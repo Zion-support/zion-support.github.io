@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
@@ -8,15 +6,6 @@ import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-=======
-import { serve } from &quot;https://deno.land/std@0.190.0/http/server.ts&quot;;
-import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2&quot;;
-import { Configuration, OpenAIApi } from &quot;https://esm.sh/openai@3.2.1&quot;;
-
-const corsHeaders = {
-  &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
-  &quot;Access-Control-Allow-Headers&quot;: &quot;authorization, x-client-info, apikey, content-type&quot;};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface HireRequest {
   talent: {
@@ -35,7 +24,6 @@ interface HireRequest {
     timeline: string,
     budgetMin: number,
     budgetMax: number
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",;
@@ -59,7 +47,6 @@ interface HireRequest {;
     timeline: string,;
     budgetMin: number,;
     budgetMax: number;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 }
 ;
@@ -67,30 +54,18 @@ interface EnhancedContent {;
   summary: string,;
   projectType: string;
 }
-<<<<<<< HEAD
 
 serve(async (req) => {
   // Handle CORS preflight requests
-<<<<<<< HEAD
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
-=======
-  if (req.method === &quot;OPTIONS&quot;) {
-    return new Response(null, { headers: corsHeaders });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
   
   try {
     const supabase = createClient(
-<<<<<<< HEAD
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
     ),
-=======
-      Deno.env.get(&quot;SUPABASE_URL&quot;) ?? "&quot;,
-      Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) ?? "&quot;
-    );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     const requestData: HireRequest = await req.json(),
     const { talent, requester, project } = requestData,
@@ -101,11 +76,7 @@ serve(async (req) => {
     // 1. Optional: Enhance content with AI
     let enhancedContent: EnhancedContent | null = null,
     
-<<<<<<< HEAD
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),
-=======
-    const openAiKey = Deno.env.get(&quot;OPENAI_API_KEY&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     if (openAiKey) {
       try {
         const configuration = new Configuration({
@@ -113,112 +84,44 @@ serve(async (req) => {
         const openai = new OpenAIApi(configuration),
         
         const prompt = `
-          Project Overview: &quot;${project.overview}&quot;
+          Project Overview: "${project.overview}"
           
           Please provide:
           1. A brief summary of this project (max 100 characters)
-          2. Classify this project into one category (e.g., &quot;AI Development&quot;, &quot;Cloud Migration&quot;, &quot;Web Design&quot;, etc.)
+          2. Classify this project into one category (e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
           
           Format your response as JSON:
           {
-            &quot;summary&quot;: &quot;Brief summary here&quot;,
-            &quot;projectType&quot;: &quot;Project type here&quot;
+            "summary": "Brief summary here",
+            "projectType": "Project type here"
           }
         `,
         
         const completion = await openai.createCompletion({
-          model: &quot;gpt-3.5-turbo-instruct&quot;,
+          model: "gpt-3.5-turbo-instruct",
           prompt,
           max_tokens: 150,
           temperature: 0.3}),
         
-<<<<<<< HEAD
         const responseText = completion.data.choices[0]?.text || "",
-=======
-        const responseText = completion.data.choices[0]?.text || "&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         
         try {
           // Extract JSON from the response
           const jsonMatch = responseText.match(/\{[\s\S]*\}/),
           if (jsonMatch) {
-<<<<<<< HEAD
             enhancedContent = JSON.parse(jsonMatch[0]),
             // // // console.log("Enhanced content generated:", enhancedContent)
-=======
-;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers: corsHeaders });
-  }
-;
-  try {;
-    const supabase = createClient(;
-      Deno.env.get("SUPABASE_URL") ?? "",;
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
-    ),;
-    const requestData: HireRequest = await req.json(),;
-    const { talent, requester, project } = requestData,;
-    // Format budget for display;
-    const budgetDisplay = `$${project.budgetMin.toLocaleString()} - $${project.budgetMax.toLocaleString()}`,;
-    // 1. Optional: Enhance content with AI;
-    let enhancedContent: EnhancedContent | null = null,;
-    const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
-    if (openAiKey) {;
-      try {;
-        const configuration = new Configuration({;
-          apiKey: openAiKey}),;
-        const openai = new OpenAIApi(configuration),;
-        const prompt = `;
-          Project Overview: "${project.overview}";
-          Please provide:;
-          1. A brief summary of this project (max 100 characters);
-          2. Classify this project into one category (e.g., "AI Development", "Cloud Migration", "Web Design", etc.);
-          Format your response as JSON:;
-          {;
-            "summary": "Brief summary here",;
-            "projectType": "Project type here";
-          }
-        `,;
-        const completion = await openai.createCompletion({;
-          model: "gpt-3.5-turbo-instruct",;
-          prompt,;
-          max_tokens: 150,;
-          temperature: 0.3}),;
-        const responseText = completion.data.choices[0]?.text || "",;
-        try {;
-          // Extract JSON from the response;
-          const jsonMatch = responseText.match(/\{[\s\S]*\}/),;
-          if (jsonMatch) {;
-            enhancedContent = JSON.parse(jsonMatch[0]),;
-            // // // console.log("Enhanced content generated:", enhancedContent);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           }
         } catch (jsonError) {;
           console.error("Error parsing AI response:", jsonError),;
           // Continue without enhanced content;
         }
-<<<<<<< HEAD
       } catch (aiError) {
         console.error("Error generating enhanced content:", aiError),
-=======
-            enhancedContent = JSON.parse(jsonMatch[0]);
-            // console.log(&quot;Enhanced content generated:&quot;, enhancedContent);
-          }
-        } catch (jsonError) {
-          console.error(&quot;Error parsing AI response:&quot;, jsonError);
-          // Continue without enhanced content
-        }
-      } catch (aiError) {
-        console.error(&quot;Error generating enhanced content:&quot;, aiError);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         // Continue without enhanced content
-=======
       } catch (aiError) {;
         console.error("Error generating enhanced content:", aiError),;
         // Continue without enhanced content;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
     }
 ;
@@ -246,7 +149,6 @@ serve(async (req) => {;
     if (requestError) {;
       throw new Error(`Error storing hire request: ${requestError.message}`);
     }
-<<<<<<< HEAD
     
     // 3. Create notification for the admin
     // Fetch admin users
@@ -257,11 +159,7 @@ serve(async (req) => {;
       .limit(1),
       
     if (adminError) {
-<<<<<<< HEAD
       console.error("Error fetching admin users:", adminError)
-=======
-      console.error(&quot;Error fetching admin users:&quot;, adminError);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     let adminId: string | undefined = undefined,
@@ -273,7 +171,7 @@ serve(async (req) => {;
       const adminNotificationContent = {
         title: `New hiring request for ${talent.full_name}`,
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
-        type: &quot;hire_request&quot;,
+        type: "hire_request",
         related_id: requestRecord[0].id
       },
       
@@ -287,12 +185,7 @@ serve(async (req) => {;
         }),
         
       if (notificationError) {
-<<<<<<< HEAD
         console.error("Error creating admin notification:", notificationError)
-=======
-        console.error(&quot;Error creating admin notification:&quot;, notificationError);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
     // 3. Create notification for the admin;
     // Fetch admin users;
@@ -325,7 +218,6 @@ serve(async (req) => {;
         }),;
       if (notificationError) {;
         console.error("Error creating admin notification:", notificationError);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
     }
 ;
@@ -347,44 +239,34 @@ serve(async (req) => {;
             <p>${project.overview}</p>;
             ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}</p>` : ''}
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
-<<<<<<< HEAD
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
           `}}),
       
-<<<<<<< HEAD
       // // // console.log("Email sending result:", emailResponse)
-=======
-      // console.log(&quot;Email sending result:&quot;, emailResponse);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 
     return new Response(
       JSON.stringify({ 
         success: true, 
-        message: &quot;Hire request processed successfully&quot;,
+        message: "Hire request processed successfully",
         request_id: requestRecord[0].id
       }),
       {
-        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200}
     )
   } catch (error) {
-<<<<<<< HEAD
     console.error("Error processing hire request:", error.message),
-=======
-    console.error(&quot;Error processing hire request:&quot;, error.message);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     return new Response(
       JSON.stringify({ 
         success: false, 
-        message: &quot;Failed to process hire request&quot;,
+        message: "Failed to process hire request",
         error: error.message 
       }),
       {
-        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json" },
-=======
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>;
             <p>Best regards,<br>The Zion AI Marketplace Team</p>;
           `}}),;
@@ -411,7 +293,6 @@ serve(async (req) => {;
       }),;
       {;
         headers: { ...corsHeaders, "Content-Type": "application/json" },;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         status: 500}
     );
   }

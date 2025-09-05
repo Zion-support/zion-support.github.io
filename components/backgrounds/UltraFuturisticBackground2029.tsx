@@ -266,30 +266,17 @@ export default function UltraFuturisticBackground2029() {;
       ctx.stroke(),;
       ctx.restore();
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
+    <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Animated gradient overlay */}
       <motion.div
-        className=&quot;absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30&quot;
+        className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
         animate={{
           background: [
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0.3) 50%, rgba(6,182,212,0.2) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)'
           ]
-=======
-  },;
-  return (;
-    <div className="fixed inset-0 -z-10 overflow-hidden">;
-      {/* Animated gradient overlay */}
-      <motion.div;
-        className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30";
-        animate={{;
-          background: [;
-            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0.3) 50%, rgba(6,182,212,0.2) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)';
-          ];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }}
         transition={{;
           duration: 8,;
@@ -300,31 +287,17 @@ export default function UltraFuturisticBackground2029() {;
       {/* Canvas for particle effects */}
       <canvas;
         ref={canvasRef}
-<<<<<<< HEAD
-        className=&quot;absolute inset-0 w-full h-full&quot;
-=======
-        className="absolute inset-0 w-full h-full";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        className="absolute inset-0 w-full h-full"
         style={{ filter: 'blur(0.5px)' }}
       />;
       {/* Additional visual layers */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0&quot;>
+      <div className="absolute inset-0">
         {/* Quantum field ripples */}
         <motion.div
-          className=&quot;absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20&quot;
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1]
-=======
-      <div className="absolute inset-0">;
-        {/* Quantum field ripples */}
-        <motion.div;
-          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20";
-          animate={{;
-            scale: [1, 1.2, 1],;
-            opacity: [0.1, 0.3, 0.1];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           }}
           transition={{;
             duration: 4,;
@@ -333,19 +306,11 @@ export default function UltraFuturisticBackground2029() {;
           }}
         />;
         {/* Holographic matrix */}
-<<<<<<< HEAD
         <motion.div
-          className=&quot;absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20&quot;
+          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.3, 0.1, 0.3]
-=======
-        <motion.div;
-          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20";
-          animate={{;
-            scale: [1.2, 1, 1.2],;
-            opacity: [0.3, 0.1, 0.3];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           }}
           transition={{;
             duration: 5,;
@@ -354,19 +319,11 @@ export default function UltraFuturisticBackground2029() {;
           }}
         />;
         {/* Neural network nodes */}
-<<<<<<< HEAD
         <motion.div
-          className=&quot;absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20&quot;
+          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
           animate={{
             scale: [1, 1.1, 1],
             opacity: [0.2, 0.4, 0.2]
-=======
-        <motion.div;
-          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20";
-          animate={{;
-            scale: [1, 1.1, 1],;
-            opacity: [0.2, 0.4, 0.2];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           }}
           transition={{;
             duration: 6,;
@@ -376,29 +333,16 @@ export default function UltraFuturisticBackground2029() {;
         />;
       </div>;
       {/* Floating orbs with glow effects */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
+      <div className="absolute inset-0 pointer-events-none">
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className=&quot;absolute w-2 h-2 rounded-full bg-cyan-400&quot;
+            className="absolute w-2 h-2 rounded-full bg-cyan-400"
             style={{
               left: `${20 + (i * 10)}%`,
               top: `${30 + (i * 8)}%`,
               filter: 'blur(1px)',
               boxShadow: '0 0 20px rgba(0, 255, 255, 0.6)'
-=======
-      <div className="absolute inset-0 pointer-events-none">;
-        {[...Array(8)].map((_, i) => (;
-          <motion.div;
-            key={i}
-            className="absolute w-2 h-2 rounded-full bg-cyan-400";
-            style={{;
-              left: `${20 + (i * 10)}%`,;
-              top: `${30 + (i * 8)}%`,;
-              filter: 'blur(1px)',;
-              boxShadow: '0 0 20px rgba(0, 255, 255, 0.6)';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             }}
             animate={{;
               y: [0, -20, 0],;

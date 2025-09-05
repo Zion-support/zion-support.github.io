@@ -73,123 +73,65 @@ export default function TechnologyInsightsPage() {;
       category: 'Business',;
       downloadUrl: '/whitepapers/automation-roi-guide.pdf';
     }
-<<<<<<< HEAD
   ],
 
   return (
     <>
       <Head>
         <title>Technology Insights | Zion Tech Group - Research & Innovation</title>
-        <meta name=&quot;description&quot; content=&quot;Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies.&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Technology Insights | Zion Tech Group&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Research insights, technology trends, and thought leadership in AI and automation.&quot; />
-        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+        <meta name="description" content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies." />
+        <meta property="og:title" content="Technology Insights | Zion Tech Group" />
+        <meta property="og:description" content="Research insights, technology trends, and thought leadership in AI and automation." />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
-      <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
-        <main className=&quot;container mx-auto px-6 py-12&quot;>
-          <section className=&quot;text-center mb-16&quot;>
-            <h1 className=&quot;text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot;>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
               Technology Insights
             </h1>
-            <p className=&quot;text-xl text-white/80 max-w-3xl mx-auto&quot;>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Research insights, technology trends, and thought leadership in AI, automation, and emerging technologies
             </p>
           </section>
 
-          <section className=&quot;mx-auto max-w-7xl&quot;>
+          <section className="mx-auto max-w-7xl">
             {/* Technology Trends */}
-            <div className=&quot;mb-16&quot;>
-              <h2 className=&quot;text-3xl font-bold mb-8 text-center text-cyan-400&quot;>Latest Technology Trends</h2>
-              <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Latest Technology Trends</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {technologyTrends.map((trend, index) => (
-                  <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300&quot;>
-                    <div className=&quot;flex items-center justify-between mb-4&quot;>
-                      <span className=&quot;px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full&quot;>{trend.category}</span>
-                      <span className=&quot;text-white/60 text-sm&quot;>{trend.readTime}</span>
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{trend.category}</span>
+                      <span className="text-white/60 text-sm">{trend.readTime}</span>
                     </div>
-                    <h3 className=&quot;text-xl font-bold mb-3 text-white&quot;>{trend.title}</h3>
-                    <p className=&quot;text-white/70 mb-4&quot;>{trend.description}</p>
+                    <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>
+                    <p className="text-white/70 mb-4">{trend.description}</p>
                     <Link 
                       href={`/blog/${trend.id}`}
-                      className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors&quot;
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
-                      Read More <span className=&quot;ml-1&quot;>→</span>
+                      Read More <span className="ml-1">→</span>
                     </a>
                   </div>
-=======
-  ];
-  return (;
-    <>;
-      <Head>;
-        <title>Technology Insights | Zion Tech Group - Research & Innovation</title>;
-        <meta name="description" content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies." />;
-        <meta property="og:title" content="Technology Insights | Zion Tech Group" />;
-        <meta property="og:description" content="Research insights, technology trends, and thought leadership in AI and automation." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-        <main className="container mx-auto px-6 py-12">;
-          <section className="text-center mb-16">;
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
-              Technology Insights;
-            </h1>;
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">;
-              Research insights, technology trends, and thought leadership in AI, automation, and emerging technologies;
-            </p>;
-          </section>;
-          <section className="mx-auto max-w-7xl">;
-            {/* Technology Trends */}
-            <div className="mb-16">;
-              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Latest Technology Trends</h2>;
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-                {technologyTrends.map((trend, index) => (;
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
-                    <div className="flex items-center justify-between mb-4">;
-                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{trend.category}</span>;
-                      <span className="text-white/60 text-sm">{trend.readTime}</span>;
-                    </div>;
-                    <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>;
-                    <p className="text-white/70 mb-4">{trend.description}</p>;
-                    <Link;
-                      href={`/blog/${trend.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors";
-                    >;
-                      Read More <span className="ml-1">→</span>;
-                    </Link>;
-                  </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 ))}
               </div>;
             </div>;
             {/* Research Areas */}
-<<<<<<< HEAD
-            <div className=&quot;mb-16&quot;>
-              <h2 className=&quot;text-3xl font-bold mb-8 text-center text-fuchsia-400&quot;>Research Focus Areas</h2>
-              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Research Focus Areas</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {researchAreas.map((area, index) => (
-                  <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6&quot;>
-                    <div className=&quot;text-4xl mb-4&quot;>{area.icon}</div>
-                    <h3 className=&quot;text-xl font-bold mb-3 text-white&quot;>{area.title}</h3>
-                    <p className=&quot;text-white/70 mb-4&quot;>{area.description}</p>
-                    <ul className=&quot;space-y-2&quot;>
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
+                    <div className="text-4xl mb-4">{area.icon}</div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{area.title}</h3>
+                    <p className="text-white/70 mb-4">{area.description}</p>
+                    <ul className="space-y-2">
                       {area.focus.map((focus, focusIndex) => (
-                        <li key={focusIndex} className=&quot;text-sm text-white/60 flex items-center&quot;>
-                          <span className=&quot;text-cyan-400 mr-2&quot;>•</span>
-=======
-            <div className="mb-16">;
-              <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Research Focus Areas</h2>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-                {researchAreas.map((area, index) => (;
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">;
-                    <div className="text-4xl mb-4">{area.icon}</div>;
-                    <h3 className="text-xl font-bold mb-3 text-white">{area.title}</h3>;
-                    <p className="text-white/70 mb-4">{area.description}</p>;
-                    <ul className="space-y-2">;
-                      {area.focus.map((focus, focusIndex) => (;
-                        <li key={focusIndex} className="text-sm text-white/60 flex items-center">;
-                          <span className="text-cyan-400 mr-2">•</span>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                        <li key={focusIndex} className="text-sm text-white/60 flex items-center">
+                          <span className="text-cyan-400 mr-2">•</span>
                           {focus}
                         </li>;
                       ))}
@@ -199,96 +141,69 @@ export default function TechnologyInsightsPage() {;
               </div>;
             </div>;
             {/* Whitepapers */}
-<<<<<<< HEAD
-            <div className=&quot;mb-16&quot;>
-              <h2 className=&quot;text-3xl font-bold mb-8 text-center text-green-400&quot;>Research Whitepapers</h2>
-              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Research Whitepapers</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {whitepapers.map((paper, index) => (
-                  <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6&quot;>
-                    <div className=&quot;flex items-center justify-between mb-3&quot;>
-                      <span className=&quot;px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full&quot;>{paper.category}</span>
-                      <span className=&quot;text-white/60 text-sm&quot;>{paper.pages} pages</span>
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
+                      <span className="text-white/60 text-sm">{paper.pages} pages</span>
                     </div>
-                    <h3 className=&quot;text-xl font-bold mb-3 text-white&quot;>{paper.title}</h3>
-                    <p className=&quot;text-white/70 mb-4&quot;>{paper.description}</p>
+                    <h3 className="text-xl font-bold mb-3 text-white">{paper.title}</h3>
+                    <p className="text-white/70 mb-4">{paper.description}</p>
                     <Link 
                       href={paper.downloadUrl}
-                      className=&quot;inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors&quot;
+                      className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
                     >
-                      Download PDF <span className=&quot;ml-1&quot;>→</span>
+                      Download PDF <span className="ml-1">→</span>
                     </a>
                   </div>
-=======
-            <div className="mb-16">;
-              <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Research Whitepapers</h2>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-                {whitepapers.map((paper, index) => (;
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">;
-                    <div className="flex items-center justify-between mb-3">;
-                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>;
-                      <span className="text-white/60 text-sm">{paper.pages} pages</span>;
-                    </div>;
-                    <h3 className="text-xl font-bold mb-3 text-white">{paper.title}</h3>;
-                    <p className="text-white/70 mb-4">{paper.description}</p>;
-                    <Link;
-                      href={paper.downloadUrl}
-                      className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors";
-                    >;
-                      Download PDF <span className="ml-1">→</span>;
-                    </Link>;
-                  </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 ))}
               </div>;
             </div>;
             {/* Innovation Lab */}
-<<<<<<< HEAD
-            <div className=&quot;mb-16&quot;>
-              <h2 className=&quot;text-3xl font-bold mb-8 text-center text-blue-400&quot;>Innovation Lab</h2>
-              <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8&quot;>
-                <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8 items-center&quot;>
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">Innovation Lab</h2>
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                   <div>
-                    <h3 className=&quot;text-2xl font-bold mb-4 text-cyan-400&quot;>Cutting-Edge Research</h3>
-                    <p className=&quot;text-white/80 mb-6&quot;>
+                    <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
+                    <p className="text-white/80 mb-6">
                       Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, 
                       AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
                     </p>
-                    <ul className=&quot;space-y-2 text-white/70&quot;>
+                    <ul className="space-y-2 text-white/70">
                       <li>• Advanced AI research and development</li>
                       <li>• Autonomous system prototyping</li>
                       <li>• Ethical AI framework development</li>
                       <li>• Industry collaboration and partnerships</li>
                     </ul>
                   </div>
-                  <div className=&quot;text-center&quot;>
-                    <div className=&quot;text-6xl mb-4&quot;>🧪</div>
-                    <p className=&quot;text-white/60 text-sm&quot;>Innovation Lab</p>
+                  <div className="text-center">
+                    <div className="text-6xl mb-4">🧪</div>
+                    <p className="text-white/60 text-sm">Innovation Lab</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Call to Action */}
-            <div className=&quot;bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center&quot;>
-              <h2 className=&quot;text-3xl font-bold mb-4 text-white&quot;>Join the Innovation Journey</h2>
-              <p className=&quot;text-xl text-white/80 mb-6&quot;>
+            <div className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center">
+              <h2 className="text-3xl font-bold mb-4 text-white">Join the Innovation Journey</h2>
+              <p className="text-xl text-white/80 mb-6">
                 Stay updated with the latest technology insights and research from Zion Tech Group
               </p>
-              <div className=&quot;flex flex-wrap justify-center gap-4&quot;>
+              <div className="flex flex-wrap justify-center gap-4">
                 <Link 
-<<<<<<< HEAD
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
-=======
-                  href=&quot;/contact&quot;
-                  className=&quot;px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 >
                   Get in Touch
                 </a>
                 <Link 
-                  href=&quot;/blog&quot;
-                  className=&quot;px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200&quot;
+                  href="/blog"
+                  className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
                 >
                   Read Our Blog
                 </a>
@@ -299,7 +214,6 @@ export default function TechnologyInsightsPage() {;
       </div>
     </>
   )
-=======
             <div className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">Innovation Lab</h2>;
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">;
@@ -350,5 +264,4 @@ export default function TechnologyInsightsPage() {;
       </div>;
     </>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

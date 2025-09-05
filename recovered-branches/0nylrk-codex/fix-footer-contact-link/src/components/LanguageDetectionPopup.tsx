@@ -29,7 +29,6 @@ export function LanguageDetectionPopup() {;
       setDetectedLanguage(browserLang),;
       setOpen(true);
     }
-<<<<<<< HEAD
   }, []),
 
   if (!detectedLanguage) return null,
@@ -43,50 +42,23 @@ export function LanguageDetectionPopup() {;
 
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
-      <AlertDialogContent className=&quot;bg-zion-blue-dark text-white border border-zion-purple/20&quot;>
+      <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">
         <AlertDialogHeader>
-          <AlertDialogTitle className=&quot;text-white&quot;>
+          <AlertDialogTitle className="text-white">
             {t('language.switch_to_detected', { language: languageName })}
           </AlertDialogTitle>
-          <AlertDialogDescription className=&quot;text-zion-slate-light&quot;>
+          <AlertDialogDescription className="text-zion-slate-light">
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel className=&quot;bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10&quot;>
-=======
-  }, []),;
-  if (!detectedLanguage) return null,;
-  const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,;
-  const handleAccept = async () => {;
-    await changeLanguage(detectedLanguage);
-    setOpen(false);
-  };
-  return (;
-    <AlertDialog open={open} onOpenChange={setOpen}>;
-      <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">;
-        <AlertDialogHeader>;
-          <AlertDialogTitle className="text-white">;
-            {t('language.switch_to_detected', { language: languageName })}
-          </AlertDialogTitle>;
-          <AlertDialogDescription className="text-zion-slate-light">;
-            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
-          </AlertDialogDescription>;
-        </AlertDialogHeader>;
-        <AlertDialogFooter>;
-          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
             {t('general.no')}
           </AlertDialogCancel>;
           <AlertDialogAction;
             onClick={handleAccept}
-<<<<<<< HEAD
-            className=&quot;bg-zion-purple text-white hover:bg-zion-purple-dark&quot;
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >
-=======
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark";
-          >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {t('general.yes')}
           </AlertDialogAction>;
         </AlertDialogFooter>;

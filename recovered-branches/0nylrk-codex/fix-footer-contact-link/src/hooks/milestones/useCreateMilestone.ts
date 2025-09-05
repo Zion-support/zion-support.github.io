@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -31,26 +30,15 @@ export const useCreateMilestone = (projectId?: string) => {
       // Create activity record
       await recordMilestoneActivity(data.id, 'created', null, 'pendingMilestone created'),
       
-<<<<<<< HEAD
       toast.success("Milestone created successfully"),
-=======
-      toast.success(&quot;Milestone created successfully&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       return data
     } catch (err: any) {
-<<<<<<< HEAD
       console.error("Error creating milestone:", err),
       toast.error("Failed to create milestone: " + err.message),
       return null
-=======
-      console.error(&quot;Error creating milestone:&quot;, err);
-      toast.error(&quot;Failed to create milestone: &quot; + err.message);
-      return null;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsSubmitting(false)
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -84,7 +72,6 @@ export const useCreateMilestone = (projectId?: string) => {;
       return null;
     } finally {;
       setIsSubmitting(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   return {;

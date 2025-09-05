@@ -23,7 +23,6 @@ export function DropzoneBulkUpload() {;
       setReport(null),;
       setErrorUrl(null);
     }
-<<<<<<< HEAD
   }, []),
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -43,16 +42,9 @@ export function DropzoneBulkUpload() {;
       const data = await res.json(),
       setReport(data),
       if (data.errors && data.errors.length) {
-<<<<<<< HEAD
         const csv = ['row,error', ...data.errors.map((e: UploadError) => `${e.row},"${e.error}"`)].join('\n'),
         const blob = new Blob([csv], { type: 'text/csv' }),
         setErrorUrl(URL.createObjectURL(blob))
-=======
-        const csv = ['row,error', ...data.errors.map((e: UploadError) => `${e.row},&quot;${e.error}&quot;`)].join('\n');
-        const blob = new Blob([csv], { type: 'text/csv' });
-        setErrorUrl(URL.createObjectURL(blob));
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
   }, []),;
   const { getRootProps, getInputProps, isDragActive } = useDropzone({;
     onDrop,;
@@ -73,29 +65,19 @@ export function DropzoneBulkUpload() {;
         const csv = ['row,error', ...data.errors.map((e: UploadError) => `${e.row},"${e.error}"`)].join('\n'),;
         const blob = new Blob([csv], { type: 'text/csv' });
         setErrorUrl(URL.createObjectURL(blob));
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
     } catch (err) {;
       console.error(err);
     } finally {;
       setProgress(100);
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;space-y-4&quot;>
+    <div className="space-y-4">
       <div
         {...getRootProps({
           className:
-=======
-  };
-  return (;
-    <div className="space-y-4">;
-      <div;
-        {...getRootProps({;
-          className:;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             'border-2 border-dashed border-muted rounded-md p-8 text-center cursor-pointer'})}
       >;
         <input {...getInputProps()} />;
@@ -104,37 +86,20 @@ export function DropzoneBulkUpload() {;
         ) : (;
           <p>Drag and drop CSV file here, or click to select file</p>;
         )}
-<<<<<<< HEAD
       </div>
-      {file && <p className=&quot;text-sm&quot;>Selected: {file.name}</p>}
+      {file && <p className="text-sm">Selected: {file.name}</p>}
       <Button onClick={handleUpload} disabled={!file}>Upload</Button>
       {progress > 0 && progress < 100 && <Progress value={progress} />}
       {report && (
-        <div className=&quot;text-sm&quot;>
+        <div className="text-sm">
           <p>Created: {report.created}</p>
           {report.errors.length > 0 && (
-            <div className=&quot;mt-2&quot;>
-              <p className=&quot;text-red-500&quot;>Errors: {report.errors.length}</p>
+            <div className="mt-2">
+              <p className="text-red-500">Errors: {report.errors.length}</p>
               {errorUrl && (
-                <a href={errorUrl} download=&quot;errors.csv&quot; className=&quot;underline&quot;>
+                <a href={errorUrl} download="errors.csv" className="underline">
                   Download error CSV
                 </Link>
-=======
-      </div>;
-      {file && <p className="text-sm">Selected: {file.name}</p>}
-      <Button onClick={handleUpload} disabled={!file}>Upload</Button>;
-      {progress > 0 && progress < 100 && <Progress value={progress} />}
-      {report && (;
-        <div className="text-sm">;
-          <p>Created: {report.created}</p>;
-          {report.errors.length > 0 && (;
-            <div className="mt-2">;
-              <p className="text-red-500">Errors: {report.errors.length}</p>;
-              {errorUrl && (;
-                <a href={errorUrl} download="errors.csv" className="underline">;
-                  Download error CSV;
-                </a>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             </div>;
           )}

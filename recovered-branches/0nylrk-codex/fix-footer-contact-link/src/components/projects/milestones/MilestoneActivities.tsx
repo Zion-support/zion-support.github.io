@@ -70,130 +70,67 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         return activity.action.replace(/_/g, ' ');
     }
   }
-<<<<<<< HEAD
 
   if (isLoading) {
     return (
-      <div className=&quot;space-y-4&quot;>
+      <div className="space-y-4">
         {[1, 2, 3].map((i) => (
           <Card key={i}>
-            <CardContent className=&quot;p-6&quot;>
-              <div className=&quot;flex items-center space-x-4&quot;>
-                <Skeleton className=&quot;h-10 w-10 rounded-full&quot; />
-                <div className=&quot;space-y-2&quot;>
-                  <Skeleton className=&quot;h-4 w-40&quot; />
-                  <Skeleton className=&quot;h-4 w-60&quot; />
+            <CardContent className="p-6">
+              <div className="flex items-center space-x-4">
+                <Skeleton className="h-10 w-10 rounded-full" />
+                <div className="space-y-2">
+                  <Skeleton className="h-4 w-40" />
+                  <Skeleton className="h-4 w-60" />
                 </div>
               </div>
             </CardContent>
           </Card>
-=======
-;
-  if (isLoading) {;
-    return (;
-      <div className="space-y-4">;
-        {[1, 2, 3].map((i) => (;
-          <Card key={i}>;
-            <CardContent className="p-6">;
-              <div className="flex items-center space-x-4">;
-                <Skeleton className="h-10 w-10 rounded-full" />;
-                <div className="space-y-2">;
-                  <Skeleton className="h-4 w-40" />;
-                  <Skeleton className="h-4 w-60" />;
-                </div>;
-              </div>;
-            </CardContent>;
-          </Card>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         ))}
       </div>;
     );
   }
-<<<<<<< HEAD
 
   if (activities.length === 0) {
     return (
       <Card>
-        <CardContent className=&quot;p-6 text-center&quot;>
-          <p className=&quot;text-muted-foreground py-8&quot;>No activity found for this project</p>
+        <CardContent className="p-6 text-center">
+          <p className="text-muted-foreground py-8">No activity found for this project</p>
         </CardContent>
       </Card>
     )
   }
 
   return (
-    <div className=&quot;space-y-4&quot;>
+    <div className="space-y-4">
       <Card>
         <CardHeader>
           <CardTitle>Project Activity</CardTitle>
         </CardHeader>
-        <CardContent className=&quot;p-6&quot;>
-          <div className=&quot;space-y-6&quot;>
+        <CardContent className="p-6">
+          <div className="space-y-6">
             {activities.map((activity) => (
-              <div key={activity.id} className=&quot;flex items-start space-x-4&quot;>
-                <Avatar className=&quot;h-10 w-10&quot;>
-                  <AvatarImage src={activity.created_by_profile?.avatar_url || ''} alt=&quot;User&quot; />
+              <div key={activity.id} className="flex items-start space-x-4">
+                <Avatar className="h-10 w-10">
+                  <AvatarImage src={activity.created_by_profile?.avatar_url || ''} alt="User" />
                   <AvatarFallback>
                     {activity.created_by_profile?.display_name?.charAt(0) || '?'}
                   </AvatarFallback>
                 </Avatar>
-                <div className=&quot;space-y-1&quot;>
-                  <div className=&quot;flex items-center space-x-2&quot;>
-                    <span className=&quot;font-medium&quot;>{activity.created_by_profile?.display_name}</span>
-                    <span className=&quot;text-muted-foreground text-sm&quot;>
+                <div className="space-y-1">
+                  <div className="flex items-center space-x-2">
+                    <span className="font-medium">{activity.created_by_profile?.display_name}</span>
+                    <span className="text-muted-foreground text-sm">
                       {getActivityDescription(activity)}
                     </span>
-                    <span className=&quot;text-muted-foreground text-xs&quot;>
+                    <span className="text-muted-foreground text-xs">
                       {format(new Date(activity.created_at), 'MMM d, yyyy h:mm a')}
                     </span>
                   </div>
-                  <p className=&quot;text-sm&quot;>
-                    <span className=&quot;font-medium&quot;>{activity.milestone?.title}</span>
+                  <p className="text-sm">
+                    <span className="font-medium">{activity.milestone?.title}</span>
                     {activity.comment && (
-                      <span className=&quot;ml-2 text-muted-foreground&quot;>&quot;{activity.comment}&quot;</span>
-=======
-;
-  if (activities.length === 0) {;
-    return (;
-      <Card>;
-        <CardContent className="p-6 text-center">;
-          <p className="text-muted-foreground py-8">No activity found for this project</p>;
-        </CardContent>;
-      </Card>;
-    );
-  }
-;
-  return (;
-    <div className="space-y-4">;
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Project Activity</CardTitle>;
-        </CardHeader>;
-        <CardContent className="p-6">;
-          <div className="space-y-6">;
-            {activities.map((activity) => (;
-              <div key={activity.id} className="flex items-start space-x-4">;
-                <Avatar className="h-10 w-10">;
-                  <AvatarImage src={activity.created_by_profile?.avatar_url || ''} alt="User" />;
-                  <AvatarFallback>;
-                    {activity.created_by_profile?.display_name?.charAt(0) || '?'}
-                  </AvatarFallback>;
-                </Avatar>;
-                <div className="space-y-1">;
-                  <div className="flex items-center space-x-2">;
-                    <span className="font-medium">{activity.created_by_profile?.display_name}</span>;
-                    <span className="text-muted-foreground text-sm">;
-                      {getActivityDescription(activity)}
-                    </span>;
-                    <span className="text-muted-foreground text-xs">;
-                      {format(new Date(activity.created_at), 'MMM d, yyyy h:mm a')}
-                    </span>;
-                  </div>;
-                  <p className="text-sm">;
-                    <span className="font-medium">{activity.milestone?.title}</span>;
-                    {activity.comment && (;
-                      <span className="ml-2 text-muted-foreground">"{activity.comment}"</span>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                      <span className="ml-2 text-muted-foreground">"{activity.comment}"</span>
                     )}
                   </p>;
                 </div>;

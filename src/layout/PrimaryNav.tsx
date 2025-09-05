@@ -48,52 +48,29 @@ export function PrimaryNav() {;
         .then(() => setQuery(''));
         .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }));
     }
-<<<<<<< HEAD
   },
 
   return (
     <>
       <header
-        className=&quot;sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md&quot;
-        role=&quot;navigation&quot;
-        aria-label=&quot;Primary&quot;
-        data-testid=&quot;header&quot;
+        className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
+        role="navigation"
+        aria-label="Primary"
+        data-testid="header"
       >
-        <div className=&quot;container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap&quot;>
+        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
           <Logo />
           
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className=&quot;hidden lg:block order-1 flex-shrink-0&quot;>
+          <div className="hidden lg:block order-1 flex-shrink-0">
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
           
           {/* Actions container with responsive layout */}
-          <div className=&quot;hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0&quot;>
+          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className=&quot;flex-shrink-0&quot; style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput
-=======
-  },;
-  return (;
-    <>;
-      <header;
-        className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md";
-        role="navigation";
-        aria-label="Primary";
-        data-testid="header";
-      >;
-        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">;
-          <Logo />;
-          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className="hidden lg:block order-1 flex-shrink-0">;
-            <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />;
-          </div>;
-          {/* Actions container with responsive layout */}
-          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">;
-            {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>;
-              <EnhancedSearchInput;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {;
@@ -126,36 +103,28 @@ export function PrimaryNav() {;
               />;
             </form>;
             {/* Compact actions group */}
-<<<<<<< HEAD
-            <div className=&quot;flex items-center gap-1&quot;>
+            <div className="flex items-center gap-1">
               <PointsBadge />
               <CartDrawer />
             </div>
             
             {/* Compact controls group */}
-            <div className=&quot;flex items-center gap-1 border-l border-primary/20 pl-1 ml-1&quot;>
+            <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
               <LanguageSelector />
             </div>
             
             {/* Auth links - flex wrap for very small screens */}
-            <div className=&quot;flex items-center gap-1 flex-wrap&quot;>
+            <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
                 <>
                   <Link
-<<<<<<< HEAD
                     href="/auth/login"
                     className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
-=======
-                    href=&quot;/auth/login&quot;
-                    className=&quot;text-sm hover:text-primary whitespace-nowrap&quot;
-                    data-testid=&quot;login-link&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                     onClick={(e) => {
                       e.preventDefault(),
                       setLoginOpen(true)
-=======
             <div className="flex items-center gap-1">;
               <PointsBadge />;
               <CartDrawer />;
@@ -176,23 +145,14 @@ export function PrimaryNav() {;
                     onClick={(e) => {;
                       e.preventDefault();
                       setLoginOpen(true);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     }}
                   >;
                     {t('auth.login')}
-<<<<<<< HEAD
                   </Link>
                   <Link
-                    href=&quot;/signup&quot;
-                    className=&quot;text-sm hover:text-primary whitespace-nowrap&quot;
+                    href="/signup"
+                    className="text-sm hover:text-primary whitespace-nowrap"
                   >
-=======
-                  </Link>;
-                  <Link;
-                    href="/signup";
-                    className="text-sm hover:text-primary whitespace-nowrap";
-                  >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     {t('auth.signup')}
                   </Link>;
                 </>;
@@ -201,23 +161,17 @@ export function PrimaryNav() {;
             </div>;
           </div>;
           {/* Tablet view (md to lg) - simplified controls */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
-=======
-          <div className=&quot;hidden md:flex lg:hidden items-center gap-2 order-2&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             <ModeToggle />
             <LanguageSelector />
             {!isLoggedIn && (
               <Link
-                href=&quot;/auth/login&quot;
-                className=&quot;text-sm hover:text-primary&quot;
-                data-testid=&quot;login-link&quot;
+                href="/auth/login"
+                className="text-sm hover:text-primary"
+                data-testid="login-link"
                 onClick={(e) => {
                   e.preventDefault(),
                   setLoginOpen(true)
-=======
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">;
             <ModeToggle />;
             <LanguageSelector />;
@@ -229,7 +183,6 @@ export function PrimaryNav() {;
                 onClick={(e) => {;
                   e.preventDefault();
                   setLoginOpen(true);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 }}
               >;
                 {t('auth.login')}
@@ -238,55 +191,29 @@ export function PrimaryNav() {;
             {isLoggedIn && <UserMenu />}
           </div>;
           {/* Mobile menu button */}
-<<<<<<< HEAD
           <button
-            className=&quot;lg:hidden p-2 rounded focus:outline-none flex-shrink-0&quot;
+            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
           >
             {mobileMenuOpen ? (
-              <X className=&quot;h-6 w-6&quot; />
+              <X className="h-6 w-6" />
             ) : (
-              <Menu className=&quot;h-6 w-6&quot; />
+              <Menu className="h-6 w-6" />
             )}
           </button>
         </div>
       </header>
       {mobileMenuOpen && (
-        <div className=&quot;lg:hidden fixed inset-0 z-60 pt-16&quot;>
+        <div className="lg:hidden fixed inset-0 z-60 pt-16">
           <div
-            className=&quot;absolute inset-0 bg-black/50 backdrop-blur-sm&quot;
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
-            aria-hidden=&quot;true&quot;
+            aria-hidden="true"
           />
-          <div className=&quot;relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto&quot;>
+          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu
-=======
-          <button;
-            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0";
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-expanded={mobileMenuOpen}
-            aria-label={t('general.toggle_mobile_menu')}
-          >;
-            {mobileMenuOpen ? (;
-              <X className="h-6 w-6" />;
-            ) : (;
-              <Menu className="h-6 w-6" />;
-            )}
-          </button>;
-        </div>;
-      </header>;
-      {mobileMenuOpen && (;
-        <div className="lg:hidden fixed inset-0 z-60 pt-16">;
-          <div;
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm";
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true";
-          />;
-          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">;
-            <MobileMenu;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={(returnToPath) => setLoginOpen(true)}

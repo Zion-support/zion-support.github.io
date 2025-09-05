@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
 /**
@@ -16,19 +15,11 @@ export async function createHireRequestNotifications({
 }: HireRequestNotificationParams) {
   const projectInfo = projectType 
     ? `${projectType} project` 
-<<<<<<< HEAD
     : "project",
   
   const summaryText = projectSummary 
     ? `: "${projectSummary}"` 
     : "",
-=======
-    : &quot;project&quot;;
-  
-  const summaryText = projectSummary 
-    ? `: &quot;${projectSummary}&quot;` 
-    : "";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Create notification for talent
   const talentNotification = await createNotification({
@@ -59,7 +50,6 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-=======
 import { createNotification } from './createNotification',;
 import { HireRequestNotificationParams } from './types',;
 /**;
@@ -107,7 +97,6 @@ export async function createHireRequestNotifications({;
       success: talentNotification.success && adminNotification.success,;
       talentNotification;
       adminNotification;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   }
 ;

@@ -1,19 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { TalentProfile } from "@/types/talent",
 import { SmartContractInfo } from "@/types/smart-contracts",
-=======
-import React from &quot;react&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { TalentProfile } from &quot;@/types/talent&quot;;
-import { SmartContractInfo } from &quot;@/types/smart-contracts&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ContractPreviewProps {
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
@@ -43,24 +33,23 @@ export function ContractPreview({
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold&quot;>Contract Preview</h2>
+        <h2 className="text-2xl font-bold">Contract Preview</h2>
         {status === 'ready' ? (
           <Badge 
-            variant=&quot;secondary"
-            className="text-sm bg-green-100 text-green-800&quot;
+            variant="secondary"
+            className="text-sm bg-green-100 text-green-800"
           >
             Ready to Sign
           </Badge>
         ) : status === 'pending' ? (
           <Badge
-            variant=&quot;outline"
-            className="text-sm bg-yellow-100 text-yellow-800&quot;
+            variant="outline"
+            className="text-sm bg-yellow-100 text-yellow-800"
           >
             Pending Review
           </Badge>
         ) : (
-          <Badge variant=&quot;outline">Draft</Badge>
-=======
+          <Badge variant="outline">Draft</Badge>
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -110,7 +99,6 @@ export function ContractPreview({;
           </Badge>;
         ) : (;
           <Badge variant="outline">Draft</Badge>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       </div>;
       {/* Contract content */}
@@ -121,39 +109,21 @@ export function ContractPreview({;
         </div>;
       </div>;
       {/* Deployment info if available */}
-<<<<<<< HEAD
       {deploymentInfo && (
         <div className="mt-4 p-4 bg-primary/10 rounded-lg">
           <h3 className="font-medium mb-2">Contract Deployment Info</h3>
-          <p className="text-sm&quot;>Contract Address: {deploymentInfo.deployedAddress || &quot;Pending..."}</p>
-          <p className="text-sm&quot;>Network: {deploymentInfo.networkName || &quot;Unknown"}</p>
+          <p className="text-sm">Contract Address: {deploymentInfo.deployedAddress || "Pending..."}</p>
+          <p className="text-sm">Network: {deploymentInfo.networkName || "Unknown"}</p>
           <p className="text-sm">Status: {deploymentInfo.status}</p>
         </div>
-=======
-      {deploymentInfo && (;
-        <div className="mt-4 p-4 bg-primary/10 rounded-lg">;
-          <h3 className="font-medium mb-2">Contract Deployment Info</h3>;
-          <p className="text-sm">Contract Address: {deploymentInfo.deployedAddress || "Pending..."}</p>;
-          <p className="text-sm">Network: {deploymentInfo.networkName || "Unknown"}</p>;
-          <p className="text-sm">Status: {deploymentInfo.status}</p>;
-        </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
 ;
       {/* Actions */}
-<<<<<<< HEAD
-      <div className="flex justify-end space-x-3 mt-4&quot;>
+      <div className="flex justify-end space-x-3 mt-4">
         {onClose && (
-          <Button variant=&quot;outline&quot; onClick={onClose}>
+          <Button variant="outline" onClick={onClose}>
             Close
           </Button>
-=======
-      <div className="flex justify-end space-x-3 mt-4">;
-        {onClose && (;
-          <Button variant="outline" onClick={onClose}>;
-            Close;
-          </Button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
 ;
         {status === 'ready' && onSign && (;
@@ -161,19 +131,11 @@ export function ContractPreview({;
             Sign Contract;
           </Button>;
         )}
-<<<<<<< HEAD
         
         {status === 'ready' && onDeploy && (
-          <Button variant=&quot;outline" onClick={onDeploy}>
+          <Button variant="outline" onClick={onDeploy}>
             Deploy on Blockchain
           </Button>
-=======
-;
-        {status === 'ready' && onDeploy && (;
-          <Button variant="outline" onClick={onDeploy}>;
-            Deploy on Blockchain;
-          </Button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       </div>;
     </div>;

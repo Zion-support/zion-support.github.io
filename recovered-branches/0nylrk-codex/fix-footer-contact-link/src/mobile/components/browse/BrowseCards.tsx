@@ -1,20 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-=======
-import React, { useState } from &quot;react&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from &quot;lucide-react&quot;;
-import { Avatar, AvatarImage, AvatarFallback } from &quot;@/components/ui/avatar&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface BrowseItem {
   id: string,
@@ -30,15 +20,9 @@ interface BrowseItem {
 }
 
 interface BrowseCardsProps {
-<<<<<<< HEAD
   items: BrowseItem[],
   type: "jobs" | "talents",
   onViewDetails: (id: string) => void
-=======
-  items: BrowseItem[];
-  type: &quot;jobs&quot; | &quot;talents&quot;;
-  onViewDetails: (id: string) => void;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }
 
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
@@ -53,49 +37,48 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   },
   
   return (
-    <div className=&quot;space-y-4 pb-24&quot;>
+    <div className="space-y-4 pb-24">
       {items.map((item) => (
-        <Card key={item.id} className=&quot;overflow-hidden&quot;>
-          <CardContent className=&quot;p-0&quot;>
-            <div className=&quot;p-4&quot;>
-              <div className=&quot;flex justify-between&quot;>
-                <div className=&quot;flex items-center gap-3&quot;>
-                  {type === &quot;talents&quot; ? (
-                    <Avatar className=&quot;h-12 w-12&quot;>
+        <Card key={item.id} className="overflow-hidden">
+          <CardContent className="p-0">
+            <div className="p-4">
+              <div className="flex justify-between">
+                <div className="flex items-center gap-3">
+                  {type === "talents" ? (
+                    <Avatar className="h-12 w-12">
                       <AvatarImage src={item.image} />
                       <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
                     </Avatar>
                   ) : (
-                    <div className=&quot;h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center&quot;>
-                      <span className=&quot;text-primary font-semibold&quot;>JOB</span>
+                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
+                      <span className="text-primary font-semibold">JOB</span>
                     </div>
                   )}
                   <div>
-                    <h3 className=&quot;font-medium&quot;>{item.title}</h3>
-                    <p className=&quot;text-sm text-muted-foreground&quot;>{item.subtitle}</p>
+                    <h3 className="font-medium">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>
                   </div>
                 </div>
                 
                 <button 
-                  className=&quot;h-8 w-8 flex items-center justify-center&quot;
+                  className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item.id)}
                 >
                   {savedItems.includes(item.id) ? (
-                    <BookmarkCheck className=&quot;h-5 w-5 text-primary&quot; />
+                    <BookmarkCheck className="h-5 w-5 text-primary" />
                   ) : (
-                    <Bookmark className=&quot;h-5 w-5 text-muted-foreground&quot; />
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />
                   )}
                 </button>
               </div>
               
-              <div className=&quot;mt-3 flex flex-wrap gap-1&quot;>
+              <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
                   <Badge 
                     key={index} 
-                    variant=&quot;outline&quot; 
-                    className=&quot;text-xs font-normal&quot;
+                    variant="outline" 
+                    className="text-xs font-normal"
                   >
-=======
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -171,100 +154,54 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     {badge}
                   </Badge>;
                 ))}
-<<<<<<< HEAD
               </div>
               
-              <p className=&quot;mt-3 text-sm line-clamp-2&quot;>{item.description}</p>
+              <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
               
-              <div className=&quot;mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground&quot;>
+              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
                 {item.location && (
-                  <div className=&quot;flex items-center gap-1&quot;>
-                    <MapPin className=&quot;h-3 w-3&quot; />
+                  <div className="flex items-center gap-1">
+                    <MapPin className="h-3 w-3" />
                     <span>{item.location}</span>
                   </div>
                 )}
                 
                 {item.price && (
-                  <div className=&quot;flex items-center gap-1&quot;>
-                    <DollarSign className=&quot;h-3 w-3&quot; />
+                  <div className="flex items-center gap-1">
+                    <DollarSign className="h-3 w-3" />
                     <span>{item.price}</span>
                   </div>
                 )}
                 
                 {item.timePosted && (
-                  <div className=&quot;flex items-center gap-1&quot;>
-                    <Clock className=&quot;h-3 w-3&quot; />
+                  <div className="flex items-center gap-1">
+                    <Clock className="h-3 w-3" />
                     <span>{item.timePosted}</span>
                   </div>
                 )}
                 
                 {item.match && (
-                  <div className=&quot;ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5&quot;>
+                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
                     {item.match}% match
                   </div>
                 )}
               </div>
             </div>
             
-            <div className=&quot;border-t border-border p-3 flex justify-end&quot;>
+            <div className="border-t border-border p-3 flex justify-end">
               <Button 
-                size=&quot;sm&quot;
+                size="sm"
                 onClick={() => onViewDetails(item.id)}
-                className=&quot;gap-1&quot;
+                className="gap-1"
               >
-                View Details <ChevronRight className=&quot;h-4 w-4&quot; />
+                View Details <ChevronRight className="h-4 w-4" />
               </Button>
             </div>
           </CardContent>
         </Card>
-=======
-              </div>;
-              <p className="mt-3 text-sm line-clamp-2">{item.description}</p>;
-              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">;
-                {item.location && (;
-                  <div className="flex items-center gap-1">;
-                    <MapPin className="h-3 w-3" />;
-                    <span>{item.location}</span>;
-                  </div>;
-                )}
-;
-                {item.price && (;
-                  <div className="flex items-center gap-1">;
-                    <DollarSign className="h-3 w-3" />;
-                    <span>{item.price}</span>;
-                  </div>;
-                )}
-;
-                {item.timePosted && (;
-                  <div className="flex items-center gap-1">;
-                    <Clock className="h-3 w-3" />;
-                    <span>{item.timePosted}</span>;
-                  </div>;
-                )}
-;
-                {item.match && (;
-                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">;
-                    {item.match}% match;
-                  </div>;
-                )}
-              </div>;
-            </div>;
-            <div className="border-t border-border p-3 flex justify-end">;
-              <Button;
-                size="sm";
-                onClick={() => onViewDetails(item.id)}
-                className="gap-1";
-              >;
-                View Details <ChevronRight className="h-4 w-4" />;
-              </Button>;
-            </div>;
-          </CardContent>;
-        </Card>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       ))}
     </div>;
   );

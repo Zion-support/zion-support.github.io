@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Analytics utilities
 export const trackEvent = (event: string, data?: any) => {
   if (typeof window !== 'undefined' && window.gtag) {
@@ -14,26 +12,6 @@ export const trackPageView = (url: string) => {
     });
   }
 };
-=======
-// Google Analytics utilities
-export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || '',
-
-// Track page views
-export const pageview = (ur: l: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', GA_TRACKING_ID, {
-      page_pat: h: url
-    })
-=======
-// Google Analytics utilities;
-export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || '',;
-// Track page views;
-export const pageview = (ur: l: string) => {;
-  if (typeof window !== 'undefined' && window.gtag) {;
-    window.gtag('config', GA_TRACKING_ID, {;
-      page_pat: h: url;
-    });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 },;
 // Track events;
@@ -78,9 +56,4 @@ declare global {;
     dataLaye: r: any[];
   }
 }
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
-;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

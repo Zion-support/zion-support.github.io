@@ -35,22 +35,13 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       participant.off('trackSubscribed', handleTrackSubscribed);
       participant.off('trackUnsubscribed', handleTrackUnsubscribed);
     }
-<<<<<<< HEAD
   }, [participant]),
 
   return (
-    <div className=&quot;bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative&quot;>
-      <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className=&quot;w-full h-48 object-cover bg-black&quot; />
-      <audio ref={audioRef} autoPlay className=&quot;hidden&quot; />
-      <div className=&quot;absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white&quot;>
-=======
-  }, [participant]);
-  return (;
-    <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">;
-      <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />;
-      <audio ref={audioRef} autoPlay className="hidden" />;
-      <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+    <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
+      <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />
+      <audio ref={audioRef} autoPlay className="hidden" />
+      <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">
         {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
       </div>;
     </div>;

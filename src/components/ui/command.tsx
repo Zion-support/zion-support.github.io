@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
-import { Command as CommandPrimitive } from &quot;cmdk&quot;
+import * as React from "react"
+import { Command as CommandPrimitive } from "cmdk"
 import { Search } from 'lucide-react'
 
-import { cn } from &quot;@/lib/utils&quot;
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from &quot;@/components/ui/dialog&quot;
+import { cn } from "@/lib/utils"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
@@ -13,24 +12,8 @@ const Command = React.forwardRef<
   <CommandPrimitive
     ref={ref}
     className={cn(
-      &quot;flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground&quot;,
+      "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",
       className
-=======
-import * as React from "react";
-import { Command as CommandPrimitive } from "cmdk";
-import { Search } from 'lucide-react';
-import { cn } from "@/lib/utils";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-const Command = React.forwardRef<;
-  React.ElementRef<typeof CommandPrimitive>,;
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive>;
->(({ className, ...props }, ref) => (;
-  <CommandPrimitive;
-    ref={ref}
-    className={cn(;
-      "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",;
-      className;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     )}
     {...props}
   />;
@@ -38,52 +21,29 @@ const Command = React.forwardRef<;
 Command.displayName = CommandPrimitive.displayName;
 interface CommandDialogProps;
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
-<<<<<<< HEAD
 
 const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
   return (
     <Dialog {...props}>
-      <DialogContent className=&quot;overflow-hidden p-0 shadow-lg&quot;>
+      <DialogContent className="overflow-hidden p-0 shadow-lg">
         <DialogHeader>
-          <DialogTitle className=&quot;sr-only&quot;>Command Menu</DialogTitle>
+          <DialogTitle className="sr-only">Command Menu</DialogTitle>
         </DialogHeader>
-        <Command className=&quot;[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5&quot;>
-=======
-;
-const CommandDialog = ({ children, ...props }: CommandDialogProps) => {;
-  return (;
-    <Dialog {...props}>;
-      <DialogContent className="overflow-hidden p-0 shadow-lg">;
-        <DialogHeader>;
-          <DialogTitle className="sr-only">Command Menu</DialogTitle>;
-        </DialogHeader>;
-        <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
           {children}
         </Command>;
       </DialogContent>;
     </Dialog>;
   );
 }
-<<<<<<< HEAD
 
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
 >(({ className, ...props }, ref) => (
-  <div className=&quot;flex items-center border-b px-3&quot; cmdk-input-wrapper="">
+  <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
     <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
     <CommandPrimitive.Input
-=======
-;
-const CommandInput = React.forwardRef<;
-  React.ElementRef<typeof CommandPrimitive.Input>,;
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>;
->(({ className, ...props }, ref) => (;
-  <div className="flex items-center border-b px-3" cmdk-input-wrapper="">;
-    <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />;
-    <CommandPrimitive.Input;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       ref={ref}
       className={cn(;
         "flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",;
@@ -152,7 +112,6 @@ const CommandItem = React.forwardRef<;
       className;
     )}
     {...props}
-<<<<<<< HEAD
   />
 ))
 
@@ -165,29 +124,14 @@ const CommandShortcut = ({
   return (
     <span
       className={cn(
-        "ml-auto text-xs tracking-widest text-muted-foreground&quot;,
+        "ml-auto text-xs tracking-widest text-muted-foreground",
         className
-=======
-  />;
-));
-CommandItem.displayName = CommandPrimitive.Item.displayName;
-const CommandShortcut = ({;
-  className,;
-  ...props;
-}: React.HTMLAttributes<HTMLSpanElement>) => {;
-  return (;
-    <span;
-      className={cn(;
-        "ml-auto text-xs tracking-widest text-muted-foreground",;
-        className;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
       {...props}
     />;
   );
 }
-<<<<<<< HEAD
-CommandShortcut.displayName = &quot;CommandShortcut"
+CommandShortcut.displayName = "CommandShortcut"
 
 export {
   Command,
@@ -198,17 +142,5 @@ export {
   CommandGroup,
   CommandItem,
   CommandShortcut,
-=======
-CommandShortcut.displayName = "CommandShortcut";
-export {;
-  Command,;
-  CommandDialog,;
-  CommandInput,;
-  CommandList,;
-  CommandEmpty,;
-  CommandGroup,;
-  CommandItem;
-  CommandShortcut;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   CommandSeparator}
 ;

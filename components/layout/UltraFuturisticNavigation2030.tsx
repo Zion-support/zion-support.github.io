@@ -127,49 +127,26 @@ export default function UltraFuturisticNavigation2030() {;
   return (;
     <>;
       {/* Top Contact Bar */}
-<<<<<<< HEAD
-      <div className=&quot;bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white py-2 px-4 text-sm&quot;>
-        <div className=&quot;max-w-7xl mx-auto flex flex-wrap items-center justify-between&quot;>
-          <div className=&quot;flex items-center space-x-6&quot;>
-            <div className=&quot;flex items-center space-x-2&quot;>
-              <Phone className=&quot;w-4 h-4 text-cyan-400&quot; />
+      <div className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white py-2 px-4 text-sm">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2">
+              <Phone className="w-4 h-4 text-cyan-400" />
               <span>{contactInfo.mobile}</span>
             </div>
-            <div className=&quot;flex items-center space-x-2&quot;>
-              <Mail className=&quot;w-4 h-4 text-cyan-400&quot; />
+            <div className="flex items-center space-x-2">
+              <Mail className="w-4 h-4 text-cyan-400" />
               <span>{contactInfo.email}</span>
             </div>
           </div>
-          <div className=&quot;flex items-center space-x-4&quot;>
-            <div className=&quot;flex items-center space-x-2&quot;>
-              <MapPin className=&quot;w-4 h-4 text-cyan-400&quot; />
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4 text-cyan-400" />
               <span>{contactInfo.address}</span>
             </div>
-            <div className=&quot;flex items-center space-x-2&quot;>
-              <Globe className=&quot;w-4 h-4 text-cyan-400&quot; />
-              <a href={contactInfo.website} className=&quot;hover:text-cyan-400 transition-colors&quot;>
-=======
-      <div className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white py-2 px-4 text-sm">;
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">;
-          <div className="flex items-center space-x-6">;
-            <div className="flex items-center space-x-2">;
-              <Phone className="w-4 h-4 text-cyan-400" />;
-              <span>{contactInfo.mobile}</span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <Mail className="w-4 h-4 text-cyan-400" />;
-              <span>{contactInfo.email}</span>;
-            </div>;
-          </div>;
-          <div className="flex items-center space-x-4">;
-            <div className="flex items-center space-x-2">;
-              <MapPin className="w-4 h-4 text-cyan-400" />;
-              <span>{contactInfo.address}</span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <Globe className="w-4 h-4 text-cyan-400" />;
-              <a href={contactInfo.website} className="hover:text-cyan-400 transition-colors">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            <div className="flex items-center space-x-2">
+              <Globe className="w-4 h-4 text-cyan-400" />
+              <a href={contactInfo.website} className="hover:text-cyan-400 transition-colors">
                 {contactInfo.website.replace('https://', '')}
               </a>;
             </div>;
@@ -177,163 +154,84 @@ export default function UltraFuturisticNavigation2030() {;
         </div>;
       </div>;
       {/* Main Navigation */}
-<<<<<<< HEAD
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
           : 'bg-gradient-to-r from-black/95 via-purple-900/95 to-black/95 backdrop-blur-sm'
       }`}>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-          <div className=&quot;flex items-center justify-between h-20&quot;>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <div className=&quot;flex items-center space-x-4&quot;>
-              <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
-                <div className=&quot;relative&quot;>
-                  <div className=&quot;w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center transform group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300&quot;>
-                    <Zap className=&quot;w-6 h-6 text-white&quot; />
+            <div className="flex items-center space-x-4">
+              <Link href="/" className="flex items-center space-x-3 group">
+                <div className="relative">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center transform group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
+                    <Zap className="w-6 h-6 text-white" />
                   </div>
-                  <div className=&quot;absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300&quot;></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                 </div>
-                <div className=&quot;flex flex-col&quot;>
-                  <span className=&quot;text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent&quot;>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
                     Zion Tech Group
                   </span>
-                  <span className=&quot;text-xs text-gray-400 font-mono&quot;>2030 Future Technology</span>
+                  <span className="text-xs text-gray-400 font-mono">2030 Future Technology</span>
                 </div>
               </a>
             </div>
 
             {/* Desktop Navigation */}
-            <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
+            <div className="hidden lg:flex items-center space-x-8">
               {mainNavigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group&quot;
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
                 >
-                  <item.icon className=&quot;w-4 h-4 group-hover:text-purple-400 transition-colors&quot; />
+                  <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
                   <span>{item.name}</span>
                 </a>
-=======
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
-        isScrolled;
-          ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl';
-          : 'bg-gradient-to-r from-black/95 via-purple-900/95 to-black/95 backdrop-blur-sm';
-      }`}>;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="flex items-center justify-between h-20">;
-            {/* Logo */}
-            <div className="flex items-center space-x-4">;
-              <Link href="/" className="flex items-center space-x-3 group">;
-                <div className="relative">;
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center transform group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">;
-                    <Zap className="w-6 h-6 text-white" />;
-                  </div>;
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>;
-                </div>;
-                <div className="flex flex-col">;
-                  <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">;
-                    Zion Tech Group;
-                  </span>;
-                  <span className="text-xs text-gray-400 font-mono">2030 Future Technology</span>;
-                </div>;
-              </Link>;
-            </div>;
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">;
-              {mainNavigation.map((item) => (;
-                <Link;
-                  key={item.name}
-                  href={item.href}
-                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group";
-                >;
-                  <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />;
-                  <span>{item.name}</span>;
-                </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
 ;
               {/* Services Dropdown */}
-<<<<<<< HEAD
-              <div className=&quot;relative group&quot;>
-                <button className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200&quot;>
-                  <Briefcase className=&quot;w-4 h-4&quot; />
+              <div className="relative group">
+                <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
+                  <Briefcase className="w-4 h-4" />
                   <span>Services</span>
-                  <ChevronDown className=&quot;w-4 h-4 group-hover:rotate-180 transition-transform duration-200&quot; />
+                  <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-200" />
                 </button>
                 
                 {/* Mega Menu */}
-                <div className=&quot;absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4&quot;>
-                  <div className=&quot;p-8&quot;>
-                    <div className=&quot;grid grid-cols-2 gap-8&quot;>
+                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4">
+                  <div className="p-8">
+                    <div className="grid grid-cols-2 gap-8">
                       {serviceCategories.map((category, index) => (
-                        <div key={index} className=&quot;space-y-4&quot;>
-                          <div className=&quot;flex items-center space-x-3&quot;>
+                        <div key={index} className="space-y-4">
+                          <div className="flex items-center space-x-3">
                             <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
-                              <category.icon className=&quot;w-5 h-5 text-white&quot; />
+                              <category.icon className="w-5 h-5 text-white" />
                             </div>
                             <div>
-                              <h3 className=&quot;text-lg font-semibold text-white&quot;>{category.title}</h3>
-                              <p className=&quot;text-sm text-gray-400&quot;>{category.description}</p>
+                              <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                              <p className="text-sm text-gray-400">{category.description}</p>
                             </div>
                           </div>
-                          <div className=&quot;space-y-2&quot;>
+                          <div className="space-y-2">
                             {category.services.map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
-                                className=&quot;block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group&quot;
+                                className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group"
                               >
-                                <div className=&quot;flex items-center justify-between&quot;>
+                                <div className="flex items-center justify-between">
                                   <div>
-                                    <h4 className=&quot;text-sm font-medium text-white group-hover:text-purple-400 transition-colors&quot;>
+                                    <h4 className="text-sm font-medium text-white group-hover:text-purple-400 transition-colors">
                                       {service.name}
                                     </h4>
-                                    <p className=&quot;text-xs text-gray-400&quot;>{service.description}</p>
+                                    <p className="text-xs text-gray-400">{service.description}</p>
                                   </div>
-                                  <span className=&quot;text-xs font-mono text-purple-400&quot;>{service.price}</span>
+                                  <span className="text-xs font-mono text-purple-400">{service.price}</span>
                                 </div>
                               </a>
-=======
-              <div className="relative group">;
-                <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">;
-                  <Briefcase className="w-4 h-4" />;
-                  <span>Services</span>;
-                  <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-200" />;
-                </button>;
-                {/* Mega Menu */}
-                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4">;
-                  <div className="p-8">;
-                    <div className="grid grid-cols-2 gap-8">;
-                      {serviceCategories.map((category, index) => (;
-                        <div key={index} className="space-y-4">;
-                          <div className="flex items-center space-x-3">;
-                            <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>;
-                              <category.icon className="w-5 h-5 text-white" />;
-                            </div>;
-                            <div>;
-                              <h3 className="text-lg font-semibold text-white">{category.title}</h3>;
-                              <p className="text-sm text-gray-400">{category.description}</p>;
-                            </div>;
-                          </div>;
-                          <div className="space-y-2">;
-                            {category.services.map((service, serviceIndex) => (;
-                              <Link;
-                                key={serviceIndex}
-                                href={service.href}
-                                className="block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group";
-                              >;
-                                <div className="flex items-center justify-between">;
-                                  <div>;
-                                    <h4 className="text-sm font-medium text-white group-hover:text-purple-400 transition-colors">;
-                                      {service.name}
-                                    </h4>;
-                                    <p className="text-xs text-gray-400">{service.description}</p>;
-                                  </div>;
-                                  <span className="text-xs font-mono text-purple-400">{service.price}</span>;
-                                </div>;
-                              </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                             ))}
                           </div>;
                         </div>;
@@ -344,61 +242,33 @@ export default function UltraFuturisticNavigation2030() {;
               </div>;
             </div>;
             {/* CTA Buttons */}
-<<<<<<< HEAD
-            <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
+            <div className="hidden lg:flex items-center space-x-4">
               <Link
-                href=&quot;/contact&quot;
-                className=&quot;px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25&quot;
+                href="/contact"
+                className="px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25"
               >
                 Get Started
               </a>
               <Link
-                href=&quot;/pricing&quot;
-                className=&quot;px-6 py-2 border border-purple-500/30 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-all duration-200&quot;
+                href="/pricing"
+                className="px-6 py-2 border border-purple-500/30 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-all duration-200"
               >
                 View Pricing
               </a>
             </div>
 
             {/* Mobile Menu Button */}
-            <div className=&quot;lg:hidden&quot;>
+            <div className="lg:hidden">
               <button
                 onClick={toggleMenu}
-                className=&quot;p-2 rounded-lg text-gray-400 hover:text-white hover:bg-purple-500/20 transition-colors duration-200&quot;
+                className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-purple-500/20 transition-colors duration-200"
               >
-                {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
+                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
           </div>
         </div>
 
-=======
-            <div className="hidden lg:flex items-center space-x-4">;
-              <Link;
-                href="/contact";
-                className="px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25";
-              >;
-                Get Started;
-              </Link>;
-              <Link;
-                href="/pricing";
-                className="px-6 py-2 border border-purple-500/30 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-all duration-200";
-              >;
-                View Pricing;
-              </Link>;
-            </div>;
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">;
-              <button;
-                onClick={toggleMenu}
-                className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-purple-500/20 transition-colors duration-200";
-              >;
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>;
-            </div>;
-          </div>;
-        </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -406,55 +276,29 @@ export default function UltraFuturisticNavigation2030() {;
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-              className=&quot;lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20&quot;
+              className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20"
             >
-              <div className=&quot;px-4 py-6 space-y-6&quot;>
+              <div className="px-4 py-6 space-y-6">
                 {/* Mobile Navigation Links */}
-                <div className=&quot;space-y-4&quot;>
+                <div className="space-y-4">
                   {mainNavigation.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
-                      className=&quot;flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-purple-500/10 transition-colors duration-200&quot;
+                      className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-purple-500/10 transition-colors duration-200"
                     >
-                      <item.icon className=&quot;w-5 h-5&quot; />
+                      <item.icon className="w-5 h-5" />
                       <span>{item.name}</span>
                     </a>
-=======
-              className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20";
-            >;
-              <div className="px-4 py-6 space-y-6">;
-                {/* Mobile Navigation Links */}
-                <div className="space-y-4">;
-                  {mainNavigation.map((item) => (;
-                    <Link;
-                      key={item.name}
-                      href={item.href}
-                      onClick={closeMenu}
-                      className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-purple-500/10 transition-colors duration-200";
-                    >;
-                      <item.icon className="w-5 h-5" />;
-                      <span>{item.name}</span>;
-                    </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   ))}
                 </div>;
                 {/* Mobile Services */}
-<<<<<<< HEAD
-                <div className=&quot;space-y-4&quot;>
-                  <h3 className=&quot;text-lg font-semibold text-white px-3&quot;>Our Services</h3>
-                  <div className=&quot;grid grid-cols-2 gap-3&quot;>
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white px-3">Our Services</h3>
+                  <div className="grid grid-cols-2 gap-3">
                     {quickLinks.map((link) => (
                       <Link
-=======
-                <div className="space-y-4">;
-                  <h3 className="text-lg font-semibold text-white px-3">Our Services</h3>;
-                  <div className="grid grid-cols-2 gap-3">;
-                    {quickLinks.map((link) => (;
-                      <Link;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                         key={link.name}
                         href={link.href}
                         onClick={closeMenu}
@@ -463,72 +307,38 @@ export default function UltraFuturisticNavigation2030() {;
                             ? `bg-gradient-to-r ${link.color} text-white`;
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700';
                         }`}
-<<<<<<< HEAD
                       >
-                        <link.icon className=&quot;w-6 h-6 mx-auto mb-2&quot; />
-                        <span className=&quot;text-sm font-medium&quot;>{link.name}</span>
+                        <link.icon className="w-6 h-6 mx-auto mb-2" />
+                        <span className="text-sm font-medium">{link.name}</span>
                       </a>
-=======
-                      >;
-                        <link.icon className="w-6 h-6 mx-auto mb-2" />;
-                        <span className="text-sm font-medium">{link.name}</span>;
-                      </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     ))}
                   </div>;
                 </div>;
                 {/* Mobile CTA */}
-<<<<<<< HEAD
-                <div className=&quot;space-y-3 pt-4 border-t border-purple-500/20&quot;>
+                <div className="space-y-3 pt-4 border-t border-purple-500/20">
                   <Link
-                    href=&quot;/contact&quot;
+                    href="/contact"
                     onClick={closeMenu}
-                    className=&quot;block w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-center rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200&quot;
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-center rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200"
                   >
                     Get Started
                   </a>
                   <Link
-                    href=&quot;/pricing&quot;
+                    href="/pricing"
                     onClick={closeMenu}
-                    className=&quot;block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200&quot;
+                    className="block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200"
                   >
                     View Pricing
                   </a>
                 </div>
               </div>
             </motion.div>
-=======
-                <div className="space-y-3 pt-4 border-t border-purple-500/20">;
-                  <Link;
-                    href="/contact";
-                    onClick={closeMenu}
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-center rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200";
-                  >;
-                    Get Started;
-                  </Link>;
-                  <Link;
-                    href="/pricing";
-                    onClick={closeMenu}
-                    className="block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200";
-                  >;
-                    View Pricing;
-                  </Link>;
-                </div>;
-              </div>;
-            </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         </AnimatePresence>;
       </nav>;
       {/* Spacer for fixed navigation */}
-<<<<<<< HEAD
-      <div className=&quot;h-20&quot;></div>
+      <div className="h-20"></div>
     </>
   )
-=======
-      <div className="h-20"></div>;
-    </>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

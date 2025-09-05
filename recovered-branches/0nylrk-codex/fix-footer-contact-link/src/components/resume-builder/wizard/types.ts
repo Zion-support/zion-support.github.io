@@ -1,20 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Resume } from "@/types/resume",
-=======
-import { Resume } from &quot;@/types/resume&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export interface StepProps {
   id: string,
   label: string
-=======
 import { Resume } from "@/types/resume",;
 export interface StepProps {;
   id: string,;
   label: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export interface NavigationButtonsProps {;

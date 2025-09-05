@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import type { NextPage, GetServerSideProps } from 'next',
 import ReviewForm from '../../components/reviews/ReviewForm',
@@ -14,16 +13,16 @@ type Props = {
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
   if (!valid) {
     return (
-      <main className=&quot;max-w-2xl mx-auto p-6&quot;>
-        <h1 className=&quot;text-2xl font-semibold mb-3&quot;>Review unavailable</h1>
-        <p className=&quot;text-sm text-gray-600&quot;>{reason || 'You cannot submit a review for this project.'}</p>
+      <main className="max-w-2xl mx-auto p-6">
+        <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>
+        <p className="text-sm text-gray-600">{reason || 'You cannot submit a review for this project.'}</p>
       </main>
     )
   }
 
   return (
-    <main className=&quot;max-w-2xl mx-auto p-6&quot;>
-      <h1 className=&quot;text-2xl font-semibold mb-6&quot;>Leave a review</h1>
+    <main className="max-w-2xl mx-auto p-6">
+      <h1 className="text-2xl font-semibold mb-6">Leave a review</h1>
       <ReviewForm initial={{ projectId, fromRole, fromId }} />
     </main>
   )
@@ -34,40 +33,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },
 
   if (!projectId || !role || !fromId) {
-=======
-import React from 'react',;
-import type { NextPage, GetServerSideProps } from 'next',;
-import ReviewForm from '../../components/reviews/ReviewForm',;
-import { findProjectById } from '../../utils/dataStore',;
-type Props = {;
-  projectId: string,;
-  fromRole: 'client' | 'talent',;
-  fromId: string,;
-  valid: boolean,;
-  reason?: string;
-},;
-const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {;
-  if (!valid) {;
-    return (;
-      <main className="max-w-2xl mx-auto p-6">;
-        <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>;
-        <p className="text-sm text-gray-600">{reason || 'You cannot submit a review for this project.'}</p>;
-      </main>;
-    );
-  }
-;
-  return (;
-    <main className="max-w-2xl mx-auto p-6">;
-      <h1 className="text-2xl font-semibold mb-6">Leave a review</h1>;
-      <ReviewForm initial={{ projectId, fromRole, fromId }} />;
-    </main>;
-  );
-},;
-export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-  const { projectId } = ctx.query as { projectId: string },;
-  const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },;
-  if (!projectId || !role || !fromId) {;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     return { props: { projectId: projectId || '', fromRole: role || 'client', fromId: fromId || '', valid: false, reason: 'Missing parameters' } }
   }
 ;

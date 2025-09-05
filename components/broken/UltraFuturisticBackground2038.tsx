@@ -257,73 +257,39 @@ export default function UltraFuturisticBackground2038({;
     return () => {;
       window.removeEventListener('resize', resizeCanvas);
     }
-<<<<<<< HEAD
   }, [intensity, theme]),
 
   return (
-    <div ref={containerRef} className=&quot;fixed inset-0 pointer-events-none&quot;>
+    <div ref={containerRef} className="fixed inset-0 pointer-events-none">
       <canvas
         ref={canvasRef}
-        className=&quot;w-full h-full&quot;
+        className="w-full h-full"
         style={{
           background: theme === 'consciousness' ? 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
                    theme === 'quantum' ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
                    theme === 'holographic' ? 'radial-gradient(ellipse at center, rgba(78, 205, 196, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
                    'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)'
-=======
-  }, [intensity, theme]),;
-  return (;
-    <div ref={containerRef} className="fixed inset-0 pointer-events-none">;
-      <canvas;
-        ref={canvasRef}
-        className="w-full h-full";
-        style={{;
-          background: theme === 'consciousness' ? 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :;
-                   theme === 'quantum' ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :;
-                   theme === 'holographic' ? 'radial-gradient(ellipse at center, rgba(78, 205, 196, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :;
-                   'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }}
       />;
       {/* Additional visual effects */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0&quot;>
+      <div className="absolute inset-0">
         {/* Quantum field lines */}
         {theme === 'consciousness' && (
-          <div className=&quot;absolute inset-0&quot;>
+          <div className="absolute inset-0">
             {[...Array(20)].map((_, i) => (
               <motion.div
                 key={i}
-                className=&quot;absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20&quot;
+                className="absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20"
                 style={{
                   left: `${(i * 5) % 100}%`,
-=======
-      <div className="absolute inset-0">;
-        {/* Quantum field lines */}
-        {theme === 'consciousness' && (;
-          <div className="absolute inset-0">;
-            {[...Array(20)].map((_, i) => (;
-              <motion.div;
-                key={i}
-                className="absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20";
-                style={{;
-                  left: `${(i * 5) % 100}%`,;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   top: `${(i * 3) % 100}%`}}
                 animate={{;
                   height: [32, 64, 32],;
                   opacity: [0.2, 0.6, 0.2]}}
-<<<<<<< HEAD
                 transition={{
                   duration: 3 + i * 0.2,
                   repeat: Infinity,
-                  ease: &quot;easeInOut&quot;
-=======
-                transition={{;
-                  duration: 3 + i * 0.2,;
-                  repeat: Infinity,;
-                  ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  ease: "easeInOut"
                 }}
               />;
             ))}
@@ -331,37 +297,20 @@ export default function UltraFuturisticBackground2038({;
         )}
 ;
         {/* Holographic grid */}
-<<<<<<< HEAD
         {theme === 'holographic' && (
-          <div className=&quot;absolute inset-0&quot;>
+          <div className="absolute inset-0">
             {[...Array(15)].map((_, i) => (
               <motion.div
                 key={i}
-                className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30&quot;
+                className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
                 style={{
-=======
-        {theme === 'holographic' && (;
-          <div className="absolute inset-0">;
-            {[...Array(15)].map((_, i) => (;
-              <motion.div;
-                key={i}
-                className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30";
-                style={{;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   top: `${(i * 7) % 100}%`}}
                 animate={{;
                   opacity: [0.3, 0.8, 0.3]}}
-<<<<<<< HEAD
                 transition={{
                   duration: 4 + i * 0.3,
                   repeat: Infinity,
-                  ease: &quot;easeInOut&quot;
-=======
-                transition={{;
-                  duration: 4 + i * 0.3,;
-                  repeat: Infinity,;
-                  ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  ease: "easeInOut"
                 }}
               />;
             ))}
@@ -369,40 +318,22 @@ export default function UltraFuturisticBackground2038({;
         )}
 ;
         {/* Consciousness waves */}
-<<<<<<< HEAD
         {theme === 'consciousness' && (
-          <div className=&quot;absolute inset-0&quot;>
+          <div className="absolute inset-0">
             {[...Array(8)].map((_, i) => (
               <motion.div
                 key={i}
-                className=&quot;absolute w-96 h-96 border border-pink-500/20 rounded-full&quot;
+                className="absolute w-96 h-96 border border-pink-500/20 rounded-full"
                 style={{
                   left: `${(i * 12) % 100}%`,
-=======
-        {theme === 'consciousness' && (;
-          <div className="absolute inset-0">;
-            {[...Array(8)].map((_, i) => (;
-              <motion.div;
-                key={i}
-                className="absolute w-96 h-96 border border-pink-500/20 rounded-full";
-                style={{;
-                  left: `${(i * 12) % 100}%`,;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   top: `${(i * 8) % 100}%`}}
                 animate={{;
                   scale: [1, 1.5, 1],;
                   opacity: [0.2, 0.6, 0.2]}}
-<<<<<<< HEAD
                 transition={{
                   duration: 6 + i * 0.5,
                   repeat: Infinity,
-                  ease: &quot;easeInOut&quot;
-=======
-                transition={{;
-                  duration: 6 + i * 0.5;
-                  repeat: Infinity;
-                  ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  ease: "easeInOut"
                 }}
               />;
             ))}

@@ -1,19 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
 import { format } from "date-fns",
 import { useTheme } from "@/hooks/useTheme",
-=======
-import React from &quot;react&quot;;
-import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-import { format } from &quot;date-fns&quot;;
-import { useTheme } from &quot;@/hooks/useTheme&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ChatMessageProps {
   message: string,
   isUser: boolean,
@@ -24,42 +14,42 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   const { theme } = useTheme(),
   
   return (
-    <div className={cn(&quot;flex items-start gap-3&quot;, isUser && &quot;flex-row-reverse&quot;)}>
-      <Avatar className=&quot;h-8 w-8&quot;>
+    <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
+      <Avatar className="h-8 w-8">
         {isUser ? (
           <>
-            <AvatarImage src=&quot;https://i.pravatar.cc/40?img=1&quot; alt=&quot;User&quot; />
+            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User" />
             <AvatarFallback>U</AvatarFallback>
           </>
         ) : (
           <>
             <AvatarImage
-              src=&quot;https://placehold.co/40x40?text=AI&quot;
-              alt=&quot;Zion Support&quot;
+              src="https://placehold.co/40x40?text=AI"
+              alt="Zion Support"
             />
-            <AvatarFallback className=&quot;bg-zion-purple text-white&quot;>Z</AvatarFallback>
+            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
           </>
         )}
       </Avatar>
       
       <div className={cn(
-        &quot;max-w-[80%] rounded-lg px-4 py-2 text-sm&quot;,
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser 
-          ? &quot;bg-zion-purple text-white&quot; 
-          : theme === &quot;dark&quot;
-            ? &quot;bg-zion-blue-light text-white&quot;
-            : &quot;bg-gray-100 text-gray-800&quot;
+          ? "bg-zion-purple text-white" 
+          : theme === "dark"
+            ? "bg-zion-blue-light text-white"
+            : "bg-gray-100 text-gray-800"
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
-          &quot;text-xs mt-1&quot;,
+          "text-xs mt-1",
           isUser 
-            ? &quot;text-white/70&quot; 
-            : theme === &quot;dark&quot;
-              ? &quot;text-gray-300&quot;
-              : &quot;text-gray-500&quot;
+            ? "text-white/70" 
+            : theme === "dark"
+              ? "text-gray-300"
+              : "text-gray-500"
         )}>
-          {format(timestamp, &quot;h:mm a&quot;)}
+          {format(timestamp, "h:mm a")}
         </div>
       </div>
     </div>
@@ -72,28 +62,17 @@ function formatMessageWithLinks(message: string): string {
   const urlRegex = /(https?:\/\/[^\s]+)/g,
   let formattedMessage = message.replace(
     urlRegex, 
-<<<<<<< HEAD
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   ),
-=======
-    '<a href=&quot;$1&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;text-zion-cyan underline hover:text-zion-cyan/80&quot;>$1</Link>'
-  );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g,
   formattedMessage = formattedMessage.replace(
     helpCenterRegex, 
-<<<<<<< HEAD
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   ),
-=======
-    '<a href=&quot;/help/$1&quot; class=&quot;text-zion-cyan underline hover:text-zion-cyan/80&quot;>$1</Link>'
-  );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   return formattedMessage
-=======
 import React from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { cn } from "@/lib/utils",;
@@ -164,6 +143,5 @@ function formatMessageWithLinks(message: string): string {;
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
   );
   return formattedMessage;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

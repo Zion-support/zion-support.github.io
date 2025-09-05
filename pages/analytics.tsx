@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react',
@@ -7,22 +6,22 @@ import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } fro
 export default function AnalyticsPage() {
   const features = [
     {
-      icon: <BarChart3 className=&quot;w-8 h-8 text-white&quot; />,
+      icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'Real-time Dashboards',
       description: 'Live monitoring and visualization of your key metrics'
     },
     {
-      icon: <TrendingUp className=&quot;w-8 h-8 text-white&quot; />,
+      icon: <TrendingUp className="w-8 h-8 text-white" />,
       title: 'Predictive Analytics',
       description: 'AI-powered forecasting and trend analysis'
     },
     {
-      icon: <PieChart className=&quot;w-8 h-8 text-white&quot; />,
+      icon: <PieChart className="w-8 h-8 text-white" />,
       title: 'Custom Reports',
       description: 'Build and schedule personalized reports'
     },
     {
-      icon: <Activity className=&quot;w-8 h-8 text-white&quot; />,
+      icon: <Activity className="w-8 h-8 text-white" />,
       title: 'Performance Monitoring',
       description: 'Track system performance and user behavior'
     }
@@ -36,40 +35,40 @@ export default function AnalyticsPage() {
     <>
       <Head>
         <title>Analytics - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities.&quot; />
+        <meta name="description" content="Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities." />
       </Head>
 
-      <div className=&quot;min-h-screen bg-black&quot;>
+      <div className="min-h-screen bg-black">
         {/* Hero Section */}
-        <section className=&quot;pt-32 pb-20 relative overflow-hidden&quot;>
-          <div className=&quot;absolute inset-0&quot;>
-            <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]&quot; />
-            <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]&quot; />
+        <section className="pt-32 pb-20 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
           </div>
           
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10&quot;>
-            <div className=&quot;mb-8&quot;>
-              <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6&quot;>
-                <BarChart3 className=&quot;w-4 h-4 mr-2&quot; />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div className="mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+                <BarChart3 className="w-4 h-4 mr-2" />
                 Data-Driven Insights
               </div>
             </div>
             
-            <h1 className=&quot;text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight&quot;>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
               Analytics Platform
             </h1>
-            <p className=&quot;text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed&quot;>
+            <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
               Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities.
             </p>
 
-            <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center&quot;>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href=&quot;/contact&quot; className=&quot;shadow-2xl shadow-blue-500/25&quot;>
+                href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Start Analyzing
-                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <a
-                href=&quot;/contact&quot; className=&quot;border-white/20 hover:border-white/40&quot;>
+                href="/contact" className="border-white/20 hover:border-white/40">
                 View Demo
               </Link>
             </div>
@@ -77,120 +76,28 @@ export default function AnalyticsPage() {
         </section>
 
         {/* Features Section */}
-        <section className=&quot;py-24&quot;>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-            <div className=&quot;text-center mb-20&quot;>
-              <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
                 Analytics Features
               </h2>
-              <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Powerful tools to understand your data and make better decisions
               </p>
             </div>
 
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
-                  key={index} className=&quot;p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300&quot;>
-                  <div className=&quot;w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center&quot;>
+                  key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
+                  <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
                     {feature.icon}
                   </div>
-                  <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>
+                  <h3 className="text-xl font-bold text-white mb-4">
                     {feature.title}
                   </h3>
-                  <p className=&quot;text-gray-400 leading-relaxed&quot;>
-=======
-import React from 'react',;
-import Head from 'next/head',;
-import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react',;
-export default function AnalyticsPage() {;
-  const features = [;
-    {;
-      icon: <BarChart3 className="w-8 h-8 text-white" />,;
-      title: 'Real-time Dashboards',;
-      description: 'Live monitoring and visualization of your key metrics';
-    },;
-    {;
-      icon: <TrendingUp className="w-8 h-8 text-white" />,;
-      title: 'Predictive Analytics',;
-      description: 'AI-powered forecasting and trend analysis';
-    },;
-    {;
-      icon: <PieChart className="w-8 h-8 text-white" />,;
-      title: 'Custom Reports',;
-      description: 'Build and schedule personalized reports';
-    },;
-    {;
-      icon: <Activity className="w-8 h-8 text-white" />,;
-      title: 'Performance Monitoring',;
-      description: 'Track system performance and user behavior';
-    }
-  ];
-  const benefits = [;
-    'Make data-driven decisionsIdentify growth opportunitiesOptimize user experienceMonitor system healthTrack business metricsGenerate actionable insights';
-  ];
-  return (;
-    <>;
-      <Head>;
-        <title>Analytics - Zion Tech Group</title>;
-        <meta name="description" content="Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities." />;
-      </Head>;
-      <div className="min-h-screen bg-black">;
-        {/* Hero Section */}
-        <section className="pt-32 pb-20 relative overflow-hidden">;
-          <div className="absolute inset-0">;
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />;
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />;
-          </div>;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">;
-            <div className="mb-8">;
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">;
-                <BarChart3 className="w-4 h-4 mr-2" />;
-                Data-Driven Insights;
-              </div>;
-            </div>;
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">;
-              Analytics Platform;
-            </h1>;
-            <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">;
-              Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">;
-              <a;
-                href="/contact" className="shadow-2xl shadow-blue-500/25">;
-                Start Analyzing;
-                <ArrowRight className="w-5 h-5 ml-2" />;
-              </a>;
-              <a;
-                href="/contact" className="border-white/20 hover:border-white/40">;
-                View Demo;
-              </a>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Features Section */}
-        <section className="py-24">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center mb-20">;
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">;
-                Analytics Features;
-              </h2>;
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
-                Powerful tools to understand your data and make better decisions;
-              </p>;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-              {features.map((feature, index) => (;
-                <div;
-                  key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">;
-                  <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">;
-                    {feature.icon}
-                  </div>;
-                  <h3 className="text-xl font-bold text-white mb-4">;
-                    {feature.title}
-                  </h3>;
-                  <p className="text-gray-400 leading-relaxed">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  <p className="text-gray-400 leading-relaxed">
                     {feature.description}
                   </p>;
                 </div>;
@@ -199,38 +106,37 @@ export default function AnalyticsPage() {;
           </div>;
         </section>;
         {/* Benefits Section */}
-<<<<<<< HEAD
-        <section className=&quot;py-24 bg-gray-900&quot;>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-            <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-16 items-center&quot;>
+        <section className="py-24 bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-8&quot;>
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Transform Data into Action
                 </h2>
-                <div className=&quot;space-y-6&quot;>
+                <div className="space-y-6">
                   {benefits.map((benefit, index) => (
-                    <div key={index} className=&quot;flex items-start&quot;>
-                      <div className=&quot;w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1&quot;>
-                        <Check className=&quot;w-4 h-4 text-blue-500&quot; />
+                    <div key={index} className="flex items-start">
+                      <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1">
+                        <Check className="w-4 h-4 text-blue-500" />
                       </div>
-                      <span className=&quot;text-gray-300 text-lg&quot;>{benefit}</span>
+                      <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
                   ))}
                 </div>
               </div>
               
-              <div className=&quot;relative&quot;>
-                <div className=&quot;bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20&quot;>
-                  <div className=&quot;text-center&quot;>
-                    <Eye className=&quot;w-24 h-24 mx-auto mb-6 text-blue-400&quot; />
-                    <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>
+              <div className="relative">
+                <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
+                  <div className="text-center">
+                    <Eye className="w-24 h-24 mx-auto mb-6 text-blue-400" />
+                    <h3 className="text-2xl font-bold text-white mb-4">
                       Visual Insights
                     </h3>
-                    <p className=&quot;text-gray-300 mb-6&quot;>
+                    <p className="text-gray-300 mb-6">
                       Beautiful charts and graphs that make complex data easy to understand
                     </p>
-                    <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm&quot;>
-                      <TrendingUp className=&quot;w-4 h-4 mr-2&quot; />
+                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm">
+                      <TrendingUp className="w-4 h-4 mr-2" />
                       Interactive dashboards
                     </div>
                   </div>
@@ -241,27 +147,21 @@ export default function AnalyticsPage() {;
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-=======
-        <section className=&quot;py-24 bg-gradient-to-r from-blue-600 to-blue-700&quot;>
-          <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
-            <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               Ready to Unlock Your Data?
             </h2>
-            <p className=&quot;text-xl text-blue-100 mb-8&quot;>
+            <p className="text-xl text-blue-100 mb-8">
               Start gaining insights from your data today
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href=&quot;/contact&quot; className=&quot;bg-white text-blue-600 hover:bg-gray-100&quot;>
+                href="/contact" className="bg-white text-blue-600 hover:bg-gray-100">
                 Start Free Trial
               </Link>
               <a
-                href=&quot;/contact&quot; className=&quot;border-white text-white hover:bg-white hover:text-blue-600&quot;>
+                href="/contact" className="border-white text-white hover:bg-white hover:text-blue-600">
                 Schedule Demo
               </Link>
             </div>
@@ -270,7 +170,6 @@ export default function AnalyticsPage() {;
       </div>
     </>
   )
-=======
         <section className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
@@ -333,5 +232,4 @@ export default function AnalyticsPage() {;
       </div>;
     </>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

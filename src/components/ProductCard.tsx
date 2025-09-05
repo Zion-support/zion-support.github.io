@@ -54,32 +54,18 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
     return () => {;
       setIsRedirecting(false);
     }
-<<<<<<< HEAD
   }, []),
 
   if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
     captureException(new Error('Invalid product data received by ProductCard'), {
       extra: { product }}),
     return (
-      <div className=&quot;relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center&quot; data-testid=&quot;product-card-error&quot;>
-        <p className=&quot;text-destructive text-sm&quot;>Product information unavailable.</p>
-        {/* Optionally, provide more details if product ID is known */}
-        {/* {product && product.id && <p className=&quot;text-xs text-muted-foreground&quot;>ID: {product.id}</p>} */}
-      </div>
-    )
-=======
-  }, []),;
-  if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {;
-    captureException(new Error('Invalid product data received by ProductCard'), {;
-      extra: { product }}),;
-    return (;
-      <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">;
-        <p className="text-destructive text-sm">Product information unavailable.</p>;
+      <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
+        <p className="text-destructive text-sm">Product information unavailable.</p>
         {/* Optionally, provide more details if product ID is known */}
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
-      </div>;
-    );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+      </div>
+    )
   }
 ;
   const active = isWishlisted(product.id),;
@@ -112,7 +98,6 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         product: product.id,;
         imageUrl});
     }
-<<<<<<< HEAD
   },
 
   const isMobile = useMediaQuery('(max-width: 768px)'),
@@ -121,133 +106,71 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw',
 
   return (
-    <div className=&quot;relative border rounded-lg bg-card p-4&quot; data-testid=&quot;product-card&quot;>
+    <div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
       <button
-        className=&quot;absolute top-2 right-2 p-1 rounded-full bg-background/70&quot;
+        className="absolute top-2 right-2 p-1 rounded-full bg-background/70"
         onClick={() => toggle(product.id)}
         aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
       >
         <Heart className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'} />
       </button>
 
-    <div className=&quot;w-full h-40 relative mb-2&quot;>
+    <div className="w-full h-40 relative mb-2">
       {imageUrl && !imageError ? (
         <Image
-=======
-  },;
-  const isMobile = useMediaQuery('(max-width: 768px)'),;
-  const isTablet = useMediaQuery('(max-width: 1200px)'),;
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw',;
-  return (;
-    <div className="relative border rounded-lg bg-card p-4" data-testid="product-card">;
-      <button;
-        className="absolute top-2 right-2 p-1 rounded-full bg-background/70";
-        onClick={() => toggle(product.id)}
-        aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
-      >;
-        <Heart className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'} />;
-      </button>;
-    <div className="w-full h-40 relative mb-2">;
-      {imageUrl && !imageError ? (;
-        <Image;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           src={imageUrl}
           alt={imageAltText}
           style={{ objectFit: 'cover' }}
           onError={(e) => handleImageError(e)}
           priority={false}
-<<<<<<< HEAD
         />
       ) : (
-        <div className=&quot;w-full h-full bg-gray-200 flex items-center justify-center&quot;>
-          <span className=&quot;text-gray-500&quot;>No Image</span>
+        <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+          <span className="text-gray-500">No Image</span>
         </div>
       )}
       {stockStatus && (
-        <Badge variant={stockVariant as any} className=&quot;absolute top-2 left-2&quot;>
-=======
-        />;
-      ) : (;
-        <div className="w-full h-full bg-gray-200 flex items-center justify-center">;
-          <span className="text-gray-500">No Image</span>;
-        </div>;
-      )}
-      {stockStatus && (;
-        <Badge variant={stockVariant as any} className="absolute top-2 left-2">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        <Badge variant={stockVariant as any} className="absolute top-2 left-2">
           {stockStatus}
         </Badge>;
       )}
-<<<<<<< HEAD
       {active && (
-        <div className=&quot;absolute top-10 left-2 p-1 rounded-full bg-background/70&quot;>
-          <Heart className=&quot;text-red-500 fill-red-500&quot; />
+        <div className="absolute top-10 left-2 p-1 rounded-full bg-background/70">
+          <Heart className="text-red-500 fill-red-500" />
         </div>
       )}
     </div>
       <Link href={`/marketplace/listing/${product.id}`}>
-        <div className=&quot;w-full h-40 relative mb-2 cursor-pointer&quot;>
+        <div className="w-full h-40 relative mb-2 cursor-pointer">
           {imageUrl && !imageError ? (
             <Image
-=======
-      {active && (;
-        <div className="absolute top-10 left-2 p-1 rounded-full bg-background/70">;
-          <Heart className="text-red-500 fill-red-500" />;
-        </div>;
-      )}
-    </div>;
-      <Link href={`/marketplace/listing/${product.id}`}>;
-        <div className="w-full h-40 relative mb-2 cursor-pointer">;
-          {imageUrl && !imageError ? (;
-            <Image;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               src={imageUrl}
               alt={imageAltText}
               style={{ objectFit: 'cover' }}
               onError={(e) => handleImageError(e)}
               priority={false}
-<<<<<<< HEAD
             />
           ) : (
-            <div className=&quot;w-full h-full bg-gray-200 flex items-center justify-center&quot;>
-              <span className=&quot;text-gray-500&quot;>No Image</span>
+            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+              <span className="text-gray-500">No Image</span>
             </div>
           )}
           {active && (
-            <div className=&quot;absolute top-2 left-2 p-1 rounded-full bg-background/70&quot;>
-              <Heart className=&quot;text-red-500 fill-red-500&quot; />
+            <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">
+              <Heart className="text-red-500 fill-red-500" />
             </div>
           )}
         </div>
-        <h3 className=&quot;font-semibold mb-1&quot;>{productTitle}</h3>
+        <h3 className="font-semibold mb-1">{productTitle}</h3>
       </Link>
       {product.price != null && (
-        <p className=&quot;text-sm text-muted-foreground&quot;>
-=======
-            />;
-          ) : (;
-            <div className="w-full h-full bg-gray-200 flex items-center justify-center">;
-              <span className="text-gray-500">No Image</span>;
-            </div>;
-          )}
-          {active && (;
-            <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">;
-              <Heart className="text-red-500 fill-red-500" />;
-            </div>;
-          )}
-        </div>;
-        <h3 className="font-semibold mb-1">{productTitle}</h3>;
-      </Link>;
-      {product.price != null && (;
-        <p className="text-sm text-muted-foreground">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        <p className="text-sm text-muted-foreground">
           {product.currency}
           {product.price}
         </p>;
       )}
-<<<<<<< HEAD
-      <div className=&quot;mt-2 flex gap-2&quot;>
-        <Button size=&quot;sm&quot; className=&quot;flex-1&quot; onClick={addToCart}>
+      <div className="mt-2 flex gap-2">
+        <Button size="sm" className="flex-1" onClick={addToCart}>
           Add to Cart
         </Button>
         {onBuy && (
@@ -267,62 +190,23 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
                           setIsRedirecting(false), // Always reset loading state
                           if (onBuyAttemptComplete) {
                             onBuyAttemptComplete(), // Notify parent if it provided this callback
-=======
-      <div className="mt-2 flex gap-2">;
-        <Button size="sm" className="flex-1" onClick={addToCart}>;
-          Add to Cart;
-        </Button>;
-        {onBuy && (;
-          <TooltipProvider>;
-            <Tooltip>;
-              <TooltipTrigger asChild>;
-                <Button;
-                  onClick={(e) => {;
-                    e.stopPropagation();
-                    if (onBuy) {;
-                      setIsRedirecting(true);
-                      onBuy();
-                        .catch(() => {;
-                          // Error is handled by parent, but we still need to reset loading locally;
-                        });
-                        .finally(() => {;
-                          setIsRedirecting(false), // Always reset loading state;
-                          if (onBuyAttemptComplete) {;
-                            onBuyAttemptComplete(), // Notify parent if it provided this callback;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                           }
                         });
                     }
                   }}
-<<<<<<< HEAD
-                  size=&quot;sm&quot;
-                  variant=&quot;outline&quot;
-                  className=&quot;flex-1&quot;
-                  data-testid=&quot;buy-now-button&quot;
+                  size="sm"
+                  variant="outline"
+                  className="flex-1"
+                  data-testid="buy-now-button"
                   disabled={!isAuthenticated || buyDisabled || isRedirecting}
                 >
                   {isRedirecting ? (
                     <>
-                      <span className=&quot;animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;></span>
+                      <span className="animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full" role="status" aria-hidden="true"></span>
                       Processing...
                     </>
                   ) : (
                     'Buy Now'
-=======
-                  size="sm";
-                  variant="outline";
-                  className="flex-1";
-                  data-testid="buy-now-button";
-                  disabled={!isAuthenticated || buyDisabled || isRedirecting}
-                >;
-                  {isRedirecting ? (;
-                    <>;
-                      <span className="animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full" role="status" aria-hidden="true"></span>;
-                      Processing...;
-                    </>;
-                  ) : (;
-                    'Buy Now';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   )}
                 </Button>;
               </TooltipTrigger>;

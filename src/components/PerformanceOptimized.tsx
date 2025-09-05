@@ -1,7 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function PerformanceOptimized() {
   return (
     <div className="performance-optimized">
@@ -9,103 +7,6 @@ export default function PerformanceOptimized() {
     </div>
   );
 }
-=======
-
-import React, { memo, useMemo, useCallback } from 'react',
-,
-// Higher-order component for performance optimization,
-export const withPerformanceOptimization = <P extends object>(,
-  Componen: t: React.ComponentType<P>,
-  option: s: {,
-    memo?: boolean,
-    memoDeps?: (prop: s: P) => any[],
-    displayName?: string
-  } = {},
-) => {,
-  const { mem: o: useMemo = true, memoDeps, displayName } = options,
-,
-  let OptimizedComponent = Component,
-,
-  if (useMemo) {,
-    OptimizedComponent = memo(Component, (prevProps, nextProps) => {,
-      if (memoDeps) {,
-        const prevDeps = memoDeps(prevProps),
-        const nextDeps = memoDeps(nextProps),
-        return prevDeps.every((dep, index) => dep === nextDeps[index])
-      },
-      return false, // Always re-render if no custom comparison
-    })
-  },
-,
-  if (displayName) {,
-    OptimizedComponent.displayName = displayName
-  },
-,
-  return OptimizedComponent
-},
-,
-// Hook for expensive calculations,
-export const useExpensiveCalculation = <T>(,
-  calculatio: n: () => T,
-  dep: s: React.DependencyList,
-): T => {,
-  return useMemo(calculation, deps)
-},
-,
-// Hook for stable callbacks,
-export const useStableCallback = <T extends (...arg: s: any[]) => any>(,
-  callbac: k: T,
-  dep: s: React.DependencyList): T => {,
-  return useCallback(callback, deps)
-=======
-;
-import React, { memo, useMemo, useCallback } from 'react',;
-,;
-// Higher-order component for performance optimization,;
-export const withPerformanceOptimization = <P extends object>(,;
-  Componen: t: React.ComponentType<P>,;
-  option: s: {,;
-    memo?: boolean,;
-    memoDeps?: (prop: s: P) => any[],;
-    displayName?: string;
-  } = {},;
-) => {,;
-  const { mem: o: useMemo = true, memoDeps, displayName } = options,;
-,;
-  let OptimizedComponent = Component,;
-,;
-  if (useMemo) {,;
-    OptimizedComponent = memo(Component, (prevProps, nextProps) => {,;
-      if (memoDeps) {,;
-        const prevDeps = memoDeps(prevProps),;
-        const nextDeps = memoDeps(nextProps),;
-        return prevDeps.every((dep, index) => dep === nextDeps[index]);
-      },;
-      return false, // Always re-render if no custom comparison;
-    });
-  },;
-,;
-  if (displayName) {,;
-    OptimizedComponent.displayName = displayName;
-  },;
-,;
-  return OptimizedComponent;
-},;
-,;
-// Hook for expensive calculations,;
-export const useExpensiveCalculation = <T>(,;
-  calculatio: n: () => T,;
-  dep: s: React.DependencyList,;
-): T => {,;
-  return useMemo(calculation, deps);
-},;
-,;
-// Hook for stable callbacks,;
-export const useStableCallback = <T extends (...arg: s: any[]) => any>(,;
-  callbac: k: T,;
-  dep: s: React.DependencyList): T => {,;
-  return useCallback(callback, deps);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 },;
 ,;
@@ -127,7 +28,6 @@ export const: LazyLoadWrapper: React.FC<{,;
           setIsVisible(true),;
           setHasLoaded(true);
         }
-<<<<<<< HEAD
       },
       { threshold, rootMargin },
     ),
@@ -170,15 +70,9 @@ export const: OptimizedImage: React.FC<{,
     <div className={`relative ${className}`} style={{ width, height }}>,
       {placeholder && !isLoaded && (,
         <div,
-<<<<<<< HEAD
           className="absolute inset-0 bg-gray-200 animate-pulse",
           style={{ width, height }},
         />)},
-=======
-          className=&quot;absolute inset-0 bg-gray-200 animate-pulse&quot;,
-          style={{ width, height }};
-        />)};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       <img,
         src={src},
         alt={alt},
@@ -192,13 +86,12 @@ export const: OptimizedImage: React.FC<{,
         } ${hasError ? 'hidden' : ''}`},
       />,
       {hasError && (,
-        <div className=&quot;absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500&quot;>,
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,
           Failed to load image,
         </div>)},
     </div>,
   )
 
-=======
       },;
       { threshold, rootMargin },;
     ),;
@@ -262,7 +155,6 @@ export const: OptimizedImage: React.FC<{,;
         </div>)},;
     </div>,;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 },;
 ,;
@@ -300,10 +192,5 @@ export const usePerformanceMetrics = () => {,;
   }, []),;
 ;
   return { metrics, recordRender }
-<<<<<<< HEAD
 },
 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

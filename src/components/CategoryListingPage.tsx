@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
@@ -9,18 +7,6 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/u
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
 import { safeStorage } from "@/utils/safeStorage",
-=======
-import { useState, useEffect } from &quot;react&quot;;
-import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
-import { ListingScoreCard } from &quot;@/components/ListingScoreCard&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Select, SelectTrigger, SelectContent, SelectItem } from &quot;@/components/ui/select&quot;;
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
-import ListingGridSkeleton from &quot;@/components/skeletons/ListingGridSkeleton&quot;;
-import { safeStorage } from &quot;@/utils/safeStorage&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // Example listing type
 interface Listing {
   id: string,
@@ -37,7 +23,6 @@ interface Listing {
   reviewCount?: number,
   price?: number | null,
   createdAt: string
-=======
 import { useState, useEffect } from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { ListingScoreCard } from "@/components/ListingScoreCard",;
@@ -63,7 +48,6 @@ interface Listing {;
   reviewCount?: number,;
   price?: number | null,;
   createdAt: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 interface CategoryListingPageProps {;
@@ -160,23 +144,13 @@ export function CategoryListingPage({;
             </p>;
           </div>;
           {/* Filters and Search */}
-<<<<<<< HEAD
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate&quot; />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
                 <Input
-                  type=&quot;text&quot;
-                  placeholder=&quot;Search listings..."
-=======
-          <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
-              <div className="relative">;
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />;
-                <Input;
-                  type="text";
-                  placeholder="Search listings...";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  type="text"
+                  placeholder="Search listings..."
                   value={searchQuery}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
@@ -223,22 +197,13 @@ export function CategoryListingPage({;
             </div>;
           </div>;
           {/* Results Count */}
-<<<<<<< HEAD
           <div className="mb-6">
-            <p className="text-zion-slate-light&quot;>
+            <p className="text-zion-slate-light">
               Showing {processedListings.length} results
-              {searchQuery && ` for &quot;${searchQuery}"`}
+              {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
 
-=======
-          <div className="mb-6">;
-            <p className="text-zion-slate-light">;
-              Showing {processedListings.length} results;
-              {searchQuery && ` for "${searchQuery}"`}
-            </p>;
-          </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           {/* Listings Grid */}
           <div aria-busy={isLoading}>;
             {isLoading ? (;
@@ -260,29 +225,22 @@ export function CategoryListingPage({;
                     reviewCount={listing.reviewCount}
                   />;
                 ))}
-<<<<<<< HEAD
               </div>
             ) : (
               <div className="text-center py-20">
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
-                <p className="text-zion-slate-light mb-6&quot;>Try adjusting your filters or search query</p>
+                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
                 <Button
-                  variant=&quot;outline&quot;
+                  variant="outline"
                   onClick={() => {
-<<<<<<< HEAD
                     setSearchQuery(""),
                     setSelectedFilter(filterOptions[0]?.value || 'all')
-=======
-                    setSearchQuery("&quot;);
-                    setSelectedFilter(filterOptions[0]?.value || 'all');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                   }}
-                  className=&quot;border-zion-purple text-zion-purple hover:bg-zion-purple/10&quot;
+                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                 >
                   Clear all filters
                 </Button>
               </div>
-=======
               </div>;
             ) : (;
               <div className="text-center py-20">;
@@ -299,7 +257,6 @@ export function CategoryListingPage({;
                   Clear all filters;
                 </Button>;
               </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             )}
           </div>;
         </div>;

@@ -1,32 +1,17 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { format } from "date-fns",
-=======
-import React from &quot;react&quot;;
-import { format } from &quot;date-fns&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
   Card,
   CardContent, 
   CardHeader, 
   CardTitle, 
   CardDescription
-<<<<<<< HEAD
 } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes",
-=======
-} from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { QuoteStatusBadge } from &quot;@/components/quotes/QuoteStatusBadge&quot;;
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react'
-import type { QuoteRequest } from &quot;@/types/quotes&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
@@ -50,12 +35,12 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   },
 
   return (
-    <Card key={quote.id} className=&quot;bg-zion-blue-dark border border-zion-blue-light overflow-hidden&quot;>
-      <CardHeader className=&quot;pb-2&quot;>
-        <div className=&quot;flex justify-between items-start&quot;>
+    <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+      <CardHeader className="pb-2">
+        <div className="flex justify-between items-start">
           <div>
-            <CardTitle className=&quot;text-white&quot;>{quote.project_name}</CardTitle>
-            <CardDescription className=&quot;text-zion-slate-light&quot;>
+            <CardTitle className="text-white">{quote.project_name}</CardTitle>
+            <CardDescription className="text-zion-slate-light">
               {formatDate(quote.created_at)}
             </CardDescription>
           </div>
@@ -63,53 +48,52 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         </div>
       </CardHeader>
       <CardContent>
-        <div className=&quot;text-sm text-zion-slate-light mb-3&quot;>
-          <span className=&quot;text-white font-medium&quot;>From: </span>
+        <div className="text-sm text-zion-slate-light mb-3">
+          <span className="text-white font-medium">From: </span>
           {quote.requester_name}
         </div>
         
-        <p className=&quot;text-white line-clamp-3 mb-4&quot;>{quote.project_summary}</p>
+        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
         
-        <div className=&quot;flex items-center gap-2 text-sm text-zion-slate-light mb-3&quot;>
-          <CalendarIcon className=&quot;h-4 w-4&quot; />
+        <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
+          <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
         
-        <div className=&quot;flex justify-between items-center mt-4&quot;>
+        <div className="flex justify-between items-center mt-4">
           <Button
-            variant=&quot;outline&quot;
-            size=&quot;sm&quot;
+            variant="outline"
+            size="sm"
             onClick={() => onViewDetails(quote)}
-            className=&quot;flex items-center gap-1&quot;
+            className="flex items-center gap-1"
           >
-            <Eye className=&quot;h-4 w-4&quot; />
+            <Eye className="h-4 w-4" />
             View Details
           </Button>
           
-          <div className=&quot;flex items-center&quot;>
+          <div className="flex items-center">
             {quote.status !== 'responded' && onMarkAsResponded && (
               <Button
-                variant=&quot;ghost&quot;
-                size=&quot;sm&quot;
+                variant="ghost"
+                size="sm"
                 onClick={() => onMarkAsResponded(quote.id)}
-                className=&quot;flex items-center gap-1&quot;
+                className="flex items-center gap-1"
               >
-                <MessageSquare className=&quot;h-4 w-4&quot; />
+                <MessageSquare className="h-4 w-4" />
                 Mark Responded
               </Button>
             )}
             
             <Button
-              variant=&quot;ghost&quot;
-              size=&quot;sm&quot;
+              variant="ghost"
+              size="sm"
               onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
-              className=&quot;flex items-center gap-1&quot;
+              className="flex items-center gap-1"
             >
               {quote.is_archived ? (
-                <RefreshCw className=&quot;h-4 w-4&quot; />
+                <RefreshCw className="h-4 w-4" />
               ) : (
-                <ArchiveIcon className=&quot;h-4 w-4&quot; />
-=======
+                <ArchiveIcon className="h-4 w-4" />
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -199,7 +183,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 <RefreshCw className="h-4 w-4" />;
               ) : (;
                 <ArchiveIcon className="h-4 w-4" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             </Button>;
           </div>;

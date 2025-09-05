@@ -1,17 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
-=======
-import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
-import { serve } from &quot;https://deno.land/std@0.168.0/http/server.ts&quot;;
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1';
-
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
@@ -22,7 +13,6 @@ interface TalentProfileData {
   bio: string,
   skills: string[],
   location?: string
-=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',;
@@ -35,7 +25,6 @@ interface TalentProfileData {;
   bio: string,;
   skills: string[],;
   location?: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 interface EnhancedProfile {;
@@ -54,22 +43,13 @@ serve(async (req) => {;
   if (req.method === 'OPTIONS') {;
     return new Response(null, { headers: corsHeaders });
   }
-<<<<<<< HEAD
 
   try {
     const { talentData } = await req.json() as { talentData: TalentProfileData },
     
     if (!talentData.bio || talentData.bio.length < 20) {
       return new Response(
-        JSON.stringify({ error: &quot;Bio must be at least 20 characters long&quot; }),
-=======
-;
-  try {;
-    const { talentData } = await req.json() as { talentData: TalentProfileData },;
-    if (!talentData.bio || talentData.bio.length < 20) {;
-      return new Response(;
-        JSON.stringify({ error: "Bio must be at least 20 characters long" }),;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        JSON.stringify({ error: "Bio must be at least 20 characters long" }),
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
@@ -95,53 +75,30 @@ serve(async (req) => {;
             Bio: ${talentData.bio}
             Skills: ${talentData.skills.join()}
             Location: ${talentData.location || 'Not specified'}
-<<<<<<< HEAD
             
             Return the result as a JSON object with these keys: 
             {
-              &quot;summary&quot;: &quot;The professional summary text (100-150 words)&quot;,
-              &quot;categorizedSkills&quot;: {
-                &quot;programming&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
-                &quot;devops&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
-                &quot;platforms&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
-                &quot;softSkills&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
-                &quot;other&quot;: [&quot;skill1&quot;, &quot;skill2&quot;]
-=======
-;
-            Return the result as a JSON object with these keys:;
-            {;
-              "summary": "The professional summary text (100-150 words)",;
-              "categorizedSkills": {;
-                "programming": ["skill1", "skill2"],;
-                "devops": ["skill1", "skill2"],;
-                "platforms": ["skill1", "skill2"],;
-                "softSkills": ["skill1", "skill2"],;
-                "other": ["skill1", "skill2"];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              "summary": "The professional summary text (100-150 words)",
+              "categorizedSkills": {
+                "programming": ["skill1", "skill2"],
+                "devops": ["skill1", "skill2"],
+                "platforms": ["skill1", "skill2"],
+                "softSkills": ["skill1", "skill2"],
+                "other": ["skill1", "skill2"]
               }
             }
 ;
             Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`;
           }
-<<<<<<< HEAD
         ],
         temperature: 0.7,
-<<<<<<< HEAD
         response_format: { type: "json_object" }
       })}),
-=======
-        response_format: { type: &quot;json_object&quot; }
-      })});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     const openAIData = await openAIResponse.json(),
     
     if (!openAIData.choices || openAIData.choices.length === 0) {
-<<<<<<< HEAD
       throw new Error("Failed to generate profile content")
-=======
-      throw new Error(&quot;Failed to generate profile content&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     // Extract the generated content from the response
@@ -152,14 +109,8 @@ serve(async (req) => {;
     try {
       enhancedProfile = JSON.parse(responseContent)
     } catch (e) {
-<<<<<<< HEAD
       console.error("Error parsing OpenAI response:", e),
       throw new Error("Failed to parse the generated content")
-=======
-      console.error(&quot;Error parsing OpenAI response:&quot;, e);
-      throw new Error(&quot;Failed to parse the generated content&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
         ],;
         temperature: 0.7,;
         response_format: { type: "json_object" }
@@ -178,31 +129,23 @@ serve(async (req) => {;
     } catch (e) {;
       console.error("Error parsing OpenAI response:", e),;
       throw new Error("Failed to parse the generated content");
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     return new Response(;
       JSON.stringify(enhancedProfile),;
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-<<<<<<< HEAD
     )
 
   } catch (error) {
-<<<<<<< HEAD
     console.error("Error in talent-profile-enhancer function:", error),
-=======
-    console.error(&quot;Error in talent-profile-enhancer function:&quot;, error);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     return new Response(
       JSON.stringify({ error: error.message }),
-=======
     );
   } catch (error) {;
     console.error("Error in talent-profile-enhancer function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }

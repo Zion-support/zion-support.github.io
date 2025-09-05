@@ -34,12 +34,11 @@ export type PortfolioProject = {;
   liveDemoUrl?: string;
   githubUrl?: string;
 }
-<<<<<<< HEAD
 
 export type ResumeDocument = {
   id: string
   ownerUserId?: string
-  name: string // e.g., &quot;DevOps Resume&quot;
+  name: string // e.g., "DevOps Resume"
   personalSummary: string
   skills: string[]
   work: WorkExperience[]
@@ -50,23 +49,6 @@ export type ResumeDocument = {
   publicSlug?: string
   updatedAt: string
   createdAt: string
-=======
-;
-export type ResumeDocument = {;
-  id: string;
-  ownerUserId?: string;
-  name: string // e.g., "DevOps Resume";
-  personalSummary: string;
-  skills: string[];
-  work: WorkExperience[];
-  certifications: Certification[];
-  education: Education[];
-  projects: PortfolioProject[];
-  isPublished?: boolean;
-  publicSlug?: string;
-  updatedAt: string;
-  createdAt: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export type AiImprovePayload = {;

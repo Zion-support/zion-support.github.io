@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
 import { cn } from "@/lib/utils",
-=======
-import { useState } from 'react';
-import { Check, Copy } from 'lucide-react';
-import { cn } from &quot;@/lib/utils&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface CodeBlockProps {
   code: string,
   language?: string,
@@ -35,18 +27,17 @@ export function CodeBlock({
 
   return (
     <div className={cn(
-      &quot;relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto&quot;,
+      "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",
       className
     )}>
       <pre className={cn(
-        &quot;p-4 overflow-auto&quot;,
-        showLineNumbers && &quot;pl-12 relative&quot;
+        "p-4 overflow-auto",
+        showLineNumbers && "pl-12 relative"
       )}>
         {showLineNumbers && (
-          <div className=&quot;absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500&quot;>
+          <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">
             {code.split('\n').map((_, i) => (
-              <div key={i} className=&quot;h-6 leading-6&quot;>
-=======
+              <div key={i} className="h-6 leading-6">
 import { useState } from 'react',;
 import { Check, Copy } from 'lucide-react',;
 import { cn } from "@/lib/utils",;
@@ -84,37 +75,22 @@ export function CodeBlock({;
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">;
             {code.split('\n').map((_, i) => (;
               <div key={i} className="h-6 leading-6">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 {i + 1}
               </div>;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
-        <code className=&quot;language-javascript&quot;>{code}</code>
+        <code className="language-javascript">{code}</code>
       </pre>
       <button
-        className=&quot;absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors&quot;
+        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors"
         onClick={handleCopyClick}
-        aria-label=&quot;Copy code&quot;
+        aria-label="Copy code"
       >
         {copied ? <Check size={16} /> : <Copy size={16} />}
       </button>
       {language && (
-        <div className=&quot;absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400&quot;>
-=======
-        <code className="language-javascript">{code}</code>;
-      </pre>;
-      <button;
-        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors";
-        onClick={handleCopyClick}
-        aria-label="Copy code";
-      >;
-        {copied ? <Check size={16} /> : <Copy size={16} />}
-      </button>;
-      {language && (;
-        <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
           {language}
         </div>;
       )}

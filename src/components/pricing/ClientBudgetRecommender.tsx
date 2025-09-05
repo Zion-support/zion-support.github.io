@@ -1,28 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import {logErrorToProduction} from '@/utils/productionLogger',
-=======
-import React, { useState } from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
   getClientBudgetSuggestion,
   PricingSuggestion,
   ClientBudgetParams,
   trackPricingSuggestion
-<<<<<<< HEAD
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
-=======
-} from &quot;@/services/pricingSuggestionService&quot;;
-import { PricingSuggestionBox } from &quot;./PricingSuggestionBox&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { Sparkles } from 'lucide-react'
 
 interface ClientBudgetRecommenderProps {
@@ -32,7 +19,6 @@ interface ClientBudgetRecommenderProps {
   scope?: string,
   experienceLevel?: string,
   onSuggestionApplied: (minValue: number, maxValue: number) => void
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -52,7 +38,6 @@ interface ClientBudgetRecommenderProps {;
   scope?: string,;
   experienceLevel?: string,;
   onSuggestionApplied: (minValue: number, maxValue: number) => void;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
@@ -85,7 +70,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD
   },
 
   const handleApplySuggestion = () => {
@@ -96,7 +80,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       if (user && user.id) {
         trackPricingSuggestion({
           userId: user.id,
-          suggestionType: &quot;client&quot;,
+          suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
           accepted: true
@@ -106,63 +90,25 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   },
 
   return (
-    <div className=&quot;space-y-4&quot;>
+    <div className="space-y-4">
       <div>
         {!suggestion && !isLoading ? (
           <Button
-            type=&quot;button&quot;
-            variant=&quot;outline&quot;
+            type="button"
+            variant="outline"
             onClick={generateSuggestion}
             disabled={!jobTitle || !category}
-            className=&quot;w-full&quot;
+            className="w-full"
           >
-            <Sparkles className=&quot;h-4 w-4 mr-2&quot; /> Get Budget Recommendation
+            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
           </Button>
         ) : (
           <PricingSuggestionBox
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-            rateType=&quot;hourly&quot;
+            rateType="hourly"
           />
-=======
-  },;
-  const handleApplySuggestion = () => {;
-    if (suggestion) {;
-      onSuggestionApplied(suggestion.minRate, suggestion.maxRate),;
-      // Track this suggestion application;
-      if (user && user.id) {;
-        trackPricingSuggestion({;
-          userId: user.id,;
-          suggestionType: "client",;
-          suggestedMin: suggestion.minRate,;
-          suggestedMax: suggestion.maxRate,;
-          accepted: true;
-        });
-      }
-    }
-  };
-  return (;
-    <div className="space-y-4">;
-      <div>;
-        {!suggestion && !isLoading ? (;
-          <Button;
-            type="button";
-            variant="outline";
-            onClick={generateSuggestion}
-            disabled={!jobTitle || !category}
-            className="w-full";
-          >;
-            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation;
-          </Button>;
-        ) : (;
-          <PricingSuggestionBox;
-            suggestion={suggestion}
-            isLoading={isLoading}
-            onApplySuggestion={handleApplySuggestion}
-            rateType="hourly";
-          />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       </div>;
     </div>;

@@ -21,37 +21,20 @@ export default function Login() {;
     } catch (err: any) {;
       toast.error(err.message || 'Login failed');
     }
-<<<<<<< HEAD
   },
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <label>
         Email
-        <input type=&quot;email&quot; {...register('email')} />
+        <input type="email" {...register('email')} />
       </label>
       <label>
         Password
-        <input type=&quot;password&quot; {...register('password')} />
+        <input type="password" {...register('password')} />
       </label>
-      <button type=&quot;submit&quot;>Login</button>
+      <button type="submit">Login</button>
     </form>
   )
-=======
-  };
-  return (;
-    <form onSubmit={handleSubmit(onSubmit)}>;
-      <label>;
-        Email;
-        <input type="email" {...register('email')} />;
-      </label>;
-      <label>;
-        Password;
-        <input type="password" {...register('password')} />;
-      </label>;
-      <button type="submit">Login</button>;
-    </form>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

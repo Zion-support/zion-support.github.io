@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { supabase } from '@/integrations/supabase/client',
 export async function ensureAnalyticsTablesExist() {
   try {
@@ -10,14 +9,8 @@ export async function ensureAnalyticsTablesExist() {
       .limit(1),
       
     if (error && error.code === 'PGRST204') {
-<<<<<<< HEAD
       // // // console.log('Creating analytics tables...'),
       await createAnalyticsTables()
-=======
-      // console.log('Creating analytics tables...');
-      await createAnalyticsTables();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import { supabase } from '@/integrations/supabase/client',;
 export async function ensureAnalyticsTablesExist() {;
   try {;
@@ -29,14 +22,12 @@ export async function ensureAnalyticsTablesExist() {;
     if (error && error.code === 'PGRST204') {;
       // // // console.log('Creating analytics tables...'),;
       await createAnalyticsTables();
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   } catch (error) {;
     console.warn('Error checking if analytics tables exist:', error),;
     // No need to create tables here, as this could be a connection error;
   }
 }
-<<<<<<< HEAD
 
 async function createAnalyticsTables() {
   try {
@@ -101,15 +92,10 @@ async function createAnalyticsTables() {
       `
     }),
     
-<<<<<<< HEAD
     // // // console.log('Analytics tables created successfully')
-=======
-    // console.log('Analytics tables created successfully');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   } catch (error) {
     console.error('Error creating analytics tables:', error),
     // Tables creation failed, but we can still continue
-=======
 ;
 async function createAnalyticsTables() {;
   try {;
@@ -174,7 +160,6 @@ async function createAnalyticsTables() {;
   } catch (error) {;
     console.error('Error creating analytics tables:', error);
     // Tables creation failed, but we can still continue;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 }
 ;

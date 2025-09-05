@@ -54,7 +54,6 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
   if (!searchTerm.trim()) {;
     return <span className={className}>{text}</span>;
   }
-<<<<<<< HEAD
 
   const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')),
   
@@ -62,16 +61,7 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
     <span className={className}>
       {parts.map((part, index) => 
         part.toLowerCase() === searchTerm.toLowerCase() ? (
-          <mark key={index} className=&quot;bg-yellow-200 text-black px-1 rounded&quot;>
-=======
-;
-  const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')),;
-  return (;
-    <span className={className}>;
-      {parts.map((part, index) =>;
-        part.toLowerCase() === searchTerm.toLowerCase() ? (;
-          <mark key={index} className="bg-yellow-200 text-black px-1 rounded">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          <mark key={index} className="bg-yellow-200 text-black px-1 rounded">
             {part}
           </mark>;
         ) : (;
@@ -92,59 +82,52 @@ const SearchResultCard: React.FC<{;
     if (result.url) {;
       router.push(result.url);
     }
-<<<<<<< HEAD
   },
 
   const cardClass = viewMode === 'grid' 
-<<<<<<< HEAD
     ? "bg-card border rounded-lg p-4 hover: shadow-lg transition-shadow cursor-pointer"
     : "bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4",
-=======
-    ? &quot;bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer&quot;
-    : &quot;bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
     <div onClick={handleClick} className={cardClass}>
       {result.image && (
-        <div className={viewMode === 'grid' ? &quot;mb-3&quot; : &quot;flex-shrink-0&quot;}>
+        <div className={viewMode === 'grid' ? "mb-3" : "flex-shrink-0"}>
           <img 
             src={result.image} 
             alt={result.title}
-            className={viewMode === 'grid' ? &quot;w-full h-48 object-cover rounded&quot; : &quot;w-20 h-20 object-cover rounded&quot;}
+            className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
         </div>
       )}
       
-      <div className=&quot;flex-1&quot;>
-        <div className=&quot;flex items-start justify-between mb-2&quot;>
+      <div className="flex-1">
+        <div className="flex items-start justify-between mb-2">
           <div>
-            <h3 className=&quot;font-semibold text-lg mb-1&quot;>
+            <h3 className="font-semibold text-lg mb-1">
               <HighlightText text={result.title} searchTerm={searchTerm} />
             </h3>
-            <Badge variant=&quot;secondary&quot; className=&quot;text-xs&quot;>
+            <Badge variant="secondary" className="text-xs">
               {result.type}
             </Badge>
           </div>
           {result.price && (
-            <div className=&quot;text-right&quot;>
-              <span className=&quot;font-bold text-primary&quot;>
+            <div className="text-right">
+              <span className="font-bold text-primary">
                 {result.currency === 'USD' ? '$' : ''}{result.price}
               </span>
-              {result.type === 'talent' && <span className=&quot;text-sm text-muted-foreground&quot;>/hr</span>}
+              {result.type === 'talent' && <span className="text-sm text-muted-foreground">/hr</span>}
             </div>
           )}
         </div>
 
-        <p className=&quot;text-muted-foreground mb-3 line-clamp-2&quot;>
+        <p className="text-muted-foreground mb-3 line-clamp-2">
           <HighlightText text={result.description} searchTerm={searchTerm} />
         </p>
 
-        <div className=&quot;flex items-center justify-between&quot;>
-          <div className=&quot;flex gap-2 flex-wrap&quot;>
+        <div className="flex items-center justify-between">
+          <div className="flex gap-2 flex-wrap">
             {result.category && (
-              <Badge variant=&quot;outline&quot; className=&quot;text-xs&quot;>
-=======
+              <Badge variant="outline" className="text-xs">
   },;
   const cardClass = viewMode === 'grid';
     ? "bg-card border rounded-lg p-4 hover: shadow-lg transition-shadow cursor-pointer";
@@ -187,36 +170,21 @@ const SearchResultCard: React.FC<{;
           <div className="flex gap-2 flex-wrap">;
             {result.category && (;
               <Badge variant="outline" className="text-xs">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 {result.category}
               </Badge>;
             )}
-<<<<<<< HEAD
             {result.tags?.slice(0, 3).map((tag, index) => (
-              <Badge key={index} variant=&quot;outline&quot; className=&quot;text-xs&quot;>
+              <Badge key={index} variant="outline" className="text-xs">
                 <HighlightText text={tag} searchTerm={searchTerm} />
               </Badge>
             ))}
           </div>
           
           {result.rating && (
-            <div className=&quot;flex items-center gap-1&quot;>
-              <span className=&quot;text-yellow-500&quot;>★</span>
-              <span className=&quot;text-sm&quot;>{result.rating.toFixed(1)}</span>
+            <div className="flex items-center gap-1">
+              <span className="text-yellow-500">★</span>
+              <span className="text-sm">{result.rating.toFixed(1)}</span>
             </div>
-=======
-            {result.tags?.slice(0, 3).map((tag, index) => (;
-              <Badge key={index} variant="outline" className="text-xs">;
-                <HighlightText text={tag} searchTerm={searchTerm} />;
-              </Badge>;
-            ))}
-          </div>;
-          {result.rating && (;
-            <div className="flex items-center gap-1">;
-              <span className="text-yellow-500">★</span>;
-              <span className="text-sm">{result.rating.toFixed(1)}</span>;
-            </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         </div>;
       </div>;
@@ -234,7 +202,6 @@ const FilterSidebar: React.FC<{;
     { id: 'talent', label: 'Talent' },;
     { id: 'service', label: 'Services' },;
     { id: 'blog', label: 'Blog Posts' }
-<<<<<<< HEAD
   ],
 
   const handleTypeChange = (typeId: string, checked: boolean) => {
@@ -254,90 +221,42 @@ const FilterSidebar: React.FC<{;
   },
 
   return (
-    <div className=&quot;space-y-6&quot;>
+    <div className="space-y-6">
       <div>
-        <h3 className=&quot;font-semibold mb-3&quot;>Content Type</h3>
-        <div className=&quot;space-y-2&quot;>
+        <h3 className="font-semibold mb-3">Content Type</h3>
+        <div className="space-y-2">
           {typeOptions.map(option => (
-            <div key={option.id} className=&quot;flex items-center space-x-2&quot;>
+            <div key={option.id} className="flex items-center space-x-2">
               <Checkbox
                 id={option.id}
                 checked={filters.types.includes(option.id)}
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
-              <label htmlFor={option.id} className=&quot;text-sm&quot;>
-=======
-  ],;
-  const handleTypeChange = (typeId: string, checked: boolean) => {;
-    const newTypes = checked;
-      ? [...filters.types, typeId];
-      : filters.types.filter(t => t !== typeId),;
-    onFiltersChange({ ...filters, types: newTypes });
-  },;
-  const handlePriceChange = (values: number[]) => {;
-    onFiltersChange({;
-      ...filters,;
-      minPrice: values[0] ?? 0,;
-      maxPrice: values[1] ?? 10000;
-    });
-  },;
-  return (;
-    <div className="space-y-6">;
-      <div>;
-        <h3 className="font-semibold mb-3">Content Type</h3>;
-        <div className="space-y-2">;
-          {typeOptions.map(option => (;
-            <div key={option.id} className="flex items-center space-x-2">;
-              <Checkbox;
-                id={option.id}
-                checked={filters.types.includes(option.id)}
-                onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
-              />;
-              <label htmlFor={option.id} className="text-sm">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              <label htmlFor={option.id} className="text-sm">
                 {option.label}
               </label>;
             </div>;
           ))}
-<<<<<<< HEAD
         </div>
       </div>
 
       <Separator />
 
       <div>
-        <h3 className=&quot;font-semibold mb-3&quot;>Category</h3>
+        <h3 className="font-semibold mb-3">Category</h3>
         <Select value={filters.category} onValueChange={(value) => 
           onFiltersChange({ ...filters, category: value === 'all' ? '' : value })
         }>
           <SelectTrigger>
-            <SelectValue placeholder=&quot;All Categories&quot; />
+            <SelectValue placeholder="All Categories" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value=&quot;all&quot;>All Categories</SelectItem>
+            <SelectItem value="all">All Categories</SelectItem>
             {availableCategories.map(category => (
               <SelectItem key={category} value={category}>
-=======
-        </div>;
-      </div>;
-      <Separator />;
-      <div>;
-        <h3 className="font-semibold mb-3">Category</h3>;
-        <Select value={filters.category} onValueChange={(value) =>;
-          onFiltersChange({ ...filters, category: value === 'all' ? '' : value });
-        }>;
-          <SelectTrigger>;
-            <SelectValue placeholder="All Categories" />;
-          </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="all">All Categories</SelectItem>;
-            {availableCategories.map(category => (;
-              <SelectItem key={category} value={category}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 {category}
               </SelectItem>;
             ))}
-<<<<<<< HEAD
           </SelectContent>
         </Select>
       </div>
@@ -345,28 +264,17 @@ const FilterSidebar: React.FC<{;
       <Separator />
 
       <div>
-        <h3 className=&quot;font-semibold mb-3&quot;>Price Range</h3>
-        <div className=&quot;px-2&quot;>
+        <h3 className="font-semibold mb-3">Price Range</h3>
+        <div className="px-2">
           <Slider
-=======
-          </SelectContent>;
-        </Select>;
-      </div>;
-      <Separator />;
-      <div>;
-        <h3 className="font-semibold mb-3">Price Range</h3>;
-        <div className="px-2">;
-          <Slider;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             value={[filters.minPrice, filters.maxPrice]}
             onValueChange={handlePriceChange}
             min={0}
             max={10000}
             step={50}
-<<<<<<< HEAD
-            className=&quot;mb-2&quot;
+            className="mb-2"
           />
-          <div className=&quot;flex justify-between text-sm text-muted-foreground&quot;>
+          <div className="flex justify-between text-sm text-muted-foreground">
             <span>${filters.minPrice}</span>
             <span>${filters.maxPrice}</span>
           </div>
@@ -376,7 +284,7 @@ const FilterSidebar: React.FC<{;
       <Separator />
 
       <div>
-        <h3 className=&quot;font-semibold mb-3&quot;>Minimum Rating</h3>
+        <h3 className="font-semibold mb-3">Minimum Rating</h3>
         <Select value={filters.minRating.toString()} onValueChange={(value) => 
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
         }>
@@ -384,12 +292,12 @@ const FilterSidebar: React.FC<{;
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value=&quot;0&quot;>Any Rating</SelectItem>
-            <SelectItem value=&quot;1&quot;>1+ Stars</SelectItem>
-            <SelectItem value=&quot;2&quot;>2+ Stars</SelectItem>
-            <SelectItem value=&quot;3&quot;>3+ Stars</SelectItem>
-            <SelectItem value=&quot;4&quot;>4+ Stars</SelectItem>
-            <SelectItem value=&quot;4.5&quot;>4.5+ Stars</SelectItem>
+            <SelectItem value="0">Any Rating</SelectItem>
+            <SelectItem value="1">1+ Stars</SelectItem>
+            <SelectItem value="2">2+ Stars</SelectItem>
+            <SelectItem value="3">3+ Stars</SelectItem>
+            <SelectItem value="4">4+ Stars</SelectItem>
+            <SelectItem value="4.5">4.5+ Stars</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -403,7 +311,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
   onNewSearch 
 }) => {
   const suggestions = [
-<<<<<<< HEAD
     "AI & Machine Learning",
     "Web Development",
     "Mobile App Development",
@@ -411,36 +318,26 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
     "UI/UX Design",
     "Blockchain Development"
   ],
-=======
-    &quot;AI & Machine Learning&quot;,
-    &quot;Web Development&quot;,
-    &quot;Mobile App Development&quot;,
-    &quot;Data Analysis&quot;,
-    &quot;UI/UX Design&quot;,
-    &quot;Blockchain Development&quot;
-  ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
-    <div className=&quot;text-center py-12&quot;>
-      <div className=&quot;mb-6&quot;>
-        <Search className=&quot;mx-auto h-16 w-16 text-muted-foreground mb-4&quot; />
-        <h2 className=&quot;text-2xl font-semibold mb-2&quot;>No results found</h2>
-        <p className=&quot;text-muted-foreground mb-6&quot;>
-          We couldn't find anything matching &quot;{searchTerm}&quot;. Try adjusting your search or filters.
+    <div className="text-center py-12">
+      <div className="mb-6">
+        <Search className="mx-auto h-16 w-16 text-muted-foreground mb-4" />
+        <h2 className="text-2xl font-semibold mb-2">No results found</h2>
+        <p className="text-muted-foreground mb-6">
+          We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.
         </p>
       </div>
 
-      <div className=&quot;max-w-md mx-auto space-y-4&quot;>
+      <div className="max-w-md mx-auto space-y-4">
         <div>
-          <h3 className=&quot;font-semibold mb-3&quot;>Search Suggestions:</h3>
-          <div className=&quot;flex flex-wrap gap-2 justify-center&quot;>
+          <h3 className="font-semibold mb-3">Search Suggestions:</h3>
+          <div className="flex flex-wrap gap-2 justify-center">
             {suggestions.map((suggestion, index) => (
               <Button
                 key={index}
-                variant=&quot;outline&quot;
-                size=&quot;sm&quot;
-=======
+                variant="outline"
+                size="sm"
             className="mb-2";
           />;
           <div className="flex justify-between text-sm text-muted-foreground">;
@@ -502,25 +399,17 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 key={index}
                 variant="outline";
                 size="sm";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 onClick={() => onNewSearch(suggestion)}
               >;
                 {suggestion}
               </Button>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
-=======
-        <div className=&quot;text-sm text-muted-foreground&quot;>
-          <p>Tips for better results:</p>
-          <ul className=&quot;mt-2 space-y-1&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             <li>• Try different keywords</li>
             <li>• Check your spelling</li>
             <li>• Use fewer filters</li>
@@ -569,7 +458,6 @@ export const SearchResultsPage: React.FC = () => {
     if (router.isReady && router.query.q) {
       const urlTerm = router.query.q as string,
       setSearchTerm(urlTerm)
-=======
           </div>;
         </div>;
         <div className="text-sm text-muted-foreground">;
@@ -618,7 +506,6 @@ export const SearchResultsPage: React.FC = () => {;
     if (router.isReady && router.query.q) {;
       const urlTerm = router.query.q as string,;
       setSearchTerm(urlTerm);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   }, [router.isReady, router.query.q]),;
   // Search function;
@@ -701,7 +588,6 @@ export const SearchResultsPage: React.FC = () => {;
     if (hasMore && !loading) {;
       performSearch(searchTerm, currentPage + 1);
     }
-<<<<<<< HEAD
   },
 
   // Active filters count
@@ -711,160 +597,81 @@ export const SearchResultsPage: React.FC = () => {;
     (filters.minRating > 0 ? 1 : 0),
 
   return (
-    <div className=&quot;container mx-auto px-4 py-6&quot;>
+    <div className="container mx-auto px-4 py-6">
       {/* Search Header */}
-      <div className=&quot;mb-6&quot;>
-        <div className=&quot;flex gap-4 mb-4&quot;>
-          <div className=&quot;flex-1&quot;>
+      <div className="mb-6">
+        <div className="flex gap-4 mb-4">
+          <div className="flex-1">
             <EnhancedSearchInput
-=======
-  },;
-  // Active filters count;
-  const activeFiltersCount = filters.types.length +;
-    (filters.category ? 1 : 0) +;
-    (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +;
-    (filters.minRating > 0 ? 1 : 0),;
-  return (;
-    <div className="container mx-auto px-4 py-6">;
-      {/* Search Header */}
-      <div className="mb-6">;
-        <div className="flex gap-4 mb-4">;
-          <div className="flex-1">;
-            <EnhancedSearchInput;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               value={searchTerm}
               onChange={setSearchTerm}
               onSelectSuggestion={(suggestion) => handleSearch(suggestion.text)}
               searchSuggestions={suggestions}
-<<<<<<< HEAD
-              placeholder=&quot;Search products, talent, services, and more...&quot;
+              placeholder="Search products, talent, services, and more..."
             />
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
-            <Search className=&quot;h-4 w-4&quot; />
+            <Search className="h-4 w-4" />
           </Button>
         </div>
 
         {searchTerm && (
-          <div className=&quot;flex items-center justify-between&quot;>
+          <div className="flex items-center justify-between">
             <div>
-              <h1 className=&quot;text-2xl font-bold&quot;>Search Results</h1>
-              <p className=&quot;text-muted-foreground&quot;>
-                {loading ? 'Searching...' : `${totalCount} results for &quot;${searchTerm}&quot;`}
+              <h1 className="text-2xl font-bold">Search Results</h1>
+              <p className="text-muted-foreground">
+                {loading ? 'Searching...' : `${totalCount} results for "${searchTerm}"`}
               </p>
             </div>
 
-            <div className=&quot;flex items-center gap-2&quot;>
+            <div className="flex items-center gap-2">
               {/* Sort Options */}
               <Select value={filters.sort} onValueChange={(value) => 
                 setFilters({ ...filters, sort: value })
               }>
-                <SelectTrigger className=&quot;w-40&quot;>
+                <SelectTrigger className="w-40">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value=&quot;relevance&quot;>Relevance</SelectItem>
-                  <SelectItem value=&quot;price_asc&quot;>Price: Low to High</SelectItem>
-                  <SelectItem value=&quot;price_desc&quot;>Price: High to Low</SelectItem>
-                  <SelectItem value=&quot;rating&quot;>Highest Rated</SelectItem>
+                  <SelectItem value="relevance">Relevance</SelectItem>
+                  <SelectItem value="price_asc">Price: Low to High</SelectItem>
+                  <SelectItem value="price_desc">Price: High to Low</SelectItem>
+                  <SelectItem value="rating">Highest Rated</SelectItem>
                 </SelectContent>
               </Select>
 
               {/* View Mode Toggle */}
-              <div className=&quot;flex border rounded-md&quot;>
+              <div className="flex border rounded-md">
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'ghost'}
-                  size=&quot;sm&quot;
+                  size="sm"
                   onClick={() => setViewMode('grid')}
                 >
-                  <GridIcon className=&quot;h-4 w-4&quot; />
+                  <GridIcon className="h-4 w-4" />
                 </Button>
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'ghost'}
-                  size=&quot;sm&quot;
+                  size="sm"
                   onClick={() => setViewMode('list')}
                 >
-                  <List className=&quot;h-4 w-4&quot; />
+                  <List className="h-4 w-4" />
                 </Button>
               </div>
 
               {/* Mobile Filter Toggle */}
               <Sheet open={showFilters} onOpenChange={setShowFilters}>
                 <SheetTrigger asChild>
-                  <Button variant=&quot;outline&quot; className=&quot;lg:hidden&quot;>
-                    <Filter className=&quot;h-4 w-4 mr-2&quot; />
+                  <Button variant="outline" className="lg:hidden">
+                    <Filter className="h-4 w-4 mr-2" />
                     Filters {activeFiltersCount > 0 && `(${activeFiltersCount})`}
                   </Button>
                 </SheetTrigger>
-                <SheetContent side=&quot;left&quot; className=&quot;w-80&quot;>
+                <SheetContent side="left" className="w-80">
                   <SheetHeader>
                     <SheetTitle>Search Filters</SheetTitle>
                   </SheetHeader>
-                  <div className=&quot;mt-6&quot;>
+                  <div className="mt-6">
                     <FilterSidebar
-=======
-              placeholder="Search products, talent, services, and more...";
-            />;
-          </div>;
-          <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>;
-            <Search className="h-4 w-4" />;
-          </Button>;
-        </div>;
-        {searchTerm && (;
-          <div className="flex items-center justify-between">;
-            <div>;
-              <h1 className="text-2xl font-bold">Search Results</h1>;
-              <p className="text-muted-foreground">;
-                {loading ? 'Searching...' : `${totalCount} results for "${searchTerm}"`}
-              </p>;
-            </div>;
-            <div className="flex items-center gap-2">;
-              {/* Sort Options */}
-              <Select value={filters.sort} onValueChange={(value) =>;
-                setFilters({ ...filters, sort: value });
-              }>;
-                <SelectTrigger className="w-40">;
-                  <SelectValue />;
-                </SelectTrigger>;
-                <SelectContent>;
-                  <SelectItem value="relevance">Relevance</SelectItem>;
-                  <SelectItem value="price_asc">Price: Low to High</SelectItem>;
-                  <SelectItem value="price_desc">Price: High to Low</SelectItem>;
-                  <SelectItem value="rating">Highest Rated</SelectItem>;
-                </SelectContent>;
-              </Select>;
-              {/* View Mode Toggle */}
-              <div className="flex border rounded-md">;
-                <Button;
-                  variant={viewMode === 'grid' ? 'default' : 'ghost'}
-                  size="sm";
-                  onClick={() => setViewMode('grid')}
-                >;
-                  <GridIcon className="h-4 w-4" />;
-                </Button>;
-                <Button;
-                  variant={viewMode === 'list' ? 'default' : 'ghost'}
-                  size="sm";
-                  onClick={() => setViewMode('list')}
-                >;
-                  <List className="h-4 w-4" />;
-                </Button>;
-              </div>;
-              {/* Mobile Filter Toggle */}
-              <Sheet open={showFilters} onOpenChange={setShowFilters}>;
-                <SheetTrigger asChild>;
-                  <Button variant="outline" className="lg:hidden">;
-                    <Filter className="h-4 w-4 mr-2" />;
-                    Filters {activeFiltersCount > 0 && `(${activeFiltersCount})`}
-                  </Button>;
-                </SheetTrigger>;
-                <SheetContent side="left" className="w-80">;
-                  <SheetHeader>;
-                    <SheetTitle>Search Filters</SheetTitle>;
-                  </SheetHeader>;
-                  <div className="mt-6">;
-                    <FilterSidebar;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       filters={filters}
                       onFiltersChange={handleFiltersChange}
                       availableCategories={availableCategories}
@@ -875,20 +682,19 @@ export const SearchResultsPage: React.FC = () => {;
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
       </div>
 
       {searchTerm && (
-        <div className=&quot;flex gap-6&quot;>
+        <div className="flex gap-6">
           {/* Desktop Filters Sidebar */}
-          <div className=&quot;hidden lg:block w-64 flex-shrink-0&quot;>
-            <div className=&quot;bg-card border rounded-lg p-4 sticky top-4&quot;>
-              <div className=&quot;flex items-center justify-between mb-4&quot;>
-                <h2 className=&quot;font-semibold&quot;>Filters</h2>
+          <div className="hidden lg:block w-64 flex-shrink-0">
+            <div className="bg-card border rounded-lg p-4 sticky top-4">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="font-semibold">Filters</h2>
                 {activeFiltersCount > 0 && (
                   <Button
-                    variant=&quot;ghost&quot;
-                    size=&quot;sm&quot;
+                    variant="ghost"
+                    size="sm"
                     onClick={() => setFilters({
                       types: [],
                       category: '',
@@ -896,27 +702,6 @@ export const SearchResultsPage: React.FC = () => {;
                       maxPrice: 10000,
                       minRating: 0,
                       sort: 'relevance'
-=======
-      </div>;
-      {searchTerm && (;
-        <div className="flex gap-6">;
-          {/* Desktop Filters Sidebar */}
-          <div className="hidden lg:block w-64 flex-shrink-0">;
-            <div className="bg-card border rounded-lg p-4 sticky top-4">;
-              <div className="flex items-center justify-between mb-4">;
-                <h2 className="font-semibold">Filters</h2>;
-                {activeFiltersCount > 0 && (;
-                  <Button;
-                    variant="ghost";
-                    size="sm";
-                    onClick={() => setFilters({;
-                      types: [],;
-                      category: '',;
-                      minPrice: 0,;
-                      maxPrice: 10000,;
-                      minRating: 0,;
-                      sort: 'relevance';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     })}
                   >;
                     Clear All;
@@ -931,45 +716,25 @@ export const SearchResultsPage: React.FC = () => {;
             </div>;
           </div>;
           {/* Main Content */}
-<<<<<<< HEAD
-          <div className=&quot;flex-1&quot;>
+          <div className="flex-1">
             {loading && results.length === 0 ? (
-              <div className=&quot;flex justify-center py-12&quot;>
-                <Loader2 className=&quot;h-8 w-8 animate-spin&quot; />
+              <div className="flex justify-center py-12">
+                <Loader2 className="h-8 w-8 animate-spin" />
               </div>
             ) : results.length === 0 && searchTerm ? (
               <NoResultsState 
                 searchTerm={searchTerm} 
-=======
-          <div className="flex-1">;
-            {loading && results.length === 0 ? (;
-              <div className="flex justify-center py-12">;
-                <Loader2 className="h-8 w-8 animate-spin" />;
-              </div>;
-            ) : results.length === 0 && searchTerm ? (;
-              <NoResultsState;
-                searchTerm={searchTerm} ;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 onNewSearch={handleSearch}
               />;
             ) : (;
               <>;
                 {/* Results Grid/List */}
-<<<<<<< HEAD
                 <div className={viewMode === 'grid' 
-                  ? &quot;grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6&quot;
-                  : &quot;space-y-4 mb-6&quot;
+                  ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6"
+                  : "space-y-4 mb-6"
                 }>
                   {results.map((result) => (
                     <SearchResultCard
-=======
-                <div className={viewMode === 'grid';
-                  ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6";
-                  : "space-y-4 mb-6";
-                }>;
-                  {results.map((result) => (;
-                    <SearchResultCard;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       key={`${result.type}-${result.id}`}
                       result={result}
                       searchTerm={searchTerm}
@@ -978,37 +743,20 @@ export const SearchResultsPage: React.FC = () => {;
                   ))}
                 </div>;
                 {/* Load More Button */}
-<<<<<<< HEAD
                 {hasMore && (
-                  <div className=&quot;text-center&quot;>
+                  <div className="text-center">
                     <Button 
                       onClick={loadMore} 
                       disabled={loading}
-                      variant=&quot;outline&quot;
+                      variant="outline"
                     >
                       {loading ? (
                         <>
-                          <Loader2 className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
+                          <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                           Loading...
                         </>
                       ) : (
                         'Load More Results'
-=======
-                {hasMore && (;
-                  <div className="text-center">;
-                    <Button;
-                      onClick={loadMore} ;
-                      disabled={loading}
-                      variant="outline";
-                    >;
-                      {loading ? (;
-                        <>;
-                          <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
-                          Loading...;
-                        </>;
-                      ) : (;
-                        'Load More Results';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       )}
                     </Button>;
                   </div>;

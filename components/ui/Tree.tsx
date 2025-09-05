@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 
 export interface TreeNode {
@@ -8,17 +6,6 @@ export interface TreeNode {
   type: "folder" | "file",
   exists?: boolean,
   children?: TreeNode[]
-=======
-import React, { useState } from &quot;react&quot;;
-
-export interface TreeNode {
-  name: string;
-  path: string;
-  type: &quot;folder&quot; | &quot;file&quot;;
-  exists?: boolean;
-  children?: TreeNode[];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import React, { useState } from "react",;
 export interface TreeNode {;
   name: string,;
@@ -26,14 +13,12 @@ export interface TreeNode {;
   type: "folder" | "file",;
   exists?: boolean,;
   children?: TreeNode[];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 interface TreeProps {;
   nodes: TreeNode[],;
   onDeploy?: (path: string) => void;
 }
-<<<<<<< HEAD
 
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
   const [open, setOpen] = useState<boolean>(false),
@@ -48,19 +33,13 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
   const clonePath = async () => {
     const url = `${window.location.origin}/api/dev/source-map`,
     await fetch(url, {
-      method: &quot;POST&quot;,
+      method: "POST",
       headers: {
-        &quot;Content-Type&quot;: &quot;application/json&quot;,
+        "Content-Type": "application/json",
         // Expect an admin token in local storage, fall back to prompt
-<<<<<<< HEAD
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any,
       body: JSON.stringify({ path: node.path })})
   },
-=======
-        &quot;x-admin-token&quot;: localStorage.getItem(&quot;ADMIN_TOKEN&quot;) || ""} as any,
-      body: JSON.stringify({ path: node.path })});
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const deploy = () => onDeploy && onDeploy(node.path),
 
@@ -68,26 +47,25 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
     <div className="ml-2">
       <div className="flex items-center gap-2 py-1">
         {hasChildren ? (
-          <button className="text-sm&quot; onClick={toggle} aria-label=&quot;Toggle&quot;>
-            {open ? &quot;▾&quot; : &quot;▸"}
+          <button className="text-sm" onClick={toggle} aria-label="Toggle">
+            {open ? "▾" : "▸"}
           </button>
         ) : (
           <span className="inline-block w-4" />
         )}
-        <span className={`font-mono text-sm ${node.exists ? "text-green-600&quot; : &quot;text-gray-500"}`}>
+        <span className={`font-mono text-sm ${node.exists ? "text-green-600" : "text-gray-500"}`}>
           {node.path}
         </span>
         <div className="ml-auto flex gap-2">
-          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded&quot; onClick={copyPath} title=&quot;Copy path">Copy</button>
-          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded&quot; onClick={clonePath} title=&quot;Create template">Template</button>
-          <button className="px-2 py-0.5 text-xs bg-emerald-100 rounded&quot; onClick={deploy} title=&quot;Auto-deploy">Deploy</button>
+          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={copyPath} title="Copy path">Copy</button>
+          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={clonePath} title="Create template">Template</button>
+          <button className="px-2 py-0.5 text-xs bg-emerald-100 rounded" onClick={deploy} title="Auto-deploy">Deploy</button>
         </div>
       </div>
       {hasChildren && open && (
         <div className="ml-4 border-l pl-2">
           {node.children!.map((child) => (
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
-=======
 ;
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {;
   const [open, setOpen] = useState<boolean>(false),;
@@ -130,7 +108,6 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         <div className="ml-4 border-l pl-2">;
           {node.children!.map((child) => (;
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           ))}
         </div>;
       )}

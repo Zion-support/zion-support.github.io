@@ -86,7 +86,6 @@ export function ContactPublisherModal({;
       e.stopPropagation();
       onClose();
     }
-<<<<<<< HEAD
   },
 
   return (
@@ -94,136 +93,68 @@ export function ContactPublisherModal({;
     <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
         <DialogContent
-          className=&quot;bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md&quot;
+          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown={handleKeyDown}
-          aria-modal=&quot;true&quot;
-          aria-labelledby=&quot;contact-publisher-title&quot;
+          aria-modal="true"
+          aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
-            <DialogTitle id=&quot;contact-publisher-title&quot; className=&quot;text-xl font-bold text-white flex items-center gap-2&quot;>
-              <Mail className=&quot;h-5 w-5 text-zion-cyan&quot; />
+            <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2">
+              <Mail className="h-5 w-5 text-zion-cyan" />
               Contact Publisher
             </DialogTitle>
           </DialogHeader>
-          {error && <p className=&quot;text-red-500 mb-2&quot;>{error}</p>}
+          {error && <p className="text-red-500 mb-2">{error}</p>}
           {publisherEmail && (
-            <div className=&quot;mb-4 text-zion-slate-light&quot;>
-            <span className=&quot;block&quot;>Email:</span>
-            <a href={`mailto:${publisherEmail}`} className=&quot;text-zion-cyan hover:underline truncate block&quot;>
+            <div className="mb-4 text-zion-slate-light">
+            <span className="block">Email:</span>
+            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
             </Link>
           </div>
         )}
         <Form {...form}>
-          <form onSubmit={(e) => e.preventDefault()} className=&quot;space-y-4&quot;>
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
             <FormField
               control={form.control}
-              name=&quot;subject&quot;
+              name="subject"
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder=&quot;Subject&quot;
-                      className=&quot;bg-zion-blue border-zion-blue-light text-white&quot;
+                      placeholder="Subject"
+                      className="bg-zion-blue border-zion-blue-light text-white"
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage className=&quot;text-red-500&quot; />
+                  <FormMessage className="text-red-500" />
                 </FormItem>
-=======
-  };
-  return (;
-    <>;
-    <Dialog open={isOpen} onOpenChange={onClose}>;
-      <FocusLock disabled={!isOpen} returnFocus>;
-        <DialogContent;
-          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md";
-          onKeyDown={handleKeyDown}
-          aria-modal="true";
-          aria-labelledby="contact-publisher-title";
-        >;
-          <DialogHeader>;
-            <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2">;
-              <Mail className="h-5 w-5 text-zion-cyan" />;
-              Contact Publisher;
-            </DialogTitle>;
-          </DialogHeader>;
-          {error && <p className="text-red-500 mb-2">{error}</p>}
-          {publisherEmail && (;
-            <div className="mb-4 text-zion-slate-light">;
-            <span className="block">Email:</span>;
-            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">;
-              {publisherEmail}
-            </a>;
-          </div>;
-        )}
-        <Form {...form}>;
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">;
-            <FormField;
-              control={form.control}
-              name="subject";
-              render={({ field }: { field: any }) => (;
-                <FormItem>;
-                  <FormLabel>Subject</FormLabel>;
-                  <FormControl>;
-                    <Input;
-                      placeholder="Subject";
-                      className="bg-zion-blue border-zion-blue-light text-white";
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage className="text-red-500" />;
-                </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             />;
             <FormField;
               control={form.control}
-<<<<<<< HEAD
-              name=&quot;message&quot;
+              name="message"
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder={`Message to ${publisherName}...`}
-                      className=&quot;bg-zion-blue border-zion-blue-light text-white min-h-[120px]&quot;
+                      className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage className=&quot;text-red-500&quot; />
+                  <FormMessage className="text-red-500" />
                 </FormItem>
-=======
-              name="message";
-              render={({ field }: { field: any }) => (;
-                <FormItem>;
-                  <FormLabel>Message</FormLabel>;
-                  <FormControl>;
-                    <Textarea;
-                      placeholder={`Message to ${publisherName}...`}
-                      className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]";
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage className="text-red-500" />;
-                </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             />;
             <Button;
               onClick={handleSend}
-<<<<<<< HEAD
-              className=&quot;w-full&quot;
+              className="w-full"
               disabled={!form.formState.isValid || isSubmitting}
             >
-              <SendIcon className=&quot;mr-2&quot; />
-=======
-              className="w-full";
-              disabled={!form.formState.isValid || isSubmitting}
-            >;
-              <SendIcon className="mr-2" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>;
           </form>;

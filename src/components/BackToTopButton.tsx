@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 import { ArrowUp } from 'lucide-react'
-<<<<<<< HEAD
 import { useEffect, useState } from "react",
-=======
-import { useEffect, useState } from &quot;react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export function BackToTopButton() {
   const [visible, setVisible] = useState(false),
 
   useEffect(() => {
     const updateVisibility = () => {
-<<<<<<< HEAD
       setVisible(window.scrollY > 400)
     },
     updateVisibility(),
@@ -25,34 +19,18 @@ export function BackToTopButton() {
     document.documentElement.scrollTo(opts),
     document.body.scrollTo(opts)
   },
-=======
-      setVisible(window.scrollY > 400);
-    };
-    updateVisibility();
-    window.addEventListener(&quot;scroll&quot;, updateVisibility);
-    return () => window.removeEventListener(&quot;scroll&quot;, updateVisibility);
-  }, []);
-
-  const scrollToTop = () => {
-    const opts: ScrollToOptions = { top: 0, behavior: &quot;smooth&quot; };
-    window.scrollTo(opts);
-    document.documentElement.scrollTo(opts);
-    document.body.scrollTo(opts);
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
     <button
-      aria-label=&quot;Back to top&quot;
+      aria-label="Back to top"
       onClick={scrollToTop}
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
-        visible ? &quot;opacity-100&quot; : &quot;opacity-0 pointer-events-none&quot;
+        visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
-      <ArrowUp className=&quot;h-5 w-5&quot; />
+      <ArrowUp className="h-5 w-5" />
     </button>
   )
-=======
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from "react",;
 export function BackToTopButton() {;
@@ -82,6 +60,5 @@ export function BackToTopButton() {;
       <ArrowUp className="h-5 w-5" />;
     </button>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

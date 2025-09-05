@@ -30,54 +30,43 @@ interface Service {;
   badge?: string,;
   icon?: React.ReactNode;
 }
-<<<<<<< HEAD
 
 const allServices: Service[] = [
   ...innovativeRealMicroSaasServices2025.map(service => ({
     ...service,
     category: 'Micro SAAS',
-    icon: <Rocket className=&quot;w-6 h-6&quot; />
+    icon: <Rocket className="w-6 h-6" />
   })),
   ...innovativeAIServicesEnhanced2025.map(service => ({
     ...service,
     category: 'AI & Consciousness',
-    icon: <Brain className=&quot;w-6 h-6&quot; />
+    icon: <Brain className="w-6 h-6" />
   })),
   ...innovativeITServicesEnhanced2025.map(service => ({
     ...service,
     category: 'Enterprise IT',
-    icon: <Shield className=&quot;w-6 h-6&quot; />
+    icon: <Shield className="w-6 h-6" />
   })),
   ...emergingTechServicesEnhanced2025.map(service => ({
     ...service,
     category: 'Quantum & Emerging Tech',
-    icon: <Atom className=&quot;w-6 h-6&quot; />
+    icon: <Atom className="w-6 h-6" />
   }))
 ],
 
 const categories = [
-<<<<<<< HEAD
   { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length },
   { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovativeRealMicroSaasServices2025.length },
   { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025.length },
   { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length },
   { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
 ],
-=======
-  { name: 'All Services', icon: <Globe className=&quot;w-5 h-5&quot; />, count: allServices.length },
-  { name: 'Micro SAAS', icon: <Rocket className=&quot;w-5 h-5&quot; />, count: innovativeRealMicroSaasServices2025.length },
-  { name: 'AI & Consciousness', icon: <Brain className=&quot;w-5 h-5&quot; />, count: innovativeAIServicesEnhanced2025.length },
-  { name: 'Enterprise IT', icon: <Shield className=&quot;w-5 h-5&quot; />, count: innovativeITServicesEnhanced2025.length },
-  { name: 'Quantum & Emerging Tech', icon: <Atom className=&quot;w-5 h-5&quot; />, count: emergingTechServicesEnhanced2025.length }
-];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 const priceRanges = [
   { label: 'All Prices', value: 'all' },
   { label: 'Under $50/month', value: 'under-50' },
   { label: '$50 - $200/month', value: '50-200' },
   { label: '$200 - $500/month', value: '200-500' },
-=======
 ;
 const allServices: Service[] = [;
   ...innovativeRealMicroSaasServices2025.map(service => ({;
@@ -113,7 +102,6 @@ const priceRanges = [;
   { label: 'Under $50/month', value: 'under-50' },;
   { label: '$50 - $200/month', value: '50-200' },;
   { label: '$200 - $500/month', value: '200-500' },;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   { label: 'Over $500/month', value: 'over-500' }
 ],;
 const sortOptions = [;
@@ -186,24 +174,15 @@ export default function ComprehensiveServicesShowcase2025() {;
       case 'Quantum & Emerging Tech': return 'from-orange-500 to-red-500',;
       default: return 'from-gray-500 to-slate-500';
     }
-<<<<<<< HEAD
   },
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-<<<<<<< HEAD
       case 'Micro SAAS': return <Rocket className="w-5 h-5" />,
       case 'AI & Consciousness': return <Brain className="w-5 h-5" />,
       case 'Enterprise IT': return <Shield className="w-5 h-5" />,
       case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />,
       default: return <Globe className="w-5 h-5" />
-=======
-      case 'Micro SAAS': return <Rocket className=&quot;w-5 h-5&quot; />;
-      case 'AI & Consciousness': return <Brain className=&quot;w-5 h-5&quot; />;
-      case 'Enterprise IT': return <Shield className=&quot;w-5 h-5&quot; />;
-      case 'Quantum & Emerging Tech': return <Atom className=&quot;w-5 h-5&quot; />;
-      default: return <Globe className=&quot;w-5 h-5&quot; />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -211,28 +190,27 @@ export default function ComprehensiveServicesShowcase2025() {;
     <Layout>
       <Head>
         <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group&quot; />
+        <meta name="description" content="Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs." />
+        <meta name="keywords" content="micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group" />
       </Head>
 
       {/* Hero Section */}
-      <div className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden&quot;>
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
-        <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black&quot;>
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]&quot;></div>
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1),transparent_50%)]&quot;></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
         </div>
         
         {/* Floating Elements */}
-        <div className=&quot;absolute inset-0 overflow-hidden&quot;>
+        <div className="absolute inset-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className=&quot;absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20&quot;
+              className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20"
               animate={{
                 x: [0, 100, 0],
                 y: [0, -100, 0],
-=======
   },;
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
@@ -266,7 +244,6 @@ export default function ComprehensiveServicesShowcase2025() {;
               animate={{;
                 x: [0, 100, 0],;
                 y: [0, -100, 0],;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 opacity: [0.2, 0.8, 0.2]}}
               transition={{;
                 duration: 10 + i * 2,;
@@ -277,99 +254,58 @@ export default function ComprehensiveServicesShowcase2025() {;
                 top: `${Math.random() * 100}%`}}
             />;
           ))}
-<<<<<<< HEAD
         </div>
 
-        <div className=&quot;relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto&quot;>
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className=&quot;text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6&quot;>
-              <span className=&quot;bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Comprehensive
               </span>
               <br />
-              <span className=&quot;text-white&quot;>Services Showcase</span>
+              <span className="text-white">Services Showcase</span>
             </h1>
-            <p className=&quot;text-xl sm:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto&quot;>
+            <p className="text-xl sm:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
               Discover our complete portfolio of {allServices.length}+ innovative micro SAAS, AI, IT, and emerging technology services
             </p>
             
             {/* Stats */}
-            <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-12&quot;>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               {[
-                { label: 'Total Services', value: allServices.length, icon: <Globe className=&quot;w-8 h-8&quot; /> },
-                { label: 'AI Solutions', value: innovativeAIServicesEnhanced2025.length, icon: <Brain className=&quot;w-8 h-8&quot; /> },
-                { label: 'IT Services', value: innovativeITServicesEnhanced2025.length, icon: <Shield className=&quot;w-8 h-8&quot; /> },
-                { label: 'Emerging Tech', value: emergingTechServicesEnhanced2025.length, icon: <Atom className=&quot;w-8 h-8&quot; /> }
+                { label: 'Total Services', value: allServices.length, icon: <Globe className="w-8 h-8" /> },
+                { label: 'AI Solutions', value: innovativeAIServicesEnhanced2025.length, icon: <Brain className="w-8 h-8" /> },
+                { label: 'IT Services', value: innovativeITServicesEnhanced2025.length, icon: <Shield className="w-8 h-8" /> },
+                { label: 'Emerging Tech', value: emergingTechServicesEnhanced2025.length, icon: <Atom className="w-8 h-8" /> }
               ].map((stat, index) => (
                 <motion.div
-=======
-        </div>;
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >;
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">;
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
-                Comprehensive;
-              </span>;
-              <br />;
-              <span className="text-white">Services Showcase</span>;
-            </h1>;
-            <p className="text-xl sm:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">;
-              Discover our complete portfolio of {allServices.length}+ innovative micro SAAS, AI, IT, and emerging technology services;
-            </p>;
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">;
-              {[;
-                { label: 'Total Services', value: allServices.length, icon: <Globe className="w-8 h-8" /> },;
-                { label: 'AI Solutions', value: innovativeAIServicesEnhanced2025.length, icon: <Brain className="w-8 h-8" /> },;
-                { label: 'IT Services', value: innovativeITServicesEnhanced2025.length, icon: <Shield className="w-8 h-8" /> },;
-                { label: 'Emerging Tech', value: emergingTechServicesEnhanced2025.length, icon: <Atom className="w-8 h-8" /> }
-              ].map((stat, index) => (;
-                <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
-<<<<<<< HEAD
-                  className=&quot;text-center&quot;
+                  className="text-center"
                 >
-                  <div className=&quot;inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400&quot;>
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400">
                     {stat.icon}
                   </div>
-                  <div className=&quot;text-3xl font-bold text-white mb-1&quot;>{stat.value}</div>
-                  <div className=&quot;text-sm text-cyan-300&quot;>{stat.label}</div>
+                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-sm text-cyan-300">{stat.label}</div>
                 </motion.div>
-=======
-                  className="text-center";
-                >;
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400">;
-                    {stat.icon}
-                  </div>;
-                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>;
-                  <div className="text-sm text-cyan-300">{stat.label}</div>;
-                </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </div>;
             {/* Search Bar */}
-<<<<<<< HEAD
-            <div className=&quot;max-w-2xl mx-auto&quot;>
-              <div className=&quot;relative&quot;>
-                <Search className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
-                  type=&quot;text&quot;
-                  placeholder=&quot;Search for services, features, or solutions...&quot;
+                  type="text"
+                  placeholder="Search for services, features, or solutions..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className=&quot;w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50&quot;
+                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 />
               </div>
             </div>
@@ -378,38 +314,13 @@ export default function ComprehensiveServicesShowcase2025() {;
       </div>
 
       {/* Filters and Controls */}
-      <div className=&quot;bg-black/50 backdrop-blur-lg border-b border-cyan-500/20 sticky top-20 z-40&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6&quot;>
-          <div className=&quot;flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0&quot;>
+      <div className="bg-black/50 backdrop-blur-lg border-b border-cyan-500/20 sticky top-20 z-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
             {/* Category Filters */}
-            <div className=&quot;flex flex-wrap items-center space-x-2&quot;>
+            <div className="flex flex-wrap items-center space-x-2">
               {categories.map((category) => (
                 <button
-=======
-            <div className="max-w-2xl mx-auto">;
-              <div className="relative">;
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-                <input;
-                  type="text";
-                  placeholder="Search for services, features, or solutions...";
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";
-                />;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </div>;
-      {/* Filters and Controls */}
-      <div className="bg-black/50 backdrop-blur-lg border-b border-cyan-500/20 sticky top-20 z-40">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">;
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">;
-            {/* Category Filters */}
-            <div className="flex flex-wrap items-center space-x-2">;
-              {categories.map((category) => (;
-                <button;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
@@ -419,39 +330,23 @@ export default function ComprehensiveServicesShowcase2025() {;
                   }`}
                 >;
                   {category.icon}
-<<<<<<< HEAD
                   <span>{category.name}</span>
-                  <span className=&quot;bg-white/20 px-2 py-1 rounded-full text-xs&quot;>
-=======
-                  <span>{category.name}</span>;
-                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}
                   </span>;
                 </button>;
               ))}
             </div>;
             {/* Price and Sort Controls */}
-<<<<<<< HEAD
-            <div className=&quot;flex flex-wrap items-center space-x-4&quot;>
-=======
-            <div className="flex flex-wrap items-center space-x-4">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            <div className="flex flex-wrap items-center space-x-4">
               {/* Price Range Filter */}
               <select;
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
-<<<<<<< HEAD
-                className=&quot;px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50&quot;
+                className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
               >
                 {priceRanges.map((range) => (
-                  <option key={range.value} value={range.value} className=&quot;bg-gray-900 text-white&quot;>
-=======
-                className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50";
-              >;
-                {priceRanges.map((range) => (;
-                  <option key={range.value} value={range.value} className="bg-gray-900 text-white">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  <option key={range.value} value={range.value} className="bg-gray-900 text-white">
                     {range.label}
                   </option>;
                 ))}
@@ -460,55 +355,35 @@ export default function ComprehensiveServicesShowcase2025() {;
               <select;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-<<<<<<< HEAD
-                className=&quot;px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50&quot;
+                className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
               >
                 {sortOptions.map((option) => (
-                  <option key={option.value} value={option.value} className=&quot;bg-gray-900 text-white&quot;>
-=======
-                className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50";
-              >;
-                {sortOptions.map((option) => (;
-                  <option key={option.value} value={option.value} className="bg-gray-900 text-white">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  <option key={option.value} value={option.value} className="bg-gray-900 text-white">
                     {option.label}
                   </option>;
                 ))}
               </select>;
               {/* View Mode Toggle */}
-<<<<<<< HEAD
-              <div className=&quot;flex items-center space-x-1 bg-white/10 rounded-lg p-1&quot;>
+              <div className="flex items-center space-x-1 bg-white/10 rounded-lg p-1">
                 <button
-=======
-              <div className="flex items-center space-x-1 bg-white/10 rounded-lg p-1">;
-                <button;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-200 ${;
                     viewMode === 'grid';
                       ? 'bg-cyan-500 text-white';
                       : 'text-gray-400 hover:text-white';
                   }`}
-<<<<<<< HEAD
                 >
-                  <Grid3X3 className=&quot;w-4 h-4&quot; />
+                  <Grid3X3 className="w-4 h-4" />
                 </button>
                 <button
-=======
-                >;
-                  <Grid3X3 className="w-4 h-4" />;
-                </button>;
-                <button;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-all duration-200 ${;
                     viewMode === 'list';
                       ? 'bg-cyan-500 text-white';
                       : 'text-white';
                   }`}
-<<<<<<< HEAD
                 >
-                  <List className=&quot;w-4 h-4&quot; />
+                  <List className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -517,351 +392,180 @@ export default function ComprehensiveServicesShowcase2025() {;
       </div>
 
       {/* Services Grid/List */}
-      <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12&quot;>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Results Count */}
-        <div className=&quot;mb-8&quot;>
-          <p className=&quot;text-gray-400&quot;>
+        <div className="mb-8">
+          <p className="text-gray-400">
             Showing {filteredServices.length} of {allServices.length} services
           </p>
         </div>
 
         {viewMode === 'grid' ? (
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
-=======
-                >;
-                  <List className="w-4 h-4" />;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Services Grid/List */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
-        {/* Results Count */}
-        <div className="mb-8">;
-          <p className="text-gray-400">;
-            Showing {filteredServices.length} of {allServices.length} services;
-          </p>;
-        </div>;
-        {viewMode === 'grid' ? (;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {filteredServices.map((service, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                className=&quot;group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300&quot;
+                className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
               >
                 {/* Category Badge */}
-                <div className=&quot;absolute top-4 right-4&quot;>
+                <div className="absolute top-4 right-4">
                   <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
                     {getCategoryIcon(service.category)}
-                    <span className=&quot;ml-2&quot;>{service.category}</span>
+                    <span className="ml-2">{service.category}</span>
                   </span>
                 </div>
 
                 {/* Service Icon */}
-                <div className=&quot;mb-4&quot;>
-                  <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300&quot;>
-=======
-                className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300";
-              >;
-                {/* Category Badge */}
-                <div className="absolute top-4 right-4">;
-                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>;
-                    {getCategoryIcon(service.category)}
-                    <span className="ml-2">{service.category}</span>;
-                  </span>;
-                </div>;
-                {/* Service Icon */}
-                <div className="mb-4">;
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                <div className="mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>;
                 </div>;
                 {/* Service Info */}
-<<<<<<< HEAD
-                <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">
                   {service.name}
                 </h3>
-                <p className=&quot;text-gray-400 mb-3 line-clamp-2&quot;>
+                <p className="text-gray-400 mb-3 line-clamp-2">
                   {service.tagline}
                 </p>
-                <p className=&quot;text-sm text-gray-500 mb-4 line-clamp-3&quot;>
-=======
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">;
-                  {service.name}
-                </h3>;
-                <p className="text-gray-400 mb-3 line-clamp-2">;
-                  {service.tagline}
-                </p>;
-                <p className="text-sm text-gray-500 mb-4 line-clamp-3">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                <p className="text-sm text-gray-500 mb-4 line-clamp-3">
                   {service.description}
                 </p>;
                 {/* Price */}
-<<<<<<< HEAD
-                <div className=&quot;mb-4&quot;>
-                  <span className=&quot;text-2xl font-bold text-cyan-400&quot;>{service.price}</span>
-                  <span className=&quot;text-gray-500 text-sm ml-2&quot;>/month</span>
+                <div className="mb-4">
+                  <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                  <span className="text-gray-500 text-sm ml-2">/month</span>
                 </div>
 
                 {/* Stats */}
-                <div className=&quot;flex items-center justify-between mb-4 text-sm&quot;>
-                  <div className=&quot;flex items-center space-x-1 text-yellow-400&quot;>
-                    <Star className=&quot;w-4 h-4 fill-current&quot; />
-                    <span className=&quot;text-white&quot;>{service.rating}</span>
-                    <span className=&quot;text-gray-500&quot;>({service.reviews})</span>
+                <div className="flex items-center justify-between mb-4 text-sm">
+                  <div className="flex items-center space-x-1 text-yellow-400">
+                    <Star className="w-4 h-4 fill-current" />
+                    <span className="text-white">{service.rating}</span>
+                    <span className="text-gray-500">({service.reviews})</span>
                   </div>
-                  <div className=&quot;flex items-center space-x-1 text-gray-400&quot;>
-                    <Users className=&quot;w-4 h-4&quot; />
+                  <div className="flex items-center space-x-1 text-gray-400">
+                    <Users className="w-4 h-4" />
                     <span>{service.customers.toLocaleString()}</span>
                   </div>
                 </div>
 
                 {/* Features Preview */}
-                <div className=&quot;mb-4&quot;>
-                  <div className=&quot;text-xs text-gray-500 mb-2&quot;>Key Features:</div>
-                  <div className=&quot;space-y-1&quot;>
+                <div className="mb-4">
+                  <div className="text-xs text-gray-500 mb-2">Key Features:</div>
+                  <div className="space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className=&quot;flex items-center space-x-2 text-sm text-gray-400&quot;>
-                        <CheckCircle className=&quot;w-3 h-3 text-cyan-400&quot; />
-                        <span className=&quot;line-clamp-1&quot;>{feature}</span>
+                      <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
+                        <CheckCircle className="w-3 h-3 text-cyan-400" />
+                        <span className="line-clamp-1">{feature}</span>
                       </div>
                     ))}
                     {service.features.length > 3 && (
-                      <div className=&quot;text-xs text-cyan-400&quot;>
+                      <div className="text-xs text-cyan-400">
                         +{service.features.length - 3} more features
                       </div>
-=======
-                <div className="mb-4">;
-                  <span className="text-2xl font-bold text-cyan-400">{service.price}</span>;
-                  <span className="text-gray-500 text-sm ml-2">/month</span>;
-                </div>;
-                {/* Stats */}
-                <div className="flex items-center justify-between mb-4 text-sm">;
-                  <div className="flex items-center space-x-1 text-yellow-400">;
-                    <Star className="w-4 h-4 fill-current" />;
-                    <span className="text-white">{service.rating}</span>;
-                    <span className="text-gray-500">({service.reviews})</span>;
-                  </div>;
-                  <div className="flex items-center space-x-1 text-gray-400">;
-                    <Users className="w-4 h-4" />;
-                    <span>{service.customers.toLocaleString()}</span>;
-                  </div>;
-                </div>;
-                {/* Features Preview */}
-                <div className="mb-4">;
-                  <div className="text-xs text-gray-500 mb-2">Key Features:</div>;
-                  <div className="space-y-1">;
-                    {service.features.slice(0, 3).map((feature, idx) => (;
-                      <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">;
-                        <CheckCircle className="w-3 h-3 text-cyan-400" />;
-                        <span className="line-clamp-1">{feature}</span>;
-                      </div>;
-                    ))}
-                    {service.features.length > 3 && (;
-                      <div className="text-xs text-cyan-400">;
-                        +{service.features.length - 3} more features;
-                      </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     )}
                   </div>;
                 </div>;
                 {/* Market Info */}
-<<<<<<< HEAD
-                <div className=&quot;mb-4 text-xs text-gray-500&quot;>
-                  <div className=&quot;flex items-center justify-between&quot;>
+                <div className="mb-4 text-xs text-gray-500">
+                  <div className="flex items-center justify-between">
                     <span>Market Size: {service.marketSize}</span>
                     <span>Growth: {service.growthRate}</span>
                   </div>
                 </div>
 
                 {/* CTA Button */}
-                <button className=&quot;w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105&quot;>
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
                   Learn More
                 </button>
               </motion.div>
             ))}
           </div>
         ) : (
-          <div className=&quot;space-y-6&quot;>
+          <div className="space-y-6">
             {filteredServices.map((service, index) => (
               <motion.div
-=======
-                <div className="mb-4 text-xs text-gray-500">;
-                  <div className="flex items-center justify-between">;
-                    <span>Market Size: {service.marketSize}</span>;
-                    <span>Growth: {service.growthRate}</span>;
-                  </div>;
-                </div>;
-                {/* CTA Button */}
-                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">;
-                  Learn More;
-                </button>;
-              </motion.div>;
-            ))}
-          </div>;
-        ) : (;
-          <div className="space-y-6">;
-            {filteredServices.map((service, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={service.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                className=&quot;group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300&quot;
+                className="group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300"
               >
-                <div className=&quot;flex items-start space-x-6&quot;>
+                <div className="flex items-start space-x-6">
                   {/* Service Icon */}
-                  <div className=&quot;flex-shrink-0&quot;>
-                    <div className=&quot;w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300&quot;>
-=======
-                className="group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300";
-              >;
-                <div className="flex items-start space-x-6">;
-                  {/* Service Icon */}
-                  <div className="flex-shrink-0">;
-                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  <div className="flex-shrink-0">
+                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div>;
                   </div>;
                   {/* Service Details */}
-<<<<<<< HEAD
-                  <div className=&quot;flex-1 min-w-0&quot;>
-                    <div className=&quot;flex items-start justify-between mb-3&quot;>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-start justify-between mb-3">
                       <div>
-                        <h3 className=&quot;text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
+                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">
                           {service.name}
                         </h3>
-                        <p className=&quot;text-lg text-cyan-300 mb-2&quot;>
+                        <p className="text-lg text-cyan-300 mb-2">
                           {service.tagline}
                         </p>
-                        <p className=&quot;text-gray-400 mb-4&quot;>
+                        <p className="text-gray-400 mb-4">
                           {service.description}
                         </p>
                       </div>
-                      <div className=&quot;text-right&quot;>
-                        <div className=&quot;text-3xl font-bold text-cyan-400 mb-2&quot;>{service.price}</div>
-                        <div className=&quot;text-gray-500 text-sm&quot;>/month</div>
+                      <div className="text-right">
+                        <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                        <div className="text-gray-500 text-sm">/month</div>
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white mt-2`}>
-=======
-                  <div className="flex-1 min-w-0">;
-                    <div className="flex items-start justify-between mb-3">;
-                      <div>;
-                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">;
-                          {service.name}
-                        </h3>;
-                        <p className="text-lg text-cyan-300 mb-2">;
-                          {service.tagline}
-                        </p>;
-                        <p className="text-gray-400 mb-4">;
-                          {service.description}
-                        </p>;
-                      </div>;
-                      <div className="text-right">;
-                        <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>;
-                        <div className="text-gray-500 text-sm">/month</div>;
-                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white mt-2`}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                           {service.category}
                         </span>;
                       </div>;
                     </div>;
                     {/* Stats Row */}
-<<<<<<< HEAD
-                    <div className=&quot;flex items-center space-x-8 mb-4 text-sm&quot;>
-                      <div className=&quot;flex items-center space-x-1 text-yellow-400&quot;>
-                        <Star className=&quot;w-4 h-4 fill-current&quot; />
-                        <span className=&quot;text-white font-medium&quot;>{service.rating}</span>
-                        <span className=&quot;text-gray-500&quot;>({service.reviews} reviews)</span>
+                    <div className="flex items-center space-x-8 mb-4 text-sm">
+                      <div className="flex items-center space-x-1 text-yellow-400">
+                        <Star className="w-4 h-4 fill-current" />
+                        <span className="text-white font-medium">{service.rating}</span>
+                        <span className="text-gray-500">({service.reviews} reviews)</span>
                       </div>
-                      <div className=&quot;flex items-center space-x-1 text-gray-400&quot;>
-                        <Users className=&quot;w-4 h-4&quot; />
-                        <span className=&quot;text-white font-medium&quot;>{service.customers.toLocaleString()}</span>
-                        <span className=&quot;text-gray-500&quot;>customers</span>
+                      <div className="flex items-center space-x-1 text-gray-400">
+                        <Users className="w-4 h-4" />
+                        <span className="text-white font-medium">{service.customers.toLocaleString()}</span>
+                        <span className="text-gray-500">customers</span>
                       </div>
-                      <div className=&quot;flex items-center space-x-1 text-gray-400&quot;>
-                        <TrendingUp className=&quot;w-4 h-4&quot; />
-                        <span className=&quot;text-white font-medium&quot;>{service.growthRate}</span>
-                        <span className=&quot;text-gray-500&quot;>growth</span>
+                      <div className="flex items-center space-x-1 text-gray-400">
+                        <TrendingUp className="w-4 h-4" />
+                        <span className="text-white font-medium">{service.growthRate}</span>
+                        <span className="text-gray-500">growth</span>
                       </div>
-                      <div className=&quot;flex items-center space-x-1 text-gray-400&quot;>
-                        <Globe className=&quot;w-4 h-4&quot; />
-                        <span className=&quot;text-white font-medium&quot;>{service.marketSize}</span>
-                        <span className=&quot;text-gray-500&quot;>market</span>
+                      <div className="flex items-center space-x-1 text-gray-400">
+                        <Globe className="w-4 h-4" />
+                        <span className="text-white font-medium">{service.marketSize}</span>
+                        <span className="text-gray-500">market</span>
                       </div>
                     </div>
 
                     {/* Features */}
-                    <div className=&quot;mb-4&quot;>
-                      <div className=&quot;text-sm text-gray-500 mb-2&quot;>Key Features:</div>
-                      <div className=&quot;grid grid-cols-2 gap-2&quot;>
+                    <div className="mb-4">
+                      <div className="text-sm text-gray-500 mb-2">Key Features:</div>
+                      <div className="grid grid-cols-2 gap-2">
                         {service.features.slice(0, 6).map((feature, idx) => (
-                          <div key={idx} className=&quot;flex items-center space-x-2 text-sm text-gray-400&quot;>
-                            <CheckCircle className=&quot;w-3 h-3 text-cyan-400 flex-shrink-0&quot; />
+                          <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
+                            <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0" />
                             <span>{feature}</span>
                           </div>
-=======
-                    <div className="flex items-center space-x-8 mb-4 text-sm">;
-                      <div className="flex items-center space-x-1 text-yellow-400">;
-                        <Star className="w-4 h-4 fill-current" />;
-                        <span className="text-white font-medium">{service.rating}</span>;
-                        <span className="text-gray-500">({service.reviews} reviews)</span>;
-                      </div>;
-                      <div className="flex items-center space-x-1 text-gray-400">;
-                        <Users className="w-4 h-4" />;
-                        <span className="text-white font-medium">{service.customers.toLocaleString()}</span>;
-                        <span className="text-gray-500">customers</span>;
-                      </div>;
-                      <div className="flex items-center space-x-1 text-gray-400">;
-                        <TrendingUp className="w-4 h-4" />;
-                        <span className="text-white font-medium">{service.growthRate}</span>;
-                        <span className="text-gray-500">growth</span>;
-                      </div>;
-                      <div className="flex items-center space-x-1 text-gray-400">;
-                        <Globe className="w-4 h-4" />;
-                        <span className="text-white font-medium">{service.marketSize}</span>;
-                        <span className="text-gray-500">market</span>;
-                      </div>;
-                    </div>;
-                    {/* Features */}
-                    <div className="mb-4">;
-                      <div className="text-sm text-gray-500 mb-2">Key Features:</div>;
-                      <div className="grid grid-cols-2 gap-2">;
-                        {service.features.slice(0, 6).map((feature, idx) => (;
-                          <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">;
-                            <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0" />;
-                            <span>{feature}</span>;
-                          </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                         ))}
                       </div>;
                     </div>;
                     {/* CTA */}
-<<<<<<< HEAD
-                    <div className=&quot;flex items-center justify-between&quot;>
-                      <button className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105&quot;>
+                    <div className="flex items-center justify-between">
+                      <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
                         Learn More
                       </button>
-                      <div className=&quot;text-xs text-gray-500&quot;>
-=======
-                    <div className="flex items-center justify-between">;
-                      <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">;
-                        Learn More;
-                      </button>;
-                      <div className="text-xs text-gray-500">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                      <div className="text-xs text-gray-500">
                         Launched: {new Date(service.launchDate).toLocaleDateString()}
                       </div>;
                     </div>;
@@ -873,14 +577,13 @@ export default function ComprehensiveServicesShowcase2025() {;
         )}
 ;
         {/* No Results */}
-<<<<<<< HEAD
         {filteredServices.length === 0 && (
-          <div className=&quot;text-center py-20&quot;>
-            <div className=&quot;w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6&quot;>
-              <Search className=&quot;w-12 h-12 text-cyan-400&quot; />
+          <div className="text-center py-20">
+            <div className="w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Search className="w-12 h-12 text-cyan-400" />
             </div>
-            <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No services found</h3>
-            <p className=&quot;text-gray-400 mb-6&quot;>
+            <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+            <p className="text-gray-400 mb-6">
               Try adjusting your search terms or filters to find what you're looking for.
             </p>
             <button
@@ -889,72 +592,39 @@ export default function ComprehensiveServicesShowcase2025() {;
                 setSelectedCategory('All Services'),
                 setSelectedPriceRange('all')
               }}
-              className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200&quot;
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
             >
               Clear All Filters
             </button>
           </div>
-=======
-        {filteredServices.length === 0 && (;
-          <div className="text-center py-20">;
-            <div className="w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
-              <Search className="w-12 h-12 text-cyan-400" />;
-            </div>;
-            <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
-            <p className="text-gray-400 mb-6">;
-              Try adjusting your search terms or filters to find what you're looking for.;
-            </p>;
-            <button;
-              onClick={() => {;
-                setSearchTerm('');
-                setSelectedCategory('All Services');
-                setSelectedPriceRange('all');
-              }}
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200";
-            >;
-              Clear All Filters;
-            </button>;
-          </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       </div>;
       {/* CTA Section */}
-<<<<<<< HEAD
-      <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center&quot;>
+      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <motion.div
-=======
-      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
           >
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
+            <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className=&quot;text-xl text-cyan-300 mb-8 max-w-3xl mx-auto&quot;>
+            <p className="text-xl text-cyan-300 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement the perfect solution for your needs. 
               Get in touch today and discover how our innovative services can drive your success.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-=======
-            <div className=&quot;flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               <a
-                href=&quot;/contact&quot;
-                className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105&quot;
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
                 Get Started Today
               </a>
               <a
-                href=&quot;/pricing&quot;
-                className=&quot;border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200&quot;
+                href="/pricing"
+                className="border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200"
               >
                 View Pricing Plans
               </a>
@@ -964,7 +634,6 @@ export default function ComprehensiveServicesShowcase2025() {;
       </div>
     </Layout>
   )
-=======
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Business?;
@@ -992,6 +661,5 @@ export default function ComprehensiveServicesShowcase2025() {;
       </div>;
     </Layout>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
-<<<<<<< HEAD
 interface NavItem {
   label: string;
   href: string;
   children?: NavItem[];
 }
 
-<<<<<<< HEAD
 interface InteractiveNavigationProps {
   items: NavItem[];
   className?: string;
@@ -128,30 +126,22 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
 };
 
 export default InteractiveNavigation;
-<<<<<<< HEAD
-=======
-export default InteractiveNavigation;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
 import React, { useState } from 'react';
 
 export default function InteractiveNavigation() {
   const [open, setOpen] = useState(false);
   return (
     <div>
-      <a href=&quot;#main&quot; className=&quot;sr-only focus:not-sr-only&quot;>Skip to content</a>
-      <button className=&quot;md:hidden px-3 py-2 border rounded&quot; onClick={() => setOpen(!open)}>Menu</button>
+      <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a>
+      <button className="md:hidden px-3 py-2 border rounded" onClick={() => setOpen(!open)}>Menu</button>
       {open && (
-        <div className=&quot;md:hidden mt-2 space-y-2&quot;>
-          <a href=&quot;/talent&quot; className=&quot;block&quot;>Browse Talent</a>
-          <a href=&quot;/jobs&quot; className=&quot;block&quot;>Browse Jobs</a>
+        <div className="md:hidden mt-2 space-y-2">
+          <a href="/talent" className="block">Browse Talent</a>
+          <a href="/jobs" className="block">Browse Jobs</a>
         </div>
       )}
     </div>
   );
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 const InteractiveNavigation = () => {},;
 export default InteractiveNavigation;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

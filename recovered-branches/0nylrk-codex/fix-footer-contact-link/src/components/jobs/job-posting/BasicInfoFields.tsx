@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
-=======
-import React, { useState } from &quot;react&quot;;
-import { Control } from &quot;react-hook-form&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
   FormField,
   FormItem, 
   FormLabel, 
   FormControl, 
   FormMessage 
-<<<<<<< HEAD
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
 import { Card, CardContent } from "@/components/ui/card",
-=======
-} from &quot;@/components/ui/form&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { ClientBudgetRecommender } from &quot;@/components/pricing/ClientBudgetRecommender&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface BasicInfoFieldsProps {
   control: Control<any>
 }
 
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
-<<<<<<< HEAD
   const [minBudget, setMinBudget] = useState<string>(""),
   const [maxBudget, setMaxBudget] = useState<string>(""),
-=======
-  const [minBudget, setMinBudget] = useState<string>("&quot;);
-  const [maxBudget, setMaxBudget] = useState<string>("&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleSuggestionApplied = (min: number, max: number) => {
     setMinBudget(min.toString()),
@@ -43,19 +25,18 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
   },
 
   return (
-    <div className=&quot;space-y-4&quot;>
+    <div className="space-y-4">
       <FormField
         control={control}
-        name=&quot;title&quot;
+        name="title"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Title</FormLabel>
             <FormControl>
-              <Input placeholder=&quot;e.g. Senior React Developer&quot; {...field} />
+              <Input placeholder="e.g. Senior React Developer" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
-=======
 import React, { useState } from "react",;
 import { Control } from "react-hook-form",;
 import {;
@@ -92,54 +73,40 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
             </FormControl>;
             <FormMessage />;
           </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       />;
       <FormField;
         control={control}
-<<<<<<< HEAD
-        name=&quot;company&quot;
+        name="company"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Company</FormLabel>
             <FormControl>
-              <Input placeholder=&quot;e.g. Acme Corporation&quot; {...field} />
+              <Input placeholder="e.g. Acme Corporation" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
-=======
-        name="company";
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Company</FormLabel>;
-            <FormControl>;
-              <Input placeholder="e.g. Acme Corporation" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       />;
       <FormField;
         control={control}
-<<<<<<< HEAD
-        name=&quot;category&quot;
+        name="category"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Category</FormLabel>
             <FormControl>
               <select
-                className=&quot;flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm&quot;
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                 {...field}
               >
-                <option value="&quot;>Select a category</option>
-                <option value=&quot;development&quot;>Development</option>
-                <option value=&quot;design&quot;>Design</option>
-                <option value=&quot;marketing&quot;>Marketing</option>
-                <option value=&quot;content&quot;>Content</option>
-                <option value=&quot;data&quot;>Data</option>
-                <option value=&quot;business&quot;>Business</option>
-                <option value=&quot;other">Other</option>
+                <option value="">Select a category</option>
+                <option value="development">Development</option>
+                <option value="design">Design</option>
+                <option value="marketing">Marketing</option>
+                <option value="content">Content</option>
+                <option value="data">Data</option>
+                <option value="business">Business</option>
+                <option value="other">Other</option>
               </select>
             </FormControl>
             <FormMessage />
@@ -147,53 +114,17 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         )}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <FormField
           control={control}
-          name=&quot;budgetMin&quot;
+          name="budgetMin"
           render={({ field: { onChange, ...rest } }) => (
             <FormItem>
               <FormLabel>Budget (Min)</FormLabel>
               <FormControl>
                 <Input
-                  type=&quot;number&quot;
-                  placeholder=&quot;e.g. 30&quot;
-=======
-        name="category";
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Job Category</FormLabel>;
-            <FormControl>;
-              <select;
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
-                {...field}
-              >;
-                <option value="">Select a category</option>;
-                <option value="development">Development</option>;
-                <option value="design">Design</option>;
-                <option value="marketing">Marketing</option>;
-                <option value="content">Content</option>;
-                <option value="data">Data</option>;
-                <option value="business">Business</option>;
-                <option value="other">Other</option>;
-              </select>;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
-        )}
-      />;
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-        <FormField;
-          control={control}
-          name="budgetMin";
-          render={({ field: { onChange, ...rest } }) => (;
-            <FormItem>;
-              <FormLabel>Budget (Min)</FormLabel>;
-              <FormControl>;
-                <Input;
-                  type="number";
-                  placeholder="e.g. 30";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  type="number"
+                  placeholder="e.g. 30"
                   value={minBudget || rest.value}
                   onChange={e => {;
                     setMinBudget(e.target.value),;
@@ -208,25 +139,14 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         />;
         <FormField;
           control={control}
-<<<<<<< HEAD
-          name=&quot;budgetMax&quot;
+          name="budgetMax"
           render={({ field: { onChange, ...rest } }) => (
             <FormItem>
               <FormLabel>Budget (Max)</FormLabel>
               <FormControl>
                 <Input
-                  type=&quot;number&quot;
-                  placeholder=&quot;e.g. 60"
-=======
-          name="budgetMax";
-          render={({ field: { onChange, ...rest } }) => (;
-            <FormItem>;
-              <FormLabel>Budget (Max)</FormLabel>;
-              <FormControl>;
-                <Input;
-                  type="number";
-                  placeholder="e.g. 60";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  type="number"
+                  placeholder="e.g. 60"
                   value={maxBudget || rest.value}
                   onChange={e => {;
                     setMaxBudget(e.target.value);
@@ -238,53 +158,30 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
               <FormMessage />;
             </FormItem>;
           )}
-<<<<<<< HEAD
         />
       </div>
       
       <Card>
-        <CardContent className="pt-4&quot;>
+        <CardContent className="pt-4">
           <ClientBudgetRecommender
-            jobTitle={control._formValues.title || "&quot;}
-            category={control._formValues.category || "&quot;}
-            experienceLevel={control._formValues.experienceLevel || "&quot;}
-=======
-        />;
-      </div>;
-      <Card>;
-        <CardContent className="pt-4">;
-          <ClientBudgetRecommender;
             jobTitle={control._formValues.title || ""}
             category={control._formValues.category || ""}
             experienceLevel={control._formValues.experienceLevel || ""}
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             onSuggestionApplied={handleSuggestionApplied}
           />;
         </CardContent>;
       </Card>;
       <FormField;
         control={control}
-<<<<<<< HEAD
-        name=&quot;location&quot;
+        name="location"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
-              <Input placeholder=&quot;e.g. Remote, San Francisco, etc.&quot; {...field} />
+              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
-=======
-        name="location";
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Location</FormLabel>;
-            <FormControl>;
-              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       />;
     </div>;

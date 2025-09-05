@@ -57,14 +57,13 @@ export function EducationForm({;
     } else {;
       onBack();
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;space-y-6&quot;>
+    <div className="space-y-6">
       <div>
-        <h2 className=&quot;text-xl font-semibold mb-2&quot;>Education</h2>
-        <p className=&quot;text-muted-foreground&quot;>
+        <h2 className="text-xl font-semibold mb-2">Education</h2>
+        <p className="text-muted-foreground">
           Add your educational background and academic achievements.
         </p>
       </div>
@@ -75,52 +74,23 @@ export function EducationForm({;
         onDelete={handleDelete}
       />
 
-      <div className=&quot;bg-muted/40 p-6 rounded-lg&quot;>
-        <h3 className=&quot;text-md font-medium mb-4&quot;>
-=======
-  };
-  return (;
-    <div className="space-y-6">;
-      <div>;
-        <h2 className="text-xl font-semibold mb-2">Education</h2>;
-        <p className="text-muted-foreground">;
-          Add your educational background and academic achievements.;
-        </p>;
-      </div>;
-      <EducationList;
-        educationEntries={educationEntries} ;
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />;
-      <div className="bg-muted/40 p-6 rounded-lg">;
-        <h3 className="text-md font-medium mb-4">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>;
         <EducationFormFields;
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
-<<<<<<< HEAD
         />
       </div>
 
       {!editingId && educationEntries.length > 0 && (
-        <div className=&quot;flex justify-end&quot;>
-          <Button type=&quot;button&quot; onClick={onComplete}>
+        <div className="flex justify-end">
+          <Button type="button" onClick={onComplete}>
             Next
           </Button>
         </div>
-=======
-        />;
-      </div>;
-      {!editingId && educationEntries.length > 0 && (;
-        <div className="flex justify-end">;
-          <Button type="button" onClick={onComplete}>;
-            Next;
-          </Button>;
-        </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
     </div>;
   );

@@ -79,27 +79,26 @@ export default function Careers() {;
         'Proven track record in B2B sales and business developmentExperience in technology or consulting industriesStrong networking and relationship-building skillsUnderstanding of emerging technologies and market trends';
       ];
     }
-<<<<<<< HEAD
   ],
 
   const companyValues = [
     {
-      icon: <Brain className=&quot;w-8 h-8&quot; />,
+      icon: <Brain className="w-8 h-8" />,
       title: 'Innovation First',
       description: 'We push boundaries and explore new technologies to solve complex problems.'
     },
     {
-      icon: <Heart className=&quot;w-8 h-8&quot; />,
+      icon: <Heart className="w-8 h-8" />,
       title: 'People Matter',
       description: 'Our team is our greatest asset, and we invest in their growth and well-being.'
     },
     {
-      icon: <Globe className=&quot;w-8 h-8&quot; />,
+      icon: <Globe className="w-8 h-8" />,
       title: 'Global Impact',
       description: 'We create solutions that make a difference in the world.'
     },
     {
-      icon: <Star className=&quot;w-8 h-8&quot; />,
+      icon: <Star className="w-8 h-8" />,
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do.'
     }
@@ -115,113 +114,46 @@ export default function Careers() {;
 
   return (
     <UltraFuturisticBackground>
-      <div className=&quot;min-h-screen&quot;>
+      <div className="min-h-screen">
         <Head>
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
-          <meta name=&quot;description&quot; content=&quot;Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects.&quot; />
+          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
         </Head>
 
-      <div className=&quot;min-h-screen py-12 px-4 sm:px-6 lg:px-8&quot;>
-=======
-  ],;
-  const companyValues = [;
-    {;
-      icon: <Brain className="w-8 h-8" />,;
-      title: 'Innovation First',;
-      description: 'We push boundaries and explore new technologies to solve complex problems.';
-    },;
-    {;
-      icon: <Heart className="w-8 h-8" />,;
-      title: 'People Matter',;
-      description: 'Our team is our greatest asset, and we invest in their growth and well-being.';
-    },;
-    {;
-      icon: <Globe className="w-8 h-8" />,;
-      title: 'Global Impact',;
-      description: 'We create solutions that make a difference in the world.';
-    },;
-    {;
-      icon: <Star className="w-8 h-8" />,;
-      title: 'Excellence',;
-      description: 'We strive for the highest quality in everything we do.';
-    }
-  ],;
-  const benefits = [;
-    'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programsGenerous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment';
-  ],;
-  const filteredJobs = selectedDepartment === 'all';
-    ? jobOpenings;
-    : jobOpenings.filter(job => job.department === selectedDepartment),;
-  return (;
-    <UltraFuturisticBackground>;
-      <div className="min-h-screen">;
-        <Head>;
-          <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>;
-          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />;
-        </Head>;
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-          className=&quot;text-center mb-16&quot;
+          className="text-center mb-16"
         >
-          <h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;>
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
             Join Our Team
           </h1>
-          <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Be part of a team that's revolutionizing technology through AI, quantum computing, 
             and space technology. Help us build the future.
           </p>
         </motion.div>
 
-=======
-          className="text-center mb-16";
-        >;
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">;
-            Join Our Team;
-          </h1>;
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-            Be part of a team that's revolutionizing technology through AI, quantum computing,;
-            and space technology. Help us build the future.;
-          </p>;
-        </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         {/* Company Culture */}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
-          className=&quot;mb-16&quot;
+          className="mb-16"
         >
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>Our Culture & Values</h2>
-          <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Culture & Values</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {companyValues.map((value, index) => (
-              <div key={index} className=&quot;bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 text-center&quot;>
-                <div className=&quot;w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400&quot;>
+              <div key={index} className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 text-center">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">
                   {value.icon}
                 </div>
-                <h3 className=&quot;text-lg font-bold text-white mb-3&quot;>{value.title}</h3>
-                <p className=&quot;text-gray-300 text-sm&quot;>{value.description}</p>
+                <h3 className="text-lg font-bold text-white mb-3">{value.title}</h3>
+                <p className="text-gray-300 text-sm">{value.description}</p>
               </div>
-=======
-          className="mb-16";
-        >;
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Culture & Values</h2>;
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {companyValues.map((value, index) => (;
-              <div key={index} className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 text-center">;
-                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">;
-                  {value.icon}
-                </div>;
-                <h3 className="text-lg font-bold text-white mb-3">{value.title}</h3>;
-                <p className="text-gray-300 text-sm">{value.description}</p>;
-              </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </motion.div>;
@@ -230,29 +162,16 @@ export default function Careers() {;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-<<<<<<< HEAD
-          className=&quot;mb-16&quot;
+          className="mb-16"
         >
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>Why Work With Us?</h2>
-          <div className=&quot;bg-gradient-to-br from-gray-900/40 to-purple-900/20 p-8 rounded-2xl border border-gray-600/20 max-w-4xl mx-auto&quot;>
-            <div className=&quot;grid md:grid-cols-2 gap-6&quot;>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
+          <div className="bg-gradient-to-br from-gray-900/40 to-purple-900/20 p-8 rounded-2xl border border-gray-600/20 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-center&quot;>
-                  <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />
-                  <span className=&quot;text-gray-300&quot;>{benefit}</span>
+                <div key={index} className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
                 </div>
-=======
-          className="mb-16";
-        >;
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>;
-          <div className="bg-gradient-to-br from-gray-900/40 to-purple-900/20 p-8 rounded-2xl border border-gray-600/20 max-w-4xl mx-auto">;
-            <div className="grid md:grid-cols-2 gap-6">;
-              {benefits.map((benefit, index) => (;
-                <div key={index} className="flex items-center">;
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
-                  <span className="text-gray-300">{benefit}</span>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </div>;
           </div>;
@@ -262,24 +181,14 @@ export default function Careers() {;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-<<<<<<< HEAD
-          className=&quot;mb-16&quot;
+          className="mb-16"
         >
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-8&quot;>Open Positions</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>
           
           {/* Department Filter */}
-          <div className=&quot;flex flex-wrap justify-center gap-3 mb-8&quot;>
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
             {departments.map((dept) => (
               <button
-=======
-          className="mb-16";
-        >;
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>;
-          {/* Department Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8">;
-            {departments.map((dept) => (;
-              <button;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={dept.id}
                 onClick={() => setSelectedDepartment(dept.id)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${;
@@ -293,90 +202,49 @@ export default function Careers() {;
             ))}
           </div>;
           {/* Job Listings */}
-<<<<<<< HEAD
-          <div className=&quot;space-y-6&quot;>
+          <div className="space-y-6">
             {filteredJobs.map((job) => (
               <motion.div
                 key={job.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className=&quot;bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300&quot;
+                className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300"
               >
-                <div className=&quot;flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4&quot;>
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                   <div>
-                    <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{job.title}</h3>
-                    <div className=&quot;flex flex-wrap gap-3 text-sm&quot;>
-                      <span className=&quot;bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full&quot;>
+                    <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>
+                    <div className="flex flex-wrap gap-3 text-sm">
+                      <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">
                         {departments.find(d => d.id === job.department)?.name}
                       </span>
-                      <span className=&quot;bg-green-500/20 text-green-400 px-3 py-1 rounded-full&quot;>
+                      <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full">
                         {job.location}
                       </span>
-                      <span className=&quot;bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full&quot;>
+                      <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">
                         {job.type}
                       </span>
-                      <span className=&quot;bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full&quot;>
-=======
-          <div className="space-y-6">;
-            {filteredJobs.map((job) => (;
-              <motion.div;
-                key={job.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300";
-              >;
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">;
-                  <div>;
-                    <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>;
-                    <div className="flex flex-wrap gap-3 text-sm">;
-                      <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">;
-                        {departments.find(d => d.id === job.department)?.name}
-                      </span>;
-                      <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full">;
-                        {job.location}
-                      </span>;
-                      <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">;
-                        {job.type}
-                      </span>;
-                      <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                      <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full">
                         {job.experience}
                       </span>;
                     </div>;
                   </div>;
                   <a;
                     href={`/contact?position=${encodeURIComponent(job.title)}`}
-<<<<<<< HEAD
-                    className=&quot;mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105&quot;
+                    className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Apply Now
-                    <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </a>
                 </div>
                 
-                <p className=&quot;text-gray-300 mb-4&quot;>{job.description}</p>
+                <p className="text-gray-300 mb-4">{job.description}</p>
                 
                 <div>
-                  <h4 className=&quot;text-white font-semibold mb-2&quot;>Requirements:</h4>
-                  <ul className=&quot;space-y-1&quot;>
+                  <h4 className="text-white font-semibold mb-2">Requirements:</h4>
+                  <ul className="space-y-1">
                     {job.requirements.map((req, index) => (
-                      <li key={index} className=&quot;flex items-start text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0&quot; />
-=======
-                    className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
-                  >;
-                    Apply Now;
-                    <ArrowRight className="w-5 h-5 ml-2" />;
-                  </a>;
-                </div>;
-                <p className="text-gray-300 mb-4">{job.description}</p>;
-                <div>;
-                  <h4 className="text-white font-semibold mb-2">Requirements:</h4>;
-                  <ul className="space-y-1">;
-                    {job.requirements.map((req, index) => (;
-                      <li key={index} className="flex items-start text-sm text-gray-300">;
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                      <li key={index} className="flex items-start text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                         {req}
                       </li>;
                     ))}
@@ -384,30 +252,17 @@ export default function Careers() {;
                 </div>;
               </motion.div>;
             ))}
-<<<<<<< HEAD
           </div>
 
           {filteredJobs.length === 0 && (
-            <div className=&quot;text-center py-12&quot;>
-              <Briefcase className=&quot;w-16 h-16 text-gray-500 mx-auto mb-4&quot; />
-              <h3 className=&quot;text-xl font-semibold text-gray-400 mb-2&quot;>No Open Positions</h3>
-              <p className=&quot;text-gray-500&quot;>
+            <div className="text-center py-12">
+              <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No Open Positions</h3>
+              <p className="text-gray-500">
                 We don't have any open positions in this department at the moment. 
                 Check back later or send us your resume for future opportunities.
               </p>
             </div>
-=======
-          </div>;
-          {filteredJobs.length === 0 && (;
-            <div className="text-center py-12">;
-              <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />;
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">No Open Positions</h3>;
-              <p className="text-gray-500">;
-                We don't have any open positions in this department at the moment.;
-                Check back later or send us your resume for future opportunities.;
-              </p>;
-            </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         </motion.div>;
         {/* General Application */}
@@ -415,30 +270,25 @@ export default function Careers() {;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-<<<<<<< HEAD
-          className=&quot;text-center&quot;
+          className="text-center"
         >
-          <div className=&quot;bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto&quot;>
-            <h2 className=&quot;text-2xl font-bold text-white mb-4&quot;>Don't See the Right Fit?</h2>
-            <p className=&quot;text-gray-300 mb-6&quot;>
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-4">Don't See the Right Fit?</h2>
+            <p className="text-gray-300 mb-6">
               We're always looking for talented individuals to join our team. 
               Send us your resume and let's discuss how you can contribute to our mission.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-=======
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               <a 
-                href=&quot;/contact&quot; 
-                className=&quot;inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105&quot;
+                href="/contact" 
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Send Your Resume
-                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a 
-                href=&quot;/about&quot; 
-                className=&quot;inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300&quot;
+                href="/about" 
+                className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
               >
                 Learn More About Us
               </a>
@@ -451,7 +301,6 @@ export default function Careers() {;
 },
 
 export default CareersPage,
-=======
           className="text-center";
         >;
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">;
@@ -482,4 +331,3 @@ export default CareersPage,
   );
 };
 export default CareersPage;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

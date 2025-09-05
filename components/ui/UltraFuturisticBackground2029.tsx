@@ -231,31 +231,20 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         cancelAnimationFrame(animationRef.current);
       }
     }
-<<<<<<< HEAD
   }, [mousePosition]),
 
   return (
-    <div className=&quot;relative w-full h-full overflow-hidden&quot;>
-=======
-  }, [mousePosition]),;
-  return (;
-    <div className="relative w-full h-full overflow-hidden">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+    <div className="relative w-full h-full overflow-hidden">
       {/* Animated background canvas */}
       <canvas;
         ref={canvasRef}
-<<<<<<< HEAD
-        className=&quot;absolute inset-0 w-full h-full pointer-events-none&quot;
-=======
-        className="absolute inset-0 w-full h-full pointer-events-none";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
       />;
       {/* Floating geometric shapes */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
+      <div className="absolute inset-0 pointer-events-none">
         <motion.div
-          className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20&quot;
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
           animate={{
             rotate: 360,
             scale: [1, 1.2, 1],
@@ -264,12 +253,12 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
+            ease: "easeInOut"
           }}
         />
         
         <motion.div
-          className=&quot;absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full&quot;
+          className="absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full"
           animate={{
             y: [0, -20, 0],
             opacity: [0.2, 0.5, 0.2]
@@ -277,12 +266,12 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
+            ease: "easeInOut"
           }}
         />
         
         <motion.div
-          className=&quot;absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45&quot;
+          className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
           animate={{
             rotate: [45, 405],
             scale: [1, 1.1, 1]
@@ -290,12 +279,12 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
+            ease: "easeInOut"
           }}
         />
         
         <motion.div
-          className=&quot;absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20&quot;
+          className="absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20"
           animate={{
             rotate: [-45, 315],
             opacity: [0.2, 0.6, 0.2]
@@ -303,73 +292,16 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
-=======
-      <div className="absolute inset-0 pointer-events-none">;
-        <motion.div;
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20";
-          animate={{;
-            rotate: 360,;
-            scale: [1, 1.2, 1],;
-            opacity: [0.2, 0.4, 0.2];
-          }}
-          transition={{;
-            duration: 8,;
-            repeat: Infinity,;
-            ease: "easeInOut";
-          }}
-        />;
-        <motion.div;
-          className="absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full";
-          animate={{;
-            y: [0, -20, 0],;
-            opacity: [0.2, 0.5, 0.2];
-          }}
-          transition={{;
-            duration: 6,;
-            repeat: Infinity,;
-            ease: "easeInOut";
-          }}
-        />;
-        <motion.div;
-          className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45";
-          animate={{;
-            rotate: [45, 405],;
-            scale: [1, 1.1, 1];
-          }}
-          transition={{;
-            duration: 12,;
-            repeat: Infinity,;
-            ease: "easeInOut";
-          }}
-        />;
-        <motion.div;
-          className="absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20";
-          animate={{;
-            rotate: [-45, 315],;
-            opacity: [0.2, 0.6, 0.2];
-          }}
-          transition={{;
-            duration: 10;
-            repeat: Infinity;
-            ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "easeInOut"
           }}
         />;
       </div>;
       {/* Gradient overlays for depth */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none&quot; />
-      <div className=&quot;absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none&quot; />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
       
       {/* Content */}
-      <div className=&quot;relative z-10&quot;>
-=======
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />;
-      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />;
-      {/* Content */}
-      <div className="relative z-10">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+      <div className="relative z-10">
         {children}
       </div>;
     </div>;

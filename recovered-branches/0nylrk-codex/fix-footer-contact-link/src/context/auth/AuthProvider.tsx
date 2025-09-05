@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect } from "react",
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
@@ -9,18 +7,6 @@ import { useNavigate, useLocation } from 'react-router-dom',
 import { useAuthState } from "./useAuthState",
 import { useAuthEventHandlers } from "./useAuthEventHandlers",
 import { mapProfileToUser } from "./profileMapper",
-=======
-import React, { useEffect } from &quot;react&quot;;
-import { supabase, getFromProfiles } from &quot;../../integrations/supabase/client&quot;;
-import { useAuthOperations } from &quot;../../hooks/useAuthOperations&quot;;
-import { AuthContext } from &quot;./AuthContext&quot;;
-import { cleanupAuthState } from &quot;../../utils/authUtils&quot;;
-import { useNavigate, useLocation } from 'react-router-dom';
-import { useAuthState } from &quot;./useAuthState&quot;;
-import { useAuthEventHandlers } from &quot;./useAuthEventHandlers&quot;;
-import { mapProfileToUser } from &quot;./profileMapper&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
     user, setUser, 
@@ -76,22 +62,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                 handleSignedIn(mappedUser)
               }
             } else if (error) {
-<<<<<<< HEAD
               console.error("Error fetching user profile:", error),
               setUser(null)
             }
           } catch (error) {
             console.error("Error fetching user profile:", error),
             setUser(null)
-=======
-              console.error(&quot;Error fetching user profile:&quot;, error);
-              setUser(null);
-            }
-          } catch (error) {
-            console.error(&quot;Error fetching user profile:&quot;, error);
-            setUser(null);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import React, { useEffect } from "react",;
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",;
 import { useAuthOperations } from "../../hooks/useAuthOperations",;
@@ -154,7 +130,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
           } catch (error) {;
             console.error("Error fetching user profile:", error),;
             setUser(null);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           }
         } else {;
           setUser(null),;

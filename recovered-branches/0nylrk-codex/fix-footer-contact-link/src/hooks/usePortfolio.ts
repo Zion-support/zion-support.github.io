@@ -39,7 +39,6 @@ export function usePortfolio() {;
       setError('You must be logged in to add a portfolio project'),;
       return null;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -63,15 +62,9 @@ export function usePortfolio() {;
       if (error) throw error,
       
       toast({
-<<<<<<< HEAD
         title: "Project added",
         description: "Your project has been added to your portfolio"
       }),
-=======
-        title: &quot;Project added&quot;,
-        description: &quot;Your project has been added to your portfolio&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       await fetchProjects(),
       return data.id
@@ -79,20 +72,13 @@ export function usePortfolio() {;
       console.error('Error adding portfolio project:', e),
       setError(e.message),
       toast({
-        title: &quot;Error&quot;,
+        title: "Error",
         description: `Could not add project: ${e.message}`,
-<<<<<<< HEAD
         variant: "destructive"
       }),
       return null
-=======
-        variant: &quot;destructive&quot;
-      });
-      return null;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -129,7 +115,6 @@ export function usePortfolio() {;
       return null;
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {;
@@ -137,7 +122,6 @@ export function usePortfolio() {;
       setError('You must be logged in to update a portfolio project'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -160,15 +144,9 @@ export function usePortfolio() {;
       if (error) throw error,
       
       toast({
-<<<<<<< HEAD
         title: "Project updated",
         description: "Your portfolio project has been updated"
       }),
-=======
-        title: &quot;Project updated&quot;,
-        description: &quot;Your portfolio project has been updated&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       await fetchProjects(),
       return true
@@ -176,20 +154,13 @@ export function usePortfolio() {;
       console.error('Error updating portfolio project:', e),
       setError(e.message),
       toast({
-        title: &quot;Error&quot;,
+        title: "Error",
         description: `Could not update project: ${e.message}`,
-<<<<<<< HEAD
         variant: "destructive"
       }),
       return false
-=======
-        variant: &quot;destructive&quot;
-      });
-      return false;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -225,7 +196,6 @@ export function usePortfolio() {;
       return false;
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const deleteProject = async (projectId: string): Promise<boolean> => {;
@@ -233,7 +203,6 @@ export function usePortfolio() {;
       setError('You must be logged in to delete a portfolio project'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -248,15 +217,9 @@ export function usePortfolio() {;
       if (error) throw error,
       
       toast({
-<<<<<<< HEAD
         title: "Project deleted",
         description: "Your portfolio project has been deleted"
       }),
-=======
-        title: &quot;Project deleted&quot;,
-        description: &quot;Your portfolio project has been deleted&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       setProjects(projects.filter(p => p.id !== projectId)),
       return true
@@ -264,20 +227,13 @@ export function usePortfolio() {;
       console.error('Error deleting portfolio project:', e),
       setError(e.message),
       toast({
-        title: &quot;Error&quot;,
+        title: "Error",
         description: `Could not delete project: ${e.message}`,
-<<<<<<< HEAD
         variant: "destructive"
       }),
       return false
-=======
-        variant: &quot;destructive&quot;
-      });
-      return false;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -305,7 +261,6 @@ export function usePortfolio() {;
       return false;
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   return {;

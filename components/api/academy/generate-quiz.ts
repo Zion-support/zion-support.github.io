@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -35,13 +34,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!apiKey) return fallback(),
 
   try {
-<<<<<<< HEAD
     const client = new OpenAI({ apiKey }),
     const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`,
-=======
-    const client = new OpenAI({ apiKey });
-    const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {&quot;questions&quot;:[{&quot;question&quot;:string,&quot;options&quot;:string[],&quot;answerIndex&quot;:number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -56,7 +50,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json(json)
     } catch {
       return fallback()
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import OpenAI from 'openai',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -103,7 +96,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json(json);
     } catch {;
       return fallback();
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   } catch (err) {;
     return fallback();

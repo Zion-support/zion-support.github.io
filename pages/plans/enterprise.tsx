@@ -44,25 +44,14 @@ export default function EnterprisePlans() {;
               {t.highlights.map(h => (;
                 <li key={h}>• {h}</li>;
               ))}
-<<<<<<< HEAD
             </ul>
             <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
-              <Link href=&quot;/enterprise&quot; passHref legacyBehavior>
+              <Link href="/enterprise" passHref legacyBehavior>
                 <a style={{ padding: '0.5rem 0.75rem', background: '#111827', color: 'white', borderRadius: 8 }}>Request Quote</Link>
               </Link>
-              <a href=&quot;mailto:sales@zion.ai&quot; style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</Link>
+              <a href="mailto:sales@zion.ai" style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</Link>
             </div>
           </div>
-=======
-            </ul>;
-            <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>;
-              <Link href="/enterprise" passHref legacyBehavior>;
-                <a style={{ padding: '0.5rem 0.75rem', background: '#111827', color: 'white', borderRadius: 8 }}>Request Quote</a>;
-              </Link>;
-              <a href="mailto:sales@zion.ai" style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</a>;
-            </div>;
-          </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         ))}
       </section>;
       <section style={{ marginTop: '2rem' }}>;
@@ -88,7 +77,6 @@ export default function EnterprisePlans() {;
                   ))}
                 </tr>;
               ))}
-<<<<<<< HEAD
             </tbody>
           </table>
         </div>
@@ -101,27 +89,9 @@ export default function EnterprisePlans() {;
           <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SOC 2</span>
         </div>
         <div style={{ marginLeft: 'auto' }}>
-          <Link href=&quot;/enterprise/admin&quot;>Admin Dashboard</Link>
+          <Link href="/enterprise/admin">Admin Dashboard</Link>
         </div>
       </section>
     </main>
   )
-=======
-            </tbody>;
-          </table>;
-        </div>;
-      </section>;
-      <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>;
-        <div style={{ display: 'flex', gap: 8 }}>;
-          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>;
-          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>ISO 27001</span>;
-          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SOC 2</span>;
-        </div>;
-        <div style={{ marginLeft: 'auto' }}>;
-          <Link href="/enterprise/admin">Admin Dashboard</Link>;
-        </div>;
-      </section>;
-    </main>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

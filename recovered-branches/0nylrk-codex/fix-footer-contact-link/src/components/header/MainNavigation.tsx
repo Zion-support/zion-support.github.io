@@ -1,70 +1,60 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { cn } from "@/lib/utils",
 import { NavLink } from "react-router-dom",
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { cn } from &quot;@/lib/utils&quot;;
-import { NavLink } from &quot;react-router-dom&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface MainNavigationProps {
   className?: string
 }
 
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
-    <nav className={cn(&quot;hidden md:flex items-center space-x-6&quot;, className)}>
+    <nav className={cn("hidden md:flex items-center space-x-6", className)}>
       <NavLink
-        to=&quot;/&quot;
+        to="/"
         className={({ isActive }) =>
           cn(
-            &quot;text-sm font-medium transition-colors hover:text-primary&quot;,
-            isActive ? &quot;text-zion-cyan&quot; : &quot;text-muted-foreground&quot;
+            "text-sm font-medium transition-colors hover:text-primary",
+            isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
       >
         Home
       </NavLink>
-      <Link to=&quot;/talent&quot; className=&quot;text-zion-slate-light hover:text-white transition-colors&quot;>
+      <Link to="/talent" className="text-zion-slate-light hover:text-white transition-colors">
         Find Talent
       </Link>
-      <Link to=&quot;/services&quot; className=&quot;text-zion-slate-light hover:text-white transition-colors&quot;>
+      <Link to="/services" className="text-zion-slate-light hover:text-white transition-colors">
         Services
       </Link>
-      <Link to=&quot;/equipment&quot; className=&quot;text-zion-slate-light hover:text-white transition-colors&quot;>
+      <Link to="/equipment" className="text-zion-slate-light hover:text-white transition-colors">
         Equipment
       </Link>
-      <Link to=&quot;/blog&quot; className=&quot;text-zion-slate-light hover:text-white transition-colors&quot;>
+      <Link to="/blog" className="text-zion-slate-light hover:text-white transition-colors">
         Blog
       </Link>
-      <Link to=&quot;/categories&quot; className=&quot;text-zion-slate-light hover:text-white transition-colors&quot;>
+      <Link to="/categories" className="text-zion-slate-light hover:text-white transition-colors">
         Categories
       </Link>
       <NavLink
-        to=&quot;/partners&quot;
+        to="/partners"
         className={({ isActive }) =>
           cn(
-            &quot;text-sm font-medium transition-colors hover:text-primary&quot;,
-            isActive ? &quot;text-zion-cyan&quot; : &quot;text-muted-foreground&quot;
+            "text-sm font-medium transition-colors hover:text-primary",
+            isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
       >
         Partner Program
       </NavLink>
       <NavLink
-        to=&quot;/signup&quot;
+        to="/signup"
         className={({ isActive }) =>
           cn(
-            &quot;text-sm font-medium transition-colors hover:text-primary&quot;,
-            isActive ? &quot;text-zion-cyan&quot; : &quot;text-muted-foreground&quot;,
-            &quot;bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light&quot;
+            "text-sm font-medium transition-colors hover:text-primary",
+            isActive ? "text-zion-cyan" : "text-muted-foreground",
+            "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
           )
-=======
 import React from 'react',;
 import { Link } from 'react-router-dom',;
 import { cn } from "@/lib/utils",;
@@ -121,7 +111,6 @@ export function MainNavigation({ className }: MainNavigationProps) {;
             isActive ? "text-zion-cyan" : "text-muted-foreground";
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light";
           );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }
       >;
         Register;

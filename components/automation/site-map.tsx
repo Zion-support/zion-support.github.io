@@ -13,49 +13,26 @@ export async function getServerSideProps() {;
   } catch {}
   return { props: { routes, generatedAt } }
 }
-<<<<<<< HEAD
 
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
   return (
-    <div className=&quot;space-y-6&quot;>
-      <h1 className=&quot;text-2xl font-semibold&quot;>AI Automation: Site Map Intelligence</h1>
-      <div className=&quot;text-xs text-gray-500&quot;>Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
-      <div className=&quot;overflow-auto border rounded&quot;>
-        <table className=&quot;min-w-full text-sm&quot;>
-          <thead className=&quot;bg-gray-50&quot;>
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">AI Automation: Site Map Intelligence</h1>
+      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
+      <div className="overflow-auto border rounded">
+        <table className="min-w-full text-sm">
+          <thead className="bg-gray-50">
             <tr>
-              <th className=&quot;text-left p-2&quot;>Route</th>
-              <th className=&quot;text-left p-2&quot;>Last Modified</th>
+              <th className="text-left p-2">Route</th>
+              <th className="text-left p-2">Last Modified</th>
             </tr>
           </thead>
           <tbody>
             {routes.map(r => (
-              <tr key={r.path} className=&quot;border-t&quot;>
-                <td className=&quot;p-2&quot;>{r.path}</td>
-                <td className=&quot;p-2&quot;>{new Date(r.lastModified).toLocaleString()}</td>
+              <tr key={r.path} className="border-t">
+                <td className="p-2">{r.path}</td>
+                <td className="p-2">{new Date(r.lastModified).toLocaleString()}</td>
               </tr>
-=======
-;
-export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {;
-  return (;
-    <div className="space-y-6">;
-      <h1 className="text-2xl font-semibold">AI Automation: Site Map Intelligence</h1>;
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>;
-      <div className="overflow-auto border rounded">;
-        <table className="min-w-full text-sm">;
-          <thead className="bg-gray-50">;
-            <tr>;
-              <th className="text-left p-2">Route</th>;
-              <th className="text-left p-2">Last Modified</th>;
-            </tr>;
-          </thead>;
-          <tbody>;
-            {routes.map(r => (;
-              <tr key={r.path} className="border-t">;
-                <td className="p-2">{r.path}</td>;
-                <td className="p-2">{new Date(r.lastModified).toLocaleString()}</td>;
-              </tr>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </tbody>;
         </table>;

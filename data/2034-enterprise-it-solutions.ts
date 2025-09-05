@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type EnterpriseITSolution = {
 	id: string,
 	name: string,
@@ -6,7 +5,6 @@ export type EnterpriseITSolution = {
 	description: string,
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	pricing: {
-<<<<<<< HEAD
 		starter: string, // e.g. "$2,999/mo"
 		professional?: string,
 		enterprise?: string
@@ -19,20 +17,6 @@ export type EnterpriseITSolution = {
 	rating?: number,
 	launchDate?: string
 },
-=======
-		starter: string; // e.g. &quot;$2,999/mo&quot;
-		professional?: string;
-		enterprise?: string;
-	};
-	features: string[];
-	integrations?: string[];
-	useCases?: string[];
-	link: string; // canonical internal link under /services/*
-	realService?: boolean;
-	rating?: number;
-	launchDate?: string;
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
 	{
@@ -133,7 +117,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		useCases: ['Audit readinessInsider risk reduction'],
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realService: true
-=======
 export type EnterpriseITSolution = {;
 	id: string,;
 	name: string,;
@@ -252,6 +235,5 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		useCases: ['Audit readinessInsider risk reduction'],;
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',;
 		realService: true;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 	}
 ];

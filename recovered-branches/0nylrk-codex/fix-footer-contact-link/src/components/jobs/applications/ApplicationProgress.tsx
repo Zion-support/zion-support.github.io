@@ -1,17 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress",
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",
 import { cn } from "@/lib/utils",
-=======
-import { ApplicationStatus } from &quot;@/types/jobs&quot;;
-import { Progress } from &quot;@/components/ui/progress&quot;;
-import { CheckCircle2, Circle, CircleDot } from &quot;lucide-react&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -21,7 +12,6 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   // Define the progress value based on status
   const getProgressValue = () => {
     switch (status) {
-<<<<<<< HEAD
       case "new": return 20,
       case "viewed": return 40,
       case "shortlisted": return 60,
@@ -29,44 +19,35 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
       case "hired": return 100,
       case "rejected": return 100,
       default: return 0
-=======
-      case &quot;new&quot;: return 20;
-      case &quot;viewed&quot;: return 40;
-      case &quot;shortlisted&quot;: return 60;
-      case &quot;interview&quot;: return 80;
-      case &quot;hired&quot;: return 100;
-      case &quot;rejected&quot;: return 100;
-      default: return 0;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
   const progressValue = getProgressValue(),
   
   return (
-    <div className={cn(&quot;w-full space-y-2&quot;, className)}>
-      <Progress value={progressValue} className=&quot;h-2&quot; />
+    <div className={cn("w-full space-y-2", className)}>
+      <Progress value={progressValue} className="h-2" />
       
-      <div className=&quot;flex justify-between text-xs text-muted-foreground&quot;>
-        <div className=&quot;flex flex-col items-center&quot;>
-          <StatusIcon status={status} current=&quot;new&quot; />
-          <span className=&quot;mt-1&quot;>Submitted</span>
+      <div className="flex justify-between text-xs text-muted-foreground">
+        <div className="flex flex-col items-center">
+          <StatusIcon status={status} current="new" />
+          <span className="mt-1">Submitted</span>
         </div>
-        <div className=&quot;flex flex-col items-center&quot;>
-          <StatusIcon status={status} current=&quot;viewed&quot; />
-          <span className=&quot;mt-1&quot;>Viewed</span>
+        <div className="flex flex-col items-center">
+          <StatusIcon status={status} current="viewed" />
+          <span className="mt-1">Viewed</span>
         </div>
-        <div className=&quot;flex flex-col items-center&quot;>
-          <StatusIcon status={status} current=&quot;shortlisted&quot; />
-          <span className=&quot;mt-1&quot;>Shortlisted</span>
+        <div className="flex flex-col items-center">
+          <StatusIcon status={status} current="shortlisted" />
+          <span className="mt-1">Shortlisted</span>
         </div>
-        <div className=&quot;flex flex-col items-center&quot;>
-          <StatusIcon status={status} current=&quot;interview&quot; />
-          <span className=&quot;mt-1&quot;>Interview</span>
+        <div className="flex flex-col items-center">
+          <StatusIcon status={status} current="interview" />
+          <span className="mt-1">Interview</span>
         </div>
-        <div className=&quot;flex flex-col items-center&quot;>
-          <StatusIcon status={status} current=&quot;hired&quot; />
-          <span className=&quot;mt-1&quot;>Decision</span>
+        <div className="flex flex-col items-center">
+          <StatusIcon status={status} current="hired" />
+          <span className="mt-1">Decision</span>
         </div>
       </div>
     </div>
@@ -88,7 +69,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
   if (currentRank < statusRank_) {
     // This step is complete
-<<<<<<< HEAD
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
   } else if (currentRank === statusRank_) {
     // This is the current step
@@ -96,16 +76,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   } else {
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
-=======
-    return <CheckCircle2 className=&quot;h-4 w-4 text-green-500&quot; />;
-  } else if (currentRank === statusRank_) {
-    // This is the current step
-    return <CircleDot className=&quot;h-4 w-4 text-blue-500&quot; />;
-  } else {
-    // This step is upcoming
-    return <Circle className=&quot;h-4 w-4 text-muted-foreground/50&quot; />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",;
@@ -178,7 +148,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   } else {;
     // This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 }
 ;

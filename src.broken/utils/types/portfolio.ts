@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type ProjectMedia = {
   imageUrl?: string,
   pdfUrl?: string,
@@ -36,7 +35,6 @@ export type EducationItem = {
 },
 
 export type ResumeVersion = {
-<<<<<<< HEAD
   id: string,
   name: string, // e.g., "AI Engineer", "Cloud DevOps"
   createdAt: string,
@@ -50,21 +48,6 @@ export type ResumeVersion = {
   education: EducationItem[],
   projects: Project[]
 },
-=======
-  id: string;
-  name: string; // e.g., &quot;AI Engineer&quot;, &quot;Cloud DevOps&quot;
-  createdAt: string;
-  updatedAt: string;
-  talentSlug?: string;
-  personalSummary: string;
-  skills: string[];
-  technologies: string[];
-  certifications: string[];
-  workHistory: WorkExperience[];
-  education: EducationItem[];
-  projects: Project[];
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export type TalentPortfolio = {
   talentSlug?: string,
@@ -88,7 +71,6 @@ export type AiAssistResponse = {
   result?: string | string[],
   error?: string
 },
-=======
 export type ProjectMedia = {;
   imageUrl?: string,;
   pdfUrl?: string,;
@@ -154,4 +136,3 @@ export type AiAssistResponse = {;
   result?: string | string[],;
   error?: string;
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

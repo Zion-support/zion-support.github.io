@@ -13,7 +13,6 @@ export function useWorkExperience() {;
       setError('You must be logged in to update work experience'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -35,16 +34,11 @@ export function useWorkExperience() {;
       
       if (error) throw error,
       
-<<<<<<< HEAD
       return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
-=======
-      return showSuccessToast(&quot;Work experience added&quot;, &quot;Your work experience has been added to your resume&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not add work experience')
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -68,7 +62,6 @@ export function useWorkExperience() {;
       return handleResumeError(e, 'Could not add work experience');
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const updateWorkExperience = async (workId: string, work: WorkExperience): Promise<boolean> => {;
@@ -76,7 +69,6 @@ export function useWorkExperience() {;
       setError('You must be logged in to update work experience'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -98,16 +90,11 @@ export function useWorkExperience() {;
       
       if (error) throw error,
       
-<<<<<<< HEAD
       return showSuccessToast("Work experience updated", "Your work experience has been updated")
-=======
-      return showSuccessToast(&quot;Work experience updated&quot;, &quot;Your work experience has been updated&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not update work experience')
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -131,7 +118,6 @@ export function useWorkExperience() {;
       return handleResumeError(e, 'Could not update work experience');
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const deleteWorkExperience = async (workId: string): Promise<boolean> => {;
@@ -139,7 +125,6 @@ export function useWorkExperience() {;
       setError('You must be logged in to delete work experience'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -152,16 +137,11 @@ export function useWorkExperience() {;
       
       if (error) throw error,
       
-<<<<<<< HEAD
       return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume")
-=======
-      return showSuccessToast(&quot;Work experience deleted&quot;, &quot;Your work experience has been removed from your resume&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete work experience')
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -176,7 +156,6 @@ export function useWorkExperience() {;
       return handleResumeError(e, 'Could not delete work experience');
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   return {;

@@ -1,26 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Badge } from "@/components/ui/badge",
-=======
-import React from &quot;react&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
   Select,
   SelectContent, 
   SelectItem, 
   SelectTrigger, 
   SelectValue 
-<<<<<<< HEAD
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes",
-=======
-} from &quot;@/components/ui/select&quot;;
-import type { QuoteStatus } from &quot;@/types/quotes&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
@@ -37,36 +25,36 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   setArchiveFilter
 }) => {
   return (
-    <div className=&quot;flex flex-col md:flex-row justify-between items-start md:items-center mb-8&quot;>
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
       <div>
-        <div className=&quot;flex items-center gap-3&quot;>
-          <h1 className=&quot;text-3xl font-bold text-white&quot;>Hire Requests</h1>
+        <div className="flex items-center gap-3">
+          <h1 className="text-3xl font-bold text-white">Hire Requests</h1>
           {unreadCount > 0 && (
-            <Badge className=&quot;bg-blue-500&quot;>
+            <Badge className="bg-blue-500">
               {unreadCount} New
             </Badge>
           )}
         </div>
-        <p className=&quot;text-zion-slate-light mt-2&quot;>
+        <p className="text-zion-slate-light mt-2">
           Manage client requests to hire your services
         </p>
       </div>
       
-      <div className=&quot;flex gap-3 mt-4 md:mt-0&quot;>
+      <div className="flex gap-3 mt-4 md:mt-0">
         <Select 
           value={statusFilter} 
           onValueChange={(value) => setStatusFilter(value as QuoteStatus | 'all')}
         >
-          <SelectTrigger className=&quot;bg-zion-blue-dark border-zion-blue-light text-white w-[140px]&quot;>
-            <SelectValue placeholder=&quot;All Statuses&quot; />
+          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">
+            <SelectValue placeholder="All Statuses" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value=&quot;all&quot;>All Statuses</SelectItem>
-            <SelectItem value=&quot;new&quot;>New</SelectItem>
-            <SelectItem value=&quot;in_review&quot;>In Review</SelectItem>
-            <SelectItem value=&quot;responded&quot;>Responded</SelectItem>
-            <SelectItem value=&quot;accepted&quot;>Accepted</SelectItem>
-            <SelectItem value=&quot;closed&quot;>Closed</SelectItem>
+            <SelectItem value="all">All Statuses</SelectItem>
+            <SelectItem value="new">New</SelectItem>
+            <SelectItem value="in_review">In Review</SelectItem>
+            <SelectItem value="responded">Responded</SelectItem>
+            <SelectItem value="accepted">Accepted</SelectItem>
+            <SelectItem value="closed">Closed</SelectItem>
           </SelectContent>
         </Select>
         
@@ -74,20 +62,19 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
           value={archiveFilter} 
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >
-          <SelectTrigger className=&quot;bg-zion-blue-dark border-zion-blue-light text-white w-[140px]&quot;>
-            <SelectValue placeholder=&quot;Active Only&quot; />
+          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">
+            <SelectValue placeholder="Active Only" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value=&quot;active&quot;>Active Only</SelectItem>
-            <SelectItem value=&quot;archived&quot;>Archived Only</SelectItem>
-            <SelectItem value=&quot;all&quot;>All Requests</SelectItem>
+            <SelectItem value="active">Active Only</SelectItem>
+            <SelectItem value="archived">Archived Only</SelectItem>
+            <SelectItem value="all">All Requests</SelectItem>
           </SelectContent>
         </Select>
       </div>
     </div>
   )
 },
-=======
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import {;
@@ -161,4 +148,3 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
     </div>;
   );
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

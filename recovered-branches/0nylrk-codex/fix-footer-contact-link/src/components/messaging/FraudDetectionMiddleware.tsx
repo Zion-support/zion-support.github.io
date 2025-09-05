@@ -20,9 +20,8 @@ interface FraudDetectionContextType {;
     explanation?: string;
   }>;
 }
-<<<<<<< HEAD
 
-// Create the context. &quot;createContext&quot; can be untyped if React type definitions
+// Create the context. "createContext" can be untyped if React type definitions
 // aren't available. Passing a generic argument to an untyped function causes
 // TS2347, so we cast the default value instead of using a type parameter.
 export const FraudDetectionContext = React.createContext(
@@ -55,79 +54,28 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         // If it's dangerous, show a warning to the user
         if (quickCheck.severity === 'dangerous') {
           toast({
-            title: &quot;Message Flagged&quot;,
-            description: &quot;Your message contains content that may violate our terms of service.&quot;,
-            variant: &quot;destructive&quot;,
+            title: "Message Flagged",
+            description: "Your message contains content that may violate our terms of service.",
+            variant: "destructive",
             duration: 5000
           }),
           
           return { 
             isSafe: false,
-<<<<<<< HEAD
             explanation: "Message contains prohibited content. Please review our communication guidelines."
-=======
-;
-// Create the context. "createContext" can be untyped if React type definitions;
-// aren't available. Passing a generic argument to an untyped function causes;
-// TS2347, so we cast the default value instead of using a type parameter.;
-export const FraudDetectionContext = React.createContext(;
-  undefined as FraudDetectionContextType | undefined;
-),;
-export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {;
-  // Function to scan message content for fraud;
-  const scanMessageContent = useCallback(async (;
-    userId: string,;
-    messageId: string,;
-    content: string,;
-    userEmail?: string;
-  ): Promise<{ isSafe: boolean, explanation?: string }> => {;
-    try {;
-      // First do a quick local check using the fraud detection service;
-      const quickCheck = checkMessage(content),;
-      // If the quick check finds suspicious content, flag it;
-      if (quickCheck.isSuspicious) {;
-        // Flag the content for review;
-        await monitorContent(;
-          userId,;
-          userEmail,;
-          'message',;
-          messageId,;
-          content;
-        ),;
-        // If it's dangerous, show a warning to the user;
-        if (quickCheck.severity === 'dangerous') {;
-          toast({;
-            title: "Message Flagged",;
-            description: "Your message contains content that may violate our terms of service.",;
-            variant: "destructive",;
-            duration: 5000;
-          }),;
-          return {;
-            isSafe: false,;
-            explanation: "Message contains prohibited content. Please review our communication guidelines.";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           }
-=======
-            explanation: &quot;Message contains prohibited content. Please review our communication guidelines.&quot;
+            explanation: "Message contains prohibited content. Please review our communication guidelines."
           };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
       }
-<<<<<<< HEAD
       
       // For suspicious but not dangerous content, log but let it pass through
       if (quickCheck.severity === 'suspicious') {
-<<<<<<< HEAD
         // // // console.log('Suspicious content detected but allowed:', content)
-=======
-        // console.log('Suspicious content detected but allowed:', content);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
       // For suspicious but not dangerous content, log but let it pass through;
       if (quickCheck.severity === 'suspicious') {;
         // // // console.log('Suspicious content detected but allowed:', content);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
 ;
       // For more complex analysis (in a real app), we would call the edge function;
@@ -140,25 +88,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         console.error('Error analyzing message:', error),;
         return { isSafe: true }, // Default to safe on error;
       }
-<<<<<<< HEAD
       
       if (data.classification === 'dangerous') {
         toast({
-<<<<<<< HEAD
           title: "Message Blocked",
           description: data.explanation || "This message contains prohibited content.",
           variant: "destructive"
         }),
-=======
-          title: &quot;Message Blocked&quot;,
-          description: data.explanation || &quot;This message contains prohibited content.&quot;,
-          variant: &quot;destructive&quot;
-        });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         return { 
           isSafe: false,
           explanation: data.explanation
-=======
 ;
       if (data.classification === 'dangerous') {;
         toast({;
@@ -169,7 +108,6 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return {;
           isSafe: false,;
           explanation: data.explanation;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }
       }
       */;

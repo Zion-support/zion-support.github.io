@@ -19,23 +19,17 @@ const CONTENT_TYPES = {;
     extensions: ['.tsx.ts.jsx.js'],;
     exclude: [];
   }
-<<<<<<< HEAD
 },
 
 function extractTextFromJSX(content) {
   // Simple text extraction from JSX/TSX content
   return content
     .replace(/<[^>]*>/g, ' ') // Remove HTML/JSX tags
-<<<<<<< HEAD
     .replace(/import.*?from.*?['"`][^'"`]*['"`],?/g, '') // Remove imports
-=======
-    .replace(/import.*?from.*?['&quot;`][^'&quot;`]*['"`];?/g, '') // Remove imports
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     .replace(/export.*?function.*?{/g, '') // Remove function declarations
     .replace(/[{}()]/g, ' ') // Remove brackets
     .replace(/\s+/g, ' ') // Normalize whitespace
     .trim()
-=======
 },;
 function extractTextFromJSX(content) {;
   // Simple text extraction from JSX/TSX content;
@@ -46,7 +40,6 @@ function extractTextFromJSX(content) {;
     .replace(/[{}()]/g, ' ') // Remove brackets;
     .replace(/\s+/g, ' ') // Normalize whitespace;
     .trim();
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 function generateSearchIndex() {;
@@ -96,27 +89,19 @@ function generateSearchIndex() {;
   if (!fs.existsSync(OUTPUT_DIR)) {;
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   }
-<<<<<<< HEAD
 
   // Write search index
   const indexPath = path.join(OUTPUT_DIR, 'index.json'),
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),
   
-<<<<<<< HEAD
   // // // console.log(`✅ Search index generated at: ${indexPath}`),
   // // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)
-=======
-  // console.log(`✅ Search index generated at: ${indexPath}`);
-  // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
   // Write search index;
   const indexPath = path.join(OUTPUT_DIR, 'index.json'),;
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),;
   // // // console.log(`✅ Search index generated at: ${indexPath}`),;
   // // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 if (require.main === module) {;

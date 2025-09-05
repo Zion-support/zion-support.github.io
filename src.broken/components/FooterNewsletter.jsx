@@ -35,69 +35,37 @@ export function FooterNewsletter() {;
   return (;
     <form;
       onSubmit={handleSubmit}
-<<<<<<< HEAD
-      className=&quot;flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2&quot;
+      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
     >
       <Input
-        type=&quot;email&quot;
-        placeholder=&quot;Enter your email&quot;
-        className=&quot;flex-grow bg-zion-blue-light text-black border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple&quot;
-=======
-      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2";
-    >;
-      <Input;
-        type="email";
-        placeholder="Enter your email";
-        className="flex-grow bg-zion-blue-light text-black border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        type="email"
+        placeholder="Enter your email"
+        className="flex-grow bg-zion-blue-light text-black border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required;
       />;
       {/* Honeypot field */}
-<<<<<<< HEAD
       <input
-        type=&quot;text&quot;
+        type="text"
         value={honeypot}
         onChange={(e) => setHoneypot(e.target.value)}
-        tabIndex=&quot;-1&quot;
-        autoComplete=&quot;off&quot;
+        tabIndex="-1"
+        autoComplete="off"
         style={{ display: 'none' }}
       />
       <Button
-        type=&quot;submit&quot;
+        type="submit"
         disabled={isSubmitting}
-        className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple&quot;
+        className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
       >
         {isSubmitting ? (
           <>
-            <Loader2 className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
+            <Loader2 className="h-4 w-4 mr-2 animate-spin" />
             Subscribing...
           </>
         ) : (
           'Subscribe'
-=======
-      <input;
-        type="text";
-        value={honeypot}
-        onChange={(e) => setHoneypot(e.target.value)}
-        tabIndex="-1";
-        autoComplete="off";
-        style={{ display: 'none' }}
-      />;
-      <Button;
-        type="submit";
-        disabled={isSubmitting}
-        className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
-      >;
-        {isSubmitting ? (;
-          <>;
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
-            Subscribing...;
-          </>;
-        ) : (;
-          'Subscribe';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       </Button>;
     </form>;

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -11,19 +9,6 @@ import { useRouter } from "next/router",
 import { slugify } from "@/lib/slugify",
 import { debounce } from "lodash",
 import { logInfo, logWarn } from '@/utils/productionLogger',
-=======
-import React, { useState, useEffect, useRef, useMemo } from &quot;react&quot;;
-import { useTranslation } from &quot;react-i18next&quot;;
-import { Search, X } from 'lucide-react'
-import { Input } from &quot;@/components/ui/input&quot;;
-import { AutocompleteSuggestions } from &quot;@/components/search/AutocompleteSuggestions&quot;;
-import { SearchSuggestion } from &quot;@/types/search&quot;;
-import { useDebounce } from &quot;@/hooks/useDebounce&quot;;
-import { useRouter } from &quot;next/router&quot;;
-import { slugify } from &quot;@/lib/slugify&quot;;
-import { debounce } from &quot;lodash&quot;;
-import { logInfo, logWarn } from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 
 interface EnhancedSearchInputProps {
@@ -46,7 +31,7 @@ export function EnhancedSearchInput({
   value,
   onChange,
   onSelectSuggestion,
-  placeholder = &quot;Search...&quot;,
+  placeholder = "Search...",
   searchSuggestions
 }: EnhancedSearchInputProps) {
   const [isFocused, setIsFocused] = useState(false),
@@ -68,7 +53,6 @@ export function EnhancedSearchInput({
         if (!query.trim()) {
           setApiSuggestions([]),
           return
-=======
 import React, { useState, useEffect, useRef, useMemo } from "react",;
 import { useTranslation } from "react-i18next",;
 import { Search, X } from 'lucide-react';
@@ -120,7 +104,6 @@ export function EnhancedSearchInput({;
         if (!query.trim()) {;
           setApiSuggestions([]),;
           return;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }
 ;
         setLoading(true),;
@@ -186,17 +169,10 @@ export function EnhancedSearchInput({;
         // setHighlightedIndex(-1), // Already handled in onBlur generally;
       }
     }
-<<<<<<< HEAD
     
-<<<<<<< HEAD
     document.addEventListener("mousedown", handleClickOutside),
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, []),
-=======
-    document.addEventListener(&quot;mousedown&quot;, handleClickOutside);
-    return () => document.removeEventListener(&quot;mousedown&quot;, handleClickOutside);
-  }, []);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const router = useRouter(),
 
@@ -217,7 +193,6 @@ export function EnhancedSearchInput({;
         router.push(`/blog/${suggestionObj.slug}`)
       } else {
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
-=======
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -240,7 +215,6 @@ export function EnhancedSearchInput({;
         router.push(`/blog/${suggestionObj.slug}`);
       } else {;
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
     }
     setIsFocused(false),;
@@ -290,50 +264,27 @@ export function EnhancedSearchInput({;
         setEnterHandledPostFocus(false),;
         break;
     }
-<<<<<<< HEAD
   },
   
   return (
     <div
-      className=&quot;relative w-full&quot;
+      className="relative w-full"
       ref={containerRef}
-      role=&quot;combobox&quot;
+      role="combobox"
       aria-expanded={isFocused && filteredSuggestions.length > 0}
-      aria-haspopup=&quot;listbox&quot;
-      aria-controls=&quot;autocomplete-suggestions-list&quot; // Added aria-controls
+      aria-haspopup="listbox"
+      aria-controls="autocomplete-suggestions-list" // Added aria-controls
       onClick={() => inputRef.current?.focus()}
     >
-      <div className=&quot;relative flex items-center w-full&quot;>
+      <div className="relative flex items-center w-full">
         <Search 
-          className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate&quot; 
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
         />
         <Input
           ref={inputRef}
-          type=&quot;text&quot;
-          id=&quot;enhanced-search-input&quot;
-          name=&quot;search&quot;
-=======
-  },;
-  return (;
-    <div;
-      className="relative w-full";
-      ref={containerRef}
-      role="combobox";
-      aria-expanded={isFocused && filteredSuggestions.length > 0}
-      aria-haspopup="listbox";
-      aria-controls="autocomplete-suggestions-list" // Added aria-controls;
-      onClick={() => inputRef.current?.focus()}
-    >;
-      <div className="relative flex items-center w-full">;
-        <Search;
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate";
-        />;
-        <Input;
-          ref={inputRef}
-          type="text";
-          id="enhanced-search-input";
-          name="search";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          type="text"
+          id="enhanced-search-input"
+          name="search"
           value={value}
           onChange={(e) => {;
             onChange(e.target.value),;
@@ -357,35 +308,19 @@ export function EnhancedSearchInput({;
           }}
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
-<<<<<<< HEAD
-          className=&quot;pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0&quot;
-          aria-autocomplete=&quot;list&quot;
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
+          aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete=&quot;off&quot;
+          autoComplete="off"
         />
         {value && (
           <button
-            className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white&quot;
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
-            aria-label=&quot;Clear search&quot;
+            aria-label="Clear search"
           >
-            <X className=&quot;h-4 w-4&quot; />
+            <X className="h-4 w-4" />
           </button>
-=======
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0";
-          aria-autocomplete="list";
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete="off";
-        />;
-        {value && (;
-          <button;
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white";
-            onClick={() => onChange('')}
-            aria-label="Clear search";
-          >;
-            <X className="h-4 w-4" />;
-          </button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       </div>;
       <AutocompleteSuggestions;
@@ -393,18 +328,10 @@ export function EnhancedSearchInput({;
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
-<<<<<<< HEAD
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
-        listId=&quot;autocomplete-suggestions-list&quot; // Pass ID for aria-controls
+        listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
   )
-=======
-        highlightedIndex={highlightedIndex} // Pass highlightedIndex;
-        listId="autocomplete-suggestions-list" // Pass ID for aria-controls;
-      />;
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

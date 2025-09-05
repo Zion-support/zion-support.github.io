@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 // Content flagging functionality
 import { supabase } from '@/integrations/supabase/client',
 import { FraudSeverity, FraudFlag } from '@/types/fraud',
@@ -18,11 +17,7 @@ export const flagContent = async (
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
-<<<<<<< HEAD
     // // // console.log('Flagging content for review:', {
-=======
-    // console.log('Flagging content for review:', {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       userId,
       contentType,
       contentId,
@@ -45,7 +40,6 @@ export const flagContent = async (
     
     if (error) throw error,
     
-=======
 // Content flagging functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { FraudSeverity, FraudFlag } from '@/types/fraud',;
@@ -84,7 +78,6 @@ export const flagContent = async (;
       status: 'pending';
     }),;
     if (error) throw error,;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     return { success: true }
   } catch (error) {;
     console.error('Error flagging content:', error),;

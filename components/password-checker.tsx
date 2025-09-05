@@ -26,7 +26,6 @@ export default function PasswordCheckerPage() {;
     } else {;
       resetAnalysis();
     }
-<<<<<<< HEAD
   }, [password]),
 
   const analyzePassword = (pass: string) => {
@@ -35,11 +34,7 @@ export default function PasswordCheckerPage() {;
       uppercase: /[A-Z]/.test(pass),
       lowercase: /[a-z]/.test(pass),
       numbers: /\d/.test(pass),
-<<<<<<< HEAD
       symbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(pass),
-=======
-      symbols: /[!@#$%^&*()_+\-=\[\]{};':&quot;\\|,.<>\/?]/.test(pass),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       noCommon: !isCommonPassword(pass),
       noSequential: !hasSequentialChars(pass)
     },
@@ -99,7 +94,6 @@ export default function PasswordCheckerPage() {;
   const generateSuggestions = (checks: any, pass: string) => {
     const suggestions: string[] = [],
     
-<<<<<<< HEAD
     if (!checks.length) suggestions.push('Make your password at least 8 characters long'),
     if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)'),
     if (!checks.lowercase) suggestions.push('Add at least one lowercase letter (a-z)'),
@@ -107,15 +101,6 @@ export default function PasswordCheckerPage() {;
     if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)'),
     if (!checks.noCommon) suggestions.push('Avoid common passwords like "password" or "123456"'),
     if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"'),
-=======
-    if (!checks.length) suggestions.push('Make your password at least 8 characters long');
-    if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)');
-    if (!checks.lowercase) suggestions.push('Add at least one lowercase letter (a-z)');
-    if (!checks.numbers) suggestions.push('Add at least one number (0-9)');
-    if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)');
-    if (!checks.noCommon) suggestions.push('Avoid common passwords like &quot;password&quot; or &quot;123456&quot;');
-    if (!checks.noSequential) suggestions.push('Avoid sequential characters like &quot;123&quot; or &quot;abc"');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security'),
     if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters'),
@@ -177,26 +162,19 @@ export default function PasswordCheckerPage() {;
     return passed ? (
       <CheckCircle className="w-5 h-5 text-green-400" />
     ) : (
-<<<<<<< HEAD
       <XCircle className="w-5 h-5 text-red-400" />
     )
   },
-=======
-      <XCircle className="w-5 h-5 text-red-400&quot; />
-    );
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
     <>
       <Head>
         <title>Password Strength Checker - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Password Strength Checker - Zion Tech Group&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Advanced password strength analyzer with security recommendations." />
+        <meta name="description" content="Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords." />
+        <meta property="og:title" content="Password Strength Checker - Zion Tech Group" />
+        <meta property="og:description" content="Advanced password strength analyzer with security recommendations." />
       </Head>
 
-=======
   }, [password]),;
   const analyzePassword = (pass: string) => {;
     const newChecks = {;
@@ -325,7 +303,6 @@ export default function PasswordCheckerPage() {;
         <meta property="og:title" content="Password Strength Checker - Zion Tech Group" />;
         <meta property="og:description" content="Advanced password strength analyzer with security recommendations." />;
       </Head>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -364,37 +341,20 @@ export default function PasswordCheckerPage() {;
               </h3>;
               <div className="space-y-6">;
                 {/* Password Input */}
-<<<<<<< HEAD
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Enter Password
                   </label>
-                  <div className="relative&quot;>
+                  <div className="relative">
                     <input
                       type={showPassword ? 'text' : 'password'}
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder=&quot;Type your password here..."
-                      className="w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent&quot;
+                      placeholder="Type your password here..."
+                      className="w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                     />
                     <button
-                      type=&quot;button"
-=======
-                <div>;
-                  <label className="block text-sm font-medium text-gray-300 mb-2">;
-                    Enter Password;
-                  </label>;
-                  <div className="relative">;
-                    <input;
-                      type={showPassword ? 'text' : 'password'}
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      placeholder="Type your password here...";
-                      className="w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent";
-                    />;
-                    <button;
-                      type="button";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                      type="button"
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white";
                     >;
@@ -413,15 +373,14 @@ export default function PasswordCheckerPage() {;
                   </Button>;
                 </div>;
                 {/* Generated Password Display */}
-<<<<<<< HEAD
                 {generatedPassword && (
                   <div className="p-4 bg-gray-700 rounded-lg border border-gray-600">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-300&quot;>Generated Password:</span>
+                      <span className="text-sm text-gray-300">Generated Password:</span>
                       <Button
                         onClick={() => copyToClipboard(generatedPassword)}
-                        variant=&quot;outline&quot;
-                        size=&quot;sm"
+                        variant="outline"
+                        size="sm"
                         className="border-gray-600 text-gray-300 hover:bg-gray-600"
                       >
                         <Copy className="w-4 h-4 mr-2" />
@@ -429,23 +388,6 @@ export default function PasswordCheckerPage() {;
                       </Button>
                     </div>
                     <div className="mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all">
-=======
-                {generatedPassword && (;
-                  <div className="p-4 bg-gray-700 rounded-lg border border-gray-600">;
-                    <div className="flex items-center justify-between">;
-                      <span className="text-sm text-gray-300">Generated Password:</span>;
-                      <Button;
-                        onClick={() => copyToClipboard(generatedPassword)}
-                        variant="outline";
-                        size="sm";
-                        className="border-gray-600 text-gray-300 hover:bg-gray-600";
-                      >;
-                        <Copy className="w-4 h-4 mr-2" />;
-                        Copy;
-                      </Button>;
-                    </div>;
-                    <div className="mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       {generatedPassword}
                     </div>;
                   </div>;
@@ -654,7 +596,6 @@ export default function PasswordCheckerPage() {;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -665,17 +606,17 @@ export default function PasswordCheckerPage() {;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              href="/contact&quot;
-              size=&quot;lg"
+              href="/contact"
+              size="lg"
               className="bg-white text-indigo-600 hover:bg-gray-100"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button
-              href="/pricing&quot;
-              variant=&quot;outline&quot;
-              size=&quot;lg"
+              href="/pricing"
+              variant="outline"
+              size="lg"
               className="border-white text-white hover:bg-white hover:text-indigo-600"
             >
               View Pricing
@@ -685,36 +626,4 @@ export default function PasswordCheckerPage() {;
       </section>
     </>
   )
-=======
-      <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600">;
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">;
-            Ready to Secure Your Passwords?;
-          </h2>;
-          <p className="text-xl text-indigo-100 mb-8">;
-            Join thousands of users who trust our password strength checker to improve their account security.;
-          </p>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <Button;
-              href="/contact";
-              size="lg";
-              className="bg-white text-indigo-600 hover:bg-gray-100";
-            >;
-              Get Started Today;
-              <ArrowRight className="w-5 h-5 ml-2" />;
-            </Button>;
-            <Button;
-              href="/pricing";
-              variant="outline";
-              size="lg";
-              className="border-white text-white hover:bg-white hover:text-indigo-600";
-            >;
-              View Pricing;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-    </>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

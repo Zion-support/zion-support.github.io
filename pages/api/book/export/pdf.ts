@@ -15,7 +15,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(400).json({ error: 'Missing html' }),;
     return;
   }
-<<<<<<< HEAD
 
   const browser = await puppeteer.launch({
     headless: true,
@@ -27,17 +26,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true }),
     await browser.close(),
 
-<<<<<<< HEAD
     res.setHeader('Content-Typeapplication/pdf'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"'),
     res.status(200).send(pdfBuffer)
-=======
-    res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', 'attachment; filename=&quot;zion-os-book.pdf&quot;');
-    res.status(200).send(pdfBuffer);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   } catch (e: any) {
-=======
 ;
   const browser = await puppeteer.launch({;
     headless: true,;
@@ -51,7 +43,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"');
     res.status(200).send(pdfBuffer);
   } catch (e: any) {;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message || 'Failed to render PDF' });
   }

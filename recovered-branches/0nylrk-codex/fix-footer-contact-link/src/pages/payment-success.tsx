@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
@@ -8,34 +7,30 @@ export default function PaymentSuccess() {
   const navigate = useNavigate(),
   
   return (
-    <div className=&quot;min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4&quot;>
-      <div className=&quot;max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center&quot;>
-        <div className=&quot;inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center&quot;>
-          <CheckCircle2 className=&quot;h-6 w-6 text-green-600&quot; />
+    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
+      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
+        <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
+          <CheckCircle2 className="h-6 w-6 text-green-600" />
         </div>
         
-        <h1 className=&quot;text-2xl font-bold text-white mb-2&quot;>Payment Successful!</h1>
+        <h1 className="text-2xl font-bold text-white mb-2">Payment Successful!</h1>
         
-        <p className=&quot;text-zion-slate-light mb-6&quot;>
+        <p className="text-zion-slate-light mb-6">
           Your payment has been processed successfully. You now have access to all the premium features.
         </p>
         
-        <div className=&quot;flex flex-col space-y-3&quot;>
+        <div className="flex flex-col space-y-3">
           <Button 
             onClick={() => navigate('/dashboard')}
-            className=&quot;bg-zion-purple hover:bg-zion-purple-dark text-white&quot;
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Go to Dashboard
           </Button>
           
           <Button 
-            variant=&quot;outline&quot;
+            variant="outline"
             onClick={() => navigate('/')}
-<<<<<<< HEAD
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
-=======
-            className=&quot;border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           >
             Return to Home
           </Button>
@@ -43,7 +38,6 @@ export default function PaymentSuccess() {
       </div>
     </div>
   )
-=======
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -78,6 +72,5 @@ export default function PaymentSuccess() {;
       </div>;
     </div>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

@@ -23,12 +23,11 @@ interface SearchProps {;
   className?: string,;
   showFilters?: boolean;
 }
-<<<<<<< HEAD
 
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch,
   onResultSelect,
-  placeholder = &quot;Search revolutionary services...&quot;,
+  placeholder = "Search revolutionary services...",
   className = "",
   showFilters = true
 }) => {
@@ -53,36 +52,6 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       slug: '/ai-consciousness-evolution-platform-2045',
       relevance: 95,
       features: ['Emotional IntelligenceSelf-AwarenessConsciousness Evolution'],
-=======
-;
-const EnhancedSearch: React.FC<SearchProps> = ({;
-  onSearch,;
-  onResultSelect,;
-  placeholder = "Search revolutionary services...",;
-  className = "",;
-  showFilters = true;
-}) => {;
-  const [query, setQuery] = useState(''),;
-  const [isSearching, setIsSearching] = useState(false),;
-  const [showResults, setShowResults] = useState(false),;
-  const [results, setResults] = useState<SearchResult[]>([]),;
-  const [selectedFilters, setSelectedFilters] = useState<string[]>([]),;
-  const [searchHistory, setSearchHistory] = useState<string[]>([]),;
-  const [popularSearches] = useState([;
-    'AI ConsciousnessQuantum ComputingCybersecurityBusiness IntelligenceSpace TechnologyAutonomous Systems';
-  ]),;
-  // Mock search results - in real app, this would come from API;
-  const mockSearchResults: SearchResult[] = [;
-    {;
-      id: '1',;
-      name: 'AI Consciousness Evolution Platform 2045',;
-      description: 'Next-generation AI consciousness with emotional intelligence and self-awareness capabilities.',;
-      category: 'AI & Machine Learning',;
-      type: 'Platform',;
-      slug: '/ai-consciousness-evolution-platform-2045',;
-      relevance: 95,;
-      features: ['Emotional IntelligenceSelf-AwarenessConsciousness Evolution'],;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
     },;
     {;
@@ -222,55 +191,31 @@ const EnhancedSearch: React.FC<SearchProps> = ({;
   return (;
     <div className={`relative ${className}`}>;
       {/* Search Form */}
-<<<<<<< HEAD
       <form onSubmit={handleSearch} className="relative">
         <div className="relative">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
           <input
-            type=&quot;text"
+            type="text"
             value={query}
             onChange={handleInputChange}
             placeholder={placeholder}
-            className="w-full pl-12 pr-20 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300&quot;
-=======
-      <form onSubmit={handleSearch} className="relative">;
-        <div className="relative">;
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-          <input;
-            type="text";
-            value={query}
-            onChange={handleInputChange}
-            placeholder={placeholder}
-            className="w-full pl-12 pr-20 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            className="w-full pl-12 pr-20 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
             onFocus={() => setShowResults(true)}
           />;
           {/* Clear Button */}
-<<<<<<< HEAD
           {query && (
             <button
-              type=&quot;button"
+              type="button"
               onClick={clearSearch}
               className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
             >
-              <X className="w-4 h-4&quot; />
+              <X className="w-4 h-4" />
             </button>
-=======
-          {query && (;
-            <button;
-              type="button";
-              onClick={clearSearch}
-              className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors";
-            >;
-              <X className="w-4 h-4" />;
-            </button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
 ;
           {/* Search Button */}
-<<<<<<< HEAD
           <button
-            type=&quot;submit"
+            type="submit"
             className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
           >
             Search
@@ -278,16 +223,6 @@ const EnhancedSearch: React.FC<SearchProps> = ({;
         </div>
       </form>
 
-=======
-          <button;
-            type="submit";
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50";
-          >;
-            Search;
-          </button>;
-        </div>;
-      </form>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {/* Search Results Dropdown */}
       <AnimatePresence>;
         {showResults && (;
@@ -420,25 +355,14 @@ const EnhancedSearch: React.FC<SearchProps> = ({;
                       </div>;
                     </motion.div>;
                   ))}
-<<<<<<< HEAD
                 </div>
               ) : query.trim().length > 0 ? (
                 <div className="text-center py-8">
-                  <div className="text-gray-400 mb-2&quot;>No results found for &quot;{query}"</div>
+                  <div className="text-gray-400 mb-2">No results found for "{query}"</div>
                   <div className="text-sm text-gray-500">Try adjusting your search terms or filters</div>
                 </div>
               ) : (
                 <div className="space-y-4">
-=======
-                </div>;
-              ) : query.trim().length > 0 ? (;
-                <div className="text-center py-8">;
-                  <div className="text-gray-400 mb-2">No results found for "{query}"</div>;
-                  <div className="text-sm text-gray-500">Try adjusting your search terms or filters</div>;
-                </div>;
-              ) : (;
-                <div className="space-y-4">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   {/* Search History */}
                   {searchHistory.length > 0 && (;
                     <div>;

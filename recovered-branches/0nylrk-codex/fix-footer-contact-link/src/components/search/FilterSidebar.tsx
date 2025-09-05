@@ -1,19 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
 import { Filter, X, Star } from "lucide-react",
 import { FilterOptions } from "@/types/search",
-=======
-import React from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Checkbox } from &quot;@/components/ui/checkbox&quot;;
-import { Filter, X, Star } from &quot;lucide-react&quot;;
-import { FilterOptions } from &quot;@/types/search&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface FilterSidebarProps {
   filters: {
     selectedProductTypes: string[],
@@ -35,16 +25,15 @@ export function FilterSidebar({
   onClearFilters
 }: FilterSidebarProps) {
   return (
-    <div className=&quot;bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4&quot;>
-      <div className=&quot;flex items-center justify-between mb-4&quot;>
-        <h3 className=&quot;text-lg font-medium text-white flex items-center&quot;>
-          <Filter className=&quot;mr-2 h-5 w-5&quot; /> Filters
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-medium text-white flex items-center">
+          <Filter className="mr-2 h-5 w-5" /> Filters
         </h3>
         <Button 
-          variant=&quot;outline&quot; 
-          size=&quot;sm&quot;
-          className=&quot;border-zion-purple text-zion-purple hover:bg-zion-purple/10&quot;
-=======
+          variant="outline" 
+          size="sm"
+          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
@@ -80,50 +69,29 @@ export function FilterSidebar({;
           variant="outline";
           size="sm";
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           onClick={onClearFilters}
         >;
           Clear All;
         </Button>;
       </div>;
       {/* Product Type Filter */}
-<<<<<<< HEAD
-      <div className=&quot;mb-6&quot;>
-        <label className=&quot;text-sm font-medium text-zion-slate-light block mb-2&quot;>
+      <div className="mb-6">
+        <label className="text-sm font-medium text-zion-slate-light block mb-2">
           Product Type
         </label>
-        <div className=&quot;space-y-2&quot;>
+        <div className="space-y-2">
           {filterOptions.productTypes.map((type) => (
-            <div key={type.value} className=&quot;flex items-center space-x-2&quot;>
+            <div key={type.value} className="flex items-center space-x-2">
               <Checkbox 
                 id={`type-${type.value}`} 
                 checked={filters.selectedProductTypes.includes(type.value)}
                 onCheckedChange={() => onFilterChange('productTypes', type.value)}
-                className=&quot;text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple&quot;
+                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label 
                 htmlFor={`type-${type.value}`}
-                className=&quot;text-sm text-zion-slate-light cursor-pointer hover:text-white&quot;
+                className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
               >
-=======
-      <div className="mb-6">;
-        <label className="text-sm font-medium text-zion-slate-light block mb-2">;
-          Product Type;
-        </label>;
-        <div className="space-y-2">;
-          {filterOptions.productTypes.map((type) => (;
-            <div key={type.value} className="flex items-center space-x-2">;
-              <Checkbox;
-                id={`type-${type.value}`} ;
-                checked={filters.selectedProductTypes.includes(type.value)}
-                onCheckedChange={() => onFilterChange('productTypes', type.value)}
-                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
-              />;
-              <label;
-                htmlFor={`type-${type.value}`}
-                className="text-sm text-zion-slate-light cursor-pointer hover:text-white";
-              >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 {type.label}
               </label>;
             </div>;
@@ -131,43 +99,23 @@ export function FilterSidebar({;
         </div>;
       </div>;
       {/* Location Filter */}
-<<<<<<< HEAD
-      <div className=&quot;mb-6&quot;>
-        <label className=&quot;text-sm font-medium text-zion-slate-light block mb-2&quot;>
+      <div className="mb-6">
+        <label className="text-sm font-medium text-zion-slate-light block mb-2">
           Location
         </label>
-        <div className=&quot;space-y-2 max-h-40 overflow-y-auto pr-2&quot;>
+        <div className="space-y-2 max-h-40 overflow-y-auto pr-2">
           {filterOptions.locations.map((location) => (
-            <div key={location.value} className=&quot;flex items-center space-x-2&quot;>
+            <div key={location.value} className="flex items-center space-x-2">
               <Checkbox 
                 id={`location-${location.value}`} 
                 checked={filters.selectedLocations.includes(location.value)}
                 onCheckedChange={() => onFilterChange('locations', location.value)}
-                className=&quot;text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple&quot;
+                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label 
                 htmlFor={`location-${location.value}`}
-                className=&quot;text-sm text-zion-slate-light cursor-pointer hover:text-white&quot;
+                className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
               >
-=======
-      <div className="mb-6">;
-        <label className="text-sm font-medium text-zion-slate-light block mb-2">;
-          Location;
-        </label>;
-        <div className="space-y-2 max-h-40 overflow-y-auto pr-2">;
-          {filterOptions.locations.map((location) => (;
-            <div key={location.value} className="flex items-center space-x-2">;
-              <Checkbox;
-                id={`location-${location.value}`} ;
-                checked={filters.selectedLocations.includes(location.value)}
-                onCheckedChange={() => onFilterChange('locations', location.value)}
-                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
-              />;
-              <label;
-                htmlFor={`location-${location.value}`}
-                className="text-sm text-zion-slate-light cursor-pointer hover:text-white";
-              >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 {location.label}
               </label>;
             </div>;
@@ -175,43 +123,23 @@ export function FilterSidebar({;
         </div>;
       </div>;
       {/* Availability Filter */}
-<<<<<<< HEAD
-      <div className=&quot;mb-6&quot;>
-        <label className=&quot;text-sm font-medium text-zion-slate-light block mb-2&quot;>
+      <div className="mb-6">
+        <label className="text-sm font-medium text-zion-slate-light block mb-2">
           Availability
         </label>
-        <div className=&quot;space-y-2&quot;>
+        <div className="space-y-2">
           {filterOptions.availabilityOptions.map((availability) => (
-            <div key={availability.value} className=&quot;flex items-center space-x-2&quot;>
+            <div key={availability.value} className="flex items-center space-x-2">
               <Checkbox 
                 id={`availability-${availability.value}`} 
                 checked={filters.selectedAvailability.includes(availability.value)}
                 onCheckedChange={() => onFilterChange('availability', availability.value)}
-                className=&quot;text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple&quot;
+                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label 
                 htmlFor={`availability-${availability.value}`}
-                className=&quot;text-sm text-zion-slate-light cursor-pointer hover:text-white&quot;
+                className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
               >
-=======
-      <div className="mb-6">;
-        <label className="text-sm font-medium text-zion-slate-light block mb-2">;
-          Availability;
-        </label>;
-        <div className="space-y-2">;
-          {filterOptions.availabilityOptions.map((availability) => (;
-            <div key={availability.value} className="flex items-center space-x-2">;
-              <Checkbox;
-                id={`availability-${availability.value}`} ;
-                checked={filters.selectedAvailability.includes(availability.value)}
-                onCheckedChange={() => onFilterChange('availability', availability.value)}
-                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
-              />;
-              <label;
-                htmlFor={`availability-${availability.value}`}
-                className="text-sm text-zion-slate-light cursor-pointer hover:text-white";
-              >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 {availability.label}
               </label>;
             </div>;
@@ -219,61 +147,32 @@ export function FilterSidebar({;
         </div>;
       </div>;
       {/* Rating Filter */}
-<<<<<<< HEAD
-      <div className=&quot;mb-6&quot;>
-        <label className=&quot;text-sm font-medium text-zion-slate-light block mb-2&quot;>
+      <div className="mb-6">
+        <label className="text-sm font-medium text-zion-slate-light block mb-2">
           Minimum Rating
         </label>
-        <div className=&quot;flex flex-wrap gap-2&quot;>
+        <div className="flex flex-wrap gap-2">
           {[null, ...filterOptions.ratingOptions].map((rating) => (
             <Button
               key={rating === null ? 'any' : rating}
-              variant=&quot;outline&quot;
-              size=&quot;sm&quot;
+              variant="outline"
+              size="sm"
               onClick={() => onRatingChange(rating)}
               className={`${
                 filters.selectedRating === rating 
-                  ? &quot;bg-zion-purple/20 border-zion-purple text-zion-purple&quot; 
-                  : &quot;border-zion-blue-light text-zion-slate-light&quot;
+                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple" 
+                  : "border-zion-blue-light text-zion-slate-light"
               }`}
             >
               {rating === null ? (
-                &quot;Any&quot;
+                "Any"
               ) : (
-                <div className=&quot;flex items-center&quot;>
+                <div className="flex items-center">
                   {[...Array(rating)].map((_, i) => (
-                    <Star key={i} className=&quot;h-3 w-3 fill-zion-cyan text-zion-cyan&quot; />
+                    <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />
                   ))}
-                  <span className=&quot;ml-1&quot;>& Up</span>
+                  <span className="ml-1">& Up</span>
                 </div>
-=======
-      <div className="mb-6">;
-        <label className="text-sm font-medium text-zion-slate-light block mb-2">;
-          Minimum Rating;
-        </label>;
-        <div className="flex flex-wrap gap-2">;
-          {[null, ...filterOptions.ratingOptions].map((rating) => (;
-            <Button;
-              key={rating === null ? 'any' : rating}
-              variant="outline";
-              size="sm";
-              onClick={() => onRatingChange(rating)}
-              className={`${;
-                filters.selectedRating === rating;
-                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple";
-                  : "border-zion-blue-light text-zion-slate-light";
-              }`}
-            >;
-              {rating === null ? (;
-                "Any";
-              ) : (;
-                <div className="flex items-center">;
-                  {[...Array(rating)].map((_, i) => (;
-                    <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
-                  ))}
-                  <span className="ml-1">& Up</span>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             </Button>;
           ))}

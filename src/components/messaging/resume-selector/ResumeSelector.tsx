@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
@@ -14,22 +12,6 @@ import { UploadSection } from './UploadSection',
 import { SelectResumeSection } from './SelectResumeSection',
 import { ResumeOption, ResumeSelectorProps } from './types',
 import {logErrorToProduction} from '@/utils/productionLogger',
-=======
-import React, { useState, useEffect } from 'react';
-import { Button } from &quot;@/components/ui/button&quot;;
-import { RadioGroup, RadioGroupItem } from &quot;@/components/ui/radio-group&quot;;
-import { Label } from &quot;@/components/ui/label&quot;;
-import { Plus, Loader2 } from 'lucide-react'
-import { useResume } from &quot;@/hooks/useResume&quot;;
-import { exportResumeToPDF } from &quot;@/utils/pdfExport&quot;;
-import { toast } from &quot;@/components/ui/use-toast&quot;;
-import { ResumePreviewCard } from './ResumePreviewCard';
-import { UploadSection } from './UploadSection';
-import { SelectResumeSection } from './SelectResumeSection';
-import { ResumeOption, ResumeSelectorProps } from './types';
-import {logErrorToProduction} from '@/utils/productionLogger';
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
@@ -50,7 +32,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         logErrorToProduction('Error loading resumes:', { data: error })
       } finally {
         setIsLoading(false)
-=======
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
@@ -81,7 +62,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         logErrorToProduction('Error loading resumes:', { data: error });
       } finally {;
         setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
     },;
     loadResumes();
@@ -123,7 +103,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       setSelectedResume(selected),;
       onResumeSelected(selected);
     }
-<<<<<<< HEAD
   },
   
   // Handle custom file upload
@@ -134,20 +113,11 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       // Check if it's a PDF file
       if (file.type !== 'application/pdf') {
         toast({
-<<<<<<< HEAD
           title: "Invalid file type",
           description: "Please upload a PDF file",
           variant: "destructive"
         }),
         return
-=======
-          title: &quot;Invalid file type&quot;,
-          description: &quot;Please upload a PDF file&quot;,
-          variant: &quot;destructive&quot;
-        });
-        return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
   },;
   // Handle custom file upload;
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -161,7 +131,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
           variant: "destructive";
         }),;
         return;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
 ;
       // Create a custom resume option;
@@ -181,7 +150,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {;
       return;
     }
-<<<<<<< HEAD
     
     try {
       setIsLoading(true),
@@ -200,63 +168,50 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       URL.revokeObjectURL(url),
       
       toast({
-<<<<<<< HEAD
         title: "Success!",
         description: "Your resume has been downloaded."})
-=======
-        title: &quot;Success!&quot;,
-        description: &quot;Your resume has been downloaded.&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (error) {
       logErrorToProduction('Error downloading PDF:', { data: error }),
       toast({
-<<<<<<< HEAD
         title: "Download failed",
         description: "There was an error downloading your resume.",
         variant: "destructive"
       })
-=======
-        title: &quot;Download failed&quot;,
-        description: &quot;There was an error downloading your resume.&quot;,
-        variant: &quot;destructive&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
     }
   },
   
-  // Handle &quot;Generate Resume Now&quot; button
+  // Handle "Generate Resume Now" button
   const handleGenerateResume = () => {
     window.open('/dashboard/talent/portfolio_blank')
   },
   
   return (
-    <div className=&quot;space-y-4&quot;>
-      <h3 className=&quot;text-lg font-medium text-white&quot;>Attach Resume</h3>
+    <div className="space-y-4">
+      <h3 className="text-lg font-medium text-white">Attach Resume</h3>
       
       <RadioGroup 
         value={selectedOption} 
         onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
-        className=&quot;space-y-3&quot;
+        className="space-y-3"
       >
-        <div className=&quot;flex items-center space-x-2&quot;>
-          <RadioGroupItem value=&quot;recent&quot; id=&quot;recent&quot; />
-          <Label htmlFor=&quot;recent&quot; className=&quot;text-white&quot;>Use most recent AI Resume</Label>
+        <div className="flex items-center space-x-2">
+          <RadioGroupItem value="recent" id="recent" />
+          <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>
         </div>
         
-        <div className=&quot;flex items-center space-x-2&quot;>
-          <RadioGroupItem value=&quot;select&quot; id=&quot;select&quot; />
-          <Label htmlFor=&quot;select&quot; className=&quot;text-white&quot;>Select from saved versions</Label>
+        <div className="flex items-center space-x-2">
+          <RadioGroupItem value="select" id="select" />
+          <Label htmlFor="select" className="text-white">Select from saved versions</Label>
         </div>
         
-        <div className=&quot;flex items-center space-x-2&quot;>
-          <RadioGroupItem value=&quot;upload&quot; id=&quot;upload&quot; />
-          <Label htmlFor=&quot;upload&quot; className=&quot;text-white&quot;>Upload a custom resume (PDF)</Label>
+        <div className="flex items-center space-x-2">
+          <RadioGroupItem value="upload" id="upload" />
+          <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>
         </div>
       </RadioGroup>
       
-=======
 ;
     try {;
       setIsLoading(true),;
@@ -310,7 +265,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
           <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>;
         </div>;
       </RadioGroup>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {/* Resume selection options based on radio selection */}
       {selectedOption === 'recent' && resume && (;
         <ResumePreviewCard;
@@ -338,32 +292,17 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       )}
 ;
       {/* Generate Resume Now button */}
-<<<<<<< HEAD
-      <div className=&quot;flex justify-between items-center pt-2&quot;>
+      <div className="flex justify-between items-center pt-2">
         <Button 
-          variant=&quot;outline&quot;
+          variant="outline"
           onClick={handleGenerateResume}
-          className=&quot;text-zion-purple border-zion-purple/20&quot;
+          className="text-zion-purple border-zion-purple/20"
         >
-          <Plus className=&quot;h-4 w-4 mr-2&quot; />
+          <Plus className="h-4 w-4 mr-2" />
           Generate Resume Now
         </Button>
       </div>
     </div>
   )
-=======
-      <div className="flex justify-between items-center pt-2">;
-        <Button;
-          variant="outline";
-          onClick={handleGenerateResume}
-          className="text-zion-purple border-zion-purple/20";
-        >;
-          <Plus className="h-4 w-4 mr-2" />;
-          Generate Resume Now;
-        </Button>;
-      </div>;
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

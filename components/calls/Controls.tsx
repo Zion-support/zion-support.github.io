@@ -28,37 +28,20 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
     } catch (e) {;
       console.warn('Screen share failed', e);
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;flex items-center gap-3&quot;>
+    <div className="flex items-center gap-3">
       <button onClick={toggleMic} className={`px-4 py-2 rounded ${accentClass} text-white`}>
-=======
-  };
-  return (;
-    <div className="flex items-center gap-3">;
-      <button onClick={toggleMic} className={`px-4 py-2 rounded ${accentClass} text-white`}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         {micEnabled ? 'Mute' : 'Unmute'}
       </button>;
       <button onClick={toggleCam} className={`px-4 py-2 rounded ${accentClass} text-white`}>;
         {camEnabled ? 'Stop Video' : 'Start Video'}
-<<<<<<< HEAD
       </button>
-      <button onClick={toggleScreenShare} className=&quot;px-4 py-2 rounded bg-gray-700 text-white&quot;>
+      <button onClick={toggleScreenShare} className="px-4 py-2 rounded bg-gray-700 text-white">
         {sharing ? 'Stop Share' : 'Share Screen'}
       </button>
-      <button onClick={onLeave} className=&quot;px-4 py-2 rounded bg-red-600 text-white&quot;>Leave</button>
+      <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
     </div>
   )
-=======
-      </button>;
-      <button onClick={toggleScreenShare} className="px-4 py-2 rounded bg-gray-700 text-white">;
-        {sharing ? 'Stop Share' : 'Share Screen'}
-      </button>;
-      <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>;
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

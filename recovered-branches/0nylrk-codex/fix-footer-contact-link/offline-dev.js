@@ -21,16 +21,11 @@ const server = http.createServer((req, res) => {;
     res.writeHead(404),;
     res.end('Not found');
   }
-<<<<<<< HEAD
 }),
 
 const PORT = 8080,
 server.listen(PORT, () => {
-<<<<<<< HEAD
   // // // console.log(`
-=======
-  // console.log(`
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -51,7 +46,6 @@ server.listen(PORT, () => {
 ╚══════════════════════════════════════════════════════════════════╝
 `)
 }),
-=======
 }),;
 const PORT = 8080,;
 server.listen(PORT, () => {;
@@ -76,4 +70,3 @@ server.listen(PORT, () => {;
 ╚══════════════════════════════════════════════════════════════════╝;
 `);
 }),;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

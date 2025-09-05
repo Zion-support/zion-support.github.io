@@ -37,26 +37,15 @@ function stripPii(text) {;
   result = result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]'),;
   return result;
 }
-<<<<<<< HEAD
 
 function buildTrainingPairs(records) {
   const pairs = [],
 
   for (const job of records.jobs) {
     pairs.push({
-      prompt: `Create a job description titled &quot;${stripPii(job.title)}&quot;`,
+      prompt: `Create a job description titled "${stripPii(job.title)}"`,
       completion: stripPii(job.description)
     })
-=======
-;
-function buildTrainingPairs(records) {;
-  const pairs = [],;
-  for (const job of records.jobs) {;
-    pairs.push({;
-      prompt: `Create a job description titled "${stripPii(job.title)}"`,;
-      completion: stripPii(job.description);
-    });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   for (const resume of records.resumes) {;
@@ -80,7 +69,6 @@ async function saveJsonl(pairs, filePath) {;
   const lines = pairs.map(p => JSON.stringify({ prompt: p.prompt, completion: p.completion })).join('\n'),;
   await fs.writeFile(filePath, lines, 'utf8');
 }
-<<<<<<< HEAD
 
 async function createFineTune(filePath) {
   const formData = new FormData(),
@@ -108,16 +96,9 @@ async function createFineTune(filePath) {
       training_file: uploaded.id,
       model: 'gpt-3.5-turbo'
     })
-<<<<<<< HEAD
   }),
   const job = await jobRes.json(),
   // // // console.log('Fine-tune job created:', job.id)
-=======
-  });
-  const job = await jobRes.json();
-  // console.log('Fine-tune job created:', job.id);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
 async function createFineTune(filePath) {;
   const formData = new FormData(),;
@@ -146,7 +127,6 @@ async function createFineTune(filePath) {;
   }),;
   const job = await jobRes.json(),;
   // // // console.log('Fine-tune job created:', job.id);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 async function main() {;

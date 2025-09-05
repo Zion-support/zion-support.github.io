@@ -17,10 +17,9 @@ const defaultContext: MessagingContextType = {;
   setActiveConversation: () => {},;
   fetchConversations: async () => {},;
   loadMessages: async () => {}
-<<<<<<< HEAD
 },
 
-// &quot;createContext&quot; may be untyped if React type definitions are missing.
+// "createContext" may be untyped if React type definitions are missing.
 // To avoid TS2347 when the definitions are unavailable, we cast the default
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
@@ -33,21 +32,6 @@ export function useMessaging(): MessagingContextType {
   const context = useContext(MessagingContext) as MessagingContextType,
   if (context === undefined) {
     throw new Error('useMessaging must be used within a MessagingProvider')
-=======
-},;
-// "createContext" may be untyped if React type definitions are missing.;
-// To avoid TS2347 when the definitions are unavailable, we cast the default;
-// value instead of passing a generic type parameter directly.;
-const MessagingContext = createContext(;
-  defaultContext as MessagingContextType;
-),;
-// Hook for using the messaging context;
-export function useMessaging(): MessagingContextType {;
-  // Cast to avoid type errors when React type definitions are missing;
-  const context = useContext(MessagingContext) as MessagingContextType,;
-  if (context === undefined) {;
-    throw new Error('useMessaging must be used within a MessagingProvider');
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
   return context;
 }

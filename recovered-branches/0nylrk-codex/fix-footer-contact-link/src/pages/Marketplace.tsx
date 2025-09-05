@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -23,31 +21,6 @@ export default function Marketplace() {
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
-=======
-import React, { useState } from &quot;react&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Link } from &quot;react-router-dom&quot;;
-import { Grid3X3, ListFilter } from &quot;lucide-react&quot;;
-import { EnhancedSearchInput } from &quot;@/components/search/EnhancedSearchInput&quot;;
-import { FilterSidebar } from &quot;@/components/search/FilterSidebar&quot;;
-import { ActiveFiltersBar } from &quot;@/components/search/ActiveFiltersBar&quot;;
-import { ProductListingCard } from &quot;@/components/ProductListingCard&quot;;
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from &quot;@/data/marketplaceData&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { useNavigate } from &quot;react-router-dom&quot;;
-import { SearchSuggestion } from &quot;@/types/search&quot;;
-import { AppLayout } from &quot;@/layout/AppLayout&quot;;
-
-export default function Marketplace() {
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("&quot;);
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
@@ -59,7 +32,6 @@ export default function Marketplace() {
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false
-=======
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -91,7 +63,6 @@ export default function Marketplace() {;
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {;
       return false;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     // Product type filter;
@@ -113,17 +84,12 @@ export default function Marketplace() {;
     if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {;
       return false;
     }
-<<<<<<< HEAD
     
     return true
   }),
   
   const handleFilterChange = (filterType: string, value: string) => {
-<<<<<<< HEAD
     // // // console.log(`Filter changed: ${filterType} = ${value}`),
-=======
-    // console.log(`Filter changed: ${filterType} = ${value}`);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev => 
@@ -144,21 +110,12 @@ export default function Marketplace() {;
   },
   
   const clearAllFilters = () => {
-<<<<<<< HEAD
     setSearchQuery(""),
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
   },
-=======
-    setSearchQuery("&quot;);
-    setSelectedProductTypes([]);
-    setSelectedLocations([]);
-    setSelectedAvailability([]);
-    setSelectedRating(null);
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
@@ -166,12 +123,12 @@ export default function Marketplace() {;
     
     if (listing) {
       toast({
-        title: &quot;Quote Requested&quot;,
+        title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`
       }),
       
       // Navigate to the quote request page with the listing information
-      navigate(&quot;/request-quote&quot;, {
+      navigate("/request-quote", {
         state: { 
           serviceType: listing.category,
           specificItem: {
@@ -179,7 +136,6 @@ export default function Marketplace() {;
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0]
-=======
 ;
     return true;
   }),;
@@ -227,101 +183,55 @@ export default function Marketplace() {;
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           }
         }
       });
     }
-<<<<<<< HEAD
   },
 
   return (
     <AppLayout>
-      <main className=&quot;flex-grow container mx-auto px-4 py-8&quot;>
-        <div className=&quot;max-w-4xl mx-auto mb-8&quot;>
-          <h1 className=&quot;text-3xl font-bold text-white mb-4&quot;>AI & Tech Marketplace</h1>
-          <p className=&quot;text-zion-slate-light&quot;>
+      <main className="flex-grow container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto mb-8">
+          <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>
+          <p className="text-zion-slate-light">
             Discover professional services and products for your AI and tech projects.
             Browse our curated collection of solutions from verified providers.
           </p>
         </div>
         
         {/* Search and filter bar */}
-        <div className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8&quot;>
-          <div className=&quot;flex flex-col md:flex-row gap-4&quot;>
-            <div className=&quot;relative flex-1&quot;>
+        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="relative flex-1">
               <EnhancedSearchInput
                 value={searchQuery}
                 onChange={setSearchQuery}
-                placeholder=&quot;Search the marketplace...&quot;
+                placeholder="Search the marketplace..."
                 searchSuggestions={searchSuggestions}
               />
             </div>
-            <div className=&quot;flex gap-2&quot;>
-              <Button variant=&quot;ghost&quot; size=&quot;icon&quot; className=&quot;text-zion-slate-light&quot;>
-                <Grid3X3 className=&quot;h-4 w-4&quot; />
+            <div className="flex gap-2">
+              <Button variant="ghost" size="icon" className="text-zion-slate-light">
+                <Grid3X3 className="h-4 w-4" />
               </Button>
-              <Button variant=&quot;ghost&quot; size=&quot;icon&quot; className=&quot;text-zion-slate-light&quot;>
-                <ListFilter className=&quot;h-4 w-4&quot; />
+              <Button variant="ghost" size="icon" className="text-zion-slate-light">
+                <ListFilter className="h-4 w-4" />
               </Button>
             </div>
           </div>
         </div>
 
         {/* Main layout with sidebar and results */}
-        <div className=&quot;grid grid-cols-1 lg:grid-cols-4 gap-6&quot;>
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar Filters */}
-          <div className=&quot;lg:col-span-1&quot;>
+          <div className="lg:col-span-1">
             <FilterSidebar
               filters={{
                 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability,
                 selectedRating
-=======
-  },;
-  return (;
-    <AppLayout>;
-      <main className="flex-grow container mx-auto px-4 py-8">;
-        <div className="max-w-4xl mx-auto mb-8">;
-          <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>;
-          <p className="text-zion-slate-light">;
-            Discover professional services and products for your AI and tech projects.;
-            Browse our curated collection of solutions from verified providers.;
-          </p>;
-        </div>;
-        {/* Search and filter bar */}
-        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">;
-          <div className="flex flex-col md:flex-row gap-4">;
-            <div className="relative flex-1">;
-              <EnhancedSearchInput;
-                value={searchQuery}
-                onChange={setSearchQuery}
-                placeholder="Search the marketplace...";
-                searchSuggestions={searchSuggestions}
-              />;
-            </div>;
-            <div className="flex gap-2">;
-              <Button variant="ghost" size="icon" className="text-zion-slate-light">;
-                <Grid3X3 className="h-4 w-4" />;
-              </Button>;
-              <Button variant="ghost" size="icon" className="text-zion-slate-light">;
-                <ListFilter className="h-4 w-4" />;
-              </Button>;
-            </div>;
-          </div>;
-        </div>;
-        {/* Main layout with sidebar and results */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
-          {/* Sidebar Filters */}
-          <div className="lg:col-span-1">;
-            <FilterSidebar;
-              filters={{;
-                selectedProductTypes,;
-                selectedLocations;
-                selectedAvailability;
-                selectedRating;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               }}
               filterOptions={filterOptions}
               onFilterChange={handleFilterChange}
@@ -330,11 +240,7 @@ export default function Marketplace() {;
             />;
           </div>;
           {/* Main content */}
-<<<<<<< HEAD
-          <div className=&quot;lg:col-span-3&quot;>
-=======
-          <div className="lg:col-span-3">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          <div className="lg:col-span-3">
             {/* Active filters display */}
             <ActiveFiltersBar;
               selectedProductTypes={selectedProductTypes}
@@ -347,22 +253,13 @@ export default function Marketplace() {;
               onClearSearch={() => setSearchQuery("")}
             />;
             {/* Results count */}
-<<<<<<< HEAD
             <div className="mb-6">
-              <p className="text-zion-slate-light&quot;>
+              <p className="text-zion-slate-light">
                 Showing {filteredListings.length} results
-                {searchQuery && ` for &quot;${searchQuery}"`}
+                {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
             
-=======
-            <div className="mb-6">;
-              <p className="text-zion-slate-light">;
-                Showing {filteredListings.length} results;
-                {searchQuery && ` for "${searchQuery}"`}
-              </p>;
-            </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               {filteredListings.length > 0 ? (;

@@ -74,21 +74,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     { id: 'it', label: 'IT Solutions', icon: '💻' },;
     { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },;
     { id: 'contact', label: 'Contact', icon: '📞' }
-<<<<<<< HEAD
   ],
 
   return (
-    <UltraFuturisticBackground2026 intensity=&quot;medium&quot; theme=&quot;quantum&quot;>
+    <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
       {showInternalNav && (
       <>
         {/* Navigation */}
-        <nav className=&quot;fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-          <div className=&quot;flex justify-between items-center h-16&quot;>
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className=&quot;flex items-center space-x-2&quot;
+              className="flex items-center space-x-2"
             >
               Zion Tech Group
             </motion.h1>
@@ -96,7 +95,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className=&quot;text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed&quot;
+              className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
             >
               Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting-edge IT solutions that drive business transformation
             </motion.p>
@@ -104,73 +103,33 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className=&quot;flex flex-col sm:flex-row gap-6 justify-center mb-12&quot;
+              className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
             >
-              <button className=&quot;px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25&quot;>
+              <button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
                 Get Started Today
               </button>
-              <button className=&quot;px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;>
+              <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                 Explore Services
               </button>
             </motion.div>
             
-=======
-  ],;
-  return (;
-    <UltraFuturisticBackground2026 intensity="medium" theme="quantum">;
-      {showInternalNav && (;
-      <>;
-        {/* Navigation */}
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="flex justify-between items-center h-16">;
-            <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="flex items-center space-x-2";
-            >;
-              Zion Tech Group;
-            </motion.h1>;
-            <motion.p;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";
-            >;
-              Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting-edge IT solutions that drive business transformation;
-            </motion.p>;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center mb-12";
-            >;
-              <button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">;
-                Get Started Today;
-              </button>;
-              <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">;
-                Explore Services;
-              </button>;
-            </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {/* Contact Information */}
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
-              className=&quot;flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400&quot;
+              className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400"
             >
-              <div className=&quot;flex items-center gap-2&quot;>
-                <span className=&quot;w-2 h-2 bg-green-400 rounded-full animate-pulse&quot;></span>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                 <span>Mobile: +1 302 464 0950</span>
               </div>
-              <div className=&quot;flex items-center gap-2&quot;>
-                <span className=&quot;w-2 h-2 bg-blue-400 rounded-full animate-pulse&quot;></span>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
                 <span>Email: kleber@ziontechgroup.com</span>
               </div>
-              <div className=&quot;flex items-center gap-2&quot;>
-                <span className=&quot;w-2 h-2 bg-purple-400 rounded-full animate-pulse&quot;></span>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></span>
                 <span>Address: 364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </motion.div>
@@ -178,65 +137,26 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </section>
 
         {/* Services Preview */}
-        <section className=&quot;py-24 px-4&quot;>
-          <div className=&quot;max-w-7xl mx-auto&quot;>
+        <section className="py-24 px-4">
+          <div className="max-w-7xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className=&quot;text-center mb-20&quot;
+              className="text-center mb-20"
             >
-              <h2 className=&quot;text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
+              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Revolutionary Services Portfolio
               </h2>
-              <p className=&quot;text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed&quot;>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Experience the future with our comprehensive portfolio of {real2036InnovativeServices.length + real2036ITServices.length + real2036AIServices.length}+ innovative services spanning AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
               </p>
             </motion.div>
 
             {/* Featured Services Grid */}
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {featuredServices.map((service, index) => (
                 <motion.div
-=======
-              className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400";
-            >;
-              <div className="flex items-center gap-2">;
-                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>;
-                <span>Mobile: +1 302 464 0950</span>;
-              </div>;
-              <div className="flex items-center gap-2">;
-                <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>;
-                <span>Email: kleber@ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items-center gap-2">;
-                <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></span>;
-                <span>Address: 364 E Main St STE 1008 Middletown DE 19709</span>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Services Preview */}
-        <section className="py-24 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-20";
-            >;
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                Revolutionary Services Portfolio;
-              </h2>;
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
-                Experience the future with our comprehensive portfolio of {real2036InnovativeServices.length + real2036ITServices.length + real2036AIServices.length}+ innovative services spanning AI, Quantum Computing, Space Technology, and cutting-edge IT solutions;
-              </p>;
-            </motion.div>;
-            {/* Featured Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-              {featuredServices.map((service, index) => (;
-                <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -255,15 +175,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                       category: service.category,;
                       icon: service.icon;
                     }}
-<<<<<<< HEAD
-                    variant=&quot;ai&quot;
+                    variant="ai"
                   />
                 </motion.div>
-=======
-                    variant="ai";
-                  />;
-                </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </div>;
             {/* Call to Action */}
@@ -271,12 +185,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className=&quot;text-center&quot;
+              className="text-center"
             >
               <a 
-                href=&quot;/comprehensive-services-showcase-2036&quot;
-                className=&quot;inline-block px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold text-xl rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-purple-500/25&quot;
+                href="/comprehensive-services-showcase-2036"
+                className="inline-block px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold text-xl rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-purple-500/25"
               >
                 View Complete Portfolio
               </a>
@@ -285,47 +198,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </section>
 
         {/* Technology Domains */}
-        <section className=&quot;py-24 px-4 bg-gradient-to-r from-gray-900/50 to-black/50&quot;>
-          <div className=&quot;max-w-7xl mx-auto&quot;>
+        <section className="py-24 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+          <div className="max-w-7xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className=&quot;text-center mb-20&quot;
+              className="text-center mb-20"
             >
-              <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16&quot; />
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
           </div>
 
-=======
-              className="text-center";
-            >;
-              <a;
-                href="/comprehensive-services-showcase-2036";
-                className="inline-block px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold text-xl rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-purple-500/25";
-              >;
-                View Complete Portfolio;
-              </a>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Technology Domains */}
-        <section className="py-24 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">;
-          <div className="max-w-7xl mx-auto">;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-20";
-            >;
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />;
-              </svg>;
-            </button>;
-          </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           {/* Mobile Navigation Menu */}
           <AnimatePresence>;
             {isMobileMenuOpen && (;
@@ -333,21 +219,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-                className=&quot;lg:hidden border-t border-white/10&quot;
-                id=&quot;mobile-navigation&quot;
+                className="lg:hidden border-t border-white/10"
+                id="mobile-navigation"
               >
-                <div className=&quot;py-4 space-y-2&quot;>
+                <div className="py-4 space-y-2">
                   {navigationSections.map((section) => (
                     <button
-=======
-                className="lg:hidden border-t border-white/10";
-                id="mobile-navigation";
-              >;
-                <div className="py-4 space-y-2">;
-                  {navigationSections.map((section) => (;
-                    <button;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       key={section.id}
                       onClick={() => scrollToSection(section.id)}
                       className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${;
@@ -360,18 +237,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                       <span>{section.label}</span>;
                     </button>;
                   ))}
-<<<<<<< HEAD
-                  <div className=&quot;pt-4 border-t border-white/10&quot;>
+                  <div className="pt-4 border-t border-white/10">
                     <a
-                      href=&quot;tel:+13024640950&quot;
-                      className=&quot;flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300&quot;
+                      href="tel:+13024640950"
+                      className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
                     >
                       <span>📱</span>
                       <span>+1 302 464 0950</span>
                     </a>
                     <a
-                      href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                      className=&quot;flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300&quot;
+                      href="mailto:kleber@ziontechgroup.com"
+                      className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
                     >
                       <span>✉️</span>
                       <span>kleber@ziontechgroup.com</span>
@@ -379,26 +255,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </div>
                 </div>
               </motion.div>
-=======
-                  <div className="pt-4 border-t border-white/10">;
-                    <a;
-                      href="tel:+13024640950";
-                      className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300";
-                    >;
-                      <span>📱</span>;
-                      <span>+1 302 464 0950</span>;
-                    </a>;
-                    <a;
-                      href="mailto:kleber@ziontechgroup.com";
-                      className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300";
-                    >;
-                      <span>✉️</span>;
-                      <span>kleber@ziontechgroup.com</span>;
-                    </a>;
-                  </div>;
-                </div>;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             )}
           </AnimatePresence>;
         </div>;
@@ -407,16 +263,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       )}
 ;
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section id=&quot;hero&quot; className=&quot;relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16&quot;>
-        <div className=&quot;text-center z-10 max-w-6xl mx-auto&quot;>
+      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
+        <div className="text-center z-10 max-w-6xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className=&quot;text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6&quot;
+            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
           >
-            <span className=&quot;bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Future of Technology
             </span>
           </motion.h1>
@@ -425,7 +280,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className=&quot;text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed&quot;
+            className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed"
           >
             Revolutionary micro SAAS services, cutting-edge AI solutions, quantum cybersecurity, and emerging technologies that transform businesses and industries.
           </motion.p>
@@ -434,590 +289,327 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-16&quot;
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <button
               onClick={() => scrollToSection('services')}
-              className=&quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25&quot;
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
             >
               Explore Services
             </button>
             <a
-              href=&quot;https://ziontechgroup.com&quot;
-              className=&quot;border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;
+              href="https://ziontechgroup.com"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
             >
               Visit Website
             </a>
           </motion.div>
 
-=======
-      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">;
-        <div className="text-center z-10 max-w-6xl mx-auto">;
-          <motion.h1;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6";
-          >;
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
-              Future of Technology;
-            </span>;
-          </motion.h1>;
-          <motion.p;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed";
-          >;
-            Revolutionary micro SAAS services, cutting-edge AI solutions, quantum cybersecurity, and emerging technologies that transform businesses and industries.;
-          </motion.p>;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-16";
-          >;
-            <button;
-              onClick={() => scrollToSection('services')}
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25";
-            >;
-              Explore Services;
-            </button>;
-            <a;
-              href="https://ziontechgroup.com";
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105";
-            >;
-              Visit Website;
-            </a>;
-          </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           {/* Floating Service Cards */}
           <motion.div;
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-<<<<<<< HEAD
-            className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto&quot;
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
           >
             {featuredServices.slice(0, 3).map((service, index) => (
               <motion.div
-=======
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto";
-          >;
-            {featuredServices.slice(0, 3).map((service, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
-<<<<<<< HEAD
-                className=&quot;bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105&quot;
+                className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
               >
-                <div className=&quot;text-4xl mb-4&quot;>{service.icon}</div>
-                <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>{service.name}</h3>
-                <p className=&quot;text-gray-400 text-sm&quot;>{service.tagline}</p>
-                <div className=&quot;mt-4 text-cyan-400 font-bold&quot;>{service.price}{service.period}</div>
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                <p className="text-gray-400 text-sm">{service.tagline}</p>
+                <div className="mt-4 text-cyan-400 font-bold">{service.price}{service.period}</div>
               </motion.div>
-=======
-                className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105";
-              >;
-                <div className="text-4xl mb-4">{service.icon}</div>;
-                <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>;
-                <p className="text-gray-400 text-sm">{service.tagline}</p>;
-                <div className="mt-4 text-cyan-400 font-bold">{service.price}{service.period}</div>;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </motion.div>;
         </div>;
       </section>;
       {/* Services Section */}
-<<<<<<< HEAD
-      <section id=&quot;services&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className=&quot;text-center mb-16&quot;
+            className="text-center mb-16"
           >
-            <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
-              <span className=&quot;bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Revolutionary Micro SAAS Services
               </span>
             </h2>
-            <p className=&quot;text-xl text-gray-300 max-w-4xl mx-auto&quot;>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Transform your business with our cutting-edge micro SAAS solutions that deliver immediate value and rapid ROI.
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovativeRealMicroSaasServices2025.slice(0, 9).map((service, index) => (
               <motion.div
-=======
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16";
-          >;
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">;
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                Revolutionary Micro SAAS Services;
-              </span>;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">;
-              Transform your business with our cutting-edge micro SAAS solutions that deliver immediate value and rapid ROI.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {innovativeRealMicroSaasServices2025.slice(0, 9).map((service, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
               >
                 <UltraFuturisticServiceCard2026 
                   service={service} 
-                  variant=&quot;default&quot;
-                  theme=&quot;quantum&quot;
+                  variant="default"
+                  theme="quantum"
                 />
               </motion.div>
-=======
-              >;
-                <UltraFuturisticServiceCard2026;
-                  service={service} ;
-                  variant="default";
-                  theme="quantum";
-                />;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* AI Services Section */}
-<<<<<<< HEAD
-      <section id=&quot;ai&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
+      <section id="ai" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className=&quot;text-center mb-16&quot;
+            className="text-center mb-16"
           >
-            <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
-              <span className=&quot;bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent&quot;>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Cutting-Edge AI Services
               </span>
             </h2>
-            <p className=&quot;text-xl text-gray-300 max-w-4xl mx-auto&quot;>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Revolutionary AI solutions that transform businesses and create unprecedented opportunities.
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovativeAIServicesEnhanced2025.slice(0, 9).map((service, index) => (
               <motion.div
-=======
-      <section id="ai" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16";
-          >;
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">;
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">;
-                Cutting-Edge AI Services;
-              </span>;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">;
-              Revolutionary AI solutions that transform businesses and create unprecedented opportunities.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {innovativeAIServicesEnhanced2025.slice(0, 9).map((service, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
               >
                 <UltraFuturisticServiceCard2026 
                   service={service} 
-                  variant=&quot;premium&quot;
-                  theme=&quot;neon&quot;
+                  variant="premium"
+                  theme="neon"
                 />
               </motion.div>
-=======
-              >;
-                <UltraFuturisticServiceCard2026;
-                  service={service} ;
-                  variant="premium";
-                  theme="neon";
-                />;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* AI Automation Services Section */}
-<<<<<<< HEAD
-      <section id=&quot;automation&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
+      <section id="automation" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className=&quot;text-center mb-16&quot;
+            className="text-center mb-16"
           >
-            <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
-              <span className=&quot;bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent&quot;>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
                 Advanced AI Automation
               </span>
             </h2>
-            <p className=&quot;text-xl text-gray-300 max-w-4xl mx-auto&quot;>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Intelligent automation solutions that learn, adapt, and continuously optimize your business processes.
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {advancedAIAutomationServices.map((service, index) => (
               <motion.div
-=======
-      <section id="automation" className="py-20 px-4 sm:px-6 lg:px-8 relative">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16";
-          >;
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">;
-              <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">;
-                Advanced AI Automation;
-              </span>;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">;
-              Intelligent automation solutions that learn, adapt, and continuously optimize your business processes.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {advancedAIAutomationServices.map((service, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
               >
                 <UltraFuturisticServiceCard2026 
                   service={service} 
-                  variant=&quot;enterprise&quot;
-                  theme=&quot;holographic&quot;
+                  variant="enterprise"
+                  theme="holographic"
                 />
               </motion.div>
-=======
-              >;
-                <UltraFuturisticServiceCard2026;
-                  service={service} ;
-                  variant="enterprise";
-                  theme="holographic";
-                />;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* Quantum Cybersecurity Section */}
-<<<<<<< HEAD
-      <section id=&quot;quantum&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
+      <section id="quantum" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className=&quot;text-center mb-16&quot;
+            className="text-center mb-16"
           >
-            <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
-              <span className=&quot;bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent&quot;>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
                 Quantum Cybersecurity
               </span>
             </h2>
-            <p className=&quot;text-xl text-gray-300 max-w-4xl mx-auto&quot;>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Unbreakable security powered by quantum computing and advanced AI algorithms.
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {quantumCybersecurityServices.map((service, index) => (
               <motion.div
-=======
-      <section id="quantum" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16";
-          >;
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">;
-              <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">;
-                Quantum Cybersecurity;
-              </span>;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">;
-              Unbreakable security powered by quantum computing and advanced AI algorithms.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {quantumCybersecurityServices.map((service, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
               >
                 <UltraFuturisticServiceCard2026 
                   service={service} 
-                  variant=&quot;premium&quot;
-                  theme=&quot;cyberpunk&quot;
+                  variant="premium"
+                  theme="cyberpunk"
                 />
               </motion.div>
-=======
-              >;
-                <UltraFuturisticServiceCard2026;
-                  service={service} ;
-                  variant="premium";
-                  theme="cyberpunk";
-                />;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* IT Solutions Section */}
-<<<<<<< HEAD
-      <section id=&quot;it&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
+      <section id="it" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className=&quot;text-center mb-16&quot;
+            className="text-center mb-16"
           >
-            <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
-              <span className=&quot;bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent&quot;>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                 Advanced IT Solutions
               </span>
             </h2>
-            <p className=&quot;text-xl text-gray-300 max-w-4xl mx-auto&quot;>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Comprehensive IT services that drive digital transformation and business innovation.
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovativeITServicesEnhanced2025.slice(0, 9).map((service, index) => (
               <motion.div
-=======
-      <section id="it" className="py-20 px-4 sm:px-6 lg:px-8 relative">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16";
-          >;
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">;
-              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
-                Advanced IT Solutions;
-              </span>;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">;
-              Comprehensive IT services that drive digital transformation and business innovation.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {innovativeITServicesEnhanced2025.slice(0, 9).map((service, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
               >
                 <UltraFuturisticServiceCard2026 
                   service={service} 
-                  variant=&quot;default&quot;
-                  theme=&quot;quantum&quot;
+                  variant="default"
+                  theme="quantum"
                 />
               </motion.div>
-=======
-              >;
-                <UltraFuturisticServiceCard2026;
-                  service={service} ;
-                  variant="default";
-                  theme="quantum";
-                />;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* Emerging Technologies Section */}
-<<<<<<< HEAD
-      <section id=&quot;emerging&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
+      <section id="emerging" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className=&quot;text-center mb-16&quot;
+            className="text-center mb-16"
           >
-            <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
-              <span className=&quot;bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent&quot;>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                 Emerging Technologies
               </span>
             </h2>
-            <p className=&quot;text-xl text-gray-300 max-w-4xl mx-auto&quot;>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Revolutionary technologies that define the future of human civilization and business.
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {emergingTechServicesEnhanced2025.slice(0, 9).map((service, index) => (
               <motion.div
-=======
-      <section id="emerging" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16";
-          >;
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">;
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">;
-                Emerging Technologies;
-              </span>;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">;
-              Revolutionary technologies that define the future of human civilization and business.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {emergingTechServicesEnhanced2025.slice(0, 9).map((service, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
               >
                 <UltraFuturisticServiceCard2026 
                   service={service} 
-                  variant=&quot;enterprise&quot;
-                  theme=&quot;holographic&quot;
+                  variant="enterprise"
+                  theme="holographic"
                 />
               </motion.div>
-=======
-              >;
-                <UltraFuturisticServiceCard2026;
-                  service={service} ;
-                  variant="enterprise";
-                  theme="holographic";
-                />;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* Contact Section */}
-<<<<<<< HEAD
-      <section id=&quot;contact&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
-        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
-=======
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative">;
-        <div className="max-w-4xl mx-auto text-center">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
           >
-            <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
-              <span className=&quot;bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
               </span>
             </h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+            <p className="text-xl text-gray-300 mb-8">
               Contact us today to learn how our innovative services can revolutionize your operations.
             </p>
             
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-12&quot;>
-              <div className=&quot;bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6&quot;>
-                <div className=&quot;text-3xl mb-4&quot;>📱</div>
-                <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Phone</h3>
-                <a href=&quot;tel:+13024640950&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
+                <div className="text-3xl mb-4">📱</div>
+                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                   +1 302 464 0950
                 </a>
               </div>
-              <div className=&quot;bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6&quot;>
-                <div className=&quot;text-3xl mb-4&quot;>✉️</div>
-                <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Email</h3>
-                <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
+              <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
+                <div className="text-3xl mb-4">✉️</div>
+                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className=&quot;bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6&quot;>
-                <div className=&quot;text-3xl mb-4&quot;>📍</div>
-                <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Address</h3>
-                <p className=&quot;text-gray-300 text-sm&quot;>
+              <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
+                <div className="text-3xl mb-4">📍</div>
+                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+                <p className="text-gray-300 text-sm">
                   364 E Main St STE 1008<br />
                   Middletown DE 19709
                 </p>
               </div>
             </div>
             
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href=&quot;https://ziontechgroup.com&quot;
-                className=&quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;
+                href="https://ziontechgroup.com"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
               >
                 Visit Our Website
               </a>
               <a
-                href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                className=&quot;border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today
               </a>
@@ -1027,67 +619,67 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </section>
 
       {/* Enhanced Footer */}
-      <footer className=&quot;bg-black/60 border-t border-white/10 py-16 px-4 sm:px-6 lg:px-8&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12&quot;>
+      <footer className="bg-black/60 border-t border-white/10 py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
-              <h3 className=&quot;text-white font-bold text-lg mb-4&quot;>ZionTech Group</h3>
-              <p className=&quot;text-gray-400 text-sm leading-relaxed&quot;>
+              <h3 className="text-white font-bold text-lg mb-4">ZionTech Group</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
                 Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies.
               </p>
             </div>
             <div>
-              <h4 className=&quot;text-white font-semibold mb-4&quot;>Services</h4>
-              <ul className=&quot;text-gray-400 text-sm space-y-2&quot;>
-                <li><a href=&quot;#services&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>Micro SAAS</a></li>
-                <li><a href=&quot;#ai&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>AI Services</a></li>
-                <li><a href=&quot;#automation&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>AI Automation</a></li>
-                <li><a href=&quot;#quantum&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>Quantum Security</a></li>
-                <li><a href=&quot;#it&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>IT Solutions</a></li>
-                <li><a href=&quot;#emerging&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>Emerging Tech</a></li>
+              <h4 className="text-white font-semibold mb-4">Services</h4>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li><a href="#services" className="hover:text-cyan-400 transition-colors">Micro SAAS</a></li>
+                <li><a href="#ai" className="hover:text-cyan-400 transition-colors">AI Services</a></li>
+                <li><a href="#automation" className="hover:text-cyan-400 transition-colors">AI Automation</a></li>
+                <li><a href="#quantum" className="hover:text-cyan-400 transition-colors">Quantum Security</a></li>
+                <li><a href="#it" className="hover:text-cyan-400 transition-colors">IT Solutions</a></li>
+                <li><a href="#emerging" className="hover:text-cyan-400 transition-colors">Emerging Tech</a></li>
               </ul>
             </div>
             <div>
-              <h4 className=&quot;text-white font-semibold mb-4&quot;>Company</h4>
-              <ul className=&quot;text-gray-400 text-sm space-y-2&quot;>
-                <li><a href=&quot;https://ziontechgroup.com&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>About Us</a></li>
-                <li><a href=&quot;#contact&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>Contact</a></li>
-                <li><a href=&quot;https://ziontechgroup.com&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>Careers</a></li>
-                <li><a href=&quot;https://ziontechgroup.com&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>Blog</a></li>
-                <li><a href=&quot;https://ziontechgroup.com&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>News</a></li>
+              <h4 className="text-white font-semibold mb-4">Company</h4>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">About Us</a></li>
+                <li><a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a></li>
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Careers</a></li>
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Blog</a></li>
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">News</a></li>
               </ul>
             </div>
             <div>
-              <h4 className=&quot;text-white font-semibold mb-4&quot;>Connect</h4>
-              <ul className=&quot;text-gray-400 text-sm space-y-2&quot;>
-                <li><a href=&quot;tel:+13024640950&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>+1 302 464 0950</a></li>
-                <li><a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>kleber@ziontechgroup.com</a></li>
-                <li><a href=&quot;https://ziontechgroup.com&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>Website</a></li>
-                <li><a href=&quot;https://www.linkedin.com/company/zion-tech-group&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>LinkedIn</a></li>
-                <li><a href=&quot;https://x.com/ziontechgroup&quot; className=&quot;hover:text-cyan-400 transition-colors&quot;>Twitter/X</a></li>
+              <h4 className="text-white font-semibold mb-4">Connect</h4>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a></li>
+                <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a></li>
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Website</a></li>
+                <li><a href="https://www.linkedin.com/company/zion-tech-group" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
+                <li><a href="https://x.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">Twitter/X</a></li>
               </ul>
             </div>
           </div>
         </section>
 
         {/* Why Choose Us */}
-        <section className=&quot;py-24 px-4&quot;>
-          <div className=&quot;max-w-7xl mx-auto&quot;>
+        <section className="py-24 px-4">
+          <div className="max-w-7xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className=&quot;text-center mb-20&quot;
+              className="text-center mb-20"
             >
-              <h2 className=&quot;text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
+              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
               </h2>
-              <p className=&quot;text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto&quot;>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
                 We're not just another technology company - we're pioneers shaping the future of business and technology
               </p>
             </motion.div>
 
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: 'Innovation First',
@@ -1118,148 +710,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   title: 'Scalable Solutions',
                   description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.',
                   icon: '📊'
-=======
-          >;
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">;
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                Ready to Transform Your Business?;
-              </span>;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8">;
-              Contact us today to learn how our innovative services can revolutionize your operations.;
-            </p>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
-              <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">;
-                <div className="text-3xl mb-4">📱</div>;
-                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>;
-                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
-                  +1 302 464 0950;
-                </a>;
-              </div>;
-              <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">;
-                <div className="text-3xl mb-4">✉️</div>;
-                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>;
-                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
-                  kleber@ziontechgroup.com;
-                </a>;
-              </div>;
-              <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6">;
-                <div className="text-3xl mb-4">📍</div>;
-                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;
-                <p className="text-gray-300 text-sm">;
-                  364 E Main St STE 1008<br />;
-                  Middletown DE 19709;
-                </p>;
-              </div>;
-            </div>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <a;
-                href="https://ziontechgroup.com";
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105";
-              >;
-                Visit Our Website;
-              </a>;
-              <a;
-                href="mailto:kleber@ziontechgroup.com";
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105";
-              >;
-                Get Started Today;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Enhanced Footer */}
-      <footer className="bg-black/60 border-t border-white/10 py-16 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-7xl mx-auto">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">;
-            <div>;
-              <h3 className="text-white font-bold text-lg mb-4">ZionTech Group</h3>;
-              <p className="text-gray-400 text-sm leading-relaxed">;
-                Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies.;
-              </p>;
-            </div>;
-            <div>;
-              <h4 className="text-white font-semibold mb-4">Services</h4>;
-              <ul className="text-gray-400 text-sm space-y-2">;
-                <li><a href="#services" className="hover:text-cyan-400 transition-colors">Micro SAAS</a></li>;
-                <li><a href="#ai" className="hover:text-cyan-400 transition-colors">AI Services</a></li>;
-                <li><a href="#automation" className="hover:text-cyan-400 transition-colors">AI Automation</a></li>;
-                <li><a href="#quantum" className="hover:text-cyan-400 transition-colors">Quantum Security</a></li>;
-                <li><a href="#it" className="hover:text-cyan-400 transition-colors">IT Solutions</a></li>;
-                <li><a href="#emerging" className="hover:text-cyan-400 transition-colors">Emerging Tech</a></li>;
-              </ul>;
-            </div>;
-            <div>;
-              <h4 className="text-white font-semibold mb-4">Company</h4>;
-              <ul className="text-gray-400 text-sm space-y-2">;
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">About Us</a></li>;
-                <li><a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a></li>;
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Careers</a></li>;
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Blog</a></li>;
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">News</a></li>;
-              </ul>;
-            </div>;
-            <div>;
-              <h4 className="text-white font-semibold mb-4">Connect</h4>;
-              <ul className="text-gray-400 text-sm space-y-2">;
-                <li><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a></li>;
-                <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a></li>;
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Website</a></li>;
-                <li><a href="https://www.linkedin.com/company/zion-tech-group" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>;
-                <li><a href="https://x.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">Twitter/X</a></li>;
-              </ul>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Why Choose Us */}
-        <section className="py-24 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-20";
-            >;
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                Why Choose Zion Tech Group?;
-              </h2>;
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">;
-                We're not just another technology company - we're pioneers shaping the future of business and technology;
-              </p>;
-            </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {[;
-                {;
-                  title: 'Innovation First',;
-                  description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.',;
-                  icon: '🚀';
-                },;
-                {;
-                  title: 'Proven Results',;
-                  description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.',;
-                  icon: '📈';
-                },;
-                {;
-                  title: 'Future-Proof Technology',;
-                  description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.',;
-                  icon: '🔮';
-                },;
-                {;
-                  title: 'Expert Team',;
-                  description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.',;
-                  icon: '👥';
-                },;
-                {;
-                  title: '24/7 Support',;
-                  description: 'Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.',;
-                  icon: '🛡️';
-                },;
-                {;
-                  title: 'Scalable Solutions',;
-                  description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.',;
-                  icon: '📊';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 }
               ].map((feature, index) => (;
                 <motion.div;
@@ -1267,27 +717,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  className=&quot;text-center p-8&quot;
+                  className="text-center p-8"
                 >
-                  <div className=&quot;w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto&quot;>
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto">
                     {feature.icon}
                   </div>
-                  <h3 className=&quot;text-2xl font-bold mb-4 text-white&quot;>
+                  <h3 className="text-2xl font-bold mb-4 text-white">
                     {feature.title}
                   </h3>
-                  <p className=&quot;text-gray-300 leading-relaxed&quot;>
-=======
-                  className="text-center p-8";
-                >;
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto">;
-                    {feature.icon}
-                  </div>;
-                  <h3 className="text-2xl font-bold mb-4 text-white">;
-                    {feature.title}
-                  </h3>;
-                  <p className="text-gray-300 leading-relaxed">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  <p className="text-gray-300 leading-relaxed">
                     {feature.description}
                   </p>;
                 </motion.div>;

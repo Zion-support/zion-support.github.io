@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
@@ -7,20 +5,10 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { SearchSuggestion } from "@/types/search",
 import {logErrorToProduction} from '@/utils/productionLogger',
-=======
-import { useEffect, useState } from &quot;react&quot;;
-import { useRouter } from 'next/router';
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput } from &quot;@/components/search/EnhancedSearchInput&quot;;
-import { generateSearchSuggestions } from &quot;@/data/marketplaceData&quot;;
-import { SearchSuggestion } from &quot;@/types/search&quot;;
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import {
   Tabs,
   TabsContent,
   TabsList,
-<<<<<<< HEAD
   TabsTrigger} from "@/components/ui/tabs",
 import { Loader2 } from 'lucide-react'
 
@@ -36,29 +24,11 @@ function highlight(text: string, term: string) {
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
   const regex = new RegExp(`(${escaped})`, "gi"),
   const parts = text.split(regex),
-=======
-  TabsTrigger} from &quot;@/components/ui/tabs&quot;;
-import { Loader2 } from 'lucide-react'
-
-interface SearchResult {
-  id: string;
-  type: &quot;product&quot; | &quot;service&quot; | &quot;talent&quot; | &quot;blog&quot; | &quot;doc&quot;;
-  title: string;
-  description: string;
-}
-
-function highlight(text: string, term: string) {
-  if (!term) return text;
-  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, &quot;\\$&&quot;);
-  const regex = new RegExp(`(${escaped})`, &quot;gi&quot;);
-  const parts = text.split(regex);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   return (
     <>
       {parts.map((part, i) =>
         regex.test(part) ? (
-          <mark key={i} className=&quot;bg-yellow-200 text-black&quot;>
-=======
+          <mark key={i} className="bg-yellow-200 text-black">
 import { useEffect, useState } from "react",;
 import { useRouter } from 'next/router',;
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',;
@@ -89,7 +59,6 @@ function highlight(text: string, term: string) {;
       {parts.map((part, i) =>;
         regex.test(part) ? (;
           <mark key={i} className="bg-yellow-200 text-black">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {part}
           </mark>;
         ) : (;
@@ -99,22 +68,13 @@ function highlight(text: string, term: string) {;
     </>;
   );
 }
-<<<<<<< HEAD
 
 export default function SearchPage() {
-<<<<<<< HEAD
   const router = useRouterReady(), // Use our custom hook
   const [query, setQuery] = useState(""),
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false),
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-=======
-  const router = useRouterReady(); // Use our custom hook
-  const [query, setQuery] = useState("&quot;);
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [loading, setLoading] = useState(false);
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
@@ -134,14 +94,9 @@ export default function SearchPage() {
   useEffect(() => {
     if (!router.isReady) return,
     
-<<<<<<< HEAD
     const urlQuery = (router.query.q as string) || "",
-=======
-    const urlQuery = (router.query.q as string) || "&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     if (urlQuery !== query) {
       setQuery(urlQuery)
-=======
 ;
 export default function SearchPage() {;
   const router = useRouterReady(), // Use our custom hook;
@@ -167,7 +122,6 @@ export default function SearchPage() {;
     const urlQuery = (router.query.q as string) || "",;
     if (urlQuery !== query) {;
       setQuery(urlQuery);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   }, [router.isReady, router.query.q]), // Fixed dependency array;
   // Fetch results when query changes;
@@ -207,7 +161,6 @@ export default function SearchPage() {;
     if (query.trim()) {;
       router.push(`/search?q=${encodeURIComponent(query.trim())}`);
     }
-<<<<<<< HEAD
   },
 
   // Add key prop to force re-render when route changes
@@ -215,19 +168,9 @@ export default function SearchPage() {;
 
   return (
     <div key={pageKey}>
-      <main className=&quot;container mx-auto px-4 py-8&quot;>
-        <form onSubmit={handleSubmit} className=&quot;mb-6&quot;>
+      <main className="container mx-auto px-4 py-8">
+        <form onSubmit={handleSubmit} className="mb-6">
           <EnhancedSearchInput
-=======
-  },;
-  // Add key prop to force re-render when route changes;
-  const pageKey = `search-${routeKey}-${router.asPath}`,;
-  return (;
-    <div key={pageKey}>;
-      <main className="container mx-auto px-4 py-8">;
-        <form onSubmit={handleSubmit} className="mb-6">;
-          <EnhancedSearchInput;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             value={query}
             onChange={setQuery}
             onSelectSuggestion={(suggestion) => {;
@@ -236,212 +179,110 @@ export default function SearchPage() {;
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
             }}
             searchSuggestions={suggestions}
-<<<<<<< HEAD
-            placeholder=&quot;Search talent, jobs, and projects...&quot;
+            placeholder="Search talent, jobs, and projects..."
           />
         </form>
 
         {loading && (
-          <div className=&quot;flex justify-center py-8&quot;>
-            <Loader2 className=&quot;h-8 w-8 animate-spin text-zion-purple&quot; />
+          <div className="flex justify-center py-8">
+            <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
           </div>
         )}
         {!loading && marketplaceResults.length === 0 && blogResults.length > 0 && (
           <div>
-            <p className=&quot;text-zion-slate-light mb-2&quot;>No marketplace results found. Related blog posts:</p>
-            <div className=&quot;space-y-4&quot;>
+            <p className="text-zion-slate-light mb-2">No marketplace results found. Related blog posts:</p>
+            <div className="space-y-4">
               {blogResults.map(r => (
-                <div key={`blog-${r.id}`} className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4&quot;>
-                  <h3 className=&quot;text-lg font-bold text-white&quot;>{highlight(r.title, query)}</h3>
-                  <p className=&quot;text-zion-slate-light&quot;>{highlight(r.description, query)}</p>
+                <div key={`blog-${r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">
+                  <h3 className="text-lg font-bold text-white">{highlight(r.title, query)}</h3>
+                  <p className="text-zion-slate-light">{highlight(r.description, query)}</p>
                 </div>
-=======
-            placeholder="Search talent, jobs, and projects...";
-          />;
-        </form>;
-        {loading && (;
-          <div className="flex justify-center py-8">;
-            <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
-          </div>;
-        )}
-        {!loading && marketplaceResults.length === 0 && blogResults.length > 0 && (;
-          <div>;
-            <p className="text-zion-slate-light mb-2">No marketplace results found. Related blog posts:</p>;
-            <div className="space-y-4">;
-              {blogResults.map(r => (;
-                <div key={`blog-${r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
-                  <h3 className="text-lg font-bold text-white">{highlight(r.title, query)}</h3>;
-                  <p className="text-zion-slate-light">{highlight(r.description, query)}</p>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
         {!loading && marketplaceResults.length === 0 && blogResults.length === 0 && query && (
-          <p className=&quot;text-zion-slate-light&quot;>No results found for &quot;{query}&quot;.</p>
+          <p className="text-zion-slate-light">No results found for "{query}".</p>
         )}
         {!loading && marketplaceResults.length > 0 && (
-          <Tabs defaultValue=&quot;products&quot; className=&quot;space-y-4&quot;>
-            <TabsList className=&quot;mb-4&quot;>
-              <TabsTrigger value=&quot;products&quot;>
+          <Tabs defaultValue="products" className="space-y-4">
+            <TabsList className="mb-4">
+              <TabsTrigger value="products">
                 Products ({productResults.length})
               </TabsTrigger>
-              <TabsTrigger value=&quot;talent&quot;>
+              <TabsTrigger value="talent">
                 Talent ({talentResults.length})
               </TabsTrigger>
-              <TabsTrigger value=&quot;docs&quot;>
+              <TabsTrigger value="docs">
                 Docs ({docResults.length})
               </TabsTrigger>
-              <TabsTrigger value=&quot;blog&quot;>
+              <TabsTrigger value="blog">
                 Blog ({blogResults.length})
               </TabsTrigger>
             </TabsList>
-            <TabsContent value=&quot;products&quot; className=&quot;space-y-4&quot;>
+            <TabsContent value="products" className="space-y-4">
               {results
-                .filter((r) => r.type === &quot;product&quot; || r.type === &quot;service&quot;)
+                .filter((r) => r.type === "product" || r.type === "service")
                 .map((r) => (
                   <div
                     key={`${r.type}-${r.id}`}
-                    className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4&quot;
+                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
-                    <h3 className=&quot;text-lg font-bold text-white&quot;>
+                    <h3 className="text-lg font-bold text-white">
                       {highlight(r.title, query)}
                     </h3>
-                    <p className=&quot;text-zion-slate-light&quot;>
-=======
-        {!loading && marketplaceResults.length === 0 && blogResults.length === 0 && query && (;
-          <p className="text-zion-slate-light">No results found for "{query}".</p>;
-        )}
-        {!loading && marketplaceResults.length > 0 && (;
-          <Tabs defaultValue="products" className="space-y-4">;
-            <TabsList className="mb-4">;
-              <TabsTrigger value="products">;
-                Products ({productResults.length});
-              </TabsTrigger>;
-              <TabsTrigger value="talent">;
-                Talent ({talentResults.length});
-              </TabsTrigger>;
-              <TabsTrigger value="docs">;
-                Docs ({docResults.length});
-              </TabsTrigger>;
-              <TabsTrigger value="blog">;
-                Blog ({blogResults.length});
-              </TabsTrigger>;
-            </TabsList>;
-            <TabsContent value="products" className="space-y-4">;
-              {results;
-                .filter((r) => r.type === "product" || r.type === "service");
-                .map((r) => (;
-                  <div;
-                    key={`${r.type}-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4";
-                  >;
-                    <h3 className="text-lg font-bold text-white">;
-                      {highlight(r.title, query)}
-                    </h3>;
-                    <p className="text-zion-slate-light">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                    <p className="text-zion-slate-light">
                       {highlight(r.description, query)}
                     </p>;
                   </div>;
                 ))}
-<<<<<<< HEAD
             </TabsContent>
-            <TabsContent value=&quot;talent&quot; className=&quot;space-y-4&quot;>
+            <TabsContent value="talent" className="space-y-4">
               {results
-                .filter((r) => r.type === &quot;talent&quot;)
+                .filter((r) => r.type === "talent")
                 .map((r) => (
                   <div
                     key={`talent-${r.id}`}
-                    className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4&quot;
+                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
-                    <h3 className=&quot;text-lg font-bold text-white&quot;>
+                    <h3 className="text-lg font-bold text-white">
                       {highlight(r.title, query)}
                     </h3>
-                    <p className=&quot;text-zion-slate-light&quot;>
-=======
-            </TabsContent>;
-            <TabsContent value="talent" className="space-y-4">;
-              {results;
-                .filter((r) => r.type === "talent");
-                .map((r) => (;
-                  <div;
-                    key={`talent-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4";
-                  >;
-                    <h3 className="text-lg font-bold text-white">;
-                      {highlight(r.title, query)}
-                    </h3>;
-                    <p className="text-zion-slate-light">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                    <p className="text-zion-slate-light">
                       {highlight(r.description, query)}
                     </p>;
                   </div>;
                 ))}
-<<<<<<< HEAD
             </TabsContent>
-            <TabsContent value=&quot;docs&quot; className=&quot;space-y-4&quot;>
+            <TabsContent value="docs" className="space-y-4">
               {results
-                .filter((r) => r.type === &quot;doc&quot;)
+                .filter((r) => r.type === "doc")
                 .map((r) => (
                   <div
                     key={`doc-${r.id}`}
-                    className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4&quot;
+                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
-                    <h3 className=&quot;text-lg font-bold text-white&quot;>
+                    <h3 className="text-lg font-bold text-white">
                       {highlight(r.title, query)}
                     </h3>
-                    <p className=&quot;text-zion-slate-light&quot;>
-=======
-            </TabsContent>;
-            <TabsContent value="docs" className="space-y-4">;
-              {results;
-                .filter((r) => r.type === "doc");
-                .map((r) => (;
-                  <div;
-                    key={`doc-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4";
-                  >;
-                    <h3 className="text-lg font-bold text-white">;
-                      {highlight(r.title, query)}
-                    </h3>;
-                    <p className="text-zion-slate-light">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                    <p className="text-zion-slate-light">
                       {highlight(r.description, query)}
                     </p>;
                   </div>;
                 ))}
-<<<<<<< HEAD
             </TabsContent>
-            <TabsContent value=&quot;blog&quot; className=&quot;space-y-4&quot;>
+            <TabsContent value="blog" className="space-y-4">
               {results
-                .filter((r) => r.type === &quot;blog&quot;)
+                .filter((r) => r.type === "blog")
                 .map((r) => (
                   <div
                     key={`blog-${r.id}`}
-                    className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4&quot;
+                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
-                    <h3 className=&quot;text-lg font-bold text-white&quot;>
+                    <h3 className="text-lg font-bold text-white">
                       {highlight(r.title, query)}
                     </h3>
-                    <p className=&quot;text-zion-slate-light&quot;>
-=======
-            </TabsContent>;
-            <TabsContent value="blog" className="space-y-4">;
-              {results;
-                .filter((r) => r.type === "blog");
-                .map((r) => (;
-                  <div;
-                    key={`blog-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4";
-                  >;
-                    <h3 className="text-lg font-bold text-white">;
-                      {highlight(r.title, query)}
-                    </h3>;
-                    <p className="text-zion-slate-light">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                    <p className="text-zion-slate-light">
                       {highlight(r.description, query)}
                     </p>;
                   </div>;

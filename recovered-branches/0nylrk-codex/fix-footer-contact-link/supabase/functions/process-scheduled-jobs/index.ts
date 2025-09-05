@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 const corsHeaders = {
@@ -9,24 +7,11 @@ const corsHeaders = {
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
-=======
-import { serve } from &quot;https://deno.land/std@0.190.0/http/server.ts&quot;;
-import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2.45.0&quot;;
-
-const corsHeaders = {
-  &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
-  &quot;Access-Control-Allow-Headers&quot;: &quot;authorization, x-client-info, apikey, content-type&quot;};
-
-serve(async (req) => {
-  if (req.method === &quot;OPTIONS&quot;) {
-    return new Response(null, { headers: corsHeaders });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 
   const supabaseAdmin = createClient(
-    Deno.env.get(&quot;SUPABASE_URL&quot;) ?? "&quot;,
-    Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) ?? "&quot;,
-=======
+    Deno.env.get("SUPABASE_URL") ?? "",
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 const corsHeaders = {;
@@ -40,7 +25,6 @@ serve(async (req) => {;
   const supabaseAdmin = createClient(;
     Deno.env.get("SUPABASE_URL") ?? "",;
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     { auth: { persistSession: false } }
   ),;
   try {;
@@ -95,24 +79,14 @@ serve(async (req) => {;
         });
         .eq('id', job.id);
     }
-<<<<<<< HEAD
 
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
-<<<<<<< HEAD
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
-=======
-      headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
-      status: 200});
-  } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
-      status: 500});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }),
 
@@ -120,7 +94,6 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
   try {
     // Create notification for user
     const milestoneMessages = {
-<<<<<<< HEAD
       profile_completed: "Complete your profile to get noticed by clients",
       skills_added: "Add your skills to get better job matches",
       availability_set: "Set your availability to receive project offers",
@@ -131,18 +104,6 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
     
     const message = milestoneMessages[milestone] || "Continue your onboarding process",
     const title = `Action needed: ${message}`,
-=======
-      profile_completed: &quot;Complete your profile to get noticed by clients&quot;,
-      skills_added: &quot;Add your skills to get better job matches&quot;,
-      availability_set: &quot;Set your availability to receive project offers&quot;,
-      job_posted: &quot;Post your first job to start finding talent&quot;,
-      match_viewed: &quot;Check out your AI matched talent recommendations&quot;,
-      talent_invited: &quot;Invite talent to your job posting to get responses&quot;
-    };
-    
-    const message = milestoneMessages[milestone] || &quot;Continue your onboarding process&quot;;
-    const title = `Action needed: ${message}`;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     // Insert notification
     await supabase.from('notifications').insert({
@@ -157,11 +118,7 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
     // For example, call another edge function to send email
     
   } catch (error) {
-<<<<<<< HEAD
     console.error("Error processing onboarding reminder:", error)
-=======
-    console.error(&quot;Error processing onboarding reminder:&quot;, error);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }
 
@@ -169,13 +126,12 @@ async function processResumeScoring(supabase, applicationId) {
   try {
     // Call the resume-scorer function to process the application
     const response = await fetch(
-      `${Deno.env.get(&quot;SUPABASE_URL&quot;)}/functions/v1/resume-scorer`,
+      `${Deno.env.get("SUPABASE_URL")}/functions/v1/resume-scorer`,
       {
-        method: &quot;POST&quot;,
+        method: "POST",
         headers: {
-          &quot;Content-Type&quot;: &quot;application/json&quot;,
-          &quot;Authorization&quot;: `Bearer ${Deno.env.get(&quot;SUPABASE_ANON_KEY&quot;)}`},
-=======
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
 ;
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
@@ -224,16 +180,13 @@ async function processResumeScoring(supabase, applicationId) {;
         headers: {;
           "Content-Type": "application/json",;
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         body: JSON.stringify({ applicationId })}
     ),;
     if (!response.ok) {;
       const errorData = await response.json(),;
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`);
     }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     // // // console.log(`Successfully scored application ${applicationId}`),
     
     // Notify the client that their application has been scored
@@ -249,66 +202,40 @@ async function processResumeScoring(supabase, applicationId) {;
         .select("client_id, title")
         .eq("id", application.job_id)
         .single(),
-=======
-    // console.log(`Successfully scored application ${applicationId}`);
-    
-    // Notify the client that their application has been scored
-    const { data: application } = await supabase
-      .from(&quot;job_applications&quot;)
-      .select(&quot;job_id&quot;)
-      .eq(&quot;id&quot;, applicationId)
-      .single();
-      
-    if (application) {
-      const { data: job } = await supabase
-        .from(&quot;jobs&quot;)
-        .select(&quot;client_id, title&quot;)
-        .eq(&quot;id&quot;, application.job_id)
-        .single();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         
       if (job) {
         // Create notification for the client
-        await supabase.from(&quot;notifications&quot;).insert({
+        await supabase.from("notifications").insert({
           user_id: job.client_id,
-          title: &quot;Application Scored&quot;,
-          message: `An application for &quot;${job.title}&quot; has been scored and is ready for review.`,
-          type: &quot;application_scored&quot;,
+          title: "Application Scored",
+          message: `An application for "${job.title}" has been scored and is ready for review.`,
+          type: "application_scored",
           related_id: applicationId,
           read: false
         })
       }
     }
   } catch (error) {
-<<<<<<< HEAD
     console.error("Error processing resume scoring:", error)
-=======
-    console.error(&quot;Error processing resume scoring:&quot;, error);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }
 
 async function processContentGeneration(supabase, contentType) {
   try {
-<<<<<<< HEAD
     // // // console.log(`Starting scheduled content generation for ${contentType}`),
-=======
-    // console.log(`Starting scheduled content generation for ${contentType}`);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     // Call the content generation function
     const response = await fetch(
-      `${Deno.env.get(&quot;SUPABASE_URL&quot;)}/functions/v1/generate-content`,
+      `${Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`,
       {
-        method: &quot;POST&quot;,
+        method: "POST",
         headers: {
-          &quot;Content-Type&quot;: &quot;application/json&quot;,
-          &quot;Authorization&quot;: `Bearer ${Deno.env.get(&quot;SUPABASE_ANON_KEY&quot;)}`},
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
         body: JSON.stringify({ 
           contentType,
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
-=======
 ;
     // // // console.log(`Successfully scored application ${applicationId}`),;
     // Notify the client that their application has been scored;
@@ -355,22 +282,15 @@ async function processContentGeneration(supabase, contentType) {;
           contentType,;
           autoPublish: contentType === 'blog' ? true : false,;
           includeImage: contentType === 'blog' ? true : false;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         })}
     ),;
     if (!response.ok) {;
       const errorData = await response.json(),;
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     const contentData = await response.json(),
     // // // console.log(`Successfully generated ${contentType} content`),
-=======
-    const contentData = await response.json();
-    // console.log(`Successfully generated ${contentType} content`);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {
@@ -386,12 +306,12 @@ async function processContentGeneration(supabase, contentType) {;
         
         // Send test newsletter to admin
         await fetch(
-          `${Deno.env.get(&quot;SUPABASE_URL&quot;)}/functions/v1/send-newsletter`,
+          `${Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`,
           {
-            method: &quot;POST&quot;,
+            method: "POST",
             headers: {
-              &quot;Content-Type&quot;: &quot;application/json&quot;,
-              &quot;Authorization&quot;: `Bearer ${Deno.env.get(&quot;SUPABASE_ANON_KEY&quot;)}`},
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
             body: JSON.stringify({
               subject: contentData.subject,
               previewText: contentData.previewText,
@@ -404,12 +324,11 @@ async function processContentGeneration(supabase, contentType) {;
         // Create notification for admin
         await supabase.from('notifications').insert({
           user_id: null, // System notification visible to admins
-          title: &quot;Newsletter Draft Ready&quot;,
-          message: &quot;AI-generated newsletter draft has been sent to your email for review.&quot;,
-          type: &quot;system&quot;,
+          title: "Newsletter Draft Ready",
+          message: "AI-generated newsletter draft has been sent to your email for review.",
+          type: "system",
           read: false
         })
-=======
 ;
     const contentData = await response.json(),;
     // // // console.log(`Successfully generated ${contentType} content`),;
@@ -447,7 +366,6 @@ async function processContentGeneration(supabase, contentType) {;
           type: "system";
           read: false;
         });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
     }
 ;

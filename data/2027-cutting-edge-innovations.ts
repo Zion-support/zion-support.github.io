@@ -14,53 +14,28 @@ export interface CuttingEdgeInnovation2027 {;
     address: string;
   }
 }
-<<<<<<< HEAD
 
 export const cuttingEdge2027Innovations: CuttingEdgeInnovation2027[] = [
   {
-    id: &quot;2027-cutting-edge-innovation&quot;,
-    name: &quot;2027 Cutting-Edge Innovation Platform&quot;,
-    tagline: &quot;Cutting-edge innovations for 2027&quot;,
-    price: &quot;$799/month&quot;,
-    description: &quot;Advanced platform showcasing cutting-edge innovations and breakthrough technologies for 2027.&quot;,
+    id: "2027-cutting-edge-innovation",
+    name: "2027 Cutting-Edge Innovation Platform",
+    tagline: "Cutting-edge innovations for 2027",
+    price: "$799/month",
+    description: "Advanced platform showcasing cutting-edge innovations and breakthrough technologies for 2027.",
     features: [
-      &quot;Cutting-edge innovations&quot;,
-      &quot;Breakthrough technologies&quot;,
-      &quot;Future capabilities&quot;,
-      &quot;Innovation platform&quot;,
-      &quot;Expert insights&quot;
+      "Cutting-edge innovations",
+      "Breakthrough technologies",
+      "Future capabilities",
+      "Innovation platform",
+      "Expert insights"
     ],
-    link: &quot;/services/2027-cutting-edge-innovation&quot;,
-    category: &quot;Cutting-Edge Innovations 2027&quot;,
+    link: "/services/2027-cutting-edge-innovation",
+    category: "Cutting-Edge Innovations 2027",
     realImplementation: true,
     contactInfo: {
-      mobile: &quot;+1 302 464 0950&quot;,
-      email: &quot;kleber@ziontechgroup.com&quot;,
-      address: &quot;364 E Main St STE 1008 Middletown DE 19709&quot;
-=======
-;
-export const cuttingEdge2027Innovations: CuttingEdgeInnovation2027[] = [;
-  {;
-    id: "2027-cutting-edge-innovation",;
-    name: "2027 Cutting-Edge Innovation Platform",;
-    tagline: "Cutting-edge innovations for 2027",;
-    price: "$799/month",;
-    description: "Advanced platform showcasing cutting-edge innovations and breakthrough technologies for 2027.",;
-    features: [;
-      "Cutting-edge innovations",;
-      "Breakthrough technologies",;
-      "Future capabilities",;
-      "Innovation platform",;
-      "Expert insights";
-    ],;
-    link: "/services/2027-cutting-edge-innovation",;
-    category: "Cutting-Edge Innovations 2027",;
-    realImplementation: true,;
-    contactInfo: {;
-      mobile: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];

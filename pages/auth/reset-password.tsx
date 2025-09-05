@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const ResetPassword: NextPage = () => {
@@ -6,7 +5,7 @@ const ResetPassword: NextPage = () => {
     <div>
       <Head>
         <title>ResetPassword - Zion Tech Solutions</title>
-        <meta name=&quot;description&quot; content=&quot;ResetPassword page&quot; />
+        <meta name="description" content="ResetPassword page" />
       </Head>
       
       <main>
@@ -18,22 +17,3 @@ const ResetPassword: NextPage = () => {
 },
 
 export default ResetPassword,
-=======
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-const ResetPassword: NextPage = () => {;
-  return (;
-    <div>;
-      <Head>;
-        <title>ResetPassword - Zion Tech Solutions</title>;
-        <meta name="description" content="ResetPassword page" />;
-      </Head>;
-      <main>;
-        <h1>ResetPassword</h1>;
-        <p>This page is under construction.</p>;
-      </main>;
-    </div>;
-  );
-},;
-export default ResetPassword;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

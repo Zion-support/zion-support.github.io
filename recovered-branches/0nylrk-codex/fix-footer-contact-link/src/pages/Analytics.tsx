@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -11,19 +9,6 @@ import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",
 import { PageViewsChart } from "@/components/analytics/PageViewsChart",
 import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart",
 import { ExportPanel } from "@/components/analytics/ExportPanel",
-=======
-import React, { useState } from &quot;react&quot;;
-import { useQuery } from &quot;@tanstack/react-query&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { AnalyticsContainer } from &quot;@/components/analytics/AnalyticsContainer&quot;;
-import { AnalyticsSummary } from &quot;@/components/analytics/AnalyticsSummary&quot;;
-import { PageViewsTable } from &quot;@/components/analytics/PageViewsTable&quot;;
-import { UserBehaviorStats } from &quot;@/components/analytics/UserBehaviorStats&quot;;
-import { PageViewsChart } from &quot;@/components/analytics/PageViewsChart&quot;;
-import { ConversionAnalysisChart } from &quot;@/components/analytics/ConversionAnalysisChart&quot;;
-import { ExportPanel } from &quot;@/components/analytics/ExportPanel&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export default function Analytics() {
   const [timeRange, setTimeRange] = useState('30d'),
   
@@ -62,7 +47,6 @@ export default function Analytics() {
           result.push(viewsByDate[dateStr])
         } else {
           result.push({ date: dateStr, views: 0 })
-=======
 import React, { useState } from "react",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -105,7 +89,6 @@ export default function Analytics() {;
           result.push(viewsByDate[dateStr]);
         } else {;
           result.push({ date: dateStr, views: 0 });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }
       }
 ;
@@ -156,14 +139,13 @@ export default function Analytics() {;
         return result;
       });
     }
-<<<<<<< HEAD
   }),
 
   return (
     <AnalyticsContainer>
       <AnalyticsSummary />
       
-      <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6&quot;>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <PageViewsChart
           data={pageViewTrends || []}
           timeRange={timeRange}
@@ -172,33 +154,13 @@ export default function Analytics() {;
         <PageViewsTable />
       </div>
       
-      <div className=&quot;mb-6&quot;>
+      <div className="mb-6">
         <UserBehaviorStats />
       </div>
       
-      <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6&quot;>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <ConversionAnalysisChart 
           data={conversionData || []} 
-=======
-  });
-  return (;
-    <AnalyticsContainer>;
-      <AnalyticsSummary />;
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">;
-        <PageViewsChart;
-          data={pageViewTrends || []}
-          timeRange={timeRange}
-          onTimeRangeChange={setTimeRange}
-        />;
-        <PageViewsTable />;
-      </div>;
-      <div className="mb-6">;
-        <UserBehaviorStats />;
-      </div>;
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">;
-        <ConversionAnalysisChart;
-          data={conversionData || []} ;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           timeRange={timeRange}
           onTimeRangeChange={setTimeRange}
         />;

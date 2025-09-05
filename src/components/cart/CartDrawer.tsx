@@ -15,24 +15,14 @@ export function CartDrawer() {;
       e.preventDefault();
       setLoginOpen(true);
     }
-<<<<<<< HEAD
   },
 
   return (
     <>
-      <Link href=&quot;/cart&quot; aria-label=&quot;Cart&quot; className=&quot;relative p-1&quot; onClick={handleClick}>
-        <ShoppingCart className=&quot;h-5 w-5 text-foreground hover:text-primary&quot; />
+      <Link href="/cart" aria-label="Cart" className="relative p-1" onClick={handleClick}>
+        <ShoppingCart className="h-5 w-5 text-foreground hover:text-primary" />
         {count > 0 && (
-          <span className=&quot;absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center&quot;>
-=======
-  };
-  return (;
-    <>;
-      <Link href="/cart" aria-label="Cart" className="relative p-1" onClick={handleClick}>;
-        <ShoppingCart className="h-5 w-5 text-foreground hover:text-primary" />;
-        {count > 0 && (;
-          <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
             {count}
           </span>;
         )}

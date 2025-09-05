@@ -13,7 +13,6 @@ export function useCertifications() {;
       setError('You must be logged in to add certifications'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -33,16 +32,11 @@ export function useCertifications() {;
       
       if (error) throw error,
       
-<<<<<<< HEAD
       return showSuccessToast("Certification added", "Your certification has been added to your resume")
-=======
-      return showSuccessToast(&quot;Certification added&quot;, &quot;Your certification has been added to your resume&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not add certification')
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -64,7 +58,6 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not add certification');
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {;
@@ -72,7 +65,6 @@ export function useCertifications() {;
       setError('You must be logged in to update certifications'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -92,16 +84,11 @@ export function useCertifications() {;
       
       if (error) throw error,
       
-<<<<<<< HEAD
       return showSuccessToast("Certification updated", "Your certification has been updated")
-=======
-      return showSuccessToast(&quot;Certification updated&quot;, &quot;Your certification has been updated&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not update certification')
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -123,7 +110,6 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not update certification');
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const deleteCertification = async (certId: string): Promise<boolean> => {;
@@ -131,7 +117,6 @@ export function useCertifications() {;
       setError('You must be logged in to delete certifications'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -144,16 +129,11 @@ export function useCertifications() {;
       
       if (error) throw error,
       
-<<<<<<< HEAD
       return showSuccessToast("Certification deleted", "Your certification has been removed from your resume")
-=======
-      return showSuccessToast(&quot;Certification deleted&quot;, &quot;Your certification has been removed from your resume&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete certification')
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -168,7 +148,6 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not delete certification');
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   return {;

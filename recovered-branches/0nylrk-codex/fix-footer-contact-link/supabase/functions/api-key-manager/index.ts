@@ -1,42 +1,26 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-=======
-import { serve } from &quot;https://deno.land/std@0.177.0/http/server.ts&quot;;
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0';
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 interface CreateKeyRequest {;
   name: string,;
   scopes: string[],;
   expiresAt?: string | null;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 interface RegenerateKeyRequest {;
   keyId: string;
 }
-<<<<<<< HEAD
 
 // Create a Supabase client
-<<<<<<< HEAD
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
-=======
-const supabaseUrl = Deno.env.get(&quot;SUPABASE_URL&quot;) as string;
-const supabaseKey = Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) as string;
-const supabase = createClient(supabaseUrl, supabaseKey);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 serve(async (req) => {
   // Handle CORS for browser requests
@@ -44,7 +28,6 @@ serve(async (req) => {
     return new Response('ok', {
       headers: {
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-=======
 ;
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
@@ -56,7 +39,6 @@ serve(async (req) => {;
     return new Response('ok', {;
       headers: {;
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}});
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   try {;

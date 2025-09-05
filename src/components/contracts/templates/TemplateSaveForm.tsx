@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { useForm, type ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -16,24 +14,6 @@ import { Switch } from "@/components/ui/switch",
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean()}),
-=======
-import { useState } from &quot;react&quot;;
-import { useForm, type ControllerRenderProps } from &quot;react-hook-form&quot;;
-import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
-import { z } from &quot;zod&quot;;
-import { Loader2 } from 'lucide-react'
-import { ContractFormValues } from &quot;@/components/contracts/components/ContractForm&quot;;
-import { ContractTemplate } from &quot;@/types/contracts&quot;;
-import { useContractTemplates } from &quot;@/hooks/useContractTemplates&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from &quot;@/components/ui/form&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Switch } from &quot;@/components/ui/switch&quot;;
-
-const formSchema = z.object({
-  title: z.string().min(1, &quot;Title is required&quot;),
-  isDefault: z.boolean()});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 type FormValues = z.infer<typeof formSchema>,
 
@@ -42,7 +22,6 @@ interface TemplateSaveFormProps {
   onComplete: () => void,
   editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
-=======
 import { useState } from "react",;
 import { useForm, type ControllerRenderProps } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -64,7 +43,6 @@ interface TemplateSaveFormProps {;
   onComplete: () => void,;
   editTemplate?: ContractTemplate | null,;
   currentValues?: ContractFormValues;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export function TemplateSaveForm({;
@@ -104,29 +82,22 @@ export function TemplateSaveForm({;
     } finally {;
       setSaving(false);
     }
-<<<<<<< HEAD
   },
   
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4&quot;>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-<<<<<<< HEAD
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
-=======
-          name=&quot;title&quot;
-          render={({ field }: { field: ControllerRenderProps<FormValues, &quot;title&quot;> }) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             <FormItem>
               <FormLabel>Template Name</FormLabel>
               <FormControl>
-                <Input {...field} placeholder=&quot;Enter template name&quot; />
+                <Input {...field} placeholder="Enter template name" />
               </FormControl>
               <FormMessage />
             </FormItem>
-=======
   };
   return (;
     <Form {...form}>;
@@ -142,25 +113,17 @@ export function TemplateSaveForm({;
               </FormControl>;
               <FormMessage />;
             </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         />;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
-<<<<<<< HEAD
           name="isDefault"
           render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => (
-=======
-          name=&quot;isDefault&quot;
-          render={({ field }: { field: ControllerRenderProps<FormValues, &quot;isDefault"> }) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             <FormItem className="flex items-center justify-between">
-              <FormLabel className="cursor-pointer&quot;>Set as default template</FormLabel>
+              <FormLabel className="cursor-pointer">Set as default template</FormLabel>
               <FormControl>
                 <Switch
-                  aria-label=&quot;Default template"
-=======
+                  aria-label="Default template"
           name="isDefault";
           render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => (;
             <FormItem className="flex items-center justify-between">;
@@ -168,7 +131,6 @@ export function TemplateSaveForm({;
               <FormControl>;
                 <Switch;
                   aria-label="Default template";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   checked={field.value}
                   onCheckedChange={field.onChange}
                 />;
@@ -176,36 +138,20 @@ export function TemplateSaveForm({;
               <FormMessage />;
             </FormItem>;
           )}
-<<<<<<< HEAD
         />
         
-        <div className="flex gap-2 justify-end&quot;>
-          <Button type=&quot;button&quot; variant=&quot;outline&quot; onClick={onCancel}>
+        <div className="flex gap-2 justify-end">
+          <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
           </Button>
-          <Button type=&quot;submit" disabled={saving}>
+          <Button type="submit" disabled={saving}>
             {saving ? (
               <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin&quot; />
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
-              `${editTemplate ? &quot;Update&quot; : &quot;Save"} Template`
-=======
-        />;
-        <div className="flex gap-2 justify-end">;
-          <Button type="button" variant="outline" onClick={onCancel}>;
-            Cancel;
-          </Button>;
-          <Button type="submit" disabled={saving}>;
-            {saving ? (;
-              <>;
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-                Saving...;
-              </>;
-            ) : (;
-              `${editTemplate ? "Update" : "Save"} Template`;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              `${editTemplate ? "Update" : "Save"} Template`
             )}
           </Button>;
         </div>;

@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import React from "react",
-=======
-import { cn } from &quot;@/lib/utils&quot;;
-import React from &quot;react&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface FeatureCardProps {
   title: string,
   description: string,
@@ -19,19 +12,18 @@ interface FeatureCardProps {
 export function FeatureCard({ title, description, icon, className }: FeatureCardProps) {
   return (
     <div className={cn(
-      &quot;flex items-start p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300&quot;,
+      "flex items-start p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300",
       className
     )}>
-      <div className=&quot;mr-4 text-zion-cyan p-2&quot;>
+      <div className="mr-4 text-zion-cyan p-2">
         {icon}
       </div>
       <div>
-        <h3 className=&quot;text-lg font-bold mb-2 text-white&quot;>{title}</h3>
-        <p className=&quot;text-zion-slate-light&quot;>{description}</p>
+        <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
+        <p className="text-zion-slate-light">{description}</p>
       </div>
     </div>
   )
-=======
 import { cn } from "@/lib/utils",;
 import React from "react",;
 interface FeatureCardProps {;
@@ -57,6 +49,5 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
       </div>;
     </div>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

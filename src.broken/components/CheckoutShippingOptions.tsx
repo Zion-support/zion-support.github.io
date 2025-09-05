@@ -60,7 +60,6 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
       } finally {;
         setLoading(false);
       }
-<<<<<<< HEAD
     },
     fetchRates()
   }, [toAddress]),
@@ -74,46 +73,20 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
   if (!toAddress) return null,
 
   return (
-    <div className=&quot;my-4&quot;>
-      <h2 className=&quot;font-semibold mb-2&quot;>Shipping Options</h2>
+    <div className="my-4">
+      <h2 className="font-semibold mb-2">Shipping Options</h2>
       {loading && <p>Loading...</p>}
       {!loading && (
-        <RadioGroup value={selected} onValueChange={handleChange} className=&quot;space-y-2&quot;>
+        <RadioGroup value={selected} onValueChange={handleChange} className="space-y-2">
           {rates.map(rate => (
-            <label key={rate.id} className=&quot;flex items-center gap-2&quot;>
+            <label key={rate.id} className="flex items-center gap-2">
               <RadioGroupItem value={rate.id} />
               <span>
                 {`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}
                 {rate.delivery_days && ` (${rate.delivery_days}d)`}
               </span>
               {rate.tax && (
-                <span className=&quot;ml-1 text-sm&quot;>(+{rate.tax} taxes)</span>
-=======
-    },;
-    fetchRates();
-  }, [toAddress]),;
-  const handleChange = (value: string) => {;
-    setSelected(value),;
-    const rate = rates.find(r => r.id === value),;
-    if (rate && onSelect) onSelect(rate);
-  },;
-  if (!toAddress) return null;
-  return (;
-    <div className="my-4">;
-      <h2 className="font-semibold mb-2">Shipping Options</h2>;
-      {loading && <p>Loading...</p>}
-      {!loading && (;
-        <RadioGroup value={selected} onValueChange={handleChange} className="space-y-2">;
-          {rates.map(rate => (;
-            <label key={rate.id} className="flex items-center gap-2">;
-              <RadioGroupItem value={rate.id} />;
-              <span>;
-                {`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}
-                {rate.delivery_days && ` (${rate.delivery_days}d)`}
-              </span>;
-              {rate.tax && (;
-                <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>
               )}
             </label>;
           ))}

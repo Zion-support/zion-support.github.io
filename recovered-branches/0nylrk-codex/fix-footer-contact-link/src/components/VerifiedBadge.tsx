@@ -6,7 +6,6 @@ interface VerifiedBadgeProps {;
   verified: boolean,;
   size?: 'sm' | 'md' | 'lg';
 }
-<<<<<<< HEAD
 
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
   if (!verified) return null,
@@ -21,7 +20,7 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <span className=&quot;inline-flex text-blue-500&quot;>
+          <span className="inline-flex text-blue-500">
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
         </TooltipTrigger>
@@ -31,29 +30,5 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
       </Tooltip>
     </TooltipProvider>
   )
-=======
-;
-export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {;
-  if (!verified) return null,;
-  const sizeClasses = {;
-    sm: 'h-3.5 w-3.5',;
-    md: 'h-4 w-4';
-    lg: 'h-5 w-5';
-  };
-  return (;
-    <TooltipProvider>;
-      <Tooltip>;
-        <TooltipTrigger asChild>;
-          <span className="inline-flex text-blue-500">;
-            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />;
-          </span>;
-        </TooltipTrigger>;
-        <TooltipContent>;
-          <p>Verified talent</p>;
-        </TooltipContent>;
-      </Tooltip>;
-    </TooltipProvider>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

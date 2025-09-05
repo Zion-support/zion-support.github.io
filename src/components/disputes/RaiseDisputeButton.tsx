@@ -1,18 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
-=======
-import React, { useState } from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
   DialogDescription} from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm",
 import { useRouter } from 'next/router',
@@ -24,25 +17,12 @@ interface RaiseDisputeButtonProps {
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
   className?: string
-=======
-  DialogDescription} from &quot;@/components/ui/dialog&quot;;
-import { DisputeForm } from &quot;./DisputeForm&quot;;
-import { useRouter } from 'next/router';
-import { ShieldAlert } from 'lucide-react'
-
-interface RaiseDisputeButtonProps {
-  projectId: string;
-  milestoneId?: string;
-  variant?: &quot;default&quot; | &quot;outline&quot; | &quot;secondary&quot; | &quot;destructive&quot; | &quot;ghost&quot; | &quot;link&quot;;
-  size?: &quot;default&quot; | &quot;sm&quot; | &quot;lg&quot; | &quot;icon&quot;;
-  className?: string;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }
 
 export function RaiseDisputeButton({ 
   projectId,
   milestoneId, 
-  variant = &quot;outline&quot;, 
+  variant = "outline", 
   size,
   className 
 }: RaiseDisputeButtonProps) {
@@ -62,12 +42,12 @@ export function RaiseDisputeButton({
         className={className} 
         onClick={() => setIsDialogOpen(true)}
       >
-        <ShieldAlert className=&quot;h-4 w-4 mr-2&quot; />
+        <ShieldAlert className="h-4 w-4 mr-2" />
         Raise Dispute
       </Button>
       
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className=&quot;sm:max-w-[550px]&quot;>
+        <DialogContent className="sm:max-w-[550px]">
           <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
@@ -76,7 +56,6 @@ export function RaiseDisputeButton({
           </DialogHeader>
           
           <DisputeForm 
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -129,7 +108,6 @@ export function RaiseDisputeButton({;
             </DialogDescription>;
           </DialogHeader>;
           <DisputeForm;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}

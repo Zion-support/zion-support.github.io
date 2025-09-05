@@ -22,28 +22,17 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     filters,;
     format: (format as any) || undefined}
 }
-<<<<<<< HEAD
 
 function toCsv(rows: any[]): string {
   if (!rows.length) return '',
   const headers = Object.keys(rows[0]),
   const escape = (v: any) => {
-<<<<<<< HEAD
     if (v === null || v === undefined) return '',
     const s = typeof v === 'string' ? v : JSON.stringify(v),
     return '"' + s.replace(/"/g, '""') + '"'
   },
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join())),
   return lines.join('\n')
-=======
-    if (v === null || v === undefined) return '';
-    const s = typeof v === 'string' ? v : JSON.stringify(v);
-    return '&quot;' + s.replace(/&quot;/g, '"&quot;') + '&quot;';
-  };
-  const lines = [headers.join(',')].concat(rows.map((r) => headers.map((h) => escape(r[h])).join(',')));
-  return lines.join('\n');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
 function toCsv(rows: any[]): string {;
   if (!rows.length) return '',;
@@ -55,7 +44,6 @@ function toCsv(rows: any[]): string {;
   },;
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join())),;
   return lines.join('\n');
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -76,23 +64,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           if (v !== undefined) query = query.eq(k, v);
         }
       }
-<<<<<<< HEAD
       if (params.sort) query = query.order(params.sort, { ascending: params.order === 'asc' }),
       const from = params.page * params.pageSize,
       const to = from + params.pageSize - 1,
       const { data, error, count } = await query.range(from, to),
       if (error) return res.status(500).json({ error: error.message }),
       if (params.format === 'csv') {
-<<<<<<< HEAD
         res.setHeader('Content-Typetext/csv'),
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`),
         return res.status(200).send(toCsv(data || []))
-=======
-        res.setHeader('Content-Type', 'text/csv');
-        res.setHeader('Content-Disposition', `attachment; filename=&quot;${type}.csv&quot;`);
-        return res.status(200).send(toCsv(data || []));
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
       if (params.sort) query = query.order(params.sort, { ascending: params.order === 'asc' }),;
       const from = params.page * params.pageSize,;
       const to = from + params.pageSize - 1,;
@@ -102,7 +82,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.setHeader('Content-Typetext/csv'),;
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`),;
         return res.status(200).send(toCsv(data || []));
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       return res.status(200).json({ items: data || [], total: count || 0 });
     } else {;
@@ -125,22 +104,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
         });
       }
-<<<<<<< HEAD
       const total = filtered.length,
       const start = params.page * params.pageSize,
       const end = start + params.pageSize,
       const pageItems = filtered.slice(start, end),
       if (params.format === 'csv') {
-<<<<<<< HEAD
         res.setHeader('Content-Typetext/csv'),
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`),
         return res.status(200).send(toCsv(pageItems))
-=======
-        res.setHeader('Content-Type', 'text/csv');
-        res.setHeader('Content-Disposition', `attachment; filename=&quot;${type}.csv&quot;`);
-        return res.status(200).send(toCsv(pageItems));
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
       const total = filtered.length,;
       const start = params.page * params.pageSize,;
       const end = start + params.pageSize,;
@@ -149,7 +120,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.setHeader('Content-Typetext/csv'),;
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`),;
         return res.status(200).send(toCsv(pageItems));
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       return res.status(200).json({ items: pageItems, total });
     }

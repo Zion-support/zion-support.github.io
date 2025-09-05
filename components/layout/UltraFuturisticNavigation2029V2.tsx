@@ -109,7 +109,6 @@ const quickLinks = [;
   { name: 'News', href: '/news', icon: TrendingUp },;
   { name: 'Careers', href: '/careers', icon: GraduationCap },;
   { name: 'Support', href: '/support', icon: MessageCircle }
-<<<<<<< HEAD
 ],
 
 export default function UltraFuturisticNavigation2029V2() {
@@ -121,190 +120,98 @@ export default function UltraFuturisticNavigation2029V2() {
   const closeMenu = () => setIsOpen(false),
 
   return (
-    <nav className=&quot;relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20&quot;>
+    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
       {/* Main Navigation Bar */}
-      <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-        <div className=&quot;flex justify-between items-center h-20&quot;>
-=======
-],;
-export default function UltraFuturisticNavigation2029V2() {;
-  const [isOpen, setIsOpen] = useState(false),;
-  const [activeCategory, setActiveCategory] = useState<string | null>(null),;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-  return (;
-    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">;
-      {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex justify-between items-center h-20">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div;
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-            className=&quot;flex-shrink-0&quot;
+            className="flex-shrink-0"
           >
-            <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
-              <div className=&quot;relative&quot;>
-                <div className=&quot;w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300&quot;>
-                  <Rocket className=&quot;w-7 h-7 text-white&quot; />
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Rocket className="w-7 h-7 text-white" />
                 </div>
-                <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300&quot; />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
               </div>
-              <div className=&quot;hidden sm:block&quot;>
-                <h1 className=&quot;text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
+              <div className="hidden sm:block">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Zion Tech Group
                 </h1>
-                <p className=&quot;text-xs text-gray-400&quot;>Future Technology Solutions</p>
+                <p className="text-xs text-gray-400">Future Technology Solutions</p>
               </div>
             </a>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
+          <div className="hidden lg:flex items-center space-x-8">
             {mainNavigation.map((item) => (
               <motion.div
-=======
-            className="flex-shrink-0";
-          >;
-            <Link href="/" className="flex items-center space-x-3 group">;
-              <div className="relative">;
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
-                  <Rocket className="w-7 h-7 text-white" />;
-                </div>;
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />;
-              </div>;
-              <div className="hidden sm:block">;
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-                  Zion Tech Group;
-                </h1>;
-                <p className="text-xs text-gray-400">Future Technology Solutions</p>;
-              </div>;
-            </Link>;
-          </motion.div>;
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">;
-            {mainNavigation.map((item) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: mainNavigation.indexOf(item) * 0.1 }}
-<<<<<<< HEAD
-                className=&quot;relative group&quot;
+                className="relative group"
               >
                 <Link
                   href={item.href}
-                  className=&quot;flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10&quot;
+                  className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10"
                 >
-                  <item.icon className=&quot;w-4 h-4&quot; />
+                  <item.icon className="w-4 h-4" />
                   <span>{item.name}</span>
                 </a>
                 
                 {/* Hover effect */}
-                <div className=&quot;absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300&quot; />
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
               </motion.div>
-=======
-                className="relative group";
-              >;
-                <Link;
-                  href={item.href}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10";
-                >;
-                  <item.icon className="w-4 h-4" />;
-                  <span>{item.name}</span>;
-                </Link>;
-                {/* Hover effect */}
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
           {/* Right side - Contact & Search */}
-<<<<<<< HEAD
-          <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
+          <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
-            <div className=&quot;relative&quot;>
-              <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&quot; />
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
               <input
-                type=&quot;text&quot;
-                placeholder=&quot;Search services...&quot;
+                type="text"
+                placeholder="Search services..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className=&quot;pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64&quot;
+                className="pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64"
               />
             </div>
 
-=======
-          <div className="hidden lg:flex items-center space-x-4">;
-            {/* Search */}
-            <div className="relative">;
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;
-              <input;
-                type="text";
-                placeholder="Search services...";
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64";
-              />;
-            </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {/* Contact Button */}
             <motion.div;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-<<<<<<< HEAD
             >
               <Link
-                href=&quot;/contact&quot;
-                className=&quot;inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25&quot;
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
-                <MessageCircle className=&quot;w-4 h-4 mr-2&quot; />
+                <MessageCircle className="w-4 h-4 mr-2" />
                 Get Started
               </a>
             </motion.div>
           </div>
 
           {/* Mobile menu button */}
-          <div className=&quot;lg:hidden&quot;>
+          <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className=&quot;p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300&quot;
+              className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300"
             >
-              {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </div>
 
-=======
-            >;
-              <Link;
-                href="/contact";
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25";
-              >;
-                <MessageCircle className="w-4 h-4 mr-2" />;
-                Get Started;
-              </Link>;
-            </motion.div>;
-          </div>;
-          {/* Mobile menu button */}
-          <div className="lg:hidden">;
-            <button;
-              onClick={toggleMenu}
-              className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300";
-            >;
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>;
-          </div>;
-        </div>;
-      </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -313,139 +220,72 @@ export default function UltraFuturisticNavigation2029V2() {;
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-            className=&quot;lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20&quot;
+            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20"
           >
-            <div className=&quot;px-4 py-6 space-y-4&quot;>
+            <div className="px-4 py-6 space-y-4">
               {/* Mobile Search */}
-              <div className=&quot;relative&quot;>
-                <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&quot; />
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input
-                  type=&quot;text&quot;
-                  placeholder=&quot;Search services...&quot;
+                  type="text"
+                  placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className=&quot;w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50&quot;
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 />
               </div>
 
               {/* Mobile Navigation Links */}
-              <div className=&quot;space-y-2&quot;>
+              <div className="space-y-2">
                 {mainNavigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={closeMenu}
-                    className=&quot;flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300&quot;
+                    className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
                   >
-                    <item.icon className=&quot;w-5 h-5&quot; />
+                    <item.icon className="w-5 h-5" />
                     <span>{item.name}</span>
                   </a>
-=======
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20";
-          >;
-            <div className="px-4 py-6 space-y-4">;
-              {/* Mobile Search */}
-              <div className="relative">;
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;
-                <input;
-                  type="text";
-                  placeholder="Search services...";
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";
-                />;
-              </div>;
-              {/* Mobile Navigation Links */}
-              <div className="space-y-2">;
-                {mainNavigation.map((item) => (;
-                  <Link;
-                    key={item.name}
-                    href={item.href}
-                    onClick={closeMenu}
-                    className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300";
-                  >;
-                    <item.icon className="w-5 h-5" />;
-                    <span>{item.name}</span>;
-                  </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 ))}
               </div>;
               {/* Quick Links */}
-<<<<<<< HEAD
-              <div className=&quot;pt-4 border-t border-gray-700&quot;>
-                <h3 className=&quot;text-sm font-medium text-gray-400 mb-3 px-4&quot;>Quick Links</h3>
-                <div className=&quot;space-y-2&quot;>
+              <div className="pt-4 border-t border-gray-700">
+                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>
+                <div className="space-y-2">
                   {quickLinks.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
-                      className=&quot;flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300&quot;
+                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
                     >
-                      <item.icon className=&quot;w-4 h-4&quot; />
-                      <span className=&quot;text-sm&quot;>{item.name}</span>
+                      <item.icon className="w-4 h-4" />
+                      <span className="text-sm">{item.name}</span>
                     </a>
-=======
-              <div className="pt-4 border-t border-gray-700">;
-                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>;
-                <div className="space-y-2">;
-                  {quickLinks.map((item) => (;
-                    <Link;
-                      key={item.name}
-                      href={item.href}
-                      onClick={closeMenu}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300";
-                    >;
-                      <item.icon className="w-4 h-4" />;
-                      <span className="text-sm">{item.name}</span>;
-                    </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   ))}
                 </div>;
               </div>;
               {/* Contact Info */}
-<<<<<<< HEAD
-              <div className=&quot;pt-4 border-t border-gray-700&quot;>
-                <h3 className=&quot;text-sm font-medium text-gray-400 mb-3 px-4&quot;>Contact Info</h3>
-                <div className=&quot;space-y-2 px-4&quot;>
-                  <div className=&quot;flex items-center space-x-3 text-gray-400&quot;>
-                    <Phone className=&quot;w-4 h-4&quot; />
-                    <span className=&quot;text-sm&quot;>{contactInfo.mobile}</span>
+              <div className="pt-4 border-t border-gray-700">
+                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Contact Info</h3>
+                <div className="space-y-2 px-4">
+                  <div className="flex items-center space-x-3 text-gray-400">
+                    <Phone className="w-4 h-4" />
+                    <span className="text-sm">{contactInfo.mobile}</span>
                   </div>
-                  <div className=&quot;flex items-center space-x-3 text-gray-400&quot;>
-                    <Mail className=&quot;w-4 h-4&quot; />
-                    <span className=&quot;text-sm&quot;>{contactInfo.email}</span>
+                  <div className="flex items-center space-x-3 text-gray-400">
+                    <Mail className="w-4 h-4" />
+                    <span className="text-sm">{contactInfo.email}</span>
                   </div>
-                  <div className=&quot;flex items-center space-x-3 text-gray-400&quot;>
-                    <MapPin className=&quot;w-4 h-4&quot; />
-                    <span className=&quot;text-sm&quot;>{contactInfo.address}</span>
+                  <div className="flex items-center space-x-3 text-gray-400">
+                    <MapPin className="w-4 h-4" />
+                    <span className="text-sm">{contactInfo.address}</span>
                   </div>
                 </div>
               </div>
             </div>
           </motion.div>
-=======
-              <div className="pt-4 border-t border-gray-700">;
-                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Contact Info</h3>;
-                <div className="space-y-2 px-4">;
-                  <div className="flex items-center space-x-3 text-gray-400">;
-                    <Phone className="w-4 h-4" />;
-                    <span className="text-sm">{contactInfo.mobile}</span>;
-                  </div>;
-                  <div className="flex items-center space-x-3 text-gray-400">;
-                    <Mail className="w-4 h-4" />;
-                    <span className="text-sm">{contactInfo.email}</span>;
-                  </div>;
-                  <div className="flex items-center space-x-3 text-gray-400">;
-                    <MapPin className="w-4 h-4" />;
-                    <span className="text-sm">{contactInfo.address}</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       </AnimatePresence>;
       {/* Service Categories Dropdown */}
@@ -456,74 +296,39 @@ export default function UltraFuturisticNavigation2029V2() {;
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-            className=&quot;absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40&quot;
+            className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40"
           >
-            <div className=&quot;max-w-7xl mx-auto px-4 py-8&quot;>
-              <div className=&quot;grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8&quot;>
+            <div className="max-w-7xl mx-auto px-4 py-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 {serviceCategories.map((category) => (
-                  <div key={category.title} className=&quot;space-y-4&quot;>
-                    <div className=&quot;flex items-center space-x-3&quot;>
+                  <div key={category.title} className="space-y-4">
+                    <div className="flex items-center space-x-3">
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
-                        <category.icon className=&quot;w-5 h-5 text-white&quot; />
+                        <category.icon className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h3 className=&quot;text-lg font-semibold text-white&quot;>{category.title}</h3>
-                        <p className=&quot;text-sm text-gray-400&quot;>{category.description}</p>
+                        <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                        <p className="text-sm text-gray-400">{category.description}</p>
                       </div>
                     </div>
                     
-                    <div className=&quot;space-y-3&quot;>
+                    <div className="space-y-3">
                       {category.services.map((service, index) => (
                         <Link
                           key={service.name}
                           href={service.href}
-                          className=&quot;block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group&quot;
+                          className="block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group"
                         >
-                          <div className=&quot;flex justify-between items-start&quot;>
+                          <div className="flex justify-between items-start">
                             <div>
-                              <h4 className=&quot;font-medium text-white group-hover:text-cyan-400 transition-colors duration-300&quot;>
+                              <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
                                 {service.name}
                               </h4>
-                              <p className=&quot;text-sm text-gray-400 mt-1&quot;>{service.description}</p>
+                              <p className="text-sm text-gray-400 mt-1">{service.description}</p>
                             </div>
-                            <span className=&quot;text-sm font-semibold text-cyan-400&quot;>{service.price}</span>
+                            <span className="text-sm font-semibold text-cyan-400">{service.price}</span>
                           </div>
                         </a>
-=======
-            className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40";
-          >;
-            <div className="max-w-7xl mx-auto px-4 py-8">;
-              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
-                {serviceCategories.map((category) => (;
-                  <div key={category.title} className="space-y-4">;
-                    <div className="flex items-center space-x-3">;
-                      <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>;
-                        <category.icon className="w-5 h-5 text-white" />;
-                      </div>;
-                      <div>;
-                        <h3 className="text-lg font-semibold text-white">{category.title}</h3>;
-                        <p className="text-sm text-gray-400">{category.description}</p>;
-                      </div>;
-                    </div>;
-                    <div className="space-y-3">;
-                      {category.services.map((service, index) => (;
-                        <Link;
-                          key={service.name}
-                          href={service.href}
-                          className="block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group";
-                        >;
-                          <div className="flex justify-between items-start">;
-                            <div>;
-                              <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">;
-                                {service.name}
-                              </h4>;
-                              <p className="text-sm text-gray-400 mt-1">{service.description}</p>;
-                            </div>;
-                            <span className="text-sm font-semibold text-cyan-400">{service.price}</span>;
-                          </div>;
-                        </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       ))}
                     </div>;
                   </div>;

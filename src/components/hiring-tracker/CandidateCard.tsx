@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -11,37 +9,16 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
-=======
-import { useState } from &quot;react&quot;;
-// Local stub is used in place of the @hello-pangea/dnd package which isn't
-// available in this environment.
-import { Draggable } from &quot;@/lib/dnd-stub&quot;;
-import { formatDistanceToNow } from &quot;date-fns&quot;;
-import Link from &quot;next/link&quot;;
-import { JobApplication } from &quot;@/types/jobs&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-import { Avatar as AvatarPrimitive } from &quot;@/components/ui/avatar&quot;; // Renamed to avoid conflict
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Textarea } from &quot;@/components/ui/textarea&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-<<<<<<< HEAD
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
 import { HireConfirmationModal } from "./HireConfirmationModal",
 import Image from 'next/image', // Import next/image
-=======
-  DropdownMenuTrigger} from &quot;@/components/ui/dropdown-menu&quot;;
-import { ScoreBadge } from &quot;@/components/jobs/applications/ScoreBadge&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { HireConfirmationModal } from &quot;./HireConfirmationModal&quot;;
-import Image from 'next/image'; // Import next/image
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface CandidateCardProps {
   application: JobApplication,
@@ -49,17 +26,10 @@ interface CandidateCardProps {
 }
 
 export function CandidateCard({ application, index }: CandidateCardProps) {
-<<<<<<< HEAD
   const [showNotes, setShowNotes] = useState(false),
   const [notes, setNotes] = useState(application.notes || ""),
   const [showHireModal, setShowHireModal] = useState(false),
   const [avatarError, setAvatarError] = useState(false),
-=======
-  const [showNotes, setShowNotes] = useState(false);
-  const [notes, setNotes] = useState(application.notes || "&quot;);
-  const [showHireModal, setShowHireModal] = useState(false);
-  const [avatarError, setAvatarError] = useState(false);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   // Check if application is stalled (no activity for 7 days)
   const isStalled = application.updated_at && 
@@ -70,38 +40,21 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
-<<<<<<< HEAD
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
     setShowNotes(false)
   },
-=======
-      title: &quot;Notes saved&quot;,
-      description: &quot;Your notes have been saved&quot;
-    });
-    setShowNotes(false);
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal
     toast({
-<<<<<<< HEAD
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
     })
   },
 
   const candidateName = application.talent_profile?.full_name || "Candidate",
-=======
-      title: &quot;Hiring process initiated&quot;,
-      description: &quot;Offer has been sent to the talent.&quot;
-    });
-  };
-
-  const candidateName = application.talent_profile?.full_name || &quot;Candidate";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   return (
     <>
@@ -109,7 +62,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"
-=======
 import { useState } from "react",;
 // Local stub is used in place of the @hello-pangea/dnd package which isn't;
 // available in this environment.;
@@ -168,7 +120,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
         {(provided) => (;
           <Card;
             className="mb-2 p-0 shadow-sm border";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
@@ -195,26 +146,25 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   <div>;
                     <h4 className="font-medium text-sm">;
                       {candidateName}
-<<<<<<< HEAD
                     </h4>
-                    <p className="text-xs text-muted-foreground&quot;>
-                      {application.talent_profile?.professional_title || &quot;Applicant&quot;}
+                    <p className="text-xs text-muted-foreground">
+                      {application.talent_profile?.professional_title || "Applicant"}
                     </p>
                   </div>
                 </div>
                 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant=&quot;ghost" className="h-8 w-8 p-0">
-                      <MoreVertical className="h-4 w-4&quot; />
+                    <Button variant="ghost" className="h-8 w-8 p-0">
+                      <MoreVertical className="h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align=&quot;end&quot;>
+                  <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-                      {showNotes ? &quot;Hide notes&quot; : &quot;Add notes"}
+                      {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>
-                      <BriefcaseIcon className="h-4 w-4 mr-2&quot; aria-hidden=&quot;true" /> Hire Candidate
+                      <BriefcaseIcon className="h-4 w-4 mr-2" aria-hidden="true" /> Hire Candidate
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link href={`/messages?talentId=${application.talent_id}`}>
@@ -223,42 +173,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     </DropdownMenuItem>
                     {application.resume?.file_url && (
                       <DropdownMenuItem asChild>
-                        <a href={application.resume.file_url} target="_blank&quot; rel=&quot;noopener noreferrer">
+                        <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
                           View Resume
                         </Link>
                       </DropdownMenuItem>
-=======
-                    </h4>;
-                    <p className="text-xs text-muted-foreground">;
-                      {application.talent_profile?.professional_title || "Applicant"}
-                    </p>;
-                  </div>;
-                </div>;
-                <DropdownMenu>;
-                  <DropdownMenuTrigger asChild>;
-                    <Button variant="ghost" className="h-8 w-8 p-0">;
-                      <MoreVertical className="h-4 w-4" />;
-                    </Button>;
-                  </DropdownMenuTrigger>;
-                  <DropdownMenuContent align="end">;
-                    <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
-                      {showNotes ? "Hide notes" : "Add notes"}
-                    </DropdownMenuItem>;
-                    <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
-                      <BriefcaseIcon className="h-4 w-4 mr-2" aria-hidden="true" /> Hire Candidate;
-                    </DropdownMenuItem>;
-                    <DropdownMenuItem asChild>;
-                      <Link href={`/messages?talentId=${application.talent_id}`}>;
-                        Message;
-                      </Link>;
-                    </DropdownMenuItem>;
-                    {application.resume?.file_url && (;
-                      <DropdownMenuItem asChild>;
-                        <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">;
-                          View Resume;
-                        </a>;
-                      </DropdownMenuItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     )}
                   </DropdownMenuContent>;
                 </DropdownMenu>;
@@ -284,103 +202,54 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
               )}
 ;
               {/* Notes Section */}
-<<<<<<< HEAD
               {showNotes && (
-                <div className="mt-2&quot;>
+                <div className="mt-2">
                   <Textarea 
-                    placeholder=&quot;Add private notes about this candidate..." 
+                    placeholder="Add private notes about this candidate..." 
                     className="text-xs min-h-[60px]"
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
                   />
-                  <div className="flex justify-end mt-2&quot;>
-                    <Button size=&quot;sm" onClick={handleSaveNotes}>Save Notes</Button>
+                  <div className="flex justify-end mt-2">
+                    <Button size="sm" onClick={handleSaveNotes}>Save Notes</Button>
                   </div>
                 </div>
-=======
-              {showNotes && (;
-                <div className="mt-2">;
-                  <Textarea;
-                    placeholder="Add private notes about this candidate...";
-                    className="text-xs min-h-[60px]";
-                    value={notes}
-                    onChange={(e) => setNotes(e.target.value)}
-                  />;
-                  <div className="flex justify-end mt-2">;
-                    <Button size="sm" onClick={handleSaveNotes}>Save Notes</Button>;
-                  </div>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
 ;
               {/* Action Buttons */}
-<<<<<<< HEAD
-              <div className="flex justify-between mt-2 gap-1&quot;>
+              <div className="flex justify-between mt-2 gap-1">
                 <Button 
-                  variant=&quot;outline&quot; 
-                  size=&quot;sm" 
+                  variant="outline" 
+                  size="sm" 
                   className="flex-1"
                   asChild
                 >
                   <Link href={`/messages?talentId=${application.talent_id}`}>
-                    <MessageSquare className="h-3 w-3 mr-1&quot; /> Message
+                    <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
                 
                 <Button 
-                  variant=&quot;outline&quot; 
-                  size=&quot;sm" 
+                  variant="outline" 
+                  size="sm" 
                   className="flex-1"
                   asChild
                 >
                   {application.resume?.file_url ? (
-                    <a href={application.resume.file_url} target="_blank&quot; rel=&quot;noopener noreferrer">
+                    <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" /> Resume
                     </Link>
                   ) : (
                     <span>
-                      <FileText className="h-3 w-3 mr-1&quot; /> No Resume
+                      <FileText className="h-3 w-3 mr-1" /> No Resume
                     </span>
                   )}
                 </Button>
                 
                 <Button 
-                  variant=&quot;default&quot; 
-                  size=&quot;sm" 
+                  variant="default" 
+                  size="sm" 
                   className="flex-1"
-=======
-              <div className="flex justify-between mt-2 gap-1">;
-                <Button;
-                  variant="outline";
-                  size="sm";
-                  className="flex-1";
-                  asChild;
-                >;
-                  <Link href={`/messages?talentId=${application.talent_id}`}>;
-                    <MessageSquare className="h-3 w-3 mr-1" /> Message;
-                  </Link>;
-                </Button>;
-                <Button;
-                  variant="outline";
-                  size="sm";
-                  className="flex-1";
-                  asChild;
-                >;
-                  {application.resume?.file_url ? (;
-                    <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">;
-                      <FileText className="h-3 w-3 mr-1" /> Resume;
-                    </a>;
-                  ) : (;
-                    <span>;
-                      <FileText className="h-3 w-3 mr-1" /> No Resume;
-                    </span>;
-                  )}
-                </Button>;
-                <Button;
-                  variant="default";
-                  size="sm";
-                  className="flex-1";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   onClick={() => setShowHireModal(true)}
                 >;
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;

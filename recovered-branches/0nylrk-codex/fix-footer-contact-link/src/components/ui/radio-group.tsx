@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
-import * as RadioGroupPrimitive from &quot;@radix-ui/react-radio-group&quot;
-import { Circle } from &quot;lucide-react&quot;
+import * as React from "react"
+import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
+import { Circle } from "lucide-react"
 
-import { cn } from &quot;@/lib/utils&quot;
+import { cn } from "@/lib/utils"
 
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>,
@@ -11,20 +10,7 @@ const RadioGroup = React.forwardRef<
 >(({ className, ...props }, ref) => {
   return (
     <RadioGroupPrimitive.Root
-      className={cn(&quot;grid gap-2&quot;, className)}
-=======
-import * as React from "react";
-import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
-import { Circle } from "lucide-react";
-import { cn } from "@/lib/utils";
-const RadioGroup = React.forwardRef<;
-  React.ElementRef<typeof RadioGroupPrimitive.Root>,;
-  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>;
->(({ className, ...props }, ref) => {;
-  return (;
-    <RadioGroupPrimitive.Root;
       className={cn("grid gap-2", className)}
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {...props}
       ref={ref}
     />;
@@ -38,35 +24,19 @@ const RadioGroupItem = React.forwardRef<;
   return (;
     <RadioGroupPrimitive.Item;
       ref={ref}
-<<<<<<< HEAD
       className={cn(
-        &quot;aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;,
+        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
         className
       )}
       {...props}
     >
-      <RadioGroupPrimitive.Indicator className=&quot;flex items-center justify-center&quot;>
-        <Circle className=&quot;h-2.5 w-2.5 fill-current text-current&quot; />
+      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
+        <Circle className="h-2.5 w-2.5 fill-current text-current" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
 
-=======
-      className={cn(;
-        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
-        className;
-      )}
-      {...props}
-    >;
-      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">;
-        <Circle className="h-2.5 w-2.5 fill-current text-current" />;
-      </RadioGroupPrimitive.Indicator>;
-    </RadioGroupPrimitive.Item>;
-  );
-});
-RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 export { RadioGroup, RadioGroupItem }
 ;

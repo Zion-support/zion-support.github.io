@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
-=======
-import { useState, useEffect } from 'react';
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -83,22 +76,12 @@ export function usePricingSuggestionAnalytics(days = 30) {
         // Process data and setAnalytics({...})
 
       } catch (error) {
-<<<<<<< HEAD
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
           isLoading: false,
           error: "Failed to load pricing analytics data."
         })
-=======
-        console.error(&quot;Error fetching pricing suggestion analytics:&quot;, error);
-        setAnalytics({
-          ...analytics,
-          isLoading: false,
-          error: &quot;Failed to load pricing analytics data.&quot;
-        });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import { useState, useEffect } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;
 interface PricingSuggestionAnalytics {;
@@ -177,7 +160,6 @@ export function usePricingSuggestionAnalytics(days = 30) {;
           isLoading: false,;
           error: "Failed to load pricing analytics data.";
         });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
     };
     fetchAnalytics();

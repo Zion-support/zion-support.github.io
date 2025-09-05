@@ -113,7 +113,6 @@ export default function TalentDirectory() {;
       query.expMin = String(experienceRange[0]),;
       query.expMax = String(experienceRange[1]);
     }
-<<<<<<< HEAD
     if (sortOption !== 'relevance') query.sort = sortOption,
     if (currentPage > 1) query.page = String(currentPage),
     
@@ -146,7 +145,7 @@ export default function TalentDirectory() {;
 
   if (isLoading) {
     return (
-      <div key={pageKey} className=&quot;container mx-auto px-4 py-8&quot;>
+      <div key={pageKey} className="container mx-auto px-4 py-8">
         <TalentSkeleton />
       </div>
     )
@@ -166,23 +165,23 @@ export default function TalentDirectory() {;
     experienceRange[1] === 15
   ) {
     return (
-      <div key={pageKey} className=&quot;container mx-auto px-4 py-8&quot;>
-        <div className=&quot;text-center py-16&quot;>
+      <div key={pageKey} className="container mx-auto px-4 py-8">
+        <div className="text-center py-16">
           <Image
-            src=&quot;/images/talent-placeholder.svg&quot;
-            alt=&quot;No talent&quot;
+            src="/images/talent-placeholder.svg"
+            alt="No talent"
             width={200}
             height={200}
-            className=&quot;mx-auto mb-6&quot;
+            className="mx-auto mb-6"
           />
-          <h2 className=&quot;text-2xl font-bold text-white mb-4&quot;>
+          <h2 className="text-2xl font-bold text-white mb-4">
             Talent Directory Currently Empty
           </h2>
-          <p className=&quot;text-zion-slate-light max-w-md mx-auto mb-6&quot;>
+          <p className="text-zion-slate-light max-w-md mx-auto mb-6">
             No talent profiles are currently available.
           </p>
-          <Link href=&quot;/create-talent-profile&quot;>
-            <Button className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white&quot;>
+          <Link href="/create-talent-profile">
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
               Be the first to list a talent
             </Button>
           </Link>
@@ -193,148 +192,39 @@ export default function TalentDirectory() {;
 
   if (error) {
     return (
-      <div key={pageKey} className=&quot;container mx-auto px-4 py-8&quot;>
-        <ErrorBanner msg=&quot;Unable to load talent profiles.&quot; />
+      <div key={pageKey} className="container mx-auto px-4 py-8">
+        <ErrorBanner msg="Unable to load talent profiles." />
       </div>
     )
   }
 
   return (
-    <div key={pageKey} className=&quot;container mx-auto px-4 py-8&quot;>
-      <div className=&quot;flex flex-col space-y-8&quot;>
-        <div className=&quot;flex items-start justify-between&quot;>
+    <div key={pageKey} className="container mx-auto px-4 py-8">
+      <div className="flex flex-col space-y-8">
+        <div className="flex items-start justify-between">
           <div>
-            <h1 className=&quot;text-3xl font-bold text-white mb-2&quot;>
+            <h1 className="text-3xl font-bold text-white mb-2">
               AI & Tech Talent Directory
             </h1>
-            <p className=&quot;text-zion-slate-light&quot;>
+            <p className="text-zion-slate-light">
               Connect with expert AI developers, data scientists, ML engineers,
               and tech professionals for your projects.
             </p>
           </div>
           {isAdmin && (
             <Link
-              href=&quot;/create-talent-profile&quot;
-              className=&quot;bg-zion-purple text-white px-4 py-2 rounded hover:bg-zion-purple-dark&quot;
+              href="/create-talent-profile"
+              className="bg-zion-purple text-white px-4 py-2 rounded hover:bg-zion-purple-dark"
             >
               Add Talent
             </Link>
-=======
-    if (sortOption !== 'relevance') query.sort = sortOption,;
-    if (currentPage > 1) query.page = String(currentPage),;
-    router.replace({ pathname: router.pathname, query }, undefined, {;
-      shallow: true});
-  }, [;
-    router.isReady,;
-    searchTerm,;
-    selectedSkills,;
-    selectedAvailability,;
-    selectedRegions,;
-    priceRange,;
-    experienceRange,;
-    sortOption,;
-    currentPage,;
-    initialized]), // Fixed dependencies;
-  const handleRequestHire = (talent: TalentProfile) => {;
-    setSelectedTalent(talent),;
-    setIsHireModalOpen(true);
-  },;
-  const viewProfile = (id: string) => {;
-    // Navigate to the talent profile page;
-    router.push(`/talent/${id}`), // Changed to router.push;
-  },;
-  // Add key prop to force re-render when route changes;
-  const pageKey = `talent-directory-${routeKey}-${router.asPath}`,;
-  if (isLoading) {;
-    return (;
-      <div key={pageKey} className="container mx-auto px-4 py-8">;
-        <TalentSkeleton />;
-      </div>;
-    );
-  }
-;
-  if (;
-    !isLoading &&;
-    !error &&;
-    filteredTalents.length === 0 &&;
-    !searchTerm &&;
-    selectedSkills.length === 0 &&;
-    selectedAvailability.length === 0 &&;
-    selectedRegions.length === 0 &&;
-    priceRange[0] === 50 &&;
-    priceRange[1] === 200 &&;
-    experienceRange[0] === 0 &&;
-    experienceRange[1] === 15;
-  ) {;
-    return (;
-      <div key={pageKey} className="container mx-auto px-4 py-8">;
-        <div className="text-center py-16">;
-          <Image;
-            src="/images/talent-placeholder.svg";
-            alt="No talent";
-            width={200}
-            height={200}
-            className="mx-auto mb-6";
-          />;
-          <h2 className="text-2xl font-bold text-white mb-4">;
-            Talent Directory Currently Empty;
-          </h2>;
-          <p className="text-zion-slate-light max-w-md mx-auto mb-6">;
-            No talent profiles are currently available.;
-          </p>;
-          <Link href="/create-talent-profile">;
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">;
-              Be the first to list a talent;
-            </Button>;
-          </Link>;
-        </div>;
-      </div>;
-    );
-  }
-;
-  if (error) {;
-    return (;
-      <div key={pageKey} className="container mx-auto px-4 py-8">;
-        <ErrorBanner msg="Unable to load talent profiles." />;
-      </div>;
-    );
-  }
-;
-  return (;
-    <div key={pageKey} className="container mx-auto px-4 py-8">;
-      <div className="flex flex-col space-y-8">;
-        <div className="flex items-start justify-between">;
-          <div>;
-            <h1 className="text-3xl font-bold text-white mb-2">;
-              AI & Tech Talent Directory;
-            </h1>;
-            <p className="text-zion-slate-light">;
-              Connect with expert AI developers, data scientists, ML engineers,;
-              and tech professionals for your projects.;
-            </p>;
-          </div>;
-          {isAdmin && (;
-            <Link;
-              href="/create-talent-profile";
-              className="bg-zion-purple text-white px-4 py-2 rounded hover:bg-zion-purple-dark";
-            >;
-              Add Talent;
-            </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         </div>;
         {/* Main content */}
-<<<<<<< HEAD
-        <div className=&quot;flex flex-col lg:flex-row gap-6&quot;>
+        <div className="flex flex-col lg:flex-row gap-6">
           {/* Sidebar - Desktop */}
-          <div className=&quot;w-full lg:w-64 shrink-0 hidden lg:block&quot;>
+          <div className="w-full lg:w-64 shrink-0 hidden lg:block">
             <FilterSidebar
-=======
-        <div className="flex flex-col lg:flex-row gap-6">;
-          {/* Sidebar - Desktop */}
-          <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
-            <FilterSidebar;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
               selectedSkills={selectedSkills}
@@ -355,32 +245,18 @@ export default function TalentDirectory() {;
             />;
           </div>;
           {/* Mobile filter button */}
-<<<<<<< HEAD
-          <div className=&quot;lg:hidden mb-4&quot;>
+          <div className="lg:hidden mb-4">
             <Button
               onClick={() => setIsMobileFilterOpen(true)}
-              variant=&quot;outline&quot;
-              className=&quot;w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light&quot;
+              variant="outline"
+              className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
             >
               Filter & Sort
             </Button>
           </div>
 
           {/* Results and Pagination Wrapper for ErrorBoundary */}
-          <div className=&quot;flex-1&quot;>
-=======
-          <div className="lg:hidden mb-4">;
-            <Button;
-              onClick={() => setIsMobileFilterOpen(true)}
-              variant="outline";
-              className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
-            >;
-              Filter & Sort;
-            </Button>;
-          </div>;
-          {/* Results and Pagination Wrapper for ErrorBoundary */}
-          <div className="flex-1">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          <div className="flex-1">
             {' '}
             {/* Added a wrapper div to contain Results and Pagination */}
             <ErrorBoundary>;
@@ -403,24 +279,14 @@ export default function TalentDirectory() {;
                   experienceRange,;
                   setExperienceRange,;
                   clearFilters}}
-<<<<<<< HEAD
               />
 
               {totalPages > 1 && (
-                <div className=&quot;mt-6&quot;>
-                  <Pagination className=&quot;justify-center&quot;>
+                <div className="mt-6">
+                  <Pagination className="justify-center">
                     <PaginationContent>
                       <PaginationItem>
                         <PaginationPrevious
-=======
-              />;
-              {totalPages > 1 && (;
-                <div className="mt-6">;
-                  <Pagination className="justify-center">;
-                    <PaginationContent>;
-                      <PaginationItem>;
-                        <PaginationPrevious;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                           href={`?page=${currentPage - 1}`}
                           onClick={(e) => {;
                             e.preventDefault(),;
@@ -460,41 +326,22 @@ export default function TalentDirectory() {;
             </ErrorBoundary>;
           </div>;
           {/* Mobile filter sidebar */}
-<<<<<<< HEAD
           {isMobileFilterOpen && (
-            <div className=&quot;fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex&quot;>
-              <div className=&quot;w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto&quot;>
-                <div className=&quot;flex justify-between items-center mb-4&quot;>
-                  <h3 className=&quot;font-bold text-white&quot;>Filter & Sort</h3>
+            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
+              <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="font-bold text-white">Filter & Sort</h3>
                   <Button
-                    variant=&quot;ghost&quot;
-                    size=&quot;sm&quot;
+                    variant="ghost"
+                    size="sm"
                     onClick={() => setIsMobileFilterOpen(false)}
-                    className=&quot;text-zion-slate-light h-8 w-8 p-0&quot;
+                    className="text-zion-slate-light h-8 w-8 p-0"
                   >
-                    <X className=&quot;h-4 w-4&quot; />
-                    <span className=&quot;sr-only&quot;>Close</span>
+                    <X className="h-4 w-4" />
+                    <span className="sr-only">Close</span>
                   </Button>
                 </div>
                 <FilterSidebar
-=======
-          {isMobileFilterOpen && (;
-            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
-              <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">;
-                <div className="flex justify-between items-center mb-4">;
-                  <h3 className="font-bold text-white">Filter & Sort</h3>;
-                  <Button;
-                    variant="ghost";
-                    size="sm";
-                    onClick={() => setIsMobileFilterOpen(false)}
-                    className="text-zion-slate-light h-8 w-8 p-0";
-                  >;
-                    <X className="h-4 w-4" />;
-                    <span className="sr-only">Close</span>;
-                  </Button>;
-                </div>;
-                <FilterSidebar;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   searchTerm={searchTerm}
                   setSearchTerm={setSearchTerm}
                   selectedSkills={selectedSkills}

@@ -351,28 +351,16 @@ export default function UltraFuturisticBackground2037({;
       }
       cancelAnimationFrame(animationFrameId);
     }
-<<<<<<< HEAD
   }, []),
 
   return (
-    <div ref={containerRef} className=&quot;fixed inset-0 w-full h-full pointer-events-none&quot;>
+    <div ref={containerRef} className="fixed inset-0 w-full h-full pointer-events-none">
       <canvas
         ref={canvasRef}
-        className=&quot;w-full h-full&quot;
+        className="w-full h-full"
         style={{
           background: 'transparent',
           filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
-=======
-  }, []),;
-  return (;
-    <div ref={containerRef} className="fixed inset-0 w-full h-full pointer-events-none">;
-      <canvas;
-        ref={canvasRef}
-        className="w-full h-full";
-        style={{;
-          background: 'transparent',;
-          filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }}
       />;
       {children}

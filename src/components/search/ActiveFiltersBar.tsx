@@ -99,38 +99,37 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   if (activeFilters.length === 0) {;
     return null;
   }
-<<<<<<< HEAD
 
   return (
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>
-      <span className=&quot;text-sm font-medium text-muted-foreground&quot;>Active filters:</span>
+      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
       
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
-          variant=&quot;secondary&quot; 
-          className=&quot;flex items-center gap-1 pl-2 pr-1&quot;
+          variant="secondary" 
+          className="flex items-center gap-1 pl-2 pr-1"
         >
-          <span className=&quot;text-xs&quot;>
+          <span className="text-xs">
             {filter.label}: {filter.value}
           </span>
           <Button
-            variant=&quot;ghost&quot;
-            size=&quot;sm&quot;
-            className=&quot;h-4 w-4 p-0 hover:bg-transparent&quot;
+            variant="ghost"
+            size="sm"
+            className="h-4 w-4 p-0 hover:bg-transparent"
             onClick={() => removeFilter(filter.key)}
             aria-label={`Remove ${filter.label} filter`}
           >
-            <X className=&quot;h-3 w-3&quot; />
+            <X className="h-3 w-3" />
           </Button>
         </Badge>
       ))}
 
       <Button
-        variant=&quot;ghost&quot;
-        size=&quot;sm&quot;
+        variant="ghost"
+        size="sm"
         onClick={onClearAll}
-        className=&quot;text-xs h-6 px-2&quot;
+        className="text-xs h-6 px-2"
       >
         Clear all
       </Button>
@@ -139,42 +138,3 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 },
 
 export default ActiveFiltersBar,
-=======
-;
-  return (;
-    <div className={`flex items-center gap-2 flex-wrap ${className}`}>;
-      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;
-      {activeFilters.map(filter => (;
-        <Badge;
-          key={filter.key} ;
-          variant="secondary";
-          className="flex items-center gap-1 pl-2 pr-1";
-        >;
-          <span className="text-xs">;
-            {filter.label}: {filter.value}
-          </span>;
-          <Button;
-            variant="ghost";
-            size="sm";
-            className="h-4 w-4 p-0 hover:bg-transparent";
-            onClick={() => removeFilter(filter.key)}
-            aria-label={`Remove ${filter.label} filter`}
-          >;
-            <X className="h-3 w-3" />;
-          </Button>;
-        </Badge>;
-      ))}
-;
-      <Button;
-        variant="ghost";
-        size="sm";
-        onClick={onClearAll}
-        className="text-xs h-6 px-2";
-      >;
-        Clear all;
-      </Button>;
-    </div>;
-  );
-};
-export default ActiveFiltersBar;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

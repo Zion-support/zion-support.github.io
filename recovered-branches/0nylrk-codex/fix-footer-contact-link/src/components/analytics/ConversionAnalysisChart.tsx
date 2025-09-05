@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
-=======
-import React from &quot;react&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { AnalyticsChart } from &quot;@/components/analytics/AnalyticsChart&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ConversionAnalysisProps {
   data: Array<Record<string any>>,
   timeRange: string,
@@ -22,18 +14,17 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
     : [],
 
   return (
-    <Card className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
+    <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
-        <CardTitle className=&quot;text-white text-lg&quot;>Conversion Analysis</CardTitle>
-        <CardDescription className=&quot;text-zion-slate-light&quot;>Track different conversion types</CardDescription>
+        <CardTitle className="text-white text-lg">Conversion Analysis</CardTitle>
+        <CardDescription className="text-zion-slate-light">Track different conversion types</CardDescription>
       </CardHeader>
       <CardContent>
         <AnalyticsChart
-          title="&quot;
+          title=""
           data={data || []}
           dataKeys={dataKeys}
-          type=&quot;bar"
-=======
+          type="bar"
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -59,7 +50,6 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           data={data || []}
           dataKeys={dataKeys}
           type="bar";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;

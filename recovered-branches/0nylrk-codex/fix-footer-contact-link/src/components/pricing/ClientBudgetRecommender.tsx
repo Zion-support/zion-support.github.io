@@ -1,29 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
-=======
-import React, { useState } from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
   getClientBudgetSuggestion,
   PricingSuggestion,
   ClientBudgetParams,
   trackPricingSuggestion
-<<<<<<< HEAD
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
-=======
-} from &quot;@/services/pricingSuggestionService&quot;;
-import { PricingSuggestionBox } from &quot;./PricingSuggestionBox&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { Sparkles } from &quot;lucide-react&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
@@ -31,7 +17,6 @@ interface ClientBudgetRecommenderProps {
   scope?: string,
   experienceLevel?: string,
   onSuggestionApplied: (minValue: number, maxValue: number) => void
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -50,7 +35,6 @@ interface ClientBudgetRecommenderProps {;
   scope?: string,;
   experienceLevel?: string,;
   onSuggestionApplied: (minValue: number, maxValue: number) => void;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
@@ -67,7 +51,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     if (!jobTitle || !category) {;
       return;
     }
-<<<<<<< HEAD
 
     setIsLoading(true),
     try {
@@ -82,14 +65,9 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       const result = await getClientBudgetSuggestion(params),
       setSuggestion(result)
     } catch (error) {
-<<<<<<< HEAD
       console.error("Error generating budget suggestion:", error)
-=======
-      console.error(&quot;Error generating budget suggestion:&quot;, error);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     try {;
@@ -105,7 +83,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       console.error("Error generating budget suggestion:", error);
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const handleApplySuggestion = () => {;
@@ -122,52 +99,28 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         });
       }
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;space-y-4&quot;>
+    <div className="space-y-4">
       <div>
         {!suggestion && !isLoading ? (
           <Button
-            type=&quot;button&quot;
-            variant=&quot;outline&quot;
+            type="button"
+            variant="outline"
             onClick={generateSuggestion}
             disabled={!jobTitle || !category}
-            className=&quot;w-full&quot;
+            className="w-full"
           >
-            <Sparkles className=&quot;h-4 w-4 mr-2&quot; /> Get Budget Recommendation
+            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
           </Button>
         ) : (
           <PricingSuggestionBox
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-            rateType=&quot;hourly&quot;
+            rateType="hourly"
           />
-=======
-  };
-  return (;
-    <div className="space-y-4">;
-      <div>;
-        {!suggestion && !isLoading ? (;
-          <Button;
-            type="button";
-            variant="outline";
-            onClick={generateSuggestion}
-            disabled={!jobTitle || !category}
-            className="w-full";
-          >;
-            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation;
-          </Button>;
-        ) : (;
-          <PricingSuggestionBox;
-            suggestion={suggestion}
-            isLoading={isLoading}
-            onApplySuggestion={handleApplySuggestion}
-            rateType="hourly";
-          />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       </div>;
     </div>;

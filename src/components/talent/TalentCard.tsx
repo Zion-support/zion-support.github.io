@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import { useRouter } from 'next/router',
 import { Badge } from "@/components/ui/badge",
@@ -11,26 +9,11 @@ import { TalentProfile } from "@/types/talent",
 import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
-=======
-import React from 'react';
-import { useRouter } from 'next/router';
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Card, CardContent, CardFooter } from &quot;@/components/ui/card&quot;;
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import { FavoriteButton } from &quot;@/components/FavoriteButton&quot;;
-import { TalentProfile } from &quot;@/types/talent&quot;;
-import { RatingStars } from '@/components/RatingStars';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { useCart } from '@/context/CartContext';
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire: (talent: TalentProfile) => void,
   isAuthenticated: boolean
-=======
 import React from 'react',;
 import { useRouter } from 'next/router',;
 import { Badge } from "@/components/ui/badge",;
@@ -47,7 +30,6 @@ export interface TalentCardProps {;
   onViewProfile: (id: string) => void,;
   onRequestHire: (talent: TalentProfile) => void,;
   isAuthenticated: boolean;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 const TalentCardComponent = ({;
@@ -71,7 +53,6 @@ const TalentCardComponent = ({;
     if (onRequestHire) {;
       onRequestHire(talent);
     }
-<<<<<<< HEAD
   },
 
 
@@ -80,192 +61,114 @@ const TalentCardComponent = ({;
 
   return (
     <Card
-      className=&quot;overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple&quot;
+      className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
       onClick={handleViewProfile}
       tabIndex={0}
     >
-      <div className=&quot;p-6&quot;>
-        <div className=&quot;flex items-start&quot;>
+      <div className="p-6">
+        <div className="flex items-start">
           {/* Avatar */}
-          <div className=&quot;relative mr-4&quot;>
-            <div className=&quot;w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light&quot;>
+          <div className="relative mr-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
               {talent.profile_picture_url ? (
                 <img
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
-                  className=&quot;w-full h-full object-cover&quot;
-                  loading=&quot;lazy&quot;
+                  className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               ) : (
-                <div className=&quot;w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold&quot;>
-                  {talent.full_name?.charAt(0) || &quot;T&quot;}
+                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
+                  {talent.full_name?.charAt(0) || "T"}
                 </div>
               )}
             </div>
             {talent.is_verified && (
-              <div className=&quot;absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full&quot;>
-                <CheckCircle2 className=&quot;w-5 h-5 text-zion-cyan&quot; />
+              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
+                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
               </div>
-=======
-  },;
-  // Extract skills - limit to 5 for display;
-  const skills = talent.skills?.slice(0, 5) || [],;
-  return (;
-    <Card;
-      className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple";
-      onClick={handleViewProfile}
-      tabIndex={0}
-    >;
-      <div className="p-6">;
-        <div className="flex items-start">;
-          {/* Avatar */}
-          <div className="relative mr-4">;
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
-              {talent.profile_picture_url ? (;
-                <img;
-                  src={talent.profile_picture_url}
-                  alt={talent.full_name}
-                  className="w-full h-full object-cover";
-                  loading="lazy";
-                />;
-              ) : (;
-                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
-                  {talent.full_name?.charAt(0) || "T"}
-                </div>;
-              )}
-            </div>;
-            {talent.is_verified && (;
-              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;
-                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
-              </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             )}
           </div>;
           {/* Main Info */}
-<<<<<<< HEAD
-          <div className=&quot;flex-1&quot;>
-            <div className=&quot;flex justify-between items-start&quot;>
-              <h3 className=&quot;text-lg font-bold text-white&quot;>{talent.full_name}</h3>
-              <FavoriteButton itemId={talent.id} className=&quot;-mt-1&quot; />
+          <div className="flex-1">
+            <div className="flex justify-between items-start">
+              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
+              <FavoriteButton itemId={talent.id} className="-mt-1" />
             </div>
-            <p className=&quot;text-white font-medium&quot;>{talent.professional_title}</p>
+            <p className="text-white font-medium">{talent.professional_title}</p>
             
             {/* Location & Availability */}
-            <div className=&quot;mt-2 flex flex-wrap gap-3 text-sm&quot;>
+            <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
-                <div className=&quot;flex items-center text-zion-slate-light&quot;>
-                  <MapPin className=&quot;h-4 w-4 mr-1&quot; />
+                <div className="flex items-center text-zion-slate-light">
+                  <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
               )}
               {talent.availability_type && (
-                <div className=&quot;flex items-center text-zion-slate-light&quot;>
-                  <Clock className=&quot;h-4 w-4 mr-1&quot; />
+                <div className="flex items-center text-zion-slate-light">
+                  <Clock className="h-4 w-4 mr-1" />
                   <span>{talent.availability_type}</span>
                 </div>
-=======
-          <div className="flex-1">;
-            <div className="flex justify-between items-start">;
-              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>;
-              <FavoriteButton itemId={talent.id} className="-mt-1" />;
-            </div>;
-            <p className="text-white font-medium">{talent.professional_title}</p>;
-            {/* Location & Availability */}
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">;
-              {talent.location && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <MapPin className="h-4 w-4 mr-1" />;
-                  <span>{talent.location}</span>;
-                </div>;
-              )}
-              {talent.availability_type && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
-                  <span>{talent.availability_type}</span>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             </div>;
           </div>;
         </div>;
         {/* Skills */}
-<<<<<<< HEAD
         {skills.length > 0 && (
-          <div className=&quot;mt-4&quot;>
-            <div className=&quot;flex flex-wrap gap-2&quot;>
+          <div className="mt-4">
+            <div className="flex flex-wrap gap-2">
               {skills.map((skill, index) => (
                 <span 
                   key={index}
-                  className=&quot;px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light&quot;
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
-=======
-        {skills.length > 0 && (;
-          <div className="mt-4">;
-            <div className="flex flex-wrap gap-2">;
-              {skills.map((skill, index) => (;
-                <span;
-                  key={index}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
-                >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   {skill}
                 </span>;
               ))}
-<<<<<<< HEAD
               {(talent.skills?.length || 0) > 5 && (
-                <span className=&quot;px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan&quot;>
+                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
                   +{(talent.skills?.length || 0) - 5} more
                 </span>
-=======
-              {(talent.skills?.length || 0) > 5 && (;
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
-                  +{(talent.skills?.length || 0) - 5} more;
-                </span>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             </div>;
           </div>;
         )}
 ;
         {/* Hourly Rate & Actions */}
-<<<<<<< HEAD
-        <div className=&quot;mt-5 flex items-center justify-between&quot;>
+        <div className="mt-5 flex items-center justify-between">
           <div>
             {talent.hourly_rate ? (
-              <div className=&quot;text-white font-bold&quot;>
+              <div className="text-white font-bold">
                 ${talent.hourly_rate}
-                <span className=&quot;text-zion-slate-light font-normal&quot;>/hr</span>
+                <span className="text-zion-slate-light font-normal">/hr</span>
               </div>
             ) : (
-              <div className=&quot;text-zion-slate-light&quot;>Rate not specified</div>
+              <div className="text-zion-slate-light">Rate not specified</div>
             )}
           </div>
           
-          <div className=&quot;flex items-center gap-2&quot;>
+          <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
-                size=&quot;sm&quot;
-                variant=&quot;secondary&quot;
+                size="sm"
+                variant="secondary"
                 onClick={handleRequestHire}
-                className=&quot;bg-zion-purple hover:bg-zion-purple-light text-white&quot;
+                className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
               </Button>
             )}
             <Button
-              size=&quot;sm&quot;
-              variant=&quot;ghost&quot;
+              size="sm"
+              variant="ghost"
               onClick={(e) => {
                 e.stopPropagation(),
                 handleViewProfile()
               }}
-<<<<<<< HEAD
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
-=======
-              className=&quot;text-zion-cyan hover:text-white hover:bg-zion-blue-light&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             >
-              View <ArrowRight className=&quot;ml-1 h-4 w-4&quot; />
+              View <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
           </div>
         </div>
@@ -276,7 +179,6 @@ const TalentCardComponent = ({;
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
-=======
         <div className="mt-5 flex items-center justify-between">;
           <div>;
             {talent.hourly_rate ? (;
@@ -318,4 +220,3 @@ TalentCard.displayName = 'TalentCard',
 },;
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

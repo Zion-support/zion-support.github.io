@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import type { ReviewsSummary } from '../../types/reviews',
 import StarRating from './StarRating',
@@ -8,14 +7,14 @@ type Props = {
 
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
-    <div className=&quot;enhanced-card flex items-center justify-between&quot;>
+    <div className="enhanced-card flex items-center justify-between">
       <div>
-        <div className=&quot;flex items-center gap-3&quot;>
-          <span className=&quot;text-2xl font-semibold&quot;>{summary.averageRating.toFixed(1)}</span>
+        <div className="flex items-center gap-3">
+          <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
         </div>
-        <div className=&quot;text-sm text-gray-600 mt-1&quot;>
-          <span className=&quot;mr-3&quot;>{summary.totalReviews} reviews</span>
+        <div className="text-sm text-gray-600 mt-1">
+          <span className="mr-3">{summary.totalReviews} reviews</span>
           <span>{summary.totalCompletedProjects} completed projects</span>
         </div>
       </div>
@@ -24,28 +23,3 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
 },
 
 export default ReviewSummary,
-=======
-import React from 'react',;
-import type { ReviewsSummary } from '../../types/reviews',;
-import StarRating from './StarRating',;
-type Props = {;
-  summary: ReviewsSummary;
-},;
-const ReviewSummary: React.FC<Props> = ({ summary }) => {;
-  return (;
-    <div className="enhanced-card flex items-center justify-between">;
-      <div>;
-        <div className="flex items-center gap-3">;
-          <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>;
-          <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />;
-        </div>;
-        <div className="text-sm text-gray-600 mt-1">;
-          <span className="mr-3">{summary.totalReviews} reviews</span>;
-          <span>{summary.totalCompletedProjects} completed projects</span>;
-        </div>;
-      </div>;
-    </div>;
-  );
-},;
-export default ReviewSummary;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

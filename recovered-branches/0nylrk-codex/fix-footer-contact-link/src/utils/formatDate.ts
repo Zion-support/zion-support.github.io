@@ -44,13 +44,12 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       }
     default: return dateObj.toLocaleDateString();
   }
-<<<<<<< HEAD
 },
 
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
- * @returns Time ago string (e.g., &quot;2 hours ago&quot;)
+ * @returns Time ago string (e.g., "2 hours ago")
  */
 export const timeAgo = (date: Date | string | number): string => {
   const dateObj = new Date(date),
@@ -61,21 +60,6 @@ export const timeAgo = (date: Date | string | number): string => {
   let interval = Math.floor(seconds / 31536000),
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`
-=======
-},;
-/**;
- * Format a date to show how long ago it was;
- * @param date Date to format;
- * @returns Time ago string (e.g., "2 hours ago");
- */;
-export const timeAgo = (date: Date | string | number): string => {;
-  const dateObj = new Date(date),;
-  const now = new Date(),;
-  const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000),;
-  let interval = Math.floor(seconds / 31536000),;
-  if (interval >= 1) {;
-    return interval === 1 ? '1 year ago' : `${interval} years ago`;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   interval = Math.floor(seconds / 2592000),;

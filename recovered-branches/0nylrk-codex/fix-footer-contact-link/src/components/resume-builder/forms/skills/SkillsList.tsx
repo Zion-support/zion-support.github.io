@@ -24,13 +24,12 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   if (Object.keys(skillsByCategory).length === 0) {;
     return null;
   }
-<<<<<<< HEAD
   
   return (
-    <div className=&quot;space-y-6&quot;>
-      <h3 className=&quot;text-md font-medium&quot;>Your Skills</h3>
+    <div className="space-y-6">
+      <h3 className="text-md font-medium">Your Skills</h3>
       
-      <div className=&quot;space-y-4&quot;>
+      <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
           <SkillCategory 
             key={category} 
@@ -38,20 +37,6 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
             skills={categorySkills} 
             onDelete={onDeleteSkill} 
           />
-=======
-;
-  return (;
-    <div className="space-y-6">;
-      <h3 className="text-md font-medium">Your Skills</h3>;
-      <div className="space-y-4">;
-        {Object.entries(skillsByCategory).map(([category, categorySkills]) => (;
-          <SkillCategory;
-            key={category} ;
-            category={category} ;
-            skills={categorySkills} ;
-            onDelete={onDeleteSkill} ;
-          />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         ))}
       </div>;
     </div>;

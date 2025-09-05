@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 // Content analysis functionality
 import { suspiciousPhrases } from './constants',
 import { AnalysisResult } from './types',
@@ -13,12 +12,7 @@ export const analyzeContent = (content: string): AnalysisResult => {
   // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
     if (contentLower.includes(phrase.toLowerCase())) {
-<<<<<<< HEAD
       reasons.push(`Contains suspicious phrase: "${phrase}"`)
-=======
-      reasons.push(`Contains suspicious phrase: &quot;${phrase}&quot;`);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 // Content analysis functionality;
 import { suspiciousPhrases } from './constants',;
 import { AnalysisResult } from './types',;
@@ -32,7 +26,6 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   for (const phrase of suspiciousPhrases) {;
     if (contentLower.includes(phrase.toLowerCase())) {;
       reasons.push(`Contains suspicious phrase: "${phrase}"`);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   }
 ;

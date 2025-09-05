@@ -79,13 +79,12 @@ class AggressiveSyntaxFixer {;
             this.log(`❌ Error fixing ${filePath}: ${error.message}`);
         }
     }
-<<<<<<< HEAD
 
     hasSyntaxErrors(content) {
         // Check for various syntax error patterns
         const errorPatterns = [
             //, // Multiple quotes
-            /&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;""&quot;/, // Multiple quotes"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"""
+            /""""""""""""""""""/, // Multiple quotes"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
             /``````````````````/, // Multiple quotes
             /import React from react',export/, // Missing newline
             /const [^a-zA-Z_$][^a-zA-Z0-9_$]*? =/, // Invalid variable name
@@ -103,30 +102,6 @@ class AggressiveSyntaxFixer {;
         ],
 
         return errorPatterns.some(pattern => pattern.test(content))
-=======
-;
-    hasSyntaxErrors(content) {;
-        // Check for various syntax error patterns;
-        const errorPatterns = [;
-            //, // Multiple quotes;
-            /""""""""""""""""""/, // Multiple quotes""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""";
-            /``````````````````/, // Multiple quotes;
-            /import React from react',export/, // Missing newline;
-            /const [^a-zA-Z_$][^a-zA-Z0-9_$]*? =/, // Invalid variable name;
-            /function [^a-zA-Z_$][^a-zA-Z0-9_$]*?\(/, // Invalid function name;
-            /default function [^a-zA-Z_$][^a-zA-Z0-9_$]*?\(/, // Invalid function name;
-            /import.*export/, // Import followed by /export.*import/, // Export followed by import;
-            /Unexpected token/, // Any unexpected token;
-            /Unterminated string constant/, // Unterminated strings;
-            /The keyword interface' is reserved/, // Interface keyword issues;
-            /Unexpected token :/, // Colon token issues;
-            /Unexpected token \[/, // Bracket token issues;
-            /Unexpected token %/, // Percent token issues;
-            /Unexpected token -/, // Dash token issues;
-            /Unexpected token \./, // Dot token issues;
-        ],;
-        return errorPatterns.some(pattern => pattern.test(content));
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     createValidFile(filePath) {;
@@ -208,32 +183,22 @@ async function main() {;
 if (require.main === module) {;
     main();
 }
-<<<<<<< HEAD
 
 module.exports = AggressiveSyntaxFixer, 
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {
-<<<<<<< HEAD
   // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
-=======
-  // console.log('\n🛑 Received SIGINT, shutting down gracefully...');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   // Add cleanup logic here
   process.exit(0)
 }),
 
 process.on('SIGTERM', () => {
-<<<<<<< HEAD
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
-=======
-  // console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   // Add cleanup logic here
   process.exit(0)
 }),
 
-=======
 ;
 module.exports = AggressiveSyntaxFixer,;
 // Graceful shutdown handling;
@@ -247,4 +212,3 @@ process.on('SIGTERM', () => {;
   // Add cleanup logic here;
   process.exit(0);
 });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

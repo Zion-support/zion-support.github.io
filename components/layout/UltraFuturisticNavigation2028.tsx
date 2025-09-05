@@ -160,7 +160,6 @@ const resourceLinks = [;
   { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },;
   { name: '🔐 Security Center', href: '/security', icon: Shield },;
   { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
-<<<<<<< HEAD
 ],
 
 export default function UltraFuturisticNavigation2028() {
@@ -187,70 +186,27 @@ export default function UltraFuturisticNavigation2028() {
   ),
 
   return (
-    <nav className=&quot;relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30&quot;>
+    <nav className="relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30">
       {/* Top Contact Bar */}
-      <div className=&quot;bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-500/20&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-          <div className=&quot;flex items-center justify-between h-10 text-xs text-purple-200&quot;>
-            <div className=&quot;flex items-center space-x-6&quot;>
-              <div className=&quot;flex items-center space-x-2&quot;>
-                <Phone className=&quot;h-3 w-3 text-purple-400&quot; />
+      <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-10 text-xs text-purple-200">
+            <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-2">
+                <Phone className="h-3 w-3 text-purple-400" />
                 <span>{contactInfo.mobile}</span>
               </div>
-              <div className=&quot;flex items-center space-x-2&quot;>
-                <Mail className=&quot;h-3 w-3 text-purple-400&quot; />
+              <div className="flex items-center space-x-2">
+                <Mail className="h-3 w-3 text-purple-400" />
                 <span>{contactInfo.email}</span>
               </div>
-              <div className=&quot;flex items-center space-x-2&quot;>
-                <MapPin className=&quot;h-3 w-3 text-purple-400&quot; />
+              <div className="flex items-center space-x-2">
+                <MapPin className="h-3 w-3 text-purple-400" />
                 <span>{contactInfo.address}</span>
               </div>
             </div>
-            <div className=&quot;flex items-center space-x-4&quot;>
-              <a href={contactInfo.website} className=&quot;text-purple-300 hover:text-white transition-colors&quot;>
-=======
-],;
-export default function UltraFuturisticNavigation2028() {;
-  const [isOpen, setIsOpen] = useState(false),;
-  const [activeCategory, setActiveCategory] = useState<string | null>(null),;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const toggleMenu = () => setIsOpen(!isOpen),;
-  const closeMenu = () => setIsOpen(false),;
-  const handleCategoryHover = (categoryTitle: string) => {;
-    setActiveCategory(categoryTitle);
-  },;
-  const handleCategoryLeave = () => {;
-    setActiveCategory(null);
-  };
-  const filteredServices = serviceCategories.flatMap(category =>;
-    category.services.filter(service =>;
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    );
-  );
-  return (;
-    <nav className="relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30">;
-      {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-500/20">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="flex items-center justify-between h-10 text-xs text-purple-200">;
-            <div className="flex items-center space-x-6">;
-              <div className="flex items-center space-x-2">;
-                <Phone className="h-3 w-3 text-purple-400" />;
-                <span>{contactInfo.mobile}</span>;
-              </div>;
-              <div className="flex items-center space-x-2">;
-                <Mail className="h-3 w-3 text-purple-400" />;
-                <span>{contactInfo.email}</span>;
-              </div>;
-              <div className="flex items-center space-x-2">;
-                <MapPin className="h-3 w-3 text-purple-400" />;
-                <span>{contactInfo.address}</span>;
-              </div>;
-            </div>;
-            <div className="flex items-center space-x-4">;
-              <a href={contactInfo.website} className="text-purple-300 hover:text-white transition-colors">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            <div className="flex items-center space-x-4">
+              <a href={contactInfo.website} className="text-purple-300 hover:text-white transition-colors">
                 {contactInfo.website}
               </a>;
             </div>;
@@ -258,135 +214,75 @@ export default function UltraFuturisticNavigation2028() {;
         </div>;
       </div>;
       {/* Main Navigation */}
-<<<<<<< HEAD
-      <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-        <div className=&quot;flex items-center justify-between h-20&quot;>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className=&quot;flex items-center&quot;>
-            <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
-              <div className=&quot;relative&quot;>
-                <div className=&quot;w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300&quot;>
-                  <Rocket className=&quot;w-6 h-6 text-white&quot; />
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
+                  <Rocket className="w-6 h-6 text-white" />
                 </div>
-                <div className=&quot;absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300 -z-10&quot;></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
               </div>
-              <div className=&quot;hidden md:block&quot;>
-                <h1 className=&quot;text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent&quot;>
+              <div className="hidden md:block">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   Zion Tech Group
                 </h1>
-                <p className=&quot;text-xs text-purple-300&quot;>2028 Future Technology</p>
+                <p className="text-xs text-purple-300">2028 Future Technology</p>
               </div>
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
+          <div className="hidden lg:flex items-center space-x-8">
             {/* Service Categories */}
-            <div className=&quot;relative group&quot;>
-              <button className=&quot;flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2&quot;>
-                <Sparkles className=&quot;w-5 h-5&quot; />
+            <div className="relative group">
+              <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">
+                <Sparkles className="w-5 h-5" />
                 <span>Services</span>
-                <ChevronDown className=&quot;w-4 h-4&quot; />
+                <ChevronDown className="w-4 h-4" />
               </button>
               
               {/* Mega Menu */}
-              <div className=&quot;absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0&quot;>
-                <div className=&quot;p-6&quot;>
-                  <div className=&quot;grid grid-cols-3 gap-6&quot;>
+              <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="p-6">
+                  <div className="grid grid-cols-3 gap-6">
                     {serviceCategories.slice(0, 6).map((category) => (
-                      <div key={category.title} className=&quot;space-y-3&quot;>
-                        <div className=&quot;flex items-center space-x-3&quot;>
+                      <div key={category.title} className="space-y-3">
+                        <div className="flex items-center space-x-3">
                           <category.icon className={`w-6 h-6 bg-gradient-to-r ${category.color} bg-clip-text text-transparent`} />
-                          <h3 className=&quot;font-semibold text-white&quot;>{category.title}</h3>
+                          <h3 className="font-semibold text-white">{category.title}</h3>
                         </div>
-                        <p className=&quot;text-sm text-purple-300&quot;>{category.description}</p>
-                        <div className=&quot;space-y-2&quot;>
+                        <p className="text-sm text-purple-300">{category.description}</p>
+                        <div className="space-y-2">
                           {category.services.slice(0, 2).map((service) => (
                             <Link
                               key={service.name}
                               href={service.href}
-                              className=&quot;block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors group&quot;
+                              className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors group"
                             >
-                              <div className=&quot;flex items-center justify-between&quot;>
+                              <div className="flex items-center justify-between">
                                 <div>
-                                  <h4 className=&quot;text-sm font-medium text-white group-hover:text-purple-300 transition-colors&quot;>
+                                  <h4 className="text-sm font-medium text-white group-hover:text-purple-300 transition-colors">
                                     {service.name}
                                   </h4>
-                                  <p className=&quot;text-xs text-purple-300&quot;>{service.description}</p>
+                                  <p className="text-xs text-purple-300">{service.description}</p>
                                 </div>
-                                <span className=&quot;text-xs text-purple-400 font-medium&quot;>{service.price}</span>
+                                <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                               </div>
                             </a>
-=======
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex items-center justify-between h-20">;
-          {/* Logo */}
-          <div className="flex items-center">;
-            <Link href="/" className="flex items-center space-x-3 group">;
-              <div className="relative">;
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">;
-                  <Rocket className="w-6 h-6 text-white" />;
-                </div>;
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>;
-              </div>;
-              <div className="hidden md:block">;
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">;
-                  Zion Tech Group;
-                </h1>;
-                <p className="text-xs text-purple-300">2028 Future Technology</p>;
-              </div>;
-            </Link>;
-          </div>;
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">;
-            {/* Service Categories */}
-            <div className="relative group">;
-              <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">;
-                <Sparkles className="w-5 h-5" />;
-                <span>Services</span>;
-                <ChevronDown className="w-4 h-4" />;
-              </button>;
-              {/* Mega Menu */}
-              <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
-                <div className="p-6">;
-                  <div className="grid grid-cols-3 gap-6">;
-                    {serviceCategories.slice(0, 6).map((category) => (;
-                      <div key={category.title} className="space-y-3">;
-                        <div className="flex items-center space-x-3">;
-                          <category.icon className={`w-6 h-6 bg-gradient-to-r ${category.color} bg-clip-text text-transparent`} />;
-                          <h3 className="font-semibold text-white">{category.title}</h3>;
-                        </div>;
-                        <p className="text-sm text-purple-300">{category.description}</p>;
-                        <div className="space-y-2">;
-                          {category.services.slice(0, 2).map((service) => (;
-                            <Link;
-                              key={service.name}
-                              href={service.href}
-                              className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors group";
-                            >;
-                              <div className="flex items-center justify-between">;
-                                <div>;
-                                  <h4 className="text-sm font-medium text-white group-hover:text-purple-300 transition-colors">;
-                                    {service.name}
-                                  </h4>;
-                                  <p className="text-xs text-purple-300">{service.description}</p>;
-                                </div>;
-                                <span className="text-xs text-purple-400 font-medium">{service.price}</span>;
-                              </div>;
-                            </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                           ))}
                         </div>;
                       </div>;
                     ))}
-<<<<<<< HEAD
                   </div>
-                  <div className=&quot;mt-6 pt-6 border-t border-purple-500/20&quot;>
-                    <div className=&quot;flex items-center justify-between&quot;>
-                      <p className=&quot;text-purple-300&quot;>Explore all our cutting-edge services</p>
+                  <div className="mt-6 pt-6 border-t border-purple-500/20">
+                    <div className="flex items-center justify-between">
+                      <p className="text-purple-300">Explore all our cutting-edge services</p>
                       <Link
-                        href=&quot;/services&quot;
-                        className=&quot;px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
+                        href="/services"
+                        className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
                       >
                         View All Services
                       </a>
@@ -396,112 +292,53 @@ export default function UltraFuturisticNavigation2028() {;
               </div>
             </div>
 
-=======
-                  </div>;
-                  <div className="mt-6 pt-6 border-t border-purple-500/20">;
-                    <div className="flex items-center justify-between">;
-                      <p className="text-purple-300">Explore all our cutting-edge services</p>;
-                      <Link;
-                        href="/services";
-                        className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30";
-                      >;
-                        View All Services;
-                      </Link>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {/* Company Links */}
             {companyLinks.slice(1, 5).map((link) => (;
               <Link;
                 key={link.name}
                 href={link.href}
-<<<<<<< HEAD
-                className=&quot;text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2&quot;
+                className="text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2"
               >
-                <link.icon className=&quot;w-4 h-4&quot; />
+                <link.icon className="w-4 h-4" />
                 <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
               </a>
-=======
-                className="text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2";
-              >;
-                <link.icon className="w-4 h-4" />;
-                <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>;
-              </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
           {/* Search and Actions */}
-<<<<<<< HEAD
-          <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
+          <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
-            <div className=&quot;relative&quot;>
-              <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400&quot; />
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
               <input
-                type=&quot;text&quot;
-                placeholder=&quot;Search services...&quot;
+                type="text"
+                placeholder="Search services..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className=&quot;w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent&quot;
+                className="w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
 
             {/* CTA Button */}
             <Link
-              href=&quot;/contact&quot;
-              className=&quot;px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25&quot;
+              href="/contact"
+              className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25"
             >
               Get Started
             </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className=&quot;lg:hidden&quot;>
+          <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className=&quot;text-purple-200 hover:text-white transition-colors p-2&quot;
+              className="text-purple-200 hover:text-white transition-colors p-2"
             >
-              {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </div>
 
-=======
-          <div className="hidden lg:flex items-center space-x-4">;
-            {/* Search */}
-            <div className="relative">;
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
-              <input;
-                type="text";
-                placeholder="Search services...";
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";
-              />;
-            </div>;
-            {/* CTA Button */}
-            <Link;
-              href="/contact";
-              className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25";
-            >;
-              Get Started;
-            </Link>;
-          </div>;
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">;
-            <button;
-              onClick={toggleMenu}
-              className="text-purple-200 hover:text-white transition-colors p-2";
-            >;
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>;
-          </div>;
-        </div>;
-      </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -509,194 +346,101 @@ export default function UltraFuturisticNavigation2028() {;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-            className=&quot;lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30&quot;
+            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30"
           >
-            <div className=&quot;px-4 py-6 space-y-6&quot;>
+            <div className="px-4 py-6 space-y-6">
               {/* Mobile Search */}
-              <div className=&quot;relative&quot;>
-                <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400&quot; />
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
                 <input
-                  type=&quot;text&quot;
-                  placeholder=&quot;Search services...&quot;
+                  type="text"
+                  placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className=&quot;w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent&quot;
+                  className="w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
 
               {/* Mobile Service Categories */}
-              <div className=&quot;space-y-4&quot;>
-                <h3 className=&quot;text-lg font-semibold text-white border-b border-purple-500/30 pb-2&quot;>
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">
                   Services
                 </h3>
                 {serviceCategories.map((category) => (
-                  <div key={category.title} className=&quot;space-y-2&quot;>
-                    <div className=&quot;flex items-center space-x-3 text-purple-200&quot;>
-                      <category.icon className=&quot;w-5 h-5&quot; />
-                      <span className=&quot;font-medium&quot;>{category.title}</span>
+                  <div key={category.title} className="space-y-2">
+                    <div className="flex items-center space-x-3 text-purple-200">
+                      <category.icon className="w-5 h-5" />
+                      <span className="font-medium">{category.title}</span>
                     </div>
-                    <div className=&quot;ml-8 space-y-2&quot;>
+                    <div className="ml-8 space-y-2">
                       {category.services.map((service) => (
                         <Link
                           key={service.name}
                           href={service.href}
                           onClick={closeMenu}
-                          className=&quot;block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors&quot;
+                          className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                         >
-                          <h4 className=&quot;text-sm font-medium text-white&quot;>{service.name}</h4>
-                          <p className=&quot;text-xs text-purple-300&quot;>{service.description}</p>
-                          <span className=&quot;text-xs text-purple-400 font-medium&quot;>{service.price}</span>
+                          <h4 className="text-sm font-medium text-white">{service.name}</h4>
+                          <p className="text-xs text-purple-300">{service.description}</p>
+                          <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                         </a>
-=======
-            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30";
-          >;
-            <div className="px-4 py-6 space-y-6">;
-              {/* Mobile Search */}
-              <div className="relative">;
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
-                <input;
-                  type="text";
-                  placeholder="Search services...";
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";
-                />;
-              </div>;
-              {/* Mobile Service Categories */}
-              <div className="space-y-4">;
-                <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">;
-                  Services;
-                </h3>;
-                {serviceCategories.map((category) => (;
-                  <div key={category.title} className="space-y-2">;
-                    <div className="flex items-center space-x-3 text-purple-200">;
-                      <category.icon className="w-5 h-5" />;
-                      <span className="font-medium">{category.title}</span>;
-                    </div>;
-                    <div className="ml-8 space-y-2">;
-                      {category.services.map((service) => (;
-                        <Link;
-                          key={service.name}
-                          href={service.href}
-                          onClick={closeMenu}
-                          className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors";
-                        >;
-                          <h4 className="text-sm font-medium text-white">{service.name}</h4>;
-                          <p className="text-xs text-purple-300">{service.description}</p>;
-                          <span className="text-xs text-purple-400 font-medium">{service.price}</span>;
-                        </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       ))}
                     </div>;
                   </div>;
                 ))}
               </div>;
               {/* Mobile Company Links */}
-<<<<<<< HEAD
-              <div className=&quot;space-y-4&quot;>
-                <h3 className=&quot;text-lg font-semibold text-white border-b border-purple-500/30 pb-2&quot;>
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">
                   Company
                 </h3>
-                <div className=&quot;grid grid-cols-2 gap-4&quot;>
+                <div className="grid grid-cols-2 gap-4">
                   {companyLinks.map((link) => (
                     <Link
                       key={link.name}
                       href={link.href}
                       onClick={closeMenu}
-                      className=&quot;flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors&quot;
+                      className="flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                     >
-                      <link.icon className=&quot;w-5 h-5 text-purple-400&quot; />
-                      <span className=&quot;text-purple-200&quot;>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
+                      <link.icon className="w-5 h-5 text-purple-400" />
+                      <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
                     </a>
-=======
-              <div className="space-y-4">;
-                <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">;
-                  Company;
-                </h3>;
-                <div className="grid grid-cols-2 gap-4">;
-                  {companyLinks.map((link) => (;
-                    <Link;
-                      key={link.name}
-                      href={link.href}
-                      onClick={closeMenu}
-                      className="flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors";
-                    >;
-                      <link.icon className="w-5 h-5 text-purple-400" />;
-                      <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>;
-                    </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   ))}
                 </div>;
               </div>;
               {/* Mobile CTA */}
-<<<<<<< HEAD
-              <div className=&quot;pt-4 border-t border-purple-500/30&quot;>
+              <div className="pt-4 border-t border-purple-500/30">
                 <Link
-                  href=&quot;/contact&quot;
+                  href="/contact"
                   onClick={closeMenu}
-                  className=&quot;block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300&quot;
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                 >
                   Get Started
                 </a>
               </div>
             </div>
           </motion.div>
-=======
-              <div className="pt-4 border-t border-purple-500/30">;
-                <Link;
-                  href="/contact";
-                  onClick={closeMenu}
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300";
-                >;
-                  Get Started;
-                </Link>;
-              </div>;
-            </div>;
-          </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       </AnimatePresence>;
       {/* Search Results Dropdown */}
-<<<<<<< HEAD
       {searchQuery && filteredServices.length > 0 && (
-        <div className=&quot;absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50&quot;>
-          <div className=&quot;p-4&quot;>
-            <div className=&quot;space-y-2&quot;>
+        <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50">
+          <div className="p-4">
+            <div className="space-y-2">
               {filteredServices.slice(0, 8).map((service) => (
                 <Link
                   key={service.name}
                   href={service.href}
-                  className=&quot;block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors&quot;
+                  className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                 >
-                  <div className=&quot;flex items-center justify-between&quot;>
+                  <div className="flex items-center justify-between">
                     <div>
-                      <h4 className=&quot;text-sm font-medium text-white&quot;>{service.name}</h4>
-                      <p className=&quot;text-xs text-purple-300&quot;>{service.description}</p>
+                      <h4 className="text-sm font-medium text-white">{service.name}</h4>
+                      <p className="text-xs text-purple-300">{service.description}</p>
                     </div>
-                    <span className=&quot;text-xs text-purple-400 font-medium&quot;>{service.price}</span>
+                    <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                   </div>
                 </a>
-=======
-      {searchQuery && filteredServices.length > 0 && (;
-        <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50">;
-          <div className="p-4">;
-            <div className="space-y-2">;
-              {filteredServices.slice(0, 8).map((service) => (;
-                <Link;
-                  key={service.name}
-                  href={service.href}
-                  className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors";
-                >;
-                  <div className="flex items-center justify-between">;
-                    <div>;
-                      <h4 className="text-sm font-medium text-white">{service.name}</h4>;
-                      <p className="text-xs text-purple-300">{service.description}</p>;
-                    </div>;
-                    <span className="text-xs text-purple-400 font-medium">{service.price}</span>;
-                  </div>;
-                </Link>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </div>;
           </div>;

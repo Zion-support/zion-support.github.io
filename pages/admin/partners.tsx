@@ -28,70 +28,42 @@ export default function AdminPartners() {;
     const json = await res.json();
     setFlags(json.flags || []);
   }
-<<<<<<< HEAD
 
   return (
-    <div className=&quot;space-y-6&quot;>
-      <h1 className=&quot;text-2xl font-semibold&quot;>Admin • Partners</h1>
-      <div className=&quot;overflow-auto&quot;>
-        <table className=&quot;min-w-full text-sm&quot;>
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">Admin • Partners</h1>
+      <div className="overflow-auto">
+        <table className="min-w-full text-sm">
           <thead>
-            <tr className=&quot;text-left border-b&quot;>
-              <th className=&quot;py-2 pr-4&quot;>Code</th>
-              <th className=&quot;py-2 pr-4&quot;>Name</th>
-              <th className=&quot;py-2 pr-4&quot;>Status</th>
-              <th className=&quot;py-2 pr-4&quot;>Commission</th>
-              <th className=&quot;py-2 pr-4&quot;>Actions</th>
+            <tr className="text-left border-b">
+              <th className="py-2 pr-4">Code</th>
+              <th className="py-2 pr-4">Name</th>
+              <th className="py-2 pr-4">Status</th>
+              <th className="py-2 pr-4">Commission</th>
+              <th className="py-2 pr-4">Actions</th>
             </tr>
           </thead>
           <tbody>
             {partners.map((p) => (
-              <tr key={p.code} className=&quot;border-b&quot;>
-                <td className=&quot;py-2 pr-4&quot;>{p.code}</td>
-                <td className=&quot;py-2 pr-4&quot;>{p.name}</td>
-                <td className=&quot;py-2 pr-4&quot;>{p.status}</td>
-                <td className=&quot;py-2 pr-4&quot;>
+              <tr key={p.code} className="border-b">
+                <td className="py-2 pr-4">{p.code}</td>
+                <td className="py-2 pr-4">{p.name}</td>
+                <td className="py-2 pr-4">{p.status}</td>
+                <td className="py-2 pr-4">
                   <input
-                    type=&quot;number&quot;
-=======
-;
-  return (;
-    <div className="space-y-6">;
-      <h1 className="text-2xl font-semibold">Admin • Partners</h1>;
-      <div className="overflow-auto">;
-        <table className="min-w-full text-sm">;
-          <thead>;
-            <tr className="text-left border-b">;
-              <th className="py-2 pr-4">Code</th>;
-              <th className="py-2 pr-4">Name</th>;
-              <th className="py-2 pr-4">Status</th>;
-              <th className="py-2 pr-4">Commission</th>;
-              <th className="py-2 pr-4">Actions</th>;
-            </tr>;
-          </thead>;
-          <tbody>;
-            {partners.map((p) => (;
-              <tr key={p.code} className="border-b">;
-                <td className="py-2 pr-4">{p.code}</td>;
-                <td className="py-2 pr-4">{p.name}</td>;
-                <td className="py-2 pr-4">{p.status}</td>;
-                <td className="py-2 pr-4">;
-                  <input;
-                    type="number";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                    type="number"
                     defaultValue={p.commission_rate}
                     min={0}
                     max={1}
                     step={0.01}
                     onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })}
-<<<<<<< HEAD
-                    className=&quot;w-24 border rounded px-2 py-1&quot;
+                    className="w-24 border rounded px-2 py-1"
                   />
                 </td>
-                <td className=&quot;py-2 pr-4 space-x-2&quot;>
-                  <button className=&quot;px-2 py-1 rounded border&quot; onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>
-                  <button className=&quot;px-2 py-1 rounded border&quot; onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>
-                  <button className=&quot;px-2 py-1 rounded border&quot; onClick={() => viewFlags(p.code)}>Fraud Flags</button>
+                <td className="py-2 pr-4 space-x-2">
+                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>
+                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>
+                  <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
             ))}
@@ -100,44 +72,17 @@ export default function AdminPartners() {;
       </div>
 
       {selected && (
-        <div className=&quot;p-4 rounded border&quot;>
-          <h2 className=&quot;font-semibold mb-2&quot;>Fraud Flags • {selected}</h2>
-          <ul className=&quot;list-disc pl-6&quot;>
+        <div className="p-4 rounded border">
+          <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
+          <ul className="list-disc pl-6">
             {flags.map((f, idx) => (
               <li key={idx}>
-                <span className=&quot;font-medium&quot;>{f.type}</span> — {f.severity} {f.note && <span className=&quot;text-gray-500&quot;>({f.note})</span>}
+                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>}
               </li>
             ))}
-            {flags.length === 0 && <li className=&quot;text-gray-500 list-none&quot;>No flags</li>}
+            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>}
           </ul>
         </div>
-=======
-                    className="w-24 border rounded px-2 py-1";
-                  />;
-                </td>;
-                <td className="py-2 pr-4 space-x-2">;
-                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>;
-                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>;
-                  <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>;
-                </td>;
-              </tr>;
-            ))}
-          </tbody>;
-        </table>;
-      </div>;
-      {selected && (;
-        <div className="p-4 rounded border">;
-          <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>;
-          <ul className="list-disc pl-6">;
-            {flags.map((f, idx) => (;
-              <li key={idx}>;
-                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>}
-              </li>;
-            ))}
-            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>}
-          </ul>;
-        </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
     </div>;
   );

@@ -138,7 +138,6 @@ export default function ServicesShowcase2027() {;
               </div>;
             </div>;
             {/* CTA Buttons */}
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
@@ -159,27 +158,6 @@ export default function ServicesShowcase2027() {;
         </div>
       </section>
 
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link;
-                href="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2";
-              >;
-                <Rocket className="w-5 h-5" />;
-                <span>Get Started</span>;
-              </Link>;
-              <Link;
-                href="/pricing";
-                className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2";
-              >;
-                <DollarSign className="w-5 h-5" />;
-                <span>View Pricing</span>;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {/* Search and Filters */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">;
         <div className="max-w-7xl mx-auto">;
@@ -304,7 +282,6 @@ export default function ServicesShowcase2027() {;
                     <div className="flex space-x-3">;
                       <Link;
                         href={service.link}
-<<<<<<< HEAD
                         className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
                       >
                         Learn More
@@ -317,19 +294,6 @@ export default function ServicesShowcase2027() {;
                       </a>
                     </div>
 
-=======
-                        className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm";
-                      >;
-                        Learn More;
-                      </Link>;
-                      <Link;
-                        href="/contact";
-                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm";
-                      >;
-                        Contact;
-                      </Link>;
-                    </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     {/* Category Badge */}
                     <div className="mt-4">;
                       <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30">;
@@ -366,7 +330,6 @@ export default function ServicesShowcase2027() {;
         </div>;
       </section>;
       {/* Contact Section */}
-<<<<<<< HEAD
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20">
@@ -430,18 +393,13 @@ export default function ServicesShowcase2027() {;
               {' • '}
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300">Terms of Service</a>
               {' • '}
-<<<<<<< HEAD
               <Link href="/contact" className="hover: text-cyan-400 transition-colors duration-300">Contact Us</Link>
-=======
-              <Link href="/contact" className="hover:text-cyan-400 transition-colors duration-300">Contact Us</a>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             </p>
           </div>
         </div>
       </footer>
     </UltraFuturisticMatrixBackground2027>
   )
-=======
       <section className="px-4 sm:px-6 lg:px-8 mb-20">;
         <div className="max-w-4xl mx-auto">;
           <div className="bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20">;
@@ -508,5 +466,4 @@ export default function ServicesShowcase2027() {;
       </footer>;
     </UltraFuturisticMatrixBackground2027>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

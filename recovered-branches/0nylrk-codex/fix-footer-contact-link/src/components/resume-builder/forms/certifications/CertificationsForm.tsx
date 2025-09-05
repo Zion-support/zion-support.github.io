@@ -80,14 +80,13 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     if (confirm('Are you sure you want to delete this certification?')) {;
       await deleteCertification(id);
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;space-y-6&quot;>
+    <div className="space-y-6">
       <div>
-        <h2 className=&quot;text-xl font-semibold mb-2&quot;>Certifications & Licenses</h2>
-        <p className=&quot;text-muted-foreground&quot;>
+        <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>
+        <p className="text-muted-foreground">
           Add any professional certifications, licenses, or credentials you have earned.
         </p>
       </div>
@@ -100,21 +99,21 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         />
       )}
 
-      <div className=&quot;bg-muted/40 p-6 rounded-lg&quot;>
-        <h3 className=&quot;text-md font-medium mb-4&quot;>
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className=&quot;space-y-4&quot;>
+          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <CertificationFormFields form={form} />
 
-            {error && <Alert variant=&quot;destructive&quot;><AlertDescription>{error}</AlertDescription></Alert>}
+            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
-            <div className=&quot;flex justify-between pt-2&quot;>
+            <div className="flex justify-between pt-2">
               <Button
-                type=&quot;button&quot;
-                variant=&quot;outline&quot;
+                type="button"
+                variant="outline"
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null),
@@ -127,64 +126,19 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       credential_url: ''})
                   } else {
                     onBack()
-=======
-  },;
-  return (;
-    <div className="space-y-6">;
-      <div>;
-        <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>;
-        <p className="text-muted-foreground">;
-          Add any professional certifications, licenses, or credentials you have earned.;
-        </p>;
-      </div>;
-      {certifications.length > 0 && (;
-        <CertificationsList;
-          certifications={certifications} ;
-          onEdit={handleEdit} ;
-          onDelete={handleDelete} ;
-        />;
-      )}
-;
-      <div className="bg-muted/40 p-6 rounded-lg">;
-        <h3 className="text-md font-medium mb-4">;
-          {editingId ? 'Update Certification' : 'Add Certification'}
-        </h3>;
-        <Form {...form}>;
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;
-            <CertificationFormFields form={form} />;
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-;
-            <div className="flex justify-between pt-2">;
-              <Button;
-                type="button";
-                variant="outline";
-                onClick={() => {;
-                  if (editingId) {;
-                    setEditingId(null),;
-                    form.reset({;
-                      name: '',;
-                      issuing_organization: '',;
-                      issue_date: '',;
-                      expiration_date: '';
-                      credential_id: '';
-                      credential_url: ''});
-                  } else {;
-                    onBack();
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
-<<<<<<< HEAD
               </Button>
 
-              <div className=&quot;flex gap-2&quot;>
-                <Button type=&quot;submit&quot; disabled={isLoading}>
-                  {isLoading && <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />}
+              <div className="flex gap-2">
+                <Button type="submit" disabled={isLoading}>
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   {editingId ? 'Update' : 'Add'} Certification
                 </Button>
 
-                <Button type=&quot;button&quot; onClick={onComplete}>
+                <Button type="button" onClick={onComplete}>
                   Next
                 </Button>
               </div>
@@ -194,23 +148,5 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       </div>
     </div>
   )
-=======
-              </Button>;
-              <div className="flex gap-2">;
-                <Button type="submit" disabled={isLoading}>;
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {editingId ? 'Update' : 'Add'} Certification;
-                </Button>;
-                <Button type="button" onClick={onComplete}>;
-                  Next;
-                </Button>;
-              </div>;
-            </div>;
-          </form>;
-        </Form>;
-      </div>;
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

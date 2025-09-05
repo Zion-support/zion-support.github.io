@@ -1,17 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',
-=======
-import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
-import { serve } from &quot;https://deno.land/std@0.168.0/http/server.ts&quot;;
-import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2.7.1&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
 
@@ -22,7 +15,6 @@ interface Service {
   id: string,
   title: string,
   category: string
-=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
@@ -36,7 +28,6 @@ interface Service {;
   id: string,;
   title: string,;
   category: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 interface QuoteDetails {;
@@ -74,19 +65,12 @@ serve(async (req) => {;
           userId = user.id;
         }
       }
-<<<<<<< HEAD
     } catch (authError) {
-<<<<<<< HEAD
       // // // console.log("Auth error:", authError),
-=======
-      // console.log(&quot;Auth error:&quot;, authError);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       // Continue without user identity
-=======
     } catch (authError) {;
       // // // console.log("Auth error:", authError),;
       // Continue without user identity;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     // Generate a summary and tags using OpenAI;
@@ -128,19 +112,12 @@ serve(async (req) => {;
           aiAnalysis = aiResult.choices[0].message.content;
         }
       }
-<<<<<<< HEAD
     } catch (openAIError) {
-<<<<<<< HEAD
       console.error("OpenAI error:", openAIError),
-=======
-      console.error(&quot;OpenAI error:&quot;, openAIError);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       // Continue without AI analysis
-=======
     } catch (openAIError) {;
       console.error("OpenAI error:", openAIError),;
       // Continue without AI analysis;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     // Store the quote request in the database;

@@ -26,7 +26,6 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       setSkillName(''),;
       setProficiency(3);
     }
-<<<<<<< HEAD
   },
   
   const handleEnhanceSkill = (enhancedCategory: string) => {
@@ -34,133 +33,67 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
   },
   
   return (
-    <form onSubmit={handleSubmit} className=&quot;space-y-4&quot;>
-      <div className=&quot;flex flex-col gap-4 md:flex-row&quot;>
-        <div className=&quot;flex-1&quot;>
-          <Label htmlFor=&quot;skill-name&quot;>Skill Name</Label>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="flex flex-col gap-4 md:flex-row">
+        <div className="flex-1">
+          <Label htmlFor="skill-name">Skill Name</Label>
           <Input
-            id=&quot;skill-name&quot;
+            id="skill-name"
             value={skillName}
             onChange={(e) => setSkillName(e.target.value)}
-            placeholder=&quot;Enter a skill (e.g., React)&quot;
+            placeholder="Enter a skill (e.g., React)"
           />
         </div>
         
-        <div className=&quot;w-full md:w-44&quot;>
-          <div className=&quot;flex justify-between items-center&quot;>
-            <Label htmlFor=&quot;skill-category&quot;>Category</Label>
+        <div className="w-full md:w-44">
+          <div className="flex justify-between items-center">
+            <Label htmlFor="skill-category">Category</Label>
             {skillName && (
               <AIEnhancementButton 
                 currentContent={skillName}
-                enhancementType=&quot;general&quot;
+                enhancementType="general"
                 onEnhanced={handleEnhanceSkill}
-                buttonText=&quot;Suggest&quot;
-                className=&quot;h-4&quot;
+                buttonText="Suggest"
+                className="h-4"
               />
-=======
-  },;
-  const handleEnhanceSkill = (enhancedCategory: string) => {;
-    setSkillCategory(enhancedCategory);
-  };
-  return (;
-    <form onSubmit={handleSubmit} className="space-y-4">;
-      <div className="flex flex-col gap-4 md:flex-row">;
-        <div className="flex-1">;
-          <Label htmlFor="skill-name">Skill Name</Label>;
-          <Input;
-            id="skill-name";
-            value={skillName}
-            onChange={(e) => setSkillName(e.target.value)}
-            placeholder="Enter a skill (e.g., React)";
-          />;
-        </div>;
-        <div className="w-full md:w-44">;
-          <div className="flex justify-between items-center">;
-            <Label htmlFor="skill-category">Category</Label>;
-            {skillName && (;
-              <AIEnhancementButton;
-                currentContent={skillName}
-                enhancementType="general";
-                onEnhanced={handleEnhanceSkill}
-                buttonText="Suggest";
-                className="h-4";
-              />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             )}
           </div>;
           <Select;
             value={skillCategory} ;
             onValueChange={setSkillCategory}
-<<<<<<< HEAD
           >
-            <SelectTrigger id=&quot;skill-category&quot;>
-              <SelectValue placeholder=&quot;Select category&quot; />
+            <SelectTrigger id="skill-category">
+              <SelectValue placeholder="Select category" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value=&quot;Programming&quot;>Programming</SelectItem>
-              <SelectItem value=&quot;Design&quot;>Design</SelectItem>
-              <SelectItem value=&quot;Soft Skills&quot;>Soft Skills</SelectItem>
-              <SelectItem value=&quot;DevOps&quot;>DevOps</SelectItem>
-              <SelectItem value=&quot;Data Science&quot;>Data Science</SelectItem>
-              <SelectItem value=&quot;AI/ML&quot;>AI/ML</SelectItem>
-              <SelectItem value=&quot;Management&quot;>Management</SelectItem>
-              <SelectItem value=&quot;Other&quot;>Other</SelectItem>
+              <SelectItem value="Programming">Programming</SelectItem>
+              <SelectItem value="Design">Design</SelectItem>
+              <SelectItem value="Soft Skills">Soft Skills</SelectItem>
+              <SelectItem value="DevOps">DevOps</SelectItem>
+              <SelectItem value="Data Science">Data Science</SelectItem>
+              <SelectItem value="AI/ML">AI/ML</SelectItem>
+              <SelectItem value="Management">Management</SelectItem>
+              <SelectItem value="Other">Other</SelectItem>
             </SelectContent>
           </Select>
         </div>
         
         <div>
-          <Label htmlFor=&quot;skill-proficiency&quot;>Proficiency (1-5)</Label>
-          <div className=&quot;flex gap-4&quot;>
+          <Label htmlFor="skill-proficiency">Proficiency (1-5)</Label>
+          <div className="flex gap-4">
             <Input
-              id=&quot;skill-proficiency&quot;
-              type=&quot;number&quot;
-=======
-          >;
-            <SelectTrigger id="skill-category">;
-              <SelectValue placeholder="Select category" />;
-            </SelectTrigger>;
-            <SelectContent>;
-              <SelectItem value="Programming">Programming</SelectItem>;
-              <SelectItem value="Design">Design</SelectItem>;
-              <SelectItem value="Soft Skills">Soft Skills</SelectItem>;
-              <SelectItem value="DevOps">DevOps</SelectItem>;
-              <SelectItem value="Data Science">Data Science</SelectItem>;
-              <SelectItem value="AI/ML">AI/ML</SelectItem>;
-              <SelectItem value="Management">Management</SelectItem>;
-              <SelectItem value="Other">Other</SelectItem>;
-            </SelectContent>;
-          </Select>;
-        </div>;
-        <div>;
-          <Label htmlFor="skill-proficiency">Proficiency (1-5)</Label>;
-          <div className="flex gap-4">;
-            <Input;
-              id="skill-proficiency";
-              type="number";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              id="skill-proficiency"
+              type="number"
               min={1}
               max={5}
               value={proficiency}
               onChange={(e) => setProficiency(Number(e.target.value))}
-<<<<<<< HEAD
-              className=&quot;w-20&quot;
+              className="w-20"
             />
-            <Button type=&quot;submit&quot;>Add</Button>
+            <Button type="submit">Add</Button>
           </div>
         </div>
       </div>
     </form>
   )
 },
-=======
-              className="w-20";
-            />;
-            <Button type="submit">Add</Button>;
-          </div>;
-        </div>;
-      </div>;
-    </form>;
-  );
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

@@ -22,54 +22,29 @@ export function AppHeader() {;
   } catch (error) {;
     console.warn('Messaging context not available');
   }
-<<<<<<< HEAD
   
   return (
     <>
-      <header className=&quot;sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md&quot;>
-        <div className=&quot;container flex h-16 items-center px-4 sm:px-6&quot;>
+      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">
+        <div className="container flex h-16 items-center px-4 sm:px-6">
           <Logo />
-          <div className=&quot;ml-6 flex-1 hidden md:block&quot;>
+          <div className="ml-6 flex-1 hidden md:block">
             <MainNavigation unreadCount={unreadCount} />
           </div>
           
           {/* Mobile menu button */}
-          <div className=&quot;md:hidden ml-auto mr-4&quot;>
+          <div className="md:hidden ml-auto mr-4">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className=&quot;inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none&quot;
+              className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
             >
-              <span className=&quot;sr-only&quot;>{t('general.open_main_menu')}</span>
+              <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
-                <X className=&quot;block h-6 w-6&quot; aria-hidden=&quot;true&quot; />
+                <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
-                <Menu className=&quot;block h-6 w-6&quot; aria-hidden=&quot;true&quot; />
-=======
-;
-  return (;
-    <>;
-      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">;
-        <div className="container flex h-16 items-center px-4 sm:px-6">;
-          <Logo />;
-          <div className="ml-6 flex-1 hidden md:block">;
-            <MainNavigation unreadCount={unreadCount} />;
-          </div>;
-          {/* Mobile menu button */}
-          <div className="md:hidden ml-auto mr-4">;
-            <button;
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none";
-              aria-expanded={mobileMenuOpen}
-              aria-label={t('general.toggle_mobile_menu')}
-            >;
-              <span className="sr-only">{t('general.open_main_menu')}</span>;
-              {mobileMenuOpen ? (;
-                <X className="block h-6 w-6" aria-hidden="true" />;
-              ) : (;
-                <Menu className="block h-6 w-6" aria-hidden="true" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                <Menu className="block h-6 w-6" aria-hidden="true" />
               )}
             </button>;
           </div>;
@@ -78,37 +53,20 @@ export function AppHeader() {;
         </div>;
       </header>;
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-<<<<<<< HEAD
       {mobileMenuOpen && (
-        <div className=&quot;md:hidden fixed inset-0 z-40 pt-16&quot;>
+        <div className="md:hidden fixed inset-0 z-40 pt-16">
           <div 
-            className=&quot;absolute inset-0 bg-black/50 backdrop-blur-sm&quot;
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
-            aria-hidden=&quot;true&quot;
+            aria-hidden="true"
           />
-          <div className=&quot;relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto&quot;>
+          <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu 
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)} 
             />
           </div>
         </div>
-=======
-      {mobileMenuOpen && (;
-        <div className="md:hidden fixed inset-0 z-40 pt-16">;
-          <div;
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm";
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true";
-          />;
-          <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
-            <MobileMenu;
-              unreadCount={unreadCount} ;
-              onClose={() => setMobileMenuOpen(false)} ;
-            />;
-          </div>;
-        </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
 ;
       {/* Mobile Bottom Navigation */}

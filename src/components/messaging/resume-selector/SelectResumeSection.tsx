@@ -11,7 +11,6 @@ interface SelectResumeSectionProps {;
   handleDownloadResume: () => void,;
   isLoading: boolean;
 }
-<<<<<<< HEAD
 
 export function SelectResumeSection({
   resumeOptions,
@@ -21,31 +20,13 @@ export function SelectResumeSection({
   isLoading
 }: SelectResumeSectionProps) {
   return (
-    <div className=&quot;space-y-2&quot;>
+    <div className="space-y-2">
       {resumeOptions.length === 0 ? (
-        <p className=&quot;text-sm text-zion-slate&quot;>No saved resumes found.</p>
+        <p className="text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
           {resumeOptions.map((option) => (
             <button
-=======
-;
-export function SelectResumeSection({;
-  resumeOptions,;
-  selectedResume,;
-  handleResumeSelect;
-  handleDownloadResume;
-  isLoading;
-}: SelectResumeSectionProps) {;
-  return (;
-    <div className="space-y-2">;
-      {resumeOptions.length === 0 ? (;
-        <p className="text-sm text-zion-slate">No saved resumes found.</p>;
-      ) : (;
-        <>;
-          {resumeOptions.map((option) => (;
-            <button;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               key={option.id}
               className={`w-full text-left p-3 rounded-md transition ${;
                 selectedResume?.id === option.id;
@@ -53,21 +34,12 @@ export function SelectResumeSection({;
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50';
               }`}
               onClick={() => handleResumeSelect(option.id)}
-<<<<<<< HEAD
             >
-              <div className=&quot;flex items-center&quot;>
-                <FileText className=&quot;h-4 w-4 mr-2 text-zion-cyan&quot; />
-                <span className=&quot;text-white&quot;>{option.title}</span>
+              <div className="flex items-center">
+                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
+                <span className="text-white">{option.title}</span>
               </div>
             </button>
-=======
-            >;
-              <div className="flex items-center">;
-                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;
-                <span className="text-white">{option.title}</span>;
-              </div>;
-            </button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           ))}
 ;
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (;

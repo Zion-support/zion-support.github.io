@@ -1,19 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
 import { Input } from "@/components/ui/input",
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
 import { SearchSuggestion } from "@/types/search",
-=======
-import React, { useState, useEffect, useRef } from &quot;react&quot;;
-import { Search, X } from &quot;lucide-react&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { AutocompleteSuggestions } from &quot;@/components/search/AutocompleteSuggestions&quot;; 
-import { SearchSuggestion } from &quot;@/types/search&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -24,7 +14,7 @@ interface EnhancedSearchInputProps {
 export function EnhancedSearchInput({ 
   value,
   onChange, 
-  placeholder = &quot;Search...&quot;, 
+  placeholder = "Search...", 
   searchSuggestions 
 }: EnhancedSearchInputProps) {
   const [isFocused, setIsFocused] = useState(false),
@@ -38,7 +28,6 @@ export function EnhancedSearchInput({
       // Show recent searches when input is empty
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
       return
-=======
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -67,7 +56,6 @@ export function EnhancedSearchInput({;
       // Show recent searches when input is empty;
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),;
       return;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     const filtered = searchSuggestions.filter(suggestion =>;
@@ -88,17 +76,10 @@ export function EnhancedSearchInput({;
         setIsFocused(false);
       }
     }
-<<<<<<< HEAD
     
-<<<<<<< HEAD
     document.addEventListener("mousedown", handleClickOutside),
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, []),
-=======
-    document.addEventListener(&quot;mousedown&quot;, handleClickOutside);
-    return () => document.removeEventListener(&quot;mousedown&quot;, handleClickOutside);
-  }, []);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleSelectSuggestion = (suggestion: string) => {
     onChange(suggestion),
@@ -107,15 +88,14 @@ export function EnhancedSearchInput({;
   },
   
   return (
-    <div className=&quot;relative w-full&quot; ref={containerRef}>
-      <div className=&quot;relative&quot;>
+    <div className="relative w-full" ref={containerRef}>
+      <div className="relative">
         <Search 
-          className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate&quot; 
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
         />
         <Input
           ref={inputRef}
-          type=&quot;text&quot;
-=======
+          type="text"
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -134,32 +114,19 @@ export function EnhancedSearchInput({;
         <Input;
           ref={inputRef}
           type="text";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
-<<<<<<< HEAD
-          className=&quot;pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate&quot;
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
         />
         {value && (
           <button 
-            className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white&quot;
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
           >
-            <X className=&quot;h-4 w-4&quot; />
+            <X className="h-4 w-4" />
           </button>
-=======
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
-        />;
-        {value && (;
-          <button;
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white";
-            onClick={() => onChange('')}
-          >;
-            <X className="h-4 w-4" />;
-          </button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       </div>;
       <AutocompleteSuggestions;

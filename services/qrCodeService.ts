@@ -202,7 +202,6 @@ class QRCodeService {;
       throw new Error('Margin must be between 0 and 10');
     }
   }
-<<<<<<< HEAD
 
   private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
     // In a real implementation, this would use a QR code library
@@ -213,33 +212,15 @@ class QRCodeService {;
     const contentSize = size - (margin * 2),
     
     const svg = `
-      <svg width=&quot;${size}&quot; height=&quot;${size}&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>
-        <rect width=&quot;${size}&quot; height=&quot;${size}&quot; fill=&quot;${options.backgroundColor}&quot;/>
-        <rect x=&quot;${margin}&quot; y=&quot;${margin}&quot; width=&quot;${contentSize}&quot; height=&quot;${contentSize}&quot; fill=&quot;${options.foregroundColor}&quot;/>
-        <text x=&quot;${size/2}&quot; y=&quot;${size/2 + 5}&quot; text-anchor=&quot;middle&quot; fill=&quot;${options.backgroundColor}&quot; font-family=&quot;Arial&quot; font-size=&quot;12&quot;>QR Code</text>
-        <text x=&quot;${size/2}&quot; y=&quot;${size/2 + 25}&quot; text-anchor=&quot;middle&quot; fill=&quot;${options.backgroundColor}&quot; font-family=&quot;Arial&quot; font-size=&quot;10&quot;>${options.text.substring(0, 20)}${options.text.length > 20 ? '...' : ''}</text>
+      <svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
+        <rect width="${size}" height="${size}" fill="${options.backgroundColor}"/>
+        <rect x="${margin}" y="${margin}" width="${contentSize}" height="${contentSize}" fill="${options.foregroundColor}"/>
+        <text x="${size/2}" y="${size/2 + 5}" text-anchor="middle" fill="${options.backgroundColor}" font-family="Arial" font-size="12">QR Code</text>
+        <text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options.backgroundColor}" font-family="Arial" font-size="10">${options.text.substring(0, 20)}${options.text.length > 20 ? '...' : ''}</text>
       </svg>
     `,
     
     return `data: image/svg+xml,base64,${btoa(svg)}`
-=======
-;
-  private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {;
-    // In a real implementation, this would use a QR code library;
-    // For now, we'll generate a placeholder SVG;
-    const size = options.size!,;
-    const margin = options.margin!,;
-    const contentSize = size - (margin * 2),;
-    const svg = `;
-      <svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">;
-        <rect width="${size}" height="${size}" fill="${options.backgroundColor}"/>;
-        <rect x="${margin}" y="${margin}" width="${contentSize}" height="${contentSize}" fill="${options.foregroundColor}"/>;
-        <text x="${size/2}" y="${size/2 + 5}" text-anchor="middle" fill="${options.backgroundColor}" font-family="Arial" font-size="12">QR Code</text>;
-        <text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options.backgroundColor}" font-family="Arial" font-size="10">${options.text.substring(0, 20)}${options.text.length > 20 ? '...' : ''}</text>;
-      </svg>;
-    `,;
-    return `data: image/svg+xml,base64,${btoa(svg)}`;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   private generateVCard(data: any): string {;
@@ -325,21 +306,14 @@ class QRCodeService {;
     // In a real app, this would retrieve from storage;
     return [];
   }
-<<<<<<< HEAD
 
   saveQRCode(qrCode: QRCodeResult): void {
     // In a real app, this would save to storage
-<<<<<<< HEAD
     // // // console.log('QR Code saved:', qrCode.options.text)
-=======
-    // console.log('QR Code saved:', qrCode.options.text);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
   saveQRCode(qrCode: QRCodeResult): void {;
     // In a real app, this would save to storage;
     // // // console.log('QR Code saved:', qrCode.options.text);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 }
 ;

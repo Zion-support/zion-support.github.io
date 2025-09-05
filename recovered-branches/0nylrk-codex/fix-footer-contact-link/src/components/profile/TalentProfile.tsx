@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -15,24 +13,6 @@ import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 import { useAuth } from "@/hooks/useAuth",
 import { Availability } from "@/types/profile",
-=======
-import React from &quot;react&quot;;
-import { Handshake, MessageSquare, Star } from &quot;lucide-react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-
-import { HireNowCTA } from &quot;./HireNowCTA&quot;;
-import { ProfileHero } from &quot;./ProfileHero&quot;;
-import { ProfileSkills } from &quot;./ProfileSkills&quot;;
-import { ProfileExperience } from &quot;./ProfileExperience&quot;;
-import { ProfileProjects } from &quot;./ProfileProjects&quot;;
-import { ProfileAvailability } from &quot;./ProfileAvailability&quot;;
-import { ProfileContact } from &quot;./ProfileContact&quot;;
-import { ProfileRatings } from &quot;./ProfileRatings&quot;;
-import { TalentProfile as TalentProfileType } from &quot;@/types/talent&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { Availability } from &quot;@/types/profile&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface TalentProfileProps {
   profile: TalentProfileType,
   onRequestHire: () => void,
@@ -68,8 +48,7 @@ export function TalentProfile({
   })) || [],
   
   return (
-    <div className=&quot;container mx-auto px-4 py-8&quot;>
-=======
+    <div className="container mx-auto px-4 py-8">
 import React from "react",;
 import { Handshake, MessageSquare, Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -116,149 +95,82 @@ export function TalentProfile({;
   })) || [];
   return (;
     <div className="container mx-auto px-4 py-8">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
         title={profile.professional_title}
         avatarUrl={profile.profile_picture_url}
-<<<<<<< HEAD
-        profileType=&quot;talent&quot;
-=======
-        profileType="talent";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        profileType="talent"
         rating={profile.average_rating}
         reviewCount={profile.rating_count}
       />;
       {/* Main content area */}
-<<<<<<< HEAD
-      <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8&quot;>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
         {/* Left Column - Skills & Info */}
-        <div className=&quot;space-y-8&quot;>
+        <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
           <ProfileContact 
             email={profile.user_id}
             profileName={profile.full_name}
-            profileType=&quot;talent&quot;
+            profileType="talent"
           />
         </div>
         
         {/* Right Column - Bio & Projects */}
-        <div className=&quot;lg:col-span-2 space-y-8&quot;>
+        <div className="lg:col-span-2 space-y-8">
           {/* Bio Section */}
-          <div className=&quot;bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6&quot;>
-            <h2 className=&quot;text-xl font-bold text-white mb-4&quot;>About {profile.full_name}</h2>
-            <div className=&quot;prose prose-invert max-w-none&quot;>
-              <p className=&quot;text-zion-slate whitespace-pre-wrap&quot;>{profile.bio}</p>
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
+            <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>
+            <div className="prose prose-invert max-w-none">
+              <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>
             </div>
           </div>
           
-=======
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
-        {/* Left Column - Skills & Info */}
-        <div className="space-y-8">;
-          <ProfileSkills skills={skillsArray} />;
-          <ProfileAvailability availability={availability} />;
-          <ProfileContact;
-            email={profile.user_id}
-            profileName={profile.full_name}
-            profileType="talent";
-          />;
-        </div>;
-        {/* Right Column - Bio & Projects */}
-        <div className="lg:col-span-2 space-y-8">;
-          {/* Bio Section */}
-          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
-            <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>;
-            <div className="prose prose-invert max-w-none">;
-              <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>;
-            </div>;
-          </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />;
           {/* Ratings Section */}
-<<<<<<< HEAD
-          <div className=&quot;bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6&quot;>
-            <h2 className=&quot;text-xl font-bold text-white mb-4 flex items-center&quot;>
-              <Star className=&quot;mr-2 h-5 w-5 text-yellow-400&quot; />
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
+            <h2 className="text-xl font-bold text-white mb-4 flex items-center">
+              <Star className="mr-2 h-5 w-5 text-yellow-400" />
               Reviews & Ratings
             </h2>
             <ProfileRatings 
-=======
-          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
-            <h2 className="text-xl font-bold text-white mb-4 flex items-center">;
-              <Star className="mr-2 h-5 w-5 text-yellow-400" />;
-              Reviews & Ratings;
-            </h2>;
-            <ProfileRatings;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}
             />;
           </div>;
           {/* Hire Now CTA */}
-<<<<<<< HEAD
           {isAuthenticated && (
-            <div className=&quot;bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8&quot;>
-              <div className=&quot;flex flex-col items-center text-center&quot;>
-                <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>Ready to collaborate?</h3>
-                <p className=&quot;text-zion-slate mb-6 max-w-md&quot;>
+            <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
+              <div className="flex flex-col items-center text-center">
+                <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>
+                <p className="text-zion-slate mb-6 max-w-md">
                   Connect with {profile.full_name} for your next project and get started right away.
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
                 </p>
                 
-                <div className=&quot;flex flex-wrap gap-4 justify-center&quot;>
+                <div className="flex flex-wrap gap-4 justify-center">
                   <Button 
-                    size=&quot;lg&quot; 
-                    className=&quot;bg-zion-purple text-white hover:bg-zion-purple-dark&quot;
+                    size="lg" 
+                    className="bg-zion-purple text-white hover:bg-zion-purple-dark"
                     onClick={onRequestHire}
                   >
-                    <Handshake className=&quot;mr-2 h-5 w-5&quot; />
+                    <Handshake className="mr-2 h-5 w-5" />
                     Hire Now
                   </Button>
                   
                   {onMessageTalent && (
                     <Button 
-                      size=&quot;lg&quot; 
-                      variant=&quot;outline&quot;
-                      className=&quot;border-zion-purple text-zion-purple hover:bg-zion-purple/10&quot;
+                      size="lg" 
+                      variant="outline"
+                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                       onClick={onMessageTalent}
                     >
-                      <MessageSquare className=&quot;mr-2 h-5 w-5&quot; />
+                      <MessageSquare className="mr-2 h-5 w-5" />
                       Message
                     </Button>
-=======
-          {isAuthenticated && (;
-            <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">;
-              <div className="flex flex-col items-center text-center">;
-                <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>;
-                <p className="text-zion-slate mb-6 max-w-md">;
-                  Connect with {profile.full_name} for your next project and get started right away.;
-                  {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
-                </p>;
-                <div className="flex flex-wrap gap-4 justify-center">;
-                  <Button;
-                    size="lg";
-                    className="bg-zion-purple text-white hover:bg-zion-purple-dark";
-                    onClick={onRequestHire}
-                  >;
-                    <Handshake className="mr-2 h-5 w-5" />;
-                    Hire Now;
-                  </Button>;
-                  {onMessageTalent && (;
-                    <Button;
-                      size="lg";
-                      variant="outline";
-                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-                      onClick={onMessageTalent}
-                    >;
-                      <MessageSquare className="mr-2 h-5 w-5" />;
-                      Message;
-                    </Button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   )}
                 </div>;
               </div>;

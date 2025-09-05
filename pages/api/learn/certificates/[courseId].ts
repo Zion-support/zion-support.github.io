@@ -13,7 +13,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     res.setHeader('AllowGET'),;
     return res.status(405).end('Method Not Allowed');
   }
-<<<<<<< HEAD
 
   const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string },
 
@@ -25,13 +24,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     if (!course) return res.status(404).json({ error: 'Course not found' }),
     if (!user) return res.status(404).json({ error: 'User not found' }),
 
-<<<<<<< HEAD
     res.setHeader('Content-Typeapplication/pdf'),
     res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`),
-=======
-    res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', `attachment; filename=&quot;${courseId}-certificate.pdf&quot;`);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     const doc = new PDFDocument({ size: 'A4', margin: 50 }),
     // Pipe to response
@@ -64,7 +58,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     doc.end()
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
-=======
 ;
   const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string },;
   try {;
@@ -102,6 +95,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     doc.end();
   } catch (e: any) {;
     res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 }

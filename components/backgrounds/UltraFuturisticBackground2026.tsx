@@ -175,18 +175,13 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
       {/* Animated Canvas Background */}
       <canvas;
         ref={canvasRef}
-<<<<<<< HEAD
-        className=&quot;fixed inset-0 w-full h-full pointer-events-none z-0&quot;
-=======
-        className="fixed inset-0 w-full h-full pointer-events-none z-0";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)' }}
       />;
       {/* Floating Geometric Shapes */}
-<<<<<<< HEAD
-      <div className=&quot;fixed inset-0 pointer-events-none z-10&quot;>
+      <div className="fixed inset-0 pointer-events-none z-10">
         <motion.div
-          className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400/20&quot;
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20"
           animate={{
             rotate: 360,
             scale: [1, 1.2, 1],
@@ -195,11 +190,11 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: &quot;linear&quot;
+            ease: "linear"
           }}
         />
         <motion.div
-          className=&quot;absolute top-40 right-32 w-24 h-24 border border-pink-400/20 rounded-full&quot;
+          className="absolute top-40 right-32 w-24 h-24 border border-pink-400/20 rounded-full"
           animate={{
             y: [0, -20, 0],
             opacity: [0.2, 0.5, 0.2]
@@ -207,11 +202,11 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
+            ease: "easeInOut"
           }}
         />
         <motion.div
-          className=&quot;absolute bottom-32 left-32 w-40 h-40 border border-purple-400/20 transform rotate-45&quot;
+          className="absolute bottom-32 left-32 w-40 h-40 border border-purple-400/20 transform rotate-45"
           animate={{
             rotate: [0, 180, 360],
             scale: [1, 1.1, 1]
@@ -219,11 +214,11 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: &quot;linear&quot;
+            ease: "linear"
           }}
         />
         <motion.div
-          className=&quot;absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12&quot;
+          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12"
           animate={{
             rotate: [0, -180, -360],
             opacity: [0.4, 0.7, 0.4]
@@ -231,135 +226,46 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: &quot;linear&quot;
-=======
-      <div className="fixed inset-0 pointer-events-none z-10">;
-        <motion.div;
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20";
-          animate={{;
-            rotate: 360,;
-            scale: [1, 1.2, 1],;
-            opacity: [0.3, 0.6, 0.3];
-          }}
-          transition={{;
-            duration: 8,;
-            repeat: Infinity,;
-            ease: "linear";
-          }}
-        />;
-        <motion.div;
-          className="absolute top-40 right-32 w-24 h-24 border border-pink-400/20 rounded-full";
-          animate={{;
-            y: [0, -20, 0],;
-            opacity: [0.2, 0.5, 0.2];
-          }}
-          transition={{;
-            duration: 6,;
-            repeat: Infinity,;
-            ease: "easeInOut";
-          }}
-        />;
-        <motion.div;
-          className="absolute bottom-32 left-32 w-40 h-40 border border-purple-400/20 transform rotate-45";
-          animate={{;
-            rotate: [0, 180, 360],;
-            scale: [1, 1.1, 1];
-          }}
-          transition={{;
-            duration: 12,;
-            repeat: Infinity,;
-            ease: "linear";
-          }}
-        />;
-        <motion.div;
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12";
-          animate={{;
-            rotate: [0, -180, -360],;
-            opacity: [0.4, 0.7, 0.4];
-          }}
-          transition={{;
-            duration: 10,;
-            repeat: Infinity,;
-            ease: "linear";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "linear"
           }}
         />;
       </div>;
       {/* Energy Field Effects */}
-<<<<<<< HEAD
-      <div className=&quot;fixed inset-0 pointer-events-none z-20&quot;>
+      <div className="fixed inset-0 pointer-events-none z-20">
         <motion.div
-          className=&quot;absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent&quot;
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent"
           animate={{
             x: ['-100%100%']
           }}
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: &quot;linear&quot;
+            ease: "linear"
           }}
         />
         <motion.div
-          className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent&quot;
+          className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent"
           animate={{
             y: ['-100%100%']
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: &quot;linear&quot;
-=======
-      <div className="fixed inset-0 pointer-events-none z-20">;
-        <motion.div;
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent";
-          animate={{;
-            x: ['-100%100%'];
-          }}
-          transition={{;
-            duration: 15,;
-            repeat: Infinity,;
-            ease: "linear";
-          }}
-        />;
-        <motion.div;
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent";
-          animate={{;
-            y: ['-100%100%'];
-          }}
-          transition={{;
-            duration: 20,;
-            repeat: Infinity,;
-            ease: "linear";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "linear"
           }}
         />;
       </div>;
       {/* Content */}
-<<<<<<< HEAD
-      <div className=&quot;relative z-30&quot;>
-=======
-      <div className="relative z-30">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+      <div className="relative z-30">
         {children}
       </div>;
       {/* Holographic Overlay */}
-<<<<<<< HEAD
-      <div className=&quot;fixed inset-0 pointer-events-none z-40&quot;>
-        <div className=&quot;absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent&quot; />
-        <div className=&quot;absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent&quot; />
+      <div className="fixed inset-0 pointer-events-none z-40">
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent" />
       </div>
     </div>
   )
 },
 
 export default UltraFuturisticBackground2026,
-=======
-      <div className="fixed inset-0 pointer-events-none z-40">;
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent" />;
-        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent" />;
-      </div>;
-    </div>;
-  );
-},;
-export default UltraFuturisticBackground2026;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

@@ -1,12 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
-=======
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import type { QuoteRequest, QuoteStatus } from &quot;@/types/quotes&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export const quoteRequestService = {
   // Get all quote requests (for admin)
@@ -68,7 +62,6 @@ export const quoteRequestService = {
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
-=======
 import { supabase } from "@/integrations/supabase/client",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 export const quoteRequestService = {;
@@ -122,7 +115,6 @@ export const quoteRequestService = {;
     // If marking as responded, set replied_at;
     if (status === 'responded') {;
       updates.replied_at = new Date().toISOString();
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     // If marking as in_review and viewed_at is null, set viewed_at;

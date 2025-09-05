@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -18,39 +16,19 @@ import { useAuth } from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
-=======
-import { useState } from &quot;react&quot;;
-import Link from &quot;next/link&quot;;
-import { useRouter } from &quot;next/router&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-import { Separator } from &quot;@/components/ui/separator&quot;;
-import { Alert, AlertDescription } from &quot;@/components/ui/alert&quot;;
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react'
-import { formatDistanceToNow, format } from &quot;date-fns&quot;;
-import { ForumPost, ForumReply } from &quot;@/types/community&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import ReplyCard from &quot;@/components/community/ReplyCard&quot;;
-import ReplyForm from &quot;@/components/community/ReplyForm&quot;;
-import { useToast } from &quot;@/hooks/use-toast&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // Mock data for a forum post
 const mockPost: ForumPost = {
-  id: &quot;1&quot;,
-  title: &quot;Best practices for AI model fine-tuning&quot;,
-  content: &quot;I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?&quot;,
-  authorId: &quot;user1&quot;,
-  authorName: &quot;Alex Johnson&quot;,
-  authorAvatar: &quot;https://i.pravatar.cc/150?img=3&quot;,
-  authorRole: &quot;Verified Talent&quot;,
-  categoryId: &quot;ai-tools&quot;,
-  tags: [&quot;machine-learning&quot;, &quot;fine-tuning&quot;, &quot;gpt&quot;],
-  createdAt: &quot;2025-04-01T12:00:00Z&quot;,
-  updatedAt: &quot;2025-04-01T12:00:00Z&quot;,
+  id: "1",
+  title: "Best practices for AI model fine-tuning",
+  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
+  authorId: "user1",
+  authorName: "Alex Johnson",
+  authorAvatar: "https://i.pravatar.cc/150?img=3",
+  authorRole: "Verified Talent",
+  categoryId: "ai-tools",
+  tags: ["machine-learning", "fine-tuning", "gpt"],
+  createdAt: "2025-04-01T12:00:00Z",
+  updatedAt: "2025-04-01T12:00:00Z",
   upvotes: 48,
   downvotes: 2,
   replyCount: 4,
@@ -61,19 +39,18 @@ const mockPost: ForumPost = {
 // Mock data for replies
 const mockReplies: ForumReply[] = [
   {
-    id: &quot;reply1&quot;,
-    postId: &quot;1&quot;,
-    content: &quot;Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.&quot;,
-    authorId: &quot;user2&quot;,
-    authorName: &quot;Sarah Chen&quot;,
-    authorAvatar: &quot;https://i.pravatar.cc/150?img=5&quot;,
-    createdAt: &quot;2025-04-01T14:30:00Z&quot;,
-    updatedAt: &quot;2025-04-01T14:30:00Z&quot;,
+    id: "reply1",
+    postId: "1",
+    content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
+    authorId: "user2",
+    authorName: "Sarah Chen",
+    authorAvatar: "https://i.pravatar.cc/150?img=5",
+    createdAt: "2025-04-01T14:30:00Z",
+    updatedAt: "2025-04-01T14:30:00Z",
     upvotes: 12,
     downvotes: 0
   },
   {
-<<<<<<< HEAD
     id: "reply2",
     postId: "1",
     content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.performance.",
@@ -82,40 +59,30 @@ const mockReplies: ForumReply[] = [
     authorRole: "AI Engineer",
     createdAt: "2025-04-01T16:15:00Z",
     updatedAt: "2025-04-01T16:15:00Z",
-=======
-    id: &quot;reply2&quot;,
-    postId: &quot;1&quot;,
-    content: &quot;Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance.&quot;,
-    authorId: &quot;user3&quot;,
-    authorName: &quot;Michael Wong&quot;,
-    authorRole: &quot;AI Engineer&quot;,
-    createdAt: &quot;2025-04-01T16:15:00Z&quot;,
-    updatedAt: &quot;2025-04-01T16:15:00Z&quot;,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     upvotes: 8,
     downvotes: 0
   },
   {
-    id: &quot;reply3&quot;,
-    postId: &quot;1&quot;,
-    content: &quot;A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.&quot;,
-    authorId: &quot;user4&quot;,
-    authorName: &quot;Emma Davis&quot;,
-    authorRole: &quot;ML Research Lead&quot;,
-    createdAt: &quot;2025-04-02T09:45:00Z&quot;,
-    updatedAt: &quot;2025-04-02T09:45:00Z&quot;,
+    id: "reply3",
+    postId: "1",
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
+    authorId: "user4",
+    authorName: "Emma Davis",
+    authorRole: "ML Research Lead",
+    createdAt: "2025-04-02T09:45:00Z",
+    updatedAt: "2025-04-02T09:45:00Z",
     upvotes: 15,
     downvotes: 0,
     isAnswer: true
   },
   {
-    id: &quot;reply4&quot;,
-    postId: &quot;1&quot;,
-    content: &quot;Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?&quot;,
-    authorId: &quot;user5&quot;,
-    authorName: &quot;David Lin&quot;,
-    createdAt: &quot;2025-04-02T11:20:00Z&quot;,
-    updatedAt: &quot;2025-04-02T11:20:00Z&quot;,
+    id: "reply4",
+    postId: "1",
+    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",
+    authorId: "user5",
+    authorName: "David Lin",
+    createdAt: "2025-04-02T11:20:00Z",
+    updatedAt: "2025-04-02T11:20:00Z",
     upvotes: 4,
     downvotes: 0
   }
@@ -141,10 +108,10 @@ export default function ForumPostPage() {
   // For this demo, we'll assume the post is found
   if (!post) {
     return (
-      <div className=&quot;container py-8&quot;>
+      <div className="container py-8">
         <h1>Post not found</h1>
-        <Button asChild className=&quot;mt-4&quot;>
-          <Link href=&quot;/community&quot;>Back to Community</Link>
+        <Button asChild className="mt-4">
+          <Link href="/community">Back to Community</Link>
         </Button>
       </div>
     )
@@ -153,79 +120,43 @@ export default function ForumPostPage() {
   const handleUpvote = () => {
     if (!user) {
       toast({
-<<<<<<< HEAD
         title: "Authentication required",
         description: "Please sign in to vote on posts"}),
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
       return
-=======
-        title: &quot;Authentication required&quot;,
-        description: &quot;Please sign in to vote on posts&quot;});
-      const returnTo = encodeURIComponent(router.asPath);
-      router.push(`/auth/login?returnTo=${returnTo}`);
-      return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     setPost({ ...post, upvotes: post.upvotes + 1 }),
     toast({
-<<<<<<< HEAD
       title: "Vote recorded",
       description: "You upvoted this post"})
   },
-=======
-      title: &quot;Vote recorded&quot;,
-      description: &quot;You upvoted this post&quot;});
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleDownvote = () => {
     if (!user) {
       toast({
-<<<<<<< HEAD
         title: "Authentication required",
         description: "Please sign in to vote on posts"}),
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
       return
-=======
-        title: &quot;Authentication required&quot;,
-        description: &quot;Please sign in to vote on posts&quot;});
-      const returnTo = encodeURIComponent(router.asPath);
-      router.push(`/auth/login?returnTo=${returnTo}`);
-      return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     setPost({ ...post, downvotes: post.downvotes + 1 }),
     toast({
-<<<<<<< HEAD
       title: "Vote recorded",
       description: "You downvoted this post"})
   },
-=======
-      title: &quot;Vote recorded&quot;,
-      description: &quot;You downvoted this post&quot;});
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
-<<<<<<< HEAD
         title: "Authentication required",
         description: "Please sign in to reply"}),
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
       return
-=======
-        title: &quot;Authentication required&quot;,
-        description: &quot;Please sign in to reply&quot;});
-      const returnTo = encodeURIComponent(router.asPath);
-      router.push(`/auth/login?returnTo=${returnTo}`);
-      return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     // Create a new reply
@@ -246,33 +177,19 @@ export default function ForumPostPage() {
     setPost({ ...post, replyCount: post.replyCount + 1 }),
     
     toast({
-<<<<<<< HEAD
       title: "Reply posted",
       description: "Your reply has been added to the discussion"})
   },
-=======
-      title: &quot;Reply posted&quot;,
-      description: &quot;Your reply has been added to the discussion&quot;});
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
       toast({
-<<<<<<< HEAD
         title: "Permission denied",
         description: "Only the original poster or moderators can mark answers",
         variant: "destructive"
       }),
       return
-=======
-        title: &quot;Permission denied&quot;,
-        description: &quot;Only the original poster or moderators can mark answers&quot;,
-        variant: &quot;destructive&quot;
-      });
-      return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     // Update the replies
@@ -285,20 +202,13 @@ export default function ForumPostPage() {
     setPost({ ...post, isAnswered: true }),
     
     toast({
-<<<<<<< HEAD
       title: "Answer marked",
       description: "The reply has been marked as the accepted answer"})
   },
-=======
-      title: &quot;Answer marked&quot;,
-      description: &quot;The reply has been marked as the accepted answer&quot;});
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleReportPost = () => {
     if (!user) {
       toast({
-<<<<<<< HEAD
         title: "Authentication required",
         description: "Please sign in to report content"}),
       const returnTo = encodeURIComponent(router.asPath),
@@ -310,19 +220,6 @@ export default function ForumPostPage() {
       title: "Report submitted",
       description: "A moderator will review this content"})
   },
-=======
-        title: &quot;Authentication required&quot;,
-        description: &quot;Please sign in to report content&quot;});
-      const returnTo = encodeURIComponent(router.asPath);
-      router.push(`/auth/login?returnTo=${returnTo}`);
-      return;
-    }
-    
-    toast({
-      title: &quot;Report submitted&quot;,
-      description: &quot;A moderator will review this content&quot;});
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handlePinPost = () => {
     if (!isAdminOrMod) return,
@@ -330,15 +227,9 @@ export default function ForumPostPage() {
     setPost({ ...post, isPinned: !post.isPinned }),
     
     toast({
-<<<<<<< HEAD
       title: post.isPinned ? "Post unpinned" : "Post pinned",
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
   },
-=======
-      title: post.isPinned ? &quot;Post unpinned&quot; : &quot;Post pinned&quot;,
-      description: post.isPinned ? &quot;The post has been unpinned&quot; : &quot;The post has been pinned to the top&quot;});
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleLockPost = () => {
     if (!isAdminOrMod) return,
@@ -346,26 +237,16 @@ export default function ForumPostPage() {
     setPost({ ...post, isLocked: !post.isLocked }),
     
     toast({
-<<<<<<< HEAD
       title: post.isLocked ? "Post unlocked" : "Post locked",
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
   },
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
-=======
-      title: post.isLocked ? &quot;Post unlocked&quot; : &quot;Post locked&quot;,
-      description: post.isLocked ? &quot;Comments are now allowed&quot; : &quot;Comments are now disabled&quot;});
-  };
-  
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
-  const formattedDate = format(new Date(post.createdAt), &quot;MMMM d, yyyy 'at' h:mm a&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   return (
     <>
       <SEO
-=======
 import { useState } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -593,140 +474,94 @@ export default function ForumPostPage() {;
   return (;
     <>;
       <SEO;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         title={`${post.title} | Community Forum | Zion AI Marketplace`}
         description={post.content.substring(0, 160)}
         keywords={`community, forum, discussion, ${post.tags.join()}`}
         canonical={`https://app.ziontechgroup.com/community/post/${post.id}`}
-<<<<<<< HEAD
       />
       
-      <div className=&quot;container py-8&quot;>
-        <div className=&quot;flex items-center gap-3 mb-6&quot;>
-          <Link href=&quot;/community&quot; className=&quot;text-sm text-muted-foreground hover:text-foreground&quot;>
+      <div className="container py-8">
+        <div className="flex items-center gap-3 mb-6">
+          <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">
             Forum
           </Link>
-          <span className=&quot;text-muted-foreground&quot;>/</span>
-          <Link href={`/community/category/${post.categoryId}`} className=&quot;text-sm text-muted-foreground hover:text-foreground&quot;>
+          <span className="text-muted-foreground">/</span>
+          <Link href={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">
             {post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
           </Link>
-          <span className=&quot;text-muted-foreground&quot;>/</span>
-          <span className=&quot;text-sm font-medium truncate max-w-[200px]&quot;>{post.title}</span>
+          <span className="text-muted-foreground">/</span>
+          <span className="text-sm font-medium truncate max-w-[200px]">{post.title}</span>
         </div>
         
         <Card>
-          <CardContent className=&quot;p-6&quot;>
-            <div className=&quot;flex justify-between items-start mb-6&quot;>
-              <div className=&quot;flex items-center gap-4&quot;>
-                <Avatar className=&quot;h-12 w-12&quot;>
+          <CardContent className="p-6">
+            <div className="flex justify-between items-start mb-6">
+              <div className="flex items-center gap-4">
+                <Avatar className="h-12 w-12">
                   <AvatarImage src={post.authorAvatar} alt={post.authorName} />
                   <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <div>
-                  <div className=&quot;font-medium text-lg&quot;>{post.authorName}</div>
+                  <div className="font-medium text-lg">{post.authorName}</div>
                   {post.authorRole && (
-                    <Badge variant=&quot;outline&quot; className=&quot;mt-1&quot;>
-=======
-      />;
-      <div className="container py-8">;
-        <div className="flex items-center gap-3 mb-6">;
-          <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">;
-            Forum;
-          </Link>;
-          <span className="text-muted-foreground">/</span>;
-          <Link href={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">;
-            {post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-          </Link>;
-          <span className="text-muted-foreground">/</span>;
-          <span className="text-sm font-medium truncate max-w-[200px]">{post.title}</span>;
-        </div>;
-        <Card>;
-          <CardContent className="p-6">;
-            <div className="flex justify-between items-start mb-6">;
-              <div className="flex items-center gap-4">;
-                <Avatar className="h-12 w-12">;
-                  <AvatarImage src={post.authorAvatar} alt={post.authorName} />;
-                  <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>;
-                </Avatar>;
-                <div>;
-                  <div className="font-medium text-lg">{post.authorName}</div>;
-                  {post.authorRole && (;
-                    <Badge variant="outline" className="mt-1">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                    <Badge variant="outline" className="mt-1">
                       {post.authorRole}
                     </Badge>;
                   )}
-<<<<<<< HEAD
                 </div>
               </div>
               
-              <div className=&quot;flex items-center text-sm text-muted-foreground&quot;>
-                <Calendar className=&quot;h-4 w-4 mr-1&quot; />
+              <div className="flex items-center text-sm text-muted-foreground">
+                <Calendar className="h-4 w-4 mr-1" />
                 <time dateTime={post.createdAt} title={formattedDate}>
                   {timeAgo}
                 </time>
               </div>
             </div>
             
-            <h1 className=&quot;text-2xl font-bold mb-2&quot;>{post.title}</h1>
+            <h1 className="text-2xl font-bold mb-2">{post.title}</h1>
             
-            <div className=&quot;flex flex-wrap gap-2 mb-6&quot;>
+            <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map(tag => (
-                <Badge key={tag} variant=&quot;outline&quot; className=&quot;bg-zion-purple/10 hover:bg-zion-purple/20&quot;>
-=======
-                </div>;
-              </div>;
-              <div className="flex items-center text-sm text-muted-foreground">;
-                <Calendar className="h-4 w-4 mr-1" />;
-                <time dateTime={post.createdAt} title={formattedDate}>;
-                  {timeAgo}
-                </time>;
-              </div>;
-            </div>;
-            <h1 className="text-2xl font-bold mb-2">{post.title}</h1>;
-            <div className="flex flex-wrap gap-2 mb-6">;
-              {post.tags.map(tag => (;
-                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
                   {tag}
                 </Badge>;
               ))}
-<<<<<<< HEAD
             </div>
             
-            <div className=&quot;prose dark:prose-invert max-w-none mb-6&quot;>
+            <div className="prose dark:prose-invert max-w-none mb-6">
               {post.content.split('\n\n').map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
             
-            <div className=&quot;flex flex-wrap items-center justify-between gap-4 mt-6&quot;>
-              <div className=&quot;flex items-center gap-4&quot;>
+            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
+              <div className="flex items-center gap-4">
                 <Button
-                  variant=&quot;outline&quot;
-                  size=&quot;sm&quot;
+                  variant="outline"
+                  size="sm"
                   onClick={handleUpvote}
-                  className=&quot;flex items-center gap-2&quot;
+                  className="flex items-center gap-2"
                 >
-                  <ThumbsUp className=&quot;h-4 w-4&quot; />
+                  <ThumbsUp className="h-4 w-4" />
                   <span>{post.upvotes}</span>
                 </Button>
                 <Button
-                  variant=&quot;outline&quot;
-                  size=&quot;sm&quot;
+                  variant="outline"
+                  size="sm"
                   onClick={handleDownvote}
-                  className=&quot;flex items-center gap-2&quot;
+                  className="flex items-center gap-2"
                 >
-                  <ThumbsDown className=&quot;h-4 w-4&quot; />
+                  <ThumbsDown className="h-4 w-4" />
                   <span>{post.downvotes}</span>
                 </Button>
               </div>
               
-              <div className=&quot;flex items-center gap-2&quot;>
+              <div className="flex items-center gap-2">
                 {(isAuthor || isAdminOrMod) && (
-                  <Button variant=&quot;ghost&quot; size=&quot;sm&quot; asChild>
+                  <Button variant="ghost" size="sm" asChild>
                     <Link href={`/community/edit/${post.id}`}>
-                      <Edit className=&quot;h-4 w-4 mr-1&quot; />
+                      <Edit className="h-4 w-4 mr-1" />
                       Edit
                     </Link>
                   </Button>
@@ -735,30 +570,30 @@ export default function ForumPostPage() {;
                 {isAdminOrMod && (
                   <>
                     <Button
-                      variant=&quot;ghost&quot;
-                      size=&quot;sm&quot;
+                      variant="ghost"
+                      size="sm"
                       onClick={handlePinPost}
                     >
-                      <Pin className=&quot;h-4 w-4 mr-1&quot; />
-                      {post.isPinned ? &quot;Unpin&quot; : &quot;Pin&quot;}
+                      <Pin className="h-4 w-4 mr-1" />
+                      {post.isPinned ? "Unpin" : "Pin"}
                     </Button>
                     <Button
-                      variant=&quot;ghost&quot;
-                      size=&quot;sm&quot;
+                      variant="ghost"
+                      size="sm"
                       onClick={handleLockPost}
                     >
-                      <Lock className=&quot;h-4 w-4 mr-1&quot; />
-                      {post.isLocked ? &quot;Unlock&quot; : &quot;Lock&quot;}
+                      <Lock className="h-4 w-4 mr-1" />
+                      {post.isLocked ? "Unlock" : "Lock"}
                     </Button>
                   </>
                 )}
                 
                 <Button
-                  variant=&quot;ghost&quot;
-                  size=&quot;sm&quot;
+                  variant="ghost"
+                  size="sm"
                   onClick={handleReportPost}
                 >
-                  <Flag className=&quot;h-4 w-4 mr-1&quot; />
+                  <Flag className="h-4 w-4 mr-1" />
                   Report
                 </Button>
               </div>
@@ -766,165 +601,50 @@ export default function ForumPostPage() {;
           </CardContent>
         </Card>
         
-        <div className=&quot;mt-8&quot;>
-          <h2 className=&quot;text-xl font-bold mb-6&quot;>Responses ({post.replyCount})</h2>
+        <div className="mt-8">
+          <h2 className="text-xl font-bold mb-6">Responses ({post.replyCount})</h2>
           
           {post.isAnswered && (
-            <div className=&quot;mb-6&quot;>
-              <h3 className=&quot;flex items-center text-green-600 font-medium mb-2&quot;>
-                <CheckCircle className=&quot;h-4 w-4 mr-2&quot; />
+            <div className="mb-6">
+              <h3 className="flex items-center text-green-600 font-medium mb-2">
+                <CheckCircle className="h-4 w-4 mr-2" />
                 Accepted Answer
               </h3>
               {replies.filter(reply => reply.isAnswer).map(reply => (
-                <ReplyCard key={reply.id} reply={reply} className=&quot;border-green-500&quot; />
-=======
-            </div>;
-            <div className="prose dark:prose-invert max-w-none mb-6">;
-              {post.content.split('\n\n').map((paragraph, i) => (;
-                <p key={i}>{paragraph}</p>;
-              ))}
-            </div>;
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">;
-              <div className="flex items-center gap-4">;
-                <Button;
-                  variant="outline";
-                  size="sm";
-                  onClick={handleUpvote}
-                  className="flex items-center gap-2";
-                >;
-                  <ThumbsUp className="h-4 w-4" />;
-                  <span>{post.upvotes}</span>;
-                </Button>;
-                <Button;
-                  variant="outline";
-                  size="sm";
-                  onClick={handleDownvote}
-                  className="flex items-center gap-2";
-                >;
-                  <ThumbsDown className="h-4 w-4" />;
-                  <span>{post.downvotes}</span>;
-                </Button>;
-              </div>;
-              <div className="flex items-center gap-2">;
-                {(isAuthor || isAdminOrMod) && (;
-                  <Button variant="ghost" size="sm" asChild>;
-                    <Link href={`/community/edit/${post.id}`}>;
-                      <Edit className="h-4 w-4 mr-1" />;
-                      Edit;
-                    </Link>;
-                  </Button>;
-                )}
-;
-                {isAdminOrMod && (;
-                  <>;
-                    <Button;
-                      variant="ghost";
-                      size="sm";
-                      onClick={handlePinPost}
-                    >;
-                      <Pin className="h-4 w-4 mr-1" />;
-                      {post.isPinned ? "Unpin" : "Pin"}
-                    </Button>;
-                    <Button;
-                      variant="ghost";
-                      size="sm";
-                      onClick={handleLockPost}
-                    >;
-                      <Lock className="h-4 w-4 mr-1" />;
-                      {post.isLocked ? "Unlock" : "Lock"}
-                    </Button>;
-                  </>;
-                )}
-;
-                <Button;
-                  variant="ghost";
-                  size="sm";
-                  onClick={handleReportPost}
-                >;
-                  <Flag className="h-4 w-4 mr-1" />;
-                  Report;
-                </Button>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-        <div className="mt-8">;
-          <h2 className="text-xl font-bold mb-6">Responses ({post.replyCount})</h2>;
-          {post.isAnswered && (;
-            <div className="mb-6">;
-              <h3 className="flex items-center text-green-600 font-medium mb-2">;
-                <CheckCircle className="h-4 w-4 mr-2" />;
-                Accepted Answer;
-              </h3>;
-              {replies.filter(reply => reply.isAnswer).map(reply => (;
-                <ReplyCard key={reply.id} reply={reply} className="border-green-500" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                <ReplyCard key={reply.id} reply={reply} className="border-green-500" />
               ))}
             </div>;
           )}
-<<<<<<< HEAD
           
           {!post.isLocked && (
-            <div className=&quot;mb-8&quot;>
-              <h3 className=&quot;text-lg font-medium mb-4&quot;>Your Response</h3>
+            <div className="mb-8">
+              <h3 className="text-lg font-medium mb-4">Your Response</h3>
               {user ? (
                 <ReplyForm onSubmit={handleSubmitReply} />
               ) : (
                 <Alert>
                   <AlertDescription>
-                    Please <Link href=&quot;/auth/login&quot; className=&quot;font-medium text-zion-purple hover:underline&quot;>sign in</Link> to join the discussion.
+                    Please <Link href="/auth/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.
                   </AlertDescription>
                 </Alert>
-=======
-;
-          {!post.isLocked && (;
-            <div className="mb-8">;
-              <h3 className="text-lg font-medium mb-4">Your Response</h3>;
-              {user ? (;
-                <ReplyForm onSubmit={handleSubmitReply} />;
-              ) : (;
-                <Alert>;
-                  <AlertDescription>;
-                    Please <Link href="/auth/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.;
-                  </AlertDescription>;
-                </Alert>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             </div>;
           )}
-<<<<<<< HEAD
           
           {post.isLocked && (
-            <Alert className=&quot;mb-8&quot;>
-              <AlertDescription className=&quot;flex items-center&quot;>
-                <Lock className=&quot;h-4 w-4 mr-2&quot; />
+            <Alert className="mb-8">
+              <AlertDescription className="flex items-center">
+                <Lock className="h-4 w-4 mr-2" />
                 This thread has been locked and is no longer open for responses.
               </AlertDescription>
             </Alert>
           )}
           
-          <div className=&quot;space-y-6&quot;>
+          <div className="space-y-6">
             {replies
               .filter(reply => !reply.isAnswer)
               .map(reply => (
                 <ReplyCard
-=======
-;
-          {post.isLocked && (;
-            <Alert className="mb-8">;
-              <AlertDescription className="flex items-center">;
-                <Lock className="h-4 w-4 mr-2" />;
-                This thread has been locked and is no longer open for responses.;
-              </AlertDescription>;
-            </Alert>;
-          )}
-;
-          <div className="space-y-6">;
-            {replies;
-              .filter(reply => !reply.isAnswer);
-              .map(reply => (;
-                <ReplyCard;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   key={reply.id}
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}

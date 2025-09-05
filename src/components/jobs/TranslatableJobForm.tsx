@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -13,22 +11,6 @@ import { useTranslationService } from "@/hooks/useTranslationService",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
 import { toast } from "@/components/ui/use-toast",
 import {logErrorToProduction} from '@/utils/productionLogger',
-=======
-import React, { useState } from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Textarea } from &quot;@/components/ui/textarea&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-import { Loader2, Globe } from 'lucide-react'
-import { useTranslation } from &quot;react-i18next&quot;;
-import { useTranslationService } from &quot;@/hooks/useTranslationService&quot;;
-import { useLanguage, SupportedLanguage } from &quot;@/context/LanguageContext&quot;;
-import { toast } from &quot;@/components/ui/use-toast&quot;;
-import {logErrorToProduction} from '@/utils/productionLogger';
-
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface TranslatableJobFormProps {
   onSubmit: (formData: any) => void,
   isSubmitting?: boolean
@@ -42,7 +24,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
   
   // Form fields with translations
-<<<<<<< HEAD
   const [title, setTitle] = useState<Record<SupportedLanguage string>>({
     en: "",
     es: "",
@@ -66,31 +47,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   
   const [budget, setBudget] = useState(""),
   const [deadline, setDeadline] = useState(""),
-=======
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
-    en: "&quot;,
-    es: "&quot;,
-    fr: "&quot;,
-    pt: "&quot;,
-    ar: "&quot;});
-  
-  const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
-    en: "&quot;,
-    es: "&quot;,
-    fr: "&quot;,
-    pt: "&quot;,
-    ar: "&quot;});
-  
-  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
-    en: "&quot;,
-    es: "&quot;,
-    fr: "&quot;,
-    pt: "&quot;,
-    ar: "&quot;});
-  
-  const [budget, setBudget] = useState("&quot;);
-  const [deadline, setDeadline] = useState("&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Handle text changes
   const handleTitleChange = (value: string) => {
@@ -125,7 +81,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     const selectedLanguage = tab as SupportedLanguage,
     if (selectedLanguage !== activeTab) {
       setActiveTab(selectedLanguage)
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -196,7 +151,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     const selectedLanguage = tab as SupportedLanguage,;
     if (selectedLanguage !== activeTab) {;
       setActiveTab(selectedLanguage);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   // Auto translate function;
@@ -219,19 +173,13 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         break;
       }
     }
-<<<<<<< HEAD
     
     if (!content) {
       toast({
         title: t('translation.no_content'),
         description: t('translation.add_content_first'),
-<<<<<<< HEAD
         variant: "destructive"}),
       return
-=======
-        variant: &quot;destructive&quot;});
-      return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     try {
@@ -241,14 +189,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         toast({
           title: t('translation.translation_failed'),
           description: error,
-<<<<<<< HEAD
           variant: "destructive"}),
         return
-=======
-          variant: &quot;destructive&quot;});
-        return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
     if (!content) {;
       toast({;
@@ -266,7 +208,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
           description: error,;
           variant: "destructive"}),;
         return;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
 ;
       if (field === 'title') {;
@@ -276,7 +217,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       } else if (field === 'requirements') {;
         setRequirements(translations);
       }
-<<<<<<< HEAD
       
       toast({
         title: t('translation.translation_success'),
@@ -286,12 +226,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       toast({
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),
-<<<<<<< HEAD
         variant: "destructive"})
-=======
-        variant: &quot;destructive"});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
       toast({;
         title: t('translation.translation_success'),;
@@ -302,7 +237,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         title: t('translation.translation_failed'),;
         description: error instanceof Error ? error.message : t('translation.unknown_error'),;
         variant: "destructive"});
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   // Ensure all translations are available;
@@ -335,34 +269,19 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         <h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>;
         <p className="text-zion-slate-light mb-6">;
           {t('jobs.post_job_description')}
-<<<<<<< HEAD
         </p>
       </div>
       
       <div className="space-y-4">
         <div className="space-y-2">
-          <div className="flex justify-between items-center&quot;>
-            <label htmlFor=&quot;title" className="text-lg font-medium&quot;>
+          <div className="flex justify-between items-center">
+            <label htmlFor="title" className="text-lg font-medium">
               {t('jobs.job_title')}
             </label>
             <Button
-              type=&quot;button&quot;
-              size=&quot;sm&quot;
-              variant=&quot;outline"
-=======
-        </p>;
-      </div>;
-      <div className="space-y-4">;
-        <div className="space-y-2">;
-          <div className="flex justify-between items-center">;
-            <label htmlFor="title" className="text-lg font-medium">;
-              {t('jobs.job_title')}
-            </label>;
-            <Button;
-              type="button";
-              size="sm";
-              variant="outline";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              type="button"
+              size="sm"
+              variant="outline"
               onClick={() => autoTranslate('title')}
               disabled={isTranslating || (!title.en && !title.es && !title.fr && !title.pt && !title.ar)}
               className="flex items-center gap-1";
@@ -396,32 +315,18 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
                 </div>;
               </TabsContent>;
             ))}
-<<<<<<< HEAD
           </Tabs>
         </div>
         
         <div className="space-y-2">
-          <div className="flex justify-between items-center&quot;>
-            <label htmlFor=&quot;description" className="text-lg font-medium&quot;>
+          <div className="flex justify-between items-center">
+            <label htmlFor="description" className="text-lg font-medium">
               {t('jobs.job_description')}
             </label>
             <Button
-              type=&quot;button&quot;
-              size=&quot;sm&quot;
-              variant=&quot;outline"
-=======
-          </Tabs>;
-        </div>;
-        <div className="space-y-2">;
-          <div className="flex justify-between items-center">;
-            <label htmlFor="description" className="text-lg font-medium">;
-              {t('jobs.job_description')}
-            </label>;
-            <Button;
-              type="button";
-              size="sm";
-              variant="outline";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              type="button"
+              size="sm"
+              variant="outline"
               onClick={() => autoTranslate('description')}
               disabled={isTranslating || (!description.en && !description.es && !description.fr && !description.pt && !description.ar)}
               className="flex items-center gap-1";
@@ -453,32 +358,18 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
                 />;
               </TabsContent>;
             ))}
-<<<<<<< HEAD
           </Tabs>
         </div>
         
         <div className="space-y-2">
-          <div className="flex justify-between items-center&quot;>
-            <label htmlFor=&quot;requirements" className="text-lg font-medium&quot;>
+          <div className="flex justify-between items-center">
+            <label htmlFor="requirements" className="text-lg font-medium">
               {t('jobs.skills_required')}
             </label>
             <Button
-              type=&quot;button&quot;
-              size=&quot;sm&quot;
-              variant=&quot;outline"
-=======
-          </Tabs>;
-        </div>;
-        <div className="space-y-2">;
-          <div className="flex justify-between items-center">;
-            <label htmlFor="requirements" className="text-lg font-medium">;
-              {t('jobs.skills_required')}
-            </label>;
-            <Button;
-              type="button";
-              size="sm";
-              variant="outline";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              type="button"
+              size="sm"
+              variant="outline"
               onClick={() => autoTranslate('requirements')}
               disabled={isTranslating || (!requirements.en && !requirements.es && !requirements.fr && !requirements.pt && !requirements.ar)}
               className="flex items-center gap-1";
@@ -510,30 +401,29 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
                 />;
               </TabsContent>;
             ))}
-<<<<<<< HEAD
           </Tabs>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="space-y-1&quot;>
-            <label htmlFor=&quot;budget" className="text-lg font-medium&quot;>
+          <div className="space-y-1">
+            <label htmlFor="budget" className="text-lg font-medium">
               {t('jobs.budget')}
             </label>
             <Input
-              id=&quot;budget&quot;
+              id="budget"
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
-              placeholder=&quot;$1000 - $2000"
+              placeholder="$1000 - $2000"
               className="w-full"
             />
           </div>
-          <div className="space-y-1&quot;>
-            <label htmlFor=&quot;deadline" className="text-lg font-medium&quot;>
+          <div className="space-y-1">
+            <label htmlFor="deadline" className="text-lg font-medium">
               {t('jobs.deadline')}
             </label>
             <Input
-              id=&quot;deadline&quot;
-              type=&quot;date"
+              id="deadline"
+              type="date"
               value={deadline}
               onChange={(e) => setDeadline(e.target.value)}
               className="w-full"
@@ -542,45 +432,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         </div>
       </div>
       
-      <div className="pt-4&quot;>
+      <div className="pt-4">
         <Button
-          type=&quot;submit"
+          type="submit"
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
-=======
-          </Tabs>;
-        </div>;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <div className="space-y-1">;
-            <label htmlFor="budget" className="text-lg font-medium">;
-              {t('jobs.budget')}
-            </label>;
-            <Input;
-              id="budget";
-              value={budget}
-              onChange={(e) => setBudget(e.target.value)}
-              placeholder="$1000 - $2000";
-              className="w-full";
-            />;
-          </div>;
-          <div className="space-y-1">;
-            <label htmlFor="deadline" className="text-lg font-medium">;
-              {t('jobs.deadline')}
-            </label>;
-            <Input;
-              id="deadline";
-              type="date";
-              value={deadline}
-              onChange={(e) => setDeadline(e.target.value)}
-              className="w-full";
-            />;
-          </div>;
-        </div>;
-      </div>;
-      <div className="pt-4">;
-        <Button;
-          type="submit";
-          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           disabled={isSubmitting || isTranslating}
         >;
           {isSubmitting ? (;

@@ -5,7 +5,6 @@ import { toast } from '@/hooks/use-toast',;
 interface SocialShareButtonsProps {;
   title: string;
 }
-<<<<<<< HEAD
 
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   const shareUrl =
@@ -36,23 +35,15 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   },
 
   const buttons = [
-<<<<<<< HEAD
     { icon: <Twitter className="h-4 w-4" />, label: 'Twitter', onClick: shareToTwitter },
     { icon: <Facebook className="h-4 w-4" />, label: 'Facebook', onClick: shareToFacebook },
     { icon: <Linkedin className="h-4 w-4" />, label: 'LinkedIn', onClick: shareToLinkedIn },
     { icon: <LinkIcon className="h-4 w-4" />, label: 'Copy Link', onClick: copyLink }],
-=======
-    { icon: <Twitter className=&quot;h-4 w-4&quot; />, label: 'Twitter', onClick: shareToTwitter },
-    { icon: <Facebook className=&quot;h-4 w-4&quot; />, label: 'Facebook', onClick: shareToFacebook },
-    { icon: <Linkedin className=&quot;h-4 w-4&quot; />, label: 'LinkedIn', onClick: shareToLinkedIn },
-    { icon: <LinkIcon className=&quot;h-4 w-4&quot; />, label: 'Copy Link', onClick: copyLink }];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
-    <div className=&quot;mt-12 flex flex-wrap gap-2&quot;>
+    <div className="mt-12 flex flex-wrap gap-2">
       {buttons.map((btn) => (
-        <Button key={btn.label} variant=&quot;outline&quot; size=&quot;sm&quot; onClick={btn.onClick} aria-label={btn.label}>
-=======
+        <Button key={btn.label} variant="outline" size="sm" onClick={btn.onClick} aria-label={btn.label}>
 ;
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
   const shareUrl =;
@@ -86,7 +77,6 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
     <div className="mt-12 flex flex-wrap gap-2">;
       {buttons.map((btn) => (;
         <Button key={btn.label} variant="outline" size="sm" onClick={btn.onClick} aria-label={btn.label}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           {btn.icon}
           <span>{btn.label}</span>;
         </Button>;

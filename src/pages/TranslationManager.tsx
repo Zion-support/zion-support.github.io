@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -15,24 +13,6 @@ import { useIsMobile } from "@/hooks/use-mobile",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
 import { useTranslationService } from "@/hooks/useTranslationService",
 import {logErrorToProduction} from '@/utils/productionLogger',
-=======
-import React, { useState, useEffect } from 'react';
-import { Header } from &quot;@/components/Header&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { Card, CardContent, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Textarea } from &quot;@/components/ui/textarea&quot;;
-import { toast } from &quot;@/components/ui/use-toast&quot;;
-import { useTranslation } from &quot;react-i18next&quot;;
-import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
-import { useIsMobile } from &quot;@/hooks/use-mobile&quot;;
-import { useLanguage, SupportedLanguage } from &quot;@/context/LanguageContext&quot;;
-import { useTranslationService } from &quot;@/hooks/useTranslationService&quot;;
-import {logErrorToProduction} from '@/utils/productionLogger';
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export default function TranslationManager() {
 
   const { t, i18n } = useTranslation(),
@@ -40,7 +20,6 @@ export default function TranslationManager() {
   const { supportedLanguages } = useLanguage(),
   const { translateContent, isTranslating } = useTranslationService(),
   
-<<<<<<< HEAD
   const [selectedNamespace, setSelectedNamespace] = useState("translation"),
   const [searchQuery, setSearchQuery] = useState(""),
   const [translations, setTranslations] = useState<Record<string any>>({}),
@@ -48,15 +27,6 @@ export default function TranslationManager() {
   const [editingKey, setEditingKey] = useState<string | null>(null),
   const [editedTranslations, setEditedTranslations] = useState<Record<string Record<SupportedLanguage string>>>({}),
   const [isSaving, setIsSaving] = useState(false),
-=======
-  const [selectedNamespace, setSelectedNamespace] = useState(&quot;translation&quot;);
-  const [searchQuery, setSearchQuery] = useState("&quot;);
-  const [translations, setTranslations] = useState<Record<string, any>>({});
-  const [filteredKeys, setFilteredKeys] = useState<string[]>([]);
-  const [editingKey, setEditingKey] = useState<string | null>(null);
-  const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
-  const [isSaving, setIsSaving] = useState(false);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Simulated translation data - in a real app, this would come from your backend
   useEffect(() => {
@@ -74,7 +44,6 @@ export default function TranslationManager() {
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
             } else {
               acc[`${pre}${key}`] = obj[key]
-=======
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -117,7 +86,6 @@ export default function TranslationManager() {;
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
             } else {;
               acc[`${pre}${key}`] = obj[key];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             }
             return acc;
           }, {} as Record<string string>);
@@ -182,7 +150,6 @@ export default function TranslationManager() {;
         if (!updatedTranslations[lang.code]) {;
           updatedTranslations[lang.code] = {}
         }
-<<<<<<< HEAD
         updatedTranslations[lang.code][key] = editedTranslations[key]?.[lang.code] || ''
       }),
       
@@ -191,17 +158,10 @@ export default function TranslationManager() {;
       setIsSaving(false),
       
       toast({
-<<<<<<< HEAD
         title: t("translation.saved"),
         description: t("translation.changes_saved")})
     }, 1000)
   },
-=======
-        title: t(&quot;translation.saved&quot;),
-        description: t(&quot;translation.changes_saved&quot;)});
-    }, 1000);
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   const handleTranslateKey = async (key: string) => {
     // Find first non-empty translation to use as source
@@ -220,13 +180,8 @@ export default function TranslationManager() {;
       toast({
         title: t('translation.no_content'),
         description: t('translation.add_content_first'),
-<<<<<<< HEAD
         variant: "destructive"}),
       return
-=======
-        variant: &quot;destructive&quot;});
-      return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     try {
@@ -240,13 +195,8 @@ export default function TranslationManager() {;
         toast({
           title: t('translation.translation_failed'),
           description: error,
-<<<<<<< HEAD
           variant: "destructive"}),
         return
-=======
-          variant: &quot;destructive&quot;});
-        return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
       
       // Update edited translations with auto-translated content
@@ -263,12 +213,7 @@ export default function TranslationManager() {;
       toast({
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),
-<<<<<<< HEAD
         variant: "destructive"})
-=======
-        variant: &quot;destructive"});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
         updatedTranslations[lang.code][key] = editedTranslations[key]?.[lang.code] || '';
       }),;
       setTranslations(updatedTranslations),;
@@ -327,7 +272,6 @@ export default function TranslationManager() {;
         title: t('translation.translation_failed'),;
         description: error instanceof Error ? error.message : t('translation.unknown_error'),;
         variant: "destructive"});
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const handleCancel = () => {;
@@ -362,54 +306,29 @@ export default function TranslationManager() {;
           <CardContent>;
             <div className="space-y-6">;
               {/* Search and filter */}
-<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4">
                 <div className="relative flex-1">
-                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground&quot; />
+                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                   <Input
-                    type=&quot;search"
-                    className="pl-8&quot;
+                    type="search"
+                    className="pl-8"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
                 </div>
                 <Tabs 
-                  defaultValue=&quot;translation" 
+                  defaultValue="translation" 
                   value={selectedNamespace}
                   onValueChange={(value) => setSelectedNamespace(value)}
-                  className="w-full sm:w-auto&quot;
+                  className="w-full sm:w-auto"
                 >
                   <TabsList>
-                    <TabsTrigger value=&quot;translation&quot;>General</TabsTrigger>
-                    <TabsTrigger value=&quot;admin">Admin</TabsTrigger>
+                    <TabsTrigger value="translation">General</TabsTrigger>
+                    <TabsTrigger value="admin">Admin</TabsTrigger>
                   </TabsList>
                 </Tabs>
               </div>
               
-=======
-              <div className="flex flex-col sm:flex-row gap-4">;
-                <div className="relative flex-1">;
-                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />;
-                  <Input;
-                    type="search";
-                    className="pl-8";
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />;
-                </div>;
-                <Tabs;
-                  defaultValue="translation";
-                  value={selectedNamespace}
-                  onValueChange={(value) => setSelectedNamespace(value)}
-                  className="w-full sm:w-auto";
-                >;
-                  <TabsList>;
-                    <TabsTrigger value="translation">General</TabsTrigger>;
-                    <TabsTrigger value="admin">Admin</TabsTrigger>;
-                  </TabsList>;
-                </Tabs>;
-              </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               {/* Translations table */}
               <div className="border rounded-md">;
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">;
@@ -452,17 +371,10 @@ export default function TranslationManager() {;
                                   )}
                                 </div>;
                               ))}
-<<<<<<< HEAD
                             </div>
-                            <div className="flex gap-2 mt-4&quot;>
+                            <div className="flex gap-2 mt-4">
                               <Button 
-                                size=&quot;sm" 
-=======
-                            </div>;
-                            <div className="flex gap-2 mt-4">;
-                              <Button;
-                                size="sm";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                                size="sm" 
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >;
@@ -470,45 +382,24 @@ export default function TranslationManager() {;
                                   <>;
                                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                                     {t('general.saving')}
-<<<<<<< HEAD
                                   </>
                                 ) : (
                                   <>
-                                    <Check className="mr-2 h-4 w-4&quot; />
-=======
-                                  </>;
-                                ) : (;
-                                  <>;
-                                    <Check className="mr-2 h-4 w-4" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                                    <Check className="mr-2 h-4 w-4" />
                                     {t('general.save')}
                                   </>;
                                 )}
-<<<<<<< HEAD
                               </Button>
                               <Button 
-                                size=&quot;sm&quot; 
-                                variant=&quot;outline&quot; 
-=======
-                              </Button>;
-                              <Button;
-                                size="sm";
-                                variant="outline";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                                size="sm" 
+                                variant="outline" 
                                 onClick={handleCancel}
                               >;
                                 {t('general.cancel')}
-<<<<<<< HEAD
                               </Button>
                               <Button
-                                size=&quot;sm&quot;
-                                variant=&quot;secondary"
-=======
-                              </Button>;
-                              <Button;
-                                size="sm";
-                                variant="secondary";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                                size="sm"
+                                variant="secondary"
                                 onClick={() => handleTranslateKey(key)}
                                 disabled={isTranslating}
                               >;
@@ -544,19 +435,11 @@ export default function TranslationManager() {;
                             </div>;
                           </div>;
                         )}
-<<<<<<< HEAD
-                        <div className="p-3 flex items-center justify-end&quot;>
+                        <div className="p-3 flex items-center justify-end">
                           {editingKey === key ? null : (
                             <Button
-                              size=&quot;sm&quot;
-                              variant=&quot;outline"
-=======
-                        <div className="p-3 flex items-center justify-end">;
-                          {editingKey === key ? null : (;
-                            <Button;
-                              size="sm";
-                              variant="outline";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                              size="sm"
+                              variant="outline"
                               onClick={() => handleEdit(key)}
                             >;
                               {t('translation.edit')}

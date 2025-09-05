@@ -26,7 +26,6 @@ export const useNotifications = (): NotificationContextType => {;
   if (!context) {;
     throw new Error('useNotifications must be used within a NotificationProvider');
   }
-<<<<<<< HEAD
   return context
 },
 
@@ -50,14 +49,8 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             filter: `user_id=eq.${user.id}`
           },
           (payload) => {
-<<<<<<< HEAD
             // // // console.log('Notification change received:', payload),
             notificationOps.fetchNotifications()
-=======
-            // console.log('Notification change received:', payload);
-            notificationOps.fetchNotifications();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
   return context;
 },;
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {;
@@ -80,7 +73,6 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
           (payload) => {;
             // // // console.log('Notification change received:', payload),;
             notificationOps.fetchNotifications();
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           }
         );
         .subscribe(),;

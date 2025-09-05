@@ -1,40 +1,32 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-=======
-import React from &quot;react&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function SharedInbox() {
   // Mock messages
   const messages = [
     {
-      id: &quot;msg-1&quot;,
-      from: &quot;John Smith&quot;,
-      subject: &quot;Interview Scheduled&quot;,
-      preview: &quot;Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.&quot;,
-      timestamp: &quot;2h ago&quot;,
+      id: "msg-1",
+      from: "John Smith",
+      subject: "Interview Scheduled",
+      preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
+      timestamp: "2h ago",
       unread: true
     },
     {
-      id: &quot;msg-2&quot;,
-      from: &quot;Talent Support&quot;,
-      subject: &quot;New talent matches&quot;,
-      preview: &quot;We've found 5 new candidates that match your recent job posting for UI/UX Designer.&quot;,
-      timestamp: &quot;Yesterday&quot;,
+      id: "msg-2",
+      from: "Talent Support",
+      subject: "New talent matches",
+      preview: "We've found 5 new candidates that match your recent job posting for UI/UX Designer.",
+      timestamp: "Yesterday",
       unread: false
     },
     {
-      id: &quot;msg-3&quot;,
-      from: &quot;Sarah Wilson&quot;,
-      subject: &quot;Contract approved&quot;,
-      preview: &quot;The contract with freelancer Michael Chen has been approved and signed.&quot;,
-      timestamp: &quot;2d ago&quot;,
+      id: "msg-3",
+      from: "Sarah Wilson",
+      subject: "Contract approved",
+      preview: "The contract with freelancer Michael Chen has been approved and signed.",
+      timestamp: "2d ago",
       unread: false
     }
   ],
@@ -42,51 +34,45 @@ export function SharedInbox() {
   return (
     <Card>
       <CardHeader>
-        <div className=&quot;flex items-center justify-between&quot;>
+        <div className="flex items-center justify-between">
           <div>
             <CardTitle>Shared Inbox</CardTitle>
             <CardDescription>Team messages and notifications</CardDescription>
           </div>
-          <Badge className=&quot;bg-blue-500&quot;>{messages.filter(m => m.unread).length} New</Badge>
+          <Badge className="bg-blue-500">{messages.filter(m => m.unread).length} New</Badge>
         </div>
       </CardHeader>
-      <CardContent className=&quot;p-0&quot;>
-        <div className=&quot;divide-y divide-border&quot;>
+      <CardContent className="p-0">
+        <div className="divide-y divide-border">
           {messages.map((message) => (
             <div 
               key={message.id} 
               className={`flex flex-col p-4 hover:bg-muted/50 cursor-pointer ${message.unread ? 'bg-blue-50 dark:bg-blue-900/10' : ''}`}
             >
-              <div className=&quot;flex items-center justify-between&quot;>
+              <div className="flex items-center justify-between">
                 <p className={`font-medium ${message.unread ? 'font-semibold' : ''}`}>{message.from}</p>
-                <span className=&quot;text-xs text-muted-foreground&quot;>{message.timestamp}</span>
+                <span className="text-xs text-muted-foreground">{message.timestamp}</span>
               </div>
-              <p className=&quot;text-sm font-medium mt-1&quot;>{message.subject}</p>
-              <p className=&quot;text-sm text-muted-foreground mt-1 truncate&quot;>{message.preview}</p>
+              <p className="text-sm font-medium mt-1">{message.subject}</p>
+              <p className="text-sm text-muted-foreground mt-1 truncate">{message.preview}</p>
             </div>
           ))}
         </div>
         
         {messages.length === 0 && (
-          <div className=&quot;p-4 text-center text-muted-foreground&quot;>
+          <div className="p-4 text-center text-muted-foreground">
             No new messages
           </div>
         )}
         
-<<<<<<< HEAD
         <div className="p-3 text-center border-t border-border">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
-=======
-        <div className=&quot;p-3 text-center border-t border-border&quot;>
-          <button className=&quot;text-sm text-blue-500 font-medium hover:text-blue-700&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             View All Messages
           </button>
         </div>
       </CardContent>
     </Card>
   )
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -159,6 +145,5 @@ export function SharedInbox() {;
       </CardContent>;
     </Card>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

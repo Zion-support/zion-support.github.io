@@ -51,13 +51,12 @@ export const PwaInstallButton: React.FC = () => {;
       toast('Installation failed', { description: 'Please try again later.' }),;
       logErrorToProduction('PWA install error:', { data: err });
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;fixed bottom-4 right-4 z-50&quot;>
+    <div className="fixed bottom-4 right-4 z-50">
       <Button onClick={onClick} disabled={isInstalling}>
-        {isInstalling && <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />}
+        {isInstalling && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
         Install App
       </Button>
     </div>
@@ -65,16 +64,3 @@ export const PwaInstallButton: React.FC = () => {;
 },
 
 export default PwaInstallButton,
-=======
-  },;
-  return (;
-    <div className="fixed bottom-4 right-4 z-50">;
-      <Button onClick={onClick} disabled={isInstalling}>;
-        {isInstalling && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-        Install App;
-      </Button>;
-    </div>;
-  );
-};
-export default PwaInstallButton;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

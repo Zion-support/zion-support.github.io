@@ -13,7 +13,6 @@ export function useEducation() {;
       setError('You must be logged in to add education'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -36,16 +35,11 @@ export function useEducation() {;
       
       if (error) throw error,
       
-<<<<<<< HEAD
       return showSuccessToast("Education added", "Your education has been added to your resume")
-=======
-      return showSuccessToast(&quot;Education added&quot;, &quot;Your education has been added to your resume&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not add education')
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -70,7 +64,6 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not add education');
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {;
@@ -78,7 +71,6 @@ export function useEducation() {;
       setError('You must be logged in to update education'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -101,16 +93,11 @@ export function useEducation() {;
       
       if (error) throw error,
       
-<<<<<<< HEAD
       return showSuccessToast("Education updated", "Your education has been updated")
-=======
-      return showSuccessToast(&quot;Education updated&quot;, &quot;Your education has been updated&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not update education')
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -135,7 +122,6 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not update education');
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const deleteEducation = async (eduId: string): Promise<boolean> => {;
@@ -143,7 +129,6 @@ export function useEducation() {;
       setError('You must be logged in to delete education'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -156,16 +141,11 @@ export function useEducation() {;
       
       if (error) throw error,
       
-<<<<<<< HEAD
       return showSuccessToast("Education deleted", "Your education has been removed from your resume")
-=======
-      return showSuccessToast(&quot;Education deleted&quot;, &quot;Your education has been removed from your resume&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete education')
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -180,7 +160,6 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not delete education');
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   return {;

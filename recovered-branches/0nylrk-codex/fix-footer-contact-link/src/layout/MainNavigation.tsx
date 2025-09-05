@@ -1,17 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Link, useLocation } from "react-router-dom",
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare } from "lucide-react",
-=======
-import { Link, useLocation } from &quot;react-router-dom&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { MessageSquare } from &quot;lucide-react&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
@@ -25,82 +16,67 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   
   const links = [
     {
-      name: &quot;Home&quot;,
-      href: &quot;/&quot;,
-      matches: (path: string) => path === &quot;/&quot;
+      name: "Home",
+      href: "/",
+      matches: (path: string) => path === "/"
     },
     {
-      name: &quot;Marketplace&quot;,
-      href: &quot;/marketplace&quot;,
-      matches: (path: string) => path.startsWith(&quot;/marketplace&quot;)
+      name: "Marketplace",
+      href: "/marketplace",
+      matches: (path: string) => path.startsWith("/marketplace")
     },
     {
-      name: &quot;Categories&quot;,
-      href: &quot;/categories&quot;,
-      matches: (path: string) => path.startsWith(&quot;/categories&quot;)
+      name: "Categories",
+      href: "/categories",
+      matches: (path: string) => path.startsWith("/categories")
     },
     {
-      name: &quot;Talent&quot;,
-      href: &quot;/talent&quot;,
-      matches: (path: string) => path.startsWith(&quot;/talent&quot;) && !path.includes(&quot;/talent-dashboard&quot;)
+      name: "Talent",
+      href: "/talent",
+      matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")
     },
     {
-      name: &quot;Equipment&quot;,
-      href: &quot;/equipment&quot;,
-      matches: (path: string) => path.startsWith(&quot;/equipment&quot;)
+      name: "Equipment",
+      href: "/equipment",
+      matches: (path: string) => path.startsWith("/equipment")
     },
     {
-      name: &quot;Community&quot;,
-      href: &quot;/community&quot;,
-      matches: (path: string) => path.startsWith(&quot;/community&quot;) || path.startsWith(&quot;/forum&quot;)
+      name: "Community",
+      href: "/community",
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     }
   ],
   
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
-<<<<<<< HEAD
       name: "Dashboard",
       href: "/dashboard",
       matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard"
     })
-=======
-      name: &quot;Dashboard&quot;,
-      href: &quot;/dashboard&quot;,
-      matches: (path: string) => path === &quot;/dashboard&quot; || path === &quot;/client-dashboard&quot; || path === &quot;/talent-dashboard&quot;
-    });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
   
   // Add admin-only links
   if (isAdmin) {
     links.push({
-<<<<<<< HEAD
       name: "Analytics",
       href: "/analytics",
       matches: (path: string) => path.startsWith("/analytics")
     })
-=======
-      name: &quot;Analytics&quot;,
-      href: &quot;/analytics&quot;,
-      matches: (path: string) => path.startsWith(&quot;/analytics&quot;)
-    });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
   
   return (
-    <nav className={cn(&quot;ml-6 hidden md:flex&quot;, className)}>
-      <ul className=&quot;flex items-center gap-1&quot;>
+    <nav className={cn("ml-6 hidden md:flex", className)}>
+      <ul className="flex items-center gap-1">
         {links.map((link) => (
           <li key={link.name}>
             <Link
               to={link.href}
               className={cn(
-                &quot;inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors&quot;,
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
                 link.matches(location.pathname)
-                  ? &quot;bg-zion-purple/20 text-zion-cyan&quot;
-                  : &quot;text-white hover:bg-zion-purple/10 hover:text-zion-cyan&quot;
-=======
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 import { Link, useLocation } from "react-router-dom",;
 import { cn } from "@/lib/utils",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -177,7 +153,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 link.matches(location.pathname);
                   ? "bg-zion-purple/20 text-zion-cyan";
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             >;
               {link.name}
@@ -186,39 +161,21 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         ))}
 ;
         {/* Messages link with unread counter */}
-<<<<<<< HEAD
         {isAuthenticated && (
           <li>
             <Link
-              to=&quot;/messages&quot;
+              to="/messages"
               className={cn(
-                &quot;inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative&quot;,
-                location.pathname === &quot;/messages&quot; || location.pathname === &quot;/inbox&quot;
-                  ? &quot;bg-zion-purple/20 text-zion-cyan&quot;
-                  : &quot;text-white hover:bg-zion-purple/10 hover:text-zion-cyan&quot;
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
+                location.pathname === "/messages" || location.pathname === "/inbox"
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}
             >
-              <MessageSquare className=&quot;w-4 h-4 mr-1&quot; />
+              <MessageSquare className="w-4 h-4 mr-1" />
               Messages
               {unreadCount > 0 && (
-                <span className=&quot;absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center&quot;>
-=======
-        {isAuthenticated && (;
-          <li>;
-            <Link;
-              to="/messages";
-              className={cn(;
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
-                location.pathname === "/messages" || location.pathname === "/inbox";
-                  ? "bg-zion-purple/20 text-zion-cyan";
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
-              )}
-            >;
-              <MessageSquare className="w-4 h-4 mr-1" />;
-              Messages;
-              {unreadCount > 0 && (;
-                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {unreadCount}
                 </span>;
               )}

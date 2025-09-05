@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 import React from 'react',
 import { render, RenderOptions } from '@testing-library/react',
 import { ThemeProvider } from 'next-themes',
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ThemeProvider attribute=&quot;class&quot; defaultTheme=&quot;light&quot;>
-=======
-import React from 'react',;
-import { render, RenderOptions } from '@testing-library/react',;
-import { ThemeProvider } from 'next-themes',;
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {;
-  return (;
-    <ThemeProvider attribute="class" defaultTheme="light">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+    <ThemeProvider attribute="class" defaultTheme="light">
       {children}
     </ThemeProvider>;
   );

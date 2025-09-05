@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
-=======
-import React from &quot;react&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { HelpCategory } from &quot;./types&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface HelpCategoryListProps {
   categories: HelpCategory[],
   onCategorySelect: (categoryId: string) => void,
@@ -33,9 +25,9 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
 
   if (filteredCategories.length === 0) {
     return (
-      <div className=&quot;text-center py-8&quot;>
-        <h3 className=&quot;text-lg font-medium mb-2&quot;>No results found</h3>
-        <p className=&quot;text-zion-slate-light&quot;>
+      <div className="text-center py-8">
+        <h3 className="text-lg font-medium mb-2">No results found</h3>
+        <p className="text-zion-slate-light">
           Try adjusting your search query or browse all categories.
         </p>
       </div>
@@ -43,27 +35,26 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
   }
 
   return (
-    <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map(category => (
         <Card
           key={category.id}
-          className=&quot;cursor-pointer hover:border-zion-purple/50 transition-colors&quot;
+          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
           onClick={() => onCategorySelect(category.id)}
         >
-          <CardHeader className=&quot;pb-2&quot;>
-            <div className=&quot;w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3&quot;>
+          <CardHeader className="pb-2">
+            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">
               {category.icon}
             </div>
             <CardTitle>{category.name}</CardTitle>
             <CardDescription>{category.description}</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className=&quot;text-sm text-zion-slate-light&quot;>
+            <p className="text-sm text-zion-slate-light">
               {category.articles.length} articles
             </p>
           </CardContent>
         </Card>
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HelpCategory } from "./types",;
@@ -119,7 +110,6 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
             </p>;
           </CardContent>;
         </Card>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       ))}
     </div>;
   );

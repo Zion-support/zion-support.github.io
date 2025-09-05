@@ -97,105 +97,60 @@ const UltraFuturisticBackground: React.FC = () => {;
     return () => {;
       window.removeEventListener('resize', handleResize);
     }
-<<<<<<< HEAD
   }, []),
 
   return (
-    <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
-=======
-  }, []),;
-  return (;
-    <div className="fixed inset-0 -z-10 overflow-hidden">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+    <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Canvas Background */}
       <canvas;
         ref={canvasRef}
-<<<<<<< HEAD
-        className=&quot;absolute inset-0 w-full h-full&quot;
-=======
-        className="absolute inset-0 w-full h-full";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        className="absolute inset-0 w-full h-full"
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
       />;
       {/* Quantum Grid */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0&quot;>
-        <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20&quot; />
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
       </div>
 
       {/* Floating Geometric Shapes */}
-      <div className=&quot;absolute inset-0&quot;>
+      <div className="absolute inset-0">
         {/* Hexagon */}
         <motion.div
-          className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400/30&quot;
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
           style={{
             clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
-=======
-      <div className="absolute inset-0">;
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />;
-      </div>;
-      {/* Floating Geometric Shapes */}
-      <div className="absolute inset-0">;
-        {/* Hexagon */}
-        <motion.div;
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30";
-          style={{;
-            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           }}
           animate={{;
             rotate: [0, 360],;
             scale: [1, 1.2, 1],;
             opacity: [0.3, 0.6, 0.3];
           }}
-<<<<<<< HEAD
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: &quot;linear&quot;
-=======
-          transition={{;
-            duration: 20,;
-            repeat: Infinity,;
-            ease: "linear";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "linear"
           }}
         />;
         {/* Triangle */}
-<<<<<<< HEAD
         <motion.div
-          className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400/30&quot;
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
           style={{
             clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
-=======
-        <motion.div;
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30";
-          style={{;
-            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           }}
           animate={{;
             rotate: [360, 0],;
             scale: [1, 1.3, 1],;
             opacity: [0.3, 0.7, 0.3];
           }}
-<<<<<<< HEAD
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: &quot;linear&quot;
-=======
-          transition={{;
-            duration: 15,;
-            repeat: Infinity,;
-            ease: "linear";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "linear"
           }}
         />;
         {/* Circle */}
-<<<<<<< HEAD
         <motion.div
-          className=&quot;absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full&quot;
+          className="absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full"
           animate={{
             scale: [1, 1.5, 1],
             opacity: [0.2, 0.8, 0.2]
@@ -203,25 +158,12 @@ const UltraFuturisticBackground: React.FC = () => {;
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
-=======
-        <motion.div;
-          className="absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full";
-          animate={{;
-            scale: [1, 1.5, 1],;
-            opacity: [0.2, 0.8, 0.2];
-          }}
-          transition={{;
-            duration: 12,;
-            repeat: Infinity,;
-            ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "easeInOut"
           }}
         />;
         {/* Square */}
-<<<<<<< HEAD
         <motion.div
-          className=&quot;absolute bottom-20 right-20 w-28 h-28 border border-green-400/30&quot;
+          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/30"
           animate={{
             rotate: [0, 180, 360],
             scale: [1, 1.1, 1],
@@ -230,196 +172,106 @@ const UltraFuturisticBackground: React.FC = () => {;
           transition={{
             duration: 18,
             repeat: Infinity,
-            ease: &quot;linear&quot;
-=======
-        <motion.div;
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/30";
-          animate={{;
-            rotate: [0, 180, 360],;
-            scale: [1, 1.1, 1],;
-            opacity: [0.3, 0.6, 0.3];
-          }}
-          transition={{;
-            duration: 18,;
-            repeat: Infinity,;
-            ease: "linear";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "linear"
           }}
         />;
       </div>;
       {/* Energy Orbs */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0&quot;>
+      <div className="absolute inset-0">
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className=&quot;absolute w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm&quot;
+            className="absolute w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm"
             style={{
               left: `${20 + (i * 10)}%`,
               top: `${30 + (i * 5)}%`
-=======
-      <div className="absolute inset-0">;
-        {[...Array(8)].map((_, i) => (;
-          <motion.div;
-            key={i}
-            className="absolute w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm";
-            style={{;
-              left: `${20 + (i * 10)}%`,;
-              top: `${30 + (i * 5)}%`;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             }}
             animate={{;
               scale: [0.5, 2, 0.5],;
               opacity: [0.3, 1, 0.3],;
               y: [0, -20, 0];
             }}
-<<<<<<< HEAD
             transition={{
               duration: 3 + i * 0.5,
               repeat: Infinity,
-              ease: &quot;easeInOut&quot;,
+              ease: "easeInOut",
               delay: i * 0.3
-=======
-            transition={{;
-              duration: 3 + i * 0.5,;
-              repeat: Infinity,;
-              ease: "easeInOut",;
-              delay: i * 0.3;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             }}
           />;
         ))}
       </div>;
       {/* Quantum Wave Effects */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0&quot;>
+      <div className="absolute inset-0">
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className=&quot;absolute w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent&quot;
+            className="absolute w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent"
             style={{
               top: `${20 + (i * 15)}%`
-=======
-      <div className="absolute inset-0">;
-        {[...Array(5)].map((_, i) => (;
-          <motion.div;
-            key={i}
-            className="absolute w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent";
-            style={{;
-              top: `${20 + (i * 15)}%`;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             }}
             animate={{;
               x: ['-100%100%'],;
               opacity: [0, 1, 0];
             }}
-<<<<<<< HEAD
             transition={{
               duration: 8 + i * 2,
               repeat: Infinity,
-              ease: &quot;linear&quot;,
+              ease: "linear",
               delay: i * 1.5
-=======
-            transition={{;
-              duration: 8 + i * 2,;
-              repeat: Infinity,;
-              ease: "linear",;
-              delay: i * 1.5;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             }}
           />;
         ))}
       </div>;
       {/* Neon Glow Effects */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0&quot;>
-        <div className=&quot;absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse&quot; />
-        <div className=&quot;absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000&quot; />
-        <div className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500&quot; />
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500" />
       </div>
 
       {/* Data Stream Effect */}
-      <div className=&quot;absolute inset-0&quot;>
+      <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className=&quot;absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent&quot;
+            className="absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent"
             style={{
               left: `${Math.random() * 100}%`,
               top: '-2rem'
-=======
-      <div className="absolute inset-0">;
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse" />;
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000" />;
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500" />;
-      </div>;
-      {/* Data Stream Effect */}
-      <div className="absolute inset-0">;
-        {[...Array(20)].map((_, i) => (;
-          <motion.div;
-            key={i}
-            className="absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent";
-            style={{;
-              left: `${Math.random() * 100}%`,;
-              top: '-2rem';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             }}
             animate={{;
               y: ['0vh100vh'],;
               opacity: [0, 1, 0];
             }}
-<<<<<<< HEAD
             transition={{
               duration: 4 + Math.random() * 3,
               repeat: Infinity,
-              ease: &quot;linear&quot;,
+              ease: "linear",
               delay: Math.random() * 5
-=======
-            transition={{;
-              duration: 4 + Math.random() * 3,;
-              repeat: Infinity,;
-              ease: "linear",;
-              delay: Math.random() * 5;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             }}
           />;
         ))}
       </div>;
       {/* Quantum Entanglement Lines */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0&quot;>
-        <svg className=&quot;w-full h-full&quot;>
+      <div className="absolute inset-0">
+        <svg className="w-full h-full">
           <defs>
-            <linearGradient id=&quot;quantumGradient&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;100%&quot;>
-              <stop offset=&quot;0%&quot; stopColor=&quot;rgba(0,255,255,0.3)&quot; />
-              <stop offset=&quot;50%&quot; stopColor=&quot;rgba(255,0,255,0.3)&quot; />
-              <stop offset=&quot;100%&quot; stopColor=&quot;rgba(0,255,255,0.3)&quot; />
+            <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="rgba(0,255,255,0.3)" />
+              <stop offset="50%" stopColor="rgba(255,0,255,0.3)" />
+              <stop offset="100%" stopColor="rgba(0,255,255,0.3)" />
             </linearGradient>
           </defs>
           {[...Array(15)].map((_, i) => (
             <motion.line
-=======
-      <div className="absolute inset-0">;
-        <svg className="w-full h-full">;
-          <defs>;
-            <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">;
-              <stop offset="0%" stopColor="rgba(0,255,255,0.3)" />;
-              <stop offset="50%" stopColor="rgba(255,0,255,0.3)" />;
-              <stop offset="100%" stopColor="rgba(0,255,255,0.3)" />;
-            </linearGradient>;
-          </defs>;
-          {[...Array(15)].map((_, i) => (;
-            <motion.line;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               key={i}
               x1={Math.random() * 100}
               y1={Math.random() * 100}
               x2={Math.random() * 100}
               y2={Math.random() * 100}
-<<<<<<< HEAD
-              stroke=&quot;url(#quantumGradient)&quot;
-              strokeWidth=&quot;1&quot;
-              opacity=&quot;0.3&quot;
+              stroke="url(#quantumGradient)"
+              strokeWidth="1"
+              opacity="0.3"
               animate={{
                 opacity: [0.1, 0.5, 0.1],
                 strokeDasharray: [0, 100, 0]
@@ -427,20 +279,7 @@ const UltraFuturisticBackground: React.FC = () => {;
               transition={{
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
-                ease: &quot;easeInOut&quot;
-=======
-              stroke="url(#quantumGradient)";
-              strokeWidth="1";
-              opacity="0.3";
-              animate={{;
-                opacity: [0.1, 0.5, 0.1],;
-                strokeDasharray: [0, 100, 0];
-              }}
-              transition={{;
-                duration: 6 + i * 0.5,;
-                repeat: Infinity,;
-                ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                ease: "easeInOut"
               }}
             />;
           ))}

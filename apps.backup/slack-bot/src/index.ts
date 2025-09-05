@@ -64,24 +64,14 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   } catch (err: any) {;
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
   }
-<<<<<<< HEAD
 }),
 
 (async () => {
-<<<<<<< HEAD
   const port = Number(process.env.SLACK_PORT || 3001),
   await app.start(port),
   // eslint-disable-next-line no-console
   // // // console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })(),
-=======
-  const port = Number(process.env.SLACK_PORT || 3001);
-  await app.start(port);
-   
-  // console.log(`⚡️ Zion Slack bot running on port ${port}`);
-})();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 }),;
 (async () => {;
   const port = Number(process.env.SLACK_PORT || 3001),;
@@ -89,4 +79,3 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   // eslint-disable-next-line no-console;
   // // // console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

@@ -20,19 +20,12 @@ export function useAuthStatus() {;
       } else {;
         setSavedTalents(prev => prev.filter(id => id !== talentId));
       }
-<<<<<<< HEAD
     } else {
       // In a real app, we might show a login prompt
-<<<<<<< HEAD
       // // // console.log('User needs to log in to save talents')
-=======
-      // console.log('User needs to log in to save talents');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
     } else {;
       // In a real app, we might show a login prompt;
       // // // console.log('User needs to log in to save talents');
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   // For demo purposes, let's provide a login/logout toggle;

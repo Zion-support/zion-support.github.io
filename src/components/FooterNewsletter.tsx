@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef } from 'react',
 import { Input } from '@/components/ui/input',
 import { Button } from '@/components/ui/button',
@@ -25,17 +24,10 @@ export function FooterNewsletter(): React.ReactElement {
 
     const trimmedEmail = email.trim(),
     if (!EMAIL_REGEX.test(trimmedEmail)) {
-<<<<<<< HEAD
       setEmailError("Please enter a valid email address."),
       return
     } else {
       setEmailError("")
-=======
-      setEmailError(&quot;Please enter a valid email address.&quot;);
-      return;
-    } else {
-      setEmailError("&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 
     setIsSubmitting(true),
@@ -52,14 +44,9 @@ export function FooterNewsletter(): React.ReactElement {
 
       if (res.ok) {
         if (data.status === 'already_subscribed') {
-<<<<<<< HEAD
           toast.success(data.message || "You're already subscribed!", { id: `${uniqueToastIdBase}-already-subscribed` })
-=======
-          toast.success(data.message || &quot;You're already subscribed!&quot;, { id: `${uniqueToastIdBase}-already-subscribed` });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         } else {
           toast.success(data.message || 'Successfully subscribed to newsletter!', { id: `${uniqueToastIdBase}-success` })
-=======
 import React, { useState, useRef } from 'react',;
 import { Input } from '@/components/ui/input',;
 import { Button } from '@/components/ui/button',;
@@ -102,7 +89,6 @@ export function FooterNewsletter(): React.ReactElement {;
           toast.success(data.message || "You're already subscribed!", { id: `${uniqueToastIdBase}-already-subscribed` });
         } else {;
           toast.success(data.message || 'Successfully subscribed to newsletter!', { id: `${uniqueToastIdBase}-success` });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }
         setEmail(''),;
         // setEmailError(''), // Already cleared if regex passed;
@@ -118,80 +104,42 @@ export function FooterNewsletter(): React.ReactElement {;
     } finally {;
       setIsSubmitting(false);
     }
-<<<<<<< HEAD
   },
 
   return (
     <form
-      id=&quot;footer-newsletter-form&quot;
-      aria-label=&quot;Newsletter sign-up"
+      id="footer-newsletter-form"
+      aria-label="Newsletter sign-up"
       onSubmit={handleSubmit}
-      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2&quot;
+      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
     >
-      <label htmlFor=&quot;newsletter-email" className="sr-only&quot;>
+      <label htmlFor="newsletter-email" className="sr-only">
         Email address for newsletter subscription
       </label>
       <Input
-        type=&quot;email&quot;
-        id=&quot;newsletter-email&quot;
-        name=&quot;newsletterEmail&quot;
-        placeholder=&quot;Enter your email"
-        className="flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center&quot;
+        type="email"
+        id="newsletter-email"
+        name="newsletterEmail"
+        placeholder="Enter your email"
+        className="flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        autoComplete=&quot;email"
+        autoComplete="email"
         required
       />
-      {emailError && <p className="text-red-500 text-sm mt-1&quot;>{emailError}</p>}
+      {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input
-        type=&quot;text&quot;
+        type="text"
         value={honeypot}
         onChange={(e) => setHoneypot(e.target.value)}
         tabIndex={-1}
-        autoComplete=&quot;off&quot;
+        autoComplete="off"
         style={{ display: 'none' }}
       />
       <Button
-        type=&quot;submit&quot;
-        aria-label=&quot;Subscribe to newsletter"
-=======
-  };
-  return (;
-    <form;
-      id="footer-newsletter-form";
-      aria-label="Newsletter sign-up";
-      onSubmit={handleSubmit}
-      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2";
-    >;
-      <label htmlFor="newsletter-email" className="sr-only">;
-        Email address for newsletter subscription;
-      </label>;
-      <Input;
-        type="email";
-        id="newsletter-email";
-        name="newsletterEmail";
-        placeholder="Enter your email";
-        className="flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center";
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        autoComplete="email";
-        required;
-      />;
-      {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
-      {/* Honeypot field */}
-      <input;
-        type="text";
-        value={honeypot}
-        onChange={(e) => setHoneypot(e.target.value)}
-        tabIndex={-1}
-        autoComplete="off";
-        style={{ display: 'none' }}
-      />;
-      <Button;
-        type="submit";
-        aria-label="Subscribe to newsletter";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        type="submit"
+        aria-label="Subscribe to newsletter"
         disabled={isSubmitting}
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
       >;

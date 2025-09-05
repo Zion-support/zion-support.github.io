@@ -1,23 +1,13 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.131.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.20.0",
 import { corsHeaders } from "../_shared/cors.ts",
 // // // console.log("Track Referral function started!"),
-=======
-import { serve } from &quot;https://deno.land/std@0.131.0/http/server.ts&quot;;
-import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2.20.0&quot;;
-import { corsHeaders } from &quot;../_shared/cors.ts&quot;;
-
-// console.log(&quot;Track Referral function started!&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 serve(async (req) => {
   // Handle CORS pre-flight request
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })
-=======
 import { serve } from "https: //deno.land/std@0.131.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.20.0",;
 import { corsHeaders } from "../_shared/cors.ts",;
@@ -26,7 +16,6 @@ serve(async (req) => {;
   // Handle CORS pre-flight request;
   if (req.method === 'OPTIONS') {;
     return new Response('ok', { headers: corsHeaders });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   // Get request data;

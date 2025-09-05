@@ -23,25 +23,14 @@ type BuilderState = {;
 function uid() {;
   return Math.random().toString(36).slice(2);
 }
-<<<<<<< HEAD
 
 function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: boolean, onClick: () => void }) {
   return (
     <button onClick={onClick} className={`w-56 shrink-0 border rounded-md p-3 text-left bg-white/70 dark:bg-gray-900 ${isActive ? 'ring-2 ring-blue-500' : 'border-gray-200 dark:border-gray-800'}`}>
-      <div className=&quot;font-semibold text-sm line-clamp-2&quot;>{slide.title || 'Untitled'}</div>
-      <div className=&quot;text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap&quot;>{slide.content || '—'}</div>
+      <div className="font-semibold text-sm line-clamp-2">{slide.title || 'Untitled'}</div>
+      <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || '—'}</div>
     </button>
   )
-=======
-;
-function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: boolean, onClick: () => void }) {;
-  return (;
-    <button onClick={onClick} className={`w-56 shrink-0 border rounded-md p-3 text-left bg-white/70 dark:bg-gray-900 ${isActive ? 'ring-2 ring-blue-500' : 'border-gray-200 dark:border-gray-800'}`}>;
-      <div className="font-semibold text-sm line-clamp-2">{slide.title || 'Untitled'}</div>;
-      <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || '—'}</div>;
-    </button>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
@@ -159,7 +148,6 @@ export default function PitchGenerator() {;
     } finally {;
       setLoading(false);
     }
-<<<<<<< HEAD
   }, [slides, versionTag]),
 
   const updateActiveSlide = (updates: Partial<Slide>) => {
@@ -170,63 +158,31 @@ export default function PitchGenerator() {;
     if (!slide.chart) return null,
     const { type, data } = slide.chart,
     return (
-      <div className=&quot;mt-3&quot;>
-        <div className=&quot;text-xs text-gray-500 dark:text-gray-400&quot;>Chart preview: {type}</div>
-        <div className=&quot;flex gap-2 items-end h-24 mt-2&quot;>
+      <div className="mt-3">
+        <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
+        <div className="flex gap-2 items-end h-24 mt-2">
           {type === 'bar' && data.map((d) => (
-            <div key={d.label} className=&quot;bg-blue-500 w-6&quot; style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
+            <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
           ))}
           {type === 'funnel' && (
-            <div className=&quot;w-full&quot;>
-              <div className=&quot;flex flex-col gap-1&quot;>
+            <div className="w-full">
+              <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
-                  <div key={d.label} className=&quot;bg-purple-500 text-white text-xs px-2 py-1&quot; style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
-=======
-  }, [slides, versionTag]),;
-  const updateActiveSlide = (updates: Partial<Slide>) => {;
-    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)));
-  },;
-  const renderChartPreview = (slide: Slide) => {;
-    if (!slide.chart) return null,;
-    const { type, data } = slide.chart;
-    return (;
-      <div className="mt-3">;
-        <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>;
-        <div className="flex gap-2 items-end h-24 mt-2">;
-          {type === 'bar' && data.map((d) => (;
-            <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />;
-          ))}
-          {type === 'funnel' && (;
-            <div className="w-full">;
-              <div className="flex flex-col gap-1">;
-                {data.map((d, idx) => (;
-                  <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
                 ))}
               </div>;
             </div>;
           )}
-<<<<<<< HEAD
           {type === 'timeline' && (
-            <div className=&quot;text-xs grid grid-cols-4 gap-2 w-full&quot;>
+            <div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
-                <div key={d.label} className=&quot;border p-1 rounded&quot;>
-                  <div className=&quot;font-medium&quot;>{d.label}</div>
+                <div key={d.label} className="border p-1 rounded">
+                  <div className="font-medium">{d.label}</div>
                   <div>{d.value}</div>
                 </div>
-=======
-          {type === 'timeline' && (;
-            <div className="text-xs grid grid-cols-4 gap-2 w-full">;
-              {data.map((d) => (;
-                <div key={d.label} className="border p-1 rounded">;
-                  <div className="font-medium">{d.label}</div>;
-                  <div>{d.value}</div>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </div>;
           )}
-<<<<<<< HEAD
         </div>
       </div>
     )
@@ -237,28 +193,28 @@ export default function PitchGenerator() {;
       <Head>
         <title>Pitch Generator - Admin</title>
       </Head>
-      <div className=&quot;space-y-6&quot;>
-        <div className=&quot;flex items-center justify-between&quot;>
-          <h1 className=&quot;text-2xl font-semibold&quot;>Pitch Generator</h1>
-          <div className=&quot;flex gap-2&quot;>
-            <button onClick={buildDeck} disabled={loading} className=&quot;px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50&quot;>Generate Deck</button>
-            <button onClick={exportPdf} disabled={loading || slides.length === 0} className=&quot;px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50&quot;>Download PDF</button>
-            <button onClick={exportGoogleSlides} disabled={loading || slides.length === 0} className=&quot;px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50&quot;>Export to Google Slides</button>
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-semibold">Pitch Generator</h1>
+          <div className="flex gap-2">
+            <button onClick={buildDeck} disabled={loading} className="px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50">Generate Deck</button>
+            <button onClick={exportPdf} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50">Download PDF</button>
+            <button onClick={exportGoogleSlides} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50">Export to Google Slides</button>
           </div>
         </div>
 
-        <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-6&quot;>
-          <div className=&quot;lg:col-span-1 space-y-4&quot;>
-            <div className=&quot;border rounded-md p-4 bg-white/70 dark:bg-gray-900&quot;>
-              <div className=&quot;font-medium mb-2&quot;>Inputs</div>
-              <label className=&quot;block text-sm mb-1&quot;>Company mission</label>
-              <input value={builder.mission} onChange={(e) => setBuilder({ ...builder, mission: e.target.value })} className=&quot;w-full border rounded px-2 py-1 bg-transparent&quot; />
-              <label className=&quot;block text-sm mt-3 mb-1&quot;>Current funding stage</label>
-              <input value={builder.fundingStage} onChange={(e) => setBuilder({ ...builder, fundingStage: e.target.value })} className=&quot;w-full border rounded px-2 py-1 bg-transparent&quot; />
-              <label className=&quot;block text-sm mt-3 mb-1&quot;>Vision/goals</label>
-              <textarea value={builder.vision} onChange={(e) => setBuilder({ ...builder, vision: e.target.value })} className=&quot;w-full border rounded px-2 py-1 bg-transparent&quot; rows={3} />
-              <label className=&quot;block text-sm mt-3 mb-1&quot;>Round type</label>
-              <select value={builder.roundType} onChange={(e) => setBuilder({ ...builder, roundType: e.target.value as any })} className=&quot;w-full border rounded px-2 py-1 bg-transparent&quot;>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-1 space-y-4">
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="font-medium mb-2">Inputs</div>
+              <label className="block text-sm mb-1">Company mission</label>
+              <input value={builder.mission} onChange={(e) => setBuilder({ ...builder, mission: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+              <label className="block text-sm mt-3 mb-1">Current funding stage</label>
+              <input value={builder.fundingStage} onChange={(e) => setBuilder({ ...builder, fundingStage: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+              <label className="block text-sm mt-3 mb-1">Vision/goals</label>
+              <textarea value={builder.vision} onChange={(e) => setBuilder({ ...builder, vision: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" rows={3} />
+              <label className="block text-sm mt-3 mb-1">Round type</label>
+              <select value={builder.roundType} onChange={(e) => setBuilder({ ...builder, roundType: e.target.value as any })} className="w-full border rounded px-2 py-1 bg-transparent">
                 <option value="">Select</option>
                 <option>Seed</option>
                 <option>Series A</option>
@@ -295,71 +251,6 @@ export default function PitchGenerator() {;
                     <span>{h.version}</span>
                     <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
                   </li>
-=======
-        </div>;
-      </div>;
-    );
-  };
-  return (;
-    <EnhancedLayout>;
-      <Head>;
-        <title>Pitch Generator - Admin</title>;
-      </Head>;
-      <div className="space-y-6">;
-        <div className="flex items-center justify-between">;
-          <h1 className="text-2xl font-semibold">Pitch Generator</h1>;
-          <div className="flex gap-2">;
-            <button onClick={buildDeck} disabled={loading} className="px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50">Generate Deck</button>;
-            <button onClick={exportPdf} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50">Download PDF</button>;
-            <button onClick={exportGoogleSlides} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50">Export to Google Slides</button>;
-          </div>;
-        </div>;
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
-          <div className="lg:col-span-1 space-y-4">;
-            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">;
-              <div className="font-medium mb-2">Inputs</div>;
-              <label className="block text-sm mb-1">Company mission</label>;
-              <input value={builder.mission} onChange={(e) => setBuilder({ ...builder, mission: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />;
-              <label className="block text-sm mt-3 mb-1">Current funding stage</label>;
-              <input value={builder.fundingStage} onChange={(e) => setBuilder({ ...builder, fundingStage: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />;
-              <label className="block text-sm mt-3 mb-1">Vision/goals</label>;
-              <textarea value={builder.vision} onChange={(e) => setBuilder({ ...builder, vision: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" rows={3} />;
-              <label className="block text-sm mt-3 mb-1">Round type</label>;
-              <select value={builder.roundType} onChange={(e) => setBuilder({ ...builder, roundType: e.target.value as any })} className="w-full border rounded px-2 py-1 bg-transparent">;
-                <option value="">Select</option>;
-                <option>Seed</option>;
-                <option>Series A</option>;
-                <option>Token Sale</option>;
-              </select>;
-              <label className="block text-sm mt-3 mb-1">Target raise amount</label>;
-              <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />;
-              <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">;
-                Drag & drop logos, photos here;
-                <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>;
-              </div>;
-            </div>;
-            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">;
-              <div className="font-medium mb-2">Auto Data</div>;
-              <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>;
-              <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">;
-                <li>Active users (30d)</li>;
-                <li>GMV, MRR, YoY growth</li>;
-                <li>Total completed projects</li>;
-                <li>Global reach</li>;
-                <li>Conversion funnel</li>;
-                <li>Notable clients or case studies</li>;
-              </ul>;
-            </div>;
-            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">;
-              <div className="font-medium mb-2">History</div>;
-              <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>;
-              <ul className="mt-2 space-y-1 text-sm">;
-                {history.map((h) => (;
-                  <li key={h.id} className="flex justify-between border rounded px-2 py-1">;
-                    <span>{h.version}</span>;
-                    <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>;
-                  </li>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 ))}
               </ul>;
             </div>;

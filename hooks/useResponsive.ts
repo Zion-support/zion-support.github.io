@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface Breakpoints {
@@ -51,11 +48,6 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
     isLarge: screenSize === 'xl',
   };
 }
-=======
-        "isDesktop": width >= 1024})},
-=======
-        &quot;isDesktop&quot;: width >= 1024})};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     updateDimensions(),
     window.addEventListener(
@@ -64,8 +56,6 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
   'resize', updateDimensions)}, []),
   return state},
 export default useResponsive,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
         "isDesktop": width >= 1024})},;
     updateDimensions(),;
     window.addEventListener(;
@@ -74,4 +64,3 @@ export default useResponsive,
   'resize', updateDimensions)}, []),;
   return state},;
 export default useResponsive;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

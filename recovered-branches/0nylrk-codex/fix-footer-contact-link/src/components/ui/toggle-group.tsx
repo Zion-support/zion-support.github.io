@@ -1,16 +1,15 @@
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
-import * as ToggleGroupPrimitive from &quot;@radix-ui/react-toggle-group&quot;
-import { type VariantProps } from &quot;class-variance-authority&quot;
+import * as React from "react"
+import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group"
+import { type VariantProps } from "class-variance-authority"
 
-import { cn } from &quot;@/lib/utils&quot;
-import { toggleVariants } from &quot;@/components/ui/toggle&quot;
+import { cn } from "@/lib/utils"
+import { toggleVariants } from "@/components/ui/toggle"
 
 type ToggleGroupContextProps = VariantProps<typeof toggleVariants>
 
 const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({
-  size: &quot;default&quot;,
-  variant: &quot;default&quot;})
+  size: "default",
+  variant: "default"})
 
 const ToggleGroup = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Root>,
@@ -18,25 +17,8 @@ const ToggleGroup = React.forwardRef<
     VariantProps<typeof toggleVariants>
 >(({ className, variant, size, children, ...props }, ref) => (
   <ToggleGroupPrimitive.Root
-=======
-import * as React from "react";
-import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group";
-import { type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
-import { toggleVariants } from "@/components/ui/toggle";
-type ToggleGroupContextProps = VariantProps<typeof toggleVariants>;
-const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({;
-  size: "default",;
-  variant: "default"});
-const ToggleGroup = React.forwardRef<;
-  React.ElementRef<typeof ToggleGroupPrimitive.Root>,;
-  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &;
-    VariantProps<typeof toggleVariants>;
->(({ className, variant, size, children, ...props }, ref) => (;
-  <ToggleGroupPrimitive.Root;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     ref={ref}
-    className={cn(&quot;flex items-center justify-center gap-1&quot;, className)}
+    className={cn("flex items-center justify-center gap-1", className)}
     {...props}
   >;
     <ToggleGroupContext.Provider value={{ variant, size }}>;

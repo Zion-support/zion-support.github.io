@@ -39,23 +39,15 @@ export const useLoadMilestones = (projectId?: string) => {;
         if (activitiesError) throw activitiesError,;
         activitiesMap[milestone.id] = activitiesData || [];
       }
-<<<<<<< HEAD
       
       setActivities(activitiesMap),
       setError(null)
     } catch (err: any) {
-<<<<<<< HEAD
       console.error("Error fetching milestones:", err),
       setError("Failed to fetch milestones: " + err.message),
       toast.error("Failed to fetch milestones")
-=======
-      console.error(&quot;Error fetching milestones:&quot;, err);
-      setError(&quot;Failed to fetch milestones: &quot; + err.message);
-      toast.error(&quot;Failed to fetch milestones&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
-=======
 ;
       setActivities(activitiesMap),;
       setError(null);
@@ -65,7 +57,6 @@ export const useLoadMilestones = (projectId?: string) => {;
       toast.error("Failed to fetch milestones");
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   // Fetch milestones when component mounts or projectId changes;

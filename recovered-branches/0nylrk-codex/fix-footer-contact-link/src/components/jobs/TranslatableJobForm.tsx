@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -12,20 +10,6 @@ import { useTranslation } from "react-i18next",
 import { useTranslationService } from "@/hooks/useTranslationService",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
 import { toast } from "@/components/ui/use-toast",
-=======
-import React, { useState } from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Textarea } from &quot;@/components/ui/textarea&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-import { Loader2, Globe } from &quot;lucide-react&quot;;
-import { useTranslation } from &quot;react-i18next&quot;;
-import { useTranslationService } from &quot;@/hooks/useTranslationService&quot;;
-import { useLanguage, SupportedLanguage } from &quot;@/context/LanguageContext&quot;;
-import { toast } from &quot;@/components/ui/use-toast&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface TranslatableJobFormProps {
   onSubmit: (formData: any) => void,
   isSubmitting?: boolean
@@ -39,7 +23,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
   
   // Form fields with translations
-<<<<<<< HEAD
   const [title, setTitle] = useState<Record<SupportedLanguage string>>({
     en: "",
     es: "",
@@ -60,28 +43,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   
   const [budget, setBudget] = useState(""),
   const [deadline, setDeadline] = useState(""),
-=======
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
-    en: "&quot;,
-    es: "&quot;,
-    pt: "&quot;,
-    ar: "&quot;});
-  
-  const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
-    en: "&quot;,
-    es: "&quot;,
-    pt: "&quot;,
-    ar: "&quot;});
-  
-  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
-    en: "&quot;,
-    es: "&quot;,
-    pt: "&quot;,
-    ar: "&quot;});
-  
-  const [budget, setBudget] = useState("&quot;);
-  const [deadline, setDeadline] = useState("&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Handle text changes
   const handleTitleChange = (value: string) => {
@@ -115,7 +76,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
       setActiveTab(tab)
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -181,7 +141,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const handleTabChange = async (tab: SupportedLanguage) => {;
     if (tab !== activeTab) {;
       setActiveTab(tab);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   // Auto translate function;
@@ -204,19 +163,13 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         break;
       }
     }
-<<<<<<< HEAD
     
     if (!content) {
       toast({
         title: t('translation.no_content'),
         description: t('translation.add_content_first'),
-<<<<<<< HEAD
         variant: "destructive"}),
       return
-=======
-        variant: &quot;destructive&quot;});
-      return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     try {
@@ -226,14 +179,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         toast({
           title: t('translation.translation_failed'),
           description: error,
-<<<<<<< HEAD
           variant: "destructive"}),
         return
-=======
-          variant: &quot;destructive&quot;});
-        return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
     if (!content) {;
       toast({;
@@ -251,7 +198,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
           description: error,;
           variant: "destructive"}),;
         return;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
 ;
       if (field === 'title') {;
@@ -261,7 +207,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       } else if (field === 'requirements') {;
         setRequirements(translations);
       }
-<<<<<<< HEAD
       
       toast({
         title: t('translation.translation_success'),
@@ -271,12 +216,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       toast({
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),
-<<<<<<< HEAD
         variant: "destructive"})
-=======
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
       toast({;
         title: t('translation.translation_success'),;
@@ -287,7 +227,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         title: t('translation.translation_failed'),;
         description: error instanceof Error ? error.message : t('translation.unknown_error'),;
         variant: "destructive"});
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   // Ensure all translations are available;
@@ -313,368 +252,195 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     if (promises.length) {;
       await Promise.all(promises);
     }
-<<<<<<< HEAD
   },
   
   return (
-    <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <h1 className=&quot;text-2xl font-bold mb-6&quot;>{t('jobs.post_job_title')}</h1>
-        <p className=&quot;text-zion-slate-light mb-6&quot;>
+        <h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>
+        <p className="text-zion-slate-light mb-6">
           {t('jobs.post_job_description')}
         </p>
       </div>
       
-      <div className=&quot;space-y-4&quot;>
-        <div className=&quot;space-y-2&quot;>
-          <div className=&quot;flex justify-between items-center&quot;>
-            <label htmlFor=&quot;title&quot; className=&quot;text-lg font-medium&quot;>
+      <div className="space-y-4">
+        <div className="space-y-2">
+          <div className="flex justify-between items-center">
+            <label htmlFor="title" className="text-lg font-medium">
               {t('jobs.job_title')}
             </label>
             <Button
-              type=&quot;button&quot;
-              size=&quot;sm&quot;
-              variant=&quot;outline&quot;
+              type="button"
+              size="sm"
+              variant="outline"
               onClick={() => autoTranslate('title')}
               disabled={isTranslating || (!title.en && !title.es && !title.pt && !title.ar)}
-              className=&quot;flex items-center gap-1&quot;
+              className="flex items-center gap-1"
             >
               {isTranslating ? (
-                <Loader2 className=&quot;h-4 w-4 animate-spin&quot; />
+                <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
-                <Globe className=&quot;h-4 w-4&quot; />
+                <Globe className="h-4 w-4" />
               )}
               {t('translation.auto_translate')}
             </Button>
           </div>
           
-          <Tabs value={activeTab} onValueChange={handleTabChange} className=&quot;w-full&quot;>
-            <TabsList className=&quot;w-full&quot;>
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+            <TabsList className="w-full">
               {supportedLanguages.map((lang) => (
-                <TabsTrigger key={lang.code} value={lang.code} className=&quot;flex-1&quot;>
-                  <span className=&quot;mr-1&quot;>{lang.flag}</span> {lang.name}
+                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
+                  <span className="mr-1">{lang.flag}</span> {lang.name}
                 </TabsTrigger>
               ))}
             </TabsList>
             
             {supportedLanguages.map((lang) => (
-              <TabsContent key={lang.code} value={lang.code} className=&quot;mt-2&quot;>
-                <div className=&quot;space-y-1&quot;>
+              <TabsContent key={lang.code} value={lang.code} className="mt-2">
+                <div className="space-y-1">
                   <Input
-=======
-  };
-  return (;
-    <form onSubmit={handleSubmit} className="space-y-6">;
-      <div>;
-        <h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>;
-        <p className="text-zion-slate-light mb-6">;
-          {t('jobs.post_job_description')}
-        </p>;
-      </div>;
-      <div className="space-y-4">;
-        <div className="space-y-2">;
-          <div className="flex justify-between items-center">;
-            <label htmlFor="title" className="text-lg font-medium">;
-              {t('jobs.job_title')}
-            </label>;
-            <Button;
-              type="button";
-              size="sm";
-              variant="outline";
-              onClick={() => autoTranslate('title')}
-              disabled={isTranslating || (!title.en && !title.es && !title.pt && !title.ar)}
-              className="flex items-center gap-1";
-            >;
-              {isTranslating ? (;
-                <Loader2 className="h-4 w-4 animate-spin" />;
-              ) : (;
-                <Globe className="h-4 w-4" />;
-              )}
-              {t('translation.auto_translate')}
-            </Button>;
-          </div>;
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">;
-                  <span className="mr-1">{lang.flag}</span> {lang.name}
-                </TabsTrigger>;
-              ))}
-            </TabsList>;
-            {supportedLanguages.map((lang) => (;
-              <TabsContent key={lang.code} value={lang.code} className="mt-2">;
-                <div className="space-y-1">;
-                  <Input;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     id={`title-${lang.code}`}
                     value={title[lang.code] || ''}
                     onChange={(e) => handleTitleChange(e.target.value)}
                     placeholder={t('jobs.title_placeholder')}
-<<<<<<< HEAD
-                    className=&quot;w-full&quot;
-=======
-                    className="w-full";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                    className="w-full"
                     dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                   />;
                 </div>;
               </TabsContent>;
             ))}
-<<<<<<< HEAD
           </Tabs>
         </div>
         
-        <div className=&quot;space-y-2&quot;>
-          <div className=&quot;flex justify-between items-center&quot;>
-            <label htmlFor=&quot;description&quot; className=&quot;text-lg font-medium&quot;>
+        <div className="space-y-2">
+          <div className="flex justify-between items-center">
+            <label htmlFor="description" className="text-lg font-medium">
               {t('jobs.job_description')}
             </label>
             <Button
-              type=&quot;button&quot;
-              size=&quot;sm&quot;
-              variant=&quot;outline&quot;
+              type="button"
+              size="sm"
+              variant="outline"
               onClick={() => autoTranslate('description')}
               disabled={isTranslating || (!description.en && !description.es && !description.pt && !description.ar)}
-              className=&quot;flex items-center gap-1&quot;
+              className="flex items-center gap-1"
             >
               {isTranslating ? (
-                <Loader2 className=&quot;h-4 w-4 animate-spin&quot; />
+                <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
-                <Globe className=&quot;h-4 w-4&quot; />
+                <Globe className="h-4 w-4" />
               )}
               {t('translation.auto_translate')}
             </Button>
           </div>
           
-          <Tabs value={activeTab} onValueChange={handleTabChange} className=&quot;w-full&quot;>
-            <TabsList className=&quot;w-full&quot;>
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+            <TabsList className="w-full">
               {supportedLanguages.map((lang) => (
-                <TabsTrigger key={lang.code} value={lang.code} className=&quot;flex-1&quot;>
-                  <span className=&quot;mr-1&quot;>{lang.flag}</span> {lang.name}
+                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
+                  <span className="mr-1">{lang.flag}</span> {lang.name}
                 </TabsTrigger>
               ))}
             </TabsList>
             
             {supportedLanguages.map((lang) => (
-              <TabsContent key={lang.code} value={lang.code} className=&quot;mt-2&quot;>
+              <TabsContent key={lang.code} value={lang.code} className="mt-2">
                 <Textarea
-=======
-          </Tabs>;
-        </div>;
-        <div className="space-y-2">;
-          <div className="flex justify-between items-center">;
-            <label htmlFor="description" className="text-lg font-medium">;
-              {t('jobs.job_description')}
-            </label>;
-            <Button;
-              type="button";
-              size="sm";
-              variant="outline";
-              onClick={() => autoTranslate('description')}
-              disabled={isTranslating || (!description.en && !description.es && !description.pt && !description.ar)}
-              className="flex items-center gap-1";
-            >;
-              {isTranslating ? (;
-                <Loader2 className="h-4 w-4 animate-spin" />;
-              ) : (;
-                <Globe className="h-4 w-4" />;
-              )}
-              {t('translation.auto_translate')}
-            </Button>;
-          </div>;
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">;
-                  <span className="mr-1">{lang.flag}</span> {lang.name}
-                </TabsTrigger>;
-              ))}
-            </TabsList>;
-            {supportedLanguages.map((lang) => (;
-              <TabsContent key={lang.code} value={lang.code} className="mt-2">;
-                <Textarea;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   id={`description-${lang.code}`}
                   value={description[lang.code] || ''}
                   onChange={(e) => handleDescriptionChange(e.target.value)}
                   placeholder={t('jobs.description_placeholder')}
-<<<<<<< HEAD
-                  className=&quot;min-h-32 w-full&quot;
-=======
-                  className="min-h-32 w-full";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  className="min-h-32 w-full"
                   dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                 />;
               </TabsContent>;
             ))}
-<<<<<<< HEAD
           </Tabs>
         </div>
         
-        <div className=&quot;space-y-2&quot;>
-          <div className=&quot;flex justify-between items-center&quot;>
-            <label htmlFor=&quot;requirements&quot; className=&quot;text-lg font-medium&quot;>
+        <div className="space-y-2">
+          <div className="flex justify-between items-center">
+            <label htmlFor="requirements" className="text-lg font-medium">
               {t('jobs.skills_required')}
             </label>
             <Button
-              type=&quot;button&quot;
-              size=&quot;sm&quot;
-              variant=&quot;outline&quot;
+              type="button"
+              size="sm"
+              variant="outline"
               onClick={() => autoTranslate('requirements')}
               disabled={isTranslating || (!requirements.en && !requirements.es && !requirements.pt && !requirements.ar)}
-              className=&quot;flex items-center gap-1&quot;
+              className="flex items-center gap-1"
             >
               {isTranslating ? (
-                <Loader2 className=&quot;h-4 w-4 animate-spin&quot; />
+                <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
-                <Globe className=&quot;h-4 w-4&quot; />
+                <Globe className="h-4 w-4" />
               )}
               {t('translation.auto_translate')}
             </Button>
           </div>
           
-          <Tabs value={activeTab} onValueChange={handleTabChange} className=&quot;w-full&quot;>
-            <TabsList className=&quot;w-full&quot;>
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+            <TabsList className="w-full">
               {supportedLanguages.map((lang) => (
-                <TabsTrigger key={lang.code} value={lang.code} className=&quot;flex-1&quot;>
-                  <span className=&quot;mr-1&quot;>{lang.flag}</span> {lang.name}
+                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
+                  <span className="mr-1">{lang.flag}</span> {lang.name}
                 </TabsTrigger>
               ))}
             </TabsList>
             
             {supportedLanguages.map((lang) => (
-              <TabsContent key={lang.code} value={lang.code} className=&quot;mt-2&quot;>
+              <TabsContent key={lang.code} value={lang.code} className="mt-2">
                 <Textarea
-=======
-          </Tabs>;
-        </div>;
-        <div className="space-y-2">;
-          <div className="flex justify-between items-center">;
-            <label htmlFor="requirements" className="text-lg font-medium">;
-              {t('jobs.skills_required')}
-            </label>;
-            <Button;
-              type="button";
-              size="sm";
-              variant="outline";
-              onClick={() => autoTranslate('requirements')}
-              disabled={isTranslating || (!requirements.en && !requirements.es && !requirements.pt && !requirements.ar)}
-              className="flex items-center gap-1";
-            >;
-              {isTranslating ? (;
-                <Loader2 className="h-4 w-4 animate-spin" />;
-              ) : (;
-                <Globe className="h-4 w-4" />;
-              )}
-              {t('translation.auto_translate')}
-            </Button>;
-          </div>;
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">;
-                  <span className="mr-1">{lang.flag}</span> {lang.name}
-                </TabsTrigger>;
-              ))}
-            </TabsList>;
-            {supportedLanguages.map((lang) => (;
-              <TabsContent key={lang.code} value={lang.code} className="mt-2">;
-                <Textarea;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   id={`requirements-${lang.code}`}
                   value={requirements[lang.code] || ''}
                   onChange={(e) => handleRequirementsChange(e.target.value)}
                   placeholder={t('jobs.requirements_placeholder')}
-<<<<<<< HEAD
-                  className=&quot;min-h-24 w-full&quot;
-=======
-                  className="min-h-24 w-full";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  className="min-h-24 w-full"
                   dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                 />;
               </TabsContent>;
             ))}
-<<<<<<< HEAD
           </Tabs>
         </div>
         
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
-          <div className=&quot;space-y-1&quot;>
-            <label htmlFor=&quot;budget&quot; className=&quot;text-lg font-medium&quot;>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-1">
+            <label htmlFor="budget" className="text-lg font-medium">
               {t('jobs.budget')}
             </label>
             <Input
-              id=&quot;budget&quot;
+              id="budget"
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
-              placeholder=&quot;$1000 - $2000&quot;
-              className=&quot;w-full&quot;
+              placeholder="$1000 - $2000"
+              className="w-full"
             />
           </div>
-          <div className=&quot;space-y-1&quot;>
-            <label htmlFor=&quot;deadline&quot; className=&quot;text-lg font-medium&quot;>
+          <div className="space-y-1">
+            <label htmlFor="deadline" className="text-lg font-medium">
               {t('jobs.deadline')}
             </label>
             <Input
-              id=&quot;deadline&quot;
-              type=&quot;date&quot;
+              id="deadline"
+              type="date"
               value={deadline}
               onChange={(e) => setDeadline(e.target.value)}
-              className=&quot;w-full&quot;
+              className="w-full"
             />
           </div>
         </div>
       </div>
       
-      <div className=&quot;pt-4&quot;>
+      <div className="pt-4">
         <Button
-          type=&quot;submit&quot;
-          className=&quot;w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan&quot;
+          type="submit"
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
           disabled={isSubmitting || isTranslating}
         >
           {isSubmitting ? (
             <>
-              <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
-=======
-          </Tabs>;
-        </div>;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <div className="space-y-1">;
-            <label htmlFor="budget" className="text-lg font-medium">;
-              {t('jobs.budget')}
-            </label>;
-            <Input;
-              id="budget";
-              value={budget}
-              onChange={(e) => setBudget(e.target.value)}
-              placeholder="$1000 - $2000";
-              className="w-full";
-            />;
-          </div>;
-          <div className="space-y-1">;
-            <label htmlFor="deadline" className="text-lg font-medium">;
-              {t('jobs.deadline')}
-            </label>;
-            <Input;
-              id="deadline";
-              type="date";
-              value={deadline}
-              onChange={(e) => setDeadline(e.target.value)}
-              className="w-full";
-            />;
-          </div>;
-        </div>;
-      </div>;
-      <div className="pt-4">;
-        <Button;
-          type="submit";
-          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan";
-          disabled={isSubmitting || isTranslating}
-        >;
-          {isSubmitting ? (;
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               {t('jobs.submitting')}
             </>;
           ) : (;

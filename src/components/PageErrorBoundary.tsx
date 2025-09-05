@@ -19,22 +19,21 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
     } else {;
       window.location.reload();
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;min-h-screen bg-zion-blue flex items-center justify-center p-4&quot;>
-      <div className=&quot;max-w-2xl w-full&quot;>
+    <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
+      <div className="max-w-2xl w-full">
         {/* Main Error Card */}
-        <div className=&quot;bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6&quot;>
-          <div className=&quot;text-center mb-6&quot;>
-            <div className=&quot;mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center&quot;>
-              <AlertTriangle className=&quot;h-8 w-8 text-red-600&quot; />
+        <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
+          <div className="text-center mb-6">
+            <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
+              <AlertTriangle className="h-8 w-8 text-red-600" />
             </div>
-            <h1 className=&quot;text-3xl font-bold text-gray-900 mb-2&quot;>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
               {pageName ? `${pageName} Unavailable` : 'Page Unavailable'}
             </h1>
-            <p className=&quot;text-gray-600&quot;>
+            <p className="text-gray-600">
               {isAuthConfigError 
                 ? 'This page cannot load due to missing authentication configuration'
                 : 'An unexpected error occurred while loading this page'
@@ -43,12 +42,12 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
           </div>
 
           {isAuthConfigError && (
-            <div className=&quot;bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6&quot;>
-              <div className=&quot;flex&quot;>
-                <Settings className=&quot;h-5 w-5 text-yellow-600 mt-0.5 mr-3&quot; />
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+              <div className="flex">
+                <Settings className="h-5 w-5 text-yellow-600 mt-0.5 mr-3" />
                 <div>
-                  <h3 className=&quot;font-semibold text-yellow-800 mb-1&quot;>Configuration Required</h3>
-                  <p className=&quot;text-yellow-700 text-sm&quot;>
+                  <h3 className="font-semibold text-yellow-800 mb-1">Configuration Required</h3>
+                  <p className="text-yellow-700 text-sm">
                     This application requires Auth0 authentication to be properly configured. 
                     Please contact your system administrator.
                   </p>
@@ -58,93 +57,49 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
           )}
 
           {error?.message && (
-            <details className=&quot;bg-gray-50 rounded-lg p-4 mb-6&quot;>
-              <summary className=&quot;cursor-pointer text-gray-700 font-medium&quot;>
+            <details className="bg-gray-50 rounded-lg p-4 mb-6">
+              <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>
-              <pre className=&quot;mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto&quot;>
-=======
-  },;
-  return (;
-    <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">;
-      <div className="max-w-2xl w-full">;
-        {/* Main Error Card */}
-        <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">;
-          <div className="text-center mb-6">;
-            <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">;
-              <AlertTriangle className="h-8 w-8 text-red-600" />;
-            </div>;
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">;
-              {pageName ? `${pageName} Unavailable` : 'Page Unavailable'}
-            </h1>;
-            <p className="text-gray-600">;
-              {isAuthConfigError;
-                ? 'This page cannot load due to missing authentication configuration';
-                : 'An unexpected error occurred while loading this page';
-              }
-            </p>;
-          </div>;
-          {isAuthConfigError && (;
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">;
-              <div className="flex">;
-                <Settings className="h-5 w-5 text-yellow-600 mt-0.5 mr-3" />;
-                <div>;
-                  <h3 className="font-semibold text-yellow-800 mb-1">Configuration Required</h3>;
-                  <p className="text-yellow-700 text-sm">;
-                    This application requires Auth0 authentication to be properly configured.;
-                    Please contact your system administrator.;
-                  </p>;
-                </div>;
-              </div>;
-            </div>;
-          )}
-;
-          {error?.message && (;
-            <details className="bg-gray-50 rounded-lg p-4 mb-6">;
-              <summary className="cursor-pointer text-gray-700 font-medium">;
-                Technical Details;
-              </summary>;
-              <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
                 {error.message}
               </pre>;
             </details>;
           )}
 ;
           {/* Action Buttons */}
-<<<<<<< HEAD
-          <div className=&quot;flex flex-col sm:flex-row gap-3 mb-6&quot;>
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
             <button 
               onClick={handleRefresh}
-              className=&quot;flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors&quot;
+              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
             >
-              <RefreshCw className=&quot;w-4 h-4 mr-2&quot; />
+              <RefreshCw className="w-4 h-4 mr-2" />
               Try Again
             </button>
             
             <Link 
-              href=&quot;/&quot;
-              className=&quot;flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors&quot;
+              href="/"
+              className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
             >
-              <Home className=&quot;w-4 h-4 mr-2&quot; />
+              <Home className="w-4 h-4 mr-2" />
               Go Home
             </Link>
           </div>
 
           {/* Navigation Options */}
-          <div className=&quot;border-t pt-6&quot;>
-            <h3 className=&quot;font-semibold text-gray-900 mb-3&quot;>You can also visit:</h3>
-            <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-3 text-sm&quot;>
-              <Link href=&quot;/marketplace&quot; className=&quot;text-blue-600 hover:underline&quot;>
+          <div className="border-t pt-6">
+            <h3 className="font-semibold text-gray-900 mb-3">You can also visit:</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+              <Link href="/marketplace" className="text-blue-600 hover:underline">
                 Marketplace
               </Link>
-              <Link href=&quot;/talent&quot; className=&quot;text-blue-600 hover:underline&quot;>
+              <Link href="/talent" className="text-blue-600 hover:underline">
                 Talent
               </Link>
-              <Link href=&quot;/services&quot; className=&quot;text-blue-600 hover:underline&quot;>
+              <Link href="/services" className="text-blue-600 hover:underline">
                 Services
               </Link>
-              <Link href=&quot;/about&quot; className=&quot;text-blue-600 hover:underline&quot;>
+              <Link href="/about" className="text-blue-600 hover:underline">
                 About
               </Link>
             </div>
@@ -152,22 +107,16 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
         </div>
 
         {/* Support Information */}
-<<<<<<< HEAD
         <div className="bg-gray-800 text-white rounded-lg p-6 text-center">
           <p className="mb-3">Need help? Contact our support team</p>
           <div className="flex flex-col sm: flex-row gap-3 justify-center">
-=======
-        <div className=&quot;bg-gray-800 text-white rounded-lg p-6 text-center&quot;>
-          <p className=&quot;mb-3&quot;>Need help? Contact our support team</p>
-          <div className=&quot;flex flex-col sm:flex-row gap-3 justify-center&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             <a 
-              href=&quot;mailto:support@zion.tech&quot; 
-              className=&quot;text-blue-400 hover:underline&quot;
+              href="mailto:support@zion.tech" 
+              className="text-blue-400 hover:underline"
             >
               support@zion.tech
             </Link>
-            <Link href=&quot;/status&quot; className=&quot;text-blue-400 hover:underline&quot;>
+            <Link href="/status" className="text-blue-400 hover:underline">
               Service Status
             </Link>
           </div>
@@ -175,7 +124,6 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
       </div>
     </div>
   )
-=======
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button;
               onClick={handleRefresh}
@@ -229,7 +177,6 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
       </div>;
     </div>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 interface PageErrorBoundaryProps {;

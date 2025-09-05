@@ -1,12 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { CreateNotificationParams, CreateNotificationResult } from './types',
-=======
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { CreateNotificationParams, CreateNotificationResult } from './types';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 /**
  * Creates a notification for a user and optionally sends an email notification
@@ -39,7 +33,6 @@ export async function createNotification({
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
-=======
 import { supabase } from "@/integrations/supabase/client",;
 import { CreateNotificationParams, CreateNotificationResult } from './types',;
 /**;
@@ -71,7 +64,6 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data;
       await supabase.functions.invoke('send-notification-email', {;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         body: { user_id: userId, notification_id: notificationId }
       });
     }

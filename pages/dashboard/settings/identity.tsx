@@ -16,7 +16,6 @@ export default function IdentitySettingsPage() {;
       setError('Failed to fetch');
     }
   }
-<<<<<<< HEAD
 
   useEffect(() => {
     load(),
@@ -27,49 +26,23 @@ export default function IdentitySettingsPage() {;
     <>
       <Head>
         <title>Identity Settings - Zion</title>
-        <meta name=&quot;description&quot; content=&quot;Manage your identity verification status&quot; />
+        <meta name="description" content="Manage your identity verification status" />
       </Head>
-      <main className=&quot;max-w-3xl mx-auto px-4 py-8&quot;>
-        <h1 className=&quot;text-2xl font-bold mb-4&quot;>Identity</h1>
+      <main className="max-w-3xl mx-auto px-4 py-8">
+        <h1 className="text-2xl font-bold mb-4">Identity</h1>
 
-        <div className=&quot;mb-4&quot;>
+        <div className="mb-4">
           <ProfileBadges profile={profile || undefined} />
         </div>
 
-        <div className=&quot;mb-4 text-sm text-gray-600&quot;>
+        <div className="mb-4 text-sm text-gray-600">
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'}
         </div>
 
-        <a href=&quot;/verify&quot; className=&quot;inline-block rounded bg-blue-600 text-white px-4 py-2&quot;>Go to verification</Link>
+        <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</Link>
 
-        {error && <div className=&quot;mt-3 text-sm text-red-600&quot;>{error}</div>}
+        {error && <div className="mt-3 text-sm text-red-600">{error}</div>}
       </main>
     </>
   )
-=======
-;
-  useEffect(() => {;
-    load();
-    // eslint-disable-next-line react-hooks/exhaustive-deps;
-  }, []);
-  return (;
-    <>;
-      <Head>;
-        <title>Identity Settings - Zion</title>;
-        <meta name="description" content="Manage your identity verification status" />;
-      </Head>;
-      <main className="max-w-3xl mx-auto px-4 py-8">;
-        <h1 className="text-2xl font-bold mb-4">Identity</h1>;
-        <div className="mb-4">;
-          <ProfileBadges profile={profile || undefined} />;
-        </div>;
-        <div className="mb-4 text-sm text-gray-600">;
-          Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'}
-        </div>;
-        <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</a>;
-        {error && <div className="mt-3 text-sm text-red-600">{error}</div>}
-      </main>;
-    </>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

@@ -17,7 +17,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(400).json({ error: 'Invalid payload' }),;
     return;
   }
-<<<<<<< HEAD
 
   const tmpPath = `/tmp/${randomUUID()}.epub`,
   const options = {
@@ -27,23 +26,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))},
 
   try {
-<<<<<<< HEAD
     await new Epub(options, tmpPath).promise,
     const buf = await fs.readFile(tmpPath),
     res.setHeader('Content-Typeapplication/epub+zip'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"'),
     res.status(200).send(buf)
-=======
-    await new Epub(options, tmpPath).promise;
-    const buf = await fs.readFile(tmpPath);
-    res.setHeader('Content-Type', 'application/epub+zip');
-    res.setHeader('Content-Disposition', 'attachment; filename=&quot;zion-os-book.epub&quot;');
-    res.status(200).send(buf);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to build EPUB' })
   } finally {
-=======
 ;
   const tmpPath = `/tmp/${randomUUID()}.epub`,;
   const options = {;
@@ -60,7 +50,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {;
     res.status(500).json({ error: e?.message || 'Failed to build EPUB' });
   } finally {;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     try { await fs.unlink(tmpPath) } catch {}
   }
 }

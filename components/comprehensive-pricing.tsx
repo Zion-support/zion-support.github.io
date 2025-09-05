@@ -71,7 +71,6 @@ export default function ComprehensivePricingPage() {;
         return bRoi - aRoi,;
       default: return a.name.localeCompare(b.name);
     }
-<<<<<<< HEAD
   }),
 
   const contactInfo = {
@@ -91,7 +90,7 @@ export default function ComprehensivePricingPage() {;
       features: [
         'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ],
-      icon: <Star className=&quot;w-6 h-6&quot; />,
+      icon: <Star className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-600',
       popular: false
     },
@@ -103,7 +102,7 @@ export default function ComprehensivePricingPage() {;
       features: [
         'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations'
       ],
-      icon: <Gem className=&quot;w-6 h-6&quot; />,
+      icon: <Gem className="w-6 h-6" />,
       color: 'from-purple-500 to-pink-600',
       popular: true
     },
@@ -115,7 +114,7 @@ export default function ComprehensivePricingPage() {;
       features: [
         'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
       ],
-      icon: <Crown className=&quot;w-6 h-6&quot; />,
+      icon: <Crown className="w-6 h-6" />,
       color: 'from-yellow-500 to-orange-600',
       popular: false
     }
@@ -127,98 +126,25 @@ export default function ComprehensivePricingPage() {;
       metric: '$15.2B',
       label: 'Total Market Size',
       description: 'Combined market value of all services',
-      icon: <ChartBar className=&quot;w-6 h-6&quot; />
+      icon: <ChartBar className="w-6 h-6" />
     },
     {
       metric: '400+',
       label: 'Services Available',
       description: 'Comprehensive micro SaaS portfolio',
-      icon: <Database className=&quot;w-6 h-6&quot; />
+      icon: <Database className="w-6 h-6" />
     },
     {
       metric: '99.99%',
       label: 'Uptime Guarantee',
       description: 'Enterprise-grade reliability',
-      icon: <Shield className=&quot;w-6 h-6&quot; />
+      icon: <Shield className="w-6 h-6" />
     },
     {
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
-      icon: <TrendingUp className=&quot;w-6 h-6&quot; />
-=======
-  }),;
-  const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';
-  },;
-  // Pricing tiers;
-  const pricingTiers = [;
-    {;
-      name: 'Starter',;
-      price: '$49',;
-      period: '/month',;
-      description: 'Perfect for small businesses and startups',;
-      features: [;
-        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics';
-      ],;
-      icon: <Star className="w-6 h-6" />,;
-      color: 'from-blue-500 to-cyan-600',;
-      popular: false;
-    },;
-    {;
-      name: 'Professional',;
-      price: '$199',;
-      period: '/month',;
-      description: 'Ideal for growing businesses and teams',;
-      features: [;
-        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations';
-      ],;
-      icon: <Gem className="w-6 h-6" />,;
-      color: 'from-purple-500 to-pink-600',;
-      popular: true;
-    },;
-    {;
-      name: 'Enterprise',;
-      price: '$499',;
-      period: '/month',;
-      description: 'For large organizations and enterprises',;
-      features: [;
-        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees';
-      ],;
-      icon: <Crown className="w-6 h-6" />,;
-      color: 'from-yellow-500 to-orange-600',;
-      popular: false;
-    }
-  ],;
-  // Market statistics;
-  const marketStats = [;
-    {;
-      metric: '$15.2B',;
-      label: 'Total Market Size',;
-      description: 'Combined market value of all services',;
-      icon: <ChartBar className="w-6 h-6" />;
-    },;
-    {;
-      metric: '400+',;
-      label: 'Services Available',;
-      description: 'Comprehensive micro SaaS portfolio',;
-      icon: <Database className="w-6 h-6" />;
-    },;
-    {;
-      metric: '99.99%',;
-      label: 'Uptime Guarantee',;
-      description: 'Enterprise-grade reliability',;
-      icon: <Shield className="w-6 h-6" />;
-    },;
-    {;
-      metric: '2000%+',;
-      label: 'Average ROI',;
-      description: 'Proven business value',;
-      icon: <TrendingUp className="w-6 h-6" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+      icon: <TrendingUp className="w-6 h-6" />
     }
   ],;
   const containerVariants = {;
@@ -239,77 +165,41 @@ export default function ComprehensivePricingPage() {;
         duration: 0.5;
       }
     }
-<<<<<<< HEAD
   },
 
   return (
-    <UltraFuturisticBackground variant=&quot;holographic&quot; intensity=&quot;high&quot;>
-      <div className=&quot;min-h-screen&quot;>
+    <UltraFuturisticBackground variant="holographic" intensity="high">
+      <div className="min-h-screen">
         <Head>
           <title>Comprehensive Pricing | Zion Tech Group - Micro SaaS Services Pricing & Plans</title>
-          <meta name=&quot;description&quot; content=&quot;Explore comprehensive pricing for all Zion Tech Group micro SaaS services. Transparent pricing, market analysis, ROI guarantees, and flexible plans for every business size.&quot; />
-          <meta name=&quot;keywords&quot; content=&quot;micro SaaS pricing, service pricing, business pricing, ROI guarantees, market analysis, transparent pricing, enterprise pricing&quot; />
-          <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
-          <meta property=&quot;og:title&quot; content=&quot;Comprehensive Pricing | Zion Tech Group&quot; />
-          <meta property=&quot;og:description&quot; content=&quot;Transparent pricing for all micro SaaS services with market analysis and ROI guarantees.&quot; />
-          <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/comprehensive-pricing&quot; />
-          <meta property=&quot;og:type&quot; content=&quot;website&quot; />
-          <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/comprehensive-pricing&quot; />
+          <meta name="description" content="Explore comprehensive pricing for all Zion Tech Group micro SaaS services. Transparent pricing, market analysis, ROI guarantees, and flexible plans for every business size." />
+          <meta name="keywords" content="micro SaaS pricing, service pricing, business pricing, ROI guarantees, market analysis, transparent pricing, enterprise pricing" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta property="og:title" content="Comprehensive Pricing | Zion Tech Group" />
+          <meta property="og:description" content="Transparent pricing for all micro SaaS services with market analysis and ROI guarantees." />
+          <meta property="og:url" content="https://ziontechgroup.com/comprehensive-pricing" />
+          <meta property="og:type" content="website" />
+          <link rel="canonical" href="https://ziontechgroup.com/comprehensive-pricing" />
         </Head>
 
         {/* Hero Section */}
-        <section className=&quot;relative py-20 overflow-hidden&quot;>
-          <div className=&quot;container mx-auto px-4 text-center&quot;>
-            <div className=&quot;max-w-5xl mx-auto&quot;>
+        <section className="relative py-20 overflow-hidden">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-5xl mx-auto">
               <motion.h1 
-                className=&quot;text-6xl md:text-8xl font-bold mb-8 futuristic-glow&quot;
+                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Comprehensive
                 </span>
                 <br />
-                <span className=&quot;text-white&quot;>Pricing & Plans</span>
+                <span className="text-white">Pricing & Plans</span>
               </motion.h1>
               <motion.p 
-                className=&quot;text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed&quot;
-=======
-  },;
-  return (;
-    <UltraFuturisticBackground variant="holographic" intensity="high">;
-      <div className="min-h-screen">;
-        <Head>;
-          <title>Comprehensive Pricing | Zion Tech Group - Micro SaaS Services Pricing & Plans</title>;
-          <meta name="description" content="Explore comprehensive pricing for all Zion Tech Group micro SaaS services. Transparent pricing, market analysis, ROI guarantees, and flexible plans for every business size." />;
-          <meta name="keywords" content="micro SaaS pricing, service pricing, business pricing, ROI guarantees, market analysis, transparent pricing, enterprise pricing" />;
-          <meta name="author" content="Zion Tech Group" />;
-          <meta property="og:title" content="Comprehensive Pricing | Zion Tech Group" />;
-          <meta property="og:description" content="Transparent pricing for all micro SaaS services with market analysis and ROI guarantees." />;
-          <meta property="og:url" content="https://ziontechgroup.com/comprehensive-pricing" />;
-          <meta property="og:type" content="website" />;
-          <link rel="canonical" href="https://ziontechgroup.com/comprehensive-pricing" />;
-        </Head>;
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">;
-          <div className="container mx-auto px-4 text-center">;
-            <div className="max-w-5xl mx-auto">;
-              <motion.h1;
-                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow";
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              >;
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-                  Comprehensive;
-                </span>;
-                <br />;
-                <span className="text-white">Pricing & Plans</span>;
-              </motion.h1>;
-              <motion.p;
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -318,58 +208,42 @@ export default function ComprehensivePricingPage() {;
                 Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.;
               </motion.p>;
               {/* Market Stats */}
-<<<<<<< HEAD
               <motion.div 
-                className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-16&quot;
+                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {marketStats.map((stat, index) => (
-                  <div key={index} className=&quot;text-center&quot;>
-                    <div className=&quot;text-3xl font-bold text-cyan-400 mb-2&quot;>{stat.metric}</div>
-                    <div className=&quot;text-gray-400 text-sm&quot;>{stat.label}</div>
-                    <div className=&quot;text-gray-500 text-xs&quot;>{stat.description}</div>
+                  <div key={index} className="text-center">
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
+                    <div className="text-gray-400 text-sm">{stat.label}</div>
+                    <div className="text-gray-500 text-xs">{stat.description}</div>
                   </div>
-=======
-              <motion.div;
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16";
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >;
-                {marketStats.map((stat, index) => (;
-                  <div key={index} className="text-center">;
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>;
-                    <div className="text-gray-400 text-sm">{stat.label}</div>;
-                    <div className="text-gray-500 text-xs">{stat.description}</div>;
-                  </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 ))}
               </motion.div>;
               {/* CTA Buttons */}
-<<<<<<< HEAD
               <motion.div 
-                className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Button 
-                  variant=&quot;primary&quot; 
-                  size=&quot;lg&quot;
+                  variant="primary" 
+                  size="lg"
                   onClick={() => document.getElementById('pricing-tiers')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   View Pricing Tiers
-                  <DollarSign className=&quot;ml-2 w-5 h-5&quot; />
+                  <DollarSign className="ml-2 w-5 h-5" />
                 </Button>
                 <Button 
-                  variant=&quot;futuristic&quot; 
-                  size=&quot;lg&quot;
+                  variant="futuristic" 
+                  size="lg"
                   onClick={() => document.getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Browse All Services
-                  <Search className=&quot;ml-2 w-5 h-5&quot; />
+                  <Search className="ml-2 w-5 h-5" />
                 </Button>
               </motion.div>
             </div>
@@ -377,124 +251,52 @@ export default function ComprehensivePricingPage() {;
         </section>
 
         {/* Contact Information Banner */}
-        <section className=&quot;py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20&quot;>
-          <div className=&quot;container mx-auto px-4&quot;>
-            <div className=&quot;flex flex-col md:flex-row justify-between items-center gap-4&quot;>
-              <div className=&quot;flex items-center gap-4&quot;>
-                <Phone className=&quot;w-5 h-5 text-cyan-400&quot; />
-                <span className=&quot;text-white&quot;>{contactInfo.mobile}</span>
-                <Mail className=&quot;w-5 h-5 text-purple-400&quot; />
-                <span className=&quot;text-white&quot;>{contactInfo.email}</span>
+        <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="flex items-center gap-4">
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <span className="text-white">{contactInfo.mobile}</span>
+                <Mail className="w-5 h-5 text-purple-400" />
+                <span className="text-white">{contactInfo.email}</span>
               </div>
-              <div className=&quot;flex items-center gap-4&quot;>
-                <MapPin className=&quot;w-5 h-5 text-green-400&quot; />
-                <span className=&quot;text-white&quot;>{contactInfo.address}</span>
-                <Globe className=&quot;w-5 h-5 text-blue-400&quot; />
-                <span className=&quot;text-white&quot;>{contactInfo.website}</span>
+              <div className="flex items-center gap-4">
+                <MapPin className="w-5 h-5 text-green-400" />
+                <span className="text-white">{contactInfo.address}</span>
+                <Globe className="w-5 h-5 text-blue-400" />
+                <span className="text-white">{contactInfo.website}</span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Pricing Tiers */}
-        <section id=&quot;pricing-tiers&quot; className=&quot;py-20&quot;>
-          <div className=&quot;container mx-auto px-4&quot;>
+        <section id="pricing-tiers" className="py-20">
+          <div className="container mx-auto px-4">
             <motion.div 
-              className=&quot;text-center mb-16&quot;
-=======
-              <motion.div;
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center";
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >;
-                <Button;
-                  variant="primary";
-                  size="lg";
-                  onClick={() => document.getElementById('pricing-tiers')?.scrollIntoView({ behavior: 'smooth' })}
-                >;
-                  View Pricing Tiers;
-                  <DollarSign className="ml-2 w-5 h-5" />;
-                </Button>;
-                <Button;
-                  variant="futuristic";
-                  size="lg";
-                  onClick={() => document.getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                >;
-                  Browse All Services;
-                  <Search className="ml-2 w-5 h-5" />;
-                </Button>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Contact Information Banner */}
-        <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20">;
-          <div className="container mx-auto px-4">;
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">;
-              <div className="flex items-center gap-4">;
-                <Phone className="w-5 h-5 text-cyan-400" />;
-                <span className="text-white">{contactInfo.mobile}</span>;
-                <Mail className="w-5 h-5 text-purple-400" />;
-                <span className="text-white">{contactInfo.email}</span>;
-              </div>;
-              <div className="flex items-center gap-4">;
-                <MapPin className="w-5 h-5 text-green-400" />;
-                <span className="text-white">{contactInfo.address}</span>;
-                <Globe className="w-5 h-5 text-blue-400" />;
-                <span className="text-white">{contactInfo.website}</span>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Pricing Tiers */}
-        <section id="pricing-tiers" className="py-20">;
-          <div className="container mx-auto px-4">;
-            <motion.div;
-              className="text-center mb-16";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             >
-              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-4&quot;>
-                <span className=&quot;bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent&quot;>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                   Flexible Pricing
                 </span>
                 <br />
-                <span className=&quot;text-white&quot;>for Every Business</span>
+                <span className="text-white">for Every Business</span>
               </h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
               </p>
             </motion.div>
 
             <motion.div 
-              className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
-              initial=&quot;hidden&quot;
-              whileInView=&quot;visible&quot;
-=======
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">;
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">;
-                  Flexible Pricing;
-                </span>;
-                <br />;
-                <span className="text-white">for Every Business</span>;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.;
-              </p>;
-            </motion.div>;
-            <motion.div;
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto";
-              variants={containerVariants}
-              initial="hidden";
-              whileInView="visible";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
             >;
               {pricingTiers.map((tier, index) => (;
@@ -505,57 +307,49 @@ export default function ComprehensivePricingPage() {;
                 >;
                   <UltraFuturisticCard;
                     variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced'}
-<<<<<<< HEAD
-                    size=&quot;large&quot;
+                    size="large"
                     className={`h-full relative ${tier.popular ? 'ring-2 ring-purple-400' : ''}`}
                   >
                     {tier.popular && (
-                      <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
-                        <div className=&quot;bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold&quot;>
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">
                           Most Popular
                         </div>
                       </div>
                     )}
                     
-                    <div className=&quot;text-center mb-8&quot;>
+                    <div className="text-center mb-8">
                       <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${tier.color} mb-6`}>
                         {tier.icon}
                       </div>
-                      <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{tier.name}</h3>
-                      <p className=&quot;text-gray-300 text-sm mb-4&quot;>{tier.description}</p>
-                      <div className=&quot;text-4xl font-bold text-cyan-400 mb-2&quot;>{tier.price}</div>
-                      <div className=&quot;text-sm text-gray-400&quot;>{tier.period}</div>
+                      <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                      <p className="text-gray-300 text-sm mb-4">{tier.description}</p>
+                      <div className="text-4xl font-bold text-cyan-400 mb-2">{tier.price}</div>
+                      <div className="text-sm text-gray-400">{tier.period}</div>
                     </div>
                     
-                    <div className=&quot;space-y-3 mb-8&quot;>
+                    <div className="space-y-3 mb-8">
                       {tier.features.map((feature, idx) => (
-                        <div key={idx} className=&quot;flex items-center gap-2&quot;>
-                          <Check className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
-                          <span className=&quot;text-sm text-gray-300&quot;>{feature}</span>
+                        <div key={idx} className="flex items-center gap-2">
+                          <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          <span className="text-sm text-gray-300">{feature}</span>
                         </div>
                       ))}
                     </div>
 
-                    <div className=&quot;text-center&quot;>
+                    <div className="text-center">
                                              <Button 
                          variant={tier.popular ? 'futuristic' : 'primary'} 
-<<<<<<< HEAD
                          size="md"
                          onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                          className="w-full"
-=======
-                         size=&quot;md&quot;
-                         onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
-                         className=&quot;w-full&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                        >
                         Get Started
-                        <ArrowRight className=&quot;ml-2 w-4 h-4&quot; />
+                        <ArrowRight className="ml-2 w-4 h-4" />
                       </Button>
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
-=======
                     size="large";
                     className={`h-full relative ${tier.popular ? 'ring-2 ring-purple-400' : ''}`}
                   >;
@@ -597,77 +391,46 @@ export default function ComprehensivePricingPage() {;
                     </div>;
                   </UltraFuturisticCard>;
                 </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </motion.div>;
           </div>;
         </section>;
         {/* Services Pricing Grid */}
-<<<<<<< HEAD
-        <section id=&quot;services-pricing&quot; className=&quot;py-20&quot;>
-          <div className=&quot;container mx-auto px-4&quot;>
+        <section id="services-pricing" className="py-20">
+          <div className="container mx-auto px-4">
             {/* Filters and Controls */}
             <motion.div 
-              className=&quot;mb-8&quot;
-=======
-        <section id="services-pricing" className="py-20">;
-          <div className="container mx-auto px-4">;
-            {/* Filters and Controls */}
-            <motion.div;
-              className="mb-8";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              className="mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             >
-              <div className=&quot;flex flex-col lg:flex-row gap-6 items-center justify-between&quot;>
-                <div className=&quot;flex flex-wrap gap-4&quot;>
+              <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+                <div className="flex flex-wrap gap-4">
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className=&quot;px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400&quot;
+                    className="px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400"
                   >
-                    <option value=&quot;All&quot;>All Categories</option>
+                    <option value="All">All Categories</option>
                     {revolutionaryServiceCategories.map(category => (
                       <option key={category} value={category}>{category}</option>
-=======
-            >;
-              <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">;
-                <div className="flex flex-wrap gap-4">;
-                  <select;
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400";
-                  >;
-                    <option value="All">All Categories</option>;
-                    {revolutionaryServiceCategories.map(category => (;
-                      <option key={category} value={category}>{category}</option>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     ))}
                   </select>;
                   <select;
                     value={priceRange}
                     onChange={(e) => setPriceRange(e.target.value)}
-<<<<<<< HEAD
-                    className=&quot;px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400&quot;
+                    className="px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400"
                   >
                     {priceRanges.map(range => (
                       <option key={range.value} value={range.value}>{range.label}</option>
-=======
-                    className="px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400";
-                  >;
-                    {priceRanges.map(range => (;
-                      <option key={range.value} value={range.value}>{range.label}</option>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     ))}
                   </select>;
                   <select;
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-<<<<<<< HEAD
-                    className=&quot;px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400&quot;
+                    className="px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400"
                   >
                     {sortOptions.map(option => (
                       <option key={option.value} value={option.value}>{option.label}</option>
@@ -675,30 +438,30 @@ export default function ComprehensivePricingPage() {;
                   </select>
                 </div>
                 
-                <div className=&quot;flex items-center gap-4&quot;>
-                  <div className=&quot;relative&quot;>
-                    <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&quot; />
+                <div className="flex items-center gap-4">
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                     <input
-                      type=&quot;text&quot;
-                      placeholder=&quot;Search services...&quot;
+                      type="text"
+                      placeholder="Search services..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className=&quot;pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64&quot;
+                      className="pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64"
                     />
                   </div>
                   
-                  <div className=&quot;flex border border-gray-600 rounded-lg overflow-hidden&quot;>
+                  <div className="flex border border-gray-600 rounded-lg overflow-hidden">
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
-                      <Grid className=&quot;w-4 h-4&quot; />
+                      <Grid className="w-4 h-4" />
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
-                      <List className=&quot;w-4 h-4&quot; />
+                      <List className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
@@ -708,58 +471,12 @@ export default function ComprehensivePricingPage() {;
             {/* Services Display */}
             <motion.div 
               className={viewMode === 'grid' 
-                ? &quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
-                : &quot;space-y-6&quot;
+                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                : "space-y-6"
               }
               variants={containerVariants}
-              initial=&quot;hidden&quot;
-              whileInView=&quot;visible&quot;
-=======
-                    className="px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400";
-                  >;
-                    {sortOptions.map(option => (;
-                      <option key={option.value} value={option.value}>{option.label}</option>;
-                    ))}
-                  </select>;
-                </div>;
-                <div className="flex items-center gap-4">;
-                  <div className="relative">;
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;
-                    <input;
-                      type="text";
-                      placeholder="Search services...";
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64";
-                    />;
-                  </div>;
-                  <div className="flex border border-gray-600 rounded-lg overflow-hidden">;
-                    <button;
-                      onClick={() => setViewMode('grid')}
-                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >;
-                      <Grid className="w-4 h-4" />;
-                    </button>;
-                    <button;
-                      onClick={() => setViewMode('list')}
-                      className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >;
-                      <List className="w-4 h-4" />;
-                    </button>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
-            {/* Services Display */}
-            <motion.div;
-              className={viewMode === 'grid';
-                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-                : "space-y-6";
-              }
-              variants={containerVariants}
-              initial="hidden";
-              whileInView="visible";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
             >;
               {filteredServices.map((service, index) => (;
@@ -772,119 +489,104 @@ export default function ComprehensivePricingPage() {;
                     variant={service.variant as any || 'quantum-advanced'}
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
-<<<<<<< HEAD
                   >
                     {viewMode === 'grid' ? (
                       // Grid View
-                      <div className=&quot;text-center&quot;>
-                        <div className=&quot;text-4xl mb-4&quot;>{service.icon}</div>
-                        <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{service.name}</h3>
-                        <p className=&quot;text-gray-300 mb-4 text-sm&quot;>{service.tagline}</p>
-                        <div className=&quot;text-2xl font-bold text-cyan-400 mb-2&quot;>{service.price}</div>
-                        <div className=&quot;text-sm text-gray-400 mb-4&quot;>{service.period}</div>
+                      <div className="text-center">
+                        <div className="text-4xl mb-4">{service.icon}</div>
+                        <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                        <p className="text-gray-300 mb-4 text-sm">{service.tagline}</p>
+                        <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                        <div className="text-sm text-gray-400 mb-4">{service.period}</div>
                         
-                        <div className=&quot;space-y-2 mb-6&quot;>
+                        <div className="space-y-2 mb-6">
                           {service.features.slice(0, 3).map((feature, idx) => (
-                            <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
-                              <Check className=&quot;w-3 h-3 text-green-400 flex-shrink-0&quot; />
-                              <span className=&quot;text-gray-300&quot;>{feature}</span>
+                            <div key={idx} className="flex items-center gap-2 text-sm">
+                              <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
+                              <span className="text-gray-300">{feature}</span>
                             </div>
                           ))}
                         </div>
 
-                        <div className=&quot;text-center space-y-2&quot;>
+                        <div className="text-center space-y-2">
                                                      <Button 
-                             variant=&quot;primary&quot; 
-                             size=&quot;sm&quot;
+                             variant="primary" 
+                             size="sm"
                              onClick={() => window.open(service.link, '_blank')}
-                             className=&quot;w-full&quot;
+                             className="w-full"
                            >
                              Learn More
-                             <ExternalLink className=&quot;ml-2 w-4 h-4&quot; />
+                             <ExternalLink className="ml-2 w-4 h-4" />
                            </Button>
                            <Button 
-<<<<<<< HEAD
                              variant="futuristic" 
                              size="sm"
                              onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                              className="w-full"
-=======
-                             variant=&quot;futuristic&quot; 
-                             size=&quot;sm&quot;
-                             onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
-                             className=&quot;w-full&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                            >
                              Get Pricing
-                             <DollarSign className=&quot;ml-2 w-4 h-4&quot; />
+                             <DollarSign className="ml-2 w-4 h-4" />
                            </Button>
                         </div>
                       </div>
                     ) : (
                       // List View
-                      <div className=&quot;flex flex-col md:flex-row gap-6 w-full&quot;>
-                        <div className=&quot;text-4xl md:text-5xl flex-shrink-0&quot;>{service.icon}</div>
-                        <div className=&quot;flex-1&quot;>
-                          <div className=&quot;flex flex-col md:flex-row md:items-center md:justify-between mb-4&quot;>
+                      <div className="flex flex-col md:flex-row gap-6 w-full">
+                        <div className="text-4xl md:text-5xl flex-shrink-0">{service.icon}</div>
+                        <div className="flex-1">
+                          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                             <div>
-                              <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{service.name}</h3>
-                              <p className=&quot;text-gray-300 text-sm&quot;>{service.tagline}</p>
+                              <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                              <p className="text-gray-300 text-sm">{service.tagline}</p>
                             </div>
-                            <div className=&quot;text-right mt-2 md:mt-0&quot;>
-                              <div className=&quot;text-2xl font-bold text-cyan-400&quot;>{service.price}</div>
-                              <div className=&quot;text-sm text-gray-400&quot;>{service.period}</div>
+                            <div className="text-right mt-2 md:mt-0">
+                              <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                              <div className="text-sm text-gray-400">{service.period}</div>
                             </div>
                           </div>
                           
-                          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4 mb-4&quot;>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
-                              <h4 className=&quot;text-sm font-semibold text-cyan-400 mb-2&quot;>Key Features</h4>
-                              <div className=&quot;space-y-1&quot;>
+                              <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features</h4>
+                              <div className="space-y-1">
                                 {service.features.slice(0, 4).map((feature, idx) => (
-                                  <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
-                                    <Check className=&quot;w-3 h-3 text-green-400 flex-shrink-0&quot; />
-                                    <span className=&quot;text-gray-300&quot;>{feature}</span>
+                                  <div key={idx} className="flex items-center gap-2 text-sm">
+                                    <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
+                                    <span className="text-gray-300">{feature}</span>
                                   </div>
                                 ))}
                               </div>
                             </div>
                             <div>
-                              <h4 className=&quot;text-sm font-semibold text-purple-400 mb-2&quot;>Market Info</h4>
-                              <div className=&quot;space-y-1 text-sm text-gray-300&quot;>
-                                <div><span className=&quot;text-gray-400&quot;>ROI:</span> {service.roi}</div>
-                                <div><span className=&quot;text-gray-400&quot;>Market:</span> {service.marketSize}</div>
-                                <div><span className=&quot;text-gray-400&quot;>Growth:</span> {service.growthRate}</div>
+                              <h4 className="text-sm font-semibold text-purple-400 mb-2">Market Info</h4>
+                              <div className="space-y-1 text-sm text-gray-300">
+                                <div><span className="text-gray-400">ROI:</span> {service.roi}</div>
+                                <div><span className="text-gray-400">Market:</span> {service.marketSize}</div>
+                                <div><span className="text-gray-400">Growth:</span> {service.growthRate}</div>
                               </div>
                             </div>
                           </div>
                           
-                          <div className=&quot;flex gap-2&quot;>
+                          <div className="flex gap-2">
                                                          <Button 
-                               variant=&quot;primary&quot; 
-                               size=&quot;sm&quot;
+                               variant="primary" 
+                               size="sm"
                                onClick={() => window.open(service.link, '_blank')}
                              >
                                Learn More
-                               <ExternalLink className=&quot;ml-2 w-4 h-4&quot; />
+                               <ExternalLink className="ml-2 w-4 h-4" />
                              </Button>
                              <Button 
-<<<<<<< HEAD
                                variant="futuristic" 
                                size="sm"
                                onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-=======
-                               variant=&quot;futuristic&quot; 
-                               size=&quot;sm&quot;
-                               onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                              >
                                Get Pricing
-                               <DollarSign className=&quot;ml-2 w-4 h-4&quot; />
+                               <DollarSign className="ml-2 w-4 h-4" />
                              </Button>
                           </div>
                         </div>
                       </div>
-=======
                   >;
                     {viewMode === 'grid' ? (;
                       // Grid View;
@@ -979,49 +681,28 @@ export default function ComprehensivePricingPage() {;
                           </div>;
                         </div>;
                       </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     )}
                   </UltraFuturisticCard>;
                 </motion.div>;
               ))}
-<<<<<<< HEAD
             </motion.div>
 
             {filteredServices.length === 0 && (
               <motion.div 
-                className=&quot;text-center py-16&quot;
+                className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className=&quot;text-6xl mb-4&quot;>🔍</div>
-                <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No Services Found</h3>
-                <p className=&quot;text-gray-400 mb-6&quot;>Try adjusting your search criteria or filters.</p>
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
+                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
                                  <Button 
-                   variant=&quot;primary&quot;
+                   variant="primary"
                    onClick={() => {
                      setSearchQuery(''),
                      setSelectedCategory('All'),
                      setPriceRange('All')
-=======
-            </motion.div>;
-            {filteredServices.length === 0 && (;
-              <motion.div;
-                className="text-center py-16";
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >;
-                <div className="text-6xl mb-4">🔍</div>;
-                <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
-                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
-                                 <Button;
-                   variant="primary";
-                   onClick={() => {;
-                     setSearchQuery('');
-                     setSelectedCategory('All');
-                     setPriceRange('All');
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                    }}
                  >;
                    Clear Filters;
@@ -1031,76 +712,56 @@ export default function ComprehensivePricingPage() {;
           </div>;
         </section>;
         {/* Contact Section */}
-<<<<<<< HEAD
-        <section className=&quot;py-20&quot;>
-          <div className=&quot;container mx-auto px-4 text-center&quot;>
+        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
             <motion.div 
-              className=&quot;max-w-4xl mx-auto&quot;
-=======
-        <section className="py-20">;
-          <div className="container mx-auto px-4 text-center">;
-            <motion.div;
-              className="max-w-4xl mx-auto";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              className="max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             >
-              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
-              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+              <p className="text-xl text-gray-300 mb-8">
                 Contact our sales team to discuss pricing, custom plans, and implementation options.
               </p>
               
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-8&quot;>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Button 
-<<<<<<< HEAD
                   variant="primary" 
                   size="lg"
                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-=======
-                  variant=&quot;primary&quot; 
-                  size=&quot;lg&quot;
-                  onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 >
                   Contact Sales
-                  <Mail className=&quot;ml-2 w-5 h-5&quot; />
+                  <Mail className="ml-2 w-5 h-5" />
                 </Button>
                 <Button 
-<<<<<<< HEAD
                   variant="futuristic" 
                   size="lg"
                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-=======
-                  variant=&quot;futuristic&quot; 
-                  size=&quot;lg&quot;
-                  onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 >
                   Schedule Demo
-                  <Calendar className=&quot;ml-2 w-5 h-5&quot; />
+                  <Calendar className="ml-2 w-5 h-5" />
                 </Button>
               </div>
 
-              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 text-center&quot;>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <Phone className=&quot;w-8 h-8 text-cyan-400 mx-auto mb-2&quot; />
-                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.mobile}</div>
-                  <div className=&quot;text-gray-400 text-sm&quot;>Call us anytime</div>
+                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{contactInfo.mobile}</div>
+                  <div className="text-gray-400 text-sm">Call us anytime</div>
                 </div>
                 <div>
-                  <Mail className=&quot;w-8 h-8 text-purple-400 mx-auto mb-2&quot; />
-                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.email}</div>
-                  <div className=&quot;text-gray-400 text-sm&quot;>Email us 24/7</div>
+                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{contactInfo.email}</div>
+                  <div className="text-gray-400 text-sm">Email us 24/7</div>
                 </div>
                 <div>
-                  <MapPin className=&quot;w-8 h-8 text-green-400 mx-auto mb-2&quot; />
-                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.address}</div>
-                  <div className=&quot;text-gray-400 text-sm&quot;>Visit our office</div>
+                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{contactInfo.address}</div>
+                  <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
               </div>
             </motion.div>
@@ -1109,7 +770,6 @@ export default function ComprehensivePricingPage() {;
       </div>
     </UltraFuturisticBackground>
   )
-=======
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Ready to Get Started?;
@@ -1158,5 +818,4 @@ export default function ComprehensivePricingPage() {;
       </div>;
     </UltraFuturisticBackground>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

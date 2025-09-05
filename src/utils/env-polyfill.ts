@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 /**
  * Environment Polyfill for Browser
  * 
  * This polyfill ensures that process.env is always available in the browser environment.
- * It prevents the &quot;Cannot read properties of undefined (reading 'env')&quot; error.
+ * It prevents the "Cannot read properties of undefined (reading 'env')" error.
  */
 
 // Define safe defaults for environment variables
@@ -27,33 +26,6 @@ if (typeof globalThis !== 'undefined') {
   if (typeof (globalThis as any).process === 'undefined') {
     (globalThis as any).process = createProcessObject()
   } else if (typeof (globalThis as any).process.env === 'undefined') {
-=======
-/**;
- * Environment Polyfill for Browser;
- *;
- * This polyfill ensures that process.env is always available in the browser environment.;
- * It prevents the "Cannot read properties of undefined (reading 'env')" error.;
- */;
-// Define safe defaults for environment variables;
-const defaultEnv = {;
-  NODE_ENV: 'production', // Default to production for safety;
-  NEXT_PUBLIC_APP_URL: '',;
-  NEXT_PUBLIC_SUPABASE_URL: '',;
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},;
-// Create a safe process object;
-const createProcessObject = () => ({;
-  env: { ...defaultEnv },;
-  versions: {},;
-  platform: 'browser',;
-  arch: 'x64',;
-  version: '18.0.0',;
-  browser: true}),;
-// Ensure process is available on globalThis;
-if (typeof globalThis !== 'undefined') {;
-  if (typeof (globalThis as any).process === 'undefined') {;
-    (globalThis as any).process = createProcessObject();
-  } else if (typeof (globalThis as any).process.env === 'undefined') {;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     (globalThis as any).process.env = { ...defaultEnv }
   }
 }
@@ -95,7 +67,6 @@ export function isDevelopment(): boolean {;
 export function isProduction(): boolean {;
   return getEnv('NODE_ENV') === 'production';
 }
-<<<<<<< HEAD
 
 // Export the polyfilled process object
 export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (globalThis as any).process.env : {
@@ -104,14 +75,9 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
   NEXT_PUBLIC_SUPABASE_URL: '',
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
 
-<<<<<<< HEAD
 // // // console.log('✅ Environment polyfill loaded successfully'),
-=======
-// console.log('✅ Environment polyfill loaded successfully');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export default safeEnv,
-=======
 ;
 // Export the polyfilled process object;
 export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (globalThis as any).process.env : {;
@@ -121,4 +87,3 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},;
 // // // console.log('✅ Environment polyfill loaded successfully'),;
 export default safeEnv;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { X } from "lucide-react",
-=======
-import React from &quot;react&quot;;
-import { ClickableBadge } from &quot;@/components/ui/clickable-badge&quot;;
-import { X } from &quot;lucide-react&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ActiveFiltersBarProps {
   selectedProductTypes: string[],
   selectedLocations: string[],
@@ -41,13 +33,12 @@ export function ActiveFiltersBar({
   if (!hasActiveFilters) return null,
   
   return (
-    <div className=&quot;flex flex-wrap gap-2 items-center mb-4&quot;>
-      <span className=&quot;text-sm text-zion-slate-light&quot;>Active filters:</span>
+    <div className="flex flex-wrap gap-2 items-center mb-4">
+      <span className="text-sm text-zion-slate-light">Active filters:</span>
       
       {searchQuery && (
         <ClickableBadge 
-          className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
-=======
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
 import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { X } from "lucide-react",;
@@ -85,97 +76,54 @@ export function ActiveFiltersBar({;
       {searchQuery && (;
         <ClickableBadge;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           onClick={onClearSearch}
         >;
           Search: {searchQuery}
-<<<<<<< HEAD
-          <X className=&quot;h-3 w-3&quot; />
+          <X className="h-3 w-3" />
         </ClickableBadge>
-=======
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
 ;
       {selectedProductTypes.map(type => (;
         <ClickableBadge;
           key={`type-${type}`}
-<<<<<<< HEAD
-          className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
-=======
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('productTypes', type)}
         >;
           {type}
-<<<<<<< HEAD
-          <X className=&quot;h-3 w-3&quot; />
+          <X className="h-3 w-3" />
         </ClickableBadge>
-=======
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       ))}
 ;
       {selectedLocations.map(location => (;
         <ClickableBadge;
           key={`location-${location}`}
-<<<<<<< HEAD
-          className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
-=======
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('locations', location)}
         >;
           {location}
-<<<<<<< HEAD
-          <X className=&quot;h-3 w-3&quot; />
+          <X className="h-3 w-3" />
         </ClickableBadge>
-=======
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       ))}
 ;
       {selectedAvailability.map(availability => (;
         <ClickableBadge;
           key={`availability-${availability}`}
-<<<<<<< HEAD
-          className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
-=======
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('availability', availability)}
         >;
           {availability}
-<<<<<<< HEAD
-          <X className=&quot;h-3 w-3&quot; />
+          <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
       
       {selectedRating !== null && (
         <ClickableBadge 
-          className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={onRemoveRating}
         >
           {selectedRating}+ Stars
-          <X className=&quot;h-3 w-3&quot; />
+          <X className="h-3 w-3" />
         </ClickableBadge>
-=======
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
-      ))}
-;
-      {selectedRating !== null && (;
-        <ClickableBadge;
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-          onClick={onRemoveRating}
-        >;
-          {selectedRating}+ Stars;
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
     </div>;
   );

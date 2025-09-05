@@ -360,30 +360,20 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       window.removeEventListener('resize', resizeCanvas),;
       cancelAnimationFrame(animationFrameId);
     }
-<<<<<<< HEAD
   }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]),
 
   return (
-    <div ref={containerRef} className=&quot;fixed inset-0 w-full h-full overflow-hidden&quot;>
+    <div ref={containerRef} className="fixed inset-0 w-full h-full overflow-hidden">
       <canvas
         ref={canvasRef}
-        className=&quot;absolute inset-0 w-full h-full&quot;
-=======
-  }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]),;
-  return (;
-    <div ref={containerRef} className="fixed inset-0 w-full h-full overflow-hidden">;
-      <canvas;
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        className="absolute inset-0 w-full h-full"
         style={{ zIndex: -1 }}
       />;
       {/* Additional visual effects */}
-<<<<<<< HEAD
       {enableMultidimensional && (
-        <div className=&quot;absolute inset-0 pointer-events-none&quot;>
+        <div className="absolute inset-0 pointer-events-none">
           <motion.div
-            className=&quot;absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full&quot;
+            className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full"
             animate={{
               scale: [1, 1.2, 1],
               rotate: [0, 180, 360],
@@ -392,11 +382,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: &quot;easeInOut&quot;
+              ease: "easeInOut"
             }}
           />
           <motion.div
-            className=&quot;absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full&quot;
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full"
             animate={{
               scale: [1.2, 1, 1.2],
               rotate: [360, 180, 0],
@@ -405,35 +395,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
             transition={{
               duration: 10,
               repeat: Infinity,
-              ease: &quot;easeInOut&quot;
-=======
-      {enableMultidimensional && (;
-        <div className="absolute inset-0 pointer-events-none">;
-          <motion.div;
-            className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full";
-            animate={{;
-              scale: [1, 1.2, 1],;
-              rotate: [0, 180, 360],;
-              opacity: [0.1, 0.3, 0.1];
-            }}
-            transition={{;
-              duration: 8,;
-              repeat: Infinity,;
-              ease: "easeInOut";
-            }}
-          />;
-          <motion.div;
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full";
-            animate={{;
-              scale: [1.2, 1, 1.2],;
-              rotate: [360, 180, 0],;
-              opacity: [0.1, 0.3, 0.1];
-            }}
-            transition={{;
-              duration: 10,;
-              repeat: Infinity,;
-              ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              ease: "easeInOut"
             }}
           />;
         </div>;

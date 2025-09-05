@@ -11,7 +11,6 @@ interface ProjectActionsProps {;
   isTalent: boolean,;
   onAddMilestone: () => void;
 }
-<<<<<<< HEAD
 
 export function ProjectActions({
   projectId,
@@ -21,43 +20,19 @@ export function ProjectActions({
   onAddMilestone
 }: ProjectActionsProps) {
   return (
-    <div className=&quot;flex gap-2&quot;>
+    <div className="flex gap-2">
       {isUnderDispute && disputeId ? (
-        <Button variant=&quot;outline&quot; asChild>
+        <Button variant="outline" asChild>
           <Link href={`/dashboard/disputes/${disputeId}`}>
-            <ShieldAlert className=&quot;h-4 w-4 mr-2&quot; />
+            <ShieldAlert className="h-4 w-4 mr-2" />
             View Active Dispute
           </Link>
         </Button>
       ) : (
         <RaiseDisputeButton 
           projectId={projectId}
-          variant=&quot;outline&quot;
+          variant="outline"
         />
-=======
-;
-export function ProjectActions({;
-  projectId,;
-  isUnderDispute,;
-  disputeId;
-  isTalent;
-  onAddMilestone;
-}: ProjectActionsProps) {;
-  return (;
-    <div className="flex gap-2">;
-      {isUnderDispute && disputeId ? (;
-        <Button variant="outline" asChild>;
-          <Link href={`/dashboard/disputes/${disputeId}`}>;
-            <ShieldAlert className="h-4 w-4 mr-2" />;
-            View Active Dispute;
-          </Link>;
-        </Button>;
-      ) : (;
-        <RaiseDisputeButton;
-          projectId={projectId}
-          variant="outline";
-        />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;

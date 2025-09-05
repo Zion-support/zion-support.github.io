@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
+import * as React from "react"
 
 /**
  * React 18 introduced `useId` for generating unique IDs. If an older
@@ -7,19 +6,8 @@ import * as React from &quot;react&quot;
  * a small fallback that mimics the API using `useRef`.
  */
 export function useReactId(): string {
-  if (typeof (React as any).useId === &quot;function&quot;) {
+  if (typeof (React as any).useId === "function") {
     return (React as any).useId()
-=======
-import * as React from "react";
-/**;
- * React 18 introduced `useId` for generating unique IDs. If an older;
- * React version is used where `useId` is unavailable, this hook provides;
- * a small fallback that mimics the API using `useRef`.;
- */;
-export function useReactId(): string {;
-  if (typeof (React as any).useId === "function") {;
-    return (React as any).useId();
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   const idRef = React.useRef<string | null>(null);

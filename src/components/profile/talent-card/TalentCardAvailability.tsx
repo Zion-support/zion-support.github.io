@@ -1,20 +1,13 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
-=======
-import React from &quot;react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { Clock } from 'lucide-react'
 
 interface TalentCardAvailabilityProps {
   availabilityType: string
-=======
 import React from "react",;
 import { Clock } from 'lucide-react';
 interface TalentCardAvailabilityProps {;
   availabilityType: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {;
@@ -43,23 +36,13 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       default:;
         return status;
     }
-<<<<<<< HEAD
   },
 
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
-      <Clock className=&quot;h-3 w-3&quot; />
+      <Clock className="h-3 w-3" />
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
-=======
-  };
-  return (;
-    <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
-      <Clock className="h-3 w-3" />;
-      <span>{getAvailabilityLabel(availabilityType)}</span>;
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

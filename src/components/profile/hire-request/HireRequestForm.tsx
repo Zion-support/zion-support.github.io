@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
@@ -12,20 +10,6 @@ import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
 import { TimelineField } from "./TimelineField",
 import { BudgetFields } from "./BudgetFields",
-=======
-import React from &quot;react&quot;;
-import { useHireRequestForm, FormValues } from &quot;./useHireRequestForm&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { DialogFooter } from &quot;@/components/ui/dialog&quot;;
-import { Form } from &quot;@/components/ui/form&quot;;
-import { Loader2 } from 'lucide-react'
-import { TalentProfile } from &quot;@/types/talent&quot;;
-import { PersonalInfoFields } from &quot;./PersonalInfoFields&quot;;
-import { ProjectDetailsField } from &quot;./ProjectDetailsField&quot;;
-import { TimelineField } from &quot;./TimelineField&quot;;
-import { BudgetFields } from &quot;./BudgetFields&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export interface HireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -48,41 +32,40 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
   
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className=&quot;space-y-6&quot;>
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <PersonalInfoFields form={form} />
         </div>
         
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
         
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <BudgetFields form={form} talent={talent} />
         </div>
         
-        <DialogFooter className=&quot;pt-4&quot;>
+        <DialogFooter className="pt-4">
           <Button 
-            type=&quot;button&quot; 
-            variant=&quot;outline&quot; 
+            type="button" 
+            variant="outline" 
             onClick={onClose}
-            className=&quot;border-zion-purple text-zion-purple hover:bg-zion-purple/10&quot;
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             disabled={isSubmitting}
           >
             Cancel
           </Button>
           <Button 
-            type=&quot;submit&quot;
-            className=&quot;bg-zion-purple hover:bg-zion-purple-dark text-white&quot;
+            type="submit"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             disabled={isSubmitting}
           >
             {isSubmitting ? (
               <>
-                <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Submitting...
               </>
             ) : (
               'Submit Request'
-=======
 import React from "react",;
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",;
 import { Button } from "@/components/ui/button",;
@@ -146,7 +129,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
               </>;
             ) : (;
               'Submit Request';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             )}
           </Button>;
         </DialogFooter>;

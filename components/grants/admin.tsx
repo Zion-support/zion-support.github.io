@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import type { GrantApplication, Milestone } from '../../types/grants',
@@ -39,67 +38,57 @@ export default function GrantsAdminPage() {
 
   return (
     <EnhancedLayout>
-      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Grants Admin</h1>
-      <div className=&quot;grid md:grid-cols-3 gap-6&quot;>
-        <div className=&quot;md:col-span-2&quot;>
-          <div className=&quot;mb-3 flex items-center gap-2&quot;>
-            <input className=&quot;border rounded p-2&quot; placeholder=&quot;Admin Token&quot; value={token} onChange={(e) => setToken(e.target.value)} />
+      <h1 className="text-2xl font-semibold mb-4">Grants Admin</h1>
+      <div className="grid md:grid-cols-3 gap-6">
+        <div className="md:col-span-2">
+          <div className="mb-3 flex items-center gap-2">
+            <input className="border rounded p-2" placeholder="Admin Token" value={token} onChange={(e) => setToken(e.target.value)} />
           </div>
-          <div className=&quot;grid gap-3&quot;>
+          <div className="grid gap-3">
             {items.map((g) => (
               <div key={g.id} className={`border rounded p-3 ${selected?.id === g.id ? 'ring-2 ring-blue-500' : ''}`}>
-                <div className=&quot;flex items-center justify-between&quot;>
+                <div className="flex items-center justify-between">
                   <div>
-                    <div className=&quot;font-medium&quot;>{g.projectName}</div>
-                    <div className=&quot;text-xs text-gray-600&quot;>{g.sector} • {g.region} • {g.program}</div>
+                    <div className="font-medium">{g.projectName}</div>
+                    <div className="text-xs text-gray-600">{g.sector} • {g.region} • {g.program}</div>
                   </div>
-                  <div className=&quot;flex gap-2&quot;>
-                    <button className=&quot;px-2 py-1 border rounded&quot; onClick={() => setStatus(g.id, 'Under Review')}>Under Review</button>
-                    <button className=&quot;px-2 py-1 bg-emerald-600 text-white rounded&quot; onClick={() => setStatus(g.id, 'Approved')}>Approve</button>
-                    <button className=&quot;px-2 py-1 bg-red-600 text-white rounded&quot; onClick={() => setStatus(g.id, 'Rejected')}>Reject</button>
-                    <button className=&quot;px-2 py-1 border rounded&quot; onClick={() => setSelected(g)}>Milestones</button>
+                  <div className="flex gap-2">
+                    <button className="px-2 py-1 border rounded" onClick={() => setStatus(g.id, 'Under Review')}>Under Review</button>
+                    <button className="px-2 py-1 bg-emerald-600 text-white rounded" onClick={() => setStatus(g.id, 'Approved')}>Approve</button>
+                    <button className="px-2 py-1 bg-red-600 text-white rounded" onClick={() => setStatus(g.id, 'Rejected')}>Reject</button>
+                    <button className="px-2 py-1 border rounded" onClick={() => setSelected(g)}>Milestones</button>
                   </div>
                 </div>
               </div>
             ))}
-            {items.length === 0 && <div className=&quot;text-sm text-gray-600&quot;>No submitted applications.</div>}
+            {items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
           </div>
         </div>
         <div>
-          <div className=&quot;border rounded p-3&quot;>
-            <h2 className=&quot;font-medium mb-2&quot;>Milestone Planner</h2>
+          <div className="border rounded p-3">
+            <h2 className="font-medium mb-2">Milestone Planner</h2>
             {selected ? (
-              <div className=&quot;space-y-2&quot;>
+              <div className="space-y-2">
                 {(milestones.length === 0 ? (selected.milestones || []) : milestones).map((m, idx) => (
-<<<<<<< HEAD
                   <div key={m.id || idx} className="border rounded p-2">
                     <input className="w-full border rounded p-2 mb-2" placeholder="Title" value={m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e.target.value }, return copy })} />
                     <textarea className="w-full border rounded p-2 mb-2" placeholder="Description" value={m.description || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e.target.value }, return copy })} />
                     <div className="grid grid-cols-2 gap-2">
                       <input className="border rounded p-2" placeholder="Due date (YYYY-MM-DD)" value={m.dueDate || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], dueDate: e.target.value }, return copy })} />
                       <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={m.trancheAmount || 0} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], trancheAmount: Number(e.target.value) }, return copy })} />
-=======
-                  <div key={m.id || idx} className=&quot;border rounded p-2&quot;>
-                    <input className=&quot;w-full border rounded p-2 mb-2&quot; placeholder=&quot;Title&quot; value={m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx], title: e.target.value }; return copy; })} />
-                    <textarea className=&quot;w-full border rounded p-2 mb-2&quot; placeholder=&quot;Description&quot; value={m.description || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx], description: e.target.value }; return copy; })} />
-                    <div className=&quot;grid grid-cols-2 gap-2&quot;>
-                      <input className=&quot;border rounded p-2&quot; placeholder=&quot;Due date (YYYY-MM-DD)&quot; value={m.dueDate || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx], dueDate: e.target.value }; return copy; })} />
-                      <input className=&quot;border rounded p-2&quot; placeholder=&quot;Tranche (amount)&quot; type=&quot;number&quot; value={m.trancheAmount || 0} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx], trancheAmount: Number(e.target.value) }; return copy; })} />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                     </div>
-                    <div className=&quot;mt-2 flex items-center gap-2&quot;>
-                      <button className=&quot;px-2 py-1 border rounded&quot; onClick={() => markComplete(m.id!)} disabled={!m.id}>Mark Complete</button>
+                    <div className="mt-2 flex items-center gap-2">
+                      <button className="px-2 py-1 border rounded" onClick={() => markComplete(m.id!)} disabled={!m.id}>Mark Complete</button>
                     </div>
                   </div>
                 ))}
-                <div className=&quot;flex gap-2 mt-2&quot;>
-                  <button className=&quot;px-2 py-1 border rounded&quot; onClick={() => setMilestones((ms) => [...(ms.length ? ms : (selected.milestones || [])), { id: `${Date.now()}-${Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>
-                  <button className=&quot;px-2 py-1 bg-blue-600 text-white rounded&quot; onClick={saveMilestones}>Save Milestones</button>
+                <div className="flex gap-2 mt-2">
+                  <button className="px-2 py-1 border rounded" onClick={() => setMilestones((ms) => [...(ms.length ? ms : (selected.milestones || [])), { id: `${Date.now()}-${Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>
+                  <button className="px-2 py-1 bg-blue-600 text-white rounded" onClick={saveMilestones}>Save Milestones</button>
                 </div>
               </div>
             ) : (
-              <div className=&quot;text-sm text-gray-600&quot;>Select a grant to plan milestones.</div>
-=======
+              <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
 import { useEffect, useMemo, useState } from 'react',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 import type { GrantApplication, Milestone } from '../../types/grants',;
@@ -183,7 +172,6 @@ export default function GrantsAdminPage() {;
               </div>;
             ) : (;
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             )}
           </div>;
         </div>;

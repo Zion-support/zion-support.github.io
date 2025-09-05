@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { UserProfile } from "@/types/auth",
-=======
-import type { UserProfile } from &quot;@/types/auth&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use
@@ -21,9 +15,9 @@ export interface SupabaseUser {
 export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
   return {
     id: user.id,
-    email: user.email || "&quot;,
-    displayName: profile.display_name || "&quot;,
-    userType: (profile.user_type as &quot;creator&quot; | &quot;jobSeeker&quot; | &quot;employer&quot; | &quot;buyer&quot; | &quot;admin&quot; | null) || null,
+    email: user.email || "",
+    displayName: profile.display_name || "",
+    userType: (profile.user_type as "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null) || null,
     profileComplete: Boolean(profile.profile_complete),
     createdAt: new Date(profile.created_at).toISOString(),
     updatedAt: new Date(profile.updated_at).toISOString(),
@@ -32,7 +26,6 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     avatar_url: profile.avatar_url || undefined,
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility
     role: profile.user_type // Map user_type to role for backward compatibility
-=======
 import type { UserProfile } from "@/types/auth",;
 // We cannot rely on the Supabase SDK types here because the project;
 // declares `@supabase/supabase-js` as an untyped external module. Define;
@@ -60,7 +53,6 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     avatar_url: profile.avatar_url || undefined;
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility;
     role: profile.user_type // Map user_type to role for backward compatibility;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 }
 ;

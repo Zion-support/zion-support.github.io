@@ -178,7 +178,6 @@ export default function CaseStudyResourcePage() {;
         optimal performance and cost efficiency.</p>;
       `;
     }
-<<<<<<< HEAD
   ],
 
   const caseStudy = caseStudies.find(study => study.id === id),
@@ -189,21 +188,16 @@ export default function CaseStudyResourcePage() {;
         <Head>
           <title>Case Study Resource Not Found | Zion Tech Group</title>
         </Head>
-        <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
-          <main className=&quot;container mx-auto px-6 py-12&quot;>
-            <div className=&quot;max-w-4xl mx-auto text-center&quot;>
-              <h1 className=&quot;text-4xl font-bold mb-6 text-white&quot;>Case Study Resource Not Found</h1>
-              <p className=&quot;text-xl text-white/80 mb-8&quot;>
+        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+          <main className="container mx-auto px-6 py-12">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>
+              <p className="text-xl text-white/80 mb-8">
                 The case study resource you're looking for doesn't exist.
               </p>
               <Link 
-<<<<<<< HEAD
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
-                href=&quot;/resources&quot;
-                className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               >
                 ← Back to Resources
               </Link>
@@ -218,52 +212,47 @@ export default function CaseStudyResourcePage() {;
     <>
       <Head>
         <title>{caseStudy.title} | Zion Tech Group - Case Study Resource</title>
-        <meta name=&quot;description&quot; content={caseStudy.description} />
-        <meta property=&quot;og:title&quot; content={`${caseStudy.title} | Zion Tech Group`} />
-        <meta property=&quot;og:description&quot; content={caseStudy.description} />
+        <meta name="description" content={caseStudy.description} />
+        <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
+        <meta property="og:description" content={caseStudy.description} />
       </Head>
       
-      <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
-        <main className=&quot;container mx-auto px-6 py-12&quot;>
-          <div className=&quot;max-w-4xl mx-auto&quot;>
-            <nav className=&quot;mb-8&quot;>
-              <Link href=&quot;/resources&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <div className="max-w-4xl mx-auto">
+            <nav className="mb-8">
+              <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 ← Back to Resources
               </Link>
             </nav>
             
-            <header className=&quot;mb-12&quot;>
-              <div className=&quot;mb-6&quot;>
-                <span className=&quot;px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30&quot;>
+            <header className="mb-12">
+              <div className="mb-6">
+                <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
                   {caseStudy.industry}
                 </span>
               </div>
-              <h1 className=&quot;text-4xl font-bold mb-4 text-white&quot;>{caseStudy.title}</h1>
-              <p className=&quot;text-xl text-cyan-400 font-semibold mb-2&quot;>{caseStudy.company}</p>
-              <p className=&quot;text-white/80 text-lg&quot;>{caseStudy.description}</p>
+              <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
+              <p className="text-xl text-cyan-400 font-semibold mb-2">{caseStudy.company}</p>
+              <p className="text-white/80 text-lg">{caseStudy.description}</p>
             </header>
             
-            <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 mb-8&quot;>
-              <h2 className=&quot;text-2xl font-bold mb-4 text-white&quot;>Key Results</h2>
-              <p className=&quot;text-green-400 font-semibold text-lg&quot;>{caseStudy.results}</p>
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 mb-8">
+              <h2 className="text-2xl font-bold mb-4 text-white">Key Results</h2>
+              <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
             </div>
             
-            <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12&quot;>
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
               <div 
-                className=&quot;prose prose-invert max-w-none&quot;
+                className="prose prose-invert max-w-none"
                 dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
               />
             </div>
             
-            <div className=&quot;text-center&quot;>
+            <div className="text-center">
               <Link 
-<<<<<<< HEAD
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
-                href=&quot;/contact&quot;
-                className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               >
                 Get Started with Your Project
               </Link>
@@ -273,7 +262,6 @@ export default function CaseStudyResourcePage() {;
       </div>
     </>
   )
-=======
   ];
   const caseStudy = caseStudies.find(study => study.id === id);
   if (!caseStudy) {;
@@ -351,5 +339,4 @@ export default function CaseStudyResourcePage() {;
       </div>;
     </>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

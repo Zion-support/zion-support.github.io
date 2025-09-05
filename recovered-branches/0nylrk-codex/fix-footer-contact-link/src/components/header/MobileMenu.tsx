@@ -1,21 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
-=======
-import { Link } from &quot;react-router-dom&quot;;
-import { useLocation } from &quot;react-router-dom&quot;;
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from &quot;lucide-react&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void
@@ -28,43 +17,43 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   
   const navItems = [
     {
-      name: &quot;Home&quot;,
-      href: &quot;/&quot;,
+      name: "Home",
+      href: "/",
       icon: Home,
-      matches: (path: string) => path === &quot;/&quot;
+      matches: (path: string) => path === "/"
     },
     {
-      name: &quot;Browse&quot;,
-      href: &quot;/talent&quot;,
+      name: "Browse",
+      href: "/talent",
       icon: Search,
-      matches: (path: string) => path.startsWith(&quot;/talent&quot;) || path.startsWith(&quot;/categories&quot;) || path.startsWith(&quot;/marketplace&quot;)
+      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
     },
     {
-      name: &quot;Community&quot;,
-      href: &quot;/community&quot;,
+      name: "Community",
+      href: "/community",
       icon: MessageCircle,
-      matches: (path: string) => path.startsWith(&quot;/community&quot;) || path.startsWith(&quot;/forum&quot;)
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
     {
-      name: &quot;Post Job&quot;,
-      href: &quot;/post-job&quot;,
+      name: "Post Job",
+      href: "/post-job",
       icon: BriefcaseIcon,
-      matches: (path: string) => path.startsWith(&quot;/post-job&quot;),
+      matches: (path: string) => path.startsWith("/post-job"),
       authRequired: true
     },
     {
-      name: &quot;Messages&quot;,
-      href: &quot;/messages&quot;,
+      name: "Messages",
+      href: "/messages",
       icon: MessageSquare,
-      matches: (path: string) => path.startsWith(&quot;/messages&quot;) || path.startsWith(&quot;/inbox&quot;),
+      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
       badge: unreadCount,
       authRequired: true
     },
     {
-      name: &quot;Dashboard&quot;,
-      href: &quot;/dashboard&quot;,
+      name: "Dashboard",
+      href: "/dashboard",
       icon: User,
-      matches: (path: string) => path.startsWith(&quot;/dashboard&quot;),
+      matches: (path: string) => path.startsWith("/dashboard"),
       authRequired: true
     }
   ],
@@ -75,32 +64,31 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   ),
 
   return (
-    <div className=&quot;py-6&quot;>
-      <div className=&quot;flex justify-between items-center px-6 mb-6&quot;>
-        <h2 className=&quot;text-xl font-bold&quot;>Menu</h2>
-        <Button variant=&quot;ghost&quot; size=&quot;icon&quot; onClick={onClose}>
-          <X className=&quot;h-5 w-5&quot; />
+    <div className="py-6">
+      <div className="flex justify-between items-center px-6 mb-6">
+        <h2 className="text-xl font-bold">Menu</h2>
+        <Button variant="ghost" size="icon" onClick={onClose}>
+          <X className="h-5 w-5" />
         </Button>
       </div>
       
-      <nav className=&quot;space-y-1&quot;>
+      <nav className="space-y-1">
         {visibleItems.map(item => (
           <Link
             key={item.name}
             to={item.href}
             className={cn(
-              &quot;flex items-center px-6 py-3 text-base font-medium&quot;,
+              "flex items-center px-6 py-3 text-base font-medium",
               item.matches(location.pathname)
-                ? &quot;bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan&quot;
-                : &quot;text-white hover:bg-zion-purple/10 hover:text-zion-cyan&quot;
+                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
+                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}
             onClick={onClose}
           >
-            <div className=&quot;relative mr-4&quot;>
-              <item.icon className=&quot;h-5 w-5&quot; />
+            <div className="relative mr-4">
+              <item.icon className="h-5 w-5" />
               {item.badge && item.badge > 0 && (
-                <span className=&quot;absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center&quot;>
-=======
+                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
 import { Link } from "react-router-dom",;
 import { useLocation } from "react-router-dom",;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",;
@@ -187,7 +175,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
               <item.icon className="h-5 w-5" />;
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>;
               )}

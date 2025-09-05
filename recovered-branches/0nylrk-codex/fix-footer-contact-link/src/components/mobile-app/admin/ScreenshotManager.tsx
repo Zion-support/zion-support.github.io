@@ -1,24 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Upload, Trash2, Plus } from "lucide-react",
 import { AppPlatform } from "./MetadataManager",
 import { toast } from "sonner",
-=======
-import React, { useState, useRef } from &quot;react&quot;;
-import { Card, CardHeader, CardTitle, CardContent } from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Upload, Trash2, Plus } from &quot;lucide-react&quot;;
-import { AppPlatform } from &quot;./MetadataManager&quot;;
-import { toast } from &quot;sonner&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ScreenshotManagerProps {
   platform: AppPlatform
-=======
 import React, { useState, useRef } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -27,7 +15,6 @@ import { AppPlatform } from "./MetadataManager",;
 import { toast } from "sonner",;
 interface ScreenshotManagerProps {;
   platform: AppPlatform;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 type Screenshot = {;
@@ -43,7 +30,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (e.target.files) {;
       addScreenshots(Array.from(e.target.files));
     }
-<<<<<<< HEAD
   },
   
   const addScreenshots = (files: File[]) => {
@@ -51,7 +37,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
     
     if (imageFiles.length === 0) {
-<<<<<<< HEAD
       toast.error("Please select valid image files"),
       return
     }
@@ -63,20 +48,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (availableSlots <= 0) {
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return
-=======
-      toast.error(&quot;Please select valid image files&quot;);
-      return;
-    }
-    
-    // Limit the number of screenshots
-    const maxScreenshots = platform === &quot;ios&quot; ? 10 : 8;
-    const availableSlots = maxScreenshots - screenshots.length;
-    
-    if (availableSlots <= 0) {
-      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === &quot;ios&quot; ? &quot;iOS&quot; : &quot;Android&quot;}`);
-      return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
   },;
   const addScreenshots = (files: File[]) => {;
     // Filter for image files only;
@@ -92,7 +63,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (availableSlots <= 0) {;
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),;
       return;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     const filesToAdd = imageFiles.slice(0, availableSlots),;
@@ -131,125 +101,66 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (e.dataTransfer.files) {;
       addScreenshots(Array.from(e.dataTransfer.files));
     }
-<<<<<<< HEAD
   },
   
   return (
-    <Card className=&quot;bg-zion-blue border-zion-purple/30&quot;>
+    <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
-        <CardTitle className=&quot;text-lg&quot;>App Screenshots</CardTitle>
+        <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
         <div 
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging 
-              ? &quot;border-zion-cyan bg-zion-cyan/10&quot; 
-              : &quot;border-zion-purple/30&quot;
-=======
-  };
-  return (;
-    <Card className="bg-zion-blue border-zion-purple/30">;
-      <CardHeader>;
-        <CardTitle className="text-lg">App Screenshots</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <div;
-          className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${;
-            isDragging;
-              ? "border-zion-cyan bg-zion-cyan/10";
-              : "border-zion-purple/30";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              ? "border-zion-cyan bg-zion-cyan/10" 
+              : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
-<<<<<<< HEAD
         >
-          <Upload className=&quot;mx-auto h-8 w-8 text-gray-400 mb-2&quot; />
-          <p className=&quot;text-sm mb-2&quot;>Drag & drop screenshots here</p>
+          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />
+          <p className="text-sm mb-2">Drag & drop screenshots here</p>
           <input
             ref={fileInputRef}
-            type=&quot;file&quot;
+            type="file"
             multiple
-            accept=&quot;image/*&quot;
+            accept="image/*"
             onChange={handleFileSelect}
-            className=&quot;hidden&quot;
+            className="hidden"
           />
           <Button 
-            variant=&quot;outline&quot; 
+            variant="outline" 
             onClick={() => fileInputRef.current?.click()}
-            className=&quot;mt-2&quot;
+            className="mt-2"
           >
-            <Plus className=&quot;mr-2 h-4 w-4&quot; />
+            <Plus className="mr-2 h-4 w-4" />
             Select Files
           </Button>
         </div>
         
-        <div className=&quot;text-xs text-gray-400 mb-4&quot;>
-          {platform === &quot;ios&quot; 
-            ? &quot;Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.&quot;
-            : &quot;Vary by device. Include phone and tablet screenshots. Max 8 per device type.&quot;
+        <div className="text-xs text-gray-400 mb-4">
+          {platform === "ios" 
+            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
           }
         </div>
         
-        <div className=&quot;grid grid-cols-2 gap-3&quot;>
+        <div className="grid grid-cols-2 gap-3">
           {screenshots.map((screenshot) => (
-            <div key={screenshot.id} className=&quot;relative group&quot;>
+            <div key={screenshot.id} className="relative group">
               <img 
                 src={screenshot.url}
-                alt=&quot;App screenshot&quot;
-                className=&quot;w-full h-auto rounded border border-zion-purple/20&quot;
+                alt="App screenshot"
+                className="w-full h-auto rounded border border-zion-purple/20"
               />
               <button
                 onClick={() => removeScreenshot(screenshot.id)}
-                className=&quot;absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity&quot;
+                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
               >
-                <Trash2 className=&quot;h-3 w-3&quot; />
+                <Trash2 className="h-3 w-3" />
               </button>
             </div>
-=======
-        >;
-          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
-          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
-          <input;
-            ref={fileInputRef}
-            type="file";
-            multiple;
-            accept="image/*";
-            onChange={handleFileSelect}
-            className="hidden";
-          />;
-          <Button;
-            variant="outline";
-            onClick={() => fileInputRef.current?.click()}
-            className="mt-2";
-          >;
-            <Plus className="mr-2 h-4 w-4" />;
-            Select Files;
-          </Button>;
-        </div>;
-        <div className="text-xs text-gray-400 mb-4">;
-          {platform === "ios";
-            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.";
-            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
-          }
-        </div>;
-        <div className="grid grid-cols-2 gap-3">;
-          {screenshots.map((screenshot) => (;
-            <div key={screenshot.id} className="relative group">;
-              <img;
-                src={screenshot.url}
-                alt="App screenshot";
-                className="w-full h-auto rounded border border-zion-purple/20";
-              />;
-              <button;
-                onClick={() => removeScreenshot(screenshot.id)}
-                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity";
-              >;
-                <Trash2 className="h-3 w-3" />;
-              </button>;
-            </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           ))}
         </div>;
       </CardContent>;

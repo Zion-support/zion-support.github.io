@@ -15,7 +15,6 @@ interface AIEnhancementDialogProps {;
   defaultOptions: AIEnhancementOptions,;
   initialContent?: string;
 }
-<<<<<<< HEAD
 
 export function AIEnhancementDialog({
   title,
@@ -32,33 +31,11 @@ export function AIEnhancementDialog({
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>
-      <DialogContent className=&quot;max-w-3xl&quot;>
+      <DialogContent className="max-w-3xl">
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
         <AIEnhancementPanel
-=======
-;
-export function AIEnhancementDialog({;
-  title,;
-  isOpen,;
-  onClose,;
-  onApply,;
-  defaultOptions,;
-  initialContent;
-}: AIEnhancementDialogProps) {;
-  const handleApply = (content: string) => {;
-    onApply(content);
-    onClose();
-  };
-  return (;
-    <Dialog open={isOpen} onOpenChange={() => onClose()}>;
-      <DialogContent className="max-w-3xl">;
-        <DialogHeader>;
-          <DialogTitle>{title}</DialogTitle>;
-        </DialogHeader>;
-        <AIEnhancementPanel;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           title={title}
           defaultOptions={defaultOptions}
           onApply={handleApply}

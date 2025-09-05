@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { Crown, Medal, Trophy } from 'lucide-react'
 
 interface LeaderboardEntry {
@@ -25,50 +18,49 @@ export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
     {
-      id: &quot;1&quot;,
+      id: "1",
       rank: 1,
-      name: &quot;AI Tech Guru&quot;,
-      avatar: "&quot;, // URL would be here
+      name: "AI Tech Guru",
+      avatar: "", // URL would be here
       referrals: 178,
       earnings: 4500,
-      badges: [&quot;gold&quot;, &quot;trending&quot;]
+      badges: ["gold", "trending"]
     },
     {
-      id: &quot;2&quot;,
+      id: "2",
       rank: 2,
-      name: &quot;Machine Learning Hub&quot;,
-      avatar: "&quot;,
+      name: "Machine Learning Hub",
+      avatar: "",
       referrals: 145,
       earnings: 3625,
-      badges: [&quot;silver&quot;]
+      badges: ["silver"]
     },
     {
-      id: &quot;3&quot;,
+      id: "3",
       rank: 3,
-      name: &quot;Neural Networks Pro&quot;,
-      avatar: "&quot;,
+      name: "Neural Networks Pro",
+      avatar: "",
       referrals: 124,
       earnings: 3100,
-      badges: [&quot;bronze&quot;]
+      badges: ["bronze"]
     },
     {
-      id: &quot;4&quot;,
+      id: "4",
       rank: 4,
-      name: &quot;AI Career Insights&quot;,
-      avatar: "&quot;,
+      name: "AI Career Insights",
+      avatar: "",
       referrals: 98,
       earnings: 2450,
       badges: []
     },
     {
-      id: &quot;5&quot;,
+      id: "5",
       rank: 5,
-      name: &quot;Deep Learning Daily&quot;,
-      avatar: "&quot;,
+      name: "Deep Learning Daily",
+      avatar: "",
       referrals: 87,
       earnings: 2175,
-      badges: [&quot;newcomer"]
-=======
+      badges: ["newcomer"]
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
@@ -130,7 +122,6 @@ export function PartnerLeaderboard() {;
       referrals: 87,;
       earnings: 2175,;
       badges: ["newcomer"];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   ],;
   // Function to render rank badge;
@@ -175,7 +166,6 @@ export function PartnerLeaderboard() {;
                       <AvatarImage src={entry.avatar} alt={entry.name} />;
                       <AvatarFallback className="bg-zion-blue text-zion-cyan">;
                         {entry.name.substring(0, 2).toUpperCase()}
-<<<<<<< HEAD
                       </AvatarFallback>
                     </Avatar>
                     <div>
@@ -188,40 +178,16 @@ export function PartnerLeaderboard() {;
                       <div className="font-semibold text-white">${entry.earnings}</div>
                       <div className="text-xs text-zion-slate-light">earned</div>
                     </div>
-                    <div className="flex gap-1&quot;>
-                      {entry.badges.includes(&quot;gold&quot;) && (
-                        <Badge variant=&quot;outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400&quot;>
+                    <div className="flex gap-1">
+                      {entry.badges.includes("gold") && (
+                        <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
                           Elite
                         </Badge>
                       )}
-                      {entry.badges.includes(&quot;trending&quot;) && (
-                        <Badge variant=&quot;outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
+                      {entry.badges.includes("trending") && (
+                        <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
                           Trending
                         </Badge>
-=======
-                      </AvatarFallback>;
-                    </Avatar>;
-                    <div>;
-                      <div className="font-medium text-white">{entry.name}</div>;
-                      <div className="text-xs text-zion-slate-light">{entry.referrals} referrals</div>;
-                    </div>;
-                  </div>;
-                  <div className="flex items-center gap-3">;
-                    <div className="text-right">;
-                      <div className="font-semibold text-white">${entry.earnings}</div>;
-                      <div className="text-xs text-zion-slate-light">earned</div>;
-                    </div>;
-                    <div className="flex gap-1">;
-                      {entry.badges.includes("gold") && (;
-                        <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">;
-                          Elite;
-                        </Badge>;
-                      )}
-                      {entry.badges.includes("trending") && (;
-                        <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">;
-                          Trending;
-                        </Badge>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       )}
                     </div>;
                   </div>;
@@ -236,7 +202,6 @@ export function PartnerLeaderboard() {;
                 </p>;
               </div>;
             )}
-<<<<<<< HEAD
           </div>
         </CardContent>
       </Card>
@@ -248,10 +213,10 @@ export function PartnerLeaderboard() {;
         </CardHeader>
         <CardContent>
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
-            <p className="text-zion-slate-light mb-4&quot;>
+            <p className="text-zion-slate-light mb-4">
               Start referring to appear on the leaderboard
             </p>
-            <Badge variant=&quot;outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">
+            <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">
               New Partner
             </Badge>
           </div>
@@ -265,8 +230,8 @@ export function PartnerLeaderboard() {;
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="p-4 bg-zion-blue rounded-md">
-            <div className="flex items-center gap-2 mb-2&quot;>
-              <Badge variant=&quot;outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
+            <div className="flex items-center gap-2 mb-2">
+              <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
                 Elite Partner
               </Badge>
               <span className="text-xs text-zion-slate-light">(Top 3)</span>
@@ -280,8 +245,8 @@ export function PartnerLeaderboard() {;
           </div>
           
           <div className="p-4 bg-zion-blue rounded-md">
-            <div className="flex items-center gap-2 mb-2&quot;>
-              <Badge variant=&quot;outline" className="bg-gray-400/20 border-gray-400 text-gray-300">
+            <div className="flex items-center gap-2 mb-2">
+              <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300">
                 Premier Partner
               </Badge>
               <span className="text-xs text-zion-slate-light">(Top 10)</span>
@@ -296,63 +261,5 @@ export function PartnerLeaderboard() {;
       </Card>
     </div>
   )
-=======
-          </div>;
-        </CardContent>;
-      </Card>;
-      <Card className="bg-zion-blue-dark border-zion-blue-light">;
-        <CardHeader>;
-          <CardTitle>Your Ranking</CardTitle>;
-          <CardDescription>How you compare to other partners</CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">;
-            <p className="text-zion-slate-light mb-4">;
-              Start referring to appear on the leaderboard;
-            </p>;
-            <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">;
-              New Partner;
-            </Badge>;
-          </div>;
-        </CardContent>;
-      </Card>;
-      <Card className="bg-zion-blue-dark border-zion-blue-light">;
-        <CardHeader>;
-          <CardTitle>Rewards Program</CardTitle>;
-          <CardDescription>Exclusive perks for top partners</CardDescription>;
-        </CardHeader>;
-        <CardContent className="space-y-4">;
-          <div className="p-4 bg-zion-blue rounded-md">;
-            <div className="flex items-center gap-2 mb-2">;
-              <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">;
-                Elite Partner;
-              </Badge>;
-              <span className="text-xs text-zion-slate-light">(Top 3)</span>;
-            </div>;
-            <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1">;
-              <li>Increased commission rate (35%)</li>;
-              <li>Featured on Zion AI home page</li>;
-              <li>Early access to new Zion AI features</li>;
-              <li>Monthly strategy call with Zion AI team</li>;
-            </ul>;
-          </div>;
-          <div className="p-4 bg-zion-blue rounded-md">;
-            <div className="flex items-center gap-2 mb-2">;
-              <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300">;
-                Premier Partner;
-              </Badge>;
-              <span className="text-xs text-zion-slate-light">(Top 10)</span>;
-            </div>;
-            <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1">;
-              <li>Increased commission rate (30%)</li>;
-              <li>Custom landing page for your referrals</li>;
-              <li>Co-marketing opportunities</li>;
-            </ul>;
-          </div>;
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

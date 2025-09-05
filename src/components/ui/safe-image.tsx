@@ -45,21 +45,12 @@ export function SafeImage({;
       <div;
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
-<<<<<<< HEAD
-        role=&quot;img&quot;
+        role="img"
         aria-label={alt}
       >
-        <ImageIcon className=&quot;w-6 h-6&quot; />
+        <ImageIcon className="w-6 h-6" />
       </div>
     )
-=======
-        role="img";
-        aria-label={alt}
-      >;
-        <ImageIcon className="w-6 h-6" />;
-      </div>;
-    );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   return (;

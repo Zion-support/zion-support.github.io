@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { AuthContext } from "@/context/auth/AuthContext",
 import type { UserDetails as AuthUserDetails } from "@/types/auth",
-=======
-import React, { createContext, useContext, useState, useEffect, ReactNode } from &quot;react&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { AuthContext } from &quot;@/context/auth/AuthContext&quot;;
-import type { UserDetails as AuthUserDetails } from &quot;@/types/auth&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // Define types for our context
 export interface UserDetails {
   id?: string,
@@ -27,7 +18,6 @@ export interface UserDetails {
   bio?: string,
   createdAt?: string,
   updatedAt?: string
-=======
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { AuthContext } from "@/context/auth/AuthContext",;
@@ -48,7 +38,6 @@ export interface UserDetails {;
   bio?: string,;
   createdAt?: string,;
   updatedAt?: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export interface AuthContextType {;
@@ -69,7 +58,6 @@ export interface AuthContextType {;
   loginWithTwitter: () => Promise<void>,;
   loginWithWeb3: () => Promise<void>;
 }
-<<<<<<< HEAD
 
 // Create a provider component
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -79,20 +67,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Mock auth functions for now - these would connect to Supabase in a real implementation
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth
-<<<<<<< HEAD
     // // // console.log("Sign in attempted with:", email),
-=======
-    // console.log(&quot;Sign in attempted with:&quot;, email);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     // Mock successful sign-in
     setUser({ 
-      id: &quot;mock-user-id&quot;, 
+      id: "mock-user-id", 
       email, 
-      displayName: &quot;Mock User&quot;, 
-      name: &quot;Mock User&quot;,
-      avatarUrl: "&quot;,
+      displayName: "Mock User", 
+      name: "Mock User",
+      avatarUrl: "",
       profileComplete: true,
-<<<<<<< HEAD
       role: "enterprise_admin",
       permissions: ["billing_access", "admin_access", "team_management"],
       companyId: "company-123"
@@ -109,30 +92,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
     // // // console.log("Sign up attempted with:", email, userData),
-=======
-      role: &quot;enterprise_admin&quot;,
-      permissions: [&quot;billing_access&quot;, &quot;admin_access&quot;, &quot;team_management&quot;],
-      companyId: &quot;company-123&quot;
-    });
-    return { error: null };
-  };
-
-  const signOut = async () => {
-    // This would be replaced with actual Supabase auth
-    // console.log(&quot;Sign out attempted&quot;);
-    setUser(null);
-  };
-
-  const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
-    // This would be replaced with actual Supabase auth
-    // console.log(&quot;Sign up attempted with:&quot;, email, userData);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     // Mock successful sign-up
     setUser({ 
-      id: &quot;mock-user-id&quot;, 
+      id: "mock-user-id", 
       email, 
-      displayName: userData?.name || &quot;New User&quot;,
-      name: userData?.name || &quot;New User&quot;,
+      displayName: userData?.name || "New User",
+      name: userData?.name || "New User",
       userType: userData?.userType,
       profileComplete: false
     }),
@@ -141,7 +106,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const resetPassword = async (email: string) => {
     // Mock implementation
-<<<<<<< HEAD
     // // // console.log("Password reset requested for:", email),
     return { error: null }
   },
@@ -149,15 +113,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
     // // // console.log("Profile update requested with:", data),
-=======
-    // console.log(&quot;Password reset requested for:&quot;, email);
-    return { error: null };
-  };
-
-  const updateProfile = async (data: Partial<UserDetails>) => {
-    // Mock implementation
-    // console.log(&quot;Profile update requested with:&quot;, data);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     if (user) {
       setUser({ ...user, ...data })
     }
@@ -165,68 +120,47 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   },
 
   const loginWithGoogle = async () => {
-<<<<<<< HEAD
     // // // console.log("Google login requested"),
-=======
-    // console.log(&quot;Google login requested&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     // Mock implementation
     setUser({ 
-      id: &quot;google-user-id&quot;, 
-      email: &quot;google@example.com&quot;, 
-      displayName: &quot;Google User&quot;,
-      name: &quot;Google User&quot;,
+      id: "google-user-id", 
+      email: "google@example.com", 
+      displayName: "Google User",
+      name: "Google User",
       profileComplete: true
     })
   },
 
   const loginWithFacebook = async () => {
-<<<<<<< HEAD
     // // // console.log("Facebook login requested"),
-=======
-    // console.log(&quot;Facebook login requested&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     // Mock implementation
     setUser({ 
-      id: &quot;facebook-user-id&quot;, 
-      email: &quot;facebook@example.com&quot;, 
-      displayName: &quot;Facebook User&quot;, 
-      name: &quot;Facebook User&quot;,
+      id: "facebook-user-id", 
+      email: "facebook@example.com", 
+      displayName: "Facebook User", 
+      name: "Facebook User",
       profileComplete: true
     })
   },
 
   const loginWithTwitter = async () => {
-<<<<<<< HEAD
     // // // console.log("Twitter login requested"),
-=======
-    // console.log(&quot;Twitter login requested&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     // Mock implementation
     setUser({
-      id: &quot;twitter-user-id&quot;,
-      email: &quot;twitter@example.com&quot;,
-      displayName: &quot;Twitter User&quot;,
-      name: &quot;Twitter User&quot;,
+      id: "twitter-user-id",
+      email: "twitter@example.com",
+      displayName: "Twitter User",
+      name: "Twitter User",
       profileComplete: true
     })
   },
 
   const loginWithWeb3 = async () => {
-<<<<<<< HEAD
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
       console.warn("No wallet detected"),
       return
-=======
-    // console.log(&quot;Web3 login requested&quot;);
-    const ethereum = (window as any).ethereum;
-    if (!ethereum) {
-      console.warn(&quot;No wallet detected&quot;);
-      return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
 // Create a provider component;
 export function AuthProvider({ children }: { children: ReactNode }) {;
@@ -321,7 +255,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     if (!ethereum) {;
       console.warn("No wallet detected"),;
       return;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
     try {;
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),;
@@ -368,25 +301,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
   };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
-<<<<<<< HEAD
 
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext),
   if (context === undefined) {
-<<<<<<< HEAD
     throw new Error("useAuth must be used within an AuthProvider")
-=======
-    throw new Error(&quot;useAuth must be used within an AuthProvider");
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
 // Custom hook to use the auth context;
 export function useAuth(): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
   return context;
 }

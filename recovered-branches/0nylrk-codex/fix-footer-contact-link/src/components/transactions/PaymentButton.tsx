@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
@@ -9,17 +7,6 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Loader2 } from "lucide-react",
 import { useNavigate } from "react-router-dom",
-=======
-import { useState } from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { Loader2 } from &quot;lucide-react&quot;;
-import { useNavigate } from &quot;react-router-dom&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -34,7 +21,7 @@ export function PaymentButton({
   amount,
   serviceId,
   providerId,
-  buttonText = &quot;Purchase&quot;,
+  buttonText = "Purchase",
   className,
   onPaymentInitiated,
   redirectUrl}: PaymentButtonProps) {
@@ -45,19 +32,13 @@ export function PaymentButton({
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
       toast({
-<<<<<<< HEAD
         title: "Authentication required",
         description: "Please sign in to make a purchase."}),
-=======
-        title: &quot;Authentication required&quot;,
-        description: &quot;Please sign in to make a purchase.&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
-      navigate(&quot;/login&quot;, { 
+      navigate("/login", { 
         state: { from: window.location.pathname } 
       }),
       return
-=======
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { cn } from "@/lib/utils",;
@@ -96,7 +77,6 @@ export function PaymentButton({;
         state: { from: window.location.pathname } ;
       }),;
       return;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     try {;
@@ -104,10 +84,9 @@ export function PaymentButton({;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
       }
-<<<<<<< HEAD
       
       // Call the create-checkout edge function
-      const { data, error } = await supabase.functions.invoke(&quot;create-checkout&quot;, {
+      const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
           amount,
           serviceId,
@@ -124,7 +103,6 @@ export function PaymentButton({;
         // Open Stripe checkout in a new tab
         window.open(data.url, '_blank')
       } else {
-<<<<<<< HEAD
         throw new Error("No checkout URL returned")
       }
       
@@ -134,23 +112,11 @@ export function PaymentButton({;
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
         variant: "destructive"})
-=======
-        throw new Error(&quot;No checkout URL returned&quot;);
-      }
-      
-    } catch (error) {
-      console.error(&quot;Payment error:&quot;, error);
-      toast({
-        title: &quot;Payment error&quot;,
-        description: &quot;There was a problem initiating your payment. Please try again.&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
-=======
 ;
       // Call the create-checkout edge function;
       const { data, error } = await supabase.functions.invoke("create-checkout", {;
@@ -183,40 +149,24 @@ export function PaymentButton({;
       setTimeout(() => {;
         setIsProcessing(false);
       }, 1500);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   };
   return (;
     <Button;
       onClick={handlePaymentClick}
       disabled={isProcessing}
-<<<<<<< HEAD
       className={cn(
-        &quot;relative min-w-[120px]&quot;,
+        "relative min-w-[120px]",
         className
       )}
     >
       {isProcessing ? (
         <>
-          <Loader2 className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
+          <Loader2 className="h-4 w-4 mr-2 animate-spin" />
           Processing...
         </>
       ) : (
         buttonText
-=======
-      className={cn(;
-        "relative min-w-[120px]";
-        className;
-      )}
-    >;
-      {isProcessing ? (;
-        <>;
-          <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
-          Processing...;
-        </>;
-      ) : (;
-        buttonText;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
     </Button>;
   );

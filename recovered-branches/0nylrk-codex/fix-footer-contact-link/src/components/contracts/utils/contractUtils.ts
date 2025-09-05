@@ -1,17 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "../components/ContractForm",
-=======
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { TalentProfile } from &quot;@/types/talent&quot;;
-import { GeneratedMilestone } from &quot;@/hooks/useMilestoneGenerator&quot;;
-import { ContractFormValues } from &quot;../components/ContractForm&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface Milestone {
   title: string,
   description: string,
@@ -37,7 +28,7 @@ export async function generateContract(
       }))
     : [],
   
-  const { data, error } = await supabase.functions.invoke(&quot;generate-contract&quot;, {
+  const { data, error } = await supabase.functions.invoke("generate-contract", {
     body: {
       talentName: talent.full_name,
       clientName: clientName,
@@ -48,7 +39,6 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
-=======
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
@@ -87,29 +77,21 @@ export async function generateContract(;
       paymentTerms: values.paymentTerms,;
       paymentAmount: values.paymentAmount,;
       additionalClauses: additionalClauses;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       milestones: milestoneData}
   });
   if (error) {;
     throw error;
   }
-<<<<<<< HEAD
   
   if (data.success && data.contract) {
     return data.contract
   } else {
-<<<<<<< HEAD
     throw new Error("Failed to generate contract")
-=======
-    throw new Error(&quot;Failed to generate contract&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
   if (data.success && data.contract) {;
     return data.contract;
   } else {;
     throw new Error("Failed to generate contract");
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 }
 ;

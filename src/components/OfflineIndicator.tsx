@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert',
@@ -15,14 +14,8 @@ export const OfflineIndicator = () => {
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
-<<<<<<< HEAD
         // Show brief "back online" message then hide
         setTimeout(() => setShowOfflineAlert(false), 3000)
-=======
-        // Show brief &quot;back online&quot; message then hide
-        setTimeout(() => setShowOfflineAlert(false), 3000);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import { useState, useEffect } from 'react',;
 import { WifiOff, Wifi } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert',;
@@ -38,7 +31,6 @@ export const OfflineIndicator = () => {;
       } else if (showOfflineAlert) {;
         // Show brief "back online" message then hide;
         setTimeout(() => setShowOfflineAlert(false), 3000);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
     },;
     // Set initial status;
@@ -50,31 +42,18 @@ export const OfflineIndicator = () => {;
       window.removeEventListener('online', updateOnlineStatus),;
       window.removeEventListener('offline', updateOnlineStatus);
     }
-<<<<<<< HEAD
   }, [showOfflineAlert]),
 
   if (!showOfflineAlert) return null,
 
   return (
-    <div className=&quot;fixed top-4 right-4 z-50 max-w-sm pointer-events-none&quot;>
-      <Alert variant={isOnline ? &quot;default&quot; : &quot;destructive&quot;}>
-        <div className=&quot;flex items-center gap-2&quot;>
+    <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">
+      <Alert variant={isOnline ? "default" : "destructive"}>
+        <div className="flex items-center gap-2">
           {isOnline ? (
-            <Wifi className=&quot;h-4 w-4&quot; />
+            <Wifi className="h-4 w-4" />
           ) : (
-            <WifiOff className=&quot;h-4 w-4&quot; />
-=======
-  }, [showOfflineAlert]),;
-  if (!showOfflineAlert) return null;
-  return (;
-    <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">;
-      <Alert variant={isOnline ? "default" : "destructive"}>;
-        <div className="flex items-center gap-2">;
-          {isOnline ? (;
-            <Wifi className="h-4 w-4" />;
-          ) : (;
-            <WifiOff className="h-4 w-4" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            <WifiOff className="h-4 w-4" />
           )}
           <AlertDescription>;
             {isOnline ? (;

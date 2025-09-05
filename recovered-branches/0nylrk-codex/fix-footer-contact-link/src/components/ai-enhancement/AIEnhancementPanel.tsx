@@ -34,7 +34,6 @@ export function AIEnhancementPanel({;
     if (result) {;
       setGeneratedContent(result);
     }
-<<<<<<< HEAD
   },
 
   const handleInputChange = (
@@ -58,91 +57,40 @@ export function AIEnhancementPanel({;
   },
 
   return (
-    <Card className=&quot;w-full max-w-2xl mx-auto&quot;>
+    <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
-        <CardTitle className=&quot;flex items-center gap-2&quot;>
-          <Sparkles className=&quot;h-5 w-5 text-primary&quot; />
+        <CardTitle className="flex items-center gap-2">
+          <Sparkles className="h-5 w-5 text-primary" />
           {title}
         </CardTitle>
       </CardHeader>
-      <CardContent className=&quot;space-y-4&quot;>
+      <CardContent className="space-y-4">
         {/* Input area */}
-        <div className=&quot;space-y-2&quot;>
-          <label className=&quot;text-sm font-medium&quot;>Content to enhance</label>
+        <div className="space-y-2">
+          <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
-            placeholder=&quot;Enter your content to enhance...&quot;
-            className=&quot;min-h-[100px]&quot;
-=======
-  },;
-  const handleInputChange = (;
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
-    field: keyof AIEnhancementOptions;
-  ) => {;
-    setOptions({;
-      ...options,;
-      [field]: e.target.value});
-  },;
-  const handleApply = () => {;
-    onApply(generatedContent),;
-    if (onClose) onClose();
-  },;
-  const handleCopy = () => {;
-    navigator.clipboard.writeText(generatedContent),;
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-  return (;
-    <Card className="w-full max-w-2xl mx-auto">;
-      <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <Sparkles className="h-5 w-5 text-primary" />;
-          {title}
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent className="space-y-4">;
-        {/* Input area */}
-        <div className="space-y-2">;
-          <label className="text-sm font-medium">Content to enhance</label>;
-          <Textarea;
-            placeholder="Enter your content to enhance...";
-            className="min-h-[100px]";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            placeholder="Enter your content to enhance..."
+            className="min-h-[100px]"
             value={options.content}
             onChange={(e) => handleInputChange(e, 'content')}
           />;
         </div>;
         {/* Context input */}
-<<<<<<< HEAD
-        <div className=&quot;space-y-2&quot;>
-          <label className=&quot;text-sm font-medium&quot;>Context (optional)</label>
+        <div className="space-y-2">
+          <label className="text-sm font-medium">Context (optional)</label>
           <Textarea
-            placeholder=&quot;Add any relevant context to guide the AI...&quot;
-            className=&quot;min-h-[60px]&quot;
-=======
-        <div className="space-y-2">;
-          <label className="text-sm font-medium">Context (optional)</label>;
-          <Textarea;
-            placeholder="Add any relevant context to guide the AI...";
-            className="min-h-[60px]";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            placeholder="Add any relevant context to guide the AI..."
+            className="min-h-[60px]"
             value={options.context}
             onChange={(e) => handleInputChange(e, 'context')}
           />;
         </div>;
         {/* Instructions input (optional) */}
-<<<<<<< HEAD
         {showInstructions && (
-          <div className=&quot;space-y-2&quot;>
-            <label className=&quot;text-sm font-medium&quot;>Special instructions (optional)</label>
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Special instructions (optional)</label>
             <Input
-              placeholder=&quot;E.g., 'Make it more conversational' or 'Focus on leadership skills'&quot;
-=======
-        {showInstructions && (;
-          <div className="space-y-2">;
-            <label className="text-sm font-medium">Special instructions (optional)</label>;
-            <Input;
-              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
@@ -150,65 +98,46 @@ export function AIEnhancementPanel({;
         )}
 ;
         {/* Generate button */}
-<<<<<<< HEAD
         <Button 
           onClick={handleGenerate} 
-          className=&quot;w-full&quot; 
+          className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
           {isEnhancing ? (
             <>
-              <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Enhancing...
             </>
           ) : (
             <>
-              <Sparkles className=&quot;mr-2 h-4 w-4&quot; />
+              <Sparkles className="mr-2 h-4 w-4" />
               Generate Enhanced Content
             </>
-=======
-        <Button;
-          onClick={handleGenerate} ;
-          className="w-full";
-          disabled={isEnhancing || !options.content && !options.context}
-        >;
-          {isEnhancing ? (;
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-              Enhancing...;
-            </>;
-          ) : (;
-            <>;
-              <Sparkles className="mr-2 h-4 w-4" />;
-              Generate Enhanced Content;
-            </>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         </Button>;
         {/* Output area */}
-<<<<<<< HEAD
         {generatedContent && (
-          <div className=&quot;space-y-2 mt-4&quot;>
-            <div className=&quot;flex justify-between items-center&quot;>
-              <label className=&quot;text-sm font-medium&quot;>Generated content</label>
+          <div className="space-y-2 mt-4">
+            <div className="flex justify-between items-center">
+              <label className="text-sm font-medium">Generated content</label>
               <Button 
-                variant=&quot;ghost&quot; 
-                size=&quot;sm&quot; 
+                variant="ghost" 
+                size="sm" 
                 onClick={handleCopy}
-                className=&quot;h-8&quot;
+                className="h-8"
               >
                 {copied ? (
-                  <><Check className=&quot;h-4 w-4 mr-1&quot; /> Copied</>
+                  <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
-                  <><Copy className=&quot;h-4 w-4 mr-1&quot; /> Copy</>
+                  <><Copy className="h-4 w-4 mr-1" /> Copy</>
                 )}
               </Button>
             </div>
-            <div className=&quot;relative&quot;>
+            <div className="relative">
               <Textarea
                 value={generatedContent}
                 onChange={(e) => setGeneratedContent(e.target.value)}
-                className=&quot;min-h-[200px]&quot;
+                className="min-h-[200px]"
               />
             </div>
           </div>
@@ -216,46 +145,11 @@ export function AIEnhancementPanel({;
       </CardContent>
       
       {generatedContent && (
-        <CardFooter className=&quot;flex justify-between&quot;>
+        <CardFooter className="flex justify-between">
           {onClose && (
-            <Button variant=&quot;outline&quot; onClick={onClose}>
+            <Button variant="outline" onClick={onClose}>
               Cancel
             </Button>
-=======
-        {generatedContent && (;
-          <div className="space-y-2 mt-4">;
-            <div className="flex justify-between items-center">;
-              <label className="text-sm font-medium">Generated content</label>;
-              <Button;
-                variant="ghost";
-                size="sm";
-                onClick={handleCopy}
-                className="h-8";
-              >;
-                {copied ? (;
-                  <><Check className="h-4 w-4 mr-1" /> Copied</>;
-                ) : (;
-                  <><Copy className="h-4 w-4 mr-1" /> Copy</>;
-                )}
-              </Button>;
-            </div>;
-            <div className="relative">;
-              <Textarea;
-                value={generatedContent}
-                onChange={(e) => setGeneratedContent(e.target.value)}
-                className="min-h-[200px]";
-              />;
-            </div>;
-          </div>;
-        )}
-      </CardContent>;
-      {generatedContent && (;
-        <CardFooter className="flex justify-between">;
-          {onClose && (;
-            <Button variant="outline" onClick={onClose}>;
-              Cancel;
-            </Button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
           <Button onClick={handleApply}>;
             Apply to Form;

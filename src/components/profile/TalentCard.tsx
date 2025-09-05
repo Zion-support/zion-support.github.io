@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
@@ -7,15 +5,6 @@ import Link from "next/link",
 import { TalentProfile } from "@/types/talent",
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
-=======
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Card } from &quot;@/components/ui/card&quot;;
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import Link from &quot;next/link&quot;;
-import { TalentProfile } from &quot;@/types/talent&quot;;
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import React and useState
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export interface TalentCardProps {
   talent: TalentProfile,
@@ -24,7 +13,6 @@ export interface TalentCardProps {
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
-=======
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
@@ -39,7 +27,6 @@ export interface TalentCardProps {;
   isSaved: boolean,;
   onToggleSave: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export function TalentCard({;
@@ -69,36 +56,29 @@ export function TalentCard({;
     if (onToggleSave) {;
       onToggleSave(talent.id, !isSaved);
     }
-<<<<<<< HEAD
   },
 
-<<<<<<< HEAD
   const skills = talent.skills?.slice(0, 5) || [],
   const talentNameInitial = talent.full_name?.charAt(0) || "T",
-=======
-  const skills = talent.skills?.slice(0, 5) || [];
-  const talentNameInitial = talent.full_name?.charAt(0) || &quot;T&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
-    <Card className=&quot;overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer&quot; onClick={handleViewProfile}>
-      <div className=&quot;p-6&quot;>
-        <div className=&quot;flex items-start&quot;>
-          <div className=&quot;relative mr-4&quot;>
-            <div className=&quot;w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative&quot;> {/* Added relative for Image */}
+    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
+      <div className="p-6">
+        <div className="flex items-start">
+          <div className="relative mr-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}
               {talent.profile_picture_url && !avatarError ? (
                 <Image
                   src={talent.profile_picture_url} 
                   alt={talent.full_name || 'Talent Avatar'}
                   fill={true}
                   style={{ objectFit: 'cover' }}
-                  className=&quot;rounded-full&quot; // Make sure image itself is rounded if fill is used in a rounded container
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
                   onError={() => setAvatarError(true)}
                   priority={false}
                 />
               ) : (
-                <div className=&quot;w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold&quot;>
-=======
+                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
   },;
   const skills = talent.skills?.slice(0, 5) || [];
   const talentNameInitial = talent.full_name?.charAt(0) || "T";
@@ -120,30 +100,28 @@ export function TalentCard({;
                 />;
               ) : (;
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   {talentNameInitial}
                 </div>;
               )}
-<<<<<<< HEAD
             </div>
             {talent.is_verified && (
-              <div className=&quot;absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full&quot;>
-                <CheckCircle2 className=&quot;w-5 h-5 text-zion-cyan&quot; />
+              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
+                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
               </div>
             )}
           </div>
           
-          <div className=&quot;flex-1&quot;>
-            <div className=&quot;flex justify-between items-start&quot;>
-              <h3 className=&quot;text-lg font-bold text-white&quot;>{talent.full_name}</h3>
+          <div className="flex-1">
+            <div className="flex justify-between items-start">
+              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
               <Button
-                variant=&quot;ghost&quot;
-                size=&quot;sm&quot;
-                className=&quot;p-1 h-auto text-zion-slate-light hover:text-zion-cyan&quot;
+                variant="ghost"
+                size="sm"
+                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}
               >
-                <Star className={`h-5 w-5 ${isSaved ? &quot;fill-yellow-400 text-yellow-400&quot; : ""}`} />
-                <span className="sr-only&quot;>{isSaved ? &quot;Saved&quot; : &quot;Save"}</span>
+                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
+                <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
               </Button>
             </div>
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
@@ -154,35 +132,6 @@ export function TalentCard({;
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
-=======
-            </div>;
-            {talent.is_verified && (;
-              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;
-                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
-              </div>;
-            )}
-          </div>;
-          <div className="flex-1">;
-            <div className="flex justify-between items-start">;
-              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>;
-              <Button;
-                variant="ghost";
-                size="sm";
-                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan";
-                onClick={handleToggleSave}
-              >;
-                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;
-                <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>;
-              </Button>;
-            </div>;
-            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>;
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">;
-              {talent.location && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <MapPin className="h-4 w-4 mr-1" />;
-                  <span>{talent.location}</span>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
               {talent.availability_type && (;
                 <div className="flex items-center text-zion-slate-light">;
@@ -223,40 +172,22 @@ export function TalentCard({;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}
-<<<<<<< HEAD
           </div>
           
-          <div className="flex items-center gap-2&quot;>
+          <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
-                size=&quot;sm&quot;
-                variant=&quot;secondary"
+                size="sm"
+                variant="secondary"
                 onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white&quot;
+                className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
               </Button>
             )}
             <Button
-              size=&quot;sm&quot;
-              variant=&quot;ghost"
-=======
-          </div>;
-          <div className="flex items-center gap-2">;
-            {isAuthenticated && (;
-              <Button;
-                size="sm";
-                variant="secondary";
-                onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white";
-              >;
-                Hire;
-              </Button>;
-            )}
-            <Button;
-              size="sm";
-              variant="ghost";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              size="sm"
+              variant="ghost"
               onClick={handleViewProfile}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
             >;

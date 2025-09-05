@@ -43,13 +43,8 @@ export function ProjectMilestonesContent() {;
         if (projectData) {;
           setProject(projectData);
         }
-<<<<<<< HEAD
       } catch (error) {
-<<<<<<< HEAD
         console.error("Error loading project:", error)
-=======
-        console.error(&quot;Error loading project:&quot;, error);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       } finally {
         setIsLoading(false)
       }
@@ -67,19 +62,14 @@ export function ProjectMilestonesContent() {;
   const isClient = user?.id === project?.client_id,
   const isTalent = user?.id === project?.talent_id,
 
-<<<<<<< HEAD
   // Determine project type based on job category or default to "Other"
   const projectType = job?.category || "Other",
-=======
-  // Determine project type based on job category or default to &quot;Other&quot;
-  const projectType = job?.category || &quot;Other&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   if (isLoading || !project) {
     return (
-      <div className=&quot;container mx-auto py-8 px-4&quot;>
-        <div className=&quot;flex justify-center items-center h-64&quot;>
-          <div className=&quot;animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary&quot;></div>
+      <div className="container mx-auto py-8 px-4">
+        <div className="flex justify-center items-center h-64">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
         </div>
       </div>
     )
@@ -92,9 +82,9 @@ export function ProjectMilestonesContent() {;
     const milestoneData = {
       project_id: projectId,
       title: data.title,
-      description: data.description || "&quot;,
+      description: data.description || "",
       amount: data.amount,
-      status: &quot;pending" as const,
+      status: "pending" as const,
       due_date: data.due_date ? data.due_date.toISOString() : undefined
     },
     
@@ -104,13 +94,12 @@ export function ProjectMilestonesContent() {;
   },
 
   return (
-    <div className="container mx-auto py-8 px-4&quot;>
-      <ProjectHeader title={project.job?.title || &quot;Untitled Project"} />
+    <div className="container mx-auto py-8 px-4">
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />
       
       <div className="flex justify-between items-center my-6">
         <h2 className="text-2xl font-bold">Payment Milestones</h2>
         <ProjectActions 
-=======
       } catch (error) {;
         console.error("Error loading project:", error);
       } finally {;
@@ -160,41 +149,25 @@ export function ProjectMilestonesContent() {;
       <div className="flex justify-between items-center my-6">;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
         <ProjectActions;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           projectId={projectId || ''}
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}
           onAddMilestone={() => setActiveTab('create')}
-<<<<<<< HEAD
         />
       </div>
       
       <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="mb-6&quot;>
-          <TabsTrigger value=&quot;milestones&quot;>Milestones</TabsTrigger>
-          <TabsTrigger value=&quot;activity&quot;>Activity</TabsTrigger>
+        <TabsList className="mb-6">
+          <TabsTrigger value="milestones">Milestones</TabsTrigger>
+          <TabsTrigger value="activity">Activity</TabsTrigger>
           {isTalent && (
-            <TabsTrigger value=&quot;create&quot;>Create Milestone</TabsTrigger>
+            <TabsTrigger value="create">Create Milestone</TabsTrigger>
           )}
         </TabsList>
         
-        <TabsContent value=&quot;milestones&quot;>
+        <TabsContent value="milestones">
           <MilestoneManager 
-=======
-        />;
-      </div>;
-      <Tabs value={activeTab} onValueChange={setActiveTab}>;
-        <TabsList className="mb-6">;
-          <TabsTrigger value="milestones">Milestones</TabsTrigger>;
-          <TabsTrigger value="activity">Activity</TabsTrigger>;
-          {isTalent && (;
-            <TabsTrigger value="create">Create Milestone</TabsTrigger>;
-          )}
-        </TabsList>;
-        <TabsContent value="milestones">;
-          <MilestoneManager;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             projectId={projectId || ''}
             milestones={milestones}
             activities={activities}
@@ -208,27 +181,16 @@ export function ProjectMilestonesContent() {;
             onDeleteMilestone={deleteMilestone}
             onUploadDeliverable={uploadDeliverable}
             refetch={refetch}
-<<<<<<< HEAD
           />
         </TabsContent>
         
-        <TabsContent value=&quot;activity&quot;>
+        <TabsContent value="activity">
           <MilestoneActivities projectId={projectId || ''} />
         </TabsContent>
         
-        <TabsContent value=&quot;create">
+        <TabsContent value="create">
           {(isClient || isTalent) && (
             <MilestoneCreator 
-=======
-          />;
-        </TabsContent>;
-        <TabsContent value="activity">;
-          <MilestoneActivities projectId={projectId || ''} />;
-        </TabsContent>;
-        <TabsContent value="create">;
-          {(isClient || isTalent) && (;
-            <MilestoneCreator;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               onSubmit={handleMilestoneSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { z } from "zod",
 import { useForm } from "react-hook-form",
@@ -13,37 +11,17 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
-=======
-import { useState } from &quot;react&quot;;
-import { z } from &quot;zod&quot;;
-import { useForm } from &quot;react-hook-form&quot;;
-import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from &quot;@/components/ui/form&quot;;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from &quot;@/components/ui/select&quot;;
-import { Textarea } from &quot;@/components/ui/textarea&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 const partnerFormSchema = z.object({
-  name: z.string().min(2, { message: &quot;Name must be at least 2 characters.&quot; }),
-  website: z.string().url({ message: &quot;Please enter a valid URL.&quot; }).optional().or(z.literal("&quot;)),
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
   twitter: z.string().optional(),
   instagram: z.string().optional(),
   youtube: z.string().optional(),
   linkedin: z.string().optional(),
-  niche: z.string().min(2, { message: &quot;Please specify your niche.&quot; }),
+  niche: z.string().min(2, { message: "Please specify your niche." }),
   audience_size: z.string(),
   payout_method: z.string(),
-<<<<<<< HEAD
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),
-=======
-  bio: z.string().min(10, { message: &quot;Bio must be at least 10 characters.&quot; }).max(500)});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
@@ -54,7 +32,6 @@ export function PartnerRegistrationForm() {
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema),
     defaultValues: {
-<<<<<<< HEAD
       name: "",
       website: "",
       twitter: "",
@@ -65,18 +42,6 @@ export function PartnerRegistrationForm() {
       audience_size: "",
       payout_method: "paypal",
       bio: ""}}),
-=======
-      name: "&quot;,
-      website: "&quot;,
-      twitter: "&quot;,
-      instagram: "&quot;,
-      youtube: "&quot;,
-      linkedin: "&quot;,
-      niche: "&quot;,
-      audience_size: "&quot;,
-      payout_method: &quot;paypal&quot;,
-      bio: "&quot;}});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const checkExistingPartner = async () => {
     const { data: existingPartner } = await supabase
@@ -87,19 +52,11 @@ export function PartnerRegistrationForm() {
 
     if (existingPartner) {
       toast({
-<<<<<<< HEAD
         title: "Already registered",
         description: "You have already registered as a partner.",
         variant: "destructive"}),
       setIsSubmitting(false),
       return true
-=======
-        title: &quot;Already registered&quot;,
-        description: &quot;You have already registered as a partner.&quot;,
-        variant: &quot;destructive&quot;});
-      setIsSubmitting(false);
-      return true;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     return false
   },
@@ -107,18 +64,10 @@ export function PartnerRegistrationForm() {
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
-<<<<<<< HEAD
         title: "Authentication required",
         description: "You must be logged in to register as a partner.",
         variant: "destructive"}),
       return
-=======
-        title: &quot;Authentication required&quot;,
-        description: &quot;You must be logged in to register as a partner.&quot;,
-        variant: &quot;destructive&quot;});
-      return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import { useState } from "react",;
 import { z } from "zod",;
 import { useForm } from "react-hook-form",;
@@ -183,7 +132,6 @@ export function PartnerRegistrationForm() {;
         description: "You must be logged in to register as a partner.",;
         variant: "destructive"}),;
       return;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     setIsSubmitting(true),;
@@ -210,22 +158,15 @@ export function PartnerRegistrationForm() {;
             bio: data.bio,;
             status: 'pending', // Partners need approval;
           }
-<<<<<<< HEAD
         ])
         .select(),
 
       if (error) throw error,
 
       toast({
-<<<<<<< HEAD
         title: "Application submitted!",
         description: "Your partner application has been submitted for review.",
         variant: "default"}),
-=======
-        title: &quot;Application submitted!&quot;,
-        description: &quot;Your partner application has been submitted for review.&quot;,
-        variant: &quot;default&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
       // Create a referral code if they don't have one already
       const { data: existingCode } = await supabase
@@ -241,42 +182,35 @@ export function PartnerRegistrationForm() {;
     } catch (error: any) {
       console.error('Error submitting partner application:', error),
       toast({
-<<<<<<< HEAD
         title: "Submission failed",
         description: error.message || "There was a problem submitting your application.",
         variant: "destructive"})
-=======
-        title: &quot;Submission failed&quot;,
-        description: error.message || &quot;There was a problem submitting your application.&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsSubmitting(false)
     }
   }
 
   return (
-    <Card className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
+    <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
         <CardTitle>Partner Registration</CardTitle>
         <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription>
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className=&quot;space-y-6&quot;>
-            <div className=&quot;space-y-4&quot;>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <div className="space-y-4">
               <FormField
                 control={form.control}
-                name=&quot;name&quot;
+                name="name"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Name / Brand</FormLabel>
                     <FormControl>
-                      <Input placeholder=&quot;Your name or brand name&quot; {...field} />
+                      <Input placeholder="Your name or brand name" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
-=======
         ]);
         .select(),;
       if (error) throw error,;
@@ -326,72 +260,44 @@ export function PartnerRegistrationForm() {;
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 )}
               />;
               <FormField;
                 control={form.control}
-<<<<<<< HEAD
-                name=&quot;website&quot;
+                name="website"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Website (Optional)</FormLabel>
                     <FormControl>
-                      <Input placeholder=&quot;https://yourwebsite.com&quot; {...field} />
+                      <Input placeholder="https://yourwebsite.com" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
 
-              <div className=&quot;grid sm:grid-cols-2 gap-4&quot;>
+              <div className="grid sm:grid-cols-2 gap-4">
                 <FormField
                   control={form.control}
-                  name=&quot;twitter&quot;
+                  name="twitter"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Twitter (Optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder=&quot;@username&quot; {...field} />
+                        <Input placeholder="@username" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
-=======
-                name="website";
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Website (Optional)</FormLabel>;
-                    <FormControl>;
-                      <Input placeholder="https://yourwebsite.com" {...field} />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-              />;
-              <div className="grid sm:grid-cols-2 gap-4">;
-                <FormField;
-                  control={form.control}
-                  name="twitter";
-                  render={({ field }) => (;
-                    <FormItem>;
-                      <FormLabel>Twitter (Optional)</FormLabel>;
-                      <FormControl>;
-                        <Input placeholder="@username" {...field} />;
-                      </FormControl>;
-                      <FormMessage />;
-                    </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   )}
                 />;
                 <FormField;
                   control={form.control}
-<<<<<<< HEAD
-                  name=&quot;instagram&quot;
+                  name="instagram"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Instagram (Optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder=&quot;@username&quot; {...field} />
+                        <Input placeholder="@username" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -399,81 +305,42 @@ export function PartnerRegistrationForm() {;
                 />
               </div>
 
-              <div className=&quot;grid sm:grid-cols-2 gap-4&quot;>
+              <div className="grid sm:grid-cols-2 gap-4">
                 <FormField
                   control={form.control}
-                  name=&quot;youtube&quot;
+                  name="youtube"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>YouTube (Optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder=&quot;Channel name or URL&quot; {...field} />
+                        <Input placeholder="Channel name or URL" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
-=======
-                  name="instagram";
-                  render={({ field }) => (;
-                    <FormItem>;
-                      <FormLabel>Instagram (Optional)</FormLabel>;
-                      <FormControl>;
-                        <Input placeholder="@username" {...field} />;
-                      </FormControl>;
-                      <FormMessage />;
-                    </FormItem>;
-                  )}
-                />;
-              </div>;
-              <div className="grid sm:grid-cols-2 gap-4">;
-                <FormField;
-                  control={form.control}
-                  name="youtube";
-                  render={({ field }) => (;
-                    <FormItem>;
-                      <FormLabel>YouTube (Optional)</FormLabel>;
-                      <FormControl>;
-                        <Input placeholder="Channel name or URL" {...field} />;
-                      </FormControl>;
-                      <FormMessage />;
-                    </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   )}
                 />;
                 <FormField;
                   control={form.control}
-<<<<<<< HEAD
-                  name=&quot;linkedin&quot;
+                  name="linkedin"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>LinkedIn (Optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder=&quot;Profile URL or username&quot; {...field} />
+                        <Input placeholder="Profile URL or username" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
-=======
-                  name="linkedin";
-                  render={({ field }) => (;
-                    <FormItem>;
-                      <FormLabel>LinkedIn (Optional)</FormLabel>;
-                      <FormControl>;
-                        <Input placeholder="Profile URL or username" {...field} />;
-                      </FormControl>;
-                      <FormMessage />;
-                    </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   )}
                 />;
               </div>;
               <FormField;
                 control={form.control}
-<<<<<<< HEAD
-                name=&quot;niche&quot;
+                name="niche"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Your Niche</FormLabel>
                     <FormControl>
-                      <Input placeholder=&quot;AI development, machine learning, tech tutorials, etc.&quot; {...field} />
+                      <Input placeholder="AI development, machine learning, tech tutorials, etc." {...field} />
                     </FormControl>
                     <FormDescription>
                       What topics do you focus on in your content?
@@ -483,126 +350,64 @@ export function PartnerRegistrationForm() {;
                 )}
               />
 
-              <div className=&quot;grid sm:grid-cols-2 gap-4&quot;>
+              <div className="grid sm:grid-cols-2 gap-4">
                 <FormField
                   control={form.control}
-                  name=&quot;audience_size&quot;
+                  name="audience_size"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Audience Size</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder=&quot;Select audience size&quot; />
+                            <SelectValue placeholder="Select audience size" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value=&quot;under1k&quot;>Under 1,000</SelectItem>
-                          <SelectItem value=&quot;1k-10k&quot;>1,000 - 10,000</SelectItem>
-                          <SelectItem value=&quot;10k-50k&quot;>10,000 - 50,000</SelectItem>
-                          <SelectItem value=&quot;50k-100k&quot;>50,000 - 100,000</SelectItem>
-                          <SelectItem value=&quot;over100k&quot;>Over 100,000</SelectItem>
+                          <SelectItem value="under1k">Under 1,000</SelectItem>
+                          <SelectItem value="1k-10k">1,000 - 10,000</SelectItem>
+                          <SelectItem value="10k-50k">10,000 - 50,000</SelectItem>
+                          <SelectItem value="50k-100k">50,000 - 100,000</SelectItem>
+                          <SelectItem value="over100k">Over 100,000</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
                     </FormItem>
-=======
-                name="niche";
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Your Niche</FormLabel>;
-                    <FormControl>;
-                      <Input placeholder="AI development, machine learning, tech tutorials, etc." {...field} />;
-                    </FormControl>;
-                    <FormDescription>;
-                      What topics do you focus on in your content?;
-                    </FormDescription>;
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-              />;
-              <div className="grid sm:grid-cols-2 gap-4">;
-                <FormField;
-                  control={form.control}
-                  name="audience_size";
-                  render={({ field }) => (;
-                    <FormItem>;
-                      <FormLabel>Audience Size</FormLabel>;
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>;
-                        <FormControl>;
-                          <SelectTrigger>;
-                            <SelectValue placeholder="Select audience size" />;
-                          </SelectTrigger>;
-                        </FormControl>;
-                        <SelectContent>;
-                          <SelectItem value="under1k">Under 1,000</SelectItem>;
-                          <SelectItem value="1k-10k">1,000 - 10,000</SelectItem>;
-                          <SelectItem value="10k-50k">10,000 - 50,000</SelectItem>;
-                          <SelectItem value="50k-100k">50,000 - 100,000</SelectItem>;
-                          <SelectItem value="over100k">Over 100,000</SelectItem>;
-                        </SelectContent>;
-                      </Select>;
-                      <FormMessage />;
-                    </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   )}
                 />;
                 <FormField;
                   control={form.control}
-<<<<<<< HEAD
-                  name=&quot;payout_method&quot;
+                  name="payout_method"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Preferred Payout Method</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder=&quot;Select payout method&quot; />
+                            <SelectValue placeholder="Select payout method" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value=&quot;paypal&quot;>PayPal</SelectItem>
-                          <SelectItem value=&quot;bank&quot;>Bank Transfer</SelectItem>
-                          <SelectItem value=&quot;crypto&quot;>Cryptocurrency</SelectItem>
-                          <SelectItem value=&quot;platform_credit&quot;>Platform Credit</SelectItem>
+                          <SelectItem value="paypal">PayPal</SelectItem>
+                          <SelectItem value="bank">Bank Transfer</SelectItem>
+                          <SelectItem value="crypto">Cryptocurrency</SelectItem>
+                          <SelectItem value="platform_credit">Platform Credit</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
                     </FormItem>
-=======
-                  name="payout_method";
-                  render={({ field }) => (;
-                    <FormItem>;
-                      <FormLabel>Preferred Payout Method</FormLabel>;
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>;
-                        <FormControl>;
-                          <SelectTrigger>;
-                            <SelectValue placeholder="Select payout method" />;
-                          </SelectTrigger>;
-                        </FormControl>;
-                        <SelectContent>;
-                          <SelectItem value="paypal">PayPal</SelectItem>;
-                          <SelectItem value="bank">Bank Transfer</SelectItem>;
-                          <SelectItem value="crypto">Cryptocurrency</SelectItem>;
-                          <SelectItem value="platform_credit">Platform Credit</SelectItem>;
-                        </SelectContent>;
-                      </Select>;
-                      <FormMessage />;
-                    </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   )}
                 />;
               </div>;
               <FormField;
                 control={form.control}
-<<<<<<< HEAD
-                name=&quot;bio&quot;
+                name="bio"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Bio</FormLabel>
                     <FormControl>
                       <Textarea 
-                        placeholder=&quot;Tell us about yourself and how you plan to promote Zion AI&quot;
+                        placeholder="Tell us about yourself and how you plan to promote Zion AI"
                         rows={4} 
                         {...field} 
                       />
@@ -617,48 +422,15 @@ export function PartnerRegistrationForm() {;
             </div>
 
             <Button 
-              type=&quot;submit&quot; 
-              className=&quot;w-full bg-zion-purple hover:bg-zion-purple-dark&quot;
+              type="submit" 
+              className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}
             >
-              {isSubmitting ? &quot;Submitting...&quot; : &quot;Submit Application&quot;}
+              {isSubmitting ? "Submitting..." : "Submit Application"}
             </Button>
           </form>
         </Form>
       </CardContent>
     </Card>
   )
-=======
-                name="bio";
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Bio</FormLabel>;
-                    <FormControl>;
-                      <Textarea;
-                        placeholder="Tell us about yourself and how you plan to promote Zion AI";
-                        rows={4} ;
-                        {...field} ;
-                      />;
-                    </FormControl>;
-                    <FormDescription>;
-                      Limit: 500 characters;
-                    </FormDescription>;
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-              />;
-            </div>;
-            <Button;
-              type="submit";
-              className="w-full bg-zion-purple hover:bg-zion-purple-dark";
-              disabled={isSubmitting}
-            >;
-              {isSubmitting ? "Submitting..." : "Submit Application"}
-            </Button>;
-          </form>;
-        </Form>;
-      </CardContent>;
-    </Card>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

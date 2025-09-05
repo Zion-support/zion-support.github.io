@@ -1,66 +1,58 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { CategoryCard } from "@/components/CategoryCard",
 import { GradientHeading } from "@/components/GradientHeading",
 import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
-=======
-import { CategoryCard } from &quot;@/components/CategoryCard&quot;;
-import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
-import ErrorBoundary from &quot;@/components/GlobalErrorBoundary&quot;; // Import ErrorBoundary
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
 const categories = [
   {
-    title: &quot;Services&quot;,
-    description: &quot;On-demand IT support, consulting, development, and more&quot;,
-    icon: <Briefcase className=&quot;w-10 h-10&quot; />,
-    link: &quot;/services&quot;, // Link for the card itself
+    title: "Services",
+    description: "On-demand IT support, consulting, development, and more",
+    icon: <Briefcase className="w-10 h-10" />,
+    link: "/services", // Link for the card itself
     color: undefined, // Let CategoryCard use default color
   },
   {
-    title: &quot;Talents&quot;,
-    description: &quot;Connect with AI experts, developers, and tech specialists&quot;,
-    icon: <Users className=&quot;w-10 h-10&quot; />,
-    link: &quot;/talent&quot;, // Link for the card itself
+    title: "Talents",
+    description: "Connect with AI experts, developers, and tech specialists",
+    icon: <Users className="w-10 h-10" />,
+    link: "/talent", // Link for the card itself
     color: undefined, // Let CategoryCard use default color
   },
   {
-    title: &quot;Equipment&quot;,
-    description: &quot;Rent or buy specialized hardware, servers, and devices&quot;,
-    icon: <HardDrive className=&quot;w-10 h-10&quot; />,
-    link: &quot;/equipment&quot;, // Link for the card itself
+    title: "Equipment",
+    description: "Rent or buy specialized hardware, servers, and devices",
+    icon: <HardDrive className="w-10 h-10" />,
+    link: "/equipment", // Link for the card itself
     color: undefined, // Let CategoryCard use default color
   },
   {
-    title: &quot;Innovation&quot;,
-    description: &quot;Discover cutting-edge solutions and tech breakthroughs&quot;,
-    icon: <Lightbulb className=&quot;w-10 h-10&quot; />,
-    link: &quot;/innovation&quot;,
+    title: "Innovation",
+    description: "Discover cutting-edge solutions and tech breakthroughs",
+    icon: <Lightbulb className="w-10 h-10" />,
+    link: "/innovation",
     color: undefined, // Let CategoryCard use default color
   }],
 
 export default function AllCategoriesPage() {
   return (
-    <div className=&quot;min-h-screen bg-zion-blue&quot;>
-      <div className=&quot;container mx-auto px-4 py-12&quot;>
-        <div className=&quot;text-center mb-12&quot;>
-          <GradientHeading level=&quot;h1&quot; className=&quot;text-4xl md:text-5xl font-bold mb-4&quot;>
+    <div className="min-h-screen bg-zion-blue">
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center mb-12">
+          <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">
             All Categories
           </GradientHeading>
-          <p className=&quot;text-zion-slate-light text-lg max-w-3xl mx-auto&quot;>
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
             Explore our extensive range of AI services and products.
             Find exactly what you're looking for to enhance your business or personal projects.
           </p>
         </div>
 
         <ErrorBoundary>
-          <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category) => (
               <CategoryCard
-=======
 import { CategoryCard } from "@/components/CategoryCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary;
@@ -113,7 +105,6 @@ export default function AllCategoriesPage() {;
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
             {categories.map((category) => (;
               <CategoryCard;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={category.title}
                 title={category.title}
                 description={category.description}

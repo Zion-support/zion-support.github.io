@@ -37,47 +37,40 @@ export default function AffiliateDashboard() {;
       setMsg(e?.message || 'Error');
     }
   }
-<<<<<<< HEAD
 
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
 
   if (!code) {
     return (
-<<<<<<< HEAD
       <div className="space-y-4">
         <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>
         <p className="text-gray-600 dark: text-gray-300">No referral code found. Visit your referral link first or register on the Partners page.</p>
-=======
-      <div className=&quot;space-y-4&quot;>
-        <h1 className=&quot;text-2xl font-semibold&quot;>Affiliate Dashboard</h1>
-        <p className=&quot;text-gray-600 dark:text-gray-300&quot;>No referral code found. Visit your referral link first or register on the Partners page.</p>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       </div>
     )
   }
 
   return (
-    <div className=&quot;space-y-6&quot;>
-      <h1 className=&quot;text-2xl font-semibold&quot;>Affiliate Dashboard</h1>
-      <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
-        <Stat label=&quot;Total Visits&quot; value={metrics?.total_visits ?? '-'} />
-        <Stat label=&quot;Total Signups&quot; value={metrics?.total_signups ?? '-'} />
-        <Stat label=&quot;Profile Completions&quot; value={metrics?.total_profile_completions ?? '-'} />
-        <Stat label=&quot;Job Creations&quot; value={metrics?.total_job_creations ?? '-'} />
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <Stat label="Total Visits" value={metrics?.total_visits ?? '-'} />
+        <Stat label="Total Signups" value={metrics?.total_signups ?? '-'} />
+        <Stat label="Profile Completions" value={metrics?.total_profile_completions ?? '-'} />
+        <Stat label="Job Creations" value={metrics?.total_job_creations ?? '-'} />
       </div>
-      <div className=&quot;p-4 rounded border border-gray-200 dark:border-gray-800&quot;>
-        <div className=&quot;flex items-center justify-between&quot;>
+      <div className="p-4 rounded border border-gray-200 dark:border-gray-800">
+        <div className="flex items-center justify-between">
           <div>
-            <div className=&quot;text-sm text-gray-600 dark:text-gray-300&quot;>Estimated Payout</div>
-            <div className=&quot;text-2xl font-bold&quot;>{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Estimated Payout</div>
+            <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>
           </div>
-          <div className=&quot;flex gap-2&quot;>
-            <input className=&quot;border rounded px-3 py-2&quot; placeholder=&quot;Amount (optional)&quot; value={amount} onChange={e=>setAmount(e.target.value)} />
-            <button className=&quot;px-3 py-2 rounded bg-indigo-600 text-white&quot; onClick={requestPayout}>Request Payout</button>
-            <a href={exportUrl} className=&quot;px-3 py-2 rounded border&quot;>Export CSV</Link>
+          <div className="flex gap-2">
+            <input className="border rounded px-3 py-2" placeholder="Amount (optional)" value={amount} onChange={e=>setAmount(e.target.value)} />
+            <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={requestPayout}>Request Payout</button>
+            <a href={exportUrl} className="px-3 py-2 rounded border">Export CSV</Link>
           </div>
         </div>
-        {msg && <p className=&quot;mt-2 text-sm&quot;>{msg}</p>}
+        {msg && <p className="mt-2 text-sm">{msg}</p>}
       </div>
     </div>
   )
@@ -85,12 +78,11 @@ export default function AffiliateDashboard() {;
 
 function Stat({ label, value }: { label: string, value: number | string }) {
   return (
-    <div className=&quot;p-4 rounded border border-gray-200 dark:border-gray-800&quot;>
-      <div className=&quot;text-sm text-gray-600 dark:text-gray-300&quot;>{label}</div>
-      <div className=&quot;text-2xl font-semibold&quot;>{value}</div>
+    <div className="p-4 rounded border border-gray-200 dark:border-gray-800">
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
+      <div className="text-2xl font-semibold">{value}</div>
     </div>
   )
-=======
 ;
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
   if (!code) {;
@@ -136,5 +128,4 @@ function Stat({ label, value }: { label: string, value: number | string }) {;
       <div className="text-2xl font-semibold">{value}</div>;
     </div>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

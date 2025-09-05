@@ -10,16 +10,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {;
     return res.status(400).json({ error: 'Missing required fields' });
   }
-<<<<<<< HEAD
 
   try {
-<<<<<<< HEAD
     const timestamp = new Date().toISOString(),
     // // // console.log('[Operator] New request to hire:', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo }),
-=======
-    const timestamp = new Date().toISOString();
-    // console.log('[Operator] New request to hire:', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     // Persist to data/requests as a simple CMS-like log
     const dir = path.join(process.cwd(), 'datarequests'),
@@ -34,7 +28,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err) {
     console.error('Request-to-hire failed', err),
     return res.status(500).json({ error: 'Internal error' })
-=======
 ;
   try {;
     const timestamp = new Date().toISOString(),;
@@ -50,6 +43,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err) {;
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 }

@@ -70,7 +70,6 @@ const LoginPage = () => {;
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
         }
       }
-<<<<<<< HEAD
 
       // Listener for auth state changes
       logInfo('LoginPage: Setting up onAuthStateChange listener.'),
@@ -83,16 +82,9 @@ const LoginPage = () => {;
         setUser(session?.user ?? null),
         // If auth state changes after initial check, ensure sessionChecked is true
         // This handles cases like login/logout in another tab.
-<<<<<<< HEAD
         if (!sessionChecked && event !== "INITIAL_SESSION") {
            setSessionChecked(true),
            logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.')
-=======
-        if (!sessionChecked && event !== &quot;INITIAL_SESSION&quot;) {
-           setSessionChecked(true);
-           logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
       // Listener for auth state changes;
       logInfo('LoginPage: Setting up onAuthStateChange listener.'),;
@@ -108,7 +100,6 @@ const LoginPage = () => {;
         if (!sessionChecked && event !== "INITIAL_SESSION") {;
            setSessionChecked(true),;
            logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.');
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }
       }),;
       return () => { // Cleanup for listener;
@@ -218,7 +209,6 @@ const LoginPage = () => {;
     } finally {;
       setIsProactivelyResending(false);
     }
-<<<<<<< HEAD
   },
 
   const handleLogin = async (e: FormEvent) => {
@@ -241,13 +231,8 @@ const LoginPage = () => {;
         const messageIncludesEmailNotConfirmed = signInError.message?.toLowerCase().includes('email not confirmed') ||
                                                  signInError.message?.toLowerCase().includes('email_not_confirmed') ||
                                                  signInError.message?.toLowerCase().includes('verify') ||
-<<<<<<< HEAD
                                                  signInError.message?.toLowerCase().includes('confirm'),
         // As per issue description, check for a specific error code "email_not_verified"
-=======
-                                                 signInError.message?.toLowerCase().includes('confirm');
-        // As per issue description, check for a specific error code &quot;email_not_verified&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
         const codeIsEmailNotVerified = (signInError as any).code === 'email_not_verified',
 
@@ -273,7 +258,6 @@ const LoginPage = () => {;
                   displayMessage = 'Network error. Please check your internet connection and try again.'
               } else if (signInError.message.toLowerCase().includes('user disabled')) {
                   displayMessage = 'Your account has been disabled. Please contact support.'
-=======
   },;
   const handleLogin = async (e: FormEvent) => {;
     e.preventDefault(),;
@@ -317,7 +301,6 @@ const LoginPage = () => {;
                   displayMessage = 'Network error. Please check your internet connection and try again.';
               } else if (signInError.message.toLowerCase().includes('user disabled')) {;
                   displayMessage = 'Your account has been disabled. Please contact support.';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               }
               // Add more specific checks here if needed for other Supabase error messages;
           }
@@ -354,7 +337,6 @@ const LoginPage = () => {;
       }, 3000),;
       return () => clearTimeout(timer);
     }
-<<<<<<< HEAD
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]),
 
@@ -362,17 +344,13 @@ const LoginPage = () => {;
 
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
-<<<<<<< HEAD
     logInfo('LoginPage: Rendering "Checking authentication..."'),
-=======
-    logInfo('LoginPage: Rendering &quot;Checking authentication...&quot;');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     return (
-      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
-        <div className=&quot;text-center&quot;>
-          <div className=&quot;animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
-          <p className=&quot;text-gray-600&quot;>Checking authentication...</p>
-          <p className=&quot;text-sm text-gray-500 mt-2&quot;>This should only take a moment</p>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Checking authentication...</p>
+          <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
         </div>
       </div>
     )
@@ -381,21 +359,16 @@ const LoginPage = () => {;
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
-<<<<<<< HEAD
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."'),
-=======
-    logInfo('LoginPage: Rendering &quot;Already Logged In / Redirecting...&quot;');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     return (
-      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
-        <div className=&quot;text-center&quot;>
-          <div className=&quot;animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
-          <h2 className=&quot;text-2xl font-bold mb-4&quot;>Already Logged In</h2>
-          <p className=&quot;text-gray-600 mb-4&quot;>Redirecting to your dashboard...</p>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>
+          <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>
         </div>
       </div>
     )
-=======
     return undefined, // Explicitly return undefined if condition is not met;
   }, [isEmailUnverified, verificationEmailSent, email, router]),;
   // --- Rendering Logic ---;
@@ -426,7 +399,6 @@ const LoginPage = () => {;
         </div>;
       </div>;
     );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading);
@@ -438,17 +410,16 @@ const LoginPage = () => {;
     logWarn(`LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`),;
     return null, // Or a minimal loader/empty div;
   }
-<<<<<<< HEAD
 
   return (
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
-        <meta name=&quot;description&quot; content=&quot;Sign in to your Zion Tech Marketplace account&quot; />
+        <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
       
-      <div className=&quot;min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8&quot;>
-        <Card className=&quot;w-full max-w-md&quot;>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <Card className="w-full max-w-md">
           <CardHeader>
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
@@ -456,99 +427,50 @@ const LoginPage = () => {;
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleLogin} className=&quot;space-y-4&quot;>
+            <form onSubmit={handleLogin} className="space-y-4">
               {error && (
-                <div className=&quot;p-3 bg-red-50 border border-red-200 rounded-md&quot;>
-                  <p className=&quot;text-sm text-red-600&quot;>{error.message}</p>
+                <div className="p-3 bg-red-50 border border-red-200 rounded-md">
+                  <p className="text-sm text-red-600">{error.message}</p>
                 </div>
               )}
               
-              <div className=&quot;space-y-2&quot;>
-                <label htmlFor=&quot;email&quot; className=&quot;text-sm font-medium&quot;>
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-sm font-medium">
                   Email
                 </label>
                 <Input
-                  id=&quot;email&quot;
-                  type=&quot;email&quot;
-=======
-;
-  return (;
-    <>;
-      <Head>;
-        <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>;
-        <meta name="description" content="Sign in to your Zion Tech Marketplace account" />;
-      </Head>;
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">;
-        <Card className="w-full max-w-md">;
-          <CardHeader>;
-            <CardTitle>Sign In</CardTitle>;
-            <CardDescription>;
-              Enter your email and password to access your account;
-            </CardDescription>;
-          </CardHeader>;
-          <CardContent>;
-            <form onSubmit={handleLogin} className="space-y-4">;
-              {error && (;
-                <div className="p-3 bg-red-50 border border-red-200 rounded-md">;
-                  <p className="text-sm text-red-600">{error.message}</p>;
-                </div>;
-              )}
-;
-              <div className="space-y-2">;
-                <label htmlFor="email" className="text-sm font-medium">;
-                  Email;
-                </label>;
-                <Input;
-                  id="email";
-                  type="email";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  id="email"
+                  type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required;
                   disabled={isLoading}
-<<<<<<< HEAD
                 />
               </div>
               
-              <div className=&quot;space-y-2&quot;>
-                <label htmlFor=&quot;password&quot; className=&quot;text-sm font-medium&quot;>
+              <div className="space-y-2">
+                <label htmlFor="password" className="text-sm font-medium">
                   Password
                 </label>
                 <Input
-                  id=&quot;password&quot;
-                  type=&quot;password&quot;
-=======
-                />;
-              </div>;
-              <div className="space-y-2">;
-                <label htmlFor="password" className="text-sm font-medium">;
-                  Password;
-                </label>;
-                <Input;
-                  id="password";
-                  type="password";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  id="password"
+                  type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required;
                   disabled={isLoading}
-<<<<<<< HEAD
                 />
               </div>
               
-              <Button type=&quot;submit&quot; className=&quot;w-full&quot; disabled={isLoading || isEmailUnverified}>
+              <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')}
               </Button>
             </form>
             
-            <div className=&quot;mt-6 text-center&quot;>
-              <p className=&quot;text-sm text-gray-600&quot;>
+            <div className="mt-6 text-center">
+              <p className="text-sm text-gray-600">
                 Don't have an account?{' '}
-<<<<<<< HEAD
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
-=======
-                <Link href=&quot;/auth/register&quot; className=&quot;text-blue-600 hover:underline&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                   Sign up
                 </Link>
               </p>
@@ -561,7 +483,6 @@ const LoginPage = () => {;
 },
 
 export default LoginPage,
-=======
                 />;
               </div>;
               <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>;
@@ -583,4 +504,3 @@ export default LoginPage,
   );
 },;
 export default LoginPage;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

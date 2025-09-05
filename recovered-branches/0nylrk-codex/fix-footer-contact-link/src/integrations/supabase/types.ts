@@ -30,25 +30,14 @@ export type Database = {;
           response?: string;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;ai_chats_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "ai_chats_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "ai_chats_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       analytics_events: {;
         Row: {;
@@ -78,14 +67,13 @@ export type Database = {;
           session_id?: string | null;
           user_id?: string | null;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;analytics_events_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "analytics_events_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
       }
       api_keys: {
@@ -98,7 +86,7 @@ export type Database = {;
           key_prefix: string
           last_used_at: string | null
           name: string
-          scopes: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;api_key_scope&quot;][]
+          scopes: Database["public"]["Enums"]["api_key_scope"][]
           user_id: string
         }
         Insert: {
@@ -110,7 +98,7 @@ export type Database = {;
           key_prefix: string
           last_used_at?: string | null
           name: string
-          scopes?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;api_key_scope&quot;][]
+          scopes?: Database["public"]["Enums"]["api_key_scope"][]
           user_id: string
         }
         Update: {
@@ -122,73 +110,17 @@ export type Database = {;
           key_prefix?: string
           last_used_at?: string | null
           name?: string
-          scopes?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;api_key_scope&quot;][]
+          scopes?: Database["public"]["Enums"]["api_key_scope"][]
           user_id?: string
         }
         Relationships: [
           {
-            foreignKeyName: &quot;api_keys_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "api_keys_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "analytics_events_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
-      }
-      api_keys: {;
-        Row: {;
-          created_at: string;
-          expires_at: string | null;
-          id: string;
-          is_active: boolean;
-          key_hash: string;
-          key_prefix: string;
-          last_used_at: string | null;
-          name: string;
-          scopes: Database["public"]["Enums"]["api_key_scope"][];
-          user_id: string;
-        }
-        Insert: {;
-          created_at?: string;
-          expires_at?: string | null;
-          id?: string;
-          is_active?: boolean;
-          key_hash: string;
-          key_prefix: string;
-          last_used_at?: string | null;
-          name: string;
-          scopes?: Database["public"]["Enums"]["api_key_scope"][];
-          user_id: string;
-        }
-        Update: {;
-          created_at?: string;
-          expires_at?: string | null;
-          id?: string;
-          is_active?: boolean;
-          key_hash?: string;
-          key_prefix?: string;
-          last_used_at?: string | null;
-          name?: string;
-          scopes?: Database["public"]["Enums"]["api_key_scope"][];
-          user_id?: string;
-        }
-        Relationships: [;
-          {;
-            foreignKeyName: "api_keys_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       api_logs: {;
         Row: {;
@@ -227,39 +159,21 @@ export type Database = {;
           user_agent?: string | null;
           user_id?: string | null;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;api_logs_api_key_id_fkey&quot;
-            columns: [&quot;api_key_id&quot;]
+            foreignKeyName: "api_logs_api_key_id_fkey"
+            columns: ["api_key_id"]
             isOneToOne: false
-            referencedRelation: &quot;api_keys&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "api_keys"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: &quot;api_logs_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "api_logs_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "api_logs_api_key_id_fkey";
-            columns: ["api_key_id"];
-            isOneToOne: false;
-            referencedRelation: "api_keys";
-            referencedColumns: ["id"];
-          },;
-          {;
-            foreignKeyName: "api_logs_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       certifications: {;
         Row: {;
@@ -295,25 +209,14 @@ export type Database = {;
           name?: string;
           resume_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;certifications_resume_id_fkey&quot;
-            columns: [&quot;resume_id&quot;]
+            foreignKeyName: "certifications_resume_id_fkey"
+            columns: ["resume_id"]
             isOneToOne: false
-            referencedRelation: &quot;talent_resumes&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "certifications_resume_id_fkey";
-            columns: ["resume_id"];
-            isOneToOne: false;
-            referencedRelation: "talent_resumes";
-            referencedColumns: ["id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       content: {;
         Row: {;
@@ -355,25 +258,14 @@ export type Database = {;
           updated_at?: string;
           views?: number | null;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;content_creator_id_fkey&quot;
-            columns: [&quot;creator_id&quot;]
+            foreignKeyName: "content_creator_id_fkey"
+            columns: ["creator_id"]
             isOneToOne: false
-            referencedRelation: &quot;profiles&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "content_creator_id_fkey";
-            columns: ["creator_id"];
-            isOneToOne: false;
-            referencedRelation: "profiles";
-            referencedColumns: ["id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       contract_templates: {;
         Row: {;
@@ -403,25 +295,14 @@ export type Database = {;
           updated_at?: string;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;contract_templates_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "contract_templates_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "contract_templates_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       education: {;
         Row: {;
@@ -469,25 +350,14 @@ export type Database = {;
           start_date?: string;
           updated_at?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;education_resume_id_fkey&quot;
-            columns: [&quot;resume_id&quot;]
+            foreignKeyName: "education_resume_id_fkey"
+            columns: ["resume_id"]
             isOneToOne: false
-            referencedRelation: &quot;talent_resumes&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "education_resume_id_fkey";
-            columns: ["resume_id"];
-            isOneToOne: false;
-            referencedRelation: "talent_resumes";
-            referencedColumns: ["id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       fraud_detection_reports: {;
         Row: {;
@@ -525,7 +395,6 @@ export type Database = {;
         }
         Relationships: [];
       }
-<<<<<<< HEAD
       fraud_flags: {
         Row: {
           action_taken: string | null
@@ -540,7 +409,7 @@ export type Database = {;
           reason: string
           reviewed_at: string | null
           reviewed_by: string | null
-          severity: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;fraud_severity&quot;]
+          severity: Database["public"]["Enums"]["fraud_severity"]
           status: string
           timestamp: string
           updated_at: string | null
@@ -560,7 +429,7 @@ export type Database = {;
           reason: string
           reviewed_at?: string | null
           reviewed_by?: string | null
-          severity?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;fraud_severity&quot;]
+          severity?: Database["public"]["Enums"]["fraud_severity"]
           status?: string
           timestamp?: string
           updated_at?: string | null
@@ -580,7 +449,7 @@ export type Database = {;
           reason?: string
           reviewed_at?: string | null
           reviewed_by?: string | null
-          severity?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;fraud_severity&quot;]
+          severity?: Database["public"]["Enums"]["fraud_severity"]
           status?: string
           timestamp?: string
           updated_at?: string | null
@@ -589,97 +458,19 @@ export type Database = {;
         }
         Relationships: [
           {
-            foreignKeyName: &quot;fraud_flags_reviewed_by_fkey&quot;
-            columns: [&quot;reviewed_by&quot;]
+            foreignKeyName: "fraud_flags_reviewed_by_fkey"
+            columns: ["reviewed_by"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           },
           {
-            foreignKeyName: &quot;fraud_flags_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "fraud_flags_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-      fraud_flags: {;
-        Row: {;
-          action_taken: string | null;
-          content_excerpt: string;
-          content_id: string;
-          content_type: string;
-          gpt_classification: string | null;
-          gpt_explanation: string | null;
-          id: string;
-          ip_address: string | null;
-          is_false_positive: boolean | null;
-          reason: string;
-          reviewed_at: string | null;
-          reviewed_by: string | null;
-          severity: Database["public"]["Enums"]["fraud_severity"];
-          status: string;
-          timestamp: string;
-          updated_at: string | null;
-          user_email: string | null;
-          user_id: string | null;
-        }
-        Insert: {;
-          action_taken?: string | null;
-          content_excerpt: string;
-          content_id: string;
-          content_type: string;
-          gpt_classification?: string | null;
-          gpt_explanation?: string | null;
-          id?: string;
-          ip_address?: string | null;
-          is_false_positive?: boolean | null;
-          reason: string;
-          reviewed_at?: string | null;
-          reviewed_by?: string | null;
-          severity?: Database["public"]["Enums"]["fraud_severity"];
-          status?: string;
-          timestamp?: string;
-          updated_at?: string | null;
-          user_email?: string | null;
-          user_id?: string | null;
-        }
-        Update: {;
-          action_taken?: string | null;
-          content_excerpt?: string;
-          content_id?: string;
-          content_type?: string;
-          gpt_classification?: string | null;
-          gpt_explanation?: string | null;
-          id?: string;
-          ip_address?: string | null;
-          is_false_positive?: boolean | null;
-          reason?: string;
-          reviewed_at?: string | null;
-          reviewed_by?: string | null;
-          severity?: Database["public"]["Enums"]["fraud_severity"];
-          status?: string;
-          timestamp?: string;
-          updated_at?: string | null;
-          user_email?: string | null;
-          user_id?: string | null;
-        }
-        Relationships: [;
-          {;
-            foreignKeyName: "fraud_flags_reviewed_by_fkey";
-            columns: ["reviewed_by"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          },;
-          {;
-            foreignKeyName: "fraud_flags_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       hire_requests: {;
         Row: {;
@@ -844,53 +635,28 @@ export type Database = {;
           talent_id?: string;
           viewed_at?: string | null;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;job_applications_job_id_fkey&quot;
-            columns: [&quot;job_id&quot;]
+            foreignKeyName: "job_applications_job_id_fkey"
+            columns: ["job_id"]
             isOneToOne: false
-            referencedRelation: &quot;jobs&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "jobs"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: &quot;job_applications_resume_id_fkey&quot;
-            columns: [&quot;resume_id&quot;]
+            foreignKeyName: "job_applications_resume_id_fkey"
+            columns: ["resume_id"]
             isOneToOne: false
-            referencedRelation: &quot;talent_resumes&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: &quot;job_applications_talent_id_fkey&quot;
-            columns: [&quot;talent_id&quot;]
+            foreignKeyName: "job_applications_talent_id_fkey"
+            columns: ["talent_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "job_applications_job_id_fkey";
-            columns: ["job_id"];
-            isOneToOne: false;
-            referencedRelation: "jobs";
-            referencedColumns: ["id"];
-          },;
-          {;
-            foreignKeyName: "job_applications_resume_id_fkey";
-            columns: ["resume_id"];
-            isOneToOne: false;
-            referencedRelation: "talent_resumes";
-            referencedColumns: ["id"];
-          },;
-          {;
-            foreignKeyName: "job_applications_talent_id_fkey";
-            columns: ["talent_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       jobs: {;
         Row: {;
@@ -932,25 +698,14 @@ export type Database = {;
           title?: string;
           updated_at?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;jobs_client_id_fkey&quot;
-            columns: [&quot;client_id&quot;]
+            foreignKeyName: "jobs_client_id_fkey"
+            columns: ["client_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "jobs_client_id_fkey";
-            columns: ["client_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       milestone_activities: {;
         Row: {;
@@ -983,39 +738,21 @@ export type Database = {;
           previous_status?: string | null;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;milestone_activities_milestone_id_fkey&quot;
-            columns: [&quot;milestone_id&quot;]
+            foreignKeyName: "milestone_activities_milestone_id_fkey"
+            columns: ["milestone_id"]
             isOneToOne: false
-            referencedRelation: &quot;project_milestones&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "project_milestones"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: &quot;milestone_activities_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "milestone_activities_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "milestone_activities_milestone_id_fkey";
-            columns: ["milestone_id"];
-            isOneToOne: false;
-            referencedRelation: "project_milestones";
-            referencedColumns: ["id"];
-          },;
-          {;
-            foreignKeyName: "milestone_activities_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       notification_preferences: {;
         Row: {;
@@ -1042,25 +779,14 @@ export type Database = {;
           updated_at?: string;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;notification_preferences_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "notification_preferences_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: true
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "notification_preferences_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: true;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       notifications: {;
         Row: {;
@@ -1096,25 +822,14 @@ export type Database = {;
           updated_at?: string | null;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;notifications_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "notifications_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "notifications_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       partner_payouts: {;
         Row: {;
@@ -1150,25 +865,14 @@ export type Database = {;
           status?: string;
           updated_at?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;partner_payouts_partner_id_fkey&quot;
-            columns: [&quot;partner_id&quot;]
+            foreignKeyName: "partner_payouts_partner_id_fkey"
+            columns: ["partner_id"]
             isOneToOne: false
-            referencedRelation: &quot;partner_profiles&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "partner_payouts_partner_id_fkey";
-            columns: ["partner_id"];
-            isOneToOne: false;
-            referencedRelation: "partner_profiles";
-            referencedColumns: ["id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       partner_profiles: {;
         Row: {;
@@ -1219,25 +923,14 @@ export type Database = {;
           user_id?: string;
           website?: string | null;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;partner_profiles_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "partner_profiles_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "partner_profiles_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       partner_referral_links: {;
         Row: {;
@@ -1273,25 +966,14 @@ export type Database = {;
           source?: string | null;
           updated_at?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;partner_referral_links_partner_id_fkey&quot;
-            columns: [&quot;partner_id&quot;]
+            foreignKeyName: "partner_referral_links_partner_id_fkey"
+            columns: ["partner_id"]
             isOneToOne: false
-            referencedRelation: &quot;partner_profiles&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "partner_referral_links_partner_id_fkey";
-            columns: ["partner_id"];
-            isOneToOne: false;
-            referencedRelation: "partner_profiles";
-            referencedColumns: ["id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       portfolio_projects: {;
         Row: {;
@@ -1333,25 +1015,14 @@ export type Database = {;
           updated_at?: string;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;portfolio_projects_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "portfolio_projects_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "portfolio_projects_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       profiles: {;
         Row: {;
@@ -1411,39 +1082,21 @@ export type Database = {;
           updated_at?: string;
           user_type?: string | null;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;profiles_id_fkey&quot;
-            columns: [&quot;id&quot;]
+            foreignKeyName: "profiles_id_fkey"
+            columns: ["id"]
             isOneToOne: true
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           },
           {
-            foreignKeyName: &quot;profiles_tenant_id_fkey&quot;
-            columns: [&quot;tenant_id&quot;]
+            foreignKeyName: "profiles_tenant_id_fkey"
+            columns: ["tenant_id"]
             isOneToOne: false
-            referencedRelation: &quot;whitelabel_tenants&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "whitelabel_tenants"
+            referencedColumns: ["id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "profiles_id_fkey";
-            columns: ["id"];
-            isOneToOne: true;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          },;
-          {;
-            foreignKeyName: "profiles_tenant_id_fkey";
-            columns: ["tenant_id"];
-            isOneToOne: false;
-            referencedRelation: "whitelabel_tenants";
-            referencedColumns: ["id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       project_milestones: {;
         Row: {;
@@ -1485,39 +1138,21 @@ export type Database = {;
           title?: string;
           updated_at?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;project_milestones_created_by_fkey&quot;
-            columns: [&quot;created_by&quot;]
+            foreignKeyName: "project_milestones_created_by_fkey"
+            columns: ["created_by"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           },
           {
-            foreignKeyName: &quot;project_milestones_project_id_fkey&quot;
-            columns: [&quot;project_id&quot;]
+            foreignKeyName: "project_milestones_project_id_fkey"
+            columns: ["project_id"]
             isOneToOne: false
-            referencedRelation: &quot;projects&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "project_milestones_created_by_fkey";
-            columns: ["created_by"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          },;
-          {;
-            foreignKeyName: "project_milestones_project_id_fkey";
-            columns: ["project_id"];
-            isOneToOne: false;
-            referencedRelation: "projects";
-            referencedColumns: ["id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       project_notes: {;
         Row: {;
@@ -1541,39 +1176,21 @@ export type Database = {;
           project_id?: string;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;project_notes_project_id_fkey&quot;
-            columns: [&quot;project_id&quot;]
+            foreignKeyName: "project_notes_project_id_fkey"
+            columns: ["project_id"]
             isOneToOne: false
-            referencedRelation: &quot;projects&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: &quot;project_notes_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "project_notes_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "project_notes_project_id_fkey";
-            columns: ["project_id"];
-            isOneToOne: false;
-            referencedRelation: "projects";
-            referencedColumns: ["id"];
-          },;
-          {;
-            foreignKeyName: "project_notes_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       projects: {;
         Row: {;
@@ -1615,28 +1232,27 @@ export type Database = {;
           talent_id?: string;
           updated_at?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;projects_client_id_fkey&quot;
-            columns: [&quot;client_id&quot;]
+            foreignKeyName: "projects_client_id_fkey"
+            columns: ["client_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           },
           {
-            foreignKeyName: &quot;projects_job_id_fkey&quot;
-            columns: [&quot;job_id&quot;]
+            foreignKeyName: "projects_job_id_fkey"
+            columns: ["job_id"]
             isOneToOne: false
-            referencedRelation: &quot;jobs&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "jobs"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: &quot;projects_talent_id_fkey&quot;
-            columns: [&quot;talent_id&quot;]
+            foreignKeyName: "projects_talent_id_fkey"
+            columns: ["talent_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
       }
       quote_requests: {
@@ -1655,7 +1271,7 @@ export type Database = {;
           requester_id: string | null
           requester_name: string
           start_date: string | null
-          status: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;quote_request_status&quot;]
+          status: Database["public"]["Enums"]["quote_request_status"]
           talent_id: string | null
           timeline: string
           updated_at: string
@@ -1676,7 +1292,7 @@ export type Database = {;
           requester_id?: string | null
           requester_name: string
           start_date?: string | null
-          status?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;quote_request_status&quot;]
+          status?: Database["public"]["Enums"]["quote_request_status"]
           talent_id?: string | null
           timeline: string
           updated_at?: string
@@ -1697,7 +1313,7 @@ export type Database = {;
           requester_id?: string | null
           requester_name?: string
           start_date?: string | null
-          status?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;quote_request_status&quot;]
+          status?: Database["public"]["Enums"]["quote_request_status"]
           talent_id?: string | null
           timeline?: string
           updated_at?: string
@@ -1705,123 +1321,19 @@ export type Database = {;
         }
         Relationships: [
           {
-            foreignKeyName: &quot;quote_requests_requester_id_fkey&quot;
-            columns: [&quot;requester_id&quot;]
+            foreignKeyName: "quote_requests_requester_id_fkey"
+            columns: ["requester_id"]
             isOneToOne: false
-            referencedRelation: &quot;profiles&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: &quot;quote_requests_talent_id_fkey&quot;
-            columns: [&quot;talent_id&quot;]
+            foreignKeyName: "quote_requests_talent_id_fkey"
+            columns: ["talent_id"]
             isOneToOne: false
-            referencedRelation: &quot;profiles&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "projects_client_id_fkey";
-            columns: ["client_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          },;
-          {;
-            foreignKeyName: "projects_job_id_fkey";
-            columns: ["job_id"];
-            isOneToOne: false;
-            referencedRelation: "jobs";
-            referencedColumns: ["id"];
-          },;
-          {;
-            foreignKeyName: "projects_talent_id_fkey";
-            columns: ["talent_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
-      }
-      quote_requests: {;
-        Row: {;
-          budget_display: string | null;
-          budget_max: number | null;
-          budget_min: number | null;
-          created_at: string;
-          id: string;
-          is_archived: boolean;
-          project_description: string | null;
-          project_name: string;
-          project_summary: string;
-          replied_at: string | null;
-          requester_email: string;
-          requester_id: string | null;
-          requester_name: string;
-          start_date: string | null;
-          status: Database["public"]["Enums"]["quote_request_status"];
-          talent_id: string | null;
-          timeline: string;
-          updated_at: string;
-          viewed_at: string | null;
-        }
-        Insert: {;
-          budget_display?: string | null;
-          budget_max?: number | null;
-          budget_min?: number | null;
-          created_at?: string;
-          id?: string;
-          is_archived?: boolean;
-          project_description?: string | null;
-          project_name: string;
-          project_summary: string;
-          replied_at?: string | null;
-          requester_email: string;
-          requester_id?: string | null;
-          requester_name: string;
-          start_date?: string | null;
-          status?: Database["public"]["Enums"]["quote_request_status"];
-          talent_id?: string | null;
-          timeline: string;
-          updated_at?: string;
-          viewed_at?: string | null;
-        }
-        Update: {;
-          budget_display?: string | null;
-          budget_max?: number | null;
-          budget_min?: number | null;
-          created_at?: string;
-          id?: string;
-          is_archived?: boolean;
-          project_description?: string | null;
-          project_name?: string;
-          project_summary?: string;
-          replied_at?: string | null;
-          requester_email?: string;
-          requester_id?: string | null;
-          requester_name?: string;
-          start_date?: string | null;
-          status?: Database["public"]["Enums"]["quote_request_status"];
-          talent_id?: string | null;
-          timeline?: string;
-          updated_at?: string;
-          viewed_at?: string | null;
-        }
-        Relationships: [;
-          {;
-            foreignKeyName: "quote_requests_requester_id_fkey";
-            columns: ["requester_id"];
-            isOneToOne: false;
-            referencedRelation: "profiles";
-            referencedColumns: ["id"];
-          },;
-          {;
-            foreignKeyName: "quote_requests_talent_id_fkey";
-            columns: ["talent_id"];
-            isOneToOne: false;
-            referencedRelation: "profiles";
-            referencedColumns: ["id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       referral_codes: {;
         Row: {;
@@ -1845,25 +1357,14 @@ export type Database = {;
           updated_at?: string;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;referral_codes_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "referral_codes_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: true
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "referral_codes_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: true;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       referral_rewards: {;
         Row: {;
@@ -1896,28 +1397,27 @@ export type Database = {;
           reward_type?: string;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;referral_rewards_partner_id_fkey&quot;
-            columns: [&quot;partner_id&quot;]
+            foreignKeyName: "referral_rewards_partner_id_fkey"
+            columns: ["partner_id"]
             isOneToOne: false
-            referencedRelation: &quot;partner_profiles&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: &quot;referral_rewards_referral_id_fkey&quot;
-            columns: [&quot;referral_id&quot;]
+            foreignKeyName: "referral_rewards_referral_id_fkey"
+            columns: ["referral_id"]
             isOneToOne: false
-            referencedRelation: &quot;referrals&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "referrals"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: &quot;referral_rewards_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "referral_rewards_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
       }
       referrals: {
@@ -1935,7 +1435,7 @@ export type Database = {;
           referrer_user_type: string | null
           reward_issued: boolean
           reward_issued_at: string | null
-          status: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;referral_status&quot;]
+          status: Database["public"]["Enums"]["referral_status"]
         }
         Insert: {
           completed_at?: string | null
@@ -1951,7 +1451,7 @@ export type Database = {;
           referrer_user_type?: string | null
           reward_issued?: boolean
           reward_issued_at?: string | null
-          status?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;referral_status&quot;]
+          status?: Database["public"]["Enums"]["referral_status"]
         }
         Update: {
           completed_at?: string | null
@@ -1967,140 +1467,37 @@ export type Database = {;
           referrer_user_type?: string | null
           reward_issued?: boolean
           reward_issued_at?: string | null
-          status?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;referral_status&quot;]
+          status?: Database["public"]["Enums"]["referral_status"]
         }
         Relationships: [
           {
-            foreignKeyName: &quot;referrals_partner_id_fkey&quot;
-            columns: [&quot;partner_id&quot;]
+            foreignKeyName: "referrals_partner_id_fkey"
+            columns: ["partner_id"]
             isOneToOne: false
-            referencedRelation: &quot;partner_profiles&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: &quot;referrals_referral_code_fkey&quot;
-            columns: [&quot;referral_code&quot;]
+            foreignKeyName: "referrals_referral_code_fkey"
+            columns: ["referral_code"]
             isOneToOne: false
-            referencedRelation: &quot;referral_codes&quot;
-            referencedColumns: [&quot;code&quot;]
+            referencedRelation: "referral_codes"
+            referencedColumns: ["code"]
           },
           {
-            foreignKeyName: &quot;referrals_referred_id_fkey&quot;
-            columns: [&quot;referred_id&quot;]
+            foreignKeyName: "referrals_referred_id_fkey"
+            columns: ["referred_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           },
           {
-            foreignKeyName: &quot;referrals_referrer_id_fkey&quot;
-            columns: [&quot;referrer_id&quot;]
+            foreignKeyName: "referrals_referrer_id_fkey"
+            columns: ["referrer_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "referral_rewards_partner_id_fkey";
-            columns: ["partner_id"];
-            isOneToOne: false;
-            referencedRelation: "partner_profiles";
-            referencedColumns: ["id"];
-          },;
-          {;
-            foreignKeyName: "referral_rewards_referral_id_fkey";
-            columns: ["referral_id"];
-            isOneToOne: false;
-            referencedRelation: "referrals";
-            referencedColumns: ["id"];
-          },;
-          {;
-            foreignKeyName: "referral_rewards_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
-      }
-      referrals: {;
-        Row: {;
-          completed_at: string | null;
-          created_at: string;
-          email: string | null;
-          id: string;
-          ip_address: string | null;
-          partner_id: string | null;
-          referral_code: string;
-          referred_id: string | null;
-          referred_user_type: string | null;
-          referrer_id: string;
-          referrer_user_type: string | null;
-          reward_issued: boolean;
-          reward_issued_at: string | null;
-          status: Database["public"]["Enums"]["referral_status"];
-        }
-        Insert: {;
-          completed_at?: string | null;
-          created_at?: string;
-          email?: string | null;
-          id?: string;
-          ip_address?: string | null;
-          partner_id?: string | null;
-          referral_code: string;
-          referred_id?: string | null;
-          referred_user_type?: string | null;
-          referrer_id: string;
-          referrer_user_type?: string | null;
-          reward_issued?: boolean;
-          reward_issued_at?: string | null;
-          status?: Database["public"]["Enums"]["referral_status"];
-        }
-        Update: {;
-          completed_at?: string | null;
-          created_at?: string;
-          email?: string | null;
-          id?: string;
-          ip_address?: string | null;
-          partner_id?: string | null;
-          referral_code?: string;
-          referred_id?: string | null;
-          referred_user_type?: string | null;
-          referrer_id?: string;
-          referrer_user_type?: string | null;
-          reward_issued?: boolean;
-          reward_issued_at?: string | null;
-          status?: Database["public"]["Enums"]["referral_status"];
-        }
-        Relationships: [;
-          {;
-            foreignKeyName: "referrals_partner_id_fkey";
-            columns: ["partner_id"];
-            isOneToOne: false;
-            referencedRelation: "partner_profiles";
-            referencedColumns: ["id"];
-          },;
-          {;
-            foreignKeyName: "referrals_referral_code_fkey";
-            columns: ["referral_code"];
-            isOneToOne: false;
-            referencedRelation: "referral_codes";
-            referencedColumns: ["code"];
-          },;
-          {;
-            foreignKeyName: "referrals_referred_id_fkey";
-            columns: ["referred_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          },;
-          {;
-            foreignKeyName: "referrals_referrer_id_fkey";
-            columns: ["referrer_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       reminder_logs: {;
         Row: {;
@@ -2133,25 +1530,14 @@ export type Database = {;
           sent_at?: string | null;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;reminder_logs_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "reminder_logs_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "reminder_logs_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       resume_skills: {;
         Row: {;
@@ -2181,25 +1567,14 @@ export type Database = {;
           resume_id?: string;
           years_experience?: number | null;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;resume_skills_resume_id_fkey&quot;
-            columns: [&quot;resume_id&quot;]
+            foreignKeyName: "resume_skills_resume_id_fkey"
+            columns: ["resume_id"]
             isOneToOne: false
-            referencedRelation: &quot;talent_resumes&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "resume_skills_resume_id_fkey";
-            columns: ["resume_id"];
-            isOneToOne: false;
-            referencedRelation: "talent_resumes";
-            referencedColumns: ["id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       review_reports: {;
         Row: {;
@@ -2229,39 +1604,21 @@ export type Database = {;
           review_id?: string;
           status?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;review_reports_reporter_id_fkey&quot;
-            columns: [&quot;reporter_id&quot;]
+            foreignKeyName: "review_reports_reporter_id_fkey"
+            columns: ["reporter_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           },
           {
-            foreignKeyName: &quot;review_reports_review_id_fkey&quot;
-            columns: [&quot;review_id&quot;]
+            foreignKeyName: "review_reports_review_id_fkey"
+            columns: ["review_id"]
             isOneToOne: false
-            referencedRelation: &quot;reviews&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "reviews"
+            referencedColumns: ["id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "review_reports_reporter_id_fkey";
-            columns: ["reporter_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          },;
-          {;
-            foreignKeyName: "review_reports_review_id_fkey";
-            columns: ["review_id"];
-            isOneToOne: false;
-            referencedRelation: "reviews";
-            referencedColumns: ["id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       reviews: {;
         Row: {;
@@ -2318,53 +1675,28 @@ export type Database = {;
           updated_at?: string;
           would_work_again?: boolean | null;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;reviews_project_id_fkey&quot;
-            columns: [&quot;project_id&quot;]
+            foreignKeyName: "reviews_project_id_fkey"
+            columns: ["project_id"]
             isOneToOne: false
-            referencedRelation: &quot;projects&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: &quot;reviews_reviewee_id_fkey&quot;
-            columns: [&quot;reviewee_id&quot;]
+            foreignKeyName: "reviews_reviewee_id_fkey"
+            columns: ["reviewee_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           },
           {
-            foreignKeyName: &quot;reviews_reviewer_id_fkey&quot;
-            columns: [&quot;reviewer_id&quot;]
+            foreignKeyName: "reviews_reviewer_id_fkey"
+            columns: ["reviewer_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "reviews_project_id_fkey";
-            columns: ["project_id"];
-            isOneToOne: false;
-            referencedRelation: "projects";
-            referencedColumns: ["id"];
-          },;
-          {;
-            foreignKeyName: "reviews_reviewee_id_fkey";
-            columns: ["reviewee_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          },;
-          {;
-            foreignKeyName: "reviews_reviewer_id_fkey";
-            columns: ["reviewer_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       scheduled_jobs: {;
         Row: {;
@@ -2436,25 +1768,14 @@ export type Database = {;
           updated_at?: string;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;subscriptions_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "subscriptions_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "subscriptions_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       talent_resumes: {;
         Row: {;
@@ -2487,25 +1808,14 @@ export type Database = {;
           updated_at?: string;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;talent_resumes_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "talent_resumes_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "talent_resumes_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       tenant_administrators: {;
         Row: {;
@@ -2526,39 +1836,21 @@ export type Database = {;
           tenant_id?: string;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;tenant_administrators_tenant_id_fkey&quot;
-            columns: [&quot;tenant_id&quot;]
+            foreignKeyName: "tenant_administrators_tenant_id_fkey"
+            columns: ["tenant_id"]
             isOneToOne: false
-            referencedRelation: &quot;whitelabel_tenants&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "whitelabel_tenants"
+            referencedColumns: ["id"]
           },
           {
-            foreignKeyName: &quot;tenant_administrators_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "tenant_administrators_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "tenant_administrators_tenant_id_fkey";
-            columns: ["tenant_id"];
-            isOneToOne: false;
-            referencedRelation: "whitelabel_tenants";
-            referencedColumns: ["id"];
-          },;
-          {;
-            foreignKeyName: "tenant_administrators_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       user_onboarding: {;
         Row: {;
@@ -2642,25 +1934,14 @@ export type Database = {;
           updated_at?: string;
           user_id?: string | null;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;user_onboarding_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "user_onboarding_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "user_onboarding_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       user_privacy_settings: {;
         Row: {;
@@ -2684,25 +1965,14 @@ export type Database = {;
           message_scanning_enabled?: boolean | null;
           updated_at?: string | null;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;user_privacy_settings_id_fkey&quot;
-            columns: [&quot;id&quot;]
+            foreignKeyName: "user_privacy_settings_id_fkey"
+            columns: ["id"]
             isOneToOne: true
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "user_privacy_settings_id_fkey";
-            columns: ["id"];
-            isOneToOne: true;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       webhook_configs: {;
         Row: {;
@@ -2741,25 +2011,14 @@ export type Database = {;
           url?: string;
           user_id?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;webhook_configs_user_id_fkey&quot;
-            columns: [&quot;user_id&quot;]
+            foreignKeyName: "webhook_configs_user_id_fkey"
+            columns: ["user_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "webhook_configs_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       whitelabel_tenants: {;
         Row: {;
@@ -2810,25 +2069,14 @@ export type Database = {;
           theme_preset?: string;
           updated_at?: string | null;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;whitelabel_tenants_account_manager_id_fkey&quot;
-            columns: [&quot;account_manager_id&quot;]
+            foreignKeyName: "whitelabel_tenants_account_manager_id_fkey"
+            columns: ["account_manager_id"]
             isOneToOne: false
-            referencedRelation: &quot;user_metrics&quot;
-            referencedColumns: [&quot;user_id&quot;]
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "whitelabel_tenants_account_manager_id_fkey";
-            columns: ["account_manager_id"];
-            isOneToOne: false;
-            referencedRelation: "user_metrics";
-            referencedColumns: ["user_id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       work_history: {;
         Row: {;
@@ -2873,25 +2121,14 @@ export type Database = {;
           start_date?: string;
           updated_at?: string;
         }
-<<<<<<< HEAD
         Relationships: [
           {
-            foreignKeyName: &quot;work_history_resume_id_fkey&quot;
-            columns: [&quot;resume_id&quot;]
+            foreignKeyName: "work_history_resume_id_fkey"
+            columns: ["resume_id"]
             isOneToOne: false
-            referencedRelation: &quot;talent_resumes&quot;
-            referencedColumns: [&quot;id&quot;]
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"]
           }]
-=======
-        Relationships: [;
-          {;
-            foreignKeyName: "work_history_resume_id_fkey";
-            columns: ["resume_id"];
-            isOneToOne: false;
-            referencedRelation: "talent_resumes";
-            referencedColumns: ["id"];
-          }];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
     }
     Views: {;
@@ -3032,80 +2269,51 @@ export type Database = {;
         Returns: boolean;
       }
     }
-<<<<<<< HEAD
     Enums: {
       api_key_scope:
-        | &quot;jobs:read&quot;
-        | &quot;jobs:write&quot;
-        | &quot;talent:read&quot;
-        | &quot;quotes:write&quot;
-        | &quot;webhooks:manage&quot;
-      fraud_severity: &quot;safe&quot; | &quot;suspicious&quot; | &quot;dangerous&quot;
+        | "jobs:read"
+        | "jobs:write"
+        | "talent:read"
+        | "quotes:write"
+        | "webhooks:manage"
+      fraud_severity: "safe" | "suspicious" | "dangerous"
       quote_request_status:
-        | &quot;new&quot;
-        | &quot;in_review&quot;
-        | &quot;accepted&quot;
-        | &quot;responded&quot;
-        | &quot;closed&quot;
-        | &quot;archived&quot;
-      referral_status: &quot;pending&quot; | &quot;completed&quot; | &quot;expired&quot;
-=======
-    Enums: {;
-      api_key_scope:;
-        | "jobs:read";
-        | "jobs:write";
-        | "talent:read";
-        | "quotes:write";
-        | "webhooks:manage";
-      fraud_severity: "safe" | "suspicious" | "dangerous";
-      quote_request_status:;
-        | "new";
-        | "in_review";
-        | "accepted";
-        | "responded";
-        | "closed";
-        | "archived";
-      referral_status: "pending" | "completed" | "expired";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        | "new"
+        | "in_review"
+        | "accepted"
+        | "responded"
+        | "closed"
+        | "archived"
+      referral_status: "pending" | "completed" | "expired"
     }
     CompositeTypes: {;
       [_ in never]: never;
     }
   }
 }
-<<<<<<< HEAD
 
-type DefaultSchema = Database[Extract<keyof Database, &quot;public&quot;>]
+type DefaultSchema = Database[Extract<keyof Database, "public">]
 
 export type Tables<
   DefaultSchemaTableNameOrOptions extends
-    | keyof (DefaultSchema[&quot;Tables&quot;] & DefaultSchema[&quot;Views&quot;])
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
     | { schema: keyof Database },
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
-<<<<<<< HEAD
     ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
     : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
       Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
-=======
-    ? keyof (Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Tables&quot;] &
-        Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Views&quot;])
-    : never = never,
-> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? (Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Tables&quot;] &
-      Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Views&quot;])[TableName] extends {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       Row: infer R
     }
     ? R
     : never
-  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema[&quot;Tables&quot;] &
-        DefaultSchema[&quot;Views&quot;])
-    ? (DefaultSchema[&quot;Tables&quot;] &
-        DefaultSchema[&quot;Views&quot;])[DefaultSchemaTableNameOrOptions] extends {
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &
+        DefaultSchema["Views"])
+    ? (DefaultSchema["Tables"] &
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R
       }
       ? R
@@ -3114,27 +2322,20 @@ export type Tables<
 
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema[&quot;Tables&quot;]
+    | keyof DefaultSchema["Tables"]
     | { schema: keyof Database },
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
-<<<<<<< HEAD
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
     : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
-=======
-    ? keyof Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Tables&quot;]
-    : never = never,
-> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Tables&quot;][TableName] extends {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       Insert: infer I
     }
     ? I
     : never
-  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema[&quot;Tables&quot;]
-    ? DefaultSchema[&quot;Tables&quot;][DefaultSchemaTableNameOrOptions] extends {
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Insert: infer I
       }
       ? I
@@ -3143,27 +2344,20 @@ export type TablesInsert<
 
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema[&quot;Tables&quot;]
+    | keyof DefaultSchema["Tables"]
     | { schema: keyof Database },
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
-<<<<<<< HEAD
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
     : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
-=======
-    ? keyof Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Tables&quot;]
-    : never = never,
-> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Tables&quot;][TableName] extends {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       Update: infer U
     }
     ? U
     : never
-  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema[&quot;Tables&quot;]
-    ? DefaultSchema[&quot;Tables&quot;][DefaultSchemaTableNameOrOptions] extends {
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Update: infer U
       }
       ? U
@@ -3172,69 +2366,50 @@ export type TablesUpdate<
 
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
-    | keyof DefaultSchema[&quot;Enums&quot;]
+    | keyof DefaultSchema["Enums"]
     | { schema: keyof Database },
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
   }
-<<<<<<< HEAD
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
     : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
-=======
-    ? keyof Database[DefaultSchemaEnumNameOrOptions[&quot;schema&quot;]][&quot;Enums&quot;]
-    : never = never,
-> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaEnumNameOrOptions[&quot;schema&quot;]][&quot;Enums&quot;][EnumName]
-  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema[&quot;Enums&quot;]
-    ? DefaultSchema[&quot;Enums&quot;][DefaultSchemaEnumNameOrOptions]
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     : never
 
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
-    | keyof DefaultSchema[&quot;CompositeTypes&quot;]
+    | keyof DefaultSchema["CompositeTypes"]
     | { schema: keyof Database },
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database
   }
-<<<<<<< HEAD
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
     : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
-=======
-    ? keyof Database[PublicCompositeTypeNameOrOptions[&quot;schema&quot;]][&quot;CompositeTypes&quot;]
-    : never = never,
-> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
-  ? Database[PublicCompositeTypeNameOrOptions[&quot;schema&quot;]][&quot;CompositeTypes&quot;][CompositeTypeName]
-  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema[&quot;CompositeTypes&quot;]
-    ? DefaultSchema[&quot;CompositeTypes&quot;][PublicCompositeTypeNameOrOptions]
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     : never
 
 export const Constants = {
   public: {
     Enums: {
       api_key_scope: [
-        &quot;jobs:read&quot;,
-        &quot;jobs:write&quot;,
-        &quot;talent:read&quot;,
-        &quot;quotes:write&quot;,
-        &quot;webhooks:manage&quot;],
-      fraud_severity: [&quot;safe&quot;, &quot;suspicious&quot;, &quot;dangerous&quot;],
+        "jobs:read",
+        "jobs:write",
+        "talent:read",
+        "quotes:write",
+        "webhooks:manage"],
+      fraud_severity: ["safe", "suspicious", "dangerous"],
       quote_request_status: [
-        &quot;new&quot;,
-        &quot;in_review&quot;,
-        &quot;accepted&quot;,
-        &quot;responded&quot;,
-        &quot;closed&quot;,
-        &quot;archived&quot;],
-      referral_status: [&quot;pending&quot;, &quot;completed&quot;, &quot;expired&quot;]}}} as const
-=======
+        "new",
+        "in_review",
+        "accepted",
+        "responded",
+        "closed",
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const
 ;
 type DefaultSchema = Database[Extract<keyof Database, "public">];
 export type Tables<;
@@ -3348,4 +2523,3 @@ export const Constants = {;
         "closed",;
         "archived"];
       referral_status: ["pending", "completed", "expired"]}}} as const;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

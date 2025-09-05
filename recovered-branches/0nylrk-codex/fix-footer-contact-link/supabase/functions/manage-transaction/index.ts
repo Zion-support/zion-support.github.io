@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
@@ -17,48 +15,21 @@ serve(async (req) => {
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_ANON_KEY") ?? ""
   ),
-=======
-import { serve } from &quot;https://deno.land/std@0.190.0/http/server.ts&quot;;
-import Stripe from &quot;https://esm.sh/stripe@14.21.0&quot;;
-import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2.45.0&quot;;
-
-const corsHeaders = {
-  &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
-  &quot;Access-Control-Allow-Headers&quot;: &quot;authorization, x-client-info, apikey, content-type&quot;};
-
-serve(async (req) => {
-  if (req.method === &quot;OPTIONS&quot;) {
-    return new Response(null, { headers: corsHeaders });
-  }
-
-  const supabaseClient = createClient(
-    Deno.env.get(&quot;SUPABASE_URL&quot;) ?? "&quot;,
-    Deno.env.get(&quot;SUPABASE_ANON_KEY&quot;) ?? "&quot;
-  );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Create service client for admin operations
   const supabaseAdmin = createClient(
-    Deno.env.get(&quot;SUPABASE_URL&quot;) ?? "&quot;,
-    Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) ?? "&quot;,
+    Deno.env.get("SUPABASE_URL") ?? "",
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
     { auth: { persistSession: false } }
   ),
 
   try {
     // Authenticate the user
-<<<<<<< HEAD
     const authHeader = req.headers.get("Authorization")!,
     const token = authHeader.replace("Bearer ", ""),
     const { data: { user } } = await supabaseClient.auth.getUser(token),
     
     if (!user?.id) throw new Error("User not authenticated"),
-=======
-    const authHeader = req.headers.get(&quot;Authorization&quot;)!;
-    const token = authHeader.replace(&quot;Bearer &quot;, "&quot;);
-    const { data: { user } } = await supabaseClient.auth.getUser(token);
-    
-    if (!user?.id) throw new Error(&quot;User not authenticated&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     // Get request data
     const { 
@@ -67,16 +38,11 @@ serve(async (req) => {
     } = await req.json(),
 
     if (!transactionId) {
-<<<<<<< HEAD
       throw new Error("Transaction ID is required")
-=======
-      throw new Error(&quot;Transaction ID is required&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 
     // Get transaction details
     const { data: transaction, error: fetchError } = await supabaseAdmin
-<<<<<<< HEAD
       .from("transactions")
       .select("*")
       .eq("id", transactionId)
@@ -84,15 +50,6 @@ serve(async (req) => {
     
     if (fetchError || !transaction) {
       throw new Error("Transaction not found")
-=======
-      .from(&quot;transactions&quot;)
-      .select(&quot;*&quot;)
-      .eq(&quot;id&quot;, transactionId)
-      .single();
-    
-    if (fetchError || !transaction) {
-      throw new Error(&quot;Transaction not found&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     // Verify user is authorized to manage this transaction
@@ -101,19 +58,11 @@ serve(async (req) => {
     
     // Clients can cancel or request refunds, providers can only release funds
     if (!isClient && !isProvider) {
-<<<<<<< HEAD
       throw new Error("You are not authorized to manage this transaction")
     }
 
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"}),
-=======
-      throw new Error(&quot;You are not authorized to manage this transaction&quot;);
-    }
-
-    const stripe = new Stripe(Deno.env.get(&quot;STRIPE_SECRET_KEY&quot;) || "&quot;, {
-      apiVersion: &quot;2023-10-16&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     let result,
     
@@ -121,22 +70,17 @@ serve(async (req) => {
       case 'release':
         // Only providers or admins can release escrow funds
         if (!isProvider) {
-<<<<<<< HEAD
           throw new Error("Only service providers can release funds from escrow")
-=======
-          throw new Error(&quot;Only service providers can release funds from escrow&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
         
         // Update transaction status
         await supabaseAdmin
-          .from(&quot;transactions&quot;)
+          .from("transactions")
           .update({ 
-            status: &quot;completed&quot;,
+            status: "completed",
             in_escrow: false,
             completed_at: new Date().toISOString() 
           })
-<<<<<<< HEAD
           .eq("id", transactionId),
         
         result = { message: "Funds released from escrow" },
@@ -146,17 +90,6 @@ serve(async (req) => {
         // Check if transaction can be refunded
         if (transaction.status !== "completed" && transaction.status !== "pending") {
           throw new Error("This transaction cannot be refunded")
-=======
-          .eq(&quot;id&quot;, transactionId);
-        
-        result = { message: &quot;Funds released from escrow&quot; };
-        break;
-        
-      case 'refund':
-        // Check if transaction can be refunded
-        if (transaction.status !== &quot;completed&quot; && transaction.status !== &quot;pending&quot;) {
-          throw new Error(&quot;This transaction cannot be refunded&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
         
         // Process refund via Stripe
@@ -167,23 +100,17 @@ serve(async (req) => {
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({
               payment_intent: session.payment_intent.toString(),
-<<<<<<< HEAD
               reason: "requested_by_customer"
             }),
-=======
-              reason: &quot;requested_by_customer&quot;
-            });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             
             // Update transaction status
             await supabaseAdmin
-              .from(&quot;transactions&quot;)
+              .from("transactions")
               .update({ 
-                status: &quot;refunded&quot;,
+                status: "refunded",
                 refunded_at: new Date().toISOString(),
                 refund_id: refund.id
               })
-<<<<<<< HEAD
               .eq("id", transactionId)
           }
         }
@@ -195,29 +122,15 @@ serve(async (req) => {
         // Only allow cancellation for pending transactions
         if (transaction.status !== "pending") {
           throw new Error("Only pending transactions can be cancelled")
-=======
-              .eq(&quot;id&quot;, transactionId);
-          }
-        }
-        
-        result = { message: &quot;Refund processed successfully&quot; };
-        break;
-        
-      case 'cancel':
-        // Only allow cancellation for pending transactions
-        if (transaction.status !== &quot;pending&quot;) {
-          throw new Error(&quot;Only pending transactions can be cancelled&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
         
         // Update transaction status
         await supabaseAdmin
-          .from(&quot;transactions&quot;)
+          .from("transactions")
           .update({ 
-            status: &quot;cancelled&quot;,
+            status: "cancelled",
             cancelled_at: new Date().toISOString() 
           })
-<<<<<<< HEAD
           .eq("id", transactionId),
         
         result = { message: "Transaction cancelled successfully" },
@@ -234,26 +147,6 @@ serve(async (req) => {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
-=======
-          .eq(&quot;id&quot;, transactionId);
-        
-        result = { message: &quot;Transaction cancelled successfully&quot; };
-        break;
-        
-      default:
-        throw new Error(&quot;Invalid action&quot;);
-    }
-
-    return new Response(JSON.stringify(result), {
-      headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
-      status: 200});
-  } catch (error) {
-    console.error(&quot;Transaction management error:&quot;, error.message);
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
-      status: 500});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -385,6 +278,5 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 });

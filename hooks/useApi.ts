@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface ApiState<T> {
   data: T | null;
   loading: boolean;
   error: string | null;
-=======
-      setLoading(false)},;
-  return { data, loading, error, execute }}
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 
 interface UseApiOptions {
@@ -50,7 +45,4 @@ export function useApi<T>(
     refetch: fetchData,
   };
 }
-<<<<<<< HEAD
-=======
 },;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

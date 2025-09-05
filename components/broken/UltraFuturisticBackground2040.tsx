@@ -159,36 +159,25 @@ const UltraFuturisticBackground2040: React.FC = () => {;
       window.removeEventListener('resize', handleResize),;
       cancelAnimationFrame(animationFrameId);
     }
-<<<<<<< HEAD
   }, []),
 
   return (
-    <div className=&quot;fixed inset-0 pointer-events-none overflow-hidden&quot;>
-=======
-  }, []),;
-  return (;
-    <div className="fixed inset-0 pointer-events-none overflow-hidden">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+    <div className="fixed inset-0 pointer-events-none overflow-hidden">
       {/* Canvas Background */}
       <canvas;
         ref={canvasRef}
-<<<<<<< HEAD
-        className=&quot;absolute inset-0 w-full h-full&quot;
-=======
-        className="absolute inset-0 w-full h-full";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        className="absolute inset-0 w-full h-full"
         style={{ zIndex: -1 }}
       />;
       {/* Overlay Gradients */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80&quot; />
-      <div className=&quot;absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60&quot; />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60" />
       
       {/* Floating Elements */}
-      <div className=&quot;absolute inset-0&quot;>
+      <div className="absolute inset-0">
         {/* Animated Grid Pattern */}
-        <div className=&quot;absolute inset-0 opacity-20&quot;>
-          <div className=&quot;absolute top-0 left-0 w-full h-full&quot; style={{
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full" style={{
             backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
@@ -200,7 +189,7 @@ const UltraFuturisticBackground2040: React.FC = () => {;
         
         {/* Floating Geometric Elements */}
         <motion.div
-          className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg&quot;
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
           animate={{
             rotate: [0, 360],
             scale: [1, 1.1, 1],
@@ -209,12 +198,12 @@ const UltraFuturisticBackground2040: React.FC = () => {;
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: &quot;linear&quot;
+            ease: "linear"
           }}
         />
         
         <motion.div
-          className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full&quot;
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
           animate={{
             rotate: [360, 0],
             scale: [1, 1.2, 1],
@@ -223,12 +212,12 @@ const UltraFuturisticBackground2040: React.FC = () => {;
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: &quot;linear&quot;
+            ease: "linear"
           }}
         />
         
         <motion.div
-          className=&quot;absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45&quot;
+          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
           animate={{
             rotate: [45, 405],
             scale: [1, 1.15, 1],
@@ -237,68 +226,12 @@ const UltraFuturisticBackground2040: React.FC = () => {;
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: &quot;linear&quot;
-=======
-      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80" />;
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60" />;
-      {/* Floating Elements */}
-      <div className="absolute inset-0">;
-        {/* Animated Grid Pattern */}
-        <div className="absolute inset-0 opacity-20">;
-          <div className="absolute top-0 left-0 w-full h-full" style={{;
-            backgroundImage: `;
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),;
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
-            `,;
-            backgroundSize: '50px 50px',;
-            animation: 'gridMove 20s linear infinite';
-          }} />;
-        </div>;
-        {/* Floating Geometric Elements */}
-        <motion.div;
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg";
-          animate={{;
-            rotate: [0, 360],;
-            scale: [1, 1.1, 1],;
-            opacity: [0.2, 0.4, 0.2];
-          }}
-          transition={{;
-            duration: 8,;
-            repeat: Infinity,;
-            ease: "linear";
-          }}
-        />;
-        <motion.div;
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full";
-          animate={{;
-            rotate: [360, 0],;
-            scale: [1, 1.2, 1],;
-            opacity: [0.2, 0.5, 0.2];
-          }}
-          transition={{;
-            duration: 10,;
-            repeat: Infinity,;
-            ease: "linear";
-          }}
-        />;
-        <motion.div;
-          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45";
-          animate={{;
-            rotate: [45, 405],;
-            scale: [1, 1.15, 1],;
-            opacity: [0.2, 0.3, 0.2];
-          }}
-          transition={{;
-            duration: 12,;
-            repeat: Infinity,;
-            ease: "linear";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "linear"
           }}
         />;
         {/* Additional Floating Elements */}
-<<<<<<< HEAD
         <motion.div
-          className=&quot;absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12&quot;
+          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
           animate={{
             rotate: [12, 372],
             scale: [1, 1.1, 1],
@@ -307,12 +240,12 @@ const UltraFuturisticBackground2040: React.FC = () => {;
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: &quot;linear&quot;
+            ease: "linear"
           }}
         />
         
         <motion.div
-          className=&quot;absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full&quot;
+          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
           animate={{
             rotate: [0, 360],
             scale: [1, 1.2, 1],
@@ -321,39 +254,12 @@ const UltraFuturisticBackground2040: React.FC = () => {;
           transition={{
             duration: 18,
             repeat: Infinity,
-            ease: &quot;linear&quot;
-=======
-        <motion.div;
-          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12";
-          animate={{;
-            rotate: [12, 372],;
-            scale: [1, 1.1, 1],;
-            opacity: [0.15, 0.25, 0.15];
-          }}
-          transition={{;
-            duration: 15,;
-            repeat: Infinity,;
-            ease: "linear";
-          }}
-        />;
-        <motion.div;
-          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full";
-          animate={{;
-            rotate: [0, 360],;
-            scale: [1, 1.2, 1],;
-            opacity: [0.15, 0.3, 0.15];
-          }}
-          transition={{;
-            duration: 18,;
-            repeat: Infinity,;
-            ease: "linear";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "linear"
           }}
         />;
         {/* Particle Effects */}
-<<<<<<< HEAD
         <motion.div
-          className=&quot;absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full&quot;
+          className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
           animate={{
             y: [0, -20, 0],
             opacity: [0.4, 0.8, 0.4]
@@ -361,12 +267,12 @@ const UltraFuturisticBackground2040: React.FC = () => {;
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
+            ease: "easeInOut"
           }}
         />
         
         <motion.div
-          className=&quot;absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full&quot;
+          className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full"
           animate={{
             y: [0, -15, 0],
             opacity: [0.4, 0.7, 0.4]
@@ -374,13 +280,13 @@ const UltraFuturisticBackground2040: React.FC = () => {;
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;,
+            ease: "easeInOut",
             delay: 1
           }}
         />
         
         <motion.div
-          className=&quot;absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-pink-400/40 rounded-full&quot;
+          className="absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-pink-400/40 rounded-full"
           animate={{
             y: [0, -25, 0],
             opacity: [0.4, 0.9, 0.4]
@@ -388,46 +294,8 @@ const UltraFuturisticBackground2040: React.FC = () => {;
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;,
+            ease: "easeInOut",
             delay: 2
-=======
-        <motion.div;
-          className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full";
-          animate={{;
-            y: [0, -20, 0],;
-            opacity: [0.4, 0.8, 0.4];
-          }}
-          transition={{;
-            duration: 3,;
-            repeat: Infinity,;
-            ease: "easeInOut";
-          }}
-        />;
-        <motion.div;
-          className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full";
-          animate={{;
-            y: [0, -15, 0],;
-            opacity: [0.4, 0.7, 0.4];
-          }}
-          transition={{;
-            duration: 4,;
-            repeat: Infinity,;
-            ease: "easeInOut",;
-            delay: 1;
-          }}
-        />;
-        <motion.div;
-          className="absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-pink-400/40 rounded-full";
-          animate={{;
-            y: [0, -25, 0],;
-            opacity: [0.4, 0.9, 0.4];
-          }}
-          transition={{;
-            duration: 5,;
-            repeat: Infinity,;
-            ease: "easeInOut",;
-            delay: 2;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           }}
         />;
       </div>;

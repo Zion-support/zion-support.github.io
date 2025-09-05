@@ -59,7 +59,6 @@ export function ResumeWizard() {;
         setActiveTab(prevStep.id);
       }
     }
-<<<<<<< HEAD
   },
 
   const handleResumeChange = (resumeId: string) => {
@@ -68,42 +67,20 @@ export function ResumeWizard() {;
   
   if (isLoading) {
     return (
-      <div className=&quot;flex justify-center items-center h-64&quot;>
-        <Loader2 className=&quot;h-8 w-8 animate-spin text-primary&quot; />
+      <div className="flex justify-center items-center h-64">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     )
   }
   
   if (error) {
     return (
-      <Alert variant=&quot;destructive&quot; className=&quot;mb-6&quot;>
-        <AlertCircle className=&quot;h-4 w-4&quot; />
+      <Alert variant="destructive" className="mb-6">
+        <AlertCircle className="h-4 w-4" />
         <AlertTitle>Error</AlertTitle>
         <AlertDescription>{error}</AlertDescription>
       </Alert>
     )
-=======
-  };
-  const handleResumeChange = (resumeId: string) => {;
-    fetchResume(resumeId);
-  };
-  if (isLoading) {;
-    return (;
-      <div className="flex justify-center items-center h-64">;
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-      </div>;
-    );
-  }
-;
-  if (error) {;
-    return (;
-      <Alert variant="destructive" className="mb-6">;
-        <AlertCircle className="h-4 w-4" />;
-        <AlertTitle>Error</AlertTitle>;
-        <AlertDescription>{error}</AlertDescription>;
-      </Alert>;
-    );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   if (!resume && !showNewResumeForm) {;
@@ -119,39 +96,29 @@ export function ResumeWizard() {;
       />;
     );
   }
-<<<<<<< HEAD
   
   return (
-    <div className=&quot;space-y-6&quot;>
-      <div className=&quot;flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4&quot;>
-        <h1 className=&quot;text-2xl font-bold&quot;>Resume Builder</h1>
-        <div className=&quot;flex gap-4 flex-wrap items-center&quot;>
-=======
-;
-  return (;
-    <div className="space-y-6">;
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
-        <h1 className="text-2xl font-bold">Resume Builder</h1>;
-        <div className="flex gap-4 flex-wrap items-center">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+    <div className="space-y-6">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <h1 className="text-2xl font-bold">Resume Builder</h1>
+        <div className="flex gap-4 flex-wrap items-center">
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
           <Button;
             onClick={() => setShowNewResumeForm(true)}
-<<<<<<< HEAD
-            variant=&quot;outline&quot;
-            size=&quot;sm&quot;
-            className=&quot;gap-2&quot;
+            variant="outline"
+            size="sm"
+            className="gap-2"
           >
-            <FilePlus className=&quot;h-4 w-4&quot; /> 
+            <FilePlus className="h-4 w-4" /> 
             Create New
           </Button>
         </div>
       </div>
       
       <Card>
-        <CardContent className=&quot;pt-6&quot;>
-          <div className=&quot;flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6&quot;>
-            <h2 className=&quot;text-xl font-semibold&quot;>{resume?.basic_info?.title || 'My Resume'}</h2>
+        <CardContent className="pt-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+            <h2 className="text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
           
@@ -164,31 +131,6 @@ export function ResumeWizard() {;
             
             {resume && (
               <ResumeStepContent 
-=======
-            variant="outline";
-            size="sm";
-            className="gap-2";
-          >;
-            <FilePlus className="h-4 w-4" />;
-            Create New;
-          </Button>;
-        </div>;
-      </div>;
-      <Card>;
-        <CardContent className="pt-6">;
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">;
-            <h2 className="text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
-            <ResumeProgress resume={resume} progress={progress} />;
-          </div>;
-          <Tabs value={activeTab} onValueChange={setActiveTab}>;
-            <ResumeSteps;
-              steps={RESUME_STEPS} ;
-              activeTab={activeTab} ;
-              onChange={setActiveTab} ;
-            />;
-            {resume && (;
-              <ResumeStepContent;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 activeTab={activeTab}
                 resume={resume as Resume}
                 onNextStep={nextStep}

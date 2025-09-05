@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 export default function MainLayout({
   children,
 }: {
@@ -9,28 +7,6 @@ export default function MainLayout({
 }) {
   return <div className="main-layout">{children}</div>;
 }
-=======
-
-                isOpen={sidebarOpen};
-                onClose={() => setSidebarOpen(false)};
-
-              />,
-              <div className=&quot;flex-1 ml-80&quot;>,
-                {children};
-              </div>
-            </div>
-          )};
-          {!showSidebar && children};
-        </main>,
-        <Footer />,
-      </div>,
-    </>,
-  ),
-
-};
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
                 isOpen={sidebarOpen},;
                 onClose={() => setSidebarOpen(false)},;
               />,;
@@ -46,4 +22,3 @@ export default function MainLayout({
     </>,;
   );
 },;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

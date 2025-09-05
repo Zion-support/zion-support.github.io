@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 export function EnterpriseCallToAction() {
@@ -8,25 +6,14 @@ export function EnterpriseCallToAction() {
     <div className="mt-12 text-center">
       <Link to="/request-quote">
         <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
-=======
-import { Link } from &quot;react-router-dom&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-
-export function EnterpriseCallToAction() {
-  return (
-    <div className=&quot;mt-12 text-center&quot;>
-      <Link to=&quot;/request-quote&quot;>
-        <Button className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           Get Custom Enterprise Quote
         </Button>
       </Link>
-      <p className=&quot;mt-4 text-zion-slate-light&quot;>
+      <p className="mt-4 text-zion-slate-light">
         Need volume pricing or custom SLAs? Contact our enterprise sales team.
       </p>
     </div>
   )
-=======
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button";
 export function EnterpriseCallToAction() {;
@@ -42,6 +29,5 @@ export function EnterpriseCallToAction() {;
       </p>;
     </div>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const EmergingTechnologyTrends: NextPage = () => {
@@ -6,7 +5,7 @@ const EmergingTechnologyTrends: NextPage = () => {
     <div>
       <Head>
         <title>EmergingTechnologyTrends - Zion Tech Solutions</title>
-        <meta name=&quot;description&quot; content=&quot;EmergingTechnologyTrends page&quot; />
+        <meta name="description" content="EmergingTechnologyTrends page" />
       </Head>
       
       <main>
@@ -18,22 +17,3 @@ const EmergingTechnologyTrends: NextPage = () => {
 },
 
 export default EmergingTechnologyTrends,
-=======
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-const EmergingTechnologyTrends: NextPage = () => {;
-  return (;
-    <div>;
-      <Head>;
-        <title>EmergingTechnologyTrends - Zion Tech Solutions</title>;
-        <meta name="description" content="EmergingTechnologyTrends page" />;
-      </Head>;
-      <main>;
-        <h1>EmergingTechnologyTrends</h1>;
-        <p>This page is under construction.</p>;
-      </main>;
-    </div>;
-  );
-},;
-export default EmergingTechnologyTrends;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

@@ -20,7 +20,6 @@ interface CountryTabsProps {;
   searchQuery: string,;
   setSearchQuery: (query: string) => void;
 }
-<<<<<<< HEAD
 
 export function CountryTabs({
   popularCountries,
@@ -42,81 +41,34 @@ export function CountryTabs({
     currentPage * countriesPerPage
   ),
   return (
-    <Tabs defaultValue=&quot;featured&quot; className=&quot;w-full&quot;>
-      <TabsList className=&quot;bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6&quot;>
+    <Tabs defaultValue="featured" className="w-full">
+      <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
         <TabsTrigger
-          value=&quot;featured&quot;
-          className=&quot;data-[state=active]:bg-zion-purple&quot;
+          value="featured"
+          className="data-[state=active]:bg-zion-purple"
         >
           Featured Countries
         </TabsTrigger>
-        <TabsTrigger value=&quot;all&quot; className=&quot;data-[state=active]:bg-zion-purple&quot;>
+        <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple">
           All Countries
         </TabsTrigger>
       </TabsList>
 
-      <TabsContent value=&quot;featured&quot; className=&quot;mt-0&quot;>
-        <div className=&quot;mb-6&quot;>
-          <h2 className=&quot;text-2xl font-bold text-white text-center&quot;>
+      <TabsContent value="featured" className="mt-0">
+        <div className="mb-6">
+          <h2 className="text-2xl font-bold text-white text-center">
             Featured Service Locations
           </h2>
-          <p className=&quot;text-zion-slate-light text-center mt-2&quot;>
+          <p className="text-zion-slate-light text-center mt-2">
             Browse our most popular service destinations
           </p>
         </div>
 
-        <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
             .filter((country) => popularCountries.includes(country.country))
             .map((country) => (
               <CountryServiceCard
-=======
-;
-export function CountryTabs({;
-  popularCountries,;
-  filteredCountries,;
-  handleCountrySelect,;
-  onQuote,;
-  searchQuery,;
-  setSearchQuery}: CountryTabsProps) {;
-  const [currentPage, setCurrentPage] = useState(1),;
-  const countriesPerPage = 50,;
-  useEffect(() => {;
-    setCurrentPage(1);
-  }, [searchQuery]),;
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),;
-  const paginatedCountries = filteredCountries.slice(;
-    (currentPage - 1) * countriesPerPage,;
-    currentPage * countriesPerPage;
-  ),;
-  return (;
-    <Tabs defaultValue="featured" className="w-full">;
-      <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">;
-        <TabsTrigger;
-          value="featured";
-          className="data-[state=active]:bg-zion-purple";
-        >;
-          Featured Countries;
-        </TabsTrigger>;
-        <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple">;
-          All Countries;
-        </TabsTrigger>;
-      </TabsList>;
-      <TabsContent value="featured" className="mt-0">;
-        <div className="mb-6">;
-          <h2 className="text-2xl font-bold text-white text-center">;
-            Featured Service Locations;
-          </h2>;
-          <p className="text-zion-slate-light text-center mt-2">;
-            Browse our most popular service destinations;
-          </p>;
-        </div>;
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {filteredCountries;
-            .filter((country) => popularCountries.includes(country.country));
-            .map((country) => (;
-              <CountryServiceCard;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={country.country}
                 country={country}
                 onSelect={handleCountrySelect}
@@ -124,47 +76,26 @@ export function CountryTabs({;
                 isPopular={true}
               />;
             ))}
-<<<<<<< HEAD
         </div>
       </TabsContent>
 
-      <TabsContent value=&quot;all&quot; className=&quot;mt-0&quot;>
-        <div className=&quot;mb-6 max-w-md mx-auto&quot;>
-          <div className=&quot;relative&quot;>
-            <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light&quot; />
+      <TabsContent value="all" className="mt-0">
+        <div className="mb-6 max-w-md mx-auto">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
             <Input
-              type=&quot;text&quot;
-              placeholder=&quot;Search by country...&quot;
-              className=&quot;pl-10 bg-zion-blue border-zion-blue-light text-white&quot;
+              type="text"
+              placeholder="Search by country..."
+              className="pl-10 bg-zion-blue border-zion-blue-light text-white"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
         </div>
 
-        <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4&quot;>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {paginatedCountries.map((country) => (
             <CountryServiceCard
-=======
-        </div>;
-      </TabsContent>;
-      <TabsContent value="all" className="mt-0">;
-        <div className="mb-6 max-w-md mx-auto">;
-          <div className="relative">;
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
-            <Input;
-              type="text";
-              placeholder="Search by country...";
-              className="pl-10 bg-zion-blue border-zion-blue-light text-white";
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />;
-          </div>;
-        </div>;
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">;
-          {paginatedCountries.map((country) => (;
-            <CountryServiceCard;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               key={country.country}
               country={country}
               onSelect={handleCountrySelect}
@@ -172,24 +103,14 @@ export function CountryTabs({;
               isPopular={popularCountries.includes(country.country)}
             />;
           ))}
-<<<<<<< HEAD
         </div>
 
         {totalPages > 1 && (
-          <div className=&quot;mt-8&quot;>
-            <Pagination className=&quot;justify-center&quot;>
+          <div className="mt-8">
+            <Pagination className="justify-center">
               <PaginationContent>
                 <PaginationItem>
                   <PaginationPrevious
-=======
-        </div>;
-        {totalPages > 1 && (;
-          <div className="mt-8">;
-            <Pagination className="justify-center">;
-              <PaginationContent>;
-                <PaginationItem>;
-                  <PaginationPrevious;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     href={`?page=${currentPage - 1}`}
                     onClick={(e) => {;
                       e.preventDefault(),;

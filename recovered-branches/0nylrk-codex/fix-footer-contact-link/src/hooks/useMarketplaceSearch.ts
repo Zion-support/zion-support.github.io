@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion, FilterOptions } from "@/types/search",
@@ -9,16 +7,6 @@ import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS 
 export function useMarketplaceSearch() {
   // Search state
   const [searchQuery, setSearchQuery] = useState(""),
-=======
-import { useState, useMemo } from &quot;react&quot;;
-import { ProductListing } from &quot;@/types/listings&quot;;
-import { SearchSuggestion, FilterOptions } from &quot;@/types/search&quot;;
-import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from &quot;@/data/marketplaceData&quot;;
-
-export function useMarketplaceSearch() {
-  // Search state
-  const [searchQuery, setSearchQuery] = useState("&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Filter states
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
@@ -91,21 +79,12 @@ export function useMarketplaceSearch() {
   
   // Clear all filters
   const clearAllFilters = () => {
-<<<<<<< HEAD
     setSearchQuery(""),
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
   },
-=======
-    setSearchQuery("&quot;);
-    setSelectedProductTypes([]);
-    setSelectedLocations([]);
-    setSelectedAvailability([]);
-    setSelectedRating(null);
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   return {
     searchQuery,
@@ -120,7 +99,6 @@ export function useMarketplaceSearch() {
     handleFilterChange,
     clearAllFilters,
     filterOptions
-=======
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -209,7 +187,6 @@ export function useMarketplaceSearch() {;
     handleFilterChange;
     clearAllFilters;
     filterOptions;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 }
 ;

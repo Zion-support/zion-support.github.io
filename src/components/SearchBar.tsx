@@ -62,7 +62,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
         } else {;
           setSuggestions([]);
         }
-<<<<<<< HEAD
         setHighlightedIndex(-1)
       })
       .catch(() => setSuggestions([])),
@@ -88,59 +87,21 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 
   return (
     <div
-      className=&quot;relative w-full&quot;
+      className="relative w-full"
       ref={containerRef}
-      role=&quot;combobox&quot;
+      role="combobox"
       aria-expanded={focused && suggestions.length > 0}
-      aria-haspopup=&quot;listbox&quot;
+      aria-haspopup="listbox"
       aria-controls={listId}
-      data-testid=&quot;search-bar&quot;
+      data-testid="search-bar"
     >
-      <div className=&quot;relative&quot;>
-        <Search className=&quot;absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate&quot; />
+      <div className="relative">
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />
         <Input
           ref={inputRef}
-          type=&quot;text&quot;
-          id=&quot;main-search-input&quot;
-          name=&quot;search&quot;
-=======
-        setHighlightedIndex(-1);
-      });
-      .catch(() => setSuggestions([])),;
-    return () => controller.abort();
-  }, [debounced]),;
-  useOnClickOutside(containerRef, () => {;
-    setFocused(false),;
-    setHighlightedIndex(-1);
-  }),;
-  const handleSelect = (suggestion: SearchSuggestion) => {;
-    onChange(suggestion.text),;
-    if (onSelectSuggestion) onSelectSuggestion(suggestion),;
-    const searchQuery = encodeURIComponent(suggestion.text),;
-    router.push(`/search?q=${searchQuery}`),;
-    fireEvent('search', { search_term: suggestion.text }),;
-    setFocused(false),;
-    setHighlightedIndex(-1),;
-    inputRef.current?.blur();
-  },;
-  return (;
-    <div;
-      className="relative w-full";
-      ref={containerRef}
-      role="combobox";
-      aria-expanded={focused && suggestions.length > 0}
-      aria-haspopup="listbox";
-      aria-controls={listId}
-      data-testid="search-bar";
-    >;
-      <div className="relative">;
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />;
-        <Input;
-          ref={inputRef}
-          type="text";
-          id="main-search-input";
-          name="search";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          type="text"
+          id="main-search-input"
+          name="search"
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onFocus={(e) => {;
@@ -156,11 +117,10 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
               setHighlightedIndex(-1);
             }
           }}
-<<<<<<< HEAD
-          className=&quot;pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate&quot;
-          aria-autocomplete=&quot;list&quot;
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+          aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete=&quot;search&quot;
+          autoComplete="search"
           onKeyDown={(e) => {
             if (!focused || suggestions.length === 0) {
               if (e.key === 'Escape') {
@@ -168,19 +128,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 setFocused(false),
                 setHighlightedIndex(-1),
                 inputRef.current?.blur()
-=======
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
-          aria-autocomplete="list";
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete="search";
-          onKeyDown={(e) => {;
-            if (!focused || suggestions.length === 0) {;
-              if (e.key === 'Escape') {;
-                e.preventDefault(),;
-                setFocused(false),;
-                setHighlightedIndex(-1),;
-                inputRef.current?.blur();
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               }
               // If Enter is pressed and there's a value, navigate with query parameter;
               if (e.key === 'Enter' && value.trim()) {;
@@ -225,27 +172,15 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
               default: break;
             }
           }}
-<<<<<<< HEAD
         />
         {value && (
           <button
-            className=&quot;absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white&quot;
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
-            aria-label=&quot;Clear search&quot;
+            aria-label="Clear search"
           >
-            <X className=&quot;h-4 w-4&quot; />
+            <X className="h-4 w-4" />
           </button>
-=======
-        />;
-        {value && (;
-          <button;
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white";
-            onClick={() => onChange('')}
-            aria-label="Clear search";
-          >;
-            <X className="h-4 w-4" />;
-          </button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       </div>;
       <AutocompleteSuggestions;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage, GetServerSideProps } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -9,21 +8,21 @@ type Props = { items: TalentItem[] },
 
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
-    <main className=&quot;space-y-6&quot;>
-      <h1 className=&quot;text-2xl font-semibold&quot;>Top Talents — Auto Generated</h1>
-      <div className=&quot;grid gap-3&quot;>
+    <main className="space-y-6">
+      <h1 className="text-2xl font-semibold">Top Talents — Auto Generated</h1>
+      <div className="grid gap-3">
         {items.map((t) => (
           <Link key={t.talentSlug} href={`/talent/${t.talentSlug}`}>
-            <div className=&quot;enhanced-card hover:shadow-lg cursor-pointer flex items-center justify-between&quot;>
+            <div className="enhanced-card hover:shadow-lg cursor-pointer flex items-center justify-between">
               <div>
-                <div className=&quot;font-medium&quot;>{t.talentName}</div>
-                <div className=&quot;text-sm text-gray-600&quot;>{t.averageRating.toFixed(1)}★ • {t.totalReviews} reviews</div>
+                <div className="font-medium">{t.talentName}</div>
+                <div className="text-sm text-gray-600">{t.averageRating.toFixed(1)}★ • {t.totalReviews} reviews</div>
               </div>
-              <span className=&quot;pill&quot;>Auto</span>
+              <span className="pill">Auto</span>
             </div>
           </Link>
         ))}
-        {!items.length && <div className=&quot;enhanced-card&quot;>No data yet.</div>}
+        {!items.length && <div className="enhanced-card">No data yet.</div>}
       </div>
     </main>
   )
@@ -36,42 +35,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     const raw = fs.readFileSync(p, 'utf8'),
     const data = JSON.parse(raw),
     items = data.items || []
-=======
-import type { NextPage, GetServerSideProps } from 'next',;
-import fs from 'fs',;
-import path from 'path',;
-import Link from 'next/link',;
-type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },;
-type Props = { items: TalentItem[] },;
-const TopTalentsPage: NextPage<Props> = ({ items }) => {;
-  return (;
-    <main className="space-y-6">;
-      <h1 className="text-2xl font-semibold">Top Talents — Auto Generated</h1>;
-      <div className="grid gap-3">;
-        {items.map((t) => (;
-          <Link key={t.talentSlug} href={`/talent/${t.talentSlug}`}>;
-            <div className="enhanced-card hover:shadow-lg cursor-pointer flex items-center justify-between">;
-              <div>;
-                <div className="font-medium">{t.talentName}</div>;
-                <div className="text-sm text-gray-600">{t.averageRating.toFixed(1)}★ • {t.totalReviews} reviews</div>;
-              </div>;
-              <span className="pill">Auto</span>;
-            </div>;
-          </Link>;
-        ))}
-        {!items.length && <div className="enhanced-card">No data yet.</div>}
-      </div>;
-    </main>;
-  );
-},;
-export const getServerSideProps: GetServerSideProps = async () => {;
-  const p = path.join(process.cwd(), 'publicautomationstop-talents.json'),;
-  let items: TalentItem[] = [],;
-  try {;
-    const raw = fs.readFileSync(p, 'utf8'),;
-    const data = JSON.parse(raw),;
-    items = data.items || [];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   } catch {}
   return { props: { items } }
 };

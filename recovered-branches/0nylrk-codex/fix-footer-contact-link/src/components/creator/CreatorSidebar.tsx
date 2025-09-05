@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",
-=======
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from &quot;lucide-react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import {
   Sidebar,
   SidebarContent,
@@ -13,11 +8,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarGroupLabel,
-<<<<<<< HEAD
   SidebarGroupContent} from "@/components/ui/sidebar",
-=======
-  SidebarGroupContent} from &quot;@/components/ui/sidebar&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export function AppSidebar() {
   return (
@@ -29,7 +20,7 @@ export function AppSidebar() {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href=&quot;/creator-dashboard&quot;>
+                  <a href="/creator-dashboard">
                     <Home size={16} />
                     <span>Home</span>
                   </Link>
@@ -37,7 +28,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href=&quot;/messaging&quot;>
+                  <a href="/messaging">
                     <Mail size={16} />
                     <span>Messages</span>
                   </Link>
@@ -45,7 +36,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href=&quot;/notifications&quot;>
+                  <a href="/notifications">
                     <Bell size={16} />
                     <span>Notifications</span>
                   </Link>
@@ -61,7 +52,7 @@ export function AppSidebar() {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href=&quot;/publish&quot;>
+                  <a href="/publish">
                     <FileText size={16} />
                     <span>My Content</span>
                   </Link>
@@ -69,7 +60,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href=&quot;/analytics&quot;>
+                  <a href="/analytics">
                     <Search size={16} />
                     <span>Analytics</span>
                   </Link>
@@ -85,7 +76,7 @@ export function AppSidebar() {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href=&quot;/profile&quot;>
+                  <a href="/profile">
                     <Users size={16} />
                     <span>Profile</span>
                   </Link>
@@ -93,7 +84,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href=&quot;/settings&quot;>
+                  <a href="/settings">
                     <Settings size={16} />
                     <span>Settings</span>
                   </Link>
@@ -105,7 +96,6 @@ export function AppSidebar() {
       </SidebarContent>
     </Sidebar>
   )
-=======
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
 import {;
   Sidebar,;
@@ -200,6 +190,5 @@ export function AppSidebar() {;
       </SidebarContent>;
     </Sidebar>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

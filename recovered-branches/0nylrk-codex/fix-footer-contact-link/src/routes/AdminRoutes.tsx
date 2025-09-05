@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -14,28 +12,11 @@ import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
 import TokenManager from "@/pages/admin/TokenManager",
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
-=======
-import { Fragment } from &quot;react&quot;;
-import { Route, Routes } from &quot;react-router-dom&quot;;
-import { ProtectedRoute } from &quot;@/components/ProtectedRoute&quot;;
-
-// Admin Pages
-import QuoteManager from &quot;@/pages/admin/QuoteManager&quot;;
-import ReviewsModeration from &quot;@/pages/admin/ReviewsModeration&quot;;
-import WhitelabelManager from &quot;@/pages/admin/WhitelabelManager&quot;;
-import PartnerManager from &quot;@/pages/admin/PartnerManager&quot;;
-import AppMetadataManager from &quot;@/pages/admin/AppMetadataManager&quot;;
-import SupportRequests from &quot;@/pages/admin/SupportRequests&quot;;
-import FraudDetection from &quot;@/pages/admin/FraudDetection&quot;;
-import TokenManager from &quot;@/pages/admin/TokenManager&quot;;
-import IntegrationsPage from &quot;@/pages/admin/IntegrationsPage&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 const AdminRoutes = () => {
   return (
     <Routes>
       <Route
-        path=&quot;/admin/quotes&quot;
+        path="/admin/quotes"
         element={
           <ProtectedRoute adminOnly={true}>
             <QuoteManager />
@@ -44,7 +25,7 @@ const AdminRoutes = () => {
       />
       
       <Route
-        path=&quot;/admin/reviews&quot;
+        path="/admin/reviews"
         element={
           <ProtectedRoute adminOnly={true}>
             <ReviewsModeration />
@@ -53,7 +34,7 @@ const AdminRoutes = () => {
       />
       
       <Route
-        path=&quot;/admin/whitelabel&quot;
+        path="/admin/whitelabel"
         element={
           <ProtectedRoute adminOnly={true}>
             <WhitelabelManager />
@@ -62,7 +43,7 @@ const AdminRoutes = () => {
       />
       
       <Route
-        path=&quot;/admin/partners&quot;
+        path="/admin/partners"
         element={
           <ProtectedRoute adminOnly={true}>
             <PartnerManager />
@@ -71,7 +52,7 @@ const AdminRoutes = () => {
       />
       
       <Route
-        path=&quot;/admin/app-metadata&quot;
+        path="/admin/app-metadata"
         element={
           <ProtectedRoute adminOnly={true}>
             <AppMetadataManager />
@@ -80,7 +61,7 @@ const AdminRoutes = () => {
       />
       
       <Route
-        path=&quot;/admin/support-requests&quot;
+        path="/admin/support-requests"
         element={
           <ProtectedRoute adminOnly={true}>
             <SupportRequests />
@@ -89,7 +70,7 @@ const AdminRoutes = () => {
       />
       
       <Route
-        path=&quot;/admin/fraud-detection&quot;
+        path="/admin/fraud-detection"
         element={
           <ProtectedRoute adminOnly={true}>
             <FraudDetection />
@@ -98,7 +79,7 @@ const AdminRoutes = () => {
       />
       
       <Route
-        path=&quot;/admin/tokens&quot;
+        path="/admin/tokens"
         element={
           <ProtectedRoute adminOnly={true}>
             <TokenManager />
@@ -107,12 +88,11 @@ const AdminRoutes = () => {
       />
       
       <Route
-        path=&quot;/admin/integrations&quot;
+        path="/admin/integrations"
         element={
           <ProtectedRoute adminOnly={true}>
             <IntegrationsPage />
           </ProtectedRoute>
-=======
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
@@ -199,7 +179,6 @@ const AdminRoutes = () => {;
           <ProtectedRoute adminOnly={true}>;
             <IntegrationsPage />;
           </ProtectedRoute>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }
       />;
     </Routes>;

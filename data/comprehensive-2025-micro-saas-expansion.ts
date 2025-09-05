@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',
 
 export interface ComprehensiveMicroSaasService {
@@ -93,15 +92,9 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     launchDate: '2024-03-15',
     customers: 2450,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 1234,
     benefits: ['10x faster content creation', 'Improved SEO rankings', 'Higher engagement rates', 'Cost reduction'],
     capabilities: ['Multi-format content generation', 'Real-time optimization', 'Advanced analytics', 'Team collaboration'],
-=======
-    reviews: 1,234,
-    benefits: ['10x faster content creationImproved SEO rankings', 'Higher engagement ratesCost reduction'],
-    capabilities: ['Multi-format content generationReal-time optimization', 'Advanced analyticsTeam collaboration'],
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
   },
 
@@ -471,7 +464,6 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalability'],
     capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'],
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveMicroSaasService {;
   id: string,;
@@ -901,6 +893,5 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     benefits: ['Operational efficiencySafety improvementsCost reductionScalability'],;
     capabilities: ['Multi-system coordinationAI optimizationSafety monitoringPerformance analytics'];
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ];

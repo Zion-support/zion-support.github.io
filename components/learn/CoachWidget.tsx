@@ -18,29 +18,15 @@ export default function CoachWidget() {;
       setLoading(false);
     }
   }
-<<<<<<< HEAD
 
   return (
-    <div className=&quot;border rounded p-3&quot;>
-      <div className=&quot;font-medium mb-2&quot;>ZionGPT Coach</div>
-      <div className=&quot;flex gap-2&quot;>
-        <input className=&quot;flex-1 border rounded px-3 py-2 bg-white dark:bg-black&quot; placeholder=&quot;Ask for help...&quot; value={input} onChange={(e) => setInput(e.target.value)} />
-        <button onClick={ask} className=&quot;px-3 py-2 bg-blue-600 text-white rounded&quot; disabled={loading}>{loading ? '...' : 'Ask'}</button>
+    <div className="border rounded p-3">
+      <div className="font-medium mb-2">ZionGPT Coach</div>
+      <div className="flex gap-2">
+        <input className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" placeholder="Ask for help..." value={input} onChange={(e) => setInput(e.target.value)} />
+        <button onClick={ask} className="px-3 py-2 bg-blue-600 text-white rounded" disabled={loading}>{loading ? '...' : 'Ask'}</button>
       </div>
-      {reply && <div className=&quot;mt-2 text-sm text-gray-800 dark:text-gray-200&quot;>{reply}</div>}
+      {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
     </div>
   )
-=======
-;
-  return (;
-    <div className="border rounded p-3">;
-      <div className="font-medium mb-2">ZionGPT Coach</div>;
-      <div className="flex gap-2">;
-        <input className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" placeholder="Ask for help..." value={input} onChange={(e) => setInput(e.target.value)} />;
-        <button onClick={ask} className="px-3 py-2 bg-blue-600 text-white rounded" disabled={loading}>{loading ? '...' : 'Ask'}</button>;
-      </div>;
-      {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

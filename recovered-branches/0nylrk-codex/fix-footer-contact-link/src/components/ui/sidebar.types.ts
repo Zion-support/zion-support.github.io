@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react',
 // This file fixes the ref type issues in sidebar components
 
@@ -24,11 +23,7 @@ export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> =
 export type SafeRef<T> = React.Ref<T>,
 
 // Sidebar specific types
-<<<<<<< HEAD
 export type SidebarState = "expanded" | "collapsed",
-=======
-export type SidebarState = &quot;expanded&quot; | &quot;collapsed&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export type SidebarContext = {
   state: SidebarState,
@@ -39,7 +34,6 @@ export type SidebarContext = {
   isMobile: boolean,
   toggleSidebar: () => void
 },
-=======
 import React from 'react',;
 // This file fixes the ref type issues in sidebar components;
 // Export a placeholder to ensure the file is recognized as a module;
@@ -67,4 +61,3 @@ export type SidebarContext = {;
   isMobile: boolean;
   toggleSidebar: () => void;
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

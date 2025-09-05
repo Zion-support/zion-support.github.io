@@ -112,7 +112,6 @@ export default function VerifyStatus() {;
     } finally {;
       setIsCheckingStatus(false);
     }
-<<<<<<< HEAD
   },
 
   const handleTryLogin = () => {
@@ -125,136 +124,66 @@ export default function VerifyStatus() {;
 
   return (
     <AuthLayout>
-      <div className=&quot;flex min-h-screen items-center justify-center p-4&quot;>
-        <div className=&quot;w-full max-w-md space-y-6&quot;>
+      <div className="flex min-h-screen items-center justify-center p-4">
+        <div className="w-full max-w-md space-y-6">
           {/* Header */}
-          <div className=&quot;text-center&quot;>
-            <div className=&quot;mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4&quot;>
-              <Mail className=&quot;h-6 w-6 text-blue-600&quot; />
+          <div className="text-center">
+            <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <Mail className="h-6 w-6 text-blue-600" />
             </div>
-            <h1 className=&quot;text-2xl font-bold text-gray-900&quot;>Email Verification</h1>
-            <p className=&quot;text-sm text-gray-600 mt-2&quot;>
+            <h1 className="text-2xl font-bold text-gray-900">Email Verification</h1>
+            <p className="text-sm text-gray-600 mt-2">
               Check and manage your email verification status
             </p>
           </div>
 
           {/* Success Message */}
           {message && (
-            <Alert className=&quot;border-green-500 bg-green-50 text-green-900&quot;>
-              <CheckCircle className=&quot;h-4 w-4&quot; />
+            <Alert className="border-green-500 bg-green-50 text-green-900">
+              <CheckCircle className="h-4 w-4" />
               <AlertDescription>{message}</AlertDescription>
             </Alert>
-=======
-  },;
-  const handleTryLogin = () => {;
-    router.push(`/auth/login?email=${encodeURIComponent(email)}`);
-  };
-  const handleGoBack = () => {;
-    router.back();
-  };
-  return (;
-    <AuthLayout>;
-      <div className="flex min-h-screen items-center justify-center p-4">;
-        <div className="w-full max-w-md space-y-6">;
-          {/* Header */}
-          <div className="text-center">;
-            <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">;
-              <Mail className="h-6 w-6 text-blue-600" />;
-            </div>;
-            <h1 className="text-2xl font-bold text-gray-900">Email Verification</h1>;
-            <p className="text-sm text-gray-600 mt-2">;
-              Check and manage your email verification status;
-            </p>;
-          </div>;
-          {/* Success Message */}
-          {message && (;
-            <Alert className="border-green-500 bg-green-50 text-green-900">;
-              <CheckCircle className="h-4 w-4" />;
-              <AlertDescription>{message}</AlertDescription>;
-            </Alert>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
 ;
           {/* Error Message */}
-<<<<<<< HEAD
           {error && (
-            <Alert variant=&quot;destructive&quot;>
-              <AlertCircle className=&quot;h-4 w-4&quot; />
+            <Alert variant="destructive">
+              <AlertCircle className="h-4 w-4" />
               <AlertDescription>{error}</AlertDescription>
             </Alert>
-=======
-          {error && (;
-            <Alert variant="destructive">;
-              <AlertCircle className="h-4 w-4" />;
-              <AlertDescription>{error}</AlertDescription>;
-            </Alert>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
 ;
           {/* Email Input */}
-<<<<<<< HEAD
-          <div className=&quot;space-y-2&quot;>
-            <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-gray-700&quot;>
+          <div className="space-y-2">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
             </label>
             <Input
-              id=&quot;email&quot;
-              type=&quot;email&quot;
+              id="email"
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder=&quot;Enter your email address&quot;
-              className=&quot;w-full&quot;
+              placeholder="Enter your email address"
+              className="w-full"
             />
             {email && (
-              <p className=&quot;text-xs text-gray-500&quot;>
+              <p className="text-xs text-gray-500">
                 We'll check the verification status for this email address
               </p>
-=======
-          <div className="space-y-2">;
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">;
-              Email Address;
-            </label>;
-            <Input;
-              id="email";
-              type="email";
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address";
-              className="w-full";
-            />;
-            {email && (;
-              <p className="text-xs text-gray-500">;
-                We'll check the verification status for this email address;
-              </p>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             )}
           </div>;
           {/* Status Info */}
-<<<<<<< HEAD
           {email && (
-            <div className=&quot;bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4&quot;>
-              <h3 className=&quot;text-sm font-medium text-slate-900 dark:text-slate-100 mb-2&quot;>Verification Status</h3>
-              <div className=&quot;text-sm text-slate-700 dark:text-slate-300 space-y-1&quot;>
+            <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
+              <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>
+              <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">
                 <p>• Check your email inbox for a verification link</p>
                 <p>• Click the link in the email to verify your account</p>
                 <p>• Return here or try logging in after verification</p>
               </div>
               {lastSentTime && (
-                <p className=&quot;text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center&quot;>
-                  <Clock className=&quot;h-3 w-3 mr-1&quot; />
-=======
-          {email && (;
-            <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">;
-              <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>;
-              <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">;
-                <p>• Check your email inbox for a verification link</p>;
-                <p>• Click the link in the email to verify your account</p>;
-                <p>• Return here or try logging in after verification</p>;
-              </div>;
-              {lastSentTime && (;
-                <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">;
-                  <Clock className="h-3 w-3 mr-1" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
+                  <Clock className="h-3 w-3 mr-1" />
                   Last email sent: {lastSentTime.toLocaleTimeString()}
                 </p>;
               )}
@@ -262,131 +191,89 @@ export default function VerifyStatus() {;
           )}
 ;
           {/* Action Buttons */}
-<<<<<<< HEAD
-          <div className=&quot;space-y-3&quot;>
-=======
-          <div className="space-y-3">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          <div className="space-y-3">
             {/* Check Status Button */}
             <Button;
               onClick={handleCheckStatus}
               disabled={!email || isCheckingStatus}
-<<<<<<< HEAD
-              className=&quot;w-full&quot;
-              variant=&quot;outline&quot;
+              className="w-full"
+              variant="outline"
             >
               {isCheckingStatus ? (
                 <>
-                  <RefreshCw className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
+                  <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
                   Checking Status...
                 </>
               ) : (
                 <>
-                  <Eye className=&quot;h-4 w-4 mr-2&quot; />
+                  <Eye className="h-4 w-4 mr-2" />
                   Check Verification Status
                 </>
-=======
-              className="w-full";
-              variant="outline";
-            >;
-              {isCheckingStatus ? (;
-                <>;
-                  <RefreshCw className="h-4 w-4 mr-2 animate-spin" />;
-                  Checking Status...;
-                </>;
-              ) : (;
-                <>;
-                  <Eye className="h-4 w-4 mr-2" />;
-                  Check Verification Status;
-                </>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             </Button>;
             {/* Resend Email Button */}
             <Button;
               onClick={handleResendEmail}
               disabled={!email || isResending || countdown > 0}
-<<<<<<< HEAD
-              className=&quot;w-full&quot;
-              variant=&quot;secondary&quot;
+              className="w-full"
+              variant="secondary"
             >
               {isResending ? (
                 <>
-                  <RefreshCw className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
+                  <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
                   Sending Email...
                 </>
               ) : countdown > 0 ? (
                 <>
-                  <Clock className=&quot;h-4 w-4 mr-2&quot; />
+                  <Clock className="h-4 w-4 mr-2" />
                   Resend in {countdown}s
                 </>
               ) : (
                 <>
-                  <Mail className=&quot;h-4 w-4 mr-2&quot; />
+                  <Mail className="h-4 w-4 mr-2" />
                   Resend Verification Email
                 </>
-=======
-              className="w-full";
-              variant="secondary";
-            >;
-              {isResending ? (;
-                <>;
-                  <RefreshCw className="h-4 w-4 mr-2 animate-spin" />;
-                  Sending Email...;
-                </>;
-              ) : countdown > 0 ? (;
-                <>;
-                  <Clock className="h-4 w-4 mr-2" />;
-                  Resend in {countdown}s;
-                </>;
-              ) : (;
-                <>;
-                  <Mail className="h-4 w-4 mr-2" />;
-                  Resend Verification Email;
-                </>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             </Button>;
             {/* Try Login Button */}
             <Button;
               onClick={handleTryLogin}
               disabled={!email}
-<<<<<<< HEAD
-              className=&quot;w-full&quot;
+              className="w-full"
             >
               Try Login
             </Button>
           </div>
 
           {/* Help Text */}
-          <div className=&quot;text-center text-sm text-gray-500 space-y-2&quot;>
+          <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
             </p>
             <Button
               onClick={handleGoBack}
-              variant=&quot;ghost&quot;
-              size=&quot;sm&quot;
-              className=&quot;text-blue-600 hover:text-blue-500&quot;
+              variant="ghost"
+              size="sm"
+              className="text-blue-600 hover:text-blue-500"
             >
-              <ArrowLeft className=&quot;h-4 w-4 mr-1&quot; />
+              <ArrowLeft className="h-4 w-4 mr-1" />
               Go Back
             </Button>
           </div>
 
           {/* Additional Options */}
-          <div className=&quot;border-t pt-4 space-y-2&quot;>
+          <div className="border-t pt-4 space-y-2">
             <Button
               onClick={() => router.push('/signup')}
-              variant=&quot;ghost&quot;
-              className=&quot;w-full text-sm&quot;
+              variant="ghost"
+              className="w-full text-sm"
             >
               Use Different Email Address
             </Button>
             <Button
               onClick={() => router.push('/contact')}
-              variant=&quot;ghost&quot;
-              className=&quot;w-full text-sm&quot;
+              variant="ghost"
+              className="w-full text-sm"
             >
               Contact Support
             </Button>
@@ -395,48 +282,5 @@ export default function VerifyStatus() {;
       </div>
     </AuthLayout>
   )
-=======
-              className="w-full";
-            >;
-              Try Login;
-            </Button>;
-          </div>;
-          {/* Help Text */}
-          <div className="text-center text-sm text-gray-500 space-y-2">;
-            <p>;
-              Can't find the verification email? Check your spam folder or try a different email address.;
-            </p>;
-            <Button;
-              onClick={handleGoBack}
-              variant="ghost";
-              size="sm";
-              className="text-blue-600 hover:text-blue-500";
-            >;
-              <ArrowLeft className="h-4 w-4 mr-1" />;
-              Go Back;
-            </Button>;
-          </div>;
-          {/* Additional Options */}
-          <div className="border-t pt-4 space-y-2">;
-            <Button;
-              onClick={() => router.push('/signup')}
-              variant="ghost";
-              className="w-full text-sm";
-            >;
-              Use Different Email Address;
-            </Button>;
-            <Button;
-              onClick={() => router.push('/contact')}
-              variant="ghost";
-              className="w-full text-sm";
-            >;
-              Contact Support;
-            </Button>;
-          </div>;
-        </div>;
-      </div>;
-    </AuthLayout>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

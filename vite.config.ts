@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
@@ -97,13 +96,8 @@ export default defineConfig({
         safari10: true,
         properties: {
           regex: /^_/,
-<<<<<<< HEAD
         },
       },
-=======
-        }
-      }
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     },
     chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
@@ -141,11 +135,7 @@ export default defineConfig({
     exclude: ['@radix-ui/react-icons'],
     esbuildOptions: {
       target: 'esnext',
-<<<<<<< HEAD
     },
-=======
-    }
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   },
   css: {
     devSourcemap: false,
@@ -163,11 +153,7 @@ export default defineConfig({
     },
     fs: {
       allow: ['..'],
-<<<<<<< HEAD
     },
-=======
-    }
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   },
   preview: {
     port: 4173,
@@ -190,7 +176,6 @@ export default defineConfig({
     },
   },
 });
-=======
 import { defineConfig, splitVendorChunkPlugin } from 'vite',;
 import react from '@vitejs/plugin-react',;
 import path from 'node: path',;
@@ -320,4 +305,3 @@ export default defineConfig({;
     }
   }
 });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

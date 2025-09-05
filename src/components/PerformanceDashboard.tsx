@@ -75,23 +75,14 @@ const PerformanceDashboard: React.FC = () => {;
       impact: 'medium',;
       category: 'security';
     }
-<<<<<<< HEAD
   ],
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-<<<<<<< HEAD
       case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,
       case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,
       case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />,
       default: return <AlertCircle className="h-4 w-4 text-gray-500" />
-=======
-      case 'completed': return <CheckCircle className=&quot;h-4 w-4 text-green-500&quot; />;
-      case 'in-progress': return <AlertCircle className=&quot;h-4 w-4 text-yellow-500&quot; />;
-      case 'planned': return <TrendingUp className=&quot;h-4 w-4 text-blue-500&quot; />;
-      default: return <AlertCircle className=&quot;h-4 w-4 text-gray-500&quot; />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
   ],;
   const getStatusIcon = (status: string) => {;
     switch (status) {;
@@ -99,7 +90,6 @@ const PerformanceDashboard: React.FC = () => {;
       case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,;
       case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />,;
       default: return <AlertCircle className="h-4 w-4 text-gray-500" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const getImpactColor = (impact: string) => {;
@@ -109,78 +99,69 @@ const PerformanceDashboard: React.FC = () => {;
       case 'low': return 'bg-green-100 text-green-800',;
       default: return 'bg-gray-100 text-gray-800';
     }
-<<<<<<< HEAD
   },
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-<<<<<<< HEAD
       case 'performance': return <Zap className="h-4 w-4" />,
       case 'security': return <Shield className="h-4 w-4" />,
       case 'ux': return <Search className="h-4 w-4" />,
       case 'build': return <TrendingUp className="h-4 w-4" />,
       default: return <CheckCircle className="h-4 w-4" />
-=======
-      case 'performance': return <Zap className=&quot;h-4 w-4&quot; />;
-      case 'security': return <Shield className=&quot;h-4 w-4&quot; />;
-      case 'ux': return <Search className=&quot;h-4 w-4&quot; />;
-      case 'build': return <TrendingUp className=&quot;h-4 w-4&quot; />;
-      default: return <CheckCircle className=&quot;h-4 w-4&quot; />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
   return (
-    <div className=&quot;space-y-6 p-6&quot;>
-      <div className=&quot;flex items-center justify-between&quot;>
-        <h1 className=&quot;text-3xl font-bold text-gray-900&quot;>Performance Dashboard</h1>
-        <Badge className=&quot;bg-green-100 text-green-800&quot;>
+    <div className="space-y-6 p-6">
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold text-gray-900">Performance Dashboard</h1>
+        <Badge className="bg-green-100 text-green-800">
           {completedImprovements.length} Improvements Completed
         </Badge>
       </div>
 
       {/* Metrics Overview */}
-      <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-4 mb-6&quot;>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
         <Card>
-          <CardHeader className=&quot;pb-2&quot;>
-            <CardTitle className=&quot;text-sm font-medium text-gray-600&quot;>Build Size</CardTitle>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className=&quot;text-2xl font-bold&quot;>{metrics.buildSize}</div>
-            <p className=&quot;text-xs text-gray-500&quot;>Total build output</p>
+            <div className="text-2xl font-bold">{metrics.buildSize}</div>
+            <p className="text-xs text-gray-500">Total build output</p>
           </CardContent>
         </Card>
         
         <Card>
-          <CardHeader className=&quot;pb-2&quot;>
-            <CardTitle className=&quot;text-sm font-medium text-gray-600&quot;>Page Count</CardTitle>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className=&quot;text-2xl font-bold&quot;>{metrics.pageCount}</div>
-            <p className=&quot;text-xs text-gray-500&quot;>Generated pages</p>
+            <div className="text-2xl font-bold">{metrics.pageCount}</div>
+            <p className="text-xs text-gray-500">Generated pages</p>
           </CardContent>
         </Card>
         
         <Card>
-          <CardHeader className=&quot;pb-2&quot;>
-            <CardTitle className=&quot;text-sm font-medium text-gray-600&quot;>Load Time</CardTitle>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className=&quot;text-2xl font-bold&quot;>{metrics.loadTime}s</div>
-            <p className=&quot;text-xs text-gray-500&quot;>Average page load</p>
+            <div className="text-2xl font-bold">{metrics.loadTime}s</div>
+            <p className="text-xs text-gray-500">Average page load</p>
           </CardContent>
         </Card>
         
         <Card>
-          <CardHeader className=&quot;pb-2&quot;>
-            <CardTitle className=&quot;text-sm font-medium text-gray-600&quot;>Health Status</CardTitle>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className=&quot;flex items-center space-x-2&quot;>
-              <CheckCircle className=&quot;h-5 w-5 text-green-500&quot; />
-              <span className=&quot;text-sm font-semibold text-green-600&quot;>Healthy</span>
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="h-5 w-5 text-green-500" />
+              <span className="text-sm font-semibold text-green-600">Healthy</span>
             </div>
           </CardContent>
         </Card>
@@ -189,8 +170,8 @@ const PerformanceDashboard: React.FC = () => {;
       {/* Completed Improvements */}
       <Card>
         <CardHeader>
-          <CardTitle className=&quot;flex items-center space-x-2&quot;>
-            <CheckCircle className=&quot;h-5 w-5 text-green-500&quot; />
+          <CardTitle className="flex items-center space-x-2">
+            <CheckCircle className="h-5 w-5 text-green-500" />
             <span>Completed Improvements</span>
           </CardTitle>
           <CardDescription>
@@ -198,26 +179,25 @@ const PerformanceDashboard: React.FC = () => {;
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className=&quot;space-y-4&quot;>
+          <div className="space-y-4">
             {completedImprovements.map((improvement) => (
-              <div key={improvement.id} className=&quot;flex items-start space-x-3 p-3 border rounded-lg&quot;>
-                <div className=&quot;flex-shrink-0 mt-1&quot;>
+              <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
+                <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
                 </div>
-                <div className=&quot;flex-1 min-w-0&quot;>
-                  <div className=&quot;flex items-center justify-between&quot;>
-                    <h3 className=&quot;text-sm font-medium text-gray-900&quot;>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-medium text-gray-900">
                       {improvement.title}
                     </h3>
-                    <div className=&quot;flex items-center space-x-2&quot;>
+                    <div className="flex items-center space-x-2">
                       <Badge className={getImpactColor(improvement.impact)}>
                         {improvement.impact} impact
                       </Badge>
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
-                  <p className=&quot;text-sm text-gray-600 mt-1&quot;>
-=======
+                  <p className="text-sm text-gray-600 mt-1">
   },;
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
@@ -309,7 +289,6 @@ const PerformanceDashboard: React.FC = () => {;
                     </div>;
                   </div>;
                   <p className="text-sm text-gray-600 mt-1">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     {improvement.description}
                   </p>;
                 </div>;
@@ -319,20 +298,13 @@ const PerformanceDashboard: React.FC = () => {;
         </CardContent>;
       </Card>;
       {/* Action Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="flex space-x-4">
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
-=======
-      <div className=&quot;flex space-x-4&quot;>
-        <Button onClick={() => window.open('/api/health/environment', '_blank')} variant=&quot;outline&quot;>
-          <Shield className=&quot;h-4 w-4 mr-2&quot; />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           Check Health Status
         </Button>
-        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant=&quot;outline&quot;>
-          <TrendingUp className=&quot;h-4 w-4 mr-2&quot; />
+        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
+          <TrendingUp className="h-4 w-4 mr-2" />
           Bundle Analysis
         </Button>
       </div>
@@ -341,7 +313,6 @@ const PerformanceDashboard: React.FC = () => {;
 },
 
 export default PerformanceDashboard, 
-=======
       <div className="flex space-x-4">;
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">;
           <Shield className="h-4 w-4 mr-2" />;
@@ -356,4 +327,3 @@ export default PerformanceDashboard,
   );
 },;
 export default PerformanceDashboard;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

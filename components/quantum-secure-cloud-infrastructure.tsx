@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import { motion } from 'framer-motion',
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react',
@@ -6,56 +5,26 @@ import SEO from '../components/SEO',
 export default function QuantumSecureCloudInfrastructure() {
 	return (
 		<ServiceLanding
-			title=&quot;Quantum-Secure Cloud Infrastructure&quot;
-			description=&quot;Future-proof your cloud with PQC, encrypted networking, and key management designed to resist quantum attacks.&quot;
-			subtitle=&quot;Protect data beyond the quantum horizon&quot;
+			title="Quantum-Secure Cloud Infrastructure"
+			description="Future-proof your cloud with PQC, encrypted networking, and key management designed to resist quantum attacks."
+			subtitle="Protect data beyond the quantum horizon"
 			pricePerMonthUSD={5999}
-			implementationWeeks=&quot;6-10 weeks&quot;
-			roiNote=&quot;Meet emerging PQC compliance and safeguard long-lived data&quot;
+			implementationWeeks="6-10 weeks"
+			roiNote="Meet emerging PQC compliance and safeguard long-lived data"
 			features={[
-				&quot;PQC algorithms for data at-rest and in-transit&quot;,
-				&quot;Hybrid crypto transition plans&quot;,
-				&quot;HSM/KMS integrations and key rotation&quot;,
-				&quot;Zero Trust + PQC reference designs&quot;,
-				&quot;Threat modeling and validation&quot;,
-				&quot;NIST PQC roadmap alignment]}
-=======
-import React from 'react',;
-import { motion } from 'framer-motion',;
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react',;
-import SEO from '../components/SEO',;
-export default function QuantumSecureCloudInfrastructure() {;
-	return (;
-		<ServiceLanding;
-			title="Quantum-Secure Cloud Infrastructure";
-			description="Future-proof your cloud with PQC, encrypted networking, and key management designed to resist quantum attacks.";
-			subtitle="Protect data beyond the quantum horizon";
-			pricePerMonthUSD={5999}
-			implementationWeeks="6-10 weeks";
-			roiNote="Meet emerging PQC compliance and safeguard long-lived data";
-			features={[;
-				"PQC algorithms for data at-rest and in-transit",;
-				"Hybrid crypto transition plans",;
-				"HSM/KMS integrations and key rotation",;
-				"Zero Trust + PQC reference designs";
-				"Threat modeling and validation";
+				"PQC algorithms for data at-rest and in-transit",
+				"Hybrid crypto transition plans",
+				"HSM/KMS integrations and key rotation",
+				"Zero Trust + PQC reference designs",
+				"Threat modeling and validation",
 				"NIST PQC roadmap alignment]}
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 			]}
-<<<<<<< HEAD
 			industries={["Financial Services", "Healthcare", "Government"]}
-<<<<<<< HEAD
 			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
-=======
-			industries={[&quot;Financial Services&quot;, &quot;Healthcare&quot;, &quot;Government&quot;]}
-			url=&quot;https://ziontechgroup.com/quantum-secure-cloud-infrastructure"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 		/>
 	)
-=======
 			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure";
 		/>;
 	);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

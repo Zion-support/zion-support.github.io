@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Fragment } from "react",
 import { Route, Routes, Navigate } from "react-router-dom",
 import Home from "@/pages/Home",
@@ -15,65 +13,47 @@ import HelpCenterPage from "@/pages/HelpCenterPage",
 import AccountSettings from "@/pages/AccountSettings",
 import ProjectRoom from "@/pages/ProjectRoom",
 import VideoCall from "@/pages/VideoCall",
-=======
-import { Fragment } from &quot;react&quot;;
-import { Route, Routes, Navigate } from &quot;react-router-dom&quot;;
-import Home from &quot;@/pages/Home&quot;;
-import About from &quot;@/pages/About&quot;;
-import Blog from &quot;@/pages/Blog&quot;;
-import BlogPost from &quot;@/pages/BlogPost&quot;;
-import GreenIT from &quot;@/pages/GreenIT&quot;;
-import Careers from &quot;@/pages/Careers&quot;;
-import SearchPage from &quot;@/pages/SearchPage&quot;;
-import { SitemapPage } from &quot;@/components/SitemapPage&quot;;
-import HelpCenterPage from &quot;@/pages/HelpCenterPage&quot;;
-import AccountSettings from &quot;@/pages/AccountSettings&quot;;
-import ProjectRoom from &quot;@/pages/ProjectRoom&quot;;
-import VideoCall from &quot;@/pages/VideoCall&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 const ContentRoutes = () => {
   return (
     <Routes>
       {/* Content Routes */}
-      <Route path=&quot;/&quot; element={<Home />} />
-      <Route path=&quot;/home&quot; element={<Home />} />
-      <Route path=&quot;/about&quot; element={<About />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/about" element={<About />} />
       
       {/* Help Center Routes */}
-      <Route path=&quot;/help&quot; element={<HelpCenterPage />} />
-      <Route path=&quot;/support&quot; element={<HelpCenterPage />} />
+      <Route path="/help" element={<HelpCenterPage />} />
+      <Route path="/support" element={<HelpCenterPage />} />
       
       {/* Blog Routes */}
-      <Route path=&quot;/blog&quot; element={<Blog />} />
-      <Route path=&quot;/blog/:slug&quot; element={<BlogPost />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
       
       {/* Green IT Route */}
-      <Route path=&quot;/green-it&quot; element={<GreenIT />} />
+      <Route path="/green-it" element={<GreenIT />} />
       
       {/* Careers Route */}
-      <Route path=&quot;/careers&quot; element={<Careers />} />
+      <Route path="/careers" element={<Careers />} />
 
       {/* Account Settings */}
-      <Route path=&quot;/settings/account&quot; element={<AccountSettings />} />
+      <Route path="/settings/account" element={<AccountSettings />} />
       
       {/* Project Room */}
-      <Route path=&quot;/project-room/:projectId&quot; element={<ProjectRoom />} />
+      <Route path="/project-room/:projectId" element={<ProjectRoom />} />
       
       {/* Video Call */}
-      <Route path=&quot;/video-call/:roomId&quot; element={<VideoCall />} />
+      <Route path="/video-call/:roomId" element={<VideoCall />} />
 
       {/* Global Search Route */}
-      <Route path=&quot;/search&quot; element={<SearchPage />} />
+      <Route path="/search" element={<SearchPage />} />
       
       {/* Sitemap Page */}
-      <Route path=&quot;/sitemap-page&quot; element={<SitemapPage />} />
+      <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
   )
 },
 
 export default ContentRoutes,
-=======
 import { Fragment } from "react",;
 import { Route, Routes, Navigate } from "react-router-dom",;
 import Home from "@/pages/Home",;
@@ -119,4 +99,3 @@ const ContentRoutes = () => {;
   );
 },;
 export default ContentRoutes;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

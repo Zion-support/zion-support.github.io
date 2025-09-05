@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -17,139 +16,139 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
-    id: &quot;nvidia-a100-server&quot;,
-    title: &quot;NVIDIA A100 GPU Training Server&quot;,
-    description: &quot;High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.&quot;,
-    category: &quot;AI Hardware&quot;,
+    id: "nvidia-a100-server",
+    title: "NVIDIA A100 GPU Training Server",
+    description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
+    category: "AI Hardware",
     price: 85000,
-    currency: &quot;$&quot;,
-    brand: &quot;NVIDIA&quot;,
-    specifications: [&quot;8x A100 GPUs&quot;, &quot;2TB HBM2e&quot;, &quot;NVLink&quot;],
-    tags: [&quot;AI&quot;, &quot;Machine Learning&quot;, &quot;GPU&quot;],
-    author: { name: &quot;NVIDIA&quot;, id: &quot;nvidia&quot; },
-    images: [&quot;https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto=format&fit=crop&w=800&h=500&quot;],
-    createdAt: &quot;2024-01-15T10:30:00.000Z&quot;,
+    currency: "$",
+    brand: "NVIDIA",
+    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
+    tags: ["AI", "Machine Learning", "GPU"],
+    author: { name: "NVIDIA", id: "nvidia" },
+    images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:30:00.000Z",
     rating: 4.9,
     reviewCount: 27,
-    location: &quot;Santa Clara, CA&quot;,
-    availability: &quot;In Stock&quot;
+    location: "Santa Clara, CA",
+    availability: "In Stock"
   },
   {
-    id: &quot;dell-poweredge-r750&quot;,
-    title: &quot;Dell PowerEdge R750 Server&quot;,
-    description: &quot;2U rack server with dual Intel Xeon processors, enterprise-grade performance for virtualization workloads.&quot;,
-    category: &quot;Servers & Compute&quot;,
+    id: "dell-poweredge-r750",
+    title: "Dell PowerEdge R750 Server",
+    description: "2U rack server with dual Intel Xeon processors, enterprise-grade performance for virtualization workloads.",
+    category: "Servers & Compute",
     price: 12500,
-    currency: &quot;$&quot;,
-    brand: &quot;Dell&quot;,
-    specifications: [&quot;2U Rack&quot;, &quot;Dual Xeon&quot;, &quot;128GB RAM&quot;, &quot;2TB SSD&quot;],
-    tags: [&quot;Server&quot;, &quot;Enterprise&quot;, &quot;Virtualization&quot;],
-    author: { name: &quot;Dell&quot;, id: &quot;dell&quot; },
-    images: [&quot;https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500&quot;],
-    createdAt: &quot;2024-01-12T14:20:00.000Z&quot;,
+    currency: "$",
+    brand: "Dell",
+    specifications: ["2U Rack", "Dual Xeon", "128GB RAM", "2TB SSD"],
+    tags: ["Server", "Enterprise", "Virtualization"],
+    author: { name: "Dell", id: "dell" },
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-12T14:20:00.000Z",
     rating: 4.7,
     reviewCount: 34,
-    location: &quot;Austin, TX&quot;,
-    availability: &quot;In Stock&quot;
+    location: "Austin, TX",
+    availability: "In Stock"
   },
   {
-    id: &quot;cisco-nexus-9k&quot;,
-    title: &quot;Cisco Nexus 9000 Switch&quot;,
-    description: &quot;High-performance datacenter switch with 100GbE ports for modern cloud infrastructure.&quot;,
-    category: &quot;Networking&quot;,
+    id: "cisco-nexus-9k",
+    title: "Cisco Nexus 9000 Switch",
+    description: "High-performance datacenter switch with 100GbE ports for modern cloud infrastructure.",
+    category: "Networking",
     price: 18500,
-    currency: &quot;$&quot;,
-    brand: &quot;Cisco&quot;,
-    specifications: [&quot;48x 100GbE&quot;, &quot;QSFP28&quot;, &quot;Line Rate&quot;],
-    tags: [&quot;Switch&quot;, &quot;100GbE&quot;, &quot;Datacenter&quot;],
-    author: { name: &quot;Cisco&quot;, id: &quot;cisco&quot; },
-    images: [&quot;https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500&quot;],
-    createdAt: &quot;2024-01-10T09:15:00.000Z&quot;,
+    currency: "$",
+    brand: "Cisco",
+    specifications: ["48x 100GbE", "QSFP28", "Line Rate"],
+    tags: ["Switch", "100GbE", "Datacenter"],
+    author: { name: "Cisco", id: "cisco" },
+    images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-10T09:15:00.000Z",
     rating: 4.8,
     reviewCount: 19,
-    location: &quot;San Jose, CA&quot;,
-    availability: &quot;In Stock&quot;
+    location: "San Jose, CA",
+    availability: "In Stock"
   },
   {
-    id: &quot;hpe-proliant-dl380&quot;,
-    title: &quot;HPE ProLiant DL380 Gen10&quot;,
-    description: &quot;Versatile 2U server optimized for compute-intensive workloads.&quot;,
-    category: &quot;Servers & Compute&quot;,
+    id: "hpe-proliant-dl380",
+    title: "HPE ProLiant DL380 Gen10",
+    description: "Versatile 2U server optimized for compute-intensive workloads.",
+    category: "Servers & Compute",
     price: 14500,
-    currency: &quot;$&quot;,
-    brand: &quot;HPE&quot;,
-    specifications: [&quot;2U Rack&quot;, &quot;Dual Xeon&quot;, &quot;256GB RAM&quot;, &quot;4TB SSD&quot;],
-    tags: [&quot;Server&quot;, &quot;Enterprise&quot;, &quot;Compute&quot;],
-    author: { name: &quot;HPE&quot;, id: &quot;hpe&quot; },
-    images: [&quot;https://images.unsplash.com/photo-1555617981-dac388a08846?auto=format&fit=crop&w=800&h=500&quot;],
-    createdAt: &quot;2024-01-18T11:00:00.000Z&quot;,
+    currency: "$",
+    brand: "HPE",
+    specifications: ["2U Rack", "Dual Xeon", "256GB RAM", "4TB SSD"],
+    tags: ["Server", "Enterprise", "Compute"],
+    author: { name: "HPE", id: "hpe" },
+    images: ["https://images.unsplash.com/photo-1555617981-dac388a08846?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-18T11:00:00.000Z",
     rating: 4.6,
     reviewCount: 21,
-    location: &quot;Houston, TX&quot;,
-    availability: &quot;In Stock&quot;
+    location: "Houston, TX",
+    availability: "In Stock"
   },
   {
-    id: &quot;netapp-aff-a250&quot;,
-    title: &quot;NetApp AFF A250 All-Flash Array&quot;,
-    description: &quot;Enterprise all-flash storage system for demanding workloads.&quot;,
-    category: &quot;Storage Systems&quot;,
+    id: "netapp-aff-a250",
+    title: "NetApp AFF A250 All-Flash Array",
+    description: "Enterprise all-flash storage system for demanding workloads.",
+    category: "Storage Systems",
     price: 42000,
-    currency: &quot;$&quot;,
-    brand: &quot;NetApp&quot;,
-    specifications: [&quot;24TB Flash&quot;, &quot;NVMe&quot;, &quot;Active-Active&quot;],
-    tags: [&quot;Storage&quot;, &quot;Flash&quot;, &quot;NVMe&quot;],
-    author: { name: &quot;NetApp&quot;, id: &quot;netapp&quot; },
-    images: [&quot;https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&h=500&quot;],
-    createdAt: &quot;2024-01-18T09:45:00.000Z&quot;,
+    currency: "$",
+    brand: "NetApp",
+    specifications: ["24TB Flash", "NVMe", "Active-Active"],
+    tags: ["Storage", "Flash", "NVMe"],
+    author: { name: "NetApp", id: "netapp" },
+    images: ["https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-18T09:45:00.000Z",
     rating: 4.7,
     reviewCount: 18,
-    location: &quot;Chicago, IL&quot;,
-    availability: &quot;2-3 Weeks&quot;
+    location: "Chicago, IL",
+    availability: "2-3 Weeks"
   },
   {
-    id: &quot;arista-7050x&quot;,
-    title: &quot;Arista 7050X Series Switch&quot;,
-    description: &quot;High-density 10/40GbE switch for modern datacenter networks.&quot;,
-    category: &quot;Networking&quot;,
+    id: "arista-7050x",
+    title: "Arista 7050X Series Switch",
+    description: "High-density 10/40GbE switch for modern datacenter networks.",
+    category: "Networking",
     price: 23000,
-    currency: &quot;$&quot;,
-    brand: &quot;Arista&quot;,
-    specifications: [&quot;48x10GbE&quot;, &quot;6x40GbE&quot;, &quot;Wire Speed&quot;],
-    tags: [&quot;Switch&quot;, &quot;10GbE&quot;, &quot;Datacenter&quot;],
-    author: { name: &quot;Arista&quot;, id: &quot;arista&quot; },
-    images: [&quot;https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500&quot;],
-    createdAt: &quot;2024-01-17T12:10:00.000Z&quot;,
+    currency: "$",
+    brand: "Arista",
+    specifications: ["48x10GbE", "6x40GbE", "Wire Speed"],
+    tags: ["Switch", "10GbE", "Datacenter"],
+    author: { name: "Arista", id: "arista" },
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-17T12:10:00.000Z",
     rating: 4.5,
     reviewCount: 16,
-    location: &quot;Sunnyvale, CA&quot;,
-    availability: &quot;In Stock&quot;
+    location: "Sunnyvale, CA",
+    availability: "In Stock"
   }
 ],
 
 // Market insights component
 const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
-  <Card className=&quot;bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6&quot;>
-    <CardContent className=&quot;p-6&quot;>
-      <div className=&quot;flex items-center gap-2 mb-4&quot;>
-        <TrendingUp className=&quot;h-5 w-5 text-blue-400&quot; />
-        <h3 className=&quot;text-lg font-semibold&quot;>Equipment Market Insights</h3>
+  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
+    <CardContent className="p-6">
+      <div className="flex items-center gap-2 mb-4">
+        <TrendingUp className="h-5 w-5 text-blue-400" />
+        <h3 className="text-lg font-semibold">Equipment Market Insights</h3>
       </div>
-      <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-4&quot;>
-        <div className=&quot;text-center&quot;>
-          <div className=&quot;text-2xl font-bold text-blue-400&quot;>${Math.round(stats.averagePrice / 1000)}k</div>
-          <div className=&quot;text-sm text-muted-foreground&quot;>Avg Price</div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="text-center">
+          <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice / 1000)}k</div>
+          <div className="text-sm text-muted-foreground">Avg Price</div>
         </div>
-        <div className=&quot;text-center&quot;>
-          <div className=&quot;text-2xl font-bold text-green-400&quot;>{stats.averageRating.toFixed(1)}</div>
-          <div className=&quot;text-sm text-muted-foreground&quot;>Avg Rating</div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
+          <div className="text-sm text-muted-foreground">Avg Rating</div>
         </div>
-        <div className=&quot;text-center&quot;>
-          <div className=&quot;text-2xl font-bold text-purple-400&quot;>{stats.totalEquipment}</div>
-          <div className=&quot;text-sm text-muted-foreground&quot;>Total Items</div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-purple-400">{stats.totalEquipment}</div>
+          <div className="text-sm text-muted-foreground">Total Items</div>
         </div>
-        <div className=&quot;text-center&quot;>
-          <div className=&quot;text-2xl font-bold text-orange-400&quot;>{stats.inStockCount}</div>
-          <div className=&quot;text-sm text-muted-foreground&quot;>In Stock</div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-orange-400">{stats.inStockCount}</div>
+          <div className="text-sm text-muted-foreground">In Stock</div>
         </div>
       </div>
     </CardContent>
@@ -160,27 +159,27 @@ const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
 const EquipmentFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
 }: any) => (
-  <div className=&quot;flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative&quot;>
-    {loading && <Spinner className=&quot;absolute right-4 top-4 h-4 w-4 text-primary&quot; />}
-    <div className=&quot;flex items-center gap-2&quot;>
-      <Filter className=&quot;h-4 w-4 text-muted-foreground&quot; />
-      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className=&quot;bg-background border border-border px-3 py-2 rounded&quot;>
+  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
+    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
+    <div className="flex items-center gap-2">
+      <Filter className="h-4 w-4 text-muted-foreground" />
+      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
         <option value="">All Categories</option>
         {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
     </div>
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
-      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded&quot;>
-        <option value=&quot;newest&quot;>Newest First</option>
-        <option value=&quot;price-low&quot;>Price: Low to High</option>
-        <option value=&quot;price-high&quot;>Price: High to Low</option>
-        <option value=&quot;rating&quot;>Highest Rated</option>
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+        <option value="newest">Newest First</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="rating">Highest Rated</option>
       </select>
     </div>
-    <Button variant={showRecommended ? &quot;default&quot; : &quot;outline&quot;} size=&quot;sm" onClick={() => setShowRecommended(!showRecommended)}>
-      <Star className="h-4 w-4 mr-1&quot; />
-      {showRecommended ? &quot;All Equipment&quot; : &quot;Recommended"}
+    <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
+      <Star className="h-4 w-4 mr-1" />
+      {showRecommended ? "All Equipment" : "Recommended"}
     </Button>
   </div>
 ),
@@ -195,13 +194,13 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>
             <p className="text-sm text-muted-foreground">{equipment.category}</p>
-            <div className="flex items-center gap-2 mt-2&quot;>
-              <Badge variant=&quot;secondary" className="text-xs">{equipment.brand}</Badge>
+            <div className="flex items-center gap-2 mt-2">
+              <Badge variant="secondary" className="text-xs">{equipment.brand}</Badge>
             </div>
           </div>
           <div className="text-right">
-            <div className="text-xl font-bold text-blue-600&quot;>{formatPrice(equipment.price ?? 0)}</div>
-            <Badge variant={equipment.availability === &quot;In Stock&quot; ? &quot;default&quot; : &quot;outline"} className="text-xs">
+            <div className="text-xl font-bold text-blue-600">{formatPrice(equipment.price ?? 0)}</div>
+            <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">
               {equipment.availability}
             </Badge>
           </div>
@@ -217,8 +216,8 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
         </div>
         <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{equipment.description}</p>
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium&quot;>{equipment.category}</span>
-          <Button size=&quot;sm" onClick={onViewDetails}>
+          <span className="text-sm font-medium">{equipment.category}</span>
+          <Button size="sm" onClick={onViewDetails}>
             <ShoppingCart className="h-4 w-4 mr-1" />
             View Details
           </Button>
@@ -246,12 +245,12 @@ function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, r
           <p className="text-red-700 mb-4">
             We're having trouble loading the equipment listings. This might be a temporary issue.
           </p>
-          <div className="flex gap-2 justify-center&quot;>
-            <Button onClick={resetErrorBoundary} variant=&quot;outline">
-              <RefreshCw className="h-4 w-4 mr-2&quot; />
+          <div className="flex gap-2 justify-center">
+            <Button onClick={resetErrorBoundary} variant="outline">
+              <RefreshCw className="h-4 w-4 mr-2" />
               Try Again
             </Button>
-            <Button onClick={() => window.location.reload()} variant=&quot;default&quot;>
+            <Button onClick={() => window.location.reload()} variant="default">
               Refresh Page
             </Button>
           </div>
@@ -259,263 +258,6 @@ function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, r
       </Card>
     </div>
   )
-=======
-import { useRouter } from 'next/router',;
-import { useState, useEffect, useCallback, useMemo } from 'react',;
-import { motion, AnimatePresence } from 'framer-motion',;
-import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react';
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',;
-import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm',;
-import { ProductListing } from '@/types/listings',;
-import { SkeletonCard } from '@/components/ui/skeleton',;
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import Spinner from '@/components/ui/spinner',;
-import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary',;
-import { useCurrency } from '@/hooks/useCurrency',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-// Enhanced initial equipment with more variety;
-const INITIAL_EQUIPMENT: ProductListing[] = [;
-  {;
-    id: "nvidia-a100-server",;
-    title: "NVIDIA A100 GPU Training Server",;
-    description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",;
-    category: "AI Hardware",;
-    price: 85000,;
-    currency: "$",;
-    brand: "NVIDIA",;
-    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],;
-    tags: ["AI", "Machine Learning", "GPU"],;
-    author: { name: "NVIDIA", id: "nvidia" },;
-    images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:30:00.000Z",;
-    rating: 4.9,;
-    reviewCount: 27,;
-    location: "Santa Clara, CA",;
-    availability: "In Stock";
-  },;
-  {;
-    id: "dell-poweredge-r750",;
-    title: "Dell PowerEdge R750 Server",;
-    description: "2U rack server with dual Intel Xeon processors, enterprise-grade performance for virtualization workloads.",;
-    category: "Servers & Compute",;
-    price: 12500,;
-    currency: "$",;
-    brand: "Dell",;
-    specifications: ["2U Rack", "Dual Xeon", "128GB RAM", "2TB SSD"],;
-    tags: ["Server", "Enterprise", "Virtualization"],;
-    author: { name: "Dell", id: "dell" },;
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-12T14:20:00.000Z",;
-    rating: 4.7,;
-    reviewCount: 34,;
-    location: "Austin, TX",;
-    availability: "In Stock";
-  },;
-  {;
-    id: "cisco-nexus-9k",;
-    title: "Cisco Nexus 9000 Switch",;
-    description: "High-performance datacenter switch with 100GbE ports for modern cloud infrastructure.",;
-    category: "Networking",;
-    price: 18500,;
-    currency: "$",;
-    brand: "Cisco",;
-    specifications: ["48x 100GbE", "QSFP28", "Line Rate"],;
-    tags: ["Switch", "100GbE", "Datacenter"],;
-    author: { name: "Cisco", id: "cisco" },;
-    images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-10T09:15:00.000Z",;
-    rating: 4.8,;
-    reviewCount: 19,;
-    location: "San Jose, CA",;
-    availability: "In Stock";
-  },;
-  {;
-    id: "hpe-proliant-dl380",;
-    title: "HPE ProLiant DL380 Gen10",;
-    description: "Versatile 2U server optimized for compute-intensive workloads.",;
-    category: "Servers & Compute",;
-    price: 14500,;
-    currency: "$",;
-    brand: "HPE",;
-    specifications: ["2U Rack", "Dual Xeon", "256GB RAM", "4TB SSD"],;
-    tags: ["Server", "Enterprise", "Compute"],;
-    author: { name: "HPE", id: "hpe" },;
-    images: ["https://images.unsplash.com/photo-1555617981-dac388a08846?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-18T11:00:00.000Z",;
-    rating: 4.6,;
-    reviewCount: 21,;
-    location: "Houston, TX",;
-    availability: "In Stock";
-  },;
-  {;
-    id: "netapp-aff-a250",;
-    title: "NetApp AFF A250 All-Flash Array",;
-    description: "Enterprise all-flash storage system for demanding workloads.",;
-    category: "Storage Systems",;
-    price: 42000,;
-    currency: "$",;
-    brand: "NetApp",;
-    specifications: ["24TB Flash", "NVMe", "Active-Active"],;
-    tags: ["Storage", "Flash", "NVMe"],;
-    author: { name: "NetApp", id: "netapp" },;
-    images: ["https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-18T09:45:00.000Z",;
-    rating: 4.7,;
-    reviewCount: 18,;
-    location: "Chicago, IL",;
-    availability: "2-3 Weeks";
-  },;
-  {;
-    id: "arista-7050x",;
-    title: "Arista 7050X Series Switch",;
-    description: "High-density 10/40GbE switch for modern datacenter networks.",;
-    category: "Networking",;
-    price: 23000,;
-    currency: "$",;
-    brand: "Arista",;
-    specifications: ["48x10GbE", "6x40GbE", "Wire Speed"],;
-    tags: ["Switch", "10GbE", "Datacenter"],;
-    author: { name: "Arista", id: "arista" },;
-    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-17T12:10:00.000Z",;
-    rating: 4.5,;
-    reviewCount: 16,;
-    location: "Sunnyvale, CA",;
-    availability: "In Stock";
-  }
-],;
-// Market insights component;
-const EquipmentMarketInsights = ({ stats }: { stats: any }) => (;
-  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">;
-    <CardContent className="p-6">;
-      <div className="flex items-center gap-2 mb-4">;
-        <TrendingUp className="h-5 w-5 text-blue-400" />;
-        <h3 className="text-lg font-semibold">Equipment Market Insights</h3>;
-      </div>;
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">;
-        <div className="text-center">;
-          <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice / 1000)}k</div>;
-          <div className="text-sm text-muted-foreground">Avg Price</div>;
-        </div>;
-        <div className="text-center">;
-          <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>;
-          <div className="text-sm text-muted-foreground">Avg Rating</div>;
-        </div>;
-        <div className="text-center">;
-          <div className="text-2xl font-bold text-purple-400">{stats.totalEquipment}</div>;
-          <div className="text-sm text-muted-foreground">Total Items</div>;
-        </div>;
-        <div className="text-center">;
-          <div className="text-2xl font-bold text-orange-400">{stats.inStockCount}</div>;
-          <div className="text-sm text-muted-foreground">In Stock</div>;
-        </div>;
-      </div>;
-    </CardContent>;
-  </Card>;
-),;
-// Filter controls;
-const EquipmentFilterControls = ({;
-  sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading;
-}: any) => (;
-  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">;
-    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
-    <div className="flex items-center gap-2">;
-      <Filter className="h-4 w-4 text-muted-foreground" />;
-      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">;
-        <option value="">All Categories</option>;
-        {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
-      </select>;
-    </div>;
-    <div className="flex items-center gap-2">;
-      <SortAsc className="h-4 w-4 text-muted-foreground" />;
-      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">;
-        <option value="newest">Newest First</option>;
-        <option value="price-low">Price: Low to High</option>;
-        <option value="price-high">Price: High to Low</option>;
-        <option value="rating">Highest Rated</option>;
-      </select>;
-    </div>;
-    <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>;
-      <Star className="h-4 w-4 mr-1" />;
-      {showRecommended ? "All Equipment" : "Recommended"}
-    </Button>;
-  </div>;
-),;
-// Equipment card;
-const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {;
-  const { formatPrice } = useCurrency(),;
-  return (;
-    <Card className="h-full hover:shadow-lg transition-shadow">;
-      <CardHeader className="pb-3">;
-        <div className="flex items-start justify-between">;
-          <div className="flex-1 min-w-0">;
-            <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>;
-            <p className="text-sm text-muted-foreground">{equipment.category}</p>;
-            <div className="flex items-center gap-2 mt-2">;
-              <Badge variant="secondary" className="text-xs">{equipment.brand}</Badge>;
-            </div>;
-          </div>;
-          <div className="text-right">;
-            <div className="text-xl font-bold text-blue-600">{formatPrice(equipment.price ?? 0)}</div>;
-            <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">;
-              {equipment.availability}
-            </Badge>;
-          </div>;
-        </div>;
-      </CardHeader>;
-      <CardContent className="pt-0">;
-        <div className="flex items-center gap-4 mb-3">;
-          <div className="flex items-center gap-1">;
-            <Star className="h-4 w-4 text-yellow-500 fill-current" />;
-            <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>;
-            <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>;
-          </div>;
-        </div>;
-        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{equipment.description}</p>;
-        <div className="flex items-center justify-between">;
-          <span className="text-sm font-medium">{equipment.category}</span>;
-          <Button size="sm" onClick={onViewDetails}>;
-            <ShoppingCart className="h-4 w-4 mr-1" />;
-            View Details;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-},;
-// Loading grid;
-const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (;
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
-    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
-  </div>;
-),;
-// Error fallback component;
-function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, resetErrorBoundary: () => void }) {;
-  return (;
-    <div className="container py-8">;
-      <Card className="border-red-200 bg-red-50">;
-        <CardContent className="p-8 text-center">;
-          <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-red-600" />;
-          <h2 className="text-2xl font-bold text-red-900 mb-2">Something went wrong</h2>;
-          <p className="text-red-700 mb-4">;
-            We're having trouble loading the equipment listings. This might be a temporary issue.;
-          </p>;
-          <div className="flex gap-2 justify-center">;
-            <Button onClick={resetErrorBoundary} variant="outline">;
-              <RefreshCw className="h-4 w-4 mr-2" />;
-              Try Again;
-            </Button>;
-            <Button onClick={() => window.location.reload()} variant="default">;
-              Refresh Page;
-            </Button>;
-          </div>;
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 // Main component;
@@ -588,7 +330,6 @@ function EquipmentPageContent() {;
       logErrorToProduction('Error in fetchEquipment:', { data: error }),;
       throw new Error('Failed to load equipment data. Please try again.');
     }
-<<<<<<< HEAD
   }, [sortBy, filterCategory, showRecommended, dataSeed]),
 
   const {
@@ -620,13 +361,8 @@ function EquipmentPageContent() {;
 
   const categories = useMemo(() => {
     // Use all possible categories, not just from current items
-<<<<<<< HEAD
     return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"]
   }, []),
-=======
-    return [&quot;AI Hardware&quot;, &quot;Servers & Compute&quot;, &quot;Networking&quot;, &quot;Storage Systems&quot;, &quot;Power & Cooling"];
-  }, []);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
@@ -658,8 +394,8 @@ function EquipmentPageContent() {;
           <AlertTriangle className="mx-auto h-12 w-12 text-red-500" />
           <h2 className="text-2xl font-bold">Unable to load equipment</h2>
           <p className="text-muted-foreground max-w-md mx-auto">{error}</p>
-          <div className="flex gap-2 justify-center&quot;>
-            <Button onClick={refresh} variant=&quot;outline">
+          <div className="flex gap-2 justify-center">
+            <Button onClick={refresh} variant="outline">
               <RefreshCw className="h-4 w-4 mr-2" />
               Try Again
             </Button>
@@ -670,7 +406,6 @@ function EquipmentPageContent() {;
         </div>
       </div>
     )
-=======
   }, [sortBy, filterCategory, showRecommended, dataSeed]),;
   const {;
     items: equipment,;
@@ -740,7 +475,6 @@ function EquipmentPageContent() {;
         </div>;
       </div>;
     );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   return (;
@@ -767,24 +501,14 @@ function EquipmentPageContent() {;
           showRecommended={showRecommended}
           setShowRecommended={setShowRecommended}
           loading={isFetching}
-<<<<<<< HEAD
         />
       </motion.div>
 
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6&quot; initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
-        <AnimatePresence mode=&quot;popLayout">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+        <AnimatePresence mode="popLayout">
           {equipment.map((item, index) => (
             <motion.div
               key={item.id} 
-=======
-        />;
-      </motion.div>;
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>;
-        <AnimatePresence mode="popLayout">;
-          {equipment.map((item, index) => (;
-            <motion.div;
-              key={item.id} ;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ref={index === equipment.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }} ;
               animate={{ opacity: 1, scale: 1 }} ;
@@ -814,27 +538,15 @@ function EquipmentPageContent() {;
           <EquipmentLoadingGrid count={4} />;
         </motion.div>;
       )}
-<<<<<<< HEAD
 
       {hasMore && !loading && (
         <div className="text-center mt-8">
           {isFetching ? (
-            <Spinner className="mx-auto h-6 w-6&quot; />
+            <Spinner className="mx-auto h-6 w-6" />
           ) : (
-            <Button onClick={loadMore} variant=&quot;outline&quot; size=&quot;lg">
+            <Button onClick={loadMore} variant="outline" size="lg">
               Load More Equipment
             </Button>
-=======
-;
-      {hasMore && !loading && (;
-        <div className="text-center mt-8">;
-          {isFetching ? (;
-            <Spinner className="mx-auto h-6 w-6" />;
-          ) : (;
-            <Button onClick={loadMore} variant="outline" size="lg">;
-              Load More Equipment;
-            </Button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
           {total !== undefined && (;
             <p className="mt-2 text-sm text-muted-foreground">;

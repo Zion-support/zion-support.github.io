@@ -40,7 +40,6 @@ export default function OrderDetailPage() {;
     } catch (err) {;
       toast({ title: 'Failed to send receipt', variant: 'destructive' });
     }
-<<<<<<< HEAD
   },
 
   const handleCopySummary = async () => {
@@ -65,21 +64,21 @@ export default function OrderDetailPage() {;
 
   if (isLoading || !order) {
     return (
-      <div className=&quot;container max-w-3xl py-10&quot;>
-        <Skeleton className=&quot;h-6 w-full&quot; />
+      <div className="container max-w-3xl py-10">
+        <Skeleton className="h-6 w-full" />
       </div>
     )
   }
 
   return (
-    <div className=&quot;container max-w-3xl py-10 space-y-6&quot;>
-      <h1 className=&quot;text-3xl font-bold&quot;>Order #{order.orderId}</h1>
+    <div className="container max-w-3xl py-10 space-y-6">
+      <h1 className="text-3xl font-bold">Order #{order.orderId}</h1>
 
       <div>
-        <h2 className=&quot;font-semibold mb-2&quot;>Items</h2>
-        <ul className=&quot;space-y-1&quot;>
+        <h2 className="font-semibold mb-2">Items</h2>
+        <ul className="space-y-1">
           {order.items.map((item, idx) => (
-            <li key={idx} className=&quot;flex justify-between&quot;>
+            <li key={idx} className="flex justify-between">
               <span>{item.name} x {item.quantity}</span>
               <span>${item.price.toFixed(2)}</span>
             </li>
@@ -88,94 +87,29 @@ export default function OrderDetailPage() {;
       </div>
 
       <div>
-        <h2 className=&quot;font-semibold mb-2&quot;>Shipping Address</h2>
+        <h2 className="font-semibold mb-2">Shipping Address</h2>
         <p>{order.shippingAddress.name}</p>
         <p>{order.shippingAddress.street}</p>
         <p>{order.shippingAddress.city}, {order.shippingAddress.state} {order.shippingAddress.zip}</p>
       </div>
 
       <div>
-        <h2 className=&quot;font-semibold mb-2&quot;>Tracking</h2>
+        <h2 className="font-semibold mb-2">Tracking</h2>
         <OrderTimeline events={order.trackingEvents} />
       </div>
 
-      <div className=&quot;flex gap-3&quot;>
+      <div className="flex gap-3">
         <Button onClick={handleDownload}>Download PDF Invoice</Button>
-        <Button variant=&quot;outline&quot; onClick={handleCopySummary}>
-          <Clipboard className=&quot;h-4 w-4&quot; /> Copy Summary
+        <Button variant="outline" onClick={handleCopySummary}>
+          <Clipboard className="h-4 w-4" /> Copy Summary
         </Button>
-        <Button variant=&quot;outline&quot; onClick={handleResend}>Resend Receipt</Button>
+        <Button variant="outline" onClick={handleResend}>Resend Receipt</Button>
       </div>
 
-      <Link href=&quot;/orders&quot; className=&quot;text-zion-purple underline&quot;>
+      <Link href="/orders" className="text-zion-purple underline">
         Back to orders
       </Link>
     </div>
   )
-=======
-  },;
-  const handleCopySummary = async () => {;
-    if (!order) return,;
-    const summary = [;
-      `Order #${order.orderId}`,;
-      `Date: ${new Date(order.date).toLocaleDateString()}`,;
-      '',;
-      'Items:',;
-      ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`),;
-      '',;
-      `Total: $${order.total.toFixed(2)}`,;
-      '',;
-      'Shipping Address:',;
-      order.shippingAddress.name,;
-      order.shippingAddress.street,;
-      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n'),;
-    await navigator.clipboard.writeText(summary);
-    toast.success('Order summary copied to clipboard');
-  };
-  if (isLoading || !order) {;
-    return (;
-      <div className="container max-w-3xl py-10">;
-        <Skeleton className="h-6 w-full" />;
-      </div>;
-    );
-  }
-;
-  return (;
-    <div className="container max-w-3xl py-10 space-y-6">;
-      <h1 className="text-3xl font-bold">Order #{order.orderId}</h1>;
-      <div>;
-        <h2 className="font-semibold mb-2">Items</h2>;
-        <ul className="space-y-1">;
-          {order.items.map((item, idx) => (;
-            <li key={idx} className="flex justify-between">;
-              <span>{item.name} x {item.quantity}</span>;
-              <span>${item.price.toFixed(2)}</span>;
-            </li>;
-          ))}
-        </ul>;
-      </div>;
-      <div>;
-        <h2 className="font-semibold mb-2">Shipping Address</h2>;
-        <p>{order.shippingAddress.name}</p>;
-        <p>{order.shippingAddress.street}</p>;
-        <p>{order.shippingAddress.city}, {order.shippingAddress.state} {order.shippingAddress.zip}</p>;
-      </div>;
-      <div>;
-        <h2 className="font-semibold mb-2">Tracking</h2>;
-        <OrderTimeline events={order.trackingEvents} />;
-      </div>;
-      <div className="flex gap-3">;
-        <Button onClick={handleDownload}>Download PDF Invoice</Button>;
-        <Button variant="outline" onClick={handleCopySummary}>;
-          <Clipboard className="h-4 w-4" /> Copy Summary;
-        </Button>;
-        <Button variant="outline" onClick={handleResend}>Resend Receipt</Button>;
-      </div>;
-      <Link href="/orders" className="text-zion-purple underline">;
-        Back to orders;
-      </Link>;
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

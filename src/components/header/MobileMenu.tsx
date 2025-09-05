@@ -24,7 +24,6 @@ function isProtectedRoute(href: string): boolean {;
   // Also check against the item's own authRequired flag if present;
   return protectedRoutes.some(route => href.startsWith(route));
 }
-<<<<<<< HEAD
 
 export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {
   const router = useRouter(),
@@ -82,94 +81,23 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
     (item) => !item.authRequired || (item.authRequired && isAuthenticated)),
 
   return (
-    <div className=&quot;py-6&quot;>
-      <div className=&quot;flex justify-between items-center px-6 mb-6&quot;>
-        <h2 className=&quot;text-xl font-bold text-foreground&quot;>Menu</h2>
+    <div className="py-6">
+      <div className="flex justify-between items-center px-6 mb-6">
+        <h2 className="text-xl font-bold text-foreground">Menu</h2>
         <Button
-          variant=&quot;ghost&quot;
-          size=&quot;icon&quot;
+          variant="ghost"
+          size="icon"
           onClick={onClose}
-          aria-label=&quot;Close menu&quot;
-          title=&quot;Close menu&quot;
+          aria-label="Close menu"
+          title="Close menu"
         >
-          <X className=&quot;h-5 w-5&quot; />
+          <X className="h-5 w-5" />
         </Button>
       </div>
 
-      <nav className=&quot;space-y-1&quot;>
+      <nav className="space-y-1">
         {visibleItems.map((item) => (
           <Link
-=======
-;
-export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {;
-  const router = useRouter(),;
-  const { user } = useAuth(),;
-  const isAuthenticated = !!user,;
-  const { t } = useTranslation(),;
-  const baseItems = [;
-    {;
-      key: 'home',;
-      href: '/',;
-      icon: Home,;
-      matches: (path: string) => path === '/'},;
-    {;
-      key: 'explore',;
-      href: '/talent',;
-      icon: Search,;
-      matches: (path: string) =>;
-        path.startsWith('/talent') ||;
-        path.startsWith('/categories') ||;
-        path.startsWith('/marketplace')},;
-    {;
-      key: 'community',;
-      href: '/community',;
-      icon: MessageCircle,;
-      matches: (path: string) =>;
-        path.startsWith('/community') || path.startsWith('/forum')},;
-    {;
-      key: 'post_job',;
-      href: '/post-job',;
-      icon: BriefcaseIcon,;
-      matches: (path: string) => path.startsWith('/post-job'),;
-      authRequired: true},;
-    {;
-      key: 'messages',;
-      href: '/messages',;
-      icon: MessageSquare,;
-      matches: (path: string) =>;
-        path.startsWith('/messages') || path.startsWith('/inbox'),;
-      badge: unreadCount,;
-      authRequired: true},;
-    {;
-      key: 'dashboard',;
-      href: '/dashboard',;
-      icon: User,;
-      matches: (path: string) => path.startsWith('/dashboard'),;
-      authRequired: true}],;
-  const navItems = baseItems.map((item) => ({;
-    ...item,;
-    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),;
-  // Filter items based on auth status;
-  const visibleItems = navItems.filter(;
-    (item) => !item.authRequired || (item.authRequired && isAuthenticated)),;
-  return (;
-    <div className="py-6">;
-      <div className="flex justify-between items-center px-6 mb-6">;
-        <h2 className="text-xl font-bold text-foreground">Menu</h2>;
-        <Button;
-          variant="ghost";
-          size="icon";
-          onClick={onClose}
-          aria-label="Close menu";
-          title="Close menu";
-        >;
-          <X className="h-5 w-5" />;
-        </Button>;
-      </div>;
-      <nav className="space-y-1">;
-        {visibleItems.map((item) => (;
-          <Link;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             key={item.name}
             href={item.href}
             aria-label={item.name}
@@ -190,19 +118,11 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
               }
               onClose(), // Close mobile menu on any click;
             }}
-<<<<<<< HEAD
           >
-            <div className=&quot;relative mr-4&quot;>
-              <item.icon className=&quot;h-5 w-5&quot; aria-hidden=&quot;true&quot; />
+            <div className="relative mr-4">
+              <item.icon className="h-5 w-5" aria-hidden="true" />
               {item.badge && item.badge > 0 && (
-                <span className=&quot;absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center&quot;>
-=======
-          >;
-            <div className="relative mr-4">;
-              <item.icon className="h-5 w-5" aria-hidden="true" />;
-              {item.badge && item.badge > 0 && (;
-                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>;
               )}
@@ -210,20 +130,11 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
             {item.name}
           </Link>;
         ))}
-<<<<<<< HEAD
       </nav>
-      <div className=&quot;mt-6 px-6&quot;>
+      <div className="mt-6 px-6">
         <ModeToggle />
       </div>
     </div>
   )
-=======
-      </nav>;
-      <div className="mt-6 px-6">;
-        <ModeToggle />;
-      </div>;
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

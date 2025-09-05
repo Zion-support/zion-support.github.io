@@ -44,31 +44,17 @@ export default function ServicesShowcase2026V3() {;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
                 Revolutionary 2026 Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
                 Experience the future of technology with our cutting-edge micro SAAS, AI, and emerging technology solutions. 
-                Transform your business with services designed for tomorrow&apos;s challenges.
+                Transform your business with services designed for tomorrow's challenges.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <motion.a
                   href="#services"
-=======
-            >;
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">;
-                Revolutionary 2026 Services;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">;
-                Experience the future of technology with our cutting-edge micro SAAS, AI, and emerging technology solutions.;
-                Transform your business with services designed for tomorrow's challenges.;
-              </p>;
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
-                <motion.a;
-                  href="#services";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200";

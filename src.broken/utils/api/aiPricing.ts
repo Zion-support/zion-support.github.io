@@ -140,12 +140,11 @@ Contract:;
 - Timeline: ${weeks} weeks;
 - Scope: ${input.scope || 'Not specified'}
 - Experience Level: ${input.experienceLevel || 'mid'}
-<<<<<<< HEAD
 
 Constraints:
 - Assume remote contractor.
 - Use current global market rates.
-- currency must be &quot;USD&quot;.
+- currency must be "USD".
 - min and max are numbers with no commas.
 - confidence is one of: Low, Medium, High.
 - rationale is a brief sentence (max 40 words).`,
@@ -178,40 +177,6 @@ Constraints:
     return suggestion
   } catch (error) {
     return null
-=======
-;
-Constraints:;
-- Assume remote contractor.;
-- Use current global market rates.;
-- currency must be "USD".;
-- min and max are numbers with no commas.;
-- confidence is one of: Low, Medium, High.;
-- rationale is a brief sentence (max 40 words).`,;
-    const response = await client.chat.completions.create({;
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',;
-      temperature: 0.2,;
-      messages: [;
-        { role: 'system', content: 'You output only JSON. No prose. Be concise and factual.' },;
-        { role: 'user', content: prompt }]}),;
-    const content = response.choices?.[0]?.message?.content || '',;
-    const jsonStart = content.indexOf('{'),;
-    const jsonEnd = content.lastIndexOf('}'),;
-    const json = JSON.parse(content.slice(jsonStart, jsonEnd + 1)),;
-    const suggestion: BudgetSuggestion = {;
-      currency: 'USD',;
-      min: roundMoney(Number(json.min)),;
-      max: roundMoney(Number(json.max)),;
-      confidence: (json.confidence as BudgetSuggestion['confidence']) || 'Medium',;
-      rationale: String(json.rationale || ''),;
-      modelUsed: response.model || (process.env.OPENAI_MODEL || 'gpt-4o-mini'),;
-      source: 'openai'},;
-    const range = clampRange(suggestion.min, suggestion.max),;
-    suggestion.min = range.min,;
-    suggestion.max = range.max,;
-    return suggestion;
-  } catch (error) {;
-    return null;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 }
 ;
@@ -225,11 +190,10 @@ Candidate:;
 - Skills: ${input.skills.join()}
 - Years Experience: ${input.yearsExperience}
 - Location: ${input.location}
-<<<<<<< HEAD
 
 Constraints:
 - Consider global averages and location factor.
-- currency must be &quot;USD&quot;.
+- currency must be "USD".
 - hourlyRate, min, max are numbers with no commas.
 - confidence is one of: Low, Medium, High.
 - rationale is a brief sentence (max 40 words).`,
@@ -263,40 +227,6 @@ Constraints:
     return suggestion
   } catch (error) {
     return null
-=======
-;
-Constraints:;
-- Consider global averages and location factor.;
-- currency must be "USD".;
-- hourlyRate, min, max are numbers with no commas.;
-- confidence is one of: Low, Medium, High.;
-- rationale is a brief sentence (max 40 words).`,;
-    const response = await client.chat.completions.create({;
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',;
-      temperature: 0.2,;
-      messages: [;
-        { role: 'system', content: 'You output only JSON. No prose. Be concise and factual.' },;
-        { role: 'user', content: prompt }]}),;
-    const content = response.choices?.[0]?.message?.content || '',;
-    const jsonStart = content.indexOf('{'),;
-    const jsonEnd = content.lastIndexOf('}'),;
-    const json = JSON.parse(content.slice(jsonStart, jsonEnd + 1)),;
-    const suggestion: TalentRateSuggestion = {;
-      currency: 'USD',;
-      hourlyRate: roundMoney(Number(json.hourlyRate)),;
-      min: roundMoney(Number(json.min)),;
-      max: roundMoney(Number(json.max)),;
-      confidence: (json.confidence as TalentRateSuggestion['confidence']) || 'Medium',;
-      rationale: String(json.rationale || ''),;
-      modelUsed: response.model || (process.env.OPENAI_MODEL || 'gpt-4o-mini'),;
-      source: 'openai'},;
-    const range = clampRange(suggestion.min, suggestion.max),;
-    suggestion.min = range.min,;
-    suggestion.max = range.max,;
-    return suggestion;
-  } catch (error) {;
-    return null;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 }
 ;

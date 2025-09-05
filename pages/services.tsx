@@ -74,7 +74,6 @@ export default function Services() {;
         border: 'border-green-500/40',;
         ring: 'focus:ring-green-500';
       }
-<<<<<<< HEAD
     },
     return colors[color as keyof typeof colors] || colors.blue
   },
@@ -83,40 +82,19 @@ export default function Services() {;
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity&quot; />
-        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; />
-        <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
-        <link rel=&quot;canonical&quot; href={`${contact.site}/services`} />
+        <meta name="description" content="Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business." />
+        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`${contact.site}/services`} />
       </Head>
       
-      <ErrorBoundary level=&quot;page&quot;>
-        <main className=&quot;min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           {/* Hero Section */}
-          <section className=&quot;py-20 px-4 text-center&quot; role=&quot;banner&quot;>
-            <div className=&quot;max-w-4xl mx-auto&quot;>
+          <section className="py-20 px-4 text-center" role="banner">
+            <div className="max-w-4xl mx-auto">
               <h1 
-=======
-    },;
-    return colors[color as keyof typeof colors] || colors.blue;
-  },;
-  return (;
-    <>;
-      <Head>;
-        <title>Our Services - Zion Tech Group</title>;
-        <meta name="description" content="Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business." />;
-        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity" />;
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
-        <meta name="robots" content="index, follow" />;
-        <link rel="canonical" href={`${contact.site}/services`} />;
-      </Head>;
-      <ErrorBoundary level="page">;
-        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">;
-          {/* Hero Section */}
-          <section className="py-20 px-4 text-center" role="banner">;
-            <div className="max-w-4xl mx-auto">;
-              <h1;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >;
                 Our Services;
@@ -131,10 +109,9 @@ export default function Services() {;
             </div>;
           </section>;
           {/* Service Categories */}
-<<<<<<< HEAD
-          <section className=&quot;py-16 px-4&quot; role=&quot;main&quot;>
-            <div className=&quot;max-w-7xl mx-auto&quot;>
-              <div className=&quot;grid lg:grid-cols-3 gap-8&quot;>
+          <section className="py-16 px-4" role="main">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-3 gap-8">
                 {serviceCategories.map((category, index) => {
                   const colors = getColorClasses(category.color),
                   return (
@@ -143,50 +120,23 @@ export default function Services() {;
                       className={`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                       style={{ transitionDelay: `${index * 200}ms` }}
                     >
-                      <div className=&quot;flex items-center justify-between mb-6&quot;>
+                      <div className="flex items-center justify-between mb-6">
                         <h3 className={`text-2xl font-bold ${colors.text}`}>
-=======
-          <section className="py-16 px-4" role="main">;
-            <div className="max-w-7xl mx-auto">;
-              <div className="grid lg:grid-cols-3 gap-8">;
-                {serviceCategories.map((category, index) => {;
-                  const colors = getColorClasses(category.color);
-                  return (;
-                    <div;
-                      key={category.title}
-                      className={`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                      style={{ transitionDelay: `${index * 200}ms` }}
-                    >;
-                      <div className="flex items-center justify-between mb-6">;
-                        <h3 className={`text-2xl font-bold ${colors.text}`}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                           {category.title}
                         </h3>;
                         <span className={`text-3xl font-bold ${colors.text}`}>;
                           {category.count}
-<<<<<<< HEAD
                         </span>
                       </div>
                       
-                      <p className=&quot;text-slate-300 mb-6&quot;>
+                      <p className="text-slate-300 mb-6">
                         {category.description}
                       </p>
                       
-                      <ul className=&quot;text-slate-400 space-y-2 mb-8&quot;>
+                      <ul className="text-slate-400 space-y-2 mb-8">
                         {category.services.map((service, serviceIndex) => (
-                          <li key={serviceIndex} className=&quot;flex items-center&quot;>
-                            <span className=&quot;w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0&quot;></span>
-=======
-                        </span>;
-                      </div>;
-                      <p className="text-slate-300 mb-6">;
-                        {category.description}
-                      </p>;
-                      <ul className="text-slate-400 space-y-2 mb-8">;
-                        {category.services.map((service, serviceIndex) => (;
-                          <li key={serviceIndex} className="flex items-center">;
-                            <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                          <li key={serviceIndex} className="flex items-center">
+                            <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
                             {service}
                           </li>;
                         ))}
@@ -196,108 +146,94 @@ export default function Services() {;
                         className={`inline-flex items-center px-6 py-3 ${colors.bg} ${colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
                       >;
                         View All {category.title}
-<<<<<<< HEAD
-                        <svg className=&quot;ml-2 w-4 h-4&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                          <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M9 5l7 7-7 7&quot; />
+                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </Link>
                     </div>
                   )
-=======
-                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />;
-                        </svg>;
-                      </Link>;
-                    </div>;
-                  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 })}
               </div>;
             </div>;
           </section>;
           {/* Why Choose Us */}
-<<<<<<< HEAD
-          <section className=&quot;py-16 px-4 bg-slate-900/40&quot;>
-            <div className=&quot;max-w-6xl mx-auto&quot;>
-              <h2 className=&quot;text-3xl md:text-4xl font-bold text-center mb-12&quot;>
+          <section className="py-16 px-4 bg-slate-900/40">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
                 Why Choose Zion Tech Group?
               </h2>
               
-              <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
-                <div className=&quot;text-center&quot;>
-                  <div className=&quot;w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
-                    <svg className=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M13 10V3L4 14h7v7l9-11h-7z&quot; />
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h3 className=&quot;text-xl font-bold mb-2&quot;>Lightning Fast</h3>
-                  <p className=&quot;text-slate-400&quot;>Rapid deployment and implementation of solutions</p>
+                  <h3 className="text-xl font-bold mb-2">Lightning Fast</h3>
+                  <p className="text-slate-400">Rapid deployment and implementation of solutions</p>
                 </div>
                 
-                <div className=&quot;text-center&quot;>
-                  <div className=&quot;w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
-                    <svg className=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z&quot; />
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 className=&quot;text-xl font-bold mb-2&quot;>Enterprise Grade</h3>
-                  <p className=&quot;text-slate-400&quot;>Scalable solutions for businesses of all sizes</p>
+                  <h3 className="text-xl font-bold mb-2">Enterprise Grade</h3>
+                  <p className="text-slate-400">Scalable solutions for businesses of all sizes</p>
                 </div>
                 
-                <div className=&quot;text-center&quot;>
-                  <div className=&quot;w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
-                    <svg className=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z&quot; />
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                   </div>
-                  <h3 className=&quot;text-xl font-bold mb-2&quot;>Secure & Reliable</h3>
-                  <p className=&quot;text-slate-400&quot;>Bank-level security and 99.9% uptime guarantee</p>
+                  <h3 className="text-xl font-bold mb-2">Secure & Reliable</h3>
+                  <p className="text-slate-400">Bank-level security and 99.9% uptime guarantee</p>
                 </div>
                 
-                <div className=&quot;text-center&quot;>
-                  <div className=&quot;w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
-                    <svg className=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
-                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z&quot; />
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
                     </svg>
                   </div>
-                  <h3 className=&quot;text-xl font-bold mb-2&quot;>24/7 Support</h3>
-                  <p className=&quot;text-slate-400&quot;>Round-the-clock technical support and maintenance</p>
+                  <h3 className="text-xl font-bold mb-2">24/7 Support</h3>
+                  <p className="text-slate-400">Round-the-clock technical support and maintenance</p>
                 </div>
               </div>
             </div>
           </section>
 
           {/* CTA Section */}
-          <section className=&quot;py-16 px-4&quot;>
-            <div className=&quot;max-w-4xl mx-auto text-center&quot;>
-              <h2 className=&quot;text-3xl md:text-4xl font-bold mb-8&quot;>
+          <section className="py-16 px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
                 Ready to Get Started?
               </h2>
-              <p className=&quot;text-lg text-slate-300 mb-8&quot;>
+              <p className="text-lg text-slate-300 mb-8">
                 Contact our experts today to discuss your project requirements and discover 
                 how our innovative solutions can transform your business.
               </p>
               
-              <div className=&quot;flex flex-col sm:flex-row items-center justify-center gap-4&quot;>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link 
-                  href=&quot;/contact&quot; 
-                  className=&quot;px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors&quot;
+                  href="/contact" 
+                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
                 >
                   Get a Quote
                 </Link>
                 <a 
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-                  className=&quot;px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors&quot;
+                  className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
                 >
                   Call {contact.phone}
                 </Link>
                 <a 
                   href={`mailto:${contact.email}`} 
-<<<<<<< HEAD
                   className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-=======
-                  className=&quot;px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 >
                   Email Us
                 </Link>
@@ -308,7 +244,6 @@ export default function Services() {;
       </ErrorBoundary>
     </>
   )
-=======
           <section className="py-16 px-4 bg-slate-900/40">;
             <div className="max-w-6xl mx-auto">;
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
@@ -390,5 +325,4 @@ export default function Services() {;
       </ErrorBoundary>;
     </>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

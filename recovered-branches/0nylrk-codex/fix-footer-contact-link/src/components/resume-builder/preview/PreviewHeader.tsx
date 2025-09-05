@@ -35,7 +35,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           display: none !important;
         }
       }
-<<<<<<< HEAD
     `,
     document.head.appendChild(style),
     
@@ -52,11 +51,11 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   return (
     <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>
       <Button 
-        variant=&quot;outline&quot; 
+        variant="outline" 
         onClick={onBack} 
-        className=&quot;gap-2 no-print&quot;
+        className="gap-2 no-print"
       >
-        <ArrowLeft className=&quot;h-4 w-4&quot; />
+        <ArrowLeft className="h-4 w-4" />
         Back
       </Button>
       
@@ -64,61 +63,21 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         <PdfExportButton resume={resume} />
         
         <Button 
-          variant=&quot;outline&quot; 
+          variant="outline" 
           onClick={handleBrowserPrint} 
           disabled={isPrinting}
-          className=&quot;gap-2&quot;
+          className="gap-2"
         >
-          <FileText className=&quot;h-4 w-4&quot; />
+          <FileText className="h-4 w-4" />
           Print
         </Button>
         
-        <Button variant=&quot;outline&quot; className=&quot;gap-2&quot;>
-          <Link className=&quot;h-4 w-4&quot; />
+        <Button variant="outline" className="gap-2">
+          <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
     </div>
   )
-=======
-    `,;
-    document.head.appendChild(style),;
-    // Trigger print dialog;
-    window.print(),;
-    // Remove the temporary style element after printing;
-    setTimeout(() => {;
-      document.head.removeChild(style);
-      setIsPrinting(false);
-    }, 1000);
-  };
-  return (;
-    <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>;
-      <Button;
-        variant="outline";
-        onClick={onBack} ;
-        className="gap-2 no-print";
-      >;
-        <ArrowLeft className="h-4 w-4" />;
-        Back;
-      </Button>;
-      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>;
-        <PdfExportButton resume={resume} />;
-        <Button;
-          variant="outline";
-          onClick={handleBrowserPrint} ;
-          disabled={isPrinting}
-          className="gap-2";
-        >;
-          <FileText className="h-4 w-4" />;
-          Print;
-        </Button>;
-        <Button variant="outline" className="gap-2">;
-          <Link className="h-4 w-4" />;
-          Add to Profile;
-        </Button>;
-      </div>;
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

@@ -37,7 +37,6 @@ export interface AnalyticsContextType {;
   events: AnalyticsEvent[],;
   clearEvents: () => void;
 }
-<<<<<<< HEAD
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
@@ -79,14 +78,9 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         metadata: metadata
       }]),
       
-<<<<<<< HEAD
       // // // console.log(`Analytics event tracked: ${type}`, metadata)
-=======
-      // console.log(`Analytics event tracked: ${type}`, metadata);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (error) {
       console.error('Error logging analytics event:', error)
-=======
 ;
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined;
@@ -125,7 +119,6 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {;
       // // // console.log(`Analytics event tracked: ${type}`, metadata);
     } catch (error) {;
       console.error('Error logging analytics event:', error);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   // Function to track conversion events;

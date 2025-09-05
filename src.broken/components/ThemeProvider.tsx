@@ -1,21 +1,12 @@
 
-<<<<<<< HEAD
-import { createContext, useContext, useLayoutEffect, useState } from &quot;react&quot;
-import { safeStorage } from &quot;@/utils/safeStorage&quot;
+import { createContext, useContext, useLayoutEffect, useState } from "react"
+import { safeStorage } from "@/utils/safeStorage"
 
-type Theme = &quot;dark&quot; | &quot;light&quot; | &quot;system&quot;
+type Theme = "dark" | "light" | "system"
 
 type ThemeProviderProps = {
   children: React.ReactNode
   defaultTheme?: Theme
-=======
-import { createContext, useContext, useLayoutEffect, useState } from "react";
-import { safeStorage } from "@/utils/safeStorage";
-type Theme = "dark" | "light" | "system";
-type ThemeProviderProps = {;
-  children: React.ReactNode;
-  defaultTheme?: Theme;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 type ThemeProviderState = {;
@@ -23,10 +14,9 @@ type ThemeProviderState = {;
   setTheme: (theme: Theme) => void;
   toggleTheme: () => void;
 }
-<<<<<<< HEAD
 
 const initialState: ThemeProviderState = {
-  theme: &quot;system&quot;,
+  theme: "system",
   setTheme: () => null,
   toggleTheme: () => null}
 
@@ -34,9 +24,9 @@ export const ThemeProviderContext = createContext<ThemeProviderState>(initialSta
 
 export function ThemeProvider({
   children,
-  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
+  defaultTheme = "system"}: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
-    const stored = safeStorage.getItem(&quot;theme&quot;) as Theme | null
+    const stored = safeStorage.getItem("theme") as Theme | null
     return stored || defaultTheme
   })
 
@@ -44,35 +34,34 @@ export function ThemeProvider({
     const root = window.document.documentElement
     const body = window.document.body
 
-    root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
-    body.classList.remove(&quot;light&quot;, &quot;dark&quot;)
+    root.classList.remove("light", "dark")
+    body.classList.remove("light", "dark")
 
-    if (t === &quot;system&quot;) {
-      const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
+    if (t === "system") {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
-        ? &quot;dark&quot;
-        : &quot;light&quot;
+        ? "dark"
+        : "light"
 
       root.classList.add(systemTheme)
-      root.setAttribute(&quot;data-theme&quot;, systemTheme)
+      root.setAttribute("data-theme", systemTheme)
       body.classList.add(systemTheme)
-      body.setAttribute(&quot;data-theme&quot;, systemTheme)
+      body.setAttribute("data-theme", systemTheme)
       return
     }
 
     root.classList.add(t)
-    root.setAttribute(&quot;data-theme&quot;, t)
+    root.setAttribute("data-theme", t)
     body.classList.add(t)
-    body.setAttribute(&quot;data-theme&quot;, t)
+    body.setAttribute("data-theme", t)
   }
 
   useLayoutEffect(() => {
     applyTheme(theme)
-    safeStorage.setItem(&quot;theme&quot;, theme)
+    safeStorage.setItem("theme", theme)
   }, [theme])
 
   const setCurrentTheme = (newTheme: Theme) => {
-<<<<<<< HEAD
     safeStorage.setItem("theme", newTheme),
     applyTheme(newTheme),
     setTheme(newTheme)
@@ -88,28 +77,10 @@ export function ThemeProvider({
     }
     setCurrentTheme(currentResolvedTheme === "dark" ? "light" : "dark")
   },
-=======
-    safeStorage.setItem(&quot;theme&quot;, newTheme);
-    applyTheme(newTheme);
-    setTheme(newTheme);
-  };
-
-  const toggleTheme = () => {
-    let currentResolvedTheme = theme;
-    if (currentResolvedTheme === &quot;system&quot;) {
-      currentResolvedTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
-        .matches
-        ? &quot;dark&quot;
-        : &quot;light&quot;;
-    }
-    setCurrentTheme(currentResolvedTheme === &quot;dark&quot; ? &quot;light&quot; : &quot;dark&quot;);
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const value = {
     theme,
     setTheme: setCurrentTheme,
-=======
 ;
 const initialState: ThemeProviderState = {;
   theme: "system",;
@@ -169,7 +140,6 @@ export function ThemeProvider({;
   const value = {;
     theme;
     setTheme: setCurrentTheme;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     toggleTheme}
 ;
   return (;
@@ -178,22 +148,13 @@ export function ThemeProvider({;
     </ThemeProviderContext.Provider>;
   );
 }
-<<<<<<< HEAD
 
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext)
 
   if (context === undefined)
-    throw new Error(&quot;useTheme must be used within a ThemeProvider&quot;)
+    throw new Error("useTheme must be used within a ThemeProvider")
 
   return context
-=======
-;
-export const useTheme = () => {;
-  const context = useContext(ThemeProviderContext);
-  if (context === undefined);
-    throw new Error("useTheme must be used within a ThemeProvider");
-  return context;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

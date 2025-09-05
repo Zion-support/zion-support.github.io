@@ -304,7 +304,6 @@ export default function SearchResultsPage({;
         return false;
       }
     }
-<<<<<<< HEAD
     return true
   }),
 
@@ -322,7 +321,7 @@ export default function SearchResultsPage({;
       case 'product':
       case 'equipment':
         return (
-          <div key={result.id} data-testid=&quot;result-card&quot;>
+          <div key={result.id} data-testid="result-card">
             <ProductCard
               product={{
                 id: result.id,
@@ -346,7 +345,7 @@ export default function SearchResultsPage({;
         ),
       case 'talent':
         return (
-          <div key={result.id} data-testid=&quot;result-card&quot;>
+          <div key={result.id} data-testid="result-card">
             <TalentCard
               talent={{
                 id: result.id,
@@ -360,61 +359,6 @@ export default function SearchResultsPage({;
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
-=======
-    return true;
-  }),;
-  // Group results by type for better display;
-  const groupedResults = filteredResults.reduce(;
-    (acc, result) => {;
-      if (!acc[result.type]) acc[result.type] = [],;
-      acc[result.type]!.push(result),;
-      return acc;
-    },;
-    {} as Record<string SearchResult[]>),;
-  const renderResultCard = (result: SearchResult) => {;
-    switch (result.type) {;
-      case 'product':;
-      case 'equipment':;
-        return (;
-          <div key={result.id} data-testid="result-card">;
-            <ProductCard;
-              product={{;
-                id: result.id,;
-                name: result.title,;
-                title: result.title,;
-                description: result.description || '',;
-                price: result.price || 0,;
-                images: result.image ? [result.image] : [],;
-                rating: result.rating || 0,;
-                reviewCount: 0,;
-                tags: result.tags || [],;
-                category: result.category || '',;
-                currency: '$',;
-                created_at: new Date().toISOString(),;
-                updated_at: new Date().toISOString(),;
-                stock: (result as any).stock,;
-                in_stock: ((result as any).stock || 0) > 0;
-              }}
-            />;
-          </div>;
-        ),;
-      case 'talent':;
-        return (;
-          <div key={result.id} data-testid="result-card">;
-            <TalentCard;
-              talent={{;
-                id: result.id,;
-                user_id: result.id,;
-                full_name: result.title,;
-                professional_title: result.description || '',;
-                profile_picture_url: result.image,;
-                average_rating: result.rating,;
-                skills: result.tags || [],;
-                location: result.category,;
-                bio: result.description,;
-                summary: result.description,;
-                is_verified: false,;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 availability_type: 'available'}}
               onViewProfile={(id: string) => {;
                 router.push(`/talent/${id}`);
@@ -423,23 +367,13 @@ export default function SearchResultsPage({;
                 router.push(`/talent/${talent.id}?action=hire`);
               }}
               isAuthenticated={isAuthenticated}
-<<<<<<< HEAD
             />
           </div>
         ),
       case 'category':
         return (
-          <div key={result.id} data-testid=&quot;result-card&quot;>
+          <div key={result.id} data-testid="result-card">
             <CategoryCard
-=======
-            />;
-          </div>;
-        ),;
-      case 'category':;
-        return (;
-          <div key={result.id} data-testid="result-card">;
-            <CategoryCard;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               title={result.title}
               description={result.description || ''}
               icon={result.image || '📁'}
@@ -450,278 +384,146 @@ export default function SearchResultsPage({;
         return (;
           <div;
             key={result.id}
-<<<<<<< HEAD
-            className=&quot;p-4 bg-white dark:bg-gray-800 rounded-lg shadow&quot;
-            data-testid=&quot;result-card&quot;
+            className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
+            data-testid="result-card"
           >
-            <h3 className=&quot;font-semibold&quot;>{result.title}</h3>
-            <p className=&quot;text-gray-600 dark:text-gray-200&quot;>
-=======
-            className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow";
-            data-testid="result-card";
-          >;
-            <h3 className="font-semibold">{result.title}</h3>;
-            <p className="text-gray-600 dark:text-gray-200">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            <h3 className="font-semibold">{result.title}</h3>
+            <p className="text-gray-600 dark:text-gray-200">
               {result.description}
             </p>;
           </div>;
         );
     }
-<<<<<<< HEAD
   },
 
   return (
     <>
       <SEO
-        title={`Search Results for &quot;${query}&quot; - Zion Marketplace`}
+        title={`Search Results for "${query}" - Zion Marketplace`}
         description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
         keywords={`${query}, search, marketplace, products, talent, services`}
         canonical={`https://app.ziontechgroup.com/search/${slug}`}
       />
 
-      <div className=&quot;min-h-screen bg-gray-50 dark:bg-gray-900&quot;>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
         <div
-          className=&quot;container mx-auto px-4 py-8&quot;
-          data-testid=&quot;search-results&quot;
+          className="container mx-auto px-4 py-8"
+          data-testid="search-results"
         >
           {/* Search Header */}
-          <div className=&quot;mb-8&quot;>
-            <div className=&quot;flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4&quot;>
-              <div className=&quot;flex-1&quot;>
-                <h1 className=&quot;text-3xl font-bold text-gray-900 dark:text-white mb-2&quot;>
+          <div className="mb-8">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+              <div className="flex-1">
+                <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                   Search Results
                 </h1>
                 <p
-                  className=&quot;text-gray-600 dark:text-gray-200&quot;
-                  data-testid=&quot;results-count&quot;
+                  className="text-gray-600 dark:text-gray-200"
+                  data-testid="results-count"
                 >
                   {filteredResults.length > 0
-                    ? `Found ${filteredResults.length} results for &quot;${query}&quot;`
-                    : `No results found for &quot;${query}&quot;`}
+                    ? `Found ${filteredResults.length} results for "${query}"`
+                    : `No results found for "${query}"`}
                 </p>
               </div>
 
               {/* Search Input */}
-              <div className=&quot;relative w-full lg:w-96&quot;>
-                <Search className=&quot;absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200&quot; />
+              <div className="relative w-full lg:w-96">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
                 <Input
-                  type=&quot;text&quot;
+                  type="text"
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
-                  placeholder=&quot;Search marketplace...&quot;
-                  className=&quot;pl-10&quot;
+                  placeholder="Search marketplace..."
+                  className="pl-10"
                 />
               </div>
             </div>
 
             {/* Controls */}
-            <div className=&quot;flex flex-wrap items-center justify-between gap-4 mt-6&quot;>
-              <div className=&quot;flex items-center gap-2 flex-wrap&quot;>
+            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
+              <div className="flex items-center gap-2 flex-wrap">
                 <Button
-                  variant=&quot;outline&quot;
-                  size=&quot;sm&quot;
-                  className=&quot;flex items-center gap-2&quot;
-                  data-testid=&quot;filter-button&quot;
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2"
+                  data-testid="filter-button"
                 >
-                  <Filter className=&quot;h-4 w-4&quot; />
+                  <Filter className="h-4 w-4" />
                   Filters
                 </Button>
 
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className=&quot;px-3 py-1 border border-gray-300 rounded-md text-sm&quot;
-                  data-testid=&quot;sort-select&quot;
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                  data-testid="sort-select"
                 >
-                  <option value=&quot;relevance&quot;>Relevance</option>
-                  <option value=&quot;newest&quot;>Newest</option>
-                  <option value=&quot;price_asc&quot;>Price: Low to High</option>
-                  <option value=&quot;price_desc&quot;>Price: High to Low</option>
-                  <option value=&quot;rating&quot;>Highest Rated</option>
+                  <option value="relevance">Relevance</option>
+                  <option value="newest">Newest</option>
+                  <option value="price_asc">Price: Low to High</option>
+                  <option value="price_desc">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
                 </select>
 
                 <select
                   value={categoryFilter}
                   onChange={(e) => setCategoryFilter(e.target.value)}
-                  className=&quot;px-3 py-1 border border-gray-300 rounded-md text-sm&quot;
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                 >
-                  <option value=&quot;all&quot;>All Categories</option>
+                  <option value="all">All Categories</option>
                   {categories.map((c) => (
                     <option key={c} value={c}>
-=======
-  },;
-  return (;
-    <>;
-      <SEO;
-        title={`Search Results for "${query}" - Zion Marketplace`}
-        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
-        keywords={`${query}, search, marketplace, products, talent, services`}
-        canonical={`https://app.ziontechgroup.com/search/${slug}`}
-      />;
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">;
-        <div;
-          className="container mx-auto px-4 py-8";
-          data-testid="search-results";
-        >;
-          {/* Search Header */}
-          <div className="mb-8">;
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">;
-              <div className="flex-1">;
-                <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">;
-                  Search Results;
-                </h1>;
-                <p;
-                  className="text-gray-600 dark:text-gray-200";
-                  data-testid="results-count";
-                >;
-                  {filteredResults.length > 0;
-                    ? `Found ${filteredResults.length} results for "${query}"`;
-                    : `No results found for "${query}"`}
-                </p>;
-              </div>;
-              {/* Search Input */}
-              <div className="relative w-full lg:w-96">;
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />;
-                <Input;
-                  type="text";
-                  value={searchQuery}
-                  onChange={(e) => handleSearch(e.target.value)}
-                  placeholder="Search marketplace...";
-                  className="pl-10";
-                />;
-              </div>;
-            </div>;
-            {/* Controls */}
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">;
-              <div className="flex items-center gap-2 flex-wrap">;
-                <Button;
-                  variant="outline";
-                  size="sm";
-                  className="flex items-center gap-2";
-                  data-testid="filter-button";
-                >;
-                  <Filter className="h-4 w-4" />;
-                  Filters;
-                </Button>;
-                <select;
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm";
-                  data-testid="sort-select";
-                >;
-                  <option value="relevance">Relevance</option>;
-                  <option value="newest">Newest</option>;
-                  <option value="price_asc">Price: Low to High</option>;
-                  <option value="price_desc">Price: High to Low</option>;
-                  <option value="rating">Highest Rated</option>;
-                </select>;
-                <select;
-                  value={categoryFilter}
-                  onChange={(e) => setCategoryFilter(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm";
-                >;
-                  <option value="all">All Categories</option>;
-                  {categories.map((c) => (;
-                    <option key={c} value={c}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       {c}
                     </option>;
                   ))}
-<<<<<<< HEAD
                 </select>
 
-                <div className=&quot;flex items-center gap-1&quot;>
+                <div className="flex items-center gap-1">
                   <input
-                    type=&quot;number&quot;
-                    placeholder=&quot;Min $&quot;
+                    type="number"
+                    placeholder="Min $"
                     value={minPrice}
                     onChange={(e) => setMinPrice(e.target.value)}
-                    className=&quot;w-20 px-2 py-1 border border-gray-300 rounded-md text-sm&quot;
+                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
                   <span>-</span>
                   <input
-                    type=&quot;number&quot;
-                    placeholder=&quot;Max $&quot;
+                    type="number"
+                    placeholder="Max $"
                     value={maxPrice}
                     onChange={(e) => setMaxPrice(e.target.value)}
-                    className=&quot;w-20 px-2 py-1 border border-gray-300 rounded-md text-sm&quot;
+                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
                 </div>
 
                 <select
                   value={minRating}
                   onChange={(e) => setMinRating(e.target.value)}
-                  className=&quot;px-3 py-1 border border-gray-300 rounded-md text-sm&quot;
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                 >
-                  <option value="&quot;>All Ratings</option>
-                  <option value=&quot;4&quot;>4★ & up</option>
-                  <option value=&quot;3&quot;>3★ & up</option>
-                  <option value=&quot;2">2★ & up</option>
+                  <option value="">All Ratings</option>
+                  <option value="4">4★ & up</option>
+                  <option value="3">3★ & up</option>
+                  <option value="2">2★ & up</option>
                 </select>
               </div>
 
-              <div className="flex items-center gap-2&quot;>
+              <div className="flex items-center gap-2">
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'}
-                  size=&quot;sm&quot;
+                  size="sm"
                   onClick={() => setViewMode('grid')}
-                  data-testid=&quot;view-mode-grid"
+                  data-testid="view-mode-grid"
                   className={viewMode === 'grid' ? 'active' : ''}
                 >
-                  <Grid className="h-4 w-4&quot; />
+                  <Grid className="h-4 w-4" />
                 </Button>
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'outline'}
-                  size=&quot;sm&quot;
+                  size="sm"
                   onClick={() => setViewMode('list')}
-                  data-testid=&quot;view-mode-list"
-=======
-                </select>;
-                <div className="flex items-center gap-1">;
-                  <input;
-                    type="number";
-                    placeholder="Min $";
-                    value={minPrice}
-                    onChange={(e) => setMinPrice(e.target.value)}
-                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm";
-                  />;
-                  <span>-</span>;
-                  <input;
-                    type="number";
-                    placeholder="Max $";
-                    value={maxPrice}
-                    onChange={(e) => setMaxPrice(e.target.value)}
-                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm";
-                  />;
-                </div>;
-                <select;
-                  value={minRating}
-                  onChange={(e) => setMinRating(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm";
-                >;
-                  <option value="">All Ratings</option>;
-                  <option value="4">4★ & up</option>;
-                  <option value="3">3★ & up</option>;
-                  <option value="2">2★ & up</option>;
-                </select>;
-              </div>;
-              <div className="flex items-center gap-2">;
-                <Button;
-                  variant={viewMode === 'grid' ? 'default' : 'outline'}
-                  size="sm";
-                  onClick={() => setViewMode('grid')}
-                  data-testid="view-mode-grid";
-                  className={viewMode === 'grid' ? 'active' : ''}
-                >;
-                  <Grid className="h-4 w-4" />;
-                </Button>;
-                <Button;
-                  variant={viewMode === 'list' ? 'default' : 'outline'}
-                  size="sm";
-                  onClick={() => setViewMode('list')}
-                  data-testid="view-mode-list";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  data-testid="view-mode-list"
                   className={viewMode === 'list' ? 'active' : ''}
                 >;
                   <List className="h-4 w-4" />;
@@ -730,31 +532,17 @@ export default function SearchResultsPage({;
             </div>;
           </div>;
           {/* Loading State */}
-<<<<<<< HEAD
           {loading && results.length === 0 && (
             <div className="flex justify-center py-12">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600&quot;></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
             </div>
-=======
-          {loading && results.length === 0 && (;
-            <div className="flex justify-center py-12">;
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>;
-            </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
 ;
           {/* Empty State */}
-<<<<<<< HEAD
           {!loading && filteredResults.length === 0 && (
-            <div data-testid=&quot;search-empty-state">
+            <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
-=======
-          {!loading && filteredResults.length === 0 && (;
-            <div data-testid="search-empty-state">;
-              <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />;
-            </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
 ;
           {/* Results */}

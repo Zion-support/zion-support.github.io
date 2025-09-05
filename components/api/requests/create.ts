@@ -15,21 +15,13 @@ async function saveRequests(requests: any[]) {;
   fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true }),;
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2));
 }
-<<<<<<< HEAD
 
 async function summarizeWithOpenAI(description: string) {
   try {
-<<<<<<< HEAD
     if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' },
     const { OpenAI } = await import('openai'),
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
     const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`,
-=======
-    if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' };
-    const { OpenAI } = await import('openai');
-    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-    const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n&quot;"&quot;${description}&quot;"&quot;`;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
@@ -38,7 +30,6 @@ async function summarizeWithOpenAI(description: string) {
       temperature: 0.3}),
     const content = response.choices[0]?.message?.content || '',
     const typeMatch = content.match(/type\s*:\s*(.+)$/im),
-=======
 ;
 async function summarizeWithOpenAI(description: string) {;
   try {;
@@ -54,7 +45,6 @@ async function summarizeWithOpenAI(description: string) {;
       temperature: 0.3}),;
     const content = response.choices[0]?.message?.content || '',;
     const typeMatch = content.match(/type\s*:\s*(.+)$/im),;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
   } catch (err) {;
     return { summary: description.slice(0, 280), type: 'unknown' }

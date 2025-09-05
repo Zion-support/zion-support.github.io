@@ -281,33 +281,18 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     <div className={`relative min-h-screen ${className}`}>;
       <canvas;
         ref={canvasRef}
-<<<<<<< HEAD
-        className=&quot;fixed inset-0 w-full h-full pointer-events-none z-0&quot;
-=======
-        className="fixed inset-0 w-full h-full pointer-events-none z-0";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'transparent' }}
       />;
       {/* Overlay gradient */}
-<<<<<<< HEAD
       <div 
-        className=&quot;fixed inset-0 pointer-events-none z-0&quot;
+        className="fixed inset-0 pointer-events-none z-0"
         style={{
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
-=======
-      <div;
-        className="fixed inset-0 pointer-events-none z-0";
-        style={{;
-          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }}
       />;
       {/* Content */}
-<<<<<<< HEAD
-      <div className=&quot;relative z-10&quot;>
-=======
-      <div className="relative z-10">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+      <div className="relative z-10">
         {children}
       </div>;
     </div>;

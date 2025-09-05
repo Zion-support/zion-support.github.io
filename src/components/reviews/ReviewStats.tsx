@@ -1,12 +1,6 @@
 
-<<<<<<< HEAD
 import { Star } from 'lucide-react'
-<<<<<<< HEAD
 import { Progress } from "@/components/ui/progress",
-=======
-import { Progress } from &quot;@/components/ui/progress&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,
@@ -24,18 +18,17 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
   },
   
   return (
-    <div className=&quot;bg-card border rounded-lg p-4&quot;>
-      <div className=&quot;flex items-center justify-between mb-4&quot;>
+    <div className="bg-card border rounded-lg p-4">
+      <div className="flex items-center justify-between mb-4">
         <div>
-          <h3 className=&quot;text-xl font-bold&quot;>{formattedRating}</h3>
-          <div className=&quot;flex items-center&quot;>
-            <div className=&quot;flex mr-2&quot;>
+          <h3 className="text-xl font-bold">{formattedRating}</h3>
+          <div className="flex items-center">
+            <div className="flex mr-2">
               {[1, 2, 3, 4, 5].map((i) => (
                 <Star
                   key={i}
                   className={`h-4 w-4 ${
-                    i <= Math.round(averageRating) ? &quot;fill-yellow-400 text-yellow-400&quot; : &quot;text-gray-300&quot;
-=======
+                    i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
 import { Star } from 'lucide-react';
 import { Progress } from "@/components/ui/progress",;
 interface ReviewStatsProps {;
@@ -64,50 +57,28 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   key={i}
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   }`}
                 />;
               ))}
-<<<<<<< HEAD
             </div>
-            <span className=&quot;text-sm text-muted-foreground&quot;>
-              {totalReviews} {totalReviews === 1 ? &quot;review&quot; : &quot;reviews&quot;}
+            <span className="text-sm text-muted-foreground">
+              {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
             </span>
           </div>
         </div>
       </div>
       
       {ratingDistribution && (
-        <div className=&quot;space-y-2&quot;>
+        <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
-            <div key={rating} className=&quot;flex items-center gap-2&quot;>
-              <div className=&quot;w-6 text-sm text-right&quot;>{rating}</div>
-              <Star className=&quot;h-3 w-3 text-yellow-400&quot; />
+            <div key={rating} className="flex items-center gap-2">
+              <div className="w-6 text-sm text-right">{rating}</div>
+              <Star className="h-3 w-3 text-yellow-400" />
               <Progress 
                 value={getPercentage(ratingDistribution[rating] || 0)} 
-                className=&quot;h-2&quot; 
+                className="h-2" 
               />
-              <div className=&quot;w-8 text-xs text-muted-foreground&quot;>
-=======
-            </div>;
-            <span className="text-sm text-muted-foreground">;
-              {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
-            </span>;
-          </div>;
-        </div>;
-      </div>;
-      {ratingDistribution && (;
-        <div className="space-y-2">;
-          {[5, 4, 3, 2, 1].map((rating) => (;
-            <div key={rating} className="flex items-center gap-2">;
-              <div className="w-6 text-sm text-right">{rating}</div>;
-              <Star className="h-3 w-3 text-yellow-400" />;
-              <Progress;
-                value={getPercentage(ratingDistribution[rating] || 0)} ;
-                className="h-2";
-              />;
-              <div className="w-8 text-xs text-muted-foreground">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              <div className="w-8 text-xs text-muted-foreground">
                 {ratingDistribution[rating] || 0}
               </div>;
             </div>;

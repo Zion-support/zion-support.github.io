@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Filter } from 'lucide-react'
@@ -12,20 +10,6 @@ import { RegionFilter } from "./filters/RegionFilter",
 import { ExperienceFilter } from "./filters/ExperienceFilter",
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
-=======
-import React from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Filter } from 'lucide-react'
-import { SearchFilter } from &quot;./filters/SearchFilter&quot;;
-import { SortFilter } from &quot;./filters/SortFilter&quot;;
-import { SkillsFilter } from &quot;./filters/SkillsFilter&quot;;
-import { AvailabilityFilter } from &quot;./filters/AvailabilityFilter&quot;;
-import { RegionFilter } from &quot;./filters/RegionFilter&quot;;
-import { ExperienceFilter } from &quot;./filters/ExperienceFilter&quot;;
-import { PriceFilter } from &quot;./filters/PriceFilter&quot;;
-import { FilterSidebarProps } from &quot;@/types/filters&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -49,22 +33,21 @@ export function FilterSidebar({
   return (
     <>
       {/* Filter header */}
-      <div className=&quot;flex items-center justify-between mb-6&quot;>
-        <h3 className=&quot;text-lg font-semibold text-white flex items-center&quot;>
-          <Filter className=&quot;h-4 w-4 mr-2 text-zion-purple&quot; />
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-lg font-semibold text-white flex items-center">
+          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
           Filters
         </h3>
         <Button 
-          variant=&quot;ghost&quot; 
-          size=&quot;sm&quot; 
+          variant="ghost" 
+          size="sm" 
           onClick={clearFilters}
-          className=&quot;h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent&quot;
+          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
         >
           Clear All
         </Button>
       </div>
       
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from 'lucide-react';
@@ -113,7 +96,6 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
       {/* Sorting */}
@@ -161,17 +143,10 @@ export function FilterSidebar({;
       {isMobileFilterOpen && (;
         <Button;
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
-<<<<<<< HEAD
-          className=&quot;w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4&quot;
+          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
         </Button>
-=======
-          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
-        >;
-          Apply Filters;
-        </Button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
     </>;
   );

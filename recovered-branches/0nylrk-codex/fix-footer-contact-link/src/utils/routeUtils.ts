@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
-=======
-import { completeSitemap, SitemapItem } from &quot;@/config/sitemap&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -35,7 +30,6 @@ export const canAccessRoute = (
   if (route.requiredRoles && route.requiredRoles.length > 0) {
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
-=======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 // Find a route by path in the complete sitemap;
 export const findRouteByPath = (path: string): SitemapItem | undefined => {;
@@ -61,7 +55,6 @@ export const canAccessRoute = (;
   if (route.requiredRoles && route.requiredRoles.length > 0) {;
     if (!userType) return false,;
     return route.requiredRoles.includes(userType as any);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   return true;

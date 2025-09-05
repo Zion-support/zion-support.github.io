@@ -16,40 +16,39 @@ export interface MatchResult {;
   matchedSkills: string[],;
   reason: string;
 }
-<<<<<<< HEAD
 
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
-    id: &quot;talent-1&quot;,
-    title: &quot;Senior AI Engineer&quot;,
-    description: &quot;Experienced AI engineer with expertise in machine learning and computer vision&quot;,
-    category: &quot;Talent - Engineering&quot;,
+    id: "talent-1",
+    title: "Senior AI Engineer",
+    description: "Experienced AI engineer with expertise in machine learning and computer vision",
+    category: "Talent - Engineering",
     price: 120,
-    skills: [&quot;Machine Learning&quot;, &quot;Computer Vision&quot;, &quot;TensorFlow&quot;, &quot;Python&quot;]
+    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"]
   },
   {
-    id: &quot;service-1&quot;,
-    title: &quot;AI Model Training&quot;,
-    description: &quot;Custom AI model training service with data preparation and deployment&quot;,
-    category: &quot;Services - AI Development&quot;,
+    id: "service-1",
+    title: "AI Model Training",
+    description: "Custom AI model training service with data preparation and deployment",
+    category: "Services - AI Development",
     price: 5000,
-    skills: [&quot;Machine Learning&quot;, &quot;Model Training&quot;, &quot;AI Deployment&quot;]
+    skills: ["Machine Learning", "Model Training", "AI Deployment"]
   },
   {
-    id: &quot;equipment-1&quot;,
-    title: &quot;NVIDIA A100 GPU Server&quot;,
-    description: &quot;High-performance GPU server for AI model training and inference&quot;,
-    category: &quot;Equipment - Hardware&quot;,
+    id: "equipment-1",
+    title: "NVIDIA A100 GPU Server",
+    description: "High-performance GPU server for AI model training and inference",
+    category: "Equipment - Hardware",
     price: 15000,
-    skills: [&quot;GPU Computing&quot;, &quot;High Performance&quot;, &quot;AI Hardware&quot;]
+    skills: ["GPU Computing", "High Performance", "AI Hardware"]
   }
 ],
 
 // Function to find matches based on query and type
 export async function findMatches(
   query: string,
-  type: string = "&quot;,
+  type: string = "",
   limit: number = 5
 ): Promise<MatchResult[]> {
   try {
@@ -60,13 +59,8 @@ export async function findMatches(
     await new Promise(resolve => setTimeout(resolve, 1000)),
     
     // Filter by type if provided
-<<<<<<< HEAD
     let filteredItems = sampleData,
     if (type && type !== "all") {
-=======
-    let filteredItems = sampleData;
-    if (type && type !== &quot;all&quot;) {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       filteredItems = sampleData.filter(item => 
         item.category.toLowerCase().includes(type.toLowerCase())
       )
@@ -83,14 +77,8 @@ export async function findMatches(
     // Sort by score
     return matches.sort((a, b) => b.score - a.score).slice(0, limit)
   } catch (error) {
-<<<<<<< HEAD
     console.error("Error in matchmaking:", error),
     return []
-=======
-    console.error(&quot;Error in matchmaking:", error);
-    return [];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
 // Sample data for testing when API is not available;
 const sampleData: MatchResultItem[] = [;
@@ -150,7 +138,6 @@ export async function findMatches(;
   } catch (error) {;
     console.error("Error in matchmaking:", error);
     return [];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 }
 ;

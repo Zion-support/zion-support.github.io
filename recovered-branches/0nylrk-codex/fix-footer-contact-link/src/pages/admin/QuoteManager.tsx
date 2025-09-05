@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -16,32 +14,11 @@ import type { QuoteRequest } from "@/types/quotes",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",
 import { ExportToCSV } from "@/components/quotes/ExportToCSV",
-=======
-import React, { useState } from &quot;react&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { useAdminQuotes } from &quot;@/hooks/useAdminQuotes&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { 
-  Card,
-  CardContent
-} from &quot;@/components/ui/card&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { Navigate } from &quot;react-router-dom&quot;;
-import type { QuoteRequest } from &quot;@/types/quotes&quot;;
-import { ProtectedRoute } from &quot;@/components/ProtectedRoute&quot;;
-import { QuoteDetails } from &quot;@/components/quotes/QuoteDetails&quot;;
-import { ExportToCSV } from &quot;@/components/quotes/ExportToCSV&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import {
   QuoteStatusCards,
   QuotesFilter,
   QuotesTable
-<<<<<<< HEAD
 } from "@/components/admin/quotes",
-=======
-} from &quot;@/components/admin/quotes&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export default function QuoteManager() {
   const { user } = useAuth(),
@@ -89,28 +66,23 @@ export default function QuoteManager() {
   },
 
   if (!isAdmin) {
-<<<<<<< HEAD
     return <Navigate to="/unauthorized" replace />
-=======
-    return <Navigate to=&quot;/unauthorized&quot; replace />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 
   return (
     <ProtectedRoute adminOnly>
       <div>
         <Header />
-        <div className=&quot;min-h-screen bg-zion-blue px-4 py-8&quot;>
-          <div className=&quot;container mx-auto&quot;>
-            <div className=&quot;flex flex-col md:flex-row justify-between items-start md:items-center mb-8&quot;>
+        <div className="min-h-screen bg-zion-blue px-4 py-8">
+          <div className="container mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
               <div>
-                <h1 className=&quot;text-3xl font-bold text-white mb-2&quot;>Quote Request Manager</h1>
-                <p className=&quot;text-zion-slate-light&quot;>Manage and respond to all talent hire requests</p>
+                <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>
+                <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>
               </div>
-              <ExportToCSV quotes={quotes} filename=&quot;zion-quote-requests&quot; />
+              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
             
-=======
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -187,7 +159,6 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
             {/* Filters */}
@@ -203,50 +174,29 @@ export default function QuoteManager() {;
               onReset={handleResetFilters}
             />;
             {/* Tabs for Active/Archived */}
-<<<<<<< HEAD
-            <Tabs defaultValue=&quot;active&quot; className=&quot;mb-6&quot;>
-              <TabsList className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
-                <TabsTrigger value=&quot;active&quot;>Active Quotes</TabsTrigger>
-                <TabsTrigger value=&quot;archived&quot;>Archived Quotes</TabsTrigger>
+            <Tabs defaultValue="active" className="mb-6">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
+                <TabsTrigger value="active">Active Quotes</TabsTrigger>
+                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
               </TabsList>
               
-              <TabsContent value=&quot;active&quot;>
+              <TabsContent value="active">
                 {/* Quotes Table */}
-                <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light overflow-hidden&quot;>
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-=======
-            <Tabs defaultValue="active" className="mb-6">;
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
-                <TabsTrigger value="active">Active Quotes</TabsTrigger>;
-                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>;
-              </TabsList>;
-              <TabsContent value="active">;
-                {/* Quotes Table */}
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-                  <QuotesTable;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     quotes={quotes.filter(quote => !quote.is_archived)}
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
-<<<<<<< HEAD
                   />
                 </Card>
               </TabsContent>
               
-              <TabsContent value=&quot;archived&quot;>
-                <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light overflow-hidden&quot;>
+              <TabsContent value="archived">
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-=======
-                  />;
-                </Card>;
-              </TabsContent>;
-              <TabsContent value="archived">;
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-                  <QuotesTable;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     quotes={quotes.filter(quote => quote.is_archived)}
                     isArchived={true}
                     isLoading={isLoading}

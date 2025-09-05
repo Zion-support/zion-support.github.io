@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { PerformanceMetrics } from '../types';
 export function usePerformanceMetrics() {
@@ -29,19 +28,11 @@ export function usePerformanceMetrics() {
         'first-input'
       )[0] as PerformanceEventTiming;
       setMetrics({
-<<<<<<< HEAD
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp.startTime : 0,
         cumulativeLayoutShift: cls,
         firstInputDelay: fid ? fid.processingStart - fid.startTime : 0,
-=======
-        loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPain: t: fcp ? fcp.startTim: e: 0,
-        largestContentfulPain: t: lcp ? lcp.startTim: e: 0,
-        cumulativeLayoutShif: t: cls,
-        firstInputDela: y: fid ? fid.processingStart - fid.startTim: e: 0
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       });
     };
     // Wait for all performance entries to be available
@@ -50,7 +41,6 @@ export function usePerformanceMetrics() {
   }, []);
   return { metrics, isSupported };
 }
-=======
 import { useEffect, useState } from 'react',;
 import { PerformanceMetrics } from '../types',;
 export function usePerformanceMetrics() {;
@@ -85,4 +75,3 @@ export function usePerformanceMetrics() {;
   }, []);
   return { metrics, isSupported }
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

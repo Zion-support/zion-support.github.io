@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
 import { useState, useEffect } from "react",
-=======
-import { Button } from &quot;@/components/ui/button&quot;;
-import Link from &quot;next/link&quot;;
-import { useState, useEffect } from &quot;react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { X } from 'lucide-react'
 
 export function FloatingCTA() {
@@ -27,19 +20,11 @@ export function FloatingCTA() {
       }
     },
 
-<<<<<<< HEAD
     window.addEventListener("scroll", handleScroll),
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [isClosed]),
-=======
-    window.addEventListener(&quot;scroll&quot;, handleScroll);
-    return () => {
-      window.removeEventListener(&quot;scroll&quot;, handleScroll);
-    };
-  }, [isClosed]);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleClose = () => {
     setIsClosed(true),
@@ -49,38 +34,32 @@ export function FloatingCTA() {
   if (!isVisible) return null,
 
   return (
-    <div className=&quot;fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in&quot;>
-      <div className=&quot;bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between&quot;>
-        <div className=&quot;mr-4&quot;>
-          <p className=&quot;text-white font-medium&quot;>Ready to explore Zion?</p>
-          <p className=&quot;text-zion-slate-light text-sm&quot;>Register today to access all features!</p>
+    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
+        <div className="mr-4">
+          <p className="text-white font-medium">Ready to explore Zion?</p>
+          <p className="text-zion-slate-light text-sm">Register today to access all features!</p>
         </div>
-        <div className=&quot;flex items-center gap-2&quot;>
+        <div className="flex items-center gap-2">
           <Button 
-            variant=&quot;default&quot; 
-            size=&quot;sm&quot; 
-            className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap&quot;
+            variant="default" 
+            size="sm" 
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap"
             asChild
           >
-            <Link href=&quot;/signup&quot;>Register Now</Link>
+            <Link href="/signup">Register Now</Link>
           </Button>
           <button 
             onClick={handleClose}
-<<<<<<< HEAD
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
-=======
-            className=&quot;text-zion-slate hover:text-white p-1&quot;
-            aria-label=&quot;Close&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           >
-            <X className=&quot;w-5 h-5&quot; />
+            <X className="w-5 h-5" />
           </button>
         </div>
       </div>
     </div>
   )
-=======
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
 import { useState, useEffect } from "react",;
@@ -135,6 +114,5 @@ export function FloatingCTA() {;
       </div>;
     </div>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

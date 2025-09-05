@@ -273,25 +273,17 @@ export default function UltraQuantumHolographicBackground({;
       {/* Quantum Holographic Canvas Background */}
       <canvas;
         ref={canvasRef}
-<<<<<<< HEAD
-        className=&quot;fixed inset-0 w-full h-full pointer-events-none z-0&quot;
+        className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{
           background: colors.background,
           filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`
-=======
-        className="fixed inset-0 w-full h-full pointer-events-none z-0";
-        style={{;
-          background: colors.background,;
-          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }}
       />;
       {/* Holographic Overlay Effects */}
-<<<<<<< HEAD
-      <div className=&quot;fixed inset-0 z-10 pointer-events-none&quot;>
+      <div className="fixed inset-0 z-10 pointer-events-none">
         {/* Quantum Field Lines */}
         <motion.div
-          className=&quot;absolute inset-0&quot;
+          className="absolute inset-0"
           animate={{
             background: [
               `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`,
@@ -303,73 +295,35 @@ export default function UltraQuantumHolographicBackground({;
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
-=======
-      <div className="fixed inset-0 z-10 pointer-events-none">;
-        {/* Quantum Field Lines */}
-        <motion.div;
-          className="absolute inset-0";
-          animate={{;
-            background: [;
-              `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`,;
-              `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`,;
-              `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`,;
-              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`;
-            ];
-          }}
-          transition={{;
-            duration: 8,;
-            repeat: Infinity,;
-            ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "easeInOut"
           }}
         />;
         {/* Holographic Scan Lines */}
-<<<<<<< HEAD
-        <div className=&quot;absolute inset-0 opacity-20&quot;>
+        <div className="absolute inset-0 opacity-20">
           {Array.from({ length: Math.ceil(dimensions.height / 4) }).map((_, i) => (
             <motion.div
               key={i}
-              className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent&quot;
+              className="absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent"
               style={{
                 top: i * 4,
                 color: colors.primary
-=======
-        <div className="absolute inset-0 opacity-20">;
-          {Array.from({ length: Math.ceil(dimensions.height / 4) }).map((_, i) => (;
-            <motion.div;
-              key={i}
-              className="absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent";
-              style={{;
-                top: i * 4,;
-                color: colors.primary;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               }}
               animate={{;
                 opacity: [0, 1, 0],;
                 scaleX: [0, 1, 0];
               }}
-<<<<<<< HEAD
               transition={{
                 duration: 2,
                 delay: i * 0.1,
                 repeat: Infinity,
-                ease: &quot;easeInOut&quot;
-=======
-              transition={{;
-                duration: 2,;
-                delay: i * 0.1,;
-                repeat: Infinity,;
-                ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                ease: "easeInOut"
               }}
             />;
           ))}
         </div>;
         {/* Quantum Fluctuations */}
-<<<<<<< HEAD
         <motion.div
-          className=&quot;absolute inset-0&quot;
+          className="absolute inset-0"
           animate={{
             boxShadow: [
               `inset 0 0 100px ${colors.primary}20`,
@@ -381,64 +335,28 @@ export default function UltraQuantumHolographicBackground({;
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
-=======
-        <motion.div;
-          className="absolute inset-0";
-          animate={{;
-            boxShadow: [;
-              `inset 0 0 100px ${colors.primary}20`,;
-              `inset 0 0 200px ${colors.secondary}20`,;
-              `inset 0 0 150px ${colors.tertiary}20`,;
-              `inset 0 0 100px ${colors.primary}20`;
-            ];
-          }}
-          transition={{;
-            duration: 6,;
-            repeat: Infinity,;
-            ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "easeInOut"
           }}
         />;
       </div>;
       {/* Content Layer */}
-<<<<<<< HEAD
-      <div className=&quot;relative z-20&quot;>
-=======
-      <div className="relative z-20">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+      <div className="relative z-20">
         {children}
       </div>;
       {/* Quantum Noise Effect */}
-<<<<<<< HEAD
-      <div className=&quot;fixed inset-0 z-30 pointer-events-none opacity-5&quot;>
+      <div className="fixed inset-0 z-30 pointer-events-none opacity-5">
         <motion.div
-          className=&quot;absolute inset-0&quot;
+          className="absolute inset-0"
           animate={{
             background: [
-              `url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E&quot;)`,
-              `url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E&quot;)`
+              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
             ]
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
-=======
-      <div className="fixed inset-0 z-30 pointer-events-none opacity-5">;
-        <motion.div;
-          className="absolute inset-0";
-          animate={{;
-            background: [;
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,;
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;
-            ];
-          }}
-          transition={{;
-            duration: 4;
-            repeat: Infinity;
-            ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "easeInOut"
           }}
         />;
       </div>;

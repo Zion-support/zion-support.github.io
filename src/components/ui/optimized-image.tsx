@@ -201,11 +201,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
         />;
       );
     }
-<<<<<<< HEAD
 
     return (
       <div className={placeholderClassName}>
-        <ImageIcon className=&quot;h-8 w-8 text-gray-400&quot; />
+        <ImageIcon className="h-8 w-8 text-gray-400" />
       </div>
     )
   },
@@ -218,22 +217,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 
   return (
     <div 
-=======
-;
-    return (;
-      <div className={placeholderClassName}>;
-        <ImageIcon className="h-8 w-8 text-gray-400" />;
-      </div>;
-    );
-  },;
-  // Container styles;
-  const containerStyle: React.CSSProperties = {;
-    aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),;
-    width: width ? `${width}px` : undefined,;
-    height: height ? `${height}px` : undefined},;
-  return (;
-    <div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       ref={imgRef}
       className={cn('relative overflow-hidden', className)}
       style={containerStyle}
@@ -245,27 +228,15 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-            className=&quot;absolute inset-0&quot;
+            className="absolute inset-0"
           >
-=======
-            className="absolute inset-0";
-          >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {generatePlaceholder()}
 ;
             {/* Loading progress */}
-<<<<<<< HEAD
             {showLoadingProgress && isLoading && loadProgress > 0 && (
-              <div className=&quot;absolute bottom-0 left-0 right-0 h-1 bg-gray-200&quot;>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
                 <motion.div
-                  className=&quot;h-full bg-blue-500&quot;
-=======
-            {showLoadingProgress && isLoading && loadProgress > 0 && (;
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">;
-                <motion.div;
-                  className="h-full bg-blue-500";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  className="h-full bg-blue-500"
                   initial={{ width: 0 }}
                   animate={{ width: `${loadProgress}%` }}
                   transition={{ duration: 0.3 }}
@@ -280,21 +251,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
           <motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-<<<<<<< HEAD
-            className=&quot;absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400&quot;
+            className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
           >
-            <AlertTriangle className=&quot;h-8 w-8 mb-2&quot; />
-            <span className=&quot;text-sm&quot;>Failed to load image</span>
+            <AlertTriangle className="h-8 w-8 mb-2" />
+            <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
-              <span className=&quot;text-xs mt-1&quot;>Retried {retries} times</span>
-=======
-            className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400";
-          >;
-            <AlertTriangle className="h-8 w-8 mb-2" />;
-            <span className="text-sm">Failed to load image</span>;
-            {retries > 0 && (;
-              <span className="text-xs mt-1">Retried {retries} times</span>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              <span className="text-xs mt-1">Retried {retries} times</span>
             )}
           </motion.div>;
         )}
@@ -334,7 +296,6 @@ interface ImageGalleryProps {;
   className?: string,;
   onImageClick?: (index: number) => void;
 }
-<<<<<<< HEAD
 
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
@@ -351,37 +312,14 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 
   return (
     <div className={cn('space-y-4', className)}>
-      <div className=&quot;flex justify-between items-center&quot;>
-        <h3 className=&quot;text-lg font-semibold&quot;>Gallery</h3>
-        <span className=&quot;text-sm text-muted-foreground&quot;>
+      <div className="flex justify-between items-center">
+        <h3 className="text-lg font-semibold">Gallery</h3>
+        <span className="text-sm text-muted-foreground">
           {loadedCount}/{images.length} loaded
         </span>
       </div>
       
       <div 
-=======
-;
-export const ImageGallery: React.FC<ImageGalleryProps> = ({;
-  images,;
-  columns = 3,;
-  aspectRatio = '16/9',;
-  className,;
-  onImageClick;
-}) => {;
-  const [loadedCount, setLoadedCount] = useState(0),;
-  const handleImageLoad = () => {;
-    setLoadedCount(prev => prev + 1);
-  },;
-  return (;
-    <div className={cn('space-y-4', className)}>;
-      <div className="flex justify-between items-center">;
-        <h3 className="text-lg font-semibold">Gallery</h3>;
-        <span className="text-sm text-muted-foreground">;
-          {loadedCount}/{images.length} loaded;
-        </span>;
-      </div>;
-      <div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         className={`grid gap-4`}
         style={{;
           gridTemplateColumns: `repeat(${columns}, 1fr)`;
@@ -393,42 +331,23 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-<<<<<<< HEAD
-            className=&quot;group cursor-pointer&quot;
+            className="group cursor-pointer"
             onClick={() => onImageClick?.(index)}
           >
-            <div className=&quot;relative&quot;>
+            <div className="relative">
               <OptimizedImage
                 src={image.src}
                 alt={image.alt}
                 aspectRatio={aspectRatio}
-                className=&quot;rounded-lg group-hover:scale-105 transition-transform duration-300&quot;
+                className="rounded-lg group-hover:scale-105 transition-transform duration-300"
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images
               />
               
               {image.caption && (
-                <div className=&quot;absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg&quot;>
-                  <p className=&quot;text-sm&quot;>{image.caption}</p>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">
+                  <p className="text-sm">{image.caption}</p>
                 </div>
-=======
-            className="group cursor-pointer";
-            onClick={() => onImageClick?.(index)}
-          >;
-            <div className="relative">;
-              <OptimizedImage;
-                src={image.src}
-                alt={image.alt}
-                aspectRatio={aspectRatio}
-                className="rounded-lg group-hover:scale-105 transition-transform duration-300";
-                onLoad={handleImageLoad}
-                priority={index < 3} // Prioritize first 3 images;
-              />;
-              {image.caption && (;
-                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">;
-                  <p className="text-sm">{image.caption}</p>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             </div>;
           </motion.div>;
@@ -466,29 +385,16 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
         <OptimizedImage;
           src={src}
           alt={alt}
-<<<<<<< HEAD
-          aspectRatio=&quot;1/1&quot;
-          objectFit=&quot;cover&quot;
+          aspectRatio="1/1"
+          objectFit="cover"
           fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
-          placeholder=&quot;color&quot;
-          placeholderColor=&quot;#f3f4f6&quot;
+          placeholder="color"
+          placeholderColor="#f3f4f6"
           priority={true}
-          className=&quot;rounded-full&quot;
+          className="rounded-full"
         />
       ) : (
-        <div className=&quot;w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold&quot;>
-=======
-          aspectRatio="1/1";
-          objectFit="cover";
-          fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
-          placeholder="color";
-          placeholderColor="#f3f4f6";
-          priority={true}
-          className="rounded-full";
-        />;
-      ) : (;
-        <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">
           {initials}
         </div>;
       )}

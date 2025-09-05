@@ -34,7 +34,6 @@ export function QuickActions() {;
     } finally {;
       setIsProcessing(null);
     }
-<<<<<<< HEAD
   },
 
   const actions: QuickAction[] = [
@@ -43,7 +42,7 @@ export function QuickActions() {;
       id: 'enable-performance-monitor',
       label: 'Enable Performance Monitor',
       description: 'Show real-time performance metrics',
-      icon: <Activity className=&quot;w-4 h-4&quot; />,
+      icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
         localStorage.setItem('performance-monitoringtrue'),
@@ -53,7 +52,7 @@ export function QuickActions() {;
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
       description: 'Monitor bundle size and chunks',
-      icon: <Package className=&quot;w-4 h-4&quot; />,
+      icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
         localStorage.setItem('bundle-analyzertrue'),
@@ -63,7 +62,7 @@ export function QuickActions() {;
       id: 'clear-cache',
       label: 'Clear Cache',
       description: 'Clear browser cache and storage',
-      icon: <Trash2 className=&quot;w-4 h-4&quot; />,
+      icon: <Trash2 className="w-4 h-4" />,
       category: 'maintenance',
       dangerous: true,
       action: () => {
@@ -80,7 +79,7 @@ export function QuickActions() {;
       id: 'preload-critical-resources',
       label: 'Preload Critical Resources',
       description: 'Preload fonts, images, and critical assets',
-      icon: <Zap className=&quot;w-4 h-4&quot; />,
+      icon: <Zap className="w-4 h-4" />,
       category: 'performance',
       action: () => {
         // Preload critical fonts
@@ -115,7 +114,7 @@ export function QuickActions() {;
       id: 'download-performance-report',
       label: 'Download Performance Report',
       description: 'Export current performance metrics',
-      icon: <Download className=&quot;w-4 h-4&quot; />,
+      icon: <Download className="w-4 h-4" />,
       category: 'development',
       action: () => {
         const metrics = {
@@ -148,7 +147,7 @@ export function QuickActions() {;
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
       description: 'Trigger an error to test Sentry integration',
-      icon: <Monitor className=&quot;w-4 h-4&quot; />,
+      icon: <Monitor className="w-4 h-4" />,
       category: 'development',
       dangerous: true,
       action: () => {
@@ -158,7 +157,7 @@ export function QuickActions() {;
       id: 'refresh-app',
       label: 'Hard Refresh',
       description: 'Force reload with cache bypass',
-      icon: <RefreshCw className=&quot;w-4 h-4&quot; />,
+      icon: <RefreshCw className="w-4 h-4" />,
       category: 'maintenance',
       action: () => {
         window.location.reload()
@@ -176,14 +175,14 @@ export function QuickActions() {;
 
   if (!isVisible) {
     return (
-      <div className=&quot;fixed bottom-4 left-4 z-50&quot;>
+      <div className="fixed bottom-4 left-4 z-50">
         <Button
-          variant=&quot;outline&quot;
-          size=&quot;sm&quot;
+          variant="outline"
+          size="sm"
           onClick={() => setIsVisible(true)}
-          className=&quot;bg-background/80 backdrop-blur-sm&quot;
+          className="bg-background/80 backdrop-blur-sm"
         >
-          <Settings className=&quot;w-4 h-4 mr-2&quot; />
+          <Settings className="w-4 h-4 mr-2" />
           Quick Actions
         </Button>
       </div>
@@ -191,249 +190,53 @@ export function QuickActions() {;
   }
 
   return (
-    <div className=&quot;fixed bottom-4 left-4 z-50 w-80&quot;>
-      <Card className=&quot;bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto&quot;>
-        <CardHeader className=&quot;pb-2&quot;>
-          <div className=&quot;flex items-center justify-between&quot;>
-            <CardTitle className=&quot;text-sm flex items-center&quot;>
-              <Settings className=&quot;w-4 h-4 mr-2&quot; />
+    <div className="fixed bottom-4 left-4 z-50 w-80">
+      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">
+        <CardHeader className="pb-2">
+          <div className="flex items-center justify-between">
+            <CardTitle className="text-sm flex items-center">
+              <Settings className="w-4 h-4 mr-2" />
               Quick Actions
             </CardTitle>
             <Button
-              variant=&quot;ghost&quot;
-              size=&quot;sm&quot;
+              variant="ghost"
+              size="sm"
               onClick={() => setIsVisible(false)}
-              className=&quot;h-6 w-6 p-0&quot;
+              className="h-6 w-6 p-0"
             >
               ✕
             </Button>
           </div>
         </CardHeader>
-        <CardContent className=&quot;pt-0 space-y-4&quot;>
+        <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
-              <div className=&quot;flex items-center gap-2 mb-2&quot;>
-                <Badge className={categoryColors[category as keyof typeof categoryColors]} variant=&quot;outline&quot;>
+              <div className="flex items-center gap-2 mb-2">
+                <Badge className={categoryColors[category as keyof typeof categoryColors]} variant="outline">
                   {category}
                 </Badge>
               </div>
-              <div className=&quot;space-y-2&quot;>
+              <div className="space-y-2">
                 {categoryActions.map((action) => (
-                  <div key={action.id} className=&quot;space-y-1&quot;>
+                  <div key={action.id} className="space-y-1">
                     <Button
-                      variant={action.dangerous ? &quot;destructive&quot; : &quot;outline&quot;}
-                      size=&quot;sm&quot;
+                      variant={action.dangerous ? "destructive" : "outline"}
+                      size="sm"
                       onClick={() => executeAction(action.id, action.action)}
                       disabled={isProcessing === action.id}
-                      className=&quot;w-full justify-start h-auto p-3&quot;
+                      className="w-full justify-start h-auto p-3"
                     >
-                      <div className=&quot;flex items-start gap-3 w-full&quot;>
-                        <div className=&quot;mt-0.5&quot;>
+                      <div className="flex items-start gap-3 w-full">
+                        <div className="mt-0.5">
                           {isProcessing === action.id ? (
-                            <RefreshCw className=&quot;w-4 h-4 animate-spin&quot; />
+                            <RefreshCw className="w-4 h-4 animate-spin" />
                           ) : (
                             action.icon
                           )}
                         </div>
-                        <div className=&quot;flex-1 text-left&quot;>
-                          <div className=&quot;font-medium text-sm&quot;>{action.label}</div>
-                          <div className=&quot;text-xs opacity-70 mt-1&quot;>
-=======
-  },;
-  const actions: QuickAction[] = [;
-    // Performance Actions;
-    {;
-      id: 'enable-performance-monitor',;
-      label: 'Enable Performance Monitor',;
-      description: 'Show real-time performance metrics',;
-      icon: <Activity className="w-4 h-4" />,;
-      category: 'performance',;
-      action: () => {;
-        localStorage.setItem('performance-monitoringtrue'),;
-        window.location.reload();
-      }},;
-    {;
-      id: 'enable-bundle-analyzer',;
-      label: 'Enable Bundle Analyzer',;
-      description: 'Monitor bundle size and chunks',;
-      icon: <Package className="w-4 h-4" />,;
-      category: 'performance',;
-      action: () => {;
-        localStorage.setItem('bundle-analyzertrue'),;
-        window.location.reload();
-      }},;
-    {;
-      id: 'clear-cache',;
-      label: 'Clear Cache',;
-      description: 'Clear browser cache and storage',;
-      icon: <Trash2 className="w-4 h-4" />,;
-      category: 'maintenance',;
-      dangerous: true,;
-      action: () => {;
-        if ('caches' in window) {;
-          caches.keys().then(names => {;
-            names.forEach(name => caches.delete(name));
-          });
-        }
-        localStorage.clear(),;
-        sessionStorage.clear(),;
-        window.location.reload();
-      }},;
-    {;
-      id: 'preload-critical-resources',;
-      label: 'Preload Critical Resources',;
-      description: 'Preload fonts, images, and critical assets',;
-      icon: <Zap className="w-4 h-4" />,;
-      category: 'performance',;
-      action: () => {;
-        // Preload critical fonts;
-        const criticalFonts = [;
-          '/fonts/inter-var.woff2/fonts/cal-sans.woff2';
-        ],;
-        criticalFonts.forEach(font => {;
-          const link = document.createElement('link'),;
-          link.rel = 'preload',;
-          link.as = 'font',;
-          link.type = 'font/woff2',;
-          link.crossOrigin = 'anonymous',;
-          link.href = font,;
-          document.head.appendChild(link);
-        }),;
-        // Preload critical images;
-        const criticalImages = [;
-          '/logos/zion-logo.png/images/hero-bg.webp';
-        ],;
-        criticalImages.forEach(img => {;
-          const link = document.createElement('link'),;
-          link.rel = 'preload',;
-          link.as = 'image',;
-          link.href = img,;
-          document.head.appendChild(link);
-        });
-      }},;
-    {;
-      id: 'download-performance-report',;
-      label: 'Download Performance Report',;
-      description: 'Export current performance metrics',;
-      icon: <Download className="w-4 h-4" />,;
-      category: 'development',;
-      action: () => {;
-        const metrics = {;
-          timestamp: new Date().toISOString(),;
-          performance: window.window.window.performance.getEntriesByType('navigation')[0],;
-          resources: window.window.window.performance.getEntriesByType('resource').slice(0, 20),;
-          memory: (performance as any).memory || {},;
-          userAgent: navigator.userAgent,;
-          screen: {;
-            width: screen.width,;
-            height: screen.height,;
-            colorDepth: screen.colorDepth;
-          }
-        },;
-        const blob = new Blob([JSON.stringify(metrics, null, 2)], {;
-          type: 'application/json';
-        }),;
-        const url = URL.createObjectURL(blob),;
-        const a = document.createElement('a'),;
-        a.href = url,;
-        a.download = `performance-report-${Date.now()}.json`,;
-        document.body.appendChild(a),;
-        a.click(),;
-        document.body.removeChild(a),;
-        URL.revokeObjectURL(url);
-      }},;
-    {;
-      id: 'test-error-boundary',;
-      label: 'Test Error Boundary',;
-      description: 'Trigger an error to test Sentry integration',;
-      icon: <Monitor className="w-4 h-4" />,;
-      category: 'development',;
-      dangerous: true,;
-      action: () => {;
-        throw new Error('Test error for Sentry integration - this is intentional!');
-      }},;
-    {;
-      id: 'refresh-app',;
-      label: 'Hard Refresh',;
-      description: 'Force reload with cache bypass',;
-      icon: <RefreshCw className="w-4 h-4" />,;
-      category: 'maintenance',;
-      action: () => {;
-        window.location.reload();
-      }}],;
-  const categorizedActions = {;
-    performance: actions.filter(a => a.category === 'performance'),;
-    development: actions.filter(a => a.category === 'development'),;
-    maintenance: actions.filter(a => a.category === 'maintenance')},;
-  const categoryColors = {;
-    performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',;
-    development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200';
-    maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'};
-  if (!isVisible) {;
-    return (;
-      <div className="fixed bottom-4 left-4 z-50">;
-        <Button;
-          variant="outline";
-          size="sm";
-          onClick={() => setIsVisible(true)}
-          className="bg-background/80 backdrop-blur-sm";
-        >;
-          <Settings className="w-4 h-4 mr-2" />;
-          Quick Actions;
-        </Button>;
-      </div>;
-    );
-  }
-;
-  return (;
-    <div className="fixed bottom-4 left-4 z-50 w-80">;
-      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">;
-        <CardHeader className="pb-2">;
-          <div className="flex items-center justify-between">;
-            <CardTitle className="text-sm flex items-center">;
-              <Settings className="w-4 h-4 mr-2" />;
-              Quick Actions;
-            </CardTitle>;
-            <Button;
-              variant="ghost";
-              size="sm";
-              onClick={() => setIsVisible(false)}
-              className="h-6 w-6 p-0";
-            >;
-              ✕;
-            </Button>;
-          </div>;
-        </CardHeader>;
-        <CardContent className="pt-0 space-y-4">;
-          {Object.entries(categorizedActions).map(([category, categoryActions]) => (;
-            <div key={category}>;
-              <div className="flex items-center gap-2 mb-2">;
-                <Badge className={categoryColors[category as keyof typeof categoryColors]} variant="outline">;
-                  {category}
-                </Badge>;
-              </div>;
-              <div className="space-y-2">;
-                {categoryActions.map((action) => (;
-                  <div key={action.id} className="space-y-1">;
-                    <Button;
-                      variant={action.dangerous ? "destructive" : "outline"}
-                      size="sm";
-                      onClick={() => executeAction(action.id, action.action)}
-                      disabled={isProcessing === action.id}
-                      className="w-full justify-start h-auto p-3";
-                    >;
-                      <div className="flex items-start gap-3 w-full">;
-                        <div className="mt-0.5">;
-                          {isProcessing === action.id ? (;
-                            <RefreshCw className="w-4 h-4 animate-spin" />;
-                          ) : (;
-                            action.icon;
-                          )}
-                        </div>;
-                        <div className="flex-1 text-left">;
-                          <div className="font-medium text-sm">{action.label}</div>;
-                          <div className="text-xs opacity-70 mt-1">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                        <div className="flex-1 text-left">
+                          <div className="font-medium text-sm">{action.label}</div>
+                          <div className="text-xs opacity-70 mt-1">
                             {action.description}
                           </div>;
                         </div>;

@@ -1,24 +1,17 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { createContext, useContext, useState } from "react",
-=======
-import React, { createContext, useContext, useState } from &quot;react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface SidebarContextType {
   isOpen: boolean,
   toggle: () => void,
   open: () => void,
   close: () => void
-=======
 import React, { createContext, useContext, useState } from "react",;
 interface SidebarContextType {;
   isOpen: boolean,;
   toggle: () => void,;
   open: () => void,;
   close: () => void;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 const SidebarContext = createContext<SidebarContextType>({;

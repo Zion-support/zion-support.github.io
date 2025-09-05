@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -23,52 +21,18 @@ export default function ITOnsiteServicesPage() {
   
   // Check for success parameter in URL
   const success = searchParams.get("success"),
-=======
-import { useState, useEffect } from &quot;react&quot;;
-import { useSearchParams } from &quot;react-router-dom&quot;;
-import { AppLayout } from &quot;@/layout/AppLayout&quot;;
-import { ITServicePricingTable } from &quot;@/components/services/ITServicePricingTable&quot;;
-import { GlobalServiceSection } from &quot;@/components/GlobalServiceSection&quot;;
-import { QuoteFormSection } from &quot;@/components/QuoteFormSection&quot;;
-import { TrustedBySection } from &quot;@/components/TrustedBySection&quot;;
-import { CountryPricing, onsiteServicePricing } from &quot;@/data/onsiteServicePricing&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { PageHero } from &quot;@/components/services/PageSections/PageHero&quot;;
-import { CountryTabs } from &quot;@/components/services/PageSections/CountryTabs&quot;;
-import { ServiceDetailsSection } from &quot;@/components/services/PageSections/ServiceDetailsSection&quot;;
-import { ServiceProcessSteps } from &quot;@/components/services/PageSections/ServiceProcessSteps&quot;;
-import { ServiceIncludes } from &quot;@/components/services/PageSections/ServiceIncludes&quot;;
-import { EnterpriseCallToAction } from &quot;@/components/services/PageSections/EnterpriseCallToAction&quot;;
-
-export default function ITOnsiteServicesPage() {
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
-  const [searchQuery, setSearchQuery] = useState("&quot;);
-  
-  // Check for success parameter in URL
-  const success = searchParams.get(&quot;success&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Show success toast if redirected from successful payment
   useEffect(() => {
-    if (success === &quot;true&quot;) {
+    if (success === "true") {
       toast({
-<<<<<<< HEAD
         title: "Payment Successful",
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})
-=======
-        title: &quot;Payment Successful&quot;,
-        description: &quot;Your IT onsite service request has been received. Our team will contact you shortly.&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   }, [success]),
   
   // Popular countries for the featured cards
-<<<<<<< HEAD
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
-=======
-  const popularCountries = [&quot;United States&quot;, &quot;United Kingdom&quot;, &quot;Canada&quot;, &quot;Germany&quot;, &quot;Japan&quot;, &quot;Singapore"];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
@@ -100,7 +64,6 @@ export default function ITOnsiteServicesPage() {
     <AppLayout>
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-=======
 import { useState, useEffect } from "react",;
 import { useSearchParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -157,17 +120,11 @@ export default function ITOnsiteServicesPage() {;
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           {/* Hero Section with Features */}
           <PageHero />;
           {/* Country Selection Tabs */}
-<<<<<<< HEAD
-          <div className="mb-12&quot;>
+          <div className="mb-12">
             <CountryTabs 
-=======
-          <div className="mb-12">;
-            <CountryTabs;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
@@ -185,8 +142,7 @@ export default function ITOnsiteServicesPage() {;
           {/* What's Included Section */}
           <ServiceIncludes />;
           {/* Complete Pricing Table */}
-<<<<<<< HEAD
-          <div id=&quot;pricing-table" className="my-16">
+          <div id="pricing-table" className="my-16">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4">Full IT Onsite Services Pricing</h2>
               <p className="text-zion-slate-light mb-6">
@@ -207,25 +163,5 @@ export default function ITOnsiteServicesPage() {;
       <QuoteFormSection />
     </AppLayout>
   )
-=======
-          <div id="pricing-table" className="my-16">;
-            <div className="text-center mb-8">;
-              <h2 className="text-2xl font-bold text-white mb-4">Full IT Onsite Services Pricing</h2>;
-              <p className="text-zion-slate-light mb-6">;
-                Our per-incident prices include transportation costs and the first hour of onsite service.;
-                Additional hours are billed separately at standard rates.;
-              </p>;
-            </div>;
-            <ITServicePricingTable />;
-          </div>;
-          <EnterpriseCallToAction />;
-        </div>;
-      </section>;
-      <GlobalServiceSection />;
-      <TrustedBySection />;
-      <QuoteFormSection />;
-    </AppLayout>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

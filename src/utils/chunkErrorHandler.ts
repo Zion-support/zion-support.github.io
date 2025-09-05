@@ -158,7 +158,6 @@ class ChunkErrorHandler {;
     // Force a hard refresh bypassing all caches;
     window.location.href = window.location.href + '?_t=' + Date.now();
   }
-<<<<<<< HEAD
 
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
@@ -179,7 +178,6 @@ class ChunkErrorHandler {;
     `,
 
     errorDiv.innerHTML = `
-<<<<<<< HEAD
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
         <p style="margin-bottom: 1.5rem, line-height: 1.5,">
@@ -207,42 +205,12 @@ class ChunkErrorHandler {;
           font-size: 1rem,
           cursor: pointer,
         ">
-=======
-      <div style=&quot;text-align: center; padding: 2rem; max-width: 500px;&quot;>
-        <h2 style=&quot;margin-bottom: 1rem;&quot;>Connection Issue</h2>
-        <p style=&quot;margin-bottom: 1.5rem; line-height: 1.5;&quot;>
-          We're having trouble loading some parts of the application. 
-          This might be due to a poor network connection or a temporary server issue.
-        </p>
-        <button onclick=&quot;window.location.reload()&quot; style=&quot;
-          background: #0070f3;
-          color: white;
-          border: none;
-          padding: 0.75rem 1.5rem;
-          border-radius: 0.5rem;
-          font-size: 1rem;
-          cursor: pointer;
-          margin-right: 1rem;
-        &quot;>
-          Try Again
-        </button>
-        <button onclick="window.location.href='/'" style=&quot;
-          background: #666;
-          color: white;
-          border: none;
-          padding: 0.75rem 1.5rem;
-          border-radius: 0.5rem;
-          font-size: 1rem;
-          cursor: pointer;
-        &quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           Go Home
         </button>
       </div>
     `,
 
     document.body.appendChild(errorDiv)
-=======
 ;
   private showFatalErrorMessage(): void {;
     // Create a user-friendly error message;
@@ -294,7 +262,6 @@ class ChunkErrorHandler {;
       </div>;
     `,;
     document.body.appendChild(errorDiv);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   private delay(ms: number): Promise<void> {;

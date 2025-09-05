@@ -1,21 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { EmptyMatchesCard } from "./EmptyMatchesCard",
 import { JobMatchCard } from "./JobMatchCard",
-=======
-import { useEffect, useState } from &quot;react&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { Card, CardContent, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { EmptyMatchesCard } from &quot;./EmptyMatchesCard&quot;;
-import { JobMatchCard } from &quot;./JobMatchCard&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface SuggestedTalentsProps {
   jobId: string,
   jobTitle?: string
@@ -30,7 +19,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     setIsLoading(true),
     try {
       const { data, error } = await supabase
-        .from(&quot;suggested_talents&quot;)
+        .from("suggested_talents")
         .select(`
           *,
           talent_profile:talent_id(
@@ -49,28 +38,16 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
             company_name
           )
         `)
-<<<<<<< HEAD
         .eq("job_id", jobId),
-=======
-        .eq(&quot;job_id&quot;, jobId);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
       if (error) throw error,
       setTalents(data || [])
     } catch (error) {
-<<<<<<< HEAD
       console.error("Error fetching suggested talents:", error),
       toast({
         title: "Error",
         description: "Failed to load suggested talents. Please try again later.",
         variant: "destructive"})
-=======
-      console.error(&quot;Error fetching suggested talents:&quot;, error);
-      toast({
-        title: &quot;Error&quot;,
-        description: &quot;Failed to load suggested talents. Please try again later.&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
     }
@@ -78,7 +55,6 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
 
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
-<<<<<<< HEAD
     // // // console.log("View talent profile:", talentId),
     toast({
       title: "View Profile",
@@ -92,21 +68,6 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`})
   },
-=======
-    // console.log(&quot;View talent profile:&quot;, talentId);
-    toast({
-      title: &quot;View Profile&quot;,
-      description: `Navigating to talent profile: ${talentId}`});
-  };
-
-  const handleInvite = (talentId: string) => {
-    // Implement logic to invite talent
-    // console.log(&quot;Invite talent:&quot;, talentId);
-    toast({
-      title: &quot;Invite Talent&quot;,
-      description: `Inviting talent: ${talentId}`});
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleRefresh = () => {
     setIsProcessing(true),
@@ -118,7 +79,6 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   useEffect(() => {
     if (jobId) {
       fetchSuggestedTalents()
-=======
 import { useEffect, useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -193,7 +153,6 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
   useEffect(() => {;
     if (jobId) {;
       fetchSuggestedTalents();
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   }, [jobId]),;
   // Transform data to match JobMatchCard component props;
@@ -208,41 +167,23 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
       category: talent.talent_profile?.category || 'Technology',;
       matchPercent: talent.match_score || 85;
       skills: talent.talent_profile?.skills || []}
-<<<<<<< HEAD
   }),
 
   return (
-    <Card className=&quot;border-zion-blue-light bg-zion-blue&quot;>
+    <Card className="border-zion-blue-light bg-zion-blue">
       <CardHeader>
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>
       </CardHeader>
       
-      <CardContent className=&quot;pt-6&quot;>
+      <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
         ) : talents.length === 0 ? (
           <EmptyMatchesCard onRefresh={handleRefresh} isProcessing={isProcessing} />
         ) : (
-          <div className=&quot;space-y-4&quot;>
+          <div className="space-y-4">
             {transformedTalents.map((talent) => (
               <JobMatchCard
-=======
-  });
-  return (;
-    <Card className="border-zion-blue-light bg-zion-blue">;
-      <CardHeader>;
-        <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>;
-      </CardHeader>;
-      <CardContent className="pt-6">;
-        {isLoading ? (;
-          <div>Loading suggested talents...</div>;
-        ) : talents.length === 0 ? (;
-          <EmptyMatchesCard onRefresh={handleRefresh} isProcessing={isProcessing} />;
-        ) : (;
-          <div className="space-y-4">;
-            {transformedTalents.map((talent) => (;
-              <JobMatchCard;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={talent.id}
                 matchId={talent.id}
                 talentId={talent.id}

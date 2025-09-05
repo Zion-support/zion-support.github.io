@@ -18,7 +18,6 @@ Do not include <html>, <body>, or scripts.`,;
     const user = `Topic: ${prompt}
 Region: ${region || 'global'}
 Service focus: ${service || 'general'}
-<<<<<<< HEAD
 Audience: buyers looking to hire talent or rent equipment
 Tone: professional, modern, trustworthy`,
 
@@ -36,7 +35,7 @@ Tone: professional, modern, trustworthy`,
     const faqResp = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
-        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{&quot;q&quot;:"&quot;,&quot;a&quot;:"&quot;}], focus on buyer concerns for the topic.' },
+        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],
       temperature: 0.5}),
 
@@ -45,30 +44,6 @@ Tone: professional, modern, trustworthy`,
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]')
     } catch {
       faq = []
-=======
-Audience: buyers looking to hire talent or rent equipment;
-Tone: professional, modern, trustworthy`,;
-    const response = await openai.chat.completions.create({;
-      model: 'gpt-4o-mini',;
-      messages: [;
-        { role: 'system', content: system },;
-        { role: 'user', content: user }],;
-      temperature: 0.7}),;
-    const content = response.choices?.[0]?.message?.content || '',;
-    const title = `Zion Marketplace — ${prompt}`,;
-    // FAQ generation;
-    const faqResp = await openai.chat.completions.create({;
-      model: 'gpt-4o-mini',;
-      messages: [;
-        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },;
-        { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],;
-      temperature: 0.5}),;
-    let faq: Array<{ q: string, a: string }> = [],;
-    try {;
-      faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]');
-    } catch {;
-      faq = [];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     const h1 = prompt,;

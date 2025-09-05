@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 export interface ContactInfo {
-<<<<<<< HEAD
 export interface ContactInfo {;
   phone: string;
   email: string;
@@ -43,19 +41,6 @@ export interface LoadingState {
 export interface AnimationState {
   isLoaded: boolean;
   hasError: boolean;
-=======
-  phone: string,
-  email: string,
-  address: string,
-  site: string
-=======
-// Type definitions index;
-export interface ContactInfo {;
-  phone: string,;
-  email: string,;
-  address: string,;
-  site: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export interface AnimationState {;
@@ -145,7 +130,6 @@ export interface UpdateItem {;
   description: string,;
   date: string;
 }
-<<<<<<< HEAD
 
 export interface SEOProps {
   title: string,
@@ -154,16 +138,5 @@ export interface SEOProps {
   image?: string,
   url?: string,
   type?: string
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
-;
-export interface SEOProps {;
-  title: string,;
-  description: string,;
-  keywords?: string,;
-  image?: string,;
-  url?: string;
-  type?: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

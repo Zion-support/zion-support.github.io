@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -10,23 +8,10 @@ import { HireRequestModal } from "@/components/profile/hire-request",
 import { useAuthStatus } from "@/hooks/talent",
 import { UserProfile } from "@/types/auth",
 import { useNavigate } from "react-router-dom",
-=======
-import React, { useState } from &quot;react&quot;;
-import { Star } from &quot;lucide-react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { ExternalLink } from &quot;lucide-react&quot;;
-import { TalentProfile } from &quot;@/types/talent&quot;;
-import { HireRequestModal } from &quot;@/components/profile/hire-request&quot;;
-import { useAuthStatus } from &quot;@/hooks/talent&quot;;
-import { UserProfile } from &quot;@/types/auth&quot;;
-import { useNavigate } from &quot;react-router-dom&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire?: (profile: TalentProfile) => void
-=======
 import React, { useState } from "react",;
 import { Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -40,7 +25,6 @@ interface TalentCardFooterProps {;
   profile: TalentProfile,;
   onViewProfile: (id: string) => void,;
   onRequestHire?: (profile: TalentProfile) => void;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
@@ -76,90 +60,48 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     if (onViewProfile) {;
       onViewProfile(profile.id || '');
     }
-<<<<<<< HEAD
   },
 
   return (
     <>
-      <div className=&quot;mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between&quot;>
+      <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">
         {/* Experience or Hourly Rate */}
         <div>
           {profile.hourly_rate ? (
             <div>
-              <span className=&quot;text-zion-slate-light text-xs&quot;>Hourly Rate</span>
-              <div className=&quot;text-white font-bold&quot;>${profile.hourly_rate}/hr</div>
+              <span className="text-zion-slate-light text-xs">Hourly Rate</span>
+              <div className="text-white font-bold">${profile.hourly_rate}/hr</div>
             </div>
           ) : (
-            <div className=&quot;flex items-center gap-1&quot;>
-              <Star className=&quot;h-4 w-4 text-zion-purple&quot; />
-              <span className=&quot;text-zion-slate-light&quot;>{profile.years_experience} years exp.</span>
+            <div className="flex items-center gap-1">
+              <Star className="h-4 w-4 text-zion-purple" />
+              <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>
             </div>
-=======
-  };
-  return (;
-    <>;
-      <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">;
-        {/* Experience or Hourly Rate */}
-        <div>;
-          {profile.hourly_rate ? (;
-            <div>;
-              <span className="text-zion-slate-light text-xs">Hourly Rate</span>;
-              <div className="text-white font-bold">${profile.hourly_rate}/hr</div>;
-            </div>;
-          ) : (;
-            <div className="flex items-center gap-1">;
-              <Star className="h-4 w-4 text-zion-purple" />;
-              <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>;
-            </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         </div>;
         {/* Action Buttons */}
-<<<<<<< HEAD
-        <div className=&quot;flex gap-2&quot;>
+        <div className="flex gap-2">
           <Button 
-            variant=&quot;default&quot; 
-            size=&quot;sm&quot; 
+            variant="default" 
+            size="sm" 
             onClick={handleRequestHire}
-            className=&quot;bg-zion-purple hover:bg-zion-purple-dark text-white&quot;
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
           </Button>
           
           <Button 
-            variant=&quot;outline&quot; 
-            size=&quot;sm&quot; 
+            variant="outline" 
+            size="sm" 
             onClick={handleViewProfile}
-            className=&quot;border-zion-purple text-zion-purple hover:bg-zion-purple/10&quot;
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
             View
-            <ExternalLink className=&quot;h-3 w-3 ml-1&quot; />
+            <ExternalLink className="h-3 w-3 ml-1" />
           </Button>
         </div>
       </div>
       
-=======
-        <div className="flex gap-2">;
-          <Button;
-            variant="default";
-            size="sm";
-            onClick={handleRequestHire}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white";
-          >;
-            Hire;
-          </Button>;
-          <Button;
-            variant="outline";
-            size="sm";
-            onClick={handleViewProfile}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-          >;
-            View;
-            <ExternalLink className="h-3 w-3 ml-1" />;
-          </Button>;
-        </div>;
-      </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {/* Hire Request Modal */}
       <HireRequestModal;
         talent={profile}

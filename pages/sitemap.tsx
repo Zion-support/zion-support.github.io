@@ -53,50 +53,49 @@ export default function SitemapPage() {;
     { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },;
     { type: 'Email', value: 'kleber@ziontechgroup.com', action: 'mailto:kleber@ziontechgroup.com' },;
     { type: 'Address', value: 'Middletown, DE', action: 'https://maps.google.com/?q=Middletown,DE' }
-<<<<<<< HEAD
   ],
 
   return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Sitemap | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category.&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Sitemap | Zion Tech Group&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Complete website sitemap and navigation guide.&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/sitemap&quot; />
+        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />
+        <meta property="og:title" content="Sitemap | Zion Tech Group" />
+        <meta property="og:description" content="Complete website sitemap and navigation guide." />
+        <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
       </Head>
 
       <SmartHeader />
 
       {/* Hero Section */}
-      <section className=&quot;pt-32 pb-20 px-6&quot;>
-        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className=&quot;text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6&quot;>
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Site Map
             </h1>
-            <p className=&quot;text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8&quot;>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
               Navigate our comprehensive website and discover all the AI-powered technology solutions, 
               resources, and information available at Zion Tech Group.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href=&quot;#main-pages&quot;
-                className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105&quot;
+                href="#main-pages"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Explore Site
-                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <a
-                href=&quot;/search&quot;
-                className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;
+                href="/search"
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
                 Search Site
-                <Search className=&quot;w-5 h-5 ml-2&quot; />
+                <Search className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </motion.div>
@@ -104,592 +103,303 @@ export default function SitemapPage() {;
       </section>
 
       {/* Main Pages */}
-      <section id=&quot;main-pages&quot; className=&quot;py-20 px-6&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
+      <section id="main-pages" className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-=======
-  ];
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
-      <Head>;
-        <title>Sitemap | Zion Tech Group</title>;
-        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />;
-        <meta property="og:title" content="Sitemap | Zion Tech Group" />;
-        <meta property="og:description" content="Complete website sitemap and navigation guide." />;
-        <link rel="canonical" href="https://ziontechgroup.com/sitemap" />;
-      </Head>;
-      <SmartHeader />;
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">;
-        <div className="max-w-7xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >;
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;
-              Site Map;
-            </h1>;
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">;
-              Navigate our comprehensive website and discover all the AI-powered technology solutions;
-              resources, and information available at Zion Tech Group.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <a;
-                href="#main-pages";
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105";
-              >;
-                Explore Site;
-                <ArrowRight className="w-5 h-5 ml-2" />;
-              </a>;
-              <a;
-                href="/search";
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
-              >;
-                Search Site;
-                <Search className="w-5 h-5 ml-2" />;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Main Pages */}
-      <section id="main-pages" className="py-20 px-6">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className=&quot;mb-16&quot;
+            className="mb-16"
           >
-            <h2 className=&quot;text-3xl font-bold text-white mb-4 text-center&quot;>
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Main Pages
             </h2>
-            <p className=&quot;text-white/60 text-center max-w-2xl mx-auto&quot;>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
               Core pages that provide essential information about our company and services
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {mainPages.map((page, index) => (
               <motion.div
-=======
-            className="mb-16";
-          >;
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">;
-              Main Pages;
-            </h2>;
-            <p className="text-white/60 text-center max-w-2xl mx-auto">;
-              Core pages that provide essential information about our company and services;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {mainPages.map((page, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={page.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className=&quot;group&quot;
+                className="group"
               >
                 <Link
                   href={page.href}
-                  className=&quot;block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 >
-                  <div className=&quot;flex items-center justify-between mb-4&quot;>
-                    <h3 className=&quot;text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300&quot;>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                       {page.label}
                     </h3>
-                    <ChevronRight className=&quot;w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300&quot; />
+                    <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
                   </div>
-                  <p className=&quot;text-white/70 text-sm leading-relaxed&quot;>{page.description}</p>
+                  <p className="text-white/70 text-sm leading-relaxed">{page.description}</p>
                 </Link>
               </motion.div>
-=======
-                className="group";
-              >;
-                <Link;
-                  href={page.href}
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
-                >;
-                  <div className="flex items-center justify-between mb-4">;
-                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">;
-                      {page.label}
-                    </h3>;
-                    <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />;
-                  </div>;
-                  <p className="text-white/70 text-sm leading-relaxed">{page.description}</p>;
-                </Link>;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* Service Categories */}
-<<<<<<< HEAD
-      <section className=&quot;py-20 px-6 bg-gradient-to-r from-white/5 to-white/10&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-=======
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className=&quot;mb-16&quot;
+            className="mb-16"
           >
-            <h2 className=&quot;text-3xl font-bold text-white mb-4 text-center&quot;>
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Service Categories
             </h2>
-            <p className=&quot;text-white/60 text-center max-w-2xl mx-auto&quot;>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
               Browse our comprehensive range of technology solutions organized by category
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {serviceCategories.map((category, index) => (
               <motion.div
-=======
-            className="mb-16";
-          >;
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">;
-              Service Categories;
-            </h2>;
-            <p className="text-white/60 text-center max-w-2xl mx-auto">;
-              Browse our comprehensive range of technology solutions organized by category;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {serviceCategories.map((category, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={category.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className=&quot;group&quot;
+                className="group"
               >
                 <Link
                   href={category.href}
-                  className=&quot;block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 >
-                  <div className=&quot;flex items-center justify-between mb-4&quot;>
-                    <h3 className=&quot;text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300&quot;>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                       {category.label}
                     </h3>
-                    <ChevronRight className=&quot;w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300&quot; />
+                    <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
                   </div>
-                  <p className=&quot;text-white/70 text-sm leading-relaxed&quot;>{category.description}</p>
+                  <p className="text-white/70 text-sm leading-relaxed">{category.description}</p>
                 </Link>
               </motion.div>
-=======
-                className="group";
-              >;
-                <Link;
-                  href={category.href}
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
-                >;
-                  <div className="flex items-center justify-between mb-4">;
-                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">;
-                      {category.label}
-                    </h3>;
-                    <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />;
-                  </div>;
-                  <p className="text-white/70 text-sm leading-relaxed">{category.description}</p>;
-                </Link>;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* Featured Services */}
-<<<<<<< HEAD
-      <section className=&quot;py-20 px-6&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-=======
-      <section className="py-20 px-6">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className=&quot;mb-16&quot;
+            className="mb-16"
           >
-            <h2 className=&quot;text-3xl font-bold text-white mb-4 text-center&quot;>
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Featured Services
             </h2>
-            <p className=&quot;text-white/60 text-center max-w-2xl mx-auto&quot;>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
               Our most popular and innovative technology solutions
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, index) => (
               <motion.div
-=======
-            className="mb-16";
-          >;
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">;
-              Featured Services;
-            </h2>;
-            <p className="text-white/60 text-center max-w-2xl mx-auto">;
-              Our most popular and innovative technology solutions;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {featuredServices.map((service, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={service.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className=&quot;group&quot;
+                className="group"
               >
                 <Link
                   href={service.href}
-                  className=&quot;block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105&quot;
+                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
                 >
-                  <div className=&quot;flex items-center justify-between mb-3&quot;>
-                    <h3 className=&quot;text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 truncate&quot;>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 truncate">
                       {service.label}
                     </h3>
-                    <ChevronRight className=&quot;w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0&quot; />
+                    <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" />
                   </div>
-                  <p className=&quot;text-white/60 text-xs&quot;>{service.category}</p>
+                  <p className="text-white/60 text-xs">{service.category}</p>
                 </Link>
               </motion.div>
-=======
-                className="group";
-              >;
-                <Link;
-                  href={service.href}
-                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105";
-                >;
-                  <div className="flex items-center justify-between mb-3">;
-                    <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 truncate">;
-                      {service.label}
-                    </h3>;
-                    <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" />;
-                  </div>;
-                  <p className="text-white/60 text-xs">{service.category}</p>;
-                </Link>;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* Resources & Tools */}
-<<<<<<< HEAD
-      <section className=&quot;py-20 px-6 bg-gradient-to-r from-white/5 to-white/10&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-=======
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className=&quot;mb-16&quot;
+            className="mb-16"
           >
-            <h2 className=&quot;text-3xl font-bold text-white mb-4 text-center&quot;>
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Resources & Tools
             </h2>
-            <p className=&quot;text-white/60 text-center max-w-2xl mx-auto&quot;>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
               Additional resources, tools, and information to help you succeed
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {resources.map((resource, index) => (
               <motion.div
-=======
-            className="mb-16";
-          >;
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">;
-              Resources & Tools;
-            </h2>;
-            <p className="text-white/60 text-center max-w-2xl mx-auto">;
-              Additional resources, tools, and information to help you succeed;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {resources.map((resource, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={resource.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className=&quot;group&quot;
+                className="group"
               >
                 <Link
                   href={resource.href}
-                  className=&quot;block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105&quot;
+                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
                 >
-                  <div className=&quot;flex items-center justify-between mb-3&quot;>
-                    <h3 className=&quot;text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300&quot;>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                       {resource.label}
                     </h3>
-                    <ChevronRight className=&quot;w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300&quot; />
+                    <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
                   </div>
-                  <p className=&quot;text-white/60 text-xs leading-relaxed&quot;>{resource.description}</p>
+                  <p className="text-white/60 text-xs leading-relaxed">{resource.description}</p>
                 </Link>
               </motion.div>
-=======
-                className="group";
-              >;
-                <Link;
-                  href={resource.href}
-                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105";
-                >;
-                  <div className="flex items-center justify-between mb-3">;
-                    <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">;
-                      {resource.label}
-                    </h3>;
-                    <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />;
-                  </div>;
-                  <p className="text-white/60 text-xs leading-relaxed">{resource.description}</p>;
-                </Link>;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* External Resources */}
-<<<<<<< HEAD
-      <section className=&quot;py-20 px-6&quot;>
-        <div className=&quot;max-w-7xl mx-auto&quot;>
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-=======
-      <section className="py-20 px-6">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className=&quot;mb-16&quot;
+            className="mb-16"
           >
-            <h2 className=&quot;text-3xl font-bold text-white mb-4 text-center&quot;>
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
               External Resources
             </h2>
-            <p className=&quot;text-white/60 text-center max-w-2xl mx-auto&quot;>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
               Additional resources and tools hosted on external platforms
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {externalLinks.map((link, index) => (
               <motion.div
-=======
-            className="mb-16";
-          >;
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">;
-              External Resources;
-            </h2>;
-            <p className="text-white/60 text-center max-w-2xl mx-auto">;
-              Additional resources and tools hosted on external platforms;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-            {externalLinks.map((link, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={link.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className=&quot;group&quot;
+                className="group"
               >
                 <a
                   href={link.href}
-                  target=&quot;_blank&quot;
-                  rel=&quot;noopener noreferrer&quot;
-                  className=&quot;block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 >
-                  <div className=&quot;flex items-center justify-between mb-4&quot;>
-                    <h3 className=&quot;text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300&quot;>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                       {link.label}
                     </h3>
-                    <ExternalLink className=&quot;w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300&quot; />
+                    <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />
                   </div>
-                  <p className=&quot;text-white/70 text-sm leading-relaxed&quot;>{link.description}</p>
+                  <p className="text-white/70 text-sm leading-relaxed">{link.description}</p>
                 </Link>
               </motion.div>
-=======
-                className="group";
-              >;
-                <a;
-                  href={link.href}
-                  target="_blank";
-                  rel="noopener noreferrer";
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
-                >;
-                  <div className="flex items-center justify-between mb-4">;
-                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">;
-                      {link.label}
-                    </h3>;
-                    <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" />;
-                  </div>;
-                  <p className="text-white/70 text-sm leading-relaxed">{link.description}</p>;
-                </a>;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* Contact Information */}
-<<<<<<< HEAD
-      <section className=&quot;py-20 px-6 bg-gradient-to-r from-white/5 to-white/10&quot;>
-        <div className=&quot;max-w-4xl mx-auto&quot;>
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-4xl mx-auto">
           <motion.div
-=======
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">;
-        <div className="max-w-4xl mx-auto">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className=&quot;mb-16&quot;
+            className="mb-16"
           >
-            <h2 className=&quot;text-3xl font-bold text-white mb-4 text-center&quot;>
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
               Contact Information
             </h2>
-            <p className=&quot;text-white/60 text-center max-w-2xl mx-auto&quot;>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
               Get in touch with us for consultations, support, or to start your project
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactInfo.map((contact, index) => (
               <motion.div
-=======
-            className="mb-16";
-          >;
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">;
-              Contact Information;
-            </h2>;
-            <p className="text-white/60 text-center max-w-2xl mx-auto">;
-              Get in touch with us for consultations, support, or to start your project;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-            {contactInfo.map((contact, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={contact.type}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className=&quot;text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl&quot;
+                className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
               >
-                <h3 className=&quot;text-lg font-bold text-white mb-3&quot;>{contact.type}</h3>
+                <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
                 <a
                   href={contact.action}
                   target={contact.action.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
-                  className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium&quot;
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                 >
                   {contact.value}
                 </Link>
               </motion.div>
-=======
-                className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl";
-              >;
-                <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>;
-                <a;
-                  href={contact.action}
-                  target={contact.action.startsWith('http') ? '_blank' : '_self'}
-                  rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium";
-                >;
-                  {contact.value}
-                </a>;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* Quick Navigation */}
-<<<<<<< HEAD
-      <section className=&quot;py-20 px-6&quot;>
-        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
-=======
-      <section className="py-20 px-6">;
-        <div className="max-w-4xl mx-auto text-center">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
           >
-<<<<<<< HEAD
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-=======
-            <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               Need Help Finding Something?
             </h2>
-            <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Use our search functionality or contact us directly for assistance
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href=&quot;/search&quot;
-                className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
+                href="/search"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
                 Search Site
-                <Search className=&quot;w-5 h-5 ml-2&quot; />
+                <Search className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                href=&quot;/contact&quot;
-                className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;
+                href="/contact"
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
                 Contact Support
-                <Mail className=&quot;w-5 h-5 ml-2&quot; />
+                <Mail className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </motion.div>
@@ -699,7 +409,6 @@ export default function SitemapPage() {;
       <SmartFooter />
     </div>
   )
-=======
           >;
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
               Need Help Finding Something?;
@@ -729,6 +438,5 @@ export default function SitemapPage() {;
       <SmartFooter />;
     </div>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

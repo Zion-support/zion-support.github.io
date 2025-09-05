@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -9,17 +7,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { AIListingForm } from "./AIListingForm",
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
-=======
-import React, { useState } from &quot;react&quot;;
-import { useToast } from &quot;@/hooks/use-toast&quot;;
-import { Card, CardContent, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Sparkles } from &quot;lucide-react&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { AIListingForm } from &quot;./AIListingForm&quot;;
-import { GeneratedContentDisplay } from &quot;./GeneratedContentDisplay&quot;;
-import { LoadingContentSkeleton } from &quot;./LoadingContentSkeleton&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -28,7 +15,6 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
-=======
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -45,7 +31,6 @@ interface GeneratedContent {;
     max: number;
   },;
   keyPoints: string[];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 interface AIListingGeneratorProps {;
@@ -85,11 +70,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       if (data.error) {;
         throw new Error(data.error);
       }
-<<<<<<< HEAD
 
       setGeneratedContent(data.generated),
       toast({
-<<<<<<< HEAD
         title: "Content Generated",
         description: "AI has created optimized listing content for you."
       })
@@ -100,18 +83,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"
       })
-=======
-        title: &quot;Content Generated&quot;,
-        description: &quot;AI has created optimized listing content for you.&quot;
-      });
-    } catch (error) {
-      console.error(&quot;Error generating content:&quot;, error);
-      toast({
-        title: &quot;Generation Failed&quot;,
-        description: error instanceof Error ? error.message : &quot;Failed to generate content. Please try again.&quot;,
-        variant: &quot;destructive&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
     }
@@ -121,27 +92,21 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
       toast({
-<<<<<<< HEAD
         title: "Content Applied",
         description: "The generated content has been applied to your listing."
       })
-=======
-        title: &quot;Content Applied&quot;,
-        description: &quot;The generated content has been applied to your listing.&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
   return (
-    <div className=&quot;space-y-6&quot;>
-      <Card className=&quot;border border-zion-blue-light bg-zion-blue-dark&quot;>
+    <div className="space-y-6">
+      <Card className="border border-zion-blue-light bg-zion-blue-dark">
         <CardHeader>
-          <CardTitle className=&quot;flex items-center text-white&quot;>
-            <Sparkles className=&quot;h-5 w-5 mr-2 text-zion-cyan&quot; />
+          <CardTitle className="flex items-center text-white">
+            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
             AI Listing Optimizer
           </CardTitle>
-          <p className=&quot;text-sm text-zion-slate-light&quot;>
+          <p className="text-sm text-zion-slate-light">
             Provide basic information and let AI generate optimized, SEO-friendly content for your listing
           </p>
         </CardHeader>
@@ -149,7 +114,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           <AIListingForm 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
-=======
 ;
       setGeneratedContent(data.generated),;
       toast({;
@@ -192,7 +156,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initialValues={initialValues}
           />;
         </CardContent>;

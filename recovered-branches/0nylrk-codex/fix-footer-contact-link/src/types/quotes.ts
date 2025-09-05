@@ -1,23 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type ServiceType = "service" | "talent" | "equipment" | "",
 export type ServiceCategory = string,
 export type TimelineType = "fixed" | "flexible",
 export type BudgetType = "fixed" | "hourly" | "range",
-=======
-export type ServiceType = &quot;service&quot; | &quot;talent&quot; | &quot;equipment&quot; | "&quot;;
-export type ServiceCategory = string;
-export type TimelineType = &quot;fixed&quot; | &quot;flexible&quot;;
-export type BudgetType = &quot;fixed&quot; | &quot;hourly&quot; | &quot;range";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export interface ListingItem {
   id: string,
   title: string,
   category: string,
   image?: string
-=======
 export type ServiceType = "service" | "talent" | "equipment" | "",;
 export type ServiceCategory = string,;
 export type TimelineType = "fixed" | "flexible",;
@@ -27,7 +18,6 @@ export interface ListingItem {;
   title: string,;
   category: string,;
   image?: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export interface ContactInfo {;

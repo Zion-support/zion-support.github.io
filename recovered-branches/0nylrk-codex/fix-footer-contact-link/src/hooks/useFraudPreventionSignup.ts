@@ -15,7 +15,6 @@ export function useFraudPreventionSignup() {;
       console.error('Error getting IP:', error),;
       return undefined;
     }
-<<<<<<< HEAD
   },
   
   // Check if the signup attempt might be fraudulent
@@ -28,11 +27,7 @@ export function useFraudPreventionSignup() {;
       const fraudCheck = await checkSignupPatterns(email, ipAddress),
       
       if (fraudCheck.isSuspicious) {
-<<<<<<< HEAD
         // // // console.log('Suspicious signup detected:', fraudCheck.reasons),
-=======
-        // console.log('Suspicious signup detected:', fraudCheck.reasons);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         
         // Create a fraud flag for admin review
         const { error } = await supabase.from('fraud_flags').insert({
@@ -58,18 +53,10 @@ export function useFraudPreventionSignup() {;
           r.includes('suspicious email domain')
         )) {
           toast({
-<<<<<<< HEAD
             title: "Signup blocked",
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
             variant: "destructive"}),
           return false
-=======
-            title: &quot;Signup blocked&quot;,
-            description: &quot;This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.&quot;,
-            variant: &quot;destructive&quot;});
-          return false;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
   },;
   // Check if the signup attempt might be fraudulent;
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {;
@@ -107,7 +94,6 @@ export function useFraudPreventionSignup() {;
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",;
             variant: "destructive"}),;
           return false;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }
 ;
         // Otherwise, allow but flag for review;

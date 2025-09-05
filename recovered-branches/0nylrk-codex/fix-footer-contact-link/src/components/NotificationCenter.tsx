@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
@@ -38,16 +37,9 @@ export const NotificationCenter: React.FC = () => {
           await fetchNotifications(),
           setError(null)
         } catch (err) {
-<<<<<<< HEAD
           console.error("Failed to fetch notifications:", err),
           setError("Couldn't load notifications"),
           toast.error("Failed to load notifications")
-=======
-          console.error(&quot;Failed to fetch notifications:&quot;, err);
-          setError(&quot;Couldn't load notifications&quot;);
-          toast.error(&quot;Failed to load notifications&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import React, { useState, useEffect } from 'react',;
 // Use the shared icon wrapper;
 import { Bell } from '@/components/icons',;
@@ -87,29 +79,19 @@ export const NotificationCenter: React.FC = () => {;
           console.error("Failed to fetch notifications:", err),;
           setError("Couldn't load notifications"),;
           toast.error("Failed to load notifications");
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }
       },;
       loadNotifications();
     }
-<<<<<<< HEAD
   }, [open, fetchNotifications]),
 
   const handleMarkAllAsRead = async () => {
     try {
-<<<<<<< HEAD
       await markAllAsRead(),
       toast.success("All notifications marked as read")
     } catch (err) {
       console.error("Failed to mark notifications as read:", err),
       toast.error("Failed to update notifications")
-=======
-      await markAllAsRead();
-      toast.success(&quot;All notifications marked as read&quot;);
-    } catch (err) {
-      console.error(&quot;Failed to mark notifications as read:&quot;, err);
-      toast.error(&quot;Failed to update notifications&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -120,11 +102,10 @@ export const NotificationCenter: React.FC = () => {;
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <Button variant=&quot;ghost&quot; size=&quot;icon&quot; className=&quot;relative&quot;>
-          <Bell className=&quot;h-5 w-5 text-zion-slate-light&quot; />
+        <Button variant="ghost" size="icon" className="relative">
+          <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
-            <span className=&quot;absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium&quot;>
-=======
+            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
   }, [open, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
     try {;
@@ -145,14 +126,12 @@ export const NotificationCenter: React.FC = () => {;
           <Bell className="h-5 w-5 text-zion-slate-light" />;
           {unreadCount > 0 && (;
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
           )}
-<<<<<<< HEAD
         </Button>
       </PopoverTrigger>
-      <PopoverContent className=&quot;w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col&quot;>
+      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
         <NotificationHeader 
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
@@ -164,20 +143,6 @@ export const NotificationCenter: React.FC = () => {;
         />
         
         <NotificationList 
-=======
-        </Button>;
-      </PopoverTrigger>;
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
-        <NotificationHeader;
-          unreadCount={unreadCount} ;
-          onMarkAllAsRead={handleMarkAllAsRead} ;
-        />;
-        <NotificationFilter;
-          filter={filter as FilterType} ;
-          onFilterChange={handleFilterChange} ;
-        />;
-        <NotificationList;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           loading={loading}
           error={error}
           notifications={filteredNotifications}

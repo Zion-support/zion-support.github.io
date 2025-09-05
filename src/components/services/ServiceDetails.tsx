@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from 'lucide-react'
 import Image from "next/image",
-=======
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Server, Clock, MapPin } from 'lucide-react'
-import Image from &quot;next/image&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ServiceDetailsProps {
   country: string
 }
@@ -18,7 +10,6 @@ interface ServiceDetailsProps {
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
   const getDatacenters = (country: string): string[] => {
-<<<<<<< HEAD
     const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
@@ -33,27 +24,10 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     
     return dataCenters[country] || dataCenters["default"] || ["Major metropolitan areas"]
   },
-=======
-    const dataCenters: Record<string, string[]> = {
-      &quot;United States&quot;: [&quot;New York&quot;, &quot;Los Angeles&quot;, &quot;Chicago&quot;, &quot;Dallas&quot;, &quot;Seattle&quot;],
-      &quot;United Kingdom&quot;: [&quot;London&quot;, &quot;Manchester&quot;, &quot;Birmingham&quot;],
-      &quot;Germany&quot;: [&quot;Frankfurt&quot;, &quot;Berlin&quot;, &quot;Munich&quot;],
-      &quot;Japan&quot;: [&quot;Tokyo&quot;, &quot;Osaka&quot;],
-      &quot;Australia&quot;: [&quot;Sydney&quot;, &quot;Melbourne&quot;, &quot;Perth&quot;],
-      &quot;Singapore&quot;: [&quot;Singapore Central&quot;],
-      &quot;Canada&quot;: [&quot;Toronto&quot;, &quot;Montreal&quot;, &quot;Vancouver&quot;],
-      // Default for other countries
-      &quot;default&quot;: [&quot;Major metropolitan areas&quot;]
-    };
-    
-    return dataCenters[country] || dataCenters[&quot;default&quot;] || [&quot;Major metropolitan areas&quot;];
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
-<<<<<<< HEAD
     const regions: Record<string string> = {
       "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
       "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
@@ -67,26 +41,10 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     
     return regions[country] || regions["default"] || "https: //source.unsplash.com/featured/900x700/?datacenter"
   },
-=======
-    const regions: Record<string, string> = {
-      &quot;United States&quot;: &quot;https://source.unsplash.com/featured/900x700/?datacenter,usa&quot;,
-      &quot;United Kingdom&quot;: &quot;https://source.unsplash.com/featured/900x700/?datacenter,uk&quot;,
-      &quot;Germany&quot;: &quot;https://source.unsplash.com/featured/900x700/?datacenter,germany&quot;,
-      &quot;Japan&quot;: &quot;https://source.unsplash.com/featured/900x700/?datacenter,japan&quot;,
-      &quot;Australia&quot;: &quot;https://source.unsplash.com/featured/900x700/?datacenter,australia&quot;,
-      &quot;Singapore&quot;: &quot;https://source.unsplash.com/featured/900x700/?datacenter,singapore&quot;,
-      // Default placeholder
-      &quot;default&quot;: &quot;https://source.unsplash.com/featured/900x700/?datacenter&quot;
-    };
-    
-    return regions[country] || regions[&quot;default&quot;] || &quot;https://source.unsplash.com/featured/900x700/?datacenter&quot;;
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
-<<<<<<< HEAD
     const timeZones: Record<string string> = {
       "United States": "EST/CST/PST depending on location",
       "United Kingdom": "GMT/BST",
@@ -98,19 +56,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     },
     
     const timezone = timeZones[country] || timeZones["default"] || "Local timezone",
-=======
-    const timeZones: Record<string, string> = {
-      &quot;United States&quot;: &quot;EST/CST/PST depending on location&quot;,
-      &quot;United Kingdom&quot;: &quot;GMT/BST&quot;,
-      &quot;Germany&quot;: &quot;CET/CEST&quot;,
-      &quot;Japan&quot;: &quot;JST&quot;,
-      &quot;Australia&quot;: &quot;AEST/ACDT/AWST depending on location&quot;,
-      &quot;Singapore&quot;: &quot;SGT&quot;,
-      &quot;default&quot;: &quot;Local timezone&quot;
-    };
-    
-    const timezone = timeZones[country] || timeZones[&quot;default&quot;] || &quot;Local timezone&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
@@ -121,39 +66,38 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
   const datacenters = getDatacenters(country),
   
   return (
-    <Card className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
+    <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
-        <CardTitle className=&quot;text-white flex items-center&quot;>
-          <Server className=&quot;mr-2 h-5 w-5 text-zion-cyan&quot; /> 
+        <CardTitle className="text-white flex items-center">
+          <Server className="mr-2 h-5 w-5 text-zion-cyan" /> 
           IT Onsite Service in {country}
         </CardTitle>
-        <CardDescription className=&quot;text-zion-slate-light&quot;>
+        <CardDescription className="text-zion-slate-light">
           Details about our service locations and capabilities in {country}
         </CardDescription>
       </CardHeader>
-      <CardContent className=&quot;space-y-4&quot;>
-        <div className=&quot;overflow-hidden rounded-lg mb-4 relative h-48&quot;>
+      <CardContent className="space-y-4">
+        <div className="overflow-hidden rounded-lg mb-4 relative h-48">
           <Image
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
-            className=&quot;object-cover transform transition-transform duration-500 hover:scale-110&quot;
-            loading=&quot;lazy&quot;
+            className="object-cover transform transition-transform duration-500 hover:scale-110"
+            loading="lazy"
           />
         </div>
         
-        <div className=&quot;space-y-4&quot;>
+        <div className="space-y-4">
           <div>
-            <h4 className=&quot;text-lg font-medium text-white mb-2 flex items-center&quot;>
-              <MapPin className=&quot;mr-2 h-4 w-4 text-zion-purple&quot; />
+            <h4 className="text-lg font-medium text-white mb-2 flex items-center">
+              <MapPin className="mr-2 h-4 w-4 text-zion-purple" />
               Service Locations
             </h4>
-            <div className=&quot;grid grid-cols-2 md:grid-cols-3 gap-2&quot;>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {datacenters.map((dc, idx) => (
                 <div 
                   key={idx} 
-                  className=&quot;bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light&quot;
+                  className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
                 >
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Server, Clock, MapPin } from 'lucide-react';
 import Image from "next/image",;
@@ -244,27 +188,25 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
                   key={idx} ;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
                 >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   {dc}
                 </div>;
               ))}
-<<<<<<< HEAD
             </div>
           </div>
           
           <div>
-            <h4 className=&quot;text-lg font-medium text-white mb-2 flex items-center&quot;>
-              <Clock className=&quot;mr-2 h-4 w-4 text-zion-purple&quot; />
+            <h4 className="text-lg font-medium text-white mb-2 flex items-center">
+              <Clock className="mr-2 h-4 w-4 text-zion-purple" />
               Service Instructions
             </h4>
-            <p className=&quot;text-zion-slate-light&quot;>
+            <p className="text-zion-slate-light">
               {getRegionalInstructions(country)}
             </p>
           </div>
           
-          <div className=&quot;bg-zion-blue rounded-lg p-4 border border-zion-blue-light&quot;>
-            <h4 className=&quot;text-lg font-medium text-white mb-2&quot;>What's Included</h4>
-            <ul className=&quot;list-disc list-inside text-zion-slate-light space-y-1&quot;>
+          <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
+            <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
+            <ul className="list-disc list-inside text-zion-slate-light space-y-1">
               <li>Transportation to your site</li>
               <li>First hour of onsite technical support</li>
               <li>Basic hardware diagnosis</li>
@@ -274,44 +216,12 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
           </div>
         </div>
       </CardContent>
-      <CardFooter className=&quot;border-t border-zion-blue-light pt-4&quot;>
-        <p className=&quot;text-sm text-zion-slate-light&quot;>
+      <CardFooter className="border-t border-zion-blue-light pt-4">
+        <p className="text-sm text-zion-slate-light">
           For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.
         </p>
       </CardFooter>
     </Card>
   )
-=======
-            </div>;
-          </div>;
-          <div>;
-            <h4 className="text-lg font-medium text-white mb-2 flex items-center">;
-              <Clock className="mr-2 h-4 w-4 text-zion-purple" />;
-              Service Instructions;
-            </h4>;
-            <p className="text-zion-slate-light">;
-              {getRegionalInstructions(country)}
-            </p>;
-          </div>;
-          <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">;
-            <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>;
-            <ul className="list-disc list-inside text-zion-slate-light space-y-1">;
-              <li>Transportation to your site</li>;
-              <li>First hour of onsite technical support</li>;
-              <li>Basic hardware diagnosis</li>;
-              <li>Network connectivity troubleshooting</li>;
-              <li>Equipment installation assistance</li>;
-            </ul>;
-          </div>;
-        </div>;
-      </CardContent>;
-      <CardFooter className="border-t border-zion-blue-light pt-4">;
-        <p className="text-sm text-zion-slate-light">;
-          For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.;
-        </p>;
-      </CardFooter>;
-    </Card>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

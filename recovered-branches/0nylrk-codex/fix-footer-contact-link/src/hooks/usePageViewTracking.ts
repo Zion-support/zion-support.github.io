@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
 /**
@@ -12,13 +11,8 @@ export function usePageViewTracking() {
   useEffect(() => {
     const handleRouteChange = () => {
       // Track page view
-<<<<<<< HEAD
       // // // console.log('Page view:', window.location.pathname)
     },
-=======
-      // console.log('Page view:', window.location.pathname);
-    };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     // Listen for route changes
     window.addEventListener('popstate', handleRouteChange),
@@ -33,14 +27,8 @@ export function usePageViewTracking() {
 
   // Also track when location changes directly via React Router
   useEffect(() => {
-<<<<<<< HEAD
     // // // console.log('Page view:', location.pathname)
   }, [location.pathname])
-=======
-    // console.log('Page view:', location.pathname);
-  }, [location.pathname]);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import { useEffect } from 'react',;
 import { useLocation } from 'react-router-dom',;
 /**;
@@ -66,6 +54,5 @@ export function usePageViewTracking() {;
   useEffect(() => {;
     // // // console.log('Page view:', location.pathname);
   }, [location.pathname]);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

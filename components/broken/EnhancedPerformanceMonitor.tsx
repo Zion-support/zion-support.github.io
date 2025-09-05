@@ -162,7 +162,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
     } finally {;
       setIsMonitoring(false);
     }
-<<<<<<< HEAD
   }, [generateRecommendations]),
 
   const getPerformanceScore = (metrics: PerformanceMetrics): number => {
@@ -191,50 +190,16 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
   if (!performanceData) {
     return (
       <div className={`p-4 bg-gray-900 rounded-lg border border-gray-700 ${className}`}>
-        <div className=&quot;animate-pulse&quot;>
-          <div className=&quot;h-4 bg-gray-700 rounded w-1/3 mb-4&quot;></div>
-          <div className=&quot;space-y-3&quot;>
-            <div className=&quot;h-3 bg-gray-700 rounded&quot;></div>
-            <div className=&quot;h-3 bg-gray-700 rounded w-5/6&quot;></div>
-            <div className=&quot;h-3 bg-gray-700 rounded w-4/6&quot;></div>
+        <div className="animate-pulse">
+          <div className="h-4 bg-gray-700 rounded w-1/3 mb-4"></div>
+          <div className="space-y-3">
+            <div className="h-3 bg-gray-700 rounded"></div>
+            <div className="h-3 bg-gray-700 rounded w-5/6"></div>
+            <div className="h-3 bg-gray-700 rounded w-4/6"></div>
           </div>
         </div>
       </div>
     )
-=======
-  }, [generateRecommendations]),;
-  const getPerformanceScore = (metrics: PerformanceMetrics): number => {;
-    let score = 100,;
-    if (metrics.fcp > 2000) score -= 20,;
-    if (metrics.lcp > 2500) score -= 25,;
-    if (metrics.cls > 0.1) score -= 15,;
-    if (metrics.ttfb > 600) score -= 20,;
-    return Math.max(0, score);
-  },;
-  const getScoreColor = (score: number): string => {;
-    if (score >= 90) return 'text-green-400',;
-    if (score >= 70) return 'text-yellow-400',;
-    return 'text-red-400';
-  },;
-  const getOverallScoreBg = (score: number) => {;
-    if (score >= 90) return 'bg-green-500/20',;
-    if (score >= 70) return 'bg-yellow-500/20',;
-    return 'bg-red-500/20';
-  },;
-  if (!performanceData) {;
-    return (;
-      <div className={`p-4 bg-gray-900 rounded-lg border border-gray-700 ${className}`}>;
-        <div className="animate-pulse">;
-          <div className="h-4 bg-gray-700 rounded w-1/3 mb-4"></div>;
-          <div className="space-y-3">;
-            <div className="h-3 bg-gray-700 rounded"></div>;
-            <div className="h-3 bg-gray-700 rounded w-5/6"></div>;
-            <div className="h-3 bg-gray-700 rounded w-4/6"></div>;
-          </div>;
-        </div>;
-      </div>;
-    );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   return (;
@@ -244,225 +209,115 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
       animate={{ opacity: 1, y: 0 }}
     >;
       {/* Header */}
-<<<<<<< HEAD
-      <div className=&quot;p-4 bg-gray-800/50 border-b border-gray-700&quot;>
-        <div className=&quot;flex items-center justify-between&quot;>
-          <div className=&quot;flex items-center space-x-3&quot;>
-            <div className=&quot;p-2 bg-blue-500/20 rounded-lg&quot;>
-              <Activity className=&quot;w-5 h-5 text-blue-400&quot; />
+      <div className="p-4 bg-gray-800/50 border-b border-gray-700">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <div className="p-2 bg-blue-500/20 rounded-lg">
+              <Activity className="w-5 h-5 text-blue-400" />
             </div>
             <div>
-              <h3 className=&quot;text-white font-semibold&quot;>Performance Monitor</h3>
-              <p className=&quot;text-gray-400 text-sm&quot;>
+              <h3 className="text-white font-semibold">Performance Monitor</h3>
+              <p className="text-gray-400 text-sm">
                 Last updated: {lastUpdate.toLocaleTimeString()}
               </p>
             </div>
           </div>
-          <div className=&quot;flex items-center space-x-2&quot;>
+          <div className="flex items-center space-x-2">
             <button
               onClick={() => setShowDetails(!showDetails)}
-              className=&quot;p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors&quot;
+              className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors"
               title={showDetails ? 'Hide details' : 'Show details'}
             >
-              <BarChart3 className=&quot;w-4 h-4&quot; />
+              <BarChart3 className="w-4 h-4" />
             </button>
             <button
               onClick={updatePerformanceData}
               disabled={isLoading}
-              className=&quot;p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors disabled:opacity-50&quot;
-              title=&quot;Refresh data&quot;
+              className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors disabled:opacity-50"
+              title="Refresh data"
             >
               <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
             </button>
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className=&quot;p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors&quot;
+              className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors"
               title={isExpanded ? 'Collapse' : 'Expand'}
             >
-              <Settings className=&quot;w-4 h-4&quot; />
+              <Settings className="w-4 h-4" />
             </button>
           </div>
         </div>
       </div>
 
       {/* Overall Score */}
-      <div className=&quot;p-4&quot;>
-        <div className=&quot;text-center mb-6&quot;>
+      <div className="p-4">
+        <div className="text-center mb-6">
           <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full ${getOverallScoreBg(performanceData.overallScore)} mb-3`}>
             <span className={`text-2xl font-bold ${getOverallScoreColor(performanceData.overallScore)}`}>
               {performanceData.overallScore}
             </span>
           </div>
-          <h4 className=&quot;text-white font-semibold mb-1&quot;>Performance Score</h4>
-          <p className=&quot;text-gray-400 text-sm&quot;>
+          <h4 className="text-white font-semibold mb-1">Performance Score</h4>
+          <p className="text-gray-400 text-sm">
             {performanceData.overallScore >= 90 ? 'Excellent' : 
-=======
-      <div className="p-4 bg-gray-800/50 border-b border-gray-700">;
-        <div className="flex items-center justify-between">;
-          <div className="flex items-center space-x-3">;
-            <div className="p-2 bg-blue-500/20 rounded-lg">;
-              <Activity className="w-5 h-5 text-blue-400" />;
-            </div>;
-            <div>;
-              <h3 className="text-white font-semibold">Performance Monitor</h3>;
-              <p className="text-gray-400 text-sm">;
-                Last updated: {lastUpdate.toLocaleTimeString()}
-              </p>;
-            </div>;
-          </div>;
-          <div className="flex items-center space-x-2">;
-            <button;
-              onClick={() => setShowDetails(!showDetails)}
-              className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors";
-              title={showDetails ? 'Hide details' : 'Show details'}
-            >;
-              <BarChart3 className="w-4 h-4" />;
-            </button>;
-            <button;
-              onClick={updatePerformanceData}
-              disabled={isLoading}
-              className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors disabled:opacity-50";
-              title="Refresh data";
-            >;
-              <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />;
-            </button>;
-            <button;
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors";
-              title={isExpanded ? 'Collapse' : 'Expand'}
-            >;
-              <Settings className="w-4 h-4" />;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Overall Score */}
-      <div className="p-4">;
-        <div className="text-center mb-6">;
-          <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full ${getOverallScoreBg(performanceData.overallScore)} mb-3`}>;
-            <span className={`text-2xl font-bold ${getOverallScoreColor(performanceData.overallScore)}`}>;
-              {performanceData.overallScore}
-            </span>;
-          </div>;
-          <h4 className="text-white font-semibold mb-1">Performance Score</h4>;
-          <p className="text-gray-400 text-sm">;
-            {performanceData.overallScore >= 90 ? 'Excellent' :;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
              performanceData.overallScore >= 70 ? 'Good' : 'Needs Improvement'}
           </p>;
         </div>;
               {/* Metrics */}
-<<<<<<< HEAD
               {metrics && (
-                <div className=&quot;bg-gray-800 rounded-lg p-4 border border-gray-700&quot;>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-3&quot;>Core Web Vitals</h3>
-                  <div className=&quot;space-y-3&quot;>
-                    <div className=&quot;flex justify-between items-center&quot;>
-                      <span className=&quot;text-gray-300&quot;>FCP</span>
+                <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                  <h3 className="text-lg font-semibold text-white mb-3">Core Web Vitals</h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">FCP</span>
                       <span className={`font-mono ${metrics.fcp > 2000 ? 'text-red-400' : 'text-green-400'}`}>
                         {metrics.fcp.toFixed(0)}ms
                       </span>
                     </div>
-                    <div className=&quot;flex justify-between items-center&quot;>
-                      <span className=&quot;text-gray-300&quot;>LCP</span>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">LCP</span>
                       <span className={`font-mono ${metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}`}>
                         {metrics.lcp.toFixed(0)}ms
                       </span>
                     </div>
-                    <div className=&quot;flex justify-between items-center&quot;>
-                      <span className=&quot;text-gray-300&quot;>CLS</span>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">CLS</span>
                       <span className={`font-mono ${metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}`}>
                         {metrics.cls.toFixed(3)}
                       </span>
                     </div>
-                    <div className=&quot;flex justify-between items-center&quot;>
-                      <span className=&quot;text-gray-300&quot;>TTFB</span>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">TTFB</span>
                       <span className={`font-mono ${metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}`}>
                         {metrics.ttfb.toFixed(0)}ms
                       </span>
                     </div>
                   </div>
                 </div>
-=======
-              {metrics && (;
-                <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">;
-                  <h3 className="text-lg font-semibold text-white mb-3">Core Web Vitals</h3>;
-                  <div className="space-y-3">;
-                    <div className="flex justify-between items-center">;
-                      <span className="text-gray-300">FCP</span>;
-                      <span className={`font-mono ${metrics.fcp > 2000 ? 'text-red-400' : 'text-green-400'}`}>;
-                        {metrics.fcp.toFixed(0)}ms;
-                      </span>;
-                    </div>;
-                    <div className="flex justify-between items-center">;
-                      <span className="text-gray-300">LCP</span>;
-                      <span className={`font-mono ${metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}`}>;
-                        {metrics.lcp.toFixed(0)}ms;
-                      </span>;
-                    </div>;
-                    <div className="flex justify-between items-center">;
-                      <span className="text-gray-300">CLS</span>;
-                      <span className={`font-mono ${metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}`}>;
-                        {metrics.cls.toFixed(3)}
-                      </span>;
-                    </div>;
-                    <div className="flex justify-between items-center">;
-                      <span className="text-gray-300">TTFB</span>;
-                      <span className={`font-mono ${metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}`}>;
-                        {metrics.ttfb.toFixed(0)}ms;
-                      </span>;
-                    </div>;
-                  </div>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
 ;
               {/* Memory Usage */}
-<<<<<<< HEAD
               {metrics?.memoryUsage && (
-                <div className=&quot;bg-gray-800 rounded-lg p-4 border border-gray-700&quot;>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-3&quot;>Memory Usage</h3>
-                  <div className=&quot;space-y-2&quot;>
-                    <div className=&quot;flex justify-between&quot;>
-                      <span className=&quot;text-gray-300&quot;>Used</span>
-                      <span className=&quot;font-mono text-cyan-400&quot;>
+                <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                  <h3 className="text-lg font-semibold text-white mb-3">Memory Usage</h3>
+                  <div className="space-y-2">
+                    <div className="flex justify-between">
+                      <span className="text-gray-300">Used</span>
+                      <span className="font-mono text-cyan-400">
                         {(metrics.memoryUsage.usedJSHeapSize / 1024 / 1024).toFixed(1)}MB
                       </span>
                     </div>
-                    <div className=&quot;flex justify-between&quot;>
-                      <span className=&quot;text-gray-300&quot;>Total</span>
-                      <span className=&quot;font-mono text-blue-400&quot;>
+                    <div className="flex justify-between">
+                      <span className="text-gray-300">Total</span>
+                      <span className="font-mono text-blue-400">
                         {(metrics.memoryUsage.totalJSHeapSize / 1024 / 1024).toFixed(1)}MB
                       </span>
                     </div>
-                    <div className=&quot;w-full bg-gray-700 rounded-full h-2&quot;>
+                    <div className="w-full bg-gray-700 rounded-full h-2">
                       <div 
-                        className=&quot;bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-300&quot;
+                        className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-300"
                         style={{ 
                           width: `${(metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100}%` 
-=======
-              {metrics?.memoryUsage && (;
-                <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">;
-                  <h3 className="text-lg font-semibold text-white mb-3">Memory Usage</h3>;
-                  <div className="space-y-2">;
-                    <div className="flex justify-between">;
-                      <span className="text-gray-300">Used</span>;
-                      <span className="font-mono text-cyan-400">;
-                        {(metrics.memoryUsage.usedJSHeapSize / 1024 / 1024).toFixed(1)}MB;
-                      </span>;
-                    </div>;
-                    <div className="flex justify-between">;
-                      <span className="text-gray-300">Total</span>;
-                      <span className="font-mono text-blue-400">;
-                        {(metrics.memoryUsage.totalJSHeapSize / 1024 / 1024).toFixed(1)}MB;
-                      </span>;
-                    </div>;
-                    <div className="w-full bg-gray-700 rounded-full h-2">;
-                      <div;
-                        className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-300";
-                        style={{;
-                          width: `${(metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100}%`;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                         }}
                       />;
                     </div>;
@@ -471,69 +326,41 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
               )}
 ;
               {/* Network Info */}
-<<<<<<< HEAD
               {metrics?.networkInfo && (
-                <div className=&quot;bg-gray-800 rounded-lg p-4 border border-gray-700&quot;>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-3&quot;>Network</h3>
-                  <div className=&quot;space-y-2&quot;>
-                    <div className=&quot;flex justify-between&quot;>
-                      <span className=&quot;text-gray-300&quot;>Type</span>
-                      <span className=&quot;font-mono text-green-400 capitalize&quot;>
+                <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                  <h3 className="text-lg font-semibold text-white mb-3">Network</h3>
+                  <div className="space-y-2">
+                    <div className="flex justify-between">
+                      <span className="text-gray-300">Type</span>
+                      <span className="font-mono text-green-400 capitalize">
                         {metrics.networkInfo.effectiveType}
                       </span>
                     </div>
-                    <div className=&quot;flex justify-between&quot;>
-                      <span className=&quot;text-gray-300&quot;>Speed</span>
-                      <span className=&quot;font-mono text-blue-400&quot;>
+                    <div className="flex justify-between">
+                      <span className="text-gray-300">Speed</span>
+                      <span className="font-mono text-blue-400">
                         {metrics.networkInfo.downlink.toFixed(1)}Mbps
                       </span>
                     </div>
-                    <div className=&quot;flex justify-between&quot;>
-                      <span className=&quot;text-gray-300&quot;>RTT</span>
-                      <span className=&quot;font-mono text-purple-400&quot;>
+                    <div className="flex justify-between">
+                      <span className="text-gray-300">RTT</span>
+                      <span className="font-mono text-purple-400">
                         {metrics.networkInfo.rtt}ms
                       </span>
                     </div>
                   </div>
                 </div>
-=======
-              {metrics?.networkInfo && (;
-                <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">;
-                  <h3 className="text-lg font-semibold text-white mb-3">Network</h3>;
-                  <div className="space-y-2">;
-                    <div className="flex justify-between">;
-                      <span className="text-gray-300">Type</span>;
-                      <span className="font-mono text-green-400 capitalize">;
-                        {metrics.networkInfo.effectiveType}
-                      </span>;
-                    </div>;
-                    <div className="flex justify-between">;
-                      <span className="text-gray-300">Speed</span>;
-                      <span className="font-mono text-blue-400">;
-                        {metrics.networkInfo.downlink.toFixed(1)}Mbps;
-                      </span>;
-                    </div>;
-                    <div className="flex justify-between">;
-                      <span className="text-gray-300">RTT</span>;
-                      <span className="font-mono text-purple-400">;
-                        {metrics.networkInfo.rtt}ms;
-                      </span>;
-                    </div>;
-                  </div>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
 ;
               {/* Recommendations */}
-<<<<<<< HEAD
               {recommendations.length > 0 && (
-                <div className=&quot;bg-gray-800 rounded-lg p-4 border border-gray-700&quot;>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-3&quot;>Recommendations</h3>
-                  <div className=&quot;space-y-3&quot;>
+                <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+                  <h3 className="text-lg font-semibold text-white mb-3">Recommendations</h3>
+                  <div className="space-y-3">
                     {recommendations.map((rec) => (
-                      <div key={rec.id} className=&quot;border-l-4 border-cyan-500 pl-3&quot;>
-                        <div className=&quot;flex items-start justify-between&quot;>
-                          <h4 className=&quot;font-medium text-white text-sm&quot;>{rec.title}</h4>
+                      <div key={rec.id} className="border-l-4 border-cyan-500 pl-3">
+                        <div className="flex items-start justify-between">
+                          <h4 className="font-medium text-white text-sm">{rec.title}</h4>
                           <span className={`text-xs px-2 py-1 rounded ${
                             rec.priority === 'high' ? 'bg-red-500/20 text-red-400' :
                             rec.priority === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
@@ -542,59 +369,25 @@ const EnhancedPerformanceMonitor: React.FC = () => {;
                             {rec.priority}
                           </span>
                         </div>
-                        <p className=&quot;text-gray-400 text-xs mt-1&quot;>{rec.description}</p>
-                        <p className=&quot;text-cyan-400 text-xs mt-1&quot;>{rec.solution}</p>
+                        <p className="text-gray-400 text-xs mt-1">{rec.description}</p>
+                        <p className="text-cyan-400 text-xs mt-1">{rec.solution}</p>
                       </div>
-=======
-              {recommendations.length > 0 && (;
-                <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">;
-                  <h3 className="text-lg font-semibold text-white mb-3">Recommendations</h3>;
-                  <div className="space-y-3">;
-                    {recommendations.map((rec) => (;
-                      <div key={rec.id} className="border-l-4 border-cyan-500 pl-3">;
-                        <div className="flex items-start justify-between">;
-                          <h4 className="font-medium text-white text-sm">{rec.title}</h4>;
-                          <span className={`text-xs px-2 py-1 rounded ${;
-                            rec.priority === 'high' ? 'bg-red-500/20 text-red-400' :;
-                            rec.priority === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :;
-                            'bg-green-500/20 text-green-400';
-                          }`}>;
-                            {rec.priority}
-                          </span>;
-                        </div>;
-                        <p className="text-gray-400 text-xs mt-1">{rec.description}</p>;
-                        <p className="text-cyan-400 text-xs mt-1">{rec.solution}</p>;
-                      </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     ))}
                   </div>;
                 </div>;
               )}
 ;
               {/* Action Buttons */}
-<<<<<<< HEAD
-              <div className=&quot;flex space-x-3&quot;>
+              <div className="flex space-x-3">
                 <button
                   onClick={measurePerformance}
                   disabled={isMonitoring}
-                  className=&quot;flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 text-white py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2&quot;
+                  className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 text-white py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   {isMonitoring ? (
-                    <RefreshCw className=&quot;w-4 h-4 animate-spin&quot; />
+                    <RefreshCw className="w-4 h-4 animate-spin" />
                   ) : (
-                    <BarChart3 className=&quot;w-4 h-4&quot; />
-=======
-              <div className="flex space-x-3">;
-                <button;
-                  onClick={measurePerformance}
-                  disabled={isMonitoring}
-                  className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 text-white py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2";
-                >;
-                  {isMonitoring ? (;
-                    <RefreshCw className="w-4 h-4 animate-spin" />;
-                  ) : (;
-                    <BarChart3 className="w-4 h-4" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                    <BarChart3 className="w-4 h-4" />
                   )}
                   <span>{isMonitoring ? 'Measuring...' : 'Measure Performance'}</span>;
                 </button>;

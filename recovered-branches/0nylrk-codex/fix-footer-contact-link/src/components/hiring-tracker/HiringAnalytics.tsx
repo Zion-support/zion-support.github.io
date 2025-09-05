@@ -1,27 +1,17 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',
-=======
-import { useState, useEffect } from &quot;react&quot;;
-import { useJobApplications } from &quot;@/hooks/useJobApplications&quot;;
-import { Card, CardContent, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface HiringAnalyticsProps {
   jobId?: string
-=======
 import { useState, useEffect } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;
 interface HiringAnalyticsProps {;
   jobId?: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
@@ -79,14 +69,13 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
   }
-<<<<<<< HEAD
   
   if (!applications || applications.length === 0) {
     return (
-      <Card className=&quot;text-center py-16&quot;>
+      <Card className="text-center py-16">
         <CardContent>
-          <h3 className=&quot;text-lg font-semibold mb-2&quot;>No data available</h3>
-          <p className=&quot;text-muted-foreground mb-6&quot;>
+          <h3 className="text-lg font-semibold mb-2">No data available</h3>
+          <p className="text-muted-foreground mb-6">
             You need applications to generate analytics
           </p>
         </CardContent>
@@ -97,58 +86,23 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
   return (
-    <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* Status Distribution */}
       <Card>
         <CardHeader>
           <CardTitle>Application Status Distribution</CardTitle>
         </CardHeader>
-        <CardContent className=&quot;h-64&quot;>
-          <ResponsiveContainer width=&quot;100%&quot; height=&quot;100%&quot;>
+        <CardContent className="h-64">
+          <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
                 data={analyticsData.statusDistribution}
-                cx=&quot;50%&quot;
-                cy=&quot;50%&quot;
+                cx="50%"
+                cy="50%"
                 labelLine={false}
                 outerRadius={80}
-                fill=&quot;#8884d8&quot;
-                dataKey=&quot;count&quot;
-=======
-;
-  if (!applications || applications.length === 0) {;
-    return (;
-      <Card className="text-center py-16">;
-        <CardContent>;
-          <h3 className="text-lg font-semibold mb-2">No data available</h3>;
-          <p className="text-muted-foreground mb-6">;
-            You need applications to generate analytics;
-          </p>;
-        </CardContent>;
-      </Card>;
-    );
-  }
-;
-  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
-  return (;
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-      {/* Status Distribution */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Application Status Distribution</CardTitle>;
-        </CardHeader>;
-        <CardContent className="h-64">;
-          <ResponsiveContainer width="100%" height="100%">;
-            <PieChart>;
-              <Pie;
-                data={analyticsData.statusDistribution}
-                cx="50%";
-                cy="50%";
-                labelLine={false}
-                outerRadius={80}
-                fill="#8884d8";
-                dataKey="count";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                fill="#8884d8"
+                dataKey="count"
                 label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
               >;
                 {analyticsData.statusDistribution.map((entry, index) => (;
@@ -161,16 +115,15 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
         </CardContent>;
       </Card>;
       {/* Time to Hire */}
-<<<<<<< HEAD
       <Card>
         <CardHeader>
           <CardTitle>Time to Hire</CardTitle>
         </CardHeader>
-        <CardContent className=&quot;flex flex-col items-center justify-center h-64&quot;>
-          <div className=&quot;text-5xl font-bold text-primary&quot;>
-            {analyticsData.timeToHire || &quot;N/A&quot;}
+        <CardContent className="flex flex-col items-center justify-center h-64">
+          <div className="text-5xl font-bold text-primary">
+            {analyticsData.timeToHire || "N/A"}
           </div>
-          <div className=&quot;text-sm text-muted-foreground mt-2&quot;>
+          <div className="text-sm text-muted-foreground mt-2">
             Average days from application to hire
           </div>
         </CardContent>
@@ -181,79 +134,33 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
         <CardHeader>
           <CardTitle>Application Conversion Rate</CardTitle>
         </CardHeader>
-        <CardContent className=&quot;flex flex-col items-center justify-center h-64&quot;>
-          <div className=&quot;text-5xl font-bold text-primary&quot;>
+        <CardContent className="flex flex-col items-center justify-center h-64">
+          <div className="text-5xl font-bold text-primary">
             {analyticsData.conversionRate}%
           </div>
-          <div className=&quot;text-sm text-muted-foreground mt-2&quot;>
+          <div className="text-sm text-muted-foreground mt-2">
             Applications to hired ratio
           </div>
         </CardContent>
       </Card>
       
       {/* Hiring Funnel */}
-      <Card className=&quot;lg:col-span-3&quot;>
+      <Card className="lg:col-span-3">
         <CardHeader>
           <CardTitle>Hiring Funnel</CardTitle>
         </CardHeader>
-        <CardContent className=&quot;h-80&quot;>
-          <ResponsiveContainer width=&quot;100%&quot; height=&quot;100%&quot;>
+        <CardContent className="h-80">
+          <ResponsiveContainer width="100%" height="100%">
             <BarChart
               data={analyticsData.funnelData}
-              layout=&quot;vertical&quot;
+              layout="vertical"
             >
-              <XAxis type=&quot;number&quot; />
-              <YAxis dataKey=&quot;name&quot; type=&quot;category&quot; width={100} />
+              <XAxis type="number" />
+              <YAxis dataKey="name" type="category" width={100} />
               <Tooltip />
-              <Bar dataKey=&quot;value&quot; fill=&quot;#8884d8&quot; radius={[0, 4, 4, 0]}>
+              <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>
                 {analyticsData.funnelData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-=======
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Time to Hire</CardTitle>;
-        </CardHeader>;
-        <CardContent className="flex flex-col items-center justify-center h-64">;
-          <div className="text-5xl font-bold text-primary">;
-            {analyticsData.timeToHire || "N/A"}
-          </div>;
-          <div className="text-sm text-muted-foreground mt-2">;
-            Average days from application to hire;
-          </div>;
-        </CardContent>;
-      </Card>;
-      {/* Conversion Rate */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Application Conversion Rate</CardTitle>;
-        </CardHeader>;
-        <CardContent className="flex flex-col items-center justify-center h-64">;
-          <div className="text-5xl font-bold text-primary">;
-            {analyticsData.conversionRate}%;
-          </div>;
-          <div className="text-sm text-muted-foreground mt-2">;
-            Applications to hired ratio;
-          </div>;
-        </CardContent>;
-      </Card>;
-      {/* Hiring Funnel */}
-      <Card className="lg:col-span-3">;
-        <CardHeader>;
-          <CardTitle>Hiring Funnel</CardTitle>;
-        </CardHeader>;
-        <CardContent className="h-80">;
-          <ResponsiveContainer width="100%" height="100%">;
-            <BarChart;
-              data={analyticsData.funnelData}
-              layout="vertical";
-            >;
-              <XAxis type="number" />;
-              <YAxis dataKey="name" type="category" width={100} />;
-              <Tooltip />;
-              <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>;
-                {analyticsData.funnelData.map((entry, index) => (;
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 ))}
               </Bar>;
             </BarChart>;

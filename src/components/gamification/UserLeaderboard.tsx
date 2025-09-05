@@ -1,73 +1,41 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { Trophy } from 'lucide-react'
 
 export interface LeaderboardEntry {
   name: string,
   points: number
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {;
   name: string;
   points: number;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
 }
-<<<<<<< HEAD
 
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className=&quot;flex items-center gap-2&quot;>
-          <Trophy className=&quot;h-5 w-5&quot; /> Leaderboard
+        <CardTitle className="flex items-center gap-2">
+          <Trophy className="h-5 w-5" /> Leaderboard
         </CardTitle>
         <CardDescription>Top users by points</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className=&quot;space-y-2&quot;>
+        <div className="space-y-2">
           {entries.map((e, idx) => (
             <div
               key={e.name}
-              className=&quot;flex justify-between items-center p-2 rounded-md hover:bg-muted/50&quot;
+              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >
-              <span className=&quot;font-medium&quot;>
+              <span className="font-medium">
                 {idx + 1}. {e.name}
               </span>
-              <span className=&quot;text-sm&quot;>{e.points} pts</span>
+              <span className="text-sm">{e.points} pts</span>
             </div>
-=======
-;
-export function UserLeaderboard({ entries }: UserLeaderboardProps) {;
-  return (;
-    <Card>;
-      <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <Trophy className="h-5 w-5" /> Leaderboard;
-        </CardTitle>;
-        <CardDescription>Top users by points</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <div className="space-y-2">;
-          {entries.map((e, idx) => (;
-            <div;
-              key={e.name}
-              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50";
-            >;
-              <span className="font-medium">;
-                {idx + 1}. {e.name}
-              </span>;
-              <span className="text-sm">{e.points} pts</span>;
-            </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           ))}
         </div>;
       </CardContent>;

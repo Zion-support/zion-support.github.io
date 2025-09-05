@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { Button } from "@/components/ui/button",
-=======
-import React from &quot;react&quot;;
-import { ClickableBadge } from &quot;@/components/ui/clickable-badge&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { X } from 'lucide-react'
 
 interface ActiveFiltersProps {
@@ -51,14 +44,13 @@ export function ActiveFilters({
   if (!hasActiveFilters) return null,
 
   return (
-    <div className=&quot;mb-6 flex flex-wrap gap-2 items-center&quot;>
-      <span className=&quot;text-zion-slate-light text-sm&quot;>Active filters:</span>
+    <div className="mb-6 flex flex-wrap gap-2 items-center">
+      <span className="text-zion-slate-light text-sm">Active filters:</span>
       
       {selectedSkills.map(skill => (
         <ClickableBadge 
           key={skill}
-          className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
-=======
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
 import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { Button } from "@/components/ui/button",;
@@ -107,92 +99,67 @@ export function ActiveFilters({;
         <ClickableBadge;
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           onClick={() => toggleSkill(skill)}
         >;
           {skill}
-<<<<<<< HEAD
-          <X className=&quot;h-3 w-3&quot; />
+          <X className="h-3 w-3" />
         </ClickableBadge>
-=======
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       ))}
 ;
       {selectedAvailability.map(status => (;
         <ClickableBadge;
           key={status}
-<<<<<<< HEAD
-          className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
-=======
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleAvailability(status)}
         >;
           {status === 'full-time' ? 'Full-time' :;
            status === 'part-time' ? 'Part-time' :;
            'Project-based'}
-<<<<<<< HEAD
-          <X className=&quot;h-3 w-3&quot; />
+          <X className="h-3 w-3" />
         </ClickableBadge>
-=======
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       ))}
 ;
       {selectedRegions.map(region => (;
         <ClickableBadge;
           key={region}
-<<<<<<< HEAD
-          className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
-=======
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleRegion(region)}
         >;
           {region}
-<<<<<<< HEAD
-          <X className=&quot;h-3 w-3&quot; />
+          <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
       
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
         <ClickableBadge 
-          className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => setPriceRange([50, 200])}
         >
           ${priceRange[0]}-${priceRange[1]}/hr
-          <X className=&quot;h-3 w-3&quot; />
+          <X className="h-3 w-3" />
         </ClickableBadge>
       )}
       
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
         <ClickableBadge 
-          className=&quot;bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2&quot;
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => setExperienceRange([0, 15])}
         >
           {experienceRange[0]}-{experienceRange[1]} years
-          <X className=&quot;h-3 w-3&quot; />
+          <X className="h-3 w-3" />
         </ClickableBadge>
       )}
       
       <Button 
-        variant=&quot;ghost&quot; 
-        size=&quot;sm&quot; 
+        variant="ghost" 
+        size="sm" 
         onClick={clearFilters}
-<<<<<<< HEAD
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
-=======
-        className=&quot;h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       >
         Clear All
       </Button>
     </div>
   )
-=======
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -227,6 +194,5 @@ export function ActiveFilters({;
       </Button>;
     </div>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

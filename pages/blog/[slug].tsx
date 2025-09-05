@@ -74,77 +74,40 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
         title={post.title}
         description={post.excerpt}
         image={post.featuredImage}
-<<<<<<< HEAD
-        type=&quot;article&quot;
+        type="article"
         article={articleLd}
       />
-      <main className=&quot;prose dark:prose-invert max-w-3xl mx-auto py-8&quot;>
+      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
         <h1>{post.title}</h1>
-        {post.excerpt && <p className=&quot;lead&quot;>{post.excerpt}</p>}
-        <div className=&quot;flex items-center gap-3 mb-6&quot;>
+        {post.excerpt && <p className="lead">{post.excerpt}</p>}
+        <div className="flex items-center gap-3 mb-6">
           <img
             src={post.author.avatarUrl}
             alt={post.author.name}
-            className=&quot;w-10 h-10 rounded-full&quot;
+            className="w-10 h-10 rounded-full"
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement,
               target.src = '/images/blog-placeholder.svg'
             }}
           />
           <div>
-            <p className=&quot;m-0 font-medium&quot;>{post.author.name}</p>
+            <p className="m-0 font-medium">{post.author.name}</p>
             {post.author.title && (
-              <p className=&quot;m-0 text-sm text-zion-slate-light&quot;>
-=======
-        type="article";
-        article={articleLd}
-      />;
-      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">;
-        <h1>{post.title}</h1>;
-        {post.excerpt && <p className="lead">{post.excerpt}</p>}
-        <div className="flex items-center gap-3 mb-6">;
-          <img;
-            src={post.author.avatarUrl}
-            alt={post.author.name}
-            className="w-10 h-10 rounded-full";
-            onError={(e) => {;
-              const target = e.currentTarget as HTMLImageElement,;
-              target.src = '/images/blog-placeholder.svg';
-            }}
-          />;
-          <div>;
-            <p className="m-0 font-medium">{post.author.name}</p>;
-            {post.author.title && (;
-              <p className="m-0 text-sm text-zion-slate-light">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              <p className="m-0 text-sm text-zion-slate-light">
                 {post.author.title}
               </p>;
             )}
-<<<<<<< HEAD
           </div>
         </div>
         {post.featuredImage && (
-          <div className=&quot;aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6&quot;>
+          <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
             <img
               src={post.featuredImage}
               alt={post.title}
-              className=&quot;object-cover w-full h-full&quot;
+              className="object-cover w-full h-full"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement,
                 target.src = '/images/blog-placeholder.svg'
-=======
-          </div>;
-        </div>;
-        {post.featuredImage && (;
-          <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">;
-            <img;
-              src={post.featuredImage}
-              alt={post.title}
-              className="object-cover w-full h-full";
-              onError={(e) => {;
-                const target = e.currentTarget as HTMLImageElement,;
-                target.src = '/images/blog-placeholder.svg';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               }}
             />;
           </div>;

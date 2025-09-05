@@ -38,121 +38,63 @@ export default function TrustPage() {;
     alert('Appeal submitted');
     form.reset();
   }
-<<<<<<< HEAD
 
   return (
     <EnhancedLayout>
-      <div className=&quot;space-y-6&quot;>
-        <div className=&quot;flex items-center justify-between&quot;>
-          <h1 className=&quot;text-2xl font-semibold&quot;>Trust & Reputation</h1>
-          <div className=&quot;flex items-center gap-3&quot;>
-            <label className=&quot;text-sm inline-flex items-center gap-2&quot;><input type=&quot;checkbox&quot; checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-semibold">Trust & Reputation</h1>
+          <div className="flex items-center gap-3">
+            <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
           </div>
         </div>
 
         {loading && <div>Loading...</div>}
         {!loading && data && (
-          <div className=&quot;grid md:grid-cols-3 gap-6&quot;>
-            <div className=&quot;md:col-span-2 space-y-4&quot;>
-              <div className=&quot;flex items-center gap-3&quot;>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="md:col-span-2 space-y-4">
+              <div className="flex items-center gap-3">
                 <TrustBadge score={data.total} reason={data.reasonSummary} communityVerified={data.communityVerified} />
                 <RiskIndicator status={data.riskLevel} />
               </div>
-              <div className=&quot;bg-white dark:bg-gray-900 rounded border p-4&quot;>
-                <h2 className=&quot;font-medium mb-2&quot;>Trust Metrics</h2>
+              <div className="bg-white dark:bg-gray-900 rounded border p-4">
+                <h2 className="font-medium mb-2">Trust Metrics</h2>
                 <TrustRadar metrics={(data.components || []).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
               </div>
               {showLogic && (
-                <div className=&quot;bg-white dark:bg-gray-900 rounded border p-4 text-sm&quot;>
-                  <h3 className=&quot;font-medium mb-2&quot;>Score Breakdown</h3>
-                  <ul className=&quot;space-y-1&quot;>
+                <div className="bg-white dark:bg-gray-900 rounded border p-4 text-sm">
+                  <h3 className="font-medium mb-2">Score Breakdown</h3>
+                  <ul className="space-y-1">
                     {data.components.map((c: any) => (
-                      <li key={c.key} className=&quot;flex justify-between&quot;>
+                      <li key={c.key} className="flex justify-between">
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
                       </li>
-=======
-;
-  return (;
-    <EnhancedLayout>;
-      <div className="space-y-6">;
-        <div className="flex items-center justify-between">;
-          <h1 className="text-2xl font-semibold">Trust & Reputation</h1>;
-          <div className="flex items-center gap-3">;
-            <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>;
-          </div>;
-        </div>;
-        {loading && <div>Loading...</div>}
-        {!loading && data && (;
-          <div className="grid md:grid-cols-3 gap-6">;
-            <div className="md:col-span-2 space-y-4">;
-              <div className="flex items-center gap-3">;
-                <TrustBadge score={data.total} reason={data.reasonSummary} communityVerified={data.communityVerified} />;
-                <RiskIndicator status={data.riskLevel} />;
-              </div>;
-              <div className="bg-white dark:bg-gray-900 rounded border p-4">;
-                <h2 className="font-medium mb-2">Trust Metrics</h2>;
-                <TrustRadar metrics={(data.components || []).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />;
-              </div>;
-              {showLogic && (;
-                <div className="bg-white dark:bg-gray-900 rounded border p-4 text-sm">;
-                  <h3 className="font-medium mb-2">Score Breakdown</h3>;
-                  <ul className="space-y-1">;
-                    {data.components.map((c: any) => (;
-                      <li key={c.key} className="flex justify-between">;
-                        <span>{c.key}</span>;
-                        <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>;
-                      </li>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     ))}
                   </ul>;
                 </div>;
               )}
-<<<<<<< HEAD
               {data.reasonSummary && (
-                <div className=&quot;bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap&quot;>
-=======
-              {data.reasonSummary && (;
-                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>;
               )}
-<<<<<<< HEAD
             </div>
-            <div className=&quot;space-y-4&quot;>
-              <div className=&quot;bg-white dark:bg-gray-900 rounded border p-4 space-y-3&quot;>
-                <h3 className=&quot;font-medium&quot;>Peer Review</h3>
-                <button className=&quot;text-sm px-3 py-1 rounded bg-green-600 text-white&quot; onClick={() => submitPeer('endorse')}>Endorse</button>
-                <button className=&quot;text-sm px-3 py-1 rounded bg-red-600 text-white&quot; onClick={() => submitPeer('flag')}>Flag</button>
+            <div className="space-y-4">
+              <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">
+                <h3 className="font-medium">Peer Review</h3>
+                <button className="text-sm px-3 py-1 rounded bg-green-600 text-white" onClick={() => submitPeer('endorse')}>Endorse</button>
+                <button className="text-sm px-3 py-1 rounded bg-red-600 text-white" onClick={() => submitPeer('flag')}>Flag</button>
               </div>
               {data.total < 70 && (
-                <div className=&quot;bg-white dark:bg-gray-900 rounded border p-4 space-y-3&quot;>
-                  <h3 className=&quot;font-medium&quot;>Appeal Score</h3>
-                  <form onSubmit={submitAppeal} className=&quot;space-y-2&quot;>
-                    <input name=&quot;email&quot; type=&quot;email&quot; placeholder=&quot;Contact email&quot; className=&quot;w-full border rounded px-2 py-1 text-sm&quot; />
-                    <textarea name=&quot;message&quot; placeholder=&quot;Explain why your score should be reconsidered&quot; className=&quot;w-full border rounded px-2 py-1 text-sm&quot; rows={4} required />
-                    <button className=&quot;text-sm px-3 py-1 rounded bg-blue-600 text-white&quot; type=&quot;submit&quot;>Submit Appeal</button>
+                <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">
+                  <h3 className="font-medium">Appeal Score</h3>
+                  <form onSubmit={submitAppeal} className="space-y-2">
+                    <input name="email" type="email" placeholder="Contact email" className="w-full border rounded px-2 py-1 text-sm" />
+                    <textarea name="message" placeholder="Explain why your score should be reconsidered" className="w-full border rounded px-2 py-1 text-sm" rows={4} required />
+                    <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" type="submit">Submit Appeal</button>
                   </form>
                 </div>
-=======
-            </div>;
-            <div className="space-y-4">;
-              <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">;
-                <h3 className="font-medium">Peer Review</h3>;
-                <button className="text-sm px-3 py-1 rounded bg-green-600 text-white" onClick={() => submitPeer('endorse')}>Endorse</button>;
-                <button className="text-sm px-3 py-1 rounded bg-red-600 text-white" onClick={() => submitPeer('flag')}>Flag</button>;
-              </div>;
-              {data.total < 70 && (;
-                <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">;
-                  <h3 className="font-medium">Appeal Score</h3>;
-                  <form onSubmit={submitAppeal} className="space-y-2">;
-                    <input name="email" type="email" placeholder="Contact email" className="w-full border rounded px-2 py-1 text-sm" />;
-                    <textarea name="message" placeholder="Explain why your score should be reconsidered" className="w-full border rounded px-2 py-1 text-sm" rows={4} required />;
-                    <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" type="submit">Submit Appeal</button>;
-                  </form>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             </div>;
           </div>;

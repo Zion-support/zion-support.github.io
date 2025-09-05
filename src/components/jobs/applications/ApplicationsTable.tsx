@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
 import { ClickableBadge } from "@/components/ui/clickable-badge",
-=======
-import { format } from &quot;date-fns&quot;;
-import { JobApplication } from &quot;@/types/jobs&quot;;
-import { Avatar as AvatarPrimitive } from &quot;@/components/ui/avatar&quot;; // Renamed
-import { ClickableBadge } from &quot;@/components/ui/clickable-badge&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
   Table,
   TableBody,
@@ -17,7 +9,6 @@ import {
   TableHead,
   TableHeader,
   TableRow
-<<<<<<< HEAD
 } from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions",
 import { StatusBadge } from "./StatusBadge",
@@ -26,16 +17,6 @@ import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmat
 import React, { useState } from "react", // Import React and useState
 import { toast } from "@/hooks/use-toast",
 import Image from 'next/image', // Import next/image
-=======
-} from &quot;@/components/ui/table&quot;;
-import { ApplicationActions } from &quot;./ApplicationActions&quot;;
-import { StatusBadge } from &quot;./StatusBadge&quot;;
-import { Briefcase, User } from 'lucide-react'
-import { HireConfirmationModal } from &quot;@/components/hiring-tracker/HireConfirmationModal&quot;;
-import React, { useState } from &quot;react&quot;; // Import React and useState
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import Image from 'next/image'; // Import next/image
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface ApplicationsTableProps {
   applications: JobApplication[],
@@ -47,28 +28,23 @@ interface ApplicationsTableProps {
 
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
-<<<<<<< HEAD
   const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || "Candidate",
-=======
-  const [avatarError, setAvatarError] = useState(false);
-  const talentName = application.talent_profile?.full_name || &quot;Candidate&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
-    <AvatarPrimitive className=&quot;h-8 w-8&quot;> {/* Using Renamed AvatarPrimitive */}
+    <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (
         <Image
           src={application.talent_profile.profile_picture_url}
           alt={talentName}
           width={32} // for h-8 w-8
           height={32} // for h-8 w-8
-          className=&quot;rounded-full object-cover&quot;
+          className="rounded-full object-cover"
           onError={() => setAvatarError(true)}
           priority={false}
         />
       ) : (
-        <User className=&quot;h-4 w-4&quot; />
+        <User className="h-4 w-4" />
       )}
     </AvatarPrimitive>
   )
@@ -91,77 +67,69 @@ export function ApplicationsTable({
   
   const handleHireConfirmed = () => {
     toast({
-<<<<<<< HEAD
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
     })
   },
-=======
-      title: &quot;Hiring process initiated&quot;,
-      description: &quot;Offer has been sent to the talent.&quot;
-    });
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   return (
     <>
-      <div className=&quot;rounded-md border&quot;>
+      <div className="rounded-md border">
         <Table>
           <TableHeader>
             <TableRow>
               <TableHead>Candidate</TableHead>
-              <TableHead className=&quot;hidden md:table-cell&quot;>Applied</TableHead>
-              <TableHead className=&quot;hidden md:table-cell&quot;>Status</TableHead>
-              <TableHead className=&quot;hidden lg:table-cell&quot;>Match Score</TableHead>
-              <TableHead className=&quot;text-right&quot;>Actions</TableHead>
+              <TableHead className="hidden md:table-cell">Applied</TableHead>
+              <TableHead className="hidden md:table-cell">Status</TableHead>
+              <TableHead className="hidden lg:table-cell">Match Score</TableHead>
+              <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {applications.map((application) => (
               <TableRow key={application.id}>
                 <TableCell>
-                  <div className=&quot;flex items-center gap-3&quot;>
+                  <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
                     <div>
-                      <div className=&quot;font-medium&quot;>
-                        {application.talent_profile?.full_name || &quot;Candidate&quot;}
+                      <div className="font-medium">
+                        {application.talent_profile?.full_name || "Candidate"}
                       </div>
-                      <div className=&quot;text-xs text-muted-foreground mt-0.5&quot;>
-                        {application.talent_profile?.professional_title || &quot;Applicant&quot;}
+                      <div className="text-xs text-muted-foreground mt-0.5">
+                        {application.talent_profile?.professional_title || "Applicant"}
                       </div>
                     </div>
                   </div>
                 </TableCell>
-                <TableCell className=&quot;hidden md:table-cell&quot;>
-                  {format(new Date(application.created_at), &quot;PP&quot;)}
+                <TableCell className="hidden md:table-cell">
+                  {format(new Date(application.created_at), "PP")}
                 </TableCell>
-                <TableCell className=&quot;hidden md:table-cell&quot;>
+                <TableCell className="hidden md:table-cell">
                   <StatusBadge status={application.status} />
                 </TableCell>
-                <TableCell className=&quot;hidden lg:table-cell&quot;>
+                <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
                     <ClickableBadge 
-                      variant=&quot;outline&quot;
-                      className=&quot;cursor-pointer&quot;
+                      variant="outline"
+                      className="cursor-pointer"
                       onClick={() => onViewScore(application)}
                     >
                       {application.match_score}%
                     </ClickableBadge>
                   ) : (
-                    <span className=&quot;text-muted-foreground text-sm&quot;>Not scored</span>
+                    <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
                 </TableCell>
-                <TableCell className=&quot;text-right&quot;>
-                  <div className=&quot;flex items-center justify-end gap-2&quot;>
+                <TableCell className="text-right">
+                  <div className="flex items-center justify-end gap-2">
                     <ClickableBadge 
-                      variant=&quot;outline&quot; 
-                      className=&quot;cursor-pointer bg-green-50 hover:bg-green-100 text-green-700&quot;
+                      variant="outline" 
+                      className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
                       onClick={() => handleHireClick(application)}
                     >
-                      <Briefcase className=&quot;h-3 w-3 mr-1&quot; /> Hire
+                      <Briefcase className="h-3 w-3 mr-1" /> Hire
                     </ClickableBadge>
                     <ApplicationActions
-=======
 import { format } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed;
@@ -288,7 +256,6 @@ export function ApplicationsTable({;
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
                     <ApplicationActions;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       application={application}
                       processingId={processingId}
                       onViewApplication={onViewApplication}

@@ -13,7 +13,6 @@ export function useSkills() {;
       setError('You must be logged in to add skills'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -31,16 +30,11 @@ export function useSkills() {;
       
       if (error) throw error,
       
-<<<<<<< HEAD
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
-=======
-      return showSuccessToast(&quot;Skill added&quot;, &quot;Your skill has been added to your resume&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not add skill')
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -60,7 +54,6 @@ export function useSkills() {;
       return handleResumeError(e, 'Could not add skill');
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const deleteSkill = async (skillId: string): Promise<boolean> => {;
@@ -68,7 +61,6 @@ export function useSkills() {;
       setError('You must be logged in to delete skills'),;
       return false;
     }
-<<<<<<< HEAD
     
     setIsLoading(true),
     setError(null),
@@ -81,16 +73,11 @@ export function useSkills() {;
       
       if (error) throw error,
       
-<<<<<<< HEAD
       return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
-=======
-      return showSuccessToast(&quot;Skill deleted&quot;, &quot;Your skill has been removed from your resume&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
     } finally {
       setIsLoading(false)
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -105,7 +92,6 @@ export function useSkills() {;
       return handleResumeError(e, 'Could not delete skill');
     } finally {;
       setIsLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   return {;

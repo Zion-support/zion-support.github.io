@@ -1,15 +1,14 @@
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
-import * as SeparatorPrimitive from &quot;@radix-ui/react-separator&quot;
+import * as React from "react"
+import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
-import { cn } from &quot;@/lib/utils&quot;
+import { cn } from "@/lib/utils"
 
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
 >(
   (
-    { className, orientation = &quot;horizontal&quot;, decorative = true, ...props },
+    { className, orientation = "horizontal", decorative = true, ...props },
     ref
   ) => (
     <SeparatorPrimitive.Root
@@ -17,30 +16,9 @@ const Separator = React.forwardRef<
       decorative={decorative}
       orientation={orientation}
       className={cn(
-        &quot;shrink-0 bg-border&quot;,
-        orientation === &quot;horizontal&quot; ? &quot;h-[1px] w-full&quot; : &quot;h-full w-[1px]&quot;,
+        "shrink-0 bg-border",
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
         className
-=======
-import * as React from "react";
-import * as SeparatorPrimitive from "@radix-ui/react-separator";
-import { cn } from "@/lib/utils";
-const Separator = React.forwardRef<;
-  React.ElementRef<typeof SeparatorPrimitive.Root>,;
-  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>;
->(;
-  (;
-    { className, orientation = "horizontal", decorative = true, ...props },;
-    ref;
-  ) => (;
-    <SeparatorPrimitive.Root;
-      ref={ref}
-      decorative={decorative}
-      orientation={orientation}
-      className={cn(;
-        "shrink-0 bg-border",;
-        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]";
-        className;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
       {...props}
     />;

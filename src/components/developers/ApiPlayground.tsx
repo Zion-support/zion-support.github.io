@@ -1,23 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button",
 import CodeBlock from "./CodeBlock",
-=======
-import { useState } from &quot;react&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Textarea } from &quot;@/components/ui/textarea&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import CodeBlock from &quot;./CodeBlock&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface Param {
   name: string,
   type: string,
   required?: boolean
-=======
 import { useState } from "react",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -27,7 +16,6 @@ interface Param {;
   name: string,;
   type: string,;
   required?: boolean;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 interface ApiPlaygroundProps {;
@@ -35,22 +23,13 @@ interface ApiPlaygroundProps {;
   path: string,;
   params?: Param[];
 }
-<<<<<<< HEAD
 
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
-<<<<<<< HEAD
   const [apiKey, setApiKey] = useState("demo_key_123"),
   const [paramValues, setParamValues] = useState<Record<string string>>({}),
   const [body, setBody] = useState("{}"),
   const [response, setResponse] = useState<string | null>(null),
   const [loading, setLoading] = useState(false),
-=======
-  const [apiKey, setApiKey] = useState(&quot;demo_key_123&quot;);
-  const [paramValues, setParamValues] = useState<Record<string, string>>({});
-  const [body, setBody] = useState(&quot;{}&quot;);
-  const [response, setResponse] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleParamChange = (name: string, value: string) => {
     setParamValues((prev) => ({ ...prev, [name]: value }))
@@ -61,13 +40,8 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : ''),
     let url = `${baseUrl}${path}`,
 
-<<<<<<< HEAD
     const searchParams = new URLSearchParams(),
     if (method === "GET" || method === "DELETE") {
-=======
-    const searchParams = new URLSearchParams();
-    if (method === &quot;GET&quot; || method === &quot;DELETE&quot;) {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       params.forEach((p) => {
         const val = paramValues[p.name],
         if (val) searchParams.append(p.name, val)
@@ -80,16 +54,15 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       method,
       headers: {
         Authorization: `Bearer ${apiKey}`,
-        &quot;Content-Type&quot;: &quot;application/json&quot;},
+        "Content-Type": "application/json"},
       // Add timeout to prevent hanging
       signal: AbortSignal.timeout(15000)},
 
-    if (method !== &quot;GET&quot; && method !== &quot;DELETE&quot;) {
+    if (method !== "GET" && method !== "DELETE") {
       try {
         options.body = JSON.stringify(JSON.parse(body))
       } catch {
         options.body = body
-=======
 ;
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {;
   const [apiKey, setApiKey] = useState("demo_key_123"),;
@@ -126,7 +99,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         options.body = JSON.stringify(JSON.parse(body));
       } catch {;
         options.body = body;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
     }
 ;
@@ -164,64 +136,35 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
     } finally {;
       setLoading(false);
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;space-y-4&quot;>
+    <div className="space-y-4">
       <Input
         value={apiKey}
         onChange={(e) => setApiKey(e.target.value)}
-        placeholder=&quot;API Key&quot;
+        placeholder="API Key"
       />
       {params.map((p) => (
         <Input
-=======
-  };
-  return (;
-    <div className="space-y-4">;
-      <Input;
-        value={apiKey}
-        onChange={(e) => setApiKey(e.target.value)}
-        placeholder="API Key";
-      />;
-      {params.map((p) => (;
-        <Input;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           key={p.name}
-          value={paramValues[p.name] || "&quot;}
+          value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
       ))}
-<<<<<<< HEAD
-      {method !== &quot;GET&quot; && method !== &quot;DELETE" && (
+      {method !== "GET" && method !== "DELETE" && (
         <Textarea
           value={body}
           onChange={(e) => setBody(e.target.value)}
-          className="font-mono&quot;
+          className="font-mono"
         />
       )}
       <Button onClick={sendRequest} disabled={loading}>
-        {loading ? &quot;Sending...&quot; : &quot;Send Request&quot;}
+        {loading ? "Sending..." : "Send Request"}
       </Button>
-      {response && <CodeBlock code={response} language=&quot;json" />}
+      {response && <CodeBlock code={response} language="json" />}
     </div>
   )
-=======
-      {method !== "GET" && method !== "DELETE" && (;
-        <Textarea;
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
-          className="font-mono";
-        />;
-      )}
-      <Button onClick={sendRequest} disabled={loading}>;
-        {loading ? "Sending..." : "Send Request"}
-      </Button>;
-      {response && <CodeBlock code={response} language="json" />}
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export default ApiPlayground;

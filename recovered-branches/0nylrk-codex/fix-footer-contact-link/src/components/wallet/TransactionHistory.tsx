@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -8,16 +6,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { Badge } from "@/components/ui/badge",
 import { formatDistanceToNow } from "date-fns",
-=======
-import React from &quot;react&quot;;
-import { useWallet } from &quot;@/hooks/useWallet&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { ScrollArea } from &quot;@/components/ui/scroll-area&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { formatDistanceToNow } from &quot;date-fns&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function TransactionHistory() {
   const { transactions, loading } = useWallet(),
 
@@ -42,30 +30,29 @@ export function TransactionHistory() {
         <CardDescription>Your recent ZION$ activity</CardDescription>
       </CardHeader>
       <CardContent>
-        <Tabs defaultValue=&quot;earned&quot;>
-          <TabsList className=&quot;w-full&quot;>
-            <TabsTrigger value=&quot;earned&quot; className=&quot;flex-1&quot;>Earned</TabsTrigger>
-            <TabsTrigger value=&quot;spent&quot; className=&quot;flex-1&quot;>Spent</TabsTrigger>
+        <Tabs defaultValue="earned">
+          <TabsList className="w-full">
+            <TabsTrigger value="earned" className="flex-1">Earned</TabsTrigger>
+            <TabsTrigger value="spent" className="flex-1">Spent</TabsTrigger>
           </TabsList>
-          <TabsContent value=&quot;earned&quot;>
-            <ScrollArea className=&quot;h-64&quot;>
+          <TabsContent value="earned">
+            <ScrollArea className="h-64">
               {earnTransactions.length === 0 ? (
-                <p className=&quot;text-center py-8 text-muted-foreground&quot;>No tokens earned yet</p>
+                <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>
               ) : (
-                <div className=&quot;space-y-2 mt-2&quot;>
+                <div className="space-y-2 mt-2">
                   {earnTransactions.map(tx => (
-                    <div key={tx.id} className=&quot;flex items-center justify-between py-2 border-b&quot;>
+                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">
                       <div>
-                        <p className=&quot;font-medium&quot;>{tx.reason || &quot;Token reward&quot;}</p>
-                        <p className=&quot;text-xs text-muted-foreground&quot;>
+                        <p className="font-medium">{tx.reason || "Token reward"}</p>
+                        <p className="text-xs text-muted-foreground">
                           {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
                         </p>
                       </div>
-                      <Badge variant=&quot;outline&quot; className=&quot;bg-green-100 text-green-800&quot;>
+                      <Badge variant="outline" className="bg-green-100 text-green-800">
                         +{tx.amount} ZION$
                       </Badge>
                     </div>
-=======
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -118,53 +105,29 @@ export function TransactionHistory() {;
                         +{tx.amount} ZION$;
                       </Badge>;
                     </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   ))}
                 </div>;
               )}
-<<<<<<< HEAD
             </ScrollArea>
           </TabsContent>
-          <TabsContent value=&quot;spent&quot;>
-            <ScrollArea className=&quot;h-64&quot;>
+          <TabsContent value="spent">
+            <ScrollArea className="h-64">
               {burnTransactions.length === 0 ? (
-                <p className=&quot;text-center py-8 text-muted-foreground&quot;>No tokens spent yet</p>
+                <p className="text-center py-8 text-muted-foreground">No tokens spent yet</p>
               ) : (
-                <div className=&quot;space-y-2 mt-2&quot;>
+                <div className="space-y-2 mt-2">
                   {burnTransactions.map(tx => (
-                    <div key={tx.id} className=&quot;flex items-center justify-between py-2 border-b&quot;>
+                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">
                       <div>
-                        <p className=&quot;font-medium&quot;>{tx.reason || &quot;Feature purchase&quot;}</p>
-                        <p className=&quot;text-xs text-muted-foreground&quot;>
+                        <p className="font-medium">{tx.reason || "Feature purchase"}</p>
+                        <p className="text-xs text-muted-foreground">
                           {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
                         </p>
                       </div>
-                      <Badge variant=&quot;outline&quot; className=&quot;bg-red-100 text-red-800&quot;>
+                      <Badge variant="outline" className="bg-red-100 text-red-800">
                         -{tx.amount} ZION$
                       </Badge>
                     </div>
-=======
-            </ScrollArea>;
-          </TabsContent>;
-          <TabsContent value="spent">;
-            <ScrollArea className="h-64">;
-              {burnTransactions.length === 0 ? (;
-                <p className="text-center py-8 text-muted-foreground">No tokens spent yet</p>;
-              ) : (;
-                <div className="space-y-2 mt-2">;
-                  {burnTransactions.map(tx => (;
-                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">;
-                      <div>;
-                        <p className="font-medium">{tx.reason || "Feature purchase"}</p>;
-                        <p className="text-xs text-muted-foreground">;
-                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
-                        </p>;
-                      </div>;
-                      <Badge variant="outline" className="bg-red-100 text-red-800">;
-                        -{tx.amount} ZION$;
-                      </Badge>;
-                    </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   ))}
                 </div>;
               )}

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -8,16 +6,6 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
-=======
-import { useQuery } from &quot;@tanstack/react-query&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Skeleton } from &quot;@/components/ui/skeleton&quot;;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from &quot;@/components/ui/select&quot;;
-import { useState } from &quot;react&quot;;
-
-type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' },
@@ -59,36 +47,36 @@ export function PageViewsTable() {
   const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) || 0,
   
   return (
-    <Card className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
-      <CardHeader className=&quot;pb-2&quot;>
-        <div className=&quot;flex flex-col sm:flex-row justify-between sm:items-center&quot;>
+    <Card className="bg-zion-blue-dark border-zion-blue-light">
+      <CardHeader className="pb-2">
+        <div className="flex flex-col sm:flex-row justify-between sm:items-center">
           <div>
-            <CardTitle className=&quot;text-white text-lg&quot;>Top Pages</CardTitle>
-            <CardDescription className=&quot;text-zion-slate-light&quot;>Most viewed pages on your platform</CardDescription>
+            <CardTitle className="text-white text-lg">Top Pages</CardTitle>
+            <CardDescription className="text-zion-slate-light">Most viewed pages on your platform</CardDescription>
           </div>
           <Select value={timeRange} onValueChange={(value: TimeRange) => setTimeRange(value)}>
-            <SelectTrigger className=&quot;w-28 mt-2 sm:mt-0 bg-zion-blue border-zion-blue-light text-zion-slate-light&quot;>
-              <SelectValue placeholder=&quot;Time Range&quot; />
+            <SelectTrigger className="w-28 mt-2 sm:mt-0 bg-zion-blue border-zion-blue-light text-zion-slate-light">
+              <SelectValue placeholder="Time Range" />
             </SelectTrigger>
-            <SelectContent className=&quot;bg-zion-blue-dark border-zion-blue-light text-zion-slate-light&quot;>
-              <SelectItem value=&quot;1d&quot;>Last 24h</SelectItem>
-              <SelectItem value=&quot;7d&quot;>Last 7 days</SelectItem>
-              <SelectItem value=&quot;30d&quot;>Last 30 days</SelectItem>
-              <SelectItem value=&quot;90d&quot;>Last 3 months</SelectItem>
-              <SelectItem value=&quot;365d&quot;>Last year</SelectItem>
+            <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light">
+              <SelectItem value="1d">Last 24h</SelectItem>
+              <SelectItem value="7d">Last 7 days</SelectItem>
+              <SelectItem value="30d">Last 30 days</SelectItem>
+              <SelectItem value="90d">Last 3 months</SelectItem>
+              <SelectItem value="365d">Last year</SelectItem>
             </SelectContent>
           </Select>
         </div>
       </CardHeader>
       <CardContent>
-        <div className=&quot;space-y-4&quot;>
+        <div className="space-y-4">
           {isLoading ? (
             Array(5).fill(0).map((_, i) => (
-              <div key={i} className=&quot;flex items-center justify-between&quot;>
-                <Skeleton className=&quot;h-4 w-40 bg-zion-blue-light&quot; />
-                <div className=&quot;flex items-center gap-2&quot;>
-                  <Skeleton className=&quot;h-4 w-10 bg-zion-blue-light&quot; />
-                  <Skeleton className=&quot;h-6 w-32 bg-zion-blue-light&quot; />
+              <div key={i} className="flex items-center justify-between">
+                <Skeleton className="h-4 w-40 bg-zion-blue-light" />
+                <div className="flex items-center gap-2">
+                  <Skeleton className="h-4 w-10 bg-zion-blue-light" />
+                  <Skeleton className="h-6 w-32 bg-zion-blue-light" />
                 </div>
               </div>
             ))
@@ -97,30 +85,29 @@ export function PageViewsTable() {
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0',
               
               return (
-                <div key={index} className=&quot;flex items-center justify-between&quot;>
-                  <div className=&quot;text-zion-slate-light font-medium&quot;>
+                <div key={index} className="flex items-center justify-between">
+                  <div className="text-zion-slate-light font-medium">
                     {formatPathName(page.path)}
                   </div>
-                  <div className=&quot;flex items-center gap-3&quot;>
-                    <span className=&quot;text-white font-medium&quot;>{page.count}</span>
-                    <div className=&quot;w-32 flex items-center gap-2&quot;>
-                      <div className=&quot;flex-1 h-2 bg-zion-blue-light rounded-full overflow-hidden&quot;>
+                  <div className="flex items-center gap-3">
+                    <span className="text-white font-medium">{page.count}</span>
+                    <div className="w-32 flex items-center gap-2">
+                      <div className="flex-1 h-2 bg-zion-blue-light rounded-full overflow-hidden">
                         <div 
-                          className=&quot;h-full bg-gradient-to-r from-zion-purple to-zion-cyan&quot; 
+                          className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
                           style={{ width: `${percentage}%` }}
                         />
                       </div>
-                      <span className=&quot;text-xs text-zion-slate&quot;>{percentage}%</span>
+                      <span className="text-xs text-zion-slate">{percentage}%</span>
                     </div>
                   </div>
                 </div>
               )
             })
           ) : (
-            <div className=&quot;text-center py-8 text-zion-slate&quot;>
+            <div className="text-center py-8 text-zion-slate">
               No page view data available for this time period
             </div>
-=======
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -220,7 +207,6 @@ export function PageViewsTable() {;
             <div className="text-center py-8 text-zion-slate">;
               No page view data available for this time period;
             </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         </div>;
       </CardContent>;

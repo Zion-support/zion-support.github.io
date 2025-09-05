@@ -32,17 +32,10 @@ function findBestBackup(pagePath) {;
           content.length > 100) {;
         return backupPath;
       }
-<<<<<<< HEAD
     } catch (error) {
-<<<<<<< HEAD
       // // // console.log(`Error reading backup ${backupPath}:`, error.message)
-=======
-      // console.log(`Error reading backup ${backupPath}:`, error.message);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
     } catch (error) {;
       // // // console.log(`Error reading backup ${backupPath}:`, error.message);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   }
 ;
@@ -70,8 +63,8 @@ function restorePage(pagePath) {;
     // Read backup content;
     let backupContent = fs.readFileSync(backupPath, 'utf8'),;
     // Handle merge conflicts by taking the content after the conflict markers;
-    if (backupContent.includes('<<<<<<< HEAD')) {;
-      const parts = backupContent.split('======='),;
+    if (backupContent.includes('')) {;
+      const parts = backupContent.split(''),;
       if (parts.length > 1) {;
         // Take the content after the conflict resolution;
         backupContent = parts[1].split('>>>>>>>')[0];
@@ -101,7 +94,6 @@ function restorePage(pagePath) {;
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
-<<<<<<< HEAD
 
 // Function to fix specific corrupted pages
 function fixSpecificPages() {
@@ -112,7 +104,6 @@ function fixSpecificPages() {
     details: []
   },
   
-<<<<<<< HEAD
   // // // console.log('🚀 Starting targeted page restoration...'),
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
   
@@ -120,15 +111,6 @@ function fixSpecificPages() {
     if (!fs.existsSync(pagePath)) {
       // // // console.log(`⚠️  Page not found: ${pagePath}`),
       results.failed++,
-=======
-  // console.log('🚀 Starting targeted page restoration...');
-  // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`);
-  
-  for (const pagePath of corruptedPages) {
-    if (!fs.existsSync(pagePath)) {
-      // console.log(`⚠️  Page not found: ${pagePath}`);
-      results.failed++;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       results.details.push({
         file: pagePath,
         restored: false,
@@ -137,7 +119,6 @@ function fixSpecificPages() {
       continue
     }
     
-<<<<<<< HEAD
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
     const result = restorePage(pagePath),
     
@@ -150,21 +131,6 @@ function fixSpecificPages() {
       results.failed++,
       // // // console.log(`❌ Failed: ${pagePath}`),
       // // // console.log(`   Reason: ${result.reason}`)
-=======
-    // console.log(`\n🔍 Checking: ${pagePath}`);
-    const result = restorePage(pagePath);
-    
-    if (result.restored) {
-      results.restored++;
-      // console.log(`✅ Restored: ${pagePath}`);
-      // console.log(`   Used backup: ${result.backupUsed}`);
-      // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
-    } else {
-      results.failed++;
-      // console.log(`❌ Failed: ${pagePath}`);
-      // console.log(`   Reason: ${result.reason}`);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
 // Function to fix specific corrupted pages;
 function fixSpecificPages() {;
@@ -199,7 +165,6 @@ function fixSpecificPages() {;
       results.failed++,;
       // // // console.log(`❌ Failed: ${pagePath}`),;
       // // // console.log(`   Reason: ${result.reason}`);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     results.details.push({;
@@ -207,10 +172,8 @@ function fixSpecificPages() {;
       ...result;
     });
   }
-<<<<<<< HEAD
   
   // Generate summary
-<<<<<<< HEAD
   // // // console.log('\n📊 Restoration Summary: '),
   // // // console.log(`   Total pages: ${results.total}`),
   // // // console.log(`   Restored: ${results.restored}`),
@@ -221,21 +184,8 @@ function fixSpecificPages() {;
   const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json'),
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),
-=======
-  // console.log('\n📊 Restoration Summary:');
-  // console.log(`   Total pages: ${results.total}`);
-  // console.log(`   Restored: ${results.restored}`);
-  // console.log(`   Failed: ${results.failed}`);
-  // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`);
-  
-  // Save detailed report
-  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json');
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
-  // console.log(`\n📄 Detailed report saved to: ${reportPath}`);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   return results
-=======
 ;
   // Generate summary;
   // // // console.log('\n📊 Restoration Summary: '),;
@@ -248,7 +198,6 @@ function fixSpecificPages() {;
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
   return results;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 // Run the restoration if this script is executed directly;

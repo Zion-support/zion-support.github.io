@@ -1,17 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { QuoteFormData } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Textarea } from "@/components/ui/textarea",
-=======
-import { QuoteFormData } from &quot;@/types/quotes&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Label } from &quot;@/components/ui/label&quot;;
-import { Textarea } from &quot;@/components/ui/textarea&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ProjectDetailsStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -19,45 +10,44 @@ interface ProjectDetailsStepProps {
 
 export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsStepProps) {
   return (
-    <div className=&quot;space-y-6&quot;>
+    <div className="space-y-6">
       <div>
-        <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>Tell us about your project</h3>
+        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
         
-        <div className=&quot;space-y-4&quot;>
+        <div className="space-y-4">
           <div>
-            <Label htmlFor=&quot;projectName&quot; className=&quot;text-zion-slate-light&quot;>Project Name</Label>
+            <Label htmlFor="projectName" className="text-zion-slate-light">Project Name</Label>
             <Input
-              id=&quot;projectName&quot;
-              placeholder=&quot;Enter a name for your project&quot;
+              id="projectName"
+              placeholder="Enter a name for your project"
               value={formData.projectName}
               onChange={(e) => updateFormData({ projectName: e.target.value })}
-              className=&quot;bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white&quot;
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
           
           <div>
-            <Label htmlFor=&quot;projectDescription&quot; className=&quot;text-zion-slate-light&quot;>Project Description</Label>
+            <Label htmlFor="projectDescription" className="text-zion-slate-light">Project Description</Label>
             <Textarea
-              id=&quot;projectDescription&quot;
-              placeholder=&quot;Describe your project in detail...&quot;
+              id="projectDescription"
+              placeholder="Describe your project in detail..."
               value={formData.projectDescription}
               onChange={(e) => updateFormData({ projectDescription: e.target.value })}
-              className=&quot;min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white&quot;
+              className="min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
         </div>
       </div>
       
       <div>
-        <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>Contact Information</h3>
+        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
         
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <Label htmlFor=&quot;name&quot; className=&quot;text-zion-slate-light&quot;>Name</Label>
+            <Label htmlFor="name" className="text-zion-slate-light">Name</Label>
             <Input
-              id=&quot;name&quot;
-              placeholder=&quot;Your name&quot;
-=======
+              id="name"
+              placeholder="Your name"
 import { QuoteFormData } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
@@ -103,98 +93,57 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input;
               id="name";
               placeholder="Your name";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               value={formData.contactInfo.name}
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, name: e.target.value } ;
               })}
-<<<<<<< HEAD
-              className=&quot;bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white&quot;
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
           
           <div>
-            <Label htmlFor=&quot;company&quot; className=&quot;text-zion-slate-light&quot;>Company</Label>
+            <Label htmlFor="company" className="text-zion-slate-light">Company</Label>
             <Input
-              id=&quot;company&quot;
-              placeholder=&quot;Your company name&quot;
-=======
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
-            />;
-          </div>;
-          <div>;
-            <Label htmlFor="company" className="text-zion-slate-light">Company</Label>;
-            <Input;
-              id="company";
-              placeholder="Your company name";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              id="company"
+              placeholder="Your company name"
               value={formData.contactInfo.company}
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, company: e.target.value } ;
               })}
-<<<<<<< HEAD
-              className=&quot;bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white&quot;
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
           
           <div>
-            <Label htmlFor=&quot;email&quot; className=&quot;text-zion-slate-light&quot;>Email</Label>
+            <Label htmlFor="email" className="text-zion-slate-light">Email</Label>
             <Input
-              id=&quot;email&quot;
-              type=&quot;email&quot;
-              placeholder=&quot;Your email address&quot;
-=======
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
-            />;
-          </div>;
-          <div>;
-            <Label htmlFor="email" className="text-zion-slate-light">Email</Label>;
-            <Input;
-              id="email";
-              type="email";
-              placeholder="Your email address";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              id="email"
+              type="email"
+              placeholder="Your email address"
               value={formData.contactInfo.email}
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, email: e.target.value } ;
               })}
-<<<<<<< HEAD
-              className=&quot;bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white&quot;
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
           
           <div>
-            <Label htmlFor=&quot;phone&quot; className=&quot;text-zion-slate-light&quot;>Phone</Label>
+            <Label htmlFor="phone" className="text-zion-slate-light">Phone</Label>
             <Input
-              id=&quot;phone&quot;
-              placeholder=&quot;Your phone number&quot;
-=======
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
-            />;
-          </div>;
-          <div>;
-            <Label htmlFor="phone" className="text-zion-slate-light">Phone</Label>;
-            <Input;
-              id="phone";
-              placeholder="Your phone number";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              id="phone"
+              placeholder="Your phone number"
               value={formData.contactInfo.phone}
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, phone: e.target.value } ;
               })}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
-=======
-              className=&quot;bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             />
           </div>
         </div>
       </div>
     </div>
   )
-=======
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
             />;
           </div>;
@@ -202,6 +151,5 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
       </div>;
     </div>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

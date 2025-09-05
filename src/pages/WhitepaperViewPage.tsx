@@ -24,7 +24,6 @@ interface SharedWhitepaper {;
   created_at: string,;
   is_public: boolean;
 }
-<<<<<<< HEAD
 
 const WhitepaperViewPage: React.FC = () => {
   const router = useRouter(),
@@ -38,16 +37,9 @@ const WhitepaperViewPage: React.FC = () => {
   useEffect(() => {
     const fetchWhitepaper = async () => {
       if (!id) {
-<<<<<<< HEAD
         setError("No whitepaper ID provided."),
         setLoading(false),
         return
-=======
-        setError(&quot;No whitepaper ID provided.&quot;);
-        setLoading(false);
-        return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
 const WhitepaperViewPage: React.FC = () => {;
   const router = useRouter(),;
@@ -63,7 +55,6 @@ const WhitepaperViewPage: React.FC = () => {;
         setError("No whitepaper ID provided."),;
         setLoading(false),;
         return;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
       setLoading(true),;
       setError(null),;
@@ -83,25 +74,20 @@ const WhitepaperViewPage: React.FC = () => {;
       } finally {;
         setLoading(false);
       }
-<<<<<<< HEAD
     },
     fetchWhitepaper()
   }, [id]),
 
   if (loading) {
-<<<<<<< HEAD
     return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>
-=======
-    return <div className=&quot;flex justify-center items-center h-screen&quot;><p>Loading whitepaper...</p></div>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 
   if (error) {
     return (
-      <div className=&quot;flex flex-col justify-center items-center h-screen text-red-600&quot;>
+      <div className="flex flex-col justify-center items-center h-screen text-red-600">
         <p>Error: {error}</p>
-        <Button asChild variant=&quot;link&quot; className=&quot;mt-4&quot;>
-          <Link href=&quot;/&quot;><ArrowLeft className=&quot;mr-2 h-4 w-4&quot; /> Back to Home</Link>
+        <Button asChild variant="link" className="mt-4">
+          <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
         </Button>
       </div>
     )
@@ -109,10 +95,10 @@ const WhitepaperViewPage: React.FC = () => {;
 
   if (!sharedData) { // Check sharedData which includes the is_public flag
     return (
-         <div className=&quot;flex flex-col justify-center items-center h-screen&quot;>
+         <div className="flex flex-col justify-center items-center h-screen">
             <p>Whitepaper not found.</p> {/* This can be a generic message */}
-            <Button asChild variant=&quot;link&quot; className=&quot;mt-4&quot;>
-              <Link href=&quot;/&quot;><ArrowLeft className=&quot;mr-2 h-4 w-4&quot; /> Back to Home</Link>
+            <Button asChild variant="link" className="mt-4">
+              <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
             </Button>
         </div>
     )
@@ -121,11 +107,11 @@ const WhitepaperViewPage: React.FC = () => {;
   // Access control based on is_public and admin role
   if (!sharedData.is_public && !isAdmin) {
     return (
-      <div className=&quot;flex flex-col justify-center items-center h-screen&quot;>
-        <h2 className=&quot;text-2xl font-semibold mb-4&quot;>Access Denied</h2>
-        <p className=&quot;mb-4&quot;>This whitepaper is not public and you do not have permission to view it.</p>
-        <Button asChild variant=&quot;link&quot;>
-          <Link href=&quot;/&quot;><ArrowLeft className=&quot;mr-2 h-4 w-4&quot; /> Back to Home</Link>
+      <div className="flex flex-col justify-center items-center h-screen">
+        <h2 className="text-2xl font-semibold mb-4">Access Denied</h2>
+        <p className="mb-4">This whitepaper is not public and you do not have permission to view it.</p>
+        <Button asChild variant="link">
+          <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
         </Button>
       </div>
     )
@@ -134,18 +120,17 @@ const WhitepaperViewPage: React.FC = () => {;
   const { whitepaper_data: whitepaper } = sharedData,
 
   return (
-    <div className=&quot;container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen&quot;>
-        <div className=&quot;mb-6 flex justify-between items-center&quot;>
-            <Button asChild variant=&quot;outline&quot;>
-                 <Link href={isAdmin ? &quot;/admin/whitepaper-generator&quot; : &quot;/&quot;}> {/* Sensible back link */}
-                    <ArrowLeft className=&quot;mr-2 h-4 w-4&quot; /> Back
+    <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">
+        <div className="mb-6 flex justify-between items-center">
+            <Button asChild variant="outline">
+                 <Link href={isAdmin ? "/admin/whitepaper-generator" : "/"}> {/* Sensible back link */}
+                    <ArrowLeft className="mr-2 h-4 w-4" /> Back
                  </Link>
             </Button>
             {!sharedData.is_public && isAdmin && (
-                <span className=&quot;px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full&quot;>
+                <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">
                     Private (Admin View)
                 </span>
-=======
     },;
     fetchWhitepaper();
   }, [id]),;
@@ -201,7 +186,6 @@ const WhitepaperViewPage: React.FC = () => {;
                 <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">;
                     Private (Admin View);
                 </span>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             )}
         </div>;
       <WhitepaperPreviewPanel;

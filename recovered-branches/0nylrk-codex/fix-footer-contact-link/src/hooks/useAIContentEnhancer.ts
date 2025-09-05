@@ -38,29 +38,20 @@ export function useAIContentEnhancer() {;
       if (error) {;
         throw new Error(error.message);
       }
-<<<<<<< HEAD
       
       return data.enhancedContent
     } catch (err: any) {
       const errorMessage = err.message || 'Failed to enhance content',
       setError(errorMessage),
       toast({
-        title: &quot;AI Enhancement Failed&quot;,
+        title: "AI Enhancement Failed",
         description: errorMessage,
-<<<<<<< HEAD
         variant: "destructive"
       }),
       console.error('Enhancement error:', err),
       return null
-=======
-        variant: &quot;destructive&quot;
-      });
-      console.error('Enhancement error:', err);
-      return null;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsEnhancing(false)
-=======
 ;
       return data.enhancedContent;
     } catch (err: any) {;
@@ -75,7 +66,6 @@ export function useAIContentEnhancer() {;
       return null;
     } finally {;
       setIsEnhancing(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   return {;

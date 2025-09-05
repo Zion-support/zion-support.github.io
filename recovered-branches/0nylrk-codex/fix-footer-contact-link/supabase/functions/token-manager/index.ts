@@ -1,35 +1,21 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
-=======
-import { serve } from &quot;https://deno.land/std@0.177.0/http/server.ts&quot;;
-import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2.38.0&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface TokenRequest {
   userId: string,
   amount: number,
   reason?: string
 }
 
-<<<<<<< HEAD
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, serviceKey),
-=======
-const supabaseUrl = Deno.env.get(&quot;SUPABASE_URL&quot;) as string;
-const serviceKey = Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) as string;
-const supabase = createClient(supabaseUrl, serviceKey);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', {
       headers: {
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",;
 interface TokenRequest {;
@@ -46,7 +32,6 @@ serve(async (req) => {;
     return new Response('ok', {;
       headers: {;
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}});
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   const url = new URL(req.url),;

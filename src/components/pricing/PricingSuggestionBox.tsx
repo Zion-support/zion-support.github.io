@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
@@ -13,21 +11,6 @@ interface PricingSuggestionBoxProps {
   isLoading: boolean,
   onApplySuggestion: () => void,
   rateType: "hourly" | "fixed"
-=======
-import React from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from &quot;@/components/ui/tooltip&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Loader2, Info, ThumbsUp } from 'lucide-react'
-import { PricingSuggestion } from &quot;@/services/pricingSuggestionService&quot;;
-
-interface PricingSuggestionBoxProps {
-  suggestion: PricingSuggestion | null;
-  isLoading: boolean;
-  onApplySuggestion: () => void;
-  rateType: &quot;hourly&quot; | &quot;fixed&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
@@ -37,18 +20,17 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   rateType}) => {
   if (isLoading) {
     return (
-      <Card className=&quot;border border-dashed border-muted&quot;>
-        <CardContent className=&quot;flex items-center justify-center p-6&quot;>
-          <div className=&quot;text-center&quot;>
-            <Loader2 className=&quot;h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4&quot; />
-            <p className=&quot;text-sm text-muted-foreground&quot;>
+      <Card className="border border-dashed border-muted">
+        <CardContent className="flex items-center justify-center p-6">
+          <div className="text-center">
+            <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
+            <p className="text-sm text-muted-foreground">
               Generating optimal pricing suggestion...
             </p>
           </div>
         </CardContent>
       </Card>
     )
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",;
@@ -81,59 +63,51 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         </CardContent>;
       </Card>;
     );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   if (!suggestion) {;
     return null;
   }
-<<<<<<< HEAD
 
   const confidenceColor = {
-<<<<<<< HEAD
     High: "bg-green-100 text-green-800",
     Medium: "bg-yellow-100 text-yellow-800",
     Low: "bg-red-100 text-red-800"}[suggestion.confidence],
-=======
-    High: &quot;bg-green-100 text-green-800&quot;,
-    Medium: &quot;bg-yellow-100 text-yellow-800&quot;,
-    Low: &quot;bg-red-100 text-red-800&quot;}[suggestion.confidence];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
-    <Card className=&quot;border-2 border-dashed border-muted-foreground/20&quot;>
-      <CardContent className=&quot;p-5 space-y-4&quot;>
-        <div className=&quot;flex items-center justify-between&quot;>
-          <h4 className=&quot;font-semibold&quot;>AI Suggested Price</h4>
-          <Badge variant=&quot;outline&quot; className={confidenceColor}>
+    <Card className="border-2 border-dashed border-muted-foreground/20">
+      <CardContent className="p-5 space-y-4">
+        <div className="flex items-center justify-between">
+          <h4 className="font-semibold">AI Suggested Price</h4>
+          <Badge variant="outline" className={confidenceColor}>
             {suggestion.confidence} confidence
           </Badge>
         </div>
 
-        <div className=&quot;bg-muted/50 rounded-md p-3 text-center&quot;>
-          <span className=&quot;text-2xl font-bold&quot;>
+        <div className="bg-muted/50 rounded-md p-3 text-center">
+          <span className="text-2xl font-bold">
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
-          <span className=&quot;text-sm text-muted-foreground ml-1&quot;>
-            {rateType === &quot;hourly&quot; ? &quot;/hour&quot; : &quot; total&quot;}
+          <span className="text-sm text-muted-foreground ml-1">
+            {rateType === "hourly" ? "/hour" : " total"}
           </span>
         </div>
 
-        <div className=&quot;flex items-start space-x-2 text-sm text-muted-foreground&quot;>
-          <Info className=&quot;h-4 w-4 flex-shrink-0 mt-1&quot; />
+        <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+          <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{suggestion.explanation}</p>
         </div>
 
-        <div className=&quot;flex items-center justify-between&quot;>
+        <div className="flex items-center justify-between">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-                  variant=&quot;default&quot;
+                  variant="default"
                   onClick={onApplySuggestion}
-                  className=&quot;w-full&quot;
+                  className="w-full"
                 >
-                  <ThumbsUp className=&quot;h-4 w-4 mr-2&quot; /> Apply Suggestion
+                  <ThumbsUp className="h-4 w-4 mr-2" /> Apply Suggestion
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
@@ -143,14 +117,13 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </TooltipProvider>
         </div>
         
-        <p className=&quot;text-xs text-center text-muted-foreground pt-2&quot;>
+        <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
         </p>
       </CardContent>
     </Card>
   )
 },
-=======
 ;
   const confidenceColor = {;
     High: "bg-green-100 text-green-800",;
@@ -202,4 +175,3 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>;
   );
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

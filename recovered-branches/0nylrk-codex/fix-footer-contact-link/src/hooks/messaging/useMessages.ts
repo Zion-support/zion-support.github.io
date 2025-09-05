@@ -76,7 +76,6 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {;
         setActiveMessages(prev => [...prev, data as Message]);
       }
-<<<<<<< HEAD
       
       // Update conversations list
       await fetchConversations(),
@@ -86,18 +85,10 @@ export function useMessages(;
     } catch (error) {
       console.error('Error sending message:', error),
       toast({
-<<<<<<< HEAD
         title: "Failed to send message",
         description: "Please try again later",
         variant: "destructive"
       })
-=======
-        title: &quot;Failed to send message&quot;,
-        description: &quot;Please try again later&quot;,
-        variant: &quot;destructive&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
       // Update conversations list;
       await fetchConversations(),;
@@ -110,7 +101,6 @@ export function useMessages(;
         description: "Please try again later",;
         variant: "destructive";
       });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   /**;

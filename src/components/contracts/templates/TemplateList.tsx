@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -9,16 +7,6 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 import { useAuth } from "@/hooks/useAuth",
-=======
-import { ContractTemplate } from &quot;@/types/contracts&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
-import { useContractTemplates } from &quot;@/hooks/useContractTemplates&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-import { Separator } from &quot;@/components/ui/separator&quot;;
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from &quot;@/components/ui/tooltip&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router',
 import {
@@ -29,20 +17,13 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-<<<<<<< HEAD
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react",
-=======
-  AlertDialogTitle} from &quot;@/components/ui/alert-dialog&quot;;
-import { useState } from &quot;react&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
   onEdit: (template: ContractTemplate) => void
-=======
 import { ContractTemplate } from "@/types/contracts",;
 import { Button } from "@/components/ui/button",;
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
@@ -68,7 +49,6 @@ interface TemplateListProps {;
   isLoading: boolean,;
   onSelect: (template: ContractTemplate) => void,;
   onEdit: (template: ContractTemplate) => void;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export function TemplateList({;
@@ -96,31 +76,30 @@ export function TemplateList({;
       router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`);
       return;
     }
-<<<<<<< HEAD
     await setDefaultTemplate.mutateAsync(templateId)
   },
 
   if (isLoading) {
     return (
-      <div className=&quot;flex justify-center items-center py-8&quot;>
-        <Loader2 className=&quot;h-8 w-8 animate-spin text-zion-purple&quot; />
+      <div className="flex justify-center items-center py-8">
+        <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
       </div>
     )
   }
 
   if (!templates.length) {
     return (
-      <div className=&quot;text-center py-8&quot;>
-        <p className=&quot;text-muted-foreground&quot;>No templates found.</p>
-        <p className=&quot;text-sm text-muted-foreground&quot;>Save a contract as a template to reuse it later.</p>
+      <div className="text-center py-8">
+        <p className="text-muted-foreground">No templates found.</p>
+        <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>
       </div>
     )
   }
 
   return (
-    <div className=&quot;space-y-3&quot;>
+    <div className="space-y-3">
       {templates.map((template) => (
-        <Card key={template.id} className={template.is_default ? &quot;border-zion-purple&quot; : ""}>
+        <Card key={template.id} className={template.is_default ? "border-zion-purple" : ""}>
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <div className="space-y-1">
@@ -128,66 +107,33 @@ export function TemplateList({;
                   <h3 className="font-medium">{template.title}</h3>
                   {template.is_default && (
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>
-=======
-    await setDefaultTemplate.mutateAsync(templateId);
-  };
-  if (isLoading) {;
-    return (;
-      <div className="flex justify-center items-center py-8">;
-        <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
-      </div>;
-    );
-  }
-;
-  if (!templates.length) {;
-    return (;
-      <div className="text-center py-8">;
-        <p className="text-muted-foreground">No templates found.</p>;
-        <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>;
-      </div>;
-    );
-  }
-;
-  return (;
-    <div className="space-y-3">;
-      {templates.map((template) => (;
-        <Card key={template.id} className={template.is_default ? "border-zion-purple" : ""}>;
-          <CardContent className="p-4">;
-            <div className="flex items-center justify-between">;
-              <div className="space-y-1">;
-                <div className="flex items-center gap-2">;
-                  <h3 className="font-medium">{template.title}</h3>;
-                  {template.is_default && (;
-                    <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   )}
                 </div>;
                 <p className="text-xs text-muted-foreground">;
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
-<<<<<<< HEAD
                 </p>
               </div>
               
-              <div className="flex items-center gap-2&quot;>
+              <div className="flex items-center gap-2">
                 <Button
-                  variant=&quot;ghost&quot;
-                  size=&quot;icon&quot;
+                  variant="ghost"
+                  size="icon"
                   onClick={() => onEdit(template)}
-                  aria-label=&quot;Edit template"
+                  aria-label="Edit template"
                 >
-                  <Edit className="h-4 w-4&quot; />
+                  <Edit className="h-4 w-4" />
                 </Button>
                 {!template.is_default ? (
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <Button
-                          variant=&quot;ghost&quot;
-                          size=&quot;icon&quot;
+                          variant="ghost"
+                          size="icon"
                           onClick={() => handleSetDefault(template.id)}
-                          aria-label=&quot;Set as default"
+                          aria-label="Set as default"
                         >
-                          <Star className="h-4 w-4&quot; />
+                          <Star className="h-4 w-4" />
                         </Button>
                       </TooltipTrigger>
                       {!user && (
@@ -198,90 +144,32 @@ export function TemplateList({;
                     </Tooltip>
                   </TooltipProvider>
                 ) : (
-                  <Button variant=&quot;ghost&quot; size=&quot;icon&quot; disabled aria-label=&quot;Default template">
-                    <StarOff className="h-4 w-4&quot; />
+                  <Button variant="ghost" size="icon" disabled aria-label="Default template">
+                    <StarOff className="h-4 w-4" />
                   </Button>
                 )}
                 <Button
-                  variant=&quot;ghost&quot;
-                  size=&quot;icon&quot;
+                  variant="ghost"
+                  size="icon"
                   onClick={() => handleDeleteClick(template.id)}
-                  aria-label=&quot;Delete template"
+                  aria-label="Delete template"
                 >
                   <Trash className="h-4 w-4 text-destructive" />
                 </Button>
               </div>
             </div>
             
-            <Separator className="my-3&quot; />
+            <Separator className="my-3" />
             
             <Button 
               onClick={() => onSelect(template)} 
-              variant=&quot;outline" 
+              variant="outline" 
               className="w-full"
             >
               Use This Template
             </Button>
           </CardContent>
         </Card>
-=======
-                </p>;
-              </div>;
-              <div className="flex items-center gap-2">;
-                <Button;
-                  variant="ghost";
-                  size="icon";
-                  onClick={() => onEdit(template)}
-                  aria-label="Edit template";
-                >;
-                  <Edit className="h-4 w-4" />;
-                </Button>;
-                {!template.is_default ? (;
-                  <TooltipProvider>;
-                    <Tooltip>;
-                      <TooltipTrigger asChild>;
-                        <Button;
-                          variant="ghost";
-                          size="icon";
-                          onClick={() => handleSetDefault(template.id)}
-                          aria-label="Set as default";
-                        >;
-                          <Star className="h-4 w-4" />;
-                        </Button>;
-                      </TooltipTrigger>;
-                      {!user && (;
-                        <TooltipContent>;
-                          Please log in to use this feature;
-                        </TooltipContent>;
-                      )}
-                    </Tooltip>;
-                  </TooltipProvider>;
-                ) : (;
-                  <Button variant="ghost" size="icon" disabled aria-label="Default template">;
-                    <StarOff className="h-4 w-4" />;
-                  </Button>;
-                )}
-                <Button;
-                  variant="ghost";
-                  size="icon";
-                  onClick={() => handleDeleteClick(template.id)}
-                  aria-label="Delete template";
-                >;
-                  <Trash className="h-4 w-4 text-destructive" />;
-                </Button>;
-              </div>;
-            </div>;
-            <Separator className="my-3" />;
-            <Button;
-              onClick={() => onSelect(template)} ;
-              variant="outline";
-              className="w-full";
-            >;
-              Use This Template;
-            </Button>;
-          </CardContent>;
-        </Card>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       ))}
 ;
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;

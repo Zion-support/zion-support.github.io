@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
@@ -12,44 +11,43 @@ export default function QuantumCybersecurityPage() {
   const features = [
     {
       icon: Shield,
-      title: &quot;Quantum-Resistant Encryption&quot;,
-      description: &quot;Advanced cryptographic algorithms that remain secure even against quantum computers.&quot;,
-      color: &quot;from-blue-500 to-cyan-500&quot;
+      title: "Quantum-Resistant Encryption",
+      description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
+      color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Lock,
-      title: &quot;Zero-Trust Architecture&quot;,
-      description: &quot;Verify every user and device before granting access to any resource.&quot;,
-      color: &quot;from-purple-500 to-pink-500&quot;
+      title: "Zero-Trust Architecture",
+      description: "Verify every user and device before granting access to any resource.",
+      color: "from-purple-500 to-pink-500"
     },
     {
       icon: Eye,
-      title: &quot;AI-Powered Threat Detection&quot;,
-      description: &quot;Machine learning algorithms that identify and respond to threats in real-time.&quot;,
-      color: &quot;from-green-500 to-emerald-500&quot;
+      title: "AI-Powered Threat Detection",
+      description: "Machine learning algorithms that identify and respond to threats in real-time.",
+      color: "from-green-500 to-emerald-500"
     },
     {
       icon: AlertTriangle,
-      title: &quot;Advanced Threat Intelligence&quot;,
-      description: &quot;Real-time monitoring and analysis of global cyber threats and vulnerabilities.&quot;,
-      color: &quot;from-red-500 to-orange-500&quot;
+      title: "Advanced Threat Intelligence",
+      description: "Real-time monitoring and analysis of global cyber threats and vulnerabilities.",
+      color: "from-red-500 to-orange-500"
     },
     {
       icon: Zap,
-      title: &quot;Automated Incident Response&quot;,
-      description: &quot;Instant response and mitigation of security incidents with minimal human intervention.&quot;,
-      color: &quot;from-yellow-500 to-orange-500&quot;
+      title: "Automated Incident Response",
+      description: "Instant response and mitigation of security incidents with minimal human intervention.",
+      color: "from-yellow-500 to-orange-500"
     },
     {
       icon: Cpu,
-      title: &quot;Secure Cloud Infrastructure&quot;,
-      description: &quot;Enterprise-grade security for cloud deployments with end-to-end encryption.&quot;,
-      color: &quot;from-indigo-500 to-purple-500&quot;
+      title: "Secure Cloud Infrastructure",
+      description: "Enterprise-grade security for cloud deployments with end-to-end encryption.",
+      color: "from-indigo-500 to-purple-500"
     }
   ],
 
   const benefits = [
-<<<<<<< HEAD
     "Protect against quantum computing attacks with future-proof encryption",
     "Reduce security incidents by 90% with AI-powered threat detection",
     "Achieve compliance with SOC 2, GDPR, and industry standards",
@@ -57,86 +55,77 @@ export default function QuantumCybersecurityPage() {
     "Scalable security that grows with your business",
     "Expert security team available around the clock"
   ],
-=======
-    &quot;Protect against quantum computing attacks with future-proof encryption&quot;,
-    &quot;Reduce security incidents by 90% with AI-powered threat detection&quot;,
-    &quot;Achieve compliance with SOC 2, GDPR, and industry standards&quot;,
-    &quot;24/7 monitoring and automated incident response&quot;,
-    &quot;Scalable security that grows with your business&quot;,
-    &quot;Expert security team available around the clock&quot;
-  ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const threats = [
     {
-      type: &quot;Quantum Attacks&quot;,
-      description: &quot;Future quantum computers could break current encryption standards&quot;,
-      solution: &quot;Quantum-resistant algorithms and post-quantum cryptography&quot;
+      type: "Quantum Attacks",
+      description: "Future quantum computers could break current encryption standards",
+      solution: "Quantum-resistant algorithms and post-quantum cryptography"
     },
     {
-      type: &quot;AI-Powered Threats&quot;,
-      description: &quot;Sophisticated attacks using artificial intelligence and machine learning&quot;,
-      solution: &quot;Advanced AI defense systems and behavioral analysis&quot;
+      type: "AI-Powered Threats",
+      description: "Sophisticated attacks using artificial intelligence and machine learning",
+      solution: "Advanced AI defense systems and behavioral analysis"
     },
     {
-      type: &quot;Supply Chain Attacks&quot;,
-      description: &quot;Compromised software or hardware in the supply chain&quot;,
-      solution: &quot;Comprehensive supply chain verification and integrity checks&quot;
+      type: "Supply Chain Attacks",
+      description: "Compromised software or hardware in the supply chain",
+      solution: "Comprehensive supply chain verification and integrity checks"
     },
     {
-      type: &quot;Ransomware&quot;,
-      description: &quot;Malicious software that encrypts data and demands payment&quot;,
-      solution: &quot;Real-time detection, automated backup, and rapid recovery&quot;
+      type: "Ransomware",
+      description: "Malicious software that encrypts data and demands payment",
+      solution: "Real-time detection, automated backup, and rapid recovery"
     }
   ],
 
   const pricing = [
     {
-      plan: &quot;Essential&quot;,
-      price: &quot;$799&quot;,
-      period: &quot;/month&quot;,
-      description: &quot;Basic quantum cybersecurity for small businesses&quot;,
+      plan: "Essential",
+      price: "$799",
+      period: "/month",
+      description: "Basic quantum cybersecurity for small businesses",
       features: [
-        &quot;Quantum-resistant encryption&quot;,
-        &quot;Basic threat detection&quot;,
-        &quot;24/7 monitoring&quot;,
-        &quot;Email support&quot;,
-        &quot;Up to 100 users&quot;,
-        &quot;Standard compliance reports&quot;
+        "Quantum-resistant encryption",
+        "Basic threat detection",
+        "24/7 monitoring",
+        "Email support",
+        "Up to 100 users",
+        "Standard compliance reports"
       ],
       popular: false
     },
     {
-      plan: &quot;Professional&quot;,
-      price: &quot;$1,999&quot;,
-      period: &quot;/month&quot;,
-      description: &quot;Advanced security features for growing organizations&quot;,
+      plan: "Professional",
+      price: "$1,999",
+      period: "/month",
+      description: "Advanced security features for growing organizations",
       features: [
-        &quot;Everything in Essential&quot;,
-        &quot;AI-powered threat detection&quot;,
-        &quot;Zero-trust architecture&quot;,
-        &quot;Priority support&quot;,
-        &quot;Up to 1000 users&quot;,
-        &quot;Custom security policies&quot;,
-        &quot;Advanced compliance reporting&quot;,
-        &quot;Incident response team&quot;
+        "Everything in Essential",
+        "AI-powered threat detection",
+        "Zero-trust architecture",
+        "Priority support",
+        "Up to 1000 users",
+        "Custom security policies",
+        "Advanced compliance reporting",
+        "Incident response team"
       ],
       popular: true
     },
     {
-      plan: &quot;Enterprise&quot;,
-      price: &quot;Custom&quot;,
-      period: "&quot;,
-      description: &quot;Full-scale security solution for large organizations&quot;,
+      plan: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "Full-scale security solution for large organizations",
       features: [
-        &quot;Everything in Professional&quot;,
-        &quot;Custom security architecture&quot;,
-        &quot;Dedicated security team&quot;,
-        &quot;Unlimited users&quot;,
-        &quot;On-premise deployment&quot;,
-        &quot;Custom training programs&quot;,
-        &quot;SLA guarantees&quot;,
-        &quot;Executive reporting&quot;
+        "Everything in Professional",
+        "Custom security architecture",
+        "Dedicated security team",
+        "Unlimited users",
+        "On-premise deployment",
+        "Custom training programs",
+        "SLA guarantees",
+        "Executive reporting"
       ],
       popular: false
     }
@@ -146,17 +135,16 @@ export default function QuantumCybersecurityPage() {
     <>
       <Head>
         <title>Quantum Cybersecurity - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Future-proof your security with quantum-resistant encryption and AI-powered threat detection. Protect your business against tomorrow's cyber threats today.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;quantum cybersecurity, quantum-resistant encryption, AI threat detection, zero-trust security, cybersecurity platform, threat intelligence&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Quantum Cybersecurity - Zion Tech Group&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Future-proof your security with quantum-resistant encryption and AI-powered threat detection.&quot; />
-        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
-        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/quantum-cybersecurity" />
+        <meta name="description" content="Future-proof your security with quantum-resistant encryption and AI-powered threat detection. Protect your business against tomorrow's cyber threats today." />
+        <meta name="keywords" content="quantum cybersecurity, quantum-resistant encryption, AI threat detection, zero-trust security, cybersecurity platform, threat intelligence" />
+        <meta property="og:title" content="Quantum Cybersecurity - Zion Tech Group" />
+        <meta property="og:description" content="Future-proof your security with quantum-resistant encryption and AI-powered threat detection." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/quantum-cybersecurity" />
       </Head>
 
       <EnhancedNavigation />
 
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -298,7 +286,6 @@ export default function QuantumCybersecurityPage() {;
         <meta property="og:url" content="https://ziontechgroup.com/quantum-cybersecurity" />;
       </Head>;
       <EnhancedNavigation />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -306,13 +293,12 @@ export default function QuantumCybersecurityPage() {;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent&quot;>
-                {&quot; "}Cybersecurity
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                {" "}Cybersecurity
               </span>
             </h1>
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -337,37 +323,6 @@ export default function QuantumCybersecurityPage() {;
         </div>
       </section>
 
-=======
-            className="text-center";
-          >;
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
-              Quantum;
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">;
-                {" "}Cybersecurity;
-              </span>;
-            </h1>;
-            <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">;
-              Future-proof your security infrastructure with quantum-resistant encryption and AI-powered threat detection.;
-              Stay ahead of emerging cyber threats with the most advanced security technology available.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <a;
-                href="/contact";
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105";
-              >;
-                Secure Your Business;
-              </a>;
-              <a;
-                href="#demo";
-                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200";
-              >;
-                Security Assessment;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {/* Features */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -600,7 +555,6 @@ export default function QuantumCybersecurityPage() {;
                       <span className="text-slate-700">{feature}</span>;
                     </li>;
                   ))}
-<<<<<<< HEAD
                 </ul>
 
                 <a
@@ -610,16 +564,6 @@ export default function QuantumCybersecurityPage() {;
                   Get Started
                 </Link>
               </motion.div>
-=======
-                </ul>;
-                <a;
-                  href="/contact";
-                  className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105";
-                >;
-                  Get Started;
-                </a>;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
@@ -631,7 +575,6 @@ export default function QuantumCybersecurityPage() {;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Secure Your Future?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -658,31 +601,4 @@ export default function QuantumCybersecurityPage() {;
       <EnhancedFooter />
     </>
   )
-=======
-          >;
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Secure Your Future?</h2>;
-            <p className="text-xl text-blue-100 mb-8">;
-              Don't wait until it's too late. Protect your business with quantum-resistant cybersecurity today.;
-            </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-              <a;
-                href="/contact";
-                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105";
-              >;
-                Security Assessment;
-              </a>;
-              <a;
-                href="/contact";
-                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200";
-              >;
-                Schedule Consultation;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      <EnhancedFooter />;
-    </>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

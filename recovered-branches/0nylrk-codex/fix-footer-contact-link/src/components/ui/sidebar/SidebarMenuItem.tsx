@@ -1,23 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
-=======
-import React from &quot;react&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
   className?: string,
   children?: React.ReactNode
-=======
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
   className?: string;
   children?: React.ReactNode;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export function SidebarMenuItem({ className, children, ...props }: SidebarMenuItemProps) {;

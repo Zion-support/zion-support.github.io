@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
@@ -35,14 +34,8 @@ export const useRecordActivity = () => {
       
       return data
     } catch (err: any) {
-<<<<<<< HEAD
       console.error("Error recording activity:", err),
       return null
-=======
-      console.error(&quot;Error recording activity:&quot;, err);
-      return null;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
@@ -76,7 +69,6 @@ export const useRecordActivity = () => {;
     } catch (err: any) {;
       console.error("Error recording activity:", err),;
       return null;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   };
   return {;

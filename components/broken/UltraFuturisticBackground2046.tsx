@@ -228,82 +228,45 @@ const UltraFuturisticBackground2046: React.FC = () => {;
         cancelAnimationFrame(animationRef.current);
       }
     }
-<<<<<<< HEAD
   }, []),
 
   return (
-    <div className=&quot;fixed inset-0 pointer-events-none z-0&quot;>
+    <div className="fixed inset-0 pointer-events-none z-0">
       {/* Animated gradient background */}
       <motion.div
-        className=&quot;absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black&quot;
+        className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black"
         animate={{
           background: [
             'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)']}}
         transition={{
           duration: 10,
           repeat: Infinity,
-          ease: &quot;easeInOut&quot;
-=======
-  }, []),;
-  return (;
-    <div className="fixed inset-0 pointer-events-none z-0">;
-      {/* Animated gradient background */}
-      <motion.div;
-        className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black";
-        animate={{;
-          background: [;
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)']}}
-        transition={{;
-          duration: 10,;
-          repeat: Infinity,;
-          ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          ease: "easeInOut"
         }}
       />;
       {/* Quantum particle canvas */}
       <canvas;
         ref={canvasRef}
-<<<<<<< HEAD
-        className=&quot;absolute inset-0 w-full h-full&quot;
-=======
-        className="absolute inset-0 w-full h-full";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        className="absolute inset-0 w-full h-full"
         style={{ filter: 'blur(0.5px)' }}
       />;
       {/* Floating geometric shapes */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0 overflow-hidden&quot;>
+      <div className="absolute inset-0 overflow-hidden">
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className=&quot;absolute w-32 h-32 border border-cyan-500/20 rounded-full&quot;
+            className="absolute w-32 h-32 border border-cyan-500/20 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
-=======
-      <div className="absolute inset-0 overflow-hidden">;
-        {[...Array(8)].map((_, i) => (;
-          <motion.div;
-            key={i}
-            className="absolute w-32 h-32 border border-cyan-500/20 rounded-full";
-            style={{;
-              left: `${Math.random() * 100}%`,;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               top: `${Math.random() * 100}%`}}
             animate={{;
               rotate: [0, 360],;
               scale: [0.5, 1, 0.5],;
               opacity: [0.1, 0.3, 0.1]}}
-<<<<<<< HEAD
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
-              ease: &quot;linear&quot;,
-=======
-            transition={{;
-              duration: Math.random() * 10 + 10,;
-              repeat: Infinity,;
-              ease: "linear",;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              ease: "linear",
               delay: i * 0.5}}
           />;
         ))}
@@ -311,109 +274,59 @@ const UltraFuturisticBackground2046: React.FC = () => {;
         {[...Array(6)].map((_, i) => (;
           <motion.div;
             key={`square-${i}`}
-<<<<<<< HEAD
-            className=&quot;absolute w-24 h-24 border border-purple-500/20 rotate-45&quot;
+            className="absolute w-24 h-24 border border-purple-500/20 rotate-45"
             style={{
               left: `${Math.random() * 100}%`,
-=======
-            className="absolute w-24 h-24 border border-purple-500/20 rotate-45";
-            style={{;
-              left: `${Math.random() * 100}%`,;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               top: `${Math.random() * 100}%`}}
             animate={{;
               rotate: [45, 405],;
               scale: [0.3, 0.8, 0.3],;
               opacity: [0.1, 0.2, 0.1]}}
-<<<<<<< HEAD
             transition={{
               duration: Math.random() * 8 + 8,
               repeat: Infinity,
-              ease: &quot;linear&quot;,
-=======
-            transition={{;
-              duration: Math.random() * 8 + 8,;
-              repeat: Infinity,;
-              ease: "linear",;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              ease: "linear",
               delay: i * 0.7}}
           />;
         ))}
       </div>;
       {/* Energy waves */}
-<<<<<<< HEAD
-      <div className=&quot;absolute bottom-0 left-0 right-0 h-32&quot;>
+      <div className="absolute bottom-0 left-0 right-0 h-32">
         <motion.div
-          className=&quot;absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent&quot;
+          className="absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent"
           animate={{
             height: ['32px48px32px']}}
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;}}
+            ease: "easeInOut"}}
         />
         <motion.div
-          className=&quot;absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent&quot;
+          className="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent"
           animate={{
             height: ['24px40px24px']}}
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;,
-=======
-      <div className="absolute bottom-0 left-0 right-0 h-32">;
-        <motion.div;
-          className="absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent";
-          animate={{;
-            height: ['32px48px32px']}}
-          transition={{;
-            duration: 4,;
-            repeat: Infinity,;
-            ease: "easeInOut"}}
-        />;
-        <motion.div;
-          className="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent";
-          animate={{;
-            height: ['24px40px24px']}}
-          transition={{;
-            duration: 3,;
-            repeat: Infinity,;
-            ease: "easeInOut",;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "easeInOut",
             delay: 1}}
         />;
       </div>;
       {/* Quantum interference patterns */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0&quot;>
+      <div className="absolute inset-0">
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={`interference-${i}`}
-            className=&quot;absolute inset-0 opacity-5&quot;
+            className="absolute inset-0 opacity-5"
             style={{
-=======
-      <div className="absolute inset-0">;
-        {[...Array(5)].map((_, i) => (;
-          <motion.div;
-            key={`interference-${i}`}
-            className="absolute inset-0 opacity-5";
-            style={{;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`}}
             animate={{;
               scale: [1, 1.5, 1],;
               opacity: [0.05, 0.1, 0.05]}}
-<<<<<<< HEAD
             transition={{
               duration: Math.random() * 6 + 4,
               repeat: Infinity,
-              ease: &quot;easeInOut&quot;,
-=======
-            transition={{;
-              duration: Math.random() * 6 + 4,;
-              repeat: Infinity,;
-              ease: "easeInOut",;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              ease: "easeInOut",
               delay: i * 0.8}}
           />;
         ))}

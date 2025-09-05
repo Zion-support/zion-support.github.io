@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GetServerSideProps } from 'next',
 import React, { useMemo, useRef, useState } from 'react',
 import PdfExportButton from '../../components/ui/PdfExportButton',
@@ -21,99 +20,44 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
   }, [selectedVersionId, initialData, versions]),
 
   return (
-    <div className=&quot;relative&quot;>
-      <div className=&quot;flex items-center justify-between mb-4&quot;>
-        <div className=&quot;flex items-center gap-3&quot;>
-          <label className=&quot;text-sm&quot;>Theme</label>
+    <div className="relative">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <label className="text-sm">Theme</label>
           <select
             value={theme}
             onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
-            className=&quot;border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black&quot;
+            className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
           >
-            <option value=&quot;light&quot;>Light</option>
-            <option value=&quot;dark&quot;>Dark</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
           </select>
 
           {versions.length > 0 && (
             <>
-              <label className=&quot;text-sm ml-4&quot;>Version</label>
+              <label className="text-sm ml-4">Version</label>
               <select
                 value={selectedVersionId}
                 onChange={(e) => setSelectedVersionId(e.target.value)}
-                className=&quot;border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black&quot;
+                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
               >
-                <option value=&quot;current&quot;>Current</option>
+                <option value="current">Current</option>
                 {versions.map(v => (
                   <option value={v.id} key={v.id}>{v.label}</option>
-=======
-import { GetServerSideProps } from 'next',;
-import React, { useMemo, useRef, useState } from 'react',;
-import PdfExportButton from '../../components/ui/PdfExportButton',;
-import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview',;
-import { createServerClient } from '../../utils/supabase/server',;
-export type ResumePreviewPageProps = {;
-  initialData: ResumeData,;
-  versions?: Array<{ id: string, label: string, data: ResumeData }>;
-},;
-export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {;
-  const [theme, setTheme] = useState<'light' | 'dark'>('light'),;
-  const [selectedVersionId, setSelectedVersionId] = useState<string>(versions[0]?.id || 'current'),;
-  const targetRef = useRef<HTMLDivElement>(null),;
-  const activeData = useMemo(() => {;
-    if (selectedVersionId === 'current') return initialData,;
-    const found = versions.find(v => v.id === selectedVersionId),;
-    return found?.data || initialData;
-  }, [selectedVersionId, initialData, versions]),;
-  return (;
-    <div className="relative">;
-      <div className="flex items-center justify-between mb-4">;
-        <div className="flex items-center gap-3">;
-          <label className="text-sm">Theme</label>;
-          <select;
-            value={theme}
-            onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
-            className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black";
-          >;
-            <option value="light">Light</option>;
-            <option value="dark">Dark</option>;
-          </select>;
-          {versions.length > 0 && (;
-            <>;
-              <label className="text-sm ml-4">Version</label>;
-              <select;
-                value={selectedVersionId}
-                onChange={(e) => setSelectedVersionId(e.target.value)}
-                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black";
-              >;
-                <option value="current">Current</option>;
-                {versions.map(v => (;
-                  <option value={v.id} key={v.id}>{v.label}</option>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 ))}
               </select>;
             </>;
           )}
-<<<<<<< HEAD
         </div>
       </div>
 
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 
-      <div className=&quot;mx-auto&quot;>
+      <div className="mx-auto">
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
   )
-=======
-        </div>;
-      </div>;
-      <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />;
-      <div className="mx-auto">;
-        <ResumePreview ref={targetRef} data={activeData} theme={theme} />;
-      </div>;
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;

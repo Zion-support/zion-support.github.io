@@ -73,17 +73,10 @@ async function main() {;
   try {;
     await generateIdeasIfPossible();
   } catch {}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   // // // console.log('Cloud autonomous run complete:', status.updatedAt)
-=======
-  // console.log('Cloud autonomous run complete:', status.updatedAt);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
   // // // console.log('Cloud autonomous run complete:', status.updatedAt);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;

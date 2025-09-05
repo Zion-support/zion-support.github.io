@@ -25,7 +25,6 @@ interface DynamicLoaderProps {;
   children?: React.ReactNode;
   [key: string]: any;
 }
-<<<<<<< HEAD
 
 // Enhanced Loading Component
 const EnhancedLoading: React.FC<{ 
@@ -37,51 +36,27 @@ const EnhancedLoading: React.FC<{
   message = 'Loading component...', 
   showProgress = true 
 }) => (
-  <Card className=&quot;w-full max-w-md mx-auto&quot;>
-    <CardContent className=&quot;p-6&quot;>
-      <div className=&quot;flex flex-col items-center space-y-4&quot;>
-        <div className=&quot;relative&quot;>
-          <Loader2 className=&quot;h-8 w-8 animate-spin text-primary&quot; />
+  <Card className="w-full max-w-md mx-auto">
+    <CardContent className="p-6">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="relative">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
           {showProgress && (
             <motion.div
-              className=&quot;absolute inset-0 rounded-full border-2 border-primary&quot;
+              className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-=======
-;
-// Enhanced Loading Component;
-const EnhancedLoading: React.FC<{;
-  progress?: number;
-  message?: string;
-  showProgress?: boolean;
-}> = ({;
-  progress = 0,;
-  message = 'Loading component...',;
-  showProgress = true;
-}) => (;
-  <Card className="w-full max-w-md mx-auto">;
-    <CardContent className="p-6">;
-      <div className="flex flex-col items-center space-y-4">;
-        <div className="relative">;
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-          {showProgress && (;
-            <motion.div;
-              className="absolute inset-0 rounded-full border-2 border-primary";
-              style={{;
-                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
             />;
           )}
-<<<<<<< HEAD
         </div>
-        <div className=&quot;text-center&quot;>
-          <p className=&quot;text-sm font-medium&quot;>{message}</p>
+        <div className="text-center">
+          <p className="text-sm font-medium">{message}</p>
           {showProgress && (
-            <p className=&quot;text-xs text-muted-foreground mt-1&quot;>
+            <p className="text-xs text-muted-foreground mt-1">
               {Math.round(progress)}% loaded
             </p>
           )}
@@ -99,101 +74,42 @@ const EnhancedError: React.FC<{
   retryCount: number
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
-  <Card className=&quot;w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10&quot;>
-    <CardContent className=&quot;p-6&quot;>
-      <div className=&quot;flex flex-col items-center space-y-4&quot;>
-        <div className=&quot;p-3 rounded-full bg-red-100 dark:bg-red-900/20&quot;>
+  <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
+    <CardContent className="p-6">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
           {isOnline ? (
-            <AlertTriangle className=&quot;h-6 w-6 text-red-600&quot; />
+            <AlertTriangle className="h-6 w-6 text-red-600" />
           ) : (
-            <WifiOff className=&quot;h-6 w-6 text-red-600&quot; />
+            <WifiOff className="h-6 w-6 text-red-600" />
           )}
         </div>
-        <div className=&quot;text-center&quot;>
-          <h3 className=&quot;font-semibold text-red-900 dark:text-red-100&quot;>
+        <div className="text-center">
+          <h3 className="font-semibold text-red-900 dark:text-red-100">
             {isOnline ? 'Loading Failed' : 'Offline'}
           </h3>
-          <p className=&quot;text-sm text-red-700 dark:text-red-200 mt-1&quot;>
+          <p className="text-sm text-red-700 dark:text-red-200 mt-1">
             {isOnline 
               ? error.message || 'Failed to load component'
               : 'Please check your internet connection'
             }
           </p>
           {retryCount > 0 && (
-            <p className=&quot;text-xs text-red-600 dark:text-red-300 mt-2&quot;>
-=======
-        </div>;
-        <div className="text-center">;
-          <p className="text-sm font-medium">{message}</p>;
-          {showProgress && (;
-            <p className="text-xs text-muted-foreground mt-1">;
-              {Math.round(progress)}% loaded;
-            </p>;
-          )}
-        </div>;
-      </div>;
-    </CardContent>;
-  </Card>;
-);
-// Enhanced Error Component;
-const EnhancedError: React.FC<{;
-  error: Error;
-  retry: () => void;
-  isOnline: boolean;
-  retryCount: number;
-  maxRetries: number;
-}> = ({ error, retry, isOnline, retryCount, maxRetries }) => (;
-  <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">;
-    <CardContent className="p-6">;
-      <div className="flex flex-col items-center space-y-4">;
-        <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">;
-          {isOnline ? (;
-            <AlertTriangle className="h-6 w-6 text-red-600" />;
-          ) : (;
-            <WifiOff className="h-6 w-6 text-red-600" />;
-          )}
-        </div>;
-        <div className="text-center">;
-          <h3 className="font-semibold text-red-900 dark:text-red-100">;
-            {isOnline ? 'Loading Failed' : 'Offline'}
-          </h3>;
-          <p className="text-sm text-red-700 dark:text-red-200 mt-1">;
-            {isOnline;
-              ? error.message || 'Failed to load component';
-              : 'Please check your internet connection';
-            }
-          </p>;
-          {retryCount > 0 && (;
-            <p className="text-xs text-red-600 dark:text-red-300 mt-2">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            <p className="text-xs text-red-600 dark:text-red-300 mt-2">
               Retry {retryCount}/{maxRetries}
             </p>;
           )}
-<<<<<<< HEAD
         </div>
         {retryCount < maxRetries && (
           <Button 
             onClick={retry} 
-            variant=&quot;outline&quot; 
-            size=&quot;sm&quot;
-            className=&quot;border-red-300 text-red-700 hover:bg-red-100&quot;
+            variant="outline" 
+            size="sm"
+            className="border-red-300 text-red-700 hover:bg-red-100"
           >
-            <RefreshCw className=&quot;h-4 w-4 mr-2&quot; />
+            <RefreshCw className="h-4 w-4 mr-2" />
             Try Again
           </Button>
-=======
-        </div>;
-        {retryCount < maxRetries && (;
-          <Button;
-            onClick={retry} ;
-            variant="outline";
-            size="sm";
-            className="border-red-300 text-red-700 hover:bg-red-100";
-          >;
-            <RefreshCw className="h-4 w-4 mr-2" />;
-            Try Again;
-          </Button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         )}
       </div>;
     </CardContent>;
@@ -306,19 +222,11 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
       <motion.div;
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-        className={cn(&quot;flex items-center justify-center p-8&quot;, className)}
+        className={cn("flex items-center justify-center p-8", className)}
       >
         <EnhancedLoading 
           progress={progress} 
-          message=&quot;Loading component...&quot;
-=======
-        className={cn("flex items-center justify-center p-8", className)}
-      >;
-        <EnhancedLoading;
-          progress={progress} ;
-          message="Loading component...";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          message="Loading component..."
           showProgress={true}
         />;
       </motion.div>;
@@ -338,15 +246,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
       <motion.div;
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-        className={cn(&quot;flex items-center justify-center p-8&quot;, className)}
+        className={cn("flex items-center justify-center p-8", className)}
       >
         <EnhancedError
-=======
-        className={cn("flex items-center justify-center p-8", className)}
-      >;
-        <EnhancedError;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           error={loadingState.error}
           retry={retry}
           isOnline={loadingState.isOnline}
@@ -394,7 +296,6 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
     />;
   );
 }
-<<<<<<< HEAD
 
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
@@ -403,8 +304,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
 //   {
 //     loadingComponent: () => (
-//       <div className=&quot;w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center&quot;>
-//         <span className=&quot;text-muted-foreground&quot;>Loading chart...</span>
+//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading chart...</span>
 //       </div>
 //     ),
 //     prefetch: true
@@ -415,34 +316,10 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
 //   {
 //     loadingComponent: () => (
-//       <div className=&quot;w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center&quot;>
-//         <span className=&quot;text-muted-foreground&quot;>Loading 3D renderer...</span>
+//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading 3D renderer...</span>
 //       </div>
 //     )
-=======
-;
-// Predefined dynamic loaders for common heavy components;
-// Note: These are examples - uncomment and install types as needed;
-// export const DynamicChartComponent = createDynamicComponent(;
-//   () => import('recharts').then(module => ({ default: module.LineChart })),;
-//   {;
-//     loadingComponent: () => (;
-//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
-//         <span className="text-muted-foreground">Loading chart...</span>;
-//       </div>;
-//     );
-//     prefetch: true;
-//   }
-// );
-// export const DynamicThreeComponent = createDynamicComponent(;
-//   () => import('three').then(module => ({ default: module.WebGLRenderer }));
-//   {;
-//     loadingComponent: () => (;
-//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>;
-//       </div>;
-//     );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 //   }
 // );
 export default DynamicComponentLoader;

@@ -36,100 +36,54 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
       }
       setIsLoading(false);
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;flex items-center gap-2&quot;>
-      <span className=&quot;text-sm text-muted-foreground&quot;>Resume:</span>
+    <div className="flex items-center gap-2">
+      <span className="text-sm text-muted-foreground">Resume:</span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant=&quot;outline&quot; size=&quot;sm&quot; className=&quot;gap-2&quot;>
+          <Button variant="outline" size="sm" className="gap-2">
             {currentResume?.basic_info?.title || 'My Resume'}
-            <ChevronDown className=&quot;h-4 w-4&quot; />
+            <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align=&quot;end&quot;>
+        <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
             <DropdownMenuItem 
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
-              className=&quot;cursor-pointer&quot;
+              className="cursor-pointer"
             >
-=======
-  };
-  return (;
-    <div className="flex items-center gap-2">;
-      <span className="text-sm text-muted-foreground">Resume:</span>;
-      <DropdownMenu>;
-        <DropdownMenuTrigger asChild>;
-          <Button variant="outline" size="sm" className="gap-2">;
-            {currentResume?.basic_info?.title || 'My Resume'}
-            <ChevronDown className="h-4 w-4" />;
-          </Button>;
-        </DropdownMenuTrigger>;
-        <DropdownMenuContent align="end">;
-          {existingResumes.map((resume) => (;
-            <DropdownMenuItem;
-              key={resume.id}
-              onClick={() => onResumeChange(resume.id!)}
-              className="cursor-pointer";
-            >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               {resume.basic_info.title}
             </DropdownMenuItem>;
           ))}
           <DropdownMenuSeparator />;
           <DropdownMenuItem;
             onClick={() => setSaveDialogOpen(true)}
-<<<<<<< HEAD
-            className=&quot;cursor-pointer&quot;
+            className="cursor-pointer"
           >
-            <Plus className=&quot;h-4 w-4 mr-2&quot; />
+            <Plus className="h-4 w-4 mr-2" />
             Save as new version
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
       
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
-        <DialogContent className=&quot;sm:max-w-md&quot;>
+        <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle>Save as new resume version</DialogTitle>
           </DialogHeader>
-          <div className=&quot;py-4&quot;>
+          <div className="py-4">
             <Input
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
-              placeholder=&quot;Enter resume title (e.g. DevOps Resume)&quot;
+              placeholder="Enter resume title (e.g. DevOps Resume)"
             />
           </div>
           <DialogFooter>
             <Button 
-              variant=&quot;outline&quot; 
-=======
-            className="cursor-pointer";
-          >;
-            <Plus className="h-4 w-4 mr-2" />;
-            Save as new version;
-          </DropdownMenuItem>;
-        </DropdownMenuContent>;
-      </DropdownMenu>;
-      <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>;
-        <DialogContent className="sm:max-w-md">;
-          <DialogHeader>;
-            <DialogTitle>Save as new resume version</DialogTitle>;
-          </DialogHeader>;
-          <div className="py-4">;
-            <Input;
-              value={newResumeTitle}
-              onChange={(e) => setNewResumeTitle(e.target.value)}
-              placeholder="Enter resume title (e.g. DevOps Resume)";
-            />;
-          </div>;
-          <DialogFooter>;
-            <Button;
-              variant="outline";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              variant="outline" 
               onClick={() => setSaveDialogOpen(false)}
             >;
               Cancel;
@@ -137,11 +91,10 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Button;
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
-<<<<<<< HEAD
-              className=&quot;gap-2&quot;
+              className="gap-2"
             >
-              {isLoading && <Loader2 className=&quot;h-4 w-4 animate-spin&quot; />}
-              <Save className=&quot;h-4 w-4&quot; />
+              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
+              <Save className="h-4 w-4" />
               Save
             </Button>
           </DialogFooter>
@@ -149,18 +102,5 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
       </Dialog>
     </div>
   )
-=======
-              className="gap-2";
-            >;
-              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-              <Save className="h-4 w-4" />;
-              Save;
-            </Button>;
-          </DialogFooter>;
-        </DialogContent>;
-      </Dialog>;
-    </div>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

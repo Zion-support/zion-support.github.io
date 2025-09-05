@@ -1,29 +1,17 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { useJobApplications } from "@/hooks/useJobApplications",
-=======
-import { useState } from &quot;react&quot;;
-import { JobApplication, ApplicationStatus } from &quot;@/types/jobs&quot;;
-import { useJobApplications } from &quot;@/hooks/useJobApplications&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import {
   ApplicationsTable,
   EmptyState,
   ErrorState,
   LoadingState,
   ScoreDialog
-<<<<<<< HEAD
 } from "./applications",
-=======
-} from &quot;./applications&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface JobApplicationsTableProps {
   jobId: string
-=======
 import { useState } from "react",;
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -36,7 +24,6 @@ import {;
 } from "./applications",;
 interface JobApplicationsTableProps {;
   jobId: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;

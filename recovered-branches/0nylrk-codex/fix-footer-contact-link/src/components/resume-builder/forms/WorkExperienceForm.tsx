@@ -99,7 +99,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     if (confirm('Are you sure you want to delete this work experience?')) {;
       await deleteWorkExperience(id);
     }
-<<<<<<< HEAD
   },
 
   const handleEnhanceDescription = (enhancedContent: string) => {
@@ -107,25 +106,25 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   },
 
   return (
-    <div className=&quot;space-y-6&quot;>
+    <div className="space-y-6">
       <div>
-        <h2 className=&quot;text-xl font-semibold mb-2&quot;>Work Experience</h2>
-        <p className=&quot;text-muted-foreground&quot;>
+        <h2 className="text-xl font-semibold mb-2">Work Experience</h2>
+        <p className="text-muted-foreground">
           Add your work history to showcase your professional experience.
         </p>
       </div>
 
       {workExperiences.length > 0 && (
-        <div className=&quot;space-y-4&quot;>
-          <h3 className=&quot;text-md font-medium&quot;>Added Experience</h3>
+        <div className="space-y-4">
+          <h3 className="text-md font-medium">Added Experience</h3>
           {workExperiences.map((work) => (
-            <Card key={work.id} className=&quot;bg-muted/40&quot;>
-              <CardContent className=&quot;pt-6&quot;>
-                <div className=&quot;flex justify-between&quot;>
+            <Card key={work.id} className="bg-muted/40">
+              <CardContent className="pt-6">
+                <div className="flex justify-between">
                   <div>
-                    <h4 className=&quot;font-medium&quot;>{work.role_title}</h4>
-                    <p className=&quot;text-sm text-muted-foreground&quot;>{work.company_name}</p>
-                    <p className=&quot;text-xs text-muted-foreground mt-1&quot;>
+                    <h4 className="font-medium">{work.role_title}</h4>
+                    <p className="text-sm text-muted-foreground">{work.company_name}</p>
+                    <p className="text-xs text-muted-foreground mt-1">
                       {typeof work.start_date === 'string' 
                         ? work.start_date 
                         : format(work.start_date, 'MMM yyyy')} - {work.is_current 
@@ -135,143 +134,64 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                           : format(work.end_date, 'MMM yyyy')) : '')}
                     </p>
                     {work.location && (
-                      <p className=&quot;text-xs text-muted-foreground&quot;>{work.location}</p>
+                      <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
                   </div>
-                  <div className=&quot;flex gap-2&quot;>
+                  <div className="flex gap-2">
                     <Button
-                      variant=&quot;ghost&quot;
-                      size=&quot;icon&quot;
+                      variant="ghost"
+                      size="icon"
                       onClick={() => handleEdit(work)}
                     >
-                      <Edit className=&quot;h-4 w-4&quot; />
+                      <Edit className="h-4 w-4" />
                     </Button>
                     <Button
-                      variant=&quot;ghost&quot;
-                      size=&quot;icon&quot;
+                      variant="ghost"
+                      size="icon"
                       onClick={() => handleDelete(work.id!)}
                     >
-                      <Trash2 className=&quot;h-4 w-4&quot; />
+                      <Trash2 className="h-4 w-4" />
                     </Button>
                   </div>
                 </div>
                 {work.description && (
-                  <p className=&quot;text-sm mt-3 line-clamp-2&quot;>{work.description}</p>
-=======
-  },;
-  const handleEnhanceDescription = (enhancedContent: string) => {;
-    form.setValue('description', enhancedContent);
-  },;
-  return (;
-    <div className="space-y-6">;
-      <div>;
-        <h2 className="text-xl font-semibold mb-2">Work Experience</h2>;
-        <p className="text-muted-foreground">;
-          Add your work history to showcase your professional experience.;
-        </p>;
-      </div>;
-      {workExperiences.length > 0 && (;
-        <div className="space-y-4">;
-          <h3 className="text-md font-medium">Added Experience</h3>;
-          {workExperiences.map((work) => (;
-            <Card key={work.id} className="bg-muted/40">;
-              <CardContent className="pt-6">;
-                <div className="flex justify-between">;
-                  <div>;
-                    <h4 className="font-medium">{work.role_title}</h4>;
-                    <p className="text-sm text-muted-foreground">{work.company_name}</p>;
-                    <p className="text-xs text-muted-foreground mt-1">;
-                      {typeof work.start_date === 'string';
-                        ? work.start_date;
-                        : format(work.start_date, 'MMM yyyy')} - {work.is_current;
-                        ? 'Present';
-                        : (work.end_date ? (typeof work.end_date === 'string';
-                          ? work.end_date;
-                          : format(work.end_date, 'MMM yyyy')) : '')}
-                    </p>;
-                    {work.location && (;
-                      <p className="text-xs text-muted-foreground">{work.location}</p>;
-                    )}
-                  </div>;
-                  <div className="flex gap-2">;
-                    <Button;
-                      variant="ghost";
-                      size="icon";
-                      onClick={() => handleEdit(work)}
-                    >;
-                      <Edit className="h-4 w-4" />;
-                    </Button>;
-                    <Button;
-                      variant="ghost";
-                      size="icon";
-                      onClick={() => handleDelete(work.id!)}
-                    >;
-                      <Trash2 className="h-4 w-4" />;
-                    </Button>;
-                  </div>;
-                </div>;
-                {work.description && (;
-                  <p className="text-sm mt-3 line-clamp-2">{work.description}</p>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
                 )}
               </CardContent>;
             </Card>;
           ))}
         </div>;
       )}
-<<<<<<< HEAD
 
-      <div className=&quot;bg-muted/40 p-6 rounded-lg&quot;>
-        <h3 className=&quot;text-md font-medium mb-4&quot;>
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className=&quot;space-y-4&quot;>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
-                name=&quot;company_name&quot;
+                name="company_name"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
-                      <Input placeholder=&quot;Google, Microsoft, etc.&quot; {...field} />
+                      <Input placeholder="Google, Microsoft, etc." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
-=======
-;
-      <div className="bg-muted/40 p-6 rounded-lg">;
-        <h3 className="text-md font-medium mb-4">;
-          {editingId ? 'Update Experience' : 'Add Experience'}
-        </h3>;
-        <Form {...form}>;
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-              <FormField;
-                control={form.control}
-                name="company_name";
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Company Name</FormLabel>;
-                    <FormControl>;
-                      <Input placeholder="Google, Microsoft, etc." {...field} />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 )}
               />;
               <FormField;
                 control={form.control}
-<<<<<<< HEAD
-                name=&quot;role_title&quot;
+                name="role_title"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
-                      <Input placeholder=&quot;Software Engineer, Product Manager, etc.&quot; {...field} />
+                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -279,120 +199,59 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               />
             </div>
 
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
-                name=&quot;start_date&quot;
+                name="start_date"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
                       <Input 
-                        type=&quot;date&quot; 
+                        type="date" 
                         {...field} 
-=======
-                name="role_title";
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Job Title</FormLabel>;
-                    <FormControl>;
-                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-              />;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-              <FormField;
-                control={form.control}
-                name="start_date";
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Start Date</FormLabel>;
-                    <FormControl>;
-                      <Input;
-                        type="date";
-                        {...field} ;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                         value={field.value || ''}
                       />;
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
                 )}
-<<<<<<< HEAD
               />
 
-              <div className=&quot;space-y-4&quot;>
+              <div className="space-y-4">
                 <FormField
                   control={form.control}
-                  name=&quot;is_current&quot;
+                  name="is_current"
                   render={({ field }) => (
-                    <FormItem className=&quot;flex flex-row items-start space-x-3 space-y-0 py-2&quot;>
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                       <FormControl>
                         <Checkbox
                           checked={field.value}
                           onCheckedChange={field.onChange}
                         />
                       </FormControl>
-                      <div className=&quot;space-y-1 leading-none&quot;>
+                      <div className="space-y-1 leading-none">
                         <FormLabel>I currently work here</FormLabel>
                       </div>
                     </FormItem>
-=======
-              />;
-              <div className="space-y-4">;
-                <FormField;
-                  control={form.control}
-                  name="is_current";
-                  render={({ field }) => (;
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">;
-                      <FormControl>;
-                        <Checkbox;
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />;
-                      </FormControl>;
-                      <div className="space-y-1 leading-none">;
-                        <FormLabel>I currently work here</FormLabel>;
-                      </div>;
-                    </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   )}
                 />;
                 {!form.watch('is_current') && (;
                   <FormField;
                     control={form.control}
-<<<<<<< HEAD
-                    name=&quot;end_date&quot;
+                    name="end_date"
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>End Date</FormLabel>
                         <FormControl>
                           <Input 
-                            type=&quot;date&quot; 
+                            type="date" 
                             {...field} 
                             value={field.value || ''} 
                           />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
-=======
-                    name="end_date";
-                    render={({ field }) => (;
-                      <FormItem>;
-                        <FormLabel>End Date</FormLabel>;
-                        <FormControl>;
-                          <Input;
-                            type="date";
-                            {...field} ;
-                            value={field.value || ''} ;
-                          />;
-                        </FormControl>;
-                        <FormMessage />;
-                      </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     )}
                   />;
                 )}
@@ -400,81 +259,49 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
             </div>;
             <FormField;
               control={form.control}
-<<<<<<< HEAD
-              name=&quot;location&quot;
+              name="location"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Location (Optional)</FormLabel>
                   <FormControl>
-                    <Input placeholder=&quot;San Francisco, CA (Remote)&quot; {...field} />
+                    <Input placeholder="San Francisco, CA (Remote)" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
-=======
-              name="location";
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Location (Optional)</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder="San Francisco, CA (Remote)" {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             />;
             <FormField;
               control={form.control}
-<<<<<<< HEAD
-              name=&quot;description&quot;
+              name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className=&quot;flex justify-between&quot;>
+                  <FormLabel className="flex justify-between">
                     <span>Job Description</span>
                     <AIEnhancementButton
                       currentContent={field.value || ''}
-                      enhancementType=&quot;work-description&quot;
+                      enhancementType="work-description"
                       context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
                       onEnhanced={handleEnhanceDescription}
                     />
                   </FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder=&quot;Describe your responsibilities and accomplishments...&quot;
-                      className=&quot;min-h-[100px]&quot;
-=======
-              name="description";
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel className="flex justify-between">;
-                    <span>Job Description</span>;
-                    <AIEnhancementButton;
-                      currentContent={field.value || ''}
-                      enhancementType="work-description";
-                      context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
-                      onEnhanced={handleEnhanceDescription}
-                    />;
-                  </FormLabel>;
-                  <FormControl>;
-                    <Textarea;
-                      placeholder="Describe your responsibilities and accomplishments...";
-                      className="min-h-[100px]";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                      placeholder="Describe your responsibilities and accomplishments..."
+                      className="min-h-[100px]"
                       {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
             />
 
-            {error && <Alert variant=&quot;destructive&quot;><AlertDescription>{error}</AlertDescription></Alert>}
+            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
-            <div className=&quot;flex justify-between pt-2&quot;>
+            <div className="flex justify-between pt-2">
               <Button
-                type=&quot;button&quot;
-                variant=&quot;outline&quot;
+                type="button"
+                variant="outline"
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null),
@@ -487,56 +314,22 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       location: ''})
                   } else {
                     onBack()
-=======
-            />;
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-;
-            <div className="flex justify-between pt-2">;
-              <Button;
-                type="button";
-                variant="outline";
-                onClick={() => {;
-                  if (editingId) {;
-                    setEditingId(null),;
-                    form.reset({;
-                      company_name: '',;
-                      role_title: '',;
-                      start_date: format(new Date(), 'yyyy-MM-dd'),;
-                      is_current: false;
-                      description: '';
-                      location: ''});
-                  } else {;
-                    onBack();
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
-<<<<<<< HEAD
               </Button>
 
-              <div className=&quot;flex gap-2&quot;>
-                <Button type=&quot;submit&quot; disabled={isLoading}>
-                  {isLoading && <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />}
+              <div className="flex gap-2">
+                <Button type="submit" disabled={isLoading}>
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
 
                 {!editingId && workExperiences.length > 0 && (
-                  <Button type=&quot;button&quot; onClick={onComplete}>
+                  <Button type="button" onClick={onComplete}>
                     Next
                   </Button>
-=======
-              </Button>;
-              <div className="flex gap-2">;
-                <Button type="submit" disabled={isLoading}>;
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {editingId ? 'Update' : 'Add'} Experience;
-                </Button>;
-                {!editingId && workExperiences.length > 0 && (;
-                  <Button type="button" onClick={onComplete}>;
-                    Next;
-                  </Button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 )}
               </div>;
             </div>;

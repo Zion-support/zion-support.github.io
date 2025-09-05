@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
-=======
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-
-type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 /**
  * Creates a notification for a user and optionally sends an email notification
@@ -49,7 +42,6 @@ export async function createNotification({
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
-=======
 import { supabase } from "@/integrations/supabase/client",;
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 /**;
@@ -90,7 +82,6 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data,;
       await supabase.functions.invoke('send-notification-email', {;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         body: { user_id: userId, notification_id: notificationId }
       });
     }
@@ -101,7 +92,6 @@ export async function createNotification({;
     return { success: false, error }
   }
 }
-<<<<<<< HEAD
 
 /**
  * Creates a hire request notification for admin and talent
@@ -125,19 +115,11 @@ export async function createHireRequestNotifications({
 }) {
   const projectInfo = projectType 
     ? `${projectType} project` 
-<<<<<<< HEAD
     : "project",
   
   const summaryText = projectSummary 
     ? `: "${projectSummary}"` 
     : "",
-=======
-    : &quot;project&quot;;
-  
-  const summaryText = projectSummary 
-    ? `: &quot;${projectSummary}&quot;` 
-    : "";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Create notification for talent
   const talentNotification = await createNotification({
@@ -168,7 +150,6 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-=======
 ;
 /**;
  * Creates a hire request notification for admin and talent;
@@ -223,7 +204,6 @@ export async function createHireRequestNotifications({;
       success: talentNotification.success && adminNotification.success,;
       talentNotification,;
       adminNotification;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   }
 ;

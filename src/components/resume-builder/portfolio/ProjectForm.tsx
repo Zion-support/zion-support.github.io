@@ -83,227 +83,118 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD
   },
   
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className=&quot;space-y-4&quot;>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-          name=&quot;title&quot;
+          name="title"
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
-                <Input placeholder=&quot;E.g., AI Chatbot, E-commerce Website&quot; {...field} />
+                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
-=======
-  };
-  return (;
-    <Form {...form}>;
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
-        <FormField;
-          control={form.control}
-          name="title";
-          render={({ field }: { field: any }) => (;
-            <FormItem>;
-              <FormLabel>Project Title</FormLabel>;
-              <FormControl>;
-                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         />;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
-          name=&quot;description&quot;
+          name="description"
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
                 <Textarea 
-                  placeholder=&quot;Describe what the project does and your role in it...&quot;
-                  className=&quot;min-h-[100px]&quot;
+                  placeholder="Describe what the project does and your role in it..."
+                  className="min-h-[100px]"
                   {...field} 
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
-=======
-          name="description";
-          render={({ field }: { field: any }) => (;
-            <FormItem>;
-              <FormLabel>Project Description</FormLabel>;
-              <FormControl>;
-                <Textarea;
-                  placeholder="Describe what the project does and your role in it...";
-                  className="min-h-[100px]";
-                  {...field} ;
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         />;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
-          name=&quot;technologies&quot;
+          name="technologies"
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Technologies Used</FormLabel>
               <FormControl>
-                <Input placeholder=&quot;React, Node.js, MongoDB, etc. (comma separated)&quot; {...field} />
+                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
         
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
-            name=&quot;github_url&quot;
+            name="github_url"
             render={({ field }: { field: any }) => (
               <FormItem>
-                <FormLabel className=&quot;flex items-center gap-2&quot;>
-                  <Github className=&quot;h-4 w-4&quot; />
+                <FormLabel className="flex items-center gap-2">
+                  <Github className="h-4 w-4" />
                   GitHub URL
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder=&quot;https://github.com/yourusername/project&quot; {...field} />
+                  <Input placeholder="https://github.com/yourusername/project" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
-=======
-          name="technologies";
-          render={({ field }: { field: any }) => (;
-            <FormItem>;
-              <FormLabel>Technologies Used</FormLabel>;
-              <FormControl>;
-                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <FormField;
-            control={form.control}
-            name="github_url";
-            render={({ field }: { field: any }) => (;
-              <FormItem>;
-                <FormLabel className="flex items-center gap-2">;
-                  <Github className="h-4 w-4" />;
-                  GitHub URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input placeholder="https://github.com/yourusername/project" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             )}
           />;
           <FormField;
             control={form.control}
-<<<<<<< HEAD
-            name=&quot;demo_url&quot;
+            name="demo_url"
             render={({ field }: { field: any }) => (
               <FormItem>
-                <FormLabel className=&quot;flex items-center gap-2&quot;>
-                  <Link className=&quot;h-4 w-4&quot; />
+                <FormLabel className="flex items-center gap-2">
+                  <Link className="h-4 w-4" />
                   Demo URL
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder=&quot;https://your-project-demo.com&quot; {...field} />
+                  <Input placeholder="https://your-project-demo.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
-=======
-            name="demo_url";
-            render={({ field }: { field: any }) => (;
-              <FormItem>;
-                <FormLabel className="flex items-center gap-2">;
-                  <Link className="h-4 w-4" />;
-                  Demo URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input placeholder="https://your-project-demo.com" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             )}
           />;
         </div>;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
-          name=&quot;image_url&quot;
+          name="image_url"
           render={({ field }: { field: any }) => (
             <FormItem>
-              <FormLabel className=&quot;flex items-center gap-2&quot;>
-                <FileImage className=&quot;h-4 w-4&quot; />
+              <FormLabel className="flex items-center gap-2">
+                <FileImage className="h-4 w-4" />
                 Screenshot URL
               </FormLabel>
               <FormControl>
-                <Input placeholder=&quot;https://example.com/screenshot.jpg&quot; {...field} />
+                <Input placeholder="https://example.com/screenshot.jpg" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
-=======
-          name="image_url";
-          render={({ field }: { field: any }) => (;
-            <FormItem>;
-              <FormLabel className="flex items-center gap-2">;
-                <FileImage className="h-4 w-4" />;
-                Screenshot URL;
-              </FormLabel>;
-              <FormControl>;
-                <Input placeholder="https://example.com/screenshot.jpg" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         />;
         {/* Future file upload field would go here */}
-<<<<<<< HEAD
         
-        <div className=&quot;flex justify-end space-x-2 pt-4&quot;>
-          <Button type=&quot;button&quot; variant=&quot;outline&quot; onClick={onCancel}>
+        <div className="flex justify-end space-x-2 pt-4">
+          <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
           </Button>
-          <Button type=&quot;submit&quot; disabled={isLoading}>
-            {isLoading && <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />}
+          <Button type="submit" disabled={isLoading}>
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isEditing ? 'Update' : 'Add'} Project
           </Button>
         </div>
       </form>
     </Form>
   )
-=======
-;
-        <div className="flex justify-end space-x-2 pt-4">;
-          <Button type="button" variant="outline" onClick={onCancel}>;
-            Cancel;
-          </Button>;
-          <Button type="submit" disabled={isLoading}>;
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-            {isEditing ? 'Update' : 'Add'} Project;
-          </Button>;
-        </div>;
-      </form>;
-    </Form>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

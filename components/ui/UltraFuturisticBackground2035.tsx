@@ -242,32 +242,21 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
       ctx.arc(x, y, 2, 0, Math.PI * 2),;
       ctx.fill();
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
+    <div className="fixed inset-0 -z-10 overflow-hidden">
       <canvas
         ref={canvasRef}
-        className=&quot;w-full h-full&quot;
+        className="w-full h-full"
         style={{
-=======
-  },;
-  return (;
-    <div className="fixed inset-0 -z-10 overflow-hidden">;
-      <canvas;
-        ref={canvasRef}
-        className="w-full h-full";
-        style={{;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           background: colors.background}}
       />;
       {/* Additional overlay effects */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
+      <div className="absolute inset-0 pointer-events-none">
         {/* Quantum energy field */}
         <motion.div
-          className=&quot;absolute inset-0&quot;
+          className="absolute inset-0"
           animate={{
             background: [
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
@@ -278,64 +267,28 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
-=======
-      <div className="absolute inset-0 pointer-events-none">;
-        {/* Quantum energy field */}
-        <motion.div;
-          className="absolute inset-0";
-          animate={{;
-            background: [;
-              `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,;
-              `radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,;
-              `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
-            ];
-          }}
-          transition={{;
-            duration: 8,;
-            repeat: Infinity,;
-            ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "easeInOut"
           }}
         />;
         {/* Holographic scan lines */}
-<<<<<<< HEAD
-        <div className=&quot;absolute inset-0 opacity-20&quot;>
+        <div className="absolute inset-0 opacity-20">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent&quot;
+              className="absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent"
               style={{
                 top: `${(i / 20) * 100}%`,
                 color: colors.primary
-=======
-        <div className="absolute inset-0 opacity-20">;
-          {[...Array(20)].map((_, i) => (;
-            <motion.div;
-              key={i}
-              className="absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent";
-              style={{;
-                top: `${(i / 20) * 100}%`,;
-                color: colors.primary;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               }}
               animate={{;
                 opacity: [0, 1, 0],;
                 scaleX: [0, 1, 0];
               }}
-<<<<<<< HEAD
               transition={{
                 duration: 3,
                 delay: i * 0.1,
                 repeat: Infinity,
-                ease: &quot;easeInOut&quot;
-=======
-              transition={{;
-                duration: 3,;
-                delay: i * 0.1,;
-                repeat: Infinity,;
-                ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                ease: "easeInOut"
               }}
             />;
           ))}

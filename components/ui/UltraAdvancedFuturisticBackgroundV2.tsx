@@ -157,18 +157,13 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       {/* Animated Canvas Background */}
       <canvas;
         ref={canvasRef}
-<<<<<<< HEAD
-        className=&quot;fixed inset-0 w-full h-full pointer-events-none z-0&quot;
-=======
-        className="fixed inset-0 w-full h-full pointer-events-none z-0";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)' }}
       />;
       {/* Floating Geometric Shapes */}
-<<<<<<< HEAD
-      <div className=&quot;fixed inset-0 pointer-events-none z-10&quot;>
+      <div className="fixed inset-0 pointer-events-none z-10">
         <motion.div
-          className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20&quot;
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
           animate={{
             rotate: [0, 360],
             scale: [1, 1.2, 1],
@@ -177,12 +172,12 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
+            ease: "easeInOut"
           }}
         />
         
         <motion.div
-          className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20&quot;
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20"
           animate={{
             rotate: [360, 0],
             scale: [1, 0.8, 1],
@@ -191,12 +186,12 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
+            ease: "easeInOut"
           }}
         />
         
         <motion.div
-          className=&quot;absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20&quot;
+          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20"
           animate={{
             rotate: [0, 360],
             scale: [1, 1.3, 1],
@@ -205,12 +200,12 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
+            ease: "easeInOut"
           }}
         />
         
         <motion.div
-          className=&quot;absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20&quot;
+          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
           animate={{
             rotate: [360, 0],
             scale: [1, 0.9, 1],
@@ -219,139 +214,53 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           transition={{
             duration: 7,
             repeat: Infinity,
-            ease: &quot;easeInOut&quot;
-=======
-      <div className="fixed inset-0 pointer-events-none z-10">;
-        <motion.div;
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20";
-          animate={{;
-            rotate: [0, 360],;
-            scale: [1, 1.2, 1],;
-            opacity: [0.1, 0.3, 0.1];
-          }}
-          transition={{;
-            duration: 8,;
-            repeat: Infinity,;
-            ease: "easeInOut";
-          }}
-        />;
-        <motion.div;
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20";
-          animate={{;
-            rotate: [360, 0],;
-            scale: [1, 0.8, 1],;
-            opacity: [0.1, 0.4, 0.1];
-          }}
-          transition={{;
-            duration: 6,;
-            repeat: Infinity,;
-            ease: "easeInOut";
-          }}
-        />;
-        <motion.div;
-          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20";
-          animate={{;
-            rotate: [0, 360],;
-            scale: [1, 1.3, 1],;
-            opacity: [0.1, 0.2, 0.1];
-          }}
-          transition={{;
-            duration: 10,;
-            repeat: Infinity,;
-            ease: "easeInOut";
-          }}
-        />;
-        <motion.div;
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20";
-          animate={{;
-            rotate: [360, 0],;
-            scale: [1, 0.9, 1],;
-            opacity: [0.1, 0.3, 0.1];
-          }}
-          transition={{;
-            duration: 7,;
-            repeat: Infinity,;
-            ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            ease: "easeInOut"
           }}
         />;
       </div>;
       {/* Quantum Energy Particles */}
-<<<<<<< HEAD
-      <div className=&quot;fixed inset-0 pointer-events-none z-20&quot;>
+      <div className="fixed inset-0 pointer-events-none z-20">
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className=&quot;absolute w-2 h-2 bg-cyan-400 rounded-full&quot;
+            className="absolute w-2 h-2 bg-cyan-400 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`
-=======
-      <div className="fixed inset-0 pointer-events-none z-20">;
-        {[...Array(20)].map((_, i) => (;
-          <motion.div;
-            key={i}
-            className="absolute w-2 h-2 bg-cyan-400 rounded-full";
-            style={{;
-              left: `${Math.random() * 100}%`,;
-              top: `${Math.random() * 100}%`;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             }}
             animate={{;
               y: [0, -100, 0],;
               opacity: [0, 1, 0],;
               scale: [0, 1, 0];
             }}
-<<<<<<< HEAD
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
-              ease: &quot;easeInOut&quot;
-=======
-            transition={{;
-              duration: 3 + Math.random() * 2,;
-              repeat: Infinity,;
-              delay: Math.random() * 2,;
-              ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              ease: "easeInOut"
             }}
           />;
         ))}
       </div>;
       {/* Neural Network Connections */}
-<<<<<<< HEAD
-      <div className=&quot;fixed inset-0 pointer-events-none z-30&quot;>
-        <svg className=&quot;w-full h-full&quot;>
+      <div className="fixed inset-0 pointer-events-none z-30">
+        <svg className="w-full h-full">
           <defs>
-            <linearGradient id=&quot;neuralGradient&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;100%&quot;>
-              <stop offset=&quot;0%&quot; stopColor=&quot;#00ffff&quot; stopOpacity=&quot;0.3&quot; />
-              <stop offset=&quot;100%&quot; stopColor=&quot;#ff00ff&quot; stopOpacity=&quot;0.3&quot; />
+            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#00ffff" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#ff00ff" stopOpacity="0.3" />
             </linearGradient>
           </defs>
           {[...Array(15)].map((_, i) => (
             <motion.line
-=======
-      <div className="fixed inset-0 pointer-events-none z-30">;
-        <svg className="w-full h-full">;
-          <defs>;
-            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">;
-              <stop offset="0%" stopColor="#00ffff" stopOpacity="0.3" />;
-              <stop offset="100%" stopColor="#ff00ff" stopOpacity="0.3" />;
-            </linearGradient>;
-          </defs>;
-          {[...Array(15)].map((_, i) => (;
-            <motion.line;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               key={i}
               x1={Math.random() * 100}
               y1={Math.random() * 100}
               x2={Math.random() * 100}
               y2={Math.random() * 100}
-<<<<<<< HEAD
-              stroke=&quot;url(#neuralGradient)&quot;
-              strokeWidth=&quot;1&quot;
-              opacity=&quot;0.1&quot;
+              stroke="url(#neuralGradient)"
+              strokeWidth="1"
+              opacity="0.1"
               animate={{
                 opacity: [0.1, 0.3, 0.1],
                 strokeDasharray: [0, 100, 0]
@@ -360,32 +269,14 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-                ease: &quot;easeInOut&quot;
-=======
-              stroke="url(#neuralGradient)";
-              strokeWidth="1";
-              opacity="0.1";
-              animate={{;
-                opacity: [0.1, 0.3, 0.1],;
-                strokeDasharray: [0, 100, 0];
-              }}
-              transition={{;
-                duration: 4 + Math.random() * 2,;
-                repeat: Infinity,;
-                delay: Math.random() * 2,;
-                ease: "easeInOut";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                ease: "easeInOut"
               }}
             />;
           ))}
         </svg>;
       </div>;
       {/* Content */}
-<<<<<<< HEAD
-      <div className=&quot;relative z-40&quot;>
-=======
-      <div className="relative z-40">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+      <div className="relative z-40">
         {children}
       </div>;
     </div>;

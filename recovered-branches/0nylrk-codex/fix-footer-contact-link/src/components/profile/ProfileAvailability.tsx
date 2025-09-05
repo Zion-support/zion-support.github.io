@@ -1,24 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge",
 import { Calendar, Clock, Check } from "lucide-react",
-=======
-import { Availability } from &quot;@/types/profile&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Calendar, Clock, Check } from &quot;lucide-react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface ProfileAvailabilityProps {
   availability: Availability
-=======
 import { Availability } from "@/types/profile",;
 import { Badge } from "@/components/ui/badge",;
 import { Calendar, Clock, Check } from "lucide-react",;
 interface ProfileAvailabilityProps {;
   availability: Availability;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {;
@@ -37,81 +28,44 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'Currently Unavailable';
       default: return '';
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8&quot;>
-      <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Availability</h3>
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+      <h3 className="text-xl font-bold text-white mb-4">Availability</h3>
       
-      <div className=&quot;flex flex-col md:flex-row md:items-center md:gap-6 mb-4&quot;>
+      <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
         <Badge 
-          variant=&quot;outline&quot; 
-=======
-  };
-  return (;
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
-      <h3 className="text-xl font-bold text-white mb-4">Availability</h3>;
-      <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">;
-        <Badge;
-          variant="outline";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+          variant="outline" 
           className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
         >;
           {getStatusText(availability.status)}
-<<<<<<< HEAD
         </Badge>
         
         {availability.nextAvailable && availability.status !== 'available' && (
-          <div className=&quot;flex items-center gap-2 text-zion-slate-light&quot;>
-            <Calendar className=&quot;h-4 w-4&quot; />
+          <div className="flex items-center gap-2 text-zion-slate-light">
+            <Calendar className="h-4 w-4" />
             <span>Next available: {availability.nextAvailable}</span>
           </div>
         )}
       </div>
       
       {availability.message && (
-        <p className=&quot;text-zion-slate mb-4&quot;>{availability.message}</p>
+        <p className="text-zion-slate mb-4">{availability.message}</p>
       )}
       
       {availability.availableHours && availability.availableHours.length > 0 && (
-        <div className=&quot;mt-4&quot;>
-          <h4 className=&quot;text-zion-slate-light text-sm mb-2&quot;>Weekly Availability</h4>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-2&quot;>
+        <div className="mt-4">
+          <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {availability.availableHours.map((slot, index) => (
-              <div key={index} className=&quot;flex items-center gap-2 text-zion-slate&quot;>
-                <div className=&quot;w-20 text-zion-slate-light&quot;>{slot.day}:</div>
-                <div className=&quot;flex items-center gap-1&quot;>
-                  <Clock className=&quot;h-4 w-4 text-zion-cyan&quot; />
+              <div key={index} className="flex items-center gap-2 text-zion-slate">
+                <div className="w-20 text-zion-slate-light">{slot.day}:</div>
+                <div className="flex items-center gap-1">
+                  <Clock className="h-4 w-4 text-zion-cyan" />
                   <span>{slot.hours}</span>
                 </div>
               </div>
-=======
-        </Badge>;
-        {availability.nextAvailable && availability.status !== 'available' && (;
-          <div className="flex items-center gap-2 text-zion-slate-light">;
-            <Calendar className="h-4 w-4" />;
-            <span>Next available: {availability.nextAvailable}</span>;
-          </div>;
-        )}
-      </div>;
-      {availability.message && (;
-        <p className="text-zion-slate mb-4">{availability.message}</p>;
-      )}
-;
-      {availability.availableHours && availability.availableHours.length > 0 && (;
-        <div className="mt-4">;
-          <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">;
-            {availability.availableHours.map((slot, index) => (;
-              <div key={index} className="flex items-center gap-2 text-zion-slate">;
-                <div className="w-20 text-zion-slate-light">{slot.day}:</div>;
-                <div className="flex items-center gap-1">;
-                  <Clock className="h-4 w-4 text-zion-cyan" />;
-                  <span>{slot.hours}</span>;
-                </div>;
-              </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;

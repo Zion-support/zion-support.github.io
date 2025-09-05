@@ -4,19 +4,13 @@ async function fetchHtml(url) {;
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),;
   return resp.text();
 }
-<<<<<<< HEAD
 
 function extractLinks(html, base) {
-<<<<<<< HEAD
   const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
-=======
-  const aTags = [...html.matchAll(/<a[^>]+href=[&quot;']([^&quot;']+)["']/gi)].map((m) => m[1]);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   const links = aTags
     .filter((h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
     .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`)),
   return Array.from(new Set(links))
-=======
 ;
 function extractLinks(html, base) {;
   const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),;
@@ -24,7 +18,6 @@ function extractLinks(html, base) {;
     .filter((h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:'));
     .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`)),;
   return Array.from(new Set(links));
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 exports.handler = async function() {;

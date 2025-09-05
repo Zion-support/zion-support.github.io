@@ -1,19 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { MessageSquare } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { ChatAssistant } from "@/components/ChatAssistant",
 import {logErrorToProduction} from '@/utils/productionLogger',
-=======
-import { useState } from &quot;react&quot;;
-import { MessageSquare } from 'lucide-react'
-import { Button } from &quot;@/components/ui/button&quot;;
-import { ChatAssistant } from &quot;@/components/ChatAssistant&quot;;
-import {logErrorToProduction} from '@/utils/productionLogger';
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function ChatAssistantTrigger() {
 
   const [isOpen, setIsOpen] = useState(false),
@@ -21,25 +11,16 @@ export function ChatAssistantTrigger() {
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
-      const response = await fetch(&quot;https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat&quot;, {
-        method: &quot;POST&quot;,
+      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+        method: "POST",
         headers: {
-          &quot;Content-Type&quot;: &quot;application/json&quot;},
+          "Content-Type": "application/json"},
         body: JSON.stringify({ 
-<<<<<<< HEAD
           messages: [{ role: "user", content: message }] 
         })}),
       
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
-=======
-          messages: [{ role: &quot;user&quot;, content: message }] 
-        })});
-      
-      if (!response.ok) {
-        throw new Error(&quot;Failed to get response from AI assistant&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import { useState } from "react",;
 import { MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
@@ -59,7 +40,6 @@ export function ChatAssistantTrigger() {;
         })}),;
       if (!response.ok) {;
         throw new Error("Failed to get response from AI assistant");
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
 ;
       return Promise.resolve();
@@ -72,28 +52,16 @@ export function ChatAssistantTrigger() {;
     <>;
       <Button;
         onClick={() => setIsOpen(true)}
-<<<<<<< HEAD
-        size=&quot;icon&quot;
-        variant=&quot;outline&quot;
-        className=&quot;fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50&quot;
-        aria-label=&quot;Open chat assistant&quot;
+        size="icon"
+        variant="outline"
+        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
+        aria-label="Open chat assistant"
       >
-        <MessageSquare className=&quot;h-5 w-5&quot; />
+        <MessageSquare className="h-5 w-5" />
       </Button>
       
       {isOpen && (
         <ChatAssistant
-=======
-        size="icon";
-        variant="outline";
-        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50";
-        aria-label="Open chat assistant";
-      >;
-        <MessageSquare className="h-5 w-5" />;
-      </Button>;
-      {isOpen && (;
-        <ChatAssistant;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           recipient={{;

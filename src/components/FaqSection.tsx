@@ -1,84 +1,70 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
-=======
-import { GradientHeading } from &quot;./GradientHeading&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
-<<<<<<< HEAD
   AccordionTrigger} from "@/components/ui/accordion",
-=======
-  AccordionTrigger} from &quot;@/components/ui/accordion&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { FileText } from 'lucide-react'
 
 const faqs = [
   {
-    question: &quot;How do I publish my AI product or service?&quot;,
+    question: "How do I publish my AI product or service?",
     answer:
-      &quot;Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check.&quot;},
+      "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."},
   {
-    question: &quot;What types of AI jobs can I find or post?&quot;,
+    question: "What types of AI jobs can I find or post?",
     answer:
-      &quot;You can hire or apply for roles such as machine learning engineer, data scientist, AI researcher, computer vision expert and more.&quot;},
+      "You can hire or apply for roles such as machine learning engineer, data scientist, AI researcher, computer vision expert and more."},
   {
-    question: &quot;What IT equipment is available to rent or buy?&quot;,
+    question: "What IT equipment is available to rent or buy?",
     answer:
-      &quot;Servers, storage solutions, networking gear, power supplies and complete rack setups are offered with flexible purchase or rental options.&quot;},
+      "Servers, storage solutions, networking gear, power supplies and complete rack setups are offered with flexible purchase or rental options."},
   {
-    question: &quot;How does Zion ensure 24x7x365 availability?&quot;,
+    question: "How does Zion ensure 24x7x365 availability?",
     answer:
-      &quot;We use distributed data centers with automated failover and a global support team working in rotating shifts.&quot;},
+      "We use distributed data centers with automated failover and a global support team working in rotating shifts."},
   {
-    question: &quot;What is Zion's Green IT program?&quot;,
+    question: "What is Zion's Green IT program?",
     answer:
-      &quot;Obsolete hardware is recycled or reused in line with WEEE, RoHS and e-Stewards standards, and we provide disposal certificates when required.&quot;},
+      "Obsolete hardware is recycled or reused in line with WEEE, RoHS and e-Stewards standards, and we provide disposal certificates when required."},
   {
-    question: &quot;Are there fees for listing my products or services?&quot;,
+    question: "Are there fees for listing my products or services?",
     answer:
-      &quot;No. Listing products, services, jobs or CVs is free, with optional paid promotion for extra visibility.&quot;},
+      "No. Listing products, services, jobs or CVs is free, with optional paid promotion for extra visibility."},
   {
-    question: &quot;How do I track my order status?&quot;,
+    question: "How do I track my order status?",
     answer:
-      &quot;Check the Orders page in your account or ask our chatbot with your order ID for a quick update.&quot;},
+      "Check the Orders page in your account or ask our chatbot with your order ID for a quick update."},
   {
-    question: &quot;How do I contact support?&quot;,
+    question: "How do I contact support?",
     answer:
-<<<<<<< HEAD
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}],
-=======
-      &quot;Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime.&quot;}];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export function FaqSection() {
   return (
-    <section className=&quot;py-20 bg-zion-blue&quot; id=&quot;faq&quot;>
-      <div className=&quot;container mx-auto px-4 sm:px-6 lg:px-8&quot;>
-        <div className=&quot;text-center mb-12&quot;>
+    <section className="py-20 bg-zion-blue" id="faq">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
           <GradientHeading>Frequently Asked Questions</GradientHeading>
-          <p className=&quot;mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto&quot;>
+          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
             Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services
           </p>
         </div>
 
-        <div className=&quot;max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6&quot;>
-          <div className=&quot;flex items-center mb-6&quot;>
-            <FileText className=&quot;h-6 w-6 text-zion-cyan mr-2&quot; />
-            <h3 className=&quot;text-xl font-bold text-white&quot;>Common Questions</h3>
+        <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">
+          <div className="flex items-center mb-6">
+            <FileText className="h-6 w-6 text-zion-cyan mr-2" />
+            <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
           
-          <Accordion type=&quot;single&quot; collapsible className=&quot;w-full&quot;>
+          <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className=&quot;border-zion-purple/10&quot;>
-                <AccordionTrigger className=&quot;text-white hover:text-zion-cyan&quot;>
+              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
+                <AccordionTrigger className="text-white hover:text-zion-cyan">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className=&quot;text-zion-slate-light&quot;>
-=======
+                <AccordionContent className="text-zion-slate-light">
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -141,7 +127,6 @@ export function FaqSection() {;
                   {faq.question}
                 </AccordionTrigger>;
                 <AccordionContent className="text-zion-slate-light">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   {faq.answer}
                 </AccordionContent>;
               </AccordionItem>;

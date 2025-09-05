@@ -133,7 +133,6 @@ export function useConversations(;
         if (createError) throw createError,;
         conversationId = newConversation.id;
       }
-<<<<<<< HEAD
       
       // Send the initial message
       await supabase
@@ -155,18 +154,10 @@ export function useConversations(;
     } catch (error) {
       console.error('Error creating conversation:', error),
       toast({
-<<<<<<< HEAD
         title: "Failed to create conversation",
         description: "Please try again later",
         variant: "destructive"
       })
-=======
-        title: &quot;Failed to create conversation&quot;,
-        description: &quot;Please try again later&quot;,
-        variant: &quot;destructive&quot;
-      });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
       // Send the initial message;
       await supabase;
@@ -190,7 +181,6 @@ export function useConversations(;
         description: "Please try again later",;
         variant: "destructive";
       });
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   };
   return {;

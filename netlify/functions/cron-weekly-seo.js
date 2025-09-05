@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 const { upsertFile } = require('./_lib/github'),
 
 async function scorePage(url) {
   const t0 = Date.now(),
   try {
-<<<<<<< HEAD
     const resp = await fetch(url),
     const html = await resp.text(),
     const ms = Date.now() - t0,
@@ -13,18 +11,7 @@ async function scorePage(url) {
     const h1Count = (html.match(/<h1[^>]*>/gi) || []).length,
     const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),
     return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) }
-=======
-    const resp = await fetch(url);
-    const html = await resp.text();
-    const ms = Date.now() - t0;
-    const title = (html.match(/<title>(.*?)<\/title>/i) || [])[1] || '';
-    const hasMetaDesc = /<meta[^>]*name=[&quot;']description[&quot;'][^>]*>/i.test(html);
-    const h1Count = (html.match(/<h1[^>]*>/gi) || []).length;
-    const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500));
-    return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   } catch (e) {
-=======
 const { upsertFile } = require('./_lib/github'),;
 async function scorePage(url) {;
   const t0 = Date.now(),;
@@ -38,7 +25,6 @@ async function scorePage(url) {;
     const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60, h1Count * 10) - Math.min(20, Math.floor(ms / 500)),;
     return { url, ms, title, hasMetaDesc, h1Count, score: Math.max(0, score) }
   } catch (e) {;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     return { url, error: e.message || String(e), score: 0 }
   }
 }

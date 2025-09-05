@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -8,60 +7,28 @@ import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } f
 export default function DevOpsAutomationPage() {
   const features = [
     {
-      icon: <GitBranch className=&quot;w-6 h-6&quot; />,
+      icon: <GitBranch className="w-6 h-6" />,
       title: 'CI/CD Pipelines',
       description: 'Automated build, test, and deployment workflows',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     },
     {
-      icon: <Zap className=&quot;w-6 h-6&quot; />,
+      icon: <Zap className="w-6 h-6" />,
       title: 'Infrastructure as Code',
       description: 'Terraform, CloudFormation, and Kubernetes automation',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600'
     },
     {
-      icon: <Shield className=&quot;w-6 h-6&quot; />,
+      icon: <Shield className="w-6 h-6" />,
       title: 'Security Automation',
       description: 'Automated security scanning and compliance checks',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
     },
     {
-      icon: <BarChart3 className=&quot;w-6 h-6&quot; />,
+      icon: <BarChart3 className="w-6 h-6" />,
       title: 'Performance Monitoring',
       description: 'Real-time performance insights and optimization',
       color: 'bg-gradient-to-br from-orange-500 to-red-600'
-=======
-import React from 'react',;
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
-import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react',;
-export default function DevOpsAutomationPage() {;
-  const features = [;
-    {;
-      icon: <GitBranch className="w-6 h-6" />,;
-      title: 'CI/CD Pipelines',;
-      description: 'Automated build, test, and deployment workflows',;
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
-    },;
-    {;
-      icon: <Zap className="w-6 h-6" />,;
-      title: 'Infrastructure as Code',;
-      description: 'Terraform, CloudFormation, and Kubernetes automation',;
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
-    },;
-    {;
-      icon: <Shield className="w-6 h-6" />,;
-      title: 'Security Automation',;
-      description: 'Automated security scanning and compliance checks',;
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600';
-    },;
-    {;
-      icon: <BarChart3 className="w-6 h-6" />,;
-      title: 'Performance Monitoring',;
-      description: 'Real-time performance insights and optimization',;
-      color: 'bg-gradient-to-br from-orange-500 to-red-600';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   ],;
   const pricingPlans = [;
@@ -176,50 +143,49 @@ export default function DevOpsAutomationPage() {;
       icon: '🏗️',;
       color: 'from-purple-500 to-indigo-600';
     }
-<<<<<<< HEAD
   ],
 
   return (
     <>
       <Head>
         <title>DevOps Automation - Zion Tech Group | Professional CI/CD & Infrastructure Automation</title>
-        <meta name=&quot;description&quot; content=&quot;Professional DevOps automation platform with CI/CD, infrastructure as code, and security automation. Plans starting at $39/month.&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;DevOps Automation - Zion Tech Group&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Professional DevOps automation starting at $39/month. CI/CD pipelines, infrastructure as code, and security automation.&quot; />
-        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+        <meta name="description" content="Professional DevOps automation platform with CI/CD, infrastructure as code, and security automation. Plans starting at $39/month." />
+        <meta property="og:title" content="DevOps Automation - Zion Tech Group" />
+        <meta property="og:description" content="Professional DevOps automation starting at $39/month. CI/CD pipelines, infrastructure as code, and security automation." />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <div className=&quot;min-h-screen bg-black&quot;>
+      <div className="min-h-screen bg-black">
         {/* Hero Section */}
-        <section className=&quot;pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20&quot;>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
-            <div className=&quot;mb-8&quot;>
-              <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6&quot;>
-                <span className=&quot;w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse&quot; />
+        <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" />
                 DevOps Automation Platform
               </div>
             </div>
-            <h1 className=&quot;text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight&quot;>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
               DevOps Automation
             </h1>
-            <p className=&quot;text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12&quot;>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
               Streamline your development workflow with automated CI/CD pipelines, infrastructure as code, 
               and intelligent security automation. Deploy faster, safer, and more reliably.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                href=&quot;#pricing&quot;
-                variant=&quot;primary&quot;
-                size=&quot;lg&quot;
-                className=&quot;bg-blue-600 hover:bg-blue-700 text-white&quot;
+                href="#pricing"
+                variant="primary"
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
               >
                 Start Free Trial
               </Button>
               <Button
-                href=&quot;#demo&quot;
-                variant=&quot;outline&quot;
-                size=&quot;lg&quot;
-                className=&quot;border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white&quot;
+                href="#demo"
+                variant="outline"
+                size="lg"
+                className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white"
               >
                 Watch Demo
               </Button>
@@ -228,231 +194,96 @@ export default function DevOpsAutomationPage() {;
         </section>
 
         {/* Features Section */}
-        <section className=&quot;py-24 bg-gray-900&quot;>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-            <div className=&quot;text-center mb-20&quot;>
-              <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-8&quot;>
+        <section className="py-24 bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 Complete DevOps Automation Suite
               </h2>
-              <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Everything you need to automate your development and deployment processes.
               </p>
             </div>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <Card
                   key={index}
-                  className=&quot;text-center group hover:scale-105 transition-transform duration-300&quot;
+                  className="text-center group hover:scale-105 transition-transform duration-300"
                 >
                   <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 ${feature.color}`}>
                     {feature.icon}
                   </div>
-                  <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-400&quot;>{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-400">{feature.description}</p>
                 </Card>
-=======
-  ];
-  return (;
-    <>;
-      <Head>;
-        <title>DevOps Automation - Zion Tech Group | Professional CI/CD & Infrastructure Automation</title>;
-        <meta name="description" content="Professional DevOps automation platform with CI/CD, infrastructure as code, and security automation. Plans starting at $39/month." />;
-        <meta property="og:title" content="DevOps Automation - Zion Tech Group" />;
-        <meta property="og:description" content="Professional DevOps automation starting at $39/month. CI/CD pipelines, infrastructure as code, and security automation." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-      <div className="min-h-screen bg-black">;
-        {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-            <div className="mb-8">;
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">;
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" />;
-                DevOps Automation Platform;
-              </div>;
-            </div>;
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">;
-              DevOps Automation;
-            </h1>;
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">;
-              Streamline your development workflow with automated CI/CD pipelines, infrastructure as code;
-              and intelligent security automation. Deploy faster, safer, and more reliably.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Button;
-                href="#pricing";
-                variant="primary";
-                size="lg";
-                className="bg-blue-600 hover:bg-blue-700 text-white";
-              >;
-                Start Free Trial;
-              </Button>;
-              <Button;
-                href="#demo";
-                variant="outline";
-                size="lg";
-                className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white";
-              >;
-                Watch Demo;
-              </Button>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Features Section */}
-        <section className="py-24 bg-gray-900">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center mb-20">;
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">;
-                Complete DevOps Automation Suite;
-              </h2>;
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
-                Everything you need to automate your development and deployment processes.;
-              </p>;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {features.map((feature, index) => (;
-                <Card;
-                  key={index}
-                  className="text-center group hover:scale-105 transition-transform duration-300";
-                >;
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 ${feature.color}`}>;
-                    {feature.icon}
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>;
-                  <p className="text-gray-400">{feature.description}</p>;
-                </Card>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </div>;
           </div>;
         </section>;
         {/* Automation Examples Section */}
-<<<<<<< HEAD
-        <section className=&quot;py-24 bg-gray-800&quot;>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-            <div className=&quot;text-center mb-20&quot;>
-              <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-8&quot;>
+        <section className="py-24 bg-gray-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 What You Can Automate
               </h2>
-              <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See how Zion DevOps can transform your development workflow.
               </p>
             </div>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {automationExamples.map((example, index) => (
                 <Card
                   key={index}
-                  className=&quot;text-center group hover:scale-105 transition-transform duration-300&quot;
+                  className="text-center group hover:scale-105 transition-transform duration-300"
                 >
                   <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}>
                     {example.icon}
                   </div>
-                  <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>{example.title}</h3>
-                  <p className=&quot;text-gray-400&quot;>{example.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-4">{example.title}</h3>
+                  <p className="text-gray-400">{example.description}</p>
                 </Card>
-=======
-        <section className="py-24 bg-gray-800">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center mb-20">;
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">;
-                What You Can Automate;
-              </h2>;
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
-                See how Zion DevOps can transform your development workflow.;
-              </p>;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {automationExamples.map((example, index) => (;
-                <Card;
-                  key={index}
-                  className="text-center group hover:scale-105 transition-transform duration-300";
-                >;
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}>;
-                    {example.icon}
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-4">{example.title}</h3>;
-                  <p className="text-gray-400">{example.description}</p>;
-                </Card>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </div>;
           </div>;
         </section>;
         {/* Pricing Section */}
-<<<<<<< HEAD
-        <section id=&quot;pricing&quot; className=&quot;py-24 bg-gray-900&quot;>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-            <div className=&quot;text-center mb-20&quot;>
-              <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-8&quot;>
+        <section id="pricing" className="py-24 bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 Simple, Transparent Pricing
               </h2>
-              <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.
               </p>
             </div>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <Card
-=======
-        <section id="pricing" className="py-24 bg-gray-900">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center mb-20">;
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">;
-                Simple, Transparent Pricing;
-              </h2>;
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
-                Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.;
-              </p>;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {pricingPlans.map((plan, index) => (;
-                <Card;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   key={index}
                   className={`relative p-8 ${plan.color} transition-all duration-300 hover:scale-105 ${;
                     plan.popular ? 'ring-2 ring-blue-500' : '';
                   }`}
-<<<<<<< HEAD
                 >
                   {plan.popular && (
-                    <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
-                      <span className=&quot;bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium&quot;>
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
                     </div>
                   )}
-                  <div className=&quot;text-center&quot;>
-                    <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{plan.name}</h3>
-                    <div className=&quot;mb-6&quot;>
-                      <span className=&quot;text-4xl font-bold text-white&quot;>{plan.price}</span>
-                      <span className=&quot;text-gray-400&quot;>{plan.period}</span>
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="mb-6">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400">{plan.period}</span>
                     </div>
-                    <p className=&quot;text-gray-300 mb-8&quot;>{plan.description}</p>
-                    <ul className=&quot;text-left space-y-3 mb-8&quot;>
+                    <p className="text-gray-300 mb-8">{plan.description}</p>
+                    <ul className="text-left space-y-3 mb-8">
                       {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
-                          <Check className=&quot;w-5 h-5 text-blue-400 mr-3 flex-shrink-0&quot; />
-=======
-                >;
-                  {plan.popular && (;
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                      <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">;
-                        Most Popular;
-                      </span>;
-                    </div>;
-                  )}
-                  <div className="text-center">;
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
-                    <div className="mb-6">;
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>;
-                      <span className="text-gray-400">{plan.period}</span>;
-                    </div>;
-                    <p className="text-gray-300 mb-8">{plan.description}</p>;
-                    <ul className="text-left space-y-3 mb-8">;
-                      {plan.features.map((feature, featureIndex) => (;
-                        <li key={featureIndex} className="flex items-center text-gray-300">;
-                          <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                        <li key={featureIndex} className="flex items-center text-gray-300">
+                          <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                           {feature}
                         </li>;
                       ))}
@@ -460,19 +291,11 @@ export default function DevOpsAutomationPage() {;
                     <Button;
                       href={plan.name === 'Enterprise' ? '/contact' : '#signup'}
                       variant={plan.popular ? 'primary' : 'outline'}
-<<<<<<< HEAD
-                      size=&quot;lg&quot;
+                      size="lg"
                       className={`w-full ${
                         plan.popular 
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' 
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-=======
-                      size="lg";
-                      className={`w-full ${;
-                        plan.popular;
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white';
-                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       }`}
                     >;
                       {plan.cta}
@@ -484,45 +307,24 @@ export default function DevOpsAutomationPage() {;
           </div>;
         </section>;
         {/* Market Comparison Section */}
-<<<<<<< HEAD
-        <section className=&quot;py-24 bg-gray-800&quot;>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-            <div className=&quot;text-center mb-20&quot;>
-              <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-8&quot;>
+        <section className="py-24 bg-gray-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 How We Compare to the Competition
               </h2>
-              <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See why Zion DevOps is the smart choice for automation.
               </p>
             </div>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {marketComparison.map((competitor, index) => (
-                <Card key={index} className=&quot;p-6&quot;>
-                  <div className=&quot;text-center mb-6&quot;>
-                    <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{competitor.competitor}</h3>
-                    <div className=&quot;flex items-center justify-center mb-2&quot;>
+                <Card key={index} className="p-6">
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>
+                    <div className="flex items-center justify-center mb-2">
                       {[...Array(5)].map((_, i) => (
                         <Star
-=======
-        <section className="py-24 bg-gray-800">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center mb-20">;
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">;
-                How We Compare to the Competition;
-              </h2>;
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
-                See why Zion DevOps is the smart choice for automation.;
-              </p>;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {marketComparison.map((competitor, index) => (;
-                <Card key={index} className="p-6">;
-                  <div className="text-center mb-6">;
-                    <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>;
-                    <div className="flex items-center justify-center mb-2">;
-                      {[...Array(5)].map((_, i) => (;
-                        <Star;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                           key={i}
                           className={`w-5 h-5 ${;
                             i < Math.floor(parseFloat(competitor.rating));
@@ -531,59 +333,31 @@ export default function DevOpsAutomationPage() {;
                           }`}
                         />;
                       ))}
-<<<<<<< HEAD
                     </div>
-                    <p className=&quot;text-sm text-gray-400&quot;>{competitor.rating}</p>
+                    <p className="text-sm text-gray-400">{competitor.rating}</p>
                   </div>
-                  <div className=&quot;mb-4&quot;>
-                    <p className=&quot;text-lg font-semibold text-white mb-1&quot;>Pricing: {competitor.pricing}</p>
-                    <p className=&quot;text-sm text-gray-400&quot;>Repositories: {competitor.repositories}</p>
+                  <div className="mb-4">
+                    <p className="text-lg font-semibold text-white mb-1">Pricing: {competitor.pricing}</p>
+                    <p className="text-sm text-gray-400">Repositories: {competitor.repositories}</p>
                   </div>
-                  <div className=&quot;space-y-2&quot;>
+                  <div className="space-y-2">
                     <div>
-                      <p className=&quot;text-sm font-medium text-green-400 mb-1&quot;>Pros:</p>
-                      <ul className=&quot;text-sm text-gray-300 space-y-1&quot;>
+                      <p className="text-sm font-medium text-green-400 mb-1">Pros:</p>
+                      <ul className="text-sm text-gray-300 space-y-1">
                         {competitor.pros.map((pro, proIndex) => (
-                          <li key={proIndex} className=&quot;flex items-center&quot;>
-                            <Check className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
-=======
-                    </div>;
-                    <p className="text-sm text-gray-400">{competitor.rating}</p>;
-                  </div>;
-                  <div className="mb-4">;
-                    <p className="text-lg font-semibold text-white mb-1">Pricing: {competitor.pricing}</p>;
-                    <p className="text-sm text-gray-400">Repositories: {competitor.repositories}</p>;
-                  </div>;
-                  <div className="space-y-2">;
-                    <div>;
-                      <p className="text-sm font-medium text-green-400 mb-1">Pros:</p>;
-                      <ul className="text-sm text-gray-300 space-y-1">;
-                        {competitor.pros.map((pro, proIndex) => (;
-                          <li key={proIndex} className="flex items-center">;
-                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                          <li key={proIndex} className="flex items-center">
+                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {pro}
                           </li>;
                         ))}
-<<<<<<< HEAD
                       </ul>
                     </div>
                     <div>
-                      <p className=&quot;text-sm font-medium text-red-400 mb-1&quot;>Cons:</p>
-                      <ul className=&quot;text-sm text-gray-300 space-y-1&quot;>
+                      <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>
+                      <ul className="text-sm text-gray-300 space-y-1">
                         {competitor.cons.map((con, conIndex) => (
-                          <li key={conIndex} className=&quot;flex items-center&quot;>
-                            <span className=&quot;w-4 h-4 text-red-400 mr-2 flex-shrink-0&quot;>×</span>
-=======
-                      </ul>;
-                    </div>;
-                    <div>;
-                      <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>;
-                      <ul className="text-sm text-gray-300 space-y-1">;
-                        {competitor.cons.map((con, conIndex) => (;
-                          <li key={conIndex} className="flex items-center">;
-                            <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0">×</span>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                          <li key={conIndex} className="flex items-center">
+                            <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0">×</span>
                             {con}
                           </li>;
                         ))}
@@ -596,87 +370,55 @@ export default function DevOpsAutomationPage() {;
           </div>;
         </section>;
         {/* Testimonials Section */}
-<<<<<<< HEAD
-        <section className=&quot;py-24 bg-gray-900&quot;>
-          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-            <div className=&quot;text-center mb-20&quot;>
-              <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-8&quot;>
+        <section className="py-24 bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 Trusted by DevOps Teams Worldwide
               </h2>
             </div>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className=&quot;p-6&quot;>
-                  <div className=&quot;flex items-center mb-4&quot;>
+                <Card key={index} className="p-6">
+                  <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className=&quot;text-gray-300 mb-6 italic&quot;>&quot;{testimonial.content}&quot;</p>
+                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                   <div>
-                    <p className=&quot;font-semibold text-white&quot;>{testimonial.name}</p>
-                    <p className=&quot;text-sm text-gray-400&quot;>{testimonial.role}</p>
-                    <p className=&quot;text-sm text-blue-400&quot;>{testimonial.company}</p>
+                    <p className="font-semibold text-white">{testimonial.name}</p>
+                    <p className="text-sm text-gray-400">{testimonial.role}</p>
+                    <p className="text-sm text-blue-400">{testimonial.company}</p>
                   </div>
                 </Card>
-=======
-        <section className="py-24 bg-gray-900">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center mb-20">;
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">;
-                Trusted by DevOps Teams Worldwide;
-              </h2>;
-            </div>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {testimonials.map((testimonial, index) => (;
-                <Card key={index} className="p-6">;
-                  <div className="flex items-center mb-4">;
-                    {[...Array(testimonial.rating)].map((_, i) => (;
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
-                    ))}
-                  </div>;
-                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>;
-                  <div>;
-                    <p className="font-semibold text-white">{testimonial.name}</p>;
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>;
-                    <p className="text-sm text-blue-400">{testimonial.company}</p>;
-                  </div>;
-                </Card>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </div>;
           </div>;
         </section>;
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-=======
-        <section className=&quot;py-24 bg-gradient-to-r from-blue-600 to-cyan-600&quot;>
-          <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
-            <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-8&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               Ready to Automate Your DevOps?
             </h2>
-            <p className=&quot;text-xl text-blue-100 mb-12&quot;>
+            <p className="text-xl text-blue-100 mb-12">
               Join thousands of teams who trust Zion for their DevOps automation needs.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                href=&quot;#signup&quot;
-                variant=&quot;secondary&quot;
-                size=&quot;lg&quot;
-                className=&quot;bg-white text-blue-600 hover:bg-gray-100&quot;
+                href="#signup"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-gray-100"
               >
                 Start Free Trial
               </Button>
               <Button
-                href=&quot;/contact&quot;
-                variant=&quot;outline&quot;
-                size=&quot;lg&quot;
-                className=&quot;border-white text-white hover:bg-white hover:text-blue-600&quot;
+                href="/contact"
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-blue-600"
               >
                 Contact Sales
               </Button>
@@ -686,7 +428,6 @@ export default function DevOpsAutomationPage() {;
       </div>
     </>
   )
-=======
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">;
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">;
@@ -718,6 +459,5 @@ export default function DevOpsAutomationPage() {;
       </div>;
     </>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

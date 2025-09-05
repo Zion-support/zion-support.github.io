@@ -133,47 +133,27 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
     { label: 'Active Customers', value: services.reduce((sum, s) => sum + (s.customers || 0), 0), icon: Users, color: 'text-green-400' },;
     { label: 'Average Rating', value: (services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },;
     { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
-<<<<<<< HEAD
   ],
 
   return (
-    <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
-      <div className=&quot;max-w-7xl mx-auto&quot;>
+    <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className=&quot;text-center mb-16&quot;>
+        <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className=&quot;text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;
+            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
           >
-=======
-  ],;
-  return (;
-    <section className="py-20 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
-        {/* Header */}
-        <div className="text-center mb-16">;
-          <motion.h2;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6";
-          >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {title}
           </motion.h2>;
           <motion.p;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-            className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;
+            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
-=======
-            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto";
-          >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {subtitle}
           </motion.p>;
           {/* Stats */}
@@ -181,29 +161,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-<<<<<<< HEAD
-            className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto&quot;
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             {stats.map((stat, index) => (
-              <div key={index} className=&quot;text-center&quot;>
+              <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>
-                  <stat.icon className=&quot;w-8 h-8&quot; />
+                  <stat.icon className="w-8 h-8" />
                 </div>
-                <div className=&quot;text-2xl font-bold text-white&quot;>{stat.value}</div>
-                <div className=&quot;text-sm text-gray-400&quot;>{stat.label}</div>
+                <div className="text-2xl font-bold text-white">{stat.value}</div>
+                <div className="text-sm text-gray-400">{stat.label}</div>
               </div>
-=======
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto";
-          >;
-            {stats.map((stat, index) => (;
-              <div key={index} className="text-center">;
-                <div className={`${stat.color} mb-2 flex justify-center`}>;
-                  <stat.icon className="w-8 h-8" />;
-                </div>;
-                <div className="text-2xl font-bold text-white">{stat.value}</div>;
-                <div className="text-sm text-gray-400">{stat.label}</div>;
-              </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </motion.div>;
         </div>;
@@ -213,91 +180,50 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
-            className=&quot;mb-12&quot;
+            className="mb-12"
           >
-            <div className=&quot;bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50&quot;>
-              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Category Filter */}
                 <div>
-                  <label className=&quot;block text-sm font-medium text-gray-300 mb-3&quot;>Category</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-3">Category</label>
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className=&quot;w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent&quot;
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     {categories.map((category) => (
                       <option key={category.id} value={category.id}>
-=======
-            className="mb-12";
-          >;
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-                {/* Category Filter */}
-                <div>;
-                  <label className="block text-sm font-medium text-gray-300 mb-3">Category</label>;
-                  <select;
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
-                  >;
-                    {categories.map((category) => (;
-                      <option key={category.id} value={category.id}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                         {category.icon} {category.name}
                       </option>;
                     ))}
                   </select>;
                 </div>;
                 {/* Price Range Filter */}
-<<<<<<< HEAD
                 <div>
-                  <label className=&quot;block text-sm font-medium text-gray-300 mb-3&quot;>Price Range</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-3">Price Range</label>
                   <select
                     value={selectedPriceRange}
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
-                    className=&quot;w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent&quot;
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     {priceRanges.map((range) => (
                       <option key={range.id} value={range.id}>
-=======
-                <div>;
-                  <label className="block text-sm font-medium text-gray-300 mb-3">Price Range</label>;
-                  <select;
-                    value={selectedPriceRange}
-                    onChange={(e) => setSelectedPriceRange(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
-                  >;
-                    {priceRanges.map((range) => (;
-                      <option key={range.id} value={range.id}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                         {range.name}
                       </option>;
                     ))}
                   </select>;
                 </div>;
                 {/* Sort Options */}
-<<<<<<< HEAD
                 <div>
-                  <label className=&quot;block text-sm font-medium text-gray-300 mb-3&quot;>Sort By</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-3">Sort By</label>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className=&quot;w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent&quot;
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
-=======
-                <div>;
-                  <label className="block text-sm font-medium text-gray-300 mb-3">Sort By</label>;
-                  <select;
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
-                  >;
-                    {sortOptions.map((option) => (;
-                      <option key={option.id} value={option.id}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                         {option.name}
                       </option>;
                     ))}
@@ -313,207 +239,110 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-<<<<<<< HEAD
-          className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
-=======
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-        >;
-          <AnimatePresence>;
-            {filteredServices.map((service, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={service.id}
                 initial={{ opacity: 0, y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-<<<<<<< HEAD
-                className=&quot;group&quot;
+                className="group"
               >
-                <div className=&quot;relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full&quot;>
+                <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
                   {/* Popular Badge */}
                   {service.popular && (
-                    <div className=&quot;absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full&quot;>
+                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                       ⭐ Most Popular
                     </div>
-=======
-                className="group";
-              >;
-                <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">;
-                  {/* Popular Badge */}
-                  {service.popular && (;
-                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">;
-                      ⭐ Most Popular;
-                    </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   )}
 ;
                   {/* Header */}
-<<<<<<< HEAD
-                  <div className=&quot;mb-6&quot;>
-                    <div className=&quot;flex items-center justify-between mb-4&quot;>
-                      <div className=&quot;text-3xl&quot;>{service.icon}</div>
-                      <div className=&quot;text-right&quot;>
-                        <div className=&quot;text-2xl font-bold text-white&quot;>{service.price}</div>
-                        <div className=&quot;text-sm text-gray-400&quot;>{service.period}</div>
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-3xl">{service.icon}</div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-white">{service.price}</div>
+                        <div className="text-sm text-gray-400">{service.period}</div>
                       </div>
                     </div>
-                    <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors&quot;>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                       {service.name}
                     </h3>
-                    <p className=&quot;text-gray-300 text-sm leading-relaxed&quot;>
-=======
-                  <div className="mb-6">;
-                    <div className="flex items-center justify-between mb-4">;
-                      <div className="text-3xl">{service.icon}</div>;
-                      <div className="text-right">;
-                        <div className="text-2xl font-bold text-white">{service.price}</div>;
-                        <div className="text-sm text-gray-400">{service.period}</div>;
-                      </div>;
-                    </div>;
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
-                      {service.name}
-                    </h3>;
-                    <p className="text-gray-300 text-sm leading-relaxed">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                    <p className="text-gray-300 text-sm leading-relaxed">
                       {service.tagline}
                     </p>;
                   </div>;
                   {/* Features */}
-<<<<<<< HEAD
-                  <div className=&quot;mb-6&quot;>
-                    <h4 className=&quot;text-sm font-semibold text-gray-300 mb-3 flex items-center&quot;>
-                      <CheckCircle className=&quot;w-4 h-4 mr-2 text-green-400&quot; />
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
+                      <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
                       Key Features
                     </h4>
-                    <ul className=&quot;space-y-2&quot;>
+                    <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className=&quot;text-sm text-gray-400 flex items-start&quot;>
-                          <span className=&quot;text-cyan-400 mr-2&quot;>•</span>
-=======
-                  <div className="mb-6">;
-                    <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">;
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-400" />;
-                      Key Features;
-                    </h4>;
-                    <ul className="space-y-2">;
-                      {service.features.slice(0, 4).map((feature, idx) => (;
-                        <li key={idx} className="text-sm text-gray-400 flex items-start">;
-                          <span className="text-cyan-400 mr-2">•</span>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                        <li key={idx} className="text-sm text-gray-400 flex items-start">
+                          <span className="text-cyan-400 mr-2">•</span>
                           {feature}
                         </li>;
                       ))}
                     </ul>;
                   </div>;
                   {/* Stats */}
-<<<<<<< HEAD
-                  <div className=&quot;grid grid-cols-3 gap-4 mb-6 text-center&quot;>
+                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                     <div>
-                      <div className=&quot;text-lg font-bold text-white&quot;>{service.rating}</div>
-                      <div className=&quot;text-xs text-gray-400&quot;>Rating</div>
+                      <div className="text-lg font-bold text-white">{service.rating}</div>
+                      <div className="text-xs text-gray-400">Rating</div>
                     </div>
                     <div>
-                      <div className=&quot;text-lg font-bold text-white&quot;>{service.customers?.toLocaleString() || '0'}</div>
-                      <div className=&quot;text-xs text-gray-400&quot;>Customers</div>
+                      <div className="text-lg font-bold text-white">{service.customers?.toLocaleString() || '0'}</div>
+                      <div className="text-xs text-gray-400">Customers</div>
                     </div>
                     <div>
-                      <div className=&quot;text-lg font-bold text-white&quot;>{service.trialDays}</div>
-                      <div className=&quot;text-xs text-gray-400&quot;>Trial Days</div>
+                      <div className="text-lg font-bold text-white">{service.trialDays}</div>
+                      <div className="text-xs text-gray-400">Trial Days</div>
                     </div>
                   </div>
 
                   {/* ROI Highlight */}
-                  <div className=&quot;mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20&quot;>
-                    <div className=&quot;text-sm text-green-400 font-semibold mb-1&quot;>🚀 ROI Promise</div>
-                    <div className=&quot;text-xs text-gray-300 leading-relaxed&quot;>
-=======
-                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">;
-                    <div>;
-                      <div className="text-lg font-bold text-white">{service.rating}</div>;
-                      <div className="text-xs text-gray-400">Rating</div>;
-                    </div>;
-                    <div>;
-                      <div className="text-lg font-bold text-white">{service.customers?.toLocaleString() || '0'}</div>;
-                      <div className="text-xs text-gray-400">Customers</div>;
-                    </div>;
-                    <div>;
-                      <div className="text-lg font-bold text-white">{service.trialDays}</div>;
-                      <div className="text-xs text-gray-400">Trial Days</div>;
-                    </div>;
-                  </div>;
-                  {/* ROI Highlight */}
-                  <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">;
-                    <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>;
-                    <div className="text-xs text-gray-300 leading-relaxed">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
+                    <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
+                    <div className="text-xs text-gray-300 leading-relaxed">
                       {service.roi}
                     </div>;
                   </div>;
                   {/* Market Position */}
-<<<<<<< HEAD
-                  <div className=&quot;mb-6 p-4 bg-gray-800/30 rounded-lg&quot;>
-                    <div className=&quot;text-sm text-cyan-400 font-semibold mb-2&quot;>📊 Market Position</div>
-                    <div className=&quot;text-xs text-gray-300 leading-relaxed&quot;>
-=======
-                  <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">;
-                    <div className="text-sm text-cyan-400 font-semibold mb-2">📊 Market Position</div>;
-                    <div className="text-xs text-gray-300 leading-relaxed">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
+                    <div className="text-sm text-cyan-400 font-semibold mb-2">📊 Market Position</div>
+                    <div className="text-xs text-gray-300 leading-relaxed">
                       {service.marketPosition}
                     </div>;
                   </div>;
                   {/* CTA */}
-<<<<<<< HEAD
-                  <div className=&quot;mt-auto&quot;>
+                  <div className="mt-auto">
                     <Button
                       href={service.link}
-                      variant=&quot;primary&quot;
-                      className=&quot;w-full group-hover:bg-cyan-500 transition-colors&quot;
+                      variant="primary"
+                      className="w-full group-hover:bg-cyan-500 transition-colors"
                     >
                       Get Started
-                      <ArrowRight className=&quot;ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform&quot; />
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>
 
                   {/* Contact Info */}
-                  <div className=&quot;mt-4 text-center&quot;>
-                    <div className=&quot;text-xs text-gray-500&quot;>
-                      Contact: <span className=&quot;text-cyan-400&quot;>{service.contactInfo.mobile}</span>
+                  <div className="mt-4 text-center">
+                    <div className="text-xs text-gray-500">
+                      Contact: <span className="text-cyan-400">{service.contactInfo.mobile}</span>
                     </div>
-                    <div className=&quot;text-xs text-gray-500&quot;>
-                      Email: <span className=&quot;text-cyan-400&quot;>{service.contactInfo.email}</span>
+                    <div className="text-xs text-gray-500">
+                      Email: <span className="text-cyan-400">{service.contactInfo.email}</span>
                     </div>
                   </div>
                 </div>
               </motion.div>
-=======
-                  <div className="mt-auto">;
-                    <Button;
-                      href={service.link}
-                      variant="primary";
-                      className="w-full group-hover:bg-cyan-500 transition-colors";
-                    >;
-                      Get Started;
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />;
-                    </Button>;
-                  </div>;
-                  {/* Contact Info */}
-                  <div className="mt-4 text-center">;
-                    <div className="text-xs text-gray-500">;
-                      Contact: <span className="text-cyan-400">{service.contactInfo.mobile}</span>;
-                    </div>;
-                    <div className="text-xs text-gray-500">;
-                      Email: <span className="text-cyan-400">{service.contactInfo.email}</span>;
-                    </div>;
-                  </div>;
-                </div>;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </AnimatePresence>;
         </motion.div>;
@@ -522,36 +351,30 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-<<<<<<< HEAD
-          className=&quot;text-center mt-16&quot;
+          className="text-center mt-16"
         >
-          <div className=&quot;bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20&quot;>
-            <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>
+          <div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
+            <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className=&quot;text-gray-300 mb-6 max-w-2xl mx-auto&quot;>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Join thousands of companies already achieving breakthrough results with our cutting-edge AI, quantum, and blockchain solutions. 
               Get started today and see the future of business technology.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary" className="text-lg px-8 py-4">
-=======
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
-              <Button href=&quot;/contact&quot; variant=&quot;primary&quot; className=&quot;text-lg px-8 py-4&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 Schedule a Consultation
-                <ArrowRight className=&quot;ml-2 w-5 h-5&quot; />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button href=&quot;/pricing&quot; variant=&quot;secondary&quot; className=&quot;text-lg px-8 py-4&quot;>
+              <Button href="/pricing" variant="secondary" className="text-lg px-8 py-4">
                 View Pricing Plans
-                <DollarSign className=&quot;ml-2 w-5 h-5&quot; />
+                <DollarSign className="ml-2 w-5 h-5" />
               </Button>
             </div>
-            <div className=&quot;mt-6 text-sm text-gray-400&quot;>
-              <p>📞 Call us: <span className=&quot;text-cyan-400&quot;>+1 302 464 0950</span></p>
-              <p>📧 Email: <span className=&quot;text-cyan-400&quot;>kleber@ziontechgroup.com</span></p>
-              <p>🌐 Visit: <span className=&quot;text-cyan-400&quot;>https://ziontechgroup.com</span></p>
+            <div className="mt-6 text-sm text-gray-400">
+              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>
+              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>
+              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>
             </div>
           </div>
         </motion.div>
@@ -561,7 +384,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 },
 
 export default EnhancedServiceShowcase,
-=======
           className="text-center mt-16";
         >;
           <div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">;
@@ -594,4 +416,3 @@ export default EnhancedServiceShowcase,
   );
 },;
 export default EnhancedServiceShowcase;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

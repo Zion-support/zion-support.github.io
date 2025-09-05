@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
@@ -15,23 +13,6 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { toast } from "@/hooks/use-toast",
 import { Check, Flag, Search, Settings, X } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
-=======
-import { useState, useEffect } from &quot;react&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { useNavigate } from &quot;react-router-dom&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from &quot;@/components/ui/table&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from &quot;@/components/ui/dialog&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { Alert, AlertDescription, AlertTitle } from &quot;@/components/ui/alert&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { Check, Flag, Search, Settings, X } from &quot;lucide-react&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -49,7 +30,6 @@ interface PartnerProfile {
 }
 
 export default function PartnerManager() {
-<<<<<<< HEAD
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -66,25 +46,6 @@ export default function PartnerManager() {
     if (!isAuthenticated) {
       navigate("/login"),
       return
-=======
-  const [partners, setPartners] = useState<PartnerProfile[]>([]);
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("&quot;);
-  const [activeTab, setActiveTab] = useState(&quot;pending&quot;);
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [commissionRate, setCommissionRate] = useState(25);
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!isAuthenticated) {
-      navigate(&quot;/login&quot;);
-      return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useNavigate } from "react-router-dom",;
@@ -131,7 +92,6 @@ export default function PartnerManager() {;
     if (!isAuthenticated) {;
       navigate("/login"),;
       return;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     fetchPartners();
@@ -230,21 +190,12 @@ export default function PartnerManager() {;
         setPartners(data as PartnerProfile[]),;
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
       }
-<<<<<<< HEAD
     } catch (error) {
-<<<<<<< HEAD
       console.error("Error fetching partners:", error),
       toast({
         title: "Error",
         description: "Failed to load partner data",
         variant: "destructive"})
-=======
-      console.error(&quot;Error fetching partners:&quot;, error);
-      toast({
-        title: &quot;Error&quot;,
-        description: &quot;Failed to load partner data&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
     }
@@ -254,14 +205,8 @@ export default function PartnerManager() {;
     let filtered = partners,
     
     // Filter by status
-<<<<<<< HEAD
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
-=======
-    if (status !== &quot;all&quot;) {
-      filtered = filtered.filter(p => p.status === status);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
     } catch (error) {;
       console.error("Error fetching partners:", error),;
       toast({;
@@ -277,7 +222,6 @@ export default function PartnerManager() {;
     // Filter by status;
     if (status !== "all") {;
       filtered = filtered.filter(p => p.status === status);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
 ;
     // Filter by search query;
@@ -290,7 +234,6 @@ export default function PartnerManager() {;
         p.website?.toLowerCase().includes(lowerQuery);
       );
     }
-<<<<<<< HEAD
     
     setFilteredPartners(filtered)
   },
@@ -330,32 +273,20 @@ export default function PartnerManager() {;
       ),
       
       toast({
-        title: status === 'approved' ? &quot;Partner Approved&quot; : &quot;Partner Rejected&quot;,
+        title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
         description: `The partner has been ${status}.`,
-<<<<<<< HEAD
         variant: status === 'approved' ? "default" : "destructive"}),
-=======
-        variant: status === 'approved' ? &quot;default&quot; : &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       // Close the dialog if open
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
         setIsDetailsOpen(false)
       }
     } catch (error) {
-<<<<<<< HEAD
       console.error("Error updating partner status:", error),
       toast({
         title: "Error",
         description: "Failed to update partner status",
         variant: "destructive"})
-=======
-      console.error(&quot;Error updating partner status:&quot;, error);
-      toast({
-        title: &quot;Error&quot;,
-        description: &quot;Failed to update partner status&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -375,32 +306,17 @@ export default function PartnerManager() {;
       ),
       
       toast({
-<<<<<<< HEAD
         title: "Settings Updated",
         description: "Partner settings have been updated successfully.",
         variant: "default"}),
-=======
-        title: &quot;Settings Updated&quot;,
-        description: &quot;Partner settings have been updated successfully.&quot;,
-        variant: &quot;default&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       setIsSettingsOpen(false)
     } catch (error) {
-<<<<<<< HEAD
       console.error("Error updating partner settings:", error),
       toast({
         title: "Error",
         description: "Failed to update partner settings",
         variant: "destructive"})
-=======
-      console.error(&quot;Error updating partner settings:&quot;, error);
-      toast({
-        title: &quot;Error&quot;,
-        description: &quot;Failed to update partner settings&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
     setFilteredPartners(filtered);
   },;
@@ -471,7 +387,6 @@ export default function PartnerManager() {;
         title: "Error",;
         description: "Failed to update partner settings",;
         variant: "destructive"});
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   const getAudienceSizeLabel = (size: string) => {;
@@ -483,13 +398,11 @@ export default function PartnerManager() {;
       case 'over100k': return 'Over 100,000',;
       default: return size;
     }
-<<<<<<< HEAD
   },
 
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
-<<<<<<< HEAD
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,
       case 'approved':
         return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>,
@@ -497,15 +410,6 @@ export default function PartnerManager() {;
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,
       default:
         return <Badge variant="outline">{status}</Badge>
-=======
-        return <Badge variant=&quot;outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600&quot;>Pending</Badge>;
-      case 'approved':
-        return <Badge variant=&quot;outline" className="bg-green-900/30 text-green-500 border-green-600&quot;>Approved</Badge>;
-      case 'rejected':
-        return <Badge variant=&quot;outline" className="bg-red-900/30 text-red-500 border-red-600&quot;>Rejected</Badge>;
-      default:
-        return <Badge variant=&quot;outline&quot;>{status}</Badge>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -513,9 +417,8 @@ export default function PartnerManager() {;
     if (flags === 0) return null,
     
     return (
-      <Badge variant=&quot;outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
+      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
-=======
   },;
   const getStatusBadge = (status: string) => {;
     switch (status) {;
@@ -534,7 +437,6 @@ export default function PartnerManager() {;
     return (;
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">;
         <Flag className="h-3 w-3" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         {flags}
       </Badge>;
     );
@@ -590,7 +492,6 @@ export default function PartnerManager() {;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
                   {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
-<<<<<<< HEAD
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -611,9 +512,9 @@ export default function PartnerManager() {;
           </div>
           <div className="w-full md:w-80">
             <div className="relative">
-              <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light&quot; />
+              <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light" />
               <Input
-                placeholder=&quot;Search partners..."
+                placeholder="Search partners..."
                 className="pl-8"
                 value={searchQuery}
                 onChange={handleSearch}
@@ -623,118 +524,52 @@ export default function PartnerManager() {;
         </CardHeader>
         <CardContent>
           <Tabs value={activeTab} onValueChange={handleTabChange} className="space-y-4">
-            <TabsList className="grid grid-cols-4 w-full md:w-auto&quot;>
-              <TabsTrigger value=&quot;pending&quot;>Pending</TabsTrigger>
-              <TabsTrigger value=&quot;approved&quot;>Approved</TabsTrigger>
-              <TabsTrigger value=&quot;rejected&quot;>Rejected</TabsTrigger>
-              <TabsTrigger value=&quot;all&quot;>All</TabsTrigger>
+            <TabsList className="grid grid-cols-4 w-full md:w-auto">
+              <TabsTrigger value="pending">Pending</TabsTrigger>
+              <TabsTrigger value="approved">Approved</TabsTrigger>
+              <TabsTrigger value="rejected">Rejected</TabsTrigger>
+              <TabsTrigger value="all">All</TabsTrigger>
             </TabsList>
             
-            <TabsContent value=&quot;pending" className="space-y-4&quot;>
+            <TabsContent value="pending" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
-=======
-                </div>;
-              </CardHeader>;
-              <CardContent className="pt-0">;
-                <p className="text-xs text-zion-slate-light">;
-                  Total potential fraud flags detected;
-                </p>;
-              </CardContent>;
-            </Card>;
-          </div>;
-        </CardContent>;
-      </Card>;
-      <Card className="bg-zion-blue-dark border-zion-blue-light">;
-        <CardHeader className="pb-3 flex flex-col md:flex-row justify-between md:items-center gap-4">;
-          <div>;
-            <CardTitle>Partners</CardTitle>;
-            <CardDescription>Manage partnership applications and settings</CardDescription>;
-          </div>;
-          <div className="w-full md:w-80">;
-            <div className="relative">;
-              <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light" />;
-              <Input;
-                placeholder="Search partners...";
-                className="pl-8";
-                value={searchQuery}
-                onChange={handleSearch}
-              />;
-            </div>;
-          </div>;
-        </CardHeader>;
-        <CardContent>;
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="space-y-4">;
-            <TabsList className="grid grid-cols-4 w-full md:w-auto">;
-              <TabsTrigger value="pending">Pending</TabsTrigger>;
-              <TabsTrigger value="approved">Approved</TabsTrigger>;
-              <TabsTrigger value="rejected">Rejected</TabsTrigger>;
-              <TabsTrigger value="all">All</TabsTrigger>;
-            </TabsList>;
-            <TabsContent value="pending" className="space-y-4">;
-              <PartnerTable;
-                partners={filteredPartners} ;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-<<<<<<< HEAD
               />
             </TabsContent>
             
-            <TabsContent value=&quot;approved" className="space-y-4&quot;>
+            <TabsContent value="approved" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
-=======
-              />;
-            </TabsContent>;
-            <TabsContent value="approved" className="space-y-4">;
-              <PartnerTable;
-                partners={filteredPartners} ;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-<<<<<<< HEAD
               />
             </TabsContent>
             
-            <TabsContent value=&quot;rejected" className="space-y-4&quot;>
+            <TabsContent value="rejected" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
-=======
-              />;
-            </TabsContent>;
-            <TabsContent value="rejected" className="space-y-4">;
-              <PartnerTable;
-                partners={filteredPartners} ;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus} ;
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-<<<<<<< HEAD
               />
             </TabsContent>
             
-            <TabsContent value=&quot;all" className="space-y-4">
+            <TabsContent value="all" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
-=======
-              />;
-            </TabsContent>;
-            <TabsContent value="all" className="space-y-4">;
-              <PartnerTable;
-                partners={filteredPartners} ;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
@@ -747,7 +582,6 @@ export default function PartnerManager() {;
         </CardContent>;
       </Card>;
       {/* Partner Details Dialog */}
-<<<<<<< HEAD
       <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}>
         <DialogContent className="sm:max-w-lg bg-zion-blue border-zion-blue-light">
           <DialogHeader>
@@ -772,7 +606,7 @@ export default function PartnerManager() {;
               
               <div>
                 <p className="text-xs text-zion-slate-light">Bio</p>
-                <p className="text-white&quot;>{selectedPartner.bio || &quot;No bio provided"}</p>
+                <p className="text-white">{selectedPartner.bio || "No bio provided"}</p>
               </div>
               
               <div className="grid grid-cols-2 gap-2">
@@ -791,47 +625,6 @@ export default function PartnerManager() {;
                   <p className="text-xs text-zion-slate-light">Website</p>
                   <p className="text-zion-cyan">{selectedPartner.website}</p>
                 </div>
-=======
-      <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}>;
-        <DialogContent className="sm:max-w-lg bg-zion-blue border-zion-blue-light">;
-          <DialogHeader>;
-            <DialogTitle>Partner Details</DialogTitle>;
-            <DialogDescription>;
-              Review the details of the partner application;
-            </DialogDescription>;
-          </DialogHeader>;
-          {selectedPartner && (;
-            <div className="space-y-4">;
-              <div className="grid grid-cols-2 gap-2">;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Name</p>;
-                  <p className="font-medium text-white">{selectedPartner.name}</p>;
-                </div>;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Status</p>;
-                  <div>{getStatusBadge(selectedPartner.status)}</div>;
-                </div>;
-              </div>;
-              <div>;
-                <p className="text-xs text-zion-slate-light">Bio</p>;
-                <p className="text-white">{selectedPartner.bio || "No bio provided"}</p>;
-              </div>;
-              <div className="grid grid-cols-2 gap-2">;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Niche</p>;
-                  <p className="text-white">{selectedPartner.niche}</p>;
-                </div>;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Audience Size</p>;
-                  <p className="text-white">{getAudienceSizeLabel(selectedPartner.audience_size)}</p>;
-                </div>;
-              </div>;
-              {selectedPartner.website && (;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Website</p>;
-                  <p className="text-zion-cyan">{selectedPartner.website}</p>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
 ;
               {selectedPartner.social_media && Object.keys(selectedPartner.social_media).length > 0 && (;
@@ -847,12 +640,11 @@ export default function PartnerManager() {;
                   </div>;
                 </div>;
               )}
-<<<<<<< HEAD
               
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Payout Method</p>
-                  <p className="text-white capitalize&quot;>{selectedPartner.payout_method || &quot;Not specified"}</p>
+                  <p className="text-white capitalize">{selectedPartner.payout_method || "Not specified"}</p>
                 </div>
                 <div>
                   <p className="text-xs text-zion-slate-light">Commission Rate</p>
@@ -873,38 +665,9 @@ export default function PartnerManager() {;
               )}
               
               {selectedPartner.status === 'pending' && (
-                <div className="flex justify-end gap-2 mt-4&quot;>
+                <div className="flex justify-end gap-2 mt-4">
                   <Button 
-                    variant=&quot;destructive" 
-=======
-;
-              <div className="grid grid-cols-2 gap-2">;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Payout Method</p>;
-                  <p className="text-white capitalize">{selectedPartner.payout_method || "Not specified"}</p>;
-                </div>;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Commission Rate</p>;
-                  <p className="text-white">{selectedPartner.commission_rate || 25}%</p>;
-                </div>;
-              </div>;
-              {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && (;
-                <Alert className="bg-red-900/20 border-red-900/50 text-red-500">;
-                  <AlertTitle className="flex items-center gap-2">;
-                    <Flag className="h-4 w-4" />;
-                    Potential Fraud Detected ({selectedPartner.fraud_flags});
-                  </AlertTitle>;
-                  <AlertDescription>;
-                    This application has triggered our fraud detection system. Review carefully before approving.;
-                  </AlertDescription>;
-                </Alert>;
-              )}
-;
-              {selectedPartner.status === 'pending' && (;
-                <div className="flex justify-end gap-2 mt-4">;
-                  <Button;
-                    variant="destructive";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                    variant="destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
                   >;
                     <X className="h-4 w-4 mr-1" />;
@@ -924,7 +687,6 @@ export default function PartnerManager() {;
         </DialogContent>;
       </Dialog>;
       {/* Partner Settings Dialog */}
-<<<<<<< HEAD
       <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>
         <DialogContent className="bg-zion-blue border-zion-blue-light">
           <DialogHeader>
@@ -942,24 +704,24 @@ export default function PartnerManager() {;
               </div>
               
               <div>
-                <label className="text-sm font-medium text-white&quot; htmlFor=&quot;commission-rate&quot;>
+                <label className="text-sm font-medium text-white" htmlFor="commission-rate">
                   Commission Rate (%)
                 </label>
                 <Input
-                  id=&quot;commission-rate&quot;
-                  type=&quot;number&quot;
-                  min=&quot;1&quot;
-                  max=&quot;50"
+                  id="commission-rate"
+                  type="number"
+                  min="1"
+                  max="50"
                   value={commissionRate}
                   onChange={(e) => setCommissionRate(parseInt(e.target.value))}
                 />
-                <p className="text-xs text-zion-slate-light mt-1&quot;>
+                <p className="text-xs text-zion-slate-light mt-1">
                   Percentage of reward granted to this partner for successful referrals
                 </p>
               </div>
               
               <DialogFooter>
-                <Button variant=&quot;outline" onClick={() => setIsSettingsOpen(false)}>
+                <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>
                   Cancel
                 </Button>
                 <Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark">
@@ -967,47 +729,6 @@ export default function PartnerManager() {;
                 </Button>
               </DialogFooter>
             </div>
-=======
-      <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>;
-        <DialogContent className="bg-zion-blue border-zion-blue-light">;
-          <DialogHeader>;
-            <DialogTitle>Partner Settings</DialogTitle>;
-            <DialogDescription>;
-              Configure commission rates and other settings;
-            </DialogDescription>;
-          </DialogHeader>;
-          {selectedPartner && (;
-            <div className="space-y-4">;
-              <div>;
-                <label className="text-sm font-medium text-white">Partner Name</label>;
-                <p className="text-zion-slate-light">{selectedPartner.name}</p>;
-              </div>;
-              <div>;
-                <label className="text-sm font-medium text-white" htmlFor="commission-rate">;
-                  Commission Rate (%);
-                </label>;
-                <Input;
-                  id="commission-rate";
-                  type="number";
-                  min="1";
-                  max="50";
-                  value={commissionRate}
-                  onChange={(e) => setCommissionRate(parseInt(e.target.value))}
-                />;
-                <p className="text-xs text-zion-slate-light mt-1">;
-                  Percentage of reward granted to this partner for successful referrals;
-                </p>;
-              </div>;
-              <DialogFooter>;
-                <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>;
-                  Cancel;
-                </Button>;
-                <Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark">;
-                  Save Changes;
-                </Button>;
-              </DialogFooter>;
-            </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         </DialogContent>;
       </Dialog>;
@@ -1078,86 +799,45 @@ function PartnerTable({;
             <TableCell>{getStatusBadge(partner.status)}</TableCell>;
             <TableCell>;
               {new Date(partner.created_at).toLocaleDateString()}
-<<<<<<< HEAD
             </TableCell>
             <TableCell className="text-right">
-              <div className="flex justify-end gap-2&quot;>
+              <div className="flex justify-end gap-2">
                 {partner.status === 'pending' && (
                   <>
                     <Button 
-                      variant=&quot;ghost&quot;
-                      size=&quot;sm"
+                      variant="ghost"
+                      size="sm"
                       onClick={() => onUpdateStatus(partner.id, 'rejected')}
                       className="text-red-500 hover:text-red-600 hover:bg-red-900/20"
                     >
                       <X className="h-4 w-4" />
-                      <span className="sr-only&quot;>Reject</span>
+                      <span className="sr-only">Reject</span>
                     </Button>
                     <Button 
-                      variant=&quot;ghost&quot;
-                      size=&quot;sm"
+                      variant="ghost"
+                      size="sm"
                       onClick={() => onUpdateStatus(partner.id, 'approved')}
                       className="text-green-500 hover:text-green-600 hover:bg-green-900/20"
                     >
                       <Check className="h-4 w-4" />
-                      <span className="sr-only&quot;>Approve</span>
+                      <span className="sr-only">Approve</span>
                     </Button>
                   </>
                 )}
                 
                 <Button 
-                  variant=&quot;ghost&quot; 
-                  size=&quot;sm"
+                  variant="ghost" 
+                  size="sm"
                   onClick={() => onOpenSettings(partner)}
                   className="text-zion-slate-light hover:text-white"
                 >
                   <Settings className="h-4 w-4" />
-                  <span className="sr-only&quot;>Settings</span>
+                  <span className="sr-only">Settings</span>
                 </Button>
                 
                 <Button 
-                  variant=&quot;outline&quot; 
-                  size=&quot;sm"
-=======
-            </TableCell>;
-            <TableCell className="text-right">;
-              <div className="flex justify-end gap-2">;
-                {partner.status === 'pending' && (;
-                  <>;
-                    <Button;
-                      variant="ghost";
-                      size="sm";
-                      onClick={() => onUpdateStatus(partner.id, 'rejected')}
-                      className="text-red-500 hover:text-red-600 hover:bg-red-900/20";
-                    >;
-                      <X className="h-4 w-4" />;
-                      <span className="sr-only">Reject</span>;
-                    </Button>;
-                    <Button;
-                      variant="ghost";
-                      size="sm";
-                      onClick={() => onUpdateStatus(partner.id, 'approved')}
-                      className="text-green-500 hover:text-green-600 hover:bg-green-900/20";
-                    >;
-                      <Check className="h-4 w-4" />;
-                      <span className="sr-only">Approve</span>;
-                    </Button>;
-                  </>;
-                )}
-;
-                <Button;
-                  variant="ghost";
-                  size="sm";
-                  onClick={() => onOpenSettings(partner)}
-                  className="text-zion-slate-light hover:text-white";
-                >;
-                  <Settings className="h-4 w-4" />;
-                  <span className="sr-only">Settings</span>;
-                </Button>;
-                <Button;
-                  variant="outline";
-                  size="sm";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  variant="outline" 
+                  size="sm"
                   onClick={() => onViewDetails(partner)}
                 >;
                   View;

@@ -323,7 +323,6 @@ const allServices = [;
                         </div>;
                       </div>;
                       {/* ROI and Popularity */}
-<<<<<<< HEAD
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-sm">
                           <span className="text-gray-500">Expected ROI:</span>
@@ -338,21 +337,6 @@ const allServices = [;
                           </div>
                         )}
 
-=======
-                      <div className="flex items-center justify-between mb-4">;
-                        <div className="text-sm">;
-                          <span className="text-gray-500">Expected ROI:</span>;
-                          <span className="text-green-600 font-semibold ml-1">;
-                            {service.roi.split(' ')[0]} ROI;
-                          </span>;
-                        </div>;
-                        {service.popular && (;
-                          <div className="flex items-center gap-1 text-yellow-600">;
-                            <Star className="w-4 h-4 fill-current" />;
-                            <span className="text-sm font-medium">Popular</span>;
-                          </div>;
-                        </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                         {/* Price and Features */}
                         <div className="lg:w-1/3">;
                           <div className="text-right mb-4">;

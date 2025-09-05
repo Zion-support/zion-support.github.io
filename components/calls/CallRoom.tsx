@@ -62,7 +62,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     if (room) {;
       room.disconnect();
     }
-<<<<<<< HEAD
     const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0,
     onLeave?.(durationSec)
   },
@@ -77,43 +76,18 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
   }, [participants.length]),
 
   return (
-    <div className=&quot;min-h-screen bg-gray-950 text-gray-100 flex flex-col&quot;>
-      <div className=&quot;p-4 flex items-center justify-between border-b border-gray-800&quot;>
+    <div className="min-h-screen bg-gray-950 text-gray-100 flex flex-col">
+      <div className="p-4 flex items-center justify-between border-b border-gray-800">
         <div>
-          <h2 className=&quot;text-lg font-semibold&quot;>Project Room: {projectId}</h2>
-          <p className=&quot;text-xs text-gray-400&quot;>Room {roomName}</p>
+          <h2 className="text-lg font-semibold">Project Room: {projectId}</h2>
+          <p className="text-xs text-gray-400">Room {roomName}</p>
         </div>
-        <Controls room={room} onLeave={handleLeave} accent=&quot;cyan&quot; />
+        <Controls room={room} onLeave={handleLeave} accent="cyan" />
       </div>
 
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
           <ParticipantTile key={String((p as any).sid || (p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />
-=======
-    const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0,;
-    onLeave?.(durationSec);
-  },;
-  const gridCols = useMemo(() => {;
-    const count = participants.length || 1,;
-    if (count <= 1) return 'grid-cols-1',;
-    if (count === 2) return 'grid-cols-2',;
-    if (count <= 4) return 'grid-cols-2 md: grid-cols-2',;
-    if (count <= 6) return 'grid-cols-2 md:grid-cols-3';
-    return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
-  }, [participants.length]);
-  return (;
-    <div className="min-h-screen bg-gray-950 text-gray-100 flex flex-col">;
-      <div className="p-4 flex items-center justify-between border-b border-gray-800">;
-        <div>;
-          <h2 className="text-lg font-semibold">Project Room: {projectId}</h2>;
-          <p className="text-xs text-gray-400">Room {roomName}</p>;
-        </div>;
-        <Controls room={room} onLeave={handleLeave} accent="cyan" />;
-      </div>;
-      <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>;
-        {participants.map((p, idx) => (;
-          <ParticipantTile key={String((p as any).sid || (p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         ))}
       </div>;
     </div>;

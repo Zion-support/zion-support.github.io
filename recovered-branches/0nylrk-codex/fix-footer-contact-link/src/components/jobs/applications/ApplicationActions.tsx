@@ -1,28 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { Link } from "react-router-dom",
-=======
-import { useState } from &quot;react&quot;;
-import { Link } from &quot;react-router-dom&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
-<<<<<<< HEAD
 } from "@/components/ui/dropdown-menu",
 import { Button } from "@/components/ui/button",
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
-=======
-} from &quot;@/components/ui/dropdown-menu&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Eye, ChevronDown, Loader2 } from &quot;lucide-react&quot;;
-import { JobApplication, ApplicationStatus } from &quot;@/types/jobs&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface ApplicationActionsProps {
   application: JobApplication,
@@ -38,49 +25,49 @@ export function ApplicationActions({
   onStatusChange
 }: ApplicationActionsProps) {
   return (
-    <div className=&quot;flex items-center justify-end gap-2&quot;>
+    <div className="flex items-center justify-end gap-2">
       <Button 
-        variant=&quot;outline&quot; 
-        size=&quot;sm&quot; 
+        variant="outline" 
+        size="sm" 
         onClick={() => onViewApplication(application.id)}
         disabled={!!application.viewed_at}
       >
-        <Eye className=&quot;h-4 w-4&quot; />
+        <Eye className="h-4 w-4" />
       </Button>
       
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button 
-            variant=&quot;outline&quot; 
-            size=&quot;sm&quot;
+            variant="outline" 
+            size="sm"
             disabled={processingId === application.id}
           >
             {processingId === application.id ? (
-              <Loader2 className=&quot;h-4 w-4 animate-spin&quot; />
+              <Loader2 className="h-4 w-4 animate-spin" />
             ) : (
-              <>Status <ChevronDown className=&quot;h-4 w-4 ml-1&quot; /></>
+              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>
             )}
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align=&quot;end&quot;>
+        <DropdownMenuContent align="end">
           <DropdownMenuItem 
-            onClick={() => onStatusChange(application.id, &quot;shortlisted&quot;)}
+            onClick={() => onStatusChange(application.id, "shortlisted")}
           >
             Shortlist
           </DropdownMenuItem>
           <DropdownMenuItem 
-            onClick={() => onStatusChange(application.id, &quot;interview&quot;)}
+            onClick={() => onStatusChange(application.id, "interview")}
           >
             Schedule Interview
           </DropdownMenuItem>
           <DropdownMenuItem 
-            onClick={() => onStatusChange(application.id, &quot;hired&quot;)}
+            onClick={() => onStatusChange(application.id, "hired")}
           >
             Hire
           </DropdownMenuItem>
           <DropdownMenuItem 
-            onClick={() => onStatusChange(application.id, &quot;rejected&quot;)}
-            className=&quot;text-red-600&quot;
+            onClick={() => onStatusChange(application.id, "rejected")}
+            className="text-red-600"
           >
             Reject
           </DropdownMenuItem>
@@ -88,8 +75,8 @@ export function ApplicationActions({
       </DropdownMenu>
       
       <Button 
-        variant=&quot;default&quot; 
-        size=&quot;sm&quot;
+        variant="default" 
+        size="sm"
         asChild
       >
         <Link to={`/messages?talentId=${application.talent_id}`}>
@@ -98,7 +85,6 @@ export function ApplicationActions({
       </Button>
     </div>
   )
-=======
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import {;
@@ -182,6 +168,5 @@ export function ApplicationActions({;
       </Button>;
     </div>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

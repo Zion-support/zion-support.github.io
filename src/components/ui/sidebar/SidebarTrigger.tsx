@@ -1,19 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Menu, X } from 'lucide-react'
 import { useSidebar } from "./sidebar-context",
 import { cn } from "@/lib/utils",
-=======
-import React from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Menu, X } from 'lucide-react'
-import { useSidebar } from &quot;./sidebar-context&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
 }
@@ -23,9 +13,8 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
 
   return (
     <Button
-      variant=&quot;ghost&quot;
-      size=&quot;icon&quot;
-=======
+      variant="ghost"
+      size="icon"
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Menu, X } from 'lucide-react';
@@ -41,7 +30,6 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
     <Button;
       variant="ghost";
       size="icon";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       className={cn("", className)}
       onClick={toggleSidebar}
       {...props}

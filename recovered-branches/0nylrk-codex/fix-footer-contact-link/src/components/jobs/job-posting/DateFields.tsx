@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import { format } from 'date-fns',
 import { Label } from "@/components/ui/label",
@@ -9,17 +7,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",
 import { FormControl } from "@/components/ui/form",
 import { cn } from "@/lib/utils",
-=======
-import React from 'react';
-import { format } from 'date-fns';
-import { Label } from &quot;@/components/ui/label&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Popover, PopoverContent, PopoverTrigger } from &quot;@/components/ui/popover&quot;;
-import { Calendar } from &quot;@/components/ui/calendar&quot;;
-import { FormControl } from &quot;@/components/ui/form&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
@@ -29,31 +16,30 @@ interface DateFieldsProps {
 
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {
   return (
-    <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
-        <Label htmlFor=&quot;publishedDate&quot;>Published Date (Optional)</Label>
+        <Label htmlFor="publishedDate">Published Date (Optional)</Label>
         <Popover>
           <PopoverTrigger asChild>
             <FormControl>
               <Button
-                variant={&quot;outline&quot;}
+                variant={"outline"}
                 className={cn(
-                  &quot;w-full md:w-[240px] pl-3 text-left font-normal&quot;,
-                  !startDate && &quot;text-muted-foreground&quot;
+                  "w-full md:w-[240px] pl-3 text-left font-normal",
+                  !startDate && "text-muted-foreground"
                 )}
               >
                 {startDate ? (
-                  format(startDate, &quot;PPP&quot;)
+                  format(startDate, "PPP")
                 ) : (
                   <span>Pick a date</span>
                 )}
               </Button>
             </FormControl>
           </PopoverTrigger>
-          <PopoverContent className=&quot;w-auto p-0&quot; align=&quot;start&quot;>
+          <PopoverContent className="w-auto p-0" align="start">
             <Calendar
-              mode=&quot;single&quot;
-=======
+              mode="single"
 import React from 'react',;
 import { format } from 'date-fns',;
 import { Label } from "@/components/ui/label",;
@@ -95,13 +81,11 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
           <PopoverContent className="w-auto p-0" align="start">;
             <Calendar;
               mode="single";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               selected={startDate}
               onSelect={setStartDate}
               disabled={(date) =>;
                 date > new Date();
               }
-<<<<<<< HEAD
               initialFocus
             />
           </PopoverContent>
@@ -109,58 +93,28 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
       </div>
 
       <div>
-        <Label htmlFor=&quot;expiryDate&quot;>Expiry Date (Optional)</Label>
+        <Label htmlFor="expiryDate">Expiry Date (Optional)</Label>
         <Popover>
           <PopoverTrigger asChild>
             <FormControl>
               <Button
-                variant={&quot;outline&quot;}
+                variant={"outline"}
                 className={cn(
-                  &quot;w-full md:w-[240px] pl-3 text-left font-normal&quot;,
-                  !endDate && &quot;text-muted-foreground&quot;
+                  "w-full md:w-[240px] pl-3 text-left font-normal",
+                  !endDate && "text-muted-foreground"
                 )}
               >
                 {endDate ? (
-                  format(endDate, &quot;PPP&quot;)
+                  format(endDate, "PPP")
                 ) : (
                   <span>Pick a date</span>
                 )}
               </Button>
             </FormControl>
           </PopoverTrigger>
-          <PopoverContent className=&quot;w-auto p-0&quot; align=&quot;start&quot;>
+          <PopoverContent className="w-auto p-0" align="start">
             <Calendar
-              mode=&quot;single&quot;
-=======
-              initialFocus;
-            />;
-          </PopoverContent>;
-        </Popover>;
-      </div>;
-      <div>;
-        <Label htmlFor="expiryDate">Expiry Date (Optional)</Label>;
-        <Popover>;
-          <PopoverTrigger asChild>;
-            <FormControl>;
-              <Button;
-                variant={"outline"}
-                className={cn(;
-                  "w-full md:w-[240px] pl-3 text-left font-normal";
-                  !endDate && "text-muted-foreground";
-                )}
-              >;
-                {endDate ? (;
-                  format(endDate, "PPP");
-                ) : (;
-                  <span>Pick a date</span>;
-                )}
-              </Button>;
-            </FormControl>;
-          </PopoverTrigger>;
-          <PopoverContent className="w-auto p-0" align="start">;
-            <Calendar;
-              mode="single";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+              mode="single"
               selected={endDate}
               onSelect={setEndDate}
               disabled={(date) =>;

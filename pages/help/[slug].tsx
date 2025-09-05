@@ -23,37 +23,19 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
       body: JSON.stringify({ articleId: article.id, helpful })});
     setVoted(helpful);
   }
-<<<<<<< HEAD
 
   return (
-    <article className=&quot;prose dark:prose-invert max-w-none&quot;>
+    <article className="prose dark:prose-invert max-w-none">
       <h1>{article.title}</h1>
-      <div className=&quot;text-sm opacity-70&quot;>Last updated {new Date(article.updatedAt).toLocaleDateString()}</div>
-      <div className=&quot;mt-6 whitespace-pre-wrap&quot;>{article.body}</div>
-      <div className=&quot;mt-8 p-4 rounded-lg border border-gray-200 dark:border-gray-800 flex items-center justify-between&quot;>
+      <div className="text-sm opacity-70">Last updated {new Date(article.updatedAt).toLocaleDateString()}</div>
+      <div className="mt-6 whitespace-pre-wrap">{article.body}</div>
+      <div className="mt-8 p-4 rounded-lg border border-gray-200 dark:border-gray-800 flex items-center justify-between">
         <div>Was this article helpful?</div>
-        <div className=&quot;flex gap-2&quot;>
-          <button onClick={() => vote(true)} disabled={voted !== null} className=&quot;enhanced-button enhanced-button-primary&quot;>Yes</button>
-          <button onClick={() => vote(false)} disabled={voted !== null} className=&quot;enhanced-button enhanced-button-secondary&quot;>No</button>
+        <div className="flex gap-2">
+          <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
+          <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
         </div>
       </div>
     </article>
   )
-=======
-;
-  return (;
-    <article className="prose dark:prose-invert max-w-none">;
-      <h1>{article.title}</h1>;
-      <div className="text-sm opacity-70">Last updated {new Date(article.updatedAt).toLocaleDateString()}</div>;
-      <div className="mt-6 whitespace-pre-wrap">{article.body}</div>;
-      <div className="mt-8 p-4 rounded-lg border border-gray-200 dark:border-gray-800 flex items-center justify-between">;
-        <div>Was this article helpful?</div>;
-        <div className="flex gap-2">;
-          <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>;
-          <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>;
-        </div>;
-      </div>;
-    </article>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

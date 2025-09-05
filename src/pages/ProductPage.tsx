@@ -41,24 +41,14 @@ export default function ProductPage() {;
     if (id) {;
       fetchProduct();
     }
-<<<<<<< HEAD
   }, [id]), // id is now from router.query
 
   if (!product && !id) { // If no id from router yet, it might still be loading
-<<<<<<< HEAD
     return <div className="p-6 text-white">Loading product details...</div>
   }
 
   if (!product) {
     return <div className="p-6 text-white">Product not found</div>
-=======
-    return <div className=&quot;p-6 text-white&quot;>Loading product details...</div>;
-  }
-
-  if (!product) {
-    return <div className=&quot;p-6 text-white&quot;>Product not found</div>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
   }, [id]), // id is now from router.query;
   if (!product && !id) { // If no id from router yet, it might still be loading;
     return <div className="p-6 text-white">Loading product details...</div>;
@@ -66,7 +56,6 @@ export default function ProductPage() {;
 ;
   if (!product) {;
     return <div className="p-6 text-white">Product not found</div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   const inCart = items.some(i => i.id === product.id),;
@@ -86,37 +75,20 @@ export default function ProductPage() {;
         title={product.title}
         description={product.description}
         ogImage={product.images?.[0]}
-<<<<<<< HEAD
       />
-      <div className=&quot;min-h-screen bg-zion-blue p-6 text-white&quot;>
-        <h1 className=&quot;text-2xl font-bold mb-4&quot;>{product.title}</h1>
+      <div className="min-h-screen bg-zion-blue p-6 text-white">
+        <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
-          <div className=&quot;mb-4 relative w-full h-64&quot;>
+          <div className="mb-4 relative w-full h-64">
             <Image
               src={product.images[0] || '/placeholder.svg'}
               alt={product.title}
-              className=&quot;object-cover rounded-md&quot;
+              className="object-cover rounded-md"
             />
           </div>
         ) : null}
-        <p className=&quot;mb-6&quot;>{product.description}</p>
+        <p className="mb-6">{product.description}</p>
         <Button onClick={handleAdd} disabled={adding || inCart}>
-=======
-      />;
-      <div className="min-h-screen bg-zion-blue p-6 text-white">;
-        <h1 className="text-2xl font-bold mb-4">{product.title}</h1>;
-        {product.images?.length ? (;
-          <div className="mb-4 relative w-full h-64">;
-            <Image;
-              src={product.images[0] || '/placeholder.svg'}
-              alt={product.title}
-              className="object-cover rounded-md";
-            />;
-          </div>;
-        ) : null}
-        <p className="mb-6">{product.description}</p>;
-        <Button onClick={handleAdd} disabled={adding || inCart}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
         </Button>;
       </div>;

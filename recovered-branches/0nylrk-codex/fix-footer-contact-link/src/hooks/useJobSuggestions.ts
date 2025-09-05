@@ -1,17 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 import { JobMatch } from "@/types/jobs",
-=======
-import { useState, useEffect } from &quot;react&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { JobMatch } from &quot;@/types/jobs&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -25,36 +16,23 @@ export function useJobSuggestions(talentId?: string) {
         
         // Get job matches with job details
         const { data, error } = await supabase
-          .from(&quot;job_talent_matches&quot;)
+          .from("job_talent_matches")
           .select(`
             *,
             job:job_id (*)
           `)
-<<<<<<< HEAD
           .eq("talent_id", talentId)
           .order("created_at", { ascending: false }),
-=======
-          .eq(&quot;talent_id&quot;, talentId)
-          .order(&quot;created_at&quot;, { ascending: false });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           
         if (error) throw error,
         
         setJobMatches(data || [])
       } catch (error) {
-<<<<<<< HEAD
         console.error("Error fetching job matches:", error),
         toast({
           title: "Error",
           description: "Failed to load job suggestions",
           variant: "destructive"})
-=======
-        console.error(&quot;Error fetching job matches:&quot;, error);
-        toast({
-          title: &quot;Error&quot;,
-          description: &quot;Failed to load job suggestions&quot;,
-          variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       } finally {
         setIsLoading(false)
       }
@@ -71,13 +49,9 @@ export function useJobSuggestions(talentId?: string) {
       },
       
       const { error } = await supabase
-        .from(&quot;job_talent_matches&quot;)
+        .from("job_talent_matches")
         .update(updates)
-<<<<<<< HEAD
         .eq("id", matchId),
-=======
-        .eq(&quot;id&quot;, matchId);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         
       if (error) throw error,
       
@@ -93,7 +67,6 @@ export function useJobSuggestions(talentId?: string) {
       // Show appropriate message
       if (status === 'applied') {
         toast({
-<<<<<<< HEAD
           title: "Application Submitted",
           description: "You've successfully applied to this job"
         })
@@ -109,24 +82,6 @@ export function useJobSuggestions(talentId?: string) {
         title: "Error",
         description: "Failed to update job status",
         variant: "destructive"})
-=======
-          title: &quot;Application Submitted&quot;,
-          description: &quot;You've successfully applied to this job&quot;
-        });
-      } else if (status === 'declined') {
-        toast({
-          title: &quot;Job Declined&quot;,
-          description: &quot;This job will be removed from your suggestions&quot;
-        });
-      }
-    } catch (error) {
-      console.error(&quot;Error updating job match status:&quot;, error);
-      toast({
-        title: &quot;Error&quot;,
-        description: &quot;Failed to update job status&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -199,7 +154,6 @@ export function useJobSuggestions(talentId?: string) {;
         title: "Error",;
         description: "Failed to update job status",;
         variant: "destructive"});
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
   },;
   // Filter matches by status;

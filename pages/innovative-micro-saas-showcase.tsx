@@ -68,165 +68,88 @@ export default function InnovativeMicroSaasShowcase() {;
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
       default: return 0;
     }
-<<<<<<< HEAD
   }),
 
   return (
     <Layout>
       <Head>
         <title>Innovative Micro SAAS Services Showcase 2025 | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, quantum computing platforms, and emerging technology solutions. Transform your business with cutting-edge technology.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;micro SAAS, AI services, quantum computing, emerging technology, business solutions, innovation&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/innovative-micro-saas-showcase&quot; />
+        <meta name="description" content="Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, quantum computing platforms, and emerging technology solutions. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="micro SAAS, AI services, quantum computing, emerging technology, business solutions, innovation" />
+        <link rel="canonical" href="https://ziontechgroup.com/innovative-micro-saas-showcase" />
       </Head>
 
       {/* Hero Section */}
-      <section className=&quot;relative py-20 lg:py-32 overflow-hidden&quot;>
-        <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black&quot;></div>
-        <div className=&quot;relative z-10 container mx-auto px-4 text-center&quot;>
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
+        <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className=&quot;text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6&quot;>
+            <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Innovative Micro SAAS Services
             </h1>
-            <p className=&quot;text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Discover our comprehensive portfolio of cutting-edge micro SAAS solutions, AI platforms, quantum computing services, and emerging technology innovations designed to transform your business.
             </p>
-            <div className=&quot;flex flex-wrap justify-center gap-4 mb-12&quot;>
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
                 <motion.div
-=======
-  });
-  return (;
-    <Layout>;
-      <Head>;
-        <title>Innovative Micro SAAS Services Showcase 2025 | Zion Tech Group</title>;
-        <meta name="description" content="Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, quantum computing platforms, and emerging technology solutions. Transform your business with cutting-edge technology." />;
-        <meta name="keywords" content="micro SAAS, AI services, quantum computing, emerging technology, business solutions, innovation" />;
-        <link rel="canonical" href="https://ziontechgroup.com/innovative-micro-saas-showcase" />;
-      </Head>;
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">;
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>;
-        <div className="relative z-10 container mx-auto px-4 text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >;
-            <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">;
-              Innovative Micro SAAS Services;
-            </h1>;
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-              Discover our comprehensive portfolio of cutting-edge micro SAAS solutions, AI platforms, quantum computing services, and emerging technology innovations designed to transform your business.;
-            </p>;
-            <div className="flex flex-wrap justify-center gap-4 mb-12">;
-              {stats.map((stat, index) => (;
-                <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  className=&quot;flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20&quot;
+                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
                   <stat.icon className={`w-5 h-5 ${stat.color}`} />
-                  <span className=&quot;text-white font-semibold&quot;>{stat.number}</span>
-                  <span className=&quot;text-gray-300 text-sm&quot;>{stat.label}</span>
+                  <span className="text-white font-semibold">{stat.number}</span>
+                  <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
-=======
-                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20";
-                >;
-                  <stat.icon className={`w-5 h-5 ${stat.color}`} />;
-                  <span className="text-white font-semibold">{stat.number}</span>;
-                  <span className="text-gray-300 text-sm">{stat.label}</span>;
-                </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </div>;
           </motion.div>;
         </div>;
       </section>;
       {/* Contact Bar */}
-<<<<<<< HEAD
-      <section className=&quot;bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 py-4&quot;>
-        <div className=&quot;container mx-auto px-4&quot;>
-          <div className=&quot;flex flex-col lg:flex-row items-center justify-between text-center lg:text-left&quot;>
-            <div className=&quot;flex items-center space-x-4 mb-4 lg:mb-0&quot;>
-              <Phone className=&quot;w-5 h-5 text-white&quot; />
-              <span className=&quot;text-white font-semibold&quot;>{contactInfo.mobile}</span>
-              <Mail className=&quot;w-5 h-5 text-white&quot; />
-              <span className=&quot;text-white font-semibold&quot;>{contactInfo.email}</span>
+      <section className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 py-4">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center justify-between text-center lg:text-left">
+            <div className="flex items-center space-x-4 mb-4 lg:mb-0">
+              <Phone className="w-5 h-5 text-white" />
+              <span className="text-white font-semibold">{contactInfo.mobile}</span>
+              <Mail className="w-5 h-5 text-white" />
+              <span className="text-white font-semibold">{contactInfo.email}</span>
             </div>
-            <div className=&quot;flex items-center space-x-4&quot;>
-              <MapPin className=&quot;w-5 h-5 text-white&quot; />
-              <span className=&quot;text-white text-sm&quot;>{contactInfo.address}</span>
+            <div className="flex items-center space-x-4">
+              <MapPin className="w-5 h-5 text-white" />
+              <span className="text-white text-sm">{contactInfo.address}</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Filters and Search */}
-      <section className=&quot;py-8 bg-black/50 backdrop-blur-sm border-b border-white/10&quot;>
-        <div className=&quot;container mx-auto px-4&quot;>
-          <div className=&quot;flex flex-col lg:flex-row gap-6 items-center justify-between&quot;>
+      <section className="py-8 bg-black/50 backdrop-blur-sm border-b border-white/10">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
-            <div className=&quot;relative flex-1 max-w-md&quot;>
-              <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
-                type=&quot;text&quot;
-                placeholder=&quot;Search services...&quot;
+                type="text"
+                placeholder="Search services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className=&quot;w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent&quot;
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
 
             {/* Category Filter */}
-            <div className=&quot;flex flex-wrap gap-2&quot;>
+            <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
-=======
-      <section className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 py-4">;
-        <div className="container mx-auto px-4">;
-          <div className="flex flex-col lg:flex-row items-center justify-between text-center lg:text-left">;
-            <div className="flex items-center space-x-4 mb-4 lg:mb-0">;
-              <Phone className="w-5 h-5 text-white" />;
-              <span className="text-white font-semibold">{contactInfo.mobile}</span>;
-              <Mail className="w-5 h-5 text-white" />;
-              <span className="text-white font-semibold">{contactInfo.email}</span>;
-            </div>;
-            <div className="flex items-center space-x-4">;
-              <MapPin className="w-5 h-5 text-white" />;
-              <span className="text-white text-sm">{contactInfo.address}</span>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Filters and Search */}
-      <section className="py-8 bg-black/50 backdrop-blur-sm border-b border-white/10">;
-        <div className="container mx-auto px-4">;
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">;
-            {/* Search */}
-            <div className="relative flex-1 max-w-md">;
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-              <input;
-                type="text";
-                placeholder="Search services...";
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";
-              />;
-            </div>;
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">;
-              {categories.map((category) => (;
-                <button;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   key={category.value}
                   onClick={() => setSelectedCategory(category.value)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-300 ${;
@@ -234,47 +157,39 @@ export default function InnovativeMicroSaasShowcase() {;
                       ? `bg-gradient-to-r ${category.color} border-transparent text-white`;
                       : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20';
                   }`}
-<<<<<<< HEAD
                 >
-                  <category.icon className=&quot;w-4 h-4&quot; />
-                  <span className=&quot;text-sm font-medium&quot;>{category.name}</span>
+                  <category.icon className="w-4 h-4" />
+                  <span className="text-sm font-medium">{category.name}</span>
                 </button>
-=======
-                >;
-                  <category.icon className="w-4 h-4" />;
-                  <span className="text-sm font-medium">{category.name}</span>;
-                </button>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </div>;
             {/* View Mode and Sort */}
-<<<<<<< HEAD
-            <div className=&quot;flex items-center space-x-4&quot;>
-              <div className=&quot;flex bg-white/10 rounded-lg p-1&quot;>
+            <div className="flex items-center space-x-4">
+              <div className="flex bg-white/10 rounded-lg p-1">
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
-                  <Grid className=&quot;w-5 h-5&quot; />
+                  <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
-                  <List className=&quot;w-5 h-5&quot; />
+                  <List className="w-5 h-5" />
                 </button>
               </div>
 
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className=&quot;bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500&quot;
+                className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
-                <option value=&quot;popularity&quot;>Most Popular</option>
-                <option value=&quot;rating&quot;>Highest Rated</option>
-                <option value=&quot;price-low&quot;>Price: Low to High</option>
-                <option value=&quot;price-high&quot;>Price: High to Low</option>
-                <option value=&quot;newest&quot;>Newest First</option>
+                <option value="popularity">Most Popular</option>
+                <option value="rating">Highest Rated</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="newest">Newest First</option>
               </select>
             </div>
           </div>
@@ -282,188 +197,98 @@ export default function InnovativeMicroSaasShowcase() {;
       </section>
 
       {/* Services Grid */}
-      <section className=&quot;py-16&quot;>
-        <div className=&quot;container mx-auto px-4&quot;>
-          <div className=&quot;mb-8&quot;>
-            <h2 className=&quot;text-3xl font-bold text-white mb-2&quot;>
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold text-white mb-2">
               {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`}
             </h2>
-            <p className=&quot;text-gray-400&quot;>
+            <p className="text-gray-400">
               {filteredServices.length} services found
             </p>
           </div>
 
           {viewMode === 'grid' ? (
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6&quot;>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {sortedServices.map((service, index) => (
                 <motion.div
-=======
-            <div className="flex items-center space-x-4">;
-              <div className="flex bg-white/10 rounded-lg p-1">;
-                <button;
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
-                >;
-                  <Grid className="w-5 h-5" />;
-                </button>;
-                <button;
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
-                >;
-                  <List className="w-5 h-5" />;
-                </button>;
-              </div>;
-              <select;
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500";
-              >;
-                <option value="popularity">Most Popular</option>;
-                <option value="rating">Highest Rated</option>;
-                <option value="price-low">Price: Low to High</option>;
-                <option value="price-high">Price: High to Low</option>;
-                <option value="newest">Newest First</option>;
-              </select>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Services Grid */}
-      <section className="py-16">;
-        <div className="container mx-auto px-4">;
-          <div className="mb-8">;
-            <h2 className="text-3xl font-bold text-white mb-2">;
-              {selectedCategory === 'all' ? 'All Services' : `${categories.find(c => c.value === selectedCategory)?.name}`}
-            </h2>;
-            <p className="text-gray-400">;
-              {filteredServices.length} services found;
-            </p>;
-          </div>;
-          {viewMode === 'grid' ? (;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
-              {sortedServices.map((service, index) => (;
-                <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  className=&quot;group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20&quot;
+                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
                 >
                   {/* Popular Badge */}
                   {service.popular && (
-                    <div className=&quot;absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full&quot;>
+                    <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                       Popular
                     </div>
-=======
-                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20";
-                >;
-                  {/* Popular Badge */}
-                  {service.popular && (;
-                    <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">;
-                      Popular;
-                    </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   )}
 ;
                   {/* Service Icon */}
-<<<<<<< HEAD
-                  <div className=&quot;text-4xl mb-4&quot;>{service.icon}</div>
+                  <div className="text-4xl mb-4">{service.icon}</div>
 
                   {/* Service Info */}
-                  <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors&quot;>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                     {service.name}
                   </h3>
-                  <p className=&quot;text-gray-400 text-sm mb-4 line-clamp-2&quot;>
-=======
-                  <div className="text-4xl mb-4">{service.icon}</div>;
-                  {/* Service Info */}
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">;
-                    {service.name}
-                  </h3>;
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-2">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                  <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                     {service.tagline}
                   </p>;
                   {/* Price */}
-<<<<<<< HEAD
-                  <div className=&quot;flex items-center justify-between mb-4&quot;>
-                    <div className=&quot;text-2xl font-bold text-purple-400&quot;>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-2xl font-bold text-purple-400">
                       {service.price}
-                      <span className=&quot;text-sm text-gray-400 font-normal&quot;>{service.period}</span>
+                      <span className="text-sm text-gray-400 font-normal">{service.period}</span>
                     </div>
-                    <div className=&quot;flex items-center space-x-1&quot;>
-                      <Star className=&quot;w-4 h-4 text-yellow-400 fill-current&quot; />
-                      <span className=&quot;text-sm text-gray-300&quot;>{service.rating}</span>
-                      <span className=&quot;text-xs text-gray-500&quot;>({service.reviews})</span>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-sm text-gray-300">{service.rating}</span>
+                      <span className="text-xs text-gray-500">({service.reviews})</span>
                     </div>
                   </div>
 
                   {/* Features */}
-                  <div className=&quot;mb-4&quot;>
-                    <div className=&quot;text-sm text-gray-400 mb-2&quot;>Key Features:</div>
-                    <div className=&quot;space-y-1&quot;>
+                  <div className="mb-4">
+                    <div className="text-sm text-gray-400 mb-2">Key Features:</div>
+                    <div className="space-y-1">
                       {service.features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className=&quot;flex items-center space-x-2 text-xs text-gray-300&quot;>
-                          <CheckCircle className=&quot;w-3 h-3 text-green-400&quot; />
+                        <div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">
+                          <CheckCircle className="w-3 h-3 text-green-400" />
                           <span>{feature}</span>
                         </div>
-=======
-                  <div className="flex items-center justify-between mb-4">;
-                    <div className="text-2xl font-bold text-purple-400">;
-                      {service.price}
-                      <span className="text-sm text-gray-400 font-normal">{service.period}</span>;
-                    </div>;
-                    <div className="flex items-center space-x-1">;
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />;
-                      <span className="text-sm text-gray-300">{service.rating}</span>;
-                      <span className="text-xs text-gray-500">({service.reviews})</span>;
-                    </div>;
-                  </div>;
-                  {/* Features */}
-                  <div className="mb-4">;
-                    <div className="text-sm text-gray-400 mb-2">Key Features:</div>;
-                    <div className="space-y-1">;
-                      {service.features.slice(0, 3).map((feature, idx) => (;
-                        <div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">;
-                          <CheckCircle className="w-3 h-3 text-green-400" />;
-                          <span>{feature}</span>;
-                        </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       ))}
                     </div>;
                   </div>;
                   {/* Category and Setup */}
-<<<<<<< HEAD
-                  <div className=&quot;flex items-center justify-between text-xs text-gray-500 mb-4&quot;>
-                    <span className=&quot;bg-white/10 px-2 py-1 rounded&quot;>{service.category}</span>
+                  <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
+                    <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>
                     <span>Setup: {service.setupTime}</span>
                   </div>
 
                   {/* Action Buttons */}
-                  <div className=&quot;flex space-x-2&quot;>
+                  <div className="flex space-x-2">
                     <Link
                       href={service.link}
-                      className=&quot;flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium&quot;
+                      className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                     >
                       Learn More
                     </Link>
-                    <button className=&quot;p-2 bg-white/10 border border-white/20 rounded-lg text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300&quot;>
-                      <Heart className=&quot;w-4 h-4&quot; />
+                    <button className="p-2 bg-white/10 border border-white/20 rounded-lg text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300">
+                      <Heart className="w-4 h-4" />
                     </button>
                   </div>
 
                   {/* Hover Overlay */}
-                  <div className=&quot;absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-6&quot;>
-                    <div className=&quot;text-center w-full&quot;>
-                      <p className=&quot;text-white text-sm mb-3 line-clamp-3&quot;>{service.description}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-6">
+                    <div className="text-center w-full">
+                      <p className="text-white text-sm mb-3 line-clamp-3">{service.description}</p>
                       <Link
                         href={service.link}
-                        className=&quot;inline-flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors&quot;
+                        className="inline-flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
                       >
                         <span>View Details</span>
-                        <ArrowRight className=&quot;w-4 h-4&quot; />
+                        <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
                   </div>
@@ -471,194 +296,94 @@ export default function InnovativeMicroSaasShowcase() {;
               ))}
             </div>
           ) : (
-            <div className=&quot;space-y-4&quot;>
+            <div className="space-y-4">
               {sortedServices.map((service, index) => (
                 <motion.div
-=======
-                  <div className="flex items-center justify-between text-xs text-gray-500 mb-4">;
-                    <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>;
-                    <span>Setup: {service.setupTime}</span>;
-                  </div>;
-                  {/* Action Buttons */}
-                  <div className="flex space-x-2">;
-                    <Link;
-                      href={service.link}
-                      className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium";
-                    >;
-                      Learn More;
-                    </Link>;
-                    <button className="p-2 bg-white/10 border border-white/20 rounded-lg text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300">;
-                      <Heart className="w-4 h-4" />;
-                    </button>;
-                  </div>;
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-6">;
-                    <div className="text-center w-full">;
-                      <p className="text-white text-sm mb-3 line-clamp-3">{service.description}</p>;
-                      <Link;
-                        href={service.link}
-                        className="inline-flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors";
-                      >;
-                        <span>View Details</span>;
-                        <ArrowRight className="w-4 h-4" />;
-                      </Link>;
-                    </div>;
-                  </div>;
-                </motion.div>;
-              ))}
-            </div>;
-          ) : (;
-            <div className="space-y-4">;
-              {sortedServices.map((service, index) => (;
-                <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   key={service.id}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  className=&quot;group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300&quot;
+                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300"
                 >
-                  <div className=&quot;flex items-start space-x-6&quot;>
+                  <div className="flex items-start space-x-6">
                     {/* Service Icon */}
-                    <div className=&quot;text-4xl&quot;>{service.icon}</div>
+                    <div className="text-4xl">{service.icon}</div>
 
                     {/* Service Details */}
-                    <div className=&quot;flex-1&quot;>
-                      <div className=&quot;flex items-start justify-between mb-3&quot;>
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between mb-3">
                         <div>
-                          <h3 className=&quot;text-xl font-bold text-white group-hover:text-purple-400 transition-colors&quot;>
+                          <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
                             {service.name}
                           </h3>
-                          <p className=&quot;text-gray-400 text-sm&quot;>{service.tagline}</p>
+                          <p className="text-gray-400 text-sm">{service.tagline}</p>
                         </div>
-                        <div className=&quot;text-right&quot;>
-                          <div className=&quot;text-2xl font-bold text-purple-400&quot;>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-purple-400">
                             {service.price}
-                            <span className=&quot;text-sm text-gray-400 font-normal&quot;>{service.period}</span>
+                            <span className="text-sm text-gray-400 font-normal">{service.period}</span>
                           </div>
-                          <div className=&quot;flex items-center justify-end space-x-1 mt-1&quot;>
-                            <Star className=&quot;w-4 h-4 text-yellow-400 fill-current&quot; />
-                            <span className=&quot;text-sm text-gray-300&quot;>{service.rating}</span>
-                            <span className=&quot;text-xs text-gray-500&quot;>({service.reviews})</span>
+                          <div className="flex items-center justify-end space-x-1 mt-1">
+                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                            <span className="text-sm text-gray-300">{service.rating}</span>
+                            <span className="text-xs text-gray-500">({service.reviews})</span>
                           </div>
                         </div>
                       </div>
 
-                      <p className=&quot;text-gray-300 text-sm mb-4 line-clamp-2&quot;>{service.description}</p>
+                      <p className="text-gray-300 text-sm mb-4 line-clamp-2">{service.description}</p>
 
-                      <div className=&quot;flex items-center justify-between&quot;>
-                        <div className=&quot;flex items-center space-x-4 text-xs text-gray-500&quot;>
-                          <span className=&quot;bg-white/10 px-2 py-1 rounded&quot;>{service.category}</span>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-4 text-xs text-gray-500">
+                          <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>
                           <span>Setup: {service.setupTime}</span>
                           <span>Trial: {service.trialDays} days</span>
                         </div>
-                        <div className=&quot;flex space-x-2&quot;>
+                        <div className="flex space-x-2">
                           <Link
                             href={service.link}
-                            className=&quot;bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium&quot;
+                            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                           >
                             Learn More
                           </Link>
-                          <button className=&quot;p-2 bg-white/10 border border-white/20 rounded-lg text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300&quot;>
-                            <Heart className=&quot;w-4 h-4&quot; />
+                          <button className="p-2 bg-white/10 border border-white/20 rounded-lg text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300">
+                            <Heart className="w-4 h-4" />
                           </button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </motion.div>
-=======
-                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300";
-                >;
-                  <div className="flex items-start space-x-6">;
-                    {/* Service Icon */}
-                    <div className="text-4xl">{service.icon}</div>;
-                    {/* Service Details */}
-                    <div className="flex-1">;
-                      <div className="flex items-start justify-between mb-3">;
-                        <div>;
-                          <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">;
-                            {service.name}
-                          </h3>;
-                          <p className="text-gray-400 text-sm">{service.tagline}</p>;
-                        </div>;
-                        <div className="text-right">;
-                          <div className="text-2xl font-bold text-purple-400">;
-                            {service.price}
-                            <span className="text-sm text-gray-400 font-normal">{service.period}</span>;
-                          </div>;
-                          <div className="flex items-center justify-end space-x-1 mt-1">;
-                            <Star className="w-4 h-4 text-yellow-400 fill-current" />;
-                            <span className="text-sm text-gray-300">{service.rating}</span>;
-                            <span className="text-xs text-gray-500">({service.reviews})</span>;
-                          </div>;
-                        </div>;
-                      </div>;
-                      <p className="text-gray-300 text-sm mb-4 line-clamp-2">{service.description}</p>;
-                      <div className="flex items-center justify-between">;
-                        <div className="flex items-center space-x-4 text-xs text-gray-500">;
-                          <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>;
-                          <span>Setup: {service.setupTime}</span>;
-                          <span>Trial: {service.trialDays} days</span>;
-                        </div>;
-                        <div className="flex space-x-2">;
-                          <Link;
-                            href={service.link}
-                            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium";
-                          >;
-                            Learn More;
-                          </Link>;
-                          <button className="p-2 bg-white/10 border border-white/20 rounded-lg text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300">;
-                            <Heart className="w-4 h-4" />;
-                          </button>;
-                        </div>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               ))}
             </div>;
           )}
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className=&quot;py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20&quot;>
-        <div className=&quot;container mx-auto px-4 text-center&quot;>
+      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
-=======
-      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">;
-        <div className="container mx-auto px-4 text-center">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
           >
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
+            <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of companies already using our innovative services to gain competitive advantages and drive growth.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-=======
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               <Link
-                href=&quot;/contact&quot;
-                className=&quot;bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105&quot;
+                href="/contact"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105"
               >
                 Get Started Today
               </Link>
               <Link
-                href=&quot;/pricing&quot;
-                className=&quot;bg-white/10 border border-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-300&quot;
+                href="/pricing"
+                className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-300"
               >
                 View Pricing
               </Link>
@@ -668,7 +393,6 @@ export default function InnovativeMicroSaasShowcase() {;
       </section>
     </Layout>
   )
-=======
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Business?;
@@ -695,5 +419,4 @@ export default function InnovativeMicroSaasShowcase() {;
       </section>;
     </Layout>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

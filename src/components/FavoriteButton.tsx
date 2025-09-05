@@ -25,24 +25,17 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
       setLoginOpen(true),;
       return;
     }
-<<<<<<< HEAD
     
     const wasWishlisted = isWishlisted(itemId),
     toggle(itemId),
     
     // Provide feedback
     toast({
-      title: wasWishlisted ? &quot;Removed from wishlist&quot; : &quot;Added to wishlist&quot;,
+      title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
       description: wasWishlisted 
-<<<<<<< HEAD
         ? "Item has been removed from your wishlist" 
         : "Item has been added to your wishlist"})
   },
-=======
-        ? &quot;Item has been removed from your wishlist&quot; 
-        : &quot;Item has been added to your wishlist&quot;});
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const active = isWishlisted(itemId),
 
@@ -55,7 +48,6 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
               className={cn(
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
                 className
-=======
 ;
     const wasWishlisted = isWishlisted(itemId),;
     toggle(itemId),;
@@ -76,7 +68,6 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
               className={cn(;
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors';
                 className;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
               onClick={handleClick}
               aria-label={active ? 'Remove from favorites' : 'Save to favorites'}

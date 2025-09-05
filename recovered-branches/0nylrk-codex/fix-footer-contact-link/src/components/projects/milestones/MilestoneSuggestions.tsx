@@ -14,7 +14,6 @@ interface MilestoneSuggestionsProps {;
   projectType: string,;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
-<<<<<<< HEAD
 
 export function MilestoneSuggestions({
   projectName,
@@ -32,13 +31,8 @@ export function MilestoneSuggestions({
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
-<<<<<<< HEAD
       projectType: projectType || "Other"
     },
-=======
-      projectType: projectType || &quot;Other&quot;
-    };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     const milestones = await generateMilestones(input),
     
@@ -46,7 +40,6 @@ export function MilestoneSuggestions({
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
-=======
 ;
 export function MilestoneSuggestions({;
   projectName,;
@@ -70,7 +63,6 @@ export function MilestoneSuggestions({;
       setShowSuggestions(true),;
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
     }
   };
@@ -80,132 +72,68 @@ export function MilestoneSuggestions({;
     } catch (error) {;
       return dateString;
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;space-y-4&quot;>
+    <div className="space-y-4">
       {!showSuggestions && (
         <Button
-          variant=&quot;outline&quot;
+          variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scopeSummary || !startDate}
-          className=&quot;w-full&quot;
+          className="w-full"
         >
           {isGenerating ? (
             <>
-              <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Generating milestones...
             </>
           ) : (
             <>
-              <Sparkles className=&quot;mr-2 h-4 w-4&quot; />
+              <Sparkles className="mr-2 h-4 w-4" />
               Suggest Project Milestones with AI
             </>
-=======
-  };
-  return (;
-    <div className="space-y-4">;
-      {!showSuggestions && (;
-        <Button;
-          variant="outline";
-          onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scopeSummary || !startDate}
-          className="w-full";
-        >;
-          {isGenerating ? (;
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-              Generating milestones...;
-            </>;
-          ) : (;
-            <>;
-              <Sparkles className="mr-2 h-4 w-4" />;
-              Suggest Project Milestones with AI;
-            </>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         </Button>;
       )}
-<<<<<<< HEAD
 
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
-          <CardHeader className=&quot;pb-3&quot;>
-            <CardTitle className=&quot;text-lg flex items-center&quot;>
-              <Sparkles className=&quot;h-5 w-5 mr-2 text-primary&quot; />
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg flex items-center">
+              <Sparkles className="h-5 w-5 mr-2 text-primary" />
               AI-Suggested Milestones
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className=&quot;space-y-3&quot;>
+            <div className="space-y-3">
               {generatedMilestones.map((milestone, index) => (
-                <div key={index} className=&quot;p-3 border rounded-lg bg-muted/10&quot;>
-                  <div className=&quot;flex items-center justify-between mb-1&quot;>
-                    <div className=&quot;font-medium flex items-center&quot;>
+                <div key={index} className="p-3 border rounded-lg bg-muted/10">
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="font-medium flex items-center">
                       {milestone.title}
-                      <Badge variant=&quot;secondary&quot; className=&quot;ml-2 text-xs&quot;>
+                      <Badge variant="secondary" className="ml-2 text-xs">
                         AI Suggested
                       </Badge>
                     </div>
-                    <div className=&quot;text-sm text-muted-foreground&quot;>
+                    <div className="text-sm text-muted-foreground">
                       Due: {formatDate(milestone.dueDate)}
                     </div>
                   </div>
-                  <p className=&quot;text-sm text-muted-foreground&quot;>{milestone.description}</p>
-                  <div className=&quot;flex justify-between items-center mt-2 text-sm&quot;>
+                  <p className="text-sm text-muted-foreground">{milestone.description}</p>
+                  <div className="flex justify-between items-center mt-2 text-sm">
                     <span>Estimated: {milestone.estimatedHours} hours</span>
                   </div>
                 </div>
               ))}
 
-              <div className=&quot;flex items-center justify-center mt-4 text-sm text-muted-foreground&quot;>
-                <Check className=&quot;h-4 w-4 mr-1 text-green-500&quot; />
+              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
+                <Check className="h-4 w-4 mr-1 text-green-500" />
                 These milestones will be added to your contract
               </div>
             </div>
           </CardContent>
         </Card>
-=======
-;
-      {showSuggestions && generatedMilestones.length > 0 && (;
-        <Card>;
-          <CardHeader className="pb-3">;
-            <CardTitle className="text-lg flex items-center">;
-              <Sparkles className="h-5 w-5 mr-2 text-primary" />;
-              AI-Suggested Milestones;
-            </CardTitle>;
-          </CardHeader>;
-          <CardContent>;
-            <div className="space-y-3">;
-              {generatedMilestones.map((milestone, index) => (;
-                <div key={index} className="p-3 border rounded-lg bg-muted/10">;
-                  <div className="flex items-center justify-between mb-1">;
-                    <div className="font-medium flex items-center">;
-                      {milestone.title}
-                      <Badge variant="secondary" className="ml-2 text-xs">;
-                        AI Suggested;
-                      </Badge>;
-                    </div>;
-                    <div className="text-sm text-muted-foreground">;
-                      Due: {formatDate(milestone.dueDate)}
-                    </div>;
-                  </div>;
-                  <p className="text-sm text-muted-foreground">{milestone.description}</p>;
-                  <div className="flex justify-between items-center mt-2 text-sm">;
-                    <span>Estimated: {milestone.estimatedHours} hours</span>;
-                  </div>;
-                </div>;
-              ))}
-;
-              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;
-                <Check className="h-4 w-4 mr-1 text-green-500" />;
-                These milestones will be added to your contract;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
     </div>;
   );

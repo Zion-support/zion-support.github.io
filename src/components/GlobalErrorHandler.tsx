@@ -35,7 +35,6 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
         Sentry.captureException(error);
       });
     }
-<<<<<<< HEAD
   }, []),
 
   const showRetryableError = useCallback((error: Error, retryAction?: () => void) => {
@@ -46,11 +45,11 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
 
     // Show user-friendly error message with retry option
     toast({
-      title: &quot;Something went wrong&quot;,
+      title: "Something went wrong",
       description: getErrorMessage(error),
-      variant: &quot;destructive&quot;,
+      variant: "destructive",
       action: retryAction ? {
-        label: &quot;Try Again&quot;,
+        label: "Try Again",
         onClick: () => {
           setRetryCount(prev => ({
             ...prev,
@@ -65,24 +64,24 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true,
     
     toast({
-      title: isOnline ? &quot;Connection Issue&quot; : &quot;No Internet Connection&quot;,
+      title: isOnline ? "Connection Issue" : "No Internet Connection",
       description: isOnline 
-        ? &quot;Unable to connect to our servers. Please check your connection and try again.&quot;
-        : &quot;You appear to be offline. Please check your internet connection.&quot;,
-      variant: &quot;destructive&quot;,
+        ? "Unable to connect to our servers. Please check your connection and try again."
+        : "You appear to be offline. Please check your internet connection.",
+      variant: "destructive",
       action: retryAction ? {
-        label: &quot;Retry&quot;,
+        label: "Retry",
         onClick: retryAction
       } : undefined})
   }, []),
 
   const showAuthError = useCallback((loginAction?: () => void) => {
     toast({
-      title: &quot;Authentication Required&quot;,
-      description: &quot;Please log in to continue with this action.&quot;,
-      variant: &quot;destructive&quot;,
+      title: "Authentication Required",
+      description: "Please log in to continue with this action.",
+      variant: "destructive",
       action: loginAction ? {
-        label: &quot;Log In&quot;,
+        label: "Log In",
         onClick: loginAction
       } : undefined})
   }, []),
@@ -101,64 +100,6 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
 
   return (
     <ErrorContext.Provider value={contextValue}>
-=======
-  }, []),;
-  const showRetryableError = useCallback((error: Error, retryAction?: () => void) => {;
-    const errorKey = error.message,;
-    const currentRetryCount = retryCount[errorKey] || 0,;
-    reportError(error, { retryCount: currentRetryCount }),;
-    // Show user-friendly error message with retry option;
-    toast({;
-      title: "Something went wrong",;
-      description: getErrorMessage(error),;
-      variant: "destructive",;
-      action: retryAction ? {;
-        label: "Try Again",;
-        onClick: () => {;
-          setRetryCount(prev => ({;
-            ...prev,;
-            [errorKey]: currentRetryCount + 1;
-          })),;
-          retryAction();
-        }
-      } : undefined});
-  }, [retryCount, reportError]),;
-  const showNetworkError = useCallback((retryAction?: () => void) => {;
-    const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true,;
-    toast({;
-      title: isOnline ? "Connection Issue" : "No Internet Connection",;
-      description: isOnline;
-        ? "Unable to connect to our servers. Please check your connection and try again.";
-        : "You appear to be offline. Please check your internet connection.",;
-      variant: "destructive",;
-      action: retryAction ? {;
-        label: "Retry",;
-        onClick: retryAction;
-      } : undefined});
-  }, []),;
-  const showAuthError = useCallback((loginAction?: () => void) => {;
-    toast({;
-      title: "Authentication Required",;
-      description: "Please log in to continue with this action.",;
-      variant: "destructive",;
-      action: loginAction ? {;
-        label: "Log In",;
-        onClick: loginAction;
-      } : undefined});
-  }, []),;
-  const clearAllErrors = useCallback(() => {;
-    setRetryCount({}),;
-    // Clear any active toasts would go here if the toast system supports it;
-  }, []),;
-  const contextValue: ErrorContextType = {;
-    reportError,;
-    showRetryableError,;
-    showNetworkError,;
-    showAuthError,;
-    clearAllErrors},;
-  return (;
-    <ErrorContext.Provider value={contextValue}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {children}
     </ErrorContext.Provider>;
   );
@@ -171,23 +112,13 @@ export function useGlobalErrorHandler(): ErrorContextType {;
   }
   return context;
 }
-<<<<<<< HEAD
 
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
 
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
-<<<<<<< HEAD
     return "Unable to connect to our servers. Please check your internet connection."
-=======
-;
-// Helper function to convert technical errors to user-friendly messages;
-function getErrorMessage(error: Error): string {;
-  const message = error.message.toLowerCase(),;
-  if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {;
-    return "Unable to connect to our servers. Please check your internet connection.";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ;
   if (message.includes('auth') || message.includes('unauthorized') || message.includes('401')) {;
@@ -213,46 +144,12 @@ function getErrorMessage(error: Error): string {;
   if (message.includes('server') || message.includes('500')) {;
     return "Our servers are experiencing issues. Please try again in a moment.";
   }
-<<<<<<< HEAD
 
   // Fallback for unknown errors
   return "An unexpected error occurred. Please try again."
-=======
-    return &quot;Unable to connect to our servers. Please check your internet connection.&quot;;
-  }
-
-  if (message.includes('auth') || message.includes('unauthorized') || message.includes('401')) {
-    return &quot;Your session has expired. Please log in again.&quot;;
-  }
-
-  if (message.includes('forbidden') || message.includes('403')) {
-    return &quot;You don't have permission to perform this action.&quot;;
-  }
-
-  if (message.includes('not found') || message.includes('404')) {
-    return &quot;The requested information could not be found.&quot;;
-  }
-
-  if (message.includes('timeout')) {
-    return &quot;Request timed out. Please try again.&quot;;
-  }
-
-  if (message.includes('validation') || message.includes('invalid')) {
-    return &quot;Please check your input and try again.&quot;;
-  }
-
-  if (message.includes('server') || message.includes('500')) {
-    return &quot;Our servers are experiencing issues. Please try again in a moment.&quot;;
-  }
-
-  // Fallback for unknown errors
-  return &quot;An unexpected error occurred. Please try again.&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 ;
   // Fallback for unknown errors;
   return "An unexpected error occurred. Please try again.";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 // Utility hook for common error scenarios;
@@ -274,21 +171,14 @@ export function useErrorHandler() {;
       retryAction?: () => void,;
       successMessage?: string;
     }
-<<<<<<< HEAD
   ): Promise<T | null> => {
     try {
       const result = await operation(),
       
       if (options?.successMessage) {
         toast({
-<<<<<<< HEAD
           title: "Success",
           description: options.successMessage})
-=======
-          title: &quot;Success&quot;,
-          description: options.successMessage});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
   ): Promise<T | null> => {;
     try {;
       const result = await operation(),;
@@ -296,7 +186,6 @@ export function useErrorHandler() {;
         toast({;
           title: "Success",;
           description: options.successMessage});
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       }
 ;
       return result;

@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-=======
-import { cn } from &quot;@/lib/utils&quot;;
-import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface ChatMessageProps {
   role: 'user' | 'assistant',
@@ -19,34 +13,33 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
   
   return (
     <div className={cn(
-      &quot;flex items-start gap-2&quot;,
-      isUser ? &quot;flex-row-reverse&quot; : &quot;flex-row&quot;
+      "flex items-start gap-2",
+      isUser ? "flex-row-reverse" : "flex-row"
     )}>
       <Avatar className={cn(
-        &quot;h-8 w-8 border&quot;,
-        isUser ? &quot;border-zion-purple/20&quot; : &quot;border-zion-cyan/20&quot;
+        "h-8 w-8 border",
+        isUser ? "border-zion-purple/20" : "border-zion-cyan/20"
       )}>
         {isUser ? (
-          <AvatarFallback className=&quot;bg-zion-purple/20 text-white&quot;>U</AvatarFallback>
+          <AvatarFallback className="bg-zion-purple/20 text-white">U</AvatarFallback>
         ) : (
           <AvatarImage
-            src=&quot;https://placehold.co/32x32?text=AI&quot;
-            alt=&quot;AI Assistant&quot;
+            src="https://placehold.co/32x32?text=AI"
+            alt="AI Assistant"
           />
         )}
-        {!isUser && <AvatarFallback className=&quot;bg-zion-cyan/20 text-white&quot;>AI</AvatarFallback>}
+        {!isUser && <AvatarFallback className="bg-zion-cyan/20 text-white">AI</AvatarFallback>}
       </Avatar>
       
       <div className={cn(
-        &quot;max-w-[80%] px-4 py-2 rounded-lg&quot;,
+        "max-w-[80%] px-4 py-2 rounded-lg",
         isUser 
-          ? &quot;bg-zion-purple/20 text-white rounded-tr-none&quot; 
-          : &quot;bg-zion-cyan/10 text-white rounded-tl-none&quot;
+          ? "bg-zion-purple/20 text-white rounded-tr-none" 
+          : "bg-zion-cyan/10 text-white rounded-tl-none"
       )}>
-        <div className=&quot;whitespace-pre-wrap&quot;>{message}</div>
+        <div className="whitespace-pre-wrap">{message}</div>
         {timestamp && (
-          <div className=&quot;text-xs text-zion-slate mt-1 text-right&quot;>
-=======
+          <div className="text-xs text-zion-slate mt-1 text-right">
 import { cn } from "@/lib/utils",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 interface ChatMessageProps {;
@@ -86,7 +79,6 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
         <div className="whitespace-pre-wrap">{message}</div>;
         {timestamp && (;
           <div className="text-xs text-zion-slate mt-1 text-right">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
           </div>;
         )}

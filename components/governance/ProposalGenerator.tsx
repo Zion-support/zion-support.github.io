@@ -82,25 +82,24 @@ export default function ProposalGenerator() {;
       setStatusMessage('Submission failed');
     }
   }
-<<<<<<< HEAD
 
   return (
-    <div className=&quot;space-y-6&quot;>
-      <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
-        <div className=&quot;space-y-4&quot;>
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="space-y-4">
           <div>
-            <label className=&quot;block text-sm font-medium&quot;>Target institution</label>
+            <label className="block text-sm font-medium">Target institution</label>
             <input
-              className=&quot;w-full border rounded px-3 py-2&quot;
+              className="w-full border rounded px-3 py-2"
               value={form.targetInstitution}
               onChange={(e) => handleChange('targetInstitution', e.target.value)}
-              placeholder=&quot;UNDP / World Bank / ILO&quot;
+              placeholder="UNDP / World Bank / ILO"
             />
           </div>
           <div>
-            <label className=&quot;block text-sm font-medium&quot;>Type</label>
+            <label className="block text-sm font-medium">Type</label>
             <select
-              className=&quot;w-full border rounded px-3 py-2&quot;
+              className="w-full border rounded px-3 py-2"
               value={form.type}
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
             >
@@ -111,59 +110,54 @@ export default function ProposalGenerator() {;
             </select>
           </div>
           <div>
-            <label className=&quot;block text-sm font-medium&quot;>Regional scope</label>
+            <label className="block text-sm font-medium">Regional scope</label>
             <input
-              className=&quot;w-full border rounded px-3 py-2&quot;
+              className="w-full border rounded px-3 py-2"
               value={form.regionalScope}
               onChange={(e) => handleChange('regionalScope', e.target.value)}
-              placeholder=&quot;Global / Africa / LATAM / APAC / EU / ...&quot;
+              placeholder="Global / Africa / LATAM / APAC / EU / ..."
             />
           </div>
           <div>
-            <label className=&quot;block text-sm font-medium&quot;>Budget / Resolution goals</label>
+            <label className="block text-sm font-medium">Budget / Resolution goals</label>
             <textarea
-              className=&quot;w-full border rounded px-3 py-2 min-h-[80px]&quot;
+              className="w-full border rounded px-3 py-2 min-h-[80px]"
               value={form.budgetOrGoals}
               onChange={(e) => handleChange('budgetOrGoals', e.target.value)}
-<<<<<<< HEAD
               placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc."
-=======
-              placeholder=&quot;$5M for pilot; goals: 10k workers onboarded, 70% female youth, etc.&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             />
           </div>
           <div>
-            <label className=&quot;block text-sm font-medium&quot;>Supporting multiverse(s)</label>
+            <label className="block text-sm font-medium">Supporting multiverse(s)</label>
             <input
-              className=&quot;w-full border rounded px-3 py-2&quot;
+              className="w-full border rounded px-3 py-2"
               value={form.supportingMultiverses}
               onChange={(e) => handleChange('supportingMultiverses', e.target.value)}
-              placeholder=&quot;Eg. Zion.ai, Zion.ID, Zion.Work&quot;
+              placeholder="Eg. Zion.ai, Zion.ID, Zion.Work"
             />
           </div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className=&quot;block text-sm font-medium&quot;>Language</label>
+              <label className="block text-sm font-medium">Language</label>
               <input
-                className=&quot;w-full border rounded px-3 py-2&quot;
+                className="w-full border rounded px-3 py-2"
                 value={form.language}
                 onChange={(e) => handleChange('language', e.target.value)}
-                placeholder=&quot;English / French / Spanish / Arabic / ...&quot;
+                placeholder="English / French / Spanish / Arabic / ..."
               />
             </div>
             <div>
-              <label className=&quot;block text-sm font-medium&quot;>GPT Prompt Assist</label>
+              <label className="block text-sm font-medium">GPT Prompt Assist</label>
               <textarea
-                className=&quot;w-full border rounded px-3 py-2 min-h-[80px]&quot;
+                className="w-full border rounded px-3 py-2 min-h-[80px]"
                 value={form.customPrompt}
                 onChange={(e) => handleChange('customPrompt', e.target.value)}
               />
             </div>
           </div>
-          <div className=&quot;flex gap-2&quot;>
+          <div className="flex gap-2">
             <button
-              className=&quot;px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50&quot;
-=======
+              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
 ;
   return (;
     <div className="space-y-6">;
@@ -240,96 +234,51 @@ export default function ProposalGenerator() {;
           <div className="flex gap-2">;
             <button;
               className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               onClick={handleGenerate}
               disabled={isGenerating}
             >;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
-<<<<<<< HEAD
             </button>
             <button
-              className=&quot;px-4 py-2 bg-emerald-600 text-white rounded&quot;
+              className="px-4 py-2 bg-emerald-600 text-white rounded"
               onClick={handleExport}
               disabled={!draftMarkdown}
             >
               Export (PDF/JSON/MD)
             </button>
             <button
-              className=&quot;px-4 py-2 bg-purple-600 text-white rounded&quot;
+              className="px-4 py-2 bg-purple-600 text-white rounded"
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}
             >
               Submit Bridge
             </button>
           </div>
-          {statusMessage && <p className=&quot;text-sm text-gray-600&quot;>{statusMessage}</p>}
+          {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
           {exportLinks && (
-            <div className=&quot;text-sm space-y-1&quot;>
+            <div className="text-sm space-y-1">
               {exportLinks.pdfUrl && (
                 <div>
-                  <a className=&quot;text-blue-600 underline&quot; href={exportLinks.pdfUrl} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>PDF</a>
+                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
                 </div>
               )}
               {exportLinks.mdUrl && (
                 <div>
-                  <a className=&quot;text-blue-600 underline&quot; href={exportLinks.mdUrl} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>Markdown</a>
+                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
                 </div>
               )}
               {exportLinks.jsonUrl && (
                 <div>
-                  <a className=&quot;text-blue-600 underline&quot; href={exportLinks.jsonUrl} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>JSON</a>
+                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
                 </div>
-=======
-            </button>;
-            <button;
-              className="px-4 py-2 bg-emerald-600 text-white rounded";
-              onClick={handleExport}
-              disabled={!draftMarkdown}
-            >;
-              Export (PDF/JSON/MD);
-            </button>;
-            <button;
-              className="px-4 py-2 bg-purple-600 text-white rounded";
-              onClick={handleSubmitBridge}
-              disabled={!draftMarkdown}
-            >;
-              Submit Bridge;
-            </button>;
-          </div>;
-          {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
-          {exportLinks && (;
-            <div className="text-sm space-y-1">;
-              {exportLinks.pdfUrl && (;
-                <div>;
-                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>;
-                </div>;
-              )}
-              {exportLinks.mdUrl && (;
-                <div>;
-                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>;
-                </div>;
-              )}
-              {exportLinks.jsonUrl && (;
-                <div>;
-                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>;
-                </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
             </div>;
           )}
-<<<<<<< HEAD
         </div>
-        <div className=&quot;space-y-2&quot;>
-          <label className=&quot;block text-sm font-medium&quot;>Draft (Markdown)</label>
+        <div className="space-y-2">
+          <label className="block text-sm font-medium">Draft (Markdown)</label>
           <textarea
-            className=&quot;w-full border rounded px-3 py-2 min-h-[520px] font-mono&quot;
-=======
-        </div>;
-        <div className="space-y-2">;
-          <label className="block text-sm font-medium">Draft (Markdown)</label>;
-          <textarea;
-            className="w-full border rounded px-3 py-2 min-h-[520px] font-mono";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+            className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
             onChange={(e) => setDraftMarkdown(e.target.value)}
           />;

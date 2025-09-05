@@ -119,7 +119,6 @@ export default function UltimateServicesShowcase2029() {;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             className="max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center space-x-2 mb-6">
@@ -164,48 +163,6 @@ export default function UltimateServicesShowcase2029() {;
               </a>
             </div>
 
-=======
-            className="max-w-4xl mx-auto";
-          >;
-            <div className="flex items-center justify-center space-x-2 mb-6">;
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">;
-                <Rocket className="w-9 h-9 text-white" />;
-              </div>;
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-2xl">;
-                <Brain className="w-9 h-9 text-white" />;
-              </div>;
-              <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 via-purple-500 to-violet-600 rounded-2xl flex items-center justify-center shadow-2xl">;
-                <Atom className="w-9 h-9 text-white" />;
-              </div>;
-            </div>;
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
-                2029 Ultimate;
-              </span>;
-              <br />;
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent">;
-                Services Showcase;
-              </span>;
-            </h1>;
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">;
-              Experience the future of technology with our revolutionary AI consciousness, quantum computing,;
-              space technology, and autonomous systems. Transform your business with innovations that define tomorrow.;
-            </p>;
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
-              <Link;
-                href="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg";
-              >;
-                Get Started Today;
-              </Link>;
-              <Link;
-                href="/pricing";
-                className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg";
-              >;
-                View Pricing;
-              </Link>;
-            </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">;
               <div className="text-center">;
@@ -366,7 +323,6 @@ export default function UltimateServicesShowcase2029() {;
                   <div className="mt-auto">;
                     <Link;
                       href={`/services/${service.id}`}
-<<<<<<< HEAD
                       className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200"
                     >
                       Learn More
@@ -374,14 +330,6 @@ export default function UltimateServicesShowcase2029() {;
                     </a>
                   </div>
 
-=======
-                      className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200";
-                    >;
-                      Learn More;
-                      <ArrowRight className="inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />;
-                    </Link>;
-                  </div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   {/* Hover Effect */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />;
                 </div>;
@@ -418,7 +366,6 @@ export default function UltimateServicesShowcase2029() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -453,38 +400,4 @@ export default function UltimateServicesShowcase2029() {;
       <UltraFuturisticFooter2029 />
     </>
   )
-=======
-          >;
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-              Join the future of technology with our revolutionary services.;
-              Contact us today to discuss how we can help you achieve your goals.;
-            </p>;
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
-              <Link;
-                href="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg";
-              >;
-                Get Started Today;
-              </Link>;
-              <div className="flex items-center space-x-4 text-gray-300">;
-                <div className="flex items-center space-x-2">;
-                  <Phone className="h-5 w-5 text-cyan-400" />;
-                  <span>{contactInfo.mobile}</span>;
-                </div>;
-                <div className="flex items-center space-x-2">;
-                  <Mail className="h-5 w-5 text-cyan-400" />;
-                  <span>{contactInfo.email}</span>;
-                </div>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      <UltraFuturisticFooter2029 />;
-    </>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

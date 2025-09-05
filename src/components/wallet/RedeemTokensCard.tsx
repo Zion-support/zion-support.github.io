@@ -1,16 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-=======
-import React, { useState } from &quot;react&quot;;
-import { useWallet } from &quot;@/hooks/useWallet&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
 import {
   Dialog,
@@ -18,11 +10,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog",
-=======
-  DialogTrigger} from &quot;@/components/ui/dialog&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 type RewardOption = {
   id: string,
@@ -70,15 +58,15 @@ export function RedeemTokensCard() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className=&quot;flex items-center gap-2&quot;>
-          <Gift className=&quot;h-5 w-5&quot; /> Redeem Rewards
+        <CardTitle className="flex items-center gap-2">
+          <Gift className="h-5 w-5" /> Redeem Rewards
         </CardTitle>
         <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
       </CardHeader>
       <CardContent>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <Button className=&quot;w-full&quot;>View Available Rewards</Button>
+            <Button className="w-full">View Available Rewards</Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
@@ -87,31 +75,31 @@ export function RedeemTokensCard() {
                 Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
               </DialogDescription>
             </DialogHeader>
-            <div className=&quot;space-y-4 py-4&quot;>
+            <div className="space-y-4 py-4">
               {REWARD_OPTIONS.map((option) => (
-                <div key={option.id} className=&quot;flex justify-between items-center border-b pb-4&quot;>
+                <div key={option.id} className="flex justify-between items-center border-b pb-4">
                   <div>
-                    <h3 className=&quot;font-medium&quot;>{option.title}</h3>
-                    <p className=&quot;text-sm text-muted-foreground&quot;>{option.description}</p>
+                    <h3 className="font-medium">{option.title}</h3>
+                    <p className="text-sm text-muted-foreground">{option.description}</p>
                   </div>
-                  <div className=&quot;flex flex-col items-end gap-1&quot;>
-                    <span className=&quot;text-sm font-bold&quot;>{option.cost} ZION$</span>
+                  <div className="flex flex-col items-end gap-1">
+                    <span className="text-sm font-bold">{option.cost} ZION$</span>
                     <Button 
-                      size=&quot;sm&quot; 
-                      variant={wallet && wallet.balance >= option.cost ? &quot;default&quot; : &quot;outline&quot;}
+                      size="sm" 
+                      variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
                       disabled={!wallet || wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}
                     >
-                      Redeem <ArrowRight className=&quot;ml-1 h-3 w-3&quot; />
+                      Redeem <ArrowRight className="ml-1 h-3 w-3" />
                     </Button>
                   </div>
                 </div>
               ))}
             </div>
-            <div className=&quot;flex justify-between&quot;>
-              <Button variant=&quot;outline&quot; size=&quot;sm&quot; onClick={() => setOpen(false)}>Close</Button>
-              <Button variant=&quot;ghost&quot; size=&quot;sm&quot;>
-                Learn More <ExternalLink className=&quot;ml-1 h-3 w-3&quot; />
+            <div className="flex justify-between">
+              <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
+              <Button variant="ghost" size="sm">
+                Learn More <ExternalLink className="ml-1 h-3 w-3" />
               </Button>
             </div>
           </DialogContent>
@@ -119,7 +107,6 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
   )
-=======
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -222,6 +209,5 @@ export function RedeemTokensCard() {;
       </CardContent>;
     </Card>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;

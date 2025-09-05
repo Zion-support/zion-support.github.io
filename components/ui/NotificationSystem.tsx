@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
@@ -48,24 +46,6 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({
       prev.filter(notification => notification.id !== id)
     );
   };
-=======
-          key={notification.id},
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},
-
-        >,
-<<<<<<< HEAD
-          <div className="flex items-start justify-between">,
-            <div className="flex-1">,
-              {notification.title && (
-                <h4 className="font-medium mb-1">{notification.title}</h4>)},
-              <p className="text-sm">{notification.message}</p>,
-=======
-          <div className=&quot;flex items-start justify-between&quot;>,
-            <div className=&quot;flex-1&quot;>,
-              {notification.title && (,
-                <h4 className=&quot;font-medium mb-1&quot;>{notification.title}</h4>)};
-              <p className=&quot;text-sm&quot;>{notification.message}</p>,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             </div>,
             {onDismiss && (
               <button
@@ -95,63 +75,13 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       setToasts((prev) => prev.filter((t) => t.id !== id)),
     }, 3000),
   }, []),
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 
   return (
     <NotificationContext.Provider
       value={{ notifications, addNotification, removeNotification }}
     >
       {children}
-<<<<<<< HEAD
       <NotificationContainer />
-=======
-      <div className=&quot;fixed inset-x-0 top-4 z-[100] flex justify-center pointer-events-none&quot;>
-        <div className=&quot;w-full max-w-md px-4&quot;>
-          <AnimatePresence>
-            {toasts.map((toast) => (
-              <motion.div
-=======
-          key={notification.id},;
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},;
-        >,;
-          <div className="flex items-start justify-between">,;
-            <div className="flex-1">,;
-              {notification.title && (;
-                <h4 className="font-medium mb-1">{notification.title}</h4>)},;
-              <p className="text-sm">{notification.message}</p>,;
-            </div>,;
-            {onDismiss && (;
-              <button;
-                onClick={() => onDismiss(notification.id)},;
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',;
-import { AnimatePresence, motion } from 'framer-motion',;
-export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },;
-type NotificationContextValue = {;
-  notify: (message: string, tone?: 'default' | 'success' | 'error') => void;
-},;
-const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} }),;
-export function useToast() {;
-  return useContext(NotificationContext);
-}
-;
-export function NotificationProvider({ children }: { children: ReactNode }) {;
-  const [toasts, setToasts] = useState<Toast[]>([]),;
-  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {;
-    const id = Math.random().toString(36).slice(2),;
-    setToasts((prev) => [...prev, { id, message, tone }]);
-    setTimeout(() => {;
-      setToasts((prev) => prev.filter((t) => t.id !== id));
-    }, 3000);
-  }, []);
-  return (;
-    <NotificationContext.Provider value={{ notify }}>;
-      {children}
-      <div className="fixed inset-x-0 top-4 z-[100] flex justify-center pointer-events-none">;
-        <div className="w-full max-w-md px-4">;
-          <AnimatePresence>;
-            {toasts.map((toast) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={toast.id}
                 initial={{ opacity: 0, y: -8 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -163,17 +93,14 @@ export function NotificationProvider({ children }: { children: ReactNode }) {;
                     ? 'border-rose-300/50 bg-rose-50 text-rose-900 dark:bg-rose-950/60 dark:text-rose-200';
                     : 'border-gray-200 bg-white/90 text-gray-900 dark:border-gray-800 dark:bg-gray-900/90 dark:text-gray-100';
                 }`}
-<<<<<<< HEAD
               >
-                <div className=&quot;text-sm font-medium&quot;>{toast.message}</div>
+                <div className="text-sm font-medium">{toast.message}</div>
               </motion.div>
             ))}
           </AnimatePresence>
         </div>
       </div>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     </NotificationContext.Provider>
-<<<<<<< HEAD
   );
 };
 
@@ -246,11 +173,6 @@ export const useNotifications = () => {
   }
   return context;
 };
-=======
-  ),
-}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
               >;
                 <div className="text-sm font-medium">{toast.message}</div>;
               </motion.div>;
@@ -262,4 +184,3 @@ export const useNotifications = () => {
   );
 }
 ;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

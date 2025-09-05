@@ -20,49 +20,43 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
       logErrorToProduction('Error during retry:', { data: retryError }),;
       Sentry.captureException(retryError);
     }
-<<<<<<< HEAD
   },
 
   return (
-    <div className=&quot;flex items-center justify-center min-h-[400px] p-6&quot;>
-      <div className=&quot;max-w-md w-full space-y-4&quot;>
-        <Alert variant=&quot;destructive&quot;>
-          <AlertCircle className=&quot;h-4 w-4&quot; />
+    <div className="flex items-center justify-center min-h-[400px] p-6">
+      <div className="max-w-md w-full space-y-4">
+        <Alert variant="destructive">
+          <AlertCircle className="h-4 w-4" />
           <AlertTitle>Something went wrong in the marketplace</AlertTitle>
-          <AlertDescription className=&quot;mt-2&quot;>
+          <AlertDescription className="mt-2">
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>
         </Alert>
         
-        <div className=&quot;flex flex-col space-y-2&quot;>
+        <div className="flex flex-col space-y-2">
           <Button 
             onClick={handleRetry}
-            className=&quot;w-full&quot;
-            variant=&quot;default&quot;
+            className="w-full"
+            variant="default"
           >
-            <RefreshCcw className=&quot;mr-2 h-4 w-4&quot; />
+            <RefreshCcw className="mr-2 h-4 w-4" />
             Retry
           </Button>
           
           <Button 
             onClick={() => window.location.reload()}
-            variant=&quot;outline&quot;
-            className=&quot;w-full&quot;
+            variant="outline"
+            className="w-full"
           >
             Reload Page
           </Button>
         </div>
         
-        <div className=&quot;text-center text-sm text-muted-foreground&quot;>
+        <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a 
-<<<<<<< HEAD
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
-=======
-            href=&quot;mailto:support@example.com&quot; 
-            className=&quot;text-primary hover:underline&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           >
             contact support
           </Link>
@@ -70,7 +64,6 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
       </div>
     </div>
   )
-=======
   },;
   return (;
     <div className="flex items-center justify-center min-h-[400px] p-6">;
@@ -111,7 +104,6 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
       </div>;
     </div>;
   );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
 ;
 interface MarketplaceErrorBoundaryProps {;

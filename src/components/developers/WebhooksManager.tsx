@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react'
@@ -18,25 +16,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-=======
-import { useState, useEffect } from &quot;react&quot;;
-import { format } from &quot;date-fns&quot;;
-import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react'
-import { useWebhooks, type WebhookEventType } from &quot;@/hooks/useWebhooks&quot;;
-
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from &quot;@/components/ui/dialog&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Checkbox } from &quot;@/components/ui/checkbox&quot;;
-import { Label } from &quot;@/components/ui/label&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Switch } from &quot;@/components/ui/switch&quot;;
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from &quot;@/components/ui/dropdown-menu&quot;;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from &quot;@/components/ui/alert-dialog&quot;;
-import { ScrollArea } from &quot;@/components/ui/scroll-area&quot;;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from &quot;@/components/ui/select&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export function WebhooksManager() {
   const {
@@ -57,19 +36,11 @@ export function WebhooksManager() {
   const [showTestResult, setShowTestResult] = useState(false),
 
   // Create webhook form state
-<<<<<<< HEAD
   const [webhookName, setWebhookName] = useState(""),
   const [webhookUrl, setWebhookUrl] = useState(""),
   const [webhookSecret, setWebhookSecret] = useState(""),
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
-=======
-  const [webhookName, setWebhookName] = useState("&quot;);
-  const [webhookUrl, setWebhookUrl] = useState("&quot;);
-  const [webhookSecret, setWebhookSecret] = useState("&quot;);
-  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]);
-  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   // Load webhooks on mount
   useEffect(() => {
@@ -77,23 +48,14 @@ export function WebhooksManager() {
   }, []),
 
   const handleCreateWebhook = async () => {
-<<<<<<< HEAD
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
-=======
-    if (webhookName.trim() === "&quot; || webhookUrl.trim() === "&quot; || selectedEvents.length === 0) return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     await createWebhook(
       webhookName, 
       webhookUrl, 
       selectedEvents, 
-<<<<<<< HEAD
       webhookSecret.trim() === "" ? undefined : webhookSecret
     ),
-=======
-      webhookSecret.trim() === "&quot; ? undefined : webhookSecret
-    );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     setShowCreateDialog(false),
     resetWebhookForm()
@@ -114,19 +76,11 @@ export function WebhooksManager() {
   },
 
   const resetWebhookForm = () => {
-<<<<<<< HEAD
     setWebhookName(""),
     setWebhookUrl(""),
     setWebhookSecret(""),
     setSelectedEvents([])
   },
-=======
-    setWebhookName("&quot;);
-    setWebhookUrl("&quot;);
-    setWebhookSecret("");
-    setSelectedEvents([]);
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   // Event type options
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [
@@ -157,13 +111,13 @@ export function WebhooksManager() {
       
       <CardContent>
         <div className="flex justify-between items-center mb-6">
-          <p className="text-sm text-zinc-400&quot;>
+          <p className="text-sm text-zinc-400">
             You have {webhooks.length} {webhooks.length === 1 ? 'webhook' : 'webhooks'}
           </p>
           
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
-              <Button variant=&quot;default">
+              <Button variant="default">
                 <Plus size={16} className="mr-1" /> Add Webhook
               </Button>
             </DialogTrigger>
@@ -176,24 +130,24 @@ export function WebhooksManager() {
               </DialogHeader>
               
               <div className="space-y-4 py-4">
-                <div className="space-y-2&quot;>
-                  <Label htmlFor=&quot;webhook-name&quot;>Webhook Name</Label>
+                <div className="space-y-2">
+                  <Label htmlFor="webhook-name">Webhook Name</Label>
                   <Input
-                    id=&quot;webhook-name&quot;
+                    id="webhook-name"
                     value={webhookName}
                     onChange={(e) => setWebhookName(e.target.value)}
-                    placeholder=&quot;e.g. Application Notifications"
+                    placeholder="e.g. Application Notifications"
                     className="bg-zinc-800 border-zinc-700"
                   />
                 </div>
                 
-                <div className="space-y-2&quot;>
-                  <Label htmlFor=&quot;webhook-url&quot;>Endpoint URL</Label>
+                <div className="space-y-2">
+                  <Label htmlFor="webhook-url">Endpoint URL</Label>
                   <Input
-                    id=&quot;webhook-url&quot;
+                    id="webhook-url"
                     value={webhookUrl}
                     onChange={(e) => setWebhookUrl(e.target.value)}
-                    placeholder=&quot;https://example.com/webhook"
+                    placeholder="https://example.com/webhook"
                     className="bg-zinc-800 border-zinc-700"
                   />
                   <p className="text-xs text-zinc-500">
@@ -201,15 +155,15 @@ export function WebhooksManager() {
                   </p>
                 </div>
 
-                <div className="space-y-2&quot;>
-                  <Label htmlFor=&quot;webhook-secret&quot;>Secret Key (Optional)</Label>
+                <div className="space-y-2">
+                  <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
                   <Input
-                    id=&quot;webhook-secret&quot;
-                    type=&quot;password&quot;
+                    id="webhook-secret"
+                    type="password"
                     value={webhookSecret}
                     onChange={(e) => setWebhookSecret(e.target.value)}
-                    placeholder=&quot;Enter secret key&quot;
-                    aria-label=&quot;Secret key"
+                    placeholder="Enter secret key"
+                    aria-label="Secret key"
                     className="bg-zinc-800 border-zinc-700"
                   />
                   <p className="text-xs text-zinc-500">
@@ -224,7 +178,6 @@ export function WebhooksManager() {
                       <div key={event.value} className="flex items-center space-x-2">
                         <Checkbox 
                           id={event.value} 
-=======
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react';
@@ -383,7 +336,6 @@ export function WebhooksManager() {;
                       <div key={event.value} className="flex items-center space-x-2">;
                         <Checkbox;
                           id={event.value} ;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
                         />;
@@ -392,8 +344,7 @@ export function WebhooksManager() {;
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";
                         >;
                           {event.label}
-<<<<<<< HEAD
-                          <span className="block text-xs text-zinc-400 mt-1&quot;>{event.description}</span>
+                          <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
                         </Label>
                       </div>
                     ))}
@@ -402,20 +353,14 @@ export function WebhooksManager() {;
               </div>
               
               <DialogFooter>
-<<<<<<< HEAD
                 <Button variant="outline" onClick={() => {
                   setShowCreateDialog(false),
                   resetWebhookForm()
-=======
-                <Button variant=&quot;outline&quot; onClick={() => {
-                  setShowCreateDialog(false);
-                  resetWebhookForm();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 }}>
                   Cancel
                 </Button>
                 <Button onClick={handleCreateWebhook} disabled={
-                  webhookName.trim() === "&quot; || 
+                  webhookName.trim() === "" || 
                   webhookUrl.trim() === "" || 
                   selectedEvents.length === 0
                 }>
@@ -449,26 +394,25 @@ export function WebhooksManager() {;
                   </div>
                   
                   <div className="flex items-center space-x-2">
-                    <div className="flex items-center mr-2&quot;>
+                    <div className="flex items-center mr-2">
                       <Switch
-                        aria-label=&quot;Toggle webhook"
+                        aria-label="Toggle webhook"
                         checked={webhook.is_active}
                         onCheckedChange={() => handleToggleStatus(webhook.id, webhook.is_active)}
                       />
-                      <span className="ml-2 text-sm&quot;>
-                        {webhook.is_active ? &quot;Active&quot; : &quot;Inactive&quot;}
+                      <span className="ml-2 text-sm">
+                        {webhook.is_active ? "Active" : "Inactive"}
                       </span>
                     </div>
                     
                       <DropdownMenu>
                       <DropdownMenuTrigger asChild>
-                        <Button variant=&quot;ghost&quot; size=&quot;icon&quot; aria-label=&quot;More options&quot;>
+                        <Button variant="ghost" size="icon" aria-label="More options">
                           <MoreVertical size={16} />
                         </Button>
                       </DropdownMenuTrigger>
-                      <DropdownMenuContent align=&quot;end" className="bg-zinc-900 border-zinc-800 text-white">
+                      <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
                         <DropdownMenuItem
-=======
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
                         </Label>;
                       </div>;
@@ -534,7 +478,6 @@ export function WebhooksManager() {;
                       </DropdownMenuTrigger>;
                       <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">;
                         <DropdownMenuItem;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                           onClick={() => setShowTestDialog(webhook.id)}
                           className="cursor-pointer";
                         >;
@@ -542,7 +485,6 @@ export function WebhooksManager() {;
                         </DropdownMenuItem>;
                         <DropdownMenuItem;
                           onClick={() => setShowDeleteConfirm(webhook.id)}
-<<<<<<< HEAD
                           className="cursor-pointer text-red-500"
                         >
                           <X size={14} className="mr-2" /> Delete
@@ -552,30 +494,13 @@ export function WebhooksManager() {;
                   </div>
                 </div>
                 
-                <div className="mt-3 flex flex-wrap gap-2&quot;>
+                <div className="mt-3 flex flex-wrap gap-2">
                   {webhook.event_types.map((event: WebhookEventType) => (
                     <Badge 
                       key={event} 
-                      variant=&quot;secondary"
+                      variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
                     >
-=======
-                          className="cursor-pointer text-red-500";
-                        >;
-                          <X size={14} className="mr-2" /> Delete;
-                        </DropdownMenuItem>;
-                      </DropdownMenuContent>;
-                    </DropdownMenu>;
-                  </div>;
-                </div>;
-                <div className="mt-3 flex flex-wrap gap-2">;
-                  {webhook.event_types.map((event: WebhookEventType) => (;
-                    <Badge;
-                      key={event} ;
-                      variant="secondary";
-                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800";
-                    >;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       {event}
                     </Badge>;
                   ))}
@@ -589,31 +514,18 @@ export function WebhooksManager() {;
               </div>;
             ));
           )}
-<<<<<<< HEAD
         </div>
       </CardContent>
       
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
-        <div className="text-xs text-zinc-500&quot;>
+        <div className="text-xs text-zinc-500">
           Webhooks will be sent with HTTPS POST requests to your endpoint.
         </div>
-        <Button variant=&quot;outline&quot; size=&quot;sm" onClick={fetchWebhooks}>
+        <Button variant="outline" size="sm" onClick={fetchWebhooks}>
           <RefreshCw size={14} className="mr-1" /> Refresh
         </Button>
       </CardFooter>
 
-=======
-        </div>;
-      </CardContent>;
-      <CardFooter className="justify-between border-t border-zinc-800 py-4">;
-        <div className="text-xs text-zinc-500">;
-          Webhooks will be sent with HTTPS POST requests to your endpoint.;
-        </div>;
-        <Button variant="outline" size="sm" onClick={fetchWebhooks}>;
-          <RefreshCw size={14} className="mr-1" /> Refresh;
-        </Button>;
-      </CardFooter>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {/* Test Webhook Dialog */}
       <Dialog;
         open={showTestDialog !== null} ;
@@ -627,7 +539,6 @@ export function WebhooksManager() {;
             }
           }
         }}
-<<<<<<< HEAD
       >
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <DialogHeader>
@@ -640,57 +551,31 @@ export function WebhooksManager() {;
           {!showTestResult ? (
             <>
               <div className="space-y-4 py-4">
-                <div className="space-y-2&quot;>
-                  <Label htmlFor=&quot;test-event-type">Event Type</Label>
+                <div className="space-y-2">
+                  <Label htmlFor="test-event-type">Event Type</Label>
                   <Select
                     value={testEventType}
                     onValueChange={(value) => setTestEventType(value as WebhookEventType)}
                   >
-                    <SelectTrigger className="bg-zinc-800 border-zinc-700&quot;>
-                      <SelectValue placeholder=&quot;Select an event type" />
+                    <SelectTrigger className="bg-zinc-800 border-zinc-700">
+                      <SelectValue placeholder="Select an event type" />
                     </SelectTrigger>
                     <SelectContent className="bg-zinc-900 border-zinc-800">
                       {eventOptions.map((option) => (
                         <SelectItem key={option.value} value={option.value}>
-=======
-      >;
-        <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;
-          <DialogHeader>;
-            <DialogTitle>Test Webhook</DialogTitle>;
-            <DialogDescription className="text-zinc-400">;
-              Send a test webhook to your endpoint.;
-            </DialogDescription>;
-          </DialogHeader>;
-          {!showTestResult ? (;
-            <>;
-              <div className="space-y-4 py-4">;
-                <div className="space-y-2">;
-                  <Label htmlFor="test-event-type">Event Type</Label>;
-                  <Select;
-                    value={testEventType}
-                    onValueChange={(value) => setTestEventType(value as WebhookEventType)}
-                  >;
-                    <SelectTrigger className="bg-zinc-800 border-zinc-700">;
-                      <SelectValue placeholder="Select an event type" />;
-                    </SelectTrigger>;
-                    <SelectContent className="bg-zinc-900 border-zinc-800">;
-                      {eventOptions.map((option) => (;
-                        <SelectItem key={option.value} value={option.value}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                           {option.label}
                         </SelectItem>;
                       ))}
-<<<<<<< HEAD
                     </SelectContent>
                   </Select>
-                  <p className="text-xs text-zinc-500&quot;>
+                  <p className="text-xs text-zinc-500">
                     The event type will determine the structure of the test payload.
                   </p>
                 </div>
               </div>
               
               <DialogFooter>
-                <Button variant=&quot;outline" onClick={() => setShowTestDialog(null)}>
+                <Button variant="outline" onClick={() => setShowTestDialog(null)}>
                   Cancel
                 </Button>
                 <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>
@@ -707,49 +592,19 @@ export function WebhooksManager() {;
                     <Badge
                       className={
                         testResult && testResult.status >= 200 && testResult.status < 300
-                          ? "bg-green-700&quot;
-                          : &quot;bg-red-700"
-=======
-                    </SelectContent>;
-                  </Select>;
-                  <p className="text-xs text-zinc-500">;
-                    The event type will determine the structure of the test payload.;
-                  </p>;
-                </div>;
-              </div>;
-              <DialogFooter>;
-                <Button variant="outline" onClick={() => setShowTestDialog(null)}>;
-                  Cancel;
-                </Button>;
-                <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>;
-                  Send Test;
-                </Button>;
-              </DialogFooter>;
-            </>;
-          ) : (;
-            <>;
-              <div className="space-y-4 py-4">;
-                <div className="space-y-2">;
-                  <div className="flex items-center justify-between">;
-                    <Label>Response Status</Label>;
-                    <Badge;
-                      className={;
-                        testResult && testResult.status >= 200 && testResult.status < 300;
-                          ? "bg-green-700";
-                          : "bg-red-700";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                          ? "bg-green-700"
+                          : "bg-red-700"
                       }
                     >;
                       {testResult?.status} {testResult?.statusText}
-<<<<<<< HEAD
                     </Badge>
                   </div>
                   
                   <div className="space-y-2 mt-4">
                     <Label>Response Body</Label>
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
-                      <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all&quot;>
-                        {testResult?.responseBody || &quot;No response body&quot;}
+                      <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">
+                        {testResult?.responseBody || "No response body"}
                       </pre>
                     </ScrollArea>
                   </div>
@@ -757,7 +612,6 @@ export function WebhooksManager() {;
               </div>
               
               <DialogFooter>
-<<<<<<< HEAD
                 <Button variant="default" onClick={() => {
                   setShowTestDialog(null),
                   setShowTestResult(false),
@@ -768,24 +622,11 @@ export function WebhooksManager() {;
                 <Button variant="outline" onClick={() => {
                   setShowTestResult(false),
                   clearTestResult()
-=======
-                <Button variant=&quot;default&quot; onClick={() => {
-                  setShowTestDialog(null);
-                  setShowTestResult(false);
-                  clearTestResult();
-                }}>
-                  Close
-                </Button>
-                <Button variant=&quot;outline" onClick={() => {
-                  setShowTestResult(false);
-                  clearTestResult();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 }}>
                   Test Another Event
                 </Button>
               </DialogFooter>
             </>
-=======
                     </Badge>;
                   </div>;
                   <div className="space-y-2 mt-4">;
@@ -814,7 +655,6 @@ export function WebhooksManager() {;
                 </Button>;
               </DialogFooter>;
             </>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
         </DialogContent>;
       </Dialog>;

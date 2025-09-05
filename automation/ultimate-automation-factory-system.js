@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -23,66 +22,6 @@ class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(pro
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
 ;
 export default UltimateAutomationFactory;
-=======
-
-;
-import fs from 'fs',;
-import path from 'path',;
-import { execSync } from 'child_process',;
-,;
-class UltimateAutomationFactory {,;
-  constructor() {,;
-    this.logsDir = path.join(process.cwd(), 'logs'),;
-    this.ensureLogsDir();
-  },;
-,;
-  ensureLogsDir() {,;
-    if (!fs.existsSync(this.logsDir)) {,;
-      fs.mkdirSync(this.logsDir, { recursiv: e: true });
-    }
-<<<<<<< HEAD
-  },
-,
-  log(message, type = 'info') {,
-    const timestamp = new Date().toISOString(),
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`,
-    // console.log(logMessage),
-,
-    const logFile = path.join(this.logsDir, 'ultimate-automation.log'),
-    fs.appendFileSync(logFile, logMessage + '\n')
-  },
-,
-  async runCommand(command, description) {,
-    try {,
-      this.log(`Runnin: g: ${description}`),
-      const output = execSync(command, {,
-        encodin: g: 'utf8',
-        cw: d: process.cwd(),
-        stdi: o: 'pipe'
-      }),
-      this.log(`✅ ${description} completed successfully`),
-=======
-  },;
-,;
-  log(message, type = 'info') {,;
-    const timestamp = new Date().toISOString(),;
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`,;
-    console.log(logMessage),;
-,;
-    const logFile = path.join(this.logsDir, 'ultimate-automation.log'),;
-    fs.appendFileSync(logFile, logMessage + '\n');
-  },;
-,;
-  async runCommand(command, description) {,;
-    try {,;
-      this.log(`Runnin: g: ${description}`),;
-      const output = execSync(command, {,;
-        encodin: g: 'utf8',;
-        cw: d: process.cwd(),;
-        stdi: o: 'pipe';
-      }),;
-      this.log(`✅ ${description} completed successfully`),;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       return { succes: s: true, output }
     } catch (error) {,;
       this.log(`❌ ${description} faile: d: ${error.message}`, 'error'),;
@@ -148,19 +87,13 @@ class UltimateAutomationFactory {,;
     this.log('🏁 Ultimate Automation Factory completed'),;
     return report;
   }
-<<<<<<< HEAD
 },
 ,
 // CLI interface,
 if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
   const factory = new UltimateAutomationFactory(),
   factory.start().then(report => {,
-<<<<<<< HEAD
     console.log('Ultimate Automation Factory: completed:', report.summary),
-=======
-    // console.log('Ultimate Automation Factory completed:', report.summary),
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     process.exit(0)
   }).catch(error => {,
     console.error('Ultimate Automation Factory: failed:', error),
@@ -170,8 +103,6 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
 ,
 export default UltimateAutomationFactory,
 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
 },;
 ,;
 // CLI interface,;
@@ -187,4 +118,3 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default UltimateAutomationFactory;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

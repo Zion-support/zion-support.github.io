@@ -1,19 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
-=======
-import React from 'react';
-import { GradientHeading } from &quot;./GradientHeading&quot;;
-import { Check, Handshake, Search, Send } from 'lucide-react'
-import { cn } from &quot;@/lib/utils&quot;;
-import { useTranslation } from &quot;react-i18next&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface HowItWorksSectionProps {
   className?: string,
   style?: React.CSSProperties
@@ -42,26 +32,25 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
   const steps = getSteps(t),
   
   return (
-    <section className={cn(&quot;py-20 bg-zion-blue&quot;, className)} style={style}>
-      <div className=&quot;container mx-auto px-4&quot;>
-        <div className=&quot;text-center mb-16&quot;>
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-          <p className=&quot;text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto&quot;>
+          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
             {t('home.how_it_works_subtitle')}
           </p>
         </div>
 
-        <div className=&quot;relative&quot;>
+        <div className="relative">
           {/* Timeline line */}
-          <div className=&quot;absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden&quot;></div>
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
           
-          <div className=&quot;space-y-12 md:space-y-0&quot;>
+          <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => (
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? &quot;md:flex-row-reverse&quot; : ""
-=======
+                  index % 2 === 0 ? "md:flex-row-reverse" : ""
 import React from 'react',;
 import { GradientHeading } from "./GradientHeading",;
 import { Check, Handshake, Search, Send } from 'lucide-react';
@@ -110,7 +99,6 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${;
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 } relative`}
               >;
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">;

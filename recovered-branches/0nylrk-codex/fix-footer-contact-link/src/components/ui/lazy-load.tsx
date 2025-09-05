@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState, useRef, ReactNode } from "react",
 import { cn } from "@/lib/utils",
 import { Skeleton } from "@/components/ui/skeleton",
-=======
-import { useEffect, useState, useRef, ReactNode } from &quot;react&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-import { Skeleton } from &quot;@/components/ui/skeleton&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
@@ -19,8 +11,8 @@ interface LazyLoadProps {
 }
 
 export function LazyLoad({
-  height = &quot;200px&quot;,
-  width = &quot;100%&quot;,
+  height = "200px",
+  width = "100%",
   children,
   loadingComponent,
   className}: LazyLoadProps) {
@@ -37,8 +29,7 @@ export function LazyLoad({
         }
       },
       {
-        rootMargin: &quot;200px&quot;, // Start loading when element is within 200px of viewport
-=======
+        rootMargin: "200px", // Start loading when element is within 200px of viewport
 import { useEffect, useState, useRef, ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 import { Skeleton } from "@/components/ui/skeleton",;
@@ -69,7 +60,6 @@ export function LazyLoad({;
       },;
       {;
         rootMargin: "200px", // Start loading when element is within 200px of viewport;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
         threshold: 0.1}
     ),;
     if (containerRef.current) {;
@@ -94,28 +84,16 @@ export function LazyLoad({;
   const defaultLoadingComponent = (;
     <Skeleton;
       style={{ height, width }}
-<<<<<<< HEAD
-      className=&quot;rounded-md bg-zion-blue-light/20&quot;
+      className="rounded-md bg-zion-blue-light/20"
     />
   ),
 
   return (
     <div
       ref={containerRef}
-      className={cn(&quot;transition-opacity duration-500&quot;, 
-        isLoaded ? &quot;opacity-100&quot; : &quot;opacity-0&quot;,
+      className={cn("transition-opacity duration-500", 
+        isLoaded ? "opacity-100" : "opacity-0",
         className
-=======
-      className="rounded-md bg-zion-blue-light/20";
-    />;
-  ),;
-  return (;
-    <div;
-      ref={containerRef}
-      className={cn("transition-opacity duration-500";
-        isLoaded ? "opacity-100" : "opacity-0";
-        className;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
     >;
       {isVisible ? (;

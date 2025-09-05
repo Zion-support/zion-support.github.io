@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 
 interface SimpleLayoutProps {
@@ -22,19 +19,9 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 };
 
 export default SimpleLayout;
-=======
-        {description && <meta name="description" content={description} />},
-      {children},
-=======
-        {description && <meta name=&quot;description&quot; content={description} />};
-      {children};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     </>)
 },
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
         {description && <meta name="description" content={description} />},;
       {children},;
     </>);
 },;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

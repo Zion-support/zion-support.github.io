@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -22,19 +21,11 @@ const contactInfo = {
 },
 
 const heroStats = [
-<<<<<<< HEAD
   { label: 'Business Solutions', value: '100+', icon: <Target className="w-5 h-5" /> },
   { label: 'Happy Businesses', value: '250+', icon: <Users className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.5%', icon: <Award className="w-5 h-5" /> },
   { label: 'ROI Average', value: '400%', icon: <TrendingUp className="w-5 h-5" /> }
 ],
-=======
-  { label: 'Business Solutions', value: '100+', icon: <Target className=&quot;w-5 h-5&quot; /> },
-  { label: 'Happy Businesses', value: '250+', icon: <Users className=&quot;w-5 h-5&quot; /> },
-  { label: 'Success Rate', value: '99.5%', icon: <Award className=&quot;w-5 h-5&quot; /> },
-  { label: 'ROI Average', value: '400%', icon: <TrendingUp className=&quot;w-5 h-5&quot; /> }
-];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 const serviceCategories = [
   {
@@ -76,7 +67,6 @@ const serviceCategories = [
     icon: TeamIcon,
     color: 'from-teal-500 to-cyan-600',
     features: ['Recruitment AutomationPerformance AnalyticsEmployee Engagement']
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -144,7 +134,6 @@ const serviceCategories = [;
     icon: TeamIcon,;
     color: 'from-teal-500 to-cyan-600',;
     features: ['Recruitment AutomationPerformance AnalyticsEmployee Engagement'];
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
 ],;
 const heroFeatures = [;
@@ -198,7 +187,6 @@ const testimonials = [;
     rating: 5,;
     avatar: '👨‍💻';
   }
-<<<<<<< HEAD
 ],
 
 export default function InnovativeBusinessSolutions() {
@@ -206,87 +194,52 @@ export default function InnovativeBusinessSolutions() {
     <Layout>
       <Head>
         <title>Innovative Business Solutions - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Revolutionary AI-powered business solutions including business intelligence, marketing automation, sales intelligence, customer service, and HR management. Transform your business operations with intelligent automation.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;business solutions, AI automation, business intelligence, marketing automation, sales intelligence, customer service, HR management&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Innovative Business Solutions - Zion Tech Group&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Revolutionary AI-powered business solutions including business intelligence, marketing automation, sales intelligence, customer service, and HR management.&quot; />
-        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/innovative-business-solutions&quot; />
-        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/innovative-business-solutions&quot; />
+        <meta name="description" content="Revolutionary AI-powered business solutions including business intelligence, marketing automation, sales intelligence, customer service, and HR management. Transform your business operations with intelligent automation." />
+        <meta name="keywords" content="business solutions, AI automation, business intelligence, marketing automation, sales intelligence, customer service, HR management" />
+        <meta property="og:title" content="Innovative Business Solutions - Zion Tech Group" />
+        <meta property="og:description" content="Revolutionary AI-powered business solutions including business intelligence, marketing automation, sales intelligence, customer service, and HR management." />
+        <meta property="og:url" content="https://ziontechgroup.com/innovative-business-solutions" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://ziontechgroup.com/innovative-business-solutions" />
       </Head>
 
       {/* Hero Section */}
-      <section className=&quot;relative py-20 lg:py-32 overflow-hidden&quot;>
-        <div className=&quot;absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20&quot;></div>
-        <div className=&quot;relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className=&quot;text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6&quot;>
+            <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6">
               Innovative Business Solutions
             </h1>
-            <p className=&quot;text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business operations with AI-powered intelligence, automation, and analytics that drive growth and efficiency
             </p>
-            <div className=&quot;flex flex-wrap justify-center gap-4 mb-12&quot;>
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
                 <motion.div
-=======
-];
-export default function InnovativeBusinessSolutions() {;
-  return (;
-    <Layout>;
-      <Head>;
-        <title>Innovative Business Solutions - Zion Tech Group</title>;
-        <meta name="description" content="Revolutionary AI-powered business solutions including business intelligence, marketing automation, sales intelligence, customer service, and HR management. Transform your business operations with intelligent automation." />;
-        <meta name="keywords" content="business solutions, AI automation, business intelligence, marketing automation, sales intelligence, customer service, HR management" />;
-        <meta property="og:title" content="Innovative Business Solutions - Zion Tech Group" />;
-        <meta property="og:description" content="Revolutionary AI-powered business solutions including business intelligence, marketing automation, sales intelligence, customer service, and HR management." />;
-        <meta property="og:url" content="https://ziontechgroup.com/innovative-business-solutions" />;
-        <meta property="og:type" content="website" />;
-        <link rel="canonical" href="https://ziontechgroup.com/innovative-business-solutions" />;
-      </Head>;
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">;
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20"></div>;
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >;
-            <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6">;
-              Innovative Business Solutions;
-            </h1>;
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-              Transform your business operations with AI-powered intelligence, automation, and analytics that drive growth and efficiency;
-            </p>;
-            <div className="flex flex-wrap justify-center gap-4 mb-12">;
-              {heroStats.map((stat, index) => (;
-                <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  className=&quot;flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30&quot;
+                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30"
                 >
                   {stat.icon}
-                  <span className=&quot;text-teal-400 font-semibold&quot;>{stat.value}</span>
-                  <span className=&quot;text-gray-300 text-sm&quot;>{stat.label}</span>
+                  <span className="text-teal-400 font-semibold">{stat.value}</span>
+                  <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
               ))}
             </div>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
-              <Link href=&quot;#services&quot; className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
                 Explore Solutions
-                <ArrowRight className=&quot;ml-2 w-5 h-5&quot; />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link href={`tel:${contactInfo.mobile}`} className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300&quot;>
-                <Phone className=&quot;mr-2 w-5 h-5&quot; />
+              <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300">
+                <Phone className="mr-2 w-5 h-5" />
                 Get Started
               </Link>
             </div>
@@ -295,253 +248,131 @@ export default function InnovativeBusinessSolutions() {;
       </section>
 
       {/* Features Section */}
-      <section className=&quot;py-20 bg-gradient-to-b from-black to-gray-900&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-=======
-                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30";
-                >;
-                  {stat.icon}
-                  <span className="text-teal-400 font-semibold">{stat.value}</span>;
-                  <span className="text-gray-300 text-sm">{stat.label}</span>;
-                </motion.div>;
-              ))}
-            </div>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">;
-                Explore Solutions;
-                <ArrowRight className="ml-2 w-5 h-5" />;
-              </Link>;
-              <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300">;
-                <Phone className="mr-2 w-5 h-5" />;
-                Get Started;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Features Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className=&quot;text-center mb-16&quot;
+            className="text-center mb-16"
           >
-            <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-4&quot;>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our Business Solutions?
             </h2>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results
             </p>
           </motion.div>
           
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {heroFeatures.map((feature, index) => (
               <motion.div
-=======
-            className="text-center mb-16";
-          >;
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">;
-              Why Choose Our Business Solutions?;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {heroFeatures.map((feature, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className=&quot;relative group&quot;
+                className="relative group"
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
-                  <div className=&quot;bg-gray-900 rounded-xl p-6 h-full&quot;>
-                    <div className=&quot;text-center&quot;>
+                  <div className="bg-gray-900 rounded-xl p-6 h-full">
+                    <div className="text-center">
                       <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
-                        <feature.icon className=&quot;w-8 h-8 text-white&quot; />
+                        <feature.icon className="w-8 h-8 text-white" />
                       </div>
-                      <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                      <p className=&quot;text-gray-300&quot;>{feature.description}</p>
+                      <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                      <p className="text-gray-300">{feature.description}</p>
                     </div>
                   </div>
                 </div>
               </motion.div>
-=======
-                className="relative group";
-              >;
-                <div className={`${feature.gradient} p-1 rounded-xl`}>;
-                  <div className="bg-gray-900 rounded-xl p-6 h-full">;
-                    <div className="text-center">;
-                      <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>;
-                        <feature.icon className="w-8 h-8 text-white" />;
-                      </div>;
-                      <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>;
-                      <p className="text-gray-300">{feature.description}</p>;
-                    </div>;
-                  </div>;
-                </div>;
-              </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             ))}
           </div>;
         </div>;
       </section>;
       {/* Services Section */}
-<<<<<<< HEAD
-      <section id=&quot;services&quot; className=&quot;py-20 bg-black&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+      <section id="services" className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-=======
-      <section id="services" className="py-20 bg-black">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className=&quot;text-center mb-16&quot;
+            className="text-center mb-16"
           >
-            <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-4&quot;>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Business Solution Categories
             </h2>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive business solutions covering every aspect of modern business operations
             </p>
           </motion.div>
 
-          <div className=&quot;space-y-16&quot;>
+          <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
-=======
-            className="text-center mb-16";
-          >;
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">;
-              Business Solution Categories;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Comprehensive business solutions covering every aspect of modern business operations;
-            </p>;
-          </motion.div>;
-          <div className="space-y-16">;
-            {serviceCategories.map((category, categoryIndex) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className=&quot;relative&quot;
+                className="relative"
               >
-                <div className=&quot;text-center mb-12&quot;>
+                <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
-                    <category.icon className=&quot;w-10 h-10 text-white&quot; />
+                    <category.icon className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>{category.title}</h3>
-                  <p className=&quot;text-xl text-gray-300 max-w-2xl mx-auto&quot;>{category.description}</p>
+                  <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
+                  <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
 
-                <div className=&quot;grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8&quot;>
+                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
-=======
-                className="relative";
-              >;
-                <div className="text-center mb-12">;
-                  <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>;
-                    <category.icon className="w-10 h-10 text-white" />;
-                  </div>;
-                  <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>;
-                  <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>;
-                </div>;
-                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
-                  {category.services.map((service, serviceIndex) => (;
-                    <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
-<<<<<<< HEAD
-                      className=&quot;relative group&quot;
+                      className="relative group"
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
-                        <div className=&quot;bg-gray-900 rounded-xl p-6 h-full&quot;>
-                          <div className=&quot;flex items-center justify-between mb-4&quot;>
-                            <span className=&quot;text-3xl&quot;>{service.icon}</span>
+                        <div className="bg-gray-900 rounded-xl p-6 h-full">
+                          <div className="flex items-center justify-between mb-4">
+                            <span className="text-3xl">{service.icon}</span>
                             {service.popular && (
-                              <span className=&quot;bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full&quot;>
+                              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                                 Popular
                               </span>
                             )}
                           </div>
-                          <h4 className=&quot;text-xl font-semibold text-white mb-2&quot;>{service.name}</h4>
-                          <p className=&quot;text-gray-300 text-sm mb-4&quot;>{service.tagline}</p>
-                          <div className=&quot;flex items-center justify-between mb-4&quot;>
-                            <span className=&quot;text-2xl font-bold text-white&quot;>{service.price}</span>
-                            <span className=&quot;text-gray-400&quot;>{service.period}</span>
+                          <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
+                          <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
+                          <div className="flex items-center justify-between mb-4">
+                            <span className="text-2xl font-bold text-white">{service.price}</span>
+                            <span className="text-gray-400">{service.period}</span>
                           </div>
-                          <p className=&quot;text-gray-300 text-sm mb-4&quot;>{service.description}</p>
-                          <div className=&quot;space-y-2 mb-6&quot;>
+                          <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                          <div className="space-y-2 mb-6">
                             {service.features.slice(0, 3).map((feature, featureIndex) => (
-                              <div key={featureIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                                <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
-=======
-                      className="relative group";
-                    >;
-                      <div className={`${service.color} p-1 rounded-xl`}>;
-                        <div className="bg-gray-900 rounded-xl p-6 h-full">;
-                          <div className="flex items-center justify-between mb-4">;
-                            <span className="text-3xl">{service.icon}</span>;
-                            {service.popular && (;
-                              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">;
-                                Popular;
-                              </span>;
-                            )}
-                          </div>;
-                          <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>;
-                          <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>;
-                          <div className="flex items-center justify-between mb-4">;
-                            <span className="text-2xl font-bold text-white">{service.price}</span>;
-                            <span className="text-gray-400">{service.period}</span>;
-                          </div>;
-                          <p className="text-gray-300 text-sm mb-4">{service.description}</p>;
-                          <div className="space-y-2 mb-6">;
-                            {service.features.slice(0, 3).map((feature, featureIndex) => (;
-                              <div key={featureIndex} className="flex items-center text-sm text-gray-300">;
-                                <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                              <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                                <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                                 {feature}
                               </div>;
                             ))}
-<<<<<<< HEAD
                           </div>
-                          <div className=&quot;flex items-center justify-between&quot;>
+                          <div className="flex items-center justify-between">
                             <Link
                               href={service.link}
-                              className=&quot;inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors duration-300&quot;
+                              className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors duration-300"
                             >
                               Learn More
-                              <ArrowRight className=&quot;ml-1 w-4 h-4&quot; />
+                              <ArrowRight className="ml-1 w-4 h-4" />
                             </Link>
                             <Link
                               href={`tel:${contactInfo.mobile}`}
-                              className=&quot;inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500 to-green-600 text-white text-sm font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300&quot;
+                              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500 to-green-600 text-white text-sm font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300"
                             >
                               Get Started
                             </Link>
@@ -549,27 +380,6 @@ export default function InnovativeBusinessSolutions() {;
                         </div>
                       </div>
                     </motion.div>
-=======
-                          </div>;
-                          <div className="flex items-center justify-between">;
-                            <Link;
-                              href={service.link}
-                              className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors duration-300";
-                            >;
-                              Learn More;
-                              <ArrowRight className="ml-1 w-4 h-4" />;
-                            </Link>;
-                            <Link;
-                              href={`tel:${contactInfo.mobile}`}
-                              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500 to-green-600 text-white text-sm font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300";
-                            >;
-                              Get Started;
-                            </Link>;
-                          </div>;
-                        </div>;
-                      </div>;
-                    </motion.div>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   ))}
                 </div>;
               </motion.div>;
@@ -578,85 +388,46 @@ export default function InnovativeBusinessSolutions() {;
         </div>;
       </section>;
       {/* Testimonials Section */}
-<<<<<<< HEAD
-      <section className=&quot;py-20 bg-gradient-to-b from-gray-900 to-black&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-=======
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className=&quot;text-center mb-16&quot;
+            className="text-center mb-16"
           >
-            <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-4&quot;>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
             </h2>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Real feedback from businesses that have transformed their operations with our innovative solutions
             </p>
           </motion.div>
 
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
-=======
-            className="text-center mb-16";
-          >;
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">;
-              What Our Clients Say;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Real feedback from businesses that have transformed their operations with our innovative solutions;
-            </p>;
-          </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {testimonials.map((testimonial, index) => (;
-              <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20&quot;
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20"
               >
-                <div className=&quot;flex items-center mb-4&quot;>
-                  <span className=&quot;text-3xl mr-3&quot;>{testimonial.avatar}</span>
+                <div className="flex items-center mb-4">
+                  <span className="text-3xl mr-3">{testimonial.avatar}</span>
                   <div>
-                    <h4 className=&quot;text-white font-semibold&quot;>{testimonial.name}</h4>
-                    <p className=&quot;text-teal-400 text-sm&quot;>{testimonial.role}</p>
-                    <p className=&quot;text-gray-400 text-sm&quot;>{testimonial.company}</p>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <p className="text-teal-400 text-sm">{testimonial.role}</p>
+                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
-                <p className=&quot;text-gray-300 mb-4&quot;>{testimonial.content}</p>
-                <div className=&quot;flex items-center&quot;>
-                  <div className=&quot;flex text-yellow-400&quot;>
+                <p className="text-gray-300 mb-4">{testimonial.content}</p>
+                <div className="flex items-center">
+                  <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className=&quot;w-4 h-4 fill-current&quot; />
-=======
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20";
-              >;
-                <div className="flex items-center mb-4">;
-                  <span className="text-3xl mr-3">{testimonial.avatar}</span>;
-                  <div>;
-                    <h4 className="text-white font-semibold">{testimonial.name}</h4>;
-                    <p className="text-teal-400 text-sm">{testimonial.role}</p>;
-                    <p className="text-gray-400 text-sm">{testimonial.company}</p>;
-                  </div>;
-                </div>;
-                <p className="text-gray-300 mb-4">{testimonial.content}</p>;
-                <div className="flex items-center">;
-                  <div className="flex text-yellow-400">;
-                    {[...Array(testimonial.rating)].map((_, i) => (;
-                      <Star key={i} className="w-4 h-4 fill-current" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                      <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>;
                 </div>;
@@ -666,83 +437,43 @@ export default function InnovativeBusinessSolutions() {;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className=&quot;py-20 bg-gradient-to-r from-teal-900/20 via-green-900/20 to-emerald-900/20&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+      <section className="py-20 bg-gradient-to-r from-teal-900/20 via-green-900/20 to-emerald-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-=======
-      <section className="py-20 bg-gradient-to-r from-teal-900/20 via-green-900/20 to-emerald-900/20">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <motion.div;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
           >
-            <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-6&quot;>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={`tel:${contactInfo.mobile}`}
-                className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
-                <Phone className=&quot;mr-2 w-5 h-5&quot; />
-=======
-          >;
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-              Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link;
-                href={`tel:${contactInfo.mobile}`}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30";
-              >;
-                <Phone className="mr-2 w-5 h-5" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+                <Phone className="mr-2 w-5 h-5" />
                 Call Now: {contactInfo.mobile}
               </Link>;
               <Link;
                 href={`mailto:${contactInfo.email}`}
-<<<<<<< HEAD
-                className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300&quot;
+                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300"
               >
-                <Mail className=&quot;mr-2 w-5 h-5&quot; />
+                <Mail className="mr-2 w-5 h-5" />
                 Email Us
               </Link>
             </div>
-            <div className=&quot;mt-8 text-center&quot;>
-              <p className=&quot;text-gray-300 mb-2&quot;>📍 {contactInfo.address}</p>
-              <p className=&quot;text-gray-300&quot;>🌐 {contactInfo.website}</p>
+            <div className="mt-8 text-center">
+              <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
+              <p className="text-gray-300">🌐 {contactInfo.website}</p>
             </div>
           </motion.div>
         </div>
       </section>
     </Layout>
   )
-=======
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300";
-              >;
-                <Mail className="mr-2 w-5 h-5" />;
-                Email Us;
-              </Link>;
-            </div>;
-            <div className="mt-8 text-center">;
-              <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>;
-              <p className="text-gray-300">🌐 {contactInfo.website}</p>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </Layout>;
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
