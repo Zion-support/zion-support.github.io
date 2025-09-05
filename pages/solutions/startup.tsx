@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Head from "next/head";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -15,7 +16,7 @@ import {
   Target,
   TrendingUp
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+
 
 const features = [
   {
@@ -129,11 +130,11 @@ const successStories = [
 
 export default function StartupSolutionsPage() {
   return (
-    <Layout 
-      title="Startup Solutions - Zion Tech Group"
-      description="Fast, affordable technology solutions for startups. Quick setup, cost-effective pricing, and expert guidance to help your startup succeed."
-      keywords="startup solutions, MVP development, startup technology, affordable tech solutions, startup consulting"
-    >
+    <>
+      <Head>
+        <title>Solutions - ZION TECH GROUP</title>
+        <meta name="description" content="Comprehensive technology solutions for your business needs." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20 overflow-hidden">
@@ -384,6 +385,6 @@ export default function StartupSolutionsPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </>
   );
 }
