@@ -299,6 +299,105 @@ const microSaaSProducts = [
     popular: true
   },
   {
+    title: 'AI-Powered Voice Cloning Studio',
+    description: 'Professional voice cloning and synthesis platform for content creators and businesses.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Control', 'Multi-language Support', 'API Integration'],
+    pricing: '$299 - $1,999/month',
+    category: 'Voice Technology',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Simulator Platform',
+    description: 'Cloud-based quantum computing simulation and algorithm development environment.',
+    icon: Cpu,
+    features: ['Quantum Simulation', 'Algorithm Development', 'Circuit Design', 'Performance Analysis'],
+    pricing: '$199 - $1,499/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis Assistant',
+    description: 'Medical imaging analysis and diagnostic support for healthcare professionals.',
+    icon: Heart,
+    features: ['Medical Imaging Analysis', 'Symptom Analysis', 'Treatment Suggestions', 'Clinical Notes'],
+    pricing: '$399 - $2,999/month',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'Autonomous Vehicle Fleet Management',
+    description: 'Complete fleet management system for autonomous vehicles and smart transportation.',
+    icon: Car,
+    features: ['Fleet Monitoring', 'Route Optimization', 'Predictive Maintenance', 'Safety Analytics'],
+    pricing: '$499 - $3,999/month',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'AI Climate Change Predictor',
+    description: 'Environmental monitoring and climate change prediction platform for businesses and governments.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Environmental Monitoring', 'Risk Assessment', 'Policy Analysis'],
+    pricing: '$299 - $2,499/month',
+    category: 'Environmental Tech',
+    popular: true
+  },
+  {
+    title: 'Metaverse Development Platform',
+    description: 'Complete platform for building and managing virtual worlds and metaverse experiences.',
+    icon: Globe,
+    features: ['Virtual World Builder', 'Avatar Creation', 'Social Features', 'Monetization Tools'],
+    pricing: '$199 - $1,999/month',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Monitor',
+    description: 'Real-time cybersecurity monitoring and threat detection for small to medium businesses.',
+    icon: Shield,
+    features: ['Threat Detection', 'Vulnerability Scanning', 'Incident Response', 'Compliance Monitoring'],
+    pricing: '$149 - $999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Blockchain Analytics Dashboard',
+    description: 'Comprehensive blockchain and cryptocurrency analytics platform for traders and investors.',
+    icon: TrendingUp,
+    features: ['Transaction Analysis', 'Market Intelligence', 'Portfolio Tracking', 'Risk Assessment'],
+    pricing: '$99 - $799/month',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Home Hub',
+    description: 'Intelligent home automation platform with AI learning and predictive capabilities.',
+    icon: Home,
+    features: ['Device Control', 'Energy Optimization', 'Security Monitoring', 'Predictive Automation'],
+    pricing: '$49 - $299/month',
+    category: 'Smart Home',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Management Platform',
+    description: 'Distributed computing management platform for edge devices and IoT systems.',
+    icon: Server,
+    features: ['Edge Device Management', 'Data Processing', 'Real-time Analytics', 'Resource Optimization'],
+    pricing: '$199 - $1,499/month',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Robotic Process Automation',
+    description: 'Intelligent automation platform for complex business processes with AI decision making.',
+    icon: Settings,
+    features: ['Process Automation', 'AI Decision Making', 'Exception Handling', 'Performance Analytics'],
+    pricing: '$299 - $1,999/month',
+    category: 'RPA',
+    popular: true
+  },
+  {
     title: 'Real-Time Language Translation API',
     description: 'Advanced translation service with context awareness and industry-specific terminology.',
     icon: Globe,

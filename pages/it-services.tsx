@@ -17,9 +17,13 @@ import {
   CheckCircle, 
   ArrowRight, 
   Star, 
-  Phone, 
+    Phone,
   MapPin,
-  ShoppingCart
+  ShoppingCart,
+  Building,
+  Car,
+  Globe,
+  Rocket
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -131,6 +135,105 @@ const itServices = [
     pricing: '$50,000 - $250,000/project',
     category: 'Quantum',
     popular: false
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Complete zero trust security implementation with identity verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing solutions for real-time processing and reduced latency.',
+    icon: Server,
+    features: ['Edge Data Centers', 'Real-time Processing', 'Low Latency', 'Distributed Management'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: '5G Network Implementation',
+    description: 'Complete 5G network deployment and optimization for enterprise environments.',
+    icon: Network,
+    features: ['5G Infrastructure', 'Network Slicing', 'Edge Computing', 'IoT Integration'],
+    pricing: '$30,000 - $200,000/project',
+    category: '5G Networks',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain solutions and distributed ledger technology implementation.',
+    icon: Shield,
+    features: ['Blockchain Development', 'Smart Contracts', 'Consensus Mechanisms', 'Security Auditing'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'IoT Platform Management',
+    description: 'Comprehensive IoT platform setup and management for connected devices.',
+    icon: Wifi,
+    features: ['Device Management', 'Data Collection', 'Real-time Analytics', 'Security Monitoring'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'IoT',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Technology',
+    description: 'Digital twin implementation for real-time monitoring and predictive maintenance.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Performance Optimization'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'Smart City Infrastructure',
+    description: 'Complete smart city technology solutions including traffic management and citizen services.',
+    icon: Building,
+    features: ['Traffic Management', 'Citizen Services', 'Environmental Monitoring', 'Data Analytics'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'Autonomous Vehicle Infrastructure',
+    description: 'IT infrastructure support for autonomous vehicle testing and deployment.',
+    icon: Car,
+    features: ['V2X Communication', 'Edge Computing', 'Data Processing', 'Safety Systems'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Advanced AI operations platform with machine learning and automation capabilities.',
+    icon: Cpu,
+    features: ['ML-powered Analytics', 'Automated Remediation', 'Predictive Maintenance', 'Intelligent Alerting'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Metaverse Infrastructure',
+    description: 'Complete infrastructure setup for metaverse platforms and virtual worlds.',
+    icon: Globe,
+    features: ['Virtual World Hosting', 'Avatar Systems', 'Real-time Rendering', 'Social Features'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'Space Technology Infrastructure',
+    description: 'Ground-based IT infrastructure for space missions and satellite operations.',
+    icon: Rocket,
+    features: ['Mission Control Systems', 'Satellite Management', 'Data Processing', 'Communication Systems'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Space Technology',
+    popular: true
   }
 ];
 

@@ -164,6 +164,10 @@ export default function HomePage() {
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               We deliver cutting-edge technology solutions with competitive pricing and unmatched expertise. 
               Our comprehensive service portfolio covers everything from micro SaaS development to enterprise AI solutions.
+              <br /><br />
+              <strong>Industry-Leading Pricing:</strong> Micro SaaS from $29/month, IT Services from $120/hour, AI Solutions from $1,000/project.
+              <br />
+              <strong>90+ Services Available:</strong> 30+ AI Solutions, 25+ IT Services, 35+ Micro SaaS Products.
             </p>
           </motion.div>
 
@@ -177,10 +181,12 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• Micro "SaaS": $29 - $4,999/month</li>
-                <li>• IT "Services": $120 - $500/hour</li>
+                <li>• Micro SaaS: $29 - $3,999/month</li>
+                <li>• IT Services: $120 - $500/hour</li>
                 <li>• AI Solutions: $1,000 - $1M/project</li>
                 <li>• Transparent, no hidden fees</li>
+                <li>• Free consultations available</li>
+                <li>• Custom enterprise pricing</li>
               </ul>
             </motion.div>
 
@@ -193,10 +199,12 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Innovation Focus</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• 50+ cutting-edge services</li>
-                <li>• AI, Blockchain, IoT expertise</li>
-                <li>• Quantum computing solutions</li>
+                <li>• 90+ cutting-edge services</li>
+                <li>• AI, Blockchain, IoT, Quantum expertise</li>
+                <li>• Metaverse & Space technology</li>
                 <li>• Future-ready technology stack</li>
+                <li>• Autonomous systems & Edge computing</li>
+                <li>• Smart cities & Digital twins</li>
               </ul>
             </motion.div>
 

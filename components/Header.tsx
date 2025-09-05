@@ -30,10 +30,10 @@ const navigation = [
     href: '/services',
     icon: Settings,
     children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '20+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '20+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '25+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '65+' }
+      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '30+' },
+      { name: 'IT Services', href: '/it-services', icon: Network, count: '25+' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '35+' },
+      { name: 'All Services', href: '/services', icon: Globe, count: '90+' }
     ]
   },
   {

@@ -41,7 +41,8 @@ import {
   Sprout,
   Mail,
   ShoppingCart,
-  BookOpen
+  BookOpen,
+  Home
 } from 'lucide-react';
 
 const aiServices = [
@@ -297,6 +298,87 @@ const aiServices = [
     features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
     pricing: '$10,000 - $75,000/project',
     category: 'AgTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Metaverse Development',
+    description: 'Complete metaverse platform development with AI-driven virtual worlds and avatars.',
+    icon: Globe,
+    features: ['Virtual World Creation', 'AI Avatars', 'Real-time Physics', 'Social Interactions'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI Voice Cloning & Synthesis',
+    description: 'Advanced voice cloning technology for personalized voice assistants and content creation.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Control', 'Multi-language Support', 'Real-time Synthesis'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Voice Technology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis',
+    description: 'Advanced medical imaging analysis and diagnostic assistance using deep learning.',
+    icon: Heart,
+    features: ['Medical Imaging Analysis', 'Disease Detection', 'Treatment Recommendations', 'Clinical Decision Support'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Medical AI',
+    popular: true
+  },
+  {
+    title: 'AI Blockchain Analytics',
+    description: 'Comprehensive blockchain analysis and cryptocurrency intelligence using AI.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Fraud Detection', 'Market Prediction', 'Compliance Monitoring'],
+    pricing: '$8,000 - $50,000/setup',
+    category: 'Blockchain AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Drones',
+    description: 'Intelligent drone systems with autonomous navigation and mission execution.',
+    icon: Rocket,
+    features: ['Autonomous Flight', 'Object Detection', 'Mission Planning', 'Real-time Decision Making'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI Edge Computing Platform',
+    description: 'Distributed AI processing at the edge for real-time decision making and reduced latency.',
+    icon: Cpu,
+    features: ['Edge AI Processing', 'Real-time Inference', 'Distributed Learning', 'Low Latency'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Robotic Process Automation',
+    description: 'Intelligent automation for complex business processes with AI decision making.',
+    icon: Settings,
+    features: ['Process Automation', 'AI Decision Making', 'Exception Handling', 'Continuous Learning'],
+    pricing: '$5,000 - $40,000/setup',
+    category: 'RPA',
+    popular: true
+  },
+  {
+    title: 'AI Cybersecurity Intelligence',
+    description: 'Next-generation threat intelligence and automated security response systems.',
+    icon: Shield,
+    features: ['Threat Intelligence', 'Automated Response', 'Behavioral Analysis', 'Zero Trust Security'],
+    pricing: '$12,000 - $80,000/setup',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Home Systems',
+    description: 'Intelligent home automation with AI learning and predictive capabilities.',
+    icon: Home,
+    features: ['Predictive Automation', 'Energy Optimization', 'Security Monitoring', 'Personalization'],
+    pricing: '$3,000 - $20,000/setup',
+    category: 'Smart Home',
     popular: true
   },
   {
