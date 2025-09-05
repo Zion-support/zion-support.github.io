@@ -13,7 +13,6 @@ import {
   Camera,
   CheckCircle,
   ClipboardList,
-<<<<<<< HEAD
   Clock,
   Cloud,
   Code,
@@ -54,9 +53,6 @@ import {
   Wifi,
   Wrench,
   Zap
-=======
-  Layers
->>>>>>> origin/main
 } from 'lucide-react';
 
 const footerSections = [
