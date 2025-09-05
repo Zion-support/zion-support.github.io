@@ -51,8 +51,6 @@ import {
   Activity,
   MapPin
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import Layout from '../components/Layout';
 
 const contactInfo = {
@@ -60,8 +58,6 @@ const contactInfo = {
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
-
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 const aiServices = [
   {
     title: 'AI-Powered Email Responder',
