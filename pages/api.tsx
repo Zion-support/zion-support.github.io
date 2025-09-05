@@ -2,43 +2,30 @@ import React from "react";
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-export default function APIPage() {}
-  const apiFeatures = []
-    {}
+export default function APIPage() {
+  const apiFeatures = [
+    {
       title: "RESTful APIs",
       description: "Clean, intuitive REST API endpoints for easy integration",
       icon: Code,
-<<<<<<< HEAD
       features: ["JSON Responses", "HTTP Status Codes", "Rate Limiting"]
-=======
-      features: [JSON Responses", "HTTP Status Codes", "Rate Limiting"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     },
-    {}
+    {
       title: "Comprehensive Documentation",
       description: "Detailed API documentation with examples and guides",
       icon: Book,
-<<<<<<< HEAD
       features: ["Interactive Docs", "Code Examples", "SDK Libraries"]
-=======
-      features: [Interactive Docs", "Code Examples", "SDK Libraries"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     },
-    {}
+    {
       title: "High Performance",
       description: "Fast, reliable APIs built for scale and speed",
       icon: Zap,
-<<<<<<< HEAD
       features: ["Low Latency", "High Throughput", "Global CDN"]
-=======
-      features: [Low Latency", "High Throughput", "Global CDN"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     },
-    {}
+    {
       title: "Enterprise Security",
       description: "Bank-level security with authentication and encryption",
       icon: Shield,
-<<<<<<< HEAD
       features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
     }
   ];
@@ -55,28 +42,6 @@ export default function APIPage() {}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-      features: [OAuth 2.0", "API Keys", "SSL/TLS Encryption"];
-    };
-  ];
-
-  return ()
-    <Layout;"
-      title="API Reference - Zion Tech Group"
-      description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
-    >
-</Layout>"
-      <div className="min-h-screen bg-gray-50">"
-</div>"
-        <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">"
-</section>"
-          <div className="container mx-auto px-4">"
-</div>
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -87,30 +52,19 @@ export default function APIPage() {}
               </p>
             </motion.div>
           </div>
-<<<<<<< HEAD
         </section>
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  <motion.div
-                    key={index}
-=======
-        </section>"
-        <section className="py-20">"
-</section>"
-          <div className="container mx-auto px-4">"
-</div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-</div>
-                  <motion.div;
-                    key={index};
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }};
-                    whileInView={{ opacity: 1, y: 0 }};
-                    transition={{ duration: 0.8, delay: index * 0.1 }};
-                    viewport={{ once: true }};
-                  >
+              {apiFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
                     <div className="text-indigo-600 mb-4">
                       <IconComponent className="w-10 h-10" />
                     </div>
@@ -128,14 +82,8 @@ export default function APIPage() {}
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
                   </motion.div>
                 ))}
-=======
-                  </motion.div>);
-                );
-              })};
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
             </div>
           </div>
         </section>
@@ -143,10 +91,10 @@ export default function APIPage() {}
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 API Documentation

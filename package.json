@@ -8,6 +8,7 @@
     "ci:build-test": "npm run build && npm run test:smoke",
     "dev": "next dev",
     "build": "next build",
+    "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "next build && next export",
     "start": "next start -p 3000",

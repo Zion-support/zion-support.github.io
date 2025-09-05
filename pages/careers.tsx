@@ -1,15 +1,8 @@
 import React from "react";
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-<<<<<<< HEAD
 import { motion } from 'framer-motion'
 import {
-=======
-import { motion } from 'framer-motion;
-import {}
-  // TODO: Implement;
-};
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
   Users, 
   MapPin, 
   Clock, 
@@ -22,93 +15,74 @@ import {}
   Coffee,
   Laptop,
   BookOpen,
-<<<<<<< HEAD
   Target
 } from 'lucide-react'
+
 const benefits = [
   {
-=======
-  Target;'
-} from 'lucide-react;
-const benefits = []
-  {'}
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     title: "Competitive Compensation",
     description: "Above-market salaries and performance bonuses",
     icon: Award
   },
-  {}
+  {
     title: "Health & Wellness",
     description: "Comprehensive health, dental, and vision insurance",
     icon: Heart
   },
-  {}
+  {
     title: "Flexible Work",
     description: "Remote work options and flexible schedules",
     icon: Laptop
   },
-  {}
+  {
     title: "Learning & Development",
     description: "Professional development budget and training programs",
     icon: BookOpen
   },
-  {}
+  {
     title: "Team Building",
     description: "Regular team events and company retreats",
     icon: Users
   },
-  {}
+  {
     title: "Innovation Time",
     description: "Dedicated time for personal projects and innovation",
-<<<<<<< HEAD
     icon: Zap
   }
-=======
-    icon: Zap;
-  }];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
 ];
 
-const openPositions = []
-  {}
+const openPositions = [
+  {
     title: "Senior Full-Stack Developer",
     department: "Engineering",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "5+ years",
     description: "Lead development of web applications using React, Node.js, and cloud technologies.",
-    requirements: []
+    requirements: [
       "5+ years of full-stack development experience",
       "Expertise in React, Node.js, and TypeScript",
       "Experience with cloud platforms (AWS, Azure, or GCP)",
-<<<<<<< HEAD
       "Strong problem-solving and communication skills"
-=======
-      "Strong problem-solving and communication skills"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     ],
     featured: true
   },
-  {}
+  {
     title: "AI/ML Engineer",
     department: "AI Services",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "3+ years",
     description: "Develop and deploy machine learning models and AI solutions for enterprise clients.",
-    requirements: []
+    requirements: [
       "3+ years of ML/AI development experience",
       "Proficiency in Python, TensorFlow, and PyTorch",
       "Experience with MLOps and model deployment",
-<<<<<<< HEAD
       "Knowledge of cloud ML services"
-=======
-      "Knowledge of cloud ML services"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     ],
     featured: true
   },
-  {}
+  {
     title: "DevOps Engineer",
     department: "Infrastructure",
     location: "Remote / Delaware",
