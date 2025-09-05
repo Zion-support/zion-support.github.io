@@ -8,7 +8,7 @@
     "ci:build-test": "npm run build && npm run test:smoke",
     "dev": "next dev",
     "build": "next build",
-    "prebuild": "echo \"Starting build...\" && node scripts/remove-console-logs.cjs",
+    "prebuild": "echo \"Starting build...\"",
     "export": "next build && next export",
     "start": "next start -p 3000",
     "postbuild": "echo \"Build completed\"",
@@ -228,6 +228,8 @@
     "audit:security": "node scripts/security-audit-enhanced.cjs",
     "optimize:ux": "node scripts/ux-optimizer.cjs",
     "improve:all": "bash scripts/comprehensive-app-improvements.sh",
+    "sanitize:data": "node tools/sanitize-data-files.cjs",
+    "automation:safe": "node tools/run-safe-automations.cjs",
     "automation:safe": "bash scripts/run-safe-automations.sh",
     "ci:smoke": "npm run build && npm run test:smoke",
     "ci:consolidated": "bash scripts/ci-consolidated.sh",
@@ -332,6 +334,7 @@
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.28.0",
     "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",

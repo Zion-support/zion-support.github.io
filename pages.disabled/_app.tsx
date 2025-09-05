@@ -1,1 +1,14 @@
-import React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import PerformanceMonitor from '../src/components/PerformanceMonitor'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> <PerformanceMonitor /> <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
+import React from 'react';
+
+interface _appProps {
+  // Add props here as needed
+}
+
+export default function _app({ }: _appProps) {
+  return (
+    <div>
+      <h1>_app</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

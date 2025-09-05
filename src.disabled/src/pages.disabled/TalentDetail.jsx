@@ -1,1 +1,14 @@
-import React from 'react';'''; import { useParams } from 'react-router-dom';'''; import { useQuery } from '@tanstack/react-query';'''; import api from '@/services/apiClient';'''; import NotFound from '@/components/NotFound';'''; import Spinner from '@/components/Spinner';'''; import TalentProfile from '@/components/TalentProfile'; export {}; return null} const { id } = useParams(); const { data,isLoading } = useQuery('; ['talent',id],; () => api.get(`/talent/${id}`).then((r) => r.data),; { "enabled": '!!id' } ); if (isLoading) return <Spinner /> ; if (isLoading) return <Spinner /> if (!data) return <NotFound /> ; return <TalentProfile {...data} />;'";}'"'"; '"'"'"; export { TalentDetail };
+import React from 'react';
+
+interface TalentDetailProps {
+  // Add props here as needed
+}
+
+export default function TalentDetail({ }: TalentDetailProps) {
+  return (
+    <div>
+      <h1>TalentDetail</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

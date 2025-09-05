@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 
-interface MainLayoutProps {
+interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;

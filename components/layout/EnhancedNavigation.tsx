@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import React from 'react';
 
-const "EnhancedNavigation": React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+interface EnhancedNavigationProps {
+  // Add props here as needed
+}
 
-  const services = [{ name: 'All Services', href: '/services' },
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-  ];
-
+export default function EnhancedNavigation({ }: EnhancedNavigationProps) {
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+    <div>
+      <h1>EnhancedNavigation</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

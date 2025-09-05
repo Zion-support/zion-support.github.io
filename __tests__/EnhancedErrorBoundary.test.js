@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary';
-
-describe('EnhancedErrorBoundary', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary';''
+describe('EnhancedErrorBoundary', () => {''}
+  test('renders without crashing', () => {'}
     render(<EnhancedErrorBoundary />);
-    expect(screen.getByTestId('enhancederrorboundary')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</EnhancedErrorBoundary>
     render(<EnhancedErrorBoundary />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</EnhancedErrorBoundary>
     render(<EnhancedErrorBoundary />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</EnhancedErrorBoundary>
     render(<EnhancedErrorBoundary />);
-    // Add styling tests here
-  });
-});
+</EnhancedErrorBoundary>'

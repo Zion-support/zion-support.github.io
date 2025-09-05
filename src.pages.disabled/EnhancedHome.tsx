@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/EnhancedHome.tsx import React from 'react'; export default EnhancedHome; Users,TrendingUp,Award,Globe,Brain,Cloud,Shield,Zap,ArrowRight,CheckCircle,Star,Play,ChevronLeft,ChevronRight,Rocket,Target,Handshake,Lightbulb,Cpu,Database,Network,Smartphone,Lock,BarChart3,Code,Server,Chip,Wifi,ShieldCheck,Globe2,Bot,Workflow,Eye,Sparkles,Phone,Mail,MapPin,Clock,DollarSign,Atom,Leaf,Gamepad2,Coins,Satellite,Activity,FileText,MessageCircle,Search,BarChart,Users2,Settings,Palette } from "lucide - react"; import React from 'react'; export default EnhancedHome; Users,TrendingUp,Award,Globe,Brain,Cloud,Shield,Zap,ArrowRight,CheckCircle,Star,Play,ChevronLeft,ChevronRight,Rocket,Target,Handshake,Lightbulb,Cpu,Database,Network,Smartphone,Lock,BarChart3,Code,Server,Chip,Wifi,ShieldCheck,Globe2,Bot,Workflow,Eye,Sparkles,Phone,Mail,MapPin,Clock,DollarSign,Atom,Leaf,Gamepad2,Coins,Satellite,Activity,FileText,MessageCircle,Search,BarChart,Users2,Settings,Palette } from "lucide - react";";
+import React from 'react';
+
+interface EnhancedHomeProps {
+  // Add props here as needed
+}
+
+export default function EnhancedHome({ }: EnhancedHomeProps) {
+  return (
+    <div>
+      <h1>EnhancedHome</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

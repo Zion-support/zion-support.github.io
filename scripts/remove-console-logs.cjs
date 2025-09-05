@@ -87,6 +87,7 @@ function main() {
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`
   ];
+
   let totalRemoved = 0;
   let filesProcessed = 0;
 

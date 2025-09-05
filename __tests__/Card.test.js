@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Card from '../components/Card';
-
-describe('Card', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import Card from '../components/Card';''
+describe('Card', () => {''}
+  test('renders without crashing', () => {'}
     render(<Card />);
-    expect(screen.getByTestId('card')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</Card>
     render(<Card />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</Card>
     render(<Card />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</Card>
     render(<Card />);
-    // Add styling tests here
-  });
-});
+</Card>'

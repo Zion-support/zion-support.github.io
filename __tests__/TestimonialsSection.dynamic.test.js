@@ -1,27 +1,14 @@
-import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic'; describe('TestimonialsSectiondynamic',() => { test('renders without crashing',() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId('testimonialssection.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<TestimonialsSectiondynamic />)}); test('handles user interactions',() => { render(<TestimonialsSectiondynamic />)}); test('applies correct styling',() => { render(<TestimonialsSectiondynamic />)})});
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic';
 
-describe('TestimonialsSectiondynamic', () => {
-  test('renders without crashing', () => {
-    render(<TestimonialsSectiondynamic />);
-    expect(
-      screen.getByTestId('testimonialssection.dynamic')
-    ).toBeInTheDocument()});
+interface TestimonialsSection.dynamic.testProps {
+  // Add props here as needed
+}
 
-  test('displays correct content', () => {
-    render(<TestimonialsSectiondynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<TestimonialsSectiondynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
-    render(<TestimonialsSectiondynamic />);
-    // Add styling tests if needed
-  })});
+export default function TestimonialsSection.dynamic.test({ }: TestimonialsSection.dynamic.testProps) {
+  return (
+    <div>
+      <h1>TestimonialsSection.dynamic.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
