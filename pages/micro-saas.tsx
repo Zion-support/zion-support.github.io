@@ -17,92 +17,248 @@ import {
   Shield,
   Globe
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from './components/Layout';
 
 const microSaasSolutions = [
   {
-    title: "Workflow Automation",
-    description: "Streamline business processes with intelligent automation tools",
+    title: "AI-Powered Workflow Automation",
+    description: "Intelligent process automation with machine learning capabilities for maximum efficiency",
     icon: Zap,
     features: [
-      "Process Automation",
-      "Task Scheduling",
-      "Data Integration",
-      "Custom Workflows",
-      "API Integrations",
-      "Real-time Notifications"
+      "Smart Process Discovery",
+      "AI-Driven Task Routing",
+      "Predictive Workflow Optimization",
+      "Natural Language Processing",
+      "Intelligent Document Processing",
+      "Real-time Decision Making",
+      "Cross-Platform Integration",
+      "Automated Compliance Checking"
     ],
-    price: "Starting at $1,500/month"
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-4,000/month",
+    benefits: ["Reduce processing time by 75%", "Eliminate 90% of manual errors", "Increase productivity by 60%"],
+    setupTime: "2-3 weeks",
+    targetUsers: "Finance, Healthcare, Legal, Manufacturing"
   },
   {
-    title: "Data Processing Tools",
-    description: "Powerful data analysis and processing solutions",
+    title: "Real-Time Data Analytics Platform",
+    description: "Advanced data processing and visualization with real-time insights and predictive analytics",
     icon: BarChart3,
     features: [
-      "Data Visualization",
-      "ETL Processes",
-      "Real-time Analytics",
-      "Custom Dashboards",
-      "Report Generation",
-      "Data Export/Import"
+      "Real-time Data Streaming",
+      "Advanced Visualization Tools",
+      "Predictive Analytics Engine",
+      "Custom KPI Dashboards",
+      "Automated Report Generation",
+      "Data Quality Monitoring",
+      "Machine Learning Integration",
+      "Multi-source Data Connectors"
     ],
-    price: "Starting at $2,000/month"
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-6,000/month",
+    benefits: ["50% faster decision making", "30% increase in data accuracy", "40% reduction in reporting time"],
+    setupTime: "3-4 weeks",
+    targetUsers: "E-commerce, Marketing, Operations, Sales"
   },
   {
-    title: "API Integration Services",
-    description: "Connect your systems with seamless API solutions",
+    title: "Smart API Management Suite",
+    description: "Comprehensive API development, management, and monetization platform with advanced security",
     icon: Code,
     features: [
-      "REST API Development",
-      "Third-party Integrations",
-      "Webhook Management",
-      "API Documentation",
-      "Rate Limiting",
-      "Authentication & Security"
+      "Auto-Generated API Documentation",
+      "Advanced Rate Limiting & Throttling",
+      "API Gateway Management",
+      "Real-time Analytics & Monitoring",
+      "Developer Portal & SDK Generation",
+      "API Versioning & Lifecycle Management",
+      "OAuth 2.0 & JWT Authentication",
+      "API Monetization Tools"
     ],
-    price: "Starting at $1,800/month"
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,800-5,500/month",
+    benefits: ["Reduce API development time by 70%", "Improve API performance by 50%", "Increase developer adoption by 80%"],
+    setupTime: "2-3 weeks",
+    targetUsers: "SaaS Companies, Enterprises, Fintech, E-commerce"
   },
   {
-    title: "Custom Dashboard Solutions",
-    description: "Tailored dashboards for your business needs",
+    title: "Intelligent Customer Experience Platform",
+    description: "AI-powered customer engagement and support automation with personalized experiences",
+    icon: Users,
+    features: [
+      "AI Chatbot & Virtual Assistants",
+      "Personalized Content Delivery",
+      "Sentiment Analysis & Monitoring",
+      "Automated Ticket Routing",
+      "Customer Journey Mapping",
+      "Real-time Support Analytics",
+      "Multi-channel Communication",
+      "Predictive Customer Insights"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,800-7,000/month",
+    benefits: ["Increase customer satisfaction by 45%", "Reduce support costs by 60%", "Improve response time by 85%"],
+    setupTime: "3-5 weeks",
+    targetUsers: "Retail, SaaS, Healthcare, Education"
+  },
+  {
+    title: "Blockchain-Based Document Management",
+    description: "Secure, immutable document storage and verification system with smart contracts",
+    icon: Shield,
+    features: [
+      "Immutable Document Storage",
+      "Smart Contract Automation",
+      "Digital Signature Verification",
+      "Document Version Control",
+      "Access Control & Permissions",
+      "Audit Trail & Compliance",
+      "Multi-signature Workflows",
+      "Integration APIs"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,200-8,500/month",
+    benefits: ["100% document integrity guarantee", "Reduce verification time by 90%", "Eliminate document fraud"],
+    setupTime: "4-6 weeks",
+    targetUsers: "Legal, Finance, Government, Healthcare"
+  },
+  {
+    title: "IoT Device Management Platform",
+    description: "Comprehensive IoT device monitoring, management, and analytics with edge computing",
+    icon: Globe,
+    features: [
+      "Device Registration & Provisioning",
+      "Real-time Device Monitoring",
+      "Edge Computing Capabilities",
+      "Data Collection & Processing",
+      "Remote Device Control",
+      "Predictive Maintenance",
+      "Security & Encryption",
+      "Scalable Cloud Infrastructure"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,500/month",
+    benefits: ["Reduce maintenance costs by 40%", "Improve device uptime by 25%", "Enable predictive maintenance"],
+    setupTime: "3-4 weeks",
+    targetUsers: "Manufacturing, Agriculture, Smart Cities, Energy"
+  },
+  {
+    title: "Advanced Project Management Suite",
+    description: "AI-enhanced project management with resource optimization and predictive analytics",
     icon: Settings,
     features: [
-      "Real-time Monitoring",
-      "Custom Widgets",
-      "User Management",
-      "Role-based Access",
-      "Mobile Responsive",
-      "Export Capabilities"
+      "AI-Powered Resource Allocation",
+      "Predictive Project Analytics",
+      "Automated Risk Assessment",
+      "Real-time Collaboration Tools",
+      "Time Tracking & Billing",
+      "Custom Workflow Builder",
+      "Integration Marketplace",
+      "Advanced Reporting Suite"
     ],
-    price: "Starting at $1,200/month"
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Increase project success rate by 35%", "Reduce project delays by 50%", "Improve resource utilization by 40%"],
+    setupTime: "2-3 weeks",
+    targetUsers: "Consulting, Construction, Software Development, Marketing"
   },
   {
-    title: "SaaS Platform Development",
-    description: "Complete SaaS solutions from concept to deployment",
-    icon: Cloud,
+    title: "Financial Technology Platform",
+    description: "Comprehensive fintech solutions including payment processing, risk management, and compliance",
+    icon: DollarSign,
     features: [
-      "Multi-tenant Architecture",
-      "Subscription Management",
-      "Payment Integration",
-      "User Onboarding",
-      "Analytics & Reporting",
-      "Scalable Infrastructure"
+      "Multi-currency Payment Processing",
+      "Real-time Risk Assessment",
+      "Regulatory Compliance Automation",
+      "Fraud Detection & Prevention",
+      "Financial Reporting & Analytics",
+      "KYC/AML Verification",
+      "Cryptocurrency Integration",
+      "Banking API Connections"
     ],
-    price: "Starting at $3,500/month"
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-12,000/month",
+    benefits: ["Reduce transaction processing time by 80%", "Lower fraud rates by 95%", "Improve compliance efficiency by 70%"],
+    setupTime: "4-6 weeks",
+    targetUsers: "Banks, Fintech, E-commerce, Lending"
   },
   {
-    title: "Business Intelligence Tools",
-    description: "Advanced BI solutions for data-driven decisions",
-    icon: BarChart3,
+    title: "Healthcare Management System",
+    description: "HIPAA-compliant healthcare management with AI-powered diagnostics and patient care",
+    icon: Heart,
     features: [
-      "Interactive Dashboards",
-      "Predictive Analytics",
-      "Data Mining",
-      "Custom Reports",
-      "Machine Learning Integration",
-      "Real-time Insights"
+      "Electronic Health Records (EHR)",
+      "AI-Powered Diagnostic Tools",
+      "Patient Portal & Communication",
+      "Appointment Scheduling & Management",
+      "Prescription Management",
+      "Telemedicine Integration",
+      "Medical Billing & Insurance",
+      "Compliance & Security"
     ],
-    price: "Starting at $2,500/month"
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-9,000/month",
+    benefits: ["Improve patient outcomes by 30%", "Reduce administrative costs by 45%", "Enhance diagnostic accuracy by 25%"],
+    setupTime: "5-8 weeks",
+    targetUsers: "Hospitals, Clinics, Private Practices, Telemedicine"
+  },
+  {
+    title: "E-Learning & Training Platform",
+    description: "Advanced learning management system with AI-powered personalization and analytics",
+    icon: GraduationCap,
+    features: [
+      "AI-Powered Learning Paths",
+      "Interactive Content Creation",
+      "Real-time Progress Tracking",
+      "Gamification & Badges",
+      "Video Conferencing Integration",
+      "Assessment & Certification",
+      "Mobile Learning Apps",
+      "Advanced Analytics & Reporting"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["Increase learning engagement by 60%", "Improve completion rates by 40%", "Reduce training costs by 35%"],
+    setupTime: "3-4 weeks",
+    targetUsers: "Education, Corporate Training, Online Courses, Professional Development"
+  },
+  {
+    title: "Supply Chain Optimization Platform",
+    description: "AI-driven supply chain management with predictive analytics and automation",
+    icon: Truck,
+    features: [
+      "Demand Forecasting & Planning",
+      "Inventory Optimization",
+      "Supplier Relationship Management",
+      "Logistics & Route Optimization",
+      "Risk Assessment & Mitigation",
+      "Sustainability Tracking",
+      "Real-time Visibility",
+      "Integration with ERP Systems"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,800-7,500/month",
+    benefits: ["Reduce inventory costs by 30%", "Improve delivery times by 25%", "Increase supply chain visibility by 90%"],
+    setupTime: "4-6 weeks",
+    targetUsers: "Manufacturing, Retail, Logistics, Food & Beverage"
+  },
+  {
+    title: "Real Estate Management Platform",
+    description: "Comprehensive property management with AI-powered market analysis and tenant management",
+    icon: Home,
+    features: [
+      "Property Listing & Management",
+      "AI Market Analysis & Pricing",
+      "Tenant Screening & Management",
+      "Maintenance Request Tracking",
+      "Financial Reporting & Analytics",
+      "Document Management",
+      "Mobile Property Inspection",
+      "Integration with MLS"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,000/month",
+    benefits: ["Increase property occupancy by 20%", "Reduce management time by 50%", "Improve tenant satisfaction by 35%"],
+    setupTime: "3-4 weeks",
+    targetUsers: "Property Management, Real Estate Agencies, Landlords, Commercial Real Estate"
   }
 ];
 

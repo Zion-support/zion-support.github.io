@@ -52,23 +52,27 @@ const footerSections = [
   {
     title: 'Services',
     links: [
-      { title: 'AI Services', href: '/ai-services', icon: Brain },
-      { title: 'IT Services', href: '/it-services', icon: Network },
-      { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
+      { title: 'AI Services (100+)', href: '/ai-services', icon: Brain },
+      { title: 'IT Services (85+)', href: '/it-services', icon: Network },
+      { title: 'Micro SaaS (120+)', href: '/micro-saas', icon: Cloud },
       { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
       { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
-      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 }
+      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
+      { title: 'Automation', href: '/automation', icon: Zap },
+      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { title: 'Automation', href: '/automation', icon: Zap },
-      { title: 'AI Development', href: '/ai-development', icon: Brain },
       { title: 'Digital Transformation', href: '/digital-transformation', icon: Settings },
+      { title: 'AI Development', href: '/ai-development', icon: Brain },
+      { title: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
       { title: 'IoT Solutions', href: '/iot-solutions', icon: Globe },
-      { title: 'Blockchain', href: '/blockchain', icon: Lock },
-      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code }
+      { title: 'Edge Computing', href: '/edge-computing', icon: Server },
+      { title: 'MLOps & AIOps', href: '/mlops', icon: Code },
+      { title: 'Green IT', href: '/green-it', icon: Sprout },
+      { title: 'API Management', href: '/api-management', icon: Settings }
     ]
   },
   {
@@ -79,7 +83,9 @@ const footerSections = [
       { title: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
       { title: 'Retail', href: '/industries/retail', icon: ShoppingCart },
       { title: 'Education', href: '/industries/education', icon: BookOpen },
-      { title: 'Real Estate', href: '/industries/real-estate', icon: Home }
+      { title: 'Real Estate', href: '/industries/real-estate', icon: Home },
+      { title: 'Government', href: '/industries/government', icon: Building },
+      { title: 'Energy', href: '/industries/energy', icon: Zap }
     ]
   },
   {
@@ -89,8 +95,10 @@ const footerSections = [
       { title: 'Case Studies', href: '/case-studies', icon: BarChart3 },
       { title: 'White Papers', href: '/white-papers', icon: FileText },
       { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
-      { title: 'Documentation', href: '/docs', icon: FileText },
-      { title: 'Events', href: '/events', icon: Calendar }
+      { title: 'Webinars', href: '/webinars', icon: Video },
+      { title: 'Events', href: '/events', icon: Calendar },
+      { title: 'API Documentation', href: '/api-docs', icon: Code },
+      { title: 'Documentation', href: '/docs', icon: FileText }
     ]
   },
   {
@@ -101,8 +109,9 @@ const footerSections = [
       { title: 'Careers', href: '/careers', icon: Users },
       { title: 'Partners', href: '/partners', icon: Globe },
       { title: 'News', href: '/news', icon: FileText },
-      { title: 'Press', href: '/press', icon: FileText },
-      { title: 'Contact', href: '/contact', icon: MessageSquare }
+      { title: 'Contact', href: '/contact', icon: Phone },
+      { title: 'Pricing', href: '/pricing', icon: DollarSign },
+      { title: 'Support', href: '/support', icon: MessageSquare }
     ]
   },
   {
@@ -113,7 +122,9 @@ const footerSections = [
       { title: 'API Reference', href: '/api', icon: Code },
       { title: 'Status Page', href: '/status', icon: BarChart3 },
       { title: 'Community', href: '/community', icon: Users },
-      { title: 'Training', href: '/training', icon: BookOpen }
+      { title: 'Training', href: '/training', icon: BookOpen },
+      { title: 'FAQ', href: '/faq', icon: HelpCircle },
+      { title: 'Contact Support', href: '/contact', icon: Phone }
     ]
   }
 ];
