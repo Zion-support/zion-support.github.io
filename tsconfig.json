@@ -1,15 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-<<<<<<< HEAD
-    "lib": ["dom", "dom.iterable", "es6"],
-=======
     "lib": [
       "dom",
       "dom.iterable",
       "es6"
     ],
->>>>>>> main
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
