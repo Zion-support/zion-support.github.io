@@ -194,22 +194,22 @@ const navigationItems = [
         description: 'Success stories and results'
       },
       {
-        title: 'White Papers',
-        href: '/white-papers',
-        icon: Document,
-        description: 'In-depth research reports'
+        title: 'News',
+        href: '/news',
+        icon: FileText,
+        description: 'Company updates and announcements'
       },
       {
-        title: 'Webinars',
-        href: '/webinars',
-        icon: Calendar,
-        description: 'Educational sessions'
+        title: 'Help Center',
+        href: '/help',
+        icon: MessageSquare,
+        description: 'Support and documentation'
       },
       {
-        title: 'Tutorials',
-        href: '/tutorials',
-        icon: BookOpen,
-        description: 'Step-by-step guides'
+        title: 'API Documentation',
+        href: '/api-docs',
+        icon: Code,
+        description: 'Technical documentation'
       }
     ]
   },
@@ -255,7 +255,7 @@ const navigationItems = [
 const quickLinks = [
   { title: 'Pricing', href: '/pricing', icon: DollarSign },
   { title: 'Contact', href: '/contact', icon: Phone },
-  { title: 'Support', href: '/support', icon: MessageSquare },
+  { title: 'Help', href: '/help', icon: MessageSquare },
   { title: 'Status', href: '/status', icon: BarChart3 }
 ];
 

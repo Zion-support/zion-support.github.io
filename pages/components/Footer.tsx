@@ -87,10 +87,10 @@ const footerSections = [
     links: [
       { title: 'Blog', href: '/blog', icon: FileText },
       { title: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-      { title: 'White Papers', href: '/white-papers', icon: FileText },
-      { title: 'Webinars', href: '/webinars', icon: Calendar },
-      { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
-      { title: 'Documentation', href: '/docs', icon: FileText }
+      { title: 'News', href: '/news', icon: FileText },
+      { title: 'Help Center', href: '/help', icon: MessageSquare },
+      { title: 'API Documentation', href: '/api-docs', icon: Code },
+      { title: 'Training', href: '/training', icon: BookOpen }
     ]
   },
   {
@@ -108,11 +108,18 @@ const footerSections = [
     title: 'Support',
     links: [
       { title: 'Help Center', href: '/help', icon: MessageSquare },
-      { title: 'Documentation', href: '/docs', icon: FileText },
-      { title: 'API Reference', href: '/api', icon: Code },
+      { title: 'Contact Us', href: '/contact', icon: MessageSquare },
       { title: 'Status Page', href: '/status', icon: BarChart3 },
-      { title: 'Community', href: '/community', icon: Users },
+      { title: 'Pricing', href: '/pricing', icon: DollarSign },
       { title: 'Training', href: '/training', icon: BookOpen }
+    ]
+  },
+  {
+    title: 'Legal',
+    links: [
+      { title: 'Privacy Policy', href: '/privacy', icon: Shield },
+      { title: 'Terms of Service', href: '/terms', icon: FileText },
+      { title: 'Cookie Policy', href: '/cookies', icon: Settings }
     ]
   }
 ];
