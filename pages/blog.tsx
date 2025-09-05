@@ -70,6 +70,7 @@ const blogPosts = [{
     image: "/api/placeholder/600/300",
     tags: ["API", "Development", "Design"]
   }]
+
 export default function BlogPage() {
   return (
     <MainLayout
@@ -112,6 +113,7 @@ export default function BlogPage() {
                       transition={{ duration: 0.8, delay: index * 0.1 }}
                       viewport={{ once: true }}>
                       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600">
+                        <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
                       </div>
                       <div className="p-6">
                         <div className="flex flex-wrap gap-2 mb-3">
@@ -151,10 +153,24 @@ export default function BlogPage() {
                   ))}
                 </div>
               </div>
+              {/* Sidebar */}
+              <div className="lg:col-span-1">
+                <div className="bg-white rounded-lg shadow-lg p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Posts</h3>
+                  <div className="space-y-4">
+                    {blogPosts.slice(0, 3).map((post) => (
+                      <div key={post.id} className="border-b border-gray-200 pb-4 last:border-b-0">
+                        <h4 className="text-sm font-medium text-gray-900 mb-1">{post.title}</h4>
+                        <p className="text-xs text-gray-500">{post.date}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   )
 }
