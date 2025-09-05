@@ -1,7 +1,8 @@
 import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
+import MainLayout from '../src/components/layout/MainLayout';import { motion } from 'framer-motion';
 import {
+  Calendar,
+  User,
   ArrowRight,
   Phone,
   Mail,
@@ -10,12 +11,9 @@ import {
   CheckCircle,
   Users,
   Building,
-  Globe,
-  Award,
+  Globe,  Award,
   Clock,
-  BarChart3,
-  Cloud,
-  Shield
+  CheckCircle
 } from 'lucide-react';
 
 const caseStudies = [
@@ -25,12 +23,11 @@ const caseStudies = [
     client: "Global E-commerce Retailer",
     industry: "E-commerce",
     challenge: "High customer service costs and inconsistent response quality",
-    solution: "Implemented AI-powered chatbot and intelligent routing system",
-    results: [
-      "60% reduction in support costs",
-      "40% faster response times",
-      "95% customer satisfaction rate",
-      "$2M annual savings"
+    solution: "Implemented AI-powered chatbot and intelligent routing system",    results: [
+      "99.2% fraud detection accuracy",
+      "80% reduction in false positives",
+      "Real-time transaction monitoring",
+      "30% cost savings in fraud prevention"
     ],
     duration: "3 months",
     team: "8 experts",
@@ -53,20 +50,19 @@ const caseStudies = [
     duration: "6 months",
     team: "12 experts",
     technologies: ["AWS", "Kubernetes", "Microservices", "DevOps"],
-    image: "/images/case-studies/cloud-migration.jpg"
-  },
+    image: "/images/case-studies/cloud-migration.jpg"  },
   {
     id: 3,
-    title: "Cybersecurity Enhancement for Healthcare",
-    client: "Healthcare Network",
-    industry: "Healthcare",
-    challenge: "Increasing cyber threats and compliance requirements",
-    solution: "Comprehensive security framework and threat detection system",
+    title: "Manufacturing: Predictive Maintenance with IoT and AI",
+    company: "Industrial Dynamics",
+    industry: "Manufacturing",
+    challenge: "Unexpected equipment failures causing production delays",
+    solution: "Implemented IoT sensors with AI predictive maintenance algorithms",
     results: [
-      "Zero security breaches",
-      "100% compliance with HIPAA",
-      "24/7 threat monitoring",
-      "50% faster incident response"
+      "70% reduction in unplanned downtime",
+      "25% increase in equipment lifespan",
+      "15% reduction in maintenance costs",
+      "Predictive accuracy of 92%"
     ],
     duration: "4 months",
     team: "6 experts",
@@ -285,6 +281,5 @@ export default function CaseStudiesPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
-  );
+    </MainLayout>  );
 }

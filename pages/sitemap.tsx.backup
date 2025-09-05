@@ -1,3 +1,4 @@
+:pages/sitemap.tsx.backup
   Users, 
   Briefcase, 
   Phone, 
@@ -390,6 +391,33 @@ const siteMap = [
       { name: 'About Us', href: '/about', description: 'Company information and team' },
       { name: 'Contact', href: '/contact', description: 'Get in touch with us' },
       { name: 'Careers', href: '/careers', description: 'Job opportunities' }    ]
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Home, 
+  Brain, 
+  Network, 
+  Target, 
+  Users, 
+  Shield, 
+  Cloud, 
+  BarChart3, 
+  Settings, 
+  Globe, 
+  ArrowRight 
+} from 'lucide-react';
+
+const sitemapData = [
+  {
+    category: 'Main Pages',
+    pages: [
+      { name: 'Home', url: '/', icon: Home },
+      { name: 'About', url: '/about', icon: Users },
+      { name: 'Contact', url: '/contact', icon: Globe },
+      { name: 'Services', url: '/services', icon: Settings }
+    ]
   },
   {
     category: 'Services',
@@ -404,6 +432,11 @@ const siteMap = [
   },
   {
     category: 'Solutions',
+:pages/sitemap.tsx.backup
+    pages: [
+      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud },
+      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings },
+      { name: 'Custom Solutions', url: '/solutions/custom', icon: Target }
     ]
   },
   {
@@ -417,19 +450,40 @@ const siteMap = [
   }
 ];
 
+:pages/sitemap.tsx.backup
+export default function SitemapPage() {
+  return (
+    <>
+      <Head>
+        <title>Sitemap - Zion Tech Group</title>
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               className="text-center"
             >
+:pages/sitemap.tsx.backup
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Sitemap</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Complete overview of all pages and sections on our website.
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Site <span className="text-yellow-400">Map</span>
+              </h1>
+              <p className="text-xl mb-8 max-w-3xl mx-auto">
+                Navigate through all our pages, services, and resources
+              </p>
             </motion.div>
           </div>
         </section>
 
+:pages/sitemap.tsx.backup
               </div>
             </div>
           </div>
@@ -466,4 +520,44 @@ const siteMap = [
         </section>
       </div>
     </>
+        {/* Sitemap Content */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {sitemapData.map((section, sectionIndex) => (
+                <motion.div
+                  key={section.category}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
+                  className="bg-white rounded-lg shadow-lg p-6"
+                >
+                  <h3 className="text-xl font-bold mb-4 text-gray-800">
+                    {section.category}
+                  </h3>
+                  <div className="space-y-3">
+                    {section.pages.map((page, pageIndex) => (
+                      <Link
+                        key={page.name}
+                        href={page.url}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                      >
+                        <page.icon className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />
+                        <div>
+                          <div className="font-medium text-gray-800 group-hover:text-blue-600">
+                            {page.name}
+                          </div>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 ml-auto" />
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
 }

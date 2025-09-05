@@ -86,8 +86,7 @@ export function HireNowCTA("props": "any) {;
       </CardContent>;
     </Card>)}
 ;
-export default HireNowCTA;        e.preventDefault();
-        if (onHire) {
+export default HireNowCTA;        e.preventDefault();        if (onHire) {
             onHire(formData);
         }
         // Reset form and close

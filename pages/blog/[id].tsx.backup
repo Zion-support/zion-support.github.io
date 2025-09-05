@@ -1,6 +1,9 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+:pages/blog/[id].tsx.backup
 import Layout from '../../components/layout/Layout';import Link from 'next/link';
+import Layout from '../../components/Layout';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag, Clock, Share2, BookOpen } from 'lucide-react';
 

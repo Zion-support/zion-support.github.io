@@ -745,6 +745,5 @@ export default function MicroSaasPage() {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>  );
 }

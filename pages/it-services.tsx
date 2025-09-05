@@ -60,20 +60,10 @@ const services = [
   },
   {
     title: "DevOps & Automation",
-    description: "Streamline your development and deployment processes",
-    icon: Zap,
-    features: [
-      "CI/CD Pipeline Setup",
-      "Infrastructure as Code",
-      "Monitoring & Logging",
-      "Performance Optimization",
-      "Automated Testing",
-      "Deployment Automation"
-    ],
-    price: "Starting at $1,500/month",
-    marketPrice: "$2,500-6,000/month",
-    benefits: ["Deploy 10x faster", "Reduce errors by 80%", "Automated scaling"],
-    setupTime: "2-4 weeks"
+    description: "Streamline your development and deployment processes",    icon: Zap,
+    title: 'Cost Savings',
+    description: 'Optimized infrastructure and processes',
+    stat: '40%'
   },
   {
     title: "Database Management",
@@ -179,203 +169,12 @@ const services = [
   },
   {
     title: "IT Security Services",
-    description: "Comprehensive security services to protect your infrastructure",
-    icon: Shield,
-    features: [
-      "Security Assessment",
-      "Vulnerability Management",
-      "Security Monitoring",
-      "Incident Response",
-      "Security Training",
-      "Compliance Auditing"
-    ],
-    price: "Starting at $2,200/month",
-    marketPrice: "$3,500-8,000/month",
-    benefits: ["Enhanced security posture", "Compliance ready", "Reduced risk"],
-    setupTime: "2-4 weeks"
-  },
+    description: "Comprehensive security services to protect your infrastructure",  },
   {
-    title: "Backup & Disaster Recovery",
-    description: "Comprehensive backup and disaster recovery solutions",
-    icon: Database,
-    features: [
-      "Automated Backups",
-      "Disaster Recovery Planning",
-      "Data Replication",
-      "Recovery Testing",
-      "Cloud Backup Solutions",
-      "Business Continuity"
-    ],
-    price: "Starting at $1,500/month",
-    marketPrice: "$2,500-7,000/month",
-    benefits: ["Zero data loss", "Fast recovery", "Business continuity"],
-    setupTime: "2-3 weeks"
-  },
-  {
-    title: "IT Infrastructure Monitoring",
-    description: "Advanced monitoring and alerting for your IT infrastructure",
-    icon: Settings,
-    features: [
-      "Real-time Monitoring",
-      "Performance Analytics",
-      "Alert Management",
-      "Capacity Planning",
-      "Trend Analysis",
-      "Custom Dashboards"
-    ],
-    price: "Starting at $1,000/month",
-    marketPrice: "$1,800-4,500/month",
-    benefits: ["Proactive issue detection", "Better performance", "Reduced downtime"],
-    setupTime: "1-2 weeks"
-  },
-  {
-    title: "IT Support & Helpdesk",
-    description: "Professional IT support and helpdesk services",
-    icon: Users,
-    features: [
-      "24/7 Technical Support",
-      "Remote Assistance",
-      "Issue Tracking",
-      "Knowledge Base",
-      "User Training",
-      "Service Level Agreements"
-    ],
-    price: "Starting at $1,200/month",
-    marketPrice: "$2,000-5,000/month",
-    benefits: ["Fast resolution times", "Expert support", "User satisfaction"],
-    setupTime: "1-2 weeks"
-  },
-  {
-    title: "IT Asset Management",
-    description: "Complete IT asset lifecycle management and optimization",
-    icon: Package,
-    features: [
-      "Asset Discovery",
-      "Inventory Management",
-      "License Management",
-      "Lifecycle Planning",
-      "Cost Optimization",
-      "Compliance Tracking"
-    ],
-    price: "Starting at $1,000/month",
-    marketPrice: "$1,800-4,000/month",
-    benefits: ["Cost optimization", "License compliance", "Asset visibility"],
-    setupTime: "2-3 weeks"
-  },
-  {
-    title: "IT Project Management",
-    description: "Professional IT project management and implementation",
-    icon: CheckCircle,
-    features: [
-      "Project Planning",
-      "Resource Management",
-      "Timeline Management",
-      "Risk Assessment",
-      "Quality Assurance",
-      "Stakeholder Communication"
-    ],
-    price: "Starting at $2,000/month",
-    marketPrice: "$3,500-8,000/month",
-    benefits: ["On-time delivery", "Budget control", "Quality assurance"],
-    setupTime: "1-2 weeks"
-  },
-  {
-    title: "IT Training & Certification",
-    description: "Comprehensive IT training and certification programs",
-    icon: GraduationCap,
-    features: [
-      "Technical Training",
-      "Certification Programs",
-      "Skill Assessment",
-      "Custom Training",
-      "Online Learning",
-      "Hands-on Labs"
-    ],
-    price: "Starting at $1,500/month",
-    marketPrice: "$2,500-6,000/month",
-    benefits: ["Improved skills", "Certification ready", "Better performance"],
-    setupTime: "1-2 weeks"
-  },
-  {
-    title: "IT Compliance & Governance",
-    description: "IT compliance management and governance services",
-    icon: Shield,
-    features: [
-      "Compliance Assessment",
-      "Policy Development",
-      "Audit Preparation",
-      "Risk Management",
-      "Governance Framework",
-      "Regulatory Updates"
-    ],
-    price: "Starting at $2,500/month",
-    marketPrice: "$4,000-10,000/month",
-    benefits: ["Compliance ready", "Risk reduction", "Audit preparation"],
-    setupTime: "2-4 weeks"
-  },
-  {
-    title: "IT Vendor Management",
-    description: "Strategic IT vendor management and optimization",
-    icon: Settings,
-    features: [
-      "Vendor Assessment",
-      "Contract Management",
-      "Performance Monitoring",
-      "Cost Optimization",
-      "Relationship Management",
-      "Service Level Management"
-    ],
-    price: "Starting at $1,800/month",
-    marketPrice: "$3,000-7,000/month",
-    benefits: ["Cost savings", "Better service", "Strategic partnerships"],
-    setupTime: "1-2 weeks"
-  },
-  {
-    title: "IT Innovation & R&D",
-    description: "IT innovation services and emerging technology adoption",
-    icon: Zap,
-    features: [
-      "Technology Research",
-      "Proof of Concept",
-      "Innovation Labs",
-      "Emerging Tech Adoption",
-      "Digital Transformation",
-      "Future Technology Planning"
-    ],
-    price: "Starting at $3,000/month",
-    marketPrice: "$5,000-15,000/month",
-    benefits: ["Competitive advantage", "Innovation leadership", "Future readiness"],
-    setupTime: "2-4 weeks"
-  },
-  {
-    title: "IT Cost Optimization",
-    description: "Strategic IT cost reduction and optimization services",
-    icon: DollarSign,
-    features: [
-      "Cost Analysis",
-      "Budget Optimization",
-      "Resource Right-sizing",
-      "Cloud Cost Management",
-      "License Optimization",
-      "ROI Analysis"
-    ],
-    price: "Starting at $2,000/month",
-    marketPrice: "$3,500-8,000/month",
-    benefits: ["30% cost reduction", "Better ROI", "Optimized spending"],
-    setupTime: "2-3 weeks"
-  }
-];
-
-const whyChooseUs = [
-  {
-    title: "Expert Team",
-    description: "Certified professionals with deep expertise in IT infrastructure",
-    icon: "👥"
-  },
-  {
-    title: "24/7 Support",
-    description: "Round-the-clock monitoring and support for your systems",
-    icon: "🛡️"
+    name: 'Premium Support',
+    description: 'Extended hours and priority support',
+    features: ['24/7 Support', 'Priority Response', 'Advanced Monitoring', 'Weekly Reports'],
+    pricing: '$3,000/month'
   },
   {
     title: "Proven Track Record",
@@ -485,8 +284,7 @@ export default function ITServicesPage() {
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center">
                           <ArrowRight className="w-3 h-3 text-blue-500 mr-1" />
-                          {benefit}
-                        </li>
+                          {benefit}                        </li>
                       ))}
                     </ul>
                   </div>
@@ -575,6 +373,5 @@ export default function ITServicesPage() {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>  );
 }

@@ -45,8 +45,7 @@ const newsCategories = [
   { name: 'Events', count: 10, color: 'bg-indigo-100 text-indigo-800' }
 ];
 
-const featuredNews = [
-  {
+const featuredNews = [  {
     id: 1,
     title: 'Zion Tech Group Launches Revolutionary AI-Powered Analytics Platform',
     excerpt: 'Our new AI analytics platform transforms how businesses process and understand their data, delivering insights 10x faster than traditional methods.',
@@ -372,6 +371,5 @@ export default function NewsPage() {
           </div>
         </section>
       </div>
-    </Layout>
-  );
+    </Layout>  );
 }

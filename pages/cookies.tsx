@@ -347,6 +347,5 @@ export default function CookiePolicyPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
-  );
+    </MainLayout>  );
 }

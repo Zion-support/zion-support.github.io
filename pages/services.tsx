@@ -13,8 +13,7 @@ const services = [
     services: [
       "Machine Learning & Deep Learning",
       "Natural Language Processing",
-      "Computer Vision & Image Recognition",
-        'Cloud security & compliance',
+      "Computer Vision & Image Recognition",        'Cloud security & compliance',
         '24/7 monitoring & support'
       ],
       href: '/cloud-solutions',
@@ -125,6 +124,24 @@ const services = [
   ];
 
   return (
+    <>
+      <Head>
+        <title>Our Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive technology services including AI development, IT solutions, micro SaaS platforms, cybersecurity, and cloud services. Expert solutions for modern businesses." />
+        <meta name="keywords" content="AI services, IT services, micro SaaS, cybersecurity, cloud solutions, mobile development, technology consulting" />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Comprehensive Technology Services
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200">
+              From AI development to cloud solutions, we provide end-to-end technology services 
+              that drive business growth and digital transformation.
+            </p>
     <MainLayout
       title="Our Services - Zion Tech Group"
       description="Discover our comprehensive range of technology services including AI solutions, cloud services, cybersecurity, and custom development. Transform your business with our expertise."

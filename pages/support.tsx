@@ -20,6 +20,12 @@ import {
 
 const supportChannels = [
   {
+    icon: MessageCircle,
+    title: 'Live Chat',
+    description: 'Get instant help with our 24/7 live chat support',
+    availability: '24/7'
+  },
+  {
     icon: Phone,
     title: 'Phone Support',
     description: 'Speak directly with our technical experts',
@@ -304,30 +310,5 @@ export default function SupportPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Still Need Help?</h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Our expert team is ready to assist you with any questions or issues you may have.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+13024640950"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-                >
-                  Call +1 302 464 0950
-                </a>
-                <Link 
-                  href="/contact"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Contact Support
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
+              viewport={{ once: true }}  );
 }

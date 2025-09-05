@@ -60,8 +60,7 @@ const featuredTutorials = [
     students: 1250,
     featured: true,
     tags: ['AI', 'Machine Learning', 'Beginner', 'Fundamentals'],
-    videoUrl: '/tutorials/ai-beginners-guide'
-  },
+    videoUrl: '/tutorials/ai-beginners-guide'  },
   {
     id: 2,
     title: 'Building Secure Web Applications: Best Practices',
@@ -325,8 +324,7 @@ export default function TutorialsPage() {
                   className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
+                  transition={{ duration: 0.5, delay: index * 0.1 }}                >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <div className="flex items-center mb-2">
@@ -415,6 +413,5 @@ export default function TutorialsPage() {
           </div>
         </section>
       </div>
-    </Layout>
-  );
+    </Layout>  );
 }

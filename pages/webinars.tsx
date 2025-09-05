@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import {
+import Link from 'next/link';import {
   Play,
   Calendar,
   Clock,
@@ -18,147 +17,15 @@ import {
 } from 'lucide-react';
 
 export default function WebinarsPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All Webinars' },
-    { id: 'ai', name: 'AI & Machine Learning' },
-    { id: 'cloud', name: 'Cloud Solutions' },
-    { id: 'security', name: 'Cybersecurity' },
-    { id: 'development', name: 'Development' },
-    { id: 'business', name: 'Business Strategy' }
-  ];
-
-  const webinars = [
-    {
-      id: 1,
-      title: 'Introduction to AI and Machine Learning',
-      description: 'Learn the fundamentals of AI and ML, including key concepts, applications, and implementation strategies for your business.',
-      category: 'ai',
-      date: '2024-01-15',
-      time: '2:00 PM EST',
-      duration: '60 minutes',
-      attendees: 1250,
-      speaker: 'Dr. Sarah Johnson',
-      speakerTitle: 'AI Research Director',
-      image: '/api/placeholder/400/250',
-      videoUrl: '#',
-      slidesUrl: '#',
-      isLive: false,
-      isUpcoming: true,
-      rating: 4.8
-    },
-    {
-      id: 2,
-      title: 'Cloud Migration Best Practices',
-      description: 'Discover proven strategies for migrating your infrastructure to the cloud while minimizing downtime and maximizing efficiency.',
-      category: 'cloud',
-      date: '2024-01-22',
-      time: '3:00 PM EST',
-      duration: '45 minutes',
-      attendees: 980,
-      speaker: 'Mike Chen',
-      speakerTitle: 'Cloud Solutions Architect',
-      image: '/api/placeholder/400/250',
-      videoUrl: '#',
-      slidesUrl: '#',
-      isLive: false,
-      isUpcoming: true,
-      rating: 4.9
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity in the Digital Age',
-      description: 'Explore the latest cybersecurity threats and learn how to protect your organization with modern security practices.',
-      category: 'security',
-      date: '2024-01-08',
-      time: '1:00 PM EST',
-      duration: '75 minutes',
-      attendees: 2100,
-      speaker: 'Alex Rodriguez',
-      speakerTitle: 'Chief Security Officer',
-      image: '/api/placeholder/400/250',
-      videoUrl: '#',
-      slidesUrl: '#',
-      isLive: false,
-      isUpcoming: false,
-      rating: 4.7
-    },
-    {
-      id: 4,
-      title: 'Building Scalable Web Applications',
-      description: 'Learn how to design and build web applications that can handle millions of users with modern development practices.',
-      category: 'development',
-      date: '2024-01-29',
-      time: '4:00 PM EST',
-      duration: '90 minutes',
-      attendees: 0,
-      speaker: 'Emily Watson',
-      speakerTitle: 'Senior Full-Stack Developer',
-      image: '/api/placeholder/400/250',
-      videoUrl: '#',
-      slidesUrl: '#',
-      isLive: true,
-      isUpcoming: false,
-      rating: 0
-    },
-    {
-      id: 5,
-      title: 'Digital Transformation Strategy',
-      description: 'Understand how to create and execute a successful digital transformation strategy for your organization.',
-      category: 'business',
-      date: '2024-02-05',
-      time: '2:30 PM EST',
-      duration: '60 minutes',
-      attendees: 0,
-      speaker: 'David Kim',
-      speakerTitle: 'Digital Transformation Consultant',
-      image: '/api/placeholder/400/250',
-      videoUrl: '#',
-      slidesUrl: '#',
-      isLive: false,
-      isUpcoming: true,
-      rating: 0
-    },
-    {
-      id: 6,
-      title: 'Advanced AI Implementation',
-      description: 'Deep dive into advanced AI techniques and learn how to implement complex AI solutions in production environments.',
-      category: 'ai',
-      date: '2023-12-20',
-      time: '3:30 PM EST',
-      duration: '120 minutes',
-      attendees: 1850,
-      speaker: 'Dr. Sarah Johnson',
-      speakerTitle: 'AI Research Director',
-      image: '/api/placeholder/400/250',
-      videoUrl: '#',
-      slidesUrl: '#',
-      isLive: false,
-      isUpcoming: false,
-      rating: 4.9
-    }
-  ];
-
-  const filteredWebinars = webinars.filter(webinar => {
-    const matchesSearch = webinar.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         webinar.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const upcomingWebinars = webinars.filter(webinar => webinar.isUpcoming);
-  const liveWebinars = webinars.filter(webinar => webinar.isLive);
-  const pastWebinars = webinars.filter(webinar => !webinar.isUpcoming && !webinar.isLive);
-
   return (
-    <MainLayout
-      title="Webinars - Zion Tech Group"
-      description="Join our educational webinars on AI, cloud solutions, cybersecurity, and more. Learn from industry experts and advance your technical knowledge."
-      keywords="webinars, AI training, cloud education, cybersecurity, technology learning, online courses"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
+      <Head>
+        <title>Webinars & Events - Zion Tech Group</title>
+        <meta name="description" content="Join our educational webinars and learn from industry experts. Discover the latest trends in technology and business." />
+        <meta name="keywords" content="webinars, events, education, technology, learning, training" />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -442,19 +309,13 @@ export default function WebinarsPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+            <motion.div              className="text-center"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Stay Updated with Our Webinars
-              </h2>
-              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-                Subscribe to our newsletter to get notified about upcoming webinars, 
-                new content, and exclusive learning opportunities.
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Webinars & <span className="text-yellow-400">Events</span>
+              </h1>
+              <p className="text-xl mb-8 max-w-3xl mx-auto">
+                Join our educational webinars and learn from industry experts
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -469,11 +330,5 @@ export default function WebinarsPage() {
                 >
                   Browse Tutorials
                 </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </MainLayout>
-  );
+              </div>  );
 }

@@ -81,8 +81,7 @@ const challenges = [
     challenge: 'Scalability',
     description: 'Handling increasing transaction volumes and user growth.',
     solution: 'Cloud-native architecture, auto-scaling, and distributed systems.',
-    icon: TrendingUp
-  }
+    icon: TrendingUp  }
 ];
 
 const benefits = [
@@ -147,8 +146,7 @@ export default function Finance() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
+          <div className="container mx-auto px-4 relative z-10">            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -168,8 +166,7 @@ export default function Finance() {
                   Get FinTech Solution
                 </Link>
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  View Case Studies
-                </Link>
+                  View Case Studies                </Link>
               </div>
             </motion.div>
           </div>
@@ -240,8 +237,7 @@ export default function Finance() {
                     </div>
                   </motion.div>
                 );
-              })}
-            </div>
+              })}            </div>
           </div>
         </section>
 
@@ -333,8 +329,7 @@ export default function Finance() {
                     <p className="text-gray-600">{benefit.description}</p>
                   </motion.div>
                 );
-              })}
-            </div>
+              })}            </div>
           </div>
         </section>
 
@@ -411,8 +406,7 @@ export default function Finance() {
                   Get FinTech Consultation
                 </Link>
                 <Link href="/industries" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
-                  View All Industries
-                </Link>
+                  View All Industries                </Link>
               </div>
             </motion.div>
           </div>
