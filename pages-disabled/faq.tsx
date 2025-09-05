@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import MainLayout from '../components/layout/MainLayout'
-import { motion, AnimatePresence } from 'framer-motion;
 import {}
   // TODO: Implement;
 };

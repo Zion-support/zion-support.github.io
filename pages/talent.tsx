@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -17,216 +18,147 @@ import {
   Zap,
   Calendar
 } from 'lucide-react';
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const jobOpenings = [
+  {
+    id: 1,
+    title: "Senior AI/ML Engineer",
+    department: "AI Services",
+    location: "Remote",
+    type: "Full-time",
+    experience: "5+ years",
+    description: "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",
+    requirements: [
+      "Master's degree in Computer Science or related field",
+      "5+ years experience in AI/ML development",
+      "Proficiency in Python, TensorFlow, PyTorch",
+      "Experience with cloud platforms (AWS, Azure, GCP)",
+      "Strong problem-solving and communication skills"
+    ],
+    benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
+  },
+  {
+    id: 2,
+    title: "Full-Stack Developer",
+    department: "Micro SaaS",
+    location: "New York, NY",
+    type: "Full-time",
+    experience: "3+ years",
+    description: "Build scalable web applications and microservices for our SaaS solutions.",
+    requirements: [
+      "3+ years experience in full-stack development",
+      "Proficiency in React, Node.js, TypeScript",
+      "Experience with databases (PostgreSQL, MongoDB)",
+      "Knowledge of cloud deployment and DevOps"
+    ],
+    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
+  },
+  {
+    id: 3,
+    title: "Cloud Solutions Architect",
+    department: "IT Services",
+    location: "Remote",
+    type: "Full-time",
+    experience: "7+ years",
+    description: "Design and implement cloud infrastructure solutions for enterprise clients.",
+    requirements: [
+      "7+ years experience in cloud architecture",
+      "AWS/Azure/GCP certifications preferred",
+      "Experience with containerization (Docker, Kubernetes)",
+      "Strong understanding of security best practices"
+    ],
+    benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
+  },
+  {
+    id: 4,
+    title: "Cybersecurity Specialist",
+    department: "Security",
+    location: "San Francisco, CA",
+    type: "Full-time",
+    experience: "4+ years",
+    description: "Protect our clients' digital assets and implement security best practices.",
+    requirements: [
+      "4+ years experience in cybersecurity",
+      "Certifications (CISSP, CISM, CEH) preferred",
+      "Experience with security tools and frameworks",
+      "Knowledge of compliance standards (SOC 2, ISO 27001)"
+    ],
+    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
+  },
+  {
+    id: 5,
+    title: "DevOps Engineer",
+    department: "Engineering",
+    location: "Austin, TX",
+    type: "Full-time",
+    experience: "3+ years",
+    description: "Streamline our development and deployment processes with modern DevOps practices.",
+    requirements: [
+      "3+ years experience in DevOps",
+      "Proficiency in CI/CD pipelines",
+      "Experience with infrastructure as code (Terraform, CloudFormation)",
+      "Knowledge of monitoring and logging tools"
+    ],
+    benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
+  },
+  {
+    id: 6,
+    title: "UX/UI Designer",
+    department: "Design",
+    location: "Remote",
+    type: "Full-time",
+    experience: "2+ years",
+    description: "Create intuitive and beautiful user experiences for our digital products.",
+    requirements: [
+      "2+ years experience in UX/UI design",
+      "Proficiency in Figma, Sketch, Adobe Creative Suite",
+      "Experience with user research and testing",
+      "Strong portfolio demonstrating design skills"
+    ],
+    benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
+  }
+];
+
+const benefits = [
+  {
+    title: "Competitive Compensation",
+    description: "We offer competitive salaries and performance-based bonuses",
+    icon: Star
+  },
+  {
+    title: "Health & Wellness",
+    description: "Comprehensive health insurance and wellness programs",
+    icon: Users
+  },
+  {
+    title: "Flexible Work",
+    description: "Remote work options and flexible schedules",
+    icon: Clock
+  },
+  {
+    title: "Professional Growth",
+    description: "Learning opportunities and career development support",
+    icon: ArrowRight
+  }
+];
+
+const values = [
+  "Innovation and creativity",
+  "Collaboration and teamwork",
+  "Continuous learning",
+  "Work-life balance",
+  "Diversity and inclusion",
+  "Client success focus"
+];
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 
 export default function TalentPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-
-  const departments = [
-    { id: 'all', name: 'All Departments' },
-    { id: 'engineering', name: 'Engineering' },
-    { id: 'design', name: 'Design' },
-    { id: 'product', name: 'Product' },
-    { id: 'marketing', name: 'Marketing' },
-    { id: 'sales', name: 'Sales' },
-    { id: 'operations', name: 'Operations' }
-  ];
-
-  const locations = [
-    { id: 'all', name: 'All Locations' },
-    { id: 'remote', name: 'Remote' },
-    { id: 'new-york', name: 'New York' },
-    { id: 'san-francisco', name: 'San Francisco' },
-    { id: 'london', name: 'London' },
-    { id: 'singapore', name: 'Singapore' }
-  ];
-
-  const jobOpenings = [
-    {
-      id: 1,
-      title: 'Senior Full-Stack Developer',
-      department: 'engineering',
-      location: 'remote',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'We are looking for a passionate Senior Full-Stack Developer to join our engineering team. You will work on building scalable web applications and APIs.',
-      requirements: [
-        '5+ years of experience with React, Node.js, and TypeScript',
-        'Experience with cloud platforms (AWS, Azure, or GCP)',
-        'Strong understanding of database design and optimization',
-        'Experience with CI/CD pipelines and DevOps practices',
-        'Excellent problem-solving and communication skills'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Unlimited PTO'
-      ],
-      postedDate: '2024-01-15',
-      isUrgent: true
-    },
-    {
-      id: 2,
-      title: 'AI/ML Engineer',
-      department: 'engineering',
-      location: 'san-francisco',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Join our AI team to build cutting-edge machine learning models and AI solutions that will transform our clients\' businesses.',
-      requirements: [
-        '3+ years of experience in machine learning and AI',
-        'Proficiency in Python, TensorFlow, and PyTorch',
-        'Experience with MLOps and model deployment',
-        'Strong background in statistics and mathematics',
-        'Experience with cloud ML platforms'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Unlimited PTO'
-      ],
-      postedDate: '2024-01-12',
-      isUrgent: false
-    },
-    {
-      id: 3,
-      title: 'UX/UI Designer',
-      department: 'design',
-      location: 'new-york',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'We are seeking a talented UX/UI Designer to create intuitive and beautiful user experiences for our products and client projects.',
-      requirements: [
-        '4+ years of experience in UX/UI design',
-        'Proficiency in Figma, Sketch, and Adobe Creative Suite',
-        'Strong portfolio showcasing user-centered design',
-        'Experience with design systems and component libraries',
-        'Knowledge of front-end development principles'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Unlimited PTO'
-      ],
-      postedDate: '2024-01-10',
-      isUrgent: false
-    },
-    {
-      id: 4,
-      title: 'Product Manager',
-      department: 'product',
-      location: 'london',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Lead product strategy and execution for our core platform. Work closely with engineering, design, and business teams to deliver exceptional products.',
-      requirements: [
-        '5+ years of product management experience',
-        'Experience with B2B SaaS products',
-        'Strong analytical and problem-solving skills',
-        'Excellent communication and leadership abilities',
-        'Experience with agile development methodologies'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Unlimited PTO'
-      ],
-      postedDate: '2024-01-08',
-      isUrgent: true
-    },
-    {
-      id: 5,
-      title: 'DevOps Engineer',
-      department: 'engineering',
-      location: 'remote',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Join our infrastructure team to build and maintain our cloud infrastructure, CI/CD pipelines, and monitoring systems.',
-      requirements: [
-        '4+ years of DevOps experience',
-        'Proficiency with AWS, Docker, and Kubernetes',
-        'Experience with Infrastructure as Code (Terraform)',
-        'Strong scripting skills (Python, Bash)',
-        'Experience with monitoring and logging tools'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Unlimited PTO'
-      ],
-      postedDate: '2024-01-05',
-      isUrgent: false
-    },
-    {
-      id: 6,
-      title: 'Sales Engineer',
-      department: 'sales',
-      location: 'singapore',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Help our clients understand and implement our technical solutions. Work closely with the sales team to drive technical discussions and demos.',
-      requirements: [
-        '3+ years of sales engineering experience',
-        'Technical background in software development',
-        'Excellent presentation and communication skills',
-        'Experience with enterprise software sales',
-        'Ability to travel as needed'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Unlimited PTO'
-      ],
-      postedDate: '2024-01-03',
-      isUrgent: false
-    }
-  ];
-
-  const filteredJobs = jobOpenings.filter(job => {
-    const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         job.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;
-    const matchesLocation = selectedLocation === 'all' || job.location === selectedLocation;
-    return matchesSearch && matchesDepartment && matchesLocation;
-  });
-
-  const companyValues = [
-    {
-      title: 'Innovation',
-      description: 'We encourage creative thinking and embrace new technologies',
-      icon: Zap
-    },
-    {
-      title: 'Collaboration',
-      description: 'We work together to achieve common goals and support each other',
-      icon: Users
-    },
-    {
-      title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do',
-      icon: Award
-    },
-    {
-      title: 'Growth',
-      description: 'We invest in our people and provide opportunities for development',
-      icon: Heart
-    }
-  ];
-
   return (
+<<<<<<< HEAD
     <MainLayout
       title="Join Our Team - Zion Tech Group"
       description="Join our talented team of engineers, designers, and innovators. Explore career opportunities at Zion Tech Group and help us build the future of technology."
@@ -502,5 +434,11 @@ export default function TalentPage() {
         </section>
       </div>
     </MainLayout>
+=======
+    <div>
+      <h1>Talent Page</h1>
+      <p>This page is under construction.</p>
+    </div>
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
   );
 }

@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Menu, X, Search, User, ShoppingCart, ChevronDown } from 'lucide-react';
 export default function EnhancedHeader() {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,12 +12,55 @@ export default function EnhancedHeader() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const handleSearch = async (e: React.FormEvent) => {
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
   const handleSearch = async ("e": React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
     }
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const toggleDropdown = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+  };
+  const navigation = [
+    {
+      name: 'Services',
+      href: '/services',
+      dropdown: [
+        { name: 'IT Services', href: '/services/it-services' },
+        { name: 'Micro SaaS', href: '/services/micro-saas' },
+        { name: 'Web Development', href: '/services/web-development' },
+        { name: 'Cloud Services', href: '/services/cloud-services' },
+        { name: 'AI Development', href: '/services/ai-development' },
+      ],
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      dropdown: [
+        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
+        { name: 'Customer Support', href: '/solutions/customer-support' },
+        { name: 'Email Automation', href: '/solutions/email-automation' },
+        { name: 'Event Management', href: '/solutions/event-management' },
+        { name: 'Project Management', href: '/solutions/project-management' },
+        { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
+      ],
+    },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
   const toggleDropdown = ("itemName": string) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
@@ -52,6 +93,13 @@ export default function EnhancedHeader() {
       className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}
     >
       {' '}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
         {' '}
         <div className="flex justify-between items-center h-16">
@@ -71,6 +119,13 @@ export default function EnhancedHeader() {
             </a>{' '}
           </div>{' '}
           {}{' '}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <nav className="hidden md:flex items-center space-x-8">
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
           <nav className="hidden "md": flex items-center space-x-8">
             {' '}
             {navigation.map(item => (
@@ -81,6 +136,13 @@ export default function EnhancedHeader() {
                     {' '}
                     <button
                       onClick={() => toggleDropdown(item.name)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
                       className="flex items-center space-x-1 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                     >
                       {' '}
@@ -94,6 +156,13 @@ export default function EnhancedHeader() {
                           <a
                             key={dropdownItem.name}
                             href={dropdownItem.href}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                            className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
                             className="block px-4 py-2 text-gray-700 "hover": bg-gray-50 hover:text-blue-600 transition-colors duration-200"
                           >
                             {' '}
@@ -106,6 +175,13 @@ export default function EnhancedHeader() {
                 ) : (
                   <a
                     href={item.href}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
                     className="text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                   >
                     {' '}
@@ -116,6 +192,13 @@ export default function EnhancedHeader() {
             ))}{' '}
           </nav>{' '}
           {}{' '}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <div className="hidden md:flex items-center space-x-4">
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
           <div className="hidden "md": flex items-center space-x-4">
             {' '}
             {}{' '}
@@ -126,6 +209,13 @@ export default function EnhancedHeader() {
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                className="w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
                 className="w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />{' '}
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '}
@@ -133,6 +223,17 @@ export default function EnhancedHeader() {
             {}{' '}
             <div className="flex items-center space-x-2">
               {' '}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200">
+                {' '}
+                <User className="h-5 w-5" />{' '}
+              </button>{' '}
+              <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200">
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
               <button className="p-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200">
                 {' '}
                 <User className="h-5 w-5" />{' '}
@@ -144,6 +245,17 @@ export default function EnhancedHeader() {
             </div>{' '}
           </div>{' '}
           {}{' '}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <div className="md:hidden">
+            {' '}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
           <div className=""md": hidden">
             {' '}
             <button
@@ -161,6 +273,13 @@ export default function EnhancedHeader() {
         </div>{' '}
         {}{' '}
         {mobileMenuOpen && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <div className="md:hidden">
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
           <div className=""md": hidden">
             {' '}
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
@@ -173,6 +292,13 @@ export default function EnhancedHeader() {
                       {' '}
                       <button
                         onClick={() => toggleDropdown(item.name)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        className="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
                         className="flex items-center justify-between w-full px-3 py-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                       >
                         {' '}
@@ -186,6 +312,13 @@ export default function EnhancedHeader() {
                             <a
                               key={dropdownItem.name}
                               href={dropdownItem.href}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                              className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
                               className="block px-3 py-2 text-gray-600 "hover": text-blue-600 transition-colors duration-200"
                             >
                               {' '}
@@ -198,6 +331,13 @@ export default function EnhancedHeader() {
                   ) : (
                     <a
                       href={item.href}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
                       className="block px-3 py-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                     >
                       {' '}
@@ -216,6 +356,13 @@ export default function EnhancedHeader() {
                     placeholder="Search..."
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
                     className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />{' '}
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '}
@@ -228,4 +375,11 @@ export default function EnhancedHeader() {
     </header>
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React,{ useState,useEffect } from 'react'; import { useRouter } from 'next/router'; import { Menu,X,Search,User,ShoppingCart,ChevronDown } from 'lucide-react'; export default function EnhancedHeader() { const router = useRouter(); const [mobileMenuOpen,setMobileMenuOpen] = useState(false); const [searchQuery,setSearchQuery] = useState(); const [scrolled,setScrolled] = useState(false); const [activeDropdown,setActiveDropdown] = useState<string | null>(null); useEffect(() => { const handleScroll = () => { setScrolled(window.scrollY > 50)}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const handleSearch = async (e: React.FormEvent) => { e.preventDefault(); if (searchQuery.trim()) { router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`)} }; const toggleDropdown = (itemName: string) => { setActiveDropdown(activeDropdown === itemName ? null : itemName)}; const navigation = [ { name: 'Services',href: '/services',dropdown: [ { name: 'IT Services',href: '/services/it-services' },{ name: 'Micro SaaS',href: '/services/micro-saas' },{ name: 'Web Development',href: '/services/web-development' },{ name: 'Cloud Services',href: '/services/cloud-services' },{ name: 'AI Development',href: '/services/ai-development' },],},{ name: 'Solutions',href: '/solutions',dropdown: [ { name: 'AI Content Creation',href: '/solutions/ai-content-creation' },{ name: 'Customer Support',href: '/solutions/customer-support' },{ name: 'Email Automation',href: '/solutions/email-automation' },{ name: 'Event Management',href: '/solutions/event-management' },{ name: 'Project Management',href: '/solutions/project-management' },{ name: 'Workflow Automation',href: '/solutions/workflow-automation' },],},{ name: 'About',href: '/about' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },]; return ( <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`} > {' '} <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {' '} <div className="flex justify-between items-center h-16"> {' '} {}{' '} <div className="flex items-center"> {' '} <a href="/" className="flex items-center space-x-2"> {' '} <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center"> {' '} <span className="text-white font-bold text-sm">Z</span>{' '} </div>{' '} <span className="text-xl font-bold text-gray-900"> {' '} Zion Tech Group{' '} </span>{' '} </a>{' '} </div>{' '} {}{' '} <nav className="hidden md:flex items-center space-x-8"> {' '} {navigation.map(item => ( <div key={item.name} className="relative"> {' '} {item.dropdown ? ( <div className="relative"> {' '} <button onClick={() => toggleDropdown(item.name)} className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200" > {' '} <span>{item.name}</span>{' '} <ChevronDown className="h-4 w-4" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"> {' '} {item.dropdown.map(dropdownItem => ( <a key={dropdownItem.name} href={dropdownItem.href} className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200" > {' '} {dropdownItem.name}{' '} </a> ))}{' '} </div> )}{' '} </div> ) : ( <a href={item.href} className="text-gray-700 hover:text-blue-600 transition-colors duration-200" > {' '} {item.name}{' '} </a> )}{' '} </div> ))}{' '} </nav>{' '} {}{' '} <div className="hidden md:flex items-center space-x-4"> {' '} {}{' '} <form onSubmit={handleSearch} className="relative"> {' '} <input type="text" placeholder="Search..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />{' '} <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '} </form>{' '} {}{' '} <div className="flex items-center space-x-2"> {' '} <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"> {' '} <User className="h-5 w-5" />{' '} </button>{' '} <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"> {' '} <ShoppingCart className="h-5 w-5" />{' '} </button>{' '} </div>{' '} </div>{' '} {}{' '} <div className="md:hidden"> {' '} <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200" > {' '} {mobileMenuOpen ? ( <X className="h-6 w-6" /> ) : ( <Menu className="h-6 w-6" /> )}{' '} </button>{' '} </div>{' '} </div>{' '} {}{' '} {mobileMenuOpen && ( <div className="md:hidden"> {' '} <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200"> {' '} {navigation.map(item => ( <div key={item.name}> {' '} {item.dropdown ? ( <div> {' '} <button onClick={() => toggleDropdown(item.name)} className="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200" > {' '} <span>{item.name}</span>{' '} <ChevronDown className="h-4 w-4" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className="pl-4 space-y-1"> {' '} {item.dropdown.map(dropdownItem => ( <a key={dropdownItem.name} href={dropdownItem.href} className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200" > {' '} {dropdownItem.name}{' '} </a> ))}{' '} </div> )}{' '} </div> ) : ( <a href={item.href} className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200" > {' '} {item.name}{' '} </a> )}{' '} </div> ))}{' '} {}{' '} <form onSubmit={handleSearch} className="px-3 py-2"> {' '} <div className="relative"> {' '} <input type="text" placeholder="Search..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />{' '} <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '} </div>{' '} </form>{' '} </div>{' '} </div> )}{' '} </div>{' '} </header> )}
+=======
+import React,{ useState,useEffect } from 'react'; import { useRouter } from 'next/router'; import { Menu,X,Search,User,ShoppingCart,ChevronDown } from 'lucide-react'; export default function EnhancedHeader() { const router = useRouter(); const [mobileMenuOpen,setMobileMenuOpen] = useState(false); const [searchQuery,setSearchQuery] = useState(); const [scrolled,setScrolled] = useState(false); const [activeDropdown,setActiveDropdown] = useState<string | null>(null); useEffect(() => { const handleScroll = () => { setScrolled(window.scrollY > 50)}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const handleSearch = async (e: React.FormEvent) => { e.preventDefault(); if (searchQuery.trim()) { router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`)} }; const toggleDropdown = (itemName: string) => { setActiveDropdown(activeDropdown === itemName ? null : itemName)}; const navigation = [ { name: 'Services',href: '/services',dropdown: [ { name: 'IT Services',href: '/services/it-services' },{ name: 'Micro SaaS',href: '/services/micro-saas' },{ name: 'Web Development',href: '/services/web-development' },{ name: 'Cloud Services',href: '/services/cloud-services' },{ name: 'AI Development',href: '/services/ai-development' },],},{ name: 'Solutions',href: '/solutions',dropdown: [ { name: 'AI Content Creation',href: '/solutions/ai-content-creation' },{ name: 'Customer Support',href: '/solutions/customer-support' },{ name: 'Email Automation',href: '/solutions/email-automation' },{ name: 'Event Management',href: '/solutions/event-management' },{ name: 'Project Management',href: '/solutions/project-management' },{ name: 'Workflow Automation',href: '/solutions/workflow-automation' },],},{ name: 'About',href: '/about' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },]; return ( <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`} > {' '} <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {' '} <div className="flex justify-between items-center h-16"> {' '} {}{' '} <div className="flex items-center"> {' '} <a href="/" className="flex items-center space-x-2"> {' '} <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center"> {' '} <span className="text-white font-bold text-sm">Z</span>{' '} </div>{' '} <span className="text-xl font-bold text-gray-900"> {' '} Zion Tech Group{' '} </span>{' '} </a>{' '} </div>{' '} {}{' '} <nav className="hidden md:flex items-center space-x-8"> {' '} {navigation.map(item => ( <div key={item.name} className="relative"> {' '} {item.dropdown ? ( <div className="relative"> {' '} <button onClick={() => toggleDropdown(item.name)} className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200" > {' '} <span>{item.name}</span>{' '} <ChevronDown className="h-4 w-4" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"> {' '} {item.dropdown.map(dropdownItem => ( <a key={dropdownItem.name} href={dropdownItem.href} className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200" > {' '} {dropdownItem.name}{' '} </a> ))}{' '} </div> )}{' '} </div> ) : ( <a href={item.href} className="text-gray-700 hover:text-blue-600 transition-colors duration-200" > {' '} {item.name}{' '} </a> )}{' '} </div> ))}{' '} </nav>{' '} {}{' '} <div className="hidden md:flex items-center space-x-4"> {' '} {}{' '} <form onSubmit={handleSearch} className="relative"> {' '} <input type="text" placeholder="Search..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />{' '} <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '} </form>{' '} {}{' '} <div className="flex items-center space-x-2"> {' '} <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"> {' '} <User className="h-5 w-5" />{' '} </button>{' '} <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"> {' '} <ShoppingCart className="h-5 w-5" />{' '} </button>{' '} </div>{' '} </div>{' '} {}{' '} <div className="md:hidden"> {' '} <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200" > {' '} {mobileMenuOpen ? ( <X className="h-6 w-6" /> ) : ( <Menu className="h-6 w-6" /> )}{' '} </button>{' '} </div>{' '} </div>{' '} {}{' '} {mobileMenuOpen && ( <div className="md:hidden"> {' '} <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200"> {' '} {navigation.map(item => ( <div key={item.name}> {' '} {item.dropdown ? ( <div> {' '} <button onClick={() => toggleDropdown(item.name)} className="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200" > {' '} <span>{item.name}</span>{' '} <ChevronDown className="h-4 w-4" />{' '} </button>{' '} {activeDropdown === item.name && ( <div className="pl-4 space-y-1"> {' '} {item.dropdown.map(dropdownItem => ( <a key={dropdownItem.name} href={dropdownItem.href} className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200" > {' '} {dropdownItem.name}{' '} </a> ))}{' '} </div> )}{' '} </div> ) : ( <a href={item.href} className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200" > {' '} {item.name}{' '} </a> )}{' '} </div> ))}{' '} {}{' '} <form onSubmit={handleSearch} className="px-3 py-2"> {' '} <div className="relative"> {' '} <input type="text" placeholder="Search..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />{' '} <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '} </div>{' '} </form>{' '} </div>{' '} </div> )}{' '} </div>{' '} </header> )}
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229

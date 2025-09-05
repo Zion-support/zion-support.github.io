@@ -1,4 +1,3 @@
-
 // Security test configuration
 export const securityTests = {
   // Check for common security vulnerabilities

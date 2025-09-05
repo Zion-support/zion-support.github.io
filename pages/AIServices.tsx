@@ -1,7 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 import Layout from '../components/Layout';
 import { 
   Brain, 

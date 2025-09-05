@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -24,6 +25,16 @@ import {
   Twitter
 } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';
+=======
+<<<<<<< HEAD
+import Link from 'next/link';
+import Layout from '../components/Layout';
+=======
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Brain, Cloud, Shield, Users } from 'lucide-react';
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 
 const teamMembers = [
   {
@@ -54,6 +65,7 @@ const teamMembers = [
     achievements: ['Implemented 150+ AI solutions', 'AI Strategy Expert', 'Stanford Alumni']
   },
   {
+<<<<<<< HEAD
     name: 'David Kim',
     role: 'Head of Security',
     expertise: 'Cybersecurity',
@@ -184,10 +196,46 @@ export default function TeamPage() {
                 </div>
               </motion.div>
             ))}
+=======
+    name: 'David Thompson',
+    role: 'Team Lead',
+    expertise: 'Project Management',
+    icon: Users,
+    description: 'Leading our development teams with agile methodologies and client-focused delivery.'
+  }
+];
+
+export default function TeamPage() {
+  return (
+    <>
+      <Head>
+        <title>Our Team - Zion Tech Group</title>
+        <meta name="description" content="Meet our expert team of technology professionals dedicated to delivering exceptional solutions." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Meet Our Expert Team
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+                Passionate professionals dedicated to delivering cutting-edge technology solutions
+              </p>
+            </motion.div>
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Values Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -249,5 +297,33 @@ export default function TeamPage() {
         </div>
       </section>
     </MainLayout>
+=======
+        {/* Team Grid */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {teamMembers.map((member, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <member.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-blue-600 font-medium mb-2">{member.role}</p>
+                  <p className="text-sm text-gray-500 mb-4">{member.expertise}</p>
+                  <p className="text-gray-600 text-sm">{member.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
   );
 }

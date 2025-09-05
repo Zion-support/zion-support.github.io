@@ -1,3 +1,104 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:pages/docs/api.tsx
+========
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD:pages/docs/api.tsx.backup
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-55a3:pages/docs/api.tsx
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import { 
+  Code, 
+  Book, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Database, 
+  Server, 
+  Lock, 
+  CheckCircle, 
+  ArrowRight,
+  Copy,
+  ExternalLink
+} from 'lucide-react';
+
+const apiEndpoints = [
+  {
+    title: 'Authentication API',
+    description: 'Secure authentication and authorization endpoints',
+    icon: Lock,
+    methods: ['POST', 'GET', 'PUT', 'DELETE'],
+    endpoint: '/api/auth',
+    examples: {
+      login: {
+        method: 'POST',
+        url: '/api/auth/login',
+        body: {
+          email: 'user@example.com',
+          password: 'password123'
+        },
+        response: {
+          token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
+          user: {
+            id: 1,
+            email: 'user@example.com',
+            name: 'John Doe'
+          }
+        }
+      }
+    }
+  },
+  {
+    title: 'User Management API',
+    description: 'Complete user profile and account management',
+    icon: Server,
+    methods: ['GET', 'PUT', 'DELETE'],
+    endpoint: '/api/users',
+    examples: {
+      getProfile: {
+        method: 'GET',
+        url: '/api/users/profile',
+        headers: {
+          'Authorization': 'Bearer YOUR_TOKEN'
+        },
+        response: {
+          id: 1,
+          email: 'user@example.com',
+          name: 'John Doe',
+          avatar: 'https://example.com/avatar.jpg',
+          createdAt: '2023-01-01T00:00:00Z'
+        }
+      }
+    }
+  }
+];
+
+<<<<<<< HEAD:pages/docs/api.tsx.backup
+const codeExamples = [
+  {
+    language: 'JavaScript',
+    code: `// AI Email Responder
+const response = await fetch('/api/ai/email-responder', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer YOUR_API_KEY'
+  },
+  body: JSON.stringify({
+    message: 'I need help with my account',
+    context: { userId: '12345' }
+=======
+>>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada:pages/docs/api.tsx.backup
 import React, { useState } from 'react';
 import MainLayout from '../../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -178,6 +279,10 @@ export default function APIDocumentationPage() {
 
   const codeExamples = {
     javascript: `// JavaScript/Node.js Example
+=======
+const codeExamples = {
+  javascript: `// JavaScript/Node.js Example
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-55a3:pages/docs/api.tsx
 const response = await fetch('https://api.ziontechgroup.com/api/v1/auth/login', {
   method: 'POST',
   headers: {
@@ -185,61 +290,190 @@ const response = await fetch('https://api.ziontechgroup.com/api/v1/auth/login', 
   },
   body: JSON.stringify({
     email: 'user@example.com',
+<<<<<<< HEAD:pages/docs/api.tsx.backup
     password: 'your-password'
+<<<<<<<< HEAD:pages/docs/api.tsx
+========
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+<<<<<<< HEAD
+=======
+=======
+    password: 'password123'
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-55a3:pages/docs/api.tsx
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada:pages/docs/api.tsx.backup
   })
 });
 
 const data = await response.json();
-console.log(data);`,
-    python: `# Python Example
+<<<<<<<< HEAD:pages/docs/api.tsx
+========
+<<<<<<< HEAD
+console.log(data.response);`
+  },
+  {
+    language: 'Python',
+    code: `# Predictive Analytics
+<<<<<<< HEAD
 import requests
 
-url = "https://api.ziontechgroup.com/api/v1/auth/login"
-payload = {
-    "email": "user@example.com",
-    "password": "your-password"
-}
+response = requests.post(
+    'https://api.ziontechgroup.com/ai/predictive-analytics',
+    headers={
+        'Authorization': 'Bearer YOUR_API_KEY',
+        'Content-Type': 'application/json'
+    },
+    json={
+        'data': historical_data,
+        'period': '30_days'
+    }
+)
 
-response = requests.post(url, json=payload)
-data = response.json()
-print(data)`,
-    curl: `# cURL Example
-curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
+predictions = response.json()
+print(predictions['predictions'])`
+  },
+  {
+    language: 'cURL',
+    code: `# Content Generation
+curl -X POST https://api.ziontechgroup.com/ai/content-generation \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "email": "user@example.com",
-    "password": "your-password"
+    "prompt": "Write a blog post about AI trends",
+    "type": "blog_post"
   }'`
-  };
+  }
+];
 
-  const copyToClipboard = (code, language) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(language);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-
-  const tabs = [
-    { id: 'overview', label: 'Overview', icon: Globe },
-    { id: 'authentication', label: 'Authentication', icon: Shield },
-    { id: 'endpoints', label: 'Endpoints', icon: Code },
-    { id: 'examples', label: 'Examples', icon: Terminal },
-    { id: 'errors', label: 'Errors', icon: XCircle }
-  ];
-
+export default function APIDocumentationPage() {
   return (
-    <MainLayout
+    <Layout
       title="API Documentation - Zion Tech Group"
-      description="Comprehensive API documentation for Zion Tech Group services. Learn how to integrate with our APIs and build powerful applications."
-      keywords="API documentation, REST API, integration, developers, endpoints, authentication"
+      description="Complete API documentation for Zion Tech Group services. Learn how to integrate with our APIs, view endpoints, and access code examples."
+      keywords="API documentation, REST API, integration, developer docs, endpoints, Zion Tech Group API"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> main
+=======
+>>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada:pages/docs/api.tsx.backup
+console.log(data);`,
+    python: `# Python Example
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+import requests
 
+response = requests.post(
+    'https://api.ziontechgroup.com/ai/predictive-analytics',
+    headers={
+        'Authorization': 'Bearer YOUR_API_KEY',
+        'Content-Type': 'application/json'
+    },
+    json={
+        'data': historical_data,
+        'period': '30_days'
+    }
+)
+
+predictions = response.json()
+print(predictions['predictions'])`
+  },
+  {
+    language: 'cURL',
+    code: `# Content Generation
+curl -X POST https://api.ziontechgroup.com/ai/content-generation \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "prompt": "Write a blog post about AI trends",
+    "type": "blog_post"
+  }'`
+  }
+];
+
+export default function APIDocumentationPage() {
+  return (
+    <Layout
+      title="API Documentation - Zion Tech Group"
+      description="Complete API documentation for Zion Tech Group services. Learn how to integrate with our APIs, view endpoints, and access code examples."
+      keywords="API documentation, REST API, integration, developer docs, endpoints, Zion Tech Group API"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> main
+=======
+console.log(data);`,
+  
+  python: `# Python Example
+import requests
+
+response = requests.post(
+    'https://api.ziontechgroup.com/api/v1/auth/login',
+    json={
+        'email': 'user@example.com',
+        'password': 'password123'
+    }
+)
+
+data = response.json()
+print(data)`,
+  
+  curl: `# cURL Example
+curl -X POST 'https://api.ziontechgroup.com/api/v1/auth/login' \\
+  -H 'Content-Type: application/json' \\
+  -d '{
+    "email": "user@example.com",
+    "password": "password123"
+  }'`
+};
+
+export default function APIDocsPage() {
+  return (
+    <>
+      <Head>
+        <title>API Documentation - Zion Tech Group | Complete Developer Guide</title>
+        <meta name="description" content="Complete API documentation for Zion Tech Group's developer platform. Detailed guides, examples, and SDKs for seamless integration." />
+        <meta name="keywords" content="API documentation, developer guide, REST API, SDK, integration, authentication" />
+        <meta property="og:title" content="Complete API Documentation - Zion Tech Group" />
+        <meta property="og:description" content="Access our comprehensive API documentation with detailed guides, examples, and SDKs." />
+        <meta property="og:url" content="https://ziontechgroup.com/docs/api" />
+        <meta property="og:type" content="website" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+=======
+import React from 'react';
+import Layout from '../../components/Layout';
+
+export default function ApiDocs() {
+  return (
+    <Layout
+      title="API Documentation - Zion Tech Group"
+      description="Comprehensive API documentation for integrating with our services and platforms."
+      keywords="API, documentation, integration, developers, REST API, GraphQL"
+    >
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+<<<<<<< HEAD
+
+=======
+          
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -248,19 +482,103 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
                 API{' '}
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Documentation
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Comprehensive API documentation for integrating with Zion Tech Group services. 
-                Build powerful applications with our RESTful APIs.
+                Complete developer documentation with detailed guides, examples, and SDKs for seamless integration.
+=======
+                API <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Documentation</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Integrate with our powerful APIs to build amazing applications and services.
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
               </p>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
+<<<<<<<< HEAD:pages/docs/api.tsx
+========
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages/docs/api.tsx.backup
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* API Endpoints Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+=======
+        {/* API Endpoints */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> main
+              animate={{ opacity: 1, y: 0 }}
+=======
+        {/* Code Examples Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-55a3:pages/docs/api.tsx
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Code Examples</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Get started quickly with our code examples in multiple programming languages.
+              </p>
+            </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages/docs/api.tsx.backup
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+<<<<<<< HEAD
+                      <span className={`px-3 py-1 rounded text-sm font-medium ${
+                        endpoint.method === 'GET' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
+                      }`}>
+                        {endpoint.method}
+                      </span>
+                    </div>
+=======
+            <div className="space-y-8">
+              {endpoints.map((endpoint, index) => (
+=======
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {Object.entries(codeExamples).map(([language, code], index) => (
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-55a3:pages/docs/api.tsx
+                <motion.div
+                  key={language}
+                  className="bg-gray-900 rounded-lg overflow-hidden"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-gray-800 px-4 py-2 flex items-center justify-between">
+                    <span className="text-white font-semibold capitalize">{language}</span>
+                    <button className="text-gray-400 hover:text-white">
+                      <Copy className="w-4 h-4" />
+                    </button>
+                  </div>
+                  <pre className="p-4 text-green-400 text-sm overflow-x-auto">
+                    <code>{code}</code>
+                  </pre>
+                </motion.div>
+              ))}
+<<<<<<< HEAD:pages/docs/api.tsx.backup
+=======
+>>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada:pages/docs/api.tsx.backup
         {/* Navigation Tabs */}
         <section className="py-8 bg-white border-b">
           <div className="container mx-auto px-4">
@@ -281,317 +599,159 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
                   </button>
                 ))}
               </div>
+<<<<<<<< HEAD:pages/docs/api.tsx
+========
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-55a3:pages/docs/api.tsx
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada:pages/docs/api.tsx.backup
             </div>
           </div>
         </section>
 
+<<<<<<<< HEAD:pages/docs/api.tsx
+========
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages/docs/api.tsx.backup
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+<<<<<<< HEAD
+        {/* Code Examples */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+=======
+        {/* API Overview */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+<<<<<<< HEAD
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Code Examples</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Get started quickly with our code examples in multiple programming languages.
+              </p>
+            </motion.div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {codeExamples.map((example, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gray-900 rounded-xl p-6"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-semibold text-white">{example.language}</h3>
+                    <Code className="w-5 h-5 text-blue-400" />
+                  </div>
+                  <pre className="text-sm text-gray-300 overflow-x-auto">
+                    <code>{example.code}</code>
+                  </pre>
+                </motion.div>
+              ))}
+>>>>>>> main
+=======
+>>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada:pages/docs/api.tsx.backup
         {/* Tab Content */}
         <section className="py-16 bg-white">
+=======
+        {/* API Endpoints Section */}
+        <section className="py-20 bg-gray-50">
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-55a3:pages/docs/api.tsx
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              {/* Overview Tab */}
-              {activeTab === 'overview' && (
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                    API Overview
-                  </h2>
-                  
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                        <Globe className="w-6 h-6 mr-3 text-indigo-600" />
-                        Base URL
-                      </h3>
-                      <p className="text-gray-600 mb-4">
-                        All API requests should be made to our base URL:
-                      </p>
-                      <code className="bg-gray-800 text-green-400 p-3 rounded-lg block font-mono">
-                        https://api.ziontechgroup.com
-                      </code>
-                    </div>
-                    
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                        <Shield className="w-6 h-6 mr-3 text-indigo-600" />
-                        Authentication
-                      </h3>
-                      <p className="text-gray-600 mb-4">
-                        Most endpoints require authentication using Bearer tokens:
-                      </p>
-                      <code className="bg-gray-800 text-green-400 p-3 rounded-lg block font-mono text-sm">
-                        Authorization: Bearer your-token-here
-                      </code>
-                    </div>
-                  </div>
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">API Endpoints</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Explore our comprehensive API endpoints with detailed documentation and examples.
+              </p>
+            </motion.div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div className="text-center">
-                      <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Zap className="w-8 h-8 text-indigo-600" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Fast & Reliable</h3>
-                      <p className="text-gray-600">High-performance APIs with 99.9% uptime guarantee</p>
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Database className="w-8 h-8 text-indigo-600" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">RESTful Design</h3>
-                      <p className="text-gray-600">Standard REST APIs following industry best practices</p>
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Cloud className="w-8 h-8 text-indigo-600" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Scalable</h3>
-                      <p className="text-gray-600">Built to handle high traffic and scale with your needs</p>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Authentication Tab */}
-              {activeTab === 'authentication' && (
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                    Authentication
-                  </h2>
-                  
-                  <div className="bg-gray-50 rounded-lg p-8 mb-8">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Getting Started</h3>
-                    <p className="text-gray-600 mb-6">
-                      To use our API, you need to authenticate your requests. We use JWT (JSON Web Tokens) 
-                      for authentication. Here's how to get started:
-                    </p>
-                    
-                    <ol className="list-decimal list-inside space-y-4 text-gray-700">
-                      <li>Register for an API account or use your existing Zion Tech Group account</li>
-                      <li>Generate an API key from your account dashboard</li>
-                      <li>Include the API key in the Authorization header of your requests</li>
-                      <li>For user-specific operations, use the login endpoint to get a JWT token</li>
-                    </ol>
-                  </div>
-
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">API Key Authentication</h3>
-                      <p className="text-gray-600 mb-4">
-                        For server-to-server communication, use your API key:
-                      </p>
-                      <code className="bg-gray-800 text-green-400 p-3 rounded-lg block font-mono text-sm">
-                        Authorization: Bearer sk_live_your_api_key_here
-                      </code>
-                    </div>
-                    
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">JWT Token Authentication</h3>
-                      <p className="text-gray-600 mb-4">
-                        For user-specific operations, use JWT tokens:
-                      </p>
-                      <code className="bg-gray-800 text-green-400 p-3 rounded-lg block font-mono text-sm">
-                        Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-                      </code>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Endpoints Tab */}
-              {activeTab === 'endpoints' && (
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                    API Endpoints
-                  </h2>
-                  
-                  <div className="space-y-8">
-                    {apiEndpoints.map((endpoint, index) => (
-                      <motion.div
-                        key={endpoint.id}
-                        className="bg-white border border-gray-200 rounded-lg overflow-hidden"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: index * 0.1 }}
-                      >
-                        <div className="bg-gray-50 p-6 border-b">
-                          <h3 className="text-2xl font-bold text-gray-900 mb-2">{endpoint.title}</h3>
-                          <p className="text-gray-600 mb-4">{endpoint.description}</p>
-                          <div className="flex items-center text-sm text-gray-500">
-                            <span className="bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full mr-2">
-                              {endpoint.baseUrl}
-                            </span>
-                            <span>Methods: {endpoint.methods.join(', ')}</span>
-                          </div>
+            <div className="space-y-8">
+              {apiEndpoints.map((endpoint, index) => {
+                const IconComponent = endpoint.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-all duration-300"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="flex items-center">
+                        <div className="text-blue-600 mr-4">
+                          <IconComponent className="w-8 h-8" />
                         </div>
-                        
-                        <div className="p-6">
-                          <div className="space-y-6">
-                            {endpoint.endpoints.map((ep, epIndex) => (
-                              <div key={epIndex} className="border border-gray-200 rounded-lg p-4">
-                                <div className="flex items-center justify-between mb-3">
-                                  <div className="flex items-center">
-                                    <span className={`px-2 py-1 rounded text-sm font-semibold mr-3 ${
-                                      ep.method === 'GET' ? 'bg-green-100 text-green-700' :
-                                      ep.method === 'POST' ? 'bg-blue-100 text-blue-700' :
-                                      ep.method === 'PUT' ? 'bg-yellow-100 text-yellow-700' :
-                                      'bg-red-100 text-red-700'
-                                    }`}>
-                                      {ep.method}
-                                    </span>
-                                    <code className="text-gray-800 font-mono">{endpoint.baseUrl}{ep.path}</code>
-                                  </div>
-                                </div>
-                                
-                                <p className="text-gray-600 mb-4">{ep.description}</p>
-                                
-                                {ep.parameters.length > 0 && (
-                                  <div className="mb-4">
-                                    <h4 className="font-semibold text-gray-900 mb-2">Parameters</h4>
-                                    <div className="overflow-x-auto">
-                                      <table className="w-full text-sm">
-                                        <thead>
-                                          <tr className="bg-gray-50">
-                                            <th className="px-3 py-2 text-left">Name</th>
-                                            <th className="px-3 py-2 text-left">Type</th>
-                                            <th className="px-3 py-2 text-left">Required</th>
-                                            <th className="px-3 py-2 text-left">Description</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          {ep.parameters.map((param, paramIndex) => (
-                                            <tr key={paramIndex} className="border-t">
-                                              <td className="px-3 py-2 font-mono">{param.name}</td>
-                                              <td className="px-3 py-2">{param.type}</td>
-                                              <td className="px-3 py-2">
-                                                {param.required ? (
-                                                  <span className="text-red-600">Yes</span>
-                                                ) : (
-                                                  <span className="text-gray-500">No</span>
-                                                )}
-                                              </td>
-                                              <td className="px-3 py-2">{param.description}</td>
-                                            </tr>
-                                          ))}
-                                        </tbody>
-                                      </table>
-                                    </div>
-                                  </div>
-                                )}
-                                
-                                <div>
-                                  <h4 className="font-semibold text-gray-900 mb-2">Response</h4>
-                                  <div className="bg-gray-800 text-green-400 p-3 rounded-lg font-mono text-sm">
-                                    <div>Status: {ep.response.status}</div>
-                                    <div>Data: {JSON.stringify(ep.response.data, null, 2)}</div>
-                                  </div>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-gray-900">{endpoint.title}</h3>
+                          <p className="text-gray-600">{endpoint.description}</p>
+                          <p className="text-sm text-blue-600 font-mono mt-1">{endpoint.endpoint}</p>
                         </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Examples Tab */}
-              {activeTab === 'examples' && (
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                    Code Examples
-                  </h2>
-                  
-                  <div className="space-y-8">
-                    {Object.entries(codeExamples).map(([language, code]) => (
-                      <div key={language} className="bg-gray-50 rounded-lg p-6">
-                        <div className="flex items-center justify-between mb-4">
-                          <h3 className="text-xl font-bold text-gray-900 capitalize">
-                            {language} Example
-                          </h3>
-                          <button
-                            onClick={() => copyToClipboard(code, language)}
-                            className="flex items-center px-3 py-1 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg transition-colors duration-300"
+                      </div>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-3">Supported Methods:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {endpoint.methods.map((method, idx) => (
+                          <span
+                            key={idx}
+                            className={`px-3 py-1 rounded-full text-sm font-medium ${
+                              method === 'GET' ? 'bg-green-100 text-green-800' :
+                              method === 'POST' ? 'bg-blue-100 text-blue-800' :
+                              method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
+                              'bg-red-100 text-red-800'
+                            }`}
                           >
-                            {copiedCode === language ? (
-                              <>
-                                <Check className="w-4 h-4 mr-2" />
-                                Copied!
-                              </>
-                            ) : (
-                              <>
-                                <Copy className="w-4 h-4 mr-2" />
-                                Copy
-                              </>
-                            )}
-                          </button>
-                        </div>
-                        <pre className="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto">
-                          <code>{code}</code>
+                            {method}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-3">Example Request:</h4>
+                      <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                        <pre className="text-green-400 text-sm">
+                          <code>{`${Object.values(endpoint.examples)[0].method} ${Object.values(endpoint.examples)[0].url}
+${Object.keys(Object.values(endpoint.examples)[0].headers || {}).map(key => 
+  `-H '${key}: ${Object.values(endpoint.examples)[0].headers[key]}'`
+).join('\n')}
+${Object.values(endpoint.examples)[0].body ? 
+  `-d '${JSON.stringify(Object.values(endpoint.examples)[0].body, null, 2)}'` : 
+  ''
+}`}</code>
                         </pre>
                       </div>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
+                    </div>
 
-              {/* Errors Tab */}
-              {activeTab === 'errors' && (
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                    Error Handling
-                  </h2>
-                  
-                  <div className="bg-gray-50 rounded-lg p-8 mb-8">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">HTTP Status Codes</h3>
-                    <p className="text-gray-600 mb-6">
-                      Our API uses standard HTTP status codes to indicate success or failure of requests.
-                    </p>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-3">Success Codes</h4>
-                        <ul className="space-y-2 text-sm">
-                          <li><code className="bg-green-100 text-green-700 px-2 py-1 rounded">200</code> OK - Request successful</li>
-                          <li><code className="bg-green-100 text-green-700 px-2 py-1 rounded">201</code> Created - Resource created successfully</li>
-                          <li><code className="bg-green-100 text-green-700 px-2 py-1 rounded">204</code> No Content - Request successful, no content returned</li>
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-3">Error Codes</h4>
-                        <ul className="space-y-2 text-sm">
-                          <li><code className="bg-red-100 text-red-700 px-2 py-1 rounded">400</code> Bad Request - Invalid request</li>
-                          <li><code className="bg-red-100 text-red-700 px-2 py-1 rounded">401</code> Unauthorized - Authentication required</li>
-                          <li><code className="bg-red-100 text-red-700 px-2 py-1 rounded">403</code> Forbidden - Access denied</li>
-                          <li><code className="bg-red-100 text-red-700 px-2 py-1 rounded">404</code> Not Found - Resource not found</li>
-                          <li><code className="bg-red-100 text-red-700 px-2 py-1 rounded">500</code> Internal Server Error - Server error</li>
-                        </ul>
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-3">Example Response:</h4>
+                      <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                        <pre className="text-green-400 text-sm">
+                          <code>{JSON.stringify(Object.values(endpoint.examples)[0].response, null, 2)}</code>
+                        </pre>
                       </div>
                     </div>
-                  </div>
 
+<<<<<<< HEAD:pages/docs/api.tsx.backup
                   <div className="bg-gray-50 rounded-lg p-8">
                     <h3 className="text-xl font-bold text-gray-900 mb-4">Error Response Format</h3>
                     <p className="text-gray-600 mb-4">
@@ -612,28 +772,231 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
                   </div>
                 </motion.div>
               )}
+<<<<<<<< HEAD:pages/docs/api.tsx
+========
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+<<<<<<< HEAD
+=======
+=======
+                    <Link
+                      href={`/contact?api=${encodeURIComponent(endpoint.title)}`}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                    >
+                      Get API Access
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </motion.div>
+                );
+              })}
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-55a3:pages/docs/api.tsx
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada:pages/docs/api.tsx.backup
+=======
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                API Overview
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our RESTful APIs provide easy access to our services and data with comprehensive documentation and examples.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="bg-white rounded-xl shadow-lg p-6 text-center"
+              >
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Secure</h3>
+                <p className="text-gray-600">OAuth 2.0 authentication and HTTPS encryption for all API calls.</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-white rounded-xl shadow-lg p-6 text-center"
+              >
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Fast</h3>
+                <p className="text-gray-600">High-performance APIs with sub-100ms response times and 99.9% uptime.</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white rounded-xl shadow-lg p-6 text-center"
+              >
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Database className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Comprehensive</h3>
+                <p className="text-gray-600">Complete coverage of all our services with detailed documentation.</p>
+              </motion.div>
+            </div>
+
+            {/* API Endpoints */}
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="bg-white rounded-xl shadow-lg p-8"
+              >
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">API Endpoints</h3>
+                
+                <div className="space-y-6">
+                  <div className="border border-gray-200 rounded-lg p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center">
+                        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mr-4">GET</span>
+                        <code className="text-lg font-mono text-gray-900">/api/v1/services</code>
+                      </div>
+                      <button className="flex items-center text-blue-600 hover:text-blue-800">
+                        <Copy className="w-4 h-4 mr-1" />
+                        Copy
+                      </button>
+                    </div>
+                    <p className="text-gray-600 mb-4">Retrieve all available services</p>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <pre className="text-sm text-gray-800">
+{`{
+  "services": [
+    {
+      "id": "ai-code-review",
+      "name": "AI Code Review Assistant",
+      "description": "Automated code review with AI analysis",
+      "pricing": "$199-999/month",
+      "category": "Development Tools"
+    }
+  ]
+}`}
+                      </pre>
+                    </div>
+                  </div>
+
+                  <div className="border border-gray-200 rounded-lg p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center">
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mr-4">POST</span>
+                        <code className="text-lg font-mono text-gray-900">/api/v1/contact</code>
+                      </div>
+                      <button className="flex items-center text-blue-600 hover:text-blue-800">
+                        <Copy className="w-4 h-4 mr-1" />
+                        Copy
+                      </button>
+                    </div>
+                    <p className="text-gray-600 mb-4">Submit a contact form</p>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <pre className="text-sm text-gray-800">
+{`{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "company": "Acme Corp",
+  "message": "Interested in your AI services"
+}`}
+                      </pre>
+                    </div>
+                  </div>
+
+                  <div className="border border-gray-200 rounded-lg p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center">
+                        <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium mr-4">PUT</span>
+                        <code className="text-lg font-mono text-gray-900">/api/v1/projects/&#123;id&#125;</code>
+                      </div>
+                      <button className="flex items-center text-blue-600 hover:text-blue-800">
+                        <Copy className="w-4 h-4 mr-1" />
+                        Copy
+                      </button>
+                    </div>
+                    <p className="text-gray-600 mb-4">Update project information</p>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <pre className="text-sm text-gray-800">
+{`{
+  "name": "Updated Project Name",
+  "status": "in-progress",
+  "description": "Updated project description"
+}`}
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
+<<<<<<<< HEAD:pages/docs/api.tsx
+========
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages/docs/api.tsx.backup
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+>>>>>>> main
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Get your API key and start integrating our AI services into your applications.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Get API Key
+                  <ExternalLink className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/ai-services"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  View AI Services
+                </Link>
+=======
+>>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada:pages/docs/api.tsx.backup
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center"
+=======
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-55a3:pages/docs/api.tsx
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Get Started?
+                Ready to Start Building?
               </h2>
-              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-                Start building with our APIs today. Get your API key and begin integrating 
-                with our powerful services.
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Get your API key and start integrating with our platform today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD:pages/docs/api.tsx.backup
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
@@ -646,11 +1009,93 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
                 >
                   View Full Documentation
                 </a>
+<<<<<<<< HEAD:pages/docs/api.tsx
+========
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+<<<<<<< HEAD
+=======
+=======
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Get API Access
+                </Link>
+                <Link href="/api" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                  View API Overview
+                </Link>
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-55a3:pages/docs/api.tsx
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada:pages/docs/api.tsx.backup
+=======
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Get your API key and start building amazing applications with our services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center">
+                  <Code className="w-5 h-5 mr-2" />
+                  Get API Key
+                </button>
+                <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold inline-flex items-center justify-center">
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  View Examples
+                </button>
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+<<<<<<<< HEAD:pages/docs/api.tsx
       </div>
     </MainLayout>
   );
 }
+========
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <Layout title="API Docs">
+      <div className="max-w-5xl mx-auto px-4 py-16">
+        <h1 className="text-3xl font-bold mb-4">API Documentation</h1>
+        <p className="text-gray-600">Reference content will return after fixes. Basic page added to restore build.</p>
+<<<<<<< HEAD
+      </div>
+    </Layout>
+=======
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+      </div>
+    </Layout>
+=======
+      </div>
+    </>
+  );
+<<<<<<< HEAD:pages/docs/api.tsx.backup
+}
+>>>>>>> main
+=======
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-55a3:pages/docs/api.tsx
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada:pages/docs/api.tsx.backup
+=======
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada

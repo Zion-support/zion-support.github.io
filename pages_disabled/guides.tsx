@@ -1,7 +1,5 @@
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import { FileText, Clock, Users, ArrowRight, CheckCircle, BookOpen, Code, Database, Cloud, Shield } from 'lucide-react';
 
 const guides = [
   {

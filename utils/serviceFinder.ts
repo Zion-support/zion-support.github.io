@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Service {
   id: string;
   name: string;
@@ -26,6 +27,8 @@ export default {
   findService,
   getServicesByCategory
 };
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 // Service finder utility
 export const findService = ("_serviceName": string) => {
   // Implementation placeholder

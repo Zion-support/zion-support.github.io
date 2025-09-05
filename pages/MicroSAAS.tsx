@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import { Star } from 'lucide-react';
+=======
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';

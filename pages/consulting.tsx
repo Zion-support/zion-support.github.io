@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Users, Target, BarChart3, Shield, CheckCircle, ArrowRight, Phone, Mail, Globe, Server, Database, Zap, RefreshCw } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';
 
 const consultingServices = [

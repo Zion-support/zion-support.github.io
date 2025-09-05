@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
 import {
 =======
@@ -544,6 +545,20 @@ export default function APIDocs() {
   CheckCircle,
   Brain,
   Cloud
+=======
+import { 
+  Code, 
+  Book, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Database, 
+  Server, 
+  Lock, 
+  CheckCircle, 
+  Brain, 
+  Cloud 
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 } from 'lucide-react';
 
 const apiEndpoints = [
@@ -586,6 +601,7 @@ export default function APIDocsPage() {
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
       </Head>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -709,6 +725,12 @@ export default function APIDocsPage() {
         {/* Code Examples */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
+=======
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -762,6 +784,7 @@ export default function APIDocsPage() {
                   className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
                 >
                   Get API Key
+<<<<<<< HEAD
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <Link
@@ -771,15 +794,25 @@ export default function APIDocsPage() {
                   View AI Services
 >>>>>>> main
                 </Link>
+=======
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  View Documentation
+                </button>
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
               </div>
             </motion.div>
           </div>
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     </Layout>
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
+=======
+    </>
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
   );
 }

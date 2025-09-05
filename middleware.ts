@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+=======
+<<<<<<< HEAD
+=======
+import { NextResponse } from "next/server";
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+import type { NextRequest } from "next/server";
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 
 const protectedRoutes = [
   "/",
@@ -7,8 +15,14 @@ const protectedRoutes = [
   "/contact",
   "/blog",
   "/services",
+<<<<<<< HEAD
   "/solutions",
   "/ai-services",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "/micro-saas",
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
   "/it-services",
   "/micro-saas",
   "/cloud-solutions",
@@ -35,6 +49,7 @@ const protectedRoutes = [
   "/help",
   "/support",
   "/faq",
+<<<<<<< HEAD
   "/talent",
   "/quote",
   "/white-papers",
@@ -45,11 +60,68 @@ const protectedRoutes = [
   "/api-docs",
   "/sitemap",
   "/status",
+=======
+  "/privacy",
+  "/terms",
+  "/login",
+  "/register"
+=======
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+  "/ai-services",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+  "/it-services",
+  "/micro-saas",
+  "/careers",
+<<<<<<< HEAD
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/sitemap",
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
   "/auth/login",
   "/auth/register",
   "/auth/forgot-password",
   "/auth/reset-password",
+<<<<<<< HEAD
   "/auth/verify"
+=======
+  "/auth/verify",
+=======
+  "/blog",
+  "/docs",
+=======
+  "/case-studies"
+<<<<<<< HEAD
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+=======
+  "/micro-saas",
+  "/it-services",
+  "/ai-services",
+  "/pricing",
+  "/team",
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+  "/careers",
+  "/blog",
+  "/news",
+  "/support",
+  "/faq",
+  "/privacy",
+<<<<<<< HEAD
+  "/terms"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
+=======
+  "/terms",
+  "/login",
+  "/register"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 ];
 
 export function middleware(request: NextRequest) {
@@ -82,6 +154,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+<<<<<<< HEAD
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
@@ -89,6 +162,26 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+=======
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-1436
+=======
+<<<<<<< HEAD
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+=======
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+=======
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
   ],
 };

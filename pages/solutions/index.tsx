@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 import { 
   Shield, 
   Rocket, 
@@ -13,7 +16,11 @@ import {
   Globe,
   Target
 } from 'lucide-react';
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
+=======
+import Layout from '../components/Layout';
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 
 const solutions = [
   {

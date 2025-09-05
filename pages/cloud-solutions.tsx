@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
+=======
+import MainLayout from '../src/components/layout/MainLayout';
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 

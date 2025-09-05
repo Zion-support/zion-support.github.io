@@ -1,4 +1,3 @@
-
 // Performance test utilities
 export const performanceTestUtils = {
   // Measure page load time

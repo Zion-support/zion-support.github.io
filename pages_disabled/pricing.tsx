@@ -1,7 +1,7 @@
+<<<<<<< HEAD
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { 
   CheckCircle,
   X,
@@ -104,6 +104,13 @@ export default function Pricing() {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
+=======
+import React from 'react';
+import Head from 'next/head';
+            </h1>
+            <p className="text-xl text-blue-100 mb-8">
+              Choose the perfect plan for your business needs
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
             </p>
           </div>
 
@@ -197,7 +204,63 @@ export default function Pricing() {
             </Link>
           </div>
         </div>
-      </div>
-    </>
-  )
-}
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-gray-600">
+                Everything you need to know about our pricing
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {faq.question}
+                  </h3>
+                  <p className="text-gray-600">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-blue-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                href="/contact"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors inline-flex items-center justify-center"
+              >
+                Contact Sales
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
