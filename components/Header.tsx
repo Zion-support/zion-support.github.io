@@ -177,11 +177,11 @@ const contactInfo = {
             <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>contact@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">

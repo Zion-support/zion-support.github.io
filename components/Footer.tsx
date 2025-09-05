@@ -208,15 +208,15 @@ export default function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">contact@ziontechgroup.com</span>
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">123 Technology Drive, Innovation City, IC 12345</span>
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
 </div>
@@ -378,7 +378,7 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-6">
 <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
-              © 2024 Zion Tech Group. All rights reserved. | 
+              © 2025 Zion Tech Group. All rights reserved. | 
               <span className="ml-2">Delaware, United States</span>
             </div>
             

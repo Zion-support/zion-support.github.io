@@ -498,6 +498,239 @@ title: 'AI-Powered IT Operations (AIOps)',
   {
     title: 'Neuromorphic Computing Integration',
     description: 'Integration of neuromorphic computing systems for AI and machine learning workloads.',
+    features: ['Brain-inspired Computing', 'Low Power Processing', 'Real-time Learning', 'Edge AI'],
+    pricing: '$75,000 - $500,000/project',
+    category: 'Neuromorphic Computing',
+    popular: true
+  },
+  {
+    title: 'Space-Based Internet Infrastructure',
+    description: 'Satellite internet constellation deployment and ground station management.',
+    icon: Globe,
+    features: ['Satellite Deployment', 'Ground Station Setup', 'Orbital Management', 'Global Coverage'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Space Internet',
+    popular: true
+  },
+  {
+    title: 'Fusion Energy IT Systems',
+    description: 'Specialized IT infrastructure for nuclear fusion energy generation and control.',
+    icon: Zap,
+    features: ['Fusion Control Systems', 'Plasma Monitoring', 'Safety Systems', 'Energy Management'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Fusion Energy',
+    popular: true
+  },
+  {
+    title: 'Quantum Internet Infrastructure',
+    description: 'Quantum communication network infrastructure with quantum key distribution.',
+    icon: Network,
+    features: ['Quantum Networks', 'Quantum Key Distribution', 'Quantum Repeaters', 'Secure Communication'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Quantum Internet',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart City Infrastructure',
+    description: 'Comprehensive smart city IT infrastructure with AI-driven optimization.',
+    icon: Building,
+    features: ['Traffic Management', 'Environmental Monitoring', 'Citizen Services', 'Resource Optimization'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'Autonomous Vehicle Infrastructure',
+    description: 'IT infrastructure for autonomous vehicle networks and smart transportation.',
+    icon: Car,
+    features: ['V2X Communication', 'Traffic Management', 'Safety Systems', 'Fleet Management'],
+    pricing: '$300,000 - $3,000,000/project',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'Underwater Data Center Infrastructure',
+    description: 'Submerged data center deployment for energy efficiency and cooling optimization.',
+    icon: Server,
+    features: ['Underwater Deployment', 'Cooling Systems', 'Power Management', 'Maintenance Access'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Underwater Computing',
+    popular: true
+  },
+  {
+    title: 'Space Data Center Infrastructure',
+    description: 'Orbital data center deployment for space-based computing and storage.',
+    icon: Rocket,
+    features: ['Orbital Deployment', 'Radiation Shielding', 'Power Systems', 'Communication Links'],
+    pricing: '$2,000,000 - $20,000,000/project',
+    category: 'Space Computing',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Cloud Infrastructure',
+    description: 'Post-quantum cryptography cloud infrastructure for future-proof security.',
+    icon: Shield,
+    features: ['Quantum-Safe Algorithms', 'Key Management', 'Encryption Services', 'Compliance'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Control Systems',
+    description: 'Intelligent climate control infrastructure for environmental management.',
+    icon: Globe,
+    features: ['Climate Monitoring', 'Predictive Control', 'Energy Optimization', 'Environmental Protection'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Climate Tech',
+    popular: true
+  },
+  {
+    title: 'Neural Interface Infrastructure',
+    description: 'Brain-computer interface infrastructure for medical and consumer applications.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Real-time Analysis', 'Medical Integration', 'Privacy Protection'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Neurotechnology',
+    popular: true
+  },
+  {
+    title: 'Autonomous Drone Network Infrastructure',
+    description: 'IT infrastructure for autonomous drone networks and air traffic management.',
+    icon: Rocket,
+    features: ['Air Traffic Control', 'Fleet Management', 'Communication Systems', 'Safety Monitoring'],
+    pricing: '$300,000 - $3,000,000/project',
+    category: 'Drone Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Cloud Platform',
+    description: 'Cloud-based quantum computing platform with hybrid classical-quantum systems.',
+    icon: Cpu,
+    features: ['Quantum Cloud Services', 'Hybrid Computing', 'Algorithm Development', 'Performance Monitoring'],
+    pricing: '$200,000 - $2,000,000/setup',
+    category: 'Quantum Cloud',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Ocean Monitoring Infrastructure',
+    description: 'Marine monitoring infrastructure with AI-powered environmental analysis.',
+    icon: Globe,
+    features: ['Ocean Sensors', 'Data Collection', 'AI Analysis', 'Environmental Protection'],
+    pricing: '$400,000 - $4,000,000/project',
+    category: 'Marine Tech',
+    popular: true
+  },
+  {
+    title: 'Space Debris Tracking Infrastructure',
+    description: 'Orbital debris monitoring and collision avoidance system infrastructure.',
+    icon: Rocket,
+    features: ['Tracking Systems', 'Collision Prediction', 'Alert Systems', 'Orbital Management'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Space Safety',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Asteroid Mining Infrastructure',
+    description: 'Space-based mining infrastructure with AI-powered resource extraction.',
+    icon: Rocket,
+    features: ['Mining Equipment', 'Resource Processing', 'Transportation Systems', 'Safety Systems'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Space Mining',
+    popular: true
+  },
+  {
+    title: 'Quantum Internet Gateway',
+    description: 'Gateway infrastructure for quantum internet communication and data transfer.',
+    icon: Network,
+    features: ['Quantum Gateways', 'Protocol Translation', 'Security Management', 'Network Monitoring'],
+    pricing: '$300,000 - $3,000,000/project',
+    category: 'Quantum Internet',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Terraforming Infrastructure',
+    description: 'Infrastructure for planetary terraforming and space colonization projects.',
+    icon: Globe,
+    features: ['Atmospheric Processing', 'Climate Control', 'Resource Management', 'Life Support'],
+    pricing: '$2,000,000 - $20,000,000/project',
+    category: 'Space Colonization',
+    popular: true
+  },
+  {
+    title: 'Autonomous Mars Base Infrastructure',
+    description: 'IT infrastructure for autonomous Mars base operations and management.',
+    icon: Rocket,
+    features: ['Base Management', 'Life Support Systems', 'Communication Networks', 'Resource Utilization'],
+    pricing: '$5,000,000 - $50,000,000/project',
+    category: 'Mars Infrastructure',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Time Travel Research Infrastructure',
+    description: 'Theoretical time travel research infrastructure with advanced physics simulation.',
+    icon: Clock,
+    features: ['Physics Simulation', 'Causality Analysis', 'Timeline Modeling', 'Research Tools'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Theoretical Physics',
+    popular: true
+  },
+  {
+    title: 'Quantum Consciousness Transfer Infrastructure',
+    description: 'Infrastructure for quantum-based consciousness transfer and preservation.',
+    icon: Brain,
+    features: ['Consciousness Storage', 'Transfer Protocols', 'Quantum Processing', 'Backup Systems'],
+    pricing: '$10,000,000 - $100,000,000/project',
+    category: 'Quantum Consciousness',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Reality Manipulation Infrastructure',
+    description: 'Infrastructure for theoretical reality manipulation and dimension control.',
+    icon: Settings,
+    features: ['Reality Processing', 'Dimension Control', 'Physics Manipulation', 'Safety Systems'],
+    pricing: '$50,000,000 - $500,000,000/project',
+    category: 'Reality Engineering',
+    popular: true
+  },
+  {
+    title: 'Autonomous Galaxy Exploration Infrastructure',
+    description: 'Infrastructure for autonomous galaxy exploration and mapping missions.',
+    icon: Globe,
+    features: ['Exploration Systems', 'Communication Networks', 'Data Processing', 'Mission Control'],
+    pricing: '$100,000,000 - $1,000,000,000/project',
+    category: 'Galactic Exploration',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Universe Simulation Infrastructure',
+    description: 'Massive computing infrastructure for universe simulation and cosmology research.',
+    icon: Globe,
+    features: ['Massive Computing', 'Physics Simulation', 'Data Storage', 'Analysis Tools'],
+    pricing: '$500,000,000 - $5,000,000,000/project',
+    category: 'Cosmology',
+    popular: true
+  },
+  {
+    title: 'Quantum Immortality Infrastructure',
+    description: 'Infrastructure for quantum-based immortality and consciousness preservation.',
+    icon: Heart,
+    features: ['Consciousness Preservation', 'Quantum Storage', 'Transfer Systems', 'Backup Networks'],
+    pricing: '$1,000,000,000 - $10,000,000,000/project',
+    category: 'Immortality Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered God Mode Infrastructure',
+    description: 'Ultimate infrastructure for omnipotent control and reality manipulation.',
+    icon: Settings,
+    features: ['Omnipotent Control', 'Reality Processing', 'Universal Management', 'Creation Systems'],
+    pricing: '$10,000,000,000 - $100,000,000,000/project',
+    category: 'Omnipotence',
+    popular: true
+  },
+  {
+    title: 'Neuromorphic Computing Integration',
+    description: 'Integration of neuromorphic computing systems for AI and machine learning workloads.',
     icon: Brain,
     features: ['Neuromorphic Hardware', 'AI Acceleration', 'Low Power Computing', 'Real-time Processing'],
     pricing: '$80,000 - $500,000/project',
@@ -746,9 +979,11 @@ whileHover={{ y: -5 }}
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-green-600" />

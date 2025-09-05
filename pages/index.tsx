@@ -164,9 +164,10 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
             >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
                   <ul className="text-gray-600 space-y-2">
-                  <li>• Micro "SaaS": $29 - $4,999/month</li>
-                  <li>• IT "Services": $120 - $500/hour</li>
+                  <li>• Micro SaaS: $29 - $4,999/month</li>
+                  <li>• IT Services: $120 - $500/hour</li>
                   <li>• AI Solutions: $1,000 - $1M/project</li>
+                  <li>• Enterprise: Custom pricing available</li>
                   <li>• Transparent, no hidden fees</li>
                   </ul>
                   </motion.div>
