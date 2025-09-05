@@ -133,7 +133,6 @@ const microSaasServices = [
     popular: false
   },
   {
-<<<<<<< HEAD
     title: '5G Network Optimization',
     description: 'AI-powered 5G network optimization with performance monitoring, capacity planning, and automated optimization.',
     icon: Network,

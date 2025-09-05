@@ -161,17 +161,10 @@ export default function PricingPage() {
         </section>
 
         {/* Pricing Plans */}
-<<<<<<< HEAD
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-=======
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {plans.map((plan, index) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+              {pricingPlans.map((plan, index) => (
                 <motion.div
                   key={plan.name}
                   initial={{ opacity: 0, y: 30 }}
