@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {motion} from 'framer-motion';';
 const EnhancedLoading = ("props": "any) => {"}
     const sizeClasses = {}
@@ -9,15 +8,12 @@ const EnhancedLoading = ("props": "any) => {"}
 
 export {EnhancedLoading};
 ;
-=======
 import React from 'react';
 
 interface EnhancedLoading.jsProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
->>>>>>> main
 export {EnhancedLoading};
 ;
 export {EnhancedLoading};
@@ -31,15 +27,12 @@ export {EnhancedLoading};
 }
   });
 }
-<<<<<<< HEAD
   }) export {EnhancedLoading};";
   });,"}) ;,"});
-=======
   }) export {EnhancedLoading};"
   }
     );,"}
     );,"})
->>>>>>> main
 }
   }) export {EnhancedLoading}
 ;
@@ -49,14 +42,11 @@ export {EnhancedLoading};
 }
   });
 }
-<<<<<<< HEAD
   }) export {EnhancedLoading};";
   });,"}) ";
-=======
   }) export {EnhancedLoading};"
   }
     );,"}) "
-=======
 export default function EnhancedLoading.js({ }: EnhancedLoading.jsProps) {
   return (
     <div>
@@ -65,5 +55,3 @@ export default function EnhancedLoading.js({ }: EnhancedLoading.jsProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

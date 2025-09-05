@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Link} from 'react-router-dom';';';
 import {MainNavigation} from './header/MainNavigation';
-=======
 import {Link} from 'react-router-dom';
 import MainNavigation from './header/MainNavigation';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 
 export function Header(props) {return (
       <header className="bg-white shadow-sm border-b border-gray-200">
@@ -22,7 +18,6 @@ export function Header(props) {return (
       </header>
     );}';
 ;';;';
-=======
 import {Link} from 'react-router-dom';
 import MainNavigation from './header/MainNavigation';
 ;
@@ -40,4 +35,3 @@ export function Header(props) {return (;
         </div>;
       </header>;
     );"}
->>>>>>> main

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useEffect, useMemo, useCallback} from 'react';';';
-=======
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 ;
@@ -51,9 +48,7 @@ export default function PerformanceOptimizer(props) {;
 ;
   return null;
 }
-=======
 import React, {useEffect, useMemo, useCallback} from 'react';
->>>>>>> main
 import {useLocation} from 'react-router-dom';
 
 export default function Page(props: any) {
@@ -116,14 +111,11 @@ export default function Page(props: any) {
                   newWorker.state === 'installed' &&
                   navigator.serviceWorker.controller
                 ) {
-<<<<<<< HEAD
                   // New service worker available
                   
-=======
 
                   // New service worker available'
                   // // 
->>>>>>> main
                 }
               }
     );
@@ -131,14 +123,11 @@ export default function Page(props: any) {
           }
     );
         })
-<<<<<<< HEAD
         .catch(registrationError => {
           
         });
-=======
         .catch(registrationError => {// // }
     );
->>>>>>> main
     }
   }, []);
 
@@ -214,10 +203,8 @@ if(typeof window !== 'undefined') {
   }
     );,"})
 }
-<<<<<<< HEAD
  export const PerformanceOptimizer = memo(({children}) => { const location = useLocation () """';
 ;';;';
-=======
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -267,8 +254,4 @@ export default function PerformanceOptimizer(props) {
 
   return null;
 }
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
  export const PerformanceOptimizer = memo(({children}) => { const location = useLocation () """
->>>>>>> main
->>>>>>> main

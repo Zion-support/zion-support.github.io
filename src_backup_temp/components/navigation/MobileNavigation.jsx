@@ -69,13 +69,10 @@ export function MobileNavigation("props": "any) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
     </div>;
   );
-=======
     </div>
     );
->>>>>>> main
 }
 ;
 export default MobileNavigation;

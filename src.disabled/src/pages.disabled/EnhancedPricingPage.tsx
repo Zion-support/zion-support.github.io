@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-import React from \"react\"; import { SEO } from \"@/components/SEO\";,\"});,\"});} export default function EnhancedPricingPage() {}; return null} } }
-=======
-<<<<<<< HEAD
-const React from "react"; import { SEO } from "@/components/SEO";,"});,"});} export default function EnhancedPricingPage() { return; }; return null} } }""
-=======
-import _React from "react"; import { SEO } from "@/components/SEO";,"});,"});} export default function EnhancedPricingPage() {}; return null} } }
->>>>>>> main
->>>>>>> main

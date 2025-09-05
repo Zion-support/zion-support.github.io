@@ -71,7 +71,6 @@ export default function Page("props": "any) {;
             case 'biotech-ai': return <Dna className="w-5 h-5" />;";
             "default": return <Cpu className="w-5 h-5" />"}
     };
-<<<<<<< HEAD
     const categories = ['";
         {"id": 'all', "name": 'All Categories', "icon": "<Globe className="w-4 h-4" />"},";
         {"id": 'quantum', "name": 'Quantum Technology', "icon": "<Atom className="w-4 h-4" />"},";
@@ -81,7 +80,6 @@ export default function Page("props": "any) {;
         {"id": 'biotech-ai', "name": 'Biotech AI', "icon": "<Dna className="w-4 h-4" />"}
     ];";
     return (<div className="max-w-7xl mx-auto p-6">;
-=======
     const categories = ['"
         {id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />},"
         {id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w-4 h-4" />},"
@@ -92,7 +90,6 @@ export default function Page("props": "any) {;
     ];"
     return (
         <div className="max-w-7xl mx-auto p-6">
->>>>>>> main
       {/* Header */}
       <motion.div initial = {;
 
@@ -743,7 +740,6 @@ export default function AdvancedServiceInnovationHub("props": any) {return (";
                       <ul className="space-y-2">""""{roadmap.opportunities.map((opportunity, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"""";
                             <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>;
                             {opportunity}
-<<<<<<< HEAD
 ;
         </motion.div>) }";
       {/* comment */}"{viewMode === "insights" && (<motion.div initial = {}">;
@@ -969,7 +965,6 @@ of emerging technologies and capitalize on future opportunities."""";
 </div>;
         </div>;
       </motion.div>;
-=======
 
         </motion.div>) }"
       {/* comment */}"{viewMode === "insights" && (<motion.div initial = {}">
@@ -1195,7 +1190,6 @@ of emerging technologies and capitalize on future opportunities.""""
 </div>
         </div>
       </motion.div>
->>>>>>> main
     </div>)};
 export default AdvancedServiceInnovationHub;
 }}}}}}

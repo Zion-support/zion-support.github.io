@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState, useMemo} from "react";""";,"});,"})","});,"})","});,"})""""";,"});,"})""""";,"});,"})""""";,"});,"})","});,"})";
 const AdvancedServiceInnovationHub = ("props": "any) => {"}"});,"})";
 ";,"});,"})";
@@ -602,7 +601,6 @@ const AdvancedServiceInnovationHub = ("props": "any) => {"}"";
     const [selectedStatus, setSelectedStatus] = useState("all")";
     const [searchTerm, setSearchTerm] = useState("")";
     const [viewMode, setViewMode] = useState();
-=======
 import React, {useState, useMemo} from "react";""";,"}
     );,"})","}
     );,"})","}
@@ -1827,7 +1825,6 @@ const AdvancedServiceInnovationHub = (props: any) => {}""
     const [selectedStatus, setSelectedStatus] = useState("all")"
     const [searchTerm, setSearchTerm] = useState("")"
     const [viewMode, setViewMode] = useState()
->>>>>>> main
 }
     // comment;
 const innovationTrends = []";
@@ -2435,7 +2432,6 @@ const innovationTrends = []";
         </motion.div>) }
 ;
       {/* comment */}
-<<<<<<< HEAD
 ;
       <motion.div initial = {}";
   {"opacity": "0", "y": "20"}} animate = {}"";
@@ -2466,7 +2462,6 @@ const innovationTrends = []";
             </Button>;
           </div>;
       </motion.div>;
-=======
 
       <motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
@@ -2497,7 +2492,6 @@ const innovationTrends = []";
             </Button>
           </div>
       </motion.div>
->>>>>>> main
 </div>)};
 export default AdvancedServiceInnovationHub;
 ;

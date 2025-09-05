@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 export function BlogSection("props": "any) {;
 
 import { Link  "} from 'react-router-dom';
@@ -33,13 +32,11 @@ import { Link  "} from 'react-router-dom';
                 <span>{post.date}</span>;
                 <span>{post.readTime}</span>;
               </div>;
-=======
 
 interface BlogSection.jsProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
             id: '2',
             title: 'Building Scalable Web Applications',
             excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
@@ -67,16 +64,12 @@ interface BlogSection.jsProps {
                 <span>{post.date}</span>
                 <span>{post.readTime}</span>
               </div>
->>>>>>> main
             </article>) ) }
         </div>;
       </div>;
     </section>)}
-<<<<<<< HEAD
 '"`;
-=======
 '"`
-=======
 export default function BlogSection.js({ }: BlogSection.jsProps) {
   return (
     <div>
@@ -85,5 +78,3 @@ export default function BlogSection.js({ }: BlogSection.jsProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

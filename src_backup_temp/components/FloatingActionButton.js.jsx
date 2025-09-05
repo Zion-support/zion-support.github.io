@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState} from "react";""";,"});,"})","});,"})","})";
   PlusIcon,,"});,"})";
   XMarkIcon,,"});,"})";
@@ -109,7 +108,6 @@ export {FloatingActionButton};,"});,"})";
 ;,"});,"})";
 export {FloatingActionButton};,"});,"})";
   const [isOpen, setIsOpen] = useState();
-=======
 import React, {useState} from "react";""";,"}
     );,"})","}
     );,"})","})"
@@ -329,7 +327,6 @@ export {FloatingActionButton};,"}
 export {FloatingActionButton};,"}
     );,"})"
   const [isOpen, setIsOpen] = useState()
->>>>>>> main
 }
   const toggleMenu = () => setIsOpen();
 }

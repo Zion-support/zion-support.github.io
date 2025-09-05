@@ -58,14 +58,11 @@ export function ApiDocumentation("props": "any) {;
   ;
 
 }
-<<<<<<< HEAD
 });
 ;
-=======
 }
     );
 
->>>>>>> main
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -131,14 +128,11 @@ const response = await fetch(\`"https"://ziontechgroup.com/api/v1/jobs/\${jobId;
     'Authorization': 'Bearer YOUR_API_KEY'",;
     'Content-Type': 'application/json';
   }
-<<<<<<< HEAD
 });
 ;
-=======
 }
     );
 
->>>>>>> main
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -208,7 +202,6 @@ print(data)`;
   "currency": "USD";
     ;
 
-<<<<<<< HEAD
 },;
     "deadline": "2025-06-"30T23":"59": "59Z";
   "}'`,;
@@ -232,7 +225,6 @@ print(data)`;
   "});
 });
 ;
-=======
 },
             {name: "description", type: "string", description: "Detailed job description", required: true},
             {name: "category", type: "string", description: "Job category", required: true},
@@ -281,7 +273,6 @@ print(data)`;
 }
     );
 
->>>>>>> main
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -361,14 +352,11 @@ print(data)`;
   ;
 
 }
-<<<<<<< HEAD
 });
 ;
-=======
 }
     );
 
->>>>>>> main
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -428,14 +416,11 @@ const response = await fetch(\`"https"://ziontechgroup.com/api/v1/talent/\${tale
     'Authorization': 'Bearer YOUR_API_KEY'",;
     'Content-Type': 'application/json';
   }
-<<<<<<< HEAD
 });
 ;
-=======
 }
     );
 
->>>>>>> main
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -516,7 +501,6 @@ print(data)`;
   "requester_email": "john@example.com";
   ;
 
-<<<<<<< HEAD
 }'`,;
             "javascript": "`const response = await fetch('"https"://ziontechgroup.com/api/v1/quotes'", {;
   "method": 'POST',;
@@ -535,7 +519,6 @@ print(data)`;
     "requester_email": 'john@example.com'});
 });
 ;
-=======
 }'`,
             javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/quotes', {
   method: 'POST',
@@ -555,7 +538,6 @@ print(data)`;
 }
     );
 
->>>>>>> main
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -627,14 +609,11 @@ print(data)`;
   ;
 
 }
-<<<<<<< HEAD
 });
 ;
-=======
 }
     );
 
->>>>>>> main
 const data = await response.json();
 `,;
             "python": "`import requests;
@@ -665,7 +644,6 @@ print(data)`;
   "replied_at": "null;
     ;
 
-<<<<<<< HEAD
 "},;
     // More quotes...;
   ],;
@@ -693,7 +671,6 @@ print(data)`;
               </p>;
               ;
               <CodeBlock code = {;
-=======
 data = response.json()
 print(data)`
         }} responseExamples = {
@@ -739,7 +716,6 @@ print(data)`
               </p>
               
               <CodeBlock code = {
->>>>>>> main
   `import crypto from 'crypto';
 ;
 // Function to verify webhook signature;
@@ -764,7 +740,6 @@ app.post('/webhook', express.raw({"type": 'application/json'}), (req, res) => {;
   ;
   // Process the webhook event;
   const event = JSON.parse(payload);
-<<<<<<< HEAD
   ;
   ;
   // Respond to acknowledge receipt;
@@ -933,7 +908,6 @@ function EndpointSection("props": "any) {;
                 : method === 'PUT';
                     ? "border-yellow-500 text-yellow-400 font-mono";
                     : "border-red-500 text-red-400 font-mono""}>;
-=======
   
   
   // Respond to acknowledge receipt
@@ -1104,7 +1078,6 @@ function EndpointSection(props: any) {
                 : method === 'PUT'
                     ? "border-yellow-500 text-yellow-400 font-mono"
                     : "border-red-500 text-red-400 font-mono"}>
->>>>>>> main
             {method}
           </Badge>;
           <span className="ml-2 font-mono text-sm text-white">{endpoint}</span>;
