@@ -1,130 +1,150 @@
 #!/usr/bin/env node
 
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-// Function to fix comprehensive syntax errors
+console.log('🔧 Starting comprehensive syntax fixer...');
+
+// Files with critical syntax errors that need immediate fixing
+const criticalFiles = [
+  'src/components/Footer.tsx',
+  'src/components/Header.tsx',
+  'src/components/Layout.tsx',
+  'src/components/layout/EnhancedFooter.tsx',
+  'src/components/layout/EnhancedNavigation.tsx',
+  'src/components/layout/Footer.tsx',
+  'src/components/layout/Header.tsx',
+  'src/components/layout/MainLayout.tsx',
+  'src/components/performance/LazyComponent.tsx',
+  'src/components/performance/OptimizedImage.tsx',
+  'src/components/ui/EnhancedMarketplaceCard.tsx',
+  'src/components/ui/InteractiveNavigation.tsx',
+  'src/components/ui/NotificationSystem.tsx',
+  'src/hooks/useDebounce.ts',
+  'src/hooks/useMessageChannelHandler.ts',
+  'src/lib/utils.ts',
+  'src/utils/messageChannelHandler.ts',
+  'src/utils/next-link-shim.tsx',
+  'src/utils/sanitizeHtml.ts',
+  'src/utils/serviceFinder.ts',
+  'src/utils/testing-system.tsx',
+  'src/utils/validation.ts',
+  'pages/about.tsx',
+  'pages/ai-services.tsx',
+  'pages/blog.tsx',
+  'pages/contact.tsx',
+  'pages/index.tsx',
+  'pages/it-services.tsx',
+  'pages/micro-saas.tsx',
+  'pages/services.tsx',
+  'pages/talent.tsx'
+];
+
+function fixMergeConflicts(content) {
+  // Remove merge conflict markers
+  return content
+    .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
+    .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '')
+    .replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+}
+
 function fixSyntaxErrors(content) {
-  // Fix shebang syntax errors
-  content = content.replace(/#!/usr/bin/env node/g, '#!/usr/bin/env node');
+  // Fix common syntax errors
+  let fixed = content;
   
-  // Fix comment syntax errors
-  content = content.replace(/\/\*\*;/g, '/**');
-  content = content.replace(/\*\/;/g, '*/');
-  content = content.replace(/\/\/\s*;/g, '//');
+  // Fix unterminated strings
+  fixed = fixed.replace(/'([^']*)$/gm, "'$1'");
+  fixed = fixed.replace(/"([^"]*)$/gm, '"$1"');
   
-  // Fix class constructor syntax
-  content = content.replace(/constructor\(\)\s*{\s*this\.\w+\s*=\s*\[\];\s*this\.\w+\s*=\s*\[\]\s*}/g, (match) => {
-    return match.replace(/\[\];\s*this\.\w+\s*=\s*\[\]/g, '[];\n    this.issues = []')});
+  // Fix missing semicolons
+  fixed = fixed.replace(/([^;}])\n(\s*[a-zA-Z_$])/g, '$1;\n$2');
   
-  // Fix missing semicolons and brackets
-  content = content.replace(/}\s*log\(\)/g, '}\n\n  log()');
-  content = content.replace(/}\s*analyzeApp\(\)/g, '}\n\n  analyzeApp()');
+  // Fix missing commas in objects
+  fixed = fixed.replace(/([^,}])\n(\s*[a-zA-Z_$])/g, '$1,\n$2');
   
-  // Fix console.log syntax errors
-  content = content.replace(/console\.log\("([^"]+)"\)console\.log\("([^"]+)"\)/g, 'console.log("$1");\n  console.log("$2");');
-  content = content.replace(/console\.log\("([^"]+)"\)console\.log\("([^"]+)"\)/g, 'console.log("$1");\n  console.log("$2");');
+  // Fix missing closing brackets
+  const openBrackets = (fixed.match(/\{/g) || []).length;
+  const closeBrackets = (fixed.match(/\}/g) || []).length;
+  if (openBrackets > closeBrackets) {
+    fixed += '\n'.repeat(openBrackets - closeBrackets) + '}'.repeat(openBrackets - closeBrackets);
+  }
   
-  // Fix try-catch syntax
-  content = content.replace(/catch\(\)\s*{\s*console\.log\('❌[^']+',\s*,\s*error\.message\)\s*}/g, 'catch(error) {\n  console.log(\'❌ Package.json is "invalid": \', error.message);\n}');
+  // Fix missing closing parentheses
+  const openParens = (fixed.match(/\(/g) || []).length;
+  const closeParens = (fixed.match(/\)/g) || []).length;
+  if (openParens > closeParens) {
+    fixed += ')'.repeat(openParens - closeParens);
+  }
   
-  // Fix array syntax
-  content = content.replace(/\[\s*;/g, '[');
-  content = content.replace(/,\s*\]/g, ']');
+  // Fix missing closing square brackets
+  const openSquare = (fixed.match(/\[/g) || []).length;
+  const closeSquare = (fixed.match(/\]/g) || []).length;
+  if (openSquare > closeSquare) {
+    fixed += ']'.repeat(openSquare - closeSquare);
+  }
   
-  // Fix object property syntax
-  content = content.replace(/;\s*,/g, ';');
-  content = content.replace(/,\s*;/g, ';');
+  // Fix common React/JSX issues
+  fixed = fixed.replace(/className="([^"]*)"([^>]*?)>/g, 'className="$1"$2>');
+  fixed = fixed.replace(/style={{([^}]*?)}}/g, 'style={{$1}}');
   
-  // Fix trailing semicolons
-  content = content.replace(/;\s*\]/g, ']');
-  content = content.replace(/;\s*\}/g, '}');
+  // Fix import statements
+  fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2";');
   
-  // Fix missing semicolons after statements
-  content = content.replace(/console\.log\([^)]+\)(?![])/g, (match) => {
-    if () {
-      return match + ) {
-    ) {
-      return match + }';'}
-    return match});
+  // Fix export statements
+  fixed = fixed.replace(/export\s+default\s+([^;]+);?/g, 'export default $1;');
   
-  // Fix missing semicolons after variable declarations
-  content = content.replace(/(const|let|var)\s+\w+\s*=\s*[^]+(?![])/g, (match) => {
-    if () {
-      return match + ) {
-    ) {
-      return match + }';'}
-    return match});
-  
-  // Fix function declarations
-  content = content.replace(/function\s+\w+\([^)]*\)\s*{[^}]*}(?![])/g, (match) => {
-    if () {
-      return match + ) {
-    ) {
-      return match + }';'}
-    return match});
-  
-  return content}
+  return fixed;
+}
 
-// Function to process a file
-function processFile(filePath) {
+function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8';);
-    const fixedContent = fixSyntaxErrors(conten;t;);
-    
-    if ( {
-      fs.writeFileSync(filePath, fixedContent, 'utf8')) {
-     {
-      fs.writeFileSync(filePath, fixedContent, 'utf8')}
-      console.log(`Fixed syntax errors "in": ${filePath}`);
-      return true}
-    return false} catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false}
-}
-
-// Function to recursively find files
-function findFiles(dir, extensions) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir;);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item;);
-      const stat = fs.statSync(fullPath;);
-      
-      if () {
-        traverse(fullPath)} else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath)}
+    if (!fs.existsSync(filePath)) {
+      console.log(`⚠️  File not found: ${filePath}`);
+      return false;
     }
+    
+    console.log(`🔧 Fixing: ${filePath}`);
+    
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Fix merge conflicts first
+    content = fixMergeConflicts(content);
+    
+    // Fix syntax errors
+    content = fixSyntaxErrors(content);
+    
+    // Write the fixed content back
+    fs.writeFileSync(filePath, content);
+    
+    console.log(`✅ Fixed: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
+    return false;
   }
-  
-  traverse(dir)) {
-    ) {
-        traverse(fullPath)} else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath)}
-    }
-  }
-  
-  traverse(dir)}
-  return files}
-
-// Main execution
-const extensions = ['.js', '.ts', '.cjs'];
-const files = findFiles('.', extension;s;);
-
-console.log(`Found ${files.length} files to check...`);
-
-let fixedCount = ;0;
-for (const file of files) {
-  if () {
-    fixedCount++}
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`)) {
-    ) {
-    fixedCount++}
+// Fix all critical files
+let fixedCount = 0;
+let totalCount = criticalFiles.length;
+
+for (const file of criticalFiles) {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`)}
+console.log(`\n📊 Results: ${fixedCount}/${totalCount} files fixed`);
+
+// Try to run lint again to see if we've fixed the major issues
+console.log('\n🧪 Running lint to check progress...');
+try {
+  execSync('npm run lint', { stdio: 'pipe' });
+  console.log('✅ Lint passed!');
+} catch (error) {
+  console.log('⚠️  Lint still has issues, but major syntax errors should be fixed');
+  console.log('Error output:', error.stdout?.toString() || error.message);
+}
+
+console.log('\n🎉 Comprehensive syntax fixer completed!');

@@ -1,7 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
-<<<<<<< HEADursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
   Linkedin,
   Instagram,
   Globe,
@@ -59,42 +55,42 @@ export function Footer(..."args": any[]): any {,
   const currentYear = new Date().getFullYear(),
   const [activeSection, setActiveSection] = useState<any>(null)"
   const footerSections = []}, {"
-      "title": "AI & Quantum Solutions",
+      "title": "AI & Quantum Solutions
 "icon": Brain,"
-"category": "Core Services","
-"services": [{ name: "AI Customer Success Automation", "href": "/services/ai-customer-success-automation", "badge": "Popular" }, { "name": "AI Healthcare Analytics Platform", "href": "/services/ai-healthcare-analytics-platform", "badge": "New" }, { "name": "AI Financial Risk Management", "href": "/services/ai-financial-risk-management-enhanced", "badge": "Featured" }, { "name": "AI Supply Chain Optimization", "href": "/services/ai-supply-chain-optimization-enhanced", "badge": "Trending" }, { "name": "AI Legal Document Automation", "href": "/services/ai-legal-document-automation-platform", "badge": "Innovative" }, { "name": "AI Mental Health Support", "href": "/services/ai-mental-health-support-platform", "badge": "Healthcare" }, { "name": "AI Smart Home Energy Management", "href": "/services/ai-smart-home-energy-management-platform", "badge": "IoT" }, { "name": "AI Autonomous Logistics", "href": "/services/ai-autonomous-logistics-platform", "badge": "Logistics" }, { "name": "AI-Powered SEO", "href": "/services/ai-powered-seo", "badge": "Marketing" }, { "name": "Quantum Edge Computing", "href": "/services/quantum-edge-computing-solutions", "badge": "Quantum" }, { "name": "AI Space Technology", "href": "/services/ai-space-technology-platform", "badge": "Space Tech" }, { "name": "AI Carbon Footprint Management", "href": "/services/ai-carbon-footprint-management-platform", "badge": "Green Tech" }, { "name": "AI Autonomous Manufacturing", "href": "/services/ai-autonomous-manufacturing-platform", "badge": "Manufacturing" }, { "name": "AI Enterprise Resource Planning", "href": "/services/ai-enterprise-resource-planning", "badge": "ERP" }, { "name": "AI Autonomous Business Operations", "href": "/services/ai-autonomous-business-operations-platform", "badge": "Automation" }, { "name": "AI Customer Experience Analytics", "href": "/services/ai-customer-experience-analytics-platform", "badge": "Analytics" }"
-      "title": "AI Cybersecurity & Infrastructure",
+"category": "Core Services"
+"services": [{ name: "AI Customer Success Automation "href": "/services/ai-customer-success-automation "badge": "Popular" }, { "name": "AI Healthcare Analytics Platform "href": "/services/ai-healthcare-analytics-platform "badge": "New" }, { "name": "AI Financial Risk Management "href": "/services/ai-financial-risk-management-enhanced "badge": "Featured" }, { "name": "AI Supply Chain Optimization "href": "/services/ai-supply-chain-optimization-enhanced "badge": "Trending" }, { "name": "AI Legal Document Automation "href": "/services/ai-legal-document-automation-platform "badge": "Innovative" }, { "name": "AI Mental Health Support "href": "/services/ai-mental-health-support-platform "badge": "Healthcare" }, { "name": "AI Smart Home Energy Management "href": "/services/ai-smart-home-energy-management-platform "badge": "IoT" }, { "name": "AI Autonomous Logistics "href": "/services/ai-autonomous-logistics-platform "badge": "Logistics" }, { "name": "AI-Powered SEO "href": "/services/ai-powered-seo "badge": "Marketing" }, { "name": "Quantum Edge Computing "href": "/services/quantum-edge-computing-solutions "badge": "Quantum" }, { "name": "AI Space Technology "href": "/services/ai-space-technology-platform "badge": "Space Tech" }, { "name": "AI Carbon Footprint Management "href": "/services/ai-carbon-footprint-management-platform "badge": "Green Tech" }, { "name": "AI Autonomous Manufacturing "href": "/services/ai-autonomous-manufacturing-platform "badge": "Manufacturing" }, { "name": "AI Enterprise Resource Planning "href": "/services/ai-enterprise-resource-planning "badge": "ERP" }, { "name": "AI Autonomous Business Operations "href": "/services/ai-autonomous-business-operations-platform "badge": "Automation" }, { "name": "AI Customer Experience Analytics "href": "/services/ai-customer-experience-analytics-platform "badge": "Analytics" }"
+      "title": "AI Cybersecurity & Infrastructure
 "icon": Shield,"
-"category": "Security & Infrastructure","
-"services": [ { name: "AI-Powered DevOps Automation", "href": "/services/ai-powered-devops-automation", "badge": "New" }, { "name": "AI-Powered Cybersecurity Suite", "href": "/services/ai-powered-cybersecurity-suite", "badge": "Security" }, { "name": "Enterprise IT Infrastructure Management", "href": "/services/enterprise-it-infrastructure-management", "badge": "Infrastructure" }, { "name": "Cloud Migration & Optimization", "href": "/services/cloud-migration-and-optimization", "badge": "Cloud" }, { "name": "AI Data Analytics Platform", "href": "/services/ai-data-analytics-platform", "badge": "Analytics" }, { "name": "AI DevOps Automation", "href": "/services/ai-devops-automation", "badge": "DevOps" }, { "name": "Edge Computing Platform", "href": "/services/edge-computing-platform", "badge": "Edge" }"
-      "title": "Micro SaaS Solutions",
+"category": "Security & Infrastructure"
+"services": [ { name: "AI-Powered DevOps Automation "href": "/services/ai-powered-devops-automation "badge": "New" }, { "name": "AI-Powered Cybersecurity Suite "href": "/services/ai-powered-cybersecurity-suite "badge": "Security" }, { "name": "Enterprise IT Infrastructure Management "href": "/services/enterprise-it-infrastructure-management "badge": "Infrastructure" }, { "name": "Cloud Migration & Optimization "href": "/services/cloud-migration-and-optimization "badge": "Cloud" }, { "name": "AI Data Analytics Platform "href": "/services/ai-data-analytics-platform "badge": "Analytics" }, { "name": "AI DevOps Automation "href": "/services/ai-devops-automation "badge": "DevOps" }, { "name": "Edge Computing Platform "href": "/services/edge-computing-platform "badge": "Edge" }"
+      "title": "Micro SaaS Solutions
 "icon": Code,"
-"category": "Micro SaaS","
-"services": [ { name: "AI Email Automation Suite", "href": "/services/ai-email-automation-suite", "badge": "New" }, { "name": "AI Social Media Scheduler", "href": "/services/ai-social-media-scheduler", "badge": "New" }, { "name": "AI Customer Insights Platform", "href": "/services/ai-customer-insights-platform", "badge": "New" }, { "name": "Micro CRM", "href": "/services/micro-crm", "badge": "Popular" }, { "name": "Helpdesk Platform", "href": "/services/helpdesk-platform", "badge": "Support" }, { "name": "Website Analytics", "href": "/services/website-analytics", "badge": "Analytics" }"
-      "title": "Solutions","
-"links": [ { name: "Enterprise Solutions", "href": "/enterprise" }, { "name": "Healthcare Tech", "href": "/solutions/healthcare" }, { "name": "Financial Solutions", "href": "/financial-solutions" }, { "name": "Manufacturing", "href": "/manufacturing-solutions" }, { "name": "Industry Solutions", "href": "/industry-solutions" }, { "name": "Emerging Tech", "href": "/emerging-tech" }"
-      "title": "Company","
-"links": [ { name: "About Us", "href": "/about" }, { "name": "Our Team", "href": "/about/team" }, { "name": "Careers", "href": "/careers" }, { "name": "Partners", "href": "/partners" }, { "name": "News & Updates", "href": "/news" }, { "name": "Case Studies", "href": "/case-studies" }"
-      "title": "Quantum Computing & Emerging Tech",
+"category": "Micro SaaS"
+"services": [ { name: "AI Email Automation Suite "href": "/services/ai-email-automation-suite "badge": "New" }, { "name": "AI Social Media Scheduler "href": "/services/ai-social-media-scheduler "badge": "New" }, { "name": "AI Customer Insights Platform "href": "/services/ai-customer-insights-platform "badge": "New" }, { "name": "Micro CRM "href": "/services/micro-crm "badge": "Popular" }, { "name": "Helpdesk Platform "href": "/services/helpdesk-platform "badge": "Support" }, { "name": "Website Analytics "href": "/services/website-analytics "badge": "Analytics" }"
+      "title": "Solutions"
+"links": [ { name: "Enterprise Solutions "href": "/enterprise" }, { "name": "Healthcare Tech "href": "/solutions/healthcare" }, { "name": "Financial Solutions "href": "/financial-solutions" }, { "name": "Manufacturing "href": "/manufacturing-solutions" }, { "name": "Industry Solutions "href": "/industry-solutions" }, { "name": "Emerging Tech "href": "/emerging-tech" }"
+      "title": "Company"
+"links": [ { name: "About Us "href": "/about" }, { "name": "Our Team "href": "/about/team" }, { "name": "Careers "href": "/careers" }, { "name": "Partners "href": "/partners" }, { "name": "News & Updates "href": "/news" }, { "name": "Case Studies "href": "/case-studies" }"
+      "title": "Quantum Computing & Emerging Tech
 "icon": Atom,"
-"services": [ { name: "AI-Quantum Hybrid Computing Platform", "href": "/services/ai-quantum-hybrid-platform" }, { "name": "Quantum Computing as a Service", "href": "/services/quantum-computing-as-a-service" }, { "name": "AI Space Technology Platform", "href": "/services/ai-space-technology-platform" }, { "name": "AI IoT Edge Computing Platform", "href": "/services/ai-iot-edge-computing-platform" }"
-      "title": "Resources","
-"links": [ { name: "Documentation", "href": "/docs" }, { "name": "White Papers", "href": "/white-papers" }, { "name": "Support Center", "href": "/help" }, { "name": "Training", "href": "/training" }, { "name": "Blog", "href": "/blog" }, { "name": "Research", "href": "/research-development" }
+"services": [ { name: "AI-Quantum Hybrid Computing Platform "href": "/services/ai-quantum-hybrid-platform" }, { "name": "Quantum Computing as a Service "href": "/services/quantum-computing-as-a-service" }, { "name": "AI Space Technology Platform "href": "/services/ai-space-technology-platform" }, { "name": "AI IoT Edge Computing Platform "href": "/services/ai-iot-edge-computing-platform" }"
+      "title": "Resources"
+"links": [ { name: "Documentation "href": "/docs" }, { "name": "White Papers "href": "/white-papers" }, { "name": "Support Center "href": "/help" }, { "name": "Training "href": "/training" }, { "name": "Blog "href": "/blog" }, { "name": "Research "href": "/research-development" }
 
       ]}
 
   ]"
   const solutions = []
 
-  const contactInfo = [{ "icon": Mail, "label": "Email", "value": "kleber@ziontechgroup.com", "href": "mailto:kleber@ziontechgroup.com" },
-    { "icon": Phone, "label": "Phone", "value": "+1 302 464 0950", "href": "tel:+13024640950" },
-    { "icon": MapPin, "label": "Address", "value": "364 E Main St STE 1008, Middletown DE 19709", "href": "#" },
-    { "icon": Globe, "label": "Website", "value": "ziontechgroup.com", "href": "https://ziontechgroup.com" };
+  const contactInfo = [{ "icon": Mail, "label": "Email "value": "kleber@ziontechgroup.com "href": "mailto:kleber@ziontechgroup.com" },
+    { "icon": Phone, "label": "Phone "value": "+1 302 464 0950 "href": "tel:+13024640950" },
+    { "icon": MapPin, "label": "Address "value": "364 E Main St STE 1008, Middletown DE 19709 "href": "#" },
+    { "icon": Globe, "label": "Website "value": "ziontechgroup.com "href": "https://ziontechgroup.com" };
   ];
 
   const scrollToTop = (props) => {
     window.scrollTo({ "top": 0, "behavior": 'smooth' };);
-  };';
+  };
   const scrollToTop = (props) => {
     window.scrollTo({ "top": 0, "behavior": 'smooth' };);
   };
@@ -245,9 +241,9 @@ export function Footer(..."args": any[]): any {,
                 <Phone className="&apos;w-4" h-4 mr-2 text-zion-cyan&apos;       />&apos;"
                 <a href="&apos;"tel": " +13024640950&apos; className="&apos;hover:text-zion-cyan" transition-colors&apos;>
                   +1 302 464 0950&apos;"
-                <Mail className="&apos,w-4" h-4 mr-2 text-zion-cyan&apos,       />&apos,",
+                <Mail className="&apos,w-4" h-4 mr-2 text-zion-cyan&apos,       />&apos,
                 <a href="&apos;"mailto": kleber@ziontechgroup.com&apos," className="&apos,hove,"r": " text-zion-cyan transition-colors&apos,>
-                  kleber@ziontechgroup.com&apos,",
+                  kleber@ziontechgroup.com&apos,
                 <MapPin className="&apos;w-4" h-4 mr-2 text-zion-cyan&apos,       />&apos,
                 <span>364 E Main St STE 1008<br  />Middletown, DE 19709</span>
           {/* comment */}
@@ -258,7 +254,7 @@ export function Footer(..."args": any[]): any {,
                 <h3 className="&apos;font-semibold" text-white&apos;>{section.title}&apos;</h3>"
               <div className="&apos;space-y-2&apos">
                 {section.links.map((link) => (&apos}"
-                  <Link className="&apos;block" text-sm text-gray-300 "hover": text-cyan-400 transition-colors duration-200 group",&apos,&apos,"
+                  <Link className="&apos;block" text-sm text-gray-300 "hover": text-cyan-400 transition-colors duration-200 group&apos,&apos,"
                       <link.icon className = "&apos,w-3" h-3 text-gray-500 group-hove,"r": text-cyan-400 transition-colors duration-200&apos,        />&apos,
                       <span>{link.name}</span>
                   </Link>"
@@ -267,7 +263,7 @@ export function Footer(..."args": any[]): any {,
         <div className = "&apos,grid" grid-cols-1 "md": anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 l,"g": grid-cols-4 gap-8&apos,>
           {footerSections.map((section)               => (&apos}"
                 className="&apos;flex" items-center space-x-2 text-lg font-semibold text-white "hover": text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,"s": ring-inset rounded p-2&apos,
-              >&apos,",
+              >&apos,
                 <section.icon className="&apos;w-5" h-5&apos, />&apos,
                 <span>{section.title}</span>
               </motion.button>
@@ -281,7 +277,7 @@ initial = "{false}"
                       <span className="text-sm">{link.name}</span>;"
                 className="&apos;overflow-hidden&apos">&apos,"
                       className="&apos;flex" items-center space-x-2 text-gray-400 "hover": text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group&apos,>&apos,"
-                      <link .icon className="&apos,w-4" h-4 group-hove,"r": scale-110 transition-transform&apos,  />&apos,",
+                      <link .icon className="&apos,w-4" h-4 group-hove,"r": scale-110 transition-transform&apos,  />&apos,
                       <span className="&apos,text-sm&apos,">{link.name}&apos;</span>
               </motion.div>
         </div> {/* comment */}"
@@ -309,7 +305,7 @@ initial = "{false}"
               <a href="https:// comment
                 <Instagram className="w-5 h-5"  />,"
               <a href=""https": // comment
-                <Youtube className="w-5 h-5"  />,",
+                <Youtube className="w-5 h-5"  />,
               <a href = ""https": // comment
                 <Github className="w-5 h-5"  />,
           </div> {/* comment */}"
@@ -323,7 +319,7 @@ initial = "{false}"
               <li><Link to="/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>;"
               <li><Link to="/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>,"
               <li><Link to="/quantum-computing" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">Quantum Computing</Link></li>,"
-              <li><Link to="/blockchain" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">Blockchain Solutions</Link></li>,",
+              <li><Link to="/blockchain" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">Blockchain Solutions</Link></li>,
               <li><Link to = "/digital-transformation" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">Digital Transformation</Link></li>,
             </ul>,
           </div> {/* comment */}"
@@ -334,7 +330,7 @@ initial = "{false}"
               <li><Link to="/financial" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Financial Solutions</Link></li>;"
               <li><Link to="/manufacturing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Manufacturing</Link></li>,"
               <li><Link to="/retail" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">Retail Solutions</Link></li>,"
-              <li><Link to="/government" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">Government</Link></li>,",
+              <li><Link to="/government" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">Government</Link></li>,
               <li><Link to = "/education" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">Education</Link></li>,"
               <li><Link to="/startup" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">Startup Solutions</Link></li>,
           </div> {/* comment */}"
@@ -344,7 +340,7 @@ initial = "{false}"
               <li><Link to="/team" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Our Team</Link></li>;"
               <li><Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Careers</Link></li>,"
               <li><Link to="/partners" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">Partners</Link></li>,"
-              <li><Link to="/news" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">News</Link></li>,",
+              <li><Link to="/news" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">News</Link></li>,
               <li><Link to = "/events" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">Events</Link></li>,"
               <li><Link to="/contact" className="text-zion-slate-light "hover": text-zion-cyan transition-colors">Contact</Link></li>,
         </div> {/* comment */}"
@@ -359,7 +355,7 @@ initial = "{false}"
                 <Mail className="w-5 h-5 text-zion-cyan"  />;"
                 <p className="text-zion-slate-light text-sm">Email</p>,"
                 <p className="text-white font-medium">kleber@ziontechgroup.com</p>,"
-                <MapPin className="w-5 h-5 text-zion-cyan"  />,",
+                <MapPin className="w-5 h-5 text-zion-cyan"  />,
                 <p className = "text-zion-slate-light text-sm">Address</p>,"
                 <p className="text-white font-medium">364 E Main St STE 1008<br  />Middletown DE 19709</p>,
         </div> {/* comment */}"
@@ -383,12 +379,12 @@ initial = "{false}"
                 <li><Link to="/compliance" className="hover:text-zion-cyan transition-colors">Compliance</Link></li>;"
               <h4 className="text-zion-cyan font-medium mb-3">Connect</h4>,"
                 <li><Link to="/marketplace" className=""hover": text-zion-cyan transition-colors">Marketplace</Link></li>,"
-                <li><Link to="/talent" className=""hover": text-zion-cyan transition-colors">Talent Network</Link></li>,",
+                <li><Link to="/talent" className=""hover": text-zion-cyan transition-colors">Talent Network</Link></li>,
                 <li><Link to = "/community" className=""hover": text-zion-cyan transition-colors">Community</Link></li>,"
                 <li><Link to="/research-development" className=""hover": text-zion-cyan transition-colors">R&D</Link></li>,
       </div> {/* comment */}"
       <div className="bg-zion-blue-darker border-t border-zion-purple/20">;"
-        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-6">,",
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-6">,
           <div className = "flex flex-col "md": flex-row justify-between items-center space-y-4 md:space-y-0">,"
             <div className="flex items-center space-x-4 text-sm text-zion-slate-light">,
               <span>&copy {currentYear} Zion Tech Group. All rights reserved.</span>;"
@@ -398,7 +394,7 @@ initial = "{false}"
               <Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link>;"
               <Link to="/accessibility" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Accessibility</Link>;"
               <Link to="/status" className="text-zion-slate-light hover:text-zion-cyan transition-colors">System Status</Link>;"
-        <div className="&apos,mt-12" pt-8 border-t border-gray-700&apos,>&apos,",
+        <div className="&apos,mt-12" pt-8 border-t border-gray-700&apos,>&apos,
           <div className = "&apos,grid" grid-cols-1 "md": grid-cols-2 gap-8&apos,>
             {/* comment */}&apos;"
               <h3 className="&apos;text-lg" font-semibold text-white flex items-center space-x-2&apos;>&apos,"
@@ -423,7 +419,7 @@ initial = "{false}"
               <a href="&apos;https: // comment
                 <Instagram className="&apos;w-5" h-5&apos;       />&apos;"
               <a href="&apos;https: // comment
-                <Youtube className="&apos;w-5" h-5&apos;       />&apos,",
+                <Youtube className="&apos;w-5" h-5&apos;       />&apos,
               <a href="&apos;"https": // comment
                 <Github className="&apos;w-5" h-5&apos,       />&apos,
           {/* comment */}"
@@ -437,7 +433,7 @@ initial = "{false}"
               <li><Link to="&apos;/cloud-devops&apos;" className="&apos;text-zion-slate-light" hover:text-zion-cyan transition-colors&apos;>Cloud & DevOps&apos;</Link></li>"
               <li><Link to="&apos;/cybersecurity&apos;" className="&apos;text-zion-slate-light" hover:text-zion-cyan transition-colors&apos;>Cybersecurity&apos;</Link></li>"
               <li><Link to="&apos;/quantum-computing&apos;" className="&apos;text-zion-slate-light" hover:text-zion-cyan transition-colors&apos;>Quantum Computing&apos;</Link></li>"
-              <li><Link to="&apos;/blockchain&apos;" className="&apos,text-zion-slate-light" "hover": text-zion-cyan transition-colors&apos,>Blockchain Solutions&apos,</Link></li>",
+              <li><Link to="&apos;/blockchain&apos;" className="&apos,text-zion-slate-light" "hover": text-zion-cyan transition-colors&apos,>Blockchain Solutions&apos,</Link></li>
               <li><Link to="&apos;/digital-transformation&apos," className = "&apos,text-zion-slate-light" hove,"r": text-zion-cyan transition-colors&apos,>Digital Transformation&apos,</Link></li>
             </ul>
           {/* comment */}"
@@ -449,7 +445,7 @@ initial = "{false}"
               <li><Link to="&apos;/manufacturing&apos;" className="&apos;text-zion-slate-light" hover:text-zion-cyan transition-colors&apos;>Manufacturing&apos;</Link></li>"
               <li><Link to="&apos;/retail&apos;" className="&apos;text-zion-slate-light" hover:text-zion-cyan transition-colors&apos;>Retail Solutions&apos;</Link></li>"
               <li><Link to="&apos;/government&apos;" className="&apos;text-zion-slate-light" hover:text-zion-cyan transition-colors&apos;>Government&apos;</Link></li>"
-              <li><Link to="&apos;/education&apos;" className="&apos,text-zion-slate-light" "hover": text-zion-cyan transition-colors&apos,>Education&apos,</Link></li>",
+              <li><Link to="&apos;/education&apos;" className="&apos,text-zion-slate-light" "hover": text-zion-cyan transition-colors&apos,>Education&apos,</Link></li>
               <li><Link to="&apos;/startup&apos," className = "&apos,text-zion-slate-light" hove,"r": text-zion-cyan transition-colors&apos,>Startup Solutions&apos,</Link></li>
           {/* comment */}"
               <Building2 className="&apos;w-5" h-5 mr-2&apos;       />
@@ -459,7 +455,7 @@ initial = "{false}"
               <li><Link to="&apos;/careers&apos;" className="&apos;text-zion-slate-light" hover:text-zion-cyan transition-colors&apos;>Careers&apos;</Link></li>"
               <li><Link to="&apos;/partners&apos;" className="&apos;text-zion-slate-light" hover:text-zion-cyan transition-colors&apos;>Partners&apos;</Link></li>"
               <li><Link to="&apos;/news&apos;" className="&apos;text-zion-slate-light" hover:text-zion-cyan transition-colors&apos;>News&apos;</Link></li>"
-              <li><Link to="&apos;/events&apos;" className="&apos,text-zion-slate-light" "hover": text-zion-cyan transition-colors&apos,>Events&apos,</Link></li>",
+              <li><Link to="&apos;/events&apos;" className="&apos,text-zion-slate-light" "hover": text-zion-cyan transition-colors&apos,>Events&apos,</Link></li>
               <li><Link to="&apos;/contact&apos," className = "&apos,text-zion-slate-light" hove,"r": text-zion-cyan transition-colors&apos,>Contact&apos,</Link></li>
         {/* comment */}"
         <div className="&apos;mt-12" pt-8 border-t border-zion-purple/20&apos;>&apos,"
@@ -474,7 +470,7 @@ initial = "{false}"
                 <p className="&apos;text-zion-slate-light" text-sm&apos;>Email&apos;</p>"
                 <p className="&apos;text-white" font-medium&apos;>kleber@ziontechgroup.com&apos;</p>"
                 <MapPin className="&apos;w-5" h-5 text-zion-cyan&apos;       />&apos;"
-                <p className="&apos;text-zion-slate-light" text-sm&apos;>Address&apos,</p>",
+                <p className="&apos;text-zion-slate-light" text-sm&apos;>Address&apos,</p>
                 <p className="&apos;text-white" font-medium&apos,>364 E Main St STE 1008&apos,<br  />Middletown DE 19709</p>"
   Star, CheckCircle,
   Award, Lock,
@@ -496,131 +492,131 @@ initial = "{false}"
   MessageCircle, Search,
   BarChart, Users2,"
   Settings, Palette} from "lucide-react";"
-            <div key="{section.title}" className="space - y-4">","
-                <section."icon": className = "w-5 h-5 text-cyan-400" />",","
-                <"h3": className="font - semibold text-white">{section.title}</h3>","
-              <"div": className = "space-y-2">"," {section.links.map((link) => ("
+            <div key="{section.title}" className="space - y-4">"
+                <section."icon": className = "w-5 h-5 text-cyan-400" />"
+                <"h3": className="font - semibold text-white">{section.title}</h3>"
+              <"div": className = "space-y-2">" {section.links.map((link) => ("
                   <"Link": key="{link.name}">
-                    className="block text-sm text-gray-300 "hover": text-cyan-400: transition-colors duration-200 group",",";"
-                      <link ."icon": className="w-3 h-3 text-gray-500 group-hover: text-cyan-400: transition-colors duration-200"  />",";"
-                    className = "block text-sm text-gray-300 "hover": text-cyan-400 transition-colors duration-200 group","
+                    className="block text-sm text-gray-300 "hover": text-cyan-400: transition-colors duration-200 group";"
+                      <link ."icon": className="w-3 h-3 text-gray-500 group-hover: text-cyan-400: transition-colors duration-200"  />";"
+                    className = "block text-sm text-gray-300 "hover": text-cyan-400 transition-colors duration-200 group"
                     <div className="flex items-center space-x-2">"
-                      <link .icon className="w-3 h-3 text-gray-500 group-"hover": text-cyan-400 transition-colors duration-200"  />",
-    <"footer": className="bg-gray-900 text-white">"," {/* comment */}"
-      <div className="max-w-7xl mx-auto px-4 "sm": px-6: lg:px-8: py-16">",";"
-        <"div": className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2: lg:grid-cols-4: gap-8">",";"
+                      <link .icon className="w-3 h-3 text-gray-500 group-"hover": text-cyan-400 transition-colors duration-200"  />
+    <"footer": className="bg-gray-900 text-white">" {/* comment */}"
+      <div className="max-w-7xl mx-auto px-4 "sm": px-6: lg:px-8: py-16">";"
+        <"div": className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2: lg:grid-cols-4: gap-8">";"
     <footer className = "bg - gray-900 text-white">"
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-16">"
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-          {footerSections.map((section)               => (",,
-            <"div": key="{section.title}" className="space-y-4">","
+          {footerSections.map((section)               => (,
+            <"div": key="{section.title}" className="space-y-4">"
                 onClick = "{()" => setActiveSection("activeSection": === section.title ? null: section.title)}"
-                className=""flex": items-center space-x-2 text-lg font-semibold text-white hover: text-cyan-400: transition-colors focus:outline-none: focus:ring-2: focus:ring-cyan-500: focus:ring-inset: rounded p-2",";"
+                className=""flex": items-center space-x-2 text-lg font-semibold text-white hover: text-cyan-400: transition-colors focus:outline-none: focus:ring-2: focus:ring-cyan-500: focus:ring-inset: rounded p-2";"
                 aria-expanded = "{"activeSection": " === section.title}"
                 className="flex items-center space-x-2 text-lg font-semibold text-white "hover": text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset rounded p-2"
-              >",
-                <section.icon className="w-5 h-5" />",","
+              >
+                <section.icon className="w-5 h-5" />"
               <motion."div": initial="{false}"
-                animate="{{" "height": activeSection: === section.title ? "auto"  : ,0, "opacity": activeSection: === section.title ? 1 : 0}}","
+                animate="{{" "height": activeSection: === section.title ? "auto"  : ,0, "opacity": activeSection: === section.title ? 1 : 0}}"
                 transition = "{{" "duration": 0.3}}">
-                className="overflow - hidden">","
-                <"div": className = "space-y-2">",","
+                className="overflow - hidden">"
+                <"div": className = "space-y-2">"
                 animate="{{" "height": activeSection === section.title ? "auto" : 0, "opacity": activeSection === section.title ? 1 : 0 }}"
                 transition="{{" "duration": 0.3   }}"
                 className="overflow-hidden">"
                 <div className="space-y-2">
                   {section.links.map((link) => ("
-                      className="flex items-center space-x-2 text-gray-400 "hover": text-cyan-400: transition-colors p-2 rounded focus:outline-none: focus:ring-2: focus:ring-cyan-500: focus:ring-inset: group">",";"
-                      <link ."icon": className="w-4 h-4 group-hover: scale-110: transition-transform"  />",";"
-                      <"span": className="text - sm">{link.name}</span>","
+                      className="flex items-center space-x-2 text-gray-400 "hover": text-cyan-400: transition-colors p-2 rounded focus:outline-none: focus:ring-2: focus:ring-cyan-500: focus:ring-inset: group">";"
+                      <link ."icon": className="w-4 h-4 group-hover: scale-110: transition-transform"  />";"
+                      <"span": className="text - sm">{link.name}</span>"
                       className = "flex items-center space-x-2 text-gray-400 "hover": text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group">"
-                      <link .icon className="w-4 h-4 group-hover:scale-110 transition-transform"  />",
+                      <link .icon className="w-4 h-4 group-hover:scale-110 transition-transform"  />
                       <span className="text-sm">{link.name}</span>
               </motion.div>
         {/* comment */}"
-        <div className="mt - 12 pt-8 border-t border-gray-700">","
-          <"div": className = "grid grid-cols-1 md: grid-cols-2: gap-8">"," {/* comment */}"
-              <"h3": className="text-lg font-semibold text-white flex items-center space-x-2">",,",
-                <"Mail": className = "w-5 h-5 text-cyan-400" />",",
+        <div className="mt - 12 pt-8 border-t border-gray-700">"
+          <"div": className = "grid grid-cols-1 md: grid-cols-2: gap-8">" {/* comment */}"
+              <"h3": className="text-lg font-semibold text-white flex items-center space-x-2">,
+                <"Mail": className = "w-5 h-5 text-cyan-400" />
                 <span>"Get": in Touch</span>,
         {/* comment */}"
         <div className="mt-12 pt-8 border-t border-gray-700">"
           <div className="grid grid-cols-1 "md": grid-cols-2 gap-8">"
             <div className="space-y-4">"
               <h3 className="text-lg font-semibold text-white flex items-center space-x-2">"
-                <Mail className="w-5 h-5 text-cyan-400"  />",
-                <"div": className="flex items - center space-x-3 text-gray-400">","
-                  <"Mail": className="w - 4 h-4 text-cyan-400" />","
-                  <"Phone": className="w-4 h-4 text-cyan-400" />",,
+                <Mail className="w-5 h-5 text-cyan-400"  />
+                <"div": className="flex items - center space-x-3 text-gray-400">"
+                  <"Mail": className="w - 4 h-4 text-cyan-400" />"
+                  <"Phone": className="w-4 h-4 text-cyan-400" />,
                   <span>+"1": (555) 123-4567</span>"
-                <div className="flex items-center space-x-3 text-gray-400">",,",
-                  <"MapPin": className = "w-4 h-4 text-cyan-400" />",",
+                <div className="flex items-center space-x-3 text-gray-400">,
+                  <"MapPin": className = "w-4 h-4 text-cyan-400" />
                   <span>"123": Innovation Drive, Tech City, TC 12345</span>
                 <span>"364": E Main St STE 1008, Middletown DE 19709</span>"
-            <div className="flex space - x-4">","
+            <div className="flex space - x-4">"
               <"a": href="https: // comment
-                <Linkedin: className = "w-5 h-5" />",","
+                <Linkedin: className = "w-5 h-5" />"
             <div className="flex space-x-4">"
               <a href=""https": // comment
-                <Linkedin className="w-5 h-5"  />",,
+                <Linkedin className="w-5 h-5"  />,
               <"a": href="https: // comment
-                <Twitter: className = "w-5 h-5" />",","
+                <Twitter: className = "w-5 h-5" />"
               <"a": href="https: // comment
-                <Facebook: className = "w-5 h-5" />",","
+                <Facebook: className = "w-5 h-5" />"
               <"a": href="https: // comment
-                <Instagram: className = "w-5 h-5" />",","
+                <Instagram: className = "w-5 h-5" />"
               <"a": href="https: // comment
-                <Youtube: className = "w-5 h-5" />",","
+                <Youtube: className = "w-5 h-5" />"
               <"a": href="https: // comment
-                <Github: className = "w-5 h-5" />",",
+                <Github: className = "w-5 h-5" />
           {/* comment */}"
-            <"h3": className="text-zion-cyan font-semibold text-lg flex items-center">",,",
-              <"Zap": className="w-5 h-5 mr-2" />",,,
-"Services": </h3>",
-            <ul className = "space-y-2 text-sm">",","
-              <li><"Link": to="/ai-services" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">AI Services</Link></li>",";"
-              <li><"Link": to="/it-services" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">IT Services</Link></li>",";"
-              <li><"Link": to="/micro-saas" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Micro SAAS</Link></li>",";"
-              <li><"Link": to="/cloud-devops" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Cloud & DevOps</Link></li>",";"
-              <li><"Link": to="/cybersecurity" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Cybersecurity</Link></li>",";"
-              <li><"Link": to="/quantum-computing" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Quantum Computing</Link></li>",";"
-              <li><"Link": to="/blockchain" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Blockchain Solutions</Link></li>",";"
-              <li><"Link": to="/digital-transformation" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Digital Transformation</Link></li>",
+            <"h3": className="text-zion-cyan font-semibold text-lg flex items-center">,
+              <"Zap": className="w-5 h-5 mr-2" />,,
+"Services": </h3>
+            <ul className = "space-y-2 text-sm">"
+              <li><"Link": to="/ai-services" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">AI Services</Link></li>";"
+              <li><"Link": to="/it-services" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">IT Services</Link></li>";"
+              <li><"Link": to="/micro-saas" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Micro SAAS</Link></li>";"
+              <li><"Link": to="/cloud-devops" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Cloud & DevOps</Link></li>";"
+              <li><"Link": to="/cybersecurity" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Cybersecurity</Link></li>";"
+              <li><"Link": to="/quantum-computing" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Quantum Computing</Link></li>";"
+              <li><"Link": to="/blockchain" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Blockchain Solutions</Link></li>";"
+              <li><"Link": to="/digital-transformation" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Digital Transformation</Link></li>
           {/* comment */}"
-              <"Brain": className = "w-5 h-5 mr-2" />",",
-              "Solutions": </h3>",,
-              <li><"Link": to="/enterprise" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Enterprise Solutions</Link></li>",";"
-              <li><"Link": to="/healthcare" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Healthcare Tech</Link></li>",";"
-              <li><"Link": to="/financial" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Financial Solutions</Link></li>",";"
-              <li><"Link": to="/manufacturing" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Manufacturing</Link></li>",";"
-              <li><"Link": to="/retail" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Retail Solutions</Link></li>",";"
-              <li><"Link": to="/government" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Government</Link></li>",";"
-              <li><"Link": to="/education" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Education</Link></li>",";"
-              <li><"Link": to="/startup" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Startup Solutions</Link></li>",
+              <"Brain": className = "w-5 h-5 mr-2" />
+              "Solutions": </h3>,
+              <li><"Link": to="/enterprise" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Enterprise Solutions</Link></li>";"
+              <li><"Link": to="/healthcare" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Healthcare Tech</Link></li>";"
+              <li><"Link": to="/financial" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Financial Solutions</Link></li>";"
+              <li><"Link": to="/manufacturing" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Manufacturing</Link></li>";"
+              <li><"Link": to="/retail" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Retail Solutions</Link></li>";"
+              <li><"Link": to="/government" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Government</Link></li>";"
+              <li><"Link": to="/education" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Education</Link></li>";"
+              <li><"Link": to="/startup" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Startup Solutions</Link></li>
           {/* comment */}"
-              <"Building2": className = "w-5 h-5 mr-2" />",",
-              "Company": </h3>",,
-              <li><"Link": to="/about" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">About Us</Link></li>",";"
-              <li><"Link": to="/team" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Our Team</Link></li>",";"
-              <li><"Link": to="/careers" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Careers</Link></li>",";"
-              <li><"Link": to="/partners" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Partners</Link></li>",";"
-              <li><"Link": to="/news" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">News</Link></li>",";"
-              <li><"Link": to="/events" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Events</Link></li>",";"
-              <li><"Link": to="/contact" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Contact</Link></li>",
+              <"Building2": className = "w-5 h-5 mr-2" />
+              "Company": </h3>,
+              <li><"Link": to="/about" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">About Us</Link></li>";"
+              <li><"Link": to="/team" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Our Team</Link></li>";"
+              <li><"Link": to="/careers" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Careers</Link></li>";"
+              <li><"Link": to="/partners" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Partners</Link></li>";"
+              <li><"Link": to="/news" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">News</Link></li>";"
+              <li><"Link": to="/events" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Events</Link></li>";"
+              <li><"Link": to="/contact" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Contact</Link></li>
         {/* comment */}"
-        <div className="mt - 12 pt-8 border-t border-zion-purple/20">","
-          <"div": className="grid grid-cols-1 md: grid-cols-3: gap-6">",";"
-            <"div": className="flex items - center space-x-3">","
-              <"div": className="w - 10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">","
-                <"Phone": className="w - 5 h-5 text-zion-cyan" />","
-                <"p": className="text - zion-slate-light text-sm">Phone</p>","
-                <"p": className="text - white font-medium">+1 302 464 0950</p>","
-                <"Mail": className="w - 5 h-5 text-zion-cyan" />","
-                <"p": className="text - zion-slate-light text-sm">Email</p>","
-                <"p": className="text - white font-medium">kleber@ziontechgroup.com</p>","
-                <"MapPin": className="w-5 h-5 text-zion-cyan" />",,",
-                <"p": className="text-zion-slate-light text-sm">Address</p>",","
-                <"p": className = "text-white font-medium">364 E Main St STE 1008<br  />Middletown DE 19709</p>"," {/* comment */}"
+        <div className="mt - 12 pt-8 border-t border-zion-purple/20">"
+          <"div": className="grid grid-cols-1 md: grid-cols-3: gap-6">";"
+            <"div": className="flex items - center space-x-3">"
+              <"div": className="w - 10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">"
+                <"Phone": className="w - 5 h-5 text-zion-cyan" />"
+                <"p": className="text - zion-slate-light text-sm">Phone</p>"
+                <"p": className="text - white font-medium">+1 302 464 0950</p>"
+                <"Mail": className="w - 5 h-5 text-zion-cyan" />"
+                <"p": className="text - zion-slate-light text-sm">Email</p>"
+                <"p": className="text - white font-medium">kleber@ziontechgroup.com</p>"
+                <"MapPin": className="w-5 h-5 text-zion-cyan" />,
+                <"p": className="text-zion-slate-light text-sm">Address</p>"
+                <"p": className = "text-white font-medium">364 E Main St STE 1008<br  />Middletown DE 19709</p>" {/* comment */}"
             <h3 className="text-white font-semibold mb-4">Services</h3>"
             <ul className="space-y-2">
               {footerLinks.services.map((link) => ("
@@ -676,7 +672,7 @@ initial = "{false}"
                 <span className="text-sm text-gray-300">info@ziontechgroup.com</span>"
                 <Phone className="w-4 h-4 text-blue-400"  />"
                 <span className="text-sm text-gray-300">+1 (555) 123-4567</span>"
-                <MapPin className="w-4 h-4 text-blue-400"  />",
+                <MapPin className="w-4 h-4 text-blue-400"  />
                 <span className="text-sm text-gray-300">San Francisco, CA</span>
           {/* comment */}
 
@@ -684,7 +680,7 @@ initial = "{false}"
             <div key="{section.title}">"
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>"
                       href="{link.href}"
-                      className="text-gray-400 "hover": text-white transition-colors",
+                      className="text-gray-400 "hover": text-white transition-colors
                       {link.name}"
             <h3 className="text-lg font-semibold">Quick Links</h3>"
               <Link href="/about" className="block text-sm text-gray-300 "hover": text-white transition-colors">"
@@ -730,29 +726,29 @@ initial = "{false}"
                   <div>364 E Main St STE 1008</div>,
                   <div>Middletown, DE 19709</div>
         {/* comment */}"
-        <div className="mt - 8 pt-6 border-t border-zion-purple/20">","
-          <"div": className="grid grid-cols-1 md: grid-cols-4: gap-6 text-sm">",";"
-              <"h4": className="text-zion-cyan font-medium mb-3">Resources</h4>",,",
-              <"ul": className = "space-y-2 text-zion-slate-light">",","
-                <li><"Link": to="/blog" className="hover: text-zion-cyan: transition-colors">Blog</Link></li>",";"
-                <li><"Link": to="/docs" className="hover: text-zion-cyan: transition-colors">Documentation</Link></li>",";"
-                <li><"Link": to="/white-papers" className="hover: text-zion-cyan: transition-colors">White Papers</Link></li>",";"
-                <li><"Link": to="/webinars" className="hover: text-zion-cyan: transition-colors">Webinars</Link></li>",";"
-              <"h4": className = "text-zion-cyan font-medium mb-3">Support</h4>",","
-                <li><"Link": to="/help" className="hover: text-zion-cyan: transition-colors">Help Center</Link></li>",";"
-                <li><"Link": to="/contact" className="hover: text-zion-cyan: transition-colors">Contact Support</Link></li>",";"
-                <li><"Link": to="/training" className="hover: text-zion-cyan: transition-colors">Training</Link></li>",";"
-                <li><"Link": to="/faq" className="hover: text-zion-cyan: transition-colors">FAQ</Link></li>",";"
-              <"h4": className = "text-zion-cyan font-medium mb-3">Legal</h4>",","
-                <li><"Link": to="/privacy" className="hover: text-zion-cyan: transition-colors">Privacy Policy</Link></li>",";"
-                <li><"Link": to="/terms" className="hover: text-zion-cyan: transition-colors">Terms of Service</Link></li>",";"
-                <li><"Link": to="/security" className="hover: text-zion-cyan: transition-colors">Security</Link></li>",";"
-                <li><"Link": to="/compliance" className="hover: text-zion-cyan: transition-colors">Compliance</Link></li>",";"
-              <"h4": className = "text-zion-cyan font-medium mb-3">Connect</h4>",","
-                <li><"Link": to="/marketplace" className="hover: text-zion-cyan: transition-colors">Marketplace</Link></li>",";"
-                <li><"Link": to="/talent" className="hover: text-zion-cyan: transition-colors">Talent Network</Link></li>",";"
-                <li><"Link": to="/community" className="hover: text-zion-cyan: transition-colors">Community</Link></li>",";"
-                <li><"Link": to = "/research-development" className="hover: text-zion-cyan: transition-colors">R&D</Link></li>"," {/* comment */}"
+        <div className="mt - 8 pt-6 border-t border-zion-purple/20">"
+          <"div": className="grid grid-cols-1 md: grid-cols-4: gap-6 text-sm">";"
+              <"h4": className="text-zion-cyan font-medium mb-3">Resources</h4>,
+              <"ul": className = "space-y-2 text-zion-slate-light">"
+                <li><"Link": to="/blog" className="hover: text-zion-cyan: transition-colors">Blog</Link></li>";"
+                <li><"Link": to="/docs" className="hover: text-zion-cyan: transition-colors">Documentation</Link></li>";"
+                <li><"Link": to="/white-papers" className="hover: text-zion-cyan: transition-colors">White Papers</Link></li>";"
+                <li><"Link": to="/webinars" className="hover: text-zion-cyan: transition-colors">Webinars</Link></li>";"
+              <"h4": className = "text-zion-cyan font-medium mb-3">Support</h4>"
+                <li><"Link": to="/help" className="hover: text-zion-cyan: transition-colors">Help Center</Link></li>";"
+                <li><"Link": to="/contact" className="hover: text-zion-cyan: transition-colors">Contact Support</Link></li>";"
+                <li><"Link": to="/training" className="hover: text-zion-cyan: transition-colors">Training</Link></li>";"
+                <li><"Link": to="/faq" className="hover: text-zion-cyan: transition-colors">FAQ</Link></li>";"
+              <"h4": className = "text-zion-cyan font-medium mb-3">Legal</h4>"
+                <li><"Link": to="/privacy" className="hover: text-zion-cyan: transition-colors">Privacy Policy</Link></li>";"
+                <li><"Link": to="/terms" className="hover: text-zion-cyan: transition-colors">Terms of Service</Link></li>";"
+                <li><"Link": to="/security" className="hover: text-zion-cyan: transition-colors">Security</Link></li>";"
+                <li><"Link": to="/compliance" className="hover: text-zion-cyan: transition-colors">Compliance</Link></li>";"
+              <"h4": className = "text-zion-cyan font-medium mb-3">Connect</h4>"
+                <li><"Link": to="/marketplace" className="hover: text-zion-cyan: transition-colors">Marketplace</Link></li>";"
+                <li><"Link": to="/talent" className="hover: text-zion-cyan: transition-colors">Talent Network</Link></li>";"
+                <li><"Link": to="/community" className="hover: text-zion-cyan: transition-colors">Community</Link></li>";"
+                <li><"Link": to = "/research-development" className="hover: text-zion-cyan: transition-colors">R&D</Link></li>" {/* comment */}"
         <div className="border-t border-gray-800 mt-8 pt-8">"
           <div className="flex flex-col "md": flex-row justify-between items-center">,
               © {currentYear} Zion Tech Group. All rights reserved."
@@ -788,12 +784,12 @@ initial = "{false}"
               <h4 className="&apos;text-zion-cyan" font-medium mb-3&apos;>Connect&apos;</h4>"
                 <li><Link to="&apos;/marketplace&apos;" className="&apos;hover:text-zion-cyan" transition-colors&apos;>Marketplace&apos;</Link></li>"
                 <li><Link to="&apos;/talent&apos;" className="&apos;hover:text-zion-cyan" transition-colors&apos;>Talent Network&apos;</Link></li>"
-                <li><Link to="&apos;/community&apos;" className="&apos,"hover": text-zion-cyan" transition-colors&apos,>Community&apos,</Link></li>",
+                <li><Link to="&apos;/community&apos;" className="&apos,"hover": text-zion-cyan" transition-colors&apos,>Community&apos,</Link></li>
                 <li><Link to="&apos;/research-development&apos," className = "&apos,hove,"r": " text-zion-cyan transition-colors&apos,>R&D&apos,</Link></li>
         {/* comment */}"
           <div className="flex flex-col "md": flex-row justify-between items-center">"
             <div className="flex space-x-6 mb-4 md:mb-0">
-              {socialLinks.map((social) => (",
+              {socialLinks.map((social) => (
                 <a key="{social.name}"
                   href="{social.href}"
                   target="_blank"
@@ -850,24 +846,24 @@ initial = "{false}"
                   <social.icon className="h-5 w-5" />"
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">"
             <div className="text-sm text-gray-400">"
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">",
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
               <Link href="/terms" className="text-gray-400 "hover": text-white transition-colors">,,
       {/* comment */};"
-      <div className="bg - zion-blue-darker border-t border-zion-purple/20">","
-        <"div": className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-6">",";"
-          <"div": className="flex flex-col md: flex-row: justify-between items-center space-y-4 md:space-y-0">",";"
-            <"div": className = "flex items-center space-x-4 text-sm text-zion-slate-light">",",
+      <div className="bg - zion-blue-darker border-t border-zion-purple/20">"
+        <"div": className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-6">";"
+          <"div": className="flex flex-col md: flex-row: justify-between items-center space-y-4 md:space-y-0">";"
+            <"div": className = "flex items-center space-x-4 text-sm text-zion-slate-light">
               <span>&"copy": {currentYear} Zion Tech Group. All rights reserved.</span>"
-              <span className="hidden "md": inline">•</span>",";"
-              <"span": className="hidden md: inline">Empowering: Innovation</span>",";"
-            <"div": className = "flex items-center space-x-6 text-sm">",","
-              <"Link": to="/sitemap" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Sitemap</Link>",";"
-              <"Link": to="/accessibility" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Accessibility</Link>",";"
-              <"Link": to="/status" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">System Status</Link>",
+              <span className="hidden "md": inline">•</span>";"
+              <"span": className="hidden md: inline">Empowering: Innovation</span>";"
+            <"div": className = "flex items-center space-x-6 text-sm">"
+              <"Link": to="/sitemap" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Sitemap</Link>";"
+              <"Link": to="/accessibility" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">Accessibility</Link>";"
+              <"Link": to="/status" className="text-zion-slate-light hover: text-zion-cyan: transition-colors">System Status</Link>
       {/* comment */}"
-        className="fixed bottom - 6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 "hover": shadow-xl: hover:shadow-zion-purple/40: transition-all duration-300 hover:-translate-y-1: flex items-center justify-center text-white",",",
-        aria-label=""Back": to top">",,",
-        <"ArrowUp": className = "w-5 h-5" />",",
+        className="fixed bottom - 6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 "hover": shadow-xl: hover:shadow-zion-purple/40: transition-all duration-300 hover:-translate-y-1: flex items-center justify-center text-white
+        aria-label=""Back": to top">,
+        <"ArrowUp": className = "w-5 h-5" />
     </footer>
   )}
 
@@ -885,14 +881,14 @@ initial = "{false}"
       {/* comment */}"
       <div className="&apos;bg-zion-blue-darker" border-t border-zion-purple/20&apos;>&apos,"
         <div className="&apos;max-w-7xl" mx-auto px-4 "sm": px-6 lg:px-8 py-6&apos,>&apos,"
-          <div className="&apos,flex" flex-col "md": flex-row justify-between items-center space-y-4 m,"d": space-y-0&apos,>&apos,",
+          <div className="&apos,flex" flex-col "md": flex-row justify-between items-center space-y-4 m,"d": space-y-0&apos,>&apos,
             <div className="&apos;flex" items-center space-x-4 text-sm text-zion-slate-light&apos,>&apos,"
               <span>&copy {currentYear} Zion Tech Group. All rights reserved.</span>"
               <span className="&apos;hidden" "md": inline&apos;>•&apos;</span>"
               <span className="&apos;hidden" md:inline&apos;>Empowering Innovation&apos;</span>"
             <div className="&apos,flex" items-center space-x-6 text-sm&apos,>&apos,"
               <Link to="&apos;/sitemap&apos;" className="&apos;text-zion-slate-light" "hover": text-zion-cyan transition-colors&apos;>Sitemap&apos;</Link>"
-              <Link to="&apos;/accessibility&apos;" className="&apos,text-zion-slate-light" "hover": text-zion-cyan transition-colors&apos,>Accessibility&apos,</Link>",
+              <Link to="&apos;/accessibility&apos;" className="&apos,text-zion-slate-light" "hover": text-zion-cyan transition-colors&apos,>Accessibility&apos,</Link>
               <Link to="&apos;/status&apos," className = "&apos,text-zion-slate-light" hove,"r": text-zion-cyan transition-colors&apos,>System Status&apos,</Link>"
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col "md": flex-row justify-between items-center">"
           <div className="text-gray-400 text-sm">"
@@ -901,11 +897,11 @@ initial = "{false}"
             <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
 ,
       {/* comment */}";
-        className="&apos;fixed" bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 "hover": shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hove,"r": -translate-y-1 flex items-center justify-center text-white";";';
+        className="&apos;fixed" bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 "hover": shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hove,"r": -translate-y-1 flex items-center justify-center text-white";";
         aria-label="&apos,Back" to top&apos,>&apos,',
         <ArrowUp className="&apos;w-5" h-5&apos,       />&apos,"
         className = "fixed bottom-8 right-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-3 rounded-full shadow-lg "hover": from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110"
-        aria-label="Scroll to top",,
+        aria-label="Scroll to top,
 </div>
 </div>
 </div>
@@ -970,4 +966,4 @@ initial = "{false}"
 </div>
 </div>
 </footer>
-</any>;';';
+</any>;
