@@ -11,6 +11,21 @@ declare global {
   }
 }
 
+// Declare Performance and PerformanceNavigationTiming types for TypeScript
+declare global {
+  interface Performance {
+    getEntriesByType(type: string): PerformanceEntry[];
+  }
+  
+  interface PerformanceNavigationTiming extends PerformanceEntry {
+    domContentLoadedEventStart: number;
+    domContentLoadedEventEnd: number;
+    loadEventStart: number;
+    loadEventEnd: number;
+    fetchStart: number;
+  }
+}
+
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
     // Only run on client side
