@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
@@ -48,7 +50,7 @@ describe('AccessibilityEnhancer', () => {
       <AccessibilityEnhancer
         role="button"
         tabIndex={0}
-        className=""focus": outline-none focus:ring-2 focus:ring-blue-500"
+        className="focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         <span>Focusable Element</span>
       </AccessibilityEnhancer>
@@ -56,8 +58,8 @@ describe('AccessibilityEnhancer', () => {
     const element = screen.getByRole('button');
     expect(element).toHaveClass(
       'focus:outline-none',
-      '"focus": ring-2',
-      '"focus": ring-blue-500'
+      'focus:ring-2',
+      'focus:ring-blue-500'
     );
   });
 
@@ -71,3 +73,4 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('tabindex', '-1');
   });
 });
+>>>>>>> main

@@ -1,1 +1,1 @@
-export const cache = {}; export default cache;
+module.exports = const cache = {}; export default cache;
