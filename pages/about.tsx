@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-import React from 'react'
-import Head from 'next/head'
-import { motion } from 'framer-motion'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   Users,
   Target,
@@ -35,32 +35,8 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react'
-import Layout from '../components/Layout'
-=======
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Users, 
-  Award, 
-  Target, 
-  Heart, 
-  Globe, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Building, 
-  Rocket, 
-  Lightbulb, 
-  Handshake 
 } from 'lucide-react';
 import Layout from '../components/Layout';
->>>>>>> 1dab9786c49abc5641bed69cf666f521fa51a67c
 
 const values = [
   {
@@ -87,78 +63,12 @@ const values = [
 
 const team = [
   {
-    name: 'Dr. Sarah Chen',
-    role: 'Chief Technology Officer',
-    expertise: 'AI & Machine Learning',
-    experience: '15+ years',
-    image: '/team/sarah-chen.jpg'
-  },
-  {
-    name: 'Michael Rodriguez',
-    role: 'Head of Engineering',
-    expertise: 'Cloud Infrastructure',
-    experience: '12+ years',
-    image: '/team/michael-rodriguez.jpg'
-  },
-  {
-    name: 'Emily Watson',
-    role: 'Lead Data Scientist',
-    expertise: 'Data Analytics & AI',
-    experience: '10+ years',
-    image: '/team/emily-watson.jpg'
-  },
-  {
-    name: 'David Kim',
-    role: 'Security Architect',
-    expertise: 'Cybersecurity',
-    experience: '14+ years',
-    image: '/team/david-kim.jpg'
-  }
-];
-
-const achievements = [
-  {
-    icon: Award,
-    title: 'Industry Recognition',
-    description: 'Named "Top AI Solutions Provider" by TechCrunch 2024',
-    stat: '2024'
-  },
-  {
-<<<<<<< HEAD
-    icon: Handshake,
-    title: 'Client Success',
-    description: 'Our success is measured by our clients\' success. We are committed to being true partners in their growth journey.'
-  }
-];
-
-const team = [
-  {
-    name: 'Dr. Sarah Chen',
-    role: 'Chief Technology Officer',
-    image: '/team/sarah-chen.jpg',
-    bio: 'Leading AI research and development with 15+ years of experience in machine learning and quantum computing.',
-    expertise: ['AI/ML', 'Quantum Computing', 'Research']
-  },
-  {
-    name: 'Michael Rodriguez',
-    role: 'Head of Cloud Architecture',
-    image: '/team/michael-rodriguez.jpg',
-    bio: 'Expert in scalable cloud solutions and infrastructure design with a focus on security and performance.',
-    expertise: ['Cloud Architecture', 'DevOps', 'Security']
-  },
-  {
-    name: 'Emily Johnson',
-    role: 'Lead Developer',
-    image: '/team/emily-johnson.jpg',
-    bio: 'Full-stack developer specializing in modern web technologies and microservices architecture.',
-    expertise: ['Full-Stack Development', 'Microservices', 'Web Technologies']
-  },
-  {
-    name: 'David Kim',
-    role: 'AI Solutions Architect',
-    image: '/team/david-kim.jpg',
-    bio: 'Designing intelligent systems that solve complex business problems using cutting-edge AI technologies.',
-    expertise: ['AI Solutions', 'System Design', 'Business Intelligence']
+    name: 'Kleber Santos',
+    role: 'CEO & Founder',
+    bio: 'Technology leader with over 10 years of experience in AI, cloud computing, and digital transformation.',
+    image: '/team/kleber-santos.jpg',
+    linkedin: 'https://linkedin.com/in/kleber-santos',
+    twitter: 'https://twitter.com/kleber_santos'
   }
 ];
 
@@ -169,38 +79,14 @@ const stats = [
   { number: '10+', label: 'Years Experience' }
 ];
 
-export default function AboutPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-    icon: Heart,
-    title: 'Client Success',
-    description: 'Your success is our success. We are deeply committed to helping you achieve your business goals.'
-  }]
-const team = [{
-    name: 'Kleber Santos',
-    role: 'CEO & Founder',
-    bio: 'Technology leader with over 10 years of experience in AI, cloud computing, and digital transformation.',
-    image: '/team/kleber-santos.jpg',
-    linkedin: 'https://linkedin.com/in/kleber-santos',
-    twitter: 'https://twitter.com/kleber_santos'
-  }]
-const stats = [
-  { number: '150+', label: 'Projects Completed' },
-  { number: '98%', label: 'Client Satisfaction' },
-  { number: '5+', label: 'Years Experience' },
-  { number: '24/7', label: 'Support Available' }]
-export default function AboutPage() {
-  return (
-    <Layout>
->>>>>>> main
-      <Head>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering innovative AI and technology solutions." />
-        <meta name="keywords" content="about us, team, mission, values, AI company, technology solutions" />
-      </Head>
-      <div className="min-h-screen bg-white">
-=======
+const achievements = [
+  {
+    icon: Award,
+    title: 'Industry Recognition',
+    description: 'Named "Top AI Solutions Provider" by TechCrunch 2024',
+    stat: '2024'
+  },
+  {
     icon: Users,
     title: 'Client Satisfaction',
     description: '98% client retention rate with 500+ successful projects',
@@ -245,12 +131,13 @@ const timeline = [
 
 export default function AboutPage() {
   return (
-    <Layout 
-      title="About Us - Zion Tech Group" 
-      description="Learn about Zion Tech Group's mission to provide cutting-edge technology solutions and our team of expert professionals."
-    >
+    <Layout>
+      <Head>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering innovative AI and technology solutions." />
+        <meta name="keywords" content="about us, team, mission, values, AI company, technology solutions" />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> 1dab9786c49abc5641bed69cf666f521fa51a67c
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
