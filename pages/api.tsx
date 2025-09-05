@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Layout from "../components/Layout";
+import React from 'react';
+import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight, Copy, Check, ExternalLink, Search, Filter, BookOpen, Globe, Terminal, Database, Server, Cpu, Lock, Clock, Users, BarChart3, Settings, Play, Pause, RotateCcw } from 'lucide-react';
+import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 
 export default function APIPage() {
   const apiFeatures = [
@@ -31,142 +31,13 @@ export default function APIPage() {
     }
   ];
 
-  const apiEndpoints = [{
-    method: 'GET',
-    path: '/api/v1/services',
-    description: 'Retrieve all available services',
-    parameters: [
-      { name: 'limit', type: 'integer', required: false, description: 'Number of services to return (max 100)' },
-      { name: 'offset', type: 'integer', required: false, description: 'Number of services to skip' },
-      { name: 'category', type: 'string', required: false, description: 'Filter by service category' }
-    ],
-    responses: [
-      { code: 200, description: 'Success', example: '{ "services": [...], "total": 45 }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid parameters" }' }]
-  },
-  {
-    method: 'POST',
-    path: '/api/v1/contact',
-    description: 'Submit a contact form or inquiry',
-    parameters: [
-      { name: 'name', type: 'string', required: true, description: 'Contact person name' },
-      { name: 'email', type: 'string', required: true, description: 'Contact email address' },
-      { name: 'message', type: 'string', required: true, description: 'Message content' },
-      { name: 'company', type: 'string', required: false, description: 'Company name' },
-      { name: 'phone', type: 'string', required: false, description: 'Phone number' }
-    ],
-    responses: [
-      { code: 201, description: 'Created', example: '{ "id": "123", "status": "received" }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Missing required fields" }' }]
-  },
-  {
-    method: 'GET',
-    path: '/api/v1/status',
-    description: 'Get system status and health information',
-    parameters: [],
-    responses: [
-      { code: 200, description: 'Success', example: '{ "status": "operational", "uptime": "99.9%" }' }]
-  },
-  {
-    method: 'POST',
-    path: '/api/v1/quote',
-    description: 'Request a project quote',
-    parameters: [
-      { name: 'project_type', type: 'string', required: true, description: 'Type of project (ai, cloud, web, mobile)' },
-      { name: 'description', type: 'string', required: true, description: 'Project description' },
-      { name: 'budget_range', type: 'string', required: false, description: 'Budget range for the project' },
-      { name: 'timeline', type: 'string', required: false, description: 'Desired project timeline' }
-    ],
-    responses: [
-      { code: 201, description: 'Quote created', example: '{ "quote_id": "456", "estimated_cost": "$10,000 - $15,000" }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }]
-  }];
-
-  const apiFeaturesDetailed = [{
-    title: 'RESTful API Design',
-    description: 'Clean, intuitive REST API endpoints following industry best practices',
-    icon: Code,
-    features: ['RESTful principles', 'Consistent naming', 'HTTP status codes', 'Resource-based URLs']
-  },
-  {
-    title: 'Authentication & Security',
-    description: 'Secure API access with multiple authentication methods',
-    icon: Shield,
-    features: ['API Key authentication', 'JWT tokens', 'OAuth 2.0', 'Rate limiting']
-  },
-  {
-    title: 'Real-time Updates',
-    description: 'WebSocket support for real-time data streaming',
-    icon: Zap,
-    features: ['WebSocket connections', 'Real-time notifications', 'Live data updates', 'Event streaming']
-  },
-  {
-    title: 'Comprehensive Documentation',
-    description: 'Interactive API documentation with examples and testing',
-    icon: Book,
-    features: ['Interactive docs', 'Code examples', 'Testing interface', 'SDK generation']
-  },
-  {
-    title: 'Monitoring & Analytics',
-    description: 'Advanced monitoring and analytics for API usage',
-    icon: BarChart3,
-    features: ['Usage analytics', 'Performance metrics', 'Error tracking', 'Custom dashboards']
-  },
-  {
-    title: 'Scalability & Performance',
-    description: 'Built for high performance and scalability',
-    icon: Server,
-    features: ['Load balancing', 'Caching', 'CDN integration', 'Auto-scaling']
-  }];
-
-  const sdkLanguages = [
-    { name: 'JavaScript', icon: 'JS', color: 'bg-yellow-500' },
-    { name: 'Python', icon: 'PY', color: 'bg-blue-500' },
-    { name: 'Java', icon: 'J', color: 'bg-red-500' },
-    { name: 'C#', icon: 'C#', color: 'bg-purple-500' },
-    { name: 'PHP', icon: 'PHP', color: 'bg-indigo-500' },
-    { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }
-  ];
-  const [selectedEndpoint, setSelectedEndpoint] = useState(0)
-  const [copiedCode, setCopiedCode] = useState<number | null>(null)
-  const copyToClipboard = (text: string, index: number) => {
-    navigator.clipboard.writeText(text)
-    setCopiedCode(index)
-    setTimeout(() => setCopiedCode(null), 2000)
-  }
-  const generateCodeExample = (endpoint: any) => {
-    const baseUrl = 'https://api.ziontechgroup.com'
-    const exampleParams = endpoint.parameters
-      .filter((p: any) => p.required)
-      .map((p: any) => `${p.name}: "example_${p.name}"`)
-      .join(', ')
-    if (endpoint.method === 'GET') {
-      return `fetch('${baseUrl}${endpoint.path}?${endpoint.parameters.map((p: any) => `${p.name}=example_${p.name}`).join('&')}')`
-        + `\n  .then(response => response.json())`
-        + `\n  .then(data => console.log(data))`
-        + `\n  .catch(error => console.error('Error:', error));`;
-    } else {
-      return `fetch('${baseUrl}${endpoint.path}', {
-  method: '${endpoint.method}',
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer YOUR_API_KEY'
-  },
-  body: JSON.stringify({
-    ${exampleParams}
-  })
-})`
-        + `\n.then(response => response.json())`
-        + `\n.then(data => console.log(data))`
-        + `\n.catch(error => console.error('Error:', error));`;
-    }
-  }
   return (
     <Layout 
       title="API Reference - Zion Tech Group"
       description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
     >
       <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
         <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -179,16 +50,18 @@ export default function APIPage() {
                 API Reference
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Comprehensive API documentation and reference for integrating with Zion Tech Group services
+                Integrate with Zion Tech Group services using our comprehensive APIs. 
+                Build powerful applications with our developer-friendly platform.
               </p>
             </motion.div>
           </div>
         </section>
 
+        {/* Features Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {apiFeaturesDetailed.map((feature, index) => {
+              {apiFeatures.map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
                   <motion.div
@@ -223,6 +96,7 @@ export default function APIPage() {
           </div>
         </section>
 
+        {/* API Endpoints Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -230,21 +104,14 @@ export default function APIPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Available Endpoints
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Explore our comprehensive API endpoints across all service categories
+                Explore our comprehensive API endpoints for AI services, IT solutions, and micro SaaS platforms.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get API Key
-                </button>
-                <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  View Examples
-                </button>
-              </div>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -305,13 +172,14 @@ export default function APIPage() {
           </div>
         </section>
 
+        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Get Started?
+              Start Building Today
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Contact us to get API access and start building with our powerful services
+              Ready to integrate with our APIs? Get started with our comprehensive documentation and developer tools.
             </p>
             <motion.a
               href="/contact"
