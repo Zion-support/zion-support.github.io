@@ -15,13 +15,17 @@ class AIIntelligentCodeAnalyzer {
       patterns: {},
       recommendations: [],
       issues: [],
-      metrics: {}
+      metrics: {},
     };
     this.learningData = this.loadLearningData();
   }
 
   loadLearningData() {
-    const learningFile = path.join(this.projectRoot, 'logs', 'ai-learning-data.json');
+    const learningFile = path.join(
+      this.projectRoot,
+      'logs',
+      'ai-learning-data.json'
+    );
     try {
       if (fs.existsSync(learningFile)) {
         return JSON.parse(fs.readFileSync(learningFile, 'utf8'));
@@ -33,50 +37,54 @@ class AIIntelligentCodeAnalyzer {
       patterns: {},
       fixes: {},
       performance: {},
-      lastUpdated: new Date().toISOString()
+      lastUpdated: new Date().toISOString(),
     };
   }
 
   saveLearningData() {
-    const learningFile = path.join(this.projectRoot, 'logs', 'ai-learning-data.json');
+    const learningFile = path.join(
+      this.projectRoot,
+      'logs',
+      'ai-learning-data.json'
+    );
     fs.writeFileSync(learningFile, JSON.stringify(this.learningData, null, 2));
   }
 
   async analyzeCodebase() {
     console.log('🔍 Analyzing codebase structure...');
-    
+
     // Analyze file structure and patterns
     await this.analyzeFileStructure();
-    
+
     // Analyze code quality patterns
     await this.analyzeCodeQuality();
-    
+
     // Detect anti-patterns
     await this.detectAntiPatterns();
-    
+
     // Analyze performance patterns
     await this.analyzePerformancePatterns();
-    
+
     // Generate intelligent recommendations
     await this.generateRecommendations();
-    
+
     // Update learning data
     this.updateLearningData();
-    
+
     // Save results
     this.saveResults();
-    
+
     console.log('✅ AI Code Analysis completed successfully!');
   }
 
   async analyzeFileStructure() {
     console.log('📁 Analyzing file structure...');
-    
+
     const structure = {
       totalFiles: 0,
       fileTypes: {},
       directoryDepth: 0,
-      complexity: 'low'
+      complexity: 'low',
     };
 
     const analyzeDirectory = (dir, depth = 0) => {
@@ -87,8 +95,12 @@ class AIIntelligentCodeAnalyzer {
       files.forEach(file => {
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+
+        if (
+          stat.isDirectory() &&
+          !file.startsWith('.') &&
+          file !== 'node_modules'
+        ) {
           analyzeDirectory(filePath, depth + 1);
         } else if (stat.isFile()) {
           const ext = path.extname(file);
@@ -98,7 +110,7 @@ class AIIntelligentCodeAnalyzer {
     };
 
     analyzeDirectory(this.projectRoot);
-    
+
     // Calculate complexity based on structure
     if (structure.directoryDepth > 5 || structure.totalFiles > 1000) {
       structure.complexity = 'high';
@@ -111,22 +123,23 @@ class AIIntelligentCodeAnalyzer {
 
   async analyzeCodeQuality() {
     console.log('🎯 Analyzing code quality patterns...');
-    
+
     const qualityMetrics = {
       maintainability: 0,
       readability: 0,
       testability: 0,
-      performance: 0
+      performance: 0,
     };
 
     // Analyze JavaScript/TypeScript files
     const jsFiles = this.findFiles(['.js', '.jsx', '.ts', '.tsx']);
-    
-    for (const file of jsFiles.slice(0, 50)) { // Limit to first 50 files for performance
+
+    for (const file of jsFiles.slice(0, 50)) {
+      // Limit to first 50 files for performance
       try {
         const content = fs.readFileSync(file, 'utf8');
         const metrics = this.analyzeFileQuality(content, file);
-        
+
         qualityMetrics.maintainability += metrics.maintainability;
         qualityMetrics.readability += metrics.readability;
         qualityMetrics.testability += metrics.testability;
@@ -139,7 +152,8 @@ class AIIntelligentCodeAnalyzer {
     // Calculate averages
     const fileCount = Math.min(jsFiles.length, 50);
     Object.keys(qualityMetrics).forEach(key => {
-      qualityMetrics[key] = Math.round((qualityMetrics[key] / fileCount) * 100) / 100;
+      qualityMetrics[key] =
+        Math.round((qualityMetrics[key] / fileCount) * 100) / 100;
     });
 
     this.analysisResults.codeQuality.metrics = qualityMetrics;
@@ -150,38 +164,49 @@ class AIIntelligentCodeAnalyzer {
       maintainability: 0,
       readability: 0,
       testability: 0,
-      performance: 0
+      performance: 0,
     };
 
     const lines = content.split('\n');
     const totalLines = lines.length;
 
     // Maintainability metrics
-    const functionCount = (content.match(/function\s+\w+|const\s+\w+\s*=\s*\(/g) || []).length;
+    const functionCount = (
+      content.match(/function\s+\w+|const\s+\w+\s*=\s*\(/g) || []
+    ).length;
     const classCount = (content.match(/class\s+\w+/g) || []).length;
-    metrics.maintainability = Math.max(0, 100 - (functionCount * 2) - (classCount * 5));
+    metrics.maintainability = Math.max(
+      0,
+      100 - functionCount * 2 - classCount * 5
+    );
 
     // Readability metrics
-    const commentLines = lines.filter(line => line.trim().startsWith('//') || line.trim().startsWith('/*')).length;
+    const commentLines = lines.filter(
+      line => line.trim().startsWith('//') || line.trim().startsWith('/*')
+    ).length;
     const commentRatio = commentLines / totalLines;
     metrics.readability = Math.min(100, commentRatio * 200);
 
     // Testability metrics
     const testFiles = filePath.includes('test') || filePath.includes('spec');
-    const hasExports = content.includes('export') || content.includes('module.exports');
+    const hasExports =
+      content.includes('export') || content.includes('module.exports');
     metrics.testability = (testFiles ? 50 : 0) + (hasExports ? 50 : 0);
 
     // Performance metrics
     const asyncAwaitCount = (content.match(/async\s+|await\s+/g) || []).length;
     const forEachCount = (content.match(/\.forEach\(/g) || []).length;
-    metrics.performance = Math.max(0, 100 - (asyncAwaitCount * 3) - (forEachCount * 2));
+    metrics.performance = Math.max(
+      0,
+      100 - asyncAwaitCount * 3 - forEachCount * 2
+    );
 
     return metrics;
   }
 
   async detectAntiPatterns() {
     console.log('🚨 Detecting anti-patterns...');
-    
+
     const antiPatterns = [];
     const jsFiles = this.findFiles(['.js', '.jsx', '.ts', '.tsx']);
 
@@ -210,7 +235,7 @@ class AIIntelligentCodeAnalyzer {
           severity: 'medium',
           file: filePath,
           line: index + 1,
-          description: 'Console.log found in production code'
+          description: 'Console.log found in production code',
         });
       }
 
@@ -221,7 +246,7 @@ class AIIntelligentCodeAnalyzer {
           severity: 'low',
           file: filePath,
           line: index + 1,
-          description: 'TODO or FIXME comment found'
+          description: 'TODO or FIXME comment found',
         });
       }
 
@@ -232,7 +257,7 @@ class AIIntelligentCodeAnalyzer {
           severity: 'medium',
           file: filePath,
           line: index + 1,
-          description: 'Function might be too long'
+          description: 'Function might be too long',
         });
       }
 
@@ -243,7 +268,7 @@ class AIIntelligentCodeAnalyzer {
           severity: 'high',
           file: filePath,
           line: index + 1,
-          description: 'Potential callback hell detected'
+          description: 'Potential callback hell detected',
         });
       }
     });
@@ -253,7 +278,7 @@ class AIIntelligentCodeAnalyzer {
 
   async analyzePerformancePatterns() {
     console.log('⚡ Analyzing performance patterns...');
-    
+
     const performanceIssues = [];
     const jsFiles = this.findFiles(['.js', '.jsx', '.ts', '.tsx']);
 
@@ -269,7 +294,7 @@ class AIIntelligentCodeAnalyzer {
 
     this.analysisResults.performance = {
       issues: performanceIssues,
-      score: Math.max(0, 100 - (performanceIssues.length * 5))
+      score: Math.max(0, 100 - performanceIssues.length * 5),
     };
   }
 
@@ -284,7 +309,7 @@ class AIIntelligentCodeAnalyzer {
           type: 'inefficient-loop',
           file: filePath,
           line: index + 1,
-          description: 'Consider caching array length'
+          description: 'Consider caching array length',
         });
       }
 
@@ -294,7 +319,7 @@ class AIIntelligentCodeAnalyzer {
           type: 'dom-in-loop',
           file: filePath,
           line: index + 1,
-          description: 'DOM query inside loop detected'
+          description: 'DOM query inside loop detected',
         });
       }
 
@@ -304,7 +329,7 @@ class AIIntelligentCodeAnalyzer {
           type: 'object-creation',
           file: filePath,
           line: index + 1,
-          description: 'Consider object pooling for large objects'
+          description: 'Consider object pooling for large objects',
         });
       }
     });
@@ -314,7 +339,7 @@ class AIIntelligentCodeAnalyzer {
 
   async generateRecommendations() {
     console.log('💡 Generating intelligent recommendations...');
-    
+
     const recommendations = [];
 
     // Based on code quality metrics
@@ -323,8 +348,9 @@ class AIIntelligentCodeAnalyzer {
       recommendations.push({
         type: 'maintainability',
         priority: 'high',
-        description: 'Improve code maintainability by reducing function complexity',
-        action: 'Refactor large functions into smaller, focused functions'
+        description:
+          'Improve code maintainability by reducing function complexity',
+        action: 'Refactor large functions into smaller, focused functions',
       });
     }
 
@@ -333,7 +359,7 @@ class AIIntelligentCodeAnalyzer {
         type: 'readability',
         priority: 'medium',
         description: 'Add more comments and improve code documentation',
-        action: 'Add JSDoc comments and inline documentation'
+        action: 'Add JSDoc comments and inline documentation',
       });
     }
 
@@ -342,18 +368,20 @@ class AIIntelligentCodeAnalyzer {
         type: 'testability',
         priority: 'high',
         description: 'Improve code testability',
-        action: 'Add unit tests and improve function modularity'
+        action: 'Add unit tests and improve function modularity',
       });
     }
 
     // Based on anti-patterns
-    const consoleLogs = this.analysisResults.issues.filter(issue => issue.type === 'console-log');
+    const consoleLogs = this.analysisResults.issues.filter(
+      issue => issue.type === 'console-log'
+    );
     if (consoleLogs.length > 0) {
       recommendations.push({
         type: 'logging',
         priority: 'medium',
         description: `Remove ${consoleLogs.length} console.log statements from production code`,
-        action: 'Replace with proper logging library or remove'
+        action: 'Replace with proper logging library or remove',
       });
     }
 
@@ -364,7 +392,7 @@ class AIIntelligentCodeAnalyzer {
         type: 'performance',
         priority: 'high',
         description: `Address ${perfIssues.length} performance issues`,
-        action: 'Optimize loops, DOM queries, and object creation'
+        action: 'Optimize loops, DOM queries, and object creation',
       });
     }
 
@@ -373,7 +401,7 @@ class AIIntelligentCodeAnalyzer {
 
   updateLearningData() {
     console.log('🧠 Updating AI learning data...');
-    
+
     // Update pattern recognition
     this.analysisResults.issues.forEach(issue => {
       if (!this.learningData.patterns[issue.type]) {
@@ -385,7 +413,7 @@ class AIIntelligentCodeAnalyzer {
     // Update performance data
     this.learningData.performance[new Date().toISOString()] = {
       score: this.analysisResults.performance.score,
-      issues: this.analysisResults.performance.issues.length
+      issues: this.analysisResults.performance.issues.length,
     };
 
     this.learningData.lastUpdated = new Date().toISOString();
@@ -394,15 +422,19 @@ class AIIntelligentCodeAnalyzer {
 
   findFiles(extensions) {
     const files = [];
-    
-    const findInDirectory = (dir) => {
+
+    const findInDirectory = dir => {
       try {
         const items = fs.readdirSync(dir);
         items.forEach(item => {
           const fullPath = path.join(dir, item);
           const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+
+          if (
+            stat.isDirectory() &&
+            !item.startsWith('.') &&
+            item !== 'node_modules'
+          ) {
             findInDirectory(fullPath);
           } else if (stat.isFile() && extensions.includes(path.extname(item))) {
             files.push(fullPath);
@@ -418,14 +450,24 @@ class AIIntelligentCodeAnalyzer {
   }
 
   saveResults() {
-    const reportFile = path.join(this.projectRoot, 'logs', `ai-code-analysis-${Date.now()}.json`);
+    const reportFile = path.join(
+      this.projectRoot,
+      'logs',
+      `ai-code-analysis-${Date.now()}.json`
+    );
     fs.writeFileSync(reportFile, JSON.stringify(this.analysisResults, null, 2));
-    
+
     console.log('📊 Analysis Results:');
-    console.log(`- Code Quality Score: ${this.analysisResults.codeQuality.metrics.maintainability}/100`);
-    console.log(`- Performance Score: ${this.analysisResults.performance.score}/100`);
+    console.log(
+      `- Code Quality Score: ${this.analysisResults.codeQuality.metrics.maintainability}/100`
+    );
+    console.log(
+      `- Performance Score: ${this.analysisResults.performance.score}/100`
+    );
     console.log(`- Issues Found: ${this.analysisResults.issues.length}`);
-    console.log(`- Recommendations: ${this.analysisResults.recommendations.length}`);
+    console.log(
+      `- Recommendations: ${this.analysisResults.recommendations.length}`
+    );
     console.log(`- Report saved to: ${reportFile}`);
   }
 }
