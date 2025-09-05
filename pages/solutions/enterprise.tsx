@@ -1,27 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-  Shield, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Building,
-  Globe,
-  Lock,
-  Zap,
-  BarChart3,
-  Settings,
-  Cloud
-} from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
-
-=======
-import { Building, Shield, Users, BarChart3, ArrowRight, CheckCircle, Clock, Globe, Database, Lock } from 'lucide-react';
-import Layout from "../../components/Layout";
->>>>>>> e424d87cc10bafdae18928500b657e2f4d2faa16
 const features = [
   {
     title: "Enterprise Security",
@@ -48,69 +27,6 @@ const features = [
     benefits: ["API Integration", "Legacy System Support", "Data Migration", "Custom Workflows"]
   }
 ];
-<<<<<<< HEAD
-
-const services = [
-  {
-    title: "Infrastructure Management",
-    description: "Complete management of your enterprise infrastructure with monitoring and optimization.",
-    icon: BarChart3,
-    price: "Custom Pricing"
-  },
-  {
-    title: "Security Consulting",
-    description: "Comprehensive security assessment and implementation of best practices.",
-    icon: Lock,
-    price: "From $5,000/month"
-  },
-  {
-    title: "Digital Transformation",
-    description: "End-to-end digital transformation strategy and implementation.",
-    icon: Zap,
-    price: "Project Based"
-  },
-  {
-    title: "Cloud Migration",
-    description: "Seamless migration to cloud infrastructure with zero downtime.",
-    icon: Cloud,
-    price: "From $10,000"
-  }
-];
-
-const testimonials = [
-  {
-    name: "Sarah Johnson",
-    title: "CTO, TechCorp",
-    content: "Zion Tech Group transformed our infrastructure and improved our security posture significantly. Their enterprise solutions are top-notch.",
-    rating: 5
-  },
-  {
-    name: "Michael Chen",
-    title: "VP Engineering, DataFlow",
-    content: "The scalability and reliability of their solutions have been crucial for our business growth. Highly recommended.",
-    rating: 5
-  },
-  {
-    name: "Emily Rodriguez",
-    title: "IT Director, GlobalCorp",
-    content: "Their 24/7 support and expertise in enterprise security gave us peace of mind. Excellent service delivery.",
-    rating: 5
-  }
-=======
-const capabilities = [
-  { title: 'Cloud Migration', description: 'Seamless migration to cloud infrastructure' },
-  { title: 'DevOps Automation', description: 'Automated deployment and continuous integration' },
-  { title: 'Data Analytics', description: 'Advanced analytics and business intelligence' },
-  { title: 'AI Integration', description: 'Machine learning and AI-powered solutions' },
-  { title: 'Compliance Management', description: 'SOC 2, HIPAA, GDPR compliance solutions' },
-  { title: 'Disaster Recovery', description: 'Comprehensive backup and recovery solutions' }
-];
-const stats = [
-  { number: '50+', label: 'Enterprise Clients' },
-  { number: '200+', label: 'Projects Delivered' },
-  { number: '99.9%', label: 'Uptime Guarantee' },
-  { number: '24/7', label: 'Support Available' }
->>>>>>> e424d87cc10bafdae18928500b657e2f4d2faa16
 ];
 export default function EnterpriseSolutionsPage() {
   return (
@@ -160,29 +76,6 @@ export default function EnterpriseSolutionsPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-
-=======
-        {/* Stats Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
->>>>>>> e424d87cc10bafdae18928500b657e2f4d2faa16
         {/* Features Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -221,12 +114,6 @@ export default function EnterpriseSolutionsPage() {
                       </p>
                     </div>
                   </div>
-<<<<<<< HEAD
-                  
-                  <ul className="space-y-2">
-=======
-                  <ul className="space-y-3">
->>>>>>> e424d87cc10bafdae18928500b657e2f4d2faa16
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -239,14 +126,6 @@ export default function EnterpriseSolutionsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Services Section */}
-        <section className="py-20 bg-gray-50">
-=======
-        {/* Capabilities Section */}
-        <section className="py-20 bg-white">
->>>>>>> e424d87cc10bafdae18928500b657e2f4d2faa16
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -261,14 +140,6 @@ export default function EnterpriseSolutionsPage() {
                 Comprehensive services tailored to meet enterprise requirements and challenges.
               </p>
             </motion.div>
-<<<<<<< HEAD
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {capabilities.map((capability, index) => (
->>>>>>> e424d87cc10bafdae18928500b657e2f4d2faa16
                 <motion.div
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
