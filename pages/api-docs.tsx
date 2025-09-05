@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
 import { 
   Code, 
   ArrowRight,
@@ -9,7 +10,6 @@ import {
   Play,
   Download
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
 
 const endpoints = [
   {
@@ -74,7 +74,7 @@ const sdks = [
 
 export default function ApiDocsPage() {
   return (
-    <MainLayout
+    <Layout
       title="API Documentation - Zion Tech Group"
       description="Complete API reference with endpoints, authentication, examples, and SDKs for developers."
       keywords="API documentation, REST API, GraphQL, SDKs, developer resources, API reference"
@@ -337,6 +337,6 @@ export default function ApiDocsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

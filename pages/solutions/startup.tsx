@@ -1,122 +1,65 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Rocket, 
-  Zap, 
-  DollarSign, 
-  Users, 
-  BarChart3,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Settings
-} from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
+import Layout from "../../components/Layout";
 
 const features = [
   {
-    title: "Rapid Deployment",
-    description: "Get your startup running in days, not months",
+    title: 'Rapid Prototyping',
+    description: 'Quick MVP development to validate your ideas and get to market fast',
     icon: Zap,
-    benefits: ["Quick setup", "Pre-built templates", "Fast iteration"]
+    benefits: ['2-4 Week MVPs', 'Agile Development', 'User Feedback Integration', 'Iterative Improvement']
   },
   {
-    title: "Cost Effective",
-    description: "Startup-friendly pricing with no hidden costs",
+    title: 'Cost Optimization',
+    description: 'Budget-friendly solutions that maximize your startup resources',
     icon: DollarSign,
-    benefits: ["Transparent pricing", "Pay as you grow", "No long-term contracts"]
+    benefits: ['Flexible Pricing', 'Pay-as-you-grow', 'No Hidden Costs', 'ROI Focused']
   },
   {
-    title: "Growth Focused",
-    description: "Solutions designed to scale with your business",
-    icon: BarChart3,
-    benefits: ["Auto-scaling", "Performance monitoring", "Growth analytics"]
+    title: 'Scalable Infrastructure',
+    description: 'Technology that grows with your startup from day one',
+    icon: TrendingUp,
+    benefits: ['Auto-scaling', 'Cloud-native', 'Performance Optimized', 'Future-proof']
   },
   {
-    title: "Expert Support",
-    description: "Dedicated support team for startups",
+    title: 'Expert Guidance',
+    description: 'Mentorship and technical guidance from experienced entrepreneurs',
     icon: Users,
-    benefits: ["Startup specialists", "Mentorship", "Best practices"]
+    benefits: ['Technical Mentorship', 'Best Practices', 'Industry Insights', 'Ongoing Support']
   }
 ];
 
-const solutions = [
-  {
-    title: "MVP Development",
-    description: "Fast-track your minimum viable product",
-    icon: Rocket,
-    features: ["2-4 week delivery", "Core features only", "User feedback integration"]
-  },
-  {
-    title: "Cloud Infrastructure",
-    description: "Scalable cloud setup for startups",
-    icon: Globe,
-    features: ["Auto-scaling", "Cost optimization", "Global deployment"]
-  },
-  {
-    title: "Analytics Platform",
-    description: "Data-driven insights for growth",
-    icon: BarChart3,
-    features: ["Real-time metrics", "User behavior", "Growth tracking"]
-  },
-  {
-    title: "Team Tools",
-    description: "Collaboration and productivity tools",
-    icon: Users,
-    features: ["Project management", "Communication", "Document sharing"]
-  }
-];
-
-const stages = [
-  { 
-    stage: "Idea Stage", 
-    description: "Validate your concept",
-    icon: "💡",
-    services: ["Market research", "Prototype development", "User interviews"]
-  },
-  { 
-    stage: "MVP Stage", 
-    description: "Build your first product",
-    icon: "🚀",
-    services: ["MVP development", "Basic analytics", "User testing"]
-  },
-  { 
-    stage: "Growth Stage", 
-    description: "Scale your business",
-    icon: "📈",
-    services: ["Advanced features", "Marketing automation", "Team expansion"]
-  },
-  { 
-    stage: "Scale Stage", 
-    description: "Enterprise readiness",
-    icon: "🏢",
-    services: ["Enterprise features", "Advanced security", "Global expansion"]
-  }
+const services = [
+  { title: 'MVP Development', description: 'Minimum viable product development in 2-4 weeks' },
+  { title: 'Tech Stack Selection', description: 'Choose the right technologies for your startup' },
+  { title: 'UI/UX Design', description: 'User-centered design that converts visitors to customers' },
+  { title: 'API Development', description: 'Robust APIs for your mobile and web applications' },
+  { title: 'Cloud Setup', description: 'Scalable cloud infrastructure from day one' },
+  { title: 'Growth Hacking', description: 'Technical solutions to accelerate user acquisition' }
 ];
 
 const stats = [
-  { number: '200+', label: 'Startups Helped' },
-  { number: '90%', label: 'Success Rate' },
-  { number: '2-4', label: 'Weeks to MVP' },
-  { number: '24/7', label: 'Support Available' }
+  { number: '100+', label: 'Startups Helped' },
+  { number: '300+', label: 'Projects Delivered' },
+  { number: '300%', label: 'Average Growth' },
+  { number: '2-4', label: 'Weeks to MVP' }
 ];
 
 export default function StartupSolutionsPage() {
   return (
-    <MainLayout
+    <Layout
       title="Startup Solutions - Zion Tech Group"
-      description="Fast, cost-effective technology solutions for startups. MVP development, cloud infrastructure, and growth-focused services."
-      keywords="startup solutions, MVP development, startup technology, cloud for startups, rapid deployment"
+      description="Rapid development and scaling solutions for startups. MVP development, tech stack selection, and growth-focused technology solutions."
+      keywords="startup solutions, MVP development, rapid prototyping, startup technology, scaling solutions"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
@@ -124,27 +67,53 @@ export default function StartupSolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Startup{' '}
-                <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                  Solutions
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Fast, affordable technology solutions designed specifically for startups. 
-                From idea to scale, we're your technology partner.
+              <div className="flex items-center justify-center mb-6">
+                <Rocket className="w-16 h-16 text-green-400 mr-4" />
+                <h1 className="text-5xl md:text-6xl font-bold">
+                  Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Solutions</span>
+                </h1>
+              </div>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Rapid development and scaling solutions designed specifically for startups and growing businesses
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Start Your Journey
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+                >
+                  Start Your MVP
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  View All Solutions
+                <Link
+                  href="/case-studies"
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"
+                >
+                  Success Stories
                 </Link>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">{stat.number}</div>
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -152,190 +121,80 @@ export default function StartupSolutionsPage() {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Built for Startups
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Advantages</span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to launch and grow your startup
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We understand the unique challenges startups face and provide solutions that help you move fast, stay lean, and scale efficiently
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      {feature.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {feature.description}
-                    </p>
-
-                    <div className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-500" />
-                          <span className="text-sm text-gray-600">{benefit}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Solutions Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Startup Solutions
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Comprehensive solutions for every stage of your startup journey
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {solutions.map((solution, index) => {
-                const IconComponent = solution.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-gray-50 p-6 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300 group cursor-pointer"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <IconComponent className="w-6 h-6 text-white" />
-                    </div>
-                    
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">
-                      {solution.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                      {solution.description}
-                    </p>
-
-                    <div className="space-y-1">
-                      {solution.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center space-x-2">
-                          <CheckCircle className="w-3 h-3 text-green-500" />
-                          <span className="text-xs text-gray-600">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Growth Stages Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Your Growth Journey
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                We support you through every stage of your startup's growth
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {stages.map((stage, index) => (
+              {features.map((feature, index) => (
                 <motion.div
-                  key={index}
-                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                  key={feature.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  className="bg-white rounded-2xl shadow-xl p-8"
                 >
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                    {stage.icon}
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                      <feature.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
+                      <p className="text-gray-600">{feature.description}</p>
+                    </div>
                   </div>
-                  
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
-                    {stage.stage}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 text-sm">
-                    {stage.description}
-                  </p>
 
-                  <div className="space-y-1">
-                    {stage.services.map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="w-3 h-3 text-green-500" />
-                        <span className="text-xs text-gray-600">{service}</span>
-                      </div>
+                  <ul className="space-y-3">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-gray-600">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        {benefit}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+        {/* Services Section */}
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Services</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive startup services designed to help you build, launch, and scale your business
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
                 <motion.div
-                  key={index}
-                  className="text-center"
+                  key={service.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="text-4xl md:text-5xl font-bold mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-green-100 font-medium">{stat.label}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600">{service.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -343,33 +202,38 @@ export default function StartupSolutionsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+        <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
             <motion.div
-              className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Launch Your Startup?
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                Let's turn your idea into a successful business with the right technology foundation
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+                Let's turn your idea into a successful product with our rapid development and scaling solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Start Building
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+                >
+                  Start Your Project
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link href="/solutions" className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Explore Solutions
+                <Link
+                  href="/solutions"
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-semibold transition-colors"
+                >
+                  View All Solutions
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

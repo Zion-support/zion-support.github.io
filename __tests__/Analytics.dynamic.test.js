@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Analyticsdynamic from '../components/Analytics.dynamic';
-
-describe('Analyticsdynamic', () => {
-  test('renders without crashing', () => {
+import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import Analyticsdynamic from '../components/Analytics.dynamic'; describe('Analyticsdynamic',() => { test('renders without crashing',() => { render(<Analyticsdynamic />); expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument()}
+}); test('displays correct content',() => { render(<Analyticsdynamic />)}
+}); test('handles user interactions',() => { render(<Analyticsdynamic />)}
+}); test('applies correct styling',() => { render(<Analyticsdynamic />)})}
+});'
+</Analyticsdynamic>
     render(<Analyticsdynamic />);
-    expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</Analyticsdynamic>
     render(<Analyticsdynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
+</Analyticsdynamic>
     render(<Analyticsdynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
+</Analyticsdynamic>
     render(<Analyticsdynamic />);
-    // Add styling tests if needed
-  });
-});
+</Analyticsdynamic>'

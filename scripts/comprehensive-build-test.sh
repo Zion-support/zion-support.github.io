@@ -10,7 +10,7 @@ LOG_DIR="automation-reports"
 mkdir -p "$LOG_DIR"
 
 echo "🚀 Starting Comprehensive Build and Test Pipeline"
-echo "=================================================="
+echo "="
 
 # Function to log with timestamp
 log() {
