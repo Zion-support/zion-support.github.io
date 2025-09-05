@@ -1,89 +1,59 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting final comprehensive syntax error fixing...');
+console.log('🔧 Final syntax fix...');
 
-// Fix specific issues
-const fixes = [{
-    "file": 'pages/docs/api-quick-start.tsx',
-    "search": "  }"\n}"}",
-    "replace": "  }\n}"}"
-  },
-  {
-    "file": 'pages/docs/api-quick-start.tsx',
-    "search": "display: 'alignItems', 'center' "gap": 12,",
-    "replace": "display: 'flex', "alignItems": 'center', "gap": 12,"
-  },
-  {
-    "file": 'pages/docs/api-quick-start.tsx',
-    "search": "background: 'borderRadius', 8",
-    "replace": "background: '#1e293b', "borderRadius": 8"
-  },
-  {
-    "file": 'pages/docs/sdk.tsx',
-    "search": "background: 'borderRadius', 8,",
-    "replace": "background: '#1e293b', "borderRadius": 8,"
-  },
-  {
-    "file": 'pages/enterprise.tsx',
-    "search": "industries.map((industry index) =>",
-    "replace": "industries.map((industry, index) =>"
-  },
-  {
-    "file": 'pages/marketplace.tsx',
-    "search": "            }",
-    "replace": "            }>"
-  },
-  {
-    "file": 'pages/schedule-demo.tsx',
-    "search": "    name: '';",
-    "replace": "    name: '',"
-  },
-  {
-    "file": 'pages/schedule-demo.tsx',
-    "search": "    email: '';",
-    "replace": "    email: '',"
-  },
-  {
-    "file": 'pages/schedule-demo.tsx',
-    "search": "    company: '';",
-    "replace": "    company: '',"
-  },
-  {
-    "file": 'pages/schedule-demo.tsx',
-    "search": "    phone: '';",
-    "replace": "    phone: '',"
-  }
+const filesToFix = [
+  '/workspace/pages/services.tsx',
+  '/workspace/pages/talent.tsx'
 ];
 
-let fixedCount = 0;
-let errorCount = 0;
+let totalFixes = 0;
 
-// Apply fixes
-fixes.forEach(({ file, search, replace }) => {
-  try {
-    const filePath = path.join(process.cwd(), file);
-    
-    if (!fs.existsSync(filePath)) {
-      console.log("⚠️  File not "found": ${file}");
-      return}
-    
+filesToFix.forEach(filePath => {
+  if (fs.existsSync(filePath)) {
     let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    if (content.includes(search)) {
-      content = content.replace(search, replace);
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log("✅ Fixed issue in ${file}");
-      fixedCount++}
+    // Fix all possible line break issues in className attributes
+    content = content.replace(/className="([^"]*)\n\s*([^"]*)"/g, (match, part1, part2) => {
+      return `className="${part1.trim()} ${part2.trim()}"`;
+    });
     
-  } catch (error) {
-    console.error("❌ Error fixing ${file}:", error.message);
-    errorCount++}
+    // Fix missing closing quotes
+    content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, (match, part1, part2) => {
+      return `className="${part1.trim()} ${part2.trim()}">`;
+    });
+    
+    // Fix any remaining unterminated strings
+    content = content.replace(/className="([^"]*)\n\s*([^"]*)\s*>/g, (match, part1, part2) => {
+      return `className="${part1.trim()} ${part2.trim()}">`;
+    });
+    
+    // Fix specific patterns that are causing issues
+    content = content.replace(/>\s*<div className="([^"]*)\n\s*([^"]*)"/g, '>\n                  <div className="$1 $2"');
+    content = content.replace(/>\s*<h2 className="([^"]*)\n\s*([^"]*)"/g, '>\n            <h2 className="$1 $2"');
+    
+    // Fix missing closing quotes in various tags
+    content = content.replace(/<h1 className="([^"]*)\n\s*([^"]*)\s*>/g, '<h1 className="$1 $2">');
+    content = content.replace(/<h2 className="([^"]*)\n\s*([^"]*)\s*>/g, '<h2 className="$1 $2">');
+    content = content.replace(/<p className="([^"]*)\n\s*([^"]*)\s*>/g, '<p className="$1 $2">');
+    content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2">');
+    
+    // Fix any remaining syntax issues
+    content = content.replace(/\s+\n\s*>/g, '>');
+    content = content.replace(/>\s*</g, '>\n                  <');
+    
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed: ${path.relative('/workspace', filePath)}`);
+      totalFixes++;
+      modified = true;
+    }
+  }
 });
 
-console.log("\n🎉 Final syntax error fixing complete!");
-console.log("✅ Files "fixed": ${fixedCount}");
-console.log("❌ "Errors": ${errorCount}");
-console.log("\n💡 Run 'npm run build' to test the fixes.`);
+console.log(`\n📊 Summary:`);
+console.log(`   Files processed: ${filesToFix.length}`);
+console.log(`   Files fixed: ${totalFixes}`);
+console.log('✨ Final syntax fix completed!');

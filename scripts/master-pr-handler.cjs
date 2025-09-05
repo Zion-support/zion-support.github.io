@@ -5,7 +5,7 @@ const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🎯 Master PR Handler & Automation System');
-console.log('==========================================');
+console.log('');
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 if (!GITHUB_TOKEN) {

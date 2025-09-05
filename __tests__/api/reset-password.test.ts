@@ -4,14 +4,15 @@ import handler from '@/pages/api/auth/reset';
 import { describe, it, expect, vi } from 'vitest';
 
 interface ErrorResponse {
-  "message": string;
+  message: string;
 }
 
 describe('/api/auth/reset token validation', () => {
   it('returns 400 if token is missing', async () => {
     const { req, res } = createMocks({
-      "method": 'POST' as RequestMethod,
-      "body": { newPassword: 'pass12345' }});
+      method: 'POST' as RequestMethod,
+      body: { newPassword: 'pass12345' }
+    });
 
     await handler(
       req as unknown as NextApiRequest,
@@ -26,8 +27,9 @@ describe('/api/auth/reset token validation', () => {
 
   it('returns 400 for invalid token', async () => {
     const { req, res } = createMocks({
-      "method": 'POST' as RequestMethod,
-      "body": { token: 'invalid', "newPassword": 'pass12345' }});
+      method: 'POST' as RequestMethod,
+      body: { token: 'invalid', newPassword: 'pass12345' }
+    });
 
     await handler(
       req as unknown as NextApiRequest,

@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-class PerformanceOptimizer {
-=======
-#!/usr/bin/env node;
-import fs from ;
-  "fs");
-import path from ;
-  "path");
-const { execSync } = // // require(;
-  "child_process");
-class $1 {
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   constructor() {
     this.optimizations = [];
     this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');
@@ -70,20 +53,6 @@ class $1 {
     try {
       // Placeholder for bundle analysis
       return {
-<<<<<<< HEAD
-        "totalSize": '2.1MB',
-        "gzippedSize": '650KB',
-        "recommendations": ['Consider code splitting', 'Remove unused dependencies']
-      };
-    } catch (error) {
-      return { "error": error.message };
-    }
-  }
-
-=======
-  "totalSize": "2.1MB, "gzippedSize": ;
-  "650KB"
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   optimizeImages() {
     try {
       // Placeholder for image optimization
@@ -94,18 +63,6 @@ class $1 {
   }
 
   analyzeDependencies() {
-<<<<<<< HEAD
-    try {
-      const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
-      const dependencies = Object.keys(packageJson.dependencies || {});
-      const devDependencies = Object.keys(packageJson.devDependencies || {});
-      
-=======
-  try {
-  const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url, "../package.json"), "utf8"));
-      const dependencies = Object.keys(packageJson.dependencies || { /* empty */ });
-      const devDependencies = Object.keys(packageJson.devDependencies || { /* empty */ });
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
         "totalDependencies": dependencies.length + devDependencies.length,
         "productionDependencies": dependencies.length,
@@ -123,39 +80,4 @@ class $1 {
   }
 
   generateRecommendations() {
-<<<<<<< HEAD
-    return ['Implement code splitting for better performance',
-      'Optimize images using WebP format',
-      'Remove unused dependencies',
-      'Enable gzip compression',
-      'Use React.memo for expensive components'
-    ];
-  }
-
-  saveReport(report) {
-    const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-  }
-}
-
-// CLI interface
-const optimizer = new PerformanceOptimizer();
-const command = process.argv[2];
-
-switch (command) {
-  case 'optimize':
-    optimizer.optimizePerformance();
-    break;
-  "default": console.log('Usage:');
-    console.log('  node performance-optimizer.js optimize');
-    break;
-}
-
-module.exports = PerformanceOptimizer;
 =======
-  return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components";
-    // // // // // // // // console.log(;
-  "Performance "report": ", report)}
-
-})}}}}}}}}}}}}}}}
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

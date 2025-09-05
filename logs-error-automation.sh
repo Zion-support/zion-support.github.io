@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "📋 Error Automation System Logs:"
-echo "================================"
+echo "===="
 pm2 logs ecosystem.error-automation.config.cjs --lines 50

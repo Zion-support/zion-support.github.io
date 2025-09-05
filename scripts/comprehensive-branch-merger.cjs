@@ -5,7 +5,7 @@ const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🔄 Comprehensive Branch Merger');
-console.log('==============================');
+console.log('==');
 
 // Function to get all remote branches
 function getAllRemoteBranches() {

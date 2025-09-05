@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Fixing All Corrupted Files...');
-console.log('=================================');
+console.log('=====');
 
 // List of corrupted files to fix
 const corruptedFiles = ['pages/docs/api-reference.tsx',

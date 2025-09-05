@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Ultimate Syntax Fixer...');
-console.log('===========================');
+console.log('======');
 
 const filesToFix = ['pages/api/health.ts',
   'components/LoadingSpinner.tsx',

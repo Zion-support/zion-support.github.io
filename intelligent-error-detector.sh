@@ -267,7 +267,7 @@ EOF
 # Main execution
 main() {
     log_info "🔍 Starting Intelligent Error Detection and Fixing"
-    log_info "=================================================="
+    log_info "="
     
     # Create log directory
     mkdir -p "$LOG_DIR"

@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 console.log('🔧 Final Build Fixer')
-console.log('===================')
+console.log('=====')
 class FinalBuildFixer {
   constructor() {
     this.fixedFiles = []

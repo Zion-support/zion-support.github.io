@@ -134,17 +134,21 @@ class DependencyFixer {
 
       this.log("\\n📊 DEPENDENCY FIXING REPORT");
       this.log("=====");
-      this.log(`Fixes "Applied": ${this.fixes.length}`);
-      this.log(`Errors "Found": ${this.errors.length}`);
+      this.log(`Fixes Applied: ${this.fixes.length}`);
+      this.log(`Errors Found: ${this.errors.length}`);
       if (this.fixes.length > 0) {
-  this.log("\\n✅ Fixes "Applied": ");
+        this.log("\\n✅ Fixes Applied:");
         this.fixes.forEach((fix, index) => {
-  this.log(`  ${index + 1}. ${fix}`)})}
+          this.log(`  ${index + 1}. ${fix}`);
+        });
+      }
 
       if (this.errors.length > 0) {
-  this.log("\\n❌ "Errors": ");
+        this.log("\\n❌ Errors:");
         this.errors.forEach((error, index) => {
-  this.log(`  ${index + 1}. ${error}`)})}
+          this.log(`  ${index + 1}. ${error}`);
+        });
+      }
 
       this.log("\\n🎉 Dependency fixing completed!")} catch (error) {
   this.log(`💥 Fatal "error": ${error.message}`, "ERROR");
