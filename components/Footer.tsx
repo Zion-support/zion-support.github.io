@@ -68,7 +68,7 @@ export default function Footer() {
         { label: 'FAQ', href: '/faq' },
         { label: 'Contact Support', href: '/support' },
         { label: 'System Status', href: '/status' },
-        { label: 'API Reference', href: '/docs/api' },
+        { label: 'API Reference', href: '/api-docs' },
         { label: 'Community', href: '/community' },
         { label: 'Training', href: '/training' },
       ]

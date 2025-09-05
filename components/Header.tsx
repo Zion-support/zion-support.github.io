@@ -80,10 +80,13 @@ export function Header({ className }: HeaderProps) {
       href: '/solutions',
       hasDropdown: true,
       dropdownItems: [
-        { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { label: 'All Solutions', href: '/solutions' },
+        { label: 'Enterprise', href: '/solutions/enterprise' },
         { label: 'Healthcare', href: '/solutions/healthcare' },
         { label: 'Finance', href: '/solutions/finance' },
         { label: 'Retail', href: '/solutions/retail' },
+        { label: 'Education', href: '/solutions/education' },
+        { label: 'Government', href: '/solutions/government' },
       ]
     },
     {
@@ -96,6 +99,7 @@ export function Header({ className }: HeaderProps) {
         { label: 'Careers', href: '/careers' },
         { label: 'News', href: '/news' },
         { label: 'Contact', href: '/contact' },
+        { label: 'Partners', href: '/partners' },
       ]
     },
     {
@@ -103,13 +107,19 @@ export function Header({ className }: HeaderProps) {
       href: '/resources',
       hasDropdown: true,
       dropdownItems: [
+        { label: 'All Resources', href: '/resources' },
         { label: 'Blog', href: '/blog' },
         { label: 'White Papers', href: '/white-papers' },
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Webinars', href: '/webinars' },
         { label: 'Help Center', href: '/help' },
         { label: 'FAQ', href: '/faq' },
+        { label: 'Documentation', href: '/docs' },
       ]
+    },
+    {
+      label: 'Community',
+      href: '/community',
     },
   ];
 

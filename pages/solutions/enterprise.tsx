@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Building, Shield, Users, BarChart3, ArrowRight, CheckCircle, Clock, Globe, Database, Lock } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../../components/layout/Layout';
 
 const features = [
   {
@@ -49,7 +49,7 @@ const stats = [
 
 export default function EnterpriseSolutionsPage() {
   return (
-    <MainLayout
+    <Layout
       title="Enterprise Solutions - Zion Tech Group"
       description="Comprehensive enterprise technology solutions including cloud migration, security, compliance, and custom development for large organizations."
       keywords="enterprise solutions, cloud migration, enterprise security, compliance, custom development, large organizations"
@@ -234,6 +234,6 @@ export default function EnterpriseSolutionsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

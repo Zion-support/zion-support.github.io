@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/layout/Layout';
 
 const securityFeatures = [
   {
@@ -113,7 +113,7 @@ const securityMetrics = [
 
 export default function SecurityPage() {
   return (
-    <MainLayout
+    <Layout
       title="Security - Zion Tech Group"
       description="Learn about our comprehensive security measures, compliance standards, and data protection practices. Your data security is our top priority."
       keywords="security, data protection, compliance, encryption, SOC 2, HIPAA, GDPR, cybersecurity"
@@ -379,6 +379,6 @@ export default function SecurityPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
