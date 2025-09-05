@@ -1,5 +1,19 @@
 import React from 'react';
 import Head from 'next/head';
+import { 
+  Brain, 
+  TrendingUp, 
+  FileText, 
+  Eye, 
+  Database, 
+  Shield, 
+  Mic, 
+  Zap, 
+  Cog, 
+  Search, 
+  Users, 
+  Code 
+} from 'lucide-react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 export default function AIServices() {
