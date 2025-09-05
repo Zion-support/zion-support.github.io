@@ -1225,6 +1225,159 @@ title: 'Generative AI Content Creation Suite',
     features: ['Mood Tracking', 'Crisis Detection', 'Therapeutic Conversations', 'Progress Monitoring'],
     pricing: '$2,000 - $12,000/setup',
     category: 'HealthTech AI'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicle Systems',
+    description: 'Advanced AI systems for autonomous driving with real-time decision making.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Obstacle Detection', 'Traffic Analysis'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Computing Optimization',
+    description: 'AI algorithms optimized for quantum computing applications and problem solving.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Design', 'Optimization Problems', 'Cryptography', 'Simulation'],
+    pricing: '$50,000 - $200,000 project',
+    category: 'Quantum AI'
+  },
+  {
+    title: 'AI-Powered Space Mission Planning',
+    description: 'Intelligent mission planning and optimization for space exploration and satellite operations.',
+    icon: Rocket,
+    features: ['Mission Optimization', 'Resource Planning', 'Risk Assessment', 'Trajectory Analysis'],
+    pricing: '$75,000 - $300,000 project',
+    category: 'Space Technology'
+  },
+  {
+    title: 'AI Climate Change Modeling',
+    description: 'Advanced climate modeling and environmental impact prediction using AI.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Impact', 'Carbon Footprint Analysis', 'Policy Simulation'],
+    pricing: '$25,000 - $100,000 project',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI-Powered Brain-Computer Interface',
+    description: 'Neural signal processing and brain-computer interface development.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Neurotechnology'
+  },
+  {
+    title: 'AI Cybersecurity Threat Intelligence',
+    description: 'Advanced threat detection and cybersecurity intelligence using AI.',
+    icon: Shield,
+    features: ['Threat Detection', 'Attack Prediction', 'Vulnerability Assessment', 'Incident Response'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'Cybersecurity AI'
+  },
+  {
+    title: 'AI-Powered Digital Twin Technology',
+    description: 'Real-time digital twins for industrial processes and smart cities.',
+    icon: Monitor,
+    features: ['Real-time Simulation', 'Predictive Modeling', 'Process Optimization', 'Maintenance Planning'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'Digital Twin'
+  },
+  {
+    title: 'AI Language Model Fine-Tuning',
+    description: 'Custom language model training and fine-tuning for specific domains.',
+    icon: MessageSquare,
+    features: ['Domain Adaptation', 'Custom Training', 'Performance Optimization', 'Deployment Support'],
+    pricing: '$10,000 - $50,000 project',
+    category: 'NLP AI'
+  },
+  {
+    title: 'AI-Powered Edge Computing',
+    description: 'Intelligent edge computing solutions for IoT and real-time processing.',
+    icon: Network,
+    features: ['Edge AI Processing', 'Real-time Analytics', 'Low Latency', 'Resource Optimization'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Edge AI'
+  },
+  {
+    title: 'AI Robotic Process Automation',
+    description: 'Intelligent automation for complex business processes and workflows.',
+    icon: Bot,
+    features: ['Process Automation', 'Decision Making', 'Error Handling', 'Scalable Deployment'],
+    pricing: '$5,000 - $25,000 project',
+    category: 'RPA AI'
+  },
+  {
+    title: 'AI-Powered Augmented Reality',
+    description: 'Intelligent AR applications with object recognition and spatial understanding.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Rendering', 'Gesture Control'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'AR AI'
+  },
+  {
+    title: 'AI Blockchain Analytics',
+    description: 'Advanced blockchain analysis and cryptocurrency intelligence using AI.',
+    icon: Network,
+    features: ['Transaction Analysis', 'Pattern Recognition', 'Risk Assessment', 'Compliance Monitoring'],
+    pricing: '$8,000 - $40,000 project',
+    category: 'Blockchain AI'
+  },
+  {
+    title: 'AI-Powered Smart Agriculture',
+    description: 'Intelligent farming solutions with precision agriculture and crop optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$12,000 - $60,000 project',
+    category: 'AgTech AI'
+  },
+  {
+    title: 'AI Voice Synthesis & Cloning',
+    description: 'Advanced voice synthesis and cloning technology for various applications.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Synthesis', 'Multi-language Support', 'Real-time Processing'],
+    pricing: '$5,000 - $25,000 project',
+    category: 'Voice AI'
+  },
+  {
+    title: 'AI-Powered Metaverse Development',
+    description: 'Intelligent virtual world creation and management systems.',
+    icon: Globe,
+    features: ['Virtual World Creation', 'AI NPCs', 'Behavioral Simulation', 'Content Generation'],
+    pricing: '$25,000 - $125,000 project',
+    category: 'Metaverse AI'
+  },
+  {
+    title: 'AI Medical Imaging Analysis',
+    description: 'Advanced medical image analysis and diagnostic support using deep learning.',
+    icon: Heart,
+    features: ['Medical Image Analysis', 'Disease Detection', 'Treatment Planning', 'Radiology Support'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Medical AI'
+  },
+  {
+    title: 'AI-Powered Smart Cities',
+    description: 'Intelligent city management and optimization systems.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Management', 'Public Safety', 'Environmental Monitoring'],
+    pricing: '$50,000 - $250,000 project',
+    category: 'Smart Cities AI'
+  },
+  {
+    title: 'AI Financial Trading Algorithms',
+    description: 'Advanced algorithmic trading systems with machine learning optimization.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'High-Frequency Trading'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'FinTech AI'
+  },
+  {
+    title: 'AI-Powered Content Creation',
+    description: 'Intelligent content generation for marketing, education, and entertainment.',
+    icon: FileText,
+    features: ['Text Generation', 'Image Creation', 'Video Production', 'Multi-format Output'],
+    pricing: '$3,000 - $15,000 project',
+    category: 'Content AI'
   }
 ];
 const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },

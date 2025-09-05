@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Brain,
   Users,
@@ -15,27 +14,13 @@ import {
   CheckCircle,
   ArrowRight,
   Star,
-=======
-import { 
-  Brain, 
-  Users, 
-  Award, 
-  Target, 
-  Heart, 
-  Globe, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   TrendingUp,
   Building,
   Rocket,
   Lightbulb,
   Handshake
 } from 'lucide-react';
-<<<<<<< HEAD
+
 const values = [{
     icon: Lightbulb,
     title: 'Innovation',
@@ -348,30 +333,79 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
                   viewport={{ once: true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-blue-600" />
-=======
+                    <IconComponent className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                    {achievement.stat}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {achievement.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {achievement.description}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
-const values = [{
-    "icon": Lightbulb,
-    "title": 'Innovation',
-    "description": 'We constantly push the boundaries of what&apos;s possible with technology, always seeking new and better ways to solve problems.'
-  },
-  {
-    "icon": Shield,
-    "title": 'Integrity',
-    "description": 'We conduct business with the highest ethical standards, building trust through transparency and honest communication.'
-  },
-  {
-    "icon": Star,
-    "title": 'Excellence',
-    "description": 'We strive for excellence in everything we do, delivering solutions that exceed expectations and drive real results.'
-  },
-  {
-    "icon": Handshake,
-    "title": 'Client Success',
-    "description": 'Our success is measured by our clients&apos; success. We are committed to being true partners in their growth journey.'
-  }
-];
+      {/* Team Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Meet Our Team
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our diverse team of experts brings together decades of experience in technology, AI, and business innovation.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {team.map((member, index) => (
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {member.name}
+                </h3>
+                <p className="text-blue-600 font-semibold mb-2">
+                  {member.role}
+                </p>
+                <p className="text-gray-600 mb-2">
+                  {member.expertise}
+                </p>
+                <p className="text-sm text-gray-500">
+                  {member.experience}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
 
 const team = [{
     "name": 'Dr. Sarah Chen',
@@ -697,7 +731,6 @@ export default function AboutPage() {
                   <p className="text-gray-600">
                     {achievement.description}
                   </p>
-<<<<<<< HEAD
                   </motion.div>
               );
             })}
@@ -754,7 +787,6 @@ export default function AboutPage() {
                 <motion.div
                   key={index}
                   className="flex items-start space-x-6"
-<<<<<<< HEAD
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}

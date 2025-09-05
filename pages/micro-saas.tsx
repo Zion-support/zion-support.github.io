@@ -1278,6 +1278,151 @@ description: 'Automated code review with security scanning, performance optimiza
     features: ['Content Generation', 'Optimal Timing', 'Engagement Prediction', 'Multi-platform Support'],
     pricing: '$39 - $199/month',
     category: 'Social Media Management'
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Intelligent contract analysis, risk assessment, and compliance monitoring for legal teams.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Monitoring', 'Clause Extraction'],
+    pricing: '$399 - $1,999/month',
+    category: 'Legal Tech',
+    popular: true
+  },
+  {
+    title: 'Smart Energy Management System',
+    description: 'AI-driven energy optimization for buildings and industrial facilities with real-time monitoring.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Predictive Maintenance', 'Cost Analysis', 'Carbon Footprint Tracking'],
+    pricing: '$199 - $999/month',
+    category: 'Green Tech'
+  },
+  {
+    title: 'AI-Powered Recruitment Assistant',
+    description: 'Intelligent candidate screening, interview scheduling, and talent matching for HR teams.',
+    icon: Users,
+    features: ['Resume Screening', 'Skill Matching', 'Interview Scheduling', 'Bias Detection'],
+    pricing: '$149 - $799/month',
+    category: 'HR Tech'
+  },
+  {
+    title: 'Blockchain Smart Contract Auditor',
+    description: 'Automated security analysis and vulnerability detection for smart contracts and DeFi protocols.',
+    icon: Shield,
+    features: ['Security Analysis', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checks'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain Security'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimizer',
+    description: 'Intelligent supply chain management with demand forecasting and logistics optimization.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Assessment'],
+    pricing: '$399 - $1,999/month',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'Real-Time Language Translation API',
+    description: 'Advanced neural machine translation with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['100+ Languages', 'Context Awareness', 'Industry Terms', 'Real-time Processing'],
+    pricing: '$0.01 - $0.10 per 1K characters',
+    category: 'Language AI'
+  },
+  {
+    title: 'AI-Powered Fraud Detection System',
+    description: 'Real-time fraud detection and prevention using machine learning and behavioral analysis.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Behavioral Analysis', 'Risk Scoring', 'Custom Rules'],
+    pricing: '$199 - $999/month',
+    category: 'FinTech'
+  },
+  {
+    title: 'Smart Home IoT Management Platform',
+    description: 'Centralized control and automation for smart home devices with AI-powered optimization.',
+    icon: Home,
+    features: ['Device Control', 'Automation Rules', 'Energy Monitoring', 'Security Integration'],
+    pricing: '$9.99 - $49.99/month',
+    category: 'IoT'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with security analysis, performance optimization, and best practices.',
+    icon: Code,
+    features: ['Security Analysis', 'Performance Review', 'Best Practices', 'Automated Fixes'],
+    pricing: '$99 - $499/month',
+    category: 'Developer Tools'
+  },
+  {
+    title: 'Predictive Maintenance Platform',
+    description: 'AI-driven predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Monitoring'],
+    pricing: '$299 - $1,499/month',
+    category: 'Industrial AI'
+  },
+  {
+    title: 'Smart Agriculture Monitoring System',
+    description: 'IoT-based crop monitoring with AI analysis for optimal farming decisions.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Weather Analysis', 'Pest Detection', 'Yield Prediction'],
+    pricing: '$149 - $799/month',
+    category: 'AgTech'
+  },
+  {
+    title: 'AI-Powered Personal Finance Manager',
+    description: 'Intelligent personal finance tracking with budgeting, investment advice, and goal setting.',
+    icon: DollarSign,
+    features: ['Expense Tracking', 'Budget Planning', 'Investment Analysis', 'Goal Setting'],
+    pricing: '$4.99 - $19.99/month',
+    category: 'FinTech'
+  },
+  {
+    title: 'Real-Time Video Analytics Platform',
+    description: 'AI-powered video analysis for security, retail analytics, and behavioral insights.',
+    icon: Video,
+    features: ['Object Detection', 'Behavior Analysis', 'Crowd Counting', 'Anomaly Detection'],
+    pricing: '$199 - $999/month',
+    category: 'Computer Vision'
+  },
+  {
+    title: 'AI-Powered Email Security Gateway',
+    description: 'Advanced email protection against phishing, malware, and advanced persistent threats.',
+    icon: Mail,
+    features: ['Phishing Detection', 'Malware Scanning', 'URL Analysis', 'Behavioral Analysis'],
+    pricing: '$2.50 - $5.00 per user/month',
+    category: 'Cybersecurity'
+  },
+  {
+    title: 'Smart Parking Management System',
+    description: 'AI-powered parking optimization with real-time availability and dynamic pricing.',
+    icon: Car,
+    features: ['Real-time Availability', 'Dynamic Pricing', 'Reservation System', 'Analytics Dashboard'],
+    pricing: '$99 - $499/month',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'AI-Powered Mental Health Assistant',
+    description: 'Conversational AI for mental health support with mood tracking and crisis intervention.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Therapeutic Conversations', 'Professional Referrals'],
+    pricing: '$9.99 - $29.99/month',
+    category: 'HealthTech'
+  },
+  {
+    title: 'Blockchain Identity Verification',
+    description: 'Decentralized identity verification and KYC compliance using blockchain technology.',
+    icon: Lock,
+    features: ['KYC Compliance', 'Identity Verification', 'Privacy Protection', 'Cross-platform Integration'],
+    pricing: '$0.50 - $2.00 per verification',
+    category: 'Identity Management'
+  },
+  {
+    title: 'AI-Powered Learning Management System',
+    description: 'Intelligent LMS with personalized learning paths and automated assessment.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'Automated Assessment', 'Progress Tracking', 'Content Recommendation'],
+    pricing: '$19.99 - $99.99/month',
+    category: 'EdTech'
   }
 ];
 const features = [{
