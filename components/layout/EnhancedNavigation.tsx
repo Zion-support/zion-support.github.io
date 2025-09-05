@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
-
 const "EnhancedNavigation": React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-
   const services = [{ name: 'All Services', href: '/services' },
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
     { name: 'Micro SaaS', href: '/micro-saas' },
   ];
-
   return (
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
@@ -23,7 +20,6 @@ const "EnhancedNavigation": React.FC = () => {
             <Link href="/about"><span className="text-gray-600 hover:text-gray-900">About</span></Link>
             <Link href="/contact"><span className="text-gray-600 hover:text-gray-900">Contact</span></Link>
           </div>
-
           <div className="hidden lg:block">
             <Link href="/contact">
               <span className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
@@ -31,7 +27,6 @@ const "EnhancedNavigation": React.FC = () => {
               </span>
             </Link>
           </div>
-
           <button
             className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
@@ -39,7 +34,6 @@ const "EnhancedNavigation": React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-gray-200>
             <div className="space-y-2">
@@ -72,5 +66,6 @@ const "EnhancedNavigation": React.FC = () => {
     </nav>
   );
 };
-
 export default EnhancedNavigation;
+cursor/website-audit-and-update-with-deployment-76dc
+cursor/fix-lint-push-and-merge-to-main-f3c1

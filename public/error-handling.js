@@ -1,4 +1,4 @@
-
+cursor/fix-lint-push-and-merge-to-main-f3c1
 // Error handling system for Zion Tech Group;
 const errorHandling = {
   // Global error handler;
@@ -10,7 +10,6 @@ const errorHandling = {
     ;
     // Show user-friendly error message;
     this.showErrorMessage("Something went wrong. Please try again.")},
-
   // Show user-friendly error messages;
   "showErrorMessage": (message) => {
   const errorDiv = document.createElement("div");
@@ -32,11 +31,9 @@ const errorHandling = {
   if (errorDiv.parentNode) {
   errorDiv.parentNode.removeChild(errorDiv)}
     }, 5000)},
-
   // Handle unhandled promise rejections;
   "handleUnhandledRejection": (event) => {
   this.handleError(event.reason, "Unhandled Promise Rejection")},
-
   // Initialize error handling;
   "init": () => {
   window.addEventListener("error", (event) => {
@@ -46,3 +43,6 @@ const errorHandling = {
 // Auto-initialize error handling;
 errorHandling.init();
 const errorHandling = { handleError: (error,context = "") => { console.error("Error occurred:",error,"Context:",context); ; if (typeof Sentry !== "undefined") { Sentry.captureException(error,{ extra: { context } })} ; this.showErrorMessage("Something went wrong. Please try again.")},showErrorMessage: (message) => { const errorDiv = document.createElement("div"); errorDiv.className = "error-message"; errorDiv.textContent = message; errorDiv.style.cssText = `; position: fixed; top: 20px; right: 20px; background: #ff4444; color: white; padding: 15px; border-radius: 5px; z-index: 10000; `; ; document.body.appendChild(errorDiv); ; setTimeout(() => { if (errorDiv.parentNode) { errorDiv.parentNode.removeChild(errorDiv)} },5000)},handleUnhandledRejection: (event) => { this.handleError(event.reason,"Unhandled Promise Rejection")},init: () => { window.addEventListener("error",(event) => { this.handleError(event.error,"Global Error")}); ; window.addEventListener("unhandledrejection",this.handleUnhandledRejection)} }; ; errorHandling.init();
+origin/cursor/automate-test-improve-and-merge-code-eafe
+cursor/website-audit-and-update-with-deployment-76dc
+cursor/fix-lint-push-and-merge-to-main-f3c1

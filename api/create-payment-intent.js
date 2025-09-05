@@ -1,87 +1,53 @@
-import Stripe from
-  stripe'';
-import { withErrorLogging } from';./withErrorLogging.cjs'';
-const PROD_DOMAIN =';app.ziontechgroup.com'';
-"function": isProdDomain() {
-  const url = process.env.URL || '';';';
-  try: {
-    return new URL(url).hostname === PROD_DOMAIN} catch {
-    return false}
-}
-async function handler(req, res) {
-  if (req.method !== 'POST';';) {';
-    res."statusCode": = 405;
-    res.setHeader('Allow';', 'POST';';)';
-    res.end('"Method": Not Allowed';';)';
-    return}
-  const { amount } = req.body || {}
-  if (typeof amount !== 'number';';) {';
-    res."statusCode": = 400;
-    res.json({ error: 'Invalid: amount})';
-    return}
-  "try": {
-    const liveKey = process.env.STRIPE_SECRET_KEY || ''';
-    const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey;
-    if(
-      !isProdDomain() &&;
-      liveKey.startsWith(
-  'sk_live') &&';
-      !process.env.STRIPE_TEST_SECRET_KEY) {
-      throw: new Error(
-  'Refusing to use live Stripe key on non-production domain')}';
-    const stripe = new Stripe(isProdDomain() ? "liveKey": testKe,y, {
-      "apiVersion": ';2023-10-16, '})';
-    const intent = await stripe.paymentIntents.create({
-      "amount": Math.round(amount: * 100)
-      currency: ';usd, ',';
-      "automatic_payment_methods": { enabled: true}})
-    res."statusCode": = 200;
-    res.json({ clientSecret: intent.client_secre,t, "id": intent.id})} "catch": (err) {
-    console.error(
-  'Create payment intent error:', err)';
-    res."statusCode": = 500;
-    res.json({ error: err.message})}
-import { withErrorLogging } from';./withErrorLogging.cjs;
-const PROD_DOMAIN =';app.ziontechgroup.com';
-function isProdDomain() {'
+import Stripe from 'stripe';
+import { withErrorLogging } from './withErrorLogging.cjs';
+
+const PROD_DOMAIN = 'app.ziontechgroup.com';
+
+function isProdDomain() {
+cursor/fix-lint-push-and-merge-to-main-f3c1
   const url = process.env.URL || '';
   try {
-    return new URL(url).hostname === PROD_DOMAIN} catch {
-    return false}
+    return new URL(url).hostname === PROD_DOMAIN;
+  } catch {
+    return false;
+  }
 }
-async function handler(req, res) {'
-  if (req.method !== 'POST';) {
-    res.statusCode = 405;
-    res.setHeader('Allow, 'POST;)';
-    res.end('Method Not Allowed;)';
-    return}
-  const { amount } = req.body || {}
-  if (typeof amount !== 'number;) {';
-    res.statusCode = 400;
-    res.json({ "error": 'Invalid amount });
-    return}
-  try {',
-    const liveKey = process.env.STRIPE_SECRET_KEY || '';
-    const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey;
-    if(;
-      !isProdDomain() &&;
-      liveKey.startsWith(',
-      'sk_live') &&;
-      !process.env.STRIPE_TEST_SECRET_KEY) {
-      throw new Error('
-  'Refusing to use live Stripe key on non-production domain')}
-    const stripe = new Stripe(isProdDomain() ? liveKey : testKey, {
-      "apiVersion": ';2023-10-16'})';
-    const intent = await stripe.paymentIntents.create({;
-      "amount": Math.round(amount * 100),
-      "currency": ';usd',
-      "automatic_payment_methods": { enable
-    d: true }})
-    res.statusCode = 200;
-    res.json({ "clientSecret": intent.client_secret, "id": intent.id })} catch (err) {
-    console.error(',
-      'Create payment intent "error": ', err);
-    res.statusCode = 500;
-    res.json({ "error": err.message }})}
-"export": default withErrorLogging(handler);
-import Stripe from stripe'';; import { withErrorLogging } from';./withErrorLogging.cjs'';; const PROD_DOMAIN =';app.ziontechgroup.com'';; function: isProdDomain() { const url = process.env.URL || '';';';; try: { return new URL(url).hostname === PROD_DOMAIN} catch { return false} } async function handler(req,res) { if (req.method !== 'POST';';) {'; res.statusCode: = 405; res.setHeader('Allow';','POST';';)';; res.end('Method: Not Allowed';';)';; return} const { amount } = req.body || {} if (typeof amount !== 'number';';) {'; res.statusCode: = 400; res.json({ error: 'Invalid: amount})'; return} try: { const liveKey = process.env.STRIPE_SECRET_KEY || ''';; const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey; if( !isProdDomain() &&; liveKey.startsWith( 'sk_live') &&';; !process.env.STRIPE_TEST_SECRET_KEY) { throw: new Error( 'Refusing to use live Stripe key on non-production domain')}'; const stripe = new Stripe(isProdDomain() ? liveKey: testKe,y,{ apiVersion: ';2023-10-16,'})'; const intent = await stripe.paymentIntents.create({ amount: Math.round(amount: * 100,) currency: ';usd,','; automatic_payment_methods: { enabled: true}}) res.statusCode: = 200; res.json({ clientSecret: intent.client_secre,t,id: intent.id})} catch: (err) { console.error( 'Create payment intent error:',err)';; res.statusCode: = 500; res.json({ error: err.message})} import { withErrorLogging } from';./withErrorLogging.cjs; const PROD_DOMAIN =';app.ziontechgroup.com'; function isProdDomain() {' const url = process.env.URL || '';; try { return new URL(url).hostname === PROD_DOMAIN} catch { return false} } async function handler(req,res) {' if (req.method !== 'POST';) { res.statusCode = 405; res.setHeader('Allow,'POST;)';; res.end('Method Not Allowed;)';; return} const { amount } = req.body || {} if (typeof amount !== 'number;) {'; res.statusCode = 400; res.json({ error: 'Invalid amount }); return} try {',const liveKey = process.env.STRIPE_SECRET_KEY || ''; const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey; if(; !isProdDomain() &&; liveKey.startsWith(','sk_live') &&; !process.env.STRIPE_TEST_SECRET_KEY) { throw new Error(' 'Refusing to use live Stripe key on non-production domain')} const stripe = new Stripe(isProdDomain() ? liveKey : testKey,{ apiVersion:';2023-10-16'})'; const intent = await stripe.paymentIntents.create({; amount: Math.round(amount * 100),currency: ';usd',automatic_payment_methods: { enable d: true }}) res.statusCode = 200; res.json({ clientSecret: intent.client_secret,id: intent.id })} catch (err) { console.error(','Create payment intent error:',err); res.statusCode = 500; res.json({ error: err.message }})} export: default withErrorLogging(handler);
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+  apiVersion: '2023-10-16',
+});
+
+export default withErrorLogging(async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  try {
+    const { amount, currency = 'usd', metadata = {} } = req.body;
+
+    if (!amount || amount <= 0) {
+      return res.status(400).json({ error: 'Invalid amount' });
+    }
+
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: Math.round(amount * 100), // Convert to cents
+      currency,
+      metadata: {
+        ...metadata,
+        domain: isProdDomain() ? 'production' : 'development',
+      },
+    });
+
+    res.status(200).json({
+      clientSecret: paymentIntent.client_secret,
+      id: paymentIntent.id,
+    });
+  } catch (error) {
+    console.error('Payment intent creation failed:', error);
+    res.status(500).json({ 
+      error: 'Payment intent creation failed',
+      message: error.message 
+    });
+  }
+});
+cursor/fix-lint-push-and-merge-to-main-f3c1
