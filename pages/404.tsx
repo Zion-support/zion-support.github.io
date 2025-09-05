@@ -36,7 +36,7 @@ export default function Custom404() {
               Oops! Page Not Found
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              The page you&apos;re looking for doesn&apos;t exist or has been moved.
+              The page you're looking for doesn't exist or has been moved.
             </p>
           </div>
           {/* Action Buttons */}
@@ -115,7 +115,7 @@ export default function Custom404() {
           {/* Help Text */}
           <div className="mt-8 text-center">
             <p className="text-gray-600">
-              Still can&apos;t find what you&apos;re looking for?{' '}
+              Still can't find what you're looking for?{' '}
               <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
                 Contact our support team
               </Link>

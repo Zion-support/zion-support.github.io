@@ -1,2 +1,71 @@
-import React from 'react'; import Head from 'next/head'; export default function FutureOfWork() {; return (; <> <Head> <title>The Future of "Work": Human-AI Collaboration | Zion Tech Group></div> <meta name="description" content="How autonomous systems are reshaping the workplace and enhancing human capabilities." /> <meta property="og:title" content="The Future of Work: Human-AI Collaboration" /> <meta property="og:description" content="How autonomous systems are reshaping the workplace and enhancing human capabilities." /> <meta name="twitter:card" content="summary_large_image" /> ></div> <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className="container mx-auto px-6 py-12"> <nav className="mb-8"> <a href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors"> ← Back to Blog; ></div> ></div> <article className="max-w-4xl mx-auto"> <header className="mb-12"> <div className="flex items-center gap-3 mb-4"> <span className="px-3 py-1 bg-yellow-400/20 text-yellow-400 text-sm rounded-full border border-yellow-400/30"> Future of Work; ></div> <span className="text-white/60 text-sm">January 5,2025></div> <span className="text-white/60 text-sm">•></div> <span className="text-white/60 text-sm">5 min read></div> ></div> <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> The Future of "Work": Human-AI Collaboration; ></div> <p className="text-xl text-white/80"> Discover how autonomous systems are reshaping the workplace and creating new ; opportunities for human-AI collaboration.; ></div> ></div> <div className="prose prose-invert prose-lg max-w-none"> <section className="mb-12"> <h2 className="text-3xl font-bold mb-6 text-cyan-400">The Collaboration Revolution></div> <p className="text-white/80 mb-4"> The future of work isn't about humans being replaced by AI—it's about humans ; and AI working together to achieve more than either could accomplish alone.; ></div> <p className="text-white/80 mb-4"> At Zion Tech Group,we're building the tools and systems that make this ; collaboration seamless,productive,and empowering.; ></div> ></div> <section className="mb-12"> <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Augmenting Human Capabilities></div> <p className="text-white/80 mb-4"> AI systems excel at tasks that require speed,precision,and pattern recognition. ; Humans excel at creativity,empathy,and strategic thinking. By combining these ; strengths,we can achieve unprecedented levels of productivity and innovation.; ></div> <p className="text-white/80 mb-4"> Our autonomous systems handle routine tasks,allowing humans to focus on ; high-value,creative work that truly matters.; ></div> ></div> <section className="mb-12"> <h2 className="text-3xl font-bold mb-6 text-green-400">New Job Opportunities></div> <p className="text-white/80 mb-4"> As AI automation becomes more prevalent,new job categories are emerging. ; These include AI trainers,automation architects,and human-AI collaboration ; specialists.; ></div> <p className="text-white/80 mb-4"> The key is to develop skills that complement AI capabilities rather than ; compete with them.; ></div> ></div> <section className="mb-12"> <h2 className="text-3xl font-bold mb-6 text-blue-400">Workplace Transformation></div> <p className="text-white/80 mb-4"> The workplace of the future will be more flexible,intelligent,and human-centered. ; AI systems will handle administrative tasks,scheduling,and routine communications,; freeing humans to focus on meaningful work.; ></div> <p className="text-white/80 mb-4"> This transformation is already happening in forward-thinking organizations ; that embrace AI collaboration.; ></div> ></div> <section className="mb-12"> <h2 className="text-3xl font-bold mb-6 text-purple-400">Skills for the Future></div> <p className="text-white/80 mb-4"> To thrive in the AI-augmented workplace,workers need to develop skills "in": ; ></div> <ul className="text-white/80 mb-4 space-y-2"> <li>• Critical thinking and problem-solving></div> <li>• Creativity and innovation></div> <li>• Emotional intelligence></div> <li>• AI literacy and collaboration></div> <li>• Continuous learning and adaptation></div> ></div> ></div> <section className="mb-12"> <h2 className="text-3xl font-bold mb-6 text-yellow-400">Building the Future Together></div> <p className="text-white/80 mb-4"> The future of work is being built today by organizations that understand ; the power of human-AI collaboration. At Zion Tech Group,we're not just ; creating the technology—we're shaping the future of work itself.; ></div> <p className="text-white/80 mb-4"> Join us in building a future where humans and AI work together to create ; a better world.; ></div> ></div> ></div> <footer className="mt-16 pt-8 border-t border-white/20"> <div className="flex items-center justify-between"> <div className="text-white/60 text-sm"> Written by Zion Tech Group AI Systems; ></div> <div className="flex gap-4"> <a href="/blog" className="text-cyan-400 "hover": text-cyan-300 transition-colors"> ← Back to Blog; ></div> <a href="/contact" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"> Get in Touch; ></div> ></div> ></div> ></div> ></div> ></div> ></div> ></div> );}"
-</Head>"
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Futureofwork() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Futureofwork - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Futureofwork
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

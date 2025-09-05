@@ -2,42 +2,43 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Cloud, 
-  Zap, 
-  Shield, 
-  Users, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight, 
-  Clock, 
-  Star, 
-  DollarSign, 
-  Award, 
-  Globe, 
-  Lock, 
-  Cpu, 
-  Bot, 
-  FileText, 
-  Image, 
-  Video, 
-  Mic, 
-  Code, 
-  Settings, 
-  Monitor, 
-  Smartphone, 
-  Server, 
-  Network, 
-  Car, 
-  Rocket, 
-  Heart, 
-  Building, 
+import {
+  Cloud,
+  Zap,
+  Shield,
+  Users,
+  BarChart3,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Star,
+  DollarSign,
+  Award,
+  Globe,
+  Lock,
+  Cpu,
+  Bot,
+  FileText,
+  Image,
+  Video,
+  Mic,
+  Code,
+  Settings,
+  Monitor,
+  Smartphone,
+  Server,
+  Network,
+  Car,
+  Rocket,
+  Heart,
+  Building,
   Sprout,
   Mail,
   MessageSquare,
   Search,
   Eye,
   Target,
+  Brain,
   TrendingUp,
   Package,
   Calendar,
@@ -46,9 +47,9 @@ import {
   Home,
   Trash2,
   Camera,
-  HardDrive
+  HardDrive,
+  Database
 } from 'lucide-react';
-
 const microSaaSProducts = [{
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
@@ -149,12 +150,525 @@ const microSaaSProducts = [{
     category: 'E-commerce'
   },
   {
-    title: 'Customer Support Ticketing',
-    description: 'AI-powered customer support ticketing and knowledge base system.',
-    icon: MessageSquare,
-    features: ['Ticket Management', 'Knowledge Base', 'AI Chatbot', 'Performance Analytics'],
-    pricing: '$19 - $149/month',
-    category: 'Support'
+    title: 'AI-Powered Code Generator',
+    description: 'Intelligent code generation and completion for developers using advanced AI.',
+    icon: Code,
+    features: ['Code Generation', 'Auto-completion', 'Bug Detection', 'Documentation Generation'],
+    pricing: '$99 - $499/month',
+    category: 'Developer Tools',
+    popular: true
+  },
+  {
+    title: 'Blockchain Analytics Platform',
+    description: 'Comprehensive blockchain transaction analysis and cryptocurrency intelligence.',
+    icon: Network,
+    features: ['Transaction Analysis', 'Wallet Tracking', 'DeFi Analytics', 'Compliance Monitoring'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain'
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Circuits', 'Algorithm Testing', 'Performance Analysis', 'Educational Tools'],
+    pricing: '$299 - $1,499/month',
+    category: 'Quantum Computing'
+  },
+  {
+    title: 'AI Voice Cloning Studio',
+    description: 'High-fidelity voice synthesis and cloning technology for content creators.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Synthesis', 'Multi-language Support', 'Real-time Processing'],
+    pricing: '$149 - $799/month',
+    category: 'Voice AI'
+  },
+  {
+    title: 'Metaverse Development Platform',
+    description: 'Complete platform for building and managing virtual worlds and experiences.',
+    icon: Globe,
+    features: ['3D World Builder', 'Avatar Creation', 'Physics Engine', 'Multi-user Support'],
+    pricing: '$399 - $1,999/month',
+    category: 'Metaverse'
+  },
+  {
+    title: 'AI Medical Diagnosis Assistant',
+    description: 'AI-powered medical image analysis and diagnostic support for healthcare professionals.',
+    icon: Heart,
+    features: ['Medical Imaging Analysis', 'Symptom Analysis', 'Treatment Recommendations', 'HIPAA Compliance'],
+    pricing: '$499 - $2,499/month',
+    category: 'Healthcare AI'
+  },
+  {
+    title: 'Autonomous Vehicle Fleet Management',
+    description: 'Complete fleet management system for autonomous vehicles and drones.',
+    icon: Car,
+    features: ['Fleet Tracking', 'Route Optimization', 'Maintenance Scheduling', 'Safety Monitoring'],
+    pricing: '$299 - $1,499/month',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'AI Climate Change Predictor',
+    description: 'Advanced climate modeling and environmental impact prediction platform.',
+    icon: Sprout,
+    features: ['Climate Forecasting', 'Carbon Footprint Analysis', 'Environmental Risk Assessment', 'Sustainability Planning'],
+    pricing: '$199 - $999/month',
+    category: 'Climate Tech'
+  },
+  {
+    title: 'AI-Powered Learning Management System',
+    description: 'Intelligent educational platform with personalized learning paths and AI tutoring.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'AI Tutoring', 'Progress Tracking', 'Assessment Generation'],
+    pricing: '$49 - $299/month',
+    category: 'EdTech'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'AI-powered home automation and energy management system.',
+    icon: Home,
+    features: ['Device Integration', 'Energy Optimization', 'Predictive Control', 'Voice Commands'],
+    pricing: '$29 - $199/month',
+    category: 'Smart Home'
+  },
+  {
+    title: 'AI Sports Analytics Platform',
+    description: 'Advanced sports performance analysis and prediction system for teams and athletes.',
+    icon: Target,
+    features: ['Performance Analysis', 'Injury Prediction', 'Tactical Analysis', 'Player Scouting'],
+    pricing: '$99 - $599/month',
+    category: 'Sports Tech'
+  },
+  {
+    title: 'AI Retail Optimization Suite',
+    description: 'Comprehensive retail analytics and customer experience optimization platform.',
+    icon: ShoppingCart,
+    features: ['Customer Behavior Analysis', 'Inventory Optimization', 'Price Optimization', 'Personalization'],
+    pricing: '$149 - $799/month',
+    category: 'Retail AI'
+  },
+  {
+    title: 'AI Agricultural Intelligence Platform',
+    description: 'Smart farming solutions with AI-powered crop and livestock management.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Disease Detection', 'Resource Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'AgTech'
+  },
+  {
+    title: 'AI Mental Health Assistant',
+    description: 'AI-powered mental health monitoring and support system for individuals and organizations.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Therapeutic Conversations', 'Progress Monitoring'],
+    pricing: '$39 - $199/month',
+    category: 'HealthTech'
+  },
+  {
+    title: 'AI Real Estate Analytics Platform',
+    description: 'Intelligent property valuation and market analysis platform for real estate professionals.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Recommendations', 'Risk Assessment'],
+    pricing: '$99 - $499/month',
+    category: 'PropTech'
+  },
+  {
+    title: 'AI Gaming Intelligence Suite',
+    description: 'AI-powered game development and player behavior analysis platform.',
+    icon: Target,
+    features: ['Procedural Content Generation', 'Player Behavior Analysis', 'Balancing Algorithms', 'Anti-cheat Systems'],
+    pricing: '$149 - $799/month',
+    category: 'Game AI'
+  },
+  {
+    title: 'AI Supply Chain Intelligence',
+    description: 'End-to-end supply chain optimization with AI-powered insights and automation.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Supplier Risk Analysis', 'Route Optimization', 'Inventory Management'],
+    pricing: '$299 - $1,499/month',
+    category: 'Supply Chain AI'
+  },
+  {
+    title: 'AI Environmental Monitoring System',
+    description: 'AI-powered environmental data collection and analysis system for organizations.',
+    icon: Sprout,
+    features: ['Air Quality Monitoring', 'Water Quality Analysis', 'Pollution Detection', 'Environmental Reporting'],
+    pricing: '$199 - $999/month',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI Digital Twin Platform',
+    description: 'AI-powered digital twin creation and simulation platform for various industries.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analysis', 'Virtual Testing'],
+    pricing: '$399 - $1,999/month',
+    category: 'Digital Twin'
+  },
+  {
+    title: 'AI Edge Computing Platform',
+    description: 'AI processing at the edge for real-time decision making and low-latency applications.',
+    icon: Cpu,
+    features: ['Real-time Processing', 'Low Latency', 'Offline Capability', 'Resource Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Edge AI'
+  },
+  {
+    title: 'AI Robotic Process Automation Suite',
+    description: 'Intelligent automation of complex business processes with AI-powered decision making.',
+    icon: Settings,
+    features: ['Process Discovery', 'Workflow Automation', 'Exception Handling', 'Performance Monitoring'],
+    pricing: '$99 - $599/month',
+    category: 'RPA'
+  },
+  {
+    title: 'AI Augmented Reality Platform',
+    description: 'AI-enhanced AR applications and experiences for various industries.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Gesture Control', 'Real-time Rendering'],
+    pricing: '$199 - $999/month',
+    category: 'AR AI'
+  },
+  {
+    title: 'AI Virtual Reality Experiences',
+    description: 'Immersive VR experiences powered by artificial intelligence and machine learning.',
+    icon: Monitor,
+    features: ['Virtual World Generation', 'AI Avatars', 'Behavioral Simulation', 'Haptic Feedback'],
+    pricing: '$299 - $1,499/month',
+    category: 'VR AI'
+  },
+  {
+    title: 'AI Internet of Things Platform',
+    description: 'AI-powered IoT device management and data analytics platform.',
+    icon: Network,
+    features: ['Device Management', 'Data Analytics', 'Predictive Maintenance', 'Security Monitoring'],
+    pricing: '$149 - $799/month',
+    category: 'IoT AI'
+  },
+  {
+    title: 'AI 5G Network Optimization',
+    description: 'AI-powered 5G network management and optimization platform.',
+    icon: Network,
+    features: ['Network Slicing', 'Traffic Optimization', 'Quality of Service', 'Resource Allocation'],
+    pricing: '$399 - $1,999/month',
+    category: '5G AI'
+  },
+  {
+    title: 'AI Blockchain Smart Contracts',
+    description: 'AI-enhanced smart contract development and auditing platform.',
+    icon: Code,
+    features: ['Smart Contract Generation', 'Security Auditing', 'Gas Optimization', 'Automated Testing'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain AI'
+  },
+  {
+    title: 'AI Quantum Machine Learning Platform',
+    description: 'Quantum-enhanced machine learning algorithms and models for complex problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Pattern Recognition', 'Quantum Simulation'],
+    pricing: '$499 - $2,499/month',
+    category: 'Quantum ML'
+  },
+  {
+    title: 'AI Synthetic Data Generation',
+    description: 'AI-powered synthetic data creation for training and testing machine learning models.',
+    icon: Database,
+    features: ['Data Synthesis', 'Privacy Preservation', 'Bias Reduction', 'Quality Validation'],
+    pricing: '$99 - $499/month',
+    category: 'Data AI'
+  },
+  {
+    title: 'AI Explainable AI Platform',
+    description: 'Platform for creating and managing explainable AI models with transparency.',
+    icon: Brain,
+    features: ['Model Interpretability', 'Bias Detection', 'Fairness Metrics', 'Transparency Reports'],
+    pricing: '$149 - $799/month',
+    category: 'XAI'
+  },
+  {
+    title: 'AI Federated Learning Platform',
+    description: 'Distributed machine learning while preserving data privacy and security.',
+    icon: Network,
+    features: ['Privacy-Preserving ML', 'Distributed Training', 'Model Aggregation', 'Secure Communication'],
+    pricing: '$299 - $1,499/month',
+    category: 'Federated Learning'
+  },
+  {
+    title: 'AI AutoML Platform',
+    description: 'Automated machine learning model development and deployment platform.',
+    icon: Settings,
+    features: ['Automated Feature Engineering', 'Model Selection', 'Hyperparameter Tuning', 'Auto Deployment'],
+    pricing: '$49 - $299/month',
+    category: 'AutoML'
+  },
+  {
+    title: 'AI MLOps Platform',
+    description: 'Complete machine learning operations and model lifecycle management platform.',
+    icon: Settings,
+    features: ['Model Versioning', 'Experiment Tracking', 'Model Monitoring', 'Automated Deployment'],
+    pricing: '$99 - $599/month',
+    category: 'MLOps'
+  },
+  {
+    title: 'AI Data Pipeline Automation',
+    description: 'Intelligent data pipeline creation and management platform.',
+    icon: Database,
+    features: ['Pipeline Generation', 'Data Quality Monitoring', 'Error Handling', 'Performance Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Data Engineering'
+  },
+  {
+    title: 'AI Model Monitoring & Observability',
+    description: 'Comprehensive AI model performance monitoring and alerting platform.',
+    icon: Monitor,
+    features: ['Performance Tracking', 'Drift Detection', 'Alert Management', 'Root Cause Analysis'],
+    pricing: '$79 - $399/month',
+    category: 'Model Ops'
+  },
+  {
+    title: 'AI Bias Detection & Mitigation',
+    description: 'AI system bias detection and fairness optimization tools.',
+    icon: Shield,
+    features: ['Bias Detection', 'Fairness Metrics', 'Mitigation Strategies', 'Compliance Reporting'],
+    pricing: '$99 - $499/month',
+    category: 'AI Ethics'
+  },
+  {
+    title: 'AI Model Compression & Optimization',
+    description: 'AI model size reduction and performance optimization platform.',
+    icon: Cpu,
+    features: ['Model Pruning', 'Quantization', 'Knowledge Distillation', 'Hardware Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Model Optimization'
+  },
+  {
+    title: 'AI Edge AI Model Deployment',
+    description: 'Deployment of AI models on edge devices and embedded systems.',
+    icon: Smartphone,
+    features: ['Model Conversion', 'Hardware Optimization', 'Performance Tuning', 'Deployment Automation'],
+    pricing: '$199 - $999/month',
+    category: 'Edge Deployment'
+  },
+  {
+    title: 'AI Multi-Modal Learning Platform',
+    description: 'AI systems that process multiple data types simultaneously.',
+    icon: Eye,
+    features: ['Text-Image Processing', 'Audio-Visual Analysis', 'Cross-Modal Learning', 'Fusion Techniques'],
+    pricing: '$299 - $1,499/month',
+    category: 'Multi-Modal AI'
+  },
+  {
+    title: 'AI Transfer Learning Platform',
+    description: 'Platform for transferring knowledge between AI models and domains.',
+    icon: Network,
+    features: ['Pre-trained Models', 'Domain Adaptation', 'Fine-tuning Tools', 'Knowledge Transfer'],
+    pricing: '$99 - $499/month',
+    category: 'Transfer Learning'
+  },
+  {
+    title: 'AI Reinforcement Learning Platform',
+    description: 'Platform for developing and training reinforcement learning agents.',
+    icon: Target,
+    features: ['Environment Simulation', 'Agent Training', 'Policy Optimization', 'Reward Engineering'],
+    pricing: '$199 - $999/month',
+    category: 'Reinforcement Learning'
+  },
+  {
+    title: 'AI Generative Adversarial Networks',
+    description: 'GAN-based solutions for data generation and augmentation.',
+    icon: Image,
+    features: ['Image Generation', 'Data Augmentation', 'Style Transfer', 'Anomaly Generation'],
+    pricing: '$149 - $799/month',
+    category: 'GANs'
+  },
+  {
+    title: 'AI Transformer Models Platform',
+    description: 'Advanced transformer-based AI models for various applications.',
+    icon: Brain,
+    features: ['Language Models', 'Vision Transformers', 'Multimodal Transformers', 'Custom Architectures'],
+    pricing: '$199 - $999/month',
+    category: 'Transformers'
+  },
+  {
+    title: 'AI Graph Neural Networks Platform',
+    description: 'Graph-based AI solutions for complex relationship modeling.',
+    icon: Network,
+    features: ['Graph Analysis', 'Node Classification', 'Link Prediction', 'Graph Generation'],
+    pricing: '$149 - $799/month',
+    category: 'Graph AI'
+  },
+  {
+    title: 'AI Time Series Forecasting Platform',
+    description: 'Advanced time series analysis and forecasting solutions.',
+    icon: TrendingUp,
+    features: ['Seasonal Analysis', 'Trend Detection', 'Anomaly Detection', 'Multi-step Forecasting'],
+    pricing: '$99 - $499/month',
+    category: 'Time Series'
+  },
+  {
+    title: 'AI Natural Language Processing Platform',
+    description: 'Advanced NLP solutions for text understanding and generation.',
+    icon: FileText,
+    features: ['Text Analysis', 'Sentiment Analysis', 'Named Entity Recognition', 'Text Generation'],
+    pricing: '$79 - $399/month',
+    category: 'NLP'
+  },
+  {
+    title: 'AI Computer Vision Solutions Platform',
+    description: 'Advanced computer vision and image processing solutions.',
+    icon: Eye,
+    features: ['Object Detection', 'Image Classification', 'Segmentation', '3D Vision'],
+    pricing: '$149 - $799/month',
+    category: 'Computer Vision'
+  },
+  {
+    title: 'AI Speech Recognition & Synthesis Platform',
+    description: 'Advanced speech processing and voice synthesis solutions.',
+    icon: Mic,
+    features: ['Speech Recognition', 'Text-to-Speech', 'Voice Cloning', 'Emotion Recognition'],
+    pricing: '$99 - $499/month',
+    category: 'Speech AI'
+  },
+  {
+    title: 'AI Recommendation Systems Platform',
+    description: 'Advanced recommendation and personalization engines.',
+    icon: Target,
+    features: ['Collaborative Filtering', 'Content-Based Filtering', 'Hybrid Approaches', 'Real-time Updates'],
+    pricing: '$49 - $299/month',
+    category: 'Recommendation Systems'
+  },
+  {
+    title: 'AI Search & Retrieval Systems Platform',
+    description: 'Intelligent search and information retrieval solutions.',
+    icon: Search,
+    features: ['Semantic Search', 'Vector Search', 'Query Understanding', 'Result Ranking'],
+    pricing: '$99 - $499/month',
+    category: 'Search AI'
+  },
+  {
+    title: 'AI Knowledge Graphs Platform',
+    description: 'AI-powered knowledge representation and reasoning systems.',
+    icon: Network,
+    features: ['Entity Extraction', 'Relationship Modeling', 'Query Answering', 'Knowledge Inference'],
+    pricing: '$199 - $999/month',
+    category: 'Knowledge AI'
+  },
+  {
+    title: 'AI Causal Inference Platform',
+    description: 'AI systems for understanding cause-and-effect relationships.',
+    icon: Target,
+    features: ['Causal Discovery', 'Treatment Effect Estimation', 'Counterfactual Analysis', 'Causal Graphs'],
+    pricing: '$299 - $1,499/month',
+    category: 'Causal AI'
+  },
+  {
+    title: 'AI Uncertainty Quantification Platform',
+    description: 'AI systems that provide uncertainty estimates and confidence intervals.',
+    icon: Shield,
+    features: ['Uncertainty Estimation', 'Confidence Intervals', 'Risk Assessment', 'Robust Predictions'],
+    pricing: '$149 - $799/month',
+    category: 'Uncertainty AI'
+  },
+  {
+    title: 'AI Adversarial Robustness Platform',
+    description: 'AI systems resistant to adversarial attacks and perturbations.',
+    icon: Shield,
+    features: ['Attack Detection', 'Robust Training', 'Defense Mechanisms', 'Security Testing'],
+    pricing: '$199 - $999/month',
+    category: 'Robust AI'
+  },
+  {
+    title: 'AI Continual Learning Platform',
+    description: 'AI systems that learn continuously without forgetting previous knowledge.',
+    icon: Brain,
+    features: ['Catastrophic Forgetting Prevention', 'Incremental Learning', 'Memory Consolidation', 'Adaptive Learning'],
+    pricing: '$249 - $1,249/month',
+    category: 'Continual Learning'
+  },
+  {
+    title: 'AI Meta-Learning Platform',
+    description: 'AI systems that learn how to learn and adapt quickly to new tasks.',
+    icon: Brain,
+    features: ['Few-shot Learning', 'Rapid Adaptation', 'Learning to Learn', 'Task Generalization'],
+    pricing: '$299 - $1,499/month',
+    category: 'Meta-Learning'
+  },
+  {
+    title: 'AI Neural Architecture Search Platform',
+    description: 'Automated neural network architecture design and optimization.',
+    icon: Settings,
+    features: ['Architecture Search', 'Performance Optimization', 'Hardware-aware Design', 'Automated Design'],
+    pricing: '$399 - $1,999/month',
+    category: 'NAS'
+  },
+  {
+    title: 'AI Hyperparameter Optimization Platform',
+    description: 'Automated hyperparameter tuning and optimization for AI models.',
+    icon: Settings,
+    features: ['Bayesian Optimization', 'Multi-objective Optimization', 'Early Stopping', 'Resource Management'],
+    pricing: '$99 - $499/month',
+    category: 'HPO'
+  },
+  {
+    title: 'AI Model Ensemble Methods Platform',
+    description: 'Advanced ensemble learning and model combination techniques.',
+    icon: Network,
+    features: ['Model Stacking', 'Bagging', 'Boosting', 'Voting Methods'],
+    pricing: '$149 - $799/month',
+    category: 'Ensemble Learning'
+  },
+  {
+    title: 'AI Active Learning Platform',
+    description: 'AI systems that intelligently select data for labeling and training.',
+    icon: Target,
+    features: ['Query Strategy', 'Uncertainty Sampling', 'Diversity Sampling', 'Human-in-the-loop'],
+    pricing: '$99 - $499/month',
+    category: 'Active Learning'
+  },
+  {
+    title: 'AI Semi-Supervised Learning Platform',
+    description: 'AI systems that learn from both labeled and unlabeled data.',
+    icon: Database,
+    features: ['Pseudo-labeling', 'Consistency Regularization', 'Graph-based Methods', 'Self-training'],
+    pricing: '$124 - $624/month',
+    category: 'Semi-Supervised Learning'
+  },
+  {
+    title: 'AI Unsupervised Learning Platform',
+    description: 'AI systems that discover patterns in data without labels.',
+    icon: Eye,
+    features: ['Clustering', 'Dimensionality Reduction', 'Anomaly Detection', 'Density Estimation'],
+    pricing: '$79 - $399/month',
+    category: 'Unsupervised Learning'
+  },
+  {
+    title: 'AI Supervised Learning Platform',
+    description: 'AI systems that learn from labeled training data.',
+    icon: Target,
+    features: ['Classification', 'Regression', 'Feature Selection', 'Model Validation'],
+    pricing: '$49 - $299/month',
+    category: 'Supervised Learning'
+  },
+  {
+    title: 'AI Deep Learning Platform',
+    description: 'Advanced deep neural network solutions for complex problems.',
+    icon: Brain,
+    features: ['Neural Networks', 'Deep Architectures', 'Gradient Descent', 'Backpropagation'],
+    pricing: '$99 - $499/month',
+    category: 'Deep Learning'
+  },
+  {
+    title: 'AI Machine Learning Platform',
+    description: 'Comprehensive machine learning solutions for various applications.',
+    icon: Cpu,
+    features: ['Algorithm Selection', 'Feature Engineering', 'Model Training', 'Performance Evaluation'],
+    pricing: '$79 - $399/month',
+    category: 'Machine Learning'
+  },
+  {
+    title: 'AI Artificial Intelligence Platform',
+    description: 'Complete AI solutions covering all aspects of artificial intelligence.',
+    icon: Brain,
+    features: ['Problem Solving', 'Learning', 'Reasoning', 'Perception'],
+    pricing: '$249 - $1,249/month',
+    category: 'General AI'
   },
   {
     title: 'HR & Payroll Management',
@@ -299,6 +813,186 @@ description: 'Automated code review with security scanning, performance optimiza
     popular: true
   },
   {
+    title: 'AI-Powered Metaverse Builder',
+    description: 'No-code platform for creating immersive 3D virtual worlds and metaverse experiences.',
+    icon: Globe,
+    features: ['3D World Builder', 'Avatar Creation', 'Virtual Events', 'NFT Integration'],
+    pricing: '$299 - $2,999/month',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Circuit Designer', 'Algorithm Testing', 'Performance Analysis', 'Educational Tools'],
+    pricing: '$199 - $1,999/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Platform',
+    description: 'Create and manage digital twins of physical assets, processes, and systems.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$399 - $3,999/month',
+    category: 'Digital Twin',
+    popular: true
+  },
+  {
+    title: 'Autonomous Drone Fleet Management',
+    description: 'Complete drone fleet management with autonomous flight planning and monitoring.',
+    icon: Rocket,
+    features: ['Flight Planning', 'Autonomous Operations', 'Payload Management', 'Regulatory Compliance'],
+    pricing: '$499 - $4,999/month',
+    category: 'Drone Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Carbon Footprint Tracker',
+    description: 'Real-time carbon footprint monitoring and sustainability optimization for businesses.',
+    icon: Sprout,
+    features: ['Carbon Tracking', 'Sustainability Goals', 'Offset Management', 'Reporting Dashboard'],
+    pricing: '$99 - $999/month',
+    category: 'Sustainability',
+    popular: true
+  },
+  {
+    title: 'Blockchain Analytics & Compliance',
+    description: 'Advanced blockchain transaction analysis and regulatory compliance monitoring.',
+    icon: Shield,
+    features: ['Transaction Tracking', 'Compliance Monitoring', 'Risk Assessment', 'Regulatory Reporting'],
+    pricing: '$299 - $2,999/month',
+    category: 'Blockchain Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Cloning Platform',
+    description: 'High-quality voice cloning and synthesis for personalized audio content.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
+    pricing: '$199 - $1,999/month',
+    category: 'Voice Technology',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Development Suite',
+    description: 'Complete platform for developing, testing, and deploying smart contracts.',
+    icon: Code,
+    features: ['Visual Builder', 'Testing Framework', 'Deployment Tools', 'Security Auditing'],
+    pricing: '$149 - $1,499/month',
+    category: 'Blockchain Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Finance Manager',
+    description: 'Intelligent personal finance tracking with investment recommendations and budgeting.',
+    icon: DollarSign,
+    features: ['Expense Tracking', 'Investment Analysis', 'Budget Optimization', 'Financial Planning'],
+    pricing: '$9 - $99/month',
+    category: 'Personal Finance',
+    popular: true
+  },
+  {
+    title: 'Virtual Reality Meeting Platform',
+    description: 'Immersive VR meeting and collaboration platform for remote teams.',
+    icon: Users,
+    features: ['VR Meetings', '3D Collaboration', 'Spatial Audio', 'Avatar Customization'],
+    pricing: '$49 - $499/month',
+    category: 'VR Collaboration',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Legal Document Generator',
+    description: 'Automated legal document creation with contract templates and compliance checking.',
+    icon: FileText,
+    features: ['Document Templates', 'Compliance Checking', 'Version Control', 'E-signature Integration'],
+    pricing: '$199 - $1,999/month',
+    category: 'Legal Tech',
+    popular: true
+  },
+  {
+    title: 'Smart Home IoT Management',
+    description: 'Centralized management platform for smart home devices and automation.',
+    icon: Home,
+    features: ['Device Control', 'Automation Rules', 'Energy Monitoring', 'Security Management'],
+    pricing: '$19 - $199/month',
+    category: 'Smart Home',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Mental Health Assistant',
+    description: 'Intelligent mental health monitoring and support with mood tracking and therapy tools.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Therapy Sessions', 'Crisis Detection', 'Progress Monitoring'],
+    pricing: '$29 - $299/month',
+    category: 'Mental Health',
+    popular: true
+  },
+  {
+    title: 'Autonomous Vehicle Fleet Management',
+    description: 'Complete management system for autonomous vehicle fleets and logistics.',
+    icon: Car,
+    features: ['Fleet Monitoring', 'Route Optimization', 'Maintenance Scheduling', 'Safety Analytics'],
+    pricing: '$999 - $9,999/month',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Learning Platform',
+    description: 'Personalized language learning with AI tutors and immersive experiences.',
+    icon: BookOpen,
+    features: ['AI Tutoring', 'Speech Recognition', 'Cultural Context', 'Progress Tracking'],
+    pricing: '$19 - $199/month',
+    category: 'Education',
+    popular: true
+  },
+  {
+    title: 'Blockchain Identity Management',
+    description: 'Decentralized identity verification and management using blockchain technology.',
+    icon: Lock,
+    features: ['Identity Verification', 'Privacy Protection', 'Cross-platform Access', 'Compliance Tools'],
+    pricing: '$99 - $999/month',
+    category: 'Identity Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'Automated property valuation using AI and machine learning algorithms.',
+    icon: Building,
+    features: ['Property Analysis', 'Market Trends', 'Investment Insights', 'Risk Assessment'],
+    pricing: '$49 - $499/month',
+    category: 'Real Estate',
+    popular: true
+  },
+  {
+    title: 'Smart Agriculture Monitoring',
+    description: 'IoT-based farm monitoring with AI-powered crop and livestock management.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Livestock Tracking', 'Weather Integration', 'Yield Prediction'],
+    pricing: '$199 - $1,999/month',
+    category: 'Agriculture',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Scanner',
+    description: 'Automated vulnerability scanning and security assessment for web applications.',
+    icon: Shield,
+    features: ['Vulnerability Detection', 'Penetration Testing', 'Compliance Checking', 'Security Reports'],
+    pricing: '$99 - $999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Virtual Event Management Platform',
+    description: 'Complete platform for hosting and managing virtual events and conferences.',
+    icon: Calendar,
+    features: ['Event Creation', 'Attendee Management', 'Live Streaming', 'Networking Tools'],
+    pricing: '$149 - $1,499/month',
+    category: 'Event Management',
+    popular: true
+  },
+  {
     title: 'Real-Time Language Translation API',
     description: 'Advanced translation service with context awareness and industry-specific terminology.',
     icon: Globe,
@@ -398,177 +1092,6 @@ description: 'Automated code review with security scanning, performance optimiza
     popular: true
   },
   {
-    title: 'AI-Powered Cybersecurity Threat Hunter',
-    description: 'Advanced threat detection and response with behavioral analysis and automated incident response.',
-    icon: Shield,
-    features: ['Threat Hunting', 'Behavioral Analysis', 'Automated Response', 'Threat Intelligence'],
-    pricing: '$599 - $3,999/month',
-    category: 'Cybersecurity',
-    popular: true
-  },
-  {
-    title: 'Quantum-Safe Encryption Manager',
-    description: 'Post-quantum cryptography implementation for future-proof data protection.',
-    icon: Lock,
-    features: ['Quantum-Safe Algorithms', 'Key Management', 'Migration Tools', 'Compliance Reporting'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Quantum Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Code Generation Assistant',
-    description: 'Intelligent code generation with context awareness and best practices enforcement.',
-    icon: Code,
-    features: ['Code Generation', 'Context Awareness', 'Best Practices', 'Multi-language Support'],
-    pricing: '$199 - $1,499/month',
-    category: 'Developer Tools',
-    popular: true
-  },
-  {
-    title: 'Real-Time Edge Computing Platform',
-    description: 'Distributed edge computing with real-time processing and low-latency applications.',
-    icon: Cpu,
-    features: ['Edge Processing', 'Low Latency', 'Global Distribution', 'Auto-scaling'],
-    pricing: '$0.05 - $0.50 per GB processed',
-    category: 'Edge Computing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Voice Cloning Platform',
-    description: 'High-quality voice synthesis and cloning with emotional expression and multi-language support.',
-    icon: Mic,
-    features: ['Voice Cloning', 'Emotional Expression', 'Multi-language', 'Real-time Synthesis'],
-    pricing: '$0.10 - $1.00 per minute',
-    category: 'Voice AI',
-    popular: true
-  },
-  {
-    title: 'Blockchain-Based Digital Identity Manager',
-    description: 'Decentralized identity management with zero-knowledge proofs and privacy preservation.',
-    icon: Users,
-    features: ['Decentralized Identity', 'Zero-Knowledge Proofs', 'Privacy Preservation', 'Cross-platform'],
-    pricing: '$99 - $599/month',
-    category: 'Digital Identity',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Predictive Maintenance',
-    description: 'Machine learning-based equipment maintenance prediction with IoT sensor integration.',
-    icon: Settings,
-    features: ['Predictive Analytics', 'IoT Integration', 'Failure Prediction', 'Maintenance Scheduling'],
-    pricing: '$299 - $2,499/month',
-    category: 'Industrial IoT',
-    popular: true
-  },
-  {
-    title: 'Autonomous Drone Fleet Management',
-    description: 'AI-powered drone fleet coordination for delivery, surveillance, and inspection services.',
-    icon: Rocket,
-    features: ['Fleet Coordination', 'Route Optimization', 'Autonomous Flight', 'Real-time Monitoring'],
-    pricing: '$499 - $3,999/month',
-    category: 'Drone Technology',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Drug Discovery Platform',
-    description: 'Machine learning platform for pharmaceutical research and drug discovery optimization.',
-    icon: Heart,
-    features: ['Molecular Analysis', 'Drug Design', 'Clinical Trial Optimization', 'Safety Prediction'],
-    pricing: '$2,999 - $19,999/month',
-    category: 'PharmaTech',
-    popular: true
-  },
-  {
-    title: 'Smart City Infrastructure Manager',
-    description: 'IoT-based smart city management with traffic optimization and resource management.',
-    icon: Building,
-    features: ['Traffic Management', 'Resource Optimization', 'Environmental Monitoring', 'Citizen Services'],
-    pricing: '$999 - $9,999/month',
-    category: 'Smart Cities',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Climate Risk Assessment',
-    description: 'Climate change impact analysis and risk assessment for businesses and investments.',
-    icon: Globe,
-    features: ['Climate Modeling', 'Risk Assessment', 'Scenario Analysis', 'Compliance Reporting'],
-    pricing: '$399 - $2,999/month',
-    category: 'Climate Tech',
-    popular: true
-  },
-  {
-    title: 'Neural Interface Development Kit',
-    description: 'Brain-computer interface development platform for medical and consumer applications.',
-    icon: Brain,
-    features: ['Neural Signal Processing', 'Real-time Analysis', 'Medical Integration', 'Developer APIs'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Neurotechnology',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Space Mission Planning',
-    description: 'Autonomous space mission planning and satellite constellation management.',
-    icon: Rocket,
-    features: ['Mission Planning', 'Satellite Management', 'Orbit Optimization', 'Collision Avoidance'],
-    pricing: '$2,999 - $19,999/month',
-    category: 'Space Technology',
-    popular: true
-  },
-  {
-    title: 'Quantum Computing Simulation Platform',
-    description: 'Cloud-based quantum computing simulation and algorithm development environment.',
-    icon: Cpu,
-    features: ['Quantum Simulation', 'Algorithm Development', 'Circuit Design', 'Performance Analysis'],
-    pricing: '$199 - $1,999/month',
-    category: 'Quantum Computing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Personalized Medicine Platform',
-    description: 'Genomic analysis and personalized treatment recommendations using AI.',
-    icon: Heart,
-    features: ['Genomic Analysis', 'Treatment Recommendations', 'Drug Interaction Check', 'Clinical Decision Support'],
-    pricing: '$999 - $4,999/month',
-    category: 'Personalized Medicine',
-    popular: true
-  },
-  {
-    title: 'Autonomous Vehicle Fleet Management',
-    description: 'AI-powered autonomous vehicle coordination and fleet optimization for transportation.',
-    icon: Car,
-    features: ['Fleet Coordination', 'Route Optimization', 'Safety Monitoring', 'Passenger Management'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Autonomous Vehicles',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Ocean Monitoring System',
-    description: 'Marine ecosystem monitoring with AI-powered analysis and environmental protection.',
-    icon: Globe,
-    features: ['Marine Monitoring', 'Ecosystem Analysis', 'Pollution Detection', 'Conservation Planning'],
-    pricing: '$599 - $3,999/month',
-    category: 'Marine Technology',
-    popular: true
-  },
-  {
-    title: 'Smart Grid Energy Management',
-    description: 'AI-powered smart grid optimization with renewable energy integration and demand response.',
-    icon: Zap,
-    features: ['Grid Optimization', 'Renewable Integration', 'Demand Response', 'Energy Trading'],
-    pricing: '$999 - $7,999/month',
-    category: 'Smart Grid',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Mental Health Assistant',
-    description: 'Intelligent mental health monitoring and support with personalized interventions.',
-    icon: Heart,
-    features: ['Mood Tracking', 'Crisis Detection', 'Personalized Support', 'Professional Integration'],
-    pricing: '$29 - $199/month',
-    category: 'Mental Health Tech',
-    popular: true
-  },
-  {
     title: 'AI-Powered Personalization Engine',
     description: 'Real-time personalization engine for e-commerce and content platforms.',
     icon: Target,
@@ -596,574 +1119,289 @@ description: 'Automated code review with security scanning, performance optimiza
     popular: true
   },
   {
-    title: 'Blockchain Document Verification',
-    description: 'Immutable document verification and digital identity management using blockchain technology.',
-    icon: Lock,
-    features: ['Document Authentication', 'Digital Signatures', 'Immutable Records', 'Identity Verification'],
-    pricing: '$99 - $599/month',
-    category: 'Blockchain',
-    popular: true
-  },
-  {
-    title: 'IoT Device Management Platform',
-    description: 'Comprehensive IoT device monitoring, management, and analytics for smart environments.',
-    icon: Cpu,
-    features: ['Device Monitoring', 'Remote Management', 'Data Analytics', 'Alert System'],
+    title: 'AI Code Security Scanner',
+    description: 'Automated security vulnerability detection and code quality analysis for development teams.',
+    icon: Shield,
+    features: ['Vulnerability Detection', 'Code Quality Analysis', 'Dependency Scanning', 'Compliance Checking'],
     pricing: '$149 - $799/month',
-    category: 'IoT',
+    category: 'DevSecOps',
     popular: true
   },
   {
-    title: 'AI-Powered Legal Document Generator',
-    description: 'Automated legal document creation with compliance checking and customization.',
-    icon: FileText,
-    features: ['Document Templates', 'Compliance Checking', 'Custom Clauses', 'Version Control'],
-    pricing: '$199 - $999/month',
-    category: 'Legal Tech',
-    popular: true
-  },
-  {
-    title: 'Smart Energy Management System',
-    description: 'AI-driven energy optimization for buildings with real-time monitoring and cost reduction.',
-    icon: Zap,
-    features: ['Energy Monitoring', 'Cost Optimization', 'Predictive Analytics', 'Automated Controls'],
-    pricing: '$299 - $1,499/month',
-    category: 'Energy',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Medical Diagnosis Assistant',
-    description: 'AI diagnostic tool for healthcare professionals with symptom analysis and treatment suggestions.',
-    icon: Heart,
-    features: ['Symptom Analysis', 'Diagnosis Support', 'Treatment Recommendations', 'Medical Records Integration'],
-    pricing: '$499 - $2,999/month',
-    category: 'Healthcare',
-    popular: true
-  },
-  {
-    title: 'Quantum-Safe Encryption Service',
-    description: 'Post-quantum cryptography solutions for future-proof data protection.',
-    icon: Shield,
-    features: ['Quantum-Resistant Algorithms', 'Key Management', 'Data Encryption', 'Compliance Ready'],
-    pricing: '$399 - $1,999/month',
-    category: 'Cybersecurity',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Market Research Platform',
-    description: 'Automated market research with sentiment analysis and competitive intelligence.',
-    icon: Search,
-    features: ['Sentiment Analysis', 'Competitor Tracking', 'Trend Identification', 'Custom Reports'],
-    pricing: '$199 - $1,299/month',
-    category: 'Market Research',
-    popular: true
-  },
-  {
-    title: 'Smart Contract Development Platform',
-    description: 'No-code smart contract creation and deployment for blockchain applications.',
-    icon: Code,
-    features: ['Visual Builder', 'Code Generation', 'Testing Suite', 'Deployment Tools'],
-    pricing: '$299 - $1,999/month',
-    category: 'Blockchain Development',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Personal Finance Advisor',
-    description: 'Personalized financial planning and investment advice using advanced AI algorithms.',
-    icon: DollarSign,
-    features: ['Financial Planning', 'Investment Advice', 'Risk Assessment', 'Goal Tracking'],
-    pricing: '$29 - $199/month',
-    category: 'FinTech',
-    popular: true
-  },
-  {
-    title: 'Edge Computing Analytics Platform',
-    description: 'Real-time data processing and analytics at the edge for IoT and mobile applications.',
-    icon: Network,
-    features: ['Edge Processing', 'Real-time Analytics', 'Low Latency', 'Offline Capability'],
-    pricing: '$199 - $1,299/month',
-    category: 'Edge Computing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Language Learning Platform',
-    description: 'Personalized language learning with AI tutors and adaptive curriculum.',
-    icon: BookOpen,
-    features: ['AI Tutoring', 'Adaptive Learning', 'Speech Recognition', 'Progress Tracking'],
-    pricing: '$19 - $99/month',
-    category: 'EdTech',
-    popular: true
-  },
-  {
-    title: 'Smart Home Automation Hub',
-    description: 'Centralized smart home control with AI-powered automation and energy management.',
-    icon: Home,
-    features: ['Device Integration', 'AI Automation', 'Energy Management', 'Voice Control'],
-    pricing: '$99 - $499/month',
-    category: 'Smart Home',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Metaverse Builder',
-    description: 'No-code platform for creating immersive virtual worlds and metaverse experiences.',
-    icon: Globe,
-    features: ['3D World Creation', 'Avatar System', 'Virtual Events', 'Blockchain Integration'],
-    pricing: '$499 - $2,999/month',
-    category: 'Metaverse',
-    popular: true
-  },
-  {
-    title: 'Quantum Machine Learning Platform',
-    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
-    icon: Cpu,
-    features: ['Quantum Algorithms', 'ML Integration', 'Optimization Problems', 'Quantum Simulation'],
-    pricing: '$999 - $4,999/month',
-    category: 'Quantum ML',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Space Debris Tracker',
-    description: 'Orbital debris monitoring and collision avoidance system for satellite operations.',
-    icon: Rocket,
-    features: ['Debris Tracking', 'Collision Prediction', 'Orbit Optimization', 'Alert System'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Space Technology',
-    popular: true
-  },
-  {
-    title: 'Neural Network Optimization Engine',
-    description: 'Automated neural network architecture search and hyperparameter optimization.',
-    icon: Brain,
-    features: ['Architecture Search', 'Hyperparameter Tuning', 'Model Compression', 'Performance Optimization'],
-    pricing: '$299 - $1,999/month',
-    category: 'AI Development',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Climate Engineering Platform',
-    description: 'Climate intervention modeling and carbon capture optimization using AI.',
-    icon: Globe,
-    features: ['Climate Modeling', 'Carbon Capture', 'Intervention Planning', 'Impact Assessment'],
-    pricing: '$2,999 - $19,999/month',
-    category: 'Climate Engineering',
-    popular: true
-  },
-  {
-    title: 'Digital Twin Manufacturing Platform',
-    description: 'Real-time digital twins for manufacturing processes with predictive analytics.',
-    icon: Settings,
-    features: ['Real-time Simulation', 'Predictive Analytics', 'Process Optimization', 'Quality Control'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Digital Twin',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Fusion Energy Controller',
-    description: 'Machine learning control systems for nuclear fusion energy generation.',
-    icon: Zap,
-    features: ['Fusion Control', 'Plasma Optimization', 'Energy Prediction', 'Safety Monitoring'],
-    pricing: '$9,999 - $49,999/month',
-    category: 'Fusion Energy',
-    popular: true
-  },
-  {
-    title: 'Autonomous Drone Swarm Coordinator',
-    description: 'AI-powered coordination system for autonomous drone swarms in various applications.',
-    icon: Rocket,
-    features: ['Swarm Coordination', 'Autonomous Flight', 'Task Distribution', 'Collision Avoidance'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Drone Technology',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Brain-Computer Interface',
-    description: 'Advanced BCI system for medical applications and human-computer interaction.',
-    icon: Brain,
-    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Integration'],
-    pricing: '$2,999 - $19,999/month',
-    category: 'Neurotechnology',
-    popular: true
-  },
-  {
-    title: 'Quantum Internet Protocol Stack',
-    description: 'Quantum communication protocols for secure quantum internet infrastructure.',
-    icon: Network,
-    features: ['Quantum Protocols', 'Secure Communication', 'Quantum Key Distribution', 'Network Management'],
-    pricing: '$4,999 - $24,999/month',
-    category: 'Quantum Internet',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Synthetic Biology Platform',
-    description: 'Machine learning platform for synthetic biology and bioengineering applications.',
-    icon: Heart,
-    features: ['DNA Design', 'Protein Engineering', 'Metabolic Modeling', 'Bio-manufacturing'],
-    pricing: '$3,999 - $19,999/month',
-    category: 'Synthetic Biology',
-    popular: true
-  },
-  {
-    title: 'Autonomous Underwater Vehicle Fleet',
-    description: 'AI-powered AUV coordination for ocean exploration and marine research.',
-    icon: Globe,
-    features: ['AUV Coordination', 'Ocean Mapping', 'Marine Research', 'Data Collection'],
-    pricing: '$2,999 - $14,999/month',
-    category: 'Marine Technology',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Asteroid Mining Planner',
-    description: 'Space resource extraction planning and optimization using AI algorithms.',
-    icon: Rocket,
-    features: ['Resource Assessment', 'Mining Planning', 'Mission Optimization', 'Risk Analysis'],
-    pricing: '$4,999 - $24,999/month',
-    category: 'Space Mining',
-    popular: true
-  },
-  {
-    title: 'Quantum Error Correction Service',
-    description: 'Quantum error correction and fault-tolerant quantum computing services.',
-    icon: Shield,
-    features: ['Error Correction', 'Fault Tolerance', 'Quantum Stability', 'Performance Monitoring'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Quantum Computing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Terraforming Simulator',
-    description: 'Planetary terraforming simulation and optimization for space colonization.',
-    icon: Globe,
-    features: ['Terraforming Models', 'Climate Simulation', 'Resource Planning', 'Timeline Optimization'],
-    pricing: '$9,999 - $49,999/month',
-    category: 'Space Colonization',
-    popular: true
-  },
-  {
-    title: 'Neural Network Compression Engine',
-    description: 'Advanced model compression and quantization for edge deployment.',
-    icon: Cpu,
-    features: ['Model Compression', 'Quantization', 'Pruning', 'Edge Optimization'],
-    pricing: '$199 - $1,299/month',
-    category: 'AI Optimization',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Time Series Forecasting',
-    description: 'Advanced time series analysis and forecasting for complex temporal data.',
-    icon: TrendingUp,
-    features: ['Multi-variate Analysis', 'Seasonal Detection', 'Anomaly Detection', 'Confidence Intervals'],
-    pricing: '$299 - $1,999/month',
-    category: 'Time Series',
-    popular: true
-  },
-  {
-    title: 'Quantum Cryptography Key Management',
-    description: 'Quantum key distribution and management for ultra-secure communications.',
+    title: 'Smart Contract Audit Platform',
+    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
     icon: Lock,
-    features: ['Quantum Key Distribution', 'Key Management', 'Security Protocols', 'Network Integration'],
-    pricing: '$999 - $4,999/month',
-    category: 'Quantum Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Materials Discovery',
-    description: 'Machine learning platform for discovering new materials and compounds.',
-    icon: Settings,
-    features: ['Material Prediction', 'Property Optimization', 'Synthesis Planning', 'Database Integration'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Materials Science',
-    popular: true
-  },
-  {
-    title: 'Autonomous Space Station Manager',
-    description: 'AI system for autonomous space station operations and maintenance.',
-    icon: Rocket,
-    features: ['Autonomous Operations', 'Maintenance Planning', 'Resource Management', 'Crew Support'],
-    pricing: '$9,999 - $49,999/month',
-    category: 'Space Operations',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Gene Therapy Designer',
-    description: 'Machine learning platform for designing personalized gene therapy treatments.',
-    icon: Heart,
-    features: ['Gene Design', 'Therapy Planning', 'Safety Analysis', 'Clinical Integration'],
-    pricing: '$4,999 - $24,999/month',
-    category: 'Gene Therapy',
-    popular: true
-  },
-  {
-    title: 'Quantum Machine Learning Accelerator',
-    description: 'Hardware-accelerated quantum machine learning for complex optimization problems.',
-    icon: Cpu,
-    features: ['Quantum Acceleration', 'ML Algorithms', 'Optimization', 'Hardware Integration'],
-    pricing: '$2,999 - $14,999/month',
-    category: 'Quantum ML',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Exoplanet Discovery',
-    description: 'Machine learning system for discovering and analyzing exoplanets.',
-    icon: Globe,
-    features: ['Exoplanet Detection', 'Atmospheric Analysis', 'Habitability Assessment', 'Data Processing'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Astronomy',
-    popular: true
-  },
-  {
-    title: 'Neural Network Interpretability Suite',
-    description: 'Tools for understanding and explaining AI model decisions and behavior.',
-    icon: Brain,
-    features: ['Model Interpretation', 'Feature Importance', 'Decision Trees', 'Visualization Tools'],
-    pricing: '$199 - $1,299/month',
-    category: 'AI Explainability',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Fusion Reactor Controller',
-    description: 'Advanced control systems for nuclear fusion reactors using AI optimization.',
-    icon: Zap,
-    features: ['Fusion Control', 'Plasma Management', 'Energy Optimization', 'Safety Systems'],
-    pricing: '$9,999 - $49,999/month',
-    category: 'Fusion Energy',
-    popular: true
-  },
-  {
-    title: 'Quantum Internet Security Gateway',
-    description: 'Secure gateway for quantum internet communications and data protection.',
-    icon: Shield,
-    features: ['Quantum Security', 'Gateway Management', 'Protocol Translation', 'Monitoring'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Quantum Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Space Elevator Controller',
-    description: 'Control system for space elevator operations and maintenance.',
-    icon: Rocket,
-    features: ['Elevator Control', 'Cable Management', 'Safety Monitoring', 'Load Optimization'],
-    pricing: '$4,999 - $24,999/month',
-    category: 'Space Infrastructure',
-    popular: true
-  },
-  {
-    title: 'Autonomous Mars Rover Fleet',
-    description: 'AI-powered Mars exploration rover coordination and mission planning.',
-    icon: Globe,
-    features: ['Rover Coordination', 'Mission Planning', 'Scientific Analysis', 'Communication'],
-    pricing: '$9,999 - $49,999/month',
-    category: 'Mars Exploration',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Consciousness Simulation',
-    description: 'Advanced AI system for simulating consciousness and cognitive processes.',
-    icon: Brain,
-    features: ['Consciousness Modeling', 'Cognitive Simulation', 'Behavior Prediction', 'Learning Systems'],
-    pricing: '$4,999 - $24,999/month',
-    category: 'Artificial Consciousness',
-    popular: true
-  },
-  {
-    title: 'Quantum Neural Network Platform',
-    description: 'Quantum-enhanced neural networks for solving complex optimization problems.',
-    icon: Cpu,
-    features: ['Quantum Neural Networks', 'Optimization', 'Learning Algorithms', 'Quantum Simulation'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Quantum AI',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Time Travel Simulation',
-    description: 'Theoretical time travel simulation and causality analysis using AI.',
-    icon: Clock,
-    features: ['Causality Analysis', 'Paradox Detection', 'Timeline Simulation', 'Physics Modeling'],
-    pricing: '$9,999 - $49,999/month',
-    category: 'Theoretical Physics',
-    popular: true
-  },
-  {
-    title: 'Autonomous Lunar Base Manager',
-    description: 'AI system for managing autonomous lunar base operations and resource utilization.',
-    icon: Rocket,
-    features: ['Base Management', 'Resource Utilization', 'Life Support', 'Mission Planning'],
-    pricing: '$9,999 - $49,999/month',
-    category: 'Lunar Operations',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Multiverse Explorer',
-    description: 'Theoretical multiverse exploration and parallel universe simulation platform.',
-    icon: Globe,
-    features: ['Multiverse Simulation', 'Parallel Universe Modeling', 'Physics Variations', 'Reality Analysis'],
-    pricing: '$9,999 - $49,999/month',
-    category: 'Theoretical Physics',
-    popular: true
-  },
-  {
-    title: 'Quantum Consciousness Interface',
-    description: 'Quantum-enhanced brain-computer interface for consciousness transfer and enhancement.',
-    icon: Brain,
-    features: ['Consciousness Transfer', 'Quantum Enhancement', 'Neural Interface', 'Memory Transfer'],
-    pricing: '$9,999 - $49,999/month',
-    category: 'Quantum Consciousness',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Universal Translator',
-    description: 'Real-time translation system for any language including alien and artificial languages.',
-    icon: Globe,
-    features: ['Universal Translation', 'Language Learning', 'Cultural Context', 'Real-time Processing'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Language AI',
-    popular: true
-  },
-  {
-    title: 'Autonomous Interstellar Probe',
-    description: 'AI-powered autonomous probe for interstellar exploration and communication.',
-    icon: Rocket,
-    features: ['Autonomous Navigation', 'Scientific Instruments', 'Communication Relay', 'Self-repair'],
-    pricing: '$49,999 - $249,999/month',
-    category: 'Interstellar Exploration',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Reality Manipulation',
-    description: 'Advanced AI system for theoretical reality manipulation and dimension control.',
-    icon: Settings,
-    features: ['Reality Modeling', 'Dimension Control', 'Physics Manipulation', 'Causality Management'],
-    pricing: '$99,999 - $499,999/month',
-    category: 'Reality Engineering',
-    popular: true
-  },
-  {
-    title: 'Quantum Teleportation Network',
-    description: 'Quantum teleportation system for instant information and matter transfer.',
-    icon: Network,
-    features: ['Quantum Teleportation', 'Information Transfer', 'Matter Transport', 'Network Management'],
-    pricing: '$49,999 - $249,999/month',
-    category: 'Quantum Transport',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Immortality Research',
-    description: 'AI system for researching and developing human immortality technologies.',
-    icon: Heart,
-    features: ['Longevity Research', 'Cellular Regeneration', 'Age Reversal', 'Life Extension'],
-    pricing: '$99,999 - $499,999/month',
-    category: 'Immortality Tech',
-    popular: true
-  },
-  {
-    title: 'Autonomous Galaxy Explorer',
-    description: 'AI-powered autonomous spacecraft for galaxy exploration and mapping.',
-    icon: Globe,
-    features: ['Galaxy Mapping', 'Autonomous Exploration', 'Scientific Discovery', 'Communication'],
-    pricing: '$99,999 - $499,999/month',
-    category: 'Galactic Exploration',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Universe Simulator',
-    description: 'Complete universe simulation with AI-powered physics and evolution modeling.',
-    icon: Globe,
-    features: ['Universe Simulation', 'Physics Modeling', 'Evolution Tracking', 'Multiverse Analysis'],
-    pricing: '$99,999 - $499,999/month',
-    category: 'Cosmology',
-    popular: true
-  },
-  {
-    title: 'Quantum Immortality Platform',
-    description: 'Quantum-based consciousness preservation and transfer system.',
-    icon: Brain,
-    features: ['Consciousness Preservation', 'Quantum Storage', 'Transfer Protocols', 'Backup Systems'],
-    pricing: '$99,999 - $499,999/month',
-    category: 'Quantum Immortality',
-    popular: true
-  },
-  {
-    title: 'AI-Powered God Mode',
-    description: 'Ultimate AI system for omnipotent control and manipulation of reality.',
-    icon: Settings,
-    features: ['Omnipotent Control', 'Reality Manipulation', 'Universal Laws', 'Creation Powers'],
-    pricing: '$999,999 - $4,999,999/month',
-    category: 'Omnipotence',
-    popular: true
-  },
-  {
-    title: 'Smart Home Automation Hub',
-    description: 'Centralized smart home control with AI-powered automation and energy management.',
-    icon: Home,
-    features: ['Device Control', 'Automation Rules', 'Energy Management', 'Voice Control'],
-    pricing: '$49 - $299/month',
-    category: 'Smart Home',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Cybersecurity Threat Intelligence',
-    description: 'Real-time threat detection and intelligence for proactive cybersecurity defense.',
-    icon: Shield,
-    features: ['Threat Detection', 'Intelligence Feeds', 'Automated Response', 'Risk Assessment'],
-    pricing: '$399 - $2,499/month',
-    category: 'Cybersecurity',
-    popular: true
-  },
-  {
-    title: 'Quantum Computing Simulation Platform',
-    description: 'Cloud-based quantum computing simulation and algorithm development environment.',
-    icon: Cpu,
-    features: ['Quantum Simulation', 'Algorithm Development', 'Performance Testing', 'Educational Tools'],
-    pricing: '$199 - $1,999/month',
-    category: 'Quantum Computing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Supply Chain Visibility',
-    description: 'End-to-end supply chain tracking and optimization with real-time visibility.',
-    icon: Package,
-    features: ['Real-time Tracking', 'Predictive Analytics', 'Risk Management', 'Optimization'],
+    features: ['Automated Auditing', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checking'],
     pricing: '$299 - $1,999/month',
-    category: 'Supply Chain',
-    popular: true
+    category: 'Blockchain Security'
   },
   {
-    title: 'Metaverse Virtual Event Platform',
-    description: 'Immersive virtual event hosting with AI-powered avatars and interactive experiences.',
-    icon: Users,
-    features: ['Virtual Venues', 'AI Avatars', 'Interactive Features', 'Analytics Dashboard'],
-    pricing: '$199 - $1,499/month',
-    category: 'Metaverse',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Carbon Footprint Tracker',
-    description: 'Automated carbon footprint calculation and reduction recommendations for businesses.',
-    icon: Sprout,
-    features: ['Carbon Tracking', 'Reduction Strategies', 'Compliance Reporting', 'Sustainability Metrics'],
+    title: 'AI-Powered API Testing Suite',
+    description: 'Intelligent API testing with automated test generation and performance optimization.',
+    icon: Code,
+    features: ['Auto Test Generation', 'Performance Testing', 'Security Testing', 'Load Testing'],
     pricing: '$99 - $599/month',
-    category: 'Sustainability',
+    category: 'API Testing'
+  },
+  {
+    title: 'Real-time Collaboration Whiteboard',
+    description: 'AI-enhanced collaborative whiteboard with smart drawing recognition and team features.',
+    icon: Monitor,
+    features: ['Real-time Collaboration', 'AI Drawing Recognition', 'Voice Notes', 'Template Library'],
+    pricing: '$19 - $99/month',
+    category: 'Collaboration'
+  },
+  {
+    title: 'AI Customer Churn Predictor',
+    description: 'Predictive analytics platform to identify and prevent customer churn with actionable insights.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Risk Scoring', 'Intervention Strategies', 'ROI Tracking'],
+    pricing: '$199 - $999/month',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'Smart Document Workflow Engine',
+    description: 'AI-powered document processing and workflow automation for business processes.',
+    icon: FileText,
+    features: ['Document Classification', 'Data Extraction', 'Workflow Automation', 'Approval Routing'],
+    pricing: '$79 - $399/month',
+    category: 'Document Management'
+  },
+  {
+    title: 'AI-Powered A/B Testing Platform',
+    description: 'Intelligent experimentation platform with statistical significance and conversion optimization.',
+    icon: Target,
+    features: ['Statistical Analysis', 'Auto-optimization', 'Multi-variate Testing', 'Conversion Tracking'],
+    pricing: '$49 - $299/month',
+    category: 'Conversion Optimization'
+  },
+  {
+    title: 'Voice-to-Action Automation',
+    description: 'Convert voice commands into automated actions across your business applications.',
+    icon: Mic,
+    features: ['Voice Commands', 'Action Automation', 'Multi-app Integration', 'Custom Workflows'],
+    pricing: '$29 - $199/month',
+    category: 'Voice Automation'
+  },
+  {
+    title: 'AI-Powered Lead Qualification',
+    description: 'Automated lead scoring and qualification using advanced AI and behavioral analysis.',
+    icon: Target,
+    features: ['Lead Scoring', 'Behavioral Analysis', 'Qualification Rules', 'CRM Integration'],
+    pricing: '$99 - $499/month',
+    category: 'Sales Automation'
+  },
+  {
+    title: 'Smart Inventory Forecasting',
+    description: 'AI-driven inventory prediction and optimization for retail and e-commerce businesses.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Stock Optimization', 'Seasonal Analysis', 'Supplier Integration'],
+    pricing: '$149 - $799/month',
+    category: 'Inventory Management'
+  },
+  {
+    title: 'AI Content Personalization Engine',
+    description: 'Dynamic content personalization based on user behavior and preferences.',
+    icon: Eye,
+    features: ['Behavioral Analysis', 'Content Optimization', 'Real-time Personalization', 'A/B Testing'],
+    pricing: '$199 - $999/month',
+    category: 'Personalization'
+  },
+  {
+    title: 'Automated Compliance Monitor',
+    description: 'AI-powered compliance monitoring and reporting for various industry regulations.',
+    icon: Shield,
+    features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Trail'],
+    pricing: '$299 - $1,499/month',
+    category: 'Compliance'
+  },
+  {
+<<<<<<< HEAD
+    title: 'AI-Powered Fraud Detection System',
+    description: 'Real-time fraud detection and prevention for financial transactions.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Machine Learning Models', 'Risk Scoring', 'API Integration'],
+    pricing: '$0.10 - $0.50 per transaction',
+    category: 'Fraud Prevention'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with AI-powered suggestions and security analysis.',
+    icon: Code,
+    features: ['Code Quality Analysis', 'Security Scanning', 'Performance Optimization', 'Best Practices'],
+    pricing: '$99 - $499/month',
+    category: 'Development Tools',
     popular: true
   },
   {
-    title: 'Neural Interface Development Kit',
-    description: 'SDK for developing brain-computer interface applications and neurotechnology solutions.',
-    icon: Brain,
-    features: ['Neural Signal Processing', 'API Integration', 'Real-time Analysis', 'Development Tools'],
-    pricing: '$999 - $4,999/month',
-    category: 'Neurotechnology',
-    popular: true
+    title: 'AI-Powered Meeting Transcriber',
+    description: 'Real-time meeting transcription with AI-powered insights and action items.',
+    icon: Mic,
+    features: ['Real-time Transcription', 'AI Summaries', 'Action Item Extraction', 'Multi-language Support'],
+    pricing: '$29 - $149/month',
+    category: 'Productivity'
   },
   {
-    title: 'AI-Powered Space Mission Planning',
-    description: 'Automated space mission planning and satellite constellation management platform.',
-    icon: Rocket,
-    features: ['Mission Planning', 'Orbit Optimization', 'Satellite Management', 'Risk Assessment'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Space Technology',
-    popular: true
+    title: 'AI-Powered Logo Generator',
+    description: 'Professional logo creation using AI with brand guidelines and variations.',
+    icon: Image,
+    features: ['AI Logo Generation', 'Brand Guidelines', 'Multiple Formats', 'Commercial License'],
+    pricing: '$19 - $99/month',
+    category: 'Design Tools'
+  },
+  {
+    title: 'AI-Powered Password Manager',
+    description: 'Intelligent password management with AI-powered security recommendations.',
+    icon: Lock,
+    features: ['Password Generation', 'Security Analysis', 'Breach Monitoring', 'Multi-device Sync'],
+    pricing: '$9 - $49/month',
+    category: 'Security'
+  },
+  {
+    title: 'AI-Powered Expense Tracker',
+    description: 'Smart expense tracking with AI categorization and receipt processing.',
+    icon: DollarSign,
+    features: ['Receipt Scanning', 'AI Categorization', 'Tax Preparation', 'Budget Analysis'],
+    pricing: '$19 - $99/month',
+    category: 'Finance'
+  },
+  {
+    title: 'AI-Powered Social Media Analytics',
+    description: 'Advanced social media analytics with AI-powered insights and recommendations.',
+    icon: BarChart3,
+    features: ['Performance Analytics', 'AI Insights', 'Competitor Analysis', 'Content Recommendations'],
+    pricing: '$49 - $299/month',
+    category: 'Social Media'
+  },
+  {
+    title: 'AI-Powered Email Signature Generator',
+    description: 'Professional email signature creation with AI-powered design and content.',
+    icon: Mail,
+    features: ['AI Design Generation', 'Brand Consistency', 'Multiple Templates', 'Easy Integration'],
+    pricing: '$9 - $49/month',
+    category: 'Email Tools'
+  },
+  {
+    title: 'AI-Powered Website Builder',
+    description: 'No-code website builder with AI-powered design and content generation.',
+    icon: Monitor,
+    features: ['AI Design Generation', 'Content Creation', 'SEO Optimization', 'Mobile Responsive'],
+    pricing: '$29 - $199/month',
+    category: 'Web Development'
+  },
+  {
+    title: 'AI-Powered Customer Feedback Analyzer',
+    description: 'Intelligent analysis of customer feedback with sentiment analysis and insights.',
+    icon: MessageSquare,
+    features: ['Sentiment Analysis', 'Trend Detection', 'Actionable Insights', 'Dashboard'],
+    pricing: '$39 - $199/month',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'AI-Powered Inventory Optimizer',
+    description: 'Smart inventory optimization with AI-powered demand forecasting.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Stock Optimization', 'Reorder Alerts', 'Cost Analysis'],
+    pricing: '$79 - $399/month',
+    category: 'Inventory Management'
+  },
+  {
+    title: 'AI-Powered Meeting Scheduler',
+    description: 'Intelligent meeting scheduling with AI-powered time optimization.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Time Zone Handling', 'Conflict Resolution', 'Calendar Integration'],
+    pricing: '$19 - $99/month',
+    category: 'Scheduling'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation with AI-powered detection and filtering.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$99 - $499/month',
+    category: 'Content Safety'
+  },
+  {
+    title: 'AI-Powered Lead Generation',
+    description: 'Automated lead generation with AI-powered prospecting and qualification.',
+    icon: Target,
+    features: ['Lead Discovery', 'Contact Enrichment', 'Qualification Scoring', 'CRM Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Sales'
+  },
+  {
+    title: 'AI-Powered Video Editor',
+    description: 'Automated video editing with AI-powered content creation and optimization.',
+    icon: Video,
+    features: ['Auto-editing', 'Content Optimization', 'Multiple Formats', 'Cloud Processing'],
+    pricing: '$49 - $299/month',
+    category: 'Video Tools'
+=======
+    title: 'AI-Powered Price Optimization',
+    description: 'Dynamic pricing optimization using AI and market analysis for maximum revenue.',
+    icon: DollarSign,
+    features: ['Dynamic Pricing', 'Market Analysis', 'Competitor Tracking', 'Revenue Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'Pricing Intelligence'
+  },
+  {
+    title: 'Smart Meeting Scheduler Pro',
+    description: 'AI-powered meeting scheduling with conflict resolution and optimal time suggestions.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Conflict Resolution', 'Time Zone Handling', 'Calendar Integration'],
+    pricing: '$9 - $49/month',
+    category: 'Productivity'
+  },
+  {
+    title: 'AI-Powered Data Quality Manager',
+    description: 'Automated data quality assessment, cleaning, and validation for business data.',
+    icon: Database,
+    features: ['Data Quality Scoring', 'Automated Cleaning', 'Duplicate Detection', 'Validation Rules'],
+    pricing: '$99 - $599/month',
+    category: 'Data Management'
+  },
+  {
+    title: 'Voice-Controlled Business Intelligence',
+    description: 'Natural language query interface for business intelligence and data visualization.',
+    icon: BarChart3,
+    features: ['Voice Queries', 'Natural Language Processing', 'Data Visualization', 'Report Generation'],
+    pricing: '$149 - $799/month',
+    category: 'Business Intelligence'
+  },
+  {
+    title: 'AI-Powered Email Signature Generator',
+    description: 'Professional email signature generation with branding and contact management.',
+    icon: Mail,
+    features: ['Template Library', 'Brand Integration', 'Contact Management', 'Social Media Links'],
+    pricing: '$5 - $29/month',
+    category: 'Email Marketing'
+  },
+  {
+    title: 'Smart Password Manager for Teams',
+    description: 'AI-enhanced password management with security monitoring and team collaboration.',
+    icon: Lock,
+    features: ['Password Generation', 'Security Monitoring', 'Team Sharing', 'Breach Detection'],
+    pricing: '$19 - $99/month',
+    category: 'Security'
+  },
+  {
+    title: 'AI-Powered Meeting Transcription',
+    description: 'Real-time meeting transcription with speaker identification and action item extraction.',
+    icon: Mic,
+    features: ['Real-time Transcription', 'Speaker Identification', 'Action Item Extraction', 'Search & Archive'],
+    pricing: '$29 - $149/month',
+    category: 'Meeting Management'
+  },
+  {
+    title: 'Automated Social Media Content Calendar',
+    description: 'AI-generated social media content calendar with optimal posting times and engagement prediction.',
+    icon: Globe,
+    features: ['Content Generation', 'Optimal Timing', 'Engagement Prediction', 'Multi-platform Support'],
+    pricing: '$39 - $199/month',
+    category: 'Social Media Management'
+>>>>>>> main
   }
 ];
-
 const features = [{
     icon: Zap,
     title: 'Rapid Deployment',
@@ -1195,7 +1433,6 @@ const features = [{
     description: 'GDPR and SOC 2 compliant by default'
   }
 ];
-
 const benefits = [{
     icon: Clock,
     title: 'Fast Time to Market',
@@ -1221,7 +1458,6 @@ const benefits = [{
     stat: '10x'
   }
 ];
-
 const pricingTiers = [{
     name: 'Starter',
     description: 'Perfect for small teams and MVPs',
@@ -1241,7 +1477,7 @@ const pricingTiers = [{
     description: 'Ideal for growing businesses',
     price: '$799',
     period: '/month',
-    features: ['Up to 10,000 users',
+features: ['Up to 10,000 users',
       'Advanced analytics',
       'Priority support',
       'Enhanced security',
@@ -1255,7 +1491,7 @@ const pricingTiers = [{
     description: 'For large organizations',
     price: 'Custom',
     period: '',
-    features: ['Unlimited users',
+features: ['Unlimited users',
       'Custom analytics',
       'Dedicated support',
       'Enterprise security',
@@ -1265,7 +1501,6 @@ const pricingTiers = [{
     popular: false
   }
 ];
-
 export default function MicroSaaSPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -1274,7 +1509,6 @@ export default function MicroSaaSPage() {
                   <meta name="description" content="Scalable Micro SaaS solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics." />
                   <meta name="keywords" content="Micro SaaS, SaaS solutions, cloud applications, scalable software, business automation" />
                   </Head>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
 <div className="absolute inset-0">
@@ -1310,7 +1544,6 @@ export default function MicroSaaSPage() {
                   </motion.div>
                   </div>
                   </section>
-
       {/* Products Grid */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -1332,7 +1565,7 @@ export default function MicroSaaSPage() {
               return (
                 <motion.div
                   key={index}
-className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
+className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${
                     product.popular ? 'ring-2 ring-purple-200' : ''
                   }`}
                   initial={{ opacity: 0, y: 30 }}
@@ -1348,7 +1581,6 @@ className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dur
                       </span>
                   </div>
                   )}
-                  
                   <div className="flex items-center justify-between mb-4">
 <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
                   <IconComponent className="w-10 h-10" />
@@ -1390,7 +1622,6 @@ className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dur
           </div>
                   </div>
                   </section>
-
       {/* Features Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -1412,7 +1643,7 @@ className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dur
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
+className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -1433,7 +1664,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
           </div>
                   </div>
                   </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -1479,7 +1709,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
           </div>
                   </div>
                   </section>
-
       {/* Pricing Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -1514,7 +1743,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                     </span>
                   </div>
                 )}
-                
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {tier.name}
                 </h3>
@@ -1537,7 +1765,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
-? 'bg-purple-600 hover:bg-purple-700 text-white'
+? 'bg-purple-600 hover: bg-purple-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
@@ -1549,7 +1777,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
           </div>
                   </div>
                   </section>
-
       {/* Contact Information Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -1567,7 +1794,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
               Ready to transform your business with cutting-edge micro SaaS solutions? Our expert team is here to help you build, deploy, and scale your next-generation software products. Contact us for a free consultation and discover how we can accelerate your digital transformation.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <motion.div
               className="text-center p-6 bg-white rounded-lg shadow-lg"
@@ -1585,7 +1811,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                 Call Now: +1 302 464 0950
               </a>
             </motion.div>
-
             <motion.div
               className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
@@ -1602,7 +1827,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                 kleber@ziontechgroup.com
               </a>
             </motion.div>
-
             <motion.div
               className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
@@ -1621,7 +1845,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
               </address>
             </motion.div>
           </div>
-
           <motion.div
             className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center"
             initial={{ opacity: 0, y: 30 }}
@@ -1653,7 +1876,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
 <div className="container mx-auto px-4 text-center">

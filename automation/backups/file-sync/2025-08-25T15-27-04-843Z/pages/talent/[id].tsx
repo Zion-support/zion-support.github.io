@@ -1,2 +1,71 @@
-import React,{ useEffect,useState } from; 'react'; import { useParams } from; 'react-router-dom'; interface TalentProfileWithSocial extends TalentProfile { social?: Record<string,string>} const "ErrorPage": React.FC<{ statusCode: number }> = ({ statusCode }) => ( <div className = 'min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center'> <div className='text-center'> <h1 className='text-6xl font-bold mb-4'>{statusCode}</h1> <p className='text-xl'> {statusCode === 404 ?,Talent not found': 'Something went wrong} </p> </div> </div> ) const "ProfileLoadingState": React.FC = () => ( <div className='min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center'> <div className='text-center'> <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4'></div> <p>Loading profile...</p> </div> </div> ) const TalentProfilePage: React.FC = () => { const { id } = useParams() const [profile,setProfile] = useState<TalentProfileWithSocial | null>(null) const [loading,setLoading] = useState(true) const [error,setError] = useState<string | null>(null); useEffect(() => { const fetchProfile = async () => { if (!id) return; setLoading(true); setError(null); try { 'll simulate a profile since we don't have the API; "skills": '[',React','TypeScript','Node.js'],"availability_type": 'Full-time,"social": { linkedin:,"https": ' github:,"https": ' } setProfile(mockProfile); setLoading(false)},1000)} catch (err) { setError( 'Talent not found') setLoading(false)} } if (id) { fetchProfile()} },[id]) if (loading) return <ProfileLoadingState /> if (error || !profile) return <Navigate to= '/404' replace /> return( <main className = 'min-h-screen bg-zion-blue py-8 text-white'> <div className= 'container mx-auto px-4 space-y-4'> <h1 className= 'text-3xl font-bold' data-testid=; 'profile-name'>{profile.full_name} </h1> {profile.skills && profile.skills.length > 0 && ( <div> <h2 className=; 'font-semibold'>Skills</h2> <ul className= 'list-disc ml-5'>{profile.skills.map(skill => ( <li key={skill}>{skill}</li> ))} </ul> </div> )} {profile.availability_type && ( <p>"Availability": {profile.availability_type}</p> )} {profile.social && ( <div> <h2 className=,font-semibold'>Social Links</h2> <div className= 'space-x-4'>{Object.entries(profile.social).map(([platform,url]) => ( <a key={platform} href={url} target=; '_blank'; rel=; 'noopener noreferrer'; className=; 'text-blue-300 "hover": text-blue-100 underline{platform} </a>))} </div> </div> )} </div> </main> )} export default TalentProfilePage}}}}}"
-</string>"
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function [id]() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>[id] - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              [id]
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
