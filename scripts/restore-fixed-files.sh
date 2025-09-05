@@ -6,7 +6,7 @@
 set -e
 
 echo "🔄 Restoring Fixed Files from Backups"
-echo "====================================="
+echo "=="
 
 # Backup directory
 BACKUP_DIR="backups/fixed-files"

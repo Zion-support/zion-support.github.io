@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import { }
   Menu, 
   X, 
   Home, 
@@ -25,17 +25,17 @@ import {
   Award,
   Globe,
   Search,
-  ArrowRight
+  ArrowRight;
 } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 
 
-const "Header": React.FC = () => {
+const "Header": React.FC = () => {}
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
+  useEffect(() => {}
+    const handleScroll = () => {}
       setIsScrolled(window.scrollY > 0);
     };
 
@@ -43,29 +43,28 @@ const "Header": React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navigationItems = [{ "name": 'Home', "href": '/' },
-    { "name": 'Services', "href": '/services' },
-    { "name": 'Solutions', "href": '/solutions' },
-    { "name": 'About', "href": '/about' },
-    { "name": 'Careers', "href": '/careers' },
-    { "name": 'Contact', "href": '/contact' },
+  const navigationItems = [{ name: 'Home', href: '/' },]
+    { name: 'Services', href: '/services' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' },
   ];
 
-  return (
+  return ()
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 h-14 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between>
         <Link href="/" className="text-white font-bold">Zion Tech Group</Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
-          {navigationItems.map((item) => (
-            <Link key={item.name} href={item.href} className="text-gray-300 "hover": text-white">
-              {item.name}
+          {navigationItems.map((item) => (})
+            <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white">
+              {item.name};
             </Link>
-          ))}
+          ))};
         </nav>
       </div>
     </header>
   );
 
-}
-
+};
 export default Header;

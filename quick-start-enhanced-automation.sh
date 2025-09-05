@@ -35,7 +35,7 @@ info() {
 }
 
 print_header "🚀 Quick Start Enhanced PM2 Automation System"
-echo "========================================================"
+echo ""
 echo
 
 # Check if we're in the right directory
@@ -107,7 +107,7 @@ chmod +x start-enhanced-pm2-automation.sh
 cat > quick-status.sh << 'EOF'
 #!/bin/bash
 echo "📊 Quick Status Check"
-echo "===================="
+echo "======"
 pm2 status
 echo ""
 echo "🔍 Health Check:"
@@ -117,7 +117,7 @@ EOF
 cat > quick-logs.sh << 'EOF'
 #!/bin/bash
 echo "📋 Recent Logs"
-echo "=============="
+echo ""
 echo ""
 echo "🔍 Git Automation:"
 pm2 logs git-automation-manager --lines 5 2>/dev/null || echo "No Git automation logs yet"
@@ -132,7 +132,7 @@ EOF
 cat > quick-restart.sh << 'EOF'
 #!/bin/bash
 echo "🔄 Quick Restart"
-echo "================"
+echo "=="
 pm2 restart all
 echo "✅ All processes restarted"
 EOF
@@ -155,7 +155,7 @@ fi
 # Display final status
 echo
 print_header "🎉 Enhanced PM2 Automation System is Running!"
-echo "========================================================"
+echo ""
 echo
 success "Your enhanced automation system is now active!"
 echo

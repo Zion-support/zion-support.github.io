@@ -170,7 +170,7 @@ handle_merge_conflicts() {
                 
                 # Remove conflict markers and keep our version
                 sed -i '/^<<<<<<< /d' "$file"
-                sed -i '/^=======/,/^>>>>>>> /d' "$file"
+                sed -i '/^/,/^>>>>>>> /d' "$file"
                 
                 # Stage resolved file
                 git add "$file"
@@ -217,7 +217,7 @@ EOF
 # Main execution
 main() {
     echo -e "${PURPLE}🚀 Intelligent Git Push & Merge System${NC}"
-    echo "=============================================="
+    echo "===="
     echo
     
     # Check prerequisites

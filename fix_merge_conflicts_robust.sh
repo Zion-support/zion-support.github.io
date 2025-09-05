@@ -13,8 +13,8 @@ resolve_file_conflicts() {
     # Use a more robust approach to resolve conflicts
     # Keep everything from HEAD (our version) and remove conflict markers
     awk '
-    /^<<<<<<< HEAD/ { in_head = 1; next }
-    /^=======/ { in_head = 0; in_other = 1; next }
+    /^/ { in_head = 1; next }
+    /^/ { in_head = 0; in_other = 1; next }
     /^>>>>>>> / { in_other = 0; next }
     in_head { print }
     !in_head && !in_other { print }
@@ -24,7 +24,7 @@ resolve_file_conflicts() {
 }
 
 # Find all files with merge conflicts
-files_with_conflicts=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.log" --exclude="*.json" --exclude="*.backup" 2>/dev/null)
+files_with_conflicts=$(grep -l "" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.log" --exclude="*.json" --exclude="*.backup" 2>/dev/null)
 
 if [ -z "$files_with_conflicts" ]; then
     echo "✅ No merge conflicts found!"

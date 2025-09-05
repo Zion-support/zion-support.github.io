@@ -1,0 +1,11 @@
+:src/utils/helpers.js.disabled
+// helpers utility,
+export const helpers = {
+  // Placeholder utility functions,
+"init": function() {
+    
+  }
+};
+export default helpers;
+export const helpers = { init: function() { } }; export default helpers;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/utils/helpers.js

@@ -1,21 +1,24 @@
 const fs = require('fs');
 const path = require('path');
+
 class CodeQualityChecker {
   constructor() {
     this.issues = [];
   }
+
   checkFileSize(filePath) {
     const stats = fs.statSync(filePath);
-    if (stats.size > 100000) {
-      // 100KB;
-      this.issues.push(`Large "file": ${filePath} (${stats.size} bytes)`);
+    if (stats.size > 100000) { // 100KB
+      this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`);
     }
   }
+
   scanDirectory(dir) {
     const items = fs.readdirSync(dir);
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+      
       if (
         stat.isDirectory() &&
         !item.startsWith('.') &&
@@ -30,6 +33,7 @@ class CodeQualityChecker {
       }
     }
   }
+
   run() {
     this.scanDirectory(process.cwd());
     console.log(`Found ${this.issues.length} code quality issues`);

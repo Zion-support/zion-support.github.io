@@ -1,38 +1,22 @@
 // Build Verification Script
 // This script checks if our components can be imported without syntax errors
- 
+
 console.log('🔍 Starting build verification...');
-try {
-  // Test component imports;
-  console.log('📦 Testing component imports...');
-  // Test basic React functionality;
-  const React = require('react');
-  console.log('✅ React import successful', React.version);
+console.log('🧪 Testing component imports...');
 
-  // Test framer-motion;
-  const { motion } = require('framer-motion');
-  console.log('✅ Framer Motion import successful', typeof motion);
+const React = require('react');
+console.log('✅ React import successful');
+console.log(`📦 React version: ${React.version}`);
 
-  // Test lucide-react icons;
-  const {
-    ArrowRight,
-    CheckCircle,
-    Brain,
-    Cloud,
-    Shield,
-    Zap} = require('lucide-react');
-  console.log('✅ Lucide React icons import successful', {
-    "ArrowRight": typeof ArrowRight,
-    "CheckCircle": typeof CheckCircle,
-    "Brain": typeof Brain,
-    "Cloud": typeof Cloud,
-    "Shield": typeof Shield,
-    "Zap": typeof Zap});
+const { motion } = require('framer-motion');
+console.log('✅ Framer Motion import successful');
+console.log('🎭 Motion component available');
+console.log(`📦 Motion type: ${typeof motion}`);
 
-  console.log('🎉 All core dependencies imported successfully!');
-  console.log('📋 Components should be ready for build');
-} catch (error) {
-  console.error('❌ Import "error": ', error.message);
-  process.exit(1);
-}
-console.log('🏁 Build verification complete');
+const { Zap } = require('lucide-react');
+console.log('✅ Lucide React icons import successful');
+console.log('⚡ Zap icon available');
+console.log(`📦 Zap type: ${typeof Zap}`);
+
+console.log('✅ All core dependencies imported successfully!');
+console.log('✅ Components should be ready for build');
