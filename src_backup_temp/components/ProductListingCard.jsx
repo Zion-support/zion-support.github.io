@@ -61,27 +61,3 @@ export default function Page("props": "any) {;
             alt={listing.title}";
             className="w-full h-full object-cover";
             onError={handleImageError}
-<<<<<<< HEAD
-            />;
-          {listing.featured && (";
-            <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">;
-              Featured;
-            </Badge>;
-          )}";
-          <FavoriteButton itemId={listing.id} itemType="product"  />;
-        </div>;
-</div>;
-  );"}";
-=======
-            />
-          {listing.featured && ("
-            <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
-              Featured
-            </Badge>
-          )}"
-          <FavoriteButton itemId={listing.id} itemType="product"  />
-        </div>
-</div>
-    );"}"
->>>>>>> main
-</div>

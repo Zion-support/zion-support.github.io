@@ -16,6 +16,119 @@ import {
   Heart
 } from 'lucide-react';
 
+const accessibilityFeatures = [
+  {
+    icon: Eye,
+    title: "Visual Accessibility",
+    description: "High contrast themes, scalable fonts, and screen reader compatibility",
+    features: [
+      "WCAG 2.1 AA compliant color contrast",
+      "Scalable text up to 200% without loss of functionality",
+      "Alt text for all images and media",
+      "Focus indicators for keyboard navigation",
+      "Screen reader compatibility",
+      "High contrast mode",
+      "Text scaling options",
+      "Alternative text for images",
+      "Keyboard navigation"
+    ]
+  },
+  {
+    icon: Ear,
+    title: "Audio Accessibility", 
+    description: "Captions, transcripts, and audio descriptions for multimedia content",
+    features: [
+      "Closed captions for all video content",
+      "Audio descriptions for visual content",
+      "Transcript files for audio content",
+      "Visual indicators for audio alerts"
+    ]
+  },
+  {
+=======
+      "Closed captions",
+      "Visual alerts",
+      "Text alternatives for audio",
+      "Sign language support",
+      "Volume controls",
+      "Audio descriptions"
+    ]
+  },
+  {
+    title: "Motor Accessibility",
+    description: "Features to support users with motor impairments",
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
+    icon: Hand,
+    title: "Motor Accessibility",
+    description: "Keyboard navigation and customizable interaction methods",
+    features: [
+      "Full keyboard navigation support",
+      "Customizable click targets",
+      "Drag and drop alternatives",
+      "Timeout extensions and controls"
+    ]
+  },
+  {
+=======
+      "Keyboard-only navigation",
+      "Voice control",
+      "Large click targets",
+      "Customizable timing",
+      "Switch navigation",
+      "Gesture alternatives"
+    ]
+  },
+  {
+    title: "Cognitive Accessibility",
+    description: "Features to support users with cognitive impairments",
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
+    icon: Brain,
+    title: "Cognitive Accessibility",
+    description: "Clear navigation, consistent layouts, and simplified interfaces",
+    features: [
+      "Consistent navigation patterns",
+      "Clear and simple language",
+      "Error prevention and recovery",
+      "Customizable interface complexity"
+=======
+      "Clear navigation",
+      "Consistent layout",
+      "Error prevention",
+      "Progress indicators",
+      "Help and support",
+      "Customizable interface"
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
+    ]
+  }
+];
+
+const complianceStandards = [
+  {
+    name: "WCAG 2.1 AA",
+    description: "Web Content Accessibility Guidelines Level AA compliance",
+    status: "Compliant",
+    icon: Award
+  },
+  {
+    name: "Section 508",
+    description: "US Federal accessibility requirements",
+    status: "Compliant", 
+    icon: FileText
+  },
+  {
+    name: "ADA",
+    description: "Americans with Disabilities Act compliance",
+    status: "Compliant",
+    icon: Users
+  },
+  {
+    name: "EN 301 549",
+    description: "European accessibility standard",
+    status: "Compliant",
+    icon: Globe
+  }
+];
+
 export default function AccessibilityPage() {
   const accessibilityFeatures = [
     {
@@ -158,112 +271,29 @@ export default function AccessibilityPage() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Accessibility{' '}
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                  Statement
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                We are committed to ensuring our website is accessible to all users, 
-                including those with disabilities. Learn about our accessibility features and compliance.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Building technology that works for everyone, regardless of ability
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Our Commitment */}
-        <section className="py-20 bg-white">
+        {/* Commitment Section */}
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Accessibility Commitment
-              </h2>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-                At Zion Tech Group, we believe that technology should be accessible to everyone. 
-                We are committed to providing an inclusive digital experience that works for all users, 
-                regardless of their abilities or the technologies they use to access our website.
-              </p>
-            </motion.div>
-
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {accessibilityCommitments.map((commitment, index) => (
-                  <motion.div
-                    key={commitment.title}
-                    className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <commitment.icon className="w-8 h-8 text-indigo-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {commitment.title}
-                    </h3>
-                    <p className="text-gray-600">{commitment.description}</p>
-                  </motion.div>
-                ))}
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Accessibility Features */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Accessibility Features
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Our website includes a comprehensive set of accessibility features 
-                designed to meet the needs of users with various disabilities.
-              </p>
-            </motion.div>
-
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {accessibilityFeatures.map((feature, index) => (
-                  <motion.div
-                    key={feature.title}
-                    className="bg-white rounded-lg shadow-lg p-8"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="flex items-center mb-6">
-                      <div className="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                        <feature.icon className="w-6 h-6 text-indigo-600" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
-                    </div>
-                    <p className="text-gray-600 mb-6">{feature.description}</p>
-                    <ul className="space-y-3">
-                      {feature.features.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-center text-gray-700">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ))}
               </div>
             </div>
           </div>
