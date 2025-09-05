@@ -150,17 +150,9 @@ export class ErrorTracker {
 }
 
 export const errorTracker = new ErrorTracker();
-  };
 
-  Object.entries(monitoringFiles).forEach(([filename, content]) => {
-    const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true }
-});
-    fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created ${filename}`);
-  }
-});
-}
+// Call the monitoring function
+createAdvancedMonitoring();
 
 // Create advanced caching system
 function createAdvancedCaching() {
@@ -276,11 +268,10 @@ export const memoryCache = new MemoryCache();
 
   Object.entries(cachingFiles).forEach(([filename, content]) => {
     const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true }
-});
+    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created ${filename}`);
-  }
+    console.log(`[OK] Created ${filename}`);
+  });
 });
 }
 
@@ -384,11 +375,10 @@ export const responseOptimizer = new ResponseOptimizer();
 
   Object.entries(apiFiles).forEach(([filename, content]) => {
     const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true }
-});
+    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created ${filename}`);
-  }
+    console.log(`[OK] Created ${filename}`);
+  });
 });
 }
 
@@ -532,11 +522,10 @@ export const connectionPool = new ConnectionPool();
 
   Object.entries(dbFiles).forEach(([filename, content]) => {
     const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true }
-});
+    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created ${filename}`);
-  }
+    console.log(`[OK] Created ${filename}`);
+  });
 });
 }
 
@@ -578,12 +567,11 @@ async function main() {
     
     fs.writeFileSync('/workspace/ecosystem.config.js', 
       `module.exports = ${JSON.stringify(pm2Config, null, 2)};);
-    console.log('✅ Created PM2 ecosystem configuration');
+    console.log('[OK] Created PM2 ecosystem configuration');
     
     // Create logs directory
-    fs.mkdirSync('/workspace/logs', { recursive: true }
-});
-    console.log('✅ Created logs directory');
+    fs.mkdirSync('/workspace/logs', { recursive: true });
+    console.log('[OK] Created logs directory');
     
     console.log('\n🎉 Advanced app improvements completed successfully!');
     console.log('\n📋 Summary of improvements:');

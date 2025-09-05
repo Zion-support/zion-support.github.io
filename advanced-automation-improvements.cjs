@@ -32,19 +32,19 @@ class AdvancedAutomationImprovements {
     this.log(`Running: ${description}`);
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot;
-        stdio: 'pipe';
-        encoding: 'utf8';
-        ...options;
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8',
+        ...options
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output: result };
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       return {
-        success: false;
-        error: error.message;
-        output: error.stdout || error.stderr;
+        success: false,
+        error: error.message,
+        output: error.stdout || error.stderr
       };
     }
   }
@@ -286,8 +286,8 @@ if (require.main === module) {
 module.exports = IntelligentErrorDetector;`;
 
     const scriptPath = path.join(
-      this.projectRoot;
-      'automation';
+      this.projectRoot,
+      'automation',
       'intelligent-error-detector.cjs'
     );
     fs.writeFileSync(scriptPath, script);
@@ -449,8 +449,8 @@ if (require.main === module) {
 module.exports = PerformanceMonitor;`;
 
     const scriptPath = path.join(
-      this.projectRoot;
-      'automation';
+      this.projectRoot,
+      'automation',
       'performance-monitor.cjs'
     );
     fs.writeFileSync(scriptPath, script);
@@ -651,8 +651,8 @@ if (require.main === module) {
 module.exports = SecurityScanner;`;
 
     const scriptPath = path.join(
-      this.projectRoot;
-      'automation';
+      this.projectRoot,
+      'automation',
       'security-scanner.cjs'
     );
     fs.writeFileSync(scriptPath, script);
@@ -804,8 +804,8 @@ if (require.main === module) {
 module.exports = GitWorkflowAutomator;`;
 
     const scriptPath = path.join(
-      this.projectRoot;
-      'automation';
+      this.projectRoot,
+      'automation',
       'git-workflow-automator.cjs'
     );
     fs.writeFileSync(scriptPath, script);
@@ -826,15 +826,15 @@ module.exports = GitWorkflowAutomator;`;
 
       // Run the new scripts
       await this.runCommand(
-        'node automation/intelligent-error-detector.cjs';
+        'node automation/intelligent-error-detector.cjs',
         'Run error detector'
       );
       await this.runCommand(
-        'node automation/performance-monitor.cjs';
+        'node automation/performance-monitor.cjs',
         'Run performance monitor'
       );
       await this.runCommand(
-        'node automation/security-scanner.cjs';
+        'node automation/security-scanner.cjs',
         'Run security scanner'
       );
 
