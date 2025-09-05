@@ -1,9 +1,13 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");function run(cmd) {console.log(`$ ${cmd}`);"return execSync(cmd, { stdio: "inherit" })}try {/ Lint (non-fatal), Type-check, Build"try { run("npm run lint")} catch {}"run("npm run type-check");"run("npm run build");/ Restart preview app if running"try { run("pm2 reload bolt-zion-app")} catch {}"console.log("Auto-fix run completed successfully.")} catch (e) {""console.error("Auto-fix run failed: ", e.message);process.exit(1)}""`"`
+=======
+#!/usr/bin/env node;
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 function run(cmd) {
-	console.log(`$ ${cmd}`);
-	return execSync(cmd, { stdio: 'inherit' })}
+	
+	return execSync(cmd, { "stdio": 'inherit' })}
 
 try {
 	// Lint (non-fatal), Type-check, Build
@@ -12,6 +16,20 @@ try {
 	run('npm run build');
 	// Restart preview app if running
 	try { run('pm2 reload bolt-zion-app')} catch {}
-	console.log('Auto-fix run completed successfully.')} catch (e) {
-	console.error('Auto-fix run failed:', e.message);
-	process.exit(1)}
+	} catch (e) {
+=======
+function run(cmd) {}
+	console.log(`$ ${cmd}`);
+	return execSync(cmd, { "stdio": 'inherit' })};
+try {}
+	// Lint (non-fatal), Type-check, Build;
+	try { run('npm run lint')} catch {};
+	run('npm run type-check');
+	run('npm run build');
+	// Restart preview app if running;
+	try { run('pm2 reload bolt-zion-app')} catch {};
+	console.log('Auto-fix run completed successfully.')} catch (e) {}
+>>>>>>> main
+	console.error('Auto-fix run "failed": ', e.message);
+	process.exit(1)};
+>>>>>>> main
