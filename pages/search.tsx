@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Search, ArrowRight, Clock, Filter, X } from 'lucide-react';
+import { Search, Filter, ArrowRight, Clock, Star, Tag, FileText, Users, Briefcase } from 'lucide-react';
 import Layout from '../components/Layout';
 
 interface SearchResult {
@@ -10,9 +10,11 @@ interface SearchResult {
   title: string;
   description: string;
   url: string;
-  type: 'page' | 'service' | 'solution' | 'resource';
+  type: 'page' | 'service' | 'solution' | 'resource' | 'team';
   category: string;
-  lastModified?: string;
+  tags: string[];
+  lastUpdated?: string;
+  rating?: number;
 }
 
 export default function SearchPage() {
@@ -22,6 +24,7 @@ export default function SearchPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const [showFilters, setShowFilters] = useState(false);
 
   // Mock search data
   const searchData: SearchResult[] = [
@@ -32,61 +35,75 @@ export default function SearchPage() {
       url: '/ai-services',
       type: 'service',
       category: 'Services',
-      lastModified: '2024-01-15'
+      tags: ['AI', 'Machine Learning', 'Automation'],
+      lastUpdated: '2024-01-15',
+      rating: 4.8
     },
     {
       id: '2',
-      title: 'IT Services',
-      description: 'Comprehensive information technology services and support',
-      url: '/it-services',
-      type: 'service',
-      category: 'Services',
-      lastModified: '2024-01-10'
-    },
-    {
-      id: '3',
-      title: 'Micro SaaS Solutions',
-      description: 'Scalable software as a service solutions for modern businesses',
-      url: '/micro-saas',
-      type: 'service',
-      category: 'Services',
-      lastModified: '2024-01-12'
-    },
-    {
-      id: '4',
-      title: 'Enterprise Solutions',
-      description: 'Tailored enterprise-grade solutions for large organizations',
-      url: '/solutions/enterprise',
-      type: 'solution',
-      category: 'Solutions',
-      lastModified: '2024-01-08'
-    },
-    {
-      id: '5',
       title: 'Cloud & DevOps',
-      description: 'Cloud infrastructure and DevOps services for scalable applications',
+      description: 'Comprehensive cloud infrastructure and DevOps solutions for modern applications',
       url: '/services/cloud-devops',
       type: 'service',
       category: 'Services',
-      lastModified: '2024-01-14'
+      tags: ['Cloud', 'DevOps', 'Infrastructure'],
+      lastUpdated: '2024-01-14',
+      rating: 4.9
+    },
+    {
+      id: '3',
+      title: 'Healthcare Solutions',
+      description: 'Specialized technology solutions for the healthcare industry',
+      url: '/solutions/healthcare',
+      type: 'solution',
+      category: 'Solutions',
+      tags: ['Healthcare', 'Compliance', 'HIPAA'],
+      lastUpdated: '2024-01-13',
+      rating: 4.7
+    },
+    {
+      id: '4',
+      title: 'Our Team',
+      description: 'Meet the experts behind Zion Tech Group',
+      url: '/team',
+      type: 'team',
+      category: 'Company',
+      tags: ['Leadership', 'Experts', 'About'],
+      lastUpdated: '2024-01-12',
+      rating: 5.0
+    },
+    {
+      id: '5',
+      title: 'API Documentation',
+      description: 'Complete API reference and integration guides',
+      url: '/api-docs',
+      type: 'resource',
+      category: 'Resources',
+      tags: ['API', 'Documentation', 'Integration'],
+      lastUpdated: '2024-01-11',
+      rating: 4.6
     },
     {
       id: '6',
       title: 'Cybersecurity Services',
-      description: 'Advanced cybersecurity solutions to protect your digital assets',
+      description: 'Advanced security solutions to protect your digital assets',
       url: '/services/cybersecurity',
       type: 'service',
       category: 'Services',
-      lastModified: '2024-01-11'
+      tags: ['Security', 'Compliance', 'Protection'],
+      lastUpdated: '2024-01-10',
+      rating: 4.8
     },
     {
       id: '7',
-      title: 'About Us',
-      description: 'Learn about Zion Tech Group and our mission to transform businesses',
-      url: '/about',
-      type: 'page',
-      category: 'Company',
-      lastModified: '2024-01-09'
+      title: 'Blog',
+      description: 'Latest insights and updates from our technology experts',
+      url: '/blog',
+      type: 'resource',
+      category: 'Resources',
+      tags: ['Blog', 'Insights', 'Updates'],
+      lastUpdated: '2024-01-09',
+      rating: 4.5
     },
     {
       id: '8',
@@ -95,43 +112,20 @@ export default function SearchPage() {
       url: '/contact',
       type: 'page',
       category: 'Company',
-      lastModified: '2024-01-13'
-    },
-    {
-      id: '9',
-      title: 'Blog',
-      description: 'Latest insights and articles on technology trends and innovations',
-      url: '/blog',
-      type: 'resource',
-      category: 'Resources',
-      lastModified: '2024-01-16'
-    },
-    {
-      id: '10',
-      title: 'White Papers',
-      description: 'In-depth research and analysis on technology topics',
-      url: '/white-papers',
-      type: 'resource',
-      category: 'Resources',
-      lastModified: '2024-01-07'
+      tags: ['Contact', 'Support', 'Consultation'],
+      lastUpdated: '2024-01-08',
+      rating: 4.9
     }
   ];
 
   const categories = [
-    { id: 'all', label: 'All Results', count: searchData.length },
-    { id: 'Services', label: 'Services', count: searchData.filter(r => r.category === 'Services').length },
-    { id: 'Solutions', label: 'Solutions', count: searchData.filter(r => r.category === 'Solutions').length },
-    { id: 'Company', label: 'Company', count: searchData.filter(r => r.category === 'Company').length },
-    { id: 'Resources', label: 'Resources', count: searchData.filter(r => r.category === 'Resources').length }
+    { id: 'all', name: 'All Results', count: searchData.length },
+    { id: 'service', name: 'Services', count: searchData.filter(item => item.type === 'service').length },
+    { id: 'solution', name: 'Solutions', count: searchData.filter(item => item.type === 'solution').length },
+    { id: 'resource', name: 'Resources', count: searchData.filter(item => item.type === 'resource').length },
+    { id: 'team', name: 'Team', count: searchData.filter(item => item.type === 'team').length },
+    { id: 'page', name: 'Pages', count: searchData.filter(item => item.type === 'page').length }
   ];
-
-  useEffect(() => {
-    const { q } = router.query;
-    if (q && typeof q === 'string') {
-      setQuery(q);
-      performSearch(q);
-    }
-  }, [router.query]);
 
   useEffect(() => {
     // Load recent searches from localStorage
@@ -139,7 +133,14 @@ export default function SearchPage() {
     if (saved) {
       setRecentSearches(JSON.parse(saved));
     }
-  }, []);
+
+    // Get query from URL
+    const { q } = router.query;
+    if (q && typeof q === 'string') {
+      setQuery(q);
+      performSearch(q);
+    }
+  }, [router.query]);
 
   const performSearch = (searchQuery: string) => {
     if (!searchQuery.trim()) {
@@ -149,24 +150,24 @@ export default function SearchPage() {
 
     setIsLoading(true);
     
-    // Simulate API delay
+    // Simulate API call
     setTimeout(() => {
-      const filtered = searchData.filter(item =>
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.category.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+      const filtered = searchData.filter(item => {
+        const matchesQuery = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                           item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                           item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+        
+        const matchesCategory = selectedCategory === 'all' || item.type === selectedCategory;
+        
+        return matchesQuery && matchesCategory;
+      });
 
-      const categoryFiltered = selectedCategory === 'all' 
-        ? filtered 
-        : filtered.filter(item => item.category === selectedCategory);
-
-      setResults(categoryFiltered);
+      setResults(filtered);
       setIsLoading(false);
 
       // Save to recent searches
-      if (searchQuery.trim()) {
-        const newRecent = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
+      if (searchQuery.trim() && !recentSearches.includes(searchQuery.trim())) {
+        const newRecent = [searchQuery.trim(), ...recentSearches.slice(0, 4)];
         setRecentSearches(newRecent);
         localStorage.setItem('recentSearches', JSON.stringify(newRecent));
       }
@@ -176,15 +177,13 @@ export default function SearchPage() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     performSearch(query);
-    router.push(`/search?q=${encodeURIComponent(query)}`, undefined, { shallow: true }
-});
   };
 
-  const handleRecentSearch = (searchTerm: string) => {
-    setQuery(searchTerm);
-    performSearch(searchTerm);
-    router.push(`/search?q=${encodeURIComponent(searchTerm)}`, undefined, { shallow: true }
-});
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    if (query.trim()) {
+      performSearch(query);
+    }
   };
 
   const clearRecentSearches = () => {
@@ -195,209 +194,244 @@ export default function SearchPage() {
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'service':
-        return '🔧';
+        return <Briefcase className="w-4 h-4" />;
       case 'solution':
-        return '💡';
-      case 'page':
-        return '📄';
+        return <Tag className="w-4 h-4" />;
       case 'resource':
-        return '📚';
+        return <FileText className="w-4 h-4" />;
+      case 'team':
+        return <Users className="w-4 h-4" />;
       default:
-        return '🔍';
+        return <FileText className="w-4 h-4" />;
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'service':
+        return 'bg-blue-100 text-blue-800';
+      case 'solution':
+        return 'bg-green-100 text-green-800';
+      case 'resource':
+        return 'bg-purple-100 text-purple-800';
+      case 'team':
+        return 'bg-orange-100 text-orange-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
     }
   };
 
   return (
-    <Layout title={`Search Results${query ? ` for "${query}"` : ''} - Zion Tech Group`}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="container mx-auto px-4 py-8">
-          {/* Search Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-8"
-          >
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Search Results
-            </h1>
-            <p className="text-gray-300 text-lg">
-              Find exactly what you're looking for
-            </p>
-          </motion.div>
-
-          {/* Search Form */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="max-w-2xl mx-auto mb-8"
-          >
-            <form onSubmit={handleSearch} className="relative">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Search services, solutions, or resources..."
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-                />
-                <button
-                  type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Search
-                </button>
-              </div>
-            </form>
-          </motion.div>
-
-          {/* Recent Searches */}
-          {!query && recentSearches.length > 0 && (
+    <Layout
+      title="Search - Zion Tech Group"
+      description="Search through our comprehensive collection of services, solutions, and resources."
+    >
+      <div className="min-h-screen bg-gray-50">
+        {/* Search Header */}
+        <div className="bg-white border-b border-gray-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="max-w-2xl mx-auto mb-8"
+              transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-white flex items-center">
-                  <Clock className="w-5 h-5 mr-2" />
-                  Recent Searches
-                </h3>
-                <button
-                  onClick={clearRecentSearches}
-                  className="text-gray-400 hover:text-white text-sm"
-                >
-                  Clear all
-                </button>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {recentSearches.map((search, index) => (
+              <h1 className="text-3xl font-bold text-gray-900 mb-4">Search</h1>
+              <p className="text-gray-600 mb-6">Find services, solutions, and resources</p>
+              
+              <form onSubmit={handleSearch} className="relative">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    placeholder="Search for services, solutions, or resources..."
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
                   <button
-                    key={index}
-                    onClick={() => handleRecentSearch(search)}
-                    className="px-3 py-1 bg-white/10 border border-white/20 rounded-full text-gray-300 hover:bg-white/20 hover:text-white transition-colors text-sm"
+                    type="submit"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200"
                   >
-                    {search}
+                    Search
                   </button>
-                ))}
-              </div>
-            </motion.div>
-          )}
-
-          {/* Category Filters */}
-          {query && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="max-w-4xl mx-auto mb-8"
-            >
-              <div className="flex items-center space-x-2 mb-4">
-                <Filter className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-300 font-medium">Filter by category:</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-4 py-2 rounded-lg transition-colors ${
-                      selectedCategory === category.id
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                    }`}
-                  >
-                    {category.label} ({category.count})
-                  </button>
-                ))}
-              </div>
-            </motion.div>
-          )}
-
-          {/* Search Results */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="max-w-4xl mx-auto"
-          >
-            {isLoading ? (
-              <div className="text-center py-12">
-                <div className="w-8 h-8 border-2 border-blue-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                <p className="text-gray-300">Searching...</p>
-              </div>
-            ) : query ? (
-              <>
-                <div className="mb-6">
-                  <p className="text-gray-300">
-                    {results.length} result{results.length !== 1 ? 's' : ''} found for "{query}"
-                  </p>
                 </div>
+              </form>
 
-                {results.length > 0 ? (
-                  <div className="space-y-4">
-                    {results.map((result, index) => (
-                      <motion.div
-                        key={result.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: index * 0.1 }}
-                        className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20 hover:bg-white/15 transition-all duration-200"
+              {/* Recent Searches */}
+              {recentSearches.length > 0 && !query && (
+                <div className="mt-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-sm font-medium text-gray-700">Recent Searches</h3>
+                    <button
+                      onClick={clearRecentSearches}
+                      className="text-sm text-gray-500 hover:text-gray-700"
+                    >
+                      Clear
+                    </button>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {recentSearches.map((search, index) => (
+                      <button
+                        key={index}
+                        onClick={() => {
+                          setQuery(search);
+                          performSearch(search);
+                        }}
+                        className="flex items-center space-x-1 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors duration-200"
                       >
-                        <Link href={result.url} className="block group">
-                          <div className="flex items-start space-x-4">
-                            <div className="text-2xl">{getTypeIcon(result.type)}</div>
-                            <div className="flex-1">
-                              <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
-                                {result.title}
-                              </h3>
-                              <p className="text-gray-300 mb-3">{result.description}</p>
-                              <div className="flex items-center space-x-4 text-sm text-gray-400">
-                                <span className="bg-white/10 px-2 py-1 rounded">{result.category}</span>
-                                <span className="flex items-center">
-                                  <ArrowRight className="w-4 h-4 mr-1" />
-                                  {result.url}
-                                </span>
-                                {result.lastModified && (
-                                  <span>Updated {new Date(result.lastModified).toLocaleDateString()}</span>
-                                )}
-                              </div>
-                            </div>
-                          </div>
-                        </Link>
-                      </motion.div>
+                        <Clock className="w-3 h-3" />
+                        <span>{search}</span>
+                      </button>
                     ))}
                   </div>
-                ) : (
-                  <div className="text-center py-12">
-                    <div className="text-6xl mb-4">🔍</div>
-                    <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
-                    <p className="text-gray-300 mb-6">
-                      Try adjusting your search terms or browse our categories
-                    </p>
-                    <Link
-                      href="/services"
-                      className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                      Browse Services
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
+                </div>
+              )}
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Filters and Results */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Filters Sidebar */}
+            <div className="lg:w-64">
+              <div className="bg-white rounded-lg border border-gray-200 p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-semibold text-gray-900">Filters</h3>
+                  <button
+                    onClick={() => setShowFilters(!showFilters)}
+                    className="lg:hidden p-1 text-gray-400 hover:text-gray-600"
+                  >
+                    <Filter className="w-5 h-5" />
+                  </button>
+                </div>
+                
+                <div className={`space-y-4 ${showFilters ? 'block' : 'hidden lg:block'}`}>
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-700 mb-3">Category</h4>
+                    <div className="space-y-2">
+                      {categories.map((category) => (
+                        <button
+                          key={category.id}
+                          onClick={() => handleCategoryChange(category.id)}
+                          className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-colors duration-200 ${
+                            selectedCategory === category.id
+                              ? 'bg-blue-100 text-blue-700'
+                              : 'text-gray-600 hover:bg-gray-100'
+                          }`}
+                        >
+                          <span>{category.name}</span>
+                          <span className="text-xs bg-gray-200 text-gray-600 px-2 py-1 rounded-full">
+                            {category.count}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                )}
-              </>
-            ) : (
-              <div className="text-center py-12">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-xl font-semibold text-white mb-2">Start your search</h3>
-                <p className="text-gray-300 mb-6">
-                  Search for services, solutions, or resources
-                </p>
+                </div>
               </div>
-            )}
-          </motion.div>
+            </div>
+
+            {/* Results */}
+            <div className="flex-1">
+              {isLoading ? (
+                <div className="flex items-center justify-center py-12">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                </div>
+              ) : results.length > 0 ? (
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm text-gray-600">
+                      {results.length} result{results.length !== 1 ? 's' : ''} found
+                    </p>
+                  </div>
+                  
+                  {results.map((result, index) => (
+                    <motion.div
+                      key={result.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                      className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow duration-200"
+                    >
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-2 mb-2">
+                            <div className={`inline-flex items-center space-x-1 px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(result.type)}`}>
+                              {getTypeIcon(result.type)}
+                              <span>{result.category}</span>
+                            </div>
+                            {result.rating && (
+                              <div className="flex items-center space-x-1">
+                                <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                                <span className="text-sm text-gray-600">{result.rating}</span>
+                              </div>
+                            )}
+                          </div>
+                          
+                          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                            <Link href={result.url} className="hover:text-blue-600 transition-colors duration-200">
+                              {result.title}
+                            </Link>
+                          </h3>
+                          
+                          <p className="text-gray-600 mb-3">{result.description}</p>
+                          
+                          <div className="flex flex-wrap gap-2 mb-3">
+                            {result.tags.map((tag, tagIndex) => (
+                              <span
+                                key={tagIndex}
+                                className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-gray-100 text-gray-700"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                          
+                          <div className="flex items-center space-x-4 text-sm text-gray-500">
+                            <span className="flex items-center space-x-1">
+                              <Clock className="w-4 h-4" />
+                              <span>Updated {result.lastUpdated}</span>
+                            </span>
+                          </div>
+                        </div>
+                        
+                        <Link
+                          href={result.url}
+                          className="ml-4 flex items-center space-x-1 text-blue-600 hover:text-blue-700 transition-colors duration-200"
+                        >
+                          <span className="text-sm font-medium">View</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </Link>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              ) : query ? (
+                <div className="text-center py-12">
+                  <Search className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">No results found</h3>
+                  <p className="text-gray-600 mb-4">
+                    We couldn't find any results for "{query}". Try adjusting your search terms.
+                  </p>
+                  <button
+                    onClick={() => setQuery('')}
+                    className="text-blue-600 hover:text-blue-700 font-medium"
+                  >
+                    Clear search
+                  </button>
+                </div>
+              ) : (
+                <div className="text-center py-12">
+                  <Search className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">Start searching</h3>
+                  <p className="text-gray-600">
+                    Enter a search term above to find services, solutions, and resources.
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

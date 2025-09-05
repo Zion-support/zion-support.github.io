@@ -84,7 +84,8 @@ const contactInfo = {
 }
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-  const footerSections = [{
+  const footerSections = [
+    {
       title: 'Services',
       icon: Settings,
       links: services
@@ -113,11 +114,15 @@ export default function Footer() {
       title: 'Support',
       icon: HelpCircle,
       links: [
-        { name: 'Help Center', href: '/help' },
-        { name: 'Contact Support', href: '/contact' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Status Page', href: '/status' }]
-    }]
+        { name: 'Contact Support', href: '/support' },
+        { name: 'System Status', href: '/status' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Community', href: '/community' },
+        { name: 'Training', href: '/tutorials' },
+        { name: 'Search', href: '/search' },
+      ]
+    }
+  ];
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
