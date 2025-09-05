@@ -78,7 +78,15 @@ export default [
       '**/deployment/**',
       '**/eslint.config.disabled.js',
       '**/maintenance-scheduler.js',
-      '**/fix_*.js'
+      '**/fix_*.js',
+      '**/advanced-*.js',
+      '**/aggressive-*.js',
+      '**/app-*.js',
+      '**/postcss.config.mjs',
+      '**/api/create-*.js',
+      '**/api/quotes.js',
+      '**/api/response-*.js',
+      '**/analyze-*.js'
     ]
   },
   {
