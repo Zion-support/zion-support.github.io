@@ -1,18 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin, Cpu, Rocket, Car, Eye } from 'lucide-react';
-=======
-import { Brain, Network, Cloud, ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import Layout from '../components/Layout';
->>>>>>> main
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
   { number: '3,500+', label: 'Projects Completed' },
-  { number: '95+', label: 'Services & Solutions' },
+  { number: '200+', label: 'Services & Solutions' },
   { number: '200+', label: 'Expert Team Members' },
   { number: '20+', label: 'Years Experience' }
 ];
@@ -20,69 +16,36 @@ const stats = [
 const services = [
   {
     title: "AI Services",
-<<<<<<< HEAD
-    description: "100+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, autonomous systems, drug discovery, climate analytics, space technology, and advanced analytics with real-world applications",
+    description: "40+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, autonomous systems, drug discovery, climate analytics, space technology, and advanced analytics with real-world applications",
     icon: Brain,
     href: "/ai-services",
-    count: "100+ Solutions",
+    count: "40+ Solutions",
     pricing: "Starting at $1,800/month",
-    marketPrice: "$3,000-20,000/month",
-    benefits: ["40-60% accuracy improvement", "80% automation", "25-35% ROI increase", "Future-proof technology"],
-    categories: ["Machine Learning", "Computer Vision", "NLP", "Quantum AI", "Healthcare AI", "Climate AI", "Space AI"]
+    marketPrice: "$3,000-100,000/month",
+    benefits: ["40-95% accuracy improvement", "60-90% automation", "15-90% ROI increase", "Future-proof technology"],
+    categories: ["Machine Learning", "Computer Vision", "NLP", "Quantum AI", "Healthcare AI", "Climate AI", "Space AI", "Autonomous AI"]
   },
   {
     title: "IT Services", 
-    description: "85+ comprehensive IT services from cloud infrastructure to cybersecurity, quantum computing, blockchain, IoT, AR/VR, space technology, edge computing, and enterprise digital transformation",
+    description: "25+ comprehensive IT services from cloud infrastructure to cybersecurity, quantum computing, blockchain, IoT, AR/VR, space technology, edge computing, and enterprise digital transformation",
     icon: Network,
     href: "/it-services",
-    count: "85+ Services",
+    count: "25+ Services",
     pricing: "Starting at $800/month",
-    marketPrice: "$1,500-15,000/month",
-    benefits: ["99.9% uptime", "50% cost reduction", "24/7 support", "Future-ready infrastructure"],
-    categories: ["Cloud Computing", "Cybersecurity", "DevOps", "Quantum Computing", "Blockchain", "IoT", "AR/VR"]
+    marketPrice: "$1,500-200,000/month",
+    benefits: ["99.9% uptime", "30-50% cost reduction", "24/7 support", "Future-ready infrastructure"],
+    categories: ["Cloud Computing", "Cybersecurity", "DevOps", "Quantum Computing", "Blockchain", "IoT", "AR/VR", "5G Networks"]
   },
   {
     title: "Micro SaaS",
-    description: "120+ innovative micro SaaS solutions for modern businesses across all industries including AI-powered tools, quantum security, blockchain analytics, space technology, and autonomous systems with real-time pricing and instant deployment",
+    description: "135+ innovative micro SaaS solutions for modern businesses across all industries including AI-powered tools, quantum security, blockchain analytics, space technology, and autonomous systems with real-time pricing and instant deployment",
     icon: Cloud,
     href: "/micro-saas",
-    count: "120+ Platforms",
+    count: "135+ Platforms",
     pricing: "Starting at $19/month",
     marketPrice: "$50-4,999/month",
     benefits: ["10x productivity", "Instant setup", "White-label options", "Advanced AI integration"],
-    categories: ["AI Marketing", "AI Analytics", "Quantum Security", "Blockchain", "IoT Management", "AR/VR", "Space Tech"]
-=======
-    description: "30+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, predictive analytics, chatbots, fraud detection, autonomous systems, voice AI, and specialized industry solutions with real-world applications",
-    icon: Brain,
-    href: "/ai-services",
-    count: "30+ Solutions",
-    pricing: "Starting at $1,800/month",
-    marketPrice: "$2,500-50,000/month",
-    benefits: ["40-95% accuracy improvement", "60-90% automation", "15-90% ROI increase"],
-    setupTime: "2-16 weeks"
-  },
-  {
-    title: "IT Services", 
-    description: "30+ comprehensive IT services from cloud infrastructure to cybersecurity, DevOps, managed services, compliance, edge computing, quantum-ready infrastructure, 5G implementation, and enterprise digital transformation",
-    icon: Network,
-    href: "/it-services",
-    count: "30+ Services",
-    pricing: "Starting at $800/month",
-    marketPrice: "$1,500-20,000/month",
-    benefits: ["99.9% uptime", "30-50% cost reduction", "24/7 support"],
-    setupTime: "1-12 weeks"
-  },
-  {
-    title: "Micro SaaS",
-    description: "35+ innovative micro SaaS solutions for modern businesses across all industries including AI-powered tools, automation platforms, subscription management, and specialized business applications with real-time pricing and instant deployment",
-    icon: Cloud,
-    href: "/micro-saas",
-    count: "35+ Solutions",
-    pricing: "Starting at $800/month",
-    marketPrice: "$1,500-20,000/month",
-    benefits: ["80% efficiency improvement", "60-90% cost savings", "10x faster deployment"],
-    setupTime: "1-8 weeks"
->>>>>>> main
+    categories: ["AI Marketing", "AI Analytics", "Quantum Security", "Blockchain", "IoT Management", "AR/VR", "Space Tech", "Climate Tech"]
   }
 ];
 
@@ -255,7 +218,6 @@ export default function HomePage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Innovative Technologies Section */}
         <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="container mx-auto px-4">
@@ -336,12 +298,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Market Position & Pricing Section */}
-        <section className="py-20 bg-gray-100">
-=======
         {/* Why Choose Us */}
         <section className="py-20 bg-gray-50">
->>>>>>> main
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>

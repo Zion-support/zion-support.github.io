@@ -30,7 +30,9 @@ import {
   AlertTriangle,
   Globe,
   Heart,
-  Clock
+  Clock,
+  Building,
+  Eye
 } from 'lucide-react';
 import Layout from './components/Layout';
 
@@ -816,6 +818,227 @@ const services = [
     marketPrice: "$22,000-60,000/month",
     benefits: ["Multi-dimensional processing", "Reality simulation", "Revolutionary computing"],
     setupTime: "10-14 weeks"
+  },
+  {
+    title: "5G Network Implementation",
+    description: "Complete 5G network deployment and optimization for ultra-fast connectivity and IoT integration",
+    icon: Wifi,
+    features: [
+      "5G Infrastructure Setup",
+      "Network Optimization",
+      "IoT Device Integration",
+      "Edge Computing Integration",
+      "Performance Monitoring",
+      "Security Implementation"
+    ],
+    price: "Starting at $15,000/month",
+    marketPrice: "$25,000-80,000/month",
+    benefits: ["10x faster speeds", "Ultra-low latency", "Massive IoT connectivity"],
+    setupTime: "8-16 weeks"
+  },
+  {
+    title: "Quantum Computing Infrastructure",
+    description: "Quantum computing setup and integration for advanced computational capabilities",
+    icon: Atom,
+    features: [
+      "Quantum Hardware Setup",
+      "Quantum Software Integration",
+      "Hybrid Classical-Quantum Systems",
+      "Quantum Security Implementation",
+      "Performance Optimization",
+      "Quantum Algorithm Development"
+    ],
+    price: "Starting at $25,000/month",
+    marketPrice: "$50,000-200,000/month",
+    benefits: ["Exponential computational power", "Breakthrough problem solving", "Future-proof technology"],
+    setupTime: "12-24 weeks"
+  },
+  {
+    title: "Edge Computing Solutions",
+    description: "Distributed computing infrastructure for real-time processing and reduced latency",
+    icon: Cpu,
+    features: [
+      "Edge Server Deployment",
+      "Data Processing Optimization",
+      "Real-time Analytics",
+      "IoT Integration",
+      "Bandwidth Optimization",
+      "Security Implementation"
+    ],
+    price: "Starting at $8,000/month",
+    marketPrice: "$15,000-50,000/month",
+    benefits: ["Reduced latency", "Lower bandwidth costs", "Real-time processing"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Smart City Infrastructure",
+    description: "Comprehensive smart city technology implementation and management",
+    icon: Building,
+    features: [
+      "IoT Sensor Networks",
+      "Data Analytics Platform",
+      "Traffic Management Systems",
+      "Energy Grid Optimization",
+      "Public Safety Systems",
+      "Citizen Services Platform"
+    ],
+    price: "Starting at $20,000/month",
+    marketPrice: "$40,000-150,000/month",
+    benefits: ["Improved city efficiency", "Enhanced citizen services", "Sustainable operations"],
+    setupTime: "16-32 weeks"
+  },
+  {
+    title: "Digital Twin Technology",
+    description: "Virtual replicas of physical assets for monitoring, simulation, and optimization",
+    icon: Monitor,
+    features: [
+      "3D Modeling & Simulation",
+      "Real-time Data Integration",
+      "Predictive Analytics",
+      "Performance Monitoring",
+      "Maintenance Optimization",
+      "Scenario Planning"
+    ],
+    price: "Starting at $12,000/month",
+    marketPrice: "$25,000-75,000/month",
+    benefits: ["Predictive maintenance", "Optimized operations", "Risk reduction"],
+    setupTime: "8-16 weeks"
+  },
+  {
+    title: "Blockchain Infrastructure",
+    description: "Complete blockchain network setup and management for secure transactions",
+    icon: Network,
+    features: [
+      "Blockchain Network Setup",
+      "Smart Contract Development",
+      "Cryptocurrency Integration",
+      "Security Implementation",
+      "Performance Optimization",
+      "Compliance Management"
+    ],
+    price: "Starting at $10,000/month",
+    marketPrice: "$20,000-60,000/month",
+    benefits: ["Enhanced security", "Transparent transactions", "Reduced costs"],
+    setupTime: "6-12 weeks"
+  },
+  {
+    title: "AR/VR Infrastructure",
+    description: "Immersive technology infrastructure for virtual and augmented reality applications",
+    icon: Eye,
+    features: [
+      "VR/AR Hardware Setup",
+      "Content Management Systems",
+      "User Experience Design",
+      "Performance Optimization",
+      "Integration Services",
+      "Training & Support"
+    ],
+    price: "Starting at $8,000/month",
+    marketPrice: "$15,000-45,000/month",
+    benefits: ["Immersive experiences", "Enhanced training", "Remote collaboration"],
+    setupTime: "6-12 weeks"
+  },
+  {
+    title: "IoT Platform Management",
+    description: "Comprehensive IoT device management and data processing platform",
+    icon: Wifi,
+    features: [
+      "Device Management",
+      "Data Collection & Processing",
+      "Real-time Analytics",
+      "Security Monitoring",
+      "Automated Updates",
+      "Performance Optimization"
+    ],
+    price: "Starting at $6,000/month",
+    marketPrice: "$12,000-35,000/month",
+    benefits: ["Automated management", "Real-time insights", "Scalable operations"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Green IT Solutions",
+    description: "Sustainable IT infrastructure with energy efficiency and environmental responsibility",
+    icon: Leaf,
+    features: [
+      "Energy-efficient Hardware",
+      "Renewable Energy Integration",
+      "Carbon Footprint Monitoring",
+      "Waste Reduction",
+      "Sustainable Procurement",
+      "Environmental Reporting"
+    ],
+    price: "Starting at $5,000/month",
+    marketPrice: "$10,000-30,000/month",
+    benefits: ["Reduced energy costs", "Environmental compliance", "Sustainable operations"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "IT Compliance & Governance",
+    description: "Comprehensive IT governance and compliance management for regulatory requirements",
+    icon: Shield,
+    features: [
+      "Compliance Assessment",
+      "Policy Development",
+      "Risk Management",
+      "Audit Preparation",
+      "Training Programs",
+      "Continuous Monitoring"
+    ],
+    price: "Starting at $7,000/month",
+    marketPrice: "$15,000-40,000/month",
+    benefits: ["Regulatory compliance", "Risk mitigation", "Improved governance"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "IT Disaster Recovery",
+    description: "Comprehensive disaster recovery planning and implementation for business continuity",
+    icon: AlertTriangle,
+    features: [
+      "Disaster Recovery Planning",
+      "Backup Systems Setup",
+      "Recovery Testing",
+      "Business Continuity",
+      "Incident Response",
+      "Recovery Optimization"
+    ],
+    price: "Starting at $4,000/month",
+    marketPrice: "$8,000-25,000/month",
+    benefits: ["Business continuity", "Minimal downtime", "Data protection"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "IT Performance Optimization",
+    description: "Comprehensive IT performance analysis and optimization for maximum efficiency",
+    icon: Zap,
+    features: [
+      "Performance Analysis",
+      "Bottleneck Identification",
+      "System Optimization",
+      "Capacity Planning",
+      "Performance Monitoring",
+      "Continuous Improvement"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$6,000-20,000/month",
+    benefits: ["Improved performance", "Reduced costs", "Better user experience"],
+    setupTime: "2-6 weeks"
+  },
+  {
+    title: "IT Innovation Lab",
+    description: "Dedicated innovation lab for testing and implementing cutting-edge technologies",
+    icon: Brain,
+    features: [
+      "Technology Research",
+      "Proof of Concept Development",
+      "Innovation Workshops",
+      "Technology Assessment",
+      "Pilot Programs",
+      "Innovation Strategy"
+    ],
+    price: "Starting at $10,000/month",
+    marketPrice: "$20,000-60,000/month",
+    benefits: ["Technology leadership", "Innovation acceleration", "Competitive advantage"],
+    setupTime: "4-8 weeks"
   }
 ];
 
