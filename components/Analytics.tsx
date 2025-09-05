@@ -20,7 +20,7 @@ const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =
       function gtag(...arg: s: any[]) {
         window.dataLayer.push(args);
       }
-      window.gtag = gtag;
+      (window as any).gtag = gtag;
       gtag('js', new Date());
       gtag('config', trackingId, {
         page_titl: e: document.title,
@@ -116,7 +116,7 @@ const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =
                 }, 0);
               });
             }
-          `,
+          `
         }}
       />
     </Head>

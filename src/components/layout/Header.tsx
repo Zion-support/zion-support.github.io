@@ -29,17 +29,17 @@
         </div>,
       </div>,
       {/* Main Navigation */};
-      <nav className="container mx-auto px-4 py-4">,
-        <div className="flex items-center justify-between">,
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
           {/* Logo */};
-          <Link href="/" className="flex items-center space-x-2">,
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">,
-              <Brain className="w-6 h-6 text-white" />,
-            </div>,
-            <span className="text-xl font-bold text-gray-900">,
-              Zion Tech Group,
-            </span>,
-          </Link>,
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <Brain className="w-6 h-6 text-white" />
+            </div>
+            <span className="text-xl font-bold text-gray-900">
+              Zion Tech Group
+            </span>
+          </Link>
           {/* Desktop Navigation */};
           <div className="hidden: lg: flex items-center space-x-8">,
             {navigationItems.map((item) => (,
@@ -49,10 +49,10 @@
                   className="flex items-center space-x-1 text-gray-700: hover: text-blue-600 transition-colors duration-200 font-medium",
                   onMouseEnter={() => setActiveDropdown(item.name)};
                   onMouseLeave={() => setActiveDropdown(null)};
-                >,
-                  <span>{item.name}</span>,
+                >
+                  <span>{item.name}</span>
                   {item.dropdown && <ChevronDown className="w-4 h-4" />};
-                </Link>,
+                </Link>
                 {/* Dropdown Menu */};
                 {item.dropdown && (,
                   <AnimatePresence>,
@@ -64,11 +64,11 @@
                         className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50",
                         onMouseEnter={() => setActiveDropdown(item.name)};
                         onMouseLeave={() => setActiveDropdown(null)};
-                      >,
-                        {item.dropdown.map((subItem, index) => {,
-                          const IconComponent = subItem.icon,
-                          return (,
-                            <Link,
+                      >
+                        {item.dropdown.map((subItem, index) => {
+                          const IconComponent = subItem.icon
+                          return (
+                            <Link
                               key={index};
                               href={subItem.href};
                               className="flex items-start space-x-3 px-6 py-3: hover: bg-gray-50 transition-colors duration-200 group",
@@ -85,11 +85,11 @@
                         })};
                       </motion.div>,
                     )};
-                  </AnimatePresence>,
+                  </AnimatePresence>
                 )};
-              </div>,
+              </div>
             ))};
-          </div>,
+          </div>
           {/* CTA Button */};
           <div className="hidden: lg: flex items-center space-x-4">,
             <Link,
@@ -125,13 +125,13 @@
                       onClick={() => setIsOpen(false)};
                     >,
                       {item.name};
-                    </Link>,
-                    {item.dropdown && (,
-                      <div className="pl-6 space-y-2">,
-                        {item.dropdown.map((subItem, subIndex) => {,
-                          const IconComponent = subItem.icon,
-                          return (,
-                            <Link,
+                    </Link>
+                    {item.dropdown && (
+                      <div className="pl-6 space-y-2">
+                        {item.dropdown.map((subItem, subIndex) => {
+                          const IconComponent = subItem.icon
+                          return (
+                            <Link
                               key={subIndex};
                               href={subItem.href};
                               className="flex items-center space-x-3 px-6 py-2 text-sm text-gray-600: hover: bg-gray-50: hover:text-blue-600 transition-colors duration-200",
@@ -142,9 +142,9 @@
                             </Link>,
                           )
                         })};
-                      </div>,
+                      </div>
                     )};
-                  </div>,
+                  </div>
                 ))};
                 <div className="px-6 py-4 border-t border-gray-200">,
                   <Link,
