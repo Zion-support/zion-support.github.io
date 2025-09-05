@@ -41,6 +41,13 @@ export default [
         KeyboardEvent: 'readonly',
         Node: 'readonly',
         PerformanceObserver: 'readonly',
+        performance: 'readonly',
+        PerformanceEntry: 'readonly',
+        PerformanceEventTiming: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        Element: 'readonly',
+        IntersectionObserver: 'readonly',
+        IntersectionObserverEntry: 'readonly',
         // React
         React: 'readonly',
         // Jest/Testing globals
