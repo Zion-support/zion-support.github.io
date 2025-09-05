@@ -13,7 +13,7 @@ import {
   Users,
   Shield,
   Zap,
-  Heart
+  Heart;
 } from 'lucide-react';
 
 export default function AccessibilityPage() {

@@ -11,7 +11,7 @@ import {
   Mail,
   MapPin,
   Search,
-  Filter
+  Filter;
 } from 'lucide-react';
 import Layout from '../components/Layout';
 

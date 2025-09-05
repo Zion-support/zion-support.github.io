@@ -149,7 +149,7 @@ export default function APIPage() {
     features: ['JavaScript/TypeScript', 'Python', 'Java', 'C#/.NET']
   }
 ];
-=======
+
 import {
   Code,
   Copy,
@@ -163,7 +163,7 @@ import {
   Database,
   Cpu,
   Cloud,
-  XCircle
+  XCircle;
 } from 'lucide-react';
 
 export default function APIPage() {
@@ -413,7 +413,7 @@ export default function APIPage() {
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   View AI Services
-=======
+
                 <motion.div
                   className="bg-white border border-gray-200 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}

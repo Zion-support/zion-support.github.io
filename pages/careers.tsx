@@ -13,7 +13,7 @@ import {
   Laptop, 
   Globe, 
   ArrowRight, 
-  CheckCircle 
+  CheckCircle
 } from 'lucide-react';
 
 const jobOpenings = [
