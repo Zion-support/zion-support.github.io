@@ -10,14 +10,11 @@ const AccessibilityEnhancer: React.FC = () => {
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     // Focus management
-    let isUsingMouse = false;
     const handleMouseDown = () => {
-      isUsingMouse = true;
       document.body.classList.add('using-mouse');
     };
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        isUsingMouse = false;
         document.body.classList.remove('using-mouse');
       }
     };

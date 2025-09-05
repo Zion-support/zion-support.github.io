@@ -85,7 +85,6 @@
     "deploy:staging": "pm2 deploy ecosystem.ultimate-intelligent-v4.cjs staging",
     "deploy:development": "pm2 deploy ecosystem.ultimate-intelligent-v4.cjs development",
     "test:comprehensive": "npm run test:smoke && npm run test:unit && npm run test:integration",
-    "test:coverage": "jest --coverage --config jest.config.ts",
     "test:unit": "npm test -- --testPathPatterns=unit",
     "test:integration": "npm test -- --testPathPatterns=integration",
     "test:e2e": "npm test -- --testPathPatterns=e2e",

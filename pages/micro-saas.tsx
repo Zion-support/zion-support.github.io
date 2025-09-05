@@ -1873,8 +1873,6 @@ const additionalServices = [
   {
     title: 'Real-time Data Streaming',
     description: 'High-performance real-time data streaming platform with event processing and analytics capabilities.',
-    title: "Workflow Automation",
-    description: "Streamline business processes with intelligent automation tools",
     icon: Zap,
     features: [
       "Process Automation",
@@ -3379,7 +3377,7 @@ export default function MicroSaas() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our micro SaaS solutions can help your business grow.
+              Let&apos;s discuss how our micro SaaS solutions can help your business grow.
             </p>
             <Link
               href="/contact"

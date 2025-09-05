@@ -121,6 +121,7 @@ export default [
       'out/**',
       'coverage/**',
       // Large/legacy sources and disabled dirs
+      'src/**',
       'src/**/src.corrupted/**',
       'src/**/src.disabled/**',
       'src/**/src.broken/**',
