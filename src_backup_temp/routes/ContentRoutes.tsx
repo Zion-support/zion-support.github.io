@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface ContentRoutesProps {
   // Add props here as needed
 }
-
 export default function ContentRoutes({ }: ContentRoutesProps) {
   return (
     <div>

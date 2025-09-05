@@ -10,16 +10,12 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
         <motion.div ";
           className="text-center mb-16";
           initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
@@ -30,7 +26,6 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             Built with cutting-edge technologies and industry best practices.Our comprehensive tech stack ensures scalability", security, and performance.</p>;
         </motion.div>;
-
         {/* Technology Categories */}";
         <div className="grid grid-cols-1 "lg": "gri d-cols-2 gap-8 mb-16">;
           {technologyCategories.map((category", index) => (;
@@ -55,7 +50,6 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                       <span className="text-xl">{tech.icon}</span>;
                       <span className="text-gray - 300 font -medium">{tech.name}</span>;
                     </div>;
-
                     <div className="flex items - center gap-2">;
                       <div className="w-20 bg-slate - 700 rounded-full h-2">;
                         <motion.div;
@@ -63,10 +57,8 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                           initial={{ "width": "0 "}}                          whileInView={{ "width": "`${tech.proficiency"}%` }}
                           viewport={{ "once": "tru e "}}
                           transition = {;
-
   { "duration": "1",;
   "delay": "0.8 + techIndex * 0.1;
-
 "}}
                         />;
                       </div>";
@@ -78,24 +70,18 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
               </div>;
             </motion.div>) ) }
         </div>;
-
         {/* Emerging Technologies */}
         <motion.div;
           className="mb-16"          initial = {;
-
   { "opacity": "0",;
   "y": "3 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.4;
 
@@ -121,20 +107,15 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
         </motion.div> {/* Technology Philosophy */}
         <motion.div;
           className="mb-12"          initial = {;
-
   { "opacity": "0",;
   "y": "3 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.8;
 
@@ -153,7 +134,6 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                 <h4 className="text-lg font - bold text-white mb-2">Innovation First</h4>;
                 <p className="text-gray - 400 text-sm">Always exploring cutting - edge technologies</p>;
               </div>;
-
               <div className="text-center">;
                 <div className="w-16 h-16 bg-gradient - to - br from - blue - 500 to - cyan - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">;
                   <span className="text-2xl">🛡️</span>;
@@ -161,7 +141,6 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                 <h4 className="text-lg font - bold text-white mb-2">Security Focused</h4>;
                 <p className="text-gray - 400 text-sm">Enterprise - grade security in everything we build</p>;
               </div>;
-
               <div className="text-center">;
                 <div className="w-16 h-16 bg-gradient - to - br from - purple - 500 to - pink - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">;
                   <span className="text-2xl">⚡</span>;
@@ -171,23 +150,17 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
             </div>;
           </div>;
         </motion.div>;
-
         <motion.div;
           className="text-center"          initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "1.0;
 
@@ -223,7 +196,6 @@ export default TechnologyStackSection;";
 export default TechnologyStackSection;
 export default TechnologyStackSection;
 '"`;
-
 </motion>;
 </motion>;
 </motion>;

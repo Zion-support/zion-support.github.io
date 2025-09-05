@@ -57,7 +57,6 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
             onChange={(e) => handleInputChange('targetAudience', e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-lg "focus": "rin g-2 "focus": rin g-blue-500 "focus": borde r-transparent";
             placeholder="e.g.", Small businesses, Enterprise clients";
-=======
             className="w-full p-3 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
             placeholder="Enter company name"
             required

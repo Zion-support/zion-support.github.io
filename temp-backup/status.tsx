@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface StatusProps {
   // Add props here as needed
 }
-
 export default function Status({ }: StatusProps) {
   return (
     <div>

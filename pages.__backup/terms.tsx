@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface TermsProps {
   // Add props here as needed
 }
-
 export default function Terms({ }: TermsProps) {
   return (
     <div>

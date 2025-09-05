@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface ClouddevopsProps {
   // Add props here as needed
 }
-
 export default function Clouddevops({ }: ClouddevopsProps) {
   return (
     <div>

@@ -12,7 +12,6 @@ describe('AICodeGeneratortest', () => {
   test('displays correct content', () => {
     render(<AICodeGeneratortest />);
   });
-  
   test('handles user interactions', () => {
     render(<AICodeGeneratortest />);
   });

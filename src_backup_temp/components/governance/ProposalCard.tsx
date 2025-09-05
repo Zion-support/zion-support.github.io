@@ -15,7 +15,6 @@ interface Proposal {;
 interface ProposalCardProps {;
   proposal: Proposa l;
   onVote?: (proposalId: string, vote: 'for' | 'against') => void;
-=======
 interface ProposalCardProps {
   "proposal": Proposa l;';';
   onVote?: (proposalId: string, "vote": 'for' | 'against') => void;
@@ -30,9 +29,7 @@ const ProposalCard: React.FC<ProposalCardProps> = ({;
   const getStatusColor = (props: any) => {;
     switch (status) {;
       case 'active':;
-=======
   const getStatusColor = (props: any) => {
-=======
 const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
   proposal,
   onVote,

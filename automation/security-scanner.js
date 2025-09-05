@@ -25,7 +25,6 @@ class SecurityScanner {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    
     fs.appendFileSync(this.logFile, logMessage);
   }
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -156,7 +155,6 @@ if (totalIssues > 0) {
      {
       return 'LOW: Monitor and update when convenient.'}} else {
       return 'No security issues found.'}
-=======
 if (vulnerabilities.critical > 0) {
       return '"CRITICAL": Immediate action required. Update dependencies or apply patches.';
     } else if (vulnerabilities.high > 0) {

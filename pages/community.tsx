@@ -34,8 +34,12 @@ export default function CommunityPage() {
   return (
     <Layout
       title="Community - Zion Tech Group"
+<<<<<<< HEAD
       description="Join our vibrant community of developers, innovators, and technology enthusiasts."
       keywords="community, developers, forums, events, webinars, networking"
+=======
+      description="Join our vibrant community of developers, technologists, and innovators. Connect, learn, and grow together."
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -53,8 +57,13 @@ export default function CommunityPage() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Community</span>
+=======
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">Community</span>
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Connect with developers, innovators, and technology enthusiasts from around the world.
@@ -79,6 +88,7 @@ export default function CommunityPage() {
                 Discover all the ways you can engage with our community and grow your skills.
               </p>
             </motion.div>
+<<<<<<< HEAD
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {communityFeatures.map((feature, index) => (
@@ -104,12 +114,47 @@ export default function CommunityPage() {
                   </ul>
                 </motion.div>
               ))}
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {communityFeatures.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                  >
+                    <div className="text-center">
+                      <div className="bg-gradient-to-r from-teal-500 to-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <IconComponent className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                      <p className="text-gray-600 mb-4">{feature.description}</p>
+                      <ul className="space-y-2">
+                        {feature.features.map((item, idx) => (
+                          <li key={idx} className="text-sm text-gray-500 flex items-center">
+                            <div className="w-2 h-2 bg-teal-500 rounded-full mr-2"></div>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </motion.div>
+                );
+              })}
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+=======
+        <section className="py-20 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -120,6 +165,7 @@ export default function CommunityPage() {
                 Ready to Join Our Community?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
+<<<<<<< HEAD
                 Connect with thousands of developers and start your journey with us today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -127,6 +173,21 @@ export default function CommunityPage() {
                   Join Now
                 </button>
                 <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+=======
+                Connect with like-minded professionals and take your skills to the next level.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-teal-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Join Now
+                </a>
+                <a
+                  href="/services"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-teal-600 transition-colors font-semibold"
+                >
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
                   Learn More
                 </button>
               </div>

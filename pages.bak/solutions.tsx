@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface SolutionsProps {
   // Add props here as needed
 }
-
 export default function Solutions({ }: SolutionsProps) {
   return (
     <div>

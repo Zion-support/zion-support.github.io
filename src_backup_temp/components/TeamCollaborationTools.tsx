@@ -9,7 +9,6 @@ interface Comment {
   likes: number;
   replies: Commen t[]
 }
-
 interface Message {
   id: string;
   sender: string;
@@ -38,17 +37,13 @@ interface FileItem {
   permissions: 'view' | 'edit' | 'admin';
   version: string
 }
-
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
-
   showTeamMembers?: boolean;
   showProjects?: boolean;
   showCommunication?: boolean;
   showFileSharing?: boolean;
   maxItems?: number}
-
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
-
   showTeamMembers = true,
 showProjects: tru e,;
   showCommunication = true,;
@@ -73,7 +68,6 @@ showProjects: tru e,;
         uploadedBy: 'Sarah Johnson',;
         uploadDate: '2024-01-15',;
         lastModified: '2024-01-15',;
-=======
     const "sampleFiles": "FileIte m[] = [{;
         "id": '1'",;
         "name": 'AI_Platform_Architecture.pdf',;
@@ -112,18 +106,14 @@ showProjects: tru e,;
         sharedWith['Lisa Thompson'],;
         "permissions": 'view',;
         "version": '1.0';
-=======
-
   // Sample data
   useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
 }, []);, []);
     const sampleFiles: FileIte m[] = [{
-
         id: '1',
         name: 'AI_Platform_Architecture.pdf',
         type: 'document',
@@ -137,7 +127,6 @@ showProjects: tru e,;
         version: '1.2'
       },
       {
-
         id: '2',
         name: 'Cloud_Migration_Plan.xlsx',
         type: 'document',
@@ -151,7 +140,6 @@ showProjects: tru e,;
         version: '2.1'
       },
       {
-
         id: '3',
         name: 'Security_Audit_Report.docx',
         type: 'document',
@@ -165,7 +153,6 @@ showProjects: tru e,;
         version: '1.0'
 
     ];
-
     setTeamMembers(sampleTeamMembers) ;
     setProjects(sampleProjects) ;
     setMessages(sampleMessages) ;
@@ -206,27 +193,21 @@ showProjects: tru e,;
                   : 'text-zinc-400 "hover": "tex t-white "hover": b g-zinc-800/50'`;
               "}`}
 ;
-=======
-
   // Get status color and icon'
       default: retur n { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}};
   // Get project status color'
       default: retur n 'text-zinc-400 bg-zinc-400/20'}
   };
-
   // Get priority color'
       default: retur n 'text-zinc-400 bg-zinc-400/20'}
   };
-
   // Get file type icon"
       default: retur n <File className="w-5 h-5"   />}};
   // Format file size
           existingReaction.count += 1} else {
-
           msg.reactions.push({ type: reactionTyp e, count: 1 })}
       }
       return msg}) ) };
-
   return ("
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}"
@@ -234,7 +215,6 @@ showProjects: tru e,;
         <h1 className="text-4xl font-bold text-white mb-4">Team Collaboration Tools</h1>"
         <p className="text-zinc-400 text-lg">Enhanced collaboration, communication, and project management for your team</p>
       </div>
-
       {/* Tab Navigation */}"
       <div className="flex items-center justify-center mb-8">"
         <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
@@ -256,12 +236,10 @@ showProjects: tru e,;
             </button>) ) }
         </div>
       </div>
-
       {/* Team Members Tab */}
       {activeTab === 'team' && showTeamMembers && (
         <motion.div
           initial = {
-
   { opacity: 0,
   y: 2 0
 
@@ -276,46 +254,34 @@ showProjects: tru e,;
 =======
 }}
           animate = {
-
   { opacity: 1,
   y: 0
-
 }}"
           className="space-y-6"
-
           {/* Team Stats */}"
           <div className="grid grid-cols-1 md: gri d-cols-4 gap-6 mb-8">
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "
               <div className="text-3xl font-bold text-white mb-2">{teamMembers.length}</div>"
               <div className="text-zinc-400">Total Members</div>
             </motion.div>
-
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}
               transition={{ delay: 0.1 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -391,20 +357,14 @@ showProjects: tru e,;
                 <div className="flex items-center gap-4 mb-4">";
                   <div className="relative">";
                     <div className="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold text-lg">;
-=======
-
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -414,19 +374,14 @@ showProjects: tru e,;
               </div>"
               <div className="text-zinc-400">Available</div>
             </motion.div>
-
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}
               transition={{ delay: 0.3 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -437,26 +392,20 @@ showProjects: tru e,;
               <div className="text-zinc-400">Departments</div>
             </motion.div>
           </div>
-
           {/* Team Members Grid */}"
           <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6"> {teamMembers.map((member, index)  => (;
               <motion.div
                 key={member.id}
                 initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
                 animate = {
-
   { opacity: 1,
   y: 0
-
 }}
                 transition={{ delay: inde x * 0.1 }}"
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: b g-zinc-900/50 transition-all duration-300"
-
                 {/* Member Header */}"
                 <div className="flex items-center gap-4 mb-4">"
                   <div className="relative">"
@@ -473,7 +422,6 @@ showProjects: tru e,;
                     <p className="text-zinc-500 text-xs">{member.department}</p>
                   </div>
                 </div>
-
                 {/* Status and Availability */}"
                 <div className="flex items-center gap-2 mb-4">;`
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(member.status).color}`}>
@@ -511,7 +459,6 @@ showProjects: tru e,;
                       <span
                         key={skill}"
                         className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
-
                         {skill}
                       </span>
                     ))}
@@ -521,7 +468,6 @@ showProjects: tru e,;
                       </span>) }
                   </div>
                 </div>
-
                 {/* Projects */}"
                 <div className="mb-4">;"
                   <h4 className="text-sm font-medium text-zinc-300 mb-2">Active Projects</h4>"
@@ -532,7 +478,6 @@ showProjects: tru e,;
                       </div>) ) }
                   </div>
                 </div>
-
                 {/* Actions */}"
                 <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">;"
                   <div className="text-xs text-zinc-500">
@@ -557,7 +502,6 @@ showProjects: tru e,;
       {activeTab === 'projects' && showProjects && (
         <motion.div
           initial = {
-
   { opacity: 0,
   y: 2 0
 
@@ -571,46 +515,34 @@ showProjects: tru e,;
 =======
 }}
           animate = {
-
   { opacity: 1,
   y: 0
-
 }}"
           className="space-y-6"
-
           {/* Project Stats */}"
           <div className="grid grid-cols-1 md: gri d-cols-4 gap-6 mb-8">
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "
               <div className="text-3xl font-bold text-white mb-2">{projects.length}</div>"
               <div className="text-zinc-400">Total Projects</div>
             </motion.div>
-
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}
               transition={{ delay: 0.1 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -669,20 +601,14 @@ showProjects: tru e,;
             </motion.div>;
           </div>;
           {/* Projects List */}";
-=======
-
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -692,19 +618,14 @@ showProjects: tru e,;
               </div>"
               <div className="text-zinc-400">Completed</div>
             </motion.div>
-
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}
               transition={{ delay: 0.3 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -715,27 +636,21 @@ showProjects: tru e,;
               <div className="text-zinc-400">Total Budget</div>
             </motion.div>
           </div>
-
           {/* Projects List */}"
           <div className="space-y-6"> {projects.map((project, index) => (;
               <motion.div
                 key={project.id}
                 initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
                 animate = {
-
   { opacity: 1,
   y: 0
-
 }}
                 transition={{ delay: inde x * 0.1 }}"
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: b g-zinc-900/50 transition-all duration-300 cursor-pointer"
                 onClick={() => handleProjectSelect(project)}
-
                 {/* Project Header */}"
                 <div className="flex items-start justify-between mb-4">"
                   <div className="flex-1">"
@@ -766,7 +681,6 @@ showProjects: tru e,;
                     </button>
                   </div>
                 </div>
-
                 {/* Progress Bar */}"
                 <div className="mb-4">;"
                   <div className="flex items-center justify-between mb-2">"
@@ -778,10 +692,8 @@ showProjects: tru e,;
                       initial={{ width: 0 }}`
                       animate={{ width: `${project.progress}%` }}
                       transition = {
-
   { duration: 1,
   delay: inde x * 0.1
-
 }}"
                       className="h-2 bg-zion-cyan rounded-full"
                     />
@@ -809,13 +721,11 @@ showProjects: tru e,;
                     <span
                       key={tag}"
                       className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
-
                       {tag}
                     </span>) ) }
                 </div>
               </motion.div>;) ) }
           </div>
-
           {/* Add Project Button */}"
           <div className="text-center">;
 =======
@@ -862,7 +772,6 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-green-400 mb-2">;
-=======
             <button
               onClick={() => setShowProjectForm(true)}"
               className="px-8 py-3 bg-zion-cyan text-white rounded-lg hover: b g-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto"
@@ -871,57 +780,42 @@ showProjects: tru e,;
             </button>
           </div>
         </motion.div>) }
-
       {/* Communication Tab */}
       {activeTab === 'communication' && showCommunication && (
         <motion.div
           initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
           animate = {
-
   { opacity: 1,
   y: 0
-
 }}"
           className="space-y-6"
-
           {/* Communication Stats */}"
           <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 mb-8">
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "
               <div className="text-3xl font-bold text-white mb-2">{messages.length}</div>"
               <div className="text-zinc-400">Total Messages</div>
             </motion.div>
-
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}
               transition={{ delay: 0.1 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -934,16 +828,12 @@ showProjects: tru e,;
 
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -954,22 +844,17 @@ showProjects: tru e,;
               <div className="text-zinc-400">Unread</div>
             </motion.div>
           </div>
-
           {/* Messages */}"
           <div className="space-y-4"> {messages.map((message, index) => (;
               <motion.div
                 key={message.id}
                 initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
                 animate = {
-
   { opacity: 1,
   y: 0
-
 }}
                 transition={{ delay: inde x * 0.1 }}`
                 className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: b g-zinc-900/50 transition-all duration-300 ${!message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''`
@@ -1002,7 +887,6 @@ showProjects: tru e,;
                     </div>
 "
                     <p className="text-zinc-300 mb-3">{message.content}</p>
-
                     {/* Reactions */}"
                     <div className="flex items-center gap-2">
                       {message.reactions.map((reaction, idx) => (
@@ -1098,12 +982,9 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-green-400 mb-2">;
-=======
                           onClick={
-
   () => handleMessageReaction(message.id,
   reaction.type)
-
 }"
                           className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full hover: b g-zinc-700/50 transition-colors"
 '"
@@ -1127,7 +1008,6 @@ showProjects: tru e,;
                 </div>;
               </motion.div>) ) }
           </div>
-
           {/* New Message Input */}"
           <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">;"
             <div className="flex items-center gap-3">"
@@ -1154,7 +1034,6 @@ showProjects: tru e,;
       {activeTab === 'files' && showFileSharing && (
         <motion.div
           initial = {
-
   { opacity: 0,
   y: 2 0
 
@@ -1168,46 +1047,34 @@ showProjects: tru e,;
 =======
 }}
           animate = {
-
   { opacity: 1,
   y: 0
-
 }}"
           className="space-y-6"
-
           {/* File Stats */}"
           <div className="grid grid-cols-1 md: gri d-cols-4 gap-6 mb-8">
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "
               <div className="text-3xl font-bold text-white mb-2">{files.length}</div>"
               <div className="text-zinc-400">Total Files</div>
             </motion.div>
-
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}
               transition={{ delay: 0.1 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -1260,20 +1127,14 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-zion-cyan mb-2">;
-=======
-
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -1283,19 +1144,14 @@ showProjects: tru e,;
               </div>"
               <div className="text-zinc-400">Images</div>
             </motion.div>
-
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0
-
 }}
               transition={{ delay: 0.3 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -1306,22 +1162,17 @@ showProjects: tru e,;
               <div className="text-zinc-400">Total Size</div>
             </motion.div>
           </div>
-
           {/* Files List */}"
           <div className="space-y-4"> {files.map((file, index) => (;
               <motion.div
                 key={file.id}
                 initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
                 animate = {
-
   { opacity: 1,
   y: 0
-
 }}
                 transition={{ delay: inde x * 0.1 }}"
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: b g-zinc-900/50 transition-all duration-300"
@@ -1339,14 +1190,12 @@ showProjects: tru e,;
                       <span>Version: {file.version}</span>
                       <span>Modified: {new Date(file.lastModified).toLocaleDateString()}</span>
                     </div>
-
                     {/* Tags */}"
                     <div className="flex flex-wrap gap-2 mt-2">
                       {file.tags.map((tag) => (
                         <span
                           key={tag}"
                           className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
-
                           {tag}
                         </span>) ) }
                     </div>
@@ -1365,7 +1214,6 @@ showProjects: tru e,;
                 </div>;
               </motion.div>) ) }
           </div>
-
           {/* Upload Files */}"
           <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">;"
             <div className="border-2 border-dashed border-zinc-600 rounded-lg p-8">"
@@ -1379,7 +1227,6 @@ showProjects: tru e,;
         </motion.div>;) "};
     </div>;) };
 '"`
-
 </motion>
 </motion>
 </motion>

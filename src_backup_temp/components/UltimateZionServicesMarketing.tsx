@@ -1,7 +1,6 @@
 =======
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-
   const categories = [{
       id: 'quantum - computing',
       name: 'Quantum Computing & AI',
@@ -67,7 +66,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
 
     if(categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId) };
-
   const selectedServices = getServicesByCategory(selectedCategory) ;
 ;
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
@@ -140,7 +138,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     : 'bg-white / 10 border-white / 20 text-gray - 300 "hover": "b g-white / 20 "hover": borde r-white / 40'                "}`}
               >";
                 <span className="mr-2 text-lg">{category.icon}</span>;
-=======
       <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-7xl mx - auto text-center">
           <motion.h1
@@ -150,13 +147,10 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           <motion.h1 "
             className="text-4xl md: tex t-6xl font-bold mb-6" 
             initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0
 
@@ -173,49 +167,35 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
               Ultimate Services Portfolio 2025
             </span>
           </motion.h1>
-
           <motion.p
             className="text-xl text-gray - 300 mb-8 max - w-4xl mx -auto"            initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0
-
 }}
             transition = {
-
   { duration: 0.6,
   delay: 0.2
-
 }}
           >
             Leading the future with revolutionary quantum computing, AI - powered solutions, blockchain innovations,
             and cutting - edge technology services that transform industries and create unprecedented value.</motion.p>
-
           {/* Comp Highlights */}
           <motion.div
             className="grid grid - cols - 1 md: gri d - cols - 4 gap-6 mb-12"            initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0
-
 }}
             transition = {
-
   { duration: 0.6,
   delay: 0.4
-
 }}
           >"
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">"
@@ -239,31 +219,23 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
               <div className="text-gray-400 text-sm">24/7 support worldwide</div>
             </div>
           </motion.div>
-
           {/* Contact Information */}
           <motion.div
             className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx - auto border border-purple -400 / 30"            initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0
-
 }}
             transition = {
-
   { duration: 0.6,
   delay: 0.6
-
 }}
           >"
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               🚀 Ready to Transform Your Business?
-            
             <div  className="grid grid - cols - 1 md: gri d - cols - 3 gap-6 text-sm">
               <div  className="text-center">
                 <div  className="text-purple - 400 font - semibold text-lg mb-2">📱 Contact Us</div>
@@ -293,22 +265,17 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           </motion.div>
         </div>
       </section>
-
       {/* Category Navigation */}
       <section className="py-12 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-7xl mx -auto">
           <motion.div
             className="flex flex - wrap gap-4 justify -center"            initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0
-
 }}
             transition={{ duration: any 0.6 }}
           >
@@ -327,21 +294,16 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
  {/* Category Overview */} {selectedCategory !== 'all' && (;"
         <section className="py-12 px-4 sm: p x-6 lg: p x-8">;"
           <div className="max-w-7xl mx-auto"> {(() => {;
-              
               if(!category) return null;
 
               return (<motion.div
                   className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"                  initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
                   whileInView = {
-
   { opacity: 1,
   y: 0
-
 }}
                   transition={{ duration: 0.6 }}
                 >"
@@ -366,7 +328,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                   </div>;
                 </motion.div>;) }) () }          </div>
         </section>) }
-
       {/* Services Grid */}
             {selectedCategory === 'all' ? 'All Revolutionary Services' : "`${categories.find(c => c.id === selectedCategory)?.name"} Services`}
           </motion.h2>;
@@ -402,36 +363,27 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                 {/* Service Header */"}";
                 <div className="text-center mb-6">`;
                   <div className={`text-6xl mb-4 group-"hover": "scal e-110 transition-transform duration-300`"}>;
-=======
       <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-7xl mx -auto">
           <motion.h2
             className="text-3xl md: tex t-4xl font - bold text-center mb-12 text-transparent bg-clip - text bg-gradient - to - r from - purple - 400 to - pink -400"            initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0
-
 }}
             transition={{ duration: 0.6 }}
           >'`
             {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
           </motion.h2>
-
           <motion.div
             className="grid grid - cols - 1 md: gri d - cols - 2 lg: gri d - cols - 3 gap-8"            variants={{
-
               hidden: { opacity: 0 },
               visible: {
-
                 opacity: 1,
                 transition: {
-
                   staggerChildren: 0.1,
                   delayChildren: 0.2
                 }
@@ -443,15 +395,11 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             {selectedServices.map((service, index) => (<motion.div
                 key={service.id}
                 variants = {
-
   {
-
                   hidden: { opacity: 0,
   y: 2 0
-
 },
                   visible: {
-
                     opacity: 1,
                     y: 0,
                     transition: { duration: 0.5 }
@@ -475,17 +423,14 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     {service.category.replace('-',).toUpperCase()}
                   </p>
                 </div>
-
                 {/* Tagline */}"
                 <p className="text-gray-300 text-sm mb-4 text-center italic">
                   {service.tagline}
                 </p>
-
                 {/* Description */}"
                 <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                   {service.description}
                 </p>
-
                 {/* Pricing */}"
                 <div className="bg-white/5 rounded-lg p-4 mb-6">"
                   <h4 className="text-purple-400 font-semibold mb-2">💰 Investment & Value</h4>"
@@ -508,7 +453,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     </div>
                   </div>
                 </div>
-
                 {/* ROI and Benefits */}"
                 <div className="mb-6">"
                   <h4 className="text-purple-400 font-semibold mb-2">📈 ROI & Benefits</h4>"
@@ -523,7 +467,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                       </div>) ) }
                   </div>
                 </div>
-
                 {/* Technology Stack */}"
                 <div className="mb-6">"
                   <h4 className="text-purple-400 font-semibold mb-2">🛠️ Technology Stack</h4>"
@@ -534,7 +477,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                       </span>) ) }
                   </div>
                 </div>
-
                 {/* Market Information */}
                 {service.marketSize && ("
                   <div className="mb-6">"
@@ -545,7 +487,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                       </p>
                     </div>
                   </div>) }
-
                 {/* Trial and Setup */}"
                 <div className="flex justify-between items-center mb-6 text-sm">"
                   <div className="text-center">"
@@ -557,7 +498,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     <div className="text-gray-300">{service.setupTime}</div>
                   </div>
                 </div>
-
                 {/* Call to Action */}"
                 <div className="text-center">"
                   <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover: fro m-purple-700 hover: t o-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover: scal e-105">
@@ -567,7 +507,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     Contact us for a personalized demo
                   </p>
                 </div>
-
                 {/* Contact Quick Access */}"
                 <div className="mt-4 text-center">"
                   <div className="text-xs text-gray-400">"
@@ -617,22 +556,17 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           </motion.div>
         </div>
       </section>
-
       {/* Bottom CTA Section */}
       <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-4xl mx - auto text-center">
           <motion.div
             className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"            initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0
-
 }}
             transition={{ duration: 0.6 }}
           >"
@@ -660,7 +594,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
 =======
     </div>;) };
 export default UltimateZionServicesMarketing;'"`
-
 </motion>
 </motion>
 </motion>

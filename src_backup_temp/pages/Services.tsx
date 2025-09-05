@@ -40,7 +40,6 @@ export default function Services() {
       href: "/services/data-analytics"
     }
   ];
-
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
@@ -49,13 +48,11 @@ export default function Services() {
           Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
         </p>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}
       </div>
-
       {/* Additional Services Section */}
       <div className="mt-16">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Specialized Solutions</h2>
@@ -72,7 +69,6 @@ export default function Services() {
               <li>• Change management and training</li>
             </ul>
           </div>
-          
           <div className="bg-gray-50 p-8 rounded-lg">
             <h3 className="text-xl font-bold text-gray-900 mb-4">Startup Solutions</h3>
             <p className="text-gray-600 mb-4">
@@ -90,7 +86,6 @@ export default function Services() {
     </div>
   );
 }
-
 function ServiceCard({ title, description, icon, href }: { 
   title: string; 
   description: string; 

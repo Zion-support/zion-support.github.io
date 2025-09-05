@@ -57,8 +57,8 @@ export default function ResourcesPage() {
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
           </div>;
 
-          <div className="container mx-auto px-4 relative z-10">";
-            <motion.div;
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -121,13 +121,13 @@ export default function ResourcesPage() {
                       <IconComponent className="w-8 h-8 text-white" />";
                     </div>;
                     
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">";
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       {resource.title}
-                    </h3>,
+                    </h3>
                     
-                    <p className="text-gray-600 mb-6 leading-relaxed">";
+                    <p className="text-gray-600 mb-6 leading-relaxed">
                       {resource.description}
-                    </p>,
+                    </p>
 
                     <div className="space-y-2 mb-6">";
                       {resource.items.map((item, itemIndex) => (,
@@ -136,9 +136,9 @@ export default function ResourcesPage() {
                           <span className="text-sm text-gray-600">{item}</span>"
                         </div>;
                       ))}
-                    </div>,
+                    </div>
 
-                    <Link;
+                    <Link
                       href={resource.href}
                       className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${resource.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
                     >,
@@ -187,11 +187,11 @@ export default function ResourcesPage() {
                       <IconComponent className="w-6 h-6 text-white" />";
                     </div>;
                     
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">";
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
                       {link.title}
-                    </h3>,
+                    </h3>
                     
-                    <Link;
+                    <Link
                       href={link.href}
                       className="text-indigo-600 hover:text-indigo-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center""
                     >;

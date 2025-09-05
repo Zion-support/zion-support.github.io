@@ -64,7 +64,6 @@ export default function Page("props": "any) {;
 
     return matchesCategory && matchesSearch}
     );
-
       case 'price':
         return a.pricing.starter - b.pricing.starter;
       case 'popularity':
@@ -72,7 +71,6 @@ export default function Page("props": "any) {;
       default: return 0}
   }
     );
-
       case 'beta':
         return 'bg-yellow-100 text-yellow-800';
       case 'coming-soon':;
@@ -113,18 +111,15 @@ export default function Page("props": "any) {;
             Discover our cutting-edge AI-powered solutions designed to transform your business operations;
           </p>;
         </div>;
-
         {/* Search and Filters */"}
         <motion.div;
           initial = {;
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           animate = {;
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition={{ "delay": "0.2 "}}
           className="mb-12";
@@ -139,7 +134,6 @@ export default function Page("props": "any) {;
                 className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg "focus": "rin g-2 "focus": rin g-blue-500 "focus": borde r-transparent";
               />;
             </div>;
-
             {/* Sort Options */"}
             <select;
               value={sortBy}
@@ -152,18 +146,15 @@ export default function Page("props": "any) {;
             </select>;
           </div>;
         </motion.div>;
-
         {/* Category Filters */"}
         <motion.div;
           initial = {;
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           animate = {;
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition={{ "delay": "0.3 "}}
           className="mb-12";
@@ -193,18 +184,15 @@ export default function Page("props": "any) {;
             </div>;
           </div>;
         </div>;
-
         {/* Services Grid */"}
         <motion.div;
           initial = {;
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           animate = {;
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition={{ "delay": "0.4 "}}
           className="grid grid - cols - 1 "md": "gri d - cols - 2 "lg": gri d - cols - 3 gap-8";
@@ -215,17 +203,14 @@ export default function Page("props": "any) {;
                 initial = {;
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
                 animate = {;
   { "opacity": "1",;
   "y": "0;
-
 "}}
                 exit = {;
   { "opacity": "0",;
   "y": "-20;
-
 "}}
                 transition={{ "delay": "inde x * 0.1 "}}
                 className="group relative bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-2xl p - 6 "hover": "b g-white / 10 transition - all duration - 300 "hover": borde r-purple -500 / 50";
@@ -239,16 +224,13 @@ export default function Page("props": "any) {;
                     {service.status === 'active' ? 'Active' : "service.status === 'beta' ? 'Beta' : 'Coming Soon'"}
                   </span>;
                 </div>;
-
                 {/* Service Icon */}
                 <div  className="mb-4">;
                   <div  className="w-16 h-16 bg-gradient - to - br from - purple - 500 to - blue - 500 rounded-2xl flex items - center justify - center group - "hover": "scal e - 110 transition - transform duration -300">;
                     <service.icon className="w-8 h-8 text-white" />                  </div>;
                 </div>;
-
                 {/* Description */"}
                 <p className="text-slate-600 mb-4 line-clamp-3">{service.description}</p>;
-
                 {/* Features */}
                 <div className="mb-4">;
                   <h4 className="text-sm font-medium text-slate-900 mb-2">Key "Features": "</h4>;
@@ -261,13 +243,11 @@ export default function Page("props": "any) {;
                     ))}
                   </div>;
                 </div>;
-
                 {/* Pricing */}
                 <div className="mb-4">;
                   <h4 className="text-sm font-medium text-slate-900 mb-2">Starting "at": "</h4>;
                   <div className="text-2xl font-bold text-blue-600">${service.pricing.starter"}/mo</div>;
                 </div>;
-
                 {/* Action Button */}
                 <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg "hover": "b g-blue-700 transition-colors flex items-center justify-center space-x-2">;
                   <span>Learn More</span>;
@@ -277,18 +257,15 @@ export default function Page("props": "any) {;
             </motion.div>;
           ))"}
         </div>;
-
         {/* Call to Action */}
         <motion.div;
           initial = {;
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           animate = {;
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition={{ "delay": "0.6 "}}
           className="text-center mt-20";

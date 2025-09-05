@@ -1,7 +1,5 @@
 import React, { Suspense, lazy, useState } from 'react';
-=======
 import React, { Suspense, lazy, useState, useEffect, memo, useCallback } from 'react';
-=======
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
@@ -28,7 +26,6 @@ const createLazyComponent = ("importFn": "() => Promise<any>", fallback?: "React
   );
 };
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025').then(module => ({ default: module.EnhancedServicesShowcase2025 })));
-=======
 const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.default })));
 const ComprehensiveNewServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveNewServicesShowcase2025').then(module => ({ default: module.default })));
 const EnhancedServicesShowcase2025 = lazy(() => import('./components/EnhancedServicesShowcase2025').then(module => ({ default: module.EnhancedServicesShowcase2025 })));
@@ -73,7 +70,6 @@ const PageLoader = () => (;
 );
 ;
 // Lazy load pages - only import existing ones;
-=======
 // Enhanced Components
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
@@ -98,20 +94,16 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
               <Route path="/team" element={<About />} />
               <Route path="/news" element={<News />} />
               <Route path="/help" element={<Help />} />
-              
               {/* New pricing guide route */}
               <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricing />} />
-              
               {/* Service Routes */}
               <Route path="/ai-services" element={<AISolutions />} />
               <Route path="/it-services" element={<Services />} />
               <Route path="/micro-saas" element={<Services />} />
-              
               {/* New sitemap routes */}
               <Route path="/ai-solutions" element={<AISolutions />} />
               <Route path="/solutions/enterprise" element={<Solutions />} />
               <Route path="/solutions/healthcare" element={<Solutions />} />
-              
               {/* Service routes */}
               <Route path="/services/cloud-devops" element={<Services />} />
               <Route path="/services/digital-twin" element={<Services />} />
@@ -134,68 +126,53 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
               <Route path="/services/it-helpdesk" element={<Services />} />
               <Route path="/services/affiliate-tracking" element={<Services />} />
               <Route path="/services/mobile-survey" element={<Services />} />
-              
               {/* Additional new service routes */}
               <Route path="/services/ai-seo" element={<Services />} />
               <Route path="/services/interview-assessment" element={<Services />} />
               <Route path="/services/helpdesk" element={<Helpdesk />} />
               <Route path="/services/dsr-portal" element={<Services />} />
               <Route path="/services/security-headers-csp" element={<Services />} />
-              
               {/* New AI-powered micro SAAS service routes */}
               <Route path="/services/ai-project-management" element={<Services />} />
               <Route path="/services/ai-customer-support-automation" element={<Services />} />
               <Route path="/services/ai-financial-analytics" element={<Services />} />
               <Route path="/services/ai-marketing-automation" element={<Services />} />
-              
               {/* Additional innovative AI services */}
               <Route path="/services/ai-quantum-financial-trading" element={<Services />} />
               <Route path="/services/ai-predictive-maintenance" element={<Services />} />
-              
               {/* Additional innovative AI services */}
               <Route path="/services/ai-autonomous-supply-chain" element={<Services />} />
               <Route path="/services/ai-cybersecurity-threat-intelligence" element={<Services />} />
-              
               {/* Additional innovative AI service routes */}
               <Route path="/services/ai-workflow-orchestrator" element={<Services />} />
               <Route path="/services/ai-data-governance-platform" element={<Services />} />
               <Route path="/services/ai-customer-experience-analytics" element={<Services />} />
-              
               {/* Quantum and advanced services */}
               <Route path="/services/quantum-computing" element={<QuantumComputing />} />
               <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-              
               {/* Revolutionary services */}
               <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
               <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
               <Route path="/enhanced-services-2025" element={<EnhancedNewServices2025 />} />
-              
               {/* Sitemap routes */}
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
-              
               {/* Support routes */}
               <Route path="/support" element={<Support />} />
               <Route path="/training" element={<Training />} />
               <Route path="/helpdesk" element={<Helpdesk />} />
-              
               {/* Catch-all route */}
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Suspense>
         </main>
-        
         <Footer />
-        
         {/* Enhanced Components */}
         <PerformanceOptimizer />
         <EnhancedAccessibilityEnhancer />
         <MobileExperienceEnhancer />
         <ChatAssistant />
       </div>
-=======
-=======
-
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.default })));
 const About = lazy(() => import('./pages/About').then(module => ({ default: module.default })));
@@ -217,9 +194,7 @@ const Login = lazy(() => import('./pages/Login').then(module => ({ default: modu
 const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.default })));
 const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing').then(module => ({ default: module.default })));
 const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025').then(module => ({ default: module.default })));
-
 // New innovative services pages
-
 // Additional service components
 =======
     >;
@@ -368,7 +343,6 @@ export default App;
 =======
 
 export default function App(props: any) {
-=======
 const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ default: module.default })));
 const ITServices = lazy(() => import('./pages/ITServices').then(module => ({ default: module.default })));
 // Create placeholder components for missing pages

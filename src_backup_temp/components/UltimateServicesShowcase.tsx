@@ -52,7 +52,6 @@ import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - i
 };
 ;
 export function UltimateServicesShowcase(...args[]): "{;
-
   const [selectedCategory", setSelectedCategory] = useState<any>('all');
   const [selectedService, setSelectedService] = useState<any>(null);
 ;
@@ -71,16 +70,12 @@ export function UltimateServicesShowcase(...args[]): "{;
         <motion.div";
           className="text-center mb-16";
           initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition={{ "duration": "0.8 "}}
 ";
@@ -109,27 +104,20 @@ export function UltimateServicesShowcase(...args[]): "{;
             </div>
           </div>
         </motion.div>
-
         {/* Category Navigation */}
         <motion.div"
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
           animate = {
-
   { opacity: 1,
   y: 0
-
 }}
           transition = {
-
   { duration: 0.8,
   delay: 0.2
-
 }}
         >
           <button'
@@ -138,7 +126,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''
                 : 'bg-zion-slate-light text-zion-gray-light hover: b g-zion-slate hover: tex t-white'`
             }`}
-
             All Services({allServices.length})
           </button>
           {categories.map((category)  => (
@@ -149,19 +136,16 @@ export function UltimateServicesShowcase(...args[]): "{;
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''
                   : 'bg-zion-slate-light text-zion-gray-light hover: b g-zion-slate hover: tex t-white'`
               }`}
-
               {category.name} ({category.services.length}
     );
             </button>;) ) }
         </motion.div>
-
         {/* Services Grid */}
         <motion.div"
           className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8"
           variants={containerVariants}"
           initial="hidden"
           animate="visible"
-
           {filteredServices.map((service) => (<motion.div
               key={service.id}
               variants={itemVariants}"
@@ -185,7 +169,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                     {service.tagline}
                   </p>
                 </div>
-
                 {/* Price */}"
                 <div className="mb-4">"
                   <div className="flex items-baseline gap-2">"
@@ -200,7 +183,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                     {service.trialDays} days free trial • Setup in {service.setupTime}
                   </p>
                 </div>
-
                 {/* Innovation Level & Patent Status */}"
                 <div className="flex flex-wrap gap-2 mb-4">`
                   <span className={`bg-gradient-to-r ${innovationLevelColors[service.innovationLevel]} text-white text-xs px-3 py-1 rounded-full font-semibold`}>
@@ -210,7 +192,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                     {service.patentStatus}
                   </span>
                 </div>
-
                 {/* Key Features */}"
                 <div className="mb-4">"
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>"
@@ -221,7 +202,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                       </li>) ) }
                   </ul>
                 </div>
-
                 {/* ROI & Market Info */}"
                 <div className="mb-4 p-3 bg-zion-slate rounded-lg">"
                   <p className="text-zion-cyan text-sm font-semibold mb-1">ROI & Market:</p>"
@@ -232,7 +212,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                     Market: {service.marketSize} • Growth: {service.growthRate}
                   </p>
                 </div>
-
                 {/* Customer Stats */}"
                 <div className="flex items-center justify-between mb-4 text-sm">"
                   <div className="flex items-center gap-1">"
@@ -243,13 +222,11 @@ export function UltimateServicesShowcase(...args[]): "{;
                     {service.customers} customers
                   </span>
                 </div>
-
                 {/* Action Buttons */}"
                 <div className="flex gap-2">
                   <button
                     onClick={() => setSelectedService(service)}"
                     className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold hover: fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
-
                     Learn More"
                     <ArrowRight className="w-4 h-4"   />
                   </button>
@@ -261,18 +238,14 @@ export function UltimateServicesShowcase(...args[]): "{;
               </div>
             </motion.div>) ) }
         </motion.div>
-
         {/* Call to Action */}
         <motion.div"
           className="text-center mt-16"
           initial = {
-
   { opacity: 0,
   y: 2 0 }}          animate = {
-
   { opacity: 1,
   y: 0 }}          transition = {
-
   { duration: 0.8,
   delay: 0.4 }}
         >"
@@ -285,7 +258,6 @@ export function UltimateServicesShowcase(...args[]): "{;
               <Link "
                 to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover: fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 flex items-center gap-2"
-
                 Get Started Today"
                 <ArrowRight className="w-5 h-5"    />              </Link>
               <a`
@@ -300,7 +272,6 @@ export function UltimateServicesShowcase(...args[]): "{;
           </div>
         </motion.div>
       </div>
-
       {/* Service Detail Modal */}
       {selectedService && ("
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">"
@@ -319,7 +290,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                 <button
                   onClick={() => setSelectedService(null)}"
                   className="text-zion-gray-light hover: tex t-white text-2xl"
-
                   ×
                 </button>
               </div>
@@ -347,7 +317,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                       </span>) ) }
                   </div>
                 </div>
-
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3">Market Information"
                   <div className="space-y-3 mb-4">
@@ -395,7 +364,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                     <Link
                       to={selectedService.link}"
                       className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold hover: fro m-zion-blue hover: t o-zion-cyan transition-all duration-300 text-center"
-
                       Get Started
                     </Link>
                     <a`
@@ -411,27 +379,20 @@ export function UltimateServicesShowcase(...args[]): "{;
             </div>;
           </div>;
         </motion.div>;
-
         {/* Category Navigation */}
         <motion.div";
           className="flex flex-wrap justify-center gap-4 mb-12";
           initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition = {;
-
   { "duration": "0.8",;
   "delay": "0.2;
-
 "}}
         >;
           <button';
@@ -455,14 +416,12 @@ export function UltimateServicesShowcase(...args[]): "{;
               {category.name} ({category.services.length}) ;
             </button>;) ) }
         </motion.div>;
-
         {/* Services Grid */}
         <motion.div";
           className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-8";
           variants={containerVariants"}";
           initial="hidden";
           animate="visible";
-
           {filteredServices.map((service) => (<motion.div;
               key={service.id}
               variants={itemVariants}";
@@ -486,7 +445,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                     {service.tagline}
                   </p>;
                 </div>;
-
                 {/* Price */}";
                 <div className="mb-4">";
                   <div className="flex items-baseline gap-2">";
@@ -501,7 +459,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                     {service.trialDays} days free trial • Setup in {service.setupTime}
                   </p>;
                 </div>;
-
                 {/* Innovation Level & Patent Status */}";
                 <div className="flex flex-wrap gap-2 mb-4">`;
                   <span className={`bg-gradient-to-r ${innovationLevelColors[service.innovationLevel]} text-white text-xs px-3 py-1 rounded-full font-semibold`}>;
@@ -511,7 +468,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                     {service.patentStatus}
                   </span>;
                 </div>;
-
                 {/* Key Features */}";
                 <div className="mb-4">";
                   <h4 className="text-white font-semibold mb-2">Key "Features": "</h4>";
@@ -522,7 +478,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                       </li>) ) }
                   </ul>;
                 </div>;
-
                 {/* ROI & Market Info */}";
                 <div className="mb-4 p-3 bg-zion-slate rounded-lg">";
                   <p className="text-zion-cyan text-sm font-semibold mb-1">ROI & "Market": "</p>";
@@ -533,7 +488,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                     "Market": "{service.marketSize"} • "Growth": "{service.growthRate"}
                   </p>;
                 </div>;
-
                 {/* Customer Stats */}";
                 <div className="flex items-center justify-between mb-4 text-sm">";
                   <div className="flex items-center gap-1">";
@@ -544,13 +498,11 @@ export function UltimateServicesShowcase(...args[]): "{;
                     {service.customers} customers;
                   </span>;
                 </div>;
-
                 {/* Action Buttons */}";
                 <div className="flex gap-2">;
                   <button;
                     onClick={() => setSelectedService(service)}";
                     className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold "hover": "fro m-zion-blue "hover": t o-zion-cyan transition-all duration-300 flex items-center justify-center gap-2";
-
                     Learn More";
                     <ArrowRight className="w-4 h-4"   />;
                   </button>;
@@ -562,18 +514,14 @@ export function UltimateServicesShowcase(...args[]): "{;
               </div>;
             </motion.div>) ) "}
         </motion.div>;
-
         {/* Call to Action */}
         <motion.div";
           className="text-center mt-16";
           initial = {;
-
   { "opacity": "0",;
   "y": "2 0 "}}          animate = {;
-
   { "opacity": "1",;
   "y": "0 "}}          transition = {;
-
   { "duration": "0.8",;
   "delay": "0.4 "}}
         >";
@@ -586,7 +534,6 @@ export function UltimateServicesShowcase(...args[]): "{;
               <Link ";
                 to="/contact";
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold "hover": "fro m-zion-blue "hover": t o-zion-cyan transition-all duration-300 flex items-center gap-2";
-
                 Get Started Today";
                 <ArrowRight className="w-5 h-5"    />              </Link>;
               <a`;
@@ -601,7 +548,6 @@ export function UltimateServicesShowcase(...args[]): "{;
           </div>;
         </motion.div>;
       </div>;
-
       {/* Service Detail Modal */"}
       {selectedService && (";
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">";
@@ -620,7 +566,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                 <button;
                   onClick={() => setSelectedService(null)}";
                   className="text-zion-gray-light "hover": "tex t-white text-2xl";
-
                   ×;
                 </button>;
               </div>;
@@ -648,7 +593,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                       </span>) ) }
                   </div>;
                 </div>;
-
                 <div>";
                   <h3 className="text-xl font-bold text-white mb-3">Market Information</h3>";
                   <div className="space-y-3 mb-4">;
@@ -696,7 +640,6 @@ export function UltimateServicesShowcase(...args[]): "{;
                     <Link;
                       to={selectedService.link}";
                       className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold "hover": "fro m-zion-blue "hover": t o-zion-cyan transition-all duration-300 text-center";
-
                       Get Started;
                     </Link>;
                     <a`;
@@ -722,7 +665,6 @@ export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 '"`;
-
 </motion>;
 </motion>;
 </motion>;

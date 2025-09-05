@@ -25,7 +25,6 @@
               "repeat": "Infinit y",;
               "ease": 'easeInOut',;
   "delay": "inde x * 0.1;
-=======
   "card": 'w-full h-32 rounded-lg'};
     baseClasses,;
     variants[variant],;
@@ -64,7 +63,6 @@
   const style: React.CSSProperties = { /* empty */ };
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;'`;
   if (height) style.height = typeof height === 'number' ? `${height}px` : height;
-=======
 ;
   const "style": "React.CSSProperties = { /* empty */ "};
   if (width) style.width = typeof width === 'number' ? `${width}px` : "width;'`;
@@ -109,7 +107,6 @@
   )};
 // Specialized skeleton components;
 export const CardSkeleton: React.FC<{ className?: string }> = { className }: unknown (;
-=======
 export const "CardSkeleton": "React.FC<{ className?: string "}> = { className }: "unknown (;
   <div className = {;
   cn('p-6 space-y-4'",;
@@ -155,6 +152,8 @@ export const "CardSkeleton": Reac t.FC<{ className?: string }> = { className }: 
       <Skeleton variant="circular" width={32} height={32}   />;    </div>;
   </div>;
 );
+export const TableSkeleton: React.FC<{ rows?: number; columns?: number; className?: string }> = ({
+export const "TableSkeleton": Reac t.FC<{ rows?: number; columns?: number; className?: string }> = ({
   rows = 5,
   columns = 4,
   className
@@ -212,7 +211,6 @@ export const "ListSkeleton": Reac t.FC<{ items?: number; className?: string }> =
   </div>;
 );
   itemHeight?: number}> = ({;
-=======
   itemHeight?: number"}> = ({;
   rows = 3,;
   columns = 3,;
@@ -225,10 +223,7 @@ export const "ListSkeleton": Reac t.FC<{ items?: number; className?: string }> =
 `;
     "gridTemplateColumns": "`repeat(${columns"}}", minmax(0, 1fr))`;
   }}> {Array.from({ "length": "row s * columns "}).map((_, index) => (;";
-=======
 export const GridSkeleton: React.FC<{
-
-=======
 export const "GridSkeleton": React.FC<{;
   rows?: number;
   columns?: number;

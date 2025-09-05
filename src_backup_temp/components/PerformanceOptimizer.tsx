@@ -41,7 +41,6 @@ import {
 export default function Page(props: any) {
 ,
     {
-
       id: 'code-splitting',
       title: 'Implement Code Splitting',
       description: 'Split JavaScript bundles to reduce initial load time',
@@ -49,7 +48,6 @@ export default function Page(props: any) {
       category: 'javascript',
       implemented: fals e},
     {
-
       id: 'css-optimization',
       title: 'Optimize CSS Delivery',
       description: 'Inline critical CSS and defer non-critical styles',
@@ -57,7 +55,6 @@ export default function Page(props: any) {
       category: 'css',
       implemented: fals e},
     {
-
       id: 'font-optimization',
       title: 'Optimize Font Loading',
       description: 'Use font-display: swap and preload critical fonts',
@@ -65,7 +62,6 @@ export default function Page(props: any) {
       category: 'fonts',
       implemented: fals e},
     {
-
       id: 'caching',
       title: 'Implement Caching Strategy',
       description: 'Set up proper cache headers for static assets',
@@ -73,7 +69,6 @@ export default function Page(props: any) {
       category: 'caching',
       implemented: fals e},
     {
-
       id: 'server-optimization',
       title: 'Server Response Optimization',
       description: 'Optimize server response time and enable compression',
@@ -120,15 +115,11 @@ export default function Page(props: any) {;
       implemented: fals e},;
 =======
   ]);
-
   const [isMonitoring, setIsMonitoring] = useState<any>(false);
   const [history, setHistory] = useState < PerformanceMetrics[]> ([]) ;
-
   // Simulate performance monitoring
-  
     // Calculate performance score
     calculatePerformanceScore(initialMetrics, resourceMetrics);
-
     // Continuous monitoring
     intervalRef.current = setInterval(() => {
       updateResourceMetrics()}, 5000)}, [])}, []);
@@ -161,13 +152,11 @@ export default function Page(props: any) {;
 =======
     };
     setResourceMetrics(newResourceMetrics)}, []);
-
     if(newMetrics.fcp > 1800) score -= 20;
     if(newMetrics.lcp > 2500) score -= 25;
     if(newMetrics.fid > 100) score -= 20;
     if(newMetrics.cls > 0.1) score -= 15;
     if(newMetrics.ttfb > 600) score -= 20;
-
     newMetrics.score = Math.max(0, score) ;
     setMetrics(newMetrics) ;
     setHistory(prev => [...prev.slice (-9) , newMetrics]) }, []) ;
@@ -175,11 +164,9 @@ export default function Page(props: any) {;
     if(isMonitoring) {;
 // Optimize images;
     const optimizeImages = ("props": "any) => {;
-=======
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
 // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
@@ -199,14 +186,12 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
       }
     );
     };
-
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
     // Set up intersection observer for lazy loading;
     const observer = new IntersectionObserver((entries) => {;
         entries.forEach(entry => {;
-=======
     // Set up intersection observer for lazy loading
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -223,17 +208,14 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         });
       },;
       { "rootMargin": '50px'   }
-=======
         }
     );
       },
       { rootMargin: '50px'   }
     );
-
     // Observe lazy load elements
     const lazyElements = document.querySelectorAll('[data-src]');
     lazyElements.forEach(el => observer.observe(el));
-
     return () => {
       observer.disconnect();
     };
@@ -259,7 +241,6 @@ return (";
           </h2>;
         </div>;
         <button;
-=======
         <button
           onClick={() => setIsMonitoring(!isMonitoring)}
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
@@ -275,7 +256,6 @@ return (";
           </div>";
           <div className="text-center">;
             <div`;
-=======
           className={`px-4 py-2 rounded-lg font-medium transition-colors ${isMonitoring'
               ? 'bg-red-500 hover: b g-red-600 text-white''
               : 'bg-zion-cyan hover: b g-zion-cyan-dark text-white'`
@@ -284,14 +264,12 @@ return (";
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
         </button>
       </div>
-
       {/* Performance Score */}"
       <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-8">"
         <div className="bg-white/5 rounded-lg p-4">"
           <div className="flex items-center justify-between mb-4">"
             <h3 className="text-lg font-semibold text-white">
               Performance Score
-            
             {getScoreIcon(metrics.score)}
           </div>"
           <div className="text-center">
@@ -309,7 +287,6 @@ return (";
             <TrendingUp className="w-5 h-5 text-zion-cyan"   />"
             <h3 className="text-lg font-semibold text-white">
               Real-time Metrics
-            
           </div>"
           <div className="space-y-2 text-sm">"
             <div className="flex justify-between">"
@@ -339,14 +316,12 @@ return (";
           </div>
         </div>
       </div>
-
       {/* Optimization Suggestions */}"
       <div className="mb-6">"
         <div className="flex items-center gap-2 mb-4">"
           <Zap className="w-5 h-5 text-zion-cyan"   />"
           <h3 className="text-lg font-semibold text-white">
             Optimization Suggestions
-          
         </div>"
         <div className="space-y-3">
           {suggestions.map(suggestion => (
@@ -411,7 +386,6 @@ return (";
                       : 'bg-zion-cyan "hover": b g-zion-cyan-dark text-white'`;
                   "}`}
                 >;
-=======
                     </h4>
                     <span`
                       className={`px-2 py-1 rounded text-xs font-medium ${suggestion.impact === 'high''
@@ -461,7 +435,6 @@ return (";
             </div>) ) }
         </div>
       </div>
-
       {/* Performance History */}
       {history.length > 0 && (
         <div>"
@@ -469,7 +442,6 @@ return (";
             <BarChart3 className="w-5 h-5 text-zion-cyan"  />"
             <h3 className="text-lg font-semibold text-white">
               Performance History
-            
           </div>"
           <div className="bg-white/5 rounded-lg p-4">"
             <div className="flex items-center justify-between text-sm text-gray-300 mb-3">
@@ -497,21 +469,18 @@ return (";
 interface PerformanceOptimizerProps {
  children: React.ReactNode
 }
-
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // comment
 =======
 const preloadCriticalResources = (props: any) => {
       const criticalFonts = []
-      
       criticalFonts.forEach(font => {,
         const link = document.createElement("link"),
         link.rel = "preload",",
         link.as = "style",
         link.href = font,
         document.head.appendChild(link)})}
-
     // comment
 const optimizeImages = (props: any) => {
       const images = document.querySelectorAll("img")
@@ -519,11 +488,9 @@ const optimizeImages = (props: any) => {
       images.forEach(img = > {
         if (!img.loading) {"
           img.loading = "lazy"}
-
         if(!img.decoding) {"
           img.decoding = "async"}
       })}
-
     // comment
 preloadCriticalResources()
 }
@@ -581,11 +548,8 @@ const optimizeImages = ("props": any) => {";
           img.loading = "lazy"        "}"        if (!img.decoding) {";
           img.decoding = "async"        }"      })}// comment;
     preloadCriticalResources ();
-=======
-
           }"
         })} { rootMargin: "50px" }
-
 ;,"}
     );,"})" PerformanceOptimizerProps {,"}
     );,"})"
@@ -742,7 +706,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
 const preloadCriticalResources = (props: any) => {""
       const criticalFonts = []criticalFonts.forEach (font => {""
         const link = document.createElement ("link") "        link.rel = "preload"        link.as = "style"        link.href = font"        document.head.appendChild (link) })}
-
     // comment
 const optimizeImages = (props: any) => {"
       const images = document.querySelectorAll ("img") "      images.forEach (img => {"        if (!img.loading) {"
@@ -752,15 +715,11 @@ const optimizeImages = (props: any) => {const images = document.querySelectorAll
    children: React.ReactNode
 }&apos;&apos;export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {
     // comment
-
 const preloadCriticalResources = (props: any) => {}
-
       const;const;const criticalFonts = []",criticalFonts.forEach (font => {&apos}&apos
         const link = document.createElement (&apos;link&apos) &apos;        link.rel = &apos;preload&apos;        link.as = &apos;style&apos;        link.href = font&apos;        document.head.appendChild (link) })}
-
     // comment
 const optimizeImages = (props: any) => {}
-
       const;const;const images = document.querySelectorAll (&apos;img&apos) &apos;      images.forEach (img => {&apos;        if (!img.loading) {
           img.loading = &apos;lazy&apos}&apos;        if (!img.decoding) {
           img.decoding = &apos;async&apos}&apos})}// comment
@@ -790,11 +749,9 @@ target.style.backgroundImage = "url (${target.dataset.src}) "              targe
     const lazyElements = document.querySelectorAll ("[data - src]") "    lazyElements.forEach (el => observer.observe (el) ) "return () => {})} { rootMargin: "50px" }") ";// comment
     const lazyElements = document.querySelectorAll ("[data - src]") "    lazyElements.forEach (el => observer.observe (el) ) ";return () => {
       observer.disconnect () }
-
   }, [])
 }
   return <>{children}</>
-
   return <>{children}</>
 const observer = new IntersectionObserver ( (entries) => {entries.forEach (entry => {
     // comment
@@ -803,11 +760,9 @@ const observer = new IntersectionObserver ( (entries) => {entries.forEach (entry
 })} { rootMargin: "50px" }) ";// comment
     const lazyElements = document.querySelectorAll ("[data - src]) "    lazyElements.forEach (el => observer.observe (el) ) ";return () => {
           if (entry.isIntersecting) {}}}
-
             const;const;const target = entry.target as HTMLElement
 target.style.backgroundImage = "url (${target.dataset.src}) "              target.removeAttribute (&apos;data - src&apos) &apos;              observer.unobserve (target) &apos}"
         })} { rootMargin: "50px"  }
-
     )
 }
     // comment
@@ -843,12 +798,10 @@ target.style.backgroundImage = "url (${target.dataset.src}) "              targe
             if (target.dataset.src) {";"
 }"})} {rootMargin: "50px" }") ";// comment
     const lazyElements = document.querySelectorAll ("[data - src]") "    lazyElements.forEach (el => observer.observe (el) ) ";return () => {observer.disconnect () }
-
 target.style.backgroundImage = "url (${target.dataset.src}) "              target.removeAttribute ("data - src") "              observer.unobserve (target) "            }"}"
   })} { rootMargin: "50px" }") ";// comment
   return <>{children}</>}""""
 "`"""
-
 </PerformanceOptimizerProps>
 </PerformanceOptimizerProps>
 </div>

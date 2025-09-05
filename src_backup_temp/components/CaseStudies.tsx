@@ -93,11 +93,9 @@ export default function CaseStudies("props": "any) {;
               transition={{ "duration": "0.6", "delay": "inde x * 0.1 "}}
             >;
               <div className="p-8">;
-=======
 import React from 'react'
 import { motion  } from 'framer-motion'
 import { CheckCircle, TrendingUp, Users, DollarSign  } from 'lucide-react'
-
 interface CaseStudy { id: string title: string
   description: string industry: string
   results: {
@@ -107,7 +105,6 @@ interface CaseStudy { id: string title: string
   technologies: string[]
   duration: string
 }
-
 const caseStudies: CaseStud y[] = [{ id: '1',
     title: 'AI-Powered Customer Service Automation',
     description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.',
@@ -194,7 +191,6 @@ export default function CaseStudies(props: any) {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">
                       {study.title}
-                    
                     <p className="text-gray-600 mb-4">
                       {study.description}
                     </p>
@@ -206,7 +202,6 @@ export default function CaseStudies(props: any) {
                     </div>
                   </div>
                 </div>
-
                 {/* Results */}
                 <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 mb-6">
                   {study.results.map((result, idx) => (
@@ -225,7 +220,6 @@ export default function CaseStudies(props: any) {
                     </div>
                   ))}
                 </div>
-
                 {/* Technologies */}
                 <div>
                   <h4 className="text-sm font-semibold text-gray-700 mb-3">Technologies Used</h4>
@@ -244,7 +238,6 @@ export default function CaseStudies(props: any) {
             </motion.div>
           ))}
         </div>
-
         {/* CTA */}
 =======
 "}
@@ -276,7 +269,6 @@ export default function CaseStudies(props: any) {
     </section>
   )
 }
-
 </motion>
 </motion>
 </motion>

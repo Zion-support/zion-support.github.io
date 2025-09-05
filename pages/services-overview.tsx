@@ -1,17 +1,157 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 import Layout from '../components/Layout';
 
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Brain, Server, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+
+=======
+
+const serviceCategories = [;
+  {}
+    title: 'AI Services,',
+>>>>>>> main
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
 const serviceCategories = [
   {
     title: 'AI Services',
     description: 'Cutting-edge artificial intelligence solutions for modern businesses',
     icon: Brain,
+<<<<<<< HEAD
     services: ['AI Analytics', 'Machine Learning', 'Natural Language Processing', 'Computer Vision'],
     link: '/ai-services',
     color: 'from-blue-500 to-purple-600'
+=======
+<<<<<<< HEAD
+    description: 'Cutting-edge artificial intelligence solutions that transform your business.',
+    href: '/ai-services',
+    color: 'from-blue-500 to-cyan-500',
+    services: [
+      'Machine Learning',
+      'Natural Language Processing',
+      'Computer Vision',
+      'AI Automation',
+      'Predictive Analytics',
+      'Custom AI Development'
+    ]
+  },
+  {
+    title: 'IT Services',
+    icon: Server,
+    description: 'Comprehensive IT solutions including cloud, security, and infrastructure management.',
+    href: '/it-services',
+    color: 'from-green-500 to-emerald-500',
+    services: [
+      'Cloud Infrastructure',
+      'Cybersecurity',
+      'Network Management',
+      'Data Backup & Recovery',
+      'IT Consulting',
+      'System Integration'
+    ]
+  },
+  {
+    title: 'Micro SaaS',
+    icon: Zap,
+    description: 'Innovative micro SaaS solutions designed for specific business needs.',
+    href: '/micro-saas',
+    color: 'from-purple-500 to-pink-500',
+    services: [
+      'AI Content Marketing',
+      'Lead Management',
+      'Analytics Dashboard',
+      'Process Automation',
+      'Financial Analysis',
+      'Custom Solutions'
+    ]
+  }
+];
+
+export default function ServicesOverview() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Head>
+        <title>Services Overview - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive overview of our AI, IT, and Micro SaaS services" />
+      </Head>
+
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to transform your business and drive growth.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {serviceCategories.map((category, index) => (
+            <motion.div
+              key={category.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="flex items-center mb-4">
+                <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4`}>
+                  <category.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>
+              </div>
+              
+              <p className="text-gray-600 mb-4">{category.description}</p>
+              
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 mb-2">Services Include:</h4>
+                <ul className="space-y-1">
+                  {category.services.map((service, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      {service}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <Link href={category.href}>
+                <a className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold">
+                  Learn More
+                  <ArrowRight className="h-4 w-4 ml-1" />
+                </a>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+=======
+    description: 'Cutting-edge artificial intelligence solutions that transform your business,',
+    href: '/ai-services,',
+    color: 'from-blue-500 to-cyan-500,',
+    services: [;
+      'Machine Learning,',
+      'Natural Language Processing',',
+      'Computer Vision',',
+      'AI Automation',',
+      'Predictive Analytics',',
+      'Custom AI Development'';
+    ],
+    stats: { projects: '150+, satisfaction: '98%' }',
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
   },
   {
     title: 'IT Services',
@@ -150,6 +290,7 @@ export default function ServicesOverviewPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -279,5 +420,35 @@ export default function ServicesOverviewPage() {
         </section>
       </div>
     </Layout>
+=======
+              viewport={{ once: true }}
+            >,
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">";
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";
+                Let's discuss how our technology services can help you achieve your goals and drive growth.';
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link;
+                  href="/contact"";
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
+                >;
+                  Get Free Consultation;
+                </Link>;
+                <Link;
+                  href="/sitemap"";
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"";
+                >;
+                  Explore All Services;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+>>>>>>> main
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
   );
 }

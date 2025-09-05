@@ -3,7 +3,6 @@ import { format } from 'date-fns';
 
 export default function Page(props: any) {
 , [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation
-  
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
@@ -12,13 +11,10 @@ export default function Page(props: any) {
 ;
   const scrollToBottom = (props: any) => {;
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-=======
-
   const scrollToBottom = (props: any) => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }
     );
   };
-  
   const handleSendMessage = async(e: React.FormEvent) => {
     e.preventDefault();
     if(!messageText.trim() || !activeConversation) return;
@@ -26,7 +22,6 @@ export default function Page(props: any) {
     await sendMessage(activeConversation.id, messageText);
     setMessageText('');
   };
-  
   if(!activeConversation) {
     return (
         <div className="flex-1 flex flex-col items-center justify-center p-8">
@@ -56,14 +51,10 @@ export default function Page(props: any) {
   const "groupedMessages": "{ "date": string; "messages": an y[] "}[] = [];
 ;
   activeMessages.forEach(message => {;
-=======
-  
   const groupedMessages: { date: string; messages: an y[] }[] = [];
-  
   activeMessages.forEach(message => {
     const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages.find(group => group.date === messageDate);
-    
     if(existingGroup) {
       existingGroup.messages.push(message);
     } else {
@@ -75,7 +66,6 @@ export default function Page(props: any) {
     }
   }
     );
-  
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description);
 ;
@@ -114,7 +104,6 @@ export default function Page(props: any) {
             {activeConversation.context_data.image_url && (;
               <div className="w-16 h-16 flex-shrink-0">;
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">;
-=======
             </div>
             <div className="text-xs text-zion-slate">
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
@@ -124,7 +113,6 @@ export default function Page(props: any) {
           </div>
         </div>
       </div>
-      
       {hasContextData && (
         <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10">
           <div className="text-sm text-zion-slate flex items-start gap-3">
@@ -137,7 +125,6 @@ export default function Page(props: any) {
                     />;
                 </AspectRatio>;
               </div>;
-=======
                     className="object-cover"
                     />
                 </AspectRatio>
@@ -148,7 +135,6 @@ export default function Page(props: any) {
                  '"Regarding":'"}
               </div>;
               <div className="text-zion-cyan font-medium">;
-=======
             <div>
               <div className="font-medium text-white mb-1">
                 {activeConversation.context_type === 'job' ? 'Regarding Job:' :
@@ -209,7 +195,6 @@ export default function Page(props: any) {
         )}
         <div ref={messagesEndRef}  />
       </div>
-      
       <div className="p-3 border-t border-zion-purple/20">
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
           <textarea
@@ -236,7 +221,6 @@ export default function Page(props: any) {
     </div>
     );
 }
-
 </textarea>
 </MessageBubble>
 </AvatarImage>

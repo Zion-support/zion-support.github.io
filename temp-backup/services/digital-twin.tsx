@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface DigitaltwinProps {
   // Add props here as needed
 }
-
 export default function Digitaltwin({ }: DigitaltwinProps) {
   return (
     <div>

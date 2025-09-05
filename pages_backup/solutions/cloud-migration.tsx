@@ -63,7 +63,6 @@ const phases = [;
     ];
   }
 ;];
-
 const services = [;
   {}
     title: 'AWS Migration,',
@@ -110,7 +109,6 @@ const services = [;
     ];
   }
 ;];
-
 const benefits = [;
   {}
     title: 'Cost Reduction,',
@@ -133,7 +131,6 @@ const benefits = [;
     icon: Smartphone;
   }
 ;];
-
 export default function CloudMigrationPage() {
   return (;
     <Layout );
@@ -149,7 +146,6 @@ export default function CloudMigrationPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
           </div>;
-
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -181,7 +177,6 @@ export default function CloudMigrationPage() {
             </motion.div>;
           </div>;
         </section>;
-
         {/* Process Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -199,7 +194,6 @@ export default function CloudMigrationPage() {
                 with minimal downtime and maximum security.;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {phases.map((phase, index) => (,
                 <motion.div}),
@@ -214,7 +208,6 @@ export default function CloudMigrationPage() {
                   </div>;
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{phase.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{phase.description}</p>"
-                  
                   <ul className="space-y-2 text-left">";
                     {phase.steps.map((step, stepIndex) => (,
                       <li key={stepIndex} className="flex items-center text-sm text-gray-600">"
@@ -228,7 +221,6 @@ export default function CloudMigrationPage() {
             </div>,
           </div>;
         </section>;
-
         {/* Services Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -246,7 +238,6 @@ export default function CloudMigrationPage() {
                 for maximum flexibility and redundancy.;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
@@ -262,9 +253,7 @@ export default function CloudMigrationPage() {
                     </div>;
                     <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>"
                   </div>;
-                  
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
-                  
                   <div>;
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>";
                     <ul className="space-y-2">";
@@ -281,7 +270,6 @@ export default function CloudMigrationPage() {
             </div>,
           </div>;
         </section>;
-
         {/* Benefits Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -299,7 +287,6 @@ export default function CloudMigrationPage() {
                 performance, and security.,
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
@@ -319,7 +306,6 @@ export default function CloudMigrationPage() {
             </div>,
           </div>;
         </section>;
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

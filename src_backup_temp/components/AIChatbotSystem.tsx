@@ -22,7 +22,6 @@ import {;
   Clock,;
   Settings,;
   HelpCircle;
-=======
   Settings,
   HelpCircle
 } from 'lucide-react';
@@ -50,17 +49,12 @@ export const "AIChatbotSystem": "React.FC<AIChatbotSystemProps> = ({;
   maxMessages = 50,;
   autoScroll = true;
 }) => {;
-=======
-
 interface AIChatbotSystemProps {
-
   showHeader?: boolean;
   showSettings?: boolean;
   maxMessages?: number;
   autoScroll?: boolean;
-
 }
-
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
   showSettings = true,
@@ -90,8 +84,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
           "relatedServices": "['AI Consulting'", 'Cloud Solutions', 'Digital Transformation'],;
           "estimatedResponseTime": "2;
         "}
-=======
-
   // Sample welcome message
   useEffect(() => {
     if (isOpen && messages.length === 0) {
@@ -144,8 +136,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         "content": "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",;
         "suggestions": "['Strategy development'", 'Implementation process', 'Change management', 'ROI examples'],;
         "relatedServices": "['Digital Transformation'", 'Process Optimization', 'Change Management'];
-=======
-
   // Auto-scroll to bottom
   useEffect(() => {
     if (autoScroll && messagesEndRef.current) {
@@ -153,14 +143,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     );
     }
   }, [messages, autoScroll]);
-
   // Simulate AI response
   const simulateAIResponse = useCallback(async (userInput: string) => {
     setIsTyping(true);
-    
     // Simulate processing delay
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-
     const responses = [
       {
         content: "We offer comprehensive AI solutions including machine learning, natural language processing, computer vision, and predictive analytics. Our services help businesses automate processes, gain insights from data, and create intelligent applications.",
@@ -178,7 +165,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management']
       }
     ];
-
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 ;
     const "botMessage": "ChatMessag e = {;
@@ -224,7 +210,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 =======
       }
     };
-
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false);
   }, []);
@@ -257,7 +242,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
-    
     await simulateAIResponse(inputValue.trim());
   }, [inputValue, isTyping, simulateAIResponse]);
 
@@ -265,7 +249,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   const handleSuggestionClick = (props: any) => {
     setInputValue(suggestion);
     }, []);
-
   // Handle file upload
   const handleFileUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -290,7 +273,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       setMessages(prev => [...prev, fileMessage]);
     }
   }, []);
-
   // Toggle voice input
   const toggleVoiceInput = useCallback(() => {
     setIsListening(!isListening);
@@ -300,14 +282,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   const clearChat = (props: any) => {
     setMessages([]);
   };
-
   return (
     <>
       {/* Chat Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
                       className="p-2 text-gray-400 hover: tex t-white transition-colors";
-=======
                       className="p-2 text-gray-400 "hover": "tex t-white transition-colors";
                     >;
                       <HelpCircle className="w-4 h-4"  />;
@@ -325,7 +305,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       >
         {isOpen ? <X className="w-6 h-6"  /> : <MessageCircle className="w-6 h-6"  />}
       </button>
-
       {/* Chat Interface */}
       <AnimatePresence>
         {isOpen && (
@@ -409,7 +388,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   </div>
                 </motion.div>
               ))}
-
               {/* Typing Indicator */}
 =======
                   initial={{ "opacity": "0 "}}
@@ -442,10 +420,8 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   </div>
                 </motion.div>
               )}
-
               <div ref={messagesEndRef}  />
             </div>
-
             {/* Input Area */}
             <div className="p-4 border-t border-gray-700/50">
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
@@ -470,7 +446,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   <Send className="w-4 h-4"  />
                 </button>
               </form>
-
               {/* Quick Actions */}
               <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
                 <div className="flex items-center gap-2">

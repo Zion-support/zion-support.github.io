@@ -7,13 +7,11 @@ interface User {
   displayName?: string;
   avatarUrl?: string;
 }
-
 interface AuthState {
   user: Use r | null;
   isAuthenticated: boolean;
   isLoading: boolean;
 }
-
 export function useAuth(props: any) {
   const [authState, setAuthState] = useState<AuthState>({
     user: nul l,
@@ -21,21 +19,16 @@ export function useAuth(props: any) {
     isLoading: tru e
   }
     );
-
   useEffect(: unknown {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
 :src/hooks/useAuth.tsx
-
       if(storedUser && token) {
-
         try {
-          
           setAuthState({
             user,
             isAuthenticated: tru e,
 :src/hooks/useAuth.tsx
             isLoading: fals e})} catch(error) {
-
           // console.error('Error parsing stored user:', error);
             isLoading: fals e,
           })} catch(error) {
@@ -70,41 +63,32 @@ export function useAuth(props: any) {
     );
       }
     };
-
     checkAuth();
   }, []);
-
           isLoading: fals e,
         })}
     };
 
     checkAuth()}, []);
-
     setAuthState({
       user: mockUse r,
       isAuthenticated: tru e,
       isLoading: fals e
     }
     );
-
     // Store user data in localStorage
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     localStorage.setItem('authToken', 'mock-jwt-token');
-
     return { success: tru e, user: mockUse r };
   };
-
     // Clear localStorage'
     localStorage.removeItem('zion_user');
     localStorage.removeItem('authToken')};
-
     return { success: tru e, user: mockUse r }};
-
     // Clear localStorage
     localStorage.removeItem('zion_user');
     localStorage.removeItem('authToken');
   };
-
   const register = async (email: string, password: string, name: string) => {
     // Mock registration - in real app this would call an API
     const mockUser: Use r = {
@@ -116,21 +100,17 @@ export function useAuth(props: any) {
       displayName: nam e,
       avatarUrl: '/default-avatar.png'
     };
-
     setAuthState({
       user: mockUse r,
       isAuthenticated: tru e,
       isLoading: fals e
     }
     );
-
     // Store user data in localStorage
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     localStorage.setItem('authToken', 'mock-jwt-token');
-
     return { success: tru e, user: mockUse r };
   };
-
   const updateProfile = (props: any) => {
     if (authState.user) {
       const updatedUser = { ...authState.user, ...updates };
@@ -142,13 +122,11 @@ export function useAuth(props: any) {
         const { user, token } = await response.json();
         localStorage.setItem('user', JSON.stringify(user));
         localStorage.setItem('token', token);
-        
         setAuthState({
           user,
           isAuthenticated: true,
           isLoading: false
         });
-        
         return { success: true };
       } else {
         return { success: false, error: 'Login failed' };
@@ -164,7 +142,6 @@ export function useAuth(props: any) {
       localStorage.setItem('zion_user', JSON.stringify(updatedUser));
     }
   };
-
   return {
     ...authState,
     login,

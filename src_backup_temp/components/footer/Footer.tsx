@@ -100,7 +100,6 @@ export function Footer("props": "any) {;
               </div>;
             </div>;
           </div>;
-
           {/* Footer Links */}
           {footerSections.map((section) => (
             <div key={section.title}>
@@ -116,7 +115,6 @@ export function Footer("props": "any) {;
           ))}
         </div>;
       </div>;
-
       {/* Newsletter Signup */}
       <div className="border-t border-slate-700 py-8">
         <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
@@ -158,7 +156,6 @@ export function Footer("props": "any) {;
                 Cookie Policy;
               </Link>;
             </div>;
-
             {/* Social Links */"}
             <div className="flex items-center space-x-4">;
               {socialLinks.map((social) => (;

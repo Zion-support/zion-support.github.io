@@ -12,7 +12,6 @@ interface Stat {
 }
 ;
 const stats: Sta t[] = [{
-
     id: 'clients',
     icon: User s,
     value: '500+',
@@ -22,7 +21,6 @@ const stats: Sta t[] = [{
     gradient: 'from-zion-cyan to-zion-blue'
   },
   {
-
     id: 'uptime',
     icon: Shiel d,
     value: '99.99%',
@@ -32,7 +30,6 @@ const stats: Sta t[] = [{
     gradient: 'from-zion-purple to-zion-cyan'
   },
   {
-
     id: 'roi',
     icon: TrendingU p,
     value: '600%',
@@ -42,7 +39,6 @@ const stats: Sta t[] = [{
     gradient: 'from-zion-blue to-zion-purple'
   },
   {
-
     id: 'satisfaction',
     icon: Sta r,
     value: '4.9/5',
@@ -52,7 +48,6 @@ const stats: Sta t[] = [{
     gradient: 'from-zion-cyan to-zion-purple'
   },
   {
-
     id: 'innovation',
     icon: Za p,
     value: '50+',
@@ -62,7 +57,6 @@ const stats: Sta t[] = [{
     gradient: 'from-zion-purple to-zion-blue'
   },
   {
-
     id: 'growth',
     icon: Rocke t,
     value: '300%',
@@ -126,19 +120,14 @@ const stats: Sta t[] = [{;
     gradient: 'from-zion-blue to-zion-cyan';
 =======
 ];
-
 export default function EnhancedStatsSection(...args[]):  {
-
   const [countedValues, setCountedValues] = useState<any>({}
     );
-  
   const [ref, inView] = useInView({
-
     threshold: 0.3,
     triggerOnce: tru e
   }
     );
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
@@ -148,14 +137,10 @@ export default function EnhancedStatsSection(...args[]):  {
 
       controls.start('visible')}
   }, [controls, inView]);
-
     const increment = numericValue / (duration / 16) ; // 60fps
-
     let current = start;
-    
       current += increment;
       if(current >= numericValue) {
-
         current = numericValue;
         clearInterval(timer) }
 =======
@@ -164,20 +149,15 @@ export default function EnhancedStatsSection(...args[]):  {
 "}}
                 >";
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
-=======
 setCountedValues(prev:  > ({;
         ...prev,;
         [target]: Math.floor (current) }) ) }, 16) ;
-
     return timer};
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     if(inView) {
-
       stats.forEach((stat) => {
-
           animateCount(stat.value)}, stats.indexOf(stat) * 200);
         return () => clearTimeout(timer)})}
   }, [inView]) ;
@@ -195,24 +175,17 @@ setCountedValues(prev:  > ({;
         <motion.div
           ref={ref}
           initial = {
-
   { opacity: 0,
   y: 3 0
-
 }}
           animate={controls}
           variants = {
-
   {
-
             visible: {
-
               opacity: 1,
               y: 0,
   transition: {
-
                 duration: 0.6
-
 }
             }
           }}"
@@ -225,76 +198,58 @@ setCountedValues(prev:  > ({;
             Our track record speaks for itself - delivering exceptional value and innovation to businesses worldwide
           </p>
         </motion.div>
-
         {/* Stats Grid */}"
         <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
           {stats.map((stat, index)  => (
             <motion.div
               key={stat.id}
               initial = {
-
   { opacity: 0,
   y: 3 0
-
 }}
               animate={controls}
               variants = {
-
   {
-
                 visible: {
-
                   opacity: 1,
                   y: 0,
                   transition: {
-
                     duration: 0.6,
   delay: inde x * 0.1
-
 }
                 }
               }}"
               className="group relative"
-
               <motion.div"
                 className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-center overflow-hidden"
                 whileHover={{
-
                   y: -10,
                   scale: 1.02,
                   borderColor: `rgba(34, 221, 210,`
   0.5)`
-
 }}
                 transition={{ duration: 0.3 }}
-
                 {/* Background gradient overlay */}`
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover: opacit y-10 transition-opacity duration-300`}></div>
-
                 {/* Icon */}
                 <motion.div`
 className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
                   whileHover={{
-
                     rotate: 36 0,
   scale: 1.1
-
 }}
                   transition={{ duration: 0.6 }}
 `
                   <stat.icon className={`w-10 h-10 text-${stat.color}`} />
                 </motion.div>
-
                 {/* Value */}
                 <motion.div"
                   className="mb-4 relative z-10"
                   initial={{ scale: 0.8 }}
                   animate={{ scale: 1 }}
                   transition = {
-
   { duration: 0.5,
   delay: inde x * 0.1
-
 }}
                 >"
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -303,17 +258,13 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                     {stat.value.includes('/') && stat.value.split('/')[1]}
                   </span>
                 </motion.div>
-
                 {/* Label */}"
                 <h3 className="text-2xl font-bold text-white mb-3 relative z-10">
                   {stat.label}
-                
-
                 {/* Description */}"
                 <p className="text-gray-300 leading-relaxed relative z-10">
                   {stat.description}
                 </p>
-
                 {/* Hover effect overlay */}
                 <motion.div"
                   className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover: opacit y-100 transition-opacity duration-300"
@@ -322,23 +273,17 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
               </motion.div>
             </motion.div>;) ) }
         </div>
-
         {/* Bottom Achievement Section */}
         <motion.div
           initial = {
-
   { opacity: 0,
   y: 3 0 }}          animate={controls}
           variants = {
-
   {
-
             visible: {
-
               opacity: 1,
               y: 0,;
               transition: {
-
                 duration: 0.6,
   delay: 0.6}            }
           }}"
@@ -379,7 +324,6 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 =======
     </section>;) }
 '"`
-
 </motion>
 </motion>
 </motion>

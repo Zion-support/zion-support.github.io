@@ -344,7 +344,6 @@ const "EnhancedHeaderNew": React.FC = (props) => {
                         </div>
                         <h3 className="text-xl font-semibold text-gray-900 group-hover:text-cyan-600">
                           {industry.name} Solutions
-                        
                       </div>
                       <p className="text-gray-600">
                         Specialized technology solutions designed for the {industry.name.toLowerCase()} industry

@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface AibusinessintelligenceProps {
   // Add props here as needed
 }
-
 export default function Aibusinessintelligence({ }: AibusinessintelligenceProps) {
   return (
     <div>

@@ -36,7 +36,6 @@
     this.log('Starting file integrity scan...');',
     const checksums = {};,
     const issues = [];,
-
     try {}
       const files = this.getProjectFiles();,
       this.log(`Scanning ${files.length} files...`);,
@@ -47,11 +46,9 @@
           checksums[file] = checksum;,
         }
       }
-
       // Check against previous checksums;
       if (fs.existsSync(this.checksumsFile)) {}
         const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, 'utf8'));',
-        
         for (const [file, currentChecksum] of Object.entries(checksums)) {}
           if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) {}
             issues.push({}),
@@ -61,7 +58,6 @@
 ;            });,
           }
         }
-
         // Check for deleted files;
         for (const file of Object.keys(previousChecksums)) {}
           if (!checksums[file] && fs.existsSync(file)) {}
@@ -84,7 +80,6 @@
       } else {}
         this.log('No integrity issues found');',
       }
-
       return {
         "filesScanned": files.length,",
         "issuesFound": issues.length,",
@@ -96,16 +91,13 @@
       return null;,
     }
   }
-
   getProjectFiles() {}
     const files = [];,
     const extensions = ['.js', '.ts', '.tsx', '.json', '.md'];',
     const ignoreDirs = ['node_modules', '.git', '.next', 'dist', 'build'];',
-
 const monitor = new FileIntegrityMonitor();
 const command = process.argv[2];,
 const interval = parseInt(process.argv[3]) || 5;,
-
 switch (command) {}
   case 'scan':',
     monitor.scanProject();,
@@ -122,10 +114,8 @@ switch (command) {}
     _console.log('  node file-integrity-monitor.js report');';,
     break;
 }
-
 module.exports = FileIntegrityMonitor;
-=======;
-=======
+;
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -255,7 +245,6 @@ process.on(
   "if": (monitor) {
     await monitor.stop()})
 // Start the monitor;
-=======
 const walkDir = (dir) => {
       try {
         const items = fs.readdirSync(dir);
@@ -328,9 +317,6 @@ switch (command) {
     monitor.generateReport();
     break;
   "default": 
-    
-    
-    
     break;
 }
 module.exports = FileIntegrityMonitor;

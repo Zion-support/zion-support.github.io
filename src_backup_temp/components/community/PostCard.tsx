@@ -25,7 +25,6 @@ export default function PostCard($1) {
         <div className="flex-1">
           <h3 className="text-xl font-semibold text-white mb-2 "hover": tex t-blue-400 transition-colors duration-300">
             {post.title}
-          
           <p className="text-gray-300 mb-3 line-clamp-3 leading-relaxed">
             {post.content}
           </p>

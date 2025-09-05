@@ -24,7 +24,6 @@ class LintingAutomation {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    
     fs.appendFileSync(this.logFile, logMessage);
   }
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -109,7 +108,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     }
     
     return { "exists": false }}
-
   async reportLintingFailure(error) {
     const failureReport = {
       "timestamp": new Date().toISOString()
@@ -210,7 +208,6 @@ if (stat.isDirectory()) {
       this.isRunning = false;,
       process.exit(0);
     });,
-    
     process.on('SIGINT', () => {'}
       this.log('Received SIGINT, shutting down gracefully');',
       this.isRunning = false;,
@@ -218,13 +215,11 @@ if (stat.isDirectory()) {
     });,
   }
 }
-
 automation.start().catch(error => {}),
   _console.error('Failed to start linting "automation": ', error);',
   process.exit(1);
 });,
-=======;
-=======
+;
 return fileList;
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async start() {

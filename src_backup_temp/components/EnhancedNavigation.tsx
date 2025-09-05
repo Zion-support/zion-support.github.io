@@ -379,7 +379,6 @@ export default function Page(props: any) {
     ]
   },
   {
-
     label: 'Cloud & Infrastructure',
     href: '/it-services',"
     icon: <Cloud className="w-4 h-4"   />,
@@ -397,7 +396,6 @@ export default function Page(props: any) {
     ]
   },
   {
-
     label: 'Cybersecurity & Privacy',
     href: '/services/cybersecurity',"
     icon: <Shield className="w-4 h-4"   />,
@@ -410,7 +408,6 @@ export default function Page(props: any) {
     ]
   },
   {
-
     label: 'Emerging Technologies',
     href: '/emerging-tech',"
     icon: <Atom className="w-4 h-4"   />,
@@ -425,7 +422,6 @@ export default function Page(props: any) {
     ]
   },
   {
-
     label: 'Micro SaaS Solutions',
     href: '/micro-saas',"
     icon: <ShoppingCart className="w-4 h-4"   />,
@@ -443,7 +439,6 @@ export default function Page(props: any) {
     ]
   },
   {
-
     label: 'Solutions',
     href: '/solutions',"
     icon: <Building className="w-4 h-4"   />,
@@ -457,7 +452,6 @@ export default function Page(props: any) {
     ]
   },
   {
-
     label: 'Comp',
     href: '/about',"
     icon: <Users className="w-4 h-4"   />,
@@ -743,7 +737,6 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
 className:  '',;
 =======
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
-
 className:  '',;
   onThemeChange }) => {;
   const [isOpen, setIsOpen] = useState<any>(false);
@@ -753,7 +746,6 @@ className:  '',;
   
   useEffect(() => {
 // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
@@ -800,15 +792,12 @@ root.classList.add(newTheme)}
                     className="px-3 py-2 text-sm font-medium text-gray-700 "dark": "tex t-gray-300 "hover": tex t-blue-600 "dark": hove "r":text-blue-400 transition-colors";
                   >;
                     {item.label"}
-=======
-
   return ()    <nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${  const contactInfo = {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709"
   };
-
   return (<nav className = {`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${isScrolled
         ? 'bg-white / 95 dark: b g-slate - 900 / 95 backdrop - blur - md shadow-lg'
         : 'bg-transparent'
@@ -825,7 +814,6 @@ root.classList.add(newTheme)}
               </span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}"
           <div className="hidden lg: anyflex items-center space-x-8">
             {navigationItems.map((item)  => ("
@@ -844,27 +832,20 @@ root.classList.add(newTheme)}
                   >
                     {item.label}
                   </Link>) }
-
                 {/* Dropdown Menu */}
                 {item.children && (<AnimatePresence>
                     {activeDropdown === item.label && (<motion.div
                         initial = {
-
   { opacity: 0,
   y: -10
-
 }}
                         animate = {
-
   { opacity: 1,
   y: 0
-
 }}
                         exit = {
-
   { opacity: 0,
   y: -10
-
 }}
                         transition={{ duration: 0.2 }}"
                         className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl py-2 z-50"
@@ -873,7 +854,6 @@ root.classList.add(newTheme)}
                           <h3 className="text-sm font-semibold text-cyan-400 flex items-center space-x-2">
                             {item.icon}
                             <span>{item.label}</span>
-                          
                         </div>"
                         <div className="max-h-96 overflow-y-auto">
                           {item.children.map((child) => (
@@ -891,13 +871,11 @@ root.classList.add(newTheme)}
                   </AnimatePresence>) }
               </div>) ) }
           </div>
-
           {/* Right Side Actions */}
           <div  className="hidden lg: flex items - center space - x-4">;
             {/* Theme Toggle */}
             <div  className="flex items - center space - x-2 bg-gray - 100 dark: b g-slate - 800 rounded-lg p -1">;
               <button     onClick={ () => handleThemeChange('light') }
-=======
           <div  className="hidden "lg": "flex items - center space - x-4">;
             {/* Theme Toggle */"}
             <div  className="flex items - center space - x-2 bg-gray - 100 "dark": "b g-slate - 800 rounded-lg p -1">;
@@ -951,7 +929,6 @@ root.classList.add(newTheme)}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}";
                     className="lg: hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50";
-=======
               <AnimatePresence>;
                 {isOpen && (;
                   <motion.div;
@@ -995,7 +972,6 @@ root.classList.add(newTheme)}
                                       <div className="w-1.5 h-1.5 bg-slate-500 rounded-full"></div>;
                                       <span>{child.label"}</span>;
                                     </Link>;
-=======
           <div  className="hidden lg: flex items - center space - x-4">
             {/* Theme Toggle */}
             <div  className="flex items - center space - x-2 bg-gray - 100 dark: b g-slate - 800 rounded-lg p -1">
@@ -1022,7 +998,6 @@ root.classList.add(newTheme)}
               >"
                 <Monitor className="w-4 h-4"   />              </button>
             </div>
-
             {/* Contact Button */}
             <Link"
               to="/contact"
@@ -1031,7 +1006,6 @@ root.classList.add(newTheme)}
               <Phone className="w-4 h-4 mr-2"   />              Get Quote
             </Link>
           </div>
-
           {/* Mobile menu button */}"
           <div className="lg: hidde n">
             <button
@@ -1042,7 +1016,6 @@ root.classList.add(newTheme)}
           </div>
         </div>
       </div>
-
                     {/* Mobile Menu */}
               <AnimatePresence>
                 {isOpen && (
@@ -1116,7 +1089,6 @@ root.classList.add(newTheme)}
                               {item.label}
                             </Link>) }
                         </div>) ) }
-
               {/* Mobile Actions */}"
               <div className="pt-4 border-t border-slate-700/50 space-y-3">"
                 <div className="flex items-center space-x-4 text-slate-400">"
@@ -1144,7 +1116,6 @@ root.classList.add(newTheme)}
   )};'"`
 ;,"}
     );,})";
-
 </motion>
 </ChevronDown>
 </motion>

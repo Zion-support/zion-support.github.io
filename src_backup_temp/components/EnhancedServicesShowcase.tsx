@@ -85,7 +85,6 @@ import { motion } from 'framer-motionimport { Link } from react-router-domimport
       "opacity": 1",;
       "transition": "{;
         "staggerChildren": 0.1"}
-=======
 import { motion } from 'framer-motionimport { Link } from react-router-domimport {Brain,'
   Shield,
   Cloud,

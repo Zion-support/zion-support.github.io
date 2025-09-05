@@ -289,7 +289,6 @@ export const EnhancedFooter: React.FC = () => {
               Leading technology solutions provider specializing in AI, cybersecurity, 
               cloud infrastructure, and digital transformation services.</p>
           </div>
-
           {/* Services */}
           <div>
             <h4 className="text-md font-semibold mb-4">Services</h4>
@@ -300,7 +299,6 @@ export const EnhancedFooter: React.FC = () => {
               <li><a href="/services/transformation" className="hover: tex t-white">Digital Transformation</a></li>
             </ul>
           </div>
-
           {/* Solutions */}
           <div>
             <h4 className="text-md font-semibold mb-4">Company</h4>
@@ -311,7 +309,6 @@ export const EnhancedFooter: React.FC = () => {
               <li><a href="/case-studies" className="hover: tex t-white">Case Studies</a></li>
             </ul>
           </div>
-
           {/* Quick Links */}
           <div>
             <h4 className="text-md font-semibold mb-4">Legal</h4>
@@ -323,7 +320,6 @@ export const EnhancedFooter: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -344,7 +340,6 @@ export const EnhancedFooter: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -366,14 +361,12 @@ export const EnhancedFooter: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Trust Indicators */}
 ;
 export default EnhancedFooter;
 =======
 "};
 ;
-=======
       <div className="border-t border-gray-800 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-8 text-sm text-gray-400">

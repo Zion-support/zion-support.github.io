@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface NetworksecurityassessmentProps {
   // Add props here as needed
 }
-
 export default function Networksecurityassessment({ }: NetworksecurityassessmentProps) {
   return (
     <div>

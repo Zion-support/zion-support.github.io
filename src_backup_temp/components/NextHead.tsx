@@ -25,7 +25,6 @@ const "NextHead": "React.FC<NextHeadProps> = ({;
   const fullTitle = title.includes('Zion Tech Group') ? title : "`${title"} | Zion Tech Group`;
   const fullOgUrl = ogUrl || canonical || '"https": "//ziontechgroup.com';
 ;
-=======
 }
 const "NextHead": Reac t.FC<NextHeadProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions',

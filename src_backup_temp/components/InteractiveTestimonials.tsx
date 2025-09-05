@@ -23,16 +23,12 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
       <div  className="max - w-7xl mx - auto px-6">;
         <motion.div;
           className="text-center mb-16"          initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
@@ -44,7 +40,6 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
             Real stories from real clients.Discover how we've transformed businesses;
             across industries with our innovative technology solutions.</p>;
         </motion.div>;
-
         {/* Category Filter */"}
         <motion.div";
           className="flex flex-wrap justify-center gap-3 mb-12";
@@ -108,7 +103,6 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
               </div>;
             </motion.div>;
           </AnimatePresence>;
-
           {/* Navigation Arrows */}
           <button;
             onClick={previousTestimonial}";
@@ -121,7 +115,6 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
           >";
             <ChevronRight className="h-6 w-6 text-gray-600"   />          </button>;
         </div>;
-
         {/* Testimonial Indicators */"}";
         <div className="flex justify-center mb-8">;";
           <div className="flex space-x-2">;
@@ -134,7 +127,6 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
               />) ) }
           </div>;
         </div>;
-
         {/* Play/Pause Controls */}";
         <div className="flex justify-center mb-8">;
           <button;
@@ -152,27 +144,21 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
               </>) "}
           </button>;
         </div>;
-
         {/* CTA Section */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "2 0 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0 "}}
         {/* Category Filter */}
         <motion.div;
           className="flex flex - wrap justify - center gap-3 mb-12"          initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
 
@@ -210,7 +196,6 @@ export default InteractiveTestimonials;";
 export default InteractiveTestimonials;
 export default InteractiveTestimonials;
 '"`;
-
 </motion>;
 </motion>;
 </button>;

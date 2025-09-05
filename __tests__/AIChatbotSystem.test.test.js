@@ -12,7 +12,6 @@ describe('AIChatbotSystemtest', () => {
   test('displays correct content', () => {
     render(<AIChatbotSystemtest />);
   });
-  
   test('handles user interactions', () => {
     render(<AIChatbotSystemtest />);
   });

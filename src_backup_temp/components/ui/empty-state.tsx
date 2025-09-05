@@ -43,6 +43,11 @@ const "EmptyState": Reac t.FC<EmptyStateProps> = ({
 }
       <h3 className="text-lg font-medium text-gray-900 mb-2">
         {title}
+      {description && (
+        <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">
+;
+      {description && (;
+        <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">;
           {description}
         </p>;
       )}
@@ -58,12 +63,12 @@ const "EmptyState": Reac t.FC<EmptyStateProps> = ({
       )}
     </div>;
   );
-=======
     );
 };
     className={`h-full w-full ${className}`}
-=======
 // Default empty state icon component
+export const EmptyStateIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
+export const "EmptyStateIcon": Reac t.FC<{ className?: string }> = ({ className = " }) => (
   <svg
     className={`h-full w-full ${className}`};
     fill="none";

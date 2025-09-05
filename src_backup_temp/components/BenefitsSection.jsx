@@ -77,7 +77,6 @@ export function BenefitsSection("props": "any) {;
   const itemVariants = {;
   "hidden": "{ "y": 30",;
   "opacity": "0 ;
-
 "},;
     "visible": "{;
       "y": 0",;
@@ -92,7 +91,6 @@ export function BenefitsSection("props": "any) {;
   const statsVariants = {;
   "hidden": "{ "scale": 0.8",;
   "opacity": "0 ;
-
 "},;
     "visible": "{;
       "scale": 1",;
@@ -120,7 +118,6 @@ export function BenefitsSection("props": "any) {;
           transition = {;
   { "duration": "20", "repeat": "Infinity",;
   "ease": "linear" ;
-
 }}
          />;
         <motion .div ;
@@ -129,7 +126,6 @@ export function BenefitsSection("props": "any) {;
           transition = {;
   { "duration": "25", "repeat": "Infinity",;
   "ease": "linear" ;
-
 }}
          />;
         <motion .div ;
@@ -167,7 +163,6 @@ export function BenefitsSection("props": "any) {;
             Our commitment to excellence drives every project to success.;
           </p>;
         </motion.div>;
-
         {/* Additional stats section */"}
         <motion.div ;
           className="grid grid-cols-2 "md": "grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" ;
@@ -211,10 +206,113 @@ export function BenefitsSection("props": "any) {;
                     {benefit.icon}
                   </div>;
                 </div>;
-
                 {/* Stats badge */}
                 <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${benefit.bgColor} border border-zion-cyan/30 mb-4`}>;
                   <span className="text-zion-cyan font-bold text-sm">{benefit.stats}</span>;
                 </div>;
-
                 {/* Title and description */}
+<<<<<<< HEAD
+=======
+                <h3 className="text-xl font-bold text-white mb-4 group-"hover": "text-zion-cyan transition-colors">;
+                  {benefit.title"}
+                </h3>;
+                <p className="text-zion-slate-light leading-relaxed mb-6">;
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
+                  {benefit.title}
+                <p className="text-zion-slate-light leading-relaxed mb-6">
+                  {benefit.description}
+                </p>;
+                {/* Features list */}
+                <AnimatePresence>;
+                  {hoveredIndex === index && (;
+                    <motion.div ;
+                      className="space-y-2" ;
+                      initial={{;
+                        "opacity": "0",;
+                        "height": "0;
+                      "}}
+                      animate={{;
+                        "opacity": "1",;
+                        "height": "auto";
+                      }}
+                      exit={{;
+                        "opacity": "0",;
+                        "height": "0;
+                      "}} ;
+                      transition={{ "duration": "0.3 "}}
+                    >;
+                      {benefit.features.map((feature, idx) => (;
+                        <motion.div ;
+                          key={idx} ;
+                          className="flex items-center gap-2 text-zion-slate-light/80 text-sm" ;
+                          initial={{;
+                            "opacity": "0",;
+                            "x": "-10;
+                          "}}
+                          animate={{;
+                            "opacity": "1",;
+                            "x": "0;
+                          "}} ;
+                          transition={{ "delay": "idx * 0.1 "}}
+                        >;
+                          <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>;
+                          <span>{feature}</span>;
+                        </motion.div>;
+                      ))}
+                    </motion.div>;
+                  )}
+                </AnimatePresence>;
+                {/* Hover indicator */}
+                <div className="mt-4 text-zion-cyan/60 text-xs">;
+                  {hoveredIndex === index ? "Hover to see details" : "Hover for details"}
+                </div>;
+              </div>;
+            </motion.div>;
+          ))}
+        </div>;
+        {/* Call to action */}
+        <motion.div ;
+          className="text-center mt-16" ;
+          initial={{;
+            "opacity": "0",;
+            "y": "20;
+          "}}
+          whileInView={{;
+            "opacity": "1",;
+            "y": "0;
+          "}}
+          viewport={{ "once": "true "}} ;
+          transition={{;
+            "duration": "0.6",;
+            "delay": "0.5;
+          "}}
+        >;
+          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">;
+            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">;
+              <p className="text-white text-lg mb-4">;
+                Ready to experience the Zion difference?;
+              </p>;
+              <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple "hover": "from-zion-cyan-light "hover":to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform "hover":scale-105 "hover":shadow-lg "hover":shadow-zion-cyan/25">;
+                Get Started Today;
+              </button>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  )"}
+;
+export default BenefitsSection;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</div>;
+</number>
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

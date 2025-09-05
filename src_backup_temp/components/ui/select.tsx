@@ -7,7 +7,6 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {;
 export function Select(props: any) {;
   const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus: outlin e-none focus: rin g-2 focus: rin g-ring focus: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50';
 ;
-=======
 export function Select($1) {
   const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "focus": outlin e-none focus: rin g-2 focus: rin g-ring focus: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50';
   return (;
@@ -50,6 +49,10 @@ export function SelectContent($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
+    </div>
+    );
+    </div>;
+  );
 }
 ;
 interface SelectValueProps {;

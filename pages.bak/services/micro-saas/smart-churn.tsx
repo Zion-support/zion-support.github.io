@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface SmartchurnProps {
   // Add props here as needed
 }
-
 export default function Smartchurn({ }: SmartchurnProps) {
   return (
     <div>

@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface StartupProps {
   // Add props here as needed
 }
-
 export default function Startup({ }: StartupProps) {
   return (
     <div>

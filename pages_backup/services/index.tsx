@@ -112,7 +112,6 @@ export default function ServicesIndex() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">

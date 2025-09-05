@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface PlatformengineeringProps {
   // Add props here as needed
 }
-
 export default function Platformengineering({ }: PlatformengineeringProps) {
   return (
     <div>

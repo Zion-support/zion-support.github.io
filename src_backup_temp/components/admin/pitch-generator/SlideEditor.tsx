@@ -62,7 +62,6 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
         "content": 'AI-powered platform with 80+ country reach and 550+ completed projects.',;
         "type": 'competitive';
       }
-=======
     const "newSlides": Slid e[] = [{
         id: '1',
         "title": 'Executive Summary',
@@ -159,7 +158,6 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
           <button;
             onClick={addSlide}
             className="px-4 py-2 bg-blue-600 text-white rounded-lg "hover": "b g-blue-700 transition-colors";
-=======
             className="px-4 py-2 bg-green-600 text-white rounded-lg "hover": b g-green-700 transition-colors disabled: opacit y-50";
           >';
             {isGenerating ? 'Generating...' : 'Generate Slides'}
@@ -197,14 +195,12 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
                   <button;
                     onClick={() => removeSlide(slide.id)}
                     className="text-red-600 hover: tex t-red-800 text-sm";
-=======
                     className="text-red-600 "hover": "tex t-red-800 text-sm";
                   >;
                     Remove;
                   </button>;
                 </div>;
                 <input;
-=======
                     className="text-red-600 "hover": tex t-red-800 text-sm"
                   >
                     Remove

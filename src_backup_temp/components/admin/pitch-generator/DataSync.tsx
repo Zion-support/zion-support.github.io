@@ -54,7 +54,6 @@ const "DataSync": "React.FC<DataSyncProps> = ({ syncedData", onNext, onBack }) =
           </div>;
           <div className="text-center">;
             <div className="text-2xl font-bold text-green-600">;
-=======
   "syncedData": an y;
   onNext: () => void;
   onBack: () => void;
@@ -100,6 +99,14 @@ const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) =
         </div>
       </div>
       <div className="bg-white p-6 rounded-lg border border-gray-200 mb-8">
+        <h3 className="text-lg font-semibold mb-4">Conversion Funnel
+        <div className="grid grid-cols-2 md: gri d-cols-4 gap-4">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-blue-600">
+        <h3 className="text-lg font-semibold mb-4">Conversion Funnel</h3>
+        <div className="grid grid-cols-2 "md": gri d-cols-4 gap-4">
+          <divclassName="text-center">
+            <divclassName="text-2xl font-bold text-blue-600">';
               {syncedData?.marketplaceConversionFunnel?.visitors?.toLocaleString() || 'N/A'}
             </div>
             <div className="text-sm text-gray-600">Visitors</div>
@@ -121,13 +128,18 @@ const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) =
               {syncedData?.marketplaceConversionFunnel?.completedTransactions?.toLocaleString() || 'N/A'}
           onClick={onBack}
           className="px-6 py-3 border border-gray-300 rounded-lg "hover": "b g-gray-50 transition-colors";
-=======
             </div>
             <div className="text-sm text-gray-600">Transactions</div>
           </div>
         </div>
       </div>
       <div className="bg-white p-6 rounded-lg border border-gray-200 mb-8">
+        <h3 className="text-lg font-semibold mb-4">Notable Clients
+        <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
+          {syncedData?.notableClients?.map((client: an y, index: number) => (
+        <h3 className="text-lg font-semibold mb-4">Notable Clients</h3>
+        <div className="grid grid-cols-1 "md": gri d-cols-2 gap-4">
+          {syncedData?.notableClients?.map((client: an y, "index": number) => (
             <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
               <span className="font-medium">{client.name}</span>
               <a

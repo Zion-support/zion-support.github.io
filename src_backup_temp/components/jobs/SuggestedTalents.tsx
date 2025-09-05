@@ -51,16 +51,13 @@ export function SuggestedTalents("props": "any) {;
   }, [jobId]); // jobId is a dependency of fetchSuggestedTalents;
 
   const handleViewProfile = (props: any) => {
-    
     toast({
       title: "View Profile",
       description: `Navigating to talent profile: ${talentId}`,
     }
     );
   };
-
   const handleInvite = (props: any) => {
-    
     toast({
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`,
@@ -78,7 +75,6 @@ export function SuggestedTalents("props": "any) {;
 ;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -87,7 +83,6 @@ export function SuggestedTalents("props": "any) {;
       fetchSuggestedTalents();
     }
   }, [jobId, fetchSuggestedTalents]); // Added fetchSuggestedTalents;
-
   // Transform data to match JobMatchCard component props;
   const transformedTalents = talents.map(talent => {;
     return {;
@@ -103,12 +98,10 @@ export function SuggestedTalents("props": "any) {;
     };
   }
     );
-
   return (<Card className="border-zion-blue-light bg-zion-blue">
       <CardHeader>
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>
       </CardHeader>
-      
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>

@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface RatingStars.testProps {
   // Add props here as needed
 }
-
 export default function RatingStars.test({ }: RatingStars.testProps) {
   return (
     <div>

@@ -4,8 +4,6 @@ import { ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
 ;
 // Lazy load dashboard pages;
-=======
-
 // Lazy load dashboard pages
 const Dashboard = lazy(() => import('../pages/Dashboard'));
 const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));
@@ -63,7 +61,6 @@ const DashboardRoutes: React.FC = () => {
     </Suspense>
   );
 };
-
 export default DashboardRoutes;
 ;
 </Route>;

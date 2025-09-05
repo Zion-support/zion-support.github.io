@@ -15,7 +15,6 @@ import {}
 } from 'lucide-react';'
 const FuturisticFooter: React.FC = () => {}
   const currentYear = new Date().getFullYear();
-
   const footerSections = []
     {'}
       title: 'Services','
@@ -72,7 +71,6 @@ const FuturisticFooter: React.FC = () => {}
       ];
     };
   ];
-
   const socialLinks = [']
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },''
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },''

@@ -6,7 +6,6 @@ interface AccessibilitySettings {
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
 }
-
 export function Accessibility(): void {
   const [isOpen, setIsOpen] = useState<any>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -17,7 +16,6 @@ export function Accessibility(): void {
     theme: 'auto'
   }
     );
-
   const updateSetting = (props: any) => {
     const newSettings = {
       ...settings,
@@ -161,7 +159,6 @@ export function Accessibility(): void {
                 </button>;
               </div>;
             </div>;
-
             {/* High Contrast */"}
             <div>;
               <label className="flex items-center">;
@@ -174,7 +171,6 @@ export function Accessibility(): void {
                 <span className="text-sm text-gray-700 "dark": "tex t-gray-300">High Contrast</span>;
               </label>;
             </div>;
-
             {/* Reduced Motion */"}
             <div>;
               <label className="flex items-center">;
@@ -187,7 +183,6 @@ export function Accessibility(): void {
                 <span className="text-sm text-gray-700 "dark": "tex t-gray-300">Reduced Motion</span>;
               </label>;
             </div>;
-
             {/* Theme */"}
             <div>;
               <label className="block text-sm font-medium text-gray-700 "dark": "tex t-gray-300 mb-2">;
@@ -203,7 +198,6 @@ export function Accessibility(): void {
                 <option value="dark">Dark</option>;
               </select>;
             </div>;
-
             {/* Reset Button */"}
             <button;
               onClick={resetSettings}

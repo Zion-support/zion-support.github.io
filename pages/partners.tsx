@@ -1,8 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Globe, Cloud, Zap, Users, Shield, Award, Users as Handshake } from 'lucide-react';
 import Layout from '../components/Layout';
+=======
+import { Globe, Cloud, Zap, Users, Shield, Award, Handshake, ArrowRight } from 'lucide-react';
+>>>>>>> main
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
 
 const partners = [
   {
@@ -80,11 +85,75 @@ const partnershipTypes = [
 
 export default function PartnersPage() {
   return (
+<<<<<<< HEAD
     <Layout
       title="Partners - Zion Tech Group"
       description="Discover our strategic partnerships and how they enhance our technology solutions and services."
       keywords="partners, partnerships, technology, cloud, integration, consulting"
     >
+=======
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our Partners
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We work with leading technology partners to deliver the best solutions for our clients.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {partners.map((partner, index) => (
+            <motion.div
+              key={partner.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="flex items-center mb-4">
+                <partner.icon className="h-8 w-8 text-blue-600 mr-3" />
+                <h3 className="text-xl font-semibold text-gray-900">{partner.name}</h3>
+              </div>
+              
+              <p className="text-gray-600 mb-4">{partner.description}</p>
+              
+              <div className="mb-4">
+                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                  {partner.category}
+                </span>
+              </div>
+              
+              <div className="mb-4">
+                <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                <ul className="space-y-1">
+                  {partner.benefits.map((benefit, idx) => (
+                    <li key={idx} className="text-sm text-gray-600">
+                      • {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+=======
+    <>
+      <Head>
+        <title>Partners - Zion Tech Group</title>
+        <meta name="description" content="Learn about our strategic partnerships with leading technology companies and how they benefit our clients." />
+      </Head>
+
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">

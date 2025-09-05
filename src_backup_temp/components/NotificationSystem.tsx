@@ -8,8 +8,6 @@ export default function Page(props: any) {;
 ;
 export default function Page("props": "any) {;
 > {;
-=======
-
 export default function Page(props: any) {
 > {
 
@@ -19,7 +17,6 @@ export default function Page(props: any) {
   enableVibration?: boolean;
   autoDismiss?: boolean;
   defaultDuration?: number}
-
 interface NotificationSettings {
   sound: boolean;
   vibration: boolean;
@@ -29,7 +26,6 @@ interface NotificationSettings {
   defaultDuration: number}
 
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
-
   maxNotifications = 5,
   position = 'top-right',
 ;
@@ -51,9 +47,7 @@ default:';
 // Initialize audio for notification sounds;
 "default":';
 // Initialize audio for notification sounds      "default":';
-=======
   const [settings, setSettings] = useState<NotificationSettings>({
-
     sound: enableSoun d,
     vibration: enableVibratio n,
     autoDismiss: autoDismis s,
@@ -65,27 +59,22 @@ default:';
   const [showSettings, setShowSettings] = useState<any>(false);
   const [isOpen, setIsOpen] = useState<any>(false);
   const [unreadCount, setUnreadCount] = useState<any>(0);
-  
 // Initialize audio for notification sounds
 default:'
 // Initialize audio for notification sounds      default:'
 return 'top-4 right-4'}
   };
-
   // Update settings
-  
     setSettings(prev => ({ ...prev, ...newSettings }) ) }, []) ;
   // Expose addNotification method globally for external use
   useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
 }, []);, []); (window as) .addNotification = addNotification;
     return () => {
       delete(window as) .addNotification}}, [addNotification]) ;
-
   return ()
     <>
       {/* Notification Bell */}`
@@ -97,7 +86,6 @@ return 'top-4 right-4'}
               animate={{ "scale": "1 "}}";
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center";
               {unreadCount > 99 ? '99+' : "unreadCount"}
-=======
         <button
           onClick={() => setIsOpen(!isOpen)}"
           className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl border border-zion-cyan/20 hover: borde r-zion-cyan/40 transition-all duration-300 transform hover: scal e-105"
@@ -113,7 +101,6 @@ return 'top-4 right-4'}
               {unreadCount > 99 ? '99+' : unreadCount}
             </motion.div>) }
         </button>
-
         {/* Settings button */}
 =======
 ";
@@ -199,7 +186,6 @@ return 'top-4 right-4'}
               <AnimatePresence>;
                 {notifications.length === 0 ? (<motion.div;
                     animate={{ opacity: 1 }}";
-=======
                     initial={{ "opacity": "0 "}}
                     animate={{ "opacity": "1 "}}";
                     className="text-center py-8 text-zion-slate/60";
@@ -226,7 +212,6 @@ return 'top-4 right-4'}
                       layout;
                       className = {;
 `;
-=======
         <button
           onClick={() => setShowSettings(!showSettings)}"
           className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 p-2 bg-zion-slate/10 hover: b g-zion-slate/20 rounded-lg transition-colors"
@@ -234,27 +219,20 @@ return 'top-4 right-4'}
 "
           <Settings className="w-4 h-4 text-zion-slate"   />        </button>
       </div>
-
       {/* Settings Panel */}
       <AnimatePresence>
         {showSettings && (<motion.div
             initial = {
-
   { opacity: 0, scale: 0.9,
   y: -10
-
 }}
             animate = {
-
   { opacity: 1, scale: 1,
   y: 0
-
 }}
             exit = {
-
   { opacity: 0, scale: 0.9,
   y: -10
-
 }}`
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6 w-80`}
 "
@@ -295,7 +273,6 @@ return 'top-4 right-4'}
                 <button
                   onClick={markAllAsRead}"
                   className="w-full px-4 py-2 bg-zion-cyan/10 hover: b g-zion-cyan/20 text-zion-cyan rounded-lg transition-colors text-sm"
-
                   Mark all as read
                 </button>
               </div>
@@ -304,37 +281,28 @@ return 'top-4 right-4'}
                 <button
                   onClick={clearAll}"
                   className="w-full px-4 py-2 bg-red-50 hover: b g-red-100 text-red-600 rounded-lg transition-colors text-sm"
-
                   Clear all notifications
                 </button>
               </div>
             </div>
           </motion.div>) }
       </AnimatePresence>
-
       {/* Notifications Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div
             initial = {
-
   { opacity: 0, scale: 0.9,
   y: -10
-
 }}
             animate = {
-
   { opacity: 1, scale: 1,
   y: 0
-
 }}
             exit = {
-
   { opacity: 0, scale: 0.9,
   y: -10
-
 }}`
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-4 w-96 max-h-96 overflow-hidden`}
-
             {/* Header */}"
             <div className="flex items-center justify-between mb-4">"
               <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications
@@ -344,7 +312,6 @@ return 'top-4 right-4'}
 "
                 <X className="w-4 h-4 text-zion-slate"   />              </button>
             </div>
-
             {/* Notifications List */}"
             <div className="space-y-2 max-h-80 overflow-y-auto">
               <AnimatePresence>
@@ -361,22 +328,16 @@ return 'top-4 right-4'}
                     <motion.div
                       key={notification.id}
                       initial = {
-
   { opacity: 0,
   x: 5 0
-
 }}
                       animate = {
-
   { opacity: 1,
   x: 0
-
 }}
                       exit = {
-
   { opacity: 0, x: -50,
   height: 0
-
 }}
                       layout
                       className = {
@@ -386,7 +347,6 @@ return 'top-4 right-4'}
 } ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`;
 =======
   notification.priority)
-
 } ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`
                       }`}
 "
@@ -445,12 +405,10 @@ return 'top-4 right-4'}
                                 >
                                   {notification.action.label}
                                 </button>) }
-
                               {!notification.read && (
                                 <button
                                   onClick={() => markAsRead(notification.id)}"
                                   className="text-xs px-2 py-1 bg-zion-slate/10 hover: b g-zion-slate/20 text-zion-slate rounded transition-colors"
-
                                   Mark read
                                 </button>) }
                             </div>
@@ -464,10 +422,8 @@ return 'top-4 right-4'}
       </AnimatePresence>;
     </>
   )};
-
 // Hook for using notifications in components
 export 
-  
     if((window as any).addNotification) {;
       (window as any).addNotification(notification)}
   }, []) ;
@@ -551,13 +507,9 @@ export
   ;
   ...options;
       }) }  },
-
   warning: (title: string, message: string, options?: Partial<Notification>)  => {
-
     if((window as ).addNotification) {
-
       (window as ).addNotification({
-
         type: 'warning',
         title,
         message,
@@ -565,12 +517,9 @@ export
         ...options
       }) }
   },
-
   error: (title: string, message: string, options?: Partial<Notification>) => {
     if((window as ).addNotification) {
-
       (window as ).addNotification({
-
         type: 'error',
         title,
         message,
@@ -578,12 +527,9 @@ export
         ...options
       }) }
   },
-
   info: (title: string, message: string, options?: Partial<Notification>) => {
     if((window as ).addNotification) {
-
       (window as ).addNotification({
-
         type: 'info',
         title,
         message,
@@ -591,12 +537,9 @@ export
         ...options
       }) }
   },
-
   achievement: (title: string, message: string, options?: Partial<Notification>) => {
     if((window as ).addNotification) {
-
       (window as ).addNotification({
-
         type: 'achievement',
         title,
         message,
@@ -608,7 +551,6 @@ export
 '"`
 ;,"}
     );,})";
-
 </Notification>
 </Notification>
 </Notification>

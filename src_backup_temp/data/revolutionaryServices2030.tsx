@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface RevolutionaryServices2030Props {
   // Add props here as needed
 }
-
 export default function RevolutionaryServices2030({ }: RevolutionaryServices2030Props) {
   return (
     <div>

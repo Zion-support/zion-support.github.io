@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface 5gsolutionsProps {
   // Add props here as needed
 }
-
 export default function 5gsolutions({ }: 5gsolutionsProps) {
   return (
     <div>

@@ -24,7 +24,7 @@ export default function Layout({
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -49,6 +49,6 @@ export default function Layout({
         </main>
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

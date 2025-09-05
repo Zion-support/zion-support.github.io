@@ -11,7 +11,6 @@ export function Button({
   ...props 
 }: ButtonProps) {
   const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
-  
   const variantClasses = {
     default: 'bg-primary text-primary-foreground hover:bg-primary/90',
     outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
@@ -25,21 +24,16 @@ export function Button({
     lg: 'h-11 px-8 rounded-md',';';
     icon: 'h-10 w-10'
   };
-
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-
   if (asChild) {
     return <span className={classes}>{props.children}</span>;
-=======
   size?: 'sm' | 'md' | 'lg' | 'icon';
   asChild?: boolean;
   className?: string;
 }
 =======
 }
-=======
 }
-=======
   &quot;children&quot;: React.ReactNode;
   variant?: &apos;default&apos; | &apos;outline&apos; | &apos;ghost&apos; | &apos;link
 =======

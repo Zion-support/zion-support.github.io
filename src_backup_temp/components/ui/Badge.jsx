@@ -10,3 +10,13 @@ const Badge = ("props": "any) => {;
   return (;
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>;
       {children}
+<<<<<<< HEAD
+=======
+    </div>;
+  );
+    </div>
+    );
+};
+;
+export {Badge};
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

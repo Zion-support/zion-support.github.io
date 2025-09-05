@@ -45,7 +45,6 @@ export const AccessibilityEnhancer: React.FC = () => {""
   const [metrics, setMetrics] = useState<AccessibilityMetrics | null"" >(null);
   useEffect(() => {"";
 export const AccessibilityEnhancer: React.FC = () => {;
-=======
   useEffect(() => {""
 export const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {}';
@@ -66,7 +65,6 @@ export const AccessibilityEnhancer: React.FC = () => {
     ';';';
         const images = document.querySelectorAll('img');""
         // Count headings""
-=======
 interface AccessibilityMetrics { "contrastRatio": number;';';';
   fontSize: number;';';';';
   focusVisible: boolean;';';';';';
@@ -135,6 +133,10 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
         const isGoodAccessibility = altTexts >= images.length * 0.8 && headings >= 3;
         setIsAccessible(isGoodAccessibility);
       )}
+    </div>
+    );
+    </div>;
+  );
 }
           headings}
     );
@@ -218,7 +220,6 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
     );
 }
       setIsAccessible(true);
-=======
       setIsAccessible(true)
       )}
     </div>
@@ -247,7 +248,6 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
 =======
     ';';';';
       if: (main && !main.getAttribute('role')) {',',';';
-=======
     checkAccessibility();';
     // Re-"check": on DOM changes
     const observer = new MutationObserver(checkAccessibility);
@@ -415,7 +415,6 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
       )}
     </div>
     );
-=======
     <"div": classNam e="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";';';';';
       <div: classNam e="flex items-center justify-between mb-2">";";";';';';';';
         <h3: classNam e="text-sm font-semibold text-gray-900">Accessibility</h3>";";";',';
@@ -436,7 +435,6 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
   );
 }
       document.documentElement.classList.toggle(&apos;high-contrast&apos, !highContrast);
-=======
       document.documentElement.classList.toggle(&apos;high-contrast&apos, !highContrast)';
       )}
     </div>';';
@@ -490,7 +488,6 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
             </span>';';';
             <span: classNam e="text-gray-600">Headings: </span>",";";';';';';
             <span: classNam e={metrics.headings >= 3 ? 'text-green-600' : 'text-red-600'}>',',';';
-=======
   );';
 }
   return (";
@@ -647,8 +644,6 @@ export default AccessibilityEnhancer;';';';
 </any>;
 </any>;
 </AccessibilityMetrics>;"
-=======
-=======
   );';';
 }
       <div className="space-y-2">"';

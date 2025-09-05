@@ -45,21 +45,17 @@ import {
   MapPin,
   Globe
 } from 'lucide-react';
-
 interface ServiceShowcaseProps {
   className?: string;
 }
-
 export function ComprehensiveNewServicesShowcase2025({ className = '' }: ServiceShowcaseProps) {
   const [activeTab, setActiveTab] = useState<'micro-saas' | 'it-services' | 'ai-services'>('micro-saas');
   const [selectedService, setSelectedService] = useState<any>(null);
-
   const tabs = [
     { id: 'micro-saas', name: 'Micro SAAS', icon: Zap, count: NEW_MICRO_SAAS_SERVICES_2025.length },
     { id: 'it-services', name: 'IT Services', icon: Server, count: NEW_IT_SERVICES_2025.length },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: NEW_INNOVATIVE_SERVICES_2025.length }
   ];
-
   const getCurrentServices = () => {
     switch (activeTab) {
       case 'micro-saas':
@@ -72,7 +68,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
         return [];
     }
   };
-
   const formatPrice = (price: number, model: string) => {
     if (model === 'monthly') {
       return `$${price.toLocaleString()}/month`;
@@ -83,21 +78,18 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
     }
     return `$${price.toLocaleString()}`;
   };
-
   const getInnovationBadge = (level: string) => {
     const colors = {
       'Revolutionary': 'bg-purple-100 text-purple-800 border-purple-200',
       'Advanced': 'bg-blue-100 text-blue-800 border-blue-200',
       'Professional': 'bg-green-100 text-green-800 border-green-200'
     };
-    
     return (
       <span className={`px-2 py-1 text-xs font-medium rounded-full border ${colors[level as keyof typeof colors] || colors.Professional}`}>
         {level}
       </span>
     );
   };
-
   return (
     <div className={`bg-gray-50 py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,7 +104,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
           </p>
 =======
         </div>
-
         {/* Search and Filter Section */}"
         <div className="mb-12">"
           <div className="flex flex-col lg: fle x-row gap-4 items-center justify-between">
@@ -156,7 +147,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               </div>
 =======
             </div>
-
             {/* Sort */}
             <select
               value={sortBy}
@@ -169,7 +159,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
             </select>
           </div>
         </div>
-
         {/* Services Grid */}"
         <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-3 gap-8">
           {filteredServices.map((service, index)  => (
@@ -205,7 +194,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                 {service.description}
               </p>
-
               {/* Pricing */}"
               <div className="mb-4 p-3 bg-gray-700 rounded-lg">"
                 <div className="flex items-center justify-between">
@@ -222,7 +210,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                   Setup: {service.pricing.setup} • Enterprise: {service.pricing.enterprise}
                 </div>
               </div>
-
               {/* Key Features */}"
               <div className="mb-4">"
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>"
@@ -239,7 +226,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                     </div>) }
                 </div>
               </div>
-
               {/* Benefits */}"
               <div className="mb-4">"
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>"
@@ -250,7 +236,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                     </div>) ) }
                 </div>
               </div>
-
               {/* Technical Specs */}"
               <div className="mb-4 p-3 bg-gray-700 rounded-lg">"
                 <div className="grid grid-cols-2 gap-2 text-xs">
@@ -272,7 +257,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                   </div>
                 </div>
               </div>
-
               {/* Target Audience */}"
               <div className="mb-4">"
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect For:</h4>"
@@ -280,7 +264,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
                   {service.targetAudience}
                 </div>
               </div>
-
               {/* CTA Buttons */}"
               <div className="space-y-2">
                 <a
@@ -300,7 +283,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               </div>
             </motion.div>) ) }
         </div>
-
         {/* Contact Information Section */}
         <motion.div
           initial={{ opacity: 0, y: 2 0 }}
@@ -355,7 +337,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
             </a>
           </div>
         </motion.div>
-
         {/* Stats Section */}"
         <div className="mt-20">"
           <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
@@ -372,7 +353,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               <div className="text-3xl font-bold text-white mb-2">15+</div>"
               <div className="text-gray-400">New Services</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -386,7 +366,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               <div className="text-3xl font-bold text-white mb-2">10+</div>"
               <div className="text-gray-400">AI-Powered</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -400,7 +379,6 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>"
               <div className="text-gray-400">Uptime</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 2 0 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -419,14 +397,12 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
       </div>
     </div>) }
 export default ComprehensiveNewServicesShowcase2025;'"`
-
 </motion>
         )}
       </div>
     </div>
   );
 }
-
 export default ComprehensiveNewServicesShowcase2025;
 =======
 </motion>

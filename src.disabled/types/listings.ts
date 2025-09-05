@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export: interface Listing {
+"export": interface Listing {
+   id: string;
+   title: string;
+   description: string;
+   price: number;
+   currency: string;
+   category: string;
+   subcategory?: string;
+   tags: string[];
+   images: string[];
+   seller: { id: string;
+   name: string;
+   rating: number;
+   reviews: numbe,r} location: string ,
+export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number} reviews: 'numbe',r} location: 'string' ,;
+   reviews: numbe,r} "location": string ,
+>>>>>>> main
+>>>>>>> main
+export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
+>>>>>>> main
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

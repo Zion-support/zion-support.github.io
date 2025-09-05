@@ -28,7 +28,6 @@ export default function Page("props": "any) {;
     }
     setWallet(initialWalletState);
   }, [web3ModalInstance]); // Removed wallet.provider, setWallet is stable;
-
   const connectWallet = useCallback(async () => {;
     if(!web3ModalInstance) {;
         console.error('Web3Modal not initialized');
@@ -49,7 +48,6 @@ export default function Page("props": "any) {;
         isConnected: tru e,
       }
     );
-
       instance.on('accountsChanged', (accounts: string[]) => {
         if(accounts.length > 0) {
           // Re-fetch signer and network info as account change might imply network change in some wallets
@@ -70,7 +68,6 @@ export default function Page("props": "any) {;
         }
       }
     );
-
       instance.on('chainChanged', async () => { // Added async
         // Re-initialize provider, signer, address, and chainId
         const newProvider = new ethers.providers.Web3Provider(instance);
@@ -85,23 +82,18 @@ export default function Page("props": "any) {;
           isConnected: tru e,
         }
     );
-        
       }
     );
-
       instance.on('disconnect', (error: an y) => {
-        
         disconnectWallet();
       }
     );
-
     } catch(error) {
       console.error('Error connecting wallet:', error);
       // If user closes modal, it might throw an error, so we ensure state is reset
       disconnectWallet();
     }
   }, [web3ModalInstance, disconnectWallet]); // Added disconnectWallet;
-
   const displayAddress = wallet.address;
     ? `${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length-4)}`;
     : "null;

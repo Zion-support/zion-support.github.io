@@ -5,21 +5,17 @@
       fs.mkdirSync(logDir, { "recursive": true });",
     }
   }
-
   log(message, level = 'INFO') {'}
     const timestamp = new Date().toISOString();,
     }
   }
-
   async runSystem(systemName, options = {}) {}
     if (!this.automationSystems.has(systemName)) {}
       this.log(`System "${systemName}" not found`, 'ERROR');',
       return false;,
     }
-
     const system = this.automationSystems.get(systemName);
-=======;
-=======
+;
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');

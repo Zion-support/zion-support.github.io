@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface ServicesoverviewProps {
   // Add props here as needed
 }
-
 export default function Servicesoverview({ }: ServicesoverviewProps) {
   return (
     <div>

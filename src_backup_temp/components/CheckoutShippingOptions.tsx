@@ -24,7 +24,6 @@ export function CheckoutShippingOptions("props": "any) {;
 ;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -32,7 +31,6 @@ export function CheckoutShippingOptions("props": "any) {;
     if(!toAddress) return;
     ;
       try {;
-
         if(res.ok) {;
           setRates(data.rates || [])} else {;
           console.error('Rates error', data)}

@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface AianalyticsProps {
   // Add props here as needed
 }
-
 export default function Aianalytics({ }: AianalyticsProps) {
   return (
     <div>

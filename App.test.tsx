@@ -13,7 +13,6 @@ describe('App', () => {
     render(<App />);
     // Add specific content assertions here
   });
-
   it('handles user interactions', () => {
     render(<App />);
     // Add interaction tests here

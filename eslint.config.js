@@ -1,6 +1,5 @@
 import js from '@eslint/js';
       },
-=======
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
@@ -316,6 +315,18 @@ export default [
       'no-console': 'warn',
       'no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
+      'react/jsx-uses-react': 'error',
+      'react/jsx-uses-vars': 'error',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
   },
   {
       'src/**',
@@ -452,7 +463,6 @@ export default [
     ]
   }
 ];
-=======
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {

@@ -169,7 +169,6 @@ const automations = {
       log('Checking link integrity...');
       // Implementation for link integrity checks
       log('Link integrity check completed');
-      
     } catch (error) {
       handleError(error, 'link-integrity');
     }
@@ -181,7 +180,6 @@ const automations = {
       log('Optimizing frontend...');
       // Implementation for frontend optimization
       log('Frontend optimization completed');
-      
     } catch (error) {
       handleError(error, 'front-maximizer');
     }

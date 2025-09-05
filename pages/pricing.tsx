@@ -7,9 +7,10 @@ const plans = [
   {
     name: "Starter",
     price: "$2,000",
-    period: "per month",
-    description: "Perfect for small businesses getting started",
+    period: "/month",
+    description: "Perfect for small businesses getting started with AI",
     features: [
+<<<<<<< HEAD
       "Up to 5 users",
       "Basic AI services",
       "Email support",
@@ -23,13 +24,29 @@ const plans = [
     ],
     popular: false,
     icon: Users
+=======
+      "Basic AI consultation",
+      "Email support",
+      "Monthly check-ins",
+      "Basic analytics dashboard",
+      "Up to 5 team members"
+    ],
+    limitations: [
+      "Limited AI models",
+      "Basic customization",
+      "Standard response time"
+    ],
+    popular: false,
+    cta: "Get Started"
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
   },
   {
     name: "Professional",
     price: "$5,000",
-    period: "per month",
+    period: "/month",
     description: "Ideal for growing businesses with advanced needs",
     features: [
+<<<<<<< HEAD
       "Up to 25 users",
       "Advanced AI services",
       "Priority support",
@@ -43,10 +60,28 @@ const plans = [
     ],
     popular: true,
     icon: Zap
+=======
+      "Advanced AI consultation",
+      "Priority support",
+      "Weekly check-ins",
+      "Advanced analytics dashboard",
+      "Up to 25 team members",
+      "Custom AI models",
+      "API access",
+      "Training sessions"
+    ],
+    limitations: [
+      "Limited custom development",
+      "Business hours support"
+    ],
+    popular: true,
+    cta: "Most Popular"
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
   },
   {
     name: "Enterprise",
     price: "$15,000",
+<<<<<<< HEAD
     period: "per month",
     description: "Complete solution for large organizations",
     features: [
@@ -57,16 +92,36 @@ const plans = [
       "Custom analytics",
       "Full customization",
       "White-label options",
+=======
+    period: "/month",
+    description: "Complete solution for large organizations",
+    features: [
+      "Dedicated AI consultant",
+      "24/7 priority support",
+      "Daily check-ins",
+      "Custom analytics dashboard",
+      "Unlimited team members",
+      "Fully custom AI models",
+      "Full API access",
+      "Comprehensive training",
+      "Custom development",
+      "SLA guarantee",
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
       "Dedicated account manager"
     ],
     limitations: [],
     popular: false,
+<<<<<<< HEAD
     icon: Shield
+=======
+    cta: "Contact Sales"
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
   }
 ];
 
-const addOns = [
+const microSaaSPlans = [
   {
+<<<<<<< HEAD
     name: "Additional Users",
     price: "$100",
     period: "per user/month",
@@ -89,13 +144,107 @@ const addOns = [
     price: "$1,000",
     period: "per session",
     description: "Comprehensive training for your team"
+=======
+    name: "Basic",
+    price: "$99",
+    period: "/month",
+    description: "Essential micro SaaS solutions",
+    features: [
+      "1 Micro SaaS platform",
+      "Basic AI features",
+      "Email support",
+      "Standard hosting",
+      "Basic analytics"
+    ],
+    popular: false
+  },
+  {
+    name: "Professional",
+    price: "$299",
+    period: "/month",
+    description: "Advanced micro SaaS suite",
+    features: [
+      "3 Micro SaaS platforms",
+      "Advanced AI features",
+      "Priority support",
+      "Premium hosting",
+      "Advanced analytics",
+      "Custom integrations",
+      "API access"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    price: "$799",
+    period: "/month",
+    description: "Complete micro SaaS ecosystem",
+    features: [
+      "Unlimited platforms",
+      "Full AI capabilities",
+      "24/7 support",
+      "Dedicated hosting",
+      "Custom analytics",
+      "Full integrations",
+      "White-label options",
+      "Custom development"
+    ],
+    popular: false
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
   }
 ];
 
-export default function PricingPage() {
-  const [billingPeriod, setBillingPeriod] = useState('monthly');
+const itServicesPlans = [
+  {
+    name: "Infrastructure",
+    price: "$3,500",
+    period: "/month",
+    description: "Core IT infrastructure services",
+    features: [
+      "Cloud infrastructure setup",
+      "Network security",
+      "Data backup & recovery",
+      "24/7 monitoring",
+      "Basic maintenance"
+    ],
+    popular: false
+  },
+  {
+    name: "Advanced",
+    price: "$7,500",
+    period: "/month",
+    description: "Comprehensive IT solutions",
+    features: [
+      "Full cloud migration",
+      "Advanced cybersecurity",
+      "AI-powered monitoring",
+      "Custom development",
+      "Dedicated support team",
+      "Performance optimization"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    price: "$20,000",
+    period: "/month",
+    description: "Complete enterprise IT transformation",
+    features: [
+      "Full digital transformation",
+      "AI & ML integration",
+      "Custom enterprise solutions",
+      "Dedicated team",
+      "SLA guarantees",
+      "Training & consulting",
+      "Ongoing optimization"
+    ],
+    popular: false
+  }
+];
 
+export default function Pricing() {
   return (
+<<<<<<< HEAD
     <Layout
       title="Pricing - Zion Tech Group"
       description="Transparent pricing for our comprehensive technology solutions. Choose the plan that fits your business needs."
@@ -111,17 +260,43 @@ export default function PricingPage() {
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
+=======
+    <Layout>
+      <Head>
+        <title>Pricing | ZionTech Group</title>
+        <meta name="description" content="Transparent pricing for AI services, IT solutions, and micro SaaS platforms. Choose the perfect plan for your business needs." />
+        <meta name="keywords" content="pricing, AI services, IT solutions, micro SaaS, technology costs" />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Simple, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Transparent</span> Pricing
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
+=======
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Transparent
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  {" "}Pricing
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Choose the perfect plan for your business needs. All plans include our core services 
+                with transparent pricing and no hidden fees.
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
               </p>
             </motion.div>
           </div>
@@ -167,14 +342,22 @@ export default function PricingPage() {
               {plans.map((plan, index) => (
                 <motion.div
                   key={plan.name}
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
+=======
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 ${
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
                     plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
                   }`}
                 >
                   {plan.popular && (
+<<<<<<< HEAD
                     <div className="bg-blue-600 text-white text-center py-2 text-sm font-semibold">
                       Most Popular
                     </div>
@@ -206,10 +389,49 @@ export default function PricingPage() {
                           <li key={idx} className="flex items-center">
                             <X className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" />
                             <span className="text-gray-500 line-through">{limitation}</span>
+=======
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        {plan.cta}
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="flex items-baseline justify-center mb-4">
+                      <span className="text-5xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-2">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
+                  </div>
+
+                  <div className="space-y-4 mb-8">
+                    <h4 className="text-lg font-semibold text-white">What's Included:</h4>
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-gray-300">
+                          <Check className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {plan.limitations.length > 0 && (
+                    <div className="space-y-4 mb-8">
+                      <h4 className="text-lg font-semibold text-white">Limitations:</h4>
+                      <ul className="space-y-3">
+                        {plan.limitations.map((limitation, idx) => (
+                          <li key={idx} className="flex items-center text-gray-400">
+                            <X className="h-5 w-5 text-red-400 mr-3 flex-shrink-0" />
+                            {limitation}
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
                           </li>
                         ))}
                       </ul>
                     </div>
+<<<<<<< HEAD
                     
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                       plan.popular
@@ -220,21 +442,44 @@ export default function PricingPage() {
                       <ArrowRight className="w-4 h-4 ml-2 inline" />
                     </button>
                   </div>
+=======
+                  )}
+
+                  <button
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
+                        : 'bg-white/20 text-white hover:bg-white/30'
+                    }`}
+                  >
+                    {plan.cta}
+                  </button>
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Add-ons */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+=======
+        {/* Micro SaaS Pricing */}
+        <section className="py-20 bg-black/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
               transition={{ duration: 0.8 }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
+<<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Add-ons & Extras
               </h2>
@@ -256,6 +501,42 @@ export default function PricingPage() {
                   <div className="text-2xl font-bold text-blue-600 mb-2">
                     {addOn.price}
                     <span className="text-sm font-normal text-gray-600">{addOn.period}</span>
+=======
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Micro SaaS Pricing
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Affordable micro SaaS solutions for every business size
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {microSaaSPlans.map((plan, index) => (
+                <motion.div
+                  key={plan.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 ${
+                    plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="flex items-baseline justify-center mb-4">
+                      <span className="text-5xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-2">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
                   </div>
                   <p className="text-gray-600 text-sm">{addOn.description}</p>
                 </motion.div>
@@ -326,6 +607,7 @@ export default function PricingPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -344,6 +626,32 @@ export default function PricingPage() {
                 <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                   Contact Sales
                 </button>
+=======
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Need a Custom Solution?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Contact us for a personalized quote tailored to your specific business requirements
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
+                >
+                  Get Custom Quote
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center"
+                >
+                  Learn More
+                </Link>
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
               </div>
             </motion.div>
           </div>

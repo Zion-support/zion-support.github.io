@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {;
 export default WebsiteAnalyzer;
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
-=======
 export const "WebsiteAnalyzer": "React.FC = () : JSX.Element => {;
 export default WebsiteAnalyzer;
 import { CheckCircle", import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
@@ -22,27 +21,22 @@ export default function Page("props": "any) {;
         missingPages;
       }) } catch(error) {;
       // console.error('Analysis "failed":', error)} finally {;
-=======
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
-
 export default function Page(props: any) {
  catch(error) {
 `
           // console.error(`Error analyzing ${page}:`, error)}
-
         // Add delay to prevent overwhelming the server
         await new Promise(resolve => setTimeout (resolve, 100) ) }
 
       setAnalysisResult({
-
         summary,
         pages: result s,
         brokenLinks,
         missingPages
       }) } catch(error) {
-
       // console.error('Analysis failed:', error)} finally {
 
 ;
@@ -58,13 +52,11 @@ export default function Page(props: any) {
       setProgress(100);
       setCurrentPage('')}
   };
-
     a.href = url;
     a.download = 'zion-website-analysis.json';    document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url)};
-
       case 'broken':"
         return <XCircle className="w-4 h-4 text-red-500"   />;
       case 'missing':"
@@ -75,7 +67,6 @@ export default function Page(props: any) {
         return <AlertTriangle className="w-4 h-4 text-gray-500"   />}
 =======
   };
-
       case 'broken':'
         return 'text-red-600 bg-red-100';
       case 'missing':'
@@ -84,7 +75,6 @@ export default function Page(props: any) {
         return 'text-blue-600 bg-blue-100';
       default:'
         return 'text-gray-600 bg-gray-100'}  };
-
   return ("
     <div className="max-w-7xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-lg p-6">"
@@ -133,7 +123,6 @@ export default function Page(props: any) {
               <p className="text-sm text-gray-600 mt-2">";
                 "Analyzing": "<span className="font-mono">{currentPage"}</span>;
               </p>;
-=======
               disabled={isAnalyzing}"
               className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"
             >
@@ -152,7 +141,6 @@ export default function Page(props: any) {
               </button>) }
           </div>
         </div>
-
         {isAnalyzing && ("
           <div className="mb-6">"
             <div className="flex items-center justify-between mb-2">"
@@ -185,7 +173,6 @@ export default function Page(props: any) {
                   </div>
                 </div>
               </div>
-
               <div  className="bg-green - 50 p - 4 rounded-lg border border-green -200">
                 <div  className="flex items -center">
                   <CheckCircle className="w-8 h-8 text-green - 600 mr-3"  />
@@ -216,7 +203,6 @@ export default function Page(props: any) {
                   </div>
                 </div>
               </div>
-
               <div  className="bg-red - 50 p - 4 rounded-lg border border-red -200">
                 <div  className="flex items -center">
                   <XCircle className="w-8 h-8 text-red - 600 mr-3"  />
@@ -226,7 +212,6 @@ export default function Page(props: any) {
                   </div>
                 </div>
               </div>
-
               <div  className="bg-yellow-50 p - 4 rounded-lg border border-yellow-200">
                 <div  className="flex items -center">
                   <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3"  />
@@ -236,7 +221,6 @@ export default function Page(props: any) {
                 </div>
               </div>
             </div>
-
             {/* Broken Links */}
             {analysisResult.brokenLinks.length > 0 && ("
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">"
@@ -278,7 +262,6 @@ export default function Page(props: any) {
                       </span>
                     </div>) ) }
                 </div>;
-=======
                 </div>
               </div>) }
 =======

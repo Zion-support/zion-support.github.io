@@ -20,7 +20,6 @@ export default function Page("props": "any) {;
       toast.error("This event is already added");
       return;
     }
-    
     setNewWebhook({
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
@@ -28,7 +27,6 @@ export default function Page("props": "any) {;
     }
     );
   };
-  
   const handleRemoveEvent = (props: any) => {
     setNewWebhook({
       ...newWebhook,
@@ -147,10 +145,8 @@ export default function Page("props": "any) {;
           </Button>
         </CardFooter>
       </Card>
-      
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks
-        
         {loading ? (
           <p>Loading webhooks...</p>
         ) : error ? (

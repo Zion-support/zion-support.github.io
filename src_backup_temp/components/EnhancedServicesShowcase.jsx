@@ -206,3 +206,780 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 ;
                 </button>;
               ))}
+<<<<<<< HEAD
+=======
+;
+          </motion.div>;
+      </section>;
+""{/* comment */}"";";
+        <div className="max-w-7xl mx-auto">"";";
+            className = "grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-8"",;
+            variants = {containerVariants}"",;
+            initial = "hidden"",;
+            whileInView="visible"";";
+            viewport = "{{" "once": "true "}}
+;
+          >{filteredServices.map((service, index) => (;
+              <motion.div,;
+                key = {service.id}"">;
+                variants={itemVariants}"";";
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 "hover": "border-white/40 transition-all duration-300 "hover":transform "hover":scale-105 group ">""{/* comment */"}"";";
+                <div className="text-center mb-6">";
+                  <div"";";
+                    className = "{"text-6xl" mb-4 group-"hover": "scale-110 transition-transform duration-300""}>;
+                  >{service.icon}"";";
+                  <h3 className="text - xl font-semibold text-white mb-2"> {service.name}"",;
+                  </h3>"";";
+          </motion.div>
+      </section>
+""{/* comment */}"";"
+        <div className="max-w-7xl mx-auto">"";"
+            className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
+            variants = {containerVariants}"",
+            initial = "hidden"",
+            whileInView="visible"";"
+            viewport = "{{" once: true }}
+          >{filteredServices.map((service, index) => (
+              <motion.div,
+                key = {service.id}"">
+                variants={itemVariants}"";"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">""{/* comment */}"";"
+                <div className="text-center mb-6">"
+                  <div"";"
+                    className = "{"text-6xl" mb-4 group-hover:scale-110 transition-transform duration-300"}>
+                  >{service.icon}"";"
+                  <h3 className="text - xl font-semibold text-white mb-2"> {service.name}"",
+                  "";"
+                  <p className = "text-sm text-blue-400 font-medium">"{service.category.replace("-").toUpperCase()}
+;
+                  </p>;
+""{/* comment */}"";";
+                <p className = "text-gray-300 text-sm mb-4 text-center"> {service.tagline}
+;
+""{/* comment */}"";";
+                <div className="bg-white/5 rounded-lg p-4 mb-4">"";";
+                  <h4 className = "text - sm font-semibold text-green-400 mb-2">,;
+                    Pricing"",;
+                  </h4>"";";
+                  <div className="space-y-1 text-xs text-gray-300">;
+                    <div>"Monthly": "{service.pricing.monthly"}</div>;
+  );
+}
+                    <div>"Yearly": "{service.pricing.yearly"}</div>;
+                    <div>"Setup": "{service.pricing.setup"}</div>;
+""{/* comment */}"";";
+                <div className="mb-4">"";";
+                  <h4 className="text - sm font-semibold text-blue-400 mb-2">,;
+                    Key Features"";";
+                  <ul className = "space - y-1"> {service.features.slice(0, 4).map((feature, idx) => (,;
+                      <li"">;
+                        key={idx}"";";
+                        className="text-xs text-gray-300 flex items-center">"";";
+                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>;
+      </section>";
+&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
+        <div className="&apos;max-w-7xl" mx-auto&apos;>"&apos;&apos,"";
+          <motion.div&apos;&apos,&apos;";
+            className="&apos;grid" grid-cols-1 "md": "grid-cols-2 l","g": "grid-cols-3 gap-8&apos",&apos,"",";
+            variants={containerVariants}&apos;&apos,";
+            initial=&apos;hidden&apos;&apos,";";
+            whileInView="&apos;visible&apos;&apos;";
+"""{/* comment */}"""""";
+        <div className = "max-w-7xl mx-auto">""""";
+          <motion.div"""";
+            className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-8"""",";
+            variants = {containerVariants}"""">;
+            initial = "hidden"""",";
+            whileInView="visible"">;
+          >{filteredServices.map((service, index) => (&apos}&apos;";
+                key="{service.id}&apos;&apos;";
+                variants={itemVariants}&apos;&apos,";"";
+                className="&apos;bg-white/10" backdrop-blur-lg rounded-xl p-6 border border-white/20 "hover": "border-white/40 transition-all duration-300 "hover":transform hove","r": "scale-105 group &apos",>"&apos,&apos {/* comment */}&apos;&apos,&apos;&apos,";
+                <div className="&apos;text-center" mb-6&apos;>"&apos;
+                  <div""";
+                  >{service.icon}&apos;&apos,&apos;&apos;";
+                  <h3 className="&apos;text-xl" font-semibold text-white mb-2&apos;>";
+                    {service.name}&apos;&apos,&apos;&apos,;
+                  </h3>&apos;&apos,&apos;&apos,";
+                  <p className="&apos;text-sm" text-blue-400 font-medium&apos;>&apos {service.category.replace(&apos;-&apos).toUpperCase()}&apos;&apos,;
+&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
+                <p className="&apos;text-gray-300" text-sm mb-4 text-center&apos;>;
+                  {service.tagline}&apos,;
+&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
+                <div className="&apos;bg-white/5" rounded-lg p-4 mb-4&apos;>"&apos;&apos,&apos;&apos;";
+                  <h4 className="&apos;text-sm" font-semibold text-green-400 mb-2&apos;>";
+                    Pricing&apos;&apos,&apos;&apos,;
+                  </h4>&apos;&apos,&apos;&apos,";
+                  <div className="&apos;space-y-1" text-xs text-gray-300&apos;>&apos,";
+                key = {service.id}""",";
+                variants={itemVariants}"""";";
+                className = "bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 "hover": "border-white/40 transition-all duration-300 "hover":transform "hover":scale-105 group ">"""{/* comment */"}""""";
+                <div className="text-center mb-6">"";
+                  >{service.icon}"""";
+                  <h3 className="text-xl font-semibold text-white mb-2">";
+                    {service.name}""""";
+                  </h3>"""";
+                  <p className="text-sm text-blue-400 font-medium">"{service.category.replace("-").toUpperCase()}"";
+"""{/* comment */}""""";
+                <p className="text-gray-300 text-sm mb-4 text-center">;
+                  {service.tagline}";
+"""{/* comment */}""""";
+                <div className="bg-white/5 rounded-lg p-4 mb-4">"""";
+                  <h4 className="text-sm font-semibold text-green-400 mb-2">";
+                    Pricing""""";
+                  </h4>"""";
+                  <div className="space-y-1 text-xs text-gray-300">;
+                    <div>"Monthly": "{service.pricing.monthly"}</div>;
+                    <div>"Yearly": "{service.pricing.yearly"}</div>;
+                    <div>"Setup": "{service.pricing.setup"}</div>;
+&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
+                <div className="&apos;mb-4&apos;">"&apos;&apos,&apos;&apos;";
+                  <h4 className="&apos;text-sm" font-semibold text-blue-400 mb-2&apos;>";
+                    Key Features&apos;&apos,&apos;&apos;";
+                  <ul className="&apos;space-y-1&apos;">;
+""{/* comment */}"";"
+                <div className="bg-white/5 rounded-lg p-4 mb-4">"";"
+                  <h4 className = "text - sm font-semibold text-green-400 mb-2">,
+                    Pricing"",
+                  </h4>"";"
+                  <div className="space-y-1 text-xs text-gray-300">
+                    <div>Monthly: {service.pricing.monthly}</div>
+    );
+}
+                    <div>Yearly: {service.pricing.yearly}</div>
+                    <div>Setup: {service.pricing.setup}</div>
+""{/* comment */}"";"
+                <div className="mb-4">"";"
+                  <h4 className="text - sm font-semibold text-blue-400 mb-2">,
+                    Key Features"";"
+                  <ul className = "space - y-1"> {service.features.slice(0, 4).map((feature, idx) => (,
+                      <li"">
+                        key={idx}"";"
+                        className="text-xs text-gray-300 flex items-center">"";"
+                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>
+      </section>"
+&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
+        <div className="&apos;max-w-7xl" mx-auto&apos;>"&apos;&apos,""
+          <motion.div&apos;&apos,&apos;"
+            className="&apos;grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-3 gap-8&apos,&apos,"","
+            variants={containerVariants}&apos;&apos,"
+            initial=&apos;hidden&apos;&apos,";"
+            whileInView="&apos;visible&apos;&apos;"
+"""{/* comment */}""""""
+        <div className = "max-w-7xl mx-auto">"""""
+          <motion.div""""
+            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8""","
+            variants = {containerVariants}"""">
+            initial = "hidden"""","
+            whileInView="visible"">
+          >{filteredServices.map((service, index) => (&apos}&apos;"
+                key="{service.id}&apos;&apos;"
+                variants={itemVariants}&apos;&apos,";""
+                className="&apos;bg-white/10" backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hove,r: scale-105 group &apos,>"&apos,&apos {/* comment */}&apos;&apos,&apos;&apos,"
+                <div className="&apos;text-center" mb-6&apos;>"&apos
+                  <div"""
+                  >{service.icon}&apos;&apos,&apos;&apos;"
+                  <h3 className="&apos;text-xl" font-semibold text-white mb-2&apos;>"
+                    {service.name}&apos;&apos,&apos;&apos,
+                  &apos;&apos,&apos;&apos,"
+                  <p className="&apos;text-sm" text-blue-400 font-medium&apos;>&apos {service.category.replace(&apos;-&apos).toUpperCase()}&apos;&apos,
+&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
+                <p className="&apos;text-gray-300" text-sm mb-4 text-center&apos;>
+                  {service.tagline}&apos,
+&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
+                <div className="&apos;bg-white/5" rounded-lg p-4 mb-4&apos;>"&apos;&apos,&apos;&apos;"
+                  <h4 className="&apos;text-sm" font-semibold text-green-400 mb-2&apos;>"
+                    Pricing&apos;&apos,&apos;&apos,
+                  </h4>&apos;&apos,&apos;&apos,"
+                  <div className="&apos;space-y-1" text-xs text-gray-300&apos;>&apos,"
+                key = {service.id}""","
+                variants={itemVariants}"""";"
+                className = "bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">"""{/* comment */}"""""
+                <div className="text-center mb-6">""
+                  >{service.icon}""""
+                  <h3 className="text-xl font-semibold text-white mb-2">"
+                    {service.name}"""""
+                  """"
+                  <p className="text-sm text-blue-400 font-medium">"{service.category.replace("-").toUpperCase()}""
+"""{/* comment */}"""""
+                <p className="text-gray-300 text-sm mb-4 text-center">
+                  {service.tagline}"
+"""{/* comment */}"""""
+                <div className="bg-white/5 rounded-lg p-4 mb-4">""""
+                  <h4 className="text-sm font-semibold text-green-400 mb-2">"
+                    Pricing"""""
+                  </h4>""""
+                  <div className="space-y-1 text-xs text-gray-300">
+                    <div>Monthly: {service.pricing.monthly}</div>
+                    <div>Yearly: {service.pricing.yearly}</div>
+                    <div>Setup: {service.pricing.setup}</div>
+&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
+                <div className="&apos;mb-4&apos;">"&apos;&apos,&apos;&apos;"
+                  <h4 className="&apos;text-sm" font-semibold text-blue-400 mb-2&apos;>"
+                    Key Features&apos;&apos,&apos;&apos;"
+                  <ul className="&apos;space-y-1&apos;">
+                    {service.features.slice(0, 4).map((feature, idx) => (&apos}
+;
+                      <li&apos;&apos>;
+                        key={idx}&apos;&apos,";";
+                        className="&apos;text-xs" text-gray-300 flex items-center&apos;&apos,&apos;>"&apos;&apos,&apos;&apos;";
+                        <span className="&apos;w-1.5" h-1.5 bg-blue-400 rounded-full mr-2&apos;>&apos,</span>";
+"""{/* comment */}""""";
+                <div className = "mb-4">"""";
+                  <h4 className="text-sm font-semibold text-blue-400 mb-2">";
+                    Key Features"""";
+                  <ul className="space-y-1">;
+                    {service.features.slice(0, 4).map((feature, idx) => (;
+                      <li""";"";
+                        key={idx}"""";";
+                        className = "text-xs text-gray-300 flex items-center""">""""";
+                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>;
+                        {feature}
+;
+                      </li>;
+                  </ul>;
+""{/* comment */}"";";
+                  <h4 className="text - sm font-semibold text-yellow-400 mb-2">,;
+                    Key Benefits"";";
+                  <ul className="space-y-1"> {service.benefits.slice(0, 3).map((benefit, idx) => (;";
+                        <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></span>;
+                  </ul>";
+&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
+                  <h4 className="&apos;text-sm" font-semibold text-yellow-400 mb-2&apos;>";
+                    Key Benefits&apos;&apos,&apos;&apos;
+                    {service.benefits.slice(0, 3).map((benefit, idx) => (&apos}";
+                        <span className="&apos;w-1.5" h-1.5 bg-yellow-400 rounded-full mr-2&apos;>&apos,</span>";
+"""{/* comment */}""""";
+                  <h4 className = "text-sm font-semibold text-yellow-400 mb-2">";
+                    Key Benefits"""";
+                    {service.benefits.slice(0, 3).map((benefit, idx) => (";
+                        <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></span>;
+                        {benefit}
+;
+""{/* comment */}"";";
+                <div className="bg-white/5 rounded-lg p-3 mb-4">"";";
+                  <div className="text-xs text-gray-300">""";";
+                    <div className="mb-1">""";";
+                      <span className = "text-green-400 font-medium">"ROI": "</span>{" ""}
+;
+&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
+                <div className="&apos;bg-white/5" rounded-lg p-3 mb-4&apos;>"&apos;&apos,&apos;&apos;";
+                  <div className="&apos;text-xs" text-gray-300&apos;>"&apos;&apos,&apos;&apos,";
+                    <div className="&apos;mb-1&apos;">"&apos;&apos,&apos;&apos,";
+                      <span className="&apos;text-green-400" font-medium&apos;>"ROI": "&apos",</span>{&apos, &apos}
+;
+                      {service.roi}&apos;&apos,;
+                    <div>&apos;&apos,&apos;&apos,&apos;&apos;";
+                      <span className="&apos;text-blue-400" font-medium&apos;>"Setup": "&apos",</span>{&apos, &apos}
+;
+                      {service.setupTime}&apos;&apos,;
+&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
+                <div className="&apos;text-center&apos;">&apos,";
+                  <Link&apos;&apos,";
+                    to={service.link}&apos;&apos,";";
+                    className="&apos;inline-flex" items-center text-blue-400 "hover": "text-blue-300 transition-colors duration-300 text-sm &apos",>";
+                    Learn More&apos,&apos,&apos;&apos,;
+                    <svg&apos;&apos,";";
+                      className="&apos;ml-2" h-4 w-4&apos;&apos,";
+                      fill=&apos;none&apos;&apos,";
+                      stroke=&apos;currentColor&apos;&apos,";";
+                      viewBox="&apos;0" 0 24 24&apos;&apos,>&apos;&apos,&apos;&apos,;
+                      <path&apos;&apos,&apos,;
+                        strokeLinecap=&apos;round&apos;&apos,",">;
+                        strokeLinejoin=&apos;round&apos;&apos,"",";
+                        strokeWidth={2}&apos;&apos,";";
+                        d="&apos;M9" 5l7 7-7 7&apos;&apos,/>&apos;&apos,;
+"""{/* comment */}""""";
+                <div className = "bg-white/5 rounded-lg p-3 mb-4">"""";
+                  <div className="text-xs text-gray-300">"""""";
+                    <div className="mb-1">"""""";
+                      <span className="text-green-400 font-medium">"ROI": "</span>{" ""}
+;
+                      {service.roi}
+;
+                    <div>""";";
+                      <span className = "text-blue-400 font-medium">"Setup": "</span>{" ""}
+;
+                      {service.setupTime}
+;
+""{/* comment */}"";";
+                <div className = "text - center">,;
+                  <Link"">;
+                    to={service.link}"";";
+                    className = "inline - flex items-center text-blue-400 "hover": "text-blue-300 transition-colors duration-300 text-sm ">",;
+                    Learn More"",;
+                    <svg"";";
+                      className = "ml - 2 h-4 w-4",;
+                      fill="none"",;
+                      stroke = "currentColor"">;
+                      viewBox="0 0 24 24"">"",;
+                      <path"",">;
+                        strokeLinecap = "round"",";
+                        strokeLinejoin="round"",>;
+                        strokeWidth = {2}"",;
+                        d="M9 5l7 7-7 7"" />;
+                    </svg>;
+                  </Link>;
+"""{/* comment */}""""";
+                <div className = "text-center">";
+                  <Link"""">;
+                    to={service.link}"""";";
+                    className = "inline-flex items-center text-blue-400 "hover": "text-blue-300 transition-colors duration-300 text-sm ">";
+                    Learn More""""",;
+                    <svg"""",";
+                      className="ml - 2 h-4 w-4""",";
+                      fill="none"""",";
+                      stroke="currentColor"""","";
+                      viewBox = "0 0 24 24""">""""";
+                      <path""""">;
+                        strokeLinecap="round"""","";
+                        strokeLinejoin="round"""",">;
+                        strokeWidth = {2}"""",;
+                        d = "M9 5l7 7-7 7""" />;
+                    </svg>;
+                  </Link>;
+          </motion.div> {/* comment */}
+;
+          {filteredServices.length === 0 && ("";"";
+              className="text-center py-12";";
+              initial = "{{" "opacity": "0 "}}";
+              animate="{{" "opacity": "1 "}}"">"";";
+              <p className="text-gray-400 text-lg">;
+                No services found matching your criteria.</p>;";
+                onClick = "{()" => {}
+;
+                  setSelectedCategory("all")";
+                  setSearchTerm(")";"}}"";";
+                className = "mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg "hover": "bg-blue-700 transition-colors duration-300 ">",;
+                View All Services,;
+""{/* comment */}"";";
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"";";
+        <div className="max - w-4xl mx-auto text-center">"",;
+          <motion.h2"";";
+            className="text-3xl "md": "text-4xl font-bold text-white mb-6">;
+            Ready to Transform Your Business?;
+          </motion.h2>""",";
+            className="text - xl text-gray-300 mb-8",;
+          >",;
+            Let"s discuss how our innovative services can help drive your;
+            success and competitive advantage;
+          </motion.p>,",;
+"","";
+            className = "flex flex-col "sm": "flex-row gap-4 justify-center mb-8"",";
+            transition="{{" "duration": "0.6", "delay": "0.4 "}}
+;
+              to="/contact"";";
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg "hover": "from-blue-700 "hover":to-cyan-700 transition-all duration-300 ">",;
+              Contact Us Today,;
+            </Link>"";
+            <a"",;
+              href=""tel": "+13024640950""",">;
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg "hover": "bg-gray-800 transition-all duration-300 ">",,;
+"Call": "+1 302 464 0950",,;
+            </a>,";
+            className = "bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto",";
+            transition="{{" "duration": "0.6", "delay": "0.6 "}}"">"";";
+            <h3 className="text - lg font-semibold text-white mb-4">,;
+              Why Choose Zion Tech Group?"";";
+            <div className="grid grid-cols-1 "md": "grid-cols-2 gap-4 text-sm text-gray-300">""",";
+              <div className="flex items-center">"",";
+                <span className = "text - green-400 mr-2">✓</span>,;
+                Expert AI & Technology Specialists"",;
+                Proven ROI & Performance Metrics"",;
+                24/7 Support & Maintenance";
+                Custom Solutions & Integration,",;
+            className="mt-8 text-sm text-gray-400" {filteredServices.length === 0 && (&apos,&apos,"&apos}&apos;";
+              className="&apos;text-center" py-12&apos;&apos;";
+              animate="{{" "opacity": "1 "}}&apos;&apos,>&apos;&apos,&apos;&apos,";
+              <p className="&apos;text-gray-400" text-lg&apos;>;
+                No services found matching your criteria.&apos;</p>";
+                  setSelectedCategory(&apos;all&apos)";
+                  setSearchTerm(&apos;&apos)";&apos}}&apos;&apos,";";
+                className="&apos;mt-4" px-6 py-2 bg-blue-600 text-white rounded-lg "hover": "bg-blue-700 transition-colors duration-300 &apos",>",;
+                View All Services&apos,&apos {filteredServices.length = == 0 && ("""";
+              className="text-center py-12"","";
+              animate="{{" "opacity": "1 "}}""">""""";
+              <p className="text-gray-400 text-lg">;
+                No services found matching your criteria.</p>;
+                  setSelectedCategory("all")";"";
+                  setSearchTerm("")";"}}"""";
+                className = "mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg "hover": "bg-blue-700 transition-colors duration-300 ">;
+                View All Services",;
+              </button>";,;
+&apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
+      <section className="&apos;py-20" bg-gradient-to-r from-blue-900/50 to-cyan-900/50&apos;>"&apos;&apos,&apos;&apos;";
+        <div className="&apos;max-w-4xl" mx-auto text-center&apos;>"&apos;&apos,"";
+          <motion.h2&apos;&apos,&apos;";
+            className="&apos;text-3xl" "md": "text-4xl font-bold text-white mb-6&apos",&apos>;
+            Ready to Transform Your Business?&apos,&apos,;
+          </motion.h2>&apos;&apos,&apos;&apos,;
+          <motion.p&apos;&apos,";";
+            className="&apos;text-xl" text-gray-300 mb-8&apos;&apos;
+            Let&apos;s discuss how our innovative services can help drive your;
+            success and competitive advantage&apos;&apos>;
+          </motion.p>";
+&apos;&apos,&apos;&apos;";
+            className="&apos;flex" flex-col "sm": "flex-row gap-4 justify-center mb-8&apos",&apos,;
+            <Link&apos;&apos,&apos>;
+              to=&apos;/contact&apos;&apos,";";
+              className="&apos;inline-flex" items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg "hover": "from-blue-700 "hover":to-cyan-700 transition-all duration-300 &apos",>;
+              Contact Us Today&apos,&apos,;
+            </Link>&apos;&apos,&apos;&apos,;
+            <a&apos;&apos,&apos,;
+              href=&apos;"tel": "+13024640950&apos",&apos,",">;
+              className="&apos;inline-flex" items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg "hover": "bg-gray-800 transition-all duration-300 &apos",>,;
+"Call": "+1 302 464 0950&apos",&apos,;
+            </a>",;
+            className="&apos;bg-white/10" backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto&apos,&apos,";
+            transition="{{" "duration": "0.6", "delay": "0.6 "}}&apos;&apos,>&apos;&apos,&apos;&apos,";
+            <h3 className="&apos;text-lg" font-semibold text-white mb-4&apos;>";
+              Why Choose Zion Tech Group?&apos;&apos,&apos;&apos;";
+            <div className="&apos;grid" grid-cols-1 "md": "grid-cols-2 gap-4 text-sm text-gray-300&apos",>"&apos,&apos,&apos;&apos;";
+              <div className="&apos;flex" items-center&apos;>"&apos;&apos,&apos;&apos;";
+                <span className="&apos;text-green-400" mr-2&apos;>✓&apos;</span>";
+                Expert AI & Technology Specialists&apos;&apos,&apos;&apos,;
+                Proven ROI & Performance Metrics&apos;&apos,&apos;&apos,",;
+                24/7 Support & Maintenance&apos;&apos,&apos,&apos,";
+"""{/* comment */}""""";
+      <section className = "py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"""";
+        <div className="max-w-4xl mx-auto text-center">""""";
+          <motion.h2"""";
+            className="text-3xl "md": "text-4xl font-bold text-white mb-6">;
+            Ready to Transform Your Business?";
+          </motion.h2>""""";
+          <motion.p""""","";
+            className = "text - xl text-gray-300 mb-8"">;
+          >",";
+            Let"s discuss how our innovative services can help drive your"";
+            Let&apos;s discuss how our innovative services can help drive your,;
+            success and competitive advantage";
+""""";
+            className="flex flex-col "sm": "flex-row gap-4 justify-center mb-8""",;
+              to="/contact"""",";
+              className = "inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg "hover": "from-blue-700 "hover":to-cyan-700 transition-all duration-300 ">;
+              Contact Us Today";
+            </Link>""""";
+            <a""""">;
+              href=""tel":+13024640950""""",";
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg "hover": "bg-gray-800 transition-all duration-300 ">",;
+"Call": "+1 302 464 0950",";
+className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto"","";
+            transition="{{" "duration": "0.6", "delay": "0.6 "}}""">""""";
+            <h3 className="text-lg font-semibold text-white mb-4">";
+              Why Choose Zion Tech Group?"""";
+            <div className="grid grid-cols-1 "md": "grid-cols-2 gap-4 text-sm text-gray-300">"""";
+              <div className="flex items-center">"""";
+                <span className="text-green-400 mr-2">✓</span>";
+                Expert AI & Technology Specialists""""";
+                Proven ROI & Performance Metrics""""";
+                24/7 Support & Maintenance""""",;
+                Custom Solutions & Integration,";
+className="&apos;mt-8" text-sm text-gray-400&apos;&apos,";
+            initial = "{{" opacit,"y": "0 "}}";
+            className="mt-8 text-sm text-gray-400"";";
+            whileInView = "{{" "opacity": "1 "}}";
+            transition="{{" "duration": "0.6", "delay": "0.8 "}}
+;
+}} whileInView = {;
+  { "opacity": "1",;
+  "y": "0;
+"}} transition = {;
+  { "duration": "0.6",;
+  "delay": "0.2;
+"}}>;
+            Let's discuss how our innovative services can help drive your success and competitive advantage;
+          </motion.p>;
+          <motion.div className="flex flex - col "sm": "flex - row gap-4 justify - center mb-8" initial = {  { "opacity": 0",;
+  "y": "20;
+"}} whileInView = {;
+  { "opacity": "1",;
+  "y": "0;
+"}} transition = {;
+  { "duration": "0.6",;
+  "delay": "0.4;
+"}}>";
+            <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg "hover": "from-blue-700 "hover":to-cyan-700 transition-all duration-300">;
+              Contact Us Today;
+            </Link>";
+            <a href=""tel":+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg "hover":bg-gray-800 transition-all duration-300">;
+              "Call": +1 302 464 0950;
+            </a>;
+          </motion.div>;
+";
+          <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {;
+  { "opacity": 0",;
+  "y": "20;
+"}} whileInView = {;
+  { "opacity": "1",;
+  "y": "0;
+"}} transition = {;
+  { "duration": "0.6",;
+  "delay": "0.6;
+"}}>";
+            <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>";
+            <div className="grid grid-cols-1 "md": "grid-cols-2 gap-4 text-sm text-gray-300">";
+              <div className="flex items-center">";
+                <span className="text-green-400 mr-2">✓</span>;
+                Expert AI & Technology Specialists;
+              </div>";
+              <div className="flex items-center">";
+                <span className="text-green-400 mr-2">✓</span>;
+                Proven ROI & Performance Metrics;
+              </div>";
+              <div className="flex items-center">";
+                <span className="text-green-400 mr-2">✓</span>;
+                24/7 Support & Maintenance;
+              </div>";
+              <div className="flex items-center">";
+                <span className="text-green-400 mr-2">✓</span>;
+                Custom Solutions & Integration;
+              </div>;
+            </div>;
+          </motion.div>;
+</div>;
+      </section>;
+    </div>)"};
+  { opacity: 1,
+  y: 0
+}} transition = {
+  { duration: 0.6,
+  delay: 0.6
+}}>"
+            <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">"
+              <div className="flex items-center">"
+                <span className="text-green-400 mr-2">✓</span>
+                Expert AI & Technology Specialists
+              </div>"
+              <div className="flex items-center">"
+                <span className="text-green-400 mr-2">✓</span>
+                Proven ROI & Performance Metrics
+              </div>"
+              <div className="flex items-center">"
+                <span className="text-green-400 mr-2">✓</span>
+                24/7 Support & Maintenance
+              </div>"
+              <div className="flex items-center">"
+                <span className="text-green-400 mr-2">✓</span>
+                Custom Solutions & Integration
+              </div>
+            </div>
+          </motion.div>
+</div>
+      </section>
+    </div>)};
+export default EnhancedServicesShowcase;
+}}}
+;
+export {EnhancedServicesShowcase};
+;
+export {EnhancedServicesShowcase};
+;
+export {EnhancedServicesShowcase};
+;
+export {EnhancedServicesShowcase};
+;
+export {EnhancedServicesShowcase};
+<p>"Address": "364 E Main St STE 1008", Middletown DE 19709</p>";
+            <p>""";
+              "Website": "{" ""}""""";
+                href=""https": "// comment;
+                className="text-blue-400 "hover": text-blue-300 ">",;
+"https": "// comment;
+    </div>)"}
+;
+export default EnhancedServicesShowcaseexport {EnhancedServicesShowcase}
+;
+export {EnhancedServicesShowcase}
+;
+'";
+`"";
+</p>;
+</motion>;
+</motion>;
+</h3>;
+</a>;
+</motion>;
+</motion>;
+</div>;
+</div>;
+</h3>;
+</motion>;
+</motion>;
+</div>;
+</section>;
+</div>;
+</div>;
+</h3>;
+</motion>;
+</div>;
+</section>;
+</path>;
+</div>;
+</path>;
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
+</path>;
+</svg>;
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
+</h4>;
+</h4>;
+</h4>;
+</h4>;
+</div>;
+</li>;
+</ul>;
+</h4>;
+</div>;
+</div>;
+</div>;
+</p>;
+</p>;
+</div>;
+</div>;
+</div>;
+</p>;
+</p>;
+</div>;
+</div>;
+</motion>;
+</div>;
+</motion>;
+</div>;
+</li>;
+</ul>;
+</h4>;
+</div>;
+</div>;
+</div>;
+</p>;
+</div>;
+</div>;
+</motion>;
+</div>;
+</div>;
+</div>;
+</motion>;
+</div>;
+</div>;
+</motion>;
+</motion>;
+</span>;
+</motion>;
+</div>;
+</div>;
+</motion>;
+</motion>;
+</div>;
+</div>;
+</div>;
+</motion>;
+</motion>;
+</motion>;
+</div>;
+</section>;
+'"
+`""
+</p>
+</motion>
+</motion>
+</a>
+</motion>
+</motion>
+</div>
+</div>
+</motion>
+</motion>
+</div>
+</section>
+</div>
+</div>
+</motion>
+</div>
+</section>
+</path>
+</div>
+</path>
+</div>
+</div>
+</div>
+</div>
+</div>
+</path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h4>
+</h4>
+</h4>
+</h4>
+</div>
+</li>
+</ul>
+</h4>
+</div>
+</div>
+</div>
+</p>
+</p>
+</div>
+</div>
+</div>
+</p>
+</p>
+</div>
+</div>
+</motion>
+</div>
+</motion>
+</div>
+</li>
+</ul>
+</h4>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</motion>
+</motion>
+</span>
+</motion>
+</div>
+</div>
+</motion>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</motion>
+</motion>
+</div>
+</section>
+</div>
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

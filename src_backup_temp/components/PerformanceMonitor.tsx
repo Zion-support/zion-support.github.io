@@ -1,6 +1,5 @@
   renderTime: number;
 }
-
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -9,7 +8,6 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-=======
 ;
 interface PerformanceMetrics {;
   "loadTime": "number;
@@ -40,7 +38,6 @@ const "PerformanceMonitor": "React.FC = () => {;
         ...prev, 
         memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
       }));
-=======
       setMetrics(prev => ({ ...prev, loadTime }));
     }
 ;
@@ -83,11 +80,9 @@ const "PerformanceMonitor": "React.FC = () => {;
 };
 ;
 export default PerformanceMonitor;
-=======
 import { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 import logger from '../utils/logger';
-
 interface PerformanceMetrics {
   name: string;
   value: number;
@@ -95,7 +90,6 @@ interface PerformanceMetrics {
   id: string;
   navigationType: string;
 }
-
 const PerformanceMonitor = () => {
   useEffect(() => {
     const sendToAnalytics = (metric: PerformanceMetrics) => {
@@ -108,7 +102,6 @@ const PerformanceMonitor = () => {
         navigationType: metric.navigationType,
       }
     );
-
       // Send to analytics service in production
       if (process.env.NODE_ENV === 'production') {
         // Example: Send to Google Analytics
@@ -123,33 +116,28 @@ const PerformanceMonitor = () => {
         }
       }
     };
-
     // Measure Core Web Vitals
     getCLS(sendToAnalytics);
     getFID(sendToAnalytics);
     getFCP(sendToAnalytics);
     getLCP(sendToAnalytics);
     getTTFB(sendToAnalytics);
-
     // Monitor page load performance
     if (typeof window !== 'undefined') {
       window.addEventListener('load', () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
         if (navigation) {
           const metrics = {
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
           };
-
           logger.info('Page Load Metrics:', metrics);
         }
       }
     );
     }
   }, []);
-
   return null; // This component doesn't render anything
 };
 

@@ -88,11 +88,17 @@ export
   ';';
   if(typeof roi = == 'string') {;
     return roiNumber > 500}
+  return false}
+    );
+  return false});
 // Quick Setup Services(< 8 weeks)
 export
   ';';
   if(typeof setupTime = == 'string') {;
     return weeks < 8}
+  return false}
+    );
+  return false});
 // Export individual service arrays for specific use cases;
 export {
   REVOLUTIONARY_SERVICES_2030';

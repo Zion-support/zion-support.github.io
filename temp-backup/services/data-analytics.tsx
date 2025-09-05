@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface DataanalyticsProps {
   // Add props here as needed
 }
-
 export default function Dataanalytics({ }: DataanalyticsProps) {
   return (
     <div>

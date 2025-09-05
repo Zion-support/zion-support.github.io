@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface AidevelopmentProps {
   // Add props here as needed
 }
-
 export default function Aidevelopment({ }: AidevelopmentProps) {
   return (
     <div>

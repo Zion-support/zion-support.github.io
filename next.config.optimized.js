@@ -7,14 +7,12 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: false },
   typescript: { ignoreBuildErrors: false },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
   // Performance optimizations
   experimental: {
     scrollRestoration: true,
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
   },
-  
   // Image optimization
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
@@ -25,7 +23,6 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   },
-  
   // Security headers
   async headers() {
     return [{
@@ -40,7 +37,6 @@ const nextConfig = {
       }
     ];
   },
-  
   // Bundle analyzer
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -54,7 +50,6 @@ const nextConfig = {
     return config;
   }
 };
-
 module.exports = nextConfig;
 =======
 const withBundleAnalyzer = require('@next/bundle-analyzer')({

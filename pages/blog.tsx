@@ -81,7 +81,7 @@ const blogPosts = [
 
 const categories = [
   "All Posts",
-  "AI & Machine Learning",
+  "AI & Technology",
   "Cloud Computing",
   "Cybersecurity",
   "SaaS Development",
@@ -93,12 +93,17 @@ const categories = [
 const featuredPost = blogPosts.find(post => post.featured);
 
 export default function BlogPage() {
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+
+  const filteredPosts = selectedCategory === 'All' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory);
+
   return (
     <Layout
       title="Blog - Zion Tech Group"
-      description="Latest insights, trends, and best practices in technology. Stay updated with our expert articles on AI, cloud computing, cybersecurity, and more."
-      keywords="technology blog, AI insights, cloud computing, cybersecurity, SaaS development, data analytics, tech trends"
-      canonical="https://ziontechgroup.com/blog"
+      description="Latest insights and trends in technology, AI, and business"
+      keywords="blog, technology news, AI trends, business insights, tech articles"
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -167,9 +172,8 @@ export default function BlogPage() {
             </div>
           </div>
         </section>
-      )}
 
-      {/* Blog Posts */}
+        {/* Blog Posts */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-8">
@@ -281,8 +285,7 @@ export default function BlogPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Contact CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
@@ -312,8 +315,43 @@ export default function BlogPage() {
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Stay Updated
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter and never miss the latest insights on technology and innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+                >
+                  Subscribe Now
+                </Link>
+                <Link
+                  href="/services"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  View Our Services
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
     </Layout>
+>>>>>>> main
+>>>>>>> main
   );
 }

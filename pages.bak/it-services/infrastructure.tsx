@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface InfrastructureProps {
   // Add props here as needed
 }
-
 export default function Infrastructure({ }: InfrastructureProps) {
   return (
     <div>

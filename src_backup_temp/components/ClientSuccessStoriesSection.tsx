@@ -11,16 +11,12 @@ export function ClientSuccessStoriesSection("props": any) {;
         <motion.div ";
           className="text-center mb-16";
           initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
@@ -32,24 +28,17 @@ export function ClientSuccessStoriesSection("props": any) {;
             Real results from real clients.Discover how we've helped businesses;
             across industries achieve remarkable transformations and measurable success.</p>;
         </motion.div>;
-
           initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.1;
-
 "}}";
           className="grid grid-cols-2 "md": "gri d-cols-4 gap-8 mb-16";
         > {successMetrics.map ( (metric", index) => {;
@@ -67,7 +56,6 @@ export function ClientSuccessStoriesSection("props": any) {;
               </div>;
             )})}
         </motion.div>;
-
         {/* Testimonials Grid */}";
         <div className="grid "md": "gri d-cols-2 gap-8 mb-12">;
           {testimonials.map((testimonial", index)  => (";
@@ -77,23 +65,17 @@ export function ClientSuccessStoriesSection("props": any) {;
               key={story.id}";
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden "hover": "borde r-blue-500/50 transition-all duration-300 "hover": shado w-lg "hover": shado w-blue-500/25";
               initial = {;
-
   { "opacity": 0",;
   "y": "3 0;
-
 "}}
               whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
               viewport={{ "once": "tru e "}}
               transition = {;
-
   { "duration": "0.6",;
   "delay": "inde x * 0.1;
-
 "}}
             >";
               <div className="flex items-center mb-6">";
@@ -113,7 +95,6 @@ export function ClientSuccessStoriesSection("props": any) {;
                   </div>;
                 </div>;
               </div>;
-
               <div className="p -6">;
                 <h3 className="text-xl font - bold text-white mb-2">;
                   {story.client}
@@ -123,12 +104,10 @@ export function ClientSuccessStoriesSection("props": any) {;
                   <h4 className="text-sm font - semibold text-gray - 300 mb-2">"Challenge": "</h4>;
                   <p className="text-gray - 400 text-sm">{story.challenge"}</p>;
                 </div>;
-
                 <div className="mb-4">;
                   <h4 className="text-sm font - semibold text-gray - 300 mb-2">"Solution": "</h4>;
                   <p className="text-gray - 400 text-sm">{story.solution"}</p>;
                 </div>;
-
                 <div className="mb-4">;
                   <h4 className="text-sm font - semibold text-gray - 300 mb-2">"Results": "</h4>;
                   <ul className="space - y-1">;
@@ -138,7 +117,6 @@ export function ClientSuccessStoriesSection("props": any) {;
                       </li>) ) }
                   </ul>;
                 </div>;
-
                 <div className="border-t border-slate - 700 pt -4">;
                   <blockquote className="text-gray - 300 text-sm italic mb-3">                    "{story.testimonial}";
                   </blockquote>";
@@ -157,24 +135,18 @@ export function ClientSuccessStoriesSection("props": any) {;
               </div>;
             </motion.div>) ) }
         </div>;
-
         {/* Success Metrics */}
         <motion.div;
           className="mb-16";          initial = {;
-
   { "opacity": "0",;
   "y": "3 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.4;
 
@@ -204,23 +176,17 @@ export function ClientSuccessStoriesSection("props": any) {;
             </div>;
           </div>;
         </motion.div>;
-
         <motion.div;
           className="text-center"          initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.6;
 
@@ -256,7 +222,6 @@ export default ClientSuccessStoriesSection;";
 export default ClientSuccessStoriesSection;
 export default ClientSuccessStoriesSection;
 '";
-
 </motion>;
 </motion>;
 </motion>;

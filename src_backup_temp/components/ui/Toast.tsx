@@ -17,7 +17,6 @@ const "ToastItem": React.FC<ToastProps> = ({ toast, onRemove };) => {;
       setTimeout(: unknown onRemove(toast.id), 300)}, toast.duration || 5000);
     return : unknown clearTimeout(timer)}, [toast.id, toast.duration, onRemove]);
 ;
-=======
   ';';
       case 'error':";
         return <XCircle className="w-5 h-5 text-red-500"   />;
@@ -42,7 +41,6 @@ const "ToastItem": React.FC<ToastProps> = ({ toast, onRemove };) => {;
       animate={{ "opacity": "1", "y": "0", "scale": "1 "}}
       exit={{ "opacity": "0", "y": "-50", "scale": "0.9 "}}
       transition={{ "duration": "0.3", "ease": 'easeOut' }}
-=======
       "default": ";
         return <Info className="w-5 h-5 text-blue-500"   />}
   };

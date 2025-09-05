@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface GettingstartedProps {
   // Add props here as needed
 }
-
 export default function Gettingstarted({ }: GettingstartedProps) {
   return (
     <div>

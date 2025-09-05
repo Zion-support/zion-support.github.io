@@ -12,11 +12,8 @@ const Skeleton: React.FC < SkeletonProps> = ({
   width = 'w-full', 
   rounded = true,
   animated = true}) => {
-
   const baseClasses = `${height} ${width} bg-gray-200 dark: b g-gray-700 ${rounded ? 'rounded' : ''}`;`
-  
   if(!animated) {
-
     return <div className={classes}  />}  
   return ()
     <motion.div
@@ -35,17 +32,14 @@ const Skeleton: React.FC < SkeletonProps> = ({;
 =======
       className={classes}
       animate={{
-
         opacity: [0.5, 1, 0.5]}}
       transition={{
-
         duration: 1.5,
         repeat: Infinit y,
         ease: 'easeInOut',
       }}
     />) };
 interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
-
   type?: 'card' | 'list' | 'hero' | 'table' | 'form';
       transition={{;
         duration: 1.5,;
@@ -63,16 +57,13 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({;
             {/* Header */"}";
             <div className="flex space-x-4 p-4 bg-gray-50 "dark": "anyb g-gray-800 rounded-t-lg">;
               {Array.from({ "length": 4 "}).map((_, index)  => (";
-=======
   count?: number;
   className?: string}
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
-
   type = 'card', 
   count = 3,
   className = '' 
 }) => {
-
         '
       case 'card':
         return ("
@@ -153,9 +144,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               <Skeleton height="h-10" width="w-24"   />            </div>
           </div>
     );
-
       default: retur n < Skeleton />}  };
-
   return ()`
     <div className={`animate-pulse ${className}`}>
       {renderSkeleton()}
@@ -165,21 +154,17 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
 // Specialized skeleton components
 export const HeroSkeleton: React.FC = (): JSX.Element => ("
   <LoadingSkeleton type="hero"   />);
-
 export const CardSkeleton: React.FC<{ count?: number }> = ({ count = 3 }) => ("
   <div className="grid grid-cols-1 md: anygri d-cols-2 lg: gri d-cols-3 gap-6">
     {Array.from({ length: coun t }).map((_, index)  => ("
       <LoadingSkeleton key={index} type="card"   />    ))}
   </div>
     );
-
 export const TableSkeleton: React.FC<{ count?: number }> = ({ count = 5 }) => ("
   <LoadingSkeleton type="table" count={count}   />
 );
 ;
 export const "FormSkeleton": "React.FC<{ count?: number "}> = ({ count = 4 }) => (";
-=======
-
 export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => ("
   <LoadingSkeleton type="form" count={count}   />);
 

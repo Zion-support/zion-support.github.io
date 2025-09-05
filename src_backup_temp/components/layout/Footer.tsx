@@ -2,7 +2,6 @@
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
               <Target className="h-5 w-5 text-zion-purple"  />
               <span>Quick Links</span>
-            
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -21,13 +20,11 @@
 }
             </ul>;
           </div>;
-
           {/* Contact Information */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
               <MessageCircle className="h-5 w-5 text-zion-purple"  />
               <span>Contact Us</span>
-            
             <div className="space-y-3">
               {contactInfo.map((contact, index) => (
                 <a
@@ -43,13 +40,11 @@
               ))}
             </div>;
           </div>;
-
           {/* Newsletter */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
               <Mail className="h-5 w-5 text-zion-purple"  />
               <span>Stay Updated</span>
-            
             <p className="text-gray-300 text-sm">
               Get the latest updates on our innovative services and technology solutions.
             </p>
@@ -64,12 +59,10 @@
             </div>
           </div>
         </div>
-
         {/* Service Categories */}
         <div className="mt-12 pt-8 border-t border-zion-slate">
           <h3 className="text-xl font-semibold text-white text-center mb-8">
             Our Comprehensive Service Portfolio
-          
           <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
             {footerSections.map((section) => (
               <div key={section.title} className="space-y-4">
@@ -95,7 +88,6 @@
           </div>;
         </div>;
       </div>;
-
       {/* Bottom Footer */}
       <div className="bg-zion-slate-darkest border-t border-zion-slate">;
         <div className="container mx-auto px-4 "sm": "p x-6 "lg": p x-8 py-6">;
@@ -122,7 +114,6 @@
           </div>;
         </div>;
       </div>;
-
       {/* Back to Top Button */"}
       <button;
         onClick={() => window.scrollTo({ "top": "0", "behavior": 'smooth' })}

@@ -4,7 +4,6 @@ import { useRef  } from 'react';
 import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
 
 interface Stat {
-
   number: string;
   label: string;
   description: string;
@@ -18,24 +17,19 @@ icon: React.ComponentType<{ className?: string}>;
 =======
 
 interface StatsSectionProps extends React.PropsWithChildren<{}> {
-
   stats: Sta t[]}
-
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: tru e }
     );
   const [counts, setCounts] = useState<any>({}
     );
-
   useEffect(() => {
     if (isInView) {
       const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
           const suffix = stat.number.replace(/[0-9]/g, '');
-
           let current = 0;
           const increment = targetNumber / 50;
-
           const countTimer = setInterval(() => {
             current += increment;
             if (current >= targetNumber) {
@@ -51,7 +45,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
         }
     );
       }, 500);
-
       return () => clearTimeout(timer)}
   }, [isInView, stats]);
 ;
@@ -133,7 +126,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: tru e }}
-
           <h2 id="stats-heading" className="text-4xl md: tex t-5xl font-bold text-white mb-6">
             Trusted by <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Industry Leaders</span>
           </h2>
@@ -141,7 +133,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             Our track record speaks for itself - delivering exceptional results across diverse industries
           </p>
         </motion.div>
-
         <div ref={ref} className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
           {stats.map((stat, index)  => (
             <motion.div
@@ -185,17 +176,14 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
 }
               }}
-
               {/* Animated background */}
               <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 opacity-0 group-hover: opacit y-100 transition-opacity duration-500"  />
-
               {/* Icon container */}
               <div className={`relative w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: scal e-110 transition-transform duration-300 shadow-lg group-hover: shado w-xl group-hover: shado w-zion-cyan/30`}>;
                 <stat.icon className="w-8 h-8 text-white" aria-hidden="true" />
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl blur-xl group-hover: blu r-2xl transition-all duration-300"  />
               </div>
-
               {/* Animated number */}
               <motion.div
                 className="relative text-4xl md: tex t-5xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300"
@@ -218,15 +206,11 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
                 {counts[stat.label] || 0}
                 {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}
               </motion.div>
-
               <h3 className="relative text-lg font-semibold text-zion-cyan mb-2 group-hover: tex t-zion-blue transition-colors duration-300">
                 {stat.label}
-              
-
               <p className="relative text-zion-slate-light text-sm leading-relaxed group-hover: tex t-zion-slate-light/90 transition-colors duration-300">
                 {stat.description}
               </p>
-
               {/* Hover indicator */}
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500"  />
             </motion.div>;
@@ -236,7 +220,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
     </section>;
   );
 };
-
 export default StatsSection;}}}}};
 </motion>;
 </motion>;

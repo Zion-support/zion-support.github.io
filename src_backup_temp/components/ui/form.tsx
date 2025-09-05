@@ -58,6 +58,10 @@ export function FormField($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
+    </div>
+    );
+    </div>;
+  );
 }
 ;
 interface FormMessageProps {;

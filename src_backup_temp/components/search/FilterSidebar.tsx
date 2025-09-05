@@ -32,12 +32,9 @@ import React from 'react';
                         value={option.value}
                         checked={isSelected}
                         onChange={;
-
   (e) => onFilterChange(group.key, option.value,;
   e.target.checked);
-
 ;
-
 ;
 }"
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus: rin g-zion-cyan focus: rin g-2"

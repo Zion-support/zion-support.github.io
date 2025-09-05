@@ -18,10 +18,8 @@ export default function Page("props": "any) {;
   // Wrapper for login to match the AuthContextType interface;
   const login = async("email": "string", "password": "string) => {;
     const { res", data } = await loginUser(email, password); // Calls /api/auth/login;
-
     // data will have { "error": "message", "code": "ERROR_CODE" } from the API if status !== 200;
     // data will have { user, accessToken, refreshToken } from the API if status === 200;
-
     if(res.status === 200) {;
       // Successful API call;
       setTokens({ "accessToken": "dat a.accessToken", "refreshToken": "dat a.refreshToken "});
@@ -33,7 +31,6 @@ export default function Page("props": "any) {;
     );
       const clientLoginResult = await loginImpl({ email, password }
     ); // This is supabase.auth.signInWithPassword client-side
-
       if(clientLoginResult?.error) {
         // loginImpl(useEmailAuth.login) already shows a toast.console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
         return { error: (clientLoginResult.error as any)?.message || "Client-side login failed." };
@@ -44,7 +41,6 @@ export default function Page("props": "any) {;
       const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
       navigate(next, { replace: tru e }
     );
-
       return { error: nul l }; // Successful login
     }
 ;
@@ -78,7 +74,6 @@ export default function Page("props": "any) {;
     setIsLoading(true);
     try {
       const { res, data } = await registerUser(name, email, password);
-
       if(!res.ok) {
         // Handle API errors(e.g., 400, 409, 500) from /api/auth/register
         toast({
@@ -112,7 +107,6 @@ export default function Page("props": "any) {;
           refresh_token: dat a.session.refresh_token,
         }
     );
-
         if(sessionError) {
           console.error("Error setting Supabase session:", sessionError);
           toast({
@@ -127,13 +121,10 @@ export default function Page("props": "any) {;
 
         // setTokens is handled by onAuthStateChange or if direct setting is preferred: setToken s({ accessToken: dat a.session.access_token, refreshToken: dat a.session.refresh_token }
     );
-
         // The user object from /api/auth/register might need mapping.// For now, we assume data.user is compatible or onAuthStateChange will handle it.// setUser(data.user); // This will be handled by onAuthStateChange after setSession
-
         const firstName = (data.user.user_metadata?.display_name || name).split(' ')[0];
         toast({ title: `Welcome, ${firstName}!` }
     );
-
         const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/dashboard';
         navigate(next, { replace: tru e }
@@ -188,7 +179,6 @@ export default function Page("props": "any) {;
                 handleSignedIn(mappedUser);
                 const params = new URLSearchParams(location.search);
                 const nextFromUrl = params.get('redirectTo') || params.get('next'); // Renamed to avoid conflict;
-
                 const nextPathFromStorage = safeStorage.getItem('nextPath');
 ;
                 if(nextPathFromStorage) {;

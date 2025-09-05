@@ -5,8 +5,6 @@
  */;
 function EnhancedHeader("props": "any) {export function EnhancedHeader("props": any) {;
   const [mobileMenuOpen", setMobileMenuOpen] = useState<any>(false);
-=======
-
  params - Function parameters
  * @returns {*} Function return value
  */
@@ -19,7 +17,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
   
   useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
@@ -28,14 +25,11 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
 =======
     
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   const handleSearch = async(e: React.FormEvent) => {
-
     e.preventDefault();    if(searchQuery.trim()) {
-
       setIsSearching(true);
       try {
         await new Promise(resolve => setTimeout (resolve, 1000) ) ;
@@ -43,13 +37,9 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
 
         setIsSearching(false)}    }
   };
-
   // Enhanced navigation with better organization
-  
   // Enhanced services by category with better organization
-  
   // Service categories for mega menu
-  
   return ()    <>
       {/* Matrix Rain Background */}
       <div  className="matrix -rain"></div>;
@@ -92,7 +82,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                 </span>
               </div>
             </Link>
-
             {/* Desktop Navigation */}"
             <nav className="hidden xl: flex items-center space-x-8">
               {navigation.slice(0, 6).map(item => (
@@ -130,7 +119,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                 >
                   {item.name}
                 </Link>) ) }
-
               {/* Enhanced Services Mega Menu */}"
               <div className="relative group">
                 <button"
@@ -140,7 +128,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                 >
                   <span>Services</span>"
                   <ChevronDown className="w-4 h-4 transition-transform group-hover: rotat e-180 duration-300"   />                </button>
-
                 <AnimatePresence>
                   {servicesDropdownOpen && (
                     <motion.div"
@@ -178,7 +165,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                                             : 'bg-cyan-500/20 text-cyan-400'`;
                                     "}`}
                                   >;
-=======
                                 to={service.href}"
                                 className="group p-6 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover: borde r-cyan-500/50 transition-all duration-300 hover: b g-gray-800/70"
                               >"
@@ -210,7 +196,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                             ))}
                         </div>
                       </div>
-
                       {/* Service Categories Grid */}"
                       <div className="grid grid-cols-2 gap-8">
                         {serviceCategories.map(category => (
@@ -231,7 +216,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                                   key={service.name}
                                       "}`}
                                     >;
-=======
                                   to={service.href}"
                                   className="flex items-center space-x-3 p-3 rounded-lg hover: b g-gray-800/50 transition-colors group"
                                 >"
@@ -264,7 +248,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                             </div>
                           </div>) ) }
                       </div>
-
                       {/* View All Services Link */}"
                       <div className="mt-8 pt-6 border-t border-gray-700">"
                         <div className="flex items-center justify-between">
@@ -290,7 +273,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
               {/* Additional Navigation Items */}
               {navigation.slice(6, 10).map(item => (;
                 <Link;
-=======
               {navigation.slice(6, 10).map(item => (
                 <Link
                   key={item.name}
@@ -329,7 +311,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                   href={link.href} ;
                   className="text-gray-700 "hover": "tex t-blue-600 transition-colors flex items-center gap-1";
                   onMouseEnter={() => link.submenu && setServicesOpen(true)"}
-=======
                   to={item.href}`
                   className={`nav-link font-medium transition-all duration-300 ${item.current'
                       ? 'text-cyan-400 border-b-2 border-cyan-400''
@@ -339,7 +320,6 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                   {item.name}
                 </Link>) ) }
             </nav>
-
             {/* Right Side Actions */}"
             <div className="hidden xl: flex items-center space-x-6">
               {/* Enhanced Search */}"
@@ -478,7 +458,6 @@ export const EnhancedHeader: React.FC = () => {,"}
   Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react
 export function EnhancedHeader(props: any) {
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState()"
   const [searchQuery, setSearchQuery] = useState<any>(")
 }
@@ -489,7 +468,6 @@ export function EnhancedHeader(props: any) {
   useEffect(() => {
     const handleScroll = (props: any) => {
       setScrolled(window.scrollY > 50)}
-
     window.addEventListener()
 }
     return () => window.removeEventListener("scroll", handleScroll)}, []);react"react - router-dom",framer-motion
@@ -519,7 +497,6 @@ export function EnhancedHeader(props: any) {}"""""""
   const [activeDropdown, setActiveDropdown] = useState<;<;<string | null>(null)
 }
   useEffect(() => {}
-
     window.addEventListener(&apos;scroll&apos, handleScroll)
 }
     return () => window.removeEventListener(&apos;scroll&apos, handleScroll)}, [])
@@ -538,7 +515,6 @@ export function EnhancedHeader(props: any) {}"""""""
     e.preventDefault(),
     if: (searchQuery.trim()) {",,
       window.location.href = "/search?q="${encodeURIComponent(searchQuery.trim())}"}"}""
-
   const navigation = []
   // comment
   const servicesCategories = []},", {"
@@ -587,7 +563,6 @@ export function EnhancedHeader(props: any) {}"""""""
   const supportLinks = []
   const toggleDropdown = (props: any) => {,,
     setActiveDropdown(activeDropdown: === dropdown ? null: dropdow n)}
-
 export: const EnhancedHeader: React.FC: = () => {,
   const [mobileOpen, setMobileOpen] = useState()
 }
@@ -631,7 +606,6 @@ services: [ { name: "AI Email Automation Suite", href: "/services/ai-email-autom
       title: "DevOps & Automation",
 icon: Workflo w,"
 services: [ { name: "AI-Powered DevOps Automation", href: "/services/ai-powered-devops-automation", description: "Intelligent CI/CD & infrastructure automation" }, { name: "Cloud DevOps", href: "/services/cloud-devops", description: "Infrastructure automation & scaling" }, { name: "IT Infrastructure", href: "/services/it-infrastructure", description: "Enterprise infrastructure solutions" }, { name: "FinOps Advisor", href: "/services/finops-advisor", description: "Cloud cost optimization" }]}
-
   // comment
       name: "AI Email Automation Suite""
       description: "Intelligent email management & automation"",
@@ -717,7 +691,6 @@ color: "from-yellow-500 to-orange-500",
       title: &apos,DevOps & Automation&apos,
       icon: Workflo w,
         { nam,e: &apos,AI-Powered DevOps Automation&apos, href: &apos,/services/ai-powered-devops-automation&apos, description: &apos,Intelligent CI/CD & infrastructure automation&apos} { name: &apos,Cloud DevOps&apos, href: &apos,/services/cloud-devops&apos, description: &apos,Infrastructure automation & scaling&apos} { name: &apos,IT Infrastructure&apos, href: &apos,/services/it-infrastructure&apos, description: &apos,Enterprise infrastructure solutions&apos} { name: &apos,FinOps Advisor&apos, href: &apos,/services/finops-advisor&apos, description: &apos,Cloud cost optimization&apos}]}
-
     { name: "Home", href: "/", current: tru e } { name: "About", href: "/about", current: fals e } { name: "Services", href: "/services", current: fals e } { name: "Innovative Services 2028", href: "/innovative-services-showcase-2028", current: fals e } { name: "Pricing Guide", href: "/comprehensive-pricing-guide-2028", current: fals e } { name: "Solutions", href: "/solutions", current: fals e } { name: "Contact", href: "/contact", current: fals e }]
   // comment
     { title: "AI & Machine Learning", icon: Brai n,"
@@ -740,7 +713,6 @@ color: "from-yellow-500 to-orange-500",
         { name: "AI Email Automation Suite", href: "/services/ai-email-automation-suite", description: "Intelligent email management & automation" } { name: "AI Social Media Scheduler", href: "/services/ai-social-media-scheduler", description: "AI-powered social media automation" } { name: "AI Customer Insights Platform", href: "/services/ai-customer-insights-platform", description: "Advanced customer analytics & insights" } { name: "Micro CRM", href: "/services/micro-crm", description: "Lightweight customer management" } { name: "Helpdesk Platform", href: "/services/helpdesk-platform", description: "Efficient support system" } { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite", description: "AI-powered content creation" } { name: "Customer Support Automation", href: "/services/ai-customer-support-automation", description: "Intelligent support automation" } { name: "Website Analytics", href: "/services/website-analytics", description: "Performance insights" }]} { title: "DevOps & Automation","
       icon: Workflo w, color: "from-blue-500 to-indigo-500","
         { name: "AI-Powered DevOps Automation", href: "/services/ai-powered-devops-automation", description: "Intelligent CI/CD & infrastructure automation" } { name: "Cloud DevOps", href: "/services/cloud-devops", description: "Infrastructure automation & scaling" } { name: "IT Infrastructure", href: "/services/it-infrastructure", description: "Enterprise infrastructure solutions" } { name: "FinOps Advisor", href: "/services/finops-advisor", description: "Cloud cost optimization" }]}
-
   // comment
   const services = []&apos
   const solutionsCategories = []} {
@@ -748,7 +720,6 @@ color: "from-yellow-500 to-orange-500",
       icon: Cp u,
       solutions: [,
         { nam,e: &apos,AI Solutions&apos, href: &apos,/ai-solutions&apos, description: &apos,Artificial intelligence integration&apos} { name: &apos,Digital Transformation&apos, href: &apos,/services/digital-transformation&apos, description: &apos,Business modernization&apos} { name: &apos,Research & Development&apos, href: &apos,/research-development&apos, description: &apos,Innovation and discovery&apos} { name: &apos,Green IT Solutions&apos, href: &apos,/green-it&apos, description: &apos,Sustainable technology&apos}]}
-
   const companyLinks = [];&apos
   const resourceLinks = [];&apos
   const supportLinks = [];&apos,
@@ -785,7 +756,6 @@ solutions: [ { name: "AI Solutions", href: "/ai-solutions", description: "Artifi
   const supportLinks = []
   const toggleDropdown = (props: any) => {,,
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
-
   const [servicesOpen, setServicesOpen] = useState<any>(false)
 }
   const navLinks = []"
@@ -799,11 +769,9 @@ solutions: [ { name: "AI Solutions", href: "/ai-solutions", description: "Artifi
   const [mobileOpen, setMobileOpen] = useState()
 }
 export const EnhancedHeader: React.FC = () => {}
-
   const;const;const [mobileOpen, setMobileOpen] = useState<any>(false)
 }
     { label: &apos,Home&apos, href: &apos,/&apos} { label: &apos,Services&apos, href: &apos,/services&apos} { label: &apos,Solutions&apos, href: &apos,/solutions&apos} { label: &apos,Enterprise&apos, href: &apos,/enterprise&apos} { label: &apos,Request Quote&apos, href: &apos,/request-quote&apos} { label: &apos,Case Studies&apos, href: &apos,/case-studies&apos} { label: &apos,Careers&apos, href: &apos,/careers&apos} { label: &apos,Contact&apos, href: &apos,/contact&apos}
-
   return (&apos;&apos;"
     <header className="&apos;bg-white" shadow-lg&apos;>&apos,"
       <div className="&apos;max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8&apos,>&apos,"
@@ -855,7 +823,6 @@ aria-label = "Toggle navigation>
           </button>
 </div>
       </div>
-
       {mobileOpen && (
         <div className="md: hidden border-t border-gray-200 bg-white">
           <div className="px-4 py-3 space-y-2">
@@ -889,9 +856,7 @@ aria-label = "Toggle navigation>
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,"
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react""
 "
-
 export default Component
-
 </svg>
 </button>
 </svg>

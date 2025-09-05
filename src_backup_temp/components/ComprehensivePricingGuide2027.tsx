@@ -17,13 +17,11 @@ export default function Page("props": "any) {;
       "href": "servic e.href || '/contact'"}) ) ;  ];
 ;
   // Filter services based on search and category;
-
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
 
     return matchesSearch && matchesCategory && matchesPrice}
     );
-
   // Sort services
   
     switch(sortBy) {;
@@ -74,16 +72,12 @@ export default function Page("props": "any) {;
         {/* Header */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "3 0;
-
 "}}
           animate = {;
-
   isVisible ? { "opacity": "1",;
   "y": "0;
-
 "} : "{ "opacity": 0", "y": "3 0 "}}
           transition={{ "duration": "0.8 "}}";
           className="text-center mb-16";
@@ -104,26 +98,19 @@ export default function Page("props": "any) {;
             Explore our complete portfolio of innovative services with transparent pricing",;
             detailed ROI analysis, and market insights to help you make informed decisions.</p>;
         </motion.div>;
-
         {/* Search and Filters */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           animate = {;
-
   isVisible ? { "opacity": "1",;
   "y": "0;
-
 "} : "{ "opacity": 0", "y": "2 0 "}}
           transition = {;
-
   { "duration": "0.8",;
   "delay": "0.2;
-
 "}}";
           className="mb-12";
 ";
@@ -139,7 +126,6 @@ export default function Page("props": "any) {;
                   className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 "focus": "outlin e-none "focus": borde r-zion-cyan/40 "focus": rin g-2 "focus": rin g-zion-cyan/20";
                 />;
               </div>;
-
               {/* Category Filter */"}
               <select;
                 value={selectedCategory}
@@ -151,7 +137,6 @@ export default function Page("props": "any) {;
                     {category}
                   </option>) ) }
               </select>;
-
               {/* Price Range Filter */}
               <select;
                 value={priceRange}
@@ -163,7 +148,6 @@ export default function Page("props": "any) {;
                     {range}
                   </option>) ) }
               </select>;
-
               {/* Sort By */}
               <select;
                 value={sortBy}
@@ -175,7 +159,6 @@ export default function Page("props": "any) {;
                 <option value="category" className="bg-zion-slate-dark text-white">Sort by Category</option>;
               </select>;
             </div>;
-
             {/* Results Count */"}";
             <div className="mt-4 text-center">";
               <span className="text-zion-cyan font-semibold">;
@@ -190,13 +173,10 @@ export default function Page("props": "any) {;
         </motion.div> {/* Services Grid */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "3 0 "}}          animate = {;
-
   isVisible ? { "opacity": "1",;
   "y": "0 "} : "{ "opacity": 0", "y": "3 0 "}}          transition = {;
-
   { "duration": "0.8",;
   "delay": "0.4 "}}"          className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-8 mb-16";
         >;
@@ -204,19 +184,14 @@ export default function Page("props": "any) {;
             <motion.div;
               key={`${service.source}-${service.id}`}
               initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
               animate = {;
-
   isVisible ? { "opacity": "1",;
   "y": "0;
-
 "} : "{ "opacity": 0", "y": "2 0 "}}
               transition = {;
-
   { "duration": "0.6",;
   "delay": "inde x * 0.05;
 
@@ -239,7 +214,6 @@ export default function Page("props": "any) {;
                     </p>;
                   </div>;
                 </div>;
-
                 {/* Features Preview */}
                 {service.features && service.features.length > 0 && (";
                   <div className="mb-4">";
@@ -248,7 +222,6 @@ export default function Page("props": "any) {;
                         <span;
                           key={featureIndex}";
                           className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30";
-
                           {feature}
                         </span>;
                       ))}
@@ -273,7 +246,6 @@ export default function Page("props": "any) {;
                     </div>;
                   </div>;
                 </div>;
-
                 {/* Additional Info for Innovative Services */}
                 {service.source === 'innovative' && 'marketSize' in service && (";
                   <div className="grid grid-cols-2 gap-4 mb-4">";
@@ -292,21 +264,17 @@ export default function Page("props": "any) {;
                   target={service.external ? "_blank" : "_self"}";
                   rel={service.external ? "noopener noreferrer" : ""}";
                   className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": "shado w-lg "hover": shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group";
-
                   {service.ctaLabel"}";
                   <ArrowRight className="w-4 h-4 group-"hover": "translat e-x-1 transition-transform duration-300"   />";
                   {service.external && <ExternalLink className="w-4 h-4"   />"}                </a>;
               </div>;
             </motion.div>) ) }
         </motion.div>;
-
         {/* Contact Section */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "3 0 "}}          animate = {;
-
   isVisible ? { "opacity": "1",;
   "y": "0 "} : "{ "opacity": 0", "y": "3 0 "}}          transition = {;
 
@@ -347,7 +315,6 @@ export default function Page("props": "any) {;
                 target="_blank";
                 rel="noopener noreferrer";
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold "hover": b g-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2";
-
                 Visit Website";
                 <ExternalLink className="w-4 h-4"   />              </a>;
             </div>;
@@ -356,7 +323,6 @@ export default function Page("props": "any) {;
       </div>;
     </section>;) "};
 '"`;
-
 </motion>;
 </motion>;
 </motion>;

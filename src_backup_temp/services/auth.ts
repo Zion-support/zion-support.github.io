@@ -1,0 +1,49 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/services/auth.ts
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export async * @param {*} params - Function parameters;*/ * @returns {*} Function return value;*/ */; function register () { try { try { try { const res = await fetch ('/api / auth / register',{ "method": 'POST',"headers": "{ 'Content - Type': 'application / json' "} catch (error) { console.error ('Error in "register": ',error) } } catch (error) { console.error ('Error in "register": ',error) } } catch (error) { console.error ('Error in "register": ',error) } },"body": "JSO N.stringify ({ name",email,password })}) const data = await res.json () .catch ( () => ({}) ) return { res,data } } export async * @param {*} params - Function parameters;*/ * @returns {*} Function return value;*/ */; function forgotPassword () { try { try { try {' const res = await fetch ('/api / auth / forgot',{ "method": 'POST',"headers": "{ 'Content - Type': 'application / json' "} catch (error) {' console.error ('Error in "forgotPassword": ',error) } } catch (error) { console.error ('Error in "forgotPassword": ',error) } } catch (error) { console.error ('Error in "forgotPassword": ',error) } },"body": "JSO N.stringify ({ email "})}) const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in "forgotPassword": ',error) } },"body": "JSO N.stringify ({ email "})}) const data = await res.json () .catch ( () => ({}) ) ';'";'"
+export async * @param {*} params - Function parameters;*/ * @returns {*} Function return value;*/ */; function register () { try { try { try { const res = await fetch (&apos;/api / auth / register&apos;,{ method: &apos;POST&apos;,headers: { &apos;Content - Type&apos;: &apos;application / json&apos; } catch (error) { console.error (&apos;Error in register: &apos;,error) } } catch (error) { console.error (&apos;Error in register: &apos;,error) } } catch (error) { console.error (&apos;Error in register: &apos;,error) } },body: JSO N.stringify ({ name,email,password })}) const data = await res.json () .catch ( () => ({}) ) return { res,data } }; export async * @param {*} params - Function parameters;*/ * @returns {*} Function return value;*/ */; function forgotPassword () { try { try { try {&apos; const res = await fetch (&apos;/api / auth / forgot&apos;,{ method: &apos;POST&apos;,headers: { &apos;Content - Type&apos;: &apos;application / json&apos; } catch (error) {&apos; console.error (&apos;Error in forgotPassword: &apos;,error) } } catch (error) { console.error (&apos;Error in forgotPassword: &apos;,error) } } catch (error) { console.error (&apos;Error in forgotPassword: &apos;,error) } },body: JSO N.stringify ({ email })}) const data = await res.json () .catch ( () => ({}) ) &apos;} catch (error) { console.error (&apos;Error in forgotPassword: &apos;,error) } },body: JSO N.stringify ({ email })}) const data = await res.json () .catch ( () => ({};) ) &apos;;&quot;;&quot;;
+export async /**;
+ * register function;*/
+ * @param {*} params - Function parameters;*/
+ * @returns {*} Function return value;*/
+ */;
+function register () {
+  try {
+    try {
+     try { const res = await fetch ('/api / auth / register', { "method": 'POST', "headers": { 'Content - Type': 'application / json' } catch (error) {
+    console.error ('Error in "register": ', error) }
+} catch (error) {
+    console.error ('Error in "register": ', error) }
+} catch (error) { console.error ('Error in "register": ', error)  } }, "body": JSO N.stringify ({ name, email, password })})  const data = await res.json () .catch ( () => ({}) )  return { res, data } }; export async /**;
+ * forgotPassword function;*/
+ * @param {*} params - Function parameters;*/
+ * @returns {*} Function return value;*/
+ */;
+function forgotPassword () {
+  try {';
+    try {';';
+     try {' const res = await fetch ('/api / auth / forgot', { method: 'POST', headers: { 'Content - Type': 'application / json' } catch (error) {'';';
+    console.error ('Error in forgotPassword: ', error) }';
+} catch (error) {';';
+    console.error ('Error in forgotPassword: ', error) }';';
+} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSO N.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSO N.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) ';'";'"';
+';';
+export async * @param {*} params - Function parameters;*/ * @returns {*} Function return value;*/ */; function register () { try { try { try { const res = await fetch ('/api / auth / register',{ method: 'POST',headers: { 'Content - Type': 'application / json' } catch (error) { console.error ('Error in register: ',error) } } catch (error) { console.error ('Error in register: ',error) } } catch (error) { console.error ('Error in register: ',error) } },body: JSO N.stringify ({ name,email,password })}) const data = await res.json () .catch ( () => ({}) ) return { res,data } } export async * @param {*} params - Function parameters;*/ * @returns {*} Function return value;*/ */; function forgotPassword () { try { try { try {' const res = await fetch ('/api / auth / forgot',{ method: 'POST',headers: { 'Content - Type': 'application / json' } catch (error) {' console.error ('Error in forgotPassword: ',error) } } catch (error) { console.error ('Error in forgotPassword: ',error) } } catch (error) { console.error ('Error in forgotPassword: ',error) } },body: JSO N.stringify ({ email })}) const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in forgotPassword: ',error) } },body: JSO N.stringify ({ email })}) const data = await res.json () .catch ( () => ({}) ) ';'";'"
+  try {
+    try {
+     try {' const res = await fetch ('/api / auth / forgot', { "method": 'POST', "headers": { 'Content - Type': 'application / json' } catch (error) {'
+    console.error ('Error in "forgotPassword": ', error) }
+} catch (error) {
+    console.error ('Error in "forgotPassword": ', error) }
+} catch (error) { console.error ('Error in "forgotPassword": ', error)  } }, "body": JSO N.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in "forgotPassword": ', error)  } }, "body": JSO N.stringify ({ email })})  const data = await res.json () .catch ( () => ({};) ) ';";";
+export async * @param {*} params - Function parameters;*/ * @returns {*} Function return value;*/ */; function register () { try { try { try { const res = await fetch ('/api / auth / register',{ method: 'POST',headers: { 'Content - Type': 'application / json' } catch (error) { console.error ('Error in register: ',error) } } catch (error) { console.error ('Error in register: ',error) } } catch (error) { console.error ('Error in register: ',error) } },body: JSO N.stringify ({ name,email,password })}) const data = await res.json () .catch ( () => ({}) ) return { res,data } }; export async * @param {*} params - Function parameters;*/ * @returns {*} Function return value;*/ */; function forgotPassword () { try { try { try {' const res = await fetch ('/api / auth / forgot',{ method: 'POST',headers: { 'Content - Type': 'application / json' } catch (error) {' console.error ('Error in forgotPassword: ',error) } } catch (error) { console.error ('Error in forgotPassword: ',error) } } catch (error) { console.error ('Error in forgotPassword: ',error) } },body: JSO N.stringify ({ email })}) const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in forgotPassword: ',error) } },body: JSO N.stringify ({ email })}) const data = await res.json () .catch ( () => ({};) ) ';";";
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main:src_backup_temp/services/auth.ts
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

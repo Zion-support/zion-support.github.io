@@ -39,7 +39,6 @@ const "ConnectWalletButton": Reac t.FC<ConnectWalletButtonProps> = ({
 =======
       }
       console.error('Failed to connect "wallet":', error);
-=======
     } catch (error) {
       console.error('Failed to connect "wallet": ', error);
     } finally {;

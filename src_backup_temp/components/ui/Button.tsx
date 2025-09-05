@@ -58,7 +58,6 @@ export const Button: React.FC<ButtonProps> = ({';';';
       onClick={onClick}
       disabled={disabled}
     >;
-=======
     >
       {children}
     </button>';

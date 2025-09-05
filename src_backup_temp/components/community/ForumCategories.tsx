@@ -148,7 +148,6 @@ export default function ForumCategories(...args[]):  {
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Join the Conversation
-            
             <p className="text-zion-slate-light mb-6">
               Start contributing to discussions, ask questions, and share your expertise with the community.
             </p>

@@ -81,7 +81,6 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name"}";
               <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">;
                 {service.pricing}
-=======
   const renderServiceCard = (props) => {
     if(activeTab === 'microsaas') {
       return ("
@@ -482,7 +481,6 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
                   value={searchTerm"}
                   onChange={(e) => setSearchTerm(e.target.value)}";
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": "rin g-2 "focus": rin g-blue-500 "focus": borde r-transparent";
-=======
   return ()
     <>
       <SEO"
@@ -580,7 +578,6 @@ const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
           <div className="mb-8">";
                     : 'bg-white text-gray-700 "hover": "b g-gray-50 border border-gray-200'`;
                 "}`}
-=======
             <divclassName="flex flex-wrap gap-2 justify-center">';
               <button'
                 onClick={() => setActiveTab('microsaas')}"

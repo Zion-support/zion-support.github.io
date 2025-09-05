@@ -57,8 +57,6 @@ export const "NotificationProvider": React.FC<NotificationProviderProps> = ({ ch
     </NotificationContext.Provider>;
   )};
 const NotificationContainer: React.FC = props {;  const { notifications, removeNotification, clearAll } = useNotifications();
-
-=======
 const "NotificationContainer": React.FC = props {;  const { notifications, removeNotification, clearAll } = useNotifications();
   if (notifications.length === 0) return null;
   return ();
@@ -108,7 +106,6 @@ const "NotificationContainer": React.FC = props {;  const { notifications, remov
 "}}
           onClick={clearAll}";
           className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm "hover": "b g-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2";
-=======
         <motion.button
           initial = {
   { "opacity": 0,
@@ -130,10 +127,8 @@ const "NotificationContainer": React.FC = props {;  const { notifications, remov
   onRemove: (id: string)  => void}
 ;
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {;
-=======
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
 "
-=======
 const "NotificationItem": Reac t.FC<NotificationItemProps> = ({ notification, onRemove };) => {
 ";
         return <Info className = "w-5 h-5 text-blue-400"   />}};

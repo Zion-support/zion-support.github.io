@@ -3,7 +3,6 @@
       ]
     }
   ];
-
   return ()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
       {/* Enhanced Animated Background */}"
       <div className="absolute inset-0 bg-futuristic-enhanced">"
@@ -18,15 +17,12 @@
           <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60 neon-glow"></div>
         </div>
       </div>
-
     { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;
     { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;
     { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;
     { name: 'Security', href: '/security', description: 'Security practices' },;
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };  ];
-
   // Create missing pages for broken links
-  
       </Link>;) };
   return ("
           <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
@@ -34,7 +30,6 @@
         <div className="absolute inset-0 opacity-30">"
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>
         </div>
-
       <div  className="relative">
         {/* Main Footer Content */}
         <div  className="container - responsive py-16">
@@ -64,7 +59,6 @@
               </motion.div>
             ))}
           </motion.div>
-
           {/* Main Footer Grid */}
           <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap-8 mb-12">
             {/* Company Info */}
@@ -106,7 +100,6 @@
                 </div>
               </div>
             </div>
-
               {/* Social Links */}"
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
@@ -123,10 +116,8 @@
                 ))}
               </div>
             </div>
-
             <p className="text-gray - 300 mb-6 max - w-md">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,              and digital transformation services.Transforming businesses with cutting - edge technology.</p>
-
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <div key={section.title}>"
@@ -148,7 +139,6 @@
                 </ul>
               </motion.div>) ) }
           </div>
-
           {/* Additional Links Grid */}"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company */}
@@ -166,7 +156,6 @@
                   </li>) ) }
               </ul>
             </div>
-
             {/* Support */}
             <div>"
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>"
@@ -182,7 +171,6 @@
                   </li>) ) }
               </ul>
             </div>
-
             {/* Legal */}
             <div>"
               <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>"
@@ -198,7 +186,6 @@
                   </li>) ) }
               </ul>
             </div>
-
             {/* Social & Newsletter */}
             <div>"
               <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>"
@@ -229,7 +216,6 @@
               </div>
             </div>
           </div>
-
           {/* Bottom Bar */}"
           <div className="pt-8 border-t border-slate-800/50">"
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">"
@@ -260,7 +246,6 @@
       ]
     },
     {
-
       title: 'Company',;
       icon: Building,
       color: 'from-green-600 to-emerald-600',
@@ -276,7 +261,6 @@
       ]
     },
     {
-
       title: 'Resources & Learning',;
       icon: BookOpen,
       color: 'from-orange-600 to-red-600',
@@ -293,7 +277,6 @@
       ]
     },
     {
-
       title: 'Platform & Tools',;
       icon: Settings,
       color: 'from-slate-600 to-gray-600',
@@ -307,7 +290,6 @@
       ]
     },
     {
-
       title: 'Legal & Compliance',;
       icon: Shield,
       color: 'from-gray-600 to-slate-600',

@@ -11,7 +11,6 @@
       return { "error": error.message };",
     }
   }
-
   analyzeDependencies() {}
       return {
         "totalDependencies": dependencies.length + devDependencies.length,",
@@ -23,15 +22,12 @@
       return { "error": error.message };",
     }
   }
-
   findUnusedDependencies() {
     // Placeholder for unused dependency detection}
     return ['example-unused-package'];',
   }
-
   generateRecommendations() {
-=======;
-=======
+;
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -51,7 +47,6 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    
     fs.appendFileSync(this.logFile, logMessage);
   }
   async optimizePerformance() {
@@ -120,9 +115,7 @@ try {
   }
   generateRecommendations() {
     // // // // // // // // }
-
 })}}}}}}}}}}}}}}}
-=======
 return ['Implement code splitting for better performance',
       'Optimize images using WebP format',
       'Remove unused dependencies',

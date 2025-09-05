@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface CookiesProps {
   // Add props here as needed
 }
-
 export default function Cookies({ }: CookiesProps) {
   return (
     <div>

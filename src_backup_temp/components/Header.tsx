@@ -9,7 +9,6 @@ interface HeaderProps {
 =======
 export function Header({ className = '' }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
@@ -87,7 +86,6 @@ export function Header({ className = '' }: "HeaderProps) {;
     { name: 'Home', href: '/' },
     { 
       name: 'Services', 
-=======
           {/* Desktop Navigation */"}
           <nav className="hidden "lg": "flex items-center space-x-8">;
             {navigationItems.map((item) => (;
@@ -102,7 +100,6 @@ export function Header({ className = '' }: "HeaderProps) {;
               </Link>;
             ))}
           </nav>;
-
           {/* Contact Info - Hidden on small screens */}
           <div className="hidden "xl": "flex items-center space-x-4 text-sm text-gray-400">;
             <div className="flex items-center space-x-2">;
@@ -114,7 +111,6 @@ export function Header({ className = '' }: "HeaderProps) {;
               <span>kleber@ziontechgroup.com</span>;
             </div>;
           </div>;
-
           {/* Right side actions */"}
           <div className="flex items-center space-x-2 "lg": "space-x-4">;
             {/* Search */"}
@@ -125,7 +121,6 @@ export function Header({ className = '' }: "HeaderProps) {;
             >;
               <Search className="w-5 h-5" />;
             </button>;
-
             {/* Theme toggle */"}
             <button;
               onClick={toggleTheme}
@@ -134,7 +129,6 @@ export function Header({ className = '' }: "HeaderProps) {;
             >;
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />"}
             </button>;
-
             {/* User menu */}
             <div className="relative">;
               <button;
@@ -145,7 +139,6 @@ export function Header({ className = '' }: "HeaderProps) {;
                 <User className="w-5 h-5" />;
                 <span className="hidden "sm":block">Account</span>;
               </button>;
-
               {/* User dropdown */"}
               {isUserMenuOpen && (;
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">;
@@ -173,7 +166,6 @@ export function Header({ className = '' }: "HeaderProps) {;
                 </div>;
               )}
             </div>;
-
             {/* Mobile menu button */}
             <button;
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -184,7 +176,6 @@ export function Header({ className = '' }: "HeaderProps) {;
             </button>;
           </div>;
         </div>;
-
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (;
           <div className=""lg": "hidden">;
@@ -242,16 +233,13 @@ export function Header({ className = '' }: "HeaderProps) {;
         )"}
       </div>;
     </header>;
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   const navigation = [
     {
       name: 'Home',
@@ -348,7 +336,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
@@ -362,10 +349,8 @@ const Header = () => {
               <p className="text-sm text-gray-600">AI & Technology Solutions</p>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-=======
           <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <Link
@@ -402,7 +387,6 @@ const Header = () => {
             >
               <Search className="w-5 h-5"  />
             </button>
-
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
@@ -411,7 +395,6 @@ const Header = () => {
             >
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
-
             {/* User menu */}
             <div className="relative">
               <button
@@ -422,7 +405,6 @@ const Header = () => {
                 <User className="w-5 h-5"  />
                 <span className="hidden sm: bloc k">Account</span>
               </button>
-              
               {isUserMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
                   <Link
@@ -451,7 +433,6 @@ const Header = () => {
   );
 }
             </div>
-
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -476,7 +457,6 @@ const Header = () => {
                     location.pathname === item.href ? 'text-cyan-400 bg-gray-800' : ''
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
-=======
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
@@ -560,10 +540,8 @@ const router = useRouter()
     if (searchQuery.trim()) {"
       router.push("/search?q="${encodeURIComponent(searchQuery.trim()),")}"
   }
-
   const navigation = []
   ]
-
   return ("
     <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
       scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">
@@ -585,7 +563,6 @@ const router = useRouter()
                 <span className="text-white font-bold text-sm">Z</span>"
               </div>""
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-=======
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -595,7 +572,6 @@ const router = useRouter()
               Get Started
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -604,7 +580,6 @@ const router = useRouter()
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isMenuOpen && (
@@ -635,7 +610,6 @@ const router = useRouter()
                       </button>
                     )}
                   </div>
-                  
                   {item.dropdown && activeDropdown === item.name && (
                     <div className="ml-4 mt-2 space-y-1">
                       {item.dropdown.map((subItem) => (
@@ -652,7 +626,6 @@ const router = useRouter()
                   )}
                 </div>
               ))}
-              
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <Link
                   href="/contact"

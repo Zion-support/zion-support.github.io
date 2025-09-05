@@ -1,3 +1,4 @@
+>>>>>>> main
 const categories = [
   {
     title: 'Getting Started',
@@ -34,7 +35,6 @@ const categories = [
 
 ];
 
-ursor/website-audit-and-update-with-deployment-9cae
 const popularDocs = [
   { title: 'Quick Start Guide', description: 'Get started with our platform in minutes', category: 'Getting Started', views: '2.5k' },
   { title: 'API Authentication', description: 'Learn how to authenticate with our API', category: 'API Reference', views: '1.8k' },
@@ -42,7 +42,6 @@ const popularDocs = [
   { title: 'Security Guidelines', description: 'Essential security practices for your applications', category: 'Best Practices', views: '1.5k' }
 ];
 
-ursor/website-audit-and-update-with-deployment-9cae
 export default function DocsPage() {
   return (
     <SimpleLayout
@@ -113,6 +112,7 @@ ursor/website-audit-and-update-with-deployment-9cae
 
 ursor/website-audit-and-update-with-deployment-9cae
         {/* Popular Docs */}
+>>>>>>> main
                   key={doc.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -124,6 +124,7 @@ ursor/website-audit-and-update-with-deployment-9cae
 
 ursor/website-audit-and-update-with-deployment-9cae
         {/* Categories Section */}
+>>>>>>> main
                   key={category.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -183,9 +184,8 @@ ursor/website-audit-and-update-with-deployment-9cae
           </div>
         </section>
       </div>
-    </MainLayout>
-    </Layout>
     </SimpleLayout>
+>>>>>>> main
   );
 }
 

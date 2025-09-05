@@ -77,7 +77,7 @@ export default function HomePage() {
           
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
@@ -90,12 +90,18 @@ export default function HomePage() {
                 Empowering businesses to thrive in the digital age.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
                 <Link
                   href="/contact"
                   className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-5 w-5" />
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
                 </Link>
                 <Link
                   href="/services"
@@ -153,14 +159,22 @@ export default function HomePage() {
               {services.map((service, index) => (
                 <motion.div
                   key={index}
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group"
+=======
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="text-center"
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   <Link
@@ -170,6 +184,11 @@ export default function HomePage() {
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
+=======
+                  <div className="text-gray-300 text-sm md:text-base">
+                    {stat.label}
+                  </div>
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
                 </motion.div>
               ))}
             </div>
@@ -184,6 +203,12 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
+<<<<<<< HEAD
+=======
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Zion Tech Group?
@@ -241,6 +266,34 @@ export default function HomePage() {
                 >
                   Learn More About Us
                 </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Contact Info */}
+        <section className="py-16 bg-black/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center">
+                  <Phone className="h-6 w-6 text-blue-400 mr-3" />
+                  <span className="text-gray-300">+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Mail className="h-6 w-6 text-blue-400 mr-3" />
+                  <span className="text-gray-300">kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <MapPin className="h-6 w-6 text-blue-400 mr-3" />
+                  <span className="text-gray-300">364 E Main St STE 1008 Middletown DE 19709</span>
+                </div>
               </div>
             </motion.div>
           </div>

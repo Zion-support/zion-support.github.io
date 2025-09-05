@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface DigitaltransformationProps {
   // Add props here as needed
 }
-
 export default function Digitaltransformation({ }: DigitaltransformationProps) {
   return (
     <div>

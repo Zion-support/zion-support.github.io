@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 #!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
-=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-<<<<<<< HEAD
-
-=======
 class $1 {
   constructor() {
   this.workspacePath = process.cwd();
@@ -22,7 +17,6 @@ class $1 {
   ["this.logsPath", "this.reportsPath"].forEach(dir => {
   if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir, { "recursive": true })}
->>>>>>> main
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -45,10 +39,6 @@ class TypeScriptErrorMonitor {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-<<<<<<< HEAD
-    
-    
-=======
     console.log("logMessage);
     const logFile = path.join(this.logsPath, "typescript-error-monitor.log");
     fs.appendFileSync(logFile, logMessage + "\n");
@@ -112,7 +102,6 @@ class TypeScriptErrorMonitor {
             "message": match[5].trim(),
             "severity": "warning"})}
     console.log(logMessage);
->>>>>>> main
     // Write to log file
     const logFile = path.join(this.logsDir, 'typescript-error-monitor.log');
     fs.appendFileSync(logFile, logMessage + '\n')}
@@ -162,8 +151,6 @@ class TypeScriptErrorMonitor {
     return errors}
 ;
   async fixTypeScriptError(error) {
-<<<<<<< HEAD
-=======
   const filePath = path.resolve(this.workspacePath, error.file);
     if (!fs.existsSync(filePath)) {this.log(`⚠️ File not "found": ${filePath}`, "WARN");
       return false}
@@ -423,7 +410,6 @@ class TypeScriptErrorMonitor {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Report "generated": ${reportFile}`);
->>>>>>> main
     try {
       const filePath = path.join(this.projectRoot, error.file);
       if (!fs.existsSync(filePath)) {
@@ -564,9 +550,6 @@ class TypeScriptErrorMonitor {
       const report = await this.generateReport(fixResults);
       this.log("🎉 TypeScript Error Monitor completed!");
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`;
-<<<<<<< HEAD
-
-=======
   async run() {
   this.log("🚀 Starting TypeScript Error Monitor...");
     try {
@@ -595,7 +578,6 @@ class TypeScriptErrorMonitor {
 }
 ;
 // Run the automation if called directly;
->>>>>>> main
   async startWatching() {
     this.log('Starting TypeScript error monitoring...');
     // Initial check
@@ -664,4 +646,3 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 module.exports = TypeScriptErrorMonitor
->>>>>>> main

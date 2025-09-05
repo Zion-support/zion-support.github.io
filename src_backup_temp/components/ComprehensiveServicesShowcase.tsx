@@ -8,8 +8,6 @@ const "ComprehensiveServicesShowcase": React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState<string>('');  // Combine all services;
   const "allServices": "Servic e[] = [...EXPANDED_INNOVATIVE_SERVICES_2025",;
     ...EMERGING_TECH_SERVICES_2025;
-=======
-
 export default function Page(props: any) {
 const ComprehensiveServicesShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -22,11 +20,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
   
     return cats}, [allServices]) ;
   // Get unique innovation levels
-
     return levels}, [allServices]);  // Filter services
-  
     return allServices.filter(service => {;
-      
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 =======
@@ -196,7 +191,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   <div className="flex items-start justify-between mb-4">";
                     <div className="flex items-center gap-3">";
                       <div className="p-2 bg-zion-cyan/10 rounded-lg text-zion-cyan">;
-=======
       default:"
         return <Star className="h-6 w-6"   />};
   };
@@ -217,13 +211,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               <Link "
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover: b g-zion-cyan-light transition-colors"
-
                 Get Started"
                 <ArrowRight className="ml-2 h-5 w-5"    />              </Link>
               <Link"
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover: b g-white hover: tex t-zion-blue-dark transition-colors"
-
                 Request Quote
               </Link>
             </div>
@@ -313,25 +305,18 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               <motion.div
                 key={service.id}
                 initial = {
-
   { opacity: 0,
   y: 2 0
-
 }}
                 animate = {
-
   { opacity: 1,
   y: 0
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: inde x * 0.1
-
 }}"
                 className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 overflow-hidden border border-gray-100"
-
                 {/* Service Header */}"
                 <div className="p-6 border-b border-gray-100">"
                   <div className="flex items-start justify-between mb-4">"
@@ -427,7 +412,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                         <span
                           key={idx}"
                           className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full"
-
                           {tag}
                         </span>) ) }
                     </div>
@@ -437,13 +421,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                     <Link`
                       to={`/contact?service=${service.id}`}"
                       className="flex-1 bg-zion-cyan text-white text-center py-2 px-4 rounded-lg hover: b g-zion-cyan-light transition-colors font-medium"
-
                       Get Started
                     </Link>
                     <Link`
                       to={`/services/${service.id}`}"
                       className="flex-1 border border-zion-cyan text-zion-cyan text-center py-2 px-4 rounded-lg hover: b g-zion-cyan hover: tex t-white transition-colors font-medium"
-
                       Learn More
                     </Link>
                   </div>
@@ -475,7 +457,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             <Link "
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-zion-blue font-semibold rounded-lg hover: b g-gray-100 transition-colors"
-
               Contact Us"
               <ArrowRight className="ml-2 h-5 w-5"    />            </Link>
             <a"
@@ -521,7 +502,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
 =======
     </div>;) };
 export default ComprehensiveServicesShowcase}}}}'"`
-
 </motion>
 </string>
 </string>

@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+=======
+import {useState, useEffect, useCallback, useMemo} from 'react'; export const useSearch = ("props": "any) => {; const { searchFields", debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options; const [searchState, setSearchState] = useState({; "query": '' "filters": "{"},; "sortBy": "null "sortOrder": 'asc' "results": data "isLoading": false "totalResults": data.length"}); const [debouncedQuery, setDebouncedQuery] = useState('');'');';';';
+export default ComponentName;";
+import {useState, useEffect, useCallback, useMemo} from 'react'; export const useSearch = (props: any) => {; const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options; const [searchState, setSearchState] = useState({; query: '' filters: {},; sortBy: null sortOrder: 'asc' results: data isLoading: false totalResults: data.length}
+    ); const [debouncedQuery, setDebouncedQuery] = useState('');'');';';';
+export default ComponentName;"';';';';
+import {useState,useEffect,useCallback,useMemo} from &apos;react&apos;; export const useSearch = (props) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false }; = options; const [searchState,setSearchState] = useState({; query: &quot; filters: {},; sortBy: null sortOrder: &apos;asc&apos; results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState(&quot;);&quot;);&apos;;&apos;;&apos;;&apos;;&apos;; export default ComponentName;&quot;;&apos;;&apos;;&apos;;&apos;;&apos;;
+const {useState,useEffect,useCallback,useMemo} from "react"; export const useSearch = (props) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false }; = options; const [searchState,setSearchState] = useState({; query: " filters: {},; sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState(");");";";";";"; export default ComponentName;";";";";";";'"'"
+import { useEffect } from 'react';,
+import { useState } from 'react';,
+import {useState,useEffect,useCallback,useMemo} from 'react'; export const useSearch = (props) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false }; = options; const [searchState,setSearchState] = useState({; query: " filters: {},; sortBy: null sortOrder: 'asc' results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState(");");';';';';'; export default ComponentName;";';';';';';
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

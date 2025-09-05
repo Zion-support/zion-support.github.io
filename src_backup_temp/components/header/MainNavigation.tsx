@@ -1,7 +1,6 @@
           </div>
         )}
       </div>
-=======
             className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50";
           >;
             <div className="p-4">;
@@ -154,7 +153,6 @@
           </div>
         )}
       </div>
-=======
                 <div>;
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
                     <Building2 className="w-4 h-4 mr-2" />;
@@ -248,7 +246,6 @@
           </div>
         )}
       </div>
-=======
             className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50";
           >;
             <div className="p-4">;
@@ -296,7 +293,6 @@
       >;
         Resources;
       </Link>;
-
       {/* Blog */"}
       <Link ;
         to="/blog" ;
@@ -304,7 +300,6 @@
       >;
         Blog;
       </Link>;
-
       {/* Contact */"}
       <Link ;
         to="/contact" ;

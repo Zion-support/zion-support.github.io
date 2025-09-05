@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface DevopsautopilotProps {
   // Add props here as needed
 }
-
 export default function Devopsautopilot({ }: DevopsautopilotProps) {
   return (
     <div>

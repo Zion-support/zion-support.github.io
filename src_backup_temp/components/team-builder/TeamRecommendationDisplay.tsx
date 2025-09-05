@@ -1,11 +1,9 @@
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
-
   recommendation: TeamRecommendatio n;
   projectBrief: ProjectBrie f; // For budget comparison
   onInviteTalent: talentI d: string, roleTitle: string void;
   // onEditRole: roleI d: string void; // For future add/remove
   // onRemoveRole: roleI d: string void; // For future add/remove
-
 }
 ;
 export 
@@ -43,12 +41,10 @@ export
              />
         </CardContent>
       </Card>
-
       <div>"
         <h3 className="text-xl font-semibold mb-4 flex items-center">"
           <Briefcase className="h-6 w-6 mr-2 text-primary"   />
           Recommended Roles
-        
         {recommendation.roles.map(role: unknow n, index: unknow n (
           <RoleCard key={index} role={role} onInviteTalent={onInviteTalent}   />
         ))}
@@ -81,6 +77,5 @@ const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: 
   </Card>;
 );
 '"`
-
 </BudgetStatusDisplay>
 </InfoCard>

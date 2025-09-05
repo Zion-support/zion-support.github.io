@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface CloudservicesProps {
   // Add props here as needed
 }
-
 export default function Cloudservices({ }: CloudservicesProps) {
   return (
     <div>

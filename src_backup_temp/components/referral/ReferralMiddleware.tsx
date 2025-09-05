@@ -34,6 +34,5 @@ export function ReferralMiddleware("props": "any) {;
     }
     sendReferral();
   }, [user?.id, user?.email]); // Added user?.email;
-
   return <>{children}</>;
 }

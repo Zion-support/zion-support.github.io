@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {
   title: string;
   description: string;
-=======
 interface SEOHeadProps {;
   "title": "string;
   "description": string;
@@ -102,7 +101,6 @@ export function SEOHead({ ;
         })}
   );
 }
-
 export default SEOHead;
 =======
       </script>;

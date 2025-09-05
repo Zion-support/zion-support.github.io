@@ -178,14 +178,10 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
   screenReader: boolean;
 }
-
 interface AccessibilityEnhancerProps {
-
   enabled?: boolean;
   showSettings?: boolean;
-
 }
-
 export function AccessibilityEnhancer(props: any) {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 1 6,
@@ -199,21 +195,15 @@ export function AccessibilityEnhancer(props: any) {
     screenReader: tru e
   }
     );
-
   const [isOpen, setIsOpen] = useState<any>(false);
-
   // Apply accessibility settings
   useEffect(() => {
     if (!enabled) return;
-
     const root = document.documentElement;
-    
     // Apply font size
     root.style.fontSize = `${settings.fontSize}px`;
-    
     // Apply line height
     root.style.lineHeight = settings.lineHeight.toString();
-    
     // Apply letter spacing
     root.style.letterSpacing = `${settings.letterSpacing}px`;
 
@@ -251,7 +241,6 @@ export function AccessibilityEnhancer(props: any) {
     this.listeners.forEach(listener => listener(this.state));
   // Public methods
   toggleHighContrast(): void {
-=======
   "}
   // Public methods;
   toggleHighContrast(): "void {;
@@ -422,7 +411,6 @@ export const "AccessibilityControls": "React.FC = () => {;
           />;
           <span className="text-sm">High Contrast</span>;
         </label>;
-
         <label className="flex items-center space-x-2">;
           <input;
             type="checkbox";
@@ -432,7 +420,6 @@ export const "AccessibilityControls": "React.FC = () => {;
           />;
           <span className="text-sm">Reduce Motion</span>;
         </label>;
-
         <div className="space-y-2">;
           <span className="text-sm font-medium">Font Size</span>;
           <div className="flex space-x-1">;
@@ -465,8 +452,6 @@ export const "AccessibilityControls": "React.FC = () => {;
 "};
 ;
 export default AccessibilityManager;
-=======
-
     // Apply high saturation
     if (settings.highSaturation) {
       root.classList.add('high-saturation');
@@ -474,23 +459,18 @@ export default AccessibilityManager;
       root.classList.remove('high-saturation');
     }
   }, [settings, enabled]);
-
   // Keyboard navigation support
   useEffect(() => {
     if (!enabled || !settings.keyboardNavigation) return;
-
     const handleKeyDown = (props: any) => {
       const target = event.target as HTMLElement;
-      
       // Tab navigation enhancement
       if (event.key === 'Tab') {
         const focusableElements = document.querySelectorAll(
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
         );
-        
         const firstElement = focusableElements[0] as HTMLElement;
         const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
         if (event.shiftKey && target === firstElement) {
           event.preventDefault();
           lastElement.focus();
@@ -500,15 +480,12 @@ export default AccessibilityManager;
         }
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [settings.keyboardNavigation, enabled]);
-
   // Screen reader announcements
   const announceToScreenReader = (props: any) => {
     };
-=======
     if (!settings.screenReader) return;
 
     const announcement = document.createElement('div');
@@ -516,23 +493,17 @@ export default AccessibilityManager;
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
-    
     document.body.appendChild(announcement);
-    
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
   };
-
   // Add accessibility attributes to interactive elements
   useEffect(() => {
     if (!enabled) return;
-
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
-    
     interactiveElements.forEach((element) => {
       const el = element as HTMLElement;
-      
       // Add focus indicators
       if (!el.hasAttribute('data-accessibility-enhanced')) {
         el.setAttribute('data-accessibility-enhanced', 'true');
@@ -541,16 +512,13 @@ export default AccessibilityManager;
     }
     );
   }, [enabled]);
-
   const updateSetting = (props: any) => {
     setSettings(prev => ({
       ...prev,
       [key]: value
     }));
   };
-
   if (!enabled) return null;
-
   return (
     <>
       {/* Accessibility Toggle Button */}
@@ -564,7 +532,6 @@ export default AccessibilityManager;
           <AccessibilityIcon className="w-6 h-6"  />
         </button>
       )}
-
       {/* Accessibility Panel */}
       {isOpen && showSettings && (
         <div className="fixed bottom-20 left-4 z-40 w-80 bg-white dark: b g-gray-800 rounded-lg shadow-xl border border-gray-200 dark: borde r-gray-700 p-6">
@@ -577,7 +544,6 @@ export default AccessibilityManager;
               ×
             </button>
           </div>
-
           <div className="space-y-4">
             {/* Font Size */}
             <div>
@@ -599,7 +565,6 @@ export default AccessibilityManager;
                 </button>
               </div>
             </div>
-
             {/* High Contrast */}
             <div>
               <label className="flex items-center">
@@ -612,7 +577,6 @@ export default AccessibilityManager;
                 <span className="text-sm text-gray-700 dark: tex t-gray-300">High Contrast</span>
               </label>
             </div>
-
             {/* Large Text */}
             <div>
               <label className="flex items-center">
@@ -625,7 +589,6 @@ export default AccessibilityManager;
                 <span className="text-sm text-gray-700 dark: tex t-gray-300">Large Text</span>
               </label>
             </div>
-
             {/* Reduced Motion */}
             <div>
               <label className="flex items-center">
@@ -638,7 +601,6 @@ export default AccessibilityManager;
                 <span className="text-sm text-gray-700 dark: tex t-gray-300">Reduced Motion</span>
               </label>
             </div>
-
             {/* Keyboard Navigation */}
             <div>
               <label className="flex items-center">
@@ -651,7 +613,6 @@ export default AccessibilityManager;
                 <span className="text-sm text-gray-700 dark: tex t-gray-300">Enhanced Keyboard Navigation</span>
               </label>
             </div>
-
             {/* Screen Reader */}
             <div>
               <label className="flex items-center">
@@ -673,47 +634,36 @@ export default AccessibilityManager;
 export default AccessibilityEnhancer;
   }
 }
-
 // Create singleton instance
 export const accessibilityManager = new AccessibilityManager();
-
 // React hook for accessibility
 export const useAccessibility = () => {
   const [state, setState] = useState<AccessibilityState>(accessibilityManager.getState());
-
   useEffect(() => {
     const unsubscribe = accessibilityManager.subscribe(setState);
     return unsubscribe;
   }, []);
-
   const toggleHighContrast = useCallback(() => {
     accessibilityManager.toggleHighContrast();
   }, []);
-
   const toggleReducedMotion = useCallback(() => {
     accessibilityManager.toggleReducedMotion();
   }, []);
-
   const setFontSize = useCallback((size: 'small' | 'medium' | 'large') => {
     accessibilityManager.setFontSize(size);
   }, []);
-
   const increaseFontSize = useCallback(() => {
     accessibilityManager.increaseFontSize();
   }, []);
-
   const decreaseFontSize = useCallback(() => {
     accessibilityManager.decreaseFontSize();
   }, []);
-
   const resetFontSize = useCallback(() => {
     accessibilityManager.resetFontSize();
   }, []);
-
   const announce = useCallback((message: string, priority?: 'polite' | 'assertive') => {
     accessibilityManager.announce(message, priority);
   }, []);
-
   return {
     ...state,
     toggleHighContrast,
@@ -725,7 +675,6 @@ export const useAccessibility = () => {
     announce,
   };
 };
-
 // Accessibility Controls Component
 export const AccessibilityControls: React.FC = () => {
   const {
@@ -739,11 +688,9 @@ export const AccessibilityControls: React.FC = () => {
     decreaseFontSize,
     resetFontSize,
   } = useAccessibility();
-
   return (
     <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 border">
       <h3 className="text-sm font-semibold mb-3">Accessibility</h3>
-      
       <div className="space-y-3">
         <label className="flex items-center space-x-2">
           <input
@@ -754,7 +701,6 @@ export const AccessibilityControls: React.FC = () => {
           />
           <span className="text-sm">High Contrast</span>
         </label>
-
         <label className="flex items-center space-x-2">
           <input
             type="checkbox"
@@ -764,7 +710,6 @@ export const AccessibilityControls: React.FC = () => {
           />
           <span className="text-sm">Reduce Motion</span>
         </label>
-
         <div className="space-y-2">
           <span className="text-sm font-medium">Font Size</span>
           <div className="flex space-x-1">
@@ -795,7 +740,6 @@ export const AccessibilityControls: React.FC = () => {
     </div>
   );
 };
-
 export default AccessibilityManager;
 =======
 </any>

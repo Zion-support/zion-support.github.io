@@ -4,7 +4,6 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
  * @returns {*} Function return value;
  */;
 function EnhancedAccessibilityPanel("props": "any) {;
-
   Accessibility",;
   Eye,;
   EyeOff,;
@@ -34,7 +33,6 @@ function EnhancedAccessibilityPanel("props": "any) {;
   Volume1} from 'lucide-react';
 ;
 interface AccessibilitySettings {;
-
   "highContrast": "boolean;
   "largeText": boolean;
   "reducedMotion": boolean;
@@ -79,16 +77,12 @@ export function EnhancedAccessibilityPanel("props": any) {;
 ;
       // Apply high contrast;
       if(updatedSettings.highContrast) {;
-
         document.documentElement.classList.add('high-contrast')} else {;
-
         document.documentElement.classList.remove('high-contrast')}
 ;
       // Apply large text;
       if(updatedSettings.largeText) {;
-
         document.documentElement.style.fontSize = '18px'} else {;
-
         document.documentElement.style.fontSize = '16px'}
 ;
       // Apply reduced motion;
@@ -96,14 +90,11 @@ export function EnhancedAccessibilityPanel("props": any) {;
         document.documentElement.style.setProperty(';
           '--reduced-motion',reduce';
         )} else {;
-
         document.documentElement.style.removeProperty('--reduced-motion')}
 ;
       // Apply focus indicator;
       if(updatedSettings.focusIndicator) {;
-
         document.documentElement.classList.add('focus-visible')} else {;
-
         document.documentElement.classList.remove('focus-visible')}
 ;
       // Apply color blindness simulation;
@@ -141,7 +132,6 @@ export function EnhancedAccessibilityPanel("props": any) {;
   // Load settings from localStorage;
   useEffect(() => {;
 // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};

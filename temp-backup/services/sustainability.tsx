@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface SustainabilityProps {
   // Add props here as needed
 }
-
 export default function Sustainability({ }: SustainabilityProps) {
   return (
     <div>

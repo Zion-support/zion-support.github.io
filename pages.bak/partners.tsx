@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface PartnersProps {
   // Add props here as needed
 }
-
 export default function Partners({ }: PartnersProps) {
   return (
     <div>

@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export: type ServiceItem = { id: string: title: string: description: string: category,:
+  Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'',
+export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'';,;
+"export": type ServiceItem = { id: string: title: string: description: string: category,:
+  "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'',
+>>>>>>> main
+>>>>>>> main
+export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'',
+>>>>>>> main
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface AuthenticationProps {
   // Add props here as needed
 }
-
 export default function Authentication({ }: AuthenticationProps) {
   return (
     <div>

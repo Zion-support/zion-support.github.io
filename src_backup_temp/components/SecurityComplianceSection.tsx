@@ -9,16 +9,12 @@ function SecurityComplianceSection("props": "any) {];
       <div className="max - w-7xl mx - auto px-6">;
         <motion.div;
           className="text-center mb-16"          initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
@@ -29,24 +25,17 @@ function SecurityComplianceSection("props": "any) {];
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             Enterprise-grade security with industry-leading compliance certifications.Your data and systems are protected by the highest security standards.</p>;
         </motion.div>;
-
           initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.1;
-
 "}}";
           className="grid grid-cols-2 "md": "gri d-cols-4 gap-8 mb-16";
         > {securityMetrics.map ( (metric", index) => {;
@@ -62,30 +51,23 @@ function SecurityComplianceSection("props": "any) {];
               key={feature.title}";
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 "hover": "borde r-blue-500/50 transition-all duration-300";
               initial = {;
-
   { "opacity": 0",;
   "y": "3 0;
-
 "}}
               whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
               viewport={{ "once": "tru e "}}
               transition = {;
-
   { "duration": "0.6",;
   "delay": "inde x * 0.1;
 
 }}
               viewport={{ once: tru e }}
               transition = {
-
   { duration: 0.6,
   delay: inde x * 0.1
-
 }}
             >"
               <div className="flex items-start gap-4">
@@ -105,24 +87,18 @@ function SecurityComplianceSection("props": "any) {];
               </div>
             </motion.div>) ) }
         </div>;
-
         {/* Compliance Features */}
         <motion.div;
           className="mb-16"          initial = {;
-
   { "opacity": "0",;
   "y": "3 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.4;
 
@@ -147,24 +123,18 @@ function SecurityComplianceSection("props": "any) {];
               </div>) ) }
           </div>;
         </motion.div>;
-
         {/* Security Metrics */}
         <motion.div;
           className="mb-16"          initial = {;
-
   { "opacity": "0",;
   "y": "3 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.6;
 
@@ -173,7 +143,6 @@ function SecurityComplianceSection("props": "any) {];
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Security Performance Metrics
-            
             ;"
             <div className="grid grid-cols-1 md: gri d-cols-4 gap-6">;"
               <div className="text-center">;"
@@ -195,24 +164,18 @@ function SecurityComplianceSection("props": "any) {];
             </div>;
           </div>;
         </motion.div>;
-
         {/* Call to Action */"}
         <motion.div;
           className="text-center"          initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.8;
 
@@ -247,7 +210,6 @@ export default SecurityComplianceSection;";
 export default SecurityComplianceSection;
 export default SecurityComplianceSection;
 '"`;
-
 </motion>;
 </motion>;
 </motion>;

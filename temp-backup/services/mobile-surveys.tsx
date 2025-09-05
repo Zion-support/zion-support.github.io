@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface MobilesurveysProps {
   // Add props here as needed
 }
-
 export default function Mobilesurveys({ }: MobilesurveysProps) {
   return (
     <div>

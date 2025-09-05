@@ -4,13 +4,11 @@ import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
 ;
 export function NewsletterSection("props": "any) {;
-
   const [email", setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 ;
   const handleSubmit = async e => {;
-
     e.preventDefault();
     setIsLoading(true);
 ;
@@ -47,30 +45,24 @@ export function NewsletterSection("props": "any) {;
   ];
 ;
   const containerVariants = {;
-
     "hidden": "{ "opacity": 0 "},;
     "visible": "{;
-
       "opacity": 1",;
       "transition": "{;
-
         "staggerChildren": 0.2",;
         "delayChildren": "0.1"}}};
 ;
   const itemVariants = {;
-
     "hidden": "{ "opacity": 0", "y": "20 "},;
     "visible": "{"opacity": 1", "y": "0"}};
 ;
   if(isSubscribed) {;
-
     return (";
       <section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">";
         <div className="absolute inset-0 opacity-10">";
           <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>";
           <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>;
         </div>;
-
         <motion.div";
           className="container mx-auto px-4 relative z-10 text-center";
           variants={containerVariants}";
@@ -101,7 +93,6 @@ export function NewsletterSection("props": "any) {;
               ))}
             </div>;
           </motion.div>;
-
           <motion.button;
             variants={itemVariants}
             onClick={() => setIsSubscribed(false)}";
@@ -119,7 +110,6 @@ export function NewsletterSection("props": "any) {;
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>";
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>;
       </div>;
-
       <motion.div";
         className="container mx-auto px-4 relative z-10";
         variants={containerVariants}";
@@ -150,7 +140,6 @@ export function NewsletterSection("props": "any) {;
             <p className="text-lg "md": "text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">;
               Get the latest AI trends", tech updates, and exclusive insights;
               delivered straight to your inbox.</p>;
-
             {/* Benefits */}";
             <div className="space-y-4 mb-8">;
               {benefits.map((benefit, index) => (";
@@ -162,7 +151,6 @@ export function NewsletterSection("props": "any) {;
                 </div>;
               ))}
             </div>;
-
             {/* Stats */}";
             <div className="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">;
               {stats.slice(0, 2).map((stat, index) => (";
@@ -177,4 +165,107 @@ export function NewsletterSection("props": "any) {;
               ))}
             </div>;
           </motion.div>;
+<<<<<<< HEAD
 
+=======
+          {/* Right content - Newsletter Form */}";
+          <motion.div variants={itemVariants} className="relative">";
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">";
+              <div className="text-center mb-6">";
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">";
+                  <Mail className="w-8 h-8 text-white"  />;
+                </div>";
+                <h3 className="text-2xl font-bold text-white mb-2">;
+                  Join Our Newsletter;
+                </h3>";
+                <p className="text-zion-slate-light">;
+                  Get exclusive tech insights and updates;
+                </p>;
+              </div>;
+";
+              <form onSubmit={handleSubmit} className="space-y-6">;
+                <div>;
+                  <label";
+                    htmlFor="email";
+                    className="block text-sm font-medium text-zion-slate-light mb-2";
+                  >;
+                    Email Address;
+                  </label>;
+                  <input";
+                    type="email";
+                    id="email";
+          {/* Right content - Newsletter Form */}"
+          <motion.div variants={itemVariants} className="relative">"
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">"
+              <div className="text-center mb-6">"
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">"
+                  <Mail className="w-8 h-8 text-white"  />
+                </div>"
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Join Our Newsletter
+                "
+                <p className="text-zion-slate-light">
+                  Get exclusive tech insights and updates
+                </p>
+              </div>
+"
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label"
+                    htmlFor="email"
+                    className="block text-sm font-medium text-zion-slate-light mb-2"
+                  >
+                    Email Address
+                  </label>
+                  <input"
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}";
+                    placeholder="Enter your email address";
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-zion-slate-light "focus": "outline-none "focus":border-zion-cyan "focus":ring-2 "focus":ring-zion-cyan/20 transition-all duration-300";
+                    required;
+                  />;
+                </div>;
+                <button";
+                  type="submit";
+                  disabled={isLoading || !email.trim()"}";
+                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue "hover": "from-zion-cyan-dark "hover":to-zion-blue-dark text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform "hover":scale-105 "hover":shadow-lg "hover":shadow-zion-cyan/25 "disabled":opacity-50 "disabled":cursor-not-allowed "disabled":transform-none flex items-center justify-center gap-2";
+                >;
+                  {isLoading ? (;
+                    <>";
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>;
+                      Subscribing...;
+                    </>;
+                  ) : (;
+                    <>;
+                      Subscribe Now";
+                      <Send className="w-5 h-5"  />;
+                    </>;
+                  )"}
+                </button>;
+              </form>;
+";
+              <div className="text-center mt-6">";
+                <p className="text-xs text-zion-slate-light">;
+                  By subscribing, you agree to our{' '}";
+                  <a href="/privacy" className="text-zion-cyan "hover": "underline">;
+                    Privacy Policy;
+                  </a>;
+                </p>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </motion.div>;
+    </section>) ;
+"}
+const benefits = [] const stats = [] export function NewsletterSection("props": "any) { const [email", setEmail] = useState(') const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = ("props": "any) => { e.preventDefault()""";
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>;
+</motion>"
+>>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

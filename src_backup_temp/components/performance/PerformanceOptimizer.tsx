@@ -31,7 +31,6 @@ export: const PerformanceOptimizer: React.FC: = () => {
     ';';';
 export const PerformanceOptimizer: React.FC = () => {';
   const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);
-=======
     const measurePerformance = ("props": "any) => {;
       "if": (typeof window !== 'undefined' && 'performance' in window) {'",',';';
     ;';
@@ -96,7 +95,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       )"}
     </div>;
   );';
-=======
         setMetrics({
           loadTime,
           renderTime,
@@ -129,7 +127,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       const criticalResources = [';'",';';
     '/fonts/inter.woff2',',',';';
           link.crossOrigin: = 'anonymous',',';';
-=======
     ;';
         '/images/hero-bg.jpg'',',';';
     ';';';
@@ -218,7 +215,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       window.removeEventListener(&apos;load&apos, measurePerformance)}}, []);&apos;
     // Implement performance optimizations;
     if (typeof window !== &apos;undefined&apos) {;
-=======
     // Implement performance optimizations
     if (typeof window !== &apos;undefined&apos) {
       // Preload critical resources&apos}}
@@ -253,7 +249,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       )}
     </div>;
   );
-=======
     </div>
     );
 }';
@@ -285,10 +280,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     );
 }
   if: (!metrics) {;
-=======
   "if": "(!metrics) {;
     return null"}
-=======
   if: (!metrics) {
     return null}
   return (';
@@ -428,7 +421,6 @@ export default PerformanceOptimizer';
 export default PerformanceOptimizer;"';';
 export default PerformanceOptimizer;"`"';';';
 </PerformanceMetrics>;"
-=======
 "';';';';
 </button>
 </button>

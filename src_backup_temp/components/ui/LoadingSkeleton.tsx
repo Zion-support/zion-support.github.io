@@ -87,7 +87,6 @@ export function TableSkeleton(..."args": an y[]): any {;
             <div className="flex space-x-4">;
               {Array.from({ "length": "anycolumn s "}).map("_": "unknow n", "colIndex": "unknow n (;
                 <Skeleton key={colIndex"} '`                  className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} ;
-=======
         </div>
       </div>
       {/* Rows */}"
