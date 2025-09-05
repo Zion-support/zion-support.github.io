@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import Head from 'next/head';
 import Link from 'next/link';
 import { 
   TrendingUp,
@@ -254,7 +253,6 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
                   viewport={{ once: true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-=======
                     <IconComponent className="w-8 h-8 text-blue-600" />
                   </div>
                   <div className="text-3xl font-bold text-blue-600 mb-2">

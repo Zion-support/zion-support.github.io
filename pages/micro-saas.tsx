@@ -44,7 +44,6 @@ import {
   HardDrive,
   Droplets,
   Calendar
->>>>>>> 17b17a8f81ff85e1faa2d953a804b4369cc38def
 } from 'lucide-react';
 import Layout from '../components/Layout';
 

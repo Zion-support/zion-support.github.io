@@ -79,6 +79,7 @@ export default [
       'components.disabled_full/',
       'corrupted-files-backup/',
       'cypress_backup/',
+      'cypress.disabled/**',
       'data.disabled/',
       'database/',
       'deployment/',
@@ -163,7 +164,8 @@ export default [
       '__tests__/',
       'api-disabled/',
       'api.disabled.temp/',
-      'api.disabled/',
+      'api.disabled/**',
+      'disabled-api/**',
       'api/',
       'app-*.cjs',
       'app-*.js',
@@ -233,21 +235,18 @@ export default [
     }
   },
   {
-<<<<<<< HEAD
     files: ['**/*.{ts,tsx}'],
-=======
-    "files": ['**/*.{ts,tsx}'],
-    "languageOptions": {
+    languageOptions: {
       parser: tsparser,
-      "ecmaVersion": 2021,
-      "sourceType": 'module',
-      "globals": {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
         window: 'readonly',
-        "document": 'readonly',
-        "navigator": 'readonly',
-        "localStorage": 'readonly',
-        "sessionStorage": 'readonly',
-        "console": 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
         "setTimeout": 'readonly',
         "setInterval": 'readonly',
         "clearTimeout": 'readonly',
@@ -285,24 +284,28 @@ export default [
         "RequestInit": 'readonly',
         "AbortController": 'readonly',
         "fs": 'readonly',
-        "CodeQualityChecker": 'readonly'
+        "CodeQualityChecker": 'readonly',
+        "JSX": 'readonly'
       }
     },
     plugins: {
-      '@typescript-eslint': typescript,
-      react: react,
-      'jsx-a11y': jsxA11y,
+      '@typescript-eslint': tseslint,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
     },
     rules: {
       'no-console': 'warn',
       'no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
+    }
   },
   {
+    ignores: [
       'src/**',
       'automation/**',
       'automation_backup/**',
       'data_backup/**',
+      'data/**',
       'pm2-automation/**',
       'scripts/**',
       'tests/**',
@@ -431,10 +434,9 @@ export default [
       '*.sar',
       '*.nar'
     ]
-  }
-];
+  },
+  {
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
->>>>>>> b53b98be96da3bddf99ec2a6a7536d70cb4cb38c
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
