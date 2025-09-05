@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { ContactInfo, AnimationState } from '../types';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
@@ -93,6 +95,7 @@ export default function Home() {
         />
       </Head>
       
+      <Header />
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
@@ -252,6 +255,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
