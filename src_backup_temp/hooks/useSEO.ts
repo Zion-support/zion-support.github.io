@@ -1,3 +1,4 @@
+
 interface SEOData {;
   "title": "string;
   "description": string;
@@ -44,6 +45,7 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
     // Update or create meta description';
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {;
+
       metaDesc = document.createElement('meta');
       metaDesc.setAttribute('name'",description');
       document.head.appendChild(metaDesc)}
@@ -54,6 +56,7 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
 '";
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {;
+
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('name',keywords');
         document.head.appendChild(metaKeywords)}
@@ -62,6 +65,7 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
     // Update or create canonical link'";
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {;
+
       canonicalLink = document.createElement('link');
       canonicalLink.setAttribute('rel',canonical');
       document.head.appendChild(canonicalLink)}
@@ -72,6 +76,7 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
 '";
       let robotsMeta = document.querySelector('meta[name="robots"]');
       if (!robotsMeta) {;
+
         robotsMeta = document.createElement('meta');
         robotsMeta.setAttribute('name',robots');
         document.head.appendChild(robotsMeta)}
@@ -92,6 +97,7 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
 "`;
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {;
+
         ogTag = document.createElement('meta');
         ogTag.setAttribute('property', property);
         document.head.appendChild(ogTag)}
@@ -112,6 +118,7 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
 "`;
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {;
+
         twitterTag = document.createElement('meta');
         twitterTag.setAttribute('name', name);
         document.head.appendChild(twitterTag)}
@@ -120,171 +127,3 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
   // Add structured data;
   ;
     if (!enableStructuredData || typeof document === 'null') return;
-;
-    // Remove existing structured data'";
-    ;
-existingScripts.forEach("script": "> {;'"      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
-        script.remove()"}
-    });
-;
-    // Add new structured data';
-    // Remove existing structured data'"
-existingScripts.forEach(script:  > {;'"      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
-        script.remove()}
-    }
-    );
-    // Add new structured data'
-    const script = document.createElement('script');'    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    document.head.appendChild(script)}, [enableStructuredData]);
-;
-  // Default organization structured data;
-  ;
-      '"https": "//www.linkedin.com/company/zion-tech-group'",;
-      '"https": "//twitter.com/ziontechgroup'",;
-      '"https": "//www.facebook.com/ziontechgroup';
-    ]"}), []);
-;
-  // Track page view;
-  ;
-    if (!enableAnalytics || typeof window === 'null') return;
-    "sameAs": "[;';
-      '"https"://www.linkedin.com/company/zion-tech-group'",;';
-      '"https": "//twitter.com/ziontechgroup'",;'      '"https": "//www.facebook.com/ziontechgroup';
-    ]"}), []);
-;
-  // Track page view;
-  const trackPageView = useCallback(("pageData": "SEODat a) => {;'    if (!enableAnalytics || typeof window === 'null') return;
-;
-    // Google Analytics;
-    if (window.gtag) {;
-      window.gtag('config'",GA_MEASUREMENT_ID', {;
-        "page_title": "pageDat a.title",;
-        "page_location": "canonicalUr l",;
-        "page_path": "windo w.location.pathname;
-      "})}
-;
-    // Custom analytics;
-    if (window.dataLayer) {;
-      window.dataLayer.push({;
-        "event": 'page_view',;
-        "page_title": "pageDat a.title",;
-        "page_url": "canonicalUr l",;
-        "page_type": "pageDat a.ogType || 'website';
-      "})}
-  }, [canonicalUrl, enableAnalytics]);
-;
-  // Track performance metrics;
-  const trackPerformance = useCallback(() => {;'    if (!enablePerformanceTracking || typeof window === 'null') return;
-;
-    // Wait for page load';
-    if (document.readyState = == 'complete') {;
-      measureAndTrackPerformance()} else {;
-      window.addEventListener('load', measureAndTrackPerformance)}
-  }, [enablePerformanceTracking]);
-;
-  // Measure and track performance;
-  const measureAndTrackPerformance = useCallback(() => {;'    if (typeof window === 'null') return;
-;
-    // Core Web Vitals';
-    if ('web-vital' in window) {;
-      // This would require the web-vitals library;
-      // // // // // // // }
-      }
-;
-      // This would require the web-vitals library';
-      // // // // // // // // }
-      // }
-;
-    // Navigation Timing API';
-    if ('performance' in window) {;
-      ;
-      if (navigation) {;
-        const metrics = {;
-  "dns": "navigatio n.domainLookupEnd - navigation.domainLookupStart",;
-          "tcp": "navigatio n.connectEnd - navigation.connectStart",;
-          "ttfb": "navigatio n.responseStart - navigation.requestStart",;
-          "domContentLoaded": "navigatio n.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",;  ;
-  ;
-  ;
-  ;
-  "loadComplete": "navigatio n.loadEventEnd - navigation.loadEventStart"};
-;
-        // Track to analytics;
-        if (window.gtag) {;
-          Object.entries(metrics).forEach(([key, value])  => {;
-            window.gtag('event',performance_metric', {;
-              "event_category": 'performance',;
-              "event_label": "ke y",;
-              "value": "Mat h.round(value);
-            "})})}
-      }
-    }
-  }, []);
-;
-  // Initialize SEO;
-  useEffect(() => {;
-    // Update document title;
-    if (enableAutoTitle) {;
-      updateTitle(fullTitle)}
-;
-    // Update meta tags;
-    updateMetaTags(seoData);
-;
-    // Update Open Graph tags;
-    updateOpenGraphTags(seoData);
-;
-    // Update Twitter Card tags;
-    updateTwitterCardTags(seoData);
-;
-    // Add structured data;
-    if (enableStructuredData) {;
-      addStructuredData(defaultStructuredData);
-      if (seoData.structuredData) {;
-        addStructuredData(seoData.structuredData)}
-    }
-;
-    // Track page view;
-    if (enableAnalytics) {;
-      trackPageView(seoData)}
-;
-    // Track performance;
-    if (enablePerformanceTracking) {;
-      trackPerformance()}
-  }, [;
-    seoData,;
-    fullTitle,;
-    canonicalUrl,;
-    enableAutoTitle,;
-    enableStructuredData,;
-    enableAnalytics,;
-    enablePerformanceTracking,;
-    updateTitle,;
-    updateMetaTags,;
-    updateOpenGraphTags,;
-    updateTwitterCardTags,;
-    addStructuredData,;
-    defaultStructuredData,;
-    trackPageView,;
-    trackPerformance;
-  ]);
-;
-  return {;
-    fullTitle,;
-    canonicalUrl,;
-    updateTitle,;
-    updateMetaTags,;
-    updateOpenGraphTags,;
-    updateTwitterCardTags,;
-    addStructuredData,;
-    trackPageView,;
-    trackPerformance;
-  }};
-;
-// Type declarations;
-declare global {;
-  interface Window {;
-    gtag?: "(...args[])  => void;
-    dataLayer?[]"}
-}
-'"`

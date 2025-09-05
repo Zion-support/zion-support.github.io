@@ -1,161 +1,293 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { Code, Shield, Zap, Globe, Database, Lock } from 'lucide-react';
-
-const apiFeatures = [
-  {
-    title: 'RESTful API',
-    description: 'Clean, intuitive REST API endpoints for easy integration',
-    icon: Code,
-    features: ['Standard HTTP methods', 'JSON responses', 'RESTful conventions']
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import {
+  Code,
+  Copy,
+  Check,
+  ExternalLink,
+  Search,
+  Filter,
+  BookOpen,
+  Zap,
+  Shield,
+  Globe,
+  ArrowRight
+} from 'lucide-react'
+import Layout from '../../components/Layout'
+const apiEndpoints = [{
+    method: 'GET',
+    path: '/api/v1/services',
+    description: 'Retrieve all available services',
+    parameters: [
+      { name: 'limit', type: 'integer', required: false, description: 'Number of services to return (max 100)' },
+      { name: 'offset', type: 'integer', required: false, description: 'Number of services to skip' },
+      { name: 'category', type: 'string', required: false, description: 'Filter by service category' }
+    ],
+    responses: [
+      { code: 200, description: 'Success', example: '{ "services": [...], "total": 45 }' },
+      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid parameters" }' }]
   },
   {
-    title: 'Authentication',
-    description: 'Secure API authentication with JWT tokens',
-    icon: Lock,
-    features: ['JWT tokens', 'API keys', 'OAuth 2.0 support']
+    method: 'POST',
+    path: '/api/v1/contact',
+    description: 'Submit a contact form or inquiry',
+    parameters: [
+      { name: 'name', type: 'string', required: true, description: 'Contact person name' },
+      { name: 'email', type: 'string', required: true, description: 'Contact email address' },
+      { name: 'message', type: 'string', required: true, description: 'Message content' },
+      { name: 'company', type: 'string', required: false, description: 'Company name' },
+      { name: 'phone', type: 'string', required: false, description: 'Phone number' }
+    ],
+    responses: [
+      { code: 201, description: 'Created', example: '{ "id": "123", "status": "received" }' },
+      { code: 400, description: 'Bad Request', example: '{ "error": "Missing required fields" }' }]
   },
   {
-    title: 'Rate Limiting',
-    description: 'Built-in rate limiting to ensure fair usage',
-    icon: Shield,
-    features: ['Per-user limits', 'IP-based throttling', 'Custom limits']
+    method: 'GET',
+    path: '/api/v1/status',
+    description: 'Get system status and health information',
+    parameters: [],
+    responses: [
+      { code: 200, description: 'Success', example: '{ "status": "operational", "uptime": "99.9%" }' }]
   },
   {
-    title: 'Real-time Updates',
-    description: 'WebSocket support for real-time data streaming',
-    icon: Zap,
-    features: ['WebSocket connections', 'Event streaming', 'Live updates']
-  },
-  {
-    title: 'Global CDN',
-    description: 'Fast API responses from our global CDN network',
-    icon: Globe,
-    features: ['Edge locations', 'Low latency', 'High availability']
-  },
-  {
-    title: 'Data Storage',
-    description: 'Secure and scalable data storage solutions',
-    icon: Database,
-    features: ['Encrypted storage', 'Backup systems', 'Data replication']
+    method: 'POST',
+    path: '/api/v1/quote',
+    description: 'Request a project quote',
+    parameters: [
+      { name: 'project_type', type: 'string', required: true, description: 'Type of project (ai, cloud, web, mobile)' },
+      { name: 'description', type: 'string', required: true, description: 'Project description' },
+      { name: 'budget_range', type: 'string', required: false, description: 'Budget range' },
+      { name: 'timeline', type: 'string', required: false, description: 'Project timeline' }
+    ],
+    responses: [
+      { code: 201, description: 'Created', example: '{ "quote_id": "456", "estimated_cost": "$10,000 - $15,000" }' },
+      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }]
+  }]
+const codeExamples = [{
+    language: 'JavaScript',
+    title: 'Fetch Services',
+    code: `const response = await fetch('https://ziontechgroup.com/api/v1/services', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
   }
-];
-
-export default function APIDocsPage() {
+}
+})
+const data = await response.json()
+  {
+    language: 'Python',
+    title: 'Submit Contact Form',
+    code: `import requests
+url = 'https://ziontechgroup.com/api/v1/contact'
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+}
+data = {
+    'name': 'John Doe',
+    'email': 'john@example.com',
+    'message': 'Interested in AI services',
+    'company': 'Tech Corp'
+}
+response = requests.post(url, json=data, headers=headers)
+export default function APIDocumentationPage() {
+  const [copiedCode, setCopiedCode] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedMethod, setSelectedMethod] = useState('all')
+  const copyToClipboard = async (code: string, id: string) => {
+    try {
+      if (typeof window !== 'undefined' && window.navigator?.clipboard) {
+        await window.navigator.clipboard.writeText(code)
+        setCopiedCode(id)
+        window.setTimeout(() => setCopiedCode(null), 2000)
+      }
+    } catch (err) {
+      console.error('Failed to copy: ', err)
+    }
+  }
+  const filteredEndpoints = apiEndpoints.filter(endpoint => {
+    const matchesSearch = endpoint.path.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         endpoint.description.toLowerCase().includes(searchQuery.toLowerCase())
+    const matchesMethod = selectedMethod === 'all' || endpoint.method.toLowerCase() === selectedMethod.toLowerCase()
+    return matchesSearch && matchesMethod
+  })
   return (
     <Layout
       title="API Documentation - Zion Tech Group"
-      description="Comprehensive API documentation for integrating with our services. Learn about endpoints, authentication, and best practices."
-      keywords="API documentation, REST API, integration, developer tools, API reference"
+      description="Comprehensive API documentation for integrating with our services and platforms."
+      keywords="API, documentation, integration, developers, REST API, GraphQL"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              className="text-center"
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 API <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Documentation</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Comprehensive API documentation for integrating with our services. Learn about endpoints, authentication, and best practices.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Integrate with our powerful APIs to build amazing applications and services.
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* API Features */}
-        <section className="py-20">
+        {/* API Overview */}
+        <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                API Overview
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our RESTful APIs provide easy access to our services and data with comprehensive documentation and examples.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
+                className="bg-white rounded-xl shadow-lg p-6 text-center"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  API Features
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Powerful, secure, and easy to use
-                </p>
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Secure</h3>
+                <p className="text-gray-600">OAuth 2.0 authentication and HTTPS encryption for all API calls.</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="bg-white rounded-xl shadow-lg p-6 text-center"
+              >
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Fast</h3>
+                <p className="text-gray-600">High-performance APIs with sub-100ms response times and 99.9% uptime.</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white rounded-xl shadow-lg p-6 text-center"
+              >
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Database className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Comprehensive</h3>
+                <p className="text-gray-600">Complete coverage of all our services with detailed documentation.</p>
               </motion.div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {apiFeatures.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
-                  >
-                    <div className="text-center">
-                      <div className="bg-gradient-to-r from-blue-500 to-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <IconComponent className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                      <p className="text-gray-600 mb-4">{feature.description}</p>
-                      <ul className="space-y-2">
-                        {feature.features.map((item, idx) => (
-                          <li key={idx} className="text-sm text-gray-600 flex items-center">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Getting Started */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            {/* API Endpoints */}
+            <div className="max-w-6xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="bg-gray-50 rounded-2xl p-8"
+                className="bg-white rounded-xl shadow-lg p-8"
               >
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Getting Started</h2>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">API Endpoints</h3>
+                
                 <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">1. Authentication</h3>
-                    <p className="text-gray-600 mb-3">Get your API key from the dashboard and include it in your requests:</p>
-                    <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
-                      <code>Authorization: Bearer YOUR_API_KEY</code>
+                  <div className="border border-gray-200 rounded-lg p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center">
+                        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mr-4">GET</span>
+                        <code className="text-lg font-mono text-gray-900">/api/v1/services</code>
+                      </div>
+                      <button className="flex items-center text-blue-600 hover:text-blue-800">
+                        <Copy className="w-4 h-4 mr-1" />
+                        Copy
+                      </button>
+                    </div>
+                    <p className="text-gray-600 mb-4">Retrieve all available services</p>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <pre className="text-sm text-gray-800">
+{`{
+  "services": [
+    {
+      "id": "ai-code-review",
+      "name": "AI Code Review Assistant",
+      "description": "Automated code review with AI analysis",
+      "pricing": "$199-999/month",
+      "category": "Development Tools"
+    }
+  ]
+}`}
+                      </pre>
                     </div>
                   </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">2. Base URL</h3>
-                    <p className="text-gray-600 mb-3">All API requests should be made to:</p>
-                    <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
-                      <code>https://api.ziontechgroup.com/v1</code>
+
+                  <div className="border border-gray-200 rounded-lg p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center">
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mr-4">POST</span>
+                        <code className="text-lg font-mono text-gray-900">/api/v1/contact</code>
+                      </div>
+                      <button className="flex items-center text-blue-600 hover:text-blue-800">
+                        <Copy className="w-4 h-4 mr-1" />
+                        Copy
+                      </button>
+                    </div>
+                    <p className="text-gray-600 mb-4">Submit a contact form</p>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <pre className="text-sm text-gray-800">
+{`{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "company": "Acme Corp",
+  "message": "Interested in your AI services"
+}`}
+                      </pre>
                     </div>
                   </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">3. Example Request</h3>
-                    <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
-                      <code>
-                        curl -X GET \<br />
-                        &nbsp;&nbsp;https://api.ziontechgroup.com/v1/users \<br />
-                        &nbsp;&nbsp;-H "Authorization: Bearer YOUR_API_KEY"
-                      </code>
+
+                  <div className="border border-gray-200 rounded-lg p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center">
+                        <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium mr-4">PUT</span>
+                        <code className="text-lg font-mono text-gray-900">/api/v1/projects/&#123;id&#125;</code>
+                      </div>
+                      <button className="flex items-center text-blue-600 hover:text-blue-800">
+                        <Copy className="w-4 h-4 mr-1" />
+                        Copy
+                      </button>
+                    </div>
+                    <p className="text-gray-600 mb-4">Update project information</p>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <pre className="text-sm text-gray-800">
+{`{
+  "name": "Updated Project Name",
+  "status": "in-progress",
+  "description": "Updated project description"
+}`}
+                      </pre>
                     </div>
                   </div>
                 </div>
@@ -173,24 +305,20 @@ export default function APIDocsPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Integrate?
+                Ready to Get Started?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Start building with our API today. Get your API key and begin integrating in minutes.
+                Get your API key and start building amazing applications with our services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
+                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center">
+                  <Code className="w-5 h-5 mr-2" />
                   Get API Key
-                </a>
-                <a
-                  href="/docs"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  View Full Docs
-                </a>
+                </button>
+                <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold inline-flex items-center justify-center">
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  View Examples
+                </button>
               </div>
             </motion.div>
           </div>
