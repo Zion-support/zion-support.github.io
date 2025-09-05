@@ -3,8 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
 import { 
   Brain, 
   Eye, 
@@ -17,13 +16,13 @@ import {
   DollarSign, 
   Award, 
   Star, 
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   Globe, 
   Lock, 
   Cpu, 
   Bot, 
   FileText, 
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   Video, 
   Mic, 
   Code, 
@@ -45,7 +44,6 @@ import {
   Gamepad2 
 } from 'lucide-react';
 
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
 const aiServices = [
   // AI Automation & Workflow
   {
@@ -356,7 +354,7 @@ const aiServices = [
     benefits: ['Better Performance', 'Risk Management', 'Automated Trading', 'Market Advantage'],
     marketPrice: '$25,000 - $125,000/project',
     link: 'https://ziontechgroup.com/ai-algorithmic-trading'
-=======
+
     id: 1,
     title: 'Machine Learning Models',
     description: 'Custom ML models for predictive analytics, automation, and intelligent decision-making across various industries.',
@@ -524,9 +522,9 @@ const aiServices = [
   {
 const benefits = [
   {
-=======
+
 const benefits = [{
-=======
+
     id: 14,
     title: 'AI Energy & Utilities',
     description: 'AI solutions for energy management, grid optimization, and renewable energy integration.',
@@ -541,7 +539,7 @@ const benefits = [{
       'Predictive maintenance',
       'Energy trading optimization',
       'Carbon footprint tracking',
-=======
+
     title: 'Computer Vision for Manufacturing',
     description: 'Quality control, defect detection, and automated inspection systems for manufacturing.',
     icon: Eye,
@@ -1383,7 +1381,6 @@ export default function AIServicesPage() {
         </section>
       </div>
     </>
-=======
 
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
@@ -1411,7 +1408,7 @@ export default function AIServicesPage() {
                       Learn More
                     </Link>
                   </div>
-=======
+
     description: 'Automatically respond to customer emails with intelligent, context-aware replies.',
     icon: Mail,
     features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-Response Generation', 'Multi-language Support'],
@@ -1728,7 +1725,7 @@ export default function AIServices() {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{industry.name}</h3>
                   <p className="text-gray-600">{industry.description}</p>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
                 </motion.div>
               ))}
             </div>
@@ -1763,13 +1760,13 @@ export default function AIServices() {
                 >
                   View IT Services
                 </Link>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   );
 }

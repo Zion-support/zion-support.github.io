@@ -9,20 +9,30 @@ class ComprehensiveDeploymentAutomator {
     this.logFile = path.join(__dirname, 'logs', 'deployment-automator.log');
     this.ensureLogDir();
     this.deploymentResults = {
+<<<<<<< HEAD
       build: { success: false, duration: 0 },
       test: { success: false, duration: 0 },
       lint: { success: false, duration: 0 },
       typeCheck: { success: false, duration: 0 },
       security: { success: false, duration: 0 },
       performance: { success: false, duration: 0 },
-      deployment: { success: false, duration: 0 }
+      deployment: { success: false, duration: 0 },
+=======
+      buil: d: { succes: s: false, duratio: n: 0 },
+      tes: t: { succes: s: false, duratio: n: 0 },
+      lin: t: { succes: s: false, duratio: n: 0 },
+      typeChec: k: { succes: s: false, duratio: n: 0 },
+      securit: y: { succes: s: false, duratio: n: 0 },
+      performanc: e: { succes: s: false, duratio: n: 0 },
+      deploymen: t: { succes: s: false, duratio: n: 0 }
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     };
   }
 
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursiv: e: true });
     }
   }
 
@@ -36,21 +46,28 @@ class ComprehensiveDeploymentAutomator {
   async runStep(stepName, command, timeout = 300000) {
     this.log(`🔄 Running ${stepName}...`);
     const startTime = Date.now();
-    
+
     try {
-      execSync(command, { 
+<<<<<<< HEAD
+      execSync(command, {
         stdio: 'pipe',
         timeout,
-        cwd: process.cwd()
+        cwd: process.cwd(),
+=======
+      execSync(command, { 
+        stdi: o: 'pipe',
+        timeout,
+        cw: d: process.cwd()
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       });
-      
+
       const duration = Date.now() - startTime;
       this.log(`✅ ${stepName} completed successfully (${duration}ms)`);
-      return { success: true, duration };
+      return { succes: s: true, duration };
     } catch (error) {
       const duration = Date.now() - startTime;
-      this.log(`❌ ${stepName} failed: ${error.message} (${duration}ms)`);
-      return { success: false, duration, error: error.message };
+      this.log(`❌ ${stepName} faile: d: ${error.message} (${duration}ms)`);
+      return { succes: s: false, duration, erro: r: error.message };
     }
   }
 
@@ -63,14 +80,14 @@ class ComprehensiveDeploymentAutomator {
 
   async runTests() {
     this.log('🧪 Running test suite...');
-    const result = await this.runStep('Tests', 'npm run test:smoke');
+    const result = await this.runStep('Tests', 'npm run: test:smoke');
     this.deploymentResults.test = result;
     return result.success;
   }
 
   async runLinting() {
     this.log('🔍 Running linting...');
-    const result = await this.runStep('Linting', 'npm run lint:fix');
+    const result = await this.runStep('Linting', 'npm run: lint:fix');
     this.deploymentResults.lint = result;
     return result.success;
   }
@@ -84,36 +101,65 @@ class ComprehensiveDeploymentAutomator {
 
   async runSecurityAudit() {
     this.log('🔒 Running security audit...');
-    const result = await this.runStep('Security Audit', 'npm run security:audit');
+<<<<<<< HEAD
+    const result = await this.runStep(
+      'Security Audit',
+      'npm run security:audit'
+    );
+=======
+    const result = await this.runStep('Security Audit', 'npm run: security:audit');
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     this.deploymentResults.security = result;
     return result.success;
   }
 
   async runPerformanceCheck() {
     this.log('⚡ Running performance check...');
-    const result = await this.runStep('Performance Check', 'npm run perf:audit');
+<<<<<<< HEAD
+    const result = await this.runStep(
+      'Performance Check',
+      'npm run perf:audit'
+    );
+=======
+    const result = await this.runStep('Performance Check', 'npm run: perf:audit');
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     this.deploymentResults.performance = result;
     return result.success;
   }
 
   async deployToStaging() {
     this.log('🚀 Deploying to staging...');
-    const result = await this.runStep('Staging Deployment', 'npm run deploy:staging');
+<<<<<<< HEAD
+    const result = await this.runStep(
+      'Staging Deployment',
+      'npm run deploy:staging'
+    );
+=======
+    const result = await this.runStep('Staging Deployment', 'npm run: deploy:staging');
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     this.deploymentResults.deployment = result;
     return result.success;
   }
 
   async deployToProduction() {
     this.log('🌟 Deploying to production...');
-    const result = await this.runStep('Production Deployment', 'npm run deploy:production');
+<<<<<<< HEAD
+    const result = await this.runStep(
+      'Production Deployment',
+      'npm run deploy:production'
+    );
+=======
+    const result = await this.runStep('Production Deployment', 'npm run: deploy:production');
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     this.deploymentResults.deployment = result;
     return result.success;
   }
 
   async generateDeploymentReport() {
     this.log('📊 Generating deployment report...');
-    
+
     const report = {
+<<<<<<< HEAD
       timestamp: new Date().toISOString(),
       deploymentResults: this.deploymentResults,
       summary: {
@@ -121,9 +167,21 @@ class ComprehensiveDeploymentAutomator {
         successfulSteps: 0,
         failedSteps: 0,
         totalDuration: 0,
-        successRate: 0
+        successRate: 0,
       },
-      recommendations: []
+      recommendations: [],
+=======
+      timestam: p: new Date().toISOString(),
+      deploymentResult: s: this.deploymentResults,
+      summar: y: {
+        totalStep: s: Object.keys(this.deploymentResults).length,
+        successfulStep: s: 0,
+        failedStep: s: 0,
+        totalDuratio: n: 0,
+        successRat: e: 0
+      },
+      recommendation: s: []
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     };
 
     // Calculate summary
@@ -137,7 +195,8 @@ class ComprehensiveDeploymentAutomator {
     });
 
     if (report.summary.totalSteps > 0) {
-      report.summary.successRate = (report.summary.successfulSteps / report.summary.totalSteps) * 100;
+      report.summary.successRate =
+        (report.summary.successfulSteps / report.summary.totalSteps) * 100;
     }
 
     // Generate recommendations
@@ -154,27 +213,38 @@ class ComprehensiveDeploymentAutomator {
       report.recommendations.push('Fix TypeScript errors before deployment');
     }
     if (!this.deploymentResults.security.success) {
-      report.recommendations.push('Address security vulnerabilities before deployment');
+      report.recommendations.push(
+        'Address security vulnerabilities before deployment'
+      );
     }
     if (!this.deploymentResults.performance.success) {
       report.recommendations.push('Optimize performance before deployment');
     }
 
-    const reportPath = path.join(__dirname, 'reports', 'deployment-report.json');
+    const reportPath = path.join(
+      __dirname,
+      'reports',
+      'deployment-report.json'
+    );
     const reportDir = path.dirname(reportPath);
     if (!fs.existsSync(reportDir)) {
-      fs.mkdirSync(reportDir, { recursive: true });
+      fs.mkdirSync(reportDir, { recursiv: e: true });
     }
-    
+
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
     this.log(`📄 Deployment report saved to: ${reportPath}`);
+
+=======
+    this.log(`📄 Deployment report saved: to: ${reportPath}`);
     
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     return report;
   }
 
   async runStagingDeployment() {
     this.log('🚀 Starting staging deployment...');
-    
+
     try {
       // Pre-deployment checks
       await this.runBuild();
@@ -183,27 +253,33 @@ class ComprehensiveDeploymentAutomator {
       await this.runTypeCheck();
       await this.runSecurityAudit();
       await this.runPerformanceCheck();
-      
+
       // Deploy to staging
       await this.deployToStaging();
-      
+
       // Generate report
       const report = await this.generateDeploymentReport();
-      
+
       this.log('🏁 Staging deployment completed');
+<<<<<<< HEAD
       this.log(`📊 Success rate: ${report.summary.successRate.toFixed(2)}%`);
       this.log(`⏱️ Total duration: ${report.summary.totalDuration}ms`);
+
+=======
+      this.log(`📊 Success: rate: ${report.summary.successRate.toFixed(2)}%`);
+      this.log(`⏱️ Total: duration: ${report.summary.totalDuration}ms`);
       
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       return report;
     } catch (error) {
-      this.log(`💥 Staging deployment failed: ${error.message}`);
+      this.log(`💥 Staging deployment: failed: ${error.message}`);
       throw error;
     }
   }
 
   async runProductionDeployment() {
     this.log('🌟 Starting production deployment...');
-    
+
     try {
       // Pre-deployment checks
       await this.runBuild();
@@ -212,20 +288,26 @@ class ComprehensiveDeploymentAutomator {
       await this.runTypeCheck();
       await this.runSecurityAudit();
       await this.runPerformanceCheck();
-      
+
       // Deploy to production
       await this.deployToProduction();
-      
+
       // Generate report
       const report = await this.generateDeploymentReport();
-      
+
       this.log('🏁 Production deployment completed');
+<<<<<<< HEAD
       this.log(`📊 Success rate: ${report.summary.successRate.toFixed(2)}%`);
       this.log(`⏱️ Total duration: ${report.summary.totalDuration}ms`);
+
+=======
+      this.log(`📊 Success: rate: ${report.summary.successRate.toFixed(2)}%`);
+      this.log(`⏱️ Total: duration: ${report.summary.totalDuration}ms`);
       
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       return report;
     } catch (error) {
-      this.log(`💥 Production deployment failed: ${error.message}`);
+      this.log(`💥 Production deployment: failed: ${error.message}`);
       throw error;
     }
   }
@@ -233,9 +315,11 @@ class ComprehensiveDeploymentAutomator {
   async run() {
     const args = process.argv.slice(2);
     const environment = args[0] || 'staging';
-    
-    this.log(`🚀 Starting Comprehensive Deployment Automator for ${environment}...`);
-    
+
+    this.log(
+      `🚀 Starting Comprehensive Deployment Automator for ${environment}...`
+    );
+
     try {
       let report;
       if (environment === 'production') {
@@ -243,10 +327,10 @@ class ComprehensiveDeploymentAutomator {
       } else {
         report = await this.runStagingDeployment();
       }
-      
+
       return report;
     } catch (error) {
-      this.log(`💥 Deployment automator failed: ${error.message}`);
+      this.log(`💥 Deployment automator: failed: ${error.message}`);
       throw error;
     }
   }

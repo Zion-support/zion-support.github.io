@@ -1,70 +1,30 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:eslint.config.js.backup
-<<<<<<< HEAD
-=======
+
       },
-=======
->>>>>>> pr-11914
-=======
-<<<<<<< HEAD
+
       },
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> pr-11935
-=======
-      },
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
 import react from 'eslint-plugin-react';
-=======
+
 import globals from 'globals';
->>>>>>> pr-11913:eslint.config.js
+
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:eslint.config.js.backup
-<<<<<<< HEAD
-=======
+
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
->>>>>>> pr-11913:eslint.config.js
-=======
-<<<<<<< HEAD
+
 export default [{
     "ignores": [
-=======
->>>>>>> pr-11935
-=======
-export default [{
-    "ignores": [
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
 
 export default [
   {
     ignores: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:eslint.config.js.backup
-=======
+
 export default [{
     "ignores": [
->>>>>>> pr-11914
-=======
->>>>>>> pr-11913:eslint.config.js
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> pr-11935
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
       'node_modules/',
       '.next/',
       'out/',
@@ -74,10 +34,7 @@ export default [{
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
-<<<<<<< HEAD
-<<<<<<< HEAD:eslint.config.js.backup
-=======
->>>>>>> pr-11935
+
       '.prettierrc.js',
       '.eslintrc.*',
       '*.min.js',
@@ -108,12 +65,7 @@ export default [{
     ]
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
     "files": ['**/*.{js,jsx}'],
     "languageOptions": {
       ecmaVersion: 2021,
@@ -161,11 +113,7 @@ export default [{
         "exports": 'readonly'
       },
       "parserOptions": {
-=======
-<<<<<<< HEAD
->>>>>>> pr-11935
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2021,
@@ -213,9 +161,7 @@ export default [{
         exports: 'readonly'
       },
       parserOptions: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
     "files": ['**/*.{js,jsx}'],
     "languageOptions": {
       ecmaVersion: 2021,
@@ -263,54 +209,31 @@ export default [{
         "exports": 'readonly'
       },
       "parserOptions": {
->>>>>>> pr-11914
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> pr-11935
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
         ecmaFeatures: {
           jsx: true
         }
       }
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
     "plugins": {
       react,
       'react-hooks': reactHooks
     },
     "rules": {
-=======
-<<<<<<< HEAD
->>>>>>> pr-11935
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
     plugins: {
       react,
       'react-hooks': reactHooks
     },
     rules: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
     "plugins": {
       react,
       'react-hooks': reactHooks
     },
     "rules": {
->>>>>>> pr-11914
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> pr-11935
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -321,12 +244,7 @@ export default [{
     }
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
     "files": ['**/*.{ts,tsx}'],
     "languageOptions": {
       parser: tsparser,
@@ -383,11 +301,7 @@ export default [{
       '@typescript-eslint': typescript,
       react: react,
       'jsx-a11y': jsxA11y,
-=======
-<<<<<<< HEAD
->>>>>>> pr-11935
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: tsparser,
@@ -444,9 +358,7 @@ export default [{
       '@typescript-eslint': tseslint,
       react: react,
       'react-hooks': reactHooks
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
     "files": ['**/*.{ts,tsx}'],
     "languageOptions": {
       parser: tsparser,
@@ -503,32 +415,13 @@ export default [{
       '@typescript-eslint': typescript,
       react: react,
       'jsx-a11y': jsxA11y,
->>>>>>> pr-11914
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> pr-11935
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
     },
     rules: {
       'no-console': 'warn',
       'no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      '@typescript-eslint/no-explicit-any': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off'
-    }
-  },
-  {
-=======
-=======
->>>>>>> pr-11935
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
   },
   {
       'src/**',
@@ -665,11 +558,7 @@ export default [{
     ]
   }
 ];
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> pr-11914
-=======
+
       'fix-critical-files.js',
       'fix-*.js',
       'fix-*.cjs',
@@ -790,23 +679,14 @@ export default [{
     },
   },
   {
->>>>>>> pr-11913:eslint.config.js
-=======
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
-=======
+
       '@typescript-eslint/no-explicit-any': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off'
     }
   },
   {
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> pr-11935
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {
@@ -821,49 +701,27 @@ export default [{
         jest: 'readonly',
         fireEvent: 'readonly',
         render: 'readonly',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        screen: 'readonly'
-      }
-=======
+
         screen: 'readonly',
       },
->>>>>>> pr-11914
-=======
+
         screen: 'readonly',
       },
-=======
+
         screen: 'readonly'
       }
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> pr-11935
-=======
+
         screen: 'readonly',
       },
-=======
+
         screen: 'readonly'
       }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
     },
     rules: {
       'no-console': 'off',
       'no-unused-vars': 'warn',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:eslint.config.js.backup
-<<<<<<< HEAD
-      '@typescript-eslint/no-unused-vars': 'warn'
-    }
-  }
-];
-=======
-=======
-<<<<<<< HEAD
->>>>>>> pr-11935
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
       '@typescript-eslint/no-unused-vars': 'warn',
     },
   },
@@ -879,25 +737,13 @@ export default [{
     ],
   },
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> pr-11914
-=======
+
     },
   }
 ];
->>>>>>> pr-11913:eslint.config.js
-=======
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
-=======
+
       '@typescript-eslint/no-unused-vars': 'warn'
     }
   }
 ];
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> pr-11935
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+

@@ -1,0 +1,66 @@
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from "react",
+import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+=======
+import React from &quot;react&quot;;
+import { TalentOnboardingForm } from &quot;@/components/profile/TalentOnboardingForm&quot;;
+import { Header } from &quot;@/components/Header&quot;;
+import { Footer } from &quot;@/components/Footer&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { Navigate } from &quot;react-router-dom&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+export default function TalentOnboarding() {
+  const { user, isLoading } = useAuth(),
+
+  // If not authenticated, redirect to login
+  if (!isLoading && !user) {
+<<<<<<< HEAD
+    return <Navigate to="/login" replace />
+=======
+    return <Navigate to=&quot;/login&quot; replace />;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+  }
+=======
+import React from "react";
+
+export default function TalentOnboarding() {_const { user, _isLoading} = useAuth();
+
+  // If not authenticated, redirect to login
+  if (!isLoading && !user) {_return <Navigate to="/login" replace />;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  return (
+    <>
+      <Header />
+<<<<<<< HEAD
+      <div className="bg-zion-blue min-h-screen py-8 md: py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Join Our Talent Network</h1>
+            <p className="text-zion-slate-light max-w-2xl mx-auto">
+=======
+      <div className=&quot;bg-zion-blue min-h-screen py-8 md:py-12&quot;>
+        <div className=&quot;container mx-auto px-4&quot;>
+          <div className=&quot;max-w-4xl mx-auto text-center mb-8 md:mb-12&quot;>
+            <h1 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>Join Our Talent Network</h1>
+            <p className=&quot;text-zion-slate-light max-w-2xl mx-auto&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+              Showcase your skills to top clients and employers. Create a professional profile
+              to get discovered for AI and tech projects on the Zion Marketplace.
+            </p>
+          </div>
+          
+          <TalentOnboardingForm />
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}

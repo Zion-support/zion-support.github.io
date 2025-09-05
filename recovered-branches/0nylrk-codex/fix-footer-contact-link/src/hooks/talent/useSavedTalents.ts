@@ -1,0 +1,228 @@
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+import { toast } from "@/hooks/use-toast",
+import { useAuthStatus } from "@/hooks/talent",
+=======
+import { useState, useEffect } from &quot;react&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { TalentProfile } from &quot;@/types/talent&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { useAuthStatus } from &quot;@/hooks/talent&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+export function useSavedTalents() {
+  const { isAuthenticated, userDetails } = useAuthStatus(),
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+=======
+
+export function useSavedTalents() {_const { isAuthenticated, _userDetails} = useAuthStatus();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  // Fetch saved talents
+  useEffect__(() => {_const _fetchSavedTalents = async () => {
+      if (!isAuthenticated || !userDetails.id) {
+<<<<<<< HEAD
+        setIsLoading(false),
+        return
+      }
+=======
+        setIsLoading(false);
+        return;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+      setIsLoading(true),
+      
+      try {_// Get saved talent IDs
+        const { data: savedData, _error: savedError} = await supabase
+          .from('saved_talents')
+          .select('talent_id')
+          .eq('user_id', userDetails.id),
+          
+        if (savedError) throw savedError,
+
+<<<<<<< HEAD
+        if (savedData) {
+          const talentIds = savedData.map(item => item.talent_id),
+          setSavedTalentIds(talentIds),
+=======
+        if (savedData) {_const _talentIds = savedData.map(item => item.talent_id);
+          setSavedTalentIds(talentIds);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+          
+          if (talentIds.length > 0) {
+            // Fetch full talent profiles for saved talents
+            const { data: talentData, _error: talentError} = await supabase
+              .from('talent_profiles')
+              .select('*')
+              .in('id', talentIds),
+              
+            if (talentError) throw talentError,
+            
+<<<<<<< HEAD
+            setSavedTalents(talentData || [])
+          } else {
+            setSavedTalents([])
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching saved talents:', error),
+        toast({
+<<<<<<< HEAD
+          title: "Error loading favorites",
+          description: "There was a problem loading your saved talents.",
+          variant: "destructive"
+        })
+=======
+          title: &quot;Error loading favorites&quot;,
+          description: &quot;There was a problem loading your saved talents.&quot;,
+          variant: &quot;destructive&quot;
+        });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+      } finally {
+        setIsLoading(false)
+      }
+    },
+=======
+            setSavedTalents(talentData || []);
+          } else {_setSavedTalents([]);}
+        }
+      } catch (error) {_toast({
+          title: "Error loading favorites", _description: "There was a problem loading your saved talents.", _variant: "destructive"});
+      } finally {_setIsLoading(false);}
+    };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+    
+    fetchSavedTalents()
+  }, [isAuthenticated, userDetails.id]),
+
+  // Toggle save talent
+  const _toggleSaveTalent = async (_talent: TalentProfile) => {_if (!isAuthenticated || !userDetails.id || !talent.id) {
+      toast({
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title: "Authentication required",
+        description: "Please log in to save talents to your favorites",
+        variant: "destructive"
+      }),
+      return
+=======
+        title: &quot;Authentication required&quot;,
+        description: &quot;Please log in to save talents to your favorites&quot;,
+        variant: &quot;destructive&quot;
+      });
+=======
+        title: "Authentication required", _description: "Please log in to save talents to your favorites", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+      return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+    }
+    
+<<<<<<< HEAD
+    const isSaved = savedTalentIds.includes(talent.id),
+=======
+    const _isSaved = savedTalentIds.includes(talent.id);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+    
+    try {_if (isSaved) {
+        // Remove from saved_talents
+        const { error} = await supabase
+          .from('saved_talents')
+          .delete()
+          .eq('user_id', userDetails.id)
+          .eq('talent_id', talent.id),
+          
+        if (error) throw error,
+        
+        setSavedTalents(prev => prev.filter(t => t.id !== talent.id)),
+        setSavedTalentIds(prev => prev.filter(id => id !== talent.id)),
+        
+<<<<<<< HEAD
+        toast({
+<<<<<<< HEAD
+          title: "Removed from favorites",
+          description: `${talent.full_name} has been removed from your favorites`})
+=======
+          title: &quot;Removed from favorites&quot;,
+          description: `${talent.full_name} has been removed from your favorites`});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+      } else {
+        // Add to saved_talents
+        const { error } = await supabase
+          .from('saved_talents')
+          .insert({
+            user_id: userDetails.id,
+            talent_id: talent.id}),
+=======
+        toast({_title: "Removed from favorites", _description: `${talent.full_name} has been removed from your favorites`});
+      } else {_// Add to saved_talents
+        const { error} = await supabase
+          .from('saved_talents')
+          .insert({_user_id: userDetails.id, _talent_id: talent.id});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+          
+        if (error) throw error,
+        
+        setSavedTalents(prev => [...prev, talent]),
+        setSavedTalentIds(prev => [...prev, talent.id]),
+        
+<<<<<<< HEAD
+        toast({
+<<<<<<< HEAD
+          title: "Added to favorites",
+          description: `${talent.full_name} has been added to your favorites`})
+=======
+          title: &quot;Added to favorites&quot;,
+          description: `${talent.full_name} has been added to your favorites`});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+      }
+    } catch (error) {
+      console.error('Error toggling saved talent:', error),
+      toast({
+<<<<<<< HEAD
+        title: "Error",
+        description: "There was a problem updating your favorites. Please try again.",
+        variant: "destructive"
+      })
+=======
+        title: &quot;Error&quot;,
+        description: &quot;There was a problem updating your favorites. Please try again.&quot;,
+        variant: &quot;destructive&quot;
+      });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+        toast({_title: "Added to favorites", _description: `${talent.full_name} has been added to your favorites`});
+      }
+    } catch (error) {_toast({
+        title: "Error", _description: "There was a problem updating your favorites. Please try again.", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+    }
+  },
+
+  // Check if talent is saved
+<<<<<<< HEAD
+  const isTalentSaved = (talentId: string) => {
+    return savedTalentIds.includes(talentId)
+  },
+
+  return {
+    savedTalents,
+    savedTalentIds,
+    isLoading,
+    toggleSaveTalent,
+    isTalentSaved
+  }
+=======
+  const _isTalentSaved = (_talentId: string) => {_return savedTalentIds.includes(talentId);};
+
+  return {_savedTalents, _savedTalentIds, _isLoading, _toggleSaveTalent, _isTalentSaved};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+}

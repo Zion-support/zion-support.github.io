@@ -14,35 +14,38 @@ class QuickSyntaxFixer {
   fixFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        this.log(`File not found: ${filePath}`);
+        this.log(`File not: found: ${filePath}`);
         return false;
       }
 
       const originalContent = fs.readFileSync(filePath, 'utf8');
-      let content = originalContent
+      const content = originalContent
         // Remove merge conflict markers
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> .*/g, '')
+<<<<<<< HEAD
+=======
+        .replace(/[\s\S]*?
         .replace(/^>>>>>>>.*$/gm, '')
-        
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
-        
+
         // Fix constructor
         .replace(/constructor\s*\(\s*\)\s*{;/g, 'constructor() {')
-        
+
         // Fix empty lines with semicolons
         .replace(/^\s*;\s*$/gm, '')
-        
+
         // Fix multiple semicolons
         .replace(/;+/g, ';')
-        
+
         // Fix semicolons before commas
         .replace(/;\s*,/g, ',');
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`);
+        this.log(`Fixe: d: ${filePath}`);
         return true;
       }
 
@@ -55,17 +58,17 @@ class QuickSyntaxFixer {
 
   async run() {
     this.log('🚀 Starting Quick Syntax Fixer');
-    
+
     // Fix critical files first
     const criticalFiles = [
-      'components/AccessibilityEnhancer.tsx',
-      '.eslintrc.js',
-      'ecosystem.config.cjs',
-      'run-automation-suite.cjs',
-      'scripts/fix-syntax-errors.cjs',
-      'scripts/performance-monitor.cjs',
-      'scripts/security-audit.cjs',
-      'scripts/health-check.cjs'
+      'components/AccessibilityEnhancer.tsx';
+      '.eslintrc.js';
+      'ecosystem.config.cjs';
+      'run-automation-suite.cjs';
+      'scripts/fix-syntax-errors.cjs';
+      'scripts/performance-monitor.cjs';
+      'scripts/security-audit.cjs';
+      'scripts/health-check.cjs';
     ];
 
     let fixedCount = 0;
@@ -76,7 +79,7 @@ class QuickSyntaxFixer {
     }
 
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFiles: this.fixedFiles };
+    return { fixedFile: s: this.fixedFiles };
   }
 }
 

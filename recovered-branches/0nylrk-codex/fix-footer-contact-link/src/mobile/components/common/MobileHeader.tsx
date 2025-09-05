@@ -1,0 +1,117 @@
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from "react",
+import { useNavigate } from "react-router-dom",
+import { ChevronLeft, Bell, Settings } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button",
+=======
+import React from &quot;react&quot;;
+import { useNavigate } from &quot;react-router-dom&quot;;
+import { ChevronLeft, Bell, Settings } from &quot;lucide-react&quot;;
+import { cn } from &quot;@/lib/utils&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+interface MobileHeaderProps {
+  title: string,
+  showBack?: boolean,
+  showNotifications?: boolean,
+  showSettings?: boolean,
+  className?: string,
+  onNotificationsClick?: () => void,
+  onSettingsClick?: () => void
+}
+
+export function MobileHeader({
+  title,
+  showBack = false,
+  showNotifications = false,
+  showSettings = false,
+  className,
+  onNotificationsClick,
+  onSettingsClick}: MobileHeaderProps) {
+  const navigate = useNavigate(),
+
+  return (
+    <header className={cn(
+      &quot;sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border&quot;,
+      className
+    )}>
+      <div className=&quot;flex items-center justify-between h-14 px-4&quot;>
+        <div className=&quot;flex items-center&quot;>
+          {showBack && (
+            <Button 
+              variant=&quot;ghost&quot; 
+              size=&quot;icon&quot; 
+              className=&quot;mr-2&quot; 
+=======
+import React from "react";
+
+interface MobileHeaderProps {_title: string;
+  showBack?: boolean;
+  showNotifications?: boolean;
+  showSettings?: boolean;
+  className?: string;
+  onNotificationsClick?: () => void;
+  onSettingsClick?: () => void;}
+
+export function MobileHeader(_{_title, _showBack = false, _showNotifications = false, _showSettings = false, _className, _onNotificationsClick, _onSettingsClick}: MobileHeaderProps) {_const _navigate = useNavigate();
+
+  return (
+    <header className={cn(
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border", _className
+    )}>
+      <div className="flex items-center justify-between h-14 px-4">
+        <div className="flex items-center">
+          {_showBack && (_<Button 
+              variant="ghost" 
+              size="icon" 
+              className="mr-2" 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+              onClick={() => navigate(-1)}
+            >
+              <ChevronLeft className=&quot;h-5 w-5&quot; />
+              <span className=&quot;sr-only&quot;>Back</span>
+            </Button>
+          )}
+<<<<<<< HEAD
+          <h1 className=&quot;text-lg font-medium leading-none truncate&quot;>
+            {title}
+          </h1>
+        </div>
+        <div className=&quot;flex items-center space-x-2&quot;>
+          {showNotifications && (
+=======
+          <h1 className="text-lg font-medium leading-none truncate">
+            {_title}
+          </h1>
+        </div>
+        <div className="flex items-center space-x-2">
+          {_showNotifications && (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+            <Button 
+              variant=&quot;ghost&quot; 
+              size=&quot;icon&quot;
+              onClick={onNotificationsClick}
+            >
+              <Bell className=&quot;h-5 w-5&quot; />
+              <span className=&quot;sr-only&quot;>Notifications</span>
+            </Button>
+          )}
+          {_showSettings && (
+            <Button 
+              variant=&quot;ghost&quot; 
+              size=&quot;icon&quot;
+              onClick={onSettingsClick}
+            >
+              <Settings className=&quot;h-5 w-5&quot; />
+              <span className=&quot;sr-only&quot;>Settings</span>
+            </Button>
+          )}
+        </div>
+      </div>
+    </header>
+  )
+}

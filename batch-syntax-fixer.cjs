@@ -1,11 +1,11 @@
-      "timestamp": new Date().toISOString(),
-      "totalFiles": files.length,
-      "fixedFiles": this.fixedFiles.length,
-      "errors": this.errors,
+      "timestamp": new Date().toISOString();
+      "totalFiles": files.length;
+      "fixedFiles": this.fixedFiles.length;
+      "errors": this.errors;
       "fixedFileList": this.fixedFiles};
 
     fs.writeFileSync(
-      path.join(this.projectRoot, 'batch-syntax-fix-report.json'),
+      path.join(this.projectRoot, 'batch-syntax-fix-report.json');
       JSON.stringify(report, null, 2)
     );
 
@@ -18,12 +18,8 @@ const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
 <<<<<<< HEAD
 =======
-=======
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

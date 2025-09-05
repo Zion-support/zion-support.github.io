@@ -72,7 +72,7 @@ const jobOpenings = [
       'Excellent communication skills'
     ],
     benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   }
 ];
 
@@ -92,7 +92,7 @@ const benefits = [
             <motion.h1 
               className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
-=======
+
     icon: Heart,
     title: 'Health & Wellness',
     description: 'Comprehensive health insurance and wellness programs'
@@ -138,7 +138,7 @@ export default function Careers() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -164,7 +164,7 @@ export default function Careers() {
                   Learn About Us
                 </Link>
               </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
             </motion.div>
           </div>
         </div>
@@ -311,6 +311,6 @@ export default function Careers() {
         </section>
       </div>
     </>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   );
 }

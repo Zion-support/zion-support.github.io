@@ -1,0 +1,463 @@
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect } from 'react',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+import { useAuth } from '@/hooks/useAuth',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Wallet, Database, Save } from "lucide-react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Separator } from '@/components/ui/separator',
+import { Switch } from '@/components/ui/switch',
+import { Label } from '@/components/ui/label',
+import { toast } from 'sonner',
+=======
+import { useState, useEffect } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Wallet, Database, Save } from &quot;lucide-react&quot;;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+import { toast } from 'sonner';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+export default function AccountSettings() {
+  const { user } = useAuth(),
+  const [displayWeb3, setDisplayWeb3] = useState(false),
+  const [didHandle, setDidHandle] = useState(''),
+  const [enableBackup, setEnableBackup] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('account_settings'),
+      if (saved) {
+        const parsed = JSON.parse(saved),
+        setDisplayWeb3(!!parsed.displayWeb3),
+        setDidHandle(parsed.didHandle || ''),
+        setEnableBackup(!!parsed.enableBackup)
+      }
+    } catch (e) {
+      console.error('Error loading account settings', e)
+    }
+  }, []),
+
+  const handleSave = () => {
+    setIsSubmitting(true),
+=======
+
+export default function AccountSettings() {_const { user} = useAuth();
+  const [displayWeb3, setDisplayWeb3] = useState(false);
+  const [didHandle, setDidHandle] = useState('');
+  const [enableBackup, setEnableBackup] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect__(() => {_try {
+      const _saved = localStorage.getItem('account_settings');
+      if (saved) {
+        const _parsed = JSON.parse(saved);
+        setDisplayWeb3(!!parsed.displayWeb3);
+        setDidHandle(parsed.didHandle || '');
+        setEnableBackup(!!parsed.enableBackup);}
+    } catch (e) {}
+  }, []);
+
+  const _handleSave = () => {_setIsSubmitting(true);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+    // Simulate API call
+    setTimeout__(() => {
+      try {
+        localStorage.setItem(
+<<<<<<< HEAD
+          'account_settings',
+          JSON.stringify({ displayWeb3, didHandle, enableBackup })
+<<<<<<< HEAD
+        ),
+        // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),
+        toast.success('Account settings updated successfully')
+=======
+        );
+        // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+        toast.success('Account settings updated successfully');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+      } catch (e) {
+        console.error('Failed to save settings', e),
+        toast.error('Failed to save settings')
+      } finally {
+        setIsSubmitting(false)
+      }
+    }, 1000)
+  },
+=======
+          'account_settings', _JSON.stringify({ displayWeb3, _didHandle, _enableBackup})
+        );
+        
+        toast.success('Account settings updated successfully');
+      } catch (e) {_toast.error('Failed to save settings');} finally {_setIsSubmitting(false);}
+    }, 1000);
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  
+  const _handleConnectWallet = async () => {_try {
+      // Check if wallet is available
+<<<<<<< HEAD
+      const ethereum = (window as any).ethereum,
+      if (!ethereum) {
+        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.'),
+        return
+      }
+      
+      // Request accounts
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
+      const address = accounts[0],
+      
+      // Sign message to verify ownership
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
+      await ethereum.request({
+        method: 'personal_sign',
+        params: [address, message]
+      }),
+      
+      // Auto-set DID handle if ENS is available
+      try {
+        const provider = new (window as any).ethers.providers.Web3Provider(ethereum),
+        const ensName = await provider.lookupAddress(address),
+        if (ensName) {
+          setDidHandle(ensName)
+        }
+      } catch (error) {
+        console.error('ENS lookup error:', error)
+      }
+      
+      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)
+    } catch (error: any) {
+      toast.error(error.message || 'Failed to connect wallet')
+    }
+  },
+
+  return (
+    <>
+      <SEO title=&quot;Account Settings&quot; description=&quot;Manage your account&quot; />
+=======
+      const _ethereum = (window as any).ethereum;
+      if (!ethereum) {
+        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
+        return;}
+      
+      // Request accounts
+      const _accounts = await ethereum.request({_method: 'eth_requestAccounts'});
+      const _address = accounts[0];
+      
+      // Sign message to verify ownership
+      const _message = `Zion AI Marketplace wallet verification\nAddress: ${_address}\nTime: ${_new Date().toISOString()}`;
+      await ethereum.request({_method: 'personal_sign', _params: [address, _message]});
+      
+      // Auto-set DID handle if ENS is available
+      try {_const _provider = new (window as any).ethers.providers.Web3Provider(ethereum);
+        const _ensName = await provider.lookupAddress(address);
+        if (ensName) {
+          setDidHandle(ensName);}
+      } catch (error) {}
+      
+      toast.success(`Wallet connected: ${_address.slice(0, _6)}...${_address.slice(-4)}`);
+    } catch (error: unknown) {_toast.error(error.message || 'Failed to connect wallet');}
+  };
+
+  return (_<>
+      <SEO title="Account Settings" description="Manage your account" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+      <Header />
+      <main className=&quot;container mx-auto py-8 px-4&quot;>
+        <h1 className=&quot;text-3xl font-bold mb-6 text-white&quot;>Account Settings</h1>
+        
+        <div className=&quot;grid gap-6 md:grid-cols-2&quot;>
+          <Card>
+            <CardHeader>
+              <CardTitle>Profile Settings</CardTitle>
+              <CardDescription>Manage your personal information and privacy</CardDescription>
+            </CardHeader>
+            <CardContent className=&quot;space-y-6&quot;>
+              <div className=&quot;space-y-2&quot;>
+                <Label htmlFor=&quot;email&quot;>Email Address</Label>
+                <Input
+<<<<<<< HEAD
+                  id=&quot;email&quot;
+                  value={user?.email || ''}
+=======
+                  id="email"
+                  value={_user?.email || ''}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                  disabled
+                  className=&quot;bg-gray-100&quot;
+                />
+              </div>
+              
+              <div className=&quot;space-y-2&quot;>
+                <Label htmlFor=&quot;didHandle&quot;>Web3 Identity Handle</Label>
+                <div className=&quot;flex gap-2&quot;>
+                  <Input
+<<<<<<< HEAD
+                    id=&quot;didHandle&quot;
+                    value={didHandle}
+                    onChange={(e) => setDidHandle(e.target.value)}
+                    placeholder=&quot;ENS / Lens / Ceramic / Farcaster&quot;
+                  />
+                  <Button 
+                    variant=&quot;outline&quot; 
+                    onClick={handleConnectWallet}
+                    type=&quot;button&quot;
+                    className=&quot;flex items-center gap-1&quot;
+=======
+                    id="didHandle"
+                    value={_didHandle}
+                    onChange={_(e) => setDidHandle(e.target.value)}
+                    placeholder="ENS / Lens / Ceramic / Farcaster"
+                  />
+                  <Button 
+                    variant="outline" 
+                    onClick={_handleConnectWallet}
+                    type="button"
+                    className="flex items-center gap-1"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                  >
+                    <Wallet className=&quot;h-4 w-4&quot; />
+                    Connect
+                  </Button>
+                </div>
+                <p className=&quot;text-xs text-gray-500 mt-1&quot;>
+                  Link your decentralized identity to display on your profile
+                </p>
+              </div>
+              
+              <div className=&quot;flex items-center justify-between&quot;>
+                <div className=&quot;space-y-0.5&quot;>
+                  <Label htmlFor=&quot;displayWeb3&quot;>Display Web3 Identity</Label>
+                  <p className=&quot;text-xs text-gray-500&quot;>Show your Web3 handle instead of email</p>
+                </div>
+                <Switch
+<<<<<<< HEAD
+                  id=&quot;displayWeb3&quot;
+                  checked={displayWeb3}
+                  onCheckedChange={setDisplayWeb3}
+=======
+                  id="displayWeb3"
+                  checked={_displayWeb3}
+                  onCheckedChange={_setDisplayWeb3}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                />
+              </div>
+              
+              <Separator />
+              
+              <div className=&quot;flex items-center justify-between&quot;>
+                <div className=&quot;space-y-0.5&quot;>
+                  <Label htmlFor=&quot;backup&quot; className=&quot;flex items-center gap-1&quot;>
+                    <Database className=&quot;h-4 w-4&quot; />
+                    Decentralized Backup
+                  </Label>
+                  <p className=&quot;text-xs text-gray-500&quot;>
+                    Backup your profile data to IPFS/Arweave
+                  </p>
+                </div>
+                <Switch
+<<<<<<< HEAD
+                  id=&quot;backup&quot;
+                  checked={enableBackup}
+                  onCheckedChange={setEnableBackup}
+                />
+              </div>
+              
+              {enableBackup && (
+                <div className=&quot;rounded-md bg-amber-50 p-3 text-sm text-amber-800&quot;>
+=======
+                  id="backup"
+                  checked={_enableBackup}
+                  onCheckedChange={_setEnableBackup}
+                />
+              </div>
+              
+              {_enableBackup && (
+                <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                  Data will be backed up to decentralized storage. This feature is in beta.
+                </div>
+              )}
+              
+              <Button 
+<<<<<<< HEAD
+                onClick={handleSave}
+                disabled={isSubmitting}
+                className=&quot;w-full&quot;
+              >
+                {isSubmitting ? 'Saving...' : 'Save Settings'}
+                {!isSubmitting && <Save className=&quot;ml-2 h-4 w-4&quot; />}
+=======
+                onClick={_handleSave}
+                disabled={_isSubmitting}
+                className="w-full"
+              >
+                {_isSubmitting ? 'Saving...' : 'Save Settings'}
+                {_!isSubmitting && <Save className="ml-2 h-4 w-4" />}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+              </Button>
+            </CardContent>
+          </Card>
+          
+          <Card>
+            <CardHeader>
+              <CardTitle>Web3 Features</CardTitle>
+              <CardDescription>Manage your Web3 connections and features</CardDescription>
+            </CardHeader>
+<<<<<<< HEAD
+            <CardContent className=&quot;space-y-6&quot;>
+              <div className=&quot;space-y-2&quot;>
+                <h3 className=&quot;font-medium&quot;>Connected Wallet</h3>
+                {didHandle ? (
+                  <div className=&quot;flex items-center gap-2 bg-gray-100 p-3 rounded-md&quot;>
+=======
+            <CardContent className="space-y-6">
+              <div className="space-y-2">
+                <h3 className="font-medium">Connected Wallet</h3>
+                {_didHandle ? (
+                  <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                    <svg 
+                      xmlns=&quot;http://www.w3.org/2000/svg&quot; 
+                      width=&quot;20&quot; 
+                      height=&quot;20&quot; 
+                      viewBox=&quot;0 0 24 24&quot; 
+                      fill=&quot;none&quot; 
+                      stroke=&quot;currentColor&quot; 
+                      strokeWidth=&quot;2&quot; 
+                      strokeLinecap=&quot;round&quot; 
+                      strokeLinejoin=&quot;round&quot; 
+                      className=&quot;text-green-500&quot;
+                    >
+                      <path d=&quot;M22 11.08V12a10 10 0 1 1-5.93-9.14&quot;></path>
+                      <polyline points=&quot;22 4 12 14.01 9 11.01&quot;></polyline>
+                    </svg>
+                    <span>{didHandle}</span>
+                  </div>
+                ) : (
+                  <div className=&quot;flex items-center gap-2 bg-gray-100 p-3 rounded-md&quot;>
+                    <svg 
+                      xmlns=&quot;http://www.w3.org/2000/svg&quot; 
+                      width=&quot;20&quot; 
+                      height=&quot;20&quot; 
+                      viewBox=&quot;0 0 24 24&quot; 
+                      fill=&quot;none&quot; 
+                      stroke=&quot;currentColor&quot; 
+                      strokeWidth=&quot;2&quot; 
+                      strokeLinecap=&quot;round&quot; 
+                      strokeLinejoin=&quot;round&quot; 
+                      className=&quot;text-red-500&quot;
+                    >
+                      <line x1=&quot;18&quot; y1=&quot;6&quot; x2=&quot;6&quot; y2=&quot;18&quot;></line>
+                      <line x1=&quot;6&quot; y1=&quot;6&quot; x2=&quot;18&quot; y2=&quot;18&quot;></line>
+                    </svg>
+                    <span>No wallet connected</span>
+                  </div>
+                )}
+              </div>
+              
+              <div>
+<<<<<<< HEAD
+                <h3 className=&quot;font-medium mb-2&quot;>Backup Status</h3>
+                <div className=&quot;grid grid-cols-2 gap-2&quot;>
+                  <div className=&quot;bg-gray-100 p-3 rounded-md&quot;>
+                    <p className=&quot;text-sm font-medium&quot;>Profile Data</p>
+                    <p className=&quot;text-xs text-gray-500&quot;>
+                      {enableBackup ? 'Backed up' : 'Not backed up'}
+                    </p>
+                  </div>
+                  <div className=&quot;bg-gray-100 p-3 rounded-md&quot;>
+                    <p className=&quot;text-sm font-medium&quot;>Resume Data</p>
+                    <p className=&quot;text-xs text-gray-500&quot;>
+                      {enableBackup ? 'Backed up' : 'Not backed up'}
+                    </p>
+                  </div>
+                  <div className=&quot;bg-gray-100 p-3 rounded-md&quot;>
+                    <p className=&quot;text-sm font-medium&quot;>Project History</p>
+                    <p className=&quot;text-xs text-gray-500&quot;>
+                      {enableBackup ? 'Backed up' : 'Not backed up'}
+                    </p>
+                  </div>
+                  <div className=&quot;bg-gray-100 p-3 rounded-md&quot;>
+                    <p className=&quot;text-sm font-medium&quot;>Reviews</p>
+                    <p className=&quot;text-xs text-gray-500&quot;>
+                      {enableBackup ? 'Backed up' : 'Not backed up'}
+=======
+                <h3 className="font-medium mb-2">Backup Status</h3>
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="bg-gray-100 p-3 rounded-md">
+                    <p className="text-sm font-medium">Profile Data</p>
+                    <p className="text-xs text-gray-500">
+                      {_enableBackup ? 'Backed up' : 'Not backed up'}
+                    </p>
+                  </div>
+                  <div className="bg-gray-100 p-3 rounded-md">
+                    <p className="text-sm font-medium">Resume Data</p>
+                    <p className="text-xs text-gray-500">
+                      {_enableBackup ? 'Backed up' : 'Not backed up'}
+                    </p>
+                  </div>
+                  <div className="bg-gray-100 p-3 rounded-md">
+                    <p className="text-sm font-medium">Project History</p>
+                    <p className="text-xs text-gray-500">
+                      {_enableBackup ? 'Backed up' : 'Not backed up'}
+                    </p>
+                  </div>
+                  <div className="bg-gray-100 p-3 rounded-md">
+                    <p className="text-sm font-medium">Reviews</p>
+                    <p className="text-xs text-gray-500">
+                      {_enableBackup ? 'Backed up' : 'Not backed up'}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className=&quot;font-medium mb-2&quot;>Recovery Options</h3>
+                <Button 
+<<<<<<< HEAD
+                  variant=&quot;outline&quot; 
+                  className=&quot;w-full&quot;
+                  disabled={!enableBackup}
+                >
+                  Restore Profile from Backup
+                </Button>
+                <p className=&quot;text-xs text-gray-500 mt-1&quot;>
+                  {enableBackup 
+=======
+                  variant="outline" 
+                  className="w-full"
+                  disabled={_!enableBackup}
+                >
+                  Restore Profile from Backup
+                </Button>
+                <p className="text-xs text-gray-500 mt-1">
+                  {_enableBackup 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                    ? 'Restore your profile data from decentralized storage' 
+                    : 'Enable backup first to use this feature'}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
+}
