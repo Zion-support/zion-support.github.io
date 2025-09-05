@@ -30,6 +30,10 @@ export default function APIPage() {
       features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-59da
   const apiEndpoints = [{
     method: 'GET',
     path: '/api/v1/services',
@@ -80,7 +84,11 @@ export default function APIPage() {
       { code: 201, description: 'Quote created', example: '{ "quote_id": "456", "estimated_cost": "$10,000 - $15,000" }' },
       { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }]
   }]
+<<<<<<< HEAD
 const apiFeaturesDetailed = [{
+=======
+      const additionalApiFeatures = [{
+>>>>>>> cursor/expand-services-advertise-and-build-project-59da
     title: 'RESTful API Design',
     description: 'Clean, intuitive REST API endpoints following industry best practices',
     icon: Code,
@@ -101,7 +109,7 @@ const apiFeaturesDetailed = [{
   {
     title: 'Comprehensive Documentation',
     description: 'Interactive API documentation with examples and testing',
-    icon: BookOpen,
+    icon: Book,
     features: ['Interactive docs', 'Code examples', 'Testing interface', 'SDK generation']
   },
   {
@@ -116,6 +124,7 @@ const apiFeaturesDetailed = [{
     icon: Server,
     features: ['Load balancing', 'Caching', 'CDN integration', 'Auto-scaling']
   }]
+<<<<<<< HEAD
 const sdkLanguages = [
   { name: 'JavaScript', icon: 'JS', color: 'bg-yellow-500' },
   { name: 'Python', icon: 'PY', color: 'bg-blue-500' },
@@ -125,6 +134,15 @@ const sdkLanguages = [
   { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }]
   
   // UI State & helpers
+=======
+  const sdkLanguages = [
+    { name: 'JavaScript', icon: 'JS', color: 'bg-yellow-500' },
+    { name: 'Python', icon: 'PY', color: 'bg-blue-500' },
+    { name: 'Java', icon: 'J', color: 'bg-red-500' },
+    { name: 'C#', icon: 'C#', color: 'bg-purple-500' },
+    { name: 'PHP', icon: 'PHP', color: 'bg-indigo-500' },
+    { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }]
+>>>>>>> cursor/expand-services-advertise-and-build-project-59da
   const [selectedEndpoint, setSelectedEndpoint] = useState(0)
   const [copiedCode, setCopiedCode] = useState<number | null>(null)
   const copyToClipboard = (text: string, index: number) => {
@@ -139,10 +157,10 @@ const sdkLanguages = [
       .map((p: any) => `${p.name}: "example_${p.name}"`)
       .join(', ')
     if (endpoint.method === 'GET') {
-      return `fetch('${baseUrl}${endpoint.path}?${endpoint.parameters.map((p: any) => `${p.name}=example_${p.name}`).join('&')}')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
+      return `fetch('${baseUrl}${endpoint.path}?${endpoint.parameters.map((p: any) => `${p.name}=example_${p.name}`).join('&')}')`
+        + `\n  .then(response => response.json())`
+        + `\n  .then(data => console.log(data))`
+        + `\n  .catch(error => console.error('Error:', error));`;
     } else {
       return `fetch('${baseUrl}${endpoint.path}', {
   method: '${endpoint.method}',
@@ -153,10 +171,10 @@ const sdkLanguages = [
   body: JSON.stringify({
     ${exampleParams}
   })
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));
+})`
+        + `\n.then(response => response.json())`
+        + `\n.then(data => console.log(data))`
+        + `\n.catch(error => console.error('Error:', error));`;
     }
   }
   return (
