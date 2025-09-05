@@ -2,31 +2,31 @@ import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, ShoppingCart, Users, Clock, Star, Shield, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle, Factory, Cpu, Users, Clock, Star, Shield } from 'lucide-react';
 
 const solutions = [
   {
-    title: 'E-commerce Platforms',
-    description: 'Complete e-commerce solutions with online stores, payment processing, and inventory management.',
-    features: ['Online Store', 'Payment Processing', 'Inventory Management', 'Order Tracking'],
-    icon: ShoppingCart
+    title: 'Industrial IoT Solutions',
+    description: 'Connected manufacturing systems with real-time monitoring, predictive maintenance, and process optimization.',
+    features: ['Sensor Integration', 'Real-time Monitoring', 'Predictive Maintenance', 'Process Optimization'],
+    icon: Factory
   },
   {
-    title: 'Customer Analytics',
-    description: 'Advanced analytics for customer behavior, preferences, and personalized marketing campaigns.',
-    features: ['Customer Insights', 'Behavior Analysis', 'Personalization', 'Marketing Automation'],
-    icon: TrendingUp
-  },
-  {
-    title: 'Point of Sale Systems',
-    description: 'Modern POS systems with inventory management, customer management, and reporting capabilities.',
-    features: ['Transaction Processing', 'Inventory Tracking', 'Customer Management', 'Sales Reporting'],
-    icon: Users
+    title: 'Manufacturing Execution Systems',
+    description: 'Comprehensive MES for production planning, quality control, and resource management.',
+    features: ['Production Planning', 'Quality Control', 'Resource Management', 'Performance Tracking'],
+    icon: Cpu
   },
   {
     title: 'Supply Chain Management',
-    description: 'End-to-end supply chain visibility and optimization for retail operations.',
-    features: ['Inventory Optimization', 'Supplier Management', 'Demand Forecasting', 'Logistics Tracking'],
+    description: 'End-to-end supply chain visibility and optimization for improved efficiency and cost reduction.',
+    features: ['Inventory Management', 'Supplier Integration', 'Demand Forecasting', 'Logistics Optimization'],
+    icon: Users
+  },
+  {
+    title: 'Quality Management Systems',
+    description: 'Advanced quality control and compliance management for manufacturing operations.',
+    features: ['Quality Control', 'Compliance Management', 'Audit Trails', 'Defect Tracking'],
     icon: Shield
   }
 ];
@@ -34,51 +34,51 @@ const solutions = [
 const benefits = [
   {
     icon: Shield,
-    title: 'Retail Expertise',
-    description: 'Deep understanding of retail operations and customer experience requirements'
+    title: 'Industry Expertise',
+    description: 'Deep understanding of manufacturing processes and industry requirements'
   },
   {
     icon: Clock,
     title: '24/7 Support',
-    description: 'Round-the-clock technical support for retail operations'
+    description: 'Round-the-clock technical support for critical manufacturing operations'
   },
   {
     icon: Users,
-    title: 'Retail Specialists',
-    description: 'Team of experts with extensive retail industry experience'
+    title: 'Manufacturing Specialists',
+    description: 'Team of experts with extensive manufacturing industry experience'
   },
   {
     icon: Star,
     title: 'Proven Results',
-    description: 'Track record of successful implementations in retail businesses'
+    description: 'Track record of successful implementations in manufacturing facilities'
   }
 ];
 
 const caseStudies = [
   {
-    title: 'E-commerce Platform Launch',
-    client: 'Fashion Retailer',
-    challenge: 'Launch online store and integrate with existing inventory systems',
-    solution: 'Developed comprehensive e-commerce platform with inventory integration and mobile optimization',
-    results: ['200% increase in online sales', '50% reduction in inventory costs', '95% customer satisfaction'],
+    title: 'Smart Factory Implementation',
+    client: 'Automotive Manufacturer',
+    challenge: 'Implement IoT solutions for real-time monitoring and predictive maintenance',
+    solution: 'Deployed comprehensive IoT platform with sensors, analytics, and maintenance alerts',
+    results: ['30% reduction in downtime', '25% improvement in efficiency', '40% cost savings'],
     image: '/api/placeholder/400/300'
   },
   {
-    title: 'POS System Modernization',
-    client: 'Multi-location Retail Chain',
-    challenge: 'Replace legacy POS systems and improve customer experience',
-    solution: 'Implemented modern POS system with inventory management and customer analytics',
-    results: ['40% faster checkout', '30% improvement in inventory accuracy', '60% reduction in manual work'],
+    title: 'MES System Integration',
+    client: 'Electronics Manufacturer',
+    challenge: 'Integrate production systems and improve quality control',
+    solution: 'Implemented integrated MES with quality management and real-time tracking',
+    results: ['50% improvement in quality', '35% reduction in defects', '60% faster reporting'],
     image: '/api/placeholder/400/300'
   }
 ];
 
-export default function RetailPage() {
+export default function ManufacturingPage() {
   return (
     <MainLayout
-      title="Retail Technology Solutions - Zion Tech Group"
-      description="Transform retail operations with our e-commerce platforms, POS systems, and customer analytics solutions."
-      keywords="retail technology, e-commerce, POS systems, customer analytics, supply chain, retail software"
+      title="Manufacturing Technology Solutions - Zion Tech Group"
+      description="Transform manufacturing operations with our IoT solutions, MES systems, and supply chain management platforms."
+      keywords="manufacturing technology, IoT, MES, supply chain, quality management, industrial automation"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -91,11 +91,11 @@ export default function RetailPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Retail Technology
+                Manufacturing Technology
                 <span className="block text-yellow-400">Solutions</span>
               </h1>
               <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
-                Transform retail operations with e-commerce platforms, POS systems, and customer analytics solutions.
+                Transform manufacturing operations with IoT solutions, MES systems, and supply chain management platforms.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -121,10 +121,10 @@ export default function RetailPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Retail Solutions
+                Manufacturing Solutions
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Comprehensive technology solutions designed specifically for retail businesses
+                Comprehensive technology solutions designed specifically for manufacturing operations
               </p>
             </div>
 
@@ -166,10 +166,10 @@ export default function RetailPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Us for Retail
+                Why Choose Us for Manufacturing
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We understand the unique challenges and requirements of retail operations
+                We understand the unique challenges and requirements of manufacturing operations
               </p>
             </div>
 
@@ -204,7 +204,7 @@ export default function RetailPage() {
                 Success Stories
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                See how we've helped retail businesses improve customer experience and increase sales
+                See how we've helped manufacturing companies improve efficiency and reduce costs
               </p>
             </div>
 
@@ -249,10 +249,10 @@ export default function RetailPage() {
         <section className="py-20 bg-blue-600">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Retail?
+              Ready to Transform Manufacturing?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Let's discuss how our retail technology solutions can improve customer experience and increase sales.
+              Let's discuss how our manufacturing technology solutions can improve efficiency and reduce costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

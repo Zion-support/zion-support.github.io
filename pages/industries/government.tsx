@@ -2,83 +2,83 @@ import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, ShoppingCart, Users, Clock, Star, Shield, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle, Shield, Building, Users, Clock, Star, FileText } from 'lucide-react';
 
 const solutions = [
   {
-    title: 'E-commerce Platforms',
-    description: 'Complete e-commerce solutions with online stores, payment processing, and inventory management.',
-    features: ['Online Store', 'Payment Processing', 'Inventory Management', 'Order Tracking'],
-    icon: ShoppingCart
+    title: 'Citizen Services Portal',
+    description: 'Comprehensive digital platform for citizen services, applications, and government interactions.',
+    features: ['Online Applications', 'Document Management', 'Payment Processing', 'Status Tracking'],
+    icon: Building
   },
   {
-    title: 'Customer Analytics',
-    description: 'Advanced analytics for customer behavior, preferences, and personalized marketing campaigns.',
-    features: ['Customer Insights', 'Behavior Analysis', 'Personalization', 'Marketing Automation'],
-    icon: TrendingUp
+    title: 'Data Management Systems',
+    description: 'Secure data management and analytics platforms for government operations and decision-making.',
+    features: ['Data Integration', 'Analytics Dashboard', 'Report Generation', 'Data Security'],
+    icon: FileText
   },
   {
-    title: 'Point of Sale Systems',
-    description: 'Modern POS systems with inventory management, customer management, and reporting capabilities.',
-    features: ['Transaction Processing', 'Inventory Tracking', 'Customer Management', 'Sales Reporting'],
-    icon: Users
-  },
-  {
-    title: 'Supply Chain Management',
-    description: 'End-to-end supply chain visibility and optimization for retail operations.',
-    features: ['Inventory Optimization', 'Supplier Management', 'Demand Forecasting', 'Logistics Tracking'],
+    title: 'Cybersecurity Solutions',
+    description: 'Advanced security measures to protect government systems and sensitive citizen data.',
+    features: ['Threat Detection', 'Access Control', 'Compliance Monitoring', 'Incident Response'],
     icon: Shield
+  },
+  {
+    title: 'Workflow Automation',
+    description: 'Automated processes for government operations, approvals, and citizen service delivery.',
+    features: ['Process Automation', 'Approval Workflows', 'Document Processing', 'Notification Systems'],
+    icon: Users
   }
 ];
 
 const benefits = [
   {
     icon: Shield,
-    title: 'Retail Expertise',
-    description: 'Deep understanding of retail operations and customer experience requirements'
+    title: 'Security Compliance',
+    description: 'Full compliance with government security standards and regulations'
   },
   {
     icon: Clock,
     title: '24/7 Support',
-    description: 'Round-the-clock technical support for retail operations'
+    description: 'Round-the-clock technical support for critical government operations'
   },
   {
     icon: Users,
-    title: 'Retail Specialists',
-    description: 'Team of experts with extensive retail industry experience'
+    title: 'Government Expertise',
+    description: 'Deep understanding of government processes and regulatory requirements'
   },
   {
     icon: Star,
-    title: 'Proven Results',
-    description: 'Track record of successful implementations in retail businesses'
+    title: 'Proven Track Record',
+    description: 'Successfully delivered solutions for federal, state, and local governments'
   }
 ];
 
 const caseStudies = [
   {
-    title: 'E-commerce Platform Launch',
-    client: 'Fashion Retailer',
-    challenge: 'Launch online store and integrate with existing inventory systems',
-    solution: 'Developed comprehensive e-commerce platform with inventory integration and mobile optimization',
-    results: ['200% increase in online sales', '50% reduction in inventory costs', '95% customer satisfaction'],
+    title: 'State Government Portal',
+    client: 'State Government',
+    challenge: 'Modernize citizen services and improve accessibility',
+    solution: 'Developed comprehensive digital portal with online services and mobile access',
+    results: ['70% reduction in in-person visits', '50% faster service delivery', '90% citizen satisfaction'],
     image: '/api/placeholder/400/300'
   },
   {
-    title: 'POS System Modernization',
-    client: 'Multi-location Retail Chain',
-    challenge: 'Replace legacy POS systems and improve customer experience',
-    solution: 'Implemented modern POS system with inventory management and customer analytics',
-    results: ['40% faster checkout', '30% improvement in inventory accuracy', '60% reduction in manual work'],
+    title: 'Federal Data Analytics Platform',
+    client: 'Federal Agency',
+    challenge: 'Consolidate data from multiple sources and improve decision-making',
+    solution: 'Implemented integrated data platform with advanced analytics and reporting',
+    results: ['60% improvement in data accuracy', '40% reduction in reporting time', '100% compliance'],
     image: '/api/placeholder/400/300'
   }
 ];
 
-export default function RetailPage() {
+export default function GovernmentPage() {
   return (
     <MainLayout
-      title="Retail Technology Solutions - Zion Tech Group"
-      description="Transform retail operations with our e-commerce platforms, POS systems, and customer analytics solutions."
-      keywords="retail technology, e-commerce, POS systems, customer analytics, supply chain, retail software"
+      title="Government Technology Solutions - Zion Tech Group"
+      description="Transform government operations with our secure, compliant solutions including citizen portals, data management, and cybersecurity systems."
+      keywords="government technology, citizen services, data management, cybersecurity, compliance, public sector"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -91,11 +91,11 @@ export default function RetailPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Retail Technology
+                Government Technology
                 <span className="block text-yellow-400">Solutions</span>
               </h1>
               <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
-                Transform retail operations with e-commerce platforms, POS systems, and customer analytics solutions.
+                Secure, compliant technology solutions for government operations, citizen services, and public sector efficiency.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -121,10 +121,10 @@ export default function RetailPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Retail Solutions
+                Government Solutions
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Comprehensive technology solutions designed specifically for retail businesses
+                Comprehensive technology solutions designed specifically for government agencies
               </p>
             </div>
 
@@ -166,10 +166,10 @@ export default function RetailPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Us for Retail
+                Why Choose Us for Government
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We understand the unique challenges and requirements of retail operations
+                We understand the unique challenges and regulatory requirements of government operations
               </p>
             </div>
 
@@ -204,7 +204,7 @@ export default function RetailPage() {
                 Success Stories
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                See how we've helped retail businesses improve customer experience and increase sales
+                See how we've helped government agencies improve citizen services and operational efficiency
               </p>
             </div>
 
@@ -249,10 +249,10 @@ export default function RetailPage() {
         <section className="py-20 bg-blue-600">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Retail?
+              Ready to Transform Government?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Let's discuss how our retail technology solutions can improve customer experience and increase sales.
+              Let's discuss how our government technology solutions can improve citizen services and operational efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
