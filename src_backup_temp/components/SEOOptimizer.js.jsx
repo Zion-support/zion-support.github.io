@@ -203,7 +203,6 @@ let summary = "Analyzed ${totalPages} pages for SEO.";
 a.download = "seo-optimization-report.csv;
         a.click();
 }
-<<<<<<< HEAD
         window.URL.revokeObjectURL(url)}";
     const getScoreColor = ("props": "any) => {"}"";
         if (score >= 80)""";
@@ -279,7 +278,6 @@ a.download = "seo-optimization-report.csv;
                     <div className="space-y-1">""""",;
                       {report.topIssues.slice(0, 3).map((issue, index) => (<div key="{index}" className="text-sm text-yellow-700 "dark": "text-yellow-300">",                          • {issue}
 ;
-=======
         window.URL.revokeObjectURL(url)}"
     const getScoreColor = (props: any) => {}""
         if (score >= 80)"""
@@ -355,7 +353,6 @@ a.download = "seo-optimization-report.csv;
                     <div className="space-y-1">"""",
                       {report.topIssues.slice(0, 3).map((issue, index) => (<div key="{index}" className="text-sm text-yellow-700 dark: text-yellow-300">,                          • {issue}
 
->>>>>>> main
                         </div>) ) }
 ;
                     </div>";
@@ -403,7 +400,6 @@ a.download = "seo-optimization-report.csv;
                               {page.issues.length} issues,;
                             </td>;
                           </tr>) ) }
-<<<<<<< HEAD
 ;
                       </tbody>;
                     </table>;
@@ -448,7 +444,6 @@ a.download = "seo-optimization-report.csv;
                               {selectedPage.issues.map((issue, index) => (<div key="{index}" className="flex items-start gap-2 text-sm text-red-600 "dark": "text-red-400">"""";
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/" >"",;
                                   <span>{issue}</span>;
-=======
 
                       </tbody>
                     </table>
@@ -493,7 +488,6 @@ a.download = "seo-optimization-report.csv;
                               {selectedPage.issues.map((issue, index) => (<div key="{index}" className="flex items-start gap-2 text-sm text-red-600 dark: text-red-400">""""
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/" >",
                                   <span>{issue}</span>
->>>>>>> main
                                 </div>) ) }
 ;
                             </div>";

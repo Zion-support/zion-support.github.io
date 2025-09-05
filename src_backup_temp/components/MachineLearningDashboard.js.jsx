@@ -3,22 +3,18 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2} from 'lucide-react';
 ;
 ;
-<<<<<<< HEAD
 export const MachineLearningDashboard = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
-=======
 export const MachineLearningDashboard = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );'
->>>>>>> main
     const [activeTab, setActiveTab] = useState('overview');
     const [showCreateModel, setShowCreateModel] = useState(false);
     const [showImportModel, setShowImportModel] = useState(false);
     const {models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel} = useMachineLearning();
     const [newModelForm, setNewModelForm] = useState({}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -42,7 +38,6 @@ export const MachineLearningDashboard = (props: any) => {
             "});';
             setNewModelForm({"name": '', "type": 'classification', "framework": 'tensorflow'});
             setShowCreateModel(false);';
-=======
 '
 ''
 '''
@@ -70,7 +65,6 @@ export const MachineLearningDashboard = (props: any) => {
             setNewModelForm({name: '', type: 'classification', framework: 'tensorflow'}
     );
             setShowCreateModel(false);'
->>>>>>> main
             trackEvent('ml',dashboard',model_created')}
     }, [newModelForm, createModel, trackEvent]);
     const hyperparameters = {}
@@ -231,7 +225,6 @@ importModel(modelData)"";
       <div className="p-4">""""""";
         <AnimatePresence mode="wait">""""""";
           {activeTab === "overview" && (<motion.div key="overview" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -327,7 +320,6 @@ importModel(modelData)"";
                           {(model.accuracy * 100).toFixed(1)}%;
                         </span>;
                       </div>;
-=======
 
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
@@ -423,7 +415,6 @@ importModel(modelData)"";
                           {(model.accuracy * 100).toFixed(1)}%
                         </span>
                       </div>
->>>>>>> main
                     </div>) ) }
 ;
                 </div>";
@@ -431,7 +422,6 @@ importModel(modelData)"";
             </motion.div>)}""""";
 """"""";
           {activeTab === "models" && (<motion.div key="models" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -446,7 +436,6 @@ importModel(modelData)"";
                   </button>;
                 </div>;
               </div>,;
-=======
 
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
@@ -461,7 +450,6 @@ importModel(modelData)"";
                   </button>
                 </div>
               </div>,
->>>>>>> main
               {/* comment */}
 ;
               <AnimatePresence>;
@@ -591,7 +579,6 @@ importModel(modelData)"";
             </motion.div>)}""""";
 """"""";
           {activeTab === "training" && (<motion.div key="training" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -649,7 +636,6 @@ importModel(modelData)"";
                           <div>""""";
                             <p className="text-sm text-gray-500 "dark": "text-gray-400">Latest Loss</p>"""";
                             <p className="font-medium text-gray-900 "dark":text-white">"""",;
-=======
 
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
@@ -707,7 +693,6 @@ Started: {job.startTime.toLocaleString()}"
                           <div>"""""
                             <p className="text-sm text-gray-500 dark: text-gray-400">Latest Loss</p>""""
                             <p className="font-medium text-gray-900 dark:text-white">""",
->>>>>>> main
                               {job.metrics.loss[job.metrics.loss.length - 1]?.toFixed(4) || "N/A"}
 ;
                             </p>";
@@ -739,7 +724,6 @@ Started: {job.startTime.toLocaleString()}"
             </motion.div>)}""""";
 """"""";
           {activeTab === "predictions" && (<motion.div key="predictions" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -812,7 +796,6 @@ Started: {job.startTime.toLocaleString()}"
                   {predictions.length === 0 && (<div className="text-center py-4 text-gray-500 "dark": "text-gray-400">"""";
                       <Target className="w-8 h-8 mx-auto mb-2 text-gray-400"/" >";
                       <p>No predictions yet</p>",;
-=======
 
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
@@ -885,7 +868,6 @@ Started: {job.startTime.toLocaleString()}"
                   {predictions.length === 0 && (<div className="text-center py-4 text-gray-500 dark: text-gray-400">""""
                       <Target className="w-8 h-8 mx-auto mb-2 text-gray-400"/" >"
                       <p>No predictions yet</p>,
->>>>>>> main
                     </div>)}
 ;
                 </div>";
@@ -893,7 +875,6 @@ Started: {job.startTime.toLocaleString()}"
             </motion.div>)}""""";
 """"""";
           {activeTab === "analytics" && (<motion.div key="analytics" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -937,7 +918,6 @@ Started: {job.startTime.toLocaleString()}"
                     <div className="flex justify-between">"""";
                       <span className="text-sm text-gray-600 "dark": "text-gray-400">Total Predictions</span>"""";
                       <span className="font-medium text-gray-900 "dark":text-white">",;
-=======
 
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
@@ -981,7 +961,6 @@ Started: {job.startTime.toLocaleString()}"
                     <div className="flex justify-between">""""
                       <span className="text-sm text-gray-600 dark: text-gray-400">Total Predictions</span>""""
                       <span className="font-medium text-gray-900 dark:text-white">,
->>>>>>> main
                         {metrics.totalPredictions}
 ;
                       </span>;

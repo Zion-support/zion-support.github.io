@@ -23,12 +23,9 @@ export function DynamicListingPage("props": "any) {;
     const listingsWithPrice = allListings.filter(l => l.price !== null);
     if (listingsWithPrice.length > 0) {;
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
-<<<<<<< HEAD
       setPriceRange({ "min": "0", max });
-=======
       setPriceRange({ min: 0, max }
     );
->>>>>>> main
       setCurrentPriceFilter([0, max]);
     }
   }, [allListings]);
@@ -41,7 +38,6 @@ export function DynamicListingPage("props": "any) {;
     const matchesPrice = listing.price >= currentPriceFilter[0] && listing.price <= currentPriceFilter[1];
     const matchesRating = selectedRating === null ||;
                          (listing.rating !== null && listing.rating >= selectedRating);
-<<<<<<< HEAD
     ;
     return matchesSearch && matchesCategory && matchesPrice && matchesRating;});
 ;
@@ -56,7 +52,6 @@ export function DynamicListingPage("props": "any) {;
   useEffect(() => {setCurrentPage(1);"}, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
 ;
   const handleRequestQuote = ("props": "any) => {;
-=======
     
     return matchesSearch && matchesCategory && matchesPrice && matchesRating;}
     );
@@ -72,13 +67,11 @@ export function DynamicListingPage("props": "any) {;
   useEffect(() => {setCurrentPage(1);}, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
 
   const handleRequestQuote = (props: any) => {
->>>>>>> main
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
     ;
     setTimeout(() => {;
       setIsLoading(false);
-<<<<<<< HEAD
       if (listing) {;
         toast({;
           "title": "Quote Requested";
@@ -94,7 +87,6 @@ export function DynamicListingPage("props": "any) {;
               "category": listing.category;
               "image": listing.images?.[0];
             "}
-=======
       if (listing) {
         toast({
           title: "Quote Requested",
@@ -111,14 +103,12 @@ export function DynamicListingPage("props": "any) {;
               category: listing.category,
               image: listing.images?.[0]
             }
->>>>>>> main
           }
         }
     );
       }
     }, 500);
   };
-<<<<<<< HEAD
 ;
   return (;
     <div className="min-h-screen bg-blue-900 py-12 px-4">;
@@ -127,7 +117,6 @@ export function DynamicListingPage("props": "any) {;
           <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>;
           <p className="text-xl text-blue-200">{description}</p>;
         </div>;
-=======
 
   return (
         <div className="min-h-screen bg-blue-900 py-12 px-4">
@@ -136,7 +125,6 @@ export function DynamicListingPage("props": "any) {;
           <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>
           <p className="text-xl text-blue-200">{description}</p>
         </div>
->>>>>>> main
 
         {/* Search and Filters */}
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">;
@@ -214,7 +202,6 @@ export function DynamicListingPage("props": "any) {;
         </div>;
 
         {/* Listings Grid */}
-<<<<<<< HEAD
         <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 "xl":grid-cols-4 gap-6">;
           {paginatedListings.map((listing) => (;
             <div key={listing.id"} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 "hover": "border-white/40 transition-all duration-300">;
@@ -229,7 +216,6 @@ export function DynamicListingPage("props": "any) {;
                 </div>;
               </div>;
               <Button ;
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {paginatedListings.map((listing) => (
             <div key={listing.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:border-white/40 transition-all duration-300">
@@ -244,7 +230,6 @@ export function DynamicListingPage("props": "any) {;
                 </div>
               </div>
               <Button 
->>>>>>> main
                 onClick={() => handleRequestQuote(listing.id)}
                 disabled={isLoading}
                 className="w-full";
@@ -271,13 +256,10 @@ export function DynamicListingPage("props": "any) {;
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
       </div>;
     </div>;
   );
-=======
       </div>
     </div>
     );
->>>>>>> main
 }

@@ -63,7 +63,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
   {"opacity": "0",;
   "y": "30"}}
           animate = {}
-<<<<<<< HEAD
   {"opacity": "1",;
   "y": "0"}}
           transition={{ "duration": "0.6 "}}''>'''';
@@ -106,7 +105,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
           className='flex flex-wrap justify-center gap-4 mb-12''initial = {}';
   {"opacity": "0",;
   "y": "20"}}
-=======
   {opacity: 1,
   y: 0}}
           transition={{ duration: 0.6 }}''>''''
@@ -149,7 +147,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
           className='flex flex-wrap justify-center gap-4 mb-12''initial = {}'
   {opacity: 0,
   y: 20}}
->>>>>>> main
           animate = {}
   {"opacity": "1",;
   "y": "0"}}
@@ -186,21 +183,18 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
                     <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium'>;
                       Popular;
                     </div>)}
-<<<<<<< HEAD
                 </div>;
 '''{/* Service Info */}'''';
                 <h3 className='text-xl font-bold text-white mb-2 group-"hover": "text-zion-cyan transition-colors'>;
                   {service.name"}''';
                 </h3>'''';
                 <p className='text-zion-cyan-light text-sm mb-4 line-clamp-2'>;
-=======
                 </div>
 '''{/* Service Info */}''''
                 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors'>
                   {service.name}'''
                 ''''
                 <p className='text-zion-cyan-light text-sm mb-4 line-clamp-2'>
->>>>>>> main
                   {service.tagline}
                 </p>;
 '''{/* Pricing */}'''';
@@ -261,7 +255,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
   {"opacity": "1",;
   "y": "0"}}
           transition = {}
-<<<<<<< HEAD
   {"duration": "0.6",;
   "delay": "0.4"}}''>'''';
           <div className='bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30'>'''';
@@ -269,7 +262,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
               Ready to Get Started?''';
             </h3>'''';
             <p className='text-zion-cyan-light mb-6 max-w-2xl mx-auto'>;
-=======
   {duration: 0.6,
   delay: 0.4}}''>''''
           <div className='bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30'>''''
@@ -277,7 +269,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
               Ready to Get Started?'''
             ''''
             <p className='text-zion-cyan-light mb-6 max-w-2xl mx-auto'>
->>>>>>> main
               Join thousands of businesses already transforming their operations with our revolutionary services.;
               Get expert consultation and custom implementation tailored to your needs.''';
             </p>'''';
@@ -309,7 +300,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
   {"scale": "1",;
   "opacity": "1"}}
               exit = {}
-<<<<<<< HEAD
   {"scale": "0.9",;
   "opacity": "0"}}
               onClick={(e) => e.stopPropagation()}''>'''';
@@ -379,7 +369,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
           </motion.div>) "}
       </AnimatePresence>;
     </section>;
-=======
   {scale: 0.9,
   opacity: 0}}
               onClick={(e) => e.stopPropagation()}''>''''
@@ -449,7 +438,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
           </motion.div>) }
       </AnimatePresence>
     </section>
->>>>>>> main
   )}''`;
 ''`'"`'";
 </motion>;

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';'''';';
 import {Link} from 'react-router-dom';'''';';
 import {motion} from 'framer-motion';';
@@ -19,15 +17,11 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
         {path: '/services/ai', label: 'AI Services', description: 'Artificial Intelligence solutions'},'''';';
         {path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps'},'''';';
         {path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection'},'''';';
-=======
 import React from 'react';
 import {Link} from 'react-router-dom';
-=======
 import React from 'react';'''
 import {Link} from 'react-router-dom';'''
->>>>>>> main
 import {motion} from 'framer-motion';
-<<<<<<< HEAD
 import { Home, Search, ArrowRight, AlertTriangle const NotFound = ("props": "any) => {"}
 ';
 '';
@@ -41,17 +35,13 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = ("props": "any
         {"path": '/careers', "label": 'Careers', "description": 'Join our team'}'';
     ];
     const servicePages = ['''';
-<<<<<<< HEAD
         {path: '/services/ai', label: 'AI Services', description: 'Artificial Intelligence solutions'},''';
         {path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps'},''';
         {path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection'},''';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
         {"path": '/services/ai', "label": 'AI Services', "description": 'Artificial Intelligence solutions'},''';
         {"path": '/services/cloud', "label": 'Cloud Services', "description": 'Cloud infrastructure and DevOps'},''';
         {"path": '/services/cybersecurity', "label": 'Cybersecurity', "description": 'Security and protection'},''';
         {"path": '/services/infrastructure', "label": 'IT Infrastructure', "description": 'Enterprise IT solutions'}
-=======
 import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) => {}
 '
 ''
@@ -68,14 +58,11 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
         {path: '/services/ai', label: 'AI Services', description: 'Artificial Intelligence solutions'},'''
         {path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps'},'''
         {path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection'},'''
->>>>>>> main
         {path: '/services/infrastructure', label: 'IT Infrastructure', description: 'Enterprise IT solutions'}
->>>>>>> main
     ];
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">""""
       <motion.div className="max-w-4xl mx-auto text-center" initial = {}
-<<<<<<< HEAD
   {"opacity": "0",;
   "y": "20;"}} animate = {}
   {"opacity": "1",;
@@ -187,7 +174,6 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
         </motion.p>;
       </motion.div>;
     </div>)"};
-=======
   {opacity: 0,
   y: 20;}} animate = {}
   {opacity: 1,
@@ -198,10 +184,6 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
   1]}} transition = {}
   {duration: 2,
   repeat: Infinity;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 """}}>""""
           <div className="w-32 h-32 mx-auto bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center">""""
             <AlertTriangle className="w-16 h-16 text-white" />
@@ -232,8 +214,6 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>""""
           <h3 className="text-2xl font-semibold text-white mb-6">Popular Pages""""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-<<<<<<< HEAD
-=======
 """}}>"""";
           <div className="w-32 h-32 mx-auto bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center">"""";
             <AlertTriangle className="w-16 h-16 text-white" />;
@@ -264,9 +244,6 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>"""";
           <h3 className="text-2xl font-semibold text-white mb-6">Popular Pages"""";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
             {popularPages.map((page, index) => (<motion.div key={page.path} initial = {}
   {opacity: 0,
   y: 20;}} animate = {}
@@ -310,10 +287,6 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
                   </div>
                 </Link>
               </motion.div>) ) }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
           </div>
         </motion.div>
 """
@@ -337,8 +310,6 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
           </a>{' '}'"""
           or call us at{' '}""""
           <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 underline">
-<<<<<<< HEAD
-=======
           </div>;
         </motion.div>;
 """;
@@ -362,17 +333,12 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
           </a>{' '}'""";
           or call us at{' '}"""";
           <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 underline">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
             +1 302 464 0950;
           </a>
         </motion.p>
       </motion.div>
     </div>)};
->>>>>>> main
 export default NotFound;
-<<<<<<< HEAD
 }
 ;
 export {NotFound};
@@ -384,13 +350,11 @@ export {NotFound};
 export {NotFound};
 ;
 export {NotFound};
-<<<<<<< HEAD
 
 </motion>
 </motion>
 </motion>';
 </motion>;';;';
-=======
 ;
 </motion>;
 </motion>;
@@ -401,14 +365,10 @@ export {NotFound};
 </motion>;
 </motion>;
 </motion>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
 import React from 'react';
 
 interface NotFound.jsProps {
   // Add props here as needed
->>>>>>> main
 }
 
 export default function NotFound.js({ }: NotFound.jsProps) {
@@ -419,4 +379,3 @@ export default function NotFound.js({ }: NotFound.jsProps) {
     </div>
   );
 }
->>>>>>> main

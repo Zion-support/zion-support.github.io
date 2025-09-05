@@ -34,22 +34,18 @@ export {ExpensiveComponent};
 ;
 export {ExpensiveComponent};
 }
-<<<<<<< HEAD
   })";
  export default function ExpensiveComponent("props": "any) { const [data", setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {"";";
   });,"})";
 ;,"});
-=======
   })"
  export default function ExpensiveComponent(props: any) { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {"";"
   }
     );,"})"
 ;,"})
->>>>>>> main
 }
   });
 }
-<<<<<<< HEAD
  export default function ExpensiveComponent("props": "any) { const [data", setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;";
   });,"});";
 }"});
@@ -57,7 +53,6 @@ export {ExpensiveComponent};
   })"";
   });,"})";
 export default function ExpensiveComponent("props": "any) {"}"});
-=======
  export default function ExpensiveComponent(props: any) { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;"
   }
     );,"}
@@ -68,11 +63,9 @@ export default function ExpensiveComponent("props": "any) {"}"});
   }
     );,"})"
 export default function ExpensiveComponent(props: any) {}"})
->>>>>>> main
 }
   });
 }
-<<<<<<< HEAD
   const [data, setData] = useState([]);";
   });,"})";
   const [loading, setLoading] = useState(true);,"});
@@ -83,7 +76,6 @@ export default function ExpensiveComponent(props: any) {}"})
   })";
     const timer = setTimeout(() => {}});,"})";
       const expensiveData = Array.from();,"});
-=======
   const [data, setData] = useState([]);"
   }
     );,"})"
@@ -97,51 +89,40 @@ export default function ExpensiveComponent(props: any) {}"})
     const timer = setTimeout(() => {}}
     );,"})"
       const expensiveData = Array.from();,"})
->>>>>>> main
 }
   });
 }
-<<<<<<< HEAD
         {"length": "10000"},";
   });,"})";
         (_, i) => Math.sqrt(i) * Math.PI * Math.random();,"});
-=======
         {length: 10000},"
   }
     );,"})"
         (_, i) => Math.sqrt(i) * Math.PI * Math.random();,"})
->>>>>>> main
 }
   });
 }
-<<<<<<< HEAD
       );";
   });,"})";
       setData(expensiveData);,"});
-=======
     );"
   }
     );,"})"
       setData(expensiveData);,"})
->>>>>>> main
 }
   });
 }
-<<<<<<< HEAD
       setLoading(false);";
   });,"});";
 }, 2000);,"});
-=======
       setLoading(false);"
   }
     );,"}
     );"
 }, 2000);,"})
->>>>>>> main
 }
   });
 }
-<<<<<<< HEAD
     return () => clearTimeout(timer);";
   });,"});";
 }, []);,"});
@@ -149,7 +130,6 @@ export default function ExpensiveComponent(props: any) {}"})
   })";
   if(loading) {}});,"})";
     return();,"});
-=======
     return () => clearTimeout(timer);"
   }
     );,"}
@@ -160,7 +140,6 @@ export default function ExpensiveComponent(props: any) {}"})
   if(loading) {}}
     );,"})"
     return();,"})
->>>>>>> main
 }
   })";
       <div className="text-center" p-8">"";,"});
@@ -173,81 +152,63 @@ export default function ExpensiveComponent(props: any) {}"})
 }
   });
 }
-<<<<<<< HEAD
       </div>;";
   });,"})";
     </div>)}"});
-=======
       </div>;"
   }
     );,"})"
     </div>)}"})
->>>>>>> main
 }
   });
 }
-<<<<<<< HEAD
 ;";
   });,"})";
 export {ExpensiveComponent};,"});
-=======
 ;"
   }
     );,"})"
 export {ExpensiveComponent};,"})
->>>>>>> main
 }
   });
 }
-<<<<<<< HEAD
 ;";
   });,"})";
 export {ExpensiveComponent};,"});
-=======
 ;"
   }
     );,"})"
 export {ExpensiveComponent};,"})
->>>>>>> main
 }
   });
 }
-<<<<<<< HEAD
 ;";
   });,"})";
 export {ExpensiveComponent};,"});
-=======
 ;"
   }
     );,"})"
 export {ExpensiveComponent};,"})
->>>>>>> main
 }
   });
 }
-<<<<<<< HEAD
 ;";
   });,"})";
 export {ExpensiveComponent};,"});
-=======
 ;"
   }
     );,"})"
 export {ExpensiveComponent};,"})
->>>>>>> main
 }
   });
 }
-<<<<<<< HEAD
 ;";
   });,"})";
 export {ExpensiveComponent};,"});
-=======
 ;"
   }
     );,"})"
 export {ExpensiveComponent};,"})
->>>>>>> main
 }
   })";
  export default function ExpensiveComponent("props": "any) { const [data", setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {";import React, { useState, useEffect } from "react";

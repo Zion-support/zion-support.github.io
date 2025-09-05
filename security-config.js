@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const securityHeaders = [
   { key: "X-DNS-Prefetch-Control", value: "on" },
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
@@ -10,4 +8,3 @@ const securityHeaders = [
 ];
 
 module.exports = { securityHeaders };
->>>>>>> 72f0fae78d2cb9c84158d193a6f319208ba0c11a

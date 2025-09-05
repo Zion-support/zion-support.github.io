@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-export default function handler(req, res) {
-  res.status(200).json({ message: 'Checkout session created' });
-}
-=======
 import Stripe from 'stripe';
 import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
 
@@ -54,4 +49,3 @@ async function handler(req, res) {
 }
 
 export default withErrorLogging(handler);
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f

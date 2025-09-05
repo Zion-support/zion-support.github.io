@@ -2,13 +2,11 @@ import {useState, useEffect, useCallback} from 'react';';
 import {motion, AnimatePresence} from 'framer-motion';';
 import {Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building} from 'lucide-react';
 ;
-<<<<<<< HEAD
 export const AdvancedForm = ("props": "any) => {;
     const { trackEvent", trackConversion } = useAnalytics({"enableTracking": "enableAnalytics",;
         "enableUserBehaviorTracking": "true;"}) ;
     const [formData, setFormData] = useState ({/* empty */}) ;
     const [validation, setValidation] = useState ({/* empty */}) ;
-=======
 export const AdvancedForm = (props: any) => {
     const { trackEvent, trackConversion } = useAnalytics({enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true;}
@@ -17,7 +15,6 @@ export const AdvancedForm = (props: any) => {
     );
     const [validation, setValidation] = useState ({/* empty */}
     );
->>>>>>> main
     const [isSubmitting, setIsSubmitting] = useState (false) ;
     const [isSubmitted, setIsSubmitted] = useState (false) ;
     const [showPassword, setShowPassword] = useState ({/* empty */}
@@ -25,7 +22,6 @@ export const AdvancedForm = (props: any) => {
     const [progress, setProgress] = useState (0) ;
     // Initialize form data and validation;
     useEffect(() => {}        const initialValidation = {};
-<<<<<<< HEAD
         fields.forEach(field => {;
 import React from "react";
 import { useState, useEffect, useCallback } from "react";,"});,"})","});,"})","});,"})";
@@ -403,7 +399,6 @@ export const AdvancedForm = ("props": "any) => {;","});,"})";
 """"";,"});,"})"""""";
     const {trackEvent, trackConversion} = useAnalytics({"enableTracking": "enableAnalytics",;
 "enableUserBehaviorTracking": "true"});
-=======
         fields.forEach(field => {
 import React from "react"
 import { useState, useEffect, useCallback } from "react";,"}
@@ -1169,7 +1164,6 @@ export const AdvancedForm = (props: any) => {;,"}
     );,"})""""""
     const {trackEvent, trackConversion} = useAnalytics({enableTracking: enableAnalytics,
 enableUserBehaviorTracking: true})
->>>>>>> main
 }
     const [formData, setFormData] = useState({});
 }
@@ -1181,7 +1175,6 @@ enableUserBehaviorTracking: true})
 }
     const [showPassword, setShowPassword] = useState({});
 }
-<<<<<<< HEAD
     const [progress, setProgress] = useState(0);""""""";
 export const AdvancedForm = ("props": "any) => {";"""";
 export const AdvancedForm = memo(({ fields", onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = "", enableAnalytics = true, showProgressBar = true }) => {;framer-motion";;react"framer - motion",lucide-react";&apos;&apos;
@@ -1190,7 +1183,6 @@ export const AdvancedForm = ("props": "any) => {";
 """}";
     const {trackEvent, trackConversion} = useAnalytics({"enableTracking": "enableAnalytics",;
         "enableUserBehaviorTracking": "true"});
-=======
     const [progress, setProgress] = useState(0);"""""""
 export const AdvancedForm = (props: any) => {";""""
 export const AdvancedForm = memo(({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = "", enableAnalytics = true, showProgressBar = true }) => {;framer-motion";react"framer - motion",lucide-react";&apos;&apos
@@ -1199,7 +1191,6 @@ export const AdvancedForm = (props: any) => {"
 ""}"
     const {trackEvent, trackConversion} = useAnalytics({enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true})
->>>>>>> main
 }
     const [formData, setFormData] = useState({});
 }
@@ -1226,7 +1217,6 @@ const initialValidation = {}
                 "message": ",;
 "isTouched": "false"}});
 }
-<<<<<<< HEAD
 &apos;
 &apos;&apos;
             initialData[field.name] = field.type === &apos;checkbox&apos; ? false : "&apos;
@@ -1235,7 +1225,6 @@ const initialValidation = {}
 "message": '',;
                 "isTouched": "false;
             "}}) ;
-=======
 &apos
 &apos;&apos
             initialData[field.name] = field.type === &apos;checkbox&apos; ? false : &apos
@@ -1245,7 +1234,6 @@ message: '',
                 isTouched: false
             }}
     );
->>>>>>> main
         setFormData(initialData) ;
         setValidation(initialValidation) }, [fields]) ;
     // Update progress based on filled fields;
@@ -1815,7 +1803,6 @@ const;const;const field = fields.find(f => f.name === name);
 }    if(isSubmitted) {}
 ;
         return (<motion.div initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0>;
 "scale": 0.9"}} animate = {}
@@ -1829,7 +1816,6 @@ const;const;const field = fields.find(f => f.name === name);
         </h3>"";";
         <p className="text-green-600 "dark": "text-green-300">"",",;
           Your message has been sent successfully. We"ll get back to you soon!,;
-=======
 
   {opacity: 0>
 scale: 0.9}} animate = {}
@@ -1843,7 +1829,6 @@ scale: 1 "",">
         "";"
         <p className="text-green-600 dark:text-green-300">",",
           Your message has been sent successfully. We"ll get back to you soon!,
->>>>>>> main
         </p>,      </motion.div>)}
 ;
     return (<motion.div initial = {}
@@ -1883,7 +1868,6 @@ scale: 1 "",">
               <Send className="w-5 h-5"   />              {submitText"}
 ;
             </>) }
-<<<<<<< HEAD
 ;
         </motion.button>;
   {"opacity": "0", "scale": "0.9"}} animate = {}
@@ -1907,7 +1891,6 @@ scale: 1 "",">
           Your message has been sent successfully. We"ll get back to you soon!"",;
         <p className="text-green-600 "dark": "text-green-300">"","";
           Your message has been sent successfully. We&apos,ll get back to you soon!";
-=======
 
         </motion.button>
   {opacity: 0, scale: 0.9}} animate = {}
@@ -1931,7 +1914,6 @@ scale: 1 "",">
           Your message has been sent successfully. We"ll get back to you soon!",
         <p className="text-green-600 dark:text-green-300">",""
           Your message has been sent successfully. We&apos,ll get back to you soon!"
->>>>>>> main
         </p>      </motion.div>)}
 ;
     return (<motion.div initial = {}

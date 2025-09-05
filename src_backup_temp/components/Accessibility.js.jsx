@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState, useEffect, createContext, useContext} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';';';
 import {Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X} from 'lucide-react';
@@ -11,38 +9,29 @@ export const useAccessibility = (props: any) => {}
 ''''';';
     throw new Error('''',';';
       'useAccessibility must be used within an AccessibilityProvider'
-=======
 import React, {useState, useEffect, createContext, useContext} from 'react';
-=======
 import React, {useState, useEffect, createContext, useContext} from 'react';'''
->>>>>>> main
 import {motion, AnimatePresence} from 'framer-motion';
 import {Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X} from 'lucide-react';
 ;const AccessibilityContext = createContext(null);
 export const useAccessibility = ("props": "any) => {"}
   const context = useContext(AccessibilityContext);
   if (!context) {}
-<<<<<<< HEAD
 '';
 '';
 '''';
     throw new Error('''',;
       'useAccessibility must be used within an AccessibilityProvider';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 ''
 ''
 ''''
     throw new Error('''',
       'useAccessibility must be used within an AccessibilityProvider'
->>>>>>> main
     );
   }
   return context;
 };
 // Accessibility Provider Component;
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const AccessibilityProvider = (props: any) => {}';
   const [highContrast, setHighContrast] = useState(false);';';
   const [reducedMotion, setReducedMotion] = useState(false);'';';
@@ -58,11 +47,8 @@ export const AccessibilityProvider = (props: any) => {}';
       setHighContrast(settings.highContrast || false);';';
       setReducedMotion(settings.reducedMotion || false);'';';
       setFontSize(settings.fontSize || 'medium');'';';
-=======
 export const AccessibilityProvider = (props: any) => {}
-=======
 export const AccessibilityProvider = ("props": "any) => {"}
->>>>>>> main
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);'
   const [fontSize, setFontSize] = useState('medium');'
@@ -75,18 +61,13 @@ export const AccessibilityProvider = ("props": "any) => {"}
     if (savedSettings) {}
       const settings = JSON.parse(savedSettings);
       setHighContrast(settings.highContrast || false);
-<<<<<<< HEAD
       setReducedMotion(settings.reducedMotion || false);';
       setFontSize(settings.fontSize || 'medium');';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
       setReducedMotion(settings.reducedMotion || false);'
       setFontSize(settings.fontSize || 'medium');'
->>>>>>> main
       setColorBlindMode(settings.colorBlindMode || 'none');
     }
 }, []);
-<<<<<<< HEAD
   // Save settings to localStorage;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
@@ -496,7 +477,6 @@ const context = useContext(AccessibilityContext)";
 """;
 """"";
     throw new Error(""""";
-=======
   // Save settings to localStorage
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -1316,11 +1296,9 @@ const context = useContext(AccessibilityContext)"
 """
 """""
     throw new Error("""""
->>>>>>> main
       "useAccessibility must be used within an AccessibilityProvider"    )}
 
   return context}
-<<<<<<< HEAD
 ;
 // comment;
 export const AccessibilityProvider = ("props": "any) => {"}";
@@ -1328,7 +1306,6 @@ export const AccessibilityProvider = ("props": "any) => {"}";
   const [reducedMotion, setReducedMotion] = useState(false)"";
   const [fontSize, setFontSize] = useState("medium")"";
   const [colorBlindMode, setColorBlindMode] = useState();
-=======
 
 // comment
 export const AccessibilityProvider = (props: any) => {}"
@@ -1336,7 +1313,6 @@ export const AccessibilityProvider = (props: any) => {}"
   const [reducedMotion, setReducedMotion] = useState(false)""
   const [fontSize, setFontSize] = useState("medium")""
   const [colorBlindMode, setColorBlindMode] = useState()
->>>>>>> main
 }
   // comment
 useEffect(() => {}""
@@ -1354,10 +1330,6 @@ useEffect(() => {}""
 
   }, [])
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
   // comment
 useEffect(() => {}"
     const settings = {}""
@@ -1371,8 +1343,6 @@ colorBlindMode};
     localStorage.setItem('
       'zion-accessibility-settings',
       JSON.stringify(settings)
-<<<<<<< HEAD
-=======
   // comment;
 useEffect(() => {}";
     const settings = {}"";
@@ -1386,19 +1356,14 @@ colorBlindMode};
     localStorage.setItem(';
       'zion-accessibility-settings',;
       JSON.stringify(settings);
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
     );
   }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-<<<<<<< HEAD
   // Apply accessibility settings to document;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
-=======
   // Apply accessibility settings to document
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -1406,7 +1371,6 @@ colorBlindMode};
   return () => {
     // Cleanup function
   };
->>>>>>> main
 }, []);, []);
     const root = document.documentElement;
     // High contrast mode
@@ -1425,7 +1389,6 @@ if (highContrast) {}""
 """
 """""
       root.classList.remove("high-contrast")}
-<<<<<<< HEAD
 ;
     // comment;
 if (reducedMotion) {}"";
@@ -1449,7 +1412,6 @@ if (reducedMotion) {}"";
             ? "url(#deuteranopia)""""";
             : "url(#tritanopia)",;
 }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-=======
 
     // comment
 if (reducedMotion) {}""
@@ -1473,7 +1435,6 @@ if (reducedMotion) {}""
             ? "url(#deuteranopia)"""""
             : "url(#tritanopia),
 }, [highContrast, reducedMotion, fontSize, colorBlindMode])
->>>>>>> main
 }
   const toggleReducedMotion = () => setReducedMotion()
 }  const value = {}
@@ -1495,14 +1456,12 @@ highContrast,
     toggleReducedMotion,
     setFontSize,
     setColorBlindMode} = useAccessibility();
-<<<<<<< HEAD
   // Keyboard shortcuts;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
   "};
-=======
   // Keyboard shortcuts
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -1510,7 +1469,6 @@ highContrast,
   return () => {
     // Cleanup function
   };
->>>>>>> main
 }, []);, []);
     const handleKeyDown = event => {const [isOpen, setIsOpen] = useState()}
   const {}
@@ -1563,7 +1521,6 @@ if()""
 }
     <>
       {/* comment */}
-<<<<<<< HEAD
 ;
       <motion .button,";
 whileHover = "{{" "scale": "1.1 "}}";
@@ -1689,7 +1646,6 @@ initial="{{" "scale": "0.9", "opacity": "0 "}}""";
 """"";
                           fontSize === size""""";
                             ? "bg-zion-cyan text-white"""""";
-=======
 
       <motion .button,"
 whileHover = "{{" scale: 1.1 }}"
@@ -1815,7 +1771,6 @@ initial="{{" scale: 0.9, opacity: 0 }}"""
 """""
                           fontSize === size"""""
                             ? "bg-zion-cyan text-white""""""
->>>>>>> main
                             : "border-zion-cyan/30 text-zion-cyan"}
 
                       >
@@ -1855,7 +1810,6 @@ initial="{{" scale: 0.9, opacity: 0 }}"""
                       )
 }
                     )}
-<<<<<<< HEAD
 ;
                   </div>";
                 </div>"";
@@ -1930,22 +1884,16 @@ useEffect(() => {;
   // "TODO": "Add dependencies if needed;
   return () => {;
     // Cleanup function;
-<<<<<<< HEAD
   };
-<<<<<<< HEAD
 }, []);, []);';
     if(!isActive) return;';';
     const focusableElements ='"';';
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);';';
-=======
-=======
   "};
->>>>>>> main
 }, []);, []);
     if(!isActive) return;
     const focusableElements ='";
       'button, [href], input, select, textarea, [tabindex]: "not([tabindex="-1"]);
-=======
 
                   </div>"
                 </div>""
@@ -2026,29 +1974,17 @@ useEffect(() => {
     if(!isActive) return;
     const focusableElements ='"
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
->>>>>>> main
     const container = document.activeElement?.closest('[data-focus-trap]');
     if(!container) return;
     const firstFocusableElement = focusableContent[0];
     const lastFocusableElement = focusableContent[focusableContent.length-1];
-<<<<<<< HEAD
     const handleTabKey = e => {e.preventDefault()"}            lastFocusableElement.focus()}
 ;
-=======
     const handleTabKey = e => {e.preventDefault()}            lastFocusableElement.focus()}
 
->>>>>>> main
         } else {}
 
           if(document.activeElement === lastFocusableElement) {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
             e.preventDefault()"
             firstFocusableElement.focus()}","
@@ -2091,10 +2027,8 @@ export default AccessibilityPanel""
 </div>
 </div>
 </motion>
-<<<<<<< HEAD
 </motion>';
 </AccessibilityContext>;';;';
-=======
 ;
             e.preventDefault()";
             firstFocusableElement.focus()}",";
@@ -2139,9 +2073,6 @@ export default AccessibilityPanel"";
 </motion>;
 </motion>;
 </AccessibilityContext>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </motion>
 </motion>
 </AccessibilityContext>
->>>>>>> main

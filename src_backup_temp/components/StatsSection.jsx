@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 ;
 export function StatsSection("props": "any) {;
   const stats = [{;
@@ -29,9 +28,7 @@ export function StatsSection("props": "any) {;
       "description": 'Industry expertise and knowledge',;
       "icon": '🏆',;
       "color": 'from-red-500 to-pink-500'}
-=======
 
-<<<<<<< HEAD
 export function StatsSection(props: any) {
   const stats = [{
       number: '500+',
@@ -60,7 +57,6 @@ export function StatsSection(props: any) {
       description: 'Industry expertise and knowledge',
       icon: '🏆',
       color: 'from-red-500 to-pink-500'}
->>>>>>> main
   ];
   return ();
     <section className="py-16 bg-white">";
@@ -90,11 +86,8 @@ export function StatsSection(props: any) {
 
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">;
                   {stat.label}
-<<<<<<< HEAD
                 </h3>;
-=======
                 
->>>>>>> main
 
                 <p className="text-gray-600 leading-relaxed">;
                   {stat.description}
@@ -104,7 +97,6 @@ export function StatsSection(props: any) {
           ))}
         </div>;
 
-<<<<<<< HEAD
         <div className="text-center mt-12">;
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200">;
             <h3 className="text-2xl font-bold text-gray-900 mb-4">;
@@ -136,7 +128,6 @@ export function StatsSection(props: any) {
 "}
 ;
 export default StatsSection;
-=======
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -165,10 +156,8 @@ export default StatsSection;
       </div>
     </section>
   );
-=======
 interface StatsSection.jsProps {
   // Add props here as needed
->>>>>>> main
 }
 
 export default function StatsSection.js({ }: StatsSection.jsProps) {
@@ -179,4 +168,3 @@ export default function StatsSection.js({ }: StatsSection.jsProps) {
     </div>
   );
 }
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 ;
@@ -39,14 +38,12 @@ export default function Page("props": "any) {;
         "rating": "4.8",;
         "projects": "250",;
         "category": 'Mobile'}
-=======
 import React from 'react';
 
 interface TechSolutionsSection.jsProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
         id: 'iot-solutions',
         title: 'IoT Solutions',
         description: 'Connected devices and smart systems for the modern world',"
@@ -80,7 +77,6 @@ interface TechSolutionsSection.jsProps {
         rating: 4.8,
         projects: 250,
         category: 'Mobile'}
->>>>>>> main
 ];
 const industries = ['";
     {"name": 'Healthcare', "icon": "<Shield className="w-5 h-5" />", "projects": "80"},";
@@ -203,15 +199,12 @@ const industries = ['";
                     </div>;
                   </div>;
 
-<<<<<<< HEAD
                   <h3 className="text-2xl font - bold text-white mb-3 group - "hover": "text-zion - cyan transition -colors">                    {solution.title"}
                   </h3>";
                   <p className="text-zion-slate-light leading-relaxed mb-4">;
-=======
                   <h3 className="text-2xl font - bold text-white mb-3 group - hover:text-zion - cyan transition -colors">                    {solution.title}
                   "
                   <p className="text-zion-slate-light leading-relaxed mb-4">
->>>>>>> main
                     {solution.description}
                   </p>;
 
@@ -325,7 +318,6 @@ const industries = ['";
   { "duration": "0.6",;
   "delay": "0.5;
 
-<<<<<<< HEAD
 "}}>";
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">";
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">";
@@ -356,7 +348,6 @@ const industries = ['";
 </motion>;
 </motion>;
 </motion>
-=======
 }}>"
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">"
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">"
@@ -387,7 +378,6 @@ const industries = ['";
 </motion>
 </motion>
 </motion>
-=======
 export default function TechSolutionsSection.js({ }: TechSolutionsSection.jsProps) {
   return (
     <div>
@@ -396,5 +386,3 @@ export default function TechSolutionsSection.js({ }: TechSolutionsSection.jsProp
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

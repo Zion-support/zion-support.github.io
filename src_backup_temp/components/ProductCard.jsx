@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 """;,"});,"})","});,"})","});,"})","});,"})","});,"})","})";
   Tooltip,,"});,"})";
@@ -128,7 +127,6 @@ export {ProductCard};,"});,"})"""""""""""""react"next / link",next / image",luci
   TooltipProvider,";
   TooltipTrigger} from "@/components / ui/tooltip",;
   const {isAuthenticated} = useAuth();
-=======
 import React from "react"
 """;,"}
     );,"})","}
@@ -395,7 +393,6 @@ export {ProductCard};,"}
   TooltipProvider,"
   TooltipTrigger} from "@/components / ui/tooltip",
   const {isAuthenticated} = useAuth()
->>>>>>> main
 }
   const {isWishlisted, toggle} = useWishlist();
 }
@@ -486,17 +483,14 @@ export default function ProductCard("props": any) {"}
             fill;";
             className="object-cover rounded-md";";
             onError = "{()" => setImageError(true)}
-<<<<<<< HEAD
 ;
          />;";
         <h3 className="font-semibold text-lg mb-2 line-clamp-2">{product.title}</h3>;
          {product.description && (;";
-=======
 
          />;"
         <h3 className="font-semibold text-lg mb-2 line-clamp-2">{product.title}
          {product.description && (;"
->>>>>>> main
           <p className = "text-muted-foreground text-sm mb-3 line-clamp-3"> {product.description}
 ;
           </p>;";
@@ -575,14 +569,11 @@ const active = isWishlisted(product.id);
     if(!imageError) {}
       setImageError(true);
       captureException(error, {}
-<<<<<<< HEAD
         "product": "product.id",;
         imageUrl});
-=======
         product: product.id,
         imageUrl}
     );
->>>>>>> main
     }
   };';
   const imageSizes = isMobile ? '100vw' : "isTablet ? '50vw' : '33vw';
@@ -621,21 +612,18 @@ const active = isWishlisted(product.id);
             <Heart aria-hidden="true" className="text-red-500 fill-red-500"  />;
           </div>;
         )}
-<<<<<<< HEAD
       </div>""";
       <Link href={`/marketplace/listing/${product.id}`}>"""";
         <h3 className="font-semibold mb-1">{productTitle}</h3>;
       </Link>""";
       {product.price != null && ("""";
         <p className="text-sm text-muted-foreground">;
-=======
       </div>"""
       <Link href={`/marketplace/listing/${product.id}`}>""""
         <h3 className="font-semibold mb-1">{productTitle}
       </Link>"""
       {product.price != null && (""""
         <p className="text-sm text-muted-foreground">
->>>>>>> main
           {product.currency}
           {product.price}
         </p>""";

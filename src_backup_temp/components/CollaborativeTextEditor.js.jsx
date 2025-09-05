@@ -3,16 +3,13 @@ import {motion} from 'framer-motion';';
 import {Users, MessageSquare, Sparkles, Save, Download, Loader2} from 'lucide-react';
 ;
 ;
-<<<<<<< HEAD
 export const CollaborativeTextEditor = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});
-=======
 export const CollaborativeTextEditor = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );
->>>>>>> main
     const [editorState, setEditorState] = useState({}
         "content": "initialContent",';
         "selection": "{"start": 0", "end": "0", "text": ''},;
@@ -30,7 +27,6 @@ export const CollaborativeTextEditor = (props: any) => {
     const collaborationRef = useRef(null);
     // Initialize real-time collaboration;
     const collaboration = useRealTimeCollaboration({}
-<<<<<<< HEAD
         roomId,;
         userId,;
         userName,;
@@ -41,7 +37,6 @@ export const CollaborativeTextEditor = (props: any) => {
         "conflictResolution": 'client',;
         "messageRetention": "1000;
     "}) ;
-=======
         roomId,
         userId,
         userName,
@@ -53,7 +48,6 @@ export const CollaborativeTextEditor = (props: any) => {
         messageRetention: 1000;
     }
     );
->>>>>>> main
     // Handle text changes;
     const handleTextChange = useCallback((event) => {}
         const newContent = event.target.value;
@@ -280,16 +274,13 @@ useEffect(() => {}";
         const handleCollaborationTextChange = ("props": "any) => {"}"";
             const {message} = event.detail""";
             if (message.type === "text_change" && message.userId !== userId) {}
-<<<<<<< HEAD
 ;
 // Default export behavior';
             const blob = new Blob([exportContent], {"type": 'text/plain'});
-=======
 
 // Default export behavior'
             const blob = new Blob([exportContent], {type: 'text/plain'}
     );
->>>>>>> main
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;`;
@@ -325,7 +316,6 @@ useEffect(() => {}
         if();
 }
             return,const autoSaveInterval = setInterval(() => {}
-<<<<<<< HEAD
 ;
 // Simple merge strategy - in production, this would use operational transformation;
                     return {...prev,;
@@ -333,7 +323,6 @@ useEffect(() => {}
                         "version": "Math.max(prev.version", message.payload.version)}});
                 trackEvent('editor',collaboration_sync',text_synced', null, {"userId": "message.userId",;
                     "version": "message.payload.version"})}
-=======
 
 // Simple merge strategy - in production, this would use operational transformation
                     return {...prev,
@@ -342,7 +331,6 @@ useEffect(() => {}
     );
                 trackEvent('editor',collaboration_sync',text_synced', null, {userId: message.userId,
                     version: message.payload.version})}
->>>>>>> main
         };
         window.addEventListener('collaborationTextChange', handleCollaborationTextChange);
         return () => {window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent]);
@@ -382,7 +370,6 @@ useEffect(() => {}
         if(!enableAI) return,const debounceTimer = setTimeout(() => {}
 ;
             if(editorState.content.length > 100) {}
-<<<<<<< HEAD
 ;
                 generateAISuggestions()}";
 }, 3000)"";
@@ -437,7 +424,6 @@ useEffect(() => {}
             </span>";
             <span>";
               Version {editorState.version}"";
-=======
 
                 generateAISuggestions()}"
 }, 3000)""
@@ -492,7 +478,6 @@ useEffect(() => {}
             </span>"
             <span>"
               Version {editorState.version}""
->>>>>>> main
               {lastSaved && " • Last saved ${lastSaved.toLocaleTimeString()}"}
 ;
             </span>;

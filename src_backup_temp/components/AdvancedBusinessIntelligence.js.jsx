@@ -290,11 +290,8 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                   <div className="flex items-center justify-between mb-3">";
                     <h3 className="font-semibold text-zion-slate">;
                       {metric.name}
-<<<<<<< HEAD
                     </h3>;
-=======
                     
->>>>>>> main
                     {getTrendIcon(metric.trend)}
                   </div>";
                   <div className="text-2xl font-bold text-zion-slate mb-2">;
@@ -331,7 +328,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               ))}
             </div>;
 
-<<<<<<< HEAD
             {/* Quick Actions */}";
             <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">";
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">";
@@ -340,7 +336,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               </h3>";
               <div className="grid grid-cols-2 "md": "grid-cols-4 gap-3">;
                 {[{;
-=======
             {/* Quick Actions */}"
             <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">"
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">"
@@ -349,7 +344,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               "
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[{
->>>>>>> main
 
                     "label": 'Generate Report'",;
                     "icon": "Download",;
@@ -397,7 +391,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">";
                       <h3 className="font-semibold text-zion-slate">;
                         {insight.title}
-<<<<<<< HEAD
                       </h3>;
                       <span`;
                         className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high'';
@@ -414,7 +407,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                       </span>;
                     </div>";
                     <p className="text-zion-slate-light mb-3">;
-=======
                       
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high''
@@ -431,7 +423,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                       </span>
                     </div>"
                     <p className="text-zion-slate-light mb-3">
->>>>>>> main
                       {insight.description}
                     </p>;
                     {insight.actionable && (;
@@ -457,7 +448,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
 ;
         {activeTab === 'models' && (";
           <div className="space-y-4">;
@@ -478,7 +468,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                           : 'bg-red-100 text-red-700 "dark":bg-red-900/30 "dark":text-red-300'`;
                     "}`}
                   >;
-=======
 
         {activeTab === 'models' && ("
           <div className="space-y-4">
@@ -499,7 +488,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                           : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'`
                     }`}
                   >
->>>>>>> main
                     {model.status}
                   </span>;
                 </div>";
@@ -533,7 +521,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
 ;
         {activeTab === 'analytics' && (";
           <div className="space-y-6">";
@@ -548,7 +535,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
     </div>;
   );}
 "export default ComponentName;";
-=======
 
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"
@@ -563,7 +549,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
     </div>
     );}
 "export default ComponentName;"
->>>>>>> main
 
 </RefreshCw>;
 </RefreshCw>

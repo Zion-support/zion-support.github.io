@@ -103,7 +103,6 @@ export default function Page("props": "any) {;
             case 'Leading': return 'bg-purple-100 text-purple-800';
             "default": return 'bg-gray-100 text-gray-800'"}
     };
-<<<<<<< HEAD
     const categories = [';
         {"id": 'all', "name": 'All Categories', "count": "portfolioData.length"},;
         {"id": 'ai', "name": 'AI & Machine Learning', "count": "portfolioData.filter(s => s.category === 'ai').length"},;
@@ -113,7 +112,6 @@ export default function Page("props": "any) {;
         {"id": 'green-tech', "name": 'Green Technology', "count": "portfolioData.filter(s => s.category === 'green-tech').length"}
     ];";
     return (<div className="max-w-7xl mx-auto p-6">;
-=======
     const categories = ['
         {id: 'all', name: 'All Categories', count: portfolioData.length},
         {id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length},
@@ -124,7 +122,6 @@ export default function Page("props": "any) {;
     ];"
     return (
         <div className="max-w-7xl mx-auto p-6">
->>>>>>> main
       {/* Header */}
       <motion.div initial = {;
 
@@ -189,7 +186,6 @@ export default function Page("props": "any) {;
           <CardContent>";
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
               {portfolioMetrics.totalServices}
-<<<<<<< HEAD
             </h3>";
             <p className="text-sm text-zion-slate-light">;
               Total Services;
@@ -269,7 +265,6 @@ export default function Page("props": "any) {;
           </CardContent>;
         </Card>;
       </motion.div>;
-=======
             "
             <p className="text-sm text-zion-slate-light">
               Total Services
@@ -349,7 +344,6 @@ export default function Page("props": "any) {;
           </CardContent>
         </Card>
       </motion.div>
->>>>>>> main
 
       {/* Filters and Controls */}
       <motion.div initial = {;
@@ -631,7 +625,6 @@ export default function Page("props": "any) {;
   { "opacity": "1",;
   "y": "0;
 
-<<<<<<< HEAD
 ";
 "}} transition={{ "delay": "0.5 "}} className="text-center">";
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">";
@@ -650,7 +643,6 @@ export default function Page("props": "any) {;
           </div>;
         </div>;
       </motion.div>;
-=======
 "
 }} transition={{ delay: 0.5 }} className="text-center">"
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"
@@ -669,7 +661,6 @@ export default function Page("props": "any) {;
           </div>
         </div>
       </motion.div>
->>>>>>> main
     </div>)};
 export default AdvancedServicePortfolioDashboard;
 }}}}}}
