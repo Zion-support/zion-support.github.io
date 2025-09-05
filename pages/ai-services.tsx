@@ -43,7 +43,8 @@ import {
   ShoppingCart,
   BookOpen,
   Package,
-  DollarSign
+  DollarSign,
+  Gamepad2
 } from 'lucide-react';
 
 const aiServices = [
@@ -200,6 +201,142 @@ const aiServices = [
     pricing: '$3,000 - $20,000 project',
     category: 'Energy',
     link: 'https://aienergy.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Drug Discovery',
+    description: 'Accelerated drug discovery using machine learning and molecular modeling.',
+    icon: Heart,
+    features: ['Molecular Modeling', 'Drug Design', 'Toxicity Prediction', 'Clinical Trial Optimization'],
+    pricing: '$50,000 - $500,000 project',
+    category: 'Pharmaceutical',
+    popular: true,
+    link: 'https://aidrugdiscovery.ziontechgroup.com'
+  },
+  {
+    title: 'AI Autonomous Vehicle Systems',
+    description: 'Advanced AI systems for autonomous vehicle navigation and safety.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Obstacle Detection', 'Safety Systems'],
+    pricing: '$100,000 - $1,000,000 project',
+    category: 'Autonomous Vehicles',
+    link: 'https://aiautonomous.ziontechgroup.com'
+  },
+  {
+    title: 'AI Climate Change Modeling',
+    description: 'Advanced climate modeling and environmental impact prediction using AI.',
+    icon: Globe,
+    features: ['Climate Modeling', 'Impact Prediction', 'Scenario Analysis', 'Policy Optimization'],
+    pricing: '$25,000 - $200,000 project',
+    category: 'Climate Science',
+    link: 'https://aiclimate.ziontechgroup.com'
+  },
+  {
+    title: 'AI Cybersecurity Threat Hunting',
+    description: 'Advanced threat detection and response using AI and behavioral analysis.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Behavioral Analysis', 'Incident Response', 'Threat Intelligence'],
+    pricing: '$8,000 - $50,000/month',
+    category: 'Cybersecurity',
+    link: 'https://aithreats.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Space Exploration',
+    description: 'AI systems for space mission planning, satellite operations, and data analysis.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Operations', 'Data Analysis', 'Autonomous Navigation'],
+    pricing: '$100,000 - $2,000,000 project',
+    category: 'Space Technology',
+    link: 'https://aispace.ziontechgroup.com'
+  },
+  {
+    title: 'AI Quantum Computing Optimization',
+    description: 'AI algorithms for quantum computing optimization and quantum machine learning.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization', 'Quantum ML', 'Error Correction'],
+    pricing: '$50,000 - $500,000 project',
+    category: 'Quantum Computing',
+    link: 'https://aiquantum.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Agriculture',
+    description: 'Precision agriculture using AI for crop monitoring, yield prediction, and optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$10,000 - $100,000 project',
+    category: 'Agriculture',
+    link: 'https://aiagriculture.ziontechgroup.com'
+  },
+  {
+    title: 'AI Mental Health Assistant',
+    description: 'AI-powered mental health monitoring and therapeutic assistance.',
+    icon: Heart,
+    features: ['Mood Analysis', 'Therapeutic Support', 'Crisis Detection', 'Personalized Care'],
+    pricing: '$5,000 - $30,000/month',
+    category: 'Mental Health',
+    link: 'https://aimentalhealth.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Robotics',
+    description: 'Advanced AI systems for industrial and service robotics applications.',
+    icon: Bot,
+    features: ['Motion Planning', 'Object Recognition', 'Human-Robot Interaction', 'Learning Systems'],
+    pricing: '$25,000 - $200,000 project',
+    category: 'Robotics',
+    link: 'https://airobotics.ziontechgroup.com'
+  },
+  {
+    title: 'AI Blockchain Analytics',
+    description: 'Advanced blockchain analysis and cryptocurrency intelligence using AI.',
+    icon: Network,
+    features: ['Transaction Analysis', 'Anomaly Detection', 'Compliance Monitoring', 'Risk Assessment'],
+    pricing: '$3,000 - $25,000/month',
+    category: 'Blockchain',
+    link: 'https://aiblockchain.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Smart Cities',
+    description: 'Intelligent city management systems using AI for traffic, utilities, and public services.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Utility Management', 'Public Safety', 'Resource Allocation'],
+    pricing: '$50,000 - $500,000 project',
+    category: 'Smart Cities',
+    link: 'https://aismartcities.ziontechgroup.com'
+  },
+  {
+    title: 'AI Content Moderation Suite',
+    description: 'Advanced AI content moderation for text, images, and videos across platforms.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Context Understanding', 'Bias Mitigation', 'Real-time Processing'],
+    pricing: '$2,000 - $15,000/month',
+    category: 'Content Moderation',
+    link: 'https://aicontentmod.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Personalization Engine',
+    description: 'Advanced personalization systems for e-commerce, media, and digital experiences.',
+    icon: Target,
+    features: ['Behavioral Analysis', 'Dynamic Content', 'A/B Testing', 'Real-time Adaptation'],
+    pricing: '$5,000 - $40,000/month',
+    category: 'Personalization',
+    link: 'https://aipersonalization.ziontechgroup.com'
+  },
+  {
+    title: 'AI Voice Cloning & Synthesis',
+    description: 'High-quality voice cloning and text-to-speech synthesis using advanced AI models.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Control', 'Multi-language Support', 'Real-time Synthesis'],
+    pricing: '$2,000 - $15,000/month',
+    category: 'Voice Technology',
+    link: 'https://aivoice.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Game Development',
+    description: 'AI tools for procedural content generation, NPC behavior, and game optimization.',
+    icon: Gamepad2,
+    features: ['Procedural Generation', 'NPC AI', 'Game Balancing', 'Player Analytics'],
+    pricing: '$10,000 - $100,000 project',
+    category: 'Game Development',
+    link: 'https://aigamedev.ziontechgroup.com'
   },
   {
     title: 'AI Customer Insights',

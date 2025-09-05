@@ -33,7 +33,9 @@ import {
   Kanban,
   DollarSign,
   Code,
-  Rocket
+  Rocket,
+  Bot,
+  Sprout
 } from 'lucide-react';
 
 const itServices = [
@@ -198,7 +200,134 @@ const itServices = [
     features: ['Vendor Evaluation', 'Contract Negotiation', 'Performance Monitoring', 'Cost Optimization'],
     pricing: '$2,000 - $15,000/project',
     category: 'Vendor Management',
-    link: 'https://itvendors.ziontechgroup.com'
+    link: 'https://itvendor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered IT Operations',
+    description: 'Intelligent IT operations with AI-driven automation and predictive maintenance.',
+    icon: Bot,
+    features: ['AI Automation', 'Predictive Maintenance', 'Anomaly Detection', 'Self-healing Systems'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'AI Operations',
+    popular: true,
+    link: 'https://aiops.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model with continuous verification and access control.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Risk-based Access'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Security Architecture',
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure design and implementation for low-latency applications.',
+    icon: Cpu,
+    features: ['Edge Infrastructure', 'Latency Optimization', 'Distributed Computing', 'IoT Integration'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Implementation of quantum-resistant cryptographic solutions for future-proof security.',
+    icon: Lock,
+    features: ['Quantum-resistant Algorithms', 'Migration Planning', 'Security Assessment', 'Implementation Support'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Quantum Security',
+    link: 'https://quantumsafe.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, deployment, and optimization for enterprise applications.',
+    icon: Wifi,
+    features: ['5G Network Design', 'Performance Optimization', 'IoT Integration', 'Network Slicing'],
+    pricing: '$25,000 - $150,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain infrastructure design and implementation services.',
+    icon: Network,
+    features: ['Blockchain Architecture', 'Smart Contract Development', 'Node Management', 'Consensus Mechanisms'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform development with device management and data analytics.',
+    icon: Smartphone,
+    features: ['Device Management', 'Data Analytics', 'Real-time Processing', 'Security Integration'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'IoT',
+    link: 'https://iotplatform.ziontechgroup.com'
+  },
+  {
+    title: 'AR/VR Infrastructure',
+    description: 'Augmented and virtual reality infrastructure setup and management services.',
+    icon: Monitor,
+    features: ['AR/VR Setup', 'Performance Optimization', 'Content Management', 'User Experience Design'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'AR/VR',
+    link: 'https://arvrinfra.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Twin Implementation',
+    description: 'Digital twin technology implementation for physical asset monitoring and simulation.',
+    icon: Server,
+    features: ['Asset Modeling', 'Real-time Monitoring', 'Predictive Analytics', 'Simulation Capabilities'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Digital Twin',
+    link: 'https://digitaltwin.ziontechgroup.com'
+  },
+  {
+    title: 'Hyperconverged Infrastructure',
+    description: 'Hyperconverged infrastructure design and implementation for simplified IT management.',
+    icon: HardDrive,
+    features: ['HCI Design', 'Storage Optimization', 'Compute Consolidation', 'Management Simplification'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'HCI',
+    link: 'https://hci.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'ITIL-based service management implementation with automated workflows and reporting.',
+    icon: Settings,
+    features: ['ITIL Implementation', 'Service Catalog', 'Incident Management', 'Change Management'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'ITSM',
+    link: 'https://itsm.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT solutions with energy efficiency optimization and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Tracking', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Green IT',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
+    title: 'IT Risk Management',
+    description: 'Comprehensive IT risk assessment and management framework implementation.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Threat Modeling', 'Vulnerability Management', 'Risk Mitigation'],
+    pricing: '$12,000 - $70,000/project',
+    category: 'Risk Management',
+    link: 'https://itrisk.ziontechgroup.com'
+  },
+  {
+    title: 'Multi-Cloud Orchestration',
+    description: 'Multi-cloud environment orchestration and management across different cloud providers.',
+    icon: Cloud,
+    features: ['Multi-cloud Strategy', 'Workload Orchestration', 'Cost Optimization', 'Unified Management'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Multi-cloud',
+    link: 'https://multicloud.ziontechgroup.com'
   },
   {
     title: 'IT Performance Monitoring',

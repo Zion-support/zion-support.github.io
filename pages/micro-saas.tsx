@@ -199,6 +199,133 @@ const microSaaSProducts = [
     link: 'https://meetingscheduler.ziontechgroup.com'
   },
   {
+    title: 'AI Code Review Assistant',
+    description: 'Automated code review with security analysis, performance optimization, and best practices enforcement.',
+    icon: Code,
+    features: ['Security Analysis', 'Performance Optimization', 'Code Quality Metrics', 'Automated Suggestions'],
+    pricing: '$199 - $999/month',
+    category: 'Development',
+    popular: true,
+    link: 'https://codeassistant.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Auditor',
+    description: 'Automated smart contract security auditing with vulnerability detection and gas optimization.',
+    icon: Shield,
+    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checks', 'Audit Reports'],
+    pricing: '$499 - $2,999/project',
+    category: 'Blockchain',
+    link: 'https://contractauditor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered SEO Optimizer',
+    description: 'Advanced SEO analysis and optimization with AI-driven content suggestions and ranking predictions.',
+    icon: Search,
+    features: ['AI Content Suggestions', 'Ranking Predictions', 'Technical SEO Audit', 'Competitor Analysis'],
+    pricing: '$99 - $499/month',
+    category: 'SEO',
+    link: 'https://seooptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'Real Estate Investment Analyzer',
+    description: 'AI-powered real estate investment analysis with market predictions and ROI calculations.',
+    icon: Building,
+    features: ['Market Analysis', 'ROI Calculations', 'Risk Assessment', 'Investment Recommendations'],
+    pricing: '$149 - $799/month',
+    category: 'Real Estate',
+    link: 'https://reianalyzer.ziontechgroup.com'
+  },
+  {
+    title: 'Supply Chain Visibility Platform',
+    description: 'End-to-end supply chain tracking with predictive analytics and risk management.',
+    icon: Network,
+    features: ['Real-time Tracking', 'Predictive Analytics', 'Risk Management', 'Supplier Performance'],
+    pricing: '$299 - $1,499/month',
+    category: 'Supply Chain',
+    link: 'https://supplychain.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Automated legal document analysis with contract review and compliance checking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Compliance Checking', 'Risk Assessment', 'Document Comparison'],
+    pricing: '$399 - $1,999/month',
+    category: 'Legal Tech',
+    link: 'https://legalanalyzer.ziontechgroup.com'
+  },
+  {
+    title: 'Healthcare Appointment Optimizer',
+    description: 'AI-driven healthcare scheduling optimization with patient flow management and resource allocation.',
+    icon: Heart,
+    features: ['Patient Flow Optimization', 'Resource Allocation', 'Wait Time Reduction', 'Capacity Planning'],
+    pricing: '$199 - $999/month',
+    category: 'Healthcare',
+    link: 'https://healthcareoptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'Cryptocurrency Portfolio Tracker',
+    description: 'Advanced crypto portfolio management with AI-powered insights and automated trading signals.',
+    icon: TrendingUp,
+    features: ['Portfolio Tracking', 'AI Insights', 'Trading Signals', 'Tax Reporting'],
+    pricing: '$29 - $149/month',
+    category: 'Crypto',
+    link: 'https://cryptotracker.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Job Matching Platform',
+    description: 'Intelligent job matching with skill analysis and career path recommendations.',
+    icon: Users,
+    features: ['Skill Analysis', 'Career Recommendations', 'Job Matching', 'Salary Insights'],
+    pricing: '$99 - $499/month',
+    category: 'HR Tech',
+    link: 'https://jobmatcher.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home Energy Optimizer',
+    description: 'AI-driven energy management for smart homes with cost optimization and sustainability tracking.',
+    icon: Home,
+    features: ['Energy Optimization', 'Cost Reduction', 'Sustainability Tracking', 'Smart Device Control'],
+    pricing: '$19 - $99/month',
+    category: 'Smart Home',
+    link: 'https://energyoptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Learning Management System',
+    description: 'Personalized learning platform with adaptive content and progress tracking.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Progress Tracking', 'Content Personalization', 'Assessment Tools'],
+    pricing: '$49 - $299/month',
+    category: 'EdTech',
+    link: 'https://learningplatform.ziontechgroup.com'
+  },
+  {
+    title: 'Fleet Management & Route Optimizer',
+    description: 'AI-powered fleet management with route optimization and fuel efficiency tracking.',
+    icon: Car,
+    features: ['Route Optimization', 'Fuel Efficiency', 'Driver Performance', 'Maintenance Scheduling'],
+    pricing: '$199 - $999/month',
+    category: 'Fleet Management',
+    link: 'https://fleetmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Customer Churn Predictor',
+    description: 'Predictive analytics to identify at-risk customers and recommend retention strategies.',
+    icon: Target,
+    features: ['Churn Prediction', 'Retention Strategies', 'Customer Segmentation', 'Risk Scoring'],
+    pricing: '$299 - $1,499/month',
+    category: 'Customer Analytics',
+    link: 'https://churnpredictor.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation with testing, deployment, and monitoring tools.',
+    icon: Code,
+    features: ['No-code Builder', 'Testing Suite', 'Deployment Tools', 'Monitoring Dashboard'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain Development',
+    link: 'https://contractbuilder.ziontechgroup.com'
+  },
+  {
     title: 'Code Review Assistant',
     description: 'AI-powered code review with automated suggestions and security vulnerability detection.',
     icon: Code,
