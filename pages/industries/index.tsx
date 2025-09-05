@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-import Layout from '../../components/Layout';
-import Layout from '../components/Layout';
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
