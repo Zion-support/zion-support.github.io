@@ -1,33 +1,23 @@
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
-
-=======
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
->>>>>>> main
-
 const features = [;
   {}
     icon: Cloud,
     title: 'Cloud Migration,',
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',
-=======
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
     description: 'Seamless migration to cloud platforms with zero downtime'
->>>>>>> main
   },
   {}
     icon: Server,
-<<<<<<< HEAD
     title: 'Infrastructure as Code,',
     description: 'Automate infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.',
   },
@@ -47,7 +37,6 @@ const features = [
     description: 'Build automated deployment pipelines for faster, more reliable software delivery.',
   }
 ;];
-
 const services = [;
   'Cloud Architecture Design',',
   'Container Orchestration (Kubernetes)',',
@@ -58,7 +47,6 @@ const services = [;
   'Cost Optimization',',
   'Security Hardening'';
 ;];
-
 export default function CloudDevOpsPage() {
   return (;
     <Layout );
@@ -92,7 +80,6 @@ export default function CloudDevOpsPage() {
             </div>;
           </div>;
         </section>;
-
         {/* Features Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -105,7 +92,6 @@ export default function CloudDevOpsPage() {
                 that modernize your infrastructure and accelerate your development cycles.;
               </p>;
             </div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {features.map((feature, index) => (,
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
@@ -119,7 +105,6 @@ export default function CloudDevOpsPage() {
             </div>,
           </div>;
         </section>;
-
         {/* Services List */}
         <section className="py-20 bg-gray-800/30">"
           <div className="container mx-auto px-4">";
@@ -138,7 +123,6 @@ export default function CloudDevOpsPage() {
             </div>;
           </div>;
         </section>;
-
         {/* CTA Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -163,7 +147,6 @@ export default function CloudDevOpsPage() {
         </section>;
       </div>;
     </Layout>;
-=======
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
   },
@@ -188,7 +171,6 @@ export default function CloudDevOpsPage() {
     description: '24/7 monitoring and proactive alerting systems'
   }
 ];
-
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -197,7 +179,6 @@ const benefits = [
   'Better disaster recovery capabilities',
   'Faster time-to-market for applications'
 ];
-
 export default function CloudDevOpsServices() {
   return (
     <Layout
@@ -228,7 +209,6 @@ export default function CloudDevOpsServices() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -241,7 +221,6 @@ export default function CloudDevOpsServices() {
                 and accelerate your development processes.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -259,7 +238,6 @@ export default function CloudDevOpsServices() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -295,7 +273,6 @@ export default function CloudDevOpsServices() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -318,6 +295,5 @@ export default function CloudDevOpsServices() {
         </section>
       </div>
     </Layout>
->>>>>>> main
   );
 }

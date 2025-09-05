@@ -1,7 +1,6 @@
 import React from 'react',;',';';
     ;
 import {SEO } from '@/components/SEO';
-<<<<<<< HEAD
 export default function ChatAssistant("props": "any) {return (;
     <div className="min-h-screen bg-white">;
       <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />;
@@ -10,7 +9,6 @@ export default function ChatAssistant("props": "any) {return (;
         <p className="text-gray-300 text-lg">;
           Professional ChatAssistant services to help your business grow.;
         </p>;
-=======
 export default function ChatAssistant(props: any) {return (
         <div className="min-h-screen bg-white">
       <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />
@@ -19,7 +17,6 @@ export default function ChatAssistant(props: any) {return (
         <p className="text-gray-300 text-lg">
           Professional ChatAssistant services to help your business grow.
         </p>
->>>>>>> main
       </div>';
     </div>';';
   );';';';

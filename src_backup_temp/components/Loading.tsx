@@ -24,7 +24,6 @@ export default function Loading("props": "any) {';';';
         <p className=`text-gray-600 text-sm font-medium`}>{text}</p>;
       );
       )}
-<<<<<<< HEAD
     </div>;
   );
 }
@@ -35,7 +34,6 @@ export default function Loading("props": "any) {';';';
   if (fullScreen) {;
     return (;
     <div className="min-h-screen bg-white">;
-=======
     </div>
     );
 }
@@ -46,12 +44,10 @@ export default function Loading("props": "any) {';';';
   if (fullScreen) {
     return (
         <div className="min-h-screen bg-white">
->>>>>>> main
         {content}
       </div>;
     );
   }
-<<<<<<< HEAD
   return (;
     <div className="min-h-screen bg-white">;
       {content}
@@ -73,7 +69,6 @@ export function SkeletonText("props": "any) {;
     <div className="min-h-screen bg-white">;
       {Array.from({ "length": line s';
   "}).map((_, i) => (';';
-=======
   return (
         <div className="min-h-screen bg-white">
       {content}
@@ -95,7 +90,6 @@ export function SkeletonText(props: any) {
         <div className="min-h-screen bg-white">
       {Array.from({ length: line s';
   }).map((_, i) => (';';
->>>>>>> main
         <div key={i}';';';
           className={`h-3 bg-gray-200 rounded ${',';';
     ';';';
@@ -104,13 +98,10 @@ export function SkeletonText(props: any) {
         ></di></div>;
       ));
       )}
-<<<<<<< HEAD
     </div>;
   );
-=======
     </div>
     );
->>>>>>> main
 }';
     </div>';';
   );';';';

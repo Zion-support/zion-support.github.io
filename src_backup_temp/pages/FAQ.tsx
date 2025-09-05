@@ -1,11 +1,9 @@
-<<<<<<< HEAD:src/pages/FAQ.tsx
+:src/pages/FAQ.tsx
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, HelpCircle, Search } from 'lucide-react';
-
 export function FAQ() {
   const [openItems, setOpenItems] = useState<number[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
-
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
@@ -13,7 +11,6 @@ export function FAQ() {
         : [...prev, index]
     );
   };
-
   const faqData = [
     {
       category: 'General',
@@ -121,7 +118,6 @@ export function FAQ() {
       ]
     }
   ];
-
   const filteredData = faqData.map(category => ({
     ...category,
     questions: category.questions.filter(q => 
@@ -129,7 +125,6 @@ export function FAQ() {
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.questions.length > 0);
-
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
@@ -146,7 +141,6 @@ export function FAQ() {
           </div>
         </div>
       </section>
-
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Search */}
         <div className="mb-8">
@@ -161,7 +155,6 @@ export function FAQ() {
             />
           </div>
         </div>
-
         {/* FAQ Categories */}
         {filteredData.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-12">
@@ -169,12 +162,10 @@ export function FAQ() {
               <HelpCircle className="w-6 h-6 mr-3 text-blue-400" />
               {category.category}
             </h2>
-            
             <div className="space-y-4">
               {category.questions.map((item, itemIndex) => {
                 const globalIndex = categoryIndex * 100 + itemIndex;
                 const isOpen = openItems.includes(globalIndex);
-                
                 return (
                   <div key={itemIndex} className="bg-gray-800/50 rounded-xl border border-gray-700">
                     <button
@@ -188,7 +179,6 @@ export function FAQ() {
                         <ChevronDown className="w-5 h-5 text-gray-400" />
                       )}
                     </button>
-                    
                     {isOpen && (
                       <div className="px-6 pb-4">
                         <p className="text-gray-300 leading-relaxed">{item.answer}</p>
@@ -200,7 +190,6 @@ export function FAQ() {
             </div>
           </div>
         ))}
-
         {/* No Results */}
         {filteredData.length === 0 && (
           <div className="text-center py-12">
@@ -217,7 +206,6 @@ export function FAQ() {
             </button>
           </div>
         )}
-
         {/* Contact CTA */}
         <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center">
           <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
@@ -243,7 +231,6 @@ export function FAQ() {
     </div>
   );
 }
-=======
 import React from 'react';
 ;
 const "FAQ": "React.FC = () => {;
@@ -260,4 +247,3 @@ const "FAQ": "React.FC = () => {;
 "};
 ;
 export default FAQ;
->>>>>>> main:src_backup_temp/pages/FAQ.tsx

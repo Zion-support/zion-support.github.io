@@ -1,5 +1,4 @@
 : "src/context/auth/useAuthState.tsx;
-
 interface User {;
   "id": string;
   "email": string;
@@ -24,8 +23,6 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
   const [isLoading, setIsLoading] = useState<typeof true>(true);
   const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0);
   const [tokens, setTokens] = useState<any>({;
-
-<<<<<<< HEAD
     "accessToken": "nul l",;
     "refreshToken": "nul l;
   "});
@@ -36,37 +33,29 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
     // Check for existing auth state on mount;
 : "src/context/auth/useAuthState.tsx;
     ;
-=======
     accessToken: nul l,
     refreshToken: nul l
   }
     );
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     // Check for existing auth state on mount
 :src/context/auth/useAuthState.tsx
-    
->>>>>>> main
         if(typeof window !== 'null') {;
           ;
           if(auth) {;
-
         if(typeof window !== 'null') {;
           ;
           if(auth) {;
             ;
             if(parsed.user && parsed.token) {;
-
               setUser(parsed.user);
               setTokens({;
-
                 "accessToken": parse d.token",;
 : "src/context/auth/useAuthState.tsx;
                 "refreshToken": parse d.refreshToken || null';
         // // // // // // // // console.error('Error checking auth "state":'", error)} finally {;
-
         setIsLoading(false)})}
                 "refreshToken": "parse d.refreshToken || null;
         // // // // // // // console.error('Error checking auth "state":'", error)} finally {;
@@ -74,16 +63,13 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
           }
         }
       } catch(error) {;
-
         // console.error('Error checking auth "state":', error)} finally {;
-
         setIsLoading(false)}
     };
 ;
     checkAuthState()}, []);
 ;
   return {;
-
     user,;
     setUser,;
     isLoading,;

@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
   "fixedFiles": 31,
@@ -38,8 +37,6 @@
     "/workspace/src/pages/SavedTalentsPage.js.jsx"
   ],
   "errorList": []
-=======
-<<<<<<< HEAD
   "timestamp": "2025-09-04T22:00:00.550Z",
   "fixedFiles": 123,
   "errors": 0,
@@ -169,7 +166,6 @@
     "lib/utils.ts"
   ],
   "errorDetails": []
-=======
   "timestamp": "2025-09-05T02:57:49.742Z",
   "processedFiles": 8556,
   "fixedFiles": 6729,
@@ -6906,6 +6902,4 @@
     "zion_academy/static/js/script.jsx"
   ],
   "errorList": []
->>>>>>> main
->>>>>>> main
 }

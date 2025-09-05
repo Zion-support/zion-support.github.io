@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
-<<<<<<< HEAD
 import Layout from "../../components/Layout";";
->>>>>>> main
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
-
-
 export default function CybersecurityPage() {
   const securityServices = [;
     {}
@@ -36,7 +30,6 @@ export default function CybersecurityPage() {
       features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]"
     }
 ;  ];
-
   return (;
     <Layout );
       title="Cybersecurity Services - Zion Tech Group"";
@@ -62,7 +55,6 @@ export default function CybersecurityPage() {
             </motion.div>;
           </div>;
         </section>;
-
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -101,7 +93,6 @@ export default function CybersecurityPage() {
             </div>,
           </div>;
         </section>;
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
@@ -123,10 +114,8 @@ export default function CybersecurityPage() {
         </section>;
       </div>;
     </Layout>;
-=======
 import Layout from '../../components/Layout';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
-
 const features = [
   {
     icon: Shield,
@@ -159,7 +148,6 @@ const features = [
     description: 'Employee security awareness and training programs'
   }
 ];
-
 const benefits = [
   'Protection against cyber threats and attacks',
   'Compliance with industry regulations',
@@ -168,7 +156,6 @@ const benefits = [
   'Lower insurance costs and liability',
   'Peace of mind with 24/7 monitoring'
 ];
-
 export default function CybersecurityServices() {
   return (
     <Layout
@@ -199,7 +186,6 @@ export default function CybersecurityServices() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -212,7 +198,6 @@ export default function CybersecurityServices() {
                 from evolving cyber threats and ensure regulatory compliance.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -230,7 +215,6 @@ export default function CybersecurityServices() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -266,7 +250,6 @@ export default function CybersecurityServices() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -289,6 +272,5 @@ export default function CybersecurityServices() {
         </section>
       </div>
     </Layout>
->>>>>>> main
   );
 }

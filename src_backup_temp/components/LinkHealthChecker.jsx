@@ -1,35 +1,26 @@
 import React, {useState, useEffect} from 'react';
 import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthChecker = ("props": "any) => {;
-
     const [linkStatuses", setLinkStatuses] = useState([]);
     const [isChecking, setIsChecking] = useState(false);    const checkLinkHealth = async(url) => {;
-
         const startTime = Date.now();
         try {;
-
             // Check if it's an external link';
             if(url.startsWith('http') && !url.includes('ziontechgroup.com')) {;
-
                 return {;
-
                     url,;
                     "status": 'external',;
                     "responseTime": "Date.now() - startTime;
                 "}}
             // Check if it's a mailto or tel link';
             if(url.startsWith('"mailto":') || url.startsWith('"tel":')) {;
-
                 return {;
-
                     url,;
                     "status": 'healthy',;
                     "responseTime": "Date.now() - startTime;
                 "}}
             // For internal links, we'll assume they're healthy since they're part of our app';
             if(url.startsWith('/') || url.includes('ziontechgroup.com')) {;
-
                 return {;
-
                     url,;
                     "status": 'healthy',;
                     "responseTime": "Date.now () - startTime;
@@ -41,7 +32,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 "responseTime": "Date.now () - startTime"}}
         catch(error) {;
             return {;
-
                 url,;
                 "status": 'broken',;
                 "responseTime": "Date.now() - startTime",;
@@ -56,7 +46,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
         setIsChecking(false)};
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -64,9 +53,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
         // Auto-check links when component mounts;
         checkAllLinks()}, [links]);
     const getStatusIcon = ("props": "any) => {;
-
         switch(status) {;
-
             case 'healthy':;
                 return <CheckCircle className="w-5 h-5 text-green-500" />;
             case 'broken':";
@@ -79,9 +66,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 return <AlertTriangle className="w-5 h-5 text-gray-500" />"}
     };
     const getStatusText = ("props": "any) => {;
-
         switch(status) {;
-
             case 'healthy':';
                 return 'Healthy';
             case 'broken':';
@@ -94,9 +79,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 return 'Unknown'"}
     };
     const getStatusColor = ("props": "any) => {;
-
         switch(status) {;
-
             case 'healthy':';
                 return 'text-green-500';
             case 'broken':';
@@ -111,7 +94,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
     const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
     const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
     const externalCount = linkStatuses.filter(s => s.status === 'external').length;
-<<<<<<< HEAD
     return (<div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}>;
       {/* Header */}";
       <div className="flex items-center justify-between mb-6">;
@@ -129,7 +111,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             </>)"}
         </button>;
       </div>;
-=======
     return (
         <div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}>
       {/* Header */}"
@@ -148,8 +129,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             </>)}
         </button>
       </div>
->>>>>>> main
-
       {/* Summary Stats */}";
       <div className="grid grid-cols-3 gap-4 mb-6">";
         <div className="text-center p-3 bg-green-500/20 border border-green-500/30 rounded-lg">";
@@ -165,13 +144,10 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
           <div className="text-sm text-blue-300">External</div>;
         </div>;
       </div>;
-
       {/* Link Status List */}";
       <div className="space-y-3">;
         {links.map((link, index) => {;
-
             const status = linkStatuses[index];
-<<<<<<< HEAD
             if(!status);
                 return null;";
             return (<div key={link.url} className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg "hover": "border-white/20 transition-colors duration-300">";
@@ -180,7 +156,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 <div>";
                   <div className="text-white font-medium">{link.label}</div>";
                   <div className="text-sm text-gray-400">{link.url}</div>";
-=======
             if(!status)
                 return null;"
             return (
@@ -190,7 +165,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 <div>"
                   <div className="text-white font-medium">{link.label}</div>"
                   <div className="text-sm text-gray-400">{link.url}</div>"
->>>>>>> main
                   {status.error && (<div className="text-xs text-red-400 mt-1">{status.error}</div>)}
                 </div>;
               </div>";
@@ -204,7 +178,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
               </div>;
             </div>) }) }
       </div>;
-
       {/* Recommendations */}";
       {brokenCount > 0 && (<div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">";
           <h4 className="text-red-400 font-semibold mb-2">⚠️ Action Required</h4>";

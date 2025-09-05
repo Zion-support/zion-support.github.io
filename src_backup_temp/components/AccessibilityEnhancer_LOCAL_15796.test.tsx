@@ -1,21 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { render, screen  } from '@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796, () => {it(renders without crashing, () => {render(<AccessibilityEnhancer_LOCAL_15796  />)';
     expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})';';
   it(displays expected content';, () => {
     render(<AccessibilityEnhancer_LOCAL_15796  />)';
     // Add specific test assertions based on component content})});';;';
-=======
 import { render,screen } from '@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_LOCAL_15796 />) expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()}) it(displays expected content';,() => { render(<AccessibilityEnhancer_LOCAL_15796 />)
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 import { render,screen } from &apos;@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_LOCAL_15796 />)&apos;; expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})&apos;;&apos;; it(displays expected content&apos;;,() => { render(<AccessibilityEnhancer_LOCAL_15796 />)&apos;;
-=======
-<<<<<<< HEAD
 const { render,screen } from "@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_LOCAL_15796 />)"; expect(screen.getByRole(main) | screen.getByText(/.*/)).toBeInTheDocument()})";"
   "; it(displays expected content";,() => { render(<AccessibilityEnhancer_LOCAL_15796 />)";''"
-=======
 import { render,screen } from &apos;@testing-library/reactimport AccessibilityEnhancer_LOCAL_15796 from ./AccessibilityEnhancer_LOCAL_15796describe(AccessibilityEnhancer_LOCAL_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_LOCAL_15796 />)&apos;; expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})';'; it(displays expected content';,() => { render(<AccessibilityEnhancer_LOCAL_15796 />)';
->>>>>>> main
->>>>>>> main
->>>>>>> main

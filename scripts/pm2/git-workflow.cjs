@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class GitWorkflowAutomator {
   constructor() {
     this.projectRoot = process.cwd();
@@ -11,18 +9,15 @@ class GitWorkflowAutomator {
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json');
     this.startTime = Date.now();
   }
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
       console.error('Error writing to log file:', error.message);
     }
   }
-
   async getCurrentBranch() {
     try {
       const branch = execSync('git branch --show-current', {
@@ -35,14 +30,12 @@ class GitWorkflowAutomator {
       return null;
     }
   }
-
   async getBranchList() {
     try {
       const branches = execSync('git branch -a', {
         cwd: this.projectRoot,
         encoding: 'utf8'
       });
-      
       return branches.split('\n')
         .map(line => line.trim())
         .filter(line => line && !line.includes('HEAD'))
@@ -53,11 +46,9 @@ class GitWorkflowAutomator {
       return [];
     }
   }
-
   async getStaleBranches() {
     try {
       this.log('🧹 Checking for stale branches...');
-      
       // Get merged branches
       const mergedBranches = execSync('git branch --merged main', {
         cwd: this.projectRoot,
@@ -66,7 +57,6 @@ class GitWorkflowAutomator {
         .map(line => line.trim())
         .filter(line => line && !line.includes('main') && !line.includes('master'))
         .map(line => line.replace(/^\*?\s*/, ''));
-      
       // Get remote branches that are merged
       const remoteMerged = execSync('git branch -r --merged origin/main', {
         cwd: this.projectRoot,
@@ -75,26 +65,21 @@ class GitWorkflowAutomator {
         .map(line => line.trim())
         .filter(line => line && !line.includes('origin/main') && !line.includes('origin/HEAD'))
         .map(line => line.replace(/^origin\//, ''));
-      
       return [...new Set([...mergedBranches, ...remoteMerged])];
     } catch (error) {
       this.log(`Error getting stale branches: ${error.message}`);
       return [];
     }
   }
-
   async cleanupBranches() {
     try {
       if (process.env.AUTO_BRANCH_CLEANUP !== 'true') {
         return { cleaned: 0, errors: [] };
       }
-      
       this.log('🧹 Cleaning up stale branches...');
-      
       const staleBranches = await this.getStaleBranches();
       let cleaned = 0;
       const errors = [];
-      
       for (const branch of staleBranches) {
         try {
           // Delete local branch
@@ -102,7 +87,6 @@ class GitWorkflowAutomator {
             cwd: this.projectRoot,
             stdio: 'pipe'
           });
-          
           // Delete remote branch
           try {
             execSync(`git push origin --delete ${branch}`, {
@@ -112,7 +96,6 @@ class GitWorkflowAutomator {
           } catch (remoteError) {
             // Remote branch might not exist
           }
-          
           cleaned++;
           this.log(`Deleted branch: ${branch}`);
         } catch (error) {
@@ -120,46 +103,37 @@ class GitWorkflowAutomator {
           this.log(`Error deleting branch ${branch}: ${error.message}`);
         }
       }
-      
       return { cleaned, errors };
     } catch (error) {
       this.log(`Branch cleanup failed: ${error.message}`);
       return { cleaned: 0, errors: [{ branch: 'unknown', error: error.message }] };
     }
   }
-
   async checkMergeConflicts() {
     try {
       this.log('🔍 Checking for merge conflicts...');
-      
       const status = execSync('git status --porcelain', {
         cwd: this.projectRoot,
         encoding: 'utf8'
       });
-      
       const conflictFiles = status.split('\n')
         .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
         .map(line => line.trim().split(/\s+/)[1]);
-      
       return conflictFiles;
     } catch (error) {
       this.log(`Error checking merge conflicts: ${error.message}`);
       return [];
     }
   }
-
   async resolveConflicts() {
     try {
       if (process.env.CONFLICT_RESOLUTION !== 'true') {
         return { resolved: 0, errors: [] };
       }
-      
       this.log('🔧 Attempting to resolve conflicts...');
-      
       const conflictFiles = await this.checkMergeConflicts();
       let resolved = 0;
       const errors = [];
-      
       for (const file of conflictFiles) {
         try {
           // Try to resolve conflicts automatically
@@ -167,12 +141,10 @@ class GitWorkflowAutomator {
             cwd: this.projectRoot,
             stdio: 'pipe'
           });
-          
           execSync(`git add ${file}`, {
             cwd: this.projectRoot,
             stdio: 'pipe'
           });
-          
           resolved++;
           this.log(`Resolved conflicts in: ${file}`);
         } catch (error) {
@@ -180,18 +152,15 @@ class GitWorkflowAutomator {
           this.log(`Error resolving conflicts in ${file}: ${error.message}`);
         }
       }
-      
       return { resolved, errors };
     } catch (error) {
       this.log(`Conflict resolution failed: ${error.message}`);
       return { resolved: 0, errors: [{ file: 'unknown', error: error.message }] };
     }
   }
-
   async checkPullRequests() {
     try {
       this.log('📋 Checking pull requests...');
-      
       // This would typically use GitHub API, but for now we'll check local branches
       const branches = await this.getBranchList();
       const featureBranches = branches.filter(branch => 
@@ -199,7 +168,6 @@ class GitWorkflowAutomator {
         branch.includes('fix/') || 
         branch.includes('hotfix/')
       );
-      
       return {
         total: featureBranches.length,
         branches: featureBranches
@@ -209,62 +177,51 @@ class GitWorkflowAutomator {
       return { total: 0, branches: [] };
     }
   }
-
   async autoMerge() {
     try {
       if (process.env.AUTO_MERGE_SAFE !== 'true') {
         return { merged: 0, errors: [] };
       }
-      
       this.log('🔄 Attempting safe auto-merge...');
-      
       const currentBranch = await this.getCurrentBranch();
       if (currentBranch === 'main' || currentBranch === 'master') {
         return { merged: 0, errors: [] };
       }
-      
       let merged = 0;
       const errors = [];
-      
       try {
         // Switch to main branch
         execSync('git checkout main', {
           cwd: this.projectRoot,
           stdio: 'pipe'
         });
-        
         // Pull latest changes
         execSync('git pull origin main', {
           cwd: this.projectRoot,
           stdio: 'pipe'
         });
-        
         // Merge feature branch
         execSync(`git merge ${currentBranch}`, {
           cwd: this.projectRoot,
           stdio: 'pipe'
         });
-        
         // Push changes
         execSync('git push origin main', {
           cwd: this.projectRoot,
           stdio: 'pipe'
         });
-        
         merged = 1;
         this.log(`Successfully merged ${currentBranch} into main`);
       } catch (error) {
         errors.push({ branch: currentBranch, error: error.message });
         this.log(`Error merging ${currentBranch}: ${error.message}`);
       }
-      
       return { merged, errors };
     } catch (error) {
       this.log(`Auto-merge failed: ${error.message}`);
       return { merged: 0, errors: [{ branch: 'unknown', error: error.message }] };
     }
   }
-
   generateReport(branchCleanup, conflictResolution, pullRequests, autoMerge) {
     const report = {
       timestamp: new Date().toISOString(),
@@ -281,13 +238,10 @@ class GitWorkflowAutomator {
       autoMerge,
       recommendations: this.generateRecommendations(branchCleanup, conflictResolution, pullRequests, autoMerge)
     };
-    
     return report;
   }
-
   generateRecommendations(branchCleanup, conflictResolution, pullRequests, autoMerge) {
     const recommendations = [];
-    
     if (branchCleanup.cleaned > 0) {
       recommendations.push({
         type: 'cleanup',
@@ -296,7 +250,6 @@ class GitWorkflowAutomator {
         action: 'Regular branch cleanup helps maintain repository hygiene'
       });
     }
-    
     if (conflictResolution.resolved > 0) {
       recommendations.push({
         type: 'conflicts',
@@ -305,7 +258,6 @@ class GitWorkflowAutomator {
         action: 'Review resolved conflicts to ensure they are correct'
       });
     }
-    
     if (pullRequests.total > 5) {
       recommendations.push({
         type: 'pull-requests',
@@ -314,7 +266,6 @@ class GitWorkflowAutomator {
         action: 'Consider reviewing and merging pending pull requests'
       });
     }
-    
     if (autoMerge.merged > 0) {
       recommendations.push({
         type: 'merge',
@@ -323,55 +274,42 @@ class GitWorkflowAutomator {
         action: 'Verify merged changes are working correctly'
       });
     }
-    
     return recommendations;
   }
-
   async saveReport(report) {
     try {
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {
         fs.mkdirSync(reportDir, { recursive: true });
       }
-      
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved to: ${this.reportFile}`);
     } catch (error) {
       this.log(`Error saving report: ${error.message}`);
     }
   }
-
   async run() {
     this.log('🔄 Starting Git Workflow Automator...');
     this.log(`Project root: ${this.projectRoot}`);
-    
     try {
       // Create logs directory if it doesn't exist
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
       }
-      
       // Clean up branches
       const branchCleanup = await this.cleanupBranches();
-      
       // Resolve conflicts
       const conflictResolution = await this.resolveConflicts();
-      
       // Check pull requests
       const pullRequests = await this.checkPullRequests();
-      
       // Auto-merge if safe
       const autoMerge = await this.autoMerge();
-      
       // Generate report
       const report = this.generateReport(branchCleanup, conflictResolution, pullRequests, autoMerge);
-      
       // Save report
       await this.saveReport(report);
-      
       const duration = Date.now() - this.startTime;
-      
       // Log summary
       this.log('\n📊 Git Workflow Report:');
       this.log(`Branches cleaned: ${report.summary.branchesCleaned}`);
@@ -380,7 +318,6 @@ class GitWorkflowAutomator {
       this.log(`Branches merged: ${report.summary.branchesMerged}`);
       this.log(`Total errors: ${report.summary.totalErrors}`);
       this.log(`Duration: ${duration}ms`);
-      
       if (report.recommendations.length > 0) {
         this.log('\n💡 Recommendations:');
         report.recommendations.forEach(rec => {
@@ -388,23 +325,18 @@ class GitWorkflowAutomator {
           this.log(`    Action: ${rec.action}`);
         });
       }
-      
     } catch (error) {
       this.log(`❌ Error running git workflow automator: ${error.message}`);
       process.exit(1);
     }
   }
 }
-
 // Run the git workflow automator
 const automator = new GitWorkflowAutomator();
 automator.run().catch(error => {
   process.exit(1);
 });
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class GitWorkflow { constructor() {" this.processName = process.env.PM2_PROCESS_NAME | "git-workflow";" this.autoBranchCleanup = process.env.AUTO_BRANCH_CLEANUP === "true";" this.autoMergeSafe = process.env.AUTO_MERGE_SAFE === "true";" this.conflictResolution = process.env.CONFLICT_RESOLUTION === "true";" this.branchStrategy = process.env.BRANCH_STRATEGY | "gitflow";" this.logFile = path.join(__dirname, "././logs/pm2/git-workflow.log"); this.ensureLogDir(); } ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile, logMessage); } async getCurrentBranch() { try {" const branch = execSync("git branch --show-current", { "" encoding: "utf8","" stdio: "pipe" }).trim(); return branch; } catch (error) {"` this.log(`Failed to get current branch: ${error.message}`); return null; } } async getBranches() { try {" const branches = execSync("git branch -a", { "" encoding: "utf8","" stdio: "pipe"" }).split("\n") .map(b => b.trim())" .filter(b => b && !b.startsWith("*"))" .map(b => b.replace(/^remotes\/origin\/, "")); return [.new Set(branches)]; / Remove duplicates } catch (error) {"` this.log(`Failed to get branches: ${error.message}`); return []; } } async getMergedBranches() { try {" const mergedBranches = execSync("git branch --merged", { "" encoding: "utf8","" stdio: "pipe"" }).split("\n") .map(b => b.trim())" .filter(b => b && !b.startsWith("*") && b !== "main" && b !== "master"); return mergedBranches; } catch (error) {"` this.log(`Failed to get merged branches: ${error.message}`); return []; } } async cleanupBranches() { if (!this.autoBranchCleanup) {" this.log("Branch cleanup disabled");" return { cleaned: false }; } try {" this.log("Starting branch cleanup."); const mergedBranches = await this.getMergedBranches(); const deletedBranches = []; for (const branch of mergedBranches) { try { / Skip protected branches" if (["main", "master", "develop", "dev"].includes(branch)) { continue; }"` this.log(`Deleting merged branch: ${branch}`);""` execSync(`git branch -d ${branch}`, { stdio: "pipe" }); deletedBranches.push(branch); } catch (error) {` this.log(`Failed to delete branch ${branch}: ${error.message}`); } }` this.log(`Cleaned up ${deletedBranches.length} branches`); return {" cleaned: true, deletedBranches," totalDeleted: deletedBranches.length }; } catch (error) {"` this.log(`Branch cleanup failed: ${error.message}`);" return { cleaned: false, error: error.message }; } } async checkForConflicts() { try {" this.log("Checking for merge conflicts."); / Check if there are any unmerged files" const unmergedFiles = execSync("git diff --name-only --diff-filter=U", { "" encoding: "utf8","" stdio: "pipe" }).trim(); if (unmergedFiles) {" const files = unmergedFiles.split("\n").filter(f => f.trim());""` this.log(`Found merge conflicts in ${files.length} files: ${files.join(", ")}`);" return { hasConflicts: true, files }; }" this.log("No merge conflicts found");" return { hasConflicts: false, files: [] }; } catch (error) {"` this.log(`Conflict check failed: ${error.message}`);" return { hasConflicts: false, error: error.message }; } } async resolveConflicts() { if (!this.conflictResolution) {" this.log("Conflict resolution disabled");" return { resolved: false }; } try { const conflictCheck = await this.checkForConflicts(); if (!conflictCheck.hasConflicts) {" this.log("No conflicts to resolve");"" return { resolved: true, message: "No conflicts found" }; }` this.log(`Resolving conflicts in ${conflictCheck.files.length} files.`); " / For automated conflict resolution, we"ll use a simple strategy / In practice, you might want more sophisticated conflict resolution for (const file of conflictCheck.files) { try {` this.log(`Resolving conflicts in ${file}.`); / Read the file and resolve conflicts (simplified approach)" let content = fs.readFileSync(file, "utf8"); / Remove conflict markers and keep both versions (simplified)""`"`
-=======
 #!/usr/bin/env node;
 /**
  * PM2 Git Workflow Service;
@@ -432,13 +364,10 @@ class GitWorkflow {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
-=======
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
->>>>>>> main
     fs.appendFileSync(this.logFile, logMessage);
   };
   async getCurrentBranch() {}
@@ -555,17 +484,12 @@ class GitWorkflow {}
           this.log(`Resolving conflicts in ${file}...`);
           // Read the file and resolve conflicts (simplified approach);
           let content = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD
-          
           // Remove conflict markers and keep both versions (simplified)
-          
-=======
           // Remove conflict markers and keep both versions (simplified);
           content = content.replace(/\n/g, '');
           content = content.replace(/\n/g, '');
           content = content.replace(/.*\n/g, '');
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> main
           fs.writeFileSync(file, content);
           // Add the resolved file;
           execSync(`git add ${file}`, { "stdio": 'pipe' }
@@ -684,5 +608,3 @@ if (require.main === module) {}
 module.exports = GitWorkflow;
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> main
->>>>>>> main

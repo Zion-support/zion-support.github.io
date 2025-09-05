@@ -26,7 +26,9 @@ import {
   BarChart3,
   Cpu,
   Car,
-  Code
+  Code,
+  HelpCircle,
+  Clock
 } from 'lucide-react';
 
 const navigation = [
@@ -79,7 +81,9 @@ const navigation = [
       { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
       { name: 'Blog', href: '/blog', icon: MessageSquare },
       { name: 'Documentation', href: '/docs', icon: FileText },
-      { name: 'API Reference', href: '/api-docs', icon: Code }
+      { name: 'API Reference', href: '/api-docs', icon: Code },
+      { name: 'Help Center', href: '/help', icon: HelpCircle },
+      { name: 'Community', href: '/community', icon: Users }
     ]
   },
   {
@@ -93,6 +97,18 @@ const navigation = [
       { name: 'Partners', href: '/partners', icon: Network },
       { name: 'News', href: '/news', icon: MessageSquare },
       { name: 'Contact', href: '/contact', icon: Phone }
+    ]
+  },
+  {
+    name: 'Support',
+    href: '/help',
+    icon: HelpCircle,
+    children: [
+      { name: 'Help Center', href: '/help', icon: HelpCircle },
+      { name: 'FAQ', href: '/faq', icon: HelpCircle },
+      { name: 'Community', href: '/community', icon: Users },
+      { name: 'Contact Support', href: '/contact', icon: Phone },
+      { name: 'Status Page', href: '/status', icon: Clock }
     ]
   },
   {
@@ -154,11 +170,16 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 transition-colors"
+                            className="flex items-center justify-between px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
                           >
-                            <div className="font-medium">{child.name}</div>
-                            {child.description && (
-                              <div className="text-xs text-gray-500 mt-1">{child.description}</div>
+                            <div className="flex items-center space-x-3">
+                              <child.icon className="w-4 h-4" />
+                              <span>{child.name}</span>
+                            </div>
+                            {child.count && (
+                              <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
+                                {child.count}
+                              </span>
                             )}
                           </Link>
                         ))}

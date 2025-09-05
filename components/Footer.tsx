@@ -55,6 +55,7 @@ const companyLinks = [
 ];
 const supportLinks = [
   { name: 'Help Center', href: '/help' },
+  { name: 'FAQ', href: '/faq' },
   { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api-docs' },
   { name: 'Community', href: '/community' },
@@ -117,7 +118,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -201,9 +202,6 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-          <p className="text-gray-400 text-sm">
-            © {currentYear} Zion Tech Group. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>

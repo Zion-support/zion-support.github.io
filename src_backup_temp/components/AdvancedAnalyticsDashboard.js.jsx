@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState} from "react";""";,"});,"})","});,"})","})";
   TrendingUp,,"});,"})";
   TrendingDown,,"});,"})";
@@ -462,7 +461,6 @@ const AdvancedAnalyticsDashboard = ("props": "any) => {"}"";
   const [timeRange, setTimeRange] = useState("30d")";"";
   const [timeRange, setTimeRange] = useState("30d")";
   const [selectedMetric, setSelectedMetric] = useState();
-=======
 import React, {useState} from "react";""";,"}
     );,"})","}
     );,"})","})"
@@ -1391,7 +1389,6 @@ const AdvancedAnalyticsDashboard = (props: any) => {}""
   const [timeRange, setTimeRange] = useState("30d")";""
   const [timeRange, setTimeRange] = useState("30d")"
   const [selectedMetric, setSelectedMetric] = useState()
->>>>>>> main
 }
   // comment;
 const metrics = []";
@@ -1550,7 +1547,6 @@ business intelligence";
           </div>;
       </motion.div>;
       {/* comment */}
-<<<<<<< HEAD
 ;
       <motion.div,";
 initial="{{" "opacity": "0", "y": "20 "}}""";
@@ -1590,8 +1586,6 @@ key="{index}"";
               </CardContent>;
             </Card>;
           </motion.div>;
-=======
-
       <motion.div,"
 initial="{{" opacity: 0, y: 20 }}"""
         animate="{{" opacity: 1, y: 0 }}""""
@@ -1630,7 +1624,6 @@ key="{index}""
               </CardContent>
             </Card>
           </motion.div>
->>>>>>> main
         ))}
 ;
       </motion.div>;
@@ -1830,7 +1823,6 @@ category,;
         </Card>;
       </motion.div>;
       {/* comment */}
-<<<<<<< HEAD
 ;
       <motion .div,";
 initial="{{" "opacity": "0", "y": "20 "}}""";
@@ -1871,8 +1863,6 @@ insights to optimize your business performance and make data-driven"";
             </Button>;
           </div>;
       </motion.div>;
-=======
-
       <motion .div,"
 initial="{{" opacity: 0, y: 20 }}"""
         animate="{{" opacity: 1, y: 0 }}""""
@@ -1912,7 +1902,6 @@ insights to optimize your business performance and make data-driven""
             </Button>
           </div>
       </motion.div>
->>>>>>> main
 </div>)};
 export default AdvancedAnalyticsDashboard;
 ;

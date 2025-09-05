@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
-
 interface PricingProps {
   // Add props here as needed
 }
-
 export default function Pricing({ }: PricingProps) {
   return (
     <div>
@@ -14,4 +10,3 @@ export default function Pricing({ }: PricingProps) {
     </div>
   );
 }
->>>>>>> main

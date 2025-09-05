@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
-
-
-=======
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> main
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -36,16 +31,13 @@ export default function CloudServicesPage() {
       icon: Zap,
       features: ["Cost Analysis", "Performance Tuning", "Resource Management"]"
     }
-<<<<<<< HEAD
 ;  ];
-
   return (;
     <Layout );
       title="Cloud Solutions - Zion Tech Group"";
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services.""
     >;
       <div className="min-h-screen bg-gray-50">";
-=======
   ];
   return (
     <Layout
@@ -53,7 +45,6 @@ export default function CloudServicesPage() {
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
     >
       <div className="min-h-screen bg-gray-50">
->>>>>>> main
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
           <div className="container mx-auto px-4">";
@@ -61,7 +52,6 @@ export default function CloudServicesPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -74,8 +64,6 @@ export default function CloudServicesPage() {
             </motion.div>;
           </div>;
         </section>;
-
-=======
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -88,7 +76,6 @@ export default function CloudServicesPage() {
             </motion.div>
           </div>
         </section>
->>>>>>> main
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -124,16 +111,12 @@ export default function CloudServicesPage() {
                   </motion.div>;
                 );
               })}
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-
-=======
             </div>
           </div>
         </section>
->>>>>>> main
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

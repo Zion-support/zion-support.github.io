@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';'''';';
-=======
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
->>>>>>> main
 import {ChevronUpIcon} from '@heroicons/react/24/outline';
 const EnhancedScrollToTop = ("props": "any) => {;
     const [isVisible", setIsVisible] = useState(false);    useEffect(() => {;
@@ -20,24 +14,18 @@ else {setIsVisible(false)}
         };
         window.addEventListener('scroll', toggleVisibility);
         return () => window.removeEventListener('scroll', toggleVisibility)}, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
     const scrollToTop = (props: any) => {
         window.scrollTo({';
             top: 0,';';
             behavior: 'smooth'
-=======
     const scrollToTop = (props: any) => {;
         window.scrollTo({;
             top: 0,;
             behavior: 'smooth';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     const scrollToTop = ("props": "any) => {;
         window.scrollTo({;
             "top": 0",;
             "behavior": 'smooth';
->>>>>>> main
         })};
     return (<AnimatePresence>;
       {isVisible && (<motion.button initial = {;
@@ -64,15 +52,9 @@ export {EnhancedScrollToTop};
 export {EnhancedScrollToTop};
 ;
 export {EnhancedScrollToTop};
-<<<<<<< HEAD
-<<<<<<< HEAD
 ';
 </motion>;';;';
-=======
 ;
 </motion>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 ;
 </motion>;
->>>>>>> main

@@ -1,22 +1,13 @@
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
-
-=======
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react';
-=======
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart3, Smartphone, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> main
->>>>>>> main
-
 const features = [;
   {}
     icon: ShoppingCart,
-<<<<<<< HEAD
     title: 'E-commerce Platforms,',
     description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'';
   },
@@ -39,7 +30,6 @@ const features = [;
     icon: Package,
     title: 'Supply Chain Optimization,',
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
-=======
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -67,11 +57,8 @@ const features = [;
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
->>>>>>> main
   }
 ;];
-
-<<<<<<< HEAD
 const solutions = [;
   'E-commerce Platform Development',',
   'Mobile Commerce Applications',',
@@ -84,7 +71,6 @@ const solutions = [;
   'Omnichannel Solutions',',
   'Retail Mobile Applications'';
 ;];
-
 export default function RetailSolutionsPage() {
   return (;
     <Layout );
@@ -119,7 +105,6 @@ export default function RetailSolutionsPage() {
             </div>;
           </div>;
         </section>;
-
         {/* Features Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -132,7 +117,6 @@ export default function RetailSolutionsPage() {
                 optimize operations, and drive business growth across all channels.,
               </p>;
             </div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {features.map((feature, index) => (,
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
@@ -142,7 +126,6 @@ export default function RetailSolutionsPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>;
-=======
 const benefits = [
   'Increased online sales and revenue',
   'Improved customer experience',
@@ -151,7 +134,6 @@ const benefits = [
   'Streamlined operations',
   'Mobile-first customer engagement'
 ];
-
 export default function RetailSolutions() {
   return (
     <Layout
@@ -182,7 +164,6 @@ export default function RetailSolutions() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -194,7 +175,6 @@ export default function RetailSolutions() {
                 Comprehensive solutions designed to enhance every aspect of your retail business.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -208,13 +188,10 @@ export default function RetailSolutions() {
                     {feature.description}
                   </p>
                 </div>
->>>>>>> main
               ))}
             </div>,
           </div>;
         </section>;
-
-<<<<<<< HEAD
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">"
           <div className="container mx-auto px-4">";
@@ -233,7 +210,6 @@ export default function RetailSolutions() {
             </div>;
           </div>;
         </section>;
-
         {/* Omnichannel Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -247,7 +223,6 @@ export default function RetailSolutions() {
                   integrated omnichannel retail solutions.;
                 </p>;
               </div>;
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
                 <div className="text-center">";
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
@@ -274,7 +249,6 @@ export default function RetailSolutions() {
             </div>;
           </div>;
         </section>;
-
         {/* CTA Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -299,7 +273,6 @@ export default function RetailSolutions() {
         </section>;
       </div>;
     </Layout>;
-=======
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -335,7 +308,6 @@ export default function RetailSolutions() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -358,6 +330,5 @@ export default function RetailSolutions() {
         </section>
       </div>
     </Layout>
->>>>>>> main
   );
 }

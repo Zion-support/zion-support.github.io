@@ -1,27 +1,16 @@
-<<<<<<< HEAD
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from "./App.tsx";
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const React from "react";","; ";";";";"; import {createRoot,hydrateRoot} from "react-dom/client";";";";";"; import App from "./App.tsx";","; ";";";";"; import "./index.css";","; ";";";";"; import {HelmetProvider} from "react-helmet-async";","; ";";";";"; import {BrowserRouter as Router} from "react-router-dom";","; ";";";";"; import {QueryClient,QueryClientProvider} from "@tanstack/react-query";","; ";";";";"; import "./utils/globalFetchInterceptor";","; ";";";";"; import "./utils/consoleErrorToast";";"; ";";";";"; import "./i18n";","; ";";";";"; import {LanguageProvider} from "@/context/LanguageContext";";";";";"; import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup";","; ";";";";"; import {WhitelabelProvider} from "@/context/WhitelabelContext";","; ";";";"; <<<<<<< HEAD";"; import {AppLayout} from "@/layout/AppLayout"; import {AuthProvider} from "./context/auth/AuthProvider";";";";"; import {NotificationProvider} from "./context/notifications/NotificationContext"; ";";";";"; import {AnalyticsProvider} from "./context/AnalyticsContext";","; ";";";";"; import React from "react"; import {createRoot,hydrateRoot} from "react-dom/client;"; import App from "./App.tsx",;"; ";";";";"; import "./index.css";";"; import {HelmetProvider} from "react-helmet-async",;"; ";";";";"; import {BrowserRouter as Router} from "react-router-dom"; import {QueryClient,QueryClientProvider} from "@tanstack/react-query;","; ";";";";"; import "./utils/globalFetchInterceptor;";";"; import "./utils/consoleErrorToast",;"; ";";";";"; import "./i18n",;"; ";";";";"; import {LanguageProvider} from "@/context/LanguageContext;"; import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup;","; ";";";";"; import {WhitelabelProvider} from "@/context/WhitelabelContext;"; import {AppLayout} from "@/layout/AppLayout"; import {AuthProvider} from "./context/auth/AuthProvider;"; import {NotificationProvider} from "./context/notifications/NotificationContext"; ";";";";"; import {AnalyticsProvider} from "./context/AnalyticsContext;"; import {ViewModeProvider} from "./context/ViewModeContext"; =======";"; import { AppLayout } from "@/layout/AppLayout"; import { AuthProvider } from "./src/context/auth/AuthProvider.jsx"; import { NotificationProvider } from "./context/notifications/NotificationContext"; import { AnalyticsProvider } from "./context/AnalyticsContext import { ViewModeProvider } from "./context/ViewModeContext"; >>>>>>> origin/merge-pr-10625 const queryClient = new QueryClient({ defaultOptions: { queries: {"; retry: 1,refetchOnWindowFocus: false}}});";";";";"; ","; ";";";";"; const rootElement = document.getElementById("root"); const renderApp = (props) => { const app = ( <React .StrictMode" >" <HelmetProvider> <QueryClientProvider client={queryClient}" >" <WhitelabelProvider> <Router> <AuthProvider> <NotificationProvider> <AnalyticsProvider> <LanguageProvider authState={{ isAuthenticated: false,user: null}};" >" <ViewModeProvider> <AppLayout> <App /" >" </AppLayout> </ViewModeProvider> <LanguageDetectionPopup /" >" </LanguageProvider> </AnalyticsProvider> </NotificationProvider> </AuthProvider> </Router> </WhitelabelProvider> </QueryClientProvider> </HelmetProvider> </React.StrictMode> ); if (rootElement?.hasChildNodes()) {hydrateRoot(rootElement,app)} else if (rootElement) {createRoot(rootElement).render(app)} }; function displayFatalError($1) { if (rootElement) { rootElement.innerHTML = `"; <div style="{{`padding: 20px;text-align}}"</p>` </div>`} }"; try {"; renderApp()} catch (error) {`}","; ";";";";"; console.error("Global error caught in main.jsx: ",error);";";";"; displayFatalError(error.message)}";"; ","; ";";";";"; window.addEventListener("error",(e) => {","; ";";";";"; console.error("Unhandled error: ",e.error | e.message);";";";"; displayFatalError(e.message)});";";";";"; "`";";";"; </LanguageDetectionPopup> </App> </React>;";";'"`'"`
-=======
-<<<<<<< HEAD
-import _React from 'react';",'; ';';';';'; import {createRoot,hydrateRoot} from 'react-dom/client';";';';';'; import App from "./App.tsx";",'; ';';';';'; import './index.css';",'; ';';';';'; import {HelmetProvider} from 'react-helmet-async';",'; ';';';';'; import {BrowserRouter as Router} from 'react-router-dom';",'; ';';';';'; import {QueryClient,QueryClientProvider} from '@tanstack/react-query';",'; ';';';';'; import './utils/globalFetchInterceptor';",'; ';';';';'; import './utils/consoleErrorToast';';'; ';';';';'; import './i18n';",'; ';';';';'; import {LanguageProvider} from '@/context/LanguageContext';";';';';'; import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup";",'; ';';';';'; import {WhitelabelProvider} from '@/context/WhitelabelContext';",'; ';';';'; 
-=======
+const React from "react";","; ";";";";"; import {createRoot,hydrateRoot} from "react-dom/client";";";";";"; import App from "./App.tsx";","; ";";";";"; import "./index.css";","; ";";";";"; import {HelmetProvider} from "react-helmet-async";","; ";";";";"; import {BrowserRouter as Router} from "react-router-dom";","; ";";";";"; import {QueryClient,QueryClientProvider} from "@tanstack/react-query";","; ";";";";"; import "./utils/globalFetchInterceptor";","; ";";";";"; import "./utils/consoleErrorToast";";"; ";";";";"; import "./i18n";","; ";";";";"; import {LanguageProvider} from "@/context/LanguageContext";";";";";"; import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup";","; ";";";";"; import {WhitelabelProvider} from "@/context/WhitelabelContext";","; ";";";"; ";"; import {AppLayout} from "@/layout/AppLayout"; import {AuthProvider} from "./context/auth/AuthProvider";";";";"; import {NotificationProvider} from "./context/notifications/NotificationContext"; ";";";";"; import {AnalyticsProvider} from "./context/AnalyticsContext";","; ";";";";"; import React from "react"; import {createRoot,hydrateRoot} from "react-dom/client;"; import App from "./App.tsx",;"; ";";";";"; import "./index.css";";"; import {HelmetProvider} from "react-helmet-async",;"; ";";";";"; import {BrowserRouter as Router} from "react-router-dom"; import {QueryClient,QueryClientProvider} from "@tanstack/react-query;","; ";";";";"; import "./utils/globalFetchInterceptor;";";"; import "./utils/consoleErrorToast",;"; ";";";";"; import "./i18n",;"; ";";";";"; import {LanguageProvider} from "@/context/LanguageContext;"; import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup;","; ";";";";"; import {WhitelabelProvider} from "@/context/WhitelabelContext;"; import {AppLayout} from "@/layout/AppLayout"; import {AuthProvider} from "./context/auth/AuthProvider;"; import {NotificationProvider} from "./context/notifications/NotificationContext"; ";";";";"; import {AnalyticsProvider} from "./context/AnalyticsContext;"; import {ViewModeProvider} from "./context/ViewModeContext"; ";"; import { AppLayout } from "@/layout/AppLayout"; import { AuthProvider } from "./src/context/auth/AuthProvider.jsx"; import { NotificationProvider } from "./context/notifications/NotificationContext"; import { AnalyticsProvider } from "./context/AnalyticsContext import { ViewModeProvider } from "./context/ViewModeContext"; import _React from 'react';",'; ';';';';'; import {createRoot,hydrateRoot} from 'react-dom/client';";';';';'; import App from "./App.tsx";",'; ';';';';'; import './index.css';",'; ';';';';'; import {HelmetProvider} from 'react-helmet-async';",'; ';';';';'; import {BrowserRouter as Router} from 'react-router-dom';",'; ';';';';'; import {QueryClient,QueryClientProvider} from '@tanstack/react-query';",'; ';';';';'; import './utils/globalFetchInterceptor';",'; ';';';';'; import './utils/consoleErrorToast';';'; ';';';';'; import './i18n';",'; ';';';';'; import {LanguageProvider} from '@/context/LanguageContext';";';';';'; import {LanguageDetectionPopup} from "./components/LanguageDetectionPopup";",'; ';';';';'; import {WhitelabelProvider} from '@/context/WhitelabelContext';",'; ';';';'; 
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.tsx';
->>>>>>> main
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './utils/globalFetchInterceptor';
 import './utils/consoleErrorToast';
-<<<<<<< HEAD
 // Import i18n configuration;
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
@@ -82,7 +71,6 @@ root.render(;
     </HelmetProvider>;
   </React.StrictMode>;
 );
-=======
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
 import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
@@ -93,14 +81,12 @@ import { NotificationProvider } from './context/notifications/NotificationContex
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
 const queryClient = new QueryClient({
-<<<<<<< HEAD
     defaultOptions: {';
         queries: {';';
             retry: 1, refetchOnWindowFocus: false}}}
     );';';';
 ""',';';
     ';';';
-=======
   defaultOptions: {
     queries: {
       retry: 1,
@@ -108,7 +94,6 @@ const queryClient = new QueryClient({
     }
   }
 });
->>>>>>> main
 const rootElement = document.getElementById('root');
 const renderApp = (props) => {
   const app = (
@@ -143,7 +128,6 @@ const renderApp = (props) => {
     createRoot(rootElement).render(app);
   }
 };
-<<<<<<< HEAD
 function displayFatalError(props: any) {
     if (rootElement) {
         rootElement.innerHTML = `""
@@ -166,7 +150,6 @@ window.addEventListener('error', (e) => {""',';';
 </LanguageDetectionPopup>
 </App>
 </React>
-=======
 function displayFatalError(errorMessage) {
   if (rootElement) {
     rootElement.innerHTML = `
@@ -187,8 +170,3 @@ window.addEventListener('error', (e) => {
   console.error('Unhandled error: ', e.error || e.message);
   displayFatalError(e.message);
 });
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,6 +1,5 @@
 import React, {createContext, useContext, useReducer, useEffect} from "react";""""""""";";
 const initialState = {}";
-
 function cartReducer("props": "any) {";
     switch (action.type) {"";
         case "ADD_ITEM": {;
@@ -28,7 +27,6 @@ function cartReducer("props": "any) {";
 const CartContext = createContext(null);
 }
 export function useCart("props": "any) {;
-
     const ctx = useContext(CartContext);";
     if (!ctx) {"";
         throw new Error("useCart must be used within a CartProvider")"}
@@ -44,7 +42,6 @@ const { user "} = useAuth();
     const stored = safeStorage.getItem(cartKey);
 ;
     if(stored) {;
-
       try {;
         items = JSON.parse(stored);
       } catch {items = [];}
@@ -52,10 +49,8 @@ const { user "} = useAuth();
 ;
     // Merge guest cart when user logs in;
     if(user?.id) {;
-
       const guestStored = safeStorage.getItem(getCartKey());
       if(guestStored) {;
-
         try {;
           const guestItems = JSON.parse(guestStored);
           items = mergeCartItems(items, guestItems);
@@ -63,14 +58,10 @@ const { user "} = useAuth();
         safeStorage.removeItem(getCartKey());
       }
     }
-<<<<<<< HEAD
 ;
     dispatch({"type": 'SET_ITEMS', "payload": "items"});
-=======
-
     dispatch({type: 'SET_ITEMS', payload: items}
     );
->>>>>>> main
   }, [cartKey]);
 ;
   // Save cart to storage whenever it changes;
@@ -79,55 +70,34 @@ const { user "} = useAuth();
   }, [state.items, cartKey]);
 ;
   const addItem = item => {;
-
-<<<<<<< HEAD
     dispatch({ "type": 'ADD_ITEM', "payload": "item "});
-=======
   const addItem = item => {
-
     dispatch({ type: 'ADD_ITEM', payload: item }
     );
->>>>>>> main
   };
 ;
   const removeItem = id => {;
-
-<<<<<<< HEAD
     dispatch({ "type": 'REMOVE_ITEM', "payload": "id "});
-=======
   const removeItem = id => {
-
     dispatch({ type: 'REMOVE_ITEM', payload: id }
     );
->>>>>>> main
   };
 ;
   const updateQuantity = ("props": "any) => {;
-
     if(quantity <= 0) {;
-
       removeItem(id);
     "} else {;
-
-<<<<<<< HEAD
       dispatch({ "type": 'UPDATE_QUANTITY', "payload": "{ id", quantity } });
-=======
       dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } }
     );
->>>>>>> main
     }
   };
 ;
   const clearCart = ("props": "any) => {;
-
-<<<<<<< HEAD
     dispatch({ "type": 'CLEAR_CART' "});
-=======
   const clearCart = (props: any) => {
-
     dispatch({ type: 'CLEAR_CART' }
     );
->>>>>>> main
   };
 ;
   const getTotalItems = ("props": "any) => {return state.items.reduce((total", item) => total + item.quantity, 0);};
@@ -184,6 +154,5 @@ if (user?.id) {const guestStored = safeStorage.getItem(getCartKey())}
 ";
     return <CartContext .Provider value={value}" >{children}</CartContext.Provider>;,";
 }"""";
-
 </CartContext>;
 </CartContext>

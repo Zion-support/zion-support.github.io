@@ -1,22 +1,13 @@
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
-
-=======
 import React from 'react';
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 import { GraduationCap, Users, BookOpen, Laptop, Globe, CheckCircle, ArrowRight } from 'lucide-react';
-=======
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> main
->>>>>>> main
-
 const features = [;
   {}
     icon: GraduationCap,
-<<<<<<< HEAD
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
   },
@@ -39,7 +30,6 @@ const features = [;
     icon: Globe,
     title: 'Accessibility Solutions,',
     description: 'ADA-compliant educational technology that ensures equal access for all students.'';
-=======
     title: 'Learning Management Systems',
     description: 'Comprehensive LMS platforms for online and blended learning'
   },
@@ -67,11 +57,8 @@ const features = [;
     icon: Users,
     title: 'Teacher Resources',
     description: 'Professional development and teaching support tools'
->>>>>>> main
   }
 ;];
-
-<<<<<<< HEAD
 const solutions = [;
   'Learning Management Systems (LMS)',',
   'Student Information Systems (SIS)',',
@@ -84,7 +71,6 @@ const solutions = [;
   'Student Analytics & Reporting',',
   'Educational Data Integration'';
 ;];
-
 export default function EducationSolutionsPage() {
   return (;
     <Layout );
@@ -119,7 +105,6 @@ export default function EducationSolutionsPage() {
             </div>;
           </div>;
         </section>;
-
         {/* Features Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -132,7 +117,6 @@ export default function EducationSolutionsPage() {
                 improve administrative efficiency, and support modern educational practices.,
               </p>;
             </div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {features.map((feature, index) => (,
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
@@ -142,7 +126,6 @@ export default function EducationSolutionsPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>;
-=======
 const benefits = [
   'Improved student engagement and outcomes',
   'Streamlined administrative processes',
@@ -151,7 +134,6 @@ const benefits = [
   'Reduced operational costs',
   'Accessible learning for all students'
 ];
-
 export default function EducationSolutions() {
   return (
     <Layout
@@ -182,7 +164,6 @@ export default function EducationSolutions() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -195,7 +176,6 @@ export default function EducationSolutions() {
                 and streamline educational operations.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -209,13 +189,10 @@ export default function EducationSolutions() {
                     {feature.description}
                   </p>
                 </div>
->>>>>>> main
               ))}
             </div>,
           </div>;
         </section>;
-
-<<<<<<< HEAD
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">"
           <div className="container mx-auto px-4">";
@@ -234,7 +211,6 @@ export default function EducationSolutions() {
             </div>;
           </div>;
         </section>;
-
         {/* Accessibility Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -248,7 +224,6 @@ export default function EducationSolutions() {
                   ensuring equal access to learning opportunities for all students.;
                 </p>;
               </div>;
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
                 <div className="text-center">";
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
@@ -275,7 +250,6 @@ export default function EducationSolutions() {
             </div>;
           </div>;
         </section>;
-
         {/* CTA Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -300,7 +274,6 @@ export default function EducationSolutions() {
         </section>;
       </div>;
     </Layout>;
-=======
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,7 +309,6 @@ export default function EducationSolutions() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -359,6 +331,5 @@ export default function EducationSolutions() {
         </section>
       </div>
     </Layout>
->>>>>>> main
   );
 }

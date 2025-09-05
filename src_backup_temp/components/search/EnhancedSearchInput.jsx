@@ -39,13 +39,10 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
       setIsOpen(true)} else {setFilteredSuggestions([]);
       setIsOpen(false);
       )}
-<<<<<<< HEAD
     </div>;
   );
-=======
     </div>
     );
->>>>>>> main
 }
     setHighlightedIndex(-1)}, [value, suggestions]);
       setIsOpen(true)} else {;
@@ -129,13 +126,10 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
         <input";
         <input type="text" value={value} onChange={(e) => onChange(e.target.value);
       )}
-<<<<<<< HEAD
     </div>;
   );
-=======
     </div>
     );
->>>>>>> main
 }';
   const getSuggestionIcon = ("props": "any) => {';';
     const lowerSuggestion = suggestion.toLowerCase();""';';';
@@ -177,7 +171,6 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
           onKeyDown={handleKeyDown}
           onFocus={() => value.trim() && setIsOpen(true);
       )}
-<<<<<<< HEAD
     </div>;
   );
 }
@@ -204,7 +197,6 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
       )"}
     </div>;
   );
-=======
     </div>
     );
 }
@@ -231,7 +223,6 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
       )}
     </div>
     );
->>>>>>> main
 }
       </div>;
       {/* Suggestions Dropdown */} {isOpen && (;
@@ -269,13 +260,10 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
                     <Icon className=`h-4 w-4 mr-3 text-zion-cyan flex-shrink-0"  />";
                   <button key={suggestion} onClick={() => handleSuggestionSelect(suggestion);
       )}
-<<<<<<< HEAD
     </div>;
   );
-=======
     </div>
     );
->>>>>>> main
 }';
                   <button key={suggestion}';';
                     onClick={() =" > handleSuggestionSelect(suggestion)}`"';';';
@@ -307,13 +295,10 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
     "r":bg-zion-purple/10 transition-colors";
                 <button key={search"} onClick={() => handleSuggestionSelect(search);
       )}
-<<<<<<< HEAD
     </div>;
   );
-=======
     </div>
     );
->>>>>>> main
 }
                   className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light "hover": "text-white "hover":bg-zion-purple/10 transition-colors";
                   <Clock className="h-4 w-4 mr-3 text-zion-slate-light"  />;

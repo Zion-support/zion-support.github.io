@@ -99,8 +99,8 @@ export default function AboutPage() {
                 These core values guide everything we do and shape our approach to delivering exceptional technology solutions.
               </p>
             </motion.div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => {
                 const IconComponent = value.icon;
                 return (
@@ -128,13 +128,11 @@ export default function AboutPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Work With Us?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss how our team can help transform your business with innovative technology solutions.
-            </p>
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300 inline-flex items-center"
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Work With Us?

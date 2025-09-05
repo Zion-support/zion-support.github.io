@@ -4,7 +4,6 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
  * @returns {*} Function return value;
  */;
 function EnhancedAccessibilityPanel("props": "any) {;
-
   Accessibility",;
   Eye,;
   EyeOff,;
@@ -34,7 +33,6 @@ function EnhancedAccessibilityPanel("props": "any) {;
   Volume1} from 'lucide-react';
 ;
 interface AccessibilitySettings {;
-
   "highContrast": "boolean;
   "largeText": boolean;
   "reducedMotion": boolean;
@@ -56,8 +54,6 @@ export function EnhancedAccessibilityPanel("props": any) {;
   const [isVisible", setIsVisible] = useState<any>(false);
   const [isExpanded, setIsExpanded] = useState<any>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({;
-
-<<<<<<< HEAD
     "highContrast": "fals e",;
     "largeText": "fals e",;
     "reducedMotion": "fals e",;
@@ -68,7 +64,6 @@ export function EnhancedAccessibilityPanel("props": any) {;
     "lineHeight": "1.5",;
     "letterSpacing": "0",;
     "wordSpacing": "0"});
-=======
     highContrast: fals e,
     largeText: fals e,
     reducedMotion: fals e,
@@ -80,7 +75,6 @@ export function EnhancedAccessibilityPanel("props": any) {;
     letterSpacing: 0,
     wordSpacing: 0}
     );
->>>>>>> main
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
   const [isScanning, setIsScanning] = useState<any>(false);
   const [currentFocus, setCurrentFocus] = useState<string>('');
@@ -92,16 +86,12 @@ export function EnhancedAccessibilityPanel("props": any) {;
 ;
       // Apply high contrast;
       if(updatedSettings.highContrast) {;
-
         document.documentElement.classList.add('high-contrast')} else {;
-
         document.documentElement.classList.remove('high-contrast')}
 ;
       // Apply large text;
       if(updatedSettings.largeText) {;
-
         document.documentElement.style.fontSize = '18px'} else {;
-
         document.documentElement.style.fontSize = '16px'}
 ;
       // Apply reduced motion;
@@ -109,14 +99,11 @@ export function EnhancedAccessibilityPanel("props": any) {;
         document.documentElement.style.setProperty(';
           '--reduced-motion',reduce';
         )} else {;
-
         document.documentElement.style.removeProperty('--reduced-motion')}
 ;
       // Apply focus indicator;
       if(updatedSettings.focusIndicator) {;
-
         document.documentElement.classList.add('focus-visible')} else {;
-
         document.documentElement.classList.remove('focus-visible')}
 ;
       // Apply color blindness simulation;
@@ -154,7 +141,6 @@ export function EnhancedAccessibilityPanel("props": any) {;
   // Load settings from localStorage;
   useEffect(() => {;
 // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};

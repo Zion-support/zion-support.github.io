@@ -2,75 +2,48 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Brain, 
-  Network, 
-  Cloud, 
-  Phone, 
-  Mail, 
-  MapPin,
   ArrowRight,
-  CheckCircle,
-  Star,
   Award,
-  Users,
-  Settings,
   BarChart3,
-  Shield,
-  Code,
-  Zap,
-  Globe,
-  Home,
-  Building,
-  FileText,
-  MessageSquare,
-  Calendar,
-  ShoppingCart,
   BookOpen,
-  Camera,
-  Music,
-  Gamepad2,
-  Heart,
-  Truck,
+  Brain,
+  Building,
   Calculator,
+  Calendar,
+  Camera,
+  CheckCircle,
+  ChevronDown,
+  Clock,
+  Cloud,
+  Code,
   CreditCard,
-  Lock,
+  Document,
+  DollarSign,
   Eye,
+  FileText,
+  Gamepad2,
+  Globe,
+  Heart,
+  Home,
+  Lock,
+  Mail,
+  MapPin,
+  Menu,
+  MessageSquare,
+  Music,
+  Network,
+  Phone,
+  Rocket,
+  Settings,
+  Shield,
+  ShoppingCart,
+  Star,
   Target,
   TrendingUp,
-  Clock,
-  DollarSign,
-  Award as Recognition,
-  Star as Rating,
-  Users as People,
-  Settings as Config,
-  BarChart3 as Analytics,
-  Shield as Security,
-  Code as Programming,
-  Zap as Lightning,
-  Globe as World,
-  Home as House,
-  Building as Office,
-  FileText as Document,
-  MessageSquare as Chat,
-  Calendar as Schedule,
-  ShoppingCart as Cart,
-  BookOpen as Book,
-  Camera as Photo,
-  Music as Audio,
-  Gamepad2 as Gaming,
-  Heart as Love,
-  Truck as Delivery,
-  Calculator as Math,
-  CreditCard as Payment,
-  Lock as Secure,
-  Eye as View,
-  Target as Goal,
-  TrendingUp as Growth,
-  Clock as Time,
-  DollarSign as Money
+  Truck,
+  Users,
+  X,
+  Zap
 } from 'lucide-react';
 
 const navigationItems = [
@@ -83,22 +56,43 @@ const navigationItems = [
         title: 'AI Services',
         href: '/ai-services',
         icon: Brain,
-        description: '80+ cutting-edge AI solutions',
+        description: '30+ cutting-edge AI solutions',
         popular: true
       },
       {
         title: 'IT Services',
         href: '/it-services',
         icon: Network,
-        description: '70+ comprehensive IT services',
+        description: '25+ comprehensive IT services',
         popular: true
       },
       {
         title: 'Micro SaaS',
         href: '/micro-saas',
         icon: Cloud,
-        description: '85+ innovative micro SaaS solutions',
+        description: '40+ innovative micro SaaS solutions',
         popular: true
+      },
+      {
+        title: 'Cybersecurity',
+        href: '/cybersecurity',
+        icon: Shield,
+        description: 'Enterprise security solutions',
+        popular: false
+      },
+      {
+        title: 'Cloud Solutions',
+        href: '/cloud-solutions',
+        icon: Cloud,
+        description: 'Scalable cloud infrastructure',
+        popular: false
+      },
+      {
+        title: 'Data Analytics',
+        href: '/data-analytics',
+        icon: BarChart3,
+        description: 'Advanced analytics platform',
+        popular: false
       }
     ]
   },
@@ -108,28 +102,28 @@ const navigationItems = [
     icon: Target,
     submenu: [
       {
-        title: 'Cloud Solutions',
-        href: '/cloud-solutions',
-        icon: Cloud,
-        description: 'Scalable cloud infrastructure'
+        title: 'Enterprise Solutions',
+        href: '/solutions/enterprise',
+        icon: Building,
+        description: 'Comprehensive enterprise solutions'
       },
       {
-        title: 'Cybersecurity',
-        href: '/cybersecurity',
-        icon: Shield,
-        description: 'Enterprise security solutions'
+        title: 'Startup Solutions',
+        href: '/solutions/startup',
+        icon: Rocket,
+        description: 'Rapid deployment for startups'
       },
       {
-        title: 'Data Analytics',
-        href: '/data-analytics',
+        title: 'Industry Solutions',
+        href: '/solutions/industry',
         icon: BarChart3,
-        description: 'Advanced analytics platform'
+        description: 'Industry-specific solutions'
       },
       {
-        title: 'Automation',
-        href: '/automation',
-        icon: Zap,
-        description: 'Intelligent process automation'
+        title: 'Custom Solutions',
+        href: '/solutions/custom',
+        icon: Settings,
+        description: 'Tailored custom solutions'
       }
     ]
   },
@@ -262,7 +256,9 @@ const quickLinks = [
   { title: 'Pricing', href: '/pricing', icon: DollarSign },
   { title: 'Contact', href: '/contact', icon: Phone },
   { title: 'Support', href: '/support', icon: MessageSquare },
-  { title: 'Status', href: '/status', icon: BarChart3 }
+  { title: 'Status', href: '/status', icon: BarChart3 },
+  { title: 'Quote', href: '/quote', icon: FileText },
+  { title: 'API Docs', href: '/api-docs', icon: Code }
 ];
 
 export default function Navigation() {

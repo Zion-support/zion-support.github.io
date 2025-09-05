@@ -1,22 +1,17 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChart3, FileText, Video, Globe, Database } from 'lucide-react';;
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { BookOpen, 
   Brain, 
   Users, 
-=======
 import {
   BookOpen,
   Brain,
   Users,
->>>>>>> main
   CheckCircle,
   ArrowRight,
   GraduationCap,
@@ -26,21 +21,16 @@ import {
   Globe,
   Database;
 } from 'lucide-react';
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
->>>>>>> main
-
 const services = [;
   {}
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',
-=======
 import Layout from '../../components/Layout';
 const services = [
   {
     title: 'Learning Management Systems',
     description: 'Comprehensive LMS platforms for educational institutions and corporate training.',
->>>>>>> main
     icon: BookOpen,
     features: [;
       'Course management,',
@@ -104,22 +94,18 @@ const services = [
       'Collaboration features'';
     ];
   }
-<<<<<<< HEAD
 ;];
-
 const benefits = [;
   {}
     title: 'Improved Learning Outcomes,',
     description: 'Personalized learning experiences lead to better student performance.,',
     icon: GraduationCap;
-=======
 ];
 const benefits = [
   {
     title: 'Improved Learning Outcomes',
     description: 'Personalized learning experiences lead to better student performance.',
     icon: GraduationCap
->>>>>>> main
   },
   {}
     title: 'Enhanced Engagement,',
@@ -136,9 +122,7 @@ const benefits = [
     description: 'Analytics help educators make informed decisions about teaching methods.,',
     icon: BarChart3;
   }
-<<<<<<< HEAD
 ;];
-
 export default function EducationPage() {
   return (;
     <Layout );
@@ -154,7 +138,6 @@ export default function EducationPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-amber-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
           </div>;
-
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -186,8 +169,6 @@ export default function EducationPage() {
             </motion.div>;
           </div>;
         </section>;
-
-=======
 ];
 export default function EducationPage() {
   return (
@@ -235,7 +216,6 @@ export default function EducationPage() {
             </motion.div>
           </div>
         </section>
->>>>>>> main
         {/* Services Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -243,7 +223,6 @@ export default function EducationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -254,11 +233,9 @@ export default function EducationPage() {
                 and corporate training programs.;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -272,26 +249,21 @@ export default function EducationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
->>>>>>> main
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">";
                     <service.icon className="w-6 h-6 text-white" />";
                   </div>;
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
-                  
                   <ul className="space-y-3">";
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-=======
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">
@@ -303,23 +275,18 @@ export default function EducationPage() {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
->>>>>>> main
                         {feature}
                       </li>,
                     ))}
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-
-=======
             </div>
           </div>
         </section>
->>>>>>> main
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -327,7 +294,6 @@ export default function EducationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -338,11 +304,9 @@ export default function EducationPage() {
                 student engagement, and educational efficiency.,
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -356,7 +320,6 @@ export default function EducationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
->>>>>>> main
                   key={benefit.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -370,16 +333,12 @@ export default function EducationPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-
-=======
             </div>
           </div>
         </section>
->>>>>>> main
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-amber-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
@@ -387,7 +346,6 @@ export default function EducationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Education?;
@@ -409,7 +367,6 @@ export default function EducationPage() {
         </section>;
       </div>;
     </Layout>;
-=======
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Education?
@@ -431,6 +388,5 @@ export default function EducationPage() {
         </section>
       </div>
     </Layout>
->>>>>>> main
   );
 }

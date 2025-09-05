@@ -1,21 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Link} from 'react - router - dom';'''';';
-=======
 import {Link} from 'react - router - dom';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 import {Link} from 'react - router - dom';'''
->>>>>>> main
 import React from 'react';
 ;
 ;
 ;
 import {Link} from "react-router-dom";
 import {Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export function ContactInfo("props": "any) {;
     return (<section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
@@ -278,8 +269,6 @@ export default Component;
 </div>;
 </div>;
 </div>;
-=======
->>>>>>> main
 export function ContactInfo(props: any) {
     return (<section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -525,9 +514,7 @@ export function ContactInfo(props: any) {
 """""";""
 """""'
 "
-
 export default Component
-
 </div>
 </div>
 </Star>
@@ -540,10 +527,8 @@ export default Component
 </MapPin>
 </Mail>
 </Phone>
-<<<<<<< HEAD
 </div>';
 </div>;';;';
-=======
 export function ContactInfo(props: any) {;
     return (<section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
@@ -806,11 +791,7 @@ export default Component;
 </div>;
 </div>;
 </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </Phone>
 </div>
 </div>
 </div>
->>>>>>> main
->>>>>>> main

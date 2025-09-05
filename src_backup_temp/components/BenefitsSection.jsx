@@ -77,7 +77,6 @@ export function BenefitsSection("props": "any) {;
   const itemVariants = {;
   "hidden": "{ "y": 30",;
   "opacity": "0 ;
-
 "},;
     "visible": "{;
       "y": 0",;
@@ -92,7 +91,6 @@ export function BenefitsSection("props": "any) {;
   const statsVariants = {;
   "hidden": "{ "scale": 0.8",;
   "opacity": "0 ;
-
 "},;
     "visible": "{;
       "scale": 1",;
@@ -120,7 +118,6 @@ export function BenefitsSection("props": "any) {;
           transition = {;
   { "duration": "20", "repeat": "Infinity",;
   "ease": "linear" ;
-
 }}
          />;
         <motion .div ;
@@ -129,7 +126,6 @@ export function BenefitsSection("props": "any) {;
           transition = {;
   { "duration": "25", "repeat": "Infinity",;
   "ease": "linear" ;
-
 }}
          />;
         <motion .div ;
@@ -167,7 +163,6 @@ export function BenefitsSection("props": "any) {;
             Our commitment to excellence drives every project to success.;
           </p>;
         </motion.div>;
-
         {/* Additional stats section */"}
         <motion.div ;
           className="grid grid-cols-2 "md": "grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" ;
@@ -211,27 +206,20 @@ export function BenefitsSection("props": "any) {;
                     {benefit.icon}
                   </div>;
                 </div>;
-
                 {/* Stats badge */}
                 <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${benefit.bgColor} border border-zion-cyan/30 mb-4`}>;
                   <span className="text-zion-cyan font-bold text-sm">{benefit.stats}</span>;
                 </div>;
-
                 {/* Title and description */}
-<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-4 group-"hover": "text-zion-cyan transition-colors">;
                   {benefit.title"}
                 </h3>;
                 <p className="text-zion-slate-light leading-relaxed mb-6">;
-=======
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
                   {benefit.title}
-                
                 <p className="text-zion-slate-light leading-relaxed mb-6">
->>>>>>> main
                   {benefit.description}
                 </p>;
-
                 {/* Features list */}
                 <AnimatePresence>;
                   {hoveredIndex === index && (;
@@ -272,7 +260,6 @@ export function BenefitsSection("props": "any) {;
                     </motion.div>;
                   )}
                 </AnimatePresence>;
-
                 {/* Hover indicator */}
                 <div className="mt-4 text-zion-cyan/60 text-xs">;
                   {hoveredIndex === index ? "Hover to see details" : "Hover for details"}
@@ -281,7 +268,6 @@ export function BenefitsSection("props": "any) {;
             </motion.div>;
           ))}
         </div>;
-
         {/* Call to action */}
         <motion.div ;
           className="text-center mt-16" ;
@@ -314,7 +300,6 @@ export function BenefitsSection("props": "any) {;
     </section>;
   )"}
 ;
-
 export default BenefitsSection;
 </motion>;
 </motion>;

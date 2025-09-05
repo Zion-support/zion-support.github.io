@@ -1,31 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState, useCallback} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';'''';';
-=======
 import React, {useState, useCallback} from 'react';'''
 import {motion, AnimatePresence} from 'framer-motion';'''
->>>>>>> main
 import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
 import {useAICodeGeneration} from "../hooks/useAICodeGeneration.jsx";
 ;
-<<<<<<< HEAD
 export const AICodeGenerator = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
-=======
 export const AICodeGenerator = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );'
->>>>>>> main
     const [activeTab, setActiveTab] = useState('generate');
     const [showAdvanced, setShowAdvanced] = useState(false);'
     const [customCode, setCustomCode] = useState('');
     const [copied, setCopied] = useState(false);
     const {isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode} = useAICodeGeneration();
     const [form, setForm] = useState({}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -41,7 +33,6 @@ export const AICodeGenerator = (props: any) => {
         "includeLogging": "false",;
         "includeMetrics": "false;
     "});
-=======
 '
 ''
 '''
@@ -55,8 +46,6 @@ export const AICodeGenerator = (props: any) => {
         includeDocs: false,
         includeErrorHandling: false,
         includeLogging: false,
-<<<<<<< HEAD
-=======
 import React, {useState, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
@@ -84,70 +73,49 @@ export const AICodeGenerator = (props: any) => {;
         includeDocs: false,;
         includeErrorHandling: false,;
         includeLogging: false,;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
         includeMetrics: false;
     }
     );
->>>>>>> main
     // Handle form submission;
     const handleSubmit = useCallback(async (e) => {}
         e.preventDefault();
-<<<<<<< HEAD
-<<<<<<< HEAD
         if(!form.prompt.trim())';
             return;';';
         await generateCode(form.prompt, form);'';';
-=======
         if(!form.prompt.trim());
             return;
         await generateCode(form.prompt, form);';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
         if(!form.prompt.trim())
             return;
         await generateCode(form.prompt, form);'
->>>>>>> main
         trackEvent('ai_code_generator',form_submitted', form.language, null, {}
-<<<<<<< HEAD
             "framework": "form.framework",;
             "style": "form.style",;
             "target": "form.target",;
             "quality": "form.quality;
         "})}, [form, generateCode, trackEvent]);
-=======
             framework: form.framework,
             style: form.style,
             target: form.target,
             quality: form.quality;
         })}, [form, generateCode, trackEvent]);
->>>>>>> main
     // Handle custom code analysis;
     const handleAnalyzeCustomCode = useCallback(async () => {}
-<<<<<<< HEAD
-<<<<<<< HEAD
         if(!customCode.trim())';
             return;';';
         await analyzeCode(customCode, form.language);'';';
-=======
         if(!customCode.trim());
             return;
         await analyzeCode(customCode, form.language);';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
         if(!customCode.trim())
             return;
         await analyzeCode(customCode, form.language);'
->>>>>>> main
         trackEvent('ai_code_generator',custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);
     // Handle code optimization;
     const handleOptimizeCode = useCallback(async (focus) => {}
         if(!generatedCode && !customCode)
             return;
         const codeToOptimize = generatedCode || customCode;
-<<<<<<< HEAD
-<<<<<<< HEAD
         const optimizedCode = await optimizeCode(codeToOptimize, focus);';
         if (generatedCode) {}';';
 '';';
@@ -172,22 +140,16 @@ export const AICodeGenerator = (props: any) => {;
         const docs = await generateDocs(codeToDoc, form.language);'''';';
         // In a real implementation, you'd want to display the documentation''''';';
         // '''';';
-=======
-=======
->>>>>>> main
         const optimizedCode = await optimizeCode(codeToOptimize, focus);
         if (generatedCode) {}
-<<<<<<< HEAD
 ';
             // Update generated code'';
             // "Note": "In a real implementation", you'd want to update the state properly;
         }';
-=======
 '
             // Update generated code''
             // Note: In a real implementation, you'd want to update the state properly;
         }'
->>>>>>> main
         trackEvent('ai_code_generator',code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);
     // Handle test generation;
     const handleGenerateTests = useCallback(async () => {}
@@ -200,27 +162,22 @@ export const AICodeGenerator = (props: any) => {;
         trackEvent('ai_code_generator',tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation;
     const handleGenerateDocs = useCallback(async () => {}
-<<<<<<< HEAD
         if(!generatedCode && !customCode);
             return;';
         const codeToDoc = generatedCode || customCode;'';
         const docs = await generateDocs(codeToDoc, form.language);''';
         // In a real implementation, you'd want to display the documentation'''';
         // ''';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
         if(!generatedCode && !customCode)
             return;'
         const codeToDoc = generatedCode || customCode;''
         const docs = await generateDocs(codeToDoc, form.language);'''
         // In a real implementation, you'd want to display the documentation''''
         // '''
->>>>>>> main
         trackEvent('ai_code_generator',docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard;
     const copyToClipboard = useCallback(async (code) => {}
 try {}
-
             await navigator.clipboard.writeText(code)"
             setCopied(true)""
             setTimeout(() => setCopied(false), 2000)"""
@@ -229,10 +186,8 @@ try {}
 """
 """""
             // comment
-
     }, [trackEvent])
 }
-<<<<<<< HEAD
     // comment;
 const handleApplySuggestion = useCallback((suggestion) => {}"";
         applySuggestion(suggestion)""";
@@ -283,7 +238,6 @@ const handleClearHistory = useCallback(() => {}"";
 ].map(({id, label, "icon": "Icon"}) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id"""""";
                 ? "border-purple-500 text-purple-600 "dark": "text-purple-400"""""""""",;
                 : "border-transparent text-gray-500 "hover": "text-gray-700 "dark":text-gray-400 "dark":"hover":text-gray-300""}"}>"""";
-=======
     // comment
 const handleApplySuggestion = useCallback((suggestion) => {}""
         applySuggestion(suggestion)"""
@@ -334,11 +288,8 @@ const handleClearHistory = useCallback(() => {}""
 ].map(({id, label, icon: Icon}) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id""""""
                 ? "border-purple-500 text-purple-600 dark: text-purple-400""""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>""""
->>>>>>> main
               <Icon className="w-4 h-4"/" >"              {label}
-
             </button>) ) }
-
         </nav>"
       </div>""
 """""
@@ -346,7 +297,6 @@ const handleClearHistory = useCallback(() => {}""
       <div className="p-6">"""""""
         <AnimatePresence mode="wait">"""""""
           {activeTab === "generate" && (<motion.div key="generate" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -464,8 +414,6 @@ const handleClearHistory = useCallback(() => {}""
 </>) : (<>"""";
                       <Sparkles className="w-5 h-5"/" >";
                       Generate Code",;
-=======
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -554,7 +502,6 @@ const handleClearHistory = useCallback(() => {}""
                   {showAdvanced ? "Hide" : "Show"} Advanced Options,
                 </button>
                 {/* comment */}
-
                 {showAdvanced && (<motion.div initial = {}"
   {opacity: 0, height: 0}} animate = {}""
   {opacity: 1, """
@@ -582,13 +529,10 @@ const handleClearHistory = useCallback(() => {}""
 </>) : (<>""""
                       <Sparkles className="w-5 h-5"/" >"
                       Generate Code,
->>>>>>> main
 </>)}
-
                 </button>
               </form>
               {/* comment */}
-<<<<<<< HEAD
 ;
               {generatedCode && (<motion.div initial = {}";
   {"opacity": "0", "y": "20"}} animate = {}"";
@@ -638,8 +582,6 @@ const handleClearHistory = useCallback(() => {}""
 </>) : (<>"""";
                     <Eye className="w-5 h-5"/" >";
                     Analyze Code",;
-=======
-
               {generatedCode && (<motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -669,7 +611,6 @@ const handleClearHistory = useCallback(() => {}""
             </motion.div>)}"""""
 """""""
           {activeTab === "analyze" && (<motion.div key="analyze" initial = {}
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -688,14 +629,9 @@ const handleClearHistory = useCallback(() => {}""
 </>) : (<>""""
                     <Eye className="w-5 h-5"/" >"
                     Analyze Code,
->>>>>>> main
 </>)}
-
               </button>
               {/* comment */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
               {codeAnalysis && (<motion.div initial = {}";
   {"opacity": "0", "y": "20"}} animate = {}"";
@@ -753,9 +689,6 @@ const handleClearHistory = useCallback(() => {}""
                               </div>"""";
                               {issue.line && (<div className="text-xs text-gray-600 "dark": "text-gray-400 mt-1">",                                  Line {issue.line}
 ;
-=======
->>>>>>> main
-
               {codeAnalysis && (<motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -780,7 +713,6 @@ const handleClearHistory = useCallback(() => {}""
                             </div>""""
                             <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
                           </div>)}
-
                     return null})}"
                   </div>""
 """""
@@ -793,8 +725,6 @@ const handleClearHistory = useCallback(() => {}""
                           <div className="text-gray-600 dark: text-gray-400 capitalize">""",
                             {key.replace(/([A-Z])/g, $1").trim()}"
                           </div>
-<<<<<<< HEAD
-=======
 ;
               {codeAnalysis && (<motion.div initial = {}";
   {opacity: 0, y: 20}} animate = {}"";
@@ -833,7 +763,6 @@ const handleClearHistory = useCallback(() => {}""
                           <div className="text-gray-600 dark: text-gray-400 capitalize">""",;
                             {key.replace(/([A-Z])/g, $1").trim()}";
                           </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                         </div>))}
 ;
                     </div>";
@@ -852,21 +781,15 @@ const handleClearHistory = useCallback(() => {}""
                                 {issue.message}""""";
                               </div>"""";
                               {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
-<<<<<<< HEAD
-
                                     </div>
   );
 }
                             </div>
-=======
 ;
                                 </div>) }
 ;
                             </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
                         </div>))}
-
                     </div>"
                   </div>""
 """""
@@ -883,21 +806,15 @@ const handleClearHistory = useCallback(() => {}""
                                 {issue.message}"""""
                               </div>""""
                               {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
-
->>>>>>> main
                                 </div>) }
-
                             </div>
->>>>>>> main
                           </div>) ) }
-
                       </div>
                     </div>)}"
                 </motion.div>)}""
             </motion.div>)}"""""
 """""""
           {activeTab === "optimize" && (<motion.div key="optimize" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -970,8 +887,6 @@ const handleClearHistory = useCallback(() => {}""
                 <FileText className="w-5 h-5"/" >";
                 Generate Documentation",;
               </button>,;
-=======
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -1002,7 +917,6 @@ const handleClearHistory = useCallback(() => {}""
             </motion.div>)}"""""
 """""""
           {activeTab === "tests" && (<motion.div key="tests" initial = {}
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -1024,7 +938,6 @@ const handleClearHistory = useCallback(() => {}""
             </motion.div>)}"""""
 """""""
           {activeTab === "docs" && (<motion.div key="docs" initial = {}
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -1043,12 +956,9 @@ const handleClearHistory = useCallback(() => {}""
                 <FileText className="w-5 h-5"/" >"
                 Generate Documentation,
               </button>,
->>>>>>> main
             </motion.div>) }
-
         </AnimatePresence>
         {/* comment */}
-<<<<<<< HEAD
 ;
         {suggestions.length > 0 && (<motion.div initial = {}";
   {"opacity": "0", "y": "20"}} animate = {}"";
@@ -1100,8 +1010,6 @@ const handleClearHistory = useCallback(() => {}""
                       Copy Code",;
                     </button>;
                   </div>,;
-=======
-
         {suggestions.length > 0 && (<motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -1152,14 +1060,10 @@ const handleClearHistory = useCallback(() => {}""
                       Copy Code,
                     </button>
                   </div>,
->>>>>>> main
                 </motion.div>) ) }
-
             </div>
           </motion.div>) }
-
         {/* comment */}
-<<<<<<< HEAD
 ;
         {history.length > 0 && (<motion.div initial = {}";
   {"opacity": "0", "y": "20"}} animate = {}"";
@@ -1201,8 +1105,6 @@ const handleClearHistory = useCallback(() => {}""
                       Export",;
                     </button>;
                   </div>,;
-=======
-
         {history.length > 0 && (<motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -1243,23 +1145,15 @@ const handleClearHistory = useCallback(() => {}""
                       Export,
                     </button>
                   </div>,
->>>>>>> main
                 </div>) ) }
-
             </div>
           </motion.div>) }"
       </div>""""
     </div>)}"""""""
 """""""`""
 "
-
   } catch (error) {console.error(error);}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 export default Component
-
 </Trash2>
 </motion>
 </motion>
@@ -1296,10 +1190,8 @@ export default Component
 </Icon>
 </Download>
 </Sparkles>
-<<<<<<< HEAD
 </Code>';
 </div>;';;';
-=======
 export default Component;
 </Trash2>;
 </motion>;
@@ -1339,8 +1231,5 @@ export default Component;
 </Sparkles>;
 </Code>;
 </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </Code>
 </div>
->>>>>>> main

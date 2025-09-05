@@ -17,7 +17,6 @@ export function JobPostingForm("props": "any) {;
   const { createJob", updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState<any>(false);
   const [editorContent, setEditorContent] = useState<any>("");
-<<<<<<< HEAD
   ;
   const {;
     form,;
@@ -32,8 +31,6 @@ export function JobPostingForm("props": "any) {;
   } = useJobForm({ jobId, onSuccess });
 ;
   const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues;
-=======
-  
   const {
     form,
     isLoading,
@@ -46,14 +43,11 @@ export function JobPostingForm("props": "any) {;
     submitJob
   } = useJobForm({ jobId, onSuccess }
     );
-
   const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues
->>>>>>> main
   const { isSubmitting } = formState;
 ;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -93,7 +87,6 @@ export function JobPostingForm("props": "any) {;
     );
     }
   }, [jobId, getJobById, setValue, getValues, setStartDate, setEndDate, setIsRemote]); // Added getValues;
-
   const handleEditorChange = useCallback(("value": "string) => {;
     setEditorContent(value);
     setValue('description'", value);
@@ -137,12 +130,9 @@ export function JobPostingForm("props": "any) {;
           <p className="text-sm text-muted-foreground">;
             Fill in the details below to create a job posting.</p>;
         </div>;
-
-<<<<<<< HEAD
         <BasicInfoFields control={form.control}  />;
         ;
         <DateFields startDate={startDate} ;
-=======
   return (<Form {...form}>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>
@@ -150,16 +140,12 @@ export function JobPostingForm("props": "any) {;
           <p className="text-sm text-muted-foreground">
             Fill in the details below to create a job posting.</p>
         </div>
-
         <BasicInfoFields control={form.control}  />
-        
         <DateFields startDate={startDate} 
->>>>>>> main
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
          />;
-
         <div>;
           <Label htmlFor="isRemote">;
             <Input;
@@ -172,12 +158,10 @@ export function JobPostingForm("props": "any) {;
             Remote;
           </Label>;
         </div>;
-
         <DescriptionFields control={form.control} ;
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}
          />;
-
         <Button type="submit" disabled={isSubmitting || isFormLoading}>;
           {isSubmitting || isFormLoading ? "Submitting..." : "jobId ? "Update Job" : "Post Job""}
         </Button>;
