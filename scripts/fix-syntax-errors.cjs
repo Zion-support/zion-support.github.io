@@ -1,115 +1,148 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
+/**
+ * Syntax Error Fixer;
+ * Automatically fixes common syntax errors in the codebase;
+ */
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-console.log('🔧 Starting syntax error fixing...');
-
-const issues = [];
-const fixes = [];
-
-// Common syntax fixes
-const syntaxFixes = [
-  {
-    pattern: /;\s*;\s*$/gm,
-    replacement: ';',
-    description: 'Remove duplicate semicolons'
-  },
-  {
-    pattern: /}\s*;\s*$/gm,
-    replacement: '}',
-    description: 'Remove semicolon after closing brace'
-  },
-  {
-    pattern: /}\s*}\s*$/gm,
-    replacement: '}',
-    description: 'Remove duplicate closing braces'
-  },
-  {
-    pattern: /<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g,
-    replacement: '',
-    description: 'Remove merge conflict markers'
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
   }
-];
 
-// File extensions to check
-const extensions = ['.tsx', '.ts', '.jsx', '.js'];
+  log(message) {
+    console.log(`🔧 ${message}`);
+  }
 
-// Directories to scan
-const directories = ['components', 'pages', 'lib', 'scripts'];
-
-function fixFile(filePath) {
-  if (!fs.existsSync(filePath)) return;
-  
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    let fileFixes = 0;
-    
-    syntaxFixes.forEach(fix => {
-      const matches = content.match(fix.pattern);
-      if (matches) {
-        content = content.replace(fix.pattern, fix.replacement);
-        fileFixes += matches.length;
-        fixes.push(`${filePath}: ${fix.description} (${matches.length} fixes)`);
+  fixFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+      
+      // Fix common syntax errors
+      content = this.fixCommonErrors(content);
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push(filePath);
+        this.log(`Fixed: ${filePath}`);
+        return true;
       }
-    });
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed ${fileFixes} issues in ${filePath}`);
+      
+      return false;
+    } catch (error) {
+      this.errors.push(`${filePath}: ${error.message}`);
+      return false;
     }
-  } catch (error) {
-    issues.push(`Error processing ${filePath}: ${error.message}`);
   }
-}
 
-// Scan directories
-directories.forEach(dir => {
-  if (fs.existsSync(dir)) {
-    const files = fs.readdirSync(dir, { recursive: true });
-    files.forEach(file => {
-      if (typeof file === 'string' && extensions.some(ext => file.endsWith(ext))) {
-        fixFile(path.join(dir, file));
+  fixCommonErrors(content) {
+    // Fix unterminated strings
+    content = content.replace(/'([^']*?)(?=\n|$)/g, (match, str) => {
+      if (!str.endsWith("'")) {
+        return match + "'";
       }
+      return match;
     });
+    
+    content = content.replace(/"([^"]*?)(?=\n|$)/g, (match, str) => {
+      if (!str.endsWith('"')) {
+        return match + '"';
+      }
+      return match;
+    });
+    
+    // Fix missing semicolons
+    content = content.replace(/([^;}])\n/g, '$1;\n');
+    
+    // Fix merge conflict markers
+    content = content.replace(/[\s\S]*?[\s\S]*?    
+    // Fix common JSX issues
+    content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
+    
+    // Fix missing commas in objects
+    content = content.replace(/([^,}])\n\s*}/g, '$1,\n}');
+    
+    // Fix missing commas in arrays
+    content = content.replace(/([^,])\n\s*]/g, '$1,\n]');
+    
+    return content;
   }
-});
 
-// Also check root files
-['package.json', 'next.config.cjs', 'eslint.config.js'].forEach(file => {
-  if (fs.existsSync(file)) {
-    fixFile(file);
+  async fixDirectory(dirPath) {
+    const files = fs.readdirSync(dirPath);
+    
+    for (const file of files) {
+      const filePath = path.join(dirPath, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        await this.fixDirectory(filePath);
+      } else if (file.match(/\.(tsx?|jsx?)$/)) {
+        this.fixFile(filePath);
+      }
+    }
   }
-});
 
-// Report results
-console.log(`\n📊 Syntax fixing complete:`);
-console.log(`   - Files processed: ${directories.length + 3}`);
-console.log(`   - Fixes applied: ${fixes.length}`);
-console.log(`   - Issues encountered: ${issues.length}`);
+  generateReport() {
+    const report = {
+      "timestamp": new Date().toISOString(),
+      "fixes": this.fixes,
+      "errors": this.errors,
+      "success": this.errors.length === 0
+   };
 
-if (issues.length > 0) {
-  console.log('\n⚠️  Issues:');
-  issues.forEach(issue => console.log(`   - ${issue}`));
+    const reportPath = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fix-report.json';);
+    const logDir = path.dirname(reportPath;);
+    
+    if () {
+      fs.mkdirSync(logDir, { "recursive": true })}
+    
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))) {
+    ) {
+      fs.mkdirSync(logDir, { "recursive": true })}
+    
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
+    this.log(`📄 Report saved "to": ${reportPath}`);
+    
+    return report}
+
+  async run() {
+    this.log('🚀 Starting syntax error fixing...');
+    
+    try {
+      await this.fixDirectory('components');
+      await this.fixDirectory('pages');
+      await this.fixDirectory('lib');
+      
+      if ( {
+        this.log('🎉 Syntax error fixing completed successfully!')} else {
+        this.log('⚠️ Syntax error fixing completed with some issues')}
+      
+      return report) {
+     {
+        this.log('🎉 Syntax error fixing completed successfully!')} else {
+        this.log('⚠️ Syntax error fixing completed with some issues')}
+      
+      return report}} catch (error) {
+      this.log(`💥 Syntax error fixing "failed": ${error.message}`, 'ERROR');
+      throw error}
+  }
 }
 
-if (fixes.length > 0) {
-  console.log('\n✅ Fixes applied:');
-  fixes.forEach(fix => console.log(`   - ${fix}`));
+if (require.main === module) {
+  const fixer = new SyntaxErrorFixer();
+  fixer.run().catch(error => {
+    console.error('Syntax fixing failed:', error);
+    process.exit(1);
+  });
 }
 
-// Save report
-const report = {
-  timestamp: new Date().toISOString(),
-  fixes: fixes,
-  issues: issues,
-  totalFixes: fixes.length,
-  totalIssues: issues.length
-};
-
-fs.writeFileSync('syntax-fix-report.json', JSON.stringify(report, null, 2));
-console.log('\n📄 Report saved to syntax-fix-report.json');
-
-process.exit(issues.length > 0 ? 1 : 0);
+module.exports = SyntaxErrorFixer;
+  log(message, level = 'INFO')
+    this.log(' Starting syntax error fixing...')
+      this.log('Running ESLint auto-fix...')
+      execSync('npm run "lint": fix', { "stdio"})
+      execSync('npm run type-check', { "stdio"})
+      execSync('npm run format', { "stdio"})
+      this.log(` Syntax fixing "failed"`)
+      this.log(`� Syntax error fixing "failed"`)

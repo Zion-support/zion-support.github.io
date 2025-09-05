@@ -1,25 +1,22 @@
 #!/bin/bash
 
-# Find all files with merge conflicts and fix them
-echo "Fixing merge conflicts in all files...
+# Script to fix merge conflicts by keeping HEAD version
+echo "Fixing merge conflicts in pages/ directory..."
 
-# Find all files with merge conflict markers
-files_with_conflicts=$(grep -r -l \|\|>>>>>>> " . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.log --exclude=*.txt" --exclude="*.json 2>/dev/null)
+# Find all files with merge conflicts
+files_with_conflicts=$(find pages/ -name "*.tsx" -exec grep -l "" {} \;)
 
 for file in $files_with_conflicts; do
-    echo Fixing conflicts in: $file"
+    echo "Fixing merge conflicts in: $file"
     
     # Create a backup
-    cp "$file $file.backup"
+    cp "$file" "$file.backup"
     
-    # Use sed to remove merge conflict markers and keep the HEAD version
-    sed -i '/^$/,/^$/d' "$file
-    sed -i '/^>>>>>>> .*$/d' $file"
-    
-    # Remove any remaining conflict markers
-    sed -i '/^$/d' "$file
-    sed -i '/^$/d' $file"
-    sed -i '/^>>>>>>> .*$/d' "$file
+    # Use sed to remove merge conflict markers and keep HEAD version
+    # Remove lines from  to  (inclusive)
+    # Remove lines from  to     sed -i '//,//d' "$file"
+    sed -i '//,/    
+    echo "Fixed: $file"
 done
 
-echo Merge conflicts fixed in all files."
+echo "Merge conflicts fixed!"

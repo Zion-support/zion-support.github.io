@@ -1,56 +1,46 @@
 {
-  "total": 8,
-  "successful": 6,
-  "failed": 2,
-  "criticalFailures": 0,
-  "startTime": "2025-09-03T16:47:59.868Z",
-  "successRate": 75,
-  "endTime": "2025-09-03T16:48:18.435Z",
-  "duration": 18567,
-  "recommendations": [
-    "⚠️  Improve automation success rate",
-    "🔧 Review and fix failed automation tasks"
-  ],
-  "tasks": [
-    {
-      "name": "Health Check",
-      "command": "node automation/health-check.cjs",
-      "critical": true
+  "timestamp": "2025-09-05T01:24:11.708Z",
+  "totalDuration": "61s",
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 60590,
+      "errors": []
     },
-    {
-      "name": "Security Scanner",
-      "command": "node automation/security-scanner.cjs",
-      "critical": true
+    "typescriptFix": {
+      "success": false,
+      "duration": 19,
+      "errors": [
+        "Command failed: node automation/typescript-fixer.cjs"
+      ]
     },
-    {
-      "name": "App Optimizer",
-      "command": "node automation/app-optimizer.cjs",
-      "critical": false
+    "healthCheck": {
+      "success": true,
+      "duration": 25,
+      "errors": []
     },
-    {
-      "name": "Continuous Improvement",
-      "command": "node automation/continuous-improvement.cjs",
-      "critical": false
+    "securityScan": {
+      "success": true,
+      "duration": 581,
+      "errors": []
     },
-    {
-      "name": "Performance Monitor",
-      "command": "node scripts/performance-monitor.js",
-      "critical": false
+    "performanceOptimize": {
+      "success": true,
+      "duration": 23,
+      "errors": []
     },
-    {
-      "name": "Build Test",
-      "command": "npm run build",
-      "critical": true
-    },
-    {
-      "name": "Type Check",
-      "command": "npm run type-check",
-      "critical": false
-    },
-    {
-      "name": "Security Audit",
-      "command": "npm audit --audit-level=moderate",
-      "critical": false
+    "buildTest": {
+      "success": false,
+      "duration": 103,
+      "errors": [
+        "Command failed: npm run build"
+      ]
     }
-  ]
+  },
+  "summary": {
+    "totalPhases": 6,
+    "successfulPhases": 4,
+    "failedPhases": 2,
+    "overallSuccess": false
+  }
 }

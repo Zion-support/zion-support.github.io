@@ -1,0 +1,95 @@
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram,
+  Github,
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  Star
+} from 'lucide-react';
+
+interface LayoutProps {
+  title: string;
+  description: string;
+  children: React.ReactNode;
+  keywords?: string;
+}
+
+export default function Layout({ title, description, children, keywords }: LayoutProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+
+  const services = [
+    { name: 'AI Services', href: '/ai-services', description: 'Machine Learning, NLP, Computer Vision, Quantum AI' },
+    { name: 'IT Services', href: '/it-services', description: 'Cloud, DevOps, Cybersecurity, Quantum Computing' },
+    { name: 'Micro SaaS', href: '/micro-saas', description: 'CRM, Project Management, E-commerce, HR Systems' },
+    { name: 'Blockchain', href: '/blockchain', description: 'Smart Contracts, DeFi, NFTs, Cryptocurrency' },
+    { name: 'IoT Solutions', href: '/iot', description: 'Connected Devices, Edge Computing, Real-time Analytics' },
+    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security Audits, Compliance, Threat Detection' },
+    { name: 'Quantum Computing', href: '/quantum-computing', description: 'Quantum Algorithms, Optimization, Simulation' },
+    { name: 'Edge Computing', href: '/edge-computing', description: 'Distributed Computing, Low Latency, 5G' }
+  ];
+
+  const solutions = [
+    { name: 'Enterprise Solutions', href: '/enterprise', description: 'Large-scale business solutions' },
+    { name: 'Startup Solutions', href: '/startup', description: 'Scalable startup platforms' },
+    { name: 'E-commerce', href: '/ecommerce', description: 'Online store solutions' },
+    { name: 'Healthcare', href: '/healthcare', description: 'Medical technology solutions' },
+    { name: 'Finance', href: '/finance', description: 'Fintech and banking solutions' },
+    { name: 'Education', href: '/education', description: 'EdTech platforms' },
+    { name: 'Manufacturing', href: '/manufacturing', description: 'Industrial automation and IoT' },
+    { name: 'Retail', href: '/retail', description: 'Omnichannel retail solutions' },
+    { name: 'Government', href: '/government', description: 'Public sector technology solutions' },
+    { name: 'Non-Profit', href: '/nonprofit', description: 'Technology for social impact' }
+  ];
+
+  const quickLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Support', href: '/support' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api-docs' }
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords || "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />      </div>
+    </>
+  );
+}

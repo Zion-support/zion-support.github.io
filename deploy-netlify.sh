@@ -1,31 +1,24 @@
 #!/bin/bash
-# Netlify deployment script for Zion Tech Group
+echo "🚀 Deploying to Netlify..."
 
-echo "🚀 Starting Netlify deployment..."
-
-# Install dependencies
-npm install
-
-# Build the application
-npm run build
-
-# Deploy to Netlify
-if [ -f "netlify.toml" ]; then
-    echo "📄 Found netlify.toml, deploying..."
-    netlify deploy --prod
-else
-    echo "⚠️ No netlify.toml found, creating basic configuration..."
-    cat > netlify.toml << EOF
-[build]
-  publish = ".next"
-  command = "npm run build"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-EOF
-    netlify deploy --prod
+# Install dependencies if needed
+if [ ! -d "node_modules" ]; then
+  echo "📦 Installing dependencies..."
+  npm install
 fi
 
-echo "✅ Netlify deployment completed"
+# Build the project
+echo "🔨 Building project..."
+npm run build
+
+# Check if Netlify CLI is installed
+if ! command -v netlify &> /dev/null; then
+  echo "❌ Netlify CLI not found. Please install it with: npm install -g netlify-cli"
+  exit 1
+fi
+
+# Deploy to Netlify
+echo "🚀 Deploying to Netlify..."
+netlify deploy --prod --dir=.next
+
+echo "✅ Deployment to Netlify completed"
