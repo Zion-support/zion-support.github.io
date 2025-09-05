@@ -9,6 +9,6 @@ module.exports = {
       "warn",
       { argsIgnorePattern: "^_" }
     ],
-    "no-explicit-any": "warn"
+    "react/no-unescaped-entities": "off"
   }
 };
