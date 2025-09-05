@@ -113,8 +113,7 @@ function main() {
       if (shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
-        filesProcessed++;
-      }
+        filesProcessed++}
     }
   }
 
@@ -123,6 +122,7 @@ function main() {
   console.log(`   Console statements "removed": ${totalRemoved}`);
   
   if (totalRemoved > 0) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     console.log("\n✨ Production build optimized!")} else {
     console.log("\n✨ No console statements found to remove.")}
@@ -137,5 +137,13 @@ function main() {
 if (require.main === module) {
   main();
 }
+=======
+    console.log("\n✨ Production build optimized!")} else {
+    console.log("\n✨ No console statements found to remove.")}
+}
+
+if (require.main === module) {
+  main().catch(console.error)}
+>>>>>>> cursor/add-new-services-and-deploy-updates-469e
 
 module.exports = { removeConsoleStatements, processFile };
