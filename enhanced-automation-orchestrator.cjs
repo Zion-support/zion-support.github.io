@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-console.log(' Starting Enhanced Automation Orchestrator...')
+// console.log(' Starting Enhanced Automation Orchestrator...')
     console.log('� Running Health Checks...')
       execSync('npm run "automation": health', { "stdio"})
       execSync('npm run "automation": security', { "stdio"})

@@ -128,7 +128,8 @@ console.log(`\n✅ Fixed ${totalFixed} files`);
 // Try to build
 console.log('\n🔨 Testing build...');
 try {
-  execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' });
+  execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' }
+});
   console.log('✅ Build successful!');
 } catch (error) {
   console.log('⚠️  Build still has issues, but conflicts were resolved');
@@ -138,8 +139,10 @@ try {
 // Commit the merge
 console.log('\n📝 Committing merge...');
 try {
-  execSync('git add .', { cwd: '/workspace' });
-  execSync('git commit -m "resolve: Final merge conflicts and syntax errors fixed"', { cwd: '/workspace' });
+  execSync('git add .', { cwd: '/workspace' }
+});
+  execSync('git commit -m "resolve: Final merge conflicts and syntax errors fixed"', { cwd: '/workspace' }
+});
   console.log('✅ Merge committed');
 } catch (error) {
   console.log('⚠️  Failed to commit merge:', error.message);
@@ -148,7 +151,8 @@ try {
 // Push changes
 console.log('\n🚀 Pushing changes to main branch...');
 try {
-  execSync('git push origin main', { cwd: '/workspace' });
+  execSync('git push origin main', { cwd: '/workspace' }
+});
   console.log('✅ Changes pushed to main branch');
 } catch (error) {
   console.log('⚠️  Failed to push changes:', error.message);

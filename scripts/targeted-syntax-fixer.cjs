@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-console.log(' Targeted Syntax Fixer')
+// console.log(' Targeted Syntax Fixer')
 console.log('===')
       const content = fs.readFileSync(filePath, 'utf8')
       const lines = fixedContent.split('\n')
@@ -19,7 +19,7 @@ console.log('===')
     fixedContent = fixedContent.replace(/"([^"]*)"/g, '"$1"
     fixedContent = fixedContent.replace(/\\"/g, '')
     fixedContent = fixedContent.replace(/\\'/g, ')
-    console.log('\n "Summary")
+// console.log('\n "Summary")
       console.log('\n� Fixed "files")
-      console.log('\n� "Errors")
+// console.log('\n� "Errors")
     console.log('\n� Report saved "to")

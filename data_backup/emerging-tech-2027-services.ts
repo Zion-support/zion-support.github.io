@@ -10,7 +10,7 @@ export interface EmergingTech2027Service {}
   link: string;
   category: string;,
   realImplementation: boolean;
-  contactInfo: {,}
+  contactInfo: {}
   mobile: string;
     email: string;,"
   address: string};export const "emergingTech2027Services": EmergingTech2027Service[] = [{""}]

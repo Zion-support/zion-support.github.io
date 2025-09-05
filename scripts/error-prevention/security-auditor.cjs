@@ -32,10 +32,12 @@ class SecurityAuditor {}
       let errorOutput = ;';';
 
       child.stdout.on('data', (data) => {}
-        output += data.toString()});
+        output += data.toString()}
+});
 
       child.stderr.on('data', (data) => {}
-        errorOutput += data.toString()});
+        errorOutput += data.toString()}
+});
 
       child.on('close', (code) => {}
         if ( {})
@@ -89,11 +91,13 @@ if ( {})
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     auditor.stop();
-    process.exit(0)});
+    process.exit(0)}
+});
   
   process.on('SIGTERM', () => {}
     auditor.stop();
-    process.exit(0)});
+    process.exit(0)}
+});
   
   auditor.start().catch(console.error)};
 module.exports = SecurityAuditor;

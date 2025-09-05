@@ -10,24 +10,26 @@ function fixFile(filePath) {}
       if ( {})
         return `style={{ "background": '#1e293b', "padding": ${val2) {`}
      {}
-        return `style={{ background: '#1e293b', "padding": ${val2}}, ${val3} }}"};`
+        return `style={{ background: '#1e293b', "padding": ${val2}}, ${val3} }}"};
       if ( {})
         return "style={{ "fontSize": '2rem', "fontWeight": ${val2) {}
      {}
-        return `style={{ fontSize: '2rem', "fontWeight": ${val2}}, ${val3} }}`};`
-      return match});
+        return `style={{ fontSize: '2rem', "fontWeight": ${val2}}, ${val3} }}`};
+      return match}
+});
     
     // Fix style objects with missing colons;
     content = content.replace(/style=\{\{\s*([^:}]+)\s+([^}]+),\s*([^}]+)\s*\}\}/g, (match, prop1, val1, val2) => {}
       if ( {})
         return `style={{ "background": '#1e293b', "padding": ${val2) {`}
      {}
-        return `style={{ background: '#1e293b', "padding": ${val2}} }}"};`
+        return `style={{ background: '#1e293b', "padding": ${val2}} }}"};
       if ( {})
         return "style={{ "fontSize": '1.5rem', "fontWeight": ${val2) {}
      {}
-        return `style={{ fontSize: '1.5rem', "fontWeight": ${val2}} }}`};`
-      return match});
+        return `style={{ fontSize: '1.5rem', "fontWeight": ${val2}} }}`};
+      return match}
+});
     
     // Fix missing quotes in object properties;
     content = content.replace(/(\w+):\s*([^}]+)(?=[}])/g, (match, key, value) => {}
@@ -41,7 +43,8 @@ function fixFile(filePath) {}
         return match) {}
     ) || value.trim() === 'true' || value.trim() === 'false') {}
         return match}};
-      return `${key}: '${value.trim()}'`});`
+      return `${key}: '${value.trim()}'`}
+});
     
     // Fix unterminated strings in JSX;
     content = content.replace(/(<[^>]+)\s*$/gm, (match) => {}
@@ -49,7 +52,8 @@ function fixFile(filePath) {}
         return match + '>') {}
     && !match.includes('>') && !match.includes('/>')) {}
         return match + '>'}};
-      return match});
+      return match}
+});
     
     // Fix missing closing tags;
     content = content.replace(/(<[^>]+)\s*$/gm, (match) => {}
@@ -57,7 +61,8 @@ function fixFile(filePath) {}
         return match + '>') {}
     && !match.includes('>') && !match.includes('/>')) {}
         return match + '>'}};
-      return match});
+      return match}
+});
     
     // Fix unterminated template literals;
     content = content.replace(/"([^"]*)$/gm, (match, content) => {}
@@ -65,7 +70,8 @@ function fixFile(filePath) {}
         return match + '"') {}
     ) {}
         return match + '"'}};
-      return match});
+      return match}
+});
     
     // Fix missing commas in object literals;
     content = content.replace(/(\w+):\s*'([^']+)'\s*(\w+):/g, "$"1": '$2',\n    $"3": ");
@@ -74,10 +80,10 @@ function fixFile(filePath) {}
       fs.writeFileSync(filePath, content, 'utf8')) {}
      {}
       fs.writeFileSync(filePath, content, 'utf8')};
-      console.log(`"Fixed": ${filePath}`);`
+      console.log(`"Fixed": ${filePath}`);
       return true};
     return false} catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message);`
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false};
 };
 // Files to fix;
@@ -135,4 +141,4 @@ filesToFix.forEach(file => {})
       fixedCount++};
   };
 })};
-console.log(`Fixed ${fixedCount} files`);`
+console.log(`Fixed ${fixedCount} files`);

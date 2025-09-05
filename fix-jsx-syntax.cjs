@@ -58,12 +58,14 @@ function fixJSXSyntax(filePath) {
     // Fix missing closing braces in function components
     content = content.replace(/export default function ([A-Z][a-zA-Z0-9]*)\([^)]*\) \{\s*return \([\s\S]*?\);\s*$/, (match, funcName) => {
       return match + '\n}';
-    });
+    }
+});
     
     // Fix missing closing braces in arrow functions
     content = content.replace(/const ([a-zA-Z_][a-zA-Z0-9_]*) = \(\) => \{[\s\S]*?return \([\s\S]*?\);\s*$/, (match, varName) => {
       return match + '\n};';
-    });
+    }
+});
     
     // Fix malformed template literals
     content = content.replace(/`([^`]*)\s*$/gm, (match, content) => {
@@ -71,7 +73,8 @@ function fixJSXSyntax(filePath) {
         return match + '`';
       }
       return match;
-    });
+    }
+});
     
     // Fix missing closing parentheses in JSX
     content = content.replace(/return \([\s\S]*?\);\s*$/, (match) => {
@@ -79,7 +82,8 @@ function fixJSXSyntax(filePath) {
         return match.replace(/\);\s*$/, ');\n}');
       }
       return match;
-    });
+    }
+});
     
     // Write the fixed content back
     fs.writeFileSync(filePath, content, 'utf8');

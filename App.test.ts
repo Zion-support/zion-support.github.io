@@ -6,13 +6,17 @@ describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
-  });
+  }
+});
   
   it('displays correct content', () => {
     render(<App />);
-  });
+  }
+});
   
   it('handles user interactions', () => {
     render(<App />);
-  });
+  }
+});
+}
 });

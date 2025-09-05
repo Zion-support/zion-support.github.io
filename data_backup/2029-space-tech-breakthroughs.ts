@@ -23,7 +23,7 @@ export interface SpaceTechBreakthroughService2029 {}
   technology: string[];,
   benefits: string[];
   useCases: string[];,
-  spaceCapabilities: string[];export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029[] = [{,"}]
+  spaceCapabilities: string[];export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029[] = [{"}]
   id: "space-mining-automation-platform",""
     "name": "Space Mining Automation Platform",""
     "tagline": "Automated asteroid mining and resource extraction in space",""

@@ -5,7 +5,7 @@ export interface Real2025Q2Addition {}
   name: string;,
   tagline: string;
   price: string;,
-  features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [{,}]
+  features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [{}]
   id:,"
   ai-meeting-notes',''
     "name": 'AI Meeting Notes & Action Items,'

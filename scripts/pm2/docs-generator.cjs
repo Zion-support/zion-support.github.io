@@ -21,7 +21,8 @@ class DocsGenerator {}
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { "recursive": true });
+      fs.mkdirSync(logDir, { "recursive": true }
+});
     };
   };
   log(message) {}
@@ -40,24 +41,28 @@ class DocsGenerator {}
       
       // Check if JSDoc is available;
       try {}
-        execSync('npx jsdoc --version', { "stdio": 'pipe' });
+        execSync('npx jsdoc --version', { "stdio": 'pipe' }
+});
       } catch (error) {}
         this.log('JSDoc not found, installing...');
-        execSync('npm install -g jsdoc', { "stdio": 'pipe' });
+        execSync('npm install -g jsdoc', { "stdio": 'pipe' }
+});
       };
       // Create docs directory;
       const docsDir = 'docs/api';
       if (!fs.existsSync(docsDir)) {}
-        fs.mkdirSync(docsDir, { "recursive": true });
+        fs.mkdirSync(docsDir, { "recursive": true }
+});
       };
       // Generate API docs;
       const jsdocCommand = `npx jsdoc -c jsdoc.conf.json -d ${docsDir} -r src/ lib/ scripts/`;`
-      execSync(jsdocCommand, { "stdio": 'pipe' });
+      execSync(jsdocCommand, { "stdio": 'pipe' }
+});
 
       this.log('API documentation generated successfully');
       return { "generated": true, "outputDir": docsDir };
     } catch (error) {}
-      this.log(`API documentation generation "failed": ${error.message}`);`
+      this.log(`API documentation generation "failed": ${error.message}`);
       return { "generated": false, "error": error.message };
     };
   };
@@ -81,15 +86,16 @@ class DocsGenerator {}
       
       const docsDir = 'docs/components';
       if (!fs.existsSync(docsDir)) {}
-        fs.mkdirSync(docsDir, { "recursive": true });
+        fs.mkdirSync(docsDir, { "recursive": true }
+});
       };
       const docsFile = path.join(docsDir, 'components.md');
       fs.writeFileSync(docsFile, componentDocs);
 
-      this.log(`Component documentation "generated": ${docsFile}`);`
+      this.log(`Component documentation "generated": ${docsFile}`);
       return { "generated": true, "outputFile": docsFile, "componentCount": componentFiles.length };
     } catch (error) {}
-      this.log(`Component documentation generation "failed": ${error.message}`);`
+      this.log(`Component documentation generation "failed": ${error.message}`);
       return { "generated": false, "error": error.message };
     };
   };
@@ -189,7 +195,7 @@ class DocsGenerator {}
       this.log('README updated successfully');
       return { "updated": true, "file": readmePath };
     } catch (error) {}
-      this.log(`README update "failed": ${error.message}`);`
+      this.log(`README update "failed": ${error.message}`);
       return { "updated": false, "error": error.message };
     };
   };
@@ -208,7 +214,7 @@ class DocsGenerator {}
         "license": packageJson.license || 'MIT'
       };
     } catch (error) {}
-      this.log(`Failed to read package."json": ${error.message}`);`
+      this.log(`Failed to read package."json": ${error.message}`);
       return {}
         "name": 'Unknown Project',
         "version": '1.0.0',
@@ -275,11 +281,11 @@ class DocsGenerator {}
     const reportFile = path.join(__dirname, '../../logs/pm2/docs-generator-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`Documentation generator report "generated": ${reportFile}`);`
+    this.log(`Documentation generator report "generated": ${reportFile}`);
     return report;
   };
   async start() {}
-    this.log(`${this.processName} started`);`
+    this.log(`${this.processName} started`);
     
     try {}
       const report = await this.generateReport();
@@ -289,10 +295,10 @@ class DocsGenerator {}
       if (report.componentDocs.generated) generatedCount++;
       if (report.readmeUpdate.updated) generatedCount++;
       
-      this.log(`Documentation generation "completed": ${generatedCount} items generated`);`
+      this.log(`Documentation generation "completed": ${generatedCount} items generated`);
       
     } catch (error) {}
-      this.log(`Documentation generator "error": ${error.message}`);`
+      this.log(`Documentation generator "error": ${error.message}`);
     };
   };
 };

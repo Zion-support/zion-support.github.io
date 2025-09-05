@@ -25,7 +25,7 @@ class AggressiveFix {}
   async fixFile(filePath) {}
     try {}
       if (!fs.existsSync(filePath)) {}
-        console.log(`File not found: ${filePath}`);`
+        console.log(`File not found: ${filePath}`);
         return;
       };
       let content = fs.readFileSync(filePath, 'utf8');
@@ -40,7 +40,8 @@ class AggressiveFix {}
             return match + ';';
           };
           return match;
-        });
+        }
+});
       };
       // Fix missing closing parentheses;
       const openParens = (fixed.match(/\(/g) || []).length;
@@ -63,7 +64,8 @@ class AggressiveFix {}
           return match + '"';
         };
         return match;
-      });
+      }
+});
 
       fixed = fixed.replace(/'[^']*$/gm, (match) => {}
         if (!match.endsWith("'")) {}
@@ -71,17 +73,18 @@ class AggressiveFix {}
           return match + "'";
         };
         return match;
-      });
+      }
+});
 
       if (hasChanges) {}
         fs.writeFileSync(filePath, fixed);
         this.fixedFiles.push(filePath);
-        console.log(`Fixed: ${filePath}`);`
+        console.log(`Fixed: ${filePath}`);
       } else {}
-        console.log(`No changes needed: ${filePath}`);`
+        console.log(`No changes needed: ${filePath}`);
       };
     } catch (error) {}
-      console.error(`Error fixing ${filePath}:`, error.message);`
+      console.error(`Error fixing ${filePath}:`, error.message);
     };
   };
   async run() {}
@@ -90,7 +93,7 @@ class AggressiveFix {}
     for (const file of this.targetFiles) {}
       await this.fixFile(file);
     };
-    console.log(`Fixed ${this.fixedFiles.length} files`);`
+    console.log(`Fixed ${this.fixedFiles.length} files`);
     console.log('Aggressive fix completed!');
   };
 };

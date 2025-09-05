@@ -38,7 +38,8 @@ class MergeConflictResolver {
         encoding: "utf8",
         timeout: 300000,
         stdio: "pipe"
-      });
+      }
+});
       this.log(`✅ ${description} completed`, "SUCCESS");
       return { success: true, output: result };
     } catch (error) {

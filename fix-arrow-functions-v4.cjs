@@ -9,12 +9,14 @@ function fixArrowFunctionSyntax(filePath) {
     // Fix specific malformed arrow functions
     content = content.replace(/\.map\([^)]*\) => \(\)/g, (match) => {
       return match.replace(/\(\)/g, '');
-    });
+    }
+});
     
     // Fix specific pattern: {feature.features.map((item, idx) => (}
     content = content.replace(/\{([^}]*\.map\([^)]*\) => \(\)\}/g, (match) => {
       return match.replace(/\(\)/g, '');
-    });
+    }
+});
     
     // Fix missing closing braces in function components
     if (content.includes('export default function') && !content.trim().endsWith('}')) {

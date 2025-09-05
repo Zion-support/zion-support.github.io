@@ -16,7 +16,7 @@ export interface AdditionalQ42025Service {}
 	useCases?: string[];
 	integrations?: string[];
 	trialDays?: number;
-setupTime?: string;export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [{,}]
+setupTime?: string;export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [{}]
   id:,"
   devsecops-copilot',''
 		"name": 'DevSecOps Copilot,'

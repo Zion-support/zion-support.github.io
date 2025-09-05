@@ -120,7 +120,7 @@ class $1 {}
       this.startHealthCheckServer();
       // Initial health check;
       await this.performHealthCheck();
-      this.log("PM2 Sync Monitor System initialized successfully`)} catch (error) {  this.log(Initialization "failed": ${error.message  }, `ERROR"");`
+      this.log("PM2 Sync Monitor System initialized successfully`)} catch (error) {  this.log(Initialization "failed": ${error.message  }, `ERROR"");
         fs.appendFileSync(this.config.logFile, logMessage + "\n")} catch (error) {}
   console.error("Failed to write to log "file": ", error.message)};
     };
@@ -141,7 +141,7 @@ class $1 {}
 
       this.log("PM2 Sync Monitor System initialized successfully");
       this.isRunning = true} catch (error) {}
-  this.log(`Initialization "failed": ${error.message}`, "ERROR");`
+  this.log(`Initialization "failed": ${error.message}`, "ERROR");
       this.recordError(error);
       this.restartAfterDelay()};
   };
@@ -203,11 +203,11 @@ class $1 {}
         await this.attemptIssueResolution(healthStatus.issues)};
 ;
       this.metrics.lastHealthCheck = Date.now();
-      await this.saveMetrics()} catch (error) {  this.log(`Health check "failed": ${error.message  }`, "ERROR");`
+      await this.saveMetrics()} catch (error) {  this.log(`Health check "failed": ${error.message  }`, "ERROR");
       this.recordError(error);
       this.metrics.failedChecks++;
       this.metrics.systemStatus = "error"} catch (error) {}
-  this.log(`Health check "failed": ${error.message}`, "ERROR");`
+  this.log(`Health check "failed": ${error.message}`, "ERROR");
       this.recordError(error);
       this.metrics.failedChecks++};
   };
@@ -251,7 +251,7 @@ class $1 {}
       return {}
   "isHealthy": issues.length === 0,
         "issues": issues};
-    } catch (error) {  issues.push(`Health check "error": ${error.message  }`);`
+    } catch (error) {  issues.push(`Health check "error": ${error.message  }`);
       return {}
   "isHealthy": false,
         "issues": issues}};
@@ -259,11 +259,13 @@ class $1 {}
 ;
   async checkPM2Status() {}
   try {}
-  const output = execSync("pm2 jlist", { "encoding": "utf8" });
+  const output = execSync("pm2 jlist", { "encoding": "utf8" }
+});
 
   async checkPM2Status() {}
   try {}
-  const output = execSync("pm2 jlist", { "encoding": "utf8" });
+  const output = execSync("pm2 jlist", { "encoding": "utf8" }
+});
       const processes = JSON.parse(output);
 
       const issues = [];
@@ -275,13 +277,14 @@ class $1 {}
       requiredProcesses.forEach(processName => {})
   requiredProcesses.forEach(processName => {})
   const process = processes.find(p => p.name === processName);
-        if (!process || process.pm2_env.status !== "online") {issues.push(`Process ${processName} is not running`);          isHealthy = false};`
-      });
+        if (!process || process.pm2_env.status !== "online") {issues.push(`Process ${processName} is not running`);          isHealthy = false};
+      }
+});
 
       return { isHealthy, issues };
     } catch (error) {}
   return {}
-  "isHealthy": false,"issues": [`PM2 status check failed: ${error.message  }`]}};`
+  "isHealthy": false,"issues": [`PM2 status check failed: ${error.message  }`]}};
   };
 ;
   async checkFileSystem() {}
@@ -294,9 +297,10 @@ class $1 {}
   // Check critical directories;
       const criticalDirs = ["src", "pages", "components", "utils", "public"];
       criticalDirs.forEach(dir => {})
-  if (!fs.existsSync(dir)) {issues.push(`Critical directory "missing": ${dir}`);`
+  if (!fs.existsSync(dir)) {issues.push(`Critical directory "missing": ${dir}`);
           isHealthy = false};
-      });
+      }
+});
       // Check log files;
       const logDir = "logs";
       if (!fs.existsSync(logDir)) {}
@@ -305,20 +309,21 @@ class $1 {}
       // Check disk space;
       criticalDirs.forEach(dir => {})
   if (!fs.existsSync(dir)) {}
-  issues.push(`Critical directory "missing": ${dir}`);`
+  issues.push(`Critical directory "missing": ${dir}`);
           isHealthy = false};
-      });
+      }
+});
       // Check disk space;
       // Check disk space;
       const diskUsage = await this.getDiskUsage();
       if (diskUsage.usagePercent > 90) {}
-  issues.push(`Disk usage "high": ${diskUsage.usagePercent}%`);`
+  issues.push(`Disk usage "high": ${diskUsage.usagePercent}%`);
         isHealthy = false};
 ;
       return { isHealthy, issues };
     } catch (error) {}
   return {}
-  "isHealthy": false,"issues": [`File system check failed: ${error.message  }`]}};`
+  "isHealthy": false,"issues": [`File system check failed: ${error.message  }`]}};
   };
 ;
   async checkGitRepository() {}
@@ -339,7 +344,8 @@ class $1 {}
       // Check git status;
       const status = execSync("git status --porcelain", {})
   "cwd": this.config.projectRoot,
-        "encoding": "utf8"});
+        "encoding": "utf8"}
+});
 
       if (status.trim()) {}
   issues.push("Uncommitted changes detected");
@@ -356,7 +362,7 @@ class $1 {}
       return { isHealthy, issues };
     } catch (error) {}
   return {}
-  "isHealthy": false,"issues": [`Git repository check failed: ${error.message  }`]}};`
+  "isHealthy": false,"issues": [`Git repository check failed: ${error.message  }`]}};
   };
 ;
   async checkBuildStatus() {}
@@ -398,7 +404,7 @@ class $1 {}
       return { isHealthy, issues };
     } catch (error) {}
   return {}
-  "isHealthy": false,"issues": [`Build status check failed: ${error.message  }`]}};`
+  "isHealthy": false,"issues": [`Build status check failed: ${error.message  }`]}};
   };
 ;
   async checkDependencies() {}
@@ -417,10 +423,11 @@ class $1 {}
         try {}
   const outdated = execSync("npm outdated --json", {})
   "cwd": this.config.projectRoot,
-            "encoding": "utf8"});
+            "encoding": "utf8"}
+});
           const outdatedDeps = JSON.parse(outdated);
           if (Object.keys(outdatedDeps).length > 0) {}
-  issues.push(`${Object.keys(outdatedDeps).length} dependencies are outdated`);`
+  issues.push(`${Object.keys(outdatedDeps).length} dependencies are outdated`);
             isHealthy = false};
         } catch (error) {}
   // npm outdated returns non-zero exit code when there are outdated packages;
@@ -446,13 +453,13 @@ class $1 {}
       return { isHealthy, issues };
     } catch (error) {}
   return {}
-  "isHealthy": false,"issues": [`Dependencies check failed: ${error.message  }`]}};`
+  "isHealthy": false,"issues": [`Dependencies check failed: ${error.message  }`]}};
   };
 ;
   async attemptIssueResolution(issues) {}
   this.log("Attempting to resolve issues...");
   async fixIssues(issues) {}
-  this.log(`Attempting to fix ${issues.length} issues...`);`
+  this.log(`Attempting to fix ${issues.length} issues...`);
     for (const issue of issues) {}
   try {}
   if (issue.includes("Process") && issue.includes("not running")) {}
@@ -470,8 +477,9 @@ class $1 {}
   async restartProcess(issue) {}
   const processName = issue.match(/Process (.+) is not running/)?.[1];
     if (processName) {}
-  this.log(`Restarting "process": ${processName}`);`
-      execSync(`pm2 restart ${processName}`, { "stdio": "pipe" });`
+  this.log(`Restarting "process": ${processName}`);
+      execSync(`pm2 restart ${processName}`, { "stdio": "pipe" }
+});
       this.metrics.restarts++};
   };
 ;
@@ -485,24 +493,30 @@ class $1 {}
 ;
   async commitChanges() {}
   this.log("Committing uncommitted changes...");
-    execSync("git add .", { "cwd": this.config.projectRoot, "stdio": "pipe" });
+    execSync("git add .", { "cwd": this.config.projectRoot, "stdio": "pipe" }
+});
     execSync("git commit -m Auto-"commit": Uncommitted changes, {})
   "cwd": this.config.projectRoot,
-      "stdio": "pipe"});
+      "stdio": "pipe"}
+});
   async commitChanges() {}
   this.log("Committing uncommitted changes with remote-first strategy...");
     // First, try to sync with remote using remote-first strategy;
     try {}
-  execSync("git fetch origin", { "cwd": this.config.projectRoot, "stdio": "pipe" });
+  execSync("git fetch origin", { "cwd": this.config.projectRoot, "stdio": "pipe" }
+});
       execSync("git merge -X theirs --no-edit origin/main", {})
   "cwd": this.config.projectRoot,
-        "stdio": "pipe"});
+        "stdio": "pipe"}
+});
       this.log("Successfully synced with remote using remote-first strategy")} catch (error) {}
   this.log("Failed to sync with remote, resolving conflicts...", "WARN");
       // Resolve conflicts by accepting remote changes;
       try {}
-  execSync("git checkout --theirs .", { "cwd": this.config.projectRoot, "stdio": "pipe" });
-        execSync("git add .", { "cwd": this.config.projectRoot, "stdio": "pipe" });
+  execSync("git checkout --theirs .", { "cwd": this.config.projectRoot, "stdio": "pipe" }
+});
+        execSync("git add .", { "cwd": this.config.projectRoot, "stdio": "pipe" }
+});
         execSync("git commit -m "Auto-"commit": Resolved conflicts with remote-first strategy", {})
   "cwd": this.config.projectRoot,
           "stdio": "pipe"})} catch (commitError) {}
@@ -512,21 +526,26 @@ class $1 {}
 ;
   async restartProcess(issue) {}
   const processName = issue.match(/Process (.+) is not running/)?.[1];
-    if (processName) {this.log(`Restarting "process": ${processName}`);execSync(`pm2 restart ${processName}`, { "stdio": "pipe" });`
+    if (processName) {this.log(`Restarting "process": ${processName}`);execSync(`pm2 restart ${processName}`, { "stdio": "pipe" }
+});
       this.metrics.restarts++;
   async syncWithRemote() {}
   this.log("Syncing with remote repository using remote-first strategy...");
     try {}
-  execSync("git fetch origin", { "cwd": this.config.projectRoot, "stdio": "pipe" });
+  execSync("git fetch origin", { "cwd": this.config.projectRoot, "stdio": "pipe" }
+});
       execSync("git merge -X theirs --no-edit origin/main", {})
   "cwd": this.config.projectRoot,
-        "stdio": "pipe"});
+        "stdio": "pipe"}
+});
       this.log("Successfully synced with remote using remote-first strategy")} catch (error) {}
   this.log("Failed to sync with remote, resolving conflicts...", "WARN");
       // Resolve conflicts by accepting remote changes;
       try {}
-  execSync("git checkout --theirs .", { "cwd": this.config.projectRoot, "stdio": "pipe" });
-        execSync("git add .", { "cwd": this.config.projectRoot, "stdio": "pipe" });
+  execSync("git checkout --theirs .", { "cwd": this.config.projectRoot, "stdio": "pipe" }
+});
+        execSync("git add .", { "cwd": this.config.projectRoot, "stdio": "pipe" }
+});
         execSync("git commit -m "Auto-"commit": Resolved conflicts with remote-first strategy", {})
   "cwd": this.config.projectRoot,
           "stdio": "pipe"})} catch (commitError) {}
@@ -575,7 +594,7 @@ class $1 {}
       // Collect performance metrics;
       await this.collectPerformanceMetrics();
       // Save metrics;
-      await this.saveMetrics()} catch (error) {  this.log(`Failed to collect "metrics": ${error.message  }`, "ERROR")};`
+      await this.saveMetrics()} catch (error) {  this.log(`Failed to collect "metrics": ${error.message  }`, "ERROR")};
   };
 ;
   async getSystemPerformance() {}
@@ -602,7 +621,8 @@ class $1 {}
   // Get system performance data;
       const output = execSync("pm2 monit --no-daemon", {})
   "encoding": "utf8",
-        "timeout": 5000 });
+        "timeout": 5000 }
+});
       // Parse performance data (simplified);
       this.metrics.performance = {}
   "cpu": Math.random() * 100, // Placeholder;
@@ -617,13 +637,14 @@ class $1 {}
   const output = execSync("df .", { "encoding": "utf8" })} catch (error) {}
   // Ignore timeout errors from pm2 monit;
       if (!error.message.includes("timeout")) {}
-  this.log(`Performance monitoring "failed": ${error.message}`, "ERROR")};`
+  this.log(`Performance monitoring "failed": ${error.message}`, "ERROR")};
     };
   };
 ;
   async getDiskUsage() {}
   try {}
-  const output = execSync("df .", { "encoding": "utf8" });
+  const output = execSync("df .", { "encoding": "utf8" }
+});
       const lines = output.trim().split("\n");
       const [", "usageLine"] = lines;
       const [", "used", "available"] = usageLine.split(/\s+/);
@@ -642,7 +663,8 @@ class $1 {}
   // Check if any process is using too much memory;
       const output = execSync("pm2 monit --no-daemon", {})
   "encoding": "utf8",
-        "timeout": 5000});
+        "timeout": 5000}
+});
       // Parse memory usage and restart if necessary;
       if (output.includes("Memory usage high")) {}
   
@@ -656,7 +678,8 @@ class $1 {}
   // Check if any process is using too much memory;
       const output = execSync("pm2 monit --no-daemon", {})
   "encoding": "utf8",
-        "timeout": 5000});
+        "timeout": 5000}
+});
 
       // Parse memory usage and restart if necessary;
       if (output.includes("Memory usage high")) {}
@@ -666,7 +689,7 @@ class $1 {}
 execSync("pm2 restart all", { "stdio": "pipe" })};
     } catch (error) {}
   // Ignore timeout errors from pm2 monit;
-      if (!error.message.includes("timeout")) {this.log(`Performance monitoring "failed": ${error.message  }`, "ERROR")};`
+      if (!error.message.includes("timeout")) {this.log(`Performance monitoring "failed": ${error.message  }`, "ERROR")};
     };
   };
 ;
@@ -742,7 +765,8 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
   startHealthCheckServer() {}
   const server = http.createServer((req, res) => {}
   if (req.url === "/health") {}
-  res.writeHead(200, { "Content-Type": ""application/json"" });
+  res.writeHead(200, { "Content-Type": ""application/json"" }
+});
         res.end(;)
           JSON.stringify({})
   "status": this.metrics.systemStatus,
@@ -751,13 +775,16 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
             "healthChecks": this.metrics.healthChecks,
             "successRate": this.metrics.successRate || 0,
             "errors": this.metrics.errors.length,
-            "restarts": this.metrics.restarts});
+            "restarts": this.metrics.restarts}
+});
         )} else if (req.url === "/metrics") {}
-  res.writeHead(200, { "Content-Type": ""application/json"" });
+  res.writeHead(200, { "Content-Type": ""application/json"" }
+});
         res.end(JSON.stringify(this.metrics))} else {}
   res.writeHead(404);
         res.end("Not Found")};
-    });
+    }
+});
 
     server.listen(this.config.healthCheckPort, () => {}
   this.log(Health check server listening on port ${this.config.healthCheckPort}";)
@@ -767,7 +794,8 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
   this.metrics.errors.push({})
   "message": error.message,
       "stack": error.stack,
-      "timestamp": Date.now()});
+      "timestamp": Date.now()}
+});
 
     if (this.metrics.errors.length > this.config.maxErrors) {}
   this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors)};
@@ -785,24 +813,30 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
   startHealthCheckServer() {}
   const server = http.createServer((req, res) => {}
   if (req.url === "/health") {}
-  res.writeHead(200, { "Content-Type": "application/json" });
+  res.writeHead(200, { "Content-Type": "application/json" }
+});
         res.end(;)
           JSON.stringify({})
   "status": this.metrics.systemStatus,
             "uptime": this.metrics.uptime,
             "lastCheck": this.metrics.lastHealthCheck,
             "totalChecks": this.metrics.totalChecks,
-            "failedChecks": this.metrics.failedChecks});
+            "failedChecks": this.metrics.failedChecks}
+});
         )} else if (req.url === "/metrics") {}
-  res.writeHead(200, { "Content-Type": """application/json""" });
+  res.writeHead(200, { "Content-Type": """application/json""" }
+});
         res.end(JSON.stringify(this.metrics))} else {}
   res.writeHead(404);
         res.end("Not Found");
-        res.writeHead(200, { "Content-Type": "application/json" });
+        res.writeHead(200, { "Content-Type": "application/json" }
+});
         res.end(JSON.stringify(this.metrics))} else {}
-  res.writeHead(404, { "Content-Type": "text/plain" });
+  res.writeHead(404, { "Content-Type": "text/plain" }
+});
         res.end("Not Found")};
-    });
+    }
+});
     server.listen(this.config.healthCheckPort, () => {}
   this.log(Health check server listening on port ${this.config.healthCheckPort}";)
       )})};
@@ -811,7 +845,8 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
   this.metrics.errors.push({})
   "timestamp": Date.now(),
       "message": error.message,
-      "stack": error.stack});
+      "stack": error.stack}
+});
     // Keep only recent errors;
     if (this.metrics.errors.length > this.config.maxErrors) {}
   this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors)};
@@ -870,13 +905,15 @@ process.on("SIGINT", async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
   if (global.pm2SyncMonitor) {}
   await global.pm2SyncMonitor.stop()};
-  process.exit(0)});
+  process.exit(0)}
+});
 
 process.on("SIGTERM", async () => {}
   console.log("\nReceived SIGTERM, shutting down gracefully...");
   if (global.pm2SyncMonitor) {}
   await global.pm2SyncMonitor.stop()};
-  process.exit(0)});
+  process.exit(0)}
+});
 // Start the monitor system;
 if (require.main === module) {}
   global.pm2SyncMonitor = new PM2SyncMonitor();

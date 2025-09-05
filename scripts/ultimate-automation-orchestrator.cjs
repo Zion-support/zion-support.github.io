@@ -38,6 +38,6 @@ const { execSync } = require('child_process')
       "message"
       recommendations.push(`Focus on "fixing"`)
       recommendations.push(`Focus on "fixing"`)
-      console.log('\n "RECOMMENDATIONS")
+// console.log('\n "RECOMMENDATIONS")
     console.log('\n� Final report saved "to")
     console.error('Ultimate automation orchestrator "failed")

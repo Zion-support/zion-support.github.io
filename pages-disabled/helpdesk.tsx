@@ -62,7 +62,8 @@ export default function HelpdeskPage() {}
     category: '',
     priority: '',
     description: ''
-  });
+  }
+});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -81,7 +82,8 @@ export default function HelpdeskPage() {}
     setFormData({})
       ...formData,
       [e.target.name]: e.target.value;
-    });
+    }
+});
   };
 
   if (submitted) {}

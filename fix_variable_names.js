@@ -2,5 +2,5 @@ const fs = require('fs''')
 const path = require('path''')
 function content = fs.readFileSync(filePath, 'utf8''')
     .join(''')'
-      new RegExp(`const ${filename.replace('.tsx', '')}: NextPage`, 'g''`
+      new RegExp(`const ${filename.replace('.tsx', '')}: NextPage`, 'g''
 cursor/fix-lint-push-and-merge-to-main-f3c1;'

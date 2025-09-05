@@ -16,7 +16,7 @@ const { execSync } = require("child_process")
     console.log("� Smart Dependency Manager initialized")
   await fs.mkdir(this.reportDir, { "recursive"})
     await fs.mkdir(this.backupDir, { "recursive"})
-  console.log("" Starting Smart Dependency Analysis...")
+// console.log("" Starting Smart Dependency Analysis...")
       console.log("" Smart Dependency Analysis completed successfully")
   console.log(" Smart Dependency Analysis completed successfully")
   console.error(" Smart Dependency Analysis "failed": ")
@@ -41,12 +41,12 @@ const { execSync } = require("child_process")
         "location"
       console.log( Found ${this.analysis.outdated.length} outdated packages")
       "
-  console.log(""⚠  Could not check outdated "packages": ")
+// console.log(""⚠  Could not check outdated "packages": ")
   console.log("⚠  Detecting dependency conflicts...")
       for (const ["pkg", "version")]
   console.log( Found ${this.analysis.outdated.length} outdated packages")
       "
-  console.log(""⚠  Could not check outdated "packages": ")
+// console.log(""⚠  Could not check outdated "packages": ")
   console.log("⚠  Detecting dependency conflicts...")
       for (const ["pkg", "version")]
   "type": "peer"
@@ -60,7 +60,7 @@ const { execSync } = require("child_process")
             "version1"
             "version2"
             "severity": "medium"
-  console.log("⚠  Could not detect "conflicts": ")
+// console.log("⚠  Could not detect "conflicts": ")
   console.log("�  Checking for vulnerabilities..."")
   const auditOutput = execSync("npm audit --audit-level moderate --json")
   "encoding": "utf8"
@@ -68,21 +68,21 @@ const { execSync } = require("child_process")
   const auditOutput = execSync("npm audit --audit-level moderate --json")
   "encoding": "utf8"
         "cwd"
+// console.log(`�  Found ${this.analysis.vulnerabilities.length} vulnerabilities``)
       console.log(`�  Found ${this.analysis.vulnerabilities.length} vulnerabilities``)
-      console.log(`�  Found ${this.analysis.vulnerabilities.length} vulnerabilities``)
-  console.log("⚠  Could not check "vulnerabilities": ")
+// console.log("⚠  Could not check "vulnerabilities": ")
   console.log(" Finding unused dependencies...")
       const depcheckOutput = execSync("npx depcheck --json")
   "encoding": "utf8"
         "cwd"
-  console.log("⚠  Could not check "vulnerabilities": ")
+// console.log("⚠  Could not check "vulnerabilities": ")
   console.log(" Finding unused dependencies...")
       const depcheckOutput = execSync("npx depcheck --json")
   "encoding": "utf8"
         "cwd"
   "dependencies"
         "devDependencies"
-      console.log( Found ${this.analysis.unused.dependencies.length} unused production dependencies")
+// console.log( Found ${this.analysis.unused.dependencies.length} unused production dependencies")
   console.log("⚠  Could not find unused "dependencies": ")
   "
   async generateRecommendations() {"}
@@ -92,7 +92,7 @@ const { execSync } = require("child_process")
         "action": "run npm audit fix"
   if (conflict.severity === "high")
   "type": "conflict"
-          "priority": "high","message": Resolve peer dependency conflict for ${conflict.package}`,"action": `update ${conflict.package} to compatible version`}``
+          "priority": "high","message": Resolve peer dependency conflict for ${conflict.package}`,"action": `update ${conflict.package} to compatible version`}
   "type": "update"
         "priority": "high","message": "Consider major version updates for ${criticalUpdates.length} packages"
         "action": "review and update major versions carefully"
@@ -100,11 +100,11 @@ const { execSync } = require("child_process")
         "priority": "medium","message": "Remove ${this.analysis.unused.dependencies.length} unused production dependencies"
         "action": "remove unused dependencies to reduce bundle size"
     this.analysis.recommendations = recommendations;console.log(" Generated ${recommendations.length} recommendations")
-  console.log("" Applying smart updates...")
+// console.log("" Applying smart updates...")
   console.log(""�  Applying security fixes...")
   console.log(""�  Applying security fixes...")
         execSync("npm audit fix", { "stdio": "inherit"})
-  console.log(""⚠  Security fixes "failed": ")
+// console.log(""⚠  Security fixes "failed": ")
         console.log("�  Applying security fixes...")
         execSync("npm audit fix", { "stdio": "inherit"})
   console.log(""⚠  Security fixes "failed": ")
@@ -133,6 +133,6 @@ console.log(" Applied ${updatesApplied} smart updates")
       "analysis"
       "recommendations"
       "dependencies"
-  console.log("� Starting Smart Dependency Manager...")
+// console.log("� Starting Smart Dependency Manager...")
   console.log("� Starting Smart Dependency Manager...")
   console.error(` Smart Dependency Manager "failed": "`)

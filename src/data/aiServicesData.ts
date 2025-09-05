@@ -19,7 +19,7 @@ export interface AIService {}
   marketPrice: string;
   roi: string;,
   innovationLevel: string;
-  contactInfo: {,}
+  contactInfo: {}
   phone: string;
     email: string;,
   website: string};
@@ -81,13 +81,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$2,500 - $8,000/month",""
     roi: "300-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["OpenAI GPT", "BERT", "Transformers", "React", "Node.js", "WebSocket"],""
       integrations: ["CRM systems", "Help desk", "Live chat", "Social media", "Mobile apps"],"
       apiEndpoints: 200,"
@@ -147,13 +147,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$15,000 - $100,000/project",""
     roi: "250-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "MLflow", "Kubernetes"],""
       integrations: ["Data warehouses", "APIs", "Cloud platforms", "Monitoring tools", "CI/CD pipelines"],"
       apiEndpoints: 500,"
@@ -213,13 +213,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$3,500 - $12,000/month",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["OpenCV", "TensorFlow", "PyTorch", "YOLO", "React", "Node.js"],""
       integrations: ["Camera systems", "Storage platforms", "Analytics tools", "Mobile apps", "Cloud services"],"
       apiEndpoints: 300,"
@@ -279,13 +279,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$2,800 - $9,000/month",""
     roi: "250-450%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["spaCy", "NLTK", "Transformers", "BERT", "Python", "React"],""
       integrations: ["Social media APIs", "CRM systems", "Content management", "Analytics platforms"],"
       apiEndpoints: 250,"
@@ -345,13 +345,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$4,200 - $15,000/month",""
     roi: "300-600%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "R", "Prophet", "ARIMA", "LSTM", "React", "Node.js"],""
       integrations: ["Data warehouses", "ERP systems", "CRM platforms", "Analytics tools"],"
       apiEndpoints: 300,"
@@ -411,13 +411,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$1,800 - $6,000/month",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "Python"],""
       integrations: ["CMS platforms", "Social media", "Email marketing", "Analytics tools"],"
       apiEndpoints: 150,"
@@ -477,13 +477,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$5,500 - $18,000/month",""
     roi: "250-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "RPA tools", "ML models", "Workflow engines", "React", "Node.js"],""
       integrations: ["ERP systems", "CRM platforms", "Document management", "Email systems"],"
       apiEndpoints: 400,"
@@ -543,13 +543,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$3,200 - $12,000/month",""
     roi: "300-600%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "TensorFlow", "Apache Spark", "Redis", "React", "Node.js"],""
       integrations: ["E-commerce platforms", "Analytics tools", "User databases", "Content management"],"
       apiEndpoints: 500,"
@@ -609,13 +609,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$4,800 - $20,000/month",""
     roi: "400-800%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "TensorFlow", "XGBoost", "Apache Kafka", "React", "Node.js"],""
       integrations: ["Payment systems", "Banking APIs", "Identity verification", "Risk management tools"],"
       apiEndpoints: 300,"
@@ -675,13 +675,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$2,200 - $8,000/month",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["DeepSpeech", "Wav2Vec", "Whisper", "React", "Node.js", "WebRTC"],""
       integrations: ["Mobile apps", "Web applications", "Call centers", "Meeting platforms"],"
       apiEndpoints: 200,"
@@ -741,13 +741,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$4,500 - $15,000/month",""
     roi: "300-500%",""
     innovationLevel: "Cutting-edge","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["TensorFlow", "PyTorch", "IoT protocols", "Time series analysis", "React", "Node.js"],""
       integrations: ["SAP", "Oracle", "Maximo", "Siemens", "Schneider Electric"],"
       apiEndpoints: 300,"
@@ -807,13 +807,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$3,500 - $12,000/month",""
     roi: "250-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "Scikit-learn", "XGBoost", "TensorFlow", "React", "PostgreSQL"],""
       integrations: ["FICO", "Experian", "Equifax", "TransUnion", "Banking APIs"],"
       apiEndpoints: 250,"
@@ -873,13 +873,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$4,000 - $18,000/month",""
     roi: "200-350%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "Apache Spark", "TensorFlow", "React", "MongoDB", "Kubernetes"],""
       integrations: ["SAP", "Oracle", "Salesforce", "WMS systems", "TMS systems"],"
       apiEndpoints: 400,"
@@ -939,13 +939,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$5,500 - $25,000/month",""
     roi: "300-500%",""
     innovationLevel: "Cutting-edge","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["PyTorch", "TensorFlow", "DICOM", "HL7 FHIR", "React", "Node.js"],""
       integrations: ["Epic", "Cerner", "Allscripts", "PACS systems", "EMR systems"],"
       apiEndpoints: 500,"
@@ -1005,13 +1005,13 @@ export const AI_SERVICES: AIService[] = []
     marketPrice: "$3,200 - $15,000/month",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "React", "Node.js"],""
       integrations: ["SIEM systems", "Firewalls", "EDR solutions", "Cloud platforms", "Threat feeds"],"
       apiEndpoints: 350,"

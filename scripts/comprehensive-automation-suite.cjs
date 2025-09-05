@@ -7,7 +7,7 @@ const { execSync } = require('child_process')
       "status"
           "status"
           "status"
-    console.log(`   - "Successful"`)
+// console.log(`   - "Successful"`)
     console.log(`   - "Failed"`)
       "name"
         execSync('npm install', { "stdio"})
