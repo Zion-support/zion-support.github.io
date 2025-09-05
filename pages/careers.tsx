@@ -1,15 +1,8 @@
 import React from "react";
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-<<<<<<< HEAD
 import { motion } from 'framer-motion'
 import {
-=======
-import { motion } from 'framer-motion;
-import {}
-  // TODO: Implement;
-};
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
   Users, 
   MapPin, 
   Clock, 
@@ -22,190 +15,152 @@ import {}
   Coffee,
   Laptop,
   BookOpen,
-<<<<<<< HEAD
   Target
 } from 'lucide-react'
+
 const benefits = [
   {
-=======
-  Target;'
-} from 'lucide-react;
-const benefits = []
-  {'}
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     title: "Competitive Compensation",
     description: "Above-market salaries and performance bonuses",
     icon: Award
   },
-  {}
+  {
     title: "Health & Wellness",
     description: "Comprehensive health, dental, and vision insurance",
     icon: Heart
   },
-  {}
+  {
     title: "Flexible Work",
     description: "Remote work options and flexible schedules",
     icon: Laptop
   },
-  {}
+  {
     title: "Learning & Development",
     description: "Professional development budget and training programs",
     icon: BookOpen
   },
-  {}
+  {
     title: "Team Building",
     description: "Regular team events and company retreats",
     icon: Users
   },
-  {}
+  {
     title: "Innovation Time",
     description: "Dedicated time for personal projects and innovation",
-<<<<<<< HEAD
     icon: Zap
   }
-=======
-    icon: Zap;
-  }];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
 ];
 
-const openPositions = []
-  {}
+const openPositions = [
+  {
     title: "Senior Full-Stack Developer",
     department: "Engineering",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "5+ years",
     description: "Lead development of web applications using React, Node.js, and cloud technologies.",
-    requirements: []
+    requirements: [
       "5+ years of full-stack development experience",
       "Expertise in React, Node.js, and TypeScript",
       "Experience with cloud platforms (AWS, Azure, or GCP)",
-<<<<<<< HEAD
       "Strong problem-solving and communication skills"
-=======
-      "Strong problem-solving and communication skills"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     ],
     featured: true
   },
-  {}
+  {
     title: "AI/ML Engineer",
     department: "AI Services",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "3+ years",
     description: "Develop and deploy machine learning models and AI solutions for enterprise clients.",
-    requirements: []
+    requirements: [
       "3+ years of ML/AI development experience",
       "Proficiency in Python, TensorFlow, and PyTorch",
       "Experience with MLOps and model deployment",
-<<<<<<< HEAD
       "Knowledge of cloud ML services"
-=======
-      "Knowledge of cloud ML services"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     ],
     featured: true
   },
-  {}
+  {
     title: "DevOps Engineer",
     department: "Infrastructure",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "4+ years",
     description: "Manage cloud infrastructure, CI/CD pipelines, and deployment automation.",
-    requirements: []
+    requirements: [
       "4+ years of DevOps experience",
       "Expertise in AWS, Docker, and Kubernetes",
       "Experience with CI/CD tools (Jenkins, GitLab CI)",
-<<<<<<< HEAD
       "Infrastructure as Code (Terraform, CloudFormation)"
-=======
-      "Infrastructure as Code (Terraform, CloudFormation)"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     ],
     featured: false
   },
-  {}
+  {
     title: "Product Manager",
     department: "Product",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "3+ years",
     description: "Lead product strategy and roadmap for our AI and SaaS solutions.",
-    requirements: []
+    requirements: [
       "3+ years of product management experience",
       "Experience with B2B SaaS products",
       "Strong analytical and communication skills",
-<<<<<<< HEAD
       "Technical background preferred"
-=======
-      "Technical background preferred"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     ],
     featured: false
   },
-  {}
+  {
     title: "Sales Engineer",
     department: "Sales",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "2+ years",
     description: "Support sales team with technical expertise and client demonstrations.",
-    requirements: []
+    requirements: [
       "2+ years of technical sales experience",
       "Strong technical background",
       "Excellent presentation and communication skills",
-<<<<<<< HEAD
       "Experience with enterprise software sales"
-=======
-      "Experience with enterprise software sales"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     ],
     featured: false
   },
-  {}
+  {
     title: "UX/UI Designer",
     department: "Design",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "3+ years",
     description: "Design user experiences and interfaces for our web and mobile applications.",
-    requirements: []
+    requirements: [
       "3+ years of UX/UI design experience",
       "Proficiency in Figma, Sketch, or Adobe XD",
       "Experience with design systems",
-<<<<<<< HEAD
       "Portfolio demonstrating B2B product design"
     ],
     featured: false
   }
-=======
-      "Portfolio demonstrating B2B product design"];
-    ],
-    featured: false;
-  };
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
 ];
 
-const culture = []
-  {}
+const culture = [
+  {
     title: "Innovation First",
     description: "We encourage experimentation and innovative thinking in everything we do.",
-    icon: Zap;
+    icon: Zap
   },
-  {}
+  {
     title: "Collaborative Environment",
     description: "Open communication and teamwork are at the heart of our culture.",
-    icon: Users;
+    icon: Users
   },
-  {}
+  {
     title: "Continuous Learning",
     description: "We invest in our team's growth with learning opportunities and development programs.",
     icon: BookOpen;
   },
-  {}
+  {
     title: "Work-Life Balance",
     description: "We believe in sustainable work practices and supporting our team's well-being.",
     icon: Heart;
@@ -219,13 +174,13 @@ const testimonials = []
     content: "Working at Zion Tech Group has been incredible. The team is supportive, the projects are challenging, and I've grown tremendously in my career.",
     avatar: "SC"
   },
-  {}
+  {
     name: "Michael Rodriguez",
     role: "AI Engineer",
     content: "The opportunity to work on cutting-edge AI projects while having the flexibility to work remotely has been perfect for me.",
     avatar: "MR"
   },
-  {}
+  {
     name: "Emily Johnson",
     role: "Product Manager",
     content: "The collaborative culture and focus on innovation make this an amazing place to work. I love being part of building solutions that make a real impact.",

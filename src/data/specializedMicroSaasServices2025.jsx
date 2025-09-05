@@ -1,117 +1,121 @@
-export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [;]
-    // AI-Powered Content Generation Suite;
-    {}
-        "id": "ai-content-generation-suite-2025",""
-        "title": "AI Content Generation Suite 2025",""
-        "description": "Comprehensive AI-powered content creation platform that generates high-quality, SEO-optimized content for blogs, social media, and marketing campaigns.",""
-        "category": "Content Marketing",""
-        "subcategory": "AI Generation",""
-        "price": 299,""
-        "currency": "$",""
-        "pricingModel": "monthly","
-        features[;"]
-            "AI-powered blog post generation",""
-            "Social media content creation",""
-            "SEO optimization tools",""
-            "Multi-language support",""
-            "Brand voice customization",""
-            "Content calendar management",""
-            "Plagiarism detection",""
-            "Performance analytics""];
-        ],;
-        benefits[;"]
-            "Create content 10x faster",""
-            "Improve SEO rankings by 40%",""
-            "Reduce content creation costs by 60%",""
-            "Maintain consistent brand voice",""
-            "Scale content production easily""];
-        ],;
-        useCases[;"]
-            "Blog content creation",""
-            "Social media marketing",""
-            "Email marketing campaigns",""
-            "Product descriptions",""
-            "Marketing copywriting""];
-        ],;
-        targetAudience[;"]
-            "Marketing agencies",""
-            "Content creators",""
-            "E-commerce businesses",""
-            "Bloggers",""
-            "Small businesses""];
-        ],;"
-        tags["AI", "Content Generation", "Marketing", "SEO", "Automation"],;""
-        "estimatedDelivery": "1-2 weeks",""
-        "supportLevel": "standard",""
-        "marketPrice": "$299 - $999/month",""
-        "contactInfo": {""}
-            phone: "+1 302 464 0950",""
-            "email": "kleber@ziontechgroup.com",""
-            "website": "https://ziontechgroup.com""
-        },"
-        "websiteUrl": "https://ziontechgroup.com/ai-content-generation-suite-2025",""
-        technologyStack["GPT-5", "Claude 3.5", "NLP", "Machine Learning", "React"],;""
-        complianceStandards["GDPR", "Data Privacy"],;""
-        integrationCapabilities["WordPress", "Shopify", "Mailchimp", "Social Media APIs", "CMS Platforms"],;""
-        "freeTier": {features["5 content generations per month", "Basic SEO tools", "Standard templates"],;""}
-            limitations["Limited AI models", "Basic analytics", "No custom branding"];}"
+export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
+    // AI-Powered Content Generation Suite
+    {
+        "id": "ai-content-generation-suite-2025",
+        "title": "AI Content Generation Suite 2025",
+        "description": "Comprehensive AI-powered content creation platform that generates high-quality, SEO-optimized content for blogs, social media, and marketing campaigns.",
+        "category": "Content Marketing",
+        "subcategory": "AI Generation",
+        "price": 299,
+        "currency": "$",
+        "pricingModel": "monthly",
+        "features": [
+            "AI-powered blog post generation",
+            "Social media content creation",
+            "SEO optimization tools",
+            "Multi-language support",
+            "Brand voice customization",
+            "Content calendar management",
+            "Plagiarism detection",
+            "Performance analytics"
+        ],
+        "benefits": [
+            "Create content 10x faster",
+            "Improve SEO rankings by 40%",
+            "Reduce content creation costs by 60%",
+            "Maintain consistent brand voice",
+            "Scale content production easily"
+        ],
+        "useCases": [
+            "Blog content creation",
+            "Social media marketing",
+            "Email marketing campaigns",
+            "Product descriptions",
+            "Marketing copywriting"
+        ],
+        "targetAudience": [
+            "Marketing agencies",
+            "Content creators",
+            "E-commerce businesses",
+            "Bloggers",
+            "Small businesses"
+        ],
+        "tags": ["AI", "Content Generation", "Marketing", "SEO", "Automation"],
+        "estimatedDelivery": "1-2 weeks",
+        "supportLevel": "standard",
+        "marketPrice": "$299 - $999/month",
+        "contactInfo": {
+            "phone": "+1 302 464 0950",
+            "email": "kleber@ziontechgroup.com",
+            "website": "https://ziontechgroup.com"
+        },
+        "websiteUrl": "https://ziontechgroup.com/ai-content-generation-suite-2025",
+        "technologyStack": ["GPT-5", "Claude 3.5", "NLP", "Machine Learning", "React"],
+        "complianceStandards": ["GDPR", "Data Privacy"],
+        "integrationCapabilities": ["WordPress", "Shopify", "Mailchimp", "Social Media APIs", "CMS Platforms"],
+        "freeTier": {
+            "features": ["5 content generations per month", "Basic SEO tools", "Standard templates"],
+            "limitations": ["Limited AI models", "Basic analytics", "No custom branding"]
+        }
     },
-    // Smart Invoice Management System;
-    {"}
-        "id": "smart-invoice-management-system",""
-        "title": "Smart Invoice Management System",""
-        "description": "Intelligent invoice processing and management platform that automates billing, payment tracking, and financial reporting using AI and OCR technology.",""
-        "category": "Financial Management",""
-        "subcategory": "Invoice Processing",""
-        "price": 199,""
-        "currency": "$",""
-        "pricingModel": "monthly","
-        features[;"]
-            "AI-powered invoice scanning and processing",""
-            "Automated payment reminders",""
-            "Multi-currency support",""
-            "Real-time payment tracking",""
-            "Financial reporting dashboard",""
-            "Integration with accounting software",""
-            "Mobile app access",""
-            "Automated reconciliation""];
-        ],;
-        benefits[;"]
-            "Process invoices 5x faster",""
-            "Reduce payment delays by 70%",""
-            "Eliminate manual data entry errors",""
-            "Improve cash flow management",""
-            "Save 15+ hours per week""];
-        ],;
-        useCases[;"]
-            "Small business invoicing",""
-            "Freelancer billing",""
-            "Service comp invoicing",""
-            "Recurring billing management",""
-            "Expense tracking""];
-        ],;
-        targetAudience[;"]
-            "Small businesses",""
-            "Freelancers",""
-            "Service providers",""
-            "Consultants",""
-            "Agencies""];
-        ],;"
-        tags["Invoicing", "Financial Management", "Automation", "OCR", "AI"],;""
-        "estimatedDelivery": "1-2 weeks",""
-        "supportLevel": "standard",""
-        "marketPrice": "$199 - $599/month",""
-        "contactInfo": {""}
-            phone: "+1 302 464 0950",""
-            "email": "kleber@ziontechgroup.com",""
-            "website": "https://ziontechgroup.com""
-        },"
-        "websiteUrl": "https://ziontechgroup.com/smart-invoice-management-system",""
-        technologyStack["OCR Technology", "AI/ML", "React", "Node.js", "Cloud Computing"],;""
-        complianceStandards["GDPR", "Financial Regulations", "Data Security"],;""
-        integrationCapabilities["QuickBooks", "Xero", "Stripe", "PayPal", "Bank APIs"],;""
-        "freeTier": {features["10 invoices per month", "Basic reporting", "Email support"],;""}
-            limitations["No API access", "Limited integrations", "Basic templates"];}"
+    // Smart Invoice Management System
+    {
+        "id": "smart-invoice-management-system",
+        "title": "Smart Invoice Management System",
+        "description": "Intelligent invoice processing and management platform that automates billing, payment tracking, and financial reporting using AI and OCR technology.",
+        "category": "Financial Management",
+        "subcategory": "Invoice Processing",
+        "price": 199,
+        "currency": "$",
+        "pricingModel": "monthly",
+        "features": [
+            "AI-powered invoice scanning and processing",
+            "Automated payment reminders",
+            "Multi-currency support",
+            "Real-time payment tracking",
+            "Financial reporting dashboard",
+            "Integration with accounting software",
+            "Mobile app access",
+            "Automated reconciliation"
+        ],
+        "benefits": [
+            "Process invoices 5x faster",
+            "Reduce payment delays by 70%",
+            "Eliminate manual data entry errors",
+            "Improve cash flow management",
+            "Save 15+ hours per week"
+        ],
+        "useCases": [
+            "Small business invoicing",
+            "Freelancer billing",
+            "Service company invoicing",
+            "Recurring billing management",
+            "Expense tracking"
+        ],
+        "targetAudience": [
+            "Small businesses",
+            "Freelancers",
+            "Service providers",
+            "Consultants",
+            "Agencies"
+        ],
+        "tags": ["Invoicing", "Financial Management", "Automation", "OCR", "AI"],
+        "estimatedDelivery": "1-2 weeks",
+        "supportLevel": "standard",
+        "marketPrice": "$199 - $599/month",
+        "contactInfo": {
+            "phone": "+1 302 464 0950",
+            "email": "kleber@ziontechgroup.com",
+            "website": "https://ziontechgroup.com"
+        },
+        "websiteUrl": "https://ziontechgroup.com/smart-invoice-management-system",
+        "technologyStack": ["OCR Technology", "AI/ML", "React", "Node.js", "Cloud Computing"],
+        "complianceStandards": ["GDPR", "Financial Regulations", "Data Security"],
+        "integrationCapabilities": ["QuickBooks", "Xero", "Stripe", "PayPal", "Bank APIs"],
+        "freeTier": {
+            "features": ["10 invoices per month", "Basic reporting", "Email support"],
+            "limitations": ["No API access", "Limited integrations", "Basic templates"]
+        }
     },
     // AI-Powered Customer Support Platform;
     {"}
