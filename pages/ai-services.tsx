@@ -41,98 +41,61 @@ import {
   Mail,
   ShoppingCart,
   BookOpen,
-<<<<<<< HEAD
-  Home
-=======
   Home,
   Gamepad2
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const aiServices = [
   {
     title: 'AI-Powered Email Responder',
     description: 'Intelligent email automation that understands context and responds naturally to customer inquiries.',
     icon: Mail,
-<<<<<<< HEAD
     features: ['Natural Language Processing', 'Context Awareness', 'Multi-language Support', 'Sentiment Analysis'],
     pricing: '$299 - $1,999/month',
     category: 'Communication AI',
-=======
-    features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-categorization', 'Smart Routing'],
-    pricing: '$2,000 - $8,000 setup',
-    category: 'Automation',
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
     popular: true
   },
   {
     title: 'Predictive Analytics Platform',
-<<<<<<< HEAD
     description: 'Advanced machine learning platform for forecasting business trends and customer behavior.',
     icon: TrendingUp,
     features: ['Machine Learning Models', 'Real-time Analytics', 'Custom Dashboards', 'API Integration'],
     pricing: '$1,500 - $15,000/month',
     category: 'Analytics AI',
-=======
-    description: 'Advanced forecasting and predictive modeling for business intelligence.',
-    icon: BarChart3,
-    features: ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
-    pricing: '$4,000 - $20,000 project',
-    category: 'Analytics',
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
     popular: true
   },
   {
     title: 'Intelligent Chatbot System',
     description: 'Conversational AI that provides 24/7 customer support with human-like interactions.',
     icon: MessageSquare,
-<<<<<<< HEAD
     features: ['Natural Conversations', 'Multi-channel Support', 'Integration APIs', 'Analytics Dashboard'],
     pricing: '$199 - $2,999/month',
     category: 'Conversational AI',
-=======
-    features: ['Natural Language Understanding', 'Context Awareness', 'Multi-language Support', 'Integration APIs'],
-    pricing: '$1,000 - $6,000/month',
-    category: 'Customer Service',
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
     popular: true
   },
   {
     title: 'Computer Vision Solutions',
     description: 'Advanced image and video analysis for quality control, security, and automation.',
     icon: Eye,
-<<<<<<< HEAD
     features: ['Object Detection', 'Image Classification', 'Facial Recognition', 'Real-time Processing'],
     pricing: '$2,000 - $25,000/setup',
     category: 'Computer Vision',
     popular: false
-=======
-    features: ['Object Detection', 'Image Classification', 'Facial Recognition', 'Video Analytics'],
-    pricing: '$3,000 - $15,000 project',
-    category: 'Computer Vision'
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
   },
   {
     title: 'AI Content Generation',
     description: 'Automated content creation for blogs, social media, and marketing materials.',
     icon: FileText,
-<<<<<<< HEAD
     features: ['Multi-format Support', 'Brand Voice Training', 'SEO Optimization', 'Plagiarism Detection'],
     pricing: '$99 - $1,499/month',
     category: 'Content AI',
     popular: true
-=======
-    features: ['Text Generation', 'Content Optimization', 'SEO Integration', 'Multi-format Output'],
-    pricing: '$1,500 - $8,000/month',
-    category: 'Content'
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
   },
   {
     title: 'Voice AI Assistant',
     description: 'Natural language voice processing for hands-free business operations.',
     icon: Mic,
-<<<<<<< HEAD
     features: ['Speech Recognition', 'Voice Synthesis', 'Multi-language', 'Custom Commands'],
     pricing: '$399 - $3,999/month',
     category: 'Voice AI',
@@ -281,10 +244,6 @@ const aiServices = [
     pricing: '$199 - $1,999/setup',
     category: 'Smart Home AI',
     popular: false
-=======
-    features: ['Speech-to-Text', 'Text-to-Speech', 'Voice Commands', 'Multi-language Support'],
-    pricing: '$2,500 - $12,000 project',
-    category: 'Voice'
   },
   {
     title: 'AI-Powered Fraud Detection',
@@ -551,11 +510,172 @@ const aiServices = [
     features: ['Personalized Learning', 'Adaptive Assessment', 'Progress Tracking', 'Skill Development'],
     pricing: '$2,000 - $10,000/month',
     category: 'EdTech'
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
+  },
+  {
+    title: 'AI Quantum Machine Learning',
+    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Quantum Neural Networks', 'Faster Training'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Metaverse Platform',
+    description: 'Complete metaverse solution with AI-generated worlds and intelligent avatars.',
+    icon: Globe,
+    features: ['AI-Generated Worlds', 'Intelligent Avatars', 'Real-time Interactions', 'Virtual Economy'],
+    pricing: '$200,000 - $1,000,000 project',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI Digital Twin Technology',
+    description: 'Real-time digital twins with AI-powered simulation and optimization.',
+    icon: Monitor,
+    features: ['Real-time Simulation', 'Predictive Analytics', 'Optimization', 'IoT Integration'],
+    pricing: '$50,000 - $250,000 project',
+    category: 'Digital Twins'
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Advanced blockchain analysis with AI for DeFi, NFTs, and cryptocurrency.',
+    icon: Lock,
+    features: ['DeFi Analysis', 'NFT Intelligence', 'Crypto Trading', 'Smart Contract Auditing'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Blockchain AI'
+  },
+  {
+    title: 'AI Synthetic Data Generation',
+    description: 'Generate high-quality synthetic data for training and testing AI models.',
+    icon: Database,
+    features: ['Privacy-Preserving', 'High Fidelity', 'Custom Datasets', 'API Integration'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Data Science'
+  },
+  {
+    title: 'AI-Powered Edge Computing',
+    description: 'Intelligent edge computing with AI processing at the network edge.',
+    icon: Network,
+    features: ['Low Latency', 'Real-time Processing', 'Distributed AI', 'IoT Integration'],
+    pricing: '$25,000 - $125,000 setup',
+    category: 'Edge AI'
+  },
+  {
+    title: 'AI Conversational Commerce',
+    description: 'AI-powered shopping assistants and conversational commerce platforms.',
+    icon: ShoppingCart,
+    features: ['Voice Shopping', 'Product Recommendations', 'Order Management', 'Customer Support'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'E-commerce AI'
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Intelligent predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Real-time Monitoring'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Industrial AI'
+  },
+  {
+    title: 'AI Emotional Intelligence Platform',
+    description: 'AI system that understands and responds to human emotions in real-time.',
+    icon: Heart,
+    features: ['Emotion Recognition', 'Sentiment Analysis', 'Adaptive Responses', 'Mental Health Support'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Emotional AI'
+  },
+  {
+    title: 'AI-Powered Autonomous Drones',
+    description: 'Intelligent drone systems with AI navigation and mission execution.',
+    icon: Rocket,
+    features: ['Autonomous Flight', 'Mission Planning', 'Object Detection', 'Real-time Decision Making'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'AI Hyperpersonalization Engine',
+    description: 'Ultra-personalized experiences using advanced AI and behavioral analytics.',
+    icon: Target,
+    features: ['Behavioral Analysis', 'Dynamic Content', 'Real-time Adaptation', 'Cross-platform Sync'],
+    pricing: '$25,000 - $125,000 setup',
+    category: 'Personalization AI'
+  },
+  {
+    title: 'AI-Powered Climate Change Solutions',
+    description: 'AI solutions for climate monitoring, carbon tracking, and sustainability optimization.',
+    icon: Globe,
+    features: ['Carbon Tracking', 'Climate Modeling', 'Sustainability Metrics', 'Green Tech Optimization'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'Climate AI'
+  },
+  {
+    title: 'AI Neural Architecture Search',
+    description: 'Automated neural network design and optimization using AI.',
+    icon: Brain,
+    features: ['AutoML', 'Architecture Optimization', 'Performance Tuning', 'Custom Models'],
+    pricing: '$50,000 - $250,000 project',
+    category: 'AutoML'
+  },
+  {
+    title: 'AI-Powered Space Mining',
+    description: 'Autonomous space mining operations with AI-powered resource extraction.',
+    icon: Rocket,
+    features: ['Resource Detection', 'Autonomous Mining', 'Mission Planning', 'Risk Assessment'],
+    pricing: '$500,000 - $2,000,000 project',
+    category: 'Space Technology'
+  },
+  {
+    title: 'AI Biometric Security System',
+    description: 'Advanced biometric authentication with AI-powered fraud detection.',
+    icon: Shield,
+    features: ['Multi-modal Biometrics', 'Fraud Detection', 'Liveness Detection', 'Privacy Protection'],
+    pricing: '$20,000 - $100,000 setup',
+    category: 'Biometric AI'
+  },
+  {
+    title: 'AI-Powered Gene Therapy',
+    description: 'AI-optimized gene therapy design and delivery systems.',
+    icon: Heart,
+    features: ['Gene Design', 'Delivery Optimization', 'Safety Analysis', 'Clinical Prediction'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Gene Therapy AI'
+  },
+  {
+    title: 'AI Quantum Cryptography',
+    description: 'Quantum-resistant encryption and secure communication using AI.',
+    icon: Lock,
+    features: ['Quantum Encryption', 'Secure Communication', 'Key Management', 'Threat Detection'],
+    pricing: '$75,000 - $300,000 project',
+    category: 'Quantum Security'
+  },
+  {
+    title: 'AI-Powered Smart Agriculture',
+    description: 'Complete smart farming solution with AI optimization and automation.',
+    icon: Sprout,
+    features: ['Crop Optimization', 'Automated Farming', 'Weather Prediction', 'Resource Management'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'Smart Agriculture'
+  },
+  {
+    title: 'AI Consciousness Simulation',
+    description: 'Advanced AI system that simulates human consciousness and decision-making.',
+    icon: Brain,
+    features: ['Consciousness Modeling', 'Decision Simulation', 'Ethical AI', 'Human-like Reasoning'],
+    pricing: '$200,000 - $1,000,000 project',
+    category: 'Consciousness AI'
+  },
+  {
+    title: 'AI-Powered Time Series Forecasting',
+    description: 'Advanced time series analysis and forecasting for complex datasets.',
+    icon: TrendingUp,
+    features: ['Multi-variate Analysis', 'Seasonal Detection', 'Anomaly Detection', 'Long-term Forecasting'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'Time Series AI'
   }
 ];
 
-const categories = ['All', 'Communication AI', 'Analytics AI', 'Conversational AI', 'Computer Vision', 'Content AI', 'Voice AI', 'Security AI', 'Healthcare AI', 'Smart City AI', 'Agricultural AI', 'Productivity AI', 'Language AI', 'Financial AI', 'Environmental AI', 'Customer Service AI', 'Blockchain AI', 'Fitness AI', 'Smart Home AI'];
+const categories = ['All', 'Communication AI', 'Analytics AI', 'Conversational AI', 'Computer Vision', 'Content AI', 'Voice AI', 'Security AI', 'Healthcare AI', 'Smart City AI', 'Agricultural AI', 'Productivity AI', 'Language AI', 'Financial AI', 'Environmental AI', 'Customer Service AI', 'Blockchain AI', 'Fitness AI', 'Smart Home AI', 'Quantum AI', 'Metaverse', 'Digital Twins', 'Data Science', 'Edge AI', 'E-commerce AI', 'Industrial AI', 'Emotional AI', 'Autonomous Systems', 'Personalization AI', 'Climate AI', 'AutoML', 'Space Technology', 'Biometric AI', 'Gene Therapy AI', 'Quantum Security', 'Smart Agriculture', 'Consciousness AI', 'Time Series AI'];
 
 export default function AIServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -569,7 +689,7 @@ export default function AIServicesPage() {
   });
 
   return (
-    <MainLayout>
+    <Layout>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
@@ -701,49 +821,9 @@ export default function AIServicesPage() {
                         </Link>
                       </div>
                     </div>
-<<<<<<< HEAD
                   </motion.div>
                 );
               })}
-=======
-                    <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
-                      {service.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-                          <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-4">
-                    <span className="text-sm font-semibold text-blue-600">{service.pricing}</span>
-                  </div>
-
-                  <Link
-                    href="/contact"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                  >
-                    <span>Get Quote</span>
-                    <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
-                </motion.div>
-              );
-            })}
           </div>
         </div>
       </section>
@@ -865,8 +945,8 @@ export default function AIServicesPage() {
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
             </div>
+            </motion.div>
           </div>
         </section>
 
@@ -904,6 +984,6 @@ export default function AIServicesPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

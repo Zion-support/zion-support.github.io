@@ -31,32 +31,23 @@ import {
   ShoppingCart,
   BookOpen,
   Brain,
-<<<<<<< HEAD
   Sprout,
   Eye,
   Bot,
   FileText,
-=======
   DollarSign,
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
   Rocket
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const itServices = [
   {
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
     icon: Cloud,
-<<<<<<< HEAD
-    features: ['Multi-cloud Strategy', 'Cost Optimization', 'Security Hardening', '24/7 Monitoring'],
+    features: ['Multi-cloud Strategy', 'Cost Optimization', 'Security Hardening', '24/7 Monitoring', 'Auto-scaling', 'Disaster Recovery'],
     pricing: '$2,000 - $25,000/month',
     category: 'Cloud Services',
-=======
-    features: ['Multi-cloud Strategy', 'Cost Optimization', 'Auto-scaling', 'Disaster Recovery'],
-    pricing: '$6,000 - $30,000/project',
-    category: 'Cloud',
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
     popular: true
   },
   {
@@ -72,23 +63,16 @@ const itServices = [
     title: 'Network Infrastructure',
     description: 'Design, implementation, and maintenance of robust network infrastructure for optimal performance.',
     icon: Network,
-<<<<<<< HEAD
-    features: ['Network Design', 'Performance Optimization', 'Troubleshooting', 'Scalability Planning'],
+    features: ['Network Design', 'Performance Optimization', 'Troubleshooting', 'Scalability Planning', 'Monitoring'],
     pricing: '$1,200 - $12,000/setup',
     category: 'Infrastructure',
     popular: true
-=======
-    features: ['Network Design', 'Performance Optimization', 'Monitoring', 'Troubleshooting'],
-    pricing: '$120 - $220/hour',
-    category: 'Networking'
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
   },
   {
     title: 'Database Management',
     description: 'Expert database administration, optimization, and migration services for all major platforms.',
     icon: Database,
-<<<<<<< HEAD
-    features: ['Performance Tuning', 'Backup & Recovery', 'Migration Services', 'Security Hardening'],
+    features: ['Performance Tuning', 'Backup & Recovery', 'Migration Services', 'Security Hardening', 'Database Design'],
     pricing: '$800 - $8,000/month',
     category: 'Database',
     popular: false
@@ -209,10 +193,6 @@ const itServices = [
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
     popular: true
-=======
-    features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Migration Services'],
-    pricing: '$2,000 - $15,000/project',
-    category: 'Database'
   },
   {
     title: 'System Administration',
@@ -503,11 +483,87 @@ const itServices = [
     features: ['API Development', 'System Integration', 'Data Synchronization', 'Workflow Automation'],
     pricing: '$15,000 - $75,000/project',
     category: 'Integration'
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
+  },
+  {
+    title: 'AI-Powered IT Operations Management',
+    description: 'Intelligent IT operations with AI-driven automation and predictive analytics.',
+    icon: Brain,
+    features: ['Predictive Maintenance', 'Automated Troubleshooting', 'Performance Analytics', 'Cost Optimization'],
+    pricing: '$3,000 - $30,000/month',
+    category: 'AI Operations',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implement zero trust security model for enhanced protection against modern threats.',
+    icon: Lock,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Threat Detection'],
+    pricing: '$5,000 - $50,000/setup',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Deploy edge computing solutions for low-latency applications and IoT connectivity.',
+    icon: Cpu,
+    features: ['Edge Deployment', 'IoT Integration', 'Low Latency', 'Distributed Processing'],
+    pricing: '$2,000 - $25,000/setup',
+    category: 'Edge Computing',
+    popular: false
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and management for advanced computing needs.',
+    icon: Cpu,
+    features: ['Quantum Hardware', 'Algorithm Development', 'Performance Optimization', 'Security Implementation'],
+    pricing: '$100,000 - $1,000,000/setup',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Metaverse Infrastructure',
+    description: 'Complete metaverse infrastructure setup with 3D worlds and virtual economies.',
+    icon: Globe,
+    features: ['3D World Creation', 'Avatar Systems', 'Virtual Economy', 'Multi-user Support'],
+    pricing: '$50,000 - $500,000/setup',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin infrastructure for real-time simulation and optimization.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$25,000 - $250,000/setup',
+    category: 'Digital Twins'
+  },
+  {
+    title: 'Blockchain Infrastructure Management',
+    description: 'Complete blockchain infrastructure setup and management for DeFi and Web3 applications.',
+    icon: Lock,
+    features: ['Blockchain Networks', 'Smart Contracts', 'DeFi Integration', 'Security Auditing'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI Data Pipeline Infrastructure',
+    description: 'Complete AI data pipeline infrastructure for machine learning and analytics.',
+    icon: Database,
+    features: ['Data Ingestion', 'Processing Pipelines', 'Model Training', 'Deployment'],
+    pricing: '$15,000 - $150,000/setup',
+    category: 'AI Infrastructure'
+  },
+  {
+    title: 'Space Technology Infrastructure',
+    description: 'Space technology infrastructure for satellite communications and space missions.',
+    icon: Rocket,
+    features: ['Satellite Ground Stations', 'Mission Control', 'Communication Systems', 'Data Processing'],
+    pricing: '$100,000 - $1,000,000/setup',
+    category: 'Space Technology'
   }
 ];
 
-const categories = ['All', 'Cloud Services', 'Security', 'Infrastructure', 'Database', 'DevOps', 'Migration', 'Management', 'AI Operations', 'Edge Computing', '5G Networks', 'Quantum Security', 'Blockchain', 'IoT', 'Disaster Recovery', 'Compliance', 'Threat Intelligence'];
+const categories = ['All', 'Cloud Services', 'Security', 'Infrastructure', 'Database', 'DevOps', 'Migration', 'Management', 'AI Operations', 'Edge Computing', '5G Networks', 'Quantum Security', 'Blockchain', 'IoT', 'Disaster Recovery', 'Compliance', 'Threat Intelligence', 'Quantum Computing', 'Metaverse', 'Digital Twins', 'AI Infrastructure', 'Space Technology'];
 
 export default function ITServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -521,7 +577,7 @@ export default function ITServicesPage() {
   });
 
   return (
-    <MainLayout>
+    <Layout>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-green-900 to-blue-900 text-white py-20">
@@ -544,24 +600,7 @@ export default function ITServicesPage() {
                   href="/contact" 
                   className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-all duration-300"
                 >
-<<<<<<< HEAD
                   Get Free Assessment
-=======
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
-                      <IconComponent className="w-10 h-10" />
-                    </div>
-                    <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
-                      {service.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
                   
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
@@ -745,7 +784,6 @@ export default function ITServicesPage() {
                 >
                   <span>Choose Plan</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
                 </Link>
                 <Link 
                   href="#services" 
@@ -895,6 +933,6 @@ export default function ITServicesPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

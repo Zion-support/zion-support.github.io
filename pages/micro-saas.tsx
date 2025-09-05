@@ -32,7 +32,6 @@ import {
   Building,
   Sprout,
   Mail,
-<<<<<<< HEAD
   ShoppingCart,
   BookOpen,
   Package,
@@ -40,40 +39,23 @@ import {
   TrendingUp,
   Target,
   Eye,
-  Brain
-=======
+  Brain,
   MessageSquare,
   Search,
-  Eye,
-  Target,
-  TrendingUp,
-  Package,
   Calendar,
-  BookOpen,
-  ShoppingCart,
   Home,
   Trash2
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const microSaaSProducts = [
   {
-<<<<<<< HEAD
-    title: 'Cloud Cost Guard',
-    description: 'Automated cloud cost monitoring and optimization for AWS, Azure, and GCP.',
-    icon: Cloud,
-    features: ['Cost Tracking', 'Budget Alerts', 'Optimization Recommendations', 'Multi-cloud Support'],
-    pricing: '$29 - $299/month',
-    category: 'Cloud Management',
-=======
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
     icon: DollarSign,
-    features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support'],
+    features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support', 'Cost Tracking', 'Budget Alerts', 'Optimization Recommendations'],
     pricing: '$299 - $1,499/month',
     category: 'FinOps',
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
     popular: true
   },
   {
@@ -98,16 +80,10 @@ const microSaaSProducts = [
     title: 'API Rate Limiting',
     description: 'Intelligent API rate limiting and throttling to protect your services.',
     icon: Shield,
-<<<<<<< HEAD
     features: ['Dynamic Rate Limiting', 'DDoS Protection', 'Analytics Dashboard', 'Custom Rules'],
     pricing: '$99 - $999/month',
     category: 'API Management',
     popular: false
-=======
-    features: ['Prompt Testing', 'Bias Detection', 'Safety Checks', 'Guardrail Policies'],
-    pricing: '$799 - $3,500/month',
-    category: 'AI Safety',
-    popular: true
   },
   {
     title: 'Customer Feedback & NPS Micro-App',
@@ -115,31 +91,17 @@ const microSaaSProducts = [
     icon: MessageSquare,
     features: ['Survey Builder', 'Sentiment Analysis', 'Auto Routing', 'NPS Tracking'],
     pricing: '$149 - $799/month',
-    category: 'Customer Success'
-  },
-  {
-    title: 'API Rate Limiting & Analytics',
-    description: 'Intelligent rate limiting with detailed analytics and usage insights.',
-    icon: BarChart3,
-    features: ['Smart Rate Limiting', 'Usage Analytics', 'Real-time Monitoring', 'Custom Rules'],
-    pricing: '$199 - $999/month',
-    category: 'API Management'
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
+    category: 'Customer Success',
+    popular: false
   },
   {
     title: 'Content Moderation AI',
     description: 'Automated content moderation using AI for text, images, and videos.',
     icon: Eye,
-<<<<<<< HEAD
-    features: ['Multi-media Support', 'Custom Rules', 'Real-time Processing', 'Human Review Queue'],
+    features: ['Multi-media Support', 'Custom Rules', 'Real-time Processing', 'Human Review Queue', 'Multi-modal Detection', 'API Integration'],
     pricing: '$149 - $1,499/month',
     category: 'Content Management',
     popular: true
-=======
-    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
-    pricing: '$399 - $1,999/month',
-    category: 'Content Safety'
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
   },
   {
     title: 'Workflow Automation',
@@ -149,25 +111,15 @@ const microSaaSProducts = [
     pricing: '$79 - $799/month',
     category: 'Automation',
     popular: true
-<<<<<<< HEAD
-  },
-  {
-    title: 'AI Lead Scoring',
-    description: 'Intelligent lead scoring and qualification using machine learning.',
-    icon: Target,
-    features: ['ML Models', 'Behavioral Analysis', 'Scoring Algorithms', 'CRM Integration'],
-    pricing: '$199 - $1,999/month',
-    category: 'Sales Tools',
-    popular: false
-=======
   },
   {
     title: 'AI Lead Scoring & Enrichment',
     description: 'Intelligent lead scoring and data enrichment for sales teams.',
     icon: Target,
-    features: ['Lead Scoring', 'Data Enrichment', 'Behavioral Tracking', 'CRM Integration'],
+    features: ['Lead Scoring', 'Data Enrichment', 'Behavioral Tracking', 'CRM Integration', 'ML Models', 'Behavioral Analysis', 'Scoring Algorithms'],
     pricing: '$199 - $999/month',
-    category: 'Sales'
+    category: 'Sales',
+    popular: false
   },
   {
     title: 'Social Media Scheduler Pro',
@@ -175,7 +127,8 @@ const microSaaSProducts = [
     icon: Globe,
     features: ['Multi-platform Posting', 'Optimal Timing', 'Content Suggestions', 'Analytics Dashboard'],
     pricing: '$49 - $299/month',
-    category: 'Social Media'
+    category: 'Social Media',
+    popular: false
   },
   {
     title: 'Invoice & Payment Processor',
@@ -344,8 +297,8 @@ const microSaaSProducts = [
     icon: MessageSquare,
     features: ['Multi-channel Analysis', 'Real-time Monitoring', 'Trend Analysis', 'Alert System'],
     pricing: '$99 - $499/month',
-    category: 'Analytics'
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
+    category: 'Analytics',
+    popular: false
   },
   {
     title: 'Smart Energy Management',
@@ -360,7 +313,6 @@ const microSaaSProducts = [
     description: 'Automated legal document analysis and contract review using AI.',
     icon: FileText,
     features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
-<<<<<<< HEAD
     pricing: '$299 - $2,999/month',
     category: 'Legal Tech',
     popular: true
@@ -451,12 +403,446 @@ const microSaaSProducts = [
     category: 'Agriculture'
   },
   {
-    title: 'AI-Powered Financial Advisor',
-    description: 'Personalized financial planning and investment advice using AI.',
+    title: 'AI-Powered Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Circuit Design', 'Algorithm Testing', 'Performance Analysis', 'Educational Tools'],
+    pricing: '$999 - $4,999/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Metaverse Development Platform',
+    description: 'Complete platform for building and deploying metaverse experiences.',
+    icon: Globe,
+    features: ['3D World Builder', 'Avatar Creation', 'Virtual Economy', 'Multi-user Support'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Digital Twin Creator',
+    description: 'Create and manage digital twins of physical assets with AI optimization.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Digital Twins'
+  },
+  {
+    title: 'Blockchain DeFi Analytics Suite',
+    description: 'Comprehensive DeFi analytics and yield farming optimization platform.',
+    icon: Lock,
+    features: ['Yield Farming', 'Liquidity Analysis', 'Risk Assessment', 'Portfolio Tracking'],
+    pricing: '$299 - $1,999/month',
+    category: 'DeFi'
+  },
+  {
+    title: 'AI Synthetic Data Generator',
+    description: 'Generate high-quality synthetic datasets for AI training and testing.',
+    icon: Database,
+    features: ['Privacy-Preserving', 'Custom Datasets', 'Quality Validation', 'API Integration'],
+    pricing: '$499 - $2,499/month',
+    category: 'Data Science'
+  },
+  {
+    title: 'Edge AI Deployment Platform',
+    description: 'Deploy and manage AI models at the edge with real-time processing.',
+    icon: Network,
+    features: ['Model Deployment', 'Edge Computing', 'Real-time Processing', 'Device Management'],
+    pricing: '$799 - $3,999/month',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'AI Conversational Commerce Platform',
+    description: 'Voice and chat-based shopping platform with AI recommendations.',
+    icon: ShoppingCart,
+    features: ['Voice Shopping', 'AI Recommendations', 'Order Management', 'Payment Processing'],
+    pricing: '$1,499 - $7,499/month',
+    category: 'E-commerce'
+  },
+  {
+    title: 'Industrial IoT Predictive Maintenance',
+    description: 'AI-powered predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Real-time Monitoring'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Industrial IoT'
+  },
+  {
+    title: 'AI Emotional Intelligence API',
+    description: 'Real-time emotion detection and response system for applications.',
+    icon: Heart,
+    features: ['Emotion Recognition', 'Sentiment Analysis', 'Adaptive Responses', 'Multi-modal Input'],
+    pricing: '$199 - $999/month',
+    category: 'Emotional AI'
+  },
+  {
+    title: 'Autonomous Drone Fleet Management',
+    description: 'AI-powered drone fleet management and mission coordination platform.',
+    icon: Rocket,
+    features: ['Fleet Coordination', 'Mission Planning', 'Real-time Tracking', 'Autonomous Operations'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'AI Hyperpersonalization Engine',
+    description: 'Ultra-personalized user experiences with advanced AI and behavioral analytics.',
+    icon: Target,
+    features: ['Behavioral Analysis', 'Dynamic Content', 'Real-time Adaptation', 'Cross-platform Sync'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Personalization'
+  },
+  {
+    title: 'Climate Change Monitoring Platform',
+    description: 'AI-powered climate monitoring and carbon footprint tracking system.',
+    icon: Globe,
+    features: ['Carbon Tracking', 'Climate Modeling', 'Sustainability Metrics', 'Green Tech Optimization'],
+    pricing: '$999 - $4,999/month',
+    category: 'Climate Tech'
+  },
+  {
+    title: 'AI Neural Architecture Search Platform',
+    description: 'Automated neural network design and optimization using AI.',
+    icon: Brain,
+    features: ['AutoML', 'Architecture Optimization', 'Performance Tuning', 'Custom Models'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'AutoML'
+  },
+  {
+    title: 'Space Mission Planning Software',
+    description: 'AI-powered space mission planning and satellite constellation management.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Management', 'Orbital Mechanics', 'Resource Optimization'],
+    pricing: '$9,999 - $49,999/month',
+    category: 'Space Technology'
+  },
+  {
+    title: 'AI Biometric Security Platform',
+    description: 'Advanced biometric authentication with AI-powered fraud detection.',
+    icon: Shield,
+    features: ['Multi-modal Biometrics', 'Fraud Detection', 'Liveness Detection', 'Privacy Protection'],
+    pricing: '$1,499 - $7,499/month',
+    category: 'Biometric Security'
+  },
+  {
+    title: 'AI Gene Therapy Design Platform',
+    description: 'AI-optimized gene therapy design and delivery system development.',
+    icon: Heart,
+    features: ['Gene Design', 'Delivery Optimization', 'Safety Analysis', 'Clinical Prediction'],
+    pricing: '$9,999 - $49,999/month',
+    category: 'Gene Therapy'
+  },
+  {
+    title: 'Quantum Cryptography Platform',
+    description: 'Quantum-resistant encryption and secure communication system.',
+    icon: Lock,
+    features: ['Quantum Encryption', 'Secure Communication', 'Key Management', 'Threat Detection'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'Quantum Security'
+  },
+  {
+    title: 'Smart Agriculture AI Platform',
+    description: 'Complete AI-powered smart farming solution with automation and optimization.',
+    icon: Sprout,
+    features: ['Crop Optimization', 'Automated Farming', 'Weather Prediction', 'Resource Management'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Smart Agriculture'
+  },
+  {
+    title: 'AI Consciousness Simulation Platform',
+    description: 'Advanced AI system that simulates human consciousness and decision-making.',
+    icon: Brain,
+    features: ['Consciousness Modeling', 'Decision Simulation', 'Ethical AI', 'Human-like Reasoning'],
+    pricing: '$19,999 - $99,999/month',
+    category: 'Consciousness AI'
+  },
+  {
+    title: 'Advanced Time Series Forecasting',
+    description: 'AI-powered time series analysis and forecasting for complex datasets.',
     icon: TrendingUp,
-    features: ['Portfolio Analysis', 'Risk Assessment', 'Investment Recommendations', 'Goal Tracking'],
-    pricing: '$29 - $199/month',
+    features: ['Multi-variate Analysis', 'Seasonal Detection', 'Anomaly Detection', 'Long-term Forecasting'],
+    pricing: '$799 - $3,999/month',
+    category: 'Time Series AI'
+  },
+  {
+    title: 'AI-Powered Virtual Reality Platform',
+    description: 'Complete VR development platform with AI-generated content and interactions.',
+    icon: Monitor,
+    features: ['Content Generation', 'Realistic Interactions', 'Adaptive Environments', 'User Behavior Analysis'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Virtual Reality'
+  },
+  {
+    title: 'AI Language Translation Platform',
+    description: 'Real-time multi-language translation with cultural context understanding.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Cultural Context', 'Voice Translation', 'Document Translation'],
+    pricing: '$499 - $2,499/month',
+    category: 'Language Technology'
+  },
+  {
+    title: 'AI-Powered Robotics Platform',
+    description: 'Complete robotics development platform with AI decision making.',
+    icon: Bot,
+    features: ['Autonomous Navigation', 'Object Manipulation', 'Human-Robot Interaction', 'Learning Capabilities'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'Robotics'
+  },
+  {
+    title: 'AI Music Composition Platform',
+    description: 'AI-generated music composition with style adaptation and emotional intelligence.',
+    icon: Mic,
+    features: ['Style Adaptation', 'Emotional Intelligence', 'Instrument Simulation', 'Collaborative Composition'],
+    pricing: '$299 - $1,499/month',
+    category: 'Creative AI'
+  },
+  {
+    title: 'AI Gaming Intelligence Platform',
+    description: 'Intelligent game AI with adaptive difficulty and procedural content generation.',
+    icon: Gamepad2,
+    features: ['Adaptive Difficulty', 'Procedural Content', 'NPC Intelligence', 'Player Behavior Analysis'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Gaming AI'
+  },
+  {
+    title: 'AI Personal Health Coach Platform',
+    description: 'AI-powered personal health monitoring and wellness recommendations.',
+    icon: Heart,
+    features: ['Health Monitoring', 'Wellness Recommendations', 'Symptom Analysis', 'Preventive Care'],
+    pricing: '$99 - $499/month',
+    category: 'Personal Health'
+  },
+  {
+    title: 'AI Smart Home Control Platform',
+    description: 'Intelligent home automation with predictive behavior and energy optimization.',
+    icon: Home,
+    features: ['Predictive Automation', 'Energy Optimization', 'Security Monitoring', 'Voice Control'],
+    pricing: '$199 - $999/month',
+    category: 'Smart Home'
+  },
+  {
+    title: 'AI Content Creation Studio',
+    description: 'AI-powered content creation for marketing, social media, and advertising.',
+    icon: Image,
+    features: ['Content Generation', 'Brand Consistency', 'Multi-format Output', 'Performance Optimization'],
+    pricing: '$299 - $1,499/month',
+    category: 'Content Marketing'
+  },
+  {
+    title: 'AI Education Platform',
+    description: 'Personalized learning platform with AI tutoring and assessment.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'Adaptive Assessment', 'Progress Tracking', 'Skill Development'],
+    pricing: '$399 - $1,999/month',
+    category: 'EdTech'
+  },
+  {
+    title: 'AI-Powered FinTech Platform',
+    description: 'Complete financial technology platform with AI-powered insights and automation.',
+    icon: DollarSign,
+    features: ['Financial Analysis', 'Risk Assessment', 'Automated Trading', 'Portfolio Optimization'],
+    pricing: '$1,999 - $9,999/month',
     category: 'FinTech'
+  },
+  {
+    title: 'AI Cybersecurity Platform',
+    description: 'Self-evolving AI cybersecurity system that adapts to new threats.',
+    icon: Shield,
+    features: ['Threat Detection', 'Adaptive Defense', 'Zero-day Protection', 'Automated Response'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Cybersecurity'
+  },
+  {
+    title: 'AI Trading Platform',
+    description: 'High-frequency trading AI with market prediction and risk management.',
+    icon: TrendingUp,
+    features: ['Market Prediction', 'Risk Management', 'Algorithmic Trading', 'Portfolio Optimization'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'Trading'
+  },
+  {
+    title: 'AI Virtual Reality Platform',
+    description: 'Immersive VR experiences with AI-generated content and interactions.',
+    icon: Monitor,
+    features: ['Content Generation', 'Realistic Interactions', 'Adaptive Environments', 'User Behavior Analysis'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Virtual Reality'
+  },
+  {
+    title: 'AI Language Processing Platform',
+    description: 'Advanced natural language processing and understanding platform.',
+    icon: Globe,
+    features: ['Text Analysis', 'Language Understanding', 'Translation', 'Sentiment Analysis'],
+    pricing: '$499 - $2,499/month',
+    category: 'NLP'
+  },
+  {
+    title: 'AI Computer Vision Platform',
+    description: 'Advanced computer vision and image analysis platform.',
+    icon: Eye,
+    features: ['Object Detection', 'Image Classification', 'Facial Recognition', 'Video Analytics'],
+    pricing: '$799 - $3,999/month',
+    category: 'Computer Vision'
+  },
+  {
+    title: 'AI Voice Processing Platform',
+    description: 'Advanced voice processing and speech recognition platform.',
+    icon: Mic,
+    features: ['Speech Recognition', 'Voice Synthesis', 'Voice Commands', 'Multi-language Support'],
+    pricing: '$399 - $1,999/month',
+    category: 'Voice AI'
+  },
+  {
+    title: 'AI Data Analytics Platform',
+    description: 'Comprehensive data analytics and business intelligence platform.',
+    icon: BarChart3,
+    features: ['Data Visualization', 'Predictive Analytics', 'Business Intelligence', 'Custom Dashboards'],
+    pricing: '$999 - $4,999/month',
+    category: 'Data Analytics'
+  },
+  {
+    title: 'AI Machine Learning Platform',
+    description: 'Complete machine learning development and deployment platform.',
+    icon: Brain,
+    features: ['Model Training', 'AutoML', 'Model Deployment', 'Performance Monitoring'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Machine Learning'
+  },
+  {
+    title: 'AI Cloud Computing Platform',
+    description: 'AI-powered cloud computing and infrastructure management platform.',
+    icon: Cloud,
+    features: ['Infrastructure Management', 'Auto-scaling', 'Cost Optimization', 'Performance Monitoring'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Cloud Computing'
+  },
+  {
+    title: 'AI IoT Platform',
+    description: 'Complete IoT platform with AI-powered device management and analytics.',
+    icon: Network,
+    features: ['Device Management', 'Data Analytics', 'Predictive Maintenance', 'Real-time Monitoring'],
+    pricing: '$1,499 - $7,499/month',
+    category: 'IoT'
+  },
+  {
+    title: 'AI Blockchain Platform',
+    description: 'AI-powered blockchain development and management platform.',
+    icon: Lock,
+    features: ['Smart Contract Development', 'DeFi Integration', 'NFT Management', 'Security Analysis'],
+    pricing: '$2,499 - $12,499/month',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI Quantum Computing Platform',
+    description: 'Quantum computing development and simulation platform.',
+    icon: Cpu,
+    features: ['Quantum Circuit Design', 'Algorithm Development', 'Simulation', 'Performance Analysis'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'Quantum Computing'
+  },
+  {
+    title: 'AI Metaverse Platform',
+    description: 'Complete metaverse development and management platform.',
+    icon: Globe,
+    features: ['3D World Creation', 'Avatar Management', 'Virtual Economy', 'Multi-user Support'],
+    pricing: '$3,999 - $19,999/month',
+    category: 'Metaverse'
+  },
+  {
+    title: 'AI Digital Twin Platform',
+    description: 'Digital twin development and management platform.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$2,999 - $14,999/month',
+    category: 'Digital Twins'
+  },
+  {
+    title: 'AI Edge Computing Platform',
+    description: 'Edge computing platform with AI processing capabilities.',
+    icon: Network,
+    features: ['Edge Deployment', 'Real-time Processing', 'Distributed AI', 'Device Management'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'AI Autonomous Systems Platform',
+    description: 'Platform for developing and managing autonomous systems.',
+    icon: Bot,
+    features: ['Autonomous Navigation', 'Decision Making', 'Mission Planning', 'Safety Systems'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'AI Personalization Platform',
+    description: 'Advanced personalization and recommendation platform.',
+    icon: Target,
+    features: ['Behavioral Analysis', 'Dynamic Content', 'Real-time Adaptation', 'Cross-platform Sync'],
+    pricing: '$1,499 - $7,499/month',
+    category: 'Personalization'
+  },
+  {
+    title: 'AI Climate Tech Platform',
+    description: 'Climate technology platform with AI-powered sustainability solutions.',
+    icon: Globe,
+    features: ['Carbon Tracking', 'Climate Modeling', 'Sustainability Metrics', 'Green Tech Optimization'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Climate Tech'
+  },
+  {
+    title: 'AI Space Technology Platform',
+    description: 'Space technology platform with AI-powered mission planning and management.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Management', 'Orbital Mechanics', 'Resource Optimization'],
+    pricing: '$9,999 - $49,999/month',
+    category: 'Space Technology'
+  },
+  {
+    title: 'AI Biometric Platform',
+    description: 'Advanced biometric authentication and security platform.',
+    icon: Shield,
+    features: ['Multi-modal Biometrics', 'Fraud Detection', 'Liveness Detection', 'Privacy Protection'],
+    pricing: '$1,499 - $7,499/month',
+    category: 'Biometric Security'
+  },
+  {
+    title: 'AI Gene Therapy Platform',
+    description: 'Gene therapy development and optimization platform.',
+    icon: Heart,
+    features: ['Gene Design', 'Delivery Optimization', 'Safety Analysis', 'Clinical Prediction'],
+    pricing: '$9,999 - $49,999/month',
+    category: 'Gene Therapy'
+  },
+  {
+    title: 'AI Quantum Security Platform',
+    description: 'Quantum-resistant security and encryption platform.',
+    icon: Lock,
+    features: ['Quantum Encryption', 'Secure Communication', 'Key Management', 'Threat Detection'],
+    pricing: '$4,999 - $24,999/month',
+    category: 'Quantum Security'
+  },
+  {
+    title: 'AI Smart Agriculture Platform',
+    description: 'Smart agriculture platform with AI-powered farming optimization.',
+    icon: Sprout,
+    features: ['Crop Optimization', 'Automated Farming', 'Weather Prediction', 'Resource Management'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'Smart Agriculture'
+  },
+  {
+    title: 'AI Consciousness Platform',
+    description: 'AI consciousness simulation and development platform.',
+    icon: Brain,
+    features: ['Consciousness Modeling', 'Decision Simulation', 'Ethical AI', 'Human-like Reasoning'],
+    pricing: '$19,999 - $99,999/month',
+    category: 'Consciousness AI'
+  },
+  {
+    title: 'AI Time Series Platform',
+    description: 'Advanced time series analysis and forecasting platform.',
+    icon: TrendingUp,
+    features: ['Multi-variate Analysis', 'Seasonal Detection', 'Anomaly Detection', 'Long-term Forecasting'],
+    pricing: '$799 - $3,999/month',
+    category: 'Time Series AI'
   },
   {
     title: 'Intelligent Meeting Scheduler',
@@ -546,7 +932,8 @@ const features = [
     description: 'Built for SaaS from the ground up'
   },
   {
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
+    title: 'Digital Marketing Analytics',
+    description: 'Comprehensive marketing analytics and campaign optimization platform.',
     icon: BarChart3,
     features: ['Multi-channel Tracking', 'ROI Analysis', 'A/B Testing', 'Predictive Analytics'],
     pricing: '$149 - $1,499/month',
@@ -614,7 +1001,7 @@ export default function MicroSaaSPage() {
   });
 
   return (
-    <MainLayout>
+    <Layout>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-900 to-pink-900 text-white py-20">
@@ -637,175 +1024,7 @@ export default function MicroSaaSPage() {
                   href="/contact" 
                   className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-all duration-300"
                 >
-<<<<<<< HEAD
                   Get Free Trial
-=======
-                  {product.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
-                      <IconComponent className="w-10 h-10" />
-                    </div>
-                    <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
-                      {product.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {product.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {product.description}
-                  </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {product.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-                          <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-4">
-                    <span className="text-sm font-semibold text-purple-600">{product.pricing}</span>
-                  </div>
-
-                  <Link
-                    href="/contact"
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                  >
-                    <span>Get Started</span>
-                    <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Micro SaaS?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Built for modern businesses that need fast, reliable, and scalable solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Proven Results
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our Micro SaaS solutions deliver measurable business impact.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <div className="text-3xl font-bold text-purple-600 mb-2">
-                    {benefit.stat}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs. No hidden fees, no surprises.
-            </p>
-          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
@@ -1005,6 +1224,6 @@ export default function MicroSaaSPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

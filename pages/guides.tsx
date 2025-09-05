@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FileText, Clock, Users, ArrowRight, CheckCircle, BookOpen, Code, Database, Cloud, Shield } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const guides = [
   {
@@ -92,7 +92,7 @@ const popularGuides = [
 
 export default function GuidesPage() {
   return (
-    <MainLayout
+    <Layout
       title="Guides - Zion Tech Group"
       description="Comprehensive guides covering web development, cloud computing, database design, security, and more. Step-by-step instructions for developers."
       keywords="guides, documentation, web development, cloud computing, database, security, API development, DevOps"
@@ -321,6 +321,6 @@ export default function GuidesPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

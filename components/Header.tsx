@@ -17,87 +17,6 @@ import {
   Cloud,
   Users,
   FileText,
-<<<<<<< HEAD
-  MessageSquare,
-  Rocket,
-  Building,
-  Heart,
-  DollarSign,
-  BookOpen,
-  ShoppingCart,
-  Video
-} from 'lucide-react';
-
-const navigation = [
-  {
-    name: 'Services',
-    href: '/services',
-    icon: Settings,
-    children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '35+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '35+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '40+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '110+' }
-    ]
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: Shield,
-    children: [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Shield },
-      { name: 'Startup Solutions', href: '/solutions/startup', icon: Rocket },
-      { name: 'Industry Solutions', href: '/solutions/industry', icon: BarChart3 },
-      { name: 'Custom Development', href: '/solutions/custom', icon: Settings },
-      { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Globe },
-      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud }
-    ]
-  },
-  {
-    name: 'Industries',
-    href: '/industries',
-    icon: Building,
-    children: [
-      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-      { name: 'Finance', href: '/industries/finance', icon: DollarSign },
-      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
-      { name: 'Education', href: '/industries/education', icon: BookOpen },
-      { name: 'Retail', href: '/industries/retail', icon: ShoppingCart },
-      { name: 'Government', href: '/industries/government', icon: Building }
-    ]
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: FileText,
-    children: [
-      { name: 'Documentation', href: '/docs', icon: FileText },
-      { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-      { name: 'Blog', href: '/blog', icon: MessageSquare },
-      { name: 'API Reference', href: '/api-docs', icon: Settings },
-      { name: 'White Papers', href: '/white-papers', icon: FileText },
-      { name: 'Webinars', href: '/webinars', icon: Video }
-    ]
-  },
-  {
-    name: 'Company',
-    href: '/about',
-    icon: Users,
-    children: [
-      { name: 'About Us', href: '/about', icon: Users },
-      { name: 'Our Team', href: '/about#team', icon: Users },
-      { name: 'Careers', href: '/careers', icon: Rocket },
-      { name: 'Partners', href: '/partners', icon: Globe },
-      { name: 'News', href: '/news', icon: MessageSquare }
-    ]
-  },
-  {
-    name: 'Contact',
-    href: '/contact',
-    icon: Phone
-  }
-];
-=======
   HelpCircle,
   DollarSign
 } from 'lucide-react';
@@ -105,7 +24,6 @@ const navigation = [
 interface HeaderProps {
   className?: string;
 }
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
 
 export function Header({ className }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -208,11 +126,11 @@ export function Header({ className }: HeaderProps) {
             <div className="hidden lg:flex items-center space-x-6">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>contact@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -375,72 +293,6 @@ export function Header({ className }: HeaderProps) {
           )}
         </div>
 
-<<<<<<< HEAD
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden border-t border-gray-200"
-            >
-              <div className="py-4 space-y-2">
-                {navigation.map((item) => (
-                  <div key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
-                      onClick={closeMenu}
-                    >
-                      <div className="flex items-center space-x-3">
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
-                      </div>
-                      {item.children && <ChevronDown className="w-4 h-4" />}
-                    </Link>
-                    {item.children && (
-                      <div className="ml-8 space-y-1">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="flex items-center justify-between px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                            onClick={closeMenu}
-                          >
-                            <div className="flex items-center space-x-3">
-                              <child.icon className="w-4 h-4" />
-                              <span>{child.name}</span>
-                            </div>
-                            {child.count && (
-                              <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
-                                {child.count}
-                              </span>
-                            )}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-                <div className="px-4 pt-4 border-t border-gray-200">
-                  <div className="flex flex-col space-y-2">
-                    <Link
-                      href="/contact"
-                      className="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium text-center"
-                      onClick={closeMenu}
-                    >
-                      Get Quote
-                    </Link>
-                    <Link
-                      href="/contact"
-                      className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-center"
-                      onClick={closeMenu}
-                    >
-                      Free Consultation
-                    </Link>
-                  </div>
-=======
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 bg-white">
@@ -468,7 +320,6 @@ export function Header({ className }: HeaderProps) {
                       ))}
                     </div>
                   )}
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
                 </div>
               ))}
             </div>

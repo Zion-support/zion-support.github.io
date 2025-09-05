@@ -7,14 +7,9 @@ import Layout from '../components/Layout';
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-<<<<<<< HEAD
   { number: '1000+', label: 'Projects Completed' },
   { number: '110+', label: 'Services Offered' },
   { number: '75+', label: 'Expert Team Members' }
-=======
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
 ];
 
 const services = [
@@ -65,14 +60,9 @@ export default function HomePage() {
                 Cutting-Edge Technology
               </span>
             </h1>
-<<<<<<< HEAD
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Zion Tech Group delivers innovative AI, IT, and Micro SaaS solutions 
               that drive growth, efficiency, and competitive advantage for businesses worldwide.
-=======
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
->>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 

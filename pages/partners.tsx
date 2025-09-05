@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Handshake, Award, Globe, Users, Zap, Shield, Cloud } from 'lucide-react';
 
@@ -74,7 +74,7 @@ const partnershipTypes = [
 
 export default function PartnersPage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Partners - Zion Tech Group"
       description="Learn about our strategic partnerships and how to become a Zion Tech Group partner."
     >
@@ -219,6 +219,6 @@ export default function PartnersPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
