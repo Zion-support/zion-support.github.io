@@ -1,24 +1,66 @@
-'use client' const navigation = [ {
-  name: 'Home', href: '/' 
-};
-{
-  name: 'About', href: '/about' 
-};
-{
-  name: 'Services', href: '/services' 
-};
-{
-  name: 'Solutions', href: '/solutions' 
-};
-{
-  name: 'Research', href: '/research' 
-};
-{
-  name: 'Contact', href: '/contact' 
-}] export default function Navigation () {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState (false) Zion Tech Group </div> </Link> </div> <div className="flex lg:hidden" > <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400" onClick= {
-  () => setMobileMenuOpen (true) 
-}> <span className="sr-only" >Open main menu</span> <Bars3Icon className="h-6 w-6" aria-hidden="true" /> </button> </div>) ) 
-}</div> <div className="hidden lg:flex lg:flex-1 lg:justify-end" > <a href="/contact" className="text-sm font-semibold leading-6 text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all duration-200 hover:scale-105" > Get Started </Link> </div> </nav> Zion Tech Group </div> </Link> <button > <span className="sr-only" >Close menu</span> <XMarkIcon className="h-6 w-6" aria-hidden="true" /> </button> </div>) ) 
-}</div> <div className="py-6" > <a > Get Started </Link> </div> </div> </div> </Dialog.Panel> </Dialog> </header>) 
+'use client'
+
+import { useState } from 'react'
+
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Research', href: '/research' },
+  { name: 'Contact', href: '/contact' }
+]
+
+export default function Navigation() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  return (
+    <nav className="bg-gray-900">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex">
+            <div className="flex-shrink-0 flex items-center">
+              <span className="text-white text-xl font-bold">Zion Tech Group</span>
+            </div>
+            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+              {navigation.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="sm:hidden">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-gray-300 hover:text-white p-2"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      {mobileMenuOpen && (
+        <div className="sm:hidden">
+          <div className="pt-2 pb-3 space-y-1">
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </nav>
+  )
 }
