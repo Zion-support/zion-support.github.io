@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -156,19 +155,12 @@ export default function HelpPage() {
       [categoryTitle]: !prev[categoryTitle]
     }))
   }
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 
-export default function Help() {
->>>>>>> cursor/expand-services-advertise-and-build-project-cac2
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
       <Head>
-        <title>Help - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <title>Help Center - Zion Academy</title>
+        <meta name="description" content="Get help and support for all your technology needs" />
         <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
       </Head>
       

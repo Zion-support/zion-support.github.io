@@ -78,8 +78,8 @@ export default function BlogPage() {
             <p className="text-xl text-blue-100 mb-8">
               Stay updated with the latest trends, insights, and innovations in technology
             </p>
-
           </div>
+        </div>
       </section>
 
 

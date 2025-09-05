@@ -209,7 +209,6 @@ const itServices = [
     category: 'Compliance'
   },
   {
-<<<<<<< HEAD
     title: 'AI-Powered IT Operations (AIOps)',
     description: 'Intelligent IT operations using AI and machine learning for predictive maintenance and automation.',
     icon: Cpu,
@@ -555,6 +554,8 @@ const itServices = [
 
 const technologies = [
   { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
+  {
+    name: 'Quantum Computing',
     description: 'Quantum computing solutions and hybrid classical-quantum systems.',
     icon: Cpu,
     features: ['Quantum Algorithm Development', 'Hybrid Systems', 'Quantum Security', 'Performance Optimization'],
@@ -814,7 +815,6 @@ const technologies = [
 
 const technologies = [
   { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
   { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
@@ -822,12 +822,8 @@ const technologies = [
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
 ];
 
-<<<<<<< HEAD
-const benefits = [{
-=======
 const benefits = [
   {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
     icon: Clock,
     title: 'Reduced Downtime',
     description: 'Proactive monitoring and maintenance',
@@ -853,12 +849,8 @@ const benefits = [
   }
 ];
 
-<<<<<<< HEAD
-const supportLevels = [{
-=======
 const supportLevels = [
   {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
     name: 'Basic Support',
     description: 'Standard business hours support',
     features: ['Email Support', 'Phone Support', 'Basic Monitoring', 'Monthly Reports'],
@@ -889,44 +881,28 @@ export default function ITServicesPage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
-<<<<<<< HEAD
-                  <div className="absolute inset-0">
-                  <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
-                  </div>
-                  <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
-                  </div>
-                  </div>
-                  <div className="container mx-auto px-4 relative z-10">
-                  <motion.div
-=======
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+          </div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+          </div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<<<<<<< HEAD
-                  <div className="flex items-center justify-center mb-6">
-                  <Server className="h-16 w-16 text-green-400 mr-4" />
-                  <h1 className="text-4xl md:text-6xl font-bold">
-=======
             <div className="flex items-center justify-center mb-6">
               <Server className="h-16 w-16 text-green-400 mr-4" />
               <h1 className="text-4xl md:text-6xl font-bold">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
                 IT{' '}
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   Services
                 </span>
-<<<<<<< HEAD
-                  </h1>
+              </h1>
                   </div>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we&apos;ve got you covered.

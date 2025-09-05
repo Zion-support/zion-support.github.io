@@ -665,6 +665,8 @@ export default function AIServicesPage() {
               <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">500+</div>
               <div className="text-slate-300">Projects Completed</div>
             </div>
+          </div>
+        </div>
       </section>
 
       {/* Services Section */}
