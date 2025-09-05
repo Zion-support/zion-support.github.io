@@ -84,10 +84,8 @@ const codeExamples = [
     'Content-Type': 'application/json'
   }
 };
-});
 
-const data = await response.json();
-``
+const data = await response.json();`
   },
   {
     language: 'Python',
@@ -105,65 +103,65 @@ data = {
     'company': 'Tech Corp'
 }
 response = requests.post(url, json=data, headers=headers)
-print(response.json())``
+print(response.json())`
   },
   {
     language: 'cURL',
     title: 'Get System Status',
-    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\`
+    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
   }
 ];
 
-const sdkLibraries = []
-  {}
+const sdkLibraries = [
+  {
     name: 'JavaScript SDK',
     description: 'Official JavaScript SDK for easy integration',
     version: '1.2.0',
     install: 'npm install @ziontechgroup/sdk',
     documentation: '/docs/sdk/javascript'
   },
-  {}
+  {
     name: 'Python SDK',
     description: 'Python SDK with full API support',
     version: '1.1.5',
     install: 'pip install ziontechgroup-sdk',
     documentation: '/docs/sdk/python'
   },
-  {}
+  {
     name: 'PHP SDK',
     description: 'PHP SDK for server-side integration',
     version: '1.0.8',
     install: 'composer require ziontechgroup/sdk',
     documentation: '/docs/sdk/php'
-  };
+  }
 ];
 
-export default function APIDocumentationPage() {}
+export default function APIDocumentationPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedMethod, setSelectedMethod] = useState('all');
 
-  const copyToClipboard = async (code: string, id: string) => {}
-    try {}
+  const copyToClipboard = async (code: string, id: string) => {
+    try {
       await navigator.clipboard.writeText(code);
       setCopiedCode(id);
       setTimeout(() => setCopiedCode(null), 2000);
-    } catch (err) {}
+    } catch (err) {
       console.error('Failed to copy: ', err);
-    };
+    }
   };
 
-  const filteredEndpoints = apiEndpoints.filter(endpoint => {})
+  const filteredEndpoints = apiEndpoints.filter(endpoint => {
     const matchesSearch = endpoint.path.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          endpoint.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesMethod = selectedMethod === 'all' || endpoint.method.toLowerCase() === selectedMethod.toLowerCase();
     return matchesSearch && matchesMethod;
   });
 
-  return ()
-    <Layout;
+  return (
+    <Layout
       title="API Documentation - Zion Tech Group"
       description="Complete API documentation for Zion Tech Group services. Learn how to integrate with our APIs, view endpoints, and access code examples."
       keywords="API documentation, REST API, integration, developer docs, endpoints, Zion Tech Group API"

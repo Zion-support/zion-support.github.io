@@ -73,6 +73,7 @@ export default function BlogPage() {
       <Head>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights on AI, technology, and business innovation from Zion Tech Group experts." />
+      </Head>
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
@@ -105,13 +106,12 @@ export default function BlogPage() {
                       transition={{ duration: 0.8, delay: index * 0.1 }}
                       viewport={{ once: true }}>
                       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600">
+                      </div>
                       <div className="p-6">
                         <div className="flex flex-wrap gap-2 mb-3">
-                          {post.tags.map((tag, tagIndex) => (
-                            <span key={tagIndex} className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
-                              {tag}
-                            </span>
-                          ))}
+                          <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                            {post.category}
+                          </span>
                         </div>
                         <h2 className="text-xl font-semibold text-gray-900 mb-2">
                           {post.title}
@@ -147,6 +147,6 @@ export default function BlogPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }

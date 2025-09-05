@@ -575,7 +575,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$20,000 - $100,000 project',
     category: 'Gaming'
   },
-  {}
+  {
     title: 'AI Personal Health Coach',
     description: 'AI-powered personal health monitoring and wellness recommendations.',
     icon: Heart,
@@ -583,7 +583,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$99 - $499/month',
     category: 'Personal Health'
   },
-  {}
+  {
     title: 'AI-Powered Smart Home',
     description: 'Intelligent home automation with predictive behavior and energy optimization.',
     icon: Home,
@@ -591,7 +591,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$10,000 - $50,000 setup',
     category: 'Smart Home'
   },
-  {}
+  {
     title: 'AI Content Creation Studio',
     description: 'AI-powered content creation for marketing, social media, and advertising.',
     icon: Image,
@@ -599,7 +599,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$1,500 - $7,500/month',
     category: 'Content Marketing'
   },
-  {}
+  {
     title: 'AI-Powered Education Platform',
     description: 'Personalized learning platform with AI tutoring and assessment.',
     icon: BookOpen,
@@ -607,95 +607,95 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$2,000 - $10,000/month',
     category: 'EdTech'
   },
-  {}
+  {
     title: 'AI-Powered Drug Discovery',
     description: 'Accelerated drug discovery using AI for molecular design and optimization.',
     icon: Heart,
     features: ['Molecular Design', 'Drug Optimization', 'Toxicity Prediction', 'Clinical Trial Design'],
     pricing: '$50,000 - $500,000/project',
     category: 'Pharmaceuticals',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'Generative AI Content Creation Suite',
     description: 'Advanced AI-powered content generation for text, images, videos, and audio.',
     icon: FileText,
     features: ['Text Generation', 'Image Creation', 'Video Production', 'Voice Synthesis'],
     pricing: '$2,000 - $15,000/month',
     category: 'Content Generation',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Cybersecurity Platform',
     description: 'Next-generation cybersecurity using AI for threat detection and response.',
     icon: Shield,
     features: ['Threat Hunting', 'Behavioral Analysis', 'Automated Response', 'Zero-day Detection'],
     pricing: '$15,000 - $100,000/setup',
     category: 'Cybersecurity',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI Climate Change Modeling',
     description: 'Advanced climate modeling and environmental impact prediction using AI.',
     icon: Sprout,
     features: ['Climate Prediction', 'Carbon Footprint Analysis', 'Environmental Monitoring', 'Policy Impact Assessment'],
     pricing: '$25,000 - $150,000/project',
     category: 'Environmental AI',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Space Exploration',
     description: 'AI systems for space mission planning, satellite operations, and planetary exploration.',
     icon: Rocket,
     features: ['Mission Planning', 'Satellite Management', 'Planetary Analysis', 'Autonomous Navigation'],
     pricing: '$50,000 - $500,000/project',
     category: 'Space Technology',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI Quantum Computing Optimization',
     description: 'AI algorithms optimized for quantum computing systems and quantum machine learning.',
     icon: Cpu,
     features: ['Quantum Algorithm Design', 'Quantum ML Models', 'Optimization Problems', 'Quantum Simulation'],
     pricing: '$30,000 - $200,000/project',
     category: 'Quantum AI',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Brain-Computer Interface',
     description: 'Advanced BCI systems for medical applications and human-computer interaction.',
     icon: Brain,
     features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Diagnostics'],
     pricing: '$40,000 - $300,000/project',
     category: 'Neurotechnology',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI Digital Twin for Smart Cities',
     description: 'Comprehensive digital twin platform for smart city management and optimization.',
     icon: Building,
     features: ['Real-time Simulation', 'Traffic Optimization', 'Resource Management', 'Predictive Analytics'],
     pricing: '$100,000 - $1,000,000/project',
     category: 'Smart Cities',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Precision Medicine',
     description: 'Personalized medicine using AI for treatment optimization and drug discovery.',
     icon: Heart,
     features: ['Genomic Analysis', 'Treatment Optimization', 'Drug Discovery', 'Clinical Decision Support'],
     pricing: '$25,000 - $200,000/project',
     category: 'Precision Medicine',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI Agricultural Intelligence',
     description: 'Smart farming solutions with AI for crop optimization and yield prediction.',
     icon: Sprout,
     features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
     pricing: '$10,000 - $75,000/project',
     category: 'AgTech',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Financial Trading',
@@ -704,7 +704,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Market Analysis', 'Algorithmic Trading', 'Risk Management', 'Portfolio Optimization'],
     pricing: '$20,000 - $150,000/setup',
     category: 'FinTech',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI Metaverse Development Platform',
@@ -713,7 +713,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Virtual World Creation', 'Avatar AI', 'Behavioral Simulation', 'Content Generation'],
     pricing: '$50,000 - $500,000/project',
     category: 'Metaverse',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Language Translation',
@@ -722,7 +722,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['100+ Languages', 'Cultural Context', 'Real-time Processing', 'Voice Translation'],
     pricing: '$0.01 - $0.10 per 1K characters',
     category: 'Language AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI Emotional Intelligence Platform',
@@ -731,7 +731,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Emotion Recognition', 'Empathy Modeling', 'Social Interaction', 'Mental Health Support'],
     pricing: '$15,000 - $100,000/setup',
     category: 'Emotional AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Scientific Discovery',
@@ -740,7 +740,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Hypothesis Generation', 'Literature Analysis', 'Experiment Design', 'Data Interpretation'],
     pricing: '$30,000 - $250,000/project',
     category: 'Scientific AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI Edge Computing Intelligence',
@@ -749,7 +749,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Edge AI Processing', 'Real-time Inference', 'Resource Optimization', 'Distributed Learning'],
     pricing: '$20,000 - $150,000/setup',
     category: 'Edge AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Personal Assistant',
@@ -758,7 +758,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Voice Interaction', 'Task Automation', 'Learning & Adaptation', 'Privacy Protection'],
     pricing: '$5,000 - $30,000/setup',
     category: 'Personal AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI Creative Design Studio',
@@ -767,7 +767,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Graphic Design', 'Music Composition', 'Video Editing', '3D Modeling'],
     pricing: '$1,000 - $10,000/month',
     category: 'Creative AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Predictive Maintenance',
@@ -776,7 +776,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Failure Prediction', 'Maintenance Scheduling', 'Performance Optimization', 'Cost Reduction'],
     pricing: '$15,000 - $100,000/setup',
     category: 'Industrial AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Quantum Machine Learning',
@@ -785,7 +785,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Quantum Algorithms', 'Hybrid Classical-Quantum', 'Optimization Problems', 'Pattern Recognition'],
     pricing: '$50,000 - $500,000/project',
     category: 'Quantum AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Synthetic Biology Platform',
@@ -794,7 +794,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['DNA Design', 'Protein Engineering', 'Metabolic Modeling', 'Biological Simulation'],
     pricing: '$75,000 - $750,000/project',
     category: 'Synthetic Biology',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Autonomous Drones',
@@ -803,7 +803,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Autonomous Navigation', 'Mission Planning', 'Object Detection', 'Swarm Coordination'],
     pricing: '$25,000 - $200,000/project',
     category: 'Autonomous Systems',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Climate Engineering',
@@ -812,7 +812,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Climate Modeling', 'Geoengineering Design', 'Impact Assessment', 'Risk Analysis'],
     pricing: '$80,000 - $800,000/project',
     category: 'Climate Engineering',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Neural Architecture Search',
@@ -821,7 +821,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Architecture Search', 'Hyperparameter Optimization', 'Model Compression', 'Performance Prediction'],
     pricing: '$30,000 - $300,000/setup',
     category: 'AutoML',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Dark Matter Detection',
@@ -830,7 +830,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Particle Detection', 'Signal Analysis', 'Background Rejection', 'Statistical Analysis'],
     pricing: '$70,000 - $700,000/project',
     category: 'Particle Physics AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Exoplanet Discovery',
@@ -839,7 +839,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Light Curve Analysis', 'Transit Detection', 'Atmospheric Modeling', 'Habitability Assessment'],
     pricing: '$45,000 - $450,000/project',
     category: 'Astrobiology AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Protein Folding Prediction',
@@ -848,7 +848,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Structure Prediction', 'Folding Simulation', 'Function Analysis', 'Drug Design'],
     pricing: '$35,000 - $350,000/setup',
     category: 'Structural Biology AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Cryptocurrency Mining Optimization',
@@ -857,7 +857,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Hash Rate Optimization', 'Energy Efficiency', 'Profit Maximization', 'Market Analysis'],
     pricing: '$20,000 - $200,000/setup',
     category: 'Crypto AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Virtual Reality Content Generation',
@@ -866,7 +866,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['3D Content Generation', 'Physics Simulation', 'Interactive Design', 'Realistic Rendering'],
     pricing: '$25,000 - $250,000/project',
     category: 'VR AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Augmented Reality Intelligence',
@@ -875,7 +875,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Object Recognition', 'Spatial Mapping', 'Real-time Processing', 'Context Awareness'],
     pricing: '$30,000 - $300,000/setup',
     category: 'AR AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Holographic Display Technology',
@@ -884,7 +884,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Hologram Generation', 'Real-time Rendering', 'Interactive Controls', '3D Projection'],
     pricing: '$40,000 - $400,000/project',
     category: 'Holographic AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Teleportation Simulation',
@@ -893,7 +893,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Quantum Simulation', 'Entanglement Modeling', 'Protocol Optimization', 'Error Correction'],
     pricing: '$55,000 - $550,000/project',
     category: 'Quantum Communication',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Time Travel Simulation',
@@ -902,7 +902,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Temporal Modeling', 'Paradox Analysis', 'Causality Simulation', 'Timeline Optimization'],
     pricing: '$90,000 - $900,000/project',
     category: 'Temporal AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Multiverse Exploration',
@@ -911,7 +911,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Multiverse Modeling', 'Theory Testing', 'Scenario Simulation', 'Physics Exploration'],
     pricing: '$100,000 - $1,000,000/project',
     category: 'Theoretical Physics AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Quantum Machine Learning',
@@ -920,7 +920,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Quantum Algorithms', 'Optimization Problems', 'Quantum Neural Networks', 'Hybrid Classical-Quantum'],
     pricing: '$25,000 - $100,000/project',
     category: 'Quantum AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Autonomous Vehicle Systems',
@@ -1073,7 +1073,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Quantum Circuit Design', 'Algorithm Simulation', 'Error Correction', 'Performance Analysis'],
     pricing: '$15,000 - $75,000/setup',
     category: 'Quantum AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI Brain-Computer Interface',
@@ -1122,7 +1122,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Zero-day Protection'],
     pricing: '$20,000 - $100,000/setup',
     category: 'Cybersecurity AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI Creative Studio',
@@ -1227,7 +1227,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Virtual World Creation', 'AI Avatars', 'Real-time Interactions', 'Blockchain Integration'],
     pricing: '$50,000 - $500,000/project',
     category: 'Metaverse',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered IoT Intelligence',
@@ -1236,7 +1236,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Device Management', 'Predictive Maintenance', 'Data Analytics', 'Automated Control'],
     pricing: '$8,000 - $50,000/project',
     category: 'IoT',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Virtual Reality',
@@ -1245,7 +1245,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Immersive Environments', 'AI NPCs', 'Adaptive Learning', 'Haptic Feedback'],
     pricing: '$25,000 - $200,000/project',
     category: 'Virtual Reality',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered 5G Network Optimization',
@@ -1254,7 +1254,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Network Slicing', 'Resource Allocation', 'Quality of Service', 'Predictive Maintenance'],
     pricing: '$30,000 - $250,000/project',
     category: '5G Technology',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Digital Transformation',
@@ -1263,7 +1263,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Process Automation', 'Workflow Optimization', 'Data Integration', 'Change Management'],
     pricing: '$40,000 - $300,000/project',
     category: 'Digital Transformation',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Customer Experience',
@@ -1272,7 +1272,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Journey Mapping', 'Personalization', 'Sentiment Analysis', 'Predictive Support'],
     pricing: '$15,000 - $100,000/setup',
     category: 'Customer Experience',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Cybersecurity Intelligence',
@@ -1281,7 +1281,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Threat Intelligence'],
     pricing: '$25,000 - $150,000/setup',
     category: 'Cybersecurity',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Drug Discovery Platform',
@@ -1290,7 +1290,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Molecular Analysis', 'Drug Design', 'Toxicity Prediction', 'Clinical Trial Optimization'],
     pricing: '$50,000 - $500,000/setup',
     category: 'Healthcare',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Autonomous Vehicle Systems',
@@ -1299,7 +1299,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Computer Vision', 'Path Planning', 'Sensor Fusion', 'Safety Systems'],
     pricing: '$100,000 - $1,000,000/setup',
     category: 'Autonomous Systems',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Financial Trading Algorithm',
@@ -1308,7 +1308,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'Real-time Trading'],
     pricing: '$75,000 - $500,000/setup',
     category: 'FinTech',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Climate Change Modeling',
@@ -1317,7 +1317,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Climate Modeling', 'Weather Prediction', 'Impact Assessment', 'Policy Analysis'],
     pricing: '$100,000 - $750,000/setup',
     category: 'Environmental AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Space Exploration Systems',
@@ -1326,7 +1326,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Mission Planning', 'Autonomous Navigation', 'Resource Management', 'Data Analysis'],
     pricing: '$200,000 - $2,000,000/setup',
     category: 'Space Technology',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Quantum Computing Optimization',
@@ -1335,7 +1335,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Quantum Algorithms', 'Optimization', 'Machine Learning', 'Error Correction'],
     pricing: '$150,000 - $1,000,000/setup',
     category: 'Quantum Computing',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Smart Grid Management',
@@ -1344,7 +1344,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Load Forecasting', 'Grid Optimization', 'Renewable Integration', 'Demand Response'],
     pricing: '$50,000 - $300,000/setup',
     category: 'Energy',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Precision Agriculture',
@@ -1353,7 +1353,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
     pricing: '$30,000 - $200,000/setup',
     category: 'Agriculture',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Smart City Infrastructure',
@@ -1362,7 +1362,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Traffic Management', 'Energy Optimization', 'Public Safety', 'Resource Management'],
     pricing: '$100,000 - $1,000,000/setup',
     category: 'Smart Cities',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Personalized Medicine',
@@ -1371,7 +1371,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Genomic Analysis', 'Treatment Personalization', 'Drug Discovery', 'Clinical Decision Support'],
     pricing: '$75,000 - $500,000/setup',
     category: 'Healthcare',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Advanced Robotics',
@@ -1380,7 +1380,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Computer Vision', 'Machine Learning', 'Autonomous Control', 'Human-Robot Interaction'],
     pricing: '$100,000 - $750,000/setup',
     category: 'Robotics',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Natural Language Understanding',
@@ -1389,7 +1389,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Multilingual Processing', 'Context Understanding', 'Sentiment Analysis', 'Language Generation'],
     pricing: '$25,000 - $150,000/setup',
     category: 'Natural Language Processing',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Advanced Computer Vision',
@@ -1398,7 +1398,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['3D Vision', 'Real-time Processing', 'Object Recognition', 'Scene Understanding'],
     pricing: '$40,000 - $250,000/setup',
     category: 'Computer Vision',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Predictive Maintenance',
@@ -1407,7 +1407,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'IoT Integration'],
     pricing: '$35,000 - $200,000/setup',
     category: 'Industrial AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Supply Chain Optimization',
@@ -1416,7 +1416,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Management'],
     pricing: '$50,000 - $300,000/setup',
     category: 'Supply Chain',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Advanced Analytics Platform',
@@ -1425,7 +1425,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Real-time Analytics', 'Machine Learning', 'Predictive Modeling', 'Data Visualization'],
     pricing: '$30,000 - $200,000/setup',
     category: 'Analytics',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Content Generation Suite',
@@ -1434,7 +1434,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Text Generation', 'Image Creation', 'Video Production', 'Audio Synthesis'],
     pricing: '$20,000 - $150,000/setup',
     category: 'Content Creation',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Advanced Search Engine',
@@ -1443,7 +1443,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Semantic Search', 'Personalization', 'Multilingual Support', 'Real-time Indexing'],
     pricing: '$40,000 - $250,000/setup',
     category: 'Search Technology',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Drug Discovery Platform',
@@ -1452,7 +1452,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Molecular Design', 'Target Identification', 'Clinical Trial Optimization', 'Toxicity Prediction'],
     pricing: '$100,000 - $1,000,000/project',
     category: 'Pharmaceutical AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Climate Change Modeling',
@@ -1501,7 +1501,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Threat Detection', 'Adaptive Defense', 'Zero-day Protection', 'Automated Response'],
     pricing: '$100,000 - $1,000,000/setup',
     category: 'Cybersecurity AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered High-Frequency Trading',
@@ -1550,7 +1550,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Multi-modal Content', 'Brand Consistency', 'Content Optimization', 'Automated Publishing'],
     pricing: '$199 - $1,999/month',
     category: 'Content AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Language Translation API',
@@ -1575,7 +1575,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Natural Language Understanding', 'Task Automation', 'Calendar Management', 'Email Processing'],
     pricing: '$9.99 - $99.99/month',
     category: 'Personal AI',
-    popular: true;
+    popular: true
   },
   {}
     title: 'AI-Powered Code Generation Platform',
