@@ -1,176 +1,164 @@
-'use client';
+import React, { useEffect, useState } from 'react';
 
-import { useEffect } from 'react';
-
-export default function AccessibilityEnhancer() {
-  useEffect(() => {
-    // Skip focus outline for mouse users
-    let usingMouse = false;
-    
-    const handleMouseDown = () => {
-      usingMouse = true;
-      document.body.classList.add('using-mouse');
-    };
-    
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        usingMouse = false;
-        document.body.classList.remove('using-mouse');
-      }
-    };
-    
-    // Add event listeners
-    document.addEventListener('mousedown', handleMouseDown);
-    document.addEventListener('keydown', handleKeyDown);
-    
-    // Add skip to main content link
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:shadow-lg';
-    skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      background: #2563eb;
-      color: white;
-      padding: 8px 16px;
-      text-decoration: none;
-      border-radius: 4px;
-      z-index: 1000;
-      transition: top 0.3s;
-    `;
-    
-    skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
-    });
-    
-    skipLink.addEventListener('blur', () => {
-      skipLink.style.top = '-40px';
-    });
-    
-    document.body.insertBefore(skipLink, document.body.firstChild);
-    
-    // Enhance keyboard navigation
-    const enhanceKeyboardNavigation = () => {
-      // Add keyboard navigation for custom elements
-      const interactiveElements = document.querySelectorAll('[role="button"], [role="tab"], [role="menuitem"]');
-      
-      interactiveElements.forEach((element) => {
-        if (!element.getAttribute('tabindex')) {
-          element.setAttribute('tabindex', '0');
-        }
-        
-        // Add keyboard event handlers
-        element.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            (element as HTMLElement).click();
-          }
-        });
-      });
-    };
-    
-    // Run enhancement after DOM is loaded
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', enhanceKeyboardNavigation);
-    } else {
-      enhanceKeyboardNavigation();
-    }
-    
-    // Add ARIA live region for announcements
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
-    
-    // Announce page changes
-    const announcePageChange = (message: string) => {
-      const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {
-        liveRegion.textContent = message;
-      }
-    };
-    
-    // Listen for route changes (Next.js specific)
-    const handleRouteChange = () => {
-      announcePageChange('Page loaded');
-    };
-    
-    // Add route change listener if available
-    if (typeof window !== 'undefined' && window.history) {
-      const originalPushState = window.history.pushState;
-      const originalReplaceState = window.history.replaceState;
-      
-      window.history.pushState = function(...args) {
-        originalPushState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
-      };
-      
-      window.history.replaceState = function(...args) {
-        originalReplaceState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
-      };
-      
-      window.addEventListener('popstate', handleRouteChange);
-    }
-    
-    // Cleanup
-    return () => {
-      document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('keydown', handleKeyDown);
-      if (skipLink.parentNode) {
-        skipLink.parentNode.removeChild(skipLink);
-      }
-      if (liveRegion.parentNode) {
-        liveRegion.parentNode.removeChild(liveRegion);
-      }
-    };
-  }, []);
-
-  return null;
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  focusVisible: boolean;
+  screenReader: boolean;
 }
 
-// Add CSS for focus management
-const focusStyles = `
-  .using-mouse *:focus {
-    outline: none !important;
-  }
-  
-  .focus-visible:focus {
-    outline: 2px solid #2563eb !important;
-    outline-offset: 2px !important;
-  }
-  
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-  
-  .sr-only.focus\:not-sr-only:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    padding: inherit;
-    margin: inherit;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
-`;
+export default function AccessibilityEnhancer() {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    focusVisible: false,
+    screenReader: false,
+  });
 
-// Inject styles
-if (typeof document !== 'undefined') {
-  const styleSheet = document.createElement('style');
-  styleSheet.textContent = focusStyles;
-  document.head.appendChild(styleSheet);
+  useEffect(() => {
+    // Check for reduced motion preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }));
+
+    // Check for high contrast preference
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+    setSettings(prev => ({ ...prev, highContrast: highContrastQuery.matches }));
+
+    // Detect screen reader usage
+    const screenReaderDetected = 
+      'speechSynthesis' in window || 
+      'speechRecognition' in window ||
+      navigator.userAgent.includes('NVDA') ||
+      navigator.userAgent.includes('JAWS') ||
+      navigator.userAgent.includes('VoiceOver');
+    
+    setSettings(prev => ({ ...prev, screenReader: screenReaderDetected }));
+
+    // Apply initial settings
+    applyAccessibilitySettings({
+      ...settings,
+      reducedMotion: mediaQuery.matches,
+      highContrast: highContrastQuery.matches,
+      screenReader: screenReaderDetected,
+    });
+  }, []);
+
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
+    
+    // Apply high contrast
+    if (newSettings.highContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+
+    // Apply large text
+    if (newSettings.largeText) {
+      root.classList.add('large-text');
+    } else {
+      root.classList.remove('large-text');
+    }
+
+    // Apply reduced motion
+    if (newSettings.reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
+
+    // Apply focus visible
+    if (newSettings.focusVisible) {
+      root.classList.add('focus-visible');
+    } else {
+      root.classList.remove('focus-visible');
+    }
+
+    // Apply screen reader optimizations
+    if (newSettings.screenReader) {
+      root.classList.add('screen-reader-optimized');
+    } else {
+      root.classList.remove('screen-reader-optimized');
+    }
+  };
+
+  const toggleSetting = (setting: keyof AccessibilitySettings) => {
+    const newSettings = {
+      ...settings,
+      [setting]: !settings[setting],
+    };
+    setSettings(newSettings);
+    applyAccessibilitySettings(newSettings);
+    
+    // Save to localStorage
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  };
+
+  // Load settings from localStorage on mount
+  useEffect(() => {
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      try {
+        const parsed = JSON.parse(savedSettings);
+        setSettings(parsed);
+        applyAccessibilitySettings(parsed);
+      } catch (error) {
+        console.warn('Failed to load accessibility settings:', error);
+      }
+    }
+  }, []);
+
+  return (
+    <div className="accessibility-panel fixed top-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 z-50">
+      <h3 className="font-bold text-lg mb-3">Accessibility Settings</h3>
+      
+      <div className="space-y-3">
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.highContrast}
+            onChange={() => toggleSetting('highContrast')}
+            className="rounded"
+          />
+          <span>High Contrast</span>
+        </label>
+
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.largeText}
+            onChange={() => toggleSetting('largeText')}
+            className="rounded"
+          />
+          <span>Large Text</span>
+        </label>
+
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.reducedMotion}
+            onChange={() => toggleSetting('reducedMotion')}
+            className="rounded"
+          />
+          <span>Reduced Motion</span>
+        </label>
+
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.focusVisible}
+            onChange={() => toggleSetting('focusVisible')}
+            className="rounded"
+          />
+          <span>Enhanced Focus</span>
+        </label>
+
+        <div className="text-sm text-gray-600">
+          Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}
+        </div>
+      </div>
+    </div>
+  );
 }
