@@ -1,5 +1,8 @@
 import React from 'react';
 import { Brain } from 'lucide-react';
+const Loading: React.FC = () => {
+import React from 'react';
+import { Brain } from 'lucide-react';
 const "Loading": React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center">

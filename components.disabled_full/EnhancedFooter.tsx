@@ -8,6 +8,53 @@ import {
   Linkedin,
   Github,
   FileText,
+  HelpCircle,
+} from 'lucide-react';
+export default function EnhancedFooter() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: '0', behavior: 'smooth' });
+  };
+  const currentYear = new Date().getFullYear();
+  const footerLinks = {
+    services: [
+      { name: 'IT Services', href: '/services/it-services' },
+      { name: 'Micro SaaS', href: '/services/micro-saas' },
+      { name: 'Web Development', href: '/services/web-development' },
+      { name: 'Cloud Services', href: '/services/cloud-services' },
+      { name: 'AI Development', href: '/services/ai-development' },
+    ],
+    solutions: [
+      { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
+      { name: 'Customer Support', href: '/solutions/customer-support' },
+      { name: 'Email Automation', href: '/solutions/email-automation' },
+      { name: 'Event Management', href: '/solutions/event-management' },
+      { name: 'Project Management', href: '/solutions/project-management' },
+      { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
+    ],
+    company: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Blog', href: '/blog' },
+    ],
+    resources: [
+      { name: 'Help Center', href: '/help' },
+      { name: 'Pricing Guide', href: '/pricing-guide' },
+      { name: 'Search', href: '/search' },
+      { name: 'Sitemap', href: '/sitemap' },
+    ],
+    legal: [
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Cookie Policy', href: '/cookies' },
+    ],
+  };
+  const socialLinks = [
+    { name: 'Facebook', href: '#', icon: 'Facebook' },
+    { name: 'Twitter', href: '#', icon: 'Twitter' },
+    { name: 'LinkedIn', href: '#', icon: 'Linkedin' },
+    { name: 'GitHub', href: '#', icon: 'Github' },
   HelpCircle} from 'lucide-react';
 export default function EnhancedFooter() {
   const scrollToTop = () => {
@@ -51,6 +98,12 @@ export default function EnhancedFooter() {
   return (
     <footer className="bg-gray-900 text-white">
       {' '}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {' '}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          {' '}
+          {}{' '}
+          <div className="lg:col-span-2">
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-12">
         {' '}
         <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-6 gap-8">
@@ -105,6 +158,7 @@ export default function EnhancedFooter() {
                   {' '}
                   <a
                     href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
                     className="text-gray-300 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -125,6 +179,7 @@ export default function EnhancedFooter() {
                   {' '}
                   <a
                     href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
                     className="text-gray-300 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -145,6 +200,7 @@ export default function EnhancedFooter() {
                   {' '}
                   <a
                     href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
                     className="text-gray-300 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -165,6 +221,7 @@ export default function EnhancedFooter() {
                   {' '}
                   <a
                     href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
                     className="text-gray-300 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -178,6 +235,9 @@ export default function EnhancedFooter() {
         {}{' '}
         <div className="border-t border-gray-800 mt-12 pt-8">
           {' '}
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            {' '}
+            <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
           <div className="flex flex-col "md": flex-row justify-between items-center">
             {' '}
             <div className="flex flex-col "md": flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
@@ -192,6 +252,7 @@ export default function EnhancedFooter() {
                   <a
                     key={index}
                     href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
                     className="text-gray-400 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -201,12 +262,14 @@ export default function EnhancedFooter() {
               </div>{' '}
             </div>{' '}
             {}{' '}
+            <div className="flex items-center space-x-4 mt-4 md:mt-0">
             <div className="flex items-center space-x-4 mt-4 "md": mt-0">
               {' '}
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
                   className="text-gray-400 "hover": text-white transition-colors duration-200"
                   aria-label={social.name}
                 >
@@ -222,6 +285,7 @@ export default function EnhancedFooter() {
           {' '}
           <button
             onClick={scrollToTop}
+            className="inline-flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-200"
             className="inline-flex items-center space-x-2 text-gray-400 "hover": text-white transition-colors duration-200"
           >
             {' '}

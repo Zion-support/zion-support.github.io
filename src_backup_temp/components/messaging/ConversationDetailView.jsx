@@ -40,7 +40,6 @@ scrollToBottom()}, [activeMessages]);
     const scrollToBottom = ("props": "any) => {;
         messagesEndRef.current?.scrollIntoView({ "behavior": 'smooth' "})};
     const scrollToBottom = (props: any) => {
-
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
     const handleSendMessage = async(e) => {e.preventDefault();
         if(!messageText.trim() || !activeConversation)
@@ -79,19 +78,15 @@ scrollToBottom()}, [activeMessages]);
     const groupedMessages = [];
     activeMessages.forEach(message => {;
     activeMessages.forEach(message => {
-
         const messageDate = format(new Date(message.created_at),yyyy-MM-dd');
         const existingGroup = groupedMessages.find(group => group.date === messageDate);
         if(existingGroup) {
-
             existingGroup.messages.push(message)}
         else {;
             groupedMessages.push({;
                 "date": "messageDate",;
         else {
-
             groupedMessages.push({
-
                 date: messageDate,
                 messages[message];
             })}
@@ -136,7 +131,6 @@ scrollToBottom()}, [activeMessages]);
           </div>
         </div>
       </div>
-
       {/* Context information(if available) */}"
       {hasContextData && (<div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10">"
           <div className="text-sm text-zion-slate flex items-start gap-3">"
@@ -204,7 +198,6 @@ scrollToBottom()}, [activeMessages]);
           </div>) : "(groupedMessages.map((group", groupIndex) => (<div key={group.date}>;
               <DateDivider date={new Date(group.date)} />";
               <div className="space-y-3">;
-
       {/* Messages */}"
       <div className="flex-1 overflow-y-auto p-4 space-y-4">"
         {groupedMessages.length === 0 ? (<div className="text-center text-zion-slate py-12">
@@ -243,7 +236,6 @@ scrollToBottom()}, [activeMessages]);
 </textarea>;
         <div ref={messagesEndRef} />
       </div>
-
       {/* Input */}"
       <div className="p-3 border-t border-zion-purple/20">"
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">"
@@ -274,5 +266,4 @@ scrollToBottom()}, [activeMessages]);
       </div>
     </div>)}
 '"
-
 </textarea>

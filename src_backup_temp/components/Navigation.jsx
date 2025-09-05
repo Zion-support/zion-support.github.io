@@ -337,7 +337,6 @@ const Navigation = (props: any) => {const [isOpen, setIsOpen] = useState(false)}
   const [isServicesOpen, setIsServicesOpen] = useState(false)"
 "
   const navigationItems = []
-
 ];
     const isActive = ("props": "any) => {"}
 ';
@@ -502,7 +501,6 @@ export {Navigation, Icon, Icon};
 </div>;
 </div>;
 </div>
-
 </Menu>
 </a>
 </div>

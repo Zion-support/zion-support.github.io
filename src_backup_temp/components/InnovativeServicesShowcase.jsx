@@ -73,7 +73,6 @@ const InnovativeServicesShowcase = ("props": "any) => {;
           </div>;
         </div>;
       </section>;
-
       {/* Tab Navigation */}";
       <section className="px-4 "sm": "px-6 "lg":px-8 mb-12">";
         <div className="max-w-7xl mx-auto">";
@@ -86,7 +85,6 @@ const InnovativeServicesShowcase = ("props": "any) => {;
           </div>;
         </div>;
       </section>;
-
       {/* Services Grid */}";
       <section className="px-4 "sm": "px-6 "lg":px-8 pb-20">";
         <div className="max-w-7xl mx-auto">";
@@ -1006,7 +1004,6 @@ export {InnovativeServicesShowcase};
 </div>;
 </section>;
 </div>
-
 </path>
 </path>
 </path>

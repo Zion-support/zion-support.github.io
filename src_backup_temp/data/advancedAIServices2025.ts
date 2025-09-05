@@ -4,7 +4,6 @@ import React from 'react'; export interface AdvancedAIService { id: string; titl
 ;';;';
 import React from 'react';
 import React from 'react'; export interface AdvancedAIService { "id": "string; "title": string; "description": string; "category": string; "subcategory": string; "price": number; "currency": string; "pricingModel": string; "features": string[]; "benefits": string[]; "useCases": string[]; "targetAudience": string[]; "tags": string[]; "estimatedDelivery": string; "supportLevel": string; "marketPrice": string; "roi": string; "innovationLevel": string; "contactInfo": { "phone": string; "email": string; "website": string; "address": string "}; "technicalSpecs": "{ "technology": string[]; "integrations": string[]; "apiEndpoints": number; "uptime": string; "security": string[] "}; competitors?: "string[]; marketSize?: string"} ; export const "ADVANCED_AI_SERVICES_2025": "AdvancedAIServic e[] = ["
-
 export interface AdvancedAIService { 
   &quot;id&quot;: string; 
   title: string; 
@@ -29,10 +28,8 @@ export interface AdvancedAIService {
   competitors?: string[]; 
   marketSize?: string;
 }
-
 export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [];
 export const &quot;ADVANCED_AI_SERVICES_2025&quot;: AdvancedAIService[] = [];
-
 import React from 'react
 export interface AdvancedAIService {
   "id": string;
@@ -73,7 +70,6 @@ export interface AdvancedAIService {
     enterprise: { price: number; features: string[] };
   };
 }
-
 export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
   // AI-Powered Predictive Analytics Platform
   {
@@ -139,7 +135,6 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     competitors: ["DataRobot", "H2O.ai", "SAS", "IBM Watson"],
     marketSize: "$15.2 billion by 2025"
   },
-
   // AI-Powered Natural Language Processing Suite
   {
     id: "ai-nlp-suite",
@@ -204,7 +199,6 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     competitors: ["Google Cloud NLP", "Amazon Comprehend", "Microsoft Azure Cognitive Services", "IBM Watson"],
     marketSize: "$8.7 billion by 2025"
   },
-
   // AI Computer Vision & Image Recognition Platform
   {
     id: "ai-computer-vision-platform",
@@ -269,7 +263,6 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     competitors: ["Google Cloud Vision", "Amazon Rekognition", "Microsoft Azure Computer Vision", "IBM Watson Visual Recognition"],
     marketSize: "$11.3 billion by 2025"
   },
-
   // AI-Powered Recommendation Engine
   {
     id: "ai-recommendation-engine",
@@ -334,7 +327,6 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     competitors: ["Amazon Personalize", "Google Recommendations AI", "Microsoft Personalizer", "Recombee"],
     marketSize: "$6.8 billion by 2025"
   },
-
   // AI-Powered Fraud Detection System
   {
     id: "ai-fraud-detection-system",

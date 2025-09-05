@@ -1,3 +1,19 @@
+);
+    fs.appendFileSync(this.logFile, logMessage);,
+  }
+  async runLint() {}
+    try {}
+      this.log('Starting lint automation...');',
+      // Run ESLint;
+      this.log('Running ESLint...');';
+      execSync('npm run lint', { "stdio": 'pipe' });',
+      this.log('ESLint completed successfully');';,
+      // Run type checking;
+      this.log('Running TypeScript type check...');';
+      execSync('npm run type-check', { "stdio": 'pipe' });',
+}
+module.exports = LintAutomation;
+;
 #!/usr/bin/env node
 /**
  * Lint Automation Script
@@ -34,6 +50,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-c10a
       // Run type checking
       this.log('Running TypeScript type check...');
       execSync('npm run type-check', { "stdio": 'pipe' });
+  automation.start().catch(console.error);
+      this.log('TypeScript type check completed successfully');
 this.log('Type check completed successfully');
       // Run smoke tests
       this.log('Running smoke tests...');
@@ -43,6 +61,42 @@ this.log('Type check completed successfully');
       return true;
     } catch (error) {
       this.log(`Lint automation "failed": ${error.message}`);
+      return false;
+    }
+  }
+  async runLintFix() {
+    try {
+      this.log('Starting lint fix automation...');
+      // Run ESLint with fix
+      this.log('Running ESLint with auto-fix...');
+      execSync('npm run "lint": fix', { "stdio": 'pipe' });
+      this.log('ESLint auto-fix completed');
+      this.log('Lint fix automation completed successfully');
+      return true;
+    } catch (error) {
+      this.log(`Lint fix automation "failed": ${error.message}`);
+      return false;
+    }
+  }
+  async run() {
+    this.log('=== Lint Automation Started ===');
+    // Try to fix linting issues first
+    const fixSuccess = await this.runLintFix();
+    // Then run linting to check for remaining issues
+    const lintSuccess = await this.runLint();
+    if (fixSuccess && lintSuccess) {
+      this.log('=== Lint Automation Completed Successfully ===');
+    } else {
+      this.log('=== Lint Automation Completed with Issues ===');
+    }
+  }
+}
+// Run the automation
+if (require.main === module) {
+  const automation = new LintAutomation();
+  automation.run().catch(console.error);
+}
+module.exports = LintAutomation;
       // Try to fix linting issues
       try {
         this.log('Attempting to fix linting issues...');

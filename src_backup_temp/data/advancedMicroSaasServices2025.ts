@@ -40,7 +40,6 @@ export interface AdvancedMicroSaasService {
     enterprise: { price: number; features: string[] };
   };
 }
-
 export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSaasService[] = [
   // AI-Powered Project Management Suite
   {
@@ -111,7 +110,6 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSaasService[] = [
       enterprise: { price: 399, features: ["White-label", "Custom AI models", "Dedicated support", "On-premise option"] }
     }
   },
-
   // AI Customer Support Automation Platform
   {
     id: "ai-customer-support-automation",
@@ -176,7 +174,6 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSaasService[] = [
     competitors: ["Zendesk", "Intercom", "Freshworks", "Drift"],
     marketSize: "$15.7 billion by 2025"
   },
-
   // AI Financial Analytics Dashboard
   {
     id: "ai-financial-analytics-dashboard",

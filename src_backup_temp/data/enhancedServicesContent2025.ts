@@ -1,7 +1,5 @@
-<<<<<<< HEAD:src/data/enhancedServicesContent2025.ts
 // Enhanced Services Content 2025 - Zion Tech Group;
 // Premium quality content with market-competitive pricing and comprehensive features;
-
 export interface EnhancedService {;
   "id": "string;
   "name": string;

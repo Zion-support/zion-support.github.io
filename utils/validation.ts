@@ -1,4 +1,3 @@
-
 export const validators = {
   email: (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -29,7 +28,6 @@ export const validators = {
     return regex.test(value);
   }
 };
-
 export const formatValidationError = (field: string, rule: string, value?: any): string => {
   const messages: Record<string, string> = {
     email: 'Please enter a valid email address',
@@ -42,7 +40,6 @@ export const formatValidationError = (field: string, rule: string, value?: any):
   };
   return messages[rule] || `${field} is invalid`;
 };
-
 export default {
   validators,
   formatValidationError

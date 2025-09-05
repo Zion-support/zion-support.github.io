@@ -44,7 +44,6 @@ export default function Page("props": "any) {;
             "icon": "User",";
             "matches": "(path) => path.startsWith("/dashboard")",;
             "authRequired": "true;
-
     ];
     // Filter items based on auth status;
     const visibleItems = navItems.filter(item => !item.authRequired || (item.authRequired && isAuthenticated));";

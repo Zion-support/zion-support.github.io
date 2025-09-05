@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Zap, Shield, Cloud, Brain, Users, Mail, ChevronDown } from 'lucide-react';
-
 export default function MainNavigation(props) {
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -21,7 +20,6 @@ export default function MainNavigation(props) {;
     { "name": 'About', "href": '/about', "icon": "Users "}
     { "name": 'Contact', "href": '/contact', "icon": "Mail "}
   ];
-
   const handleDropdownToggle = (props: any) => {setActiveDropdown(activeDropdown === index ? null : index)};"
     {"""
       name: "Home", """
@@ -98,9 +96,7 @@ export default function MainNavigation(props) {;
         {name: "Documentation", href: "/docs"},""
         {name: "Training", href: "/training"},""
         {name: "Contact", href: "/contact"}
-
       ]}
-
 "
   return ("
     <nav className="flex space-x-8">"
@@ -114,7 +110,6 @@ export default function MainNavigation(props) {;
                     ? "text-zion-cyan bg-zion-purple/10"""
                     : "text-zion-slate-light hover:text-white hove,"
     r: bg-zion-purple/10""}"}
-
               >
                 <span>{item.name}</span>
                 <ChevronDown ""
@@ -122,7 +117,6 @@ export default function MainNavigation(props) {;
                     activeDropdown === index ? "rotate-180" : """   />
               </button>
               {/* comment */}
-
               {activeDropdown === index && (""
                 <div className=""absolute" top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">""
                   <div className="py-2">
@@ -132,9 +126,7 @@ export default function MainNavigation(props) {;
                         className="block px-4 py-3 text-sm text-zion-slate-light hover:text-white hove,"
     r: bg-zion-purple/10 transition-colors"">
                         onClick="{()" => setActiveDropdown(null)}
-
   const handleDropdownToggle = (props: any) => {setActiveDropdown(activeDropdown === index ? null : index)}
-
 "
   return ("""
       {navigationItems.map((item, index) => ("""
@@ -145,7 +137,6 @@ export default function MainNavigation(props) {;
                     ? "text-zion-cyan bg-zion-purple/10""
                     : "text-zion-slate-light hover: text-white hover:bg-zion-purple/10",
                 <ChevronDown className="{"h-4" w-4 transition-transform ${ activeDropdown === index ? "rotate-180" : "" }"}        />
-              
               {/* comment */} {activeDropdown === index && ("
                 <div className=""absolute" top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">"
                       <Link key="{child.name}" to="{child.href}" className="{"block" px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors" onClick="{()" => setActiveDropdown(null)}"
@@ -165,10 +156,8 @@ export default function MainNavigation(props) {;
                         className="block px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"">
                         onClick="{()" =" > setActiveDropdown(null)}"
                         {child.name}
-
                       </Link>
                     ))}
-
                       </div>
   );
 }
@@ -179,15 +168,12 @@ export default function MainNavigation(props) {;
             <Link to="{item.href}";""
 }"}" >"
               {item.name}
-
     </nav>"
   )} ("")"}""
 """"
 "`"
 "
-
 export default Component
-
 </ChevronDown>
 </div>
 </button>

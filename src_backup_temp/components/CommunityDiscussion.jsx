@@ -94,11 +94,9 @@ export default function Page(props: any) {
 '";
 '"
 import React from 'react';
-
 interface CommunityDiscussion.jsProps {
   // Add props here as needed
 }
-
 export default function CommunityDiscussion.js({ }: CommunityDiscussion.jsProps) {
   return (
     <div>

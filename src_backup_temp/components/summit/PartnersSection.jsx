@@ -15,10 +15,8 @@ export function PartnersSection("props": "any) {;
       </div>;
     </section>)}
 ;
-
 export default PartnersSection;
 const partners = [ {name: &apos;Partner A&apos;,logo: &apos;https: {name: &apos;Partner B&apos;,logo: &apos;https: ]; export function PartnersSection($1) { return (<section className=&quot;py-12 bg-background&quot; id=&quot;partners&quot;> <div className=&quot;container mx-auto px-4&quot;> <h2 className=&quot;text-3xl font-bold mb-8 text-center&quot;>Partners</h2> <div className=&quot;flex flex-wrap items-center justify-center gap-6&quot;> {partners.map((p) => (<img loading=&quot;lazy&quot; key={p.name} src={p.logo} alt={p.name} className=&quot;h-16&quot; />))} </div> <div className=&quot;text-center mt-8&quot;> <a href=&quot;#register&quot; className=&quot;text-zion-cyan underline&quot;>Become a Sponsor</a> </div> </div> </section>)} export default PartnersSection;
-
 const partners = [{"name": 'Partner A', "logo": 'https://placehold.co/150x80'},
     {"name": 'Partner B', "logo": 'https://placehold.co/150x80'};,
 ];

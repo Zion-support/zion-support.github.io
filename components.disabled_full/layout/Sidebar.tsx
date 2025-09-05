@@ -1,6 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { servicesCatalog } from '../../data/services';
+const Sidebar: React.FC = () => {
+  const categories = Array.from(new Set(servicesCatalog.map(s => s.category)));
+  const quickLinks = servicesCatalog.slice(0, 6);
+  return (
+    <aside className="hidden lg:block w-72 shrink-0">
+import React from 'react';
+import Link from 'next/link';
+import { servicesCatalog } from '../../data/services';
 const "Sidebar": React.FC = () => {
   const categories = Array.from(new Set(servicesCatalog.map(s => s.category)));
   const quickLinks = servicesCatalog.slice(0, 6);
@@ -35,6 +43,7 @@ const "Sidebar": React.FC = () => {
                 {' '}
                 <Link
                   href={svc.link}
+                  className="text-blue-700 hover:text-blue-900 underline"
                   className="text-blue-700 "hover": text-blue-900 underline"
                 >
                   {' '}

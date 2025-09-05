@@ -4,7 +4,6 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
-
 export interface MicroSaasService {
   id: string;
   name: string;
@@ -31,7 +30,6 @@ export interface MicroSaasService {
   useCases: string[];
   technologies: string[];
 }
-
 // Zion Tech Group Contact Information
 export const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",
@@ -39,7 +37,6 @@ export const zionContact: ServiceContact = {
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
-
 // Revolutionary Micro SAAS Services 2025
 export const newMicroSaasServices2025: MicroSaasService[] = [
   {
@@ -593,7 +590,6 @@ export const newMicroSaasServices2025: MicroSaasService[] = [
     technologies: ["NLP", "Machine Learning", "Python", "React", "Elasticsearch"]
   }
 ];
-
 // Revolutionary IT Services 2025
 export interface ITService {
   id: string;
@@ -621,7 +617,6 @@ export interface ITService {
   useCases: string[];
   technologies: string[];
 }
-
 export const newITServices2025: ITService[] = [
   {
     id: "cloud-migration-expert",
@@ -899,7 +894,6 @@ export const newITServices2025: ITService[] = [
     technologies: ["SIEM", "Machine Learning", "Network Analysis", "Threat Intelligence", "Automation"]
   }
 ];
-
 // Revolutionary AI Services 2025
 export interface AIService {
   id: string;
@@ -927,7 +921,6 @@ export interface AIService {
   useCases: string[];
   technologies: string[];
 }
-
 export const newAIServices2025: AIService[] = [
   {
     id: "ai-predictive-maintenance",

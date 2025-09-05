@@ -7,7 +7,6 @@ import React from 'react';
 import {Footer} from '@/components/Footer';
 import {SEO} from '@/components/SEO';
 import React from &apos;react&apos;; import {Footer} from &apos;@/components/Footer&apos;;&quot; import {SEO} from &apos;@/components/SEO&apos;;&quot; import {GradientHeading} from &apos;@/components/ui/GradientHeading&apos;; ; export default function Privacy($1) {} return(); <>&quot;; <SEO &quot;; title=&quot;Privacy Policy&quot;; description=&quot;Learn how Zion Tech Group handles your data and protects your privacy.&quot;; canonical=&quot;https: />&quot;; {}&quot;; <main className=&quot;min-h-screen bg-zion-blue pt-24 pb-20&quot;>&quot;; <div className=&quot;container mx-auto px-4 sm:px-6 lg:px-8&quot;>&quot;; <div className=&quot;text-center mb-16&quot;>&quot;; <GradientHeading>Privacy Policy</GradientHeading>&quot;; <p className=&quot;mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto&quot;>; Your privacy is important to us. This page explains how we; collect,use,and safeguard your information.; </p>&quot;; </div>&quot;; <div className=&quot;space-y-6 text-zion-slate-light text-lg&quot;>; <p>; We collect personal information you provide when creating an; account or using our services. This may include your name,email,; and other details required to deliver our marketplace features.; </p>; <p>; Zion Tech Group uses this data solely to operate and improve our; platform. We do not sell your personal information to third; parties.&apos;; </p>&apos;; <p>&apos; If you have questions about our privacy practices,please contact&quot; us at{&apos; &apos;}&quot; <a&quot; href=&quot;mailto:support@ziontechgroup.com&quot; className=&quot;text-zion-cyan hover:underline&quot; > support@ziontechgroup.com; </a>; .; </p>; </div>; </main>; <Footer />; </>; )} ; export {Privacy}; ; export {Privacy}; ; export {Privacy}; ; export {Privacy}; ; export {Privacy}; </div> </SEO>;&apos;;&apos;;
-
 import React from 'react';
 // import {Header} from "@/components/header/Header";
 import {Footer} from '@/components/Footer';"
@@ -102,7 +101,6 @@ export {Privacy};
 export {Privacy};
 export {Privacy};
 export {Privacy};
-
 </div>';
 </SEO>;';;';
 ;

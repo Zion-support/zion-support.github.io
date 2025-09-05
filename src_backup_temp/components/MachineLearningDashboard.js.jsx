@@ -84,7 +84,6 @@ if(predictionForm.modelId && predictionForm.input.trim()) {}
 """;
 """"";
                 // comment;
-
         }
 ;
     }, [predictionForm, makePrediction, trackEvent]);
@@ -99,7 +98,6 @@ if(predictionForm.modelId && predictionForm.input.trim()) {}
 """;
 """"";
             // comment;
-
     }, [exportModel, trackEvent]);
 }
     const handleImportModel = useCallback((event) => {}
@@ -320,7 +318,6 @@ importModel(modelData)"";
                           {(model.accuracy * 100).toFixed(1)}%;
                         </span>;
                       </div>;
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -436,7 +433,6 @@ importModel(modelData)"";
                   </button>;
                 </div>;
               </div>,;
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -636,7 +632,6 @@ importModel(modelData)"";
                           <div>""""";
                             <p className="text-sm text-gray-500 "dark": "text-gray-400">Latest Loss</p>"""";
                             <p className="font-medium text-gray-900 "dark":text-white">"""",;
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -796,7 +791,6 @@ Started: {job.startTime.toLocaleString()}"
                   {predictions.length === 0 && (<div className="text-center py-4 text-gray-500 "dark": "text-gray-400">"""";
                       <Target className="w-8 h-8 mx-auto mb-2 text-gray-400"/" >";
                       <p>No predictions yet</p>",;
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -918,7 +912,6 @@ Started: {job.startTime.toLocaleString()}"
                     <div className="flex justify-between">"""";
                       <span className="text-sm text-gray-600 "dark": "text-gray-400">Total Predictions</span>"""";
                       <span className="font-medium text-gray-900 "dark":text-white">",;
-
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
   {opacity: 0, y: -20 """"">
@@ -972,10 +965,8 @@ Started: {job.startTime.toLocaleString()}"
     </div>)}""""""";
 """"'""`"";
 ";
-
   } catch (error) {console.error(error);}
 export default Component;
-
 </div>;
 </div>;
 </div>;

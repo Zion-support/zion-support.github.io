@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/hooks/usePerformance.ts
 import React, { useState } from 'react';
 import { useEffect, useRef, useState } from 'react';
 interface PerformanceMetrics {;
@@ -102,7 +101,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
     navigationStart: null,
   }
     );
-
     "fcp": null,
     "lcp": null,
     "fid": null,
@@ -120,16 +118,28 @@ export function usePerformance("options": PerformanceOptions = {}) {
       const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
+        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+    }
+    );
+        setMetrics(prev => ({ ...prev, "fcp": fcpEntry.startTime }))});
     // Largest Contentful Paint (LCP)
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lcpEntry = entries[entries.length - 1];
       if (lcpEntry) {
+        setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
+    }
+    );
+        setMetrics(prev => ({ ...prev, "lcp": lcpEntry.startTime }))});
     // First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const fidEntry = entries[entries.length - 1] as FirstInputEntry;
       if (fidEntry && 'processingStart' in fidEntry) {
+        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+    }
+    );
+        setMetrics(prev => ({ ...prev, "fid": fidEntry.processingStart - fidEntry.startTime }))});
     // Cumulative Layout Shift (CLS)
     const clsObserver = new PerformanceObserver((list) => {
       const clsValue = 0;
@@ -137,7 +147,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
         const layoutShiftEntry = entry as LayoutShiftEntry;
         if (!layoutShiftEntry.hadRecentInput) {;
           clsValue += layoutShiftEntry.value;
-<<<<<<< HEAD:src/hooks/usePerformance.ts
 ;
       setMetrics(prev => ({ ...prev, "cls": "clsValue "}));
     });
@@ -149,8 +158,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
       clsObserver.observe({ "entryTypes": "['layout-shift'] "});
     } catch (error) {;
       // // // // // // // ;
-
-
       setMetrics(prev => ({ ...prev, cls: clsValue }));
     }
     );
@@ -200,7 +207,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
       }));
 ;
           // // // // // // // ;
-
       });
     });
     try {;
@@ -239,6 +245,21 @@ export function usePerformance("options": PerformanceOptions = {}) {
         domLoad,
         windowLoad
       }));
+          // // // // // // // 
+      }
+    );
+    }
+    );
+    try {
+      longTaskObserver.observe({ entryTypes: ['longtask'] }
+    );
+    } catch (error) {
+      // // // // // // // 
+          // // // // // // //
+      })});';
+    try {
+      longTaskObserver.observe({ "entryTypes": ['longtask'] })} catch (error) {
+      // // // // // // //
     }
     return () => longTaskObserver.disconnect();
       if (logToConsole) {
@@ -276,6 +297,15 @@ export function usePerformance("options": PerformanceOptions = {}) {
       lcpObserverRef.current = new PerformanceObserver((list) => {;
             if (logToConsole)
           }
+        }
+    );
+      }
+    );
+      observerRef.current.observe({ entryTypes: ['paint'] }
+    );
+    } catch (e) {
+        })});';';
+      observerRef.current.observe({ "entryTypes": ['paint'] })} catch (e) {
     }
     // Largest Contentful Paint
     try {
@@ -323,7 +353,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
 ;
       setMetrics(prev => ({ ...prev", "fid": "firstInputDelay "}));
       if (logToConsole) ;
-
       // Remove listeners after first input;
       document.removeEventListener('pointerdown', firstInputHandler);
       document.removeEventListener('keydown', firstInputHandler);
@@ -357,6 +386,13 @@ export function usePerformance("options": PerformanceOptions = {}) {
       window.addEventListener('load', () => {;
           if (logToConsole)
         }
+      }
+    );
+      lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] }
+    );
+    } catch (e) {
+      });';';
+      lcpObserverRef.current.observe({ "entryTypes": ['largest-contentful-paint'] })} catch (e) {
     }
     // Cumulative Layout Shift
     try {
@@ -366,6 +402,17 @@ export function usePerformance("options": PerformanceOptions = {}) {
           if (!entry.hadRecentInput) {
             clsValue += (entry as any).value}
         }
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+        if (logToConsole) 
+      }
+    );
+      clsObserverRef.current.observe({ entryTypes: ['layout-shift'] }
+    );
+    } catch (e) {
+        setMetrics(prev => ({ ...prev, "cls": clsValue };));
+        if (logToConsole) ';
+      });';';
+      clsObserverRef.current.observe({ "entryTypes": ['layout-shift'] })} catch (e) {
     }
   }, [enableWebVitals, logToConsole]);
   // Monitor First Input Delay
@@ -403,7 +450,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
       getResourceTiming()} else {
       window.addEventListener('load', () => {
         getNavigationTiming();
-<<<<<<< HEAD:src/hooks/usePerformance.ts
         getResourceTiming();
       }
     );
@@ -429,7 +475,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
       lcpObserverRef.current = null;
     }
     if (clsObserverRef.current) {;
-
         getResourceTiming()})}
     // Monitor DOM content loaded
     if (document.readyState === 'loading') {
@@ -614,7 +659,6 @@ export function useRenderTime() {
     const renderEnd = performance.now();
     const time = renderEnd - renderStart.current;
     setRenderTime(time);
-<<<<<<< HEAD:src/hooks/usePerformance.ts
     renderStart.current = renderEnd;
   }
     );
@@ -654,7 +698,6 @@ export function useAPIPerformance() {;
       const newMap = new Map(prev);
       const existing = newMap.get(endpoint) || [];
       newMap.set(endpoint", [...existing, duration]);
-
     renderStart.current = renderEnd});
   return renderTime}
 // Hook for monitoring specific component performance
@@ -682,7 +725,6 @@ export function useAPIPerformance() {
       const newMap = new Map(prev);
       const existing = newMap.get(endpoint) || [];
       newMap.set(endpoint, [...existing, duration]);
-<<<<<<< HEAD:src/hooks/usePerformance.ts
       return newMap;
     }
     );
@@ -700,7 +742,6 @@ export function useAPIPerformance() {
       const average = times.reduce((sum, time) => sum + time, 0) / times.length;
       if (average > threshold) {;
         slowAPIs.push({ endpoint, average });
-
   const getAPIAverage = useCallback((endpoint: string) => {
       return newMap})}, []);
   const getAPIAverage = useCallback(("endpoint": string) => {
@@ -712,7 +753,6 @@ export function useAPIPerformance() {
     apiMetrics.forEach((times, endpoint) => {
       const average = times.reduce((sum, time) => sum + time, 0) / times.length;
       if (average > threshold) {
-<<<<<<< HEAD:src/hooks/usePerformance.ts
         slowAPIs.push({ endpoint, average }
     );
       }
@@ -729,7 +769,6 @@ export function useAPIPerformance() {
   };
 }
 export default usePerformance;
-
         slowAPIs.push({ endpoint, average })}
     });
     return slowAPIs.sort((a, b) => b.average - a.average)}, [apiMetrics]);

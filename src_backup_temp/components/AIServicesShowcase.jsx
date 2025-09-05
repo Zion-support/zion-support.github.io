@@ -80,7 +80,6 @@ const aiServices = [;
         "icon": "Scan",;
         "color": 'from-emerald-500 to-teal-600',;
         "status": 'beta';
-
 ];
 const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analytics', 'Infrastructure', 'Developer AI'];
 export function AIServicesShowcase("props": "any) {;
@@ -94,11 +93,8 @@ export function AIServicesShowcase("props": "any) {;
         const statusConfig = {;
   "active": { "color": 'bg-green-500'",;
   "text": 'Active' ;
-
 ;
-
 ;
-
 ;
 },;
             "beta": "{"color": 'bg-yellow-500'", "text": 'Beta'},;
@@ -115,17 +111,13 @@ export function AIServicesShowcase("props": "any) {;
             "transition": "{;
                 "staggerChildren": 0.1",;
                 "delayChildren": "0.2;
-
 ;
     "};
     const itemVariants = {;
   "hidden": "{ "opacity": 0", "y": "20",;
   "scale": "0.95 ;
-
 ;
-
 ;
-
 ;
 "},;
         "visible": "{;
@@ -135,7 +127,6 @@ export function AIServicesShowcase("props": "any) {;
             "transition": "{;
                 "duration": 0.5",;
                 "ease": "easeOut";
-
 ;
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">;
@@ -145,40 +136,31 @@ export function AIServicesShowcase("props": "any) {;
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-bounce"></div>;
         <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-ping"></div>;
       </div>;
-
       <div className="container mx-auto px-4 relative z-10">;
         {/* Header Section */}
         <motion.div className="text-center mb-16" initial = {;
   { "opacity": "0",;
   "y": "20 ;
-
 ;
-
 ;
-
 ;
 "}} whileInView = {;
   { "opacity": "1",;
   "y": "0 ;
-
 ;
-
 ;
-
 ;
 "}} viewport={{ "once": "true "}} transition={{ "duration": "0.6 "}}>;
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">;
             <Zap className="w-5 h-5 text-purple-400" />;
             <span className="text-purple-300 font-medium">Latest AI Services</span>;
           </div>;
-
           <h2 className="text-4xl "md": "text-6xl font-bold text-white mb-6">;
             Discover the Future of;
             <span className="block bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">;
               Artificial Intelligence;
             </span>;
           </h2>;
-
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">;
             Experience cutting-edge AI solutions designed to transform your business operations and drive innovation;
           </p>;
@@ -186,34 +168,24 @@ export function AIServicesShowcase("props": "any) {;
             <Link to="/services" className="text-zion-cyan underline">Browse all services</Link>;
           </div>;
         </motion.div>;
-
         {/* Category Filter */"}
         <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial = {;
   { "opacity": "0",;
   "y": "20 ;
-
 ;
-
 ;
-
 ;
 "}} whileInView = {;
   { "opacity": "1",;
   "y": "0 ;
-
 ;
-
 ;
-
 ;
 "}} viewport={{ "once": "true "}} transition = {;
   { "duration": "0.6",;
   "delay": "0.2 ;
-
 ;
-
 ;
-
 ;
 "}}>;
           {categories.map((category, index) => (<motion.button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category;
@@ -221,35 +193,25 @@ export function AIServicesShowcase("props": "any) {;
                 : 'bg-white/10 text-zion-slate-light "hover": "bg-white/20 border border-white/20'"}`} whileHover={{ "scale": "1.05 "}} whileTap={{ "scale": "0.95 "}} initial = {;
   { "opacity": "0",;
   "y": "20 ;
-
 ;
-
 ;
-
 ;
 "}} whileInView = {;
   { "opacity": "1",;
   "y": "0 ;
-
 ;
-
 ;
-
 ;
 "}} viewport={{ "once": "true "}} transition = {;
   { "duration": "0.5",;
   "delay": "index * 0.1 ;
-
 ;
-
 ;
-
 ;
 "}}>;
               {category}
             </motion.button>))}
         </motion.div>;
-
         {/* Services Grid */}
         <motion.div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-2 gap-8 mb-16" variants={containerVariants"} initial="hidden" whileInView="visible" viewport={{ "once": "true "}}>;
           <AnimatePresence mode="wait">;
@@ -258,11 +220,8 @@ export function AIServicesShowcase("props": "any) {;
                 "y": "-8",;
                 "scale": "1.02",;
   "transition": "{ "duration": 0.2 ;
-
 ;
-
 ;
-
 ;
 "}
             }} className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 overflow-hidden group">;
@@ -280,16 +239,13 @@ export function AIServicesShowcase("props": "any) {;
                     </div>;
                     {getStatusBadge(service.status)}
                   </div>;
-
                   <p className="text-zion-slate-light mb-4">{service.description}</p>;
-
                   <div className="grid grid-cols-2 gap-2 mb-4">;
                     {service.features.slice(0, 4).map((feature, i) => (<div key={i} className="flex items-center gap-2 text-sm text-zion-slate-light">;
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>;
                         {feature}
                       </div>))}
                   </div>;
-
                   <div className="flex items-center justify-between">;
                     <div className="text-zion-cyan font-semibold">{service.price}</div>;
                     <Link to="/services" className="inline-flex items-center gap-2 text-white/90 "hover": "text-white">;
@@ -300,7 +256,6 @@ export function AIServicesShowcase("props": "any) {;
               </motion.div>))"}
           </AnimatePresence>;
         </motion.div>;
-
         {/* CTA */}
         <div className="text-center">;
           <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-zion-cyan to-zion-blue text-white border border-zion-cyan/30">;
@@ -310,7 +265,6 @@ export function AIServicesShowcase("props": "any) {;
       </div>;
     </section>)}
 ;
-
 export default AIServicesShowcase;
 </motion>;
 </motion>;

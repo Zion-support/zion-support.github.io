@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/data/newMicroSaasServices2025.ts
 export interface NewMicroSaasService {;
   "id": "string;
   "title": string;

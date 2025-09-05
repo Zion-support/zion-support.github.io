@@ -22,14 +22,11 @@ import {useInterviews} from '@/hooks/useInterviews';
     "title": "z.string().min(3", "Please provide a brief title for the interview."),;
     "notes": "z.string().optional()"});
 export function InterviewRequestForm("props": "any) {;
-
     const { requestInterview "} = useInterviews();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const form = useForm({;
-
         "resolver": "zodResolver(formSchema)",;
         "defaultValues": "{;
-
             "title": `Interview with ${talent.full_name"}`,";
             "duration": "30",";
             "platform": "zoom",";
@@ -62,14 +59,11 @@ import {useInterviews} from '@/hooks/useInterviews';
     );
 export function InterviewRequestForm(props: any) {
 import React from 'react';
-
 interface InterviewRequestForm.jsProps {
   // Add props here as needed
 }
-
         resolver: zodResolver(formSchema),
         defaultValues: {
-
             title: `Interview with ${talent.full_name}`,"
             duration: "30","
             platform: "zoom","
@@ -77,9 +71,7 @@ interface InterviewRequestForm.jsProps {
             meetingLink: ""}}
     );
     async function onSubmit(props: any) {
-
         if(!userDetails?.id) {;
-
             toast({;
 ";
                 "title": "Authentication required"",";
@@ -216,7 +208,6 @@ interface InterviewRequestForm.jsProps {
                   <PopoverContent className="w-auto p-0" align="start">"
                     <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled = {(date) => date < new Date() || date > addDays(new Date(),
   90)
-
 "} initialFocus className="p-3 pointer-events-auto"/>;
                   </PopoverContent>;
                 </Popover>;
@@ -306,7 +297,6 @@ interface InterviewRequestForm.jsProps {
       </form>;
     </Form>)}
 '"`;
-
 </FormField>;
 </FormField>;
 </FormField>;

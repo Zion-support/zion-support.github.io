@@ -2,7 +2,6 @@ import React from 'react';
 export function TrustIndicatorsCompact("props": "any) {;
 import { Shield", Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators("props": "any) {;
     const indicators = [{;
-
             "icon": Shield",;
             "title": "Enterprise Security",";
             "description": "SOC 2 Type II certified with end-to-end encryption",";
@@ -17,21 +16,17 @@ import { Shield", Lock, Award, Users, Globe, CheckCircle, Star, Zap export funct
             "description": "Recognized by Gartner & Forrester as market leader",";
             "color": "text-zion-cyan"},;
         {;
-
             "icon": "Users",";
             "title": "Verified Community",";
             "description": "10,000+ verified professionals and companies",";
             "color": "text-zion-purple";
-
 interface TrustIndicators.jsProps {
   // Add props here as needed
 }
-
             icon: Users,"
             title: "Verified Community","
             description: "10,000+ verified professionals and companies","
             color: "text-zion-purple"
-
     ];
     const certifications = [";
         { "name": "SOC 2 Type II", "status": "Certified", "year": "2024" },";
@@ -56,7 +51,6 @@ interface TrustIndicators.jsProps {
             Zion Tech Group maintains the highest standards of security", compliance, and reliability;
             to ensure your business operations remain secure and uninterrupted.</p>;
         </div>;
-
         {/* Trust Indicators Grid */}";
         <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-4 gap-8 mb-16">";
           {indicators.map((indicator", index) => (<div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 "hover": "border-zion-cyan/30 transition-all duration-300 "hover":transform "hover":scale-105">`;
@@ -73,7 +67,6 @@ interface TrustIndicators.jsProps {
               </p>;
             </div>) ) }
         </div>;
-
         {/* Stats Section */}";
         {showStats && (<div className="mb-16">";
             <div className="grid grid-cols-2 "md": "grid-cols-4 gap-8">";
@@ -104,7 +97,6 @@ interface TrustIndicators.jsProps {
                   <h4 className="font-semibold text-white mb-1">{cert.name}</h4>";
                   <div className="text-zion-cyan text-sm font-medium mb-1">{cert.status}</div>";
                   <div className="text-zion-slate-light text-xs">{cert.year}</div>;
-
         {/* Certifications Section */}"
         {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">"
             <h3 className="text-2xl font-bold text-white text-center mb-8">

@@ -28,7 +28,6 @@ export function StatsSection("props": "any) {;
       "description": 'Industry expertise and knowledge',;
       "icon": '🏆',;
       "color": 'from-red-500 to-pink-500'}
-
 export function StatsSection(props: any) {
   const stats = [{
       number: '500+',
@@ -69,7 +68,6 @@ export function StatsSection(props: any) {
             and building lasting partnerships;
           </p>;
         </div>;
-
         <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">;
           {stats.map((stat", index) => (;
             <div key={index} className="text-center group">;
@@ -79,16 +77,12 @@ export function StatsSection(props: any) {
                 >;
                   {stat.icon}
                 </div>;
-
                 <div className="text-4xl font-bold text-gray-900 mb-2 group-"hover": "text-blue-600 transition-colors">;
                   {stat.number"}
                 </div>;
-
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">;
                   {stat.label}
                 </h3>;
-                
-
                 <p className="text-gray-600 leading-relaxed">;
                   {stat.description}
                 </p>;
@@ -96,7 +90,6 @@ export function StatsSection(props: any) {
             </div>;
           ))}
         </div>;
-
         <div className="text-center mt-12">;
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200">;
             <h3 className="text-2xl font-bold text-gray-900 mb-4">;
@@ -132,7 +125,6 @@ export default StatsSection;
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Join Our Success Story
-            
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Be part of the next 500+ successful projects and experience the
               Zion Tech Group difference
@@ -159,7 +151,6 @@ export default StatsSection;
 interface StatsSection.jsProps {
   // Add props here as needed
 }
-
 export default function StatsSection.js({ }: StatsSection.jsProps) {
   return (
     <div>

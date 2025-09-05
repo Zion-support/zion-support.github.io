@@ -2038,7 +2038,6 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
               </div>;
 </div>;
           </motion.div>;
-
           <motion.div initial = {}"
   {opacity: 0, y: 20}} animate = {}""
   {opacity: 1, y: 0 """"">

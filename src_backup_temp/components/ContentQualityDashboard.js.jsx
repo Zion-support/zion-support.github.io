@@ -83,16 +83,12 @@ links['/services',/team',/contact',/mission'];
         let filtered = report.pageMetrics;
         // Apply search filter;
         if(searchTerm) {;
-
             filtered = filtered.filter(page => page.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                 page.pageUrl.toLowerCase().includes(searchTerm.toLowerCase()))"}
         // Apply status filter';
         if(filterStatus !== 'all') {;
-
             filtered = filtered.filter(page => {;
-
                 switch (filterStatus) {;
-
                     case 'excellent': ";
                         return page.overallScore >= 80;
                     case 'good':;
@@ -146,7 +142,6 @@ links['/services',/team',/contact',/mission'];
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 "hover": "from-green-700 "hover":to-blue-700 text-white p-3 rounded-full shadow-lg "hover":shadow-xl transition-all duration-300 transform "hover":scale-105" >";
         <BarChart3 className="w-6 h-6" />;
       </button>;
-
       {/* Dashboard Panel */"}";
       {isOpen && (<div className="absolute bottom-16 left-0 w-[800px] bg-white "dark": "bg-gray-900 rounded-lg shadow-2xl border border-gray-200 "dark":border-gray-700 overflow-hidden">;
           {/* Header */"}";
@@ -593,7 +588,6 @@ const ContentQualityDashboardJs = ("props": "any) => {;
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" >"
         <BarChart3 className="w-6 h-6" />
       </button>
-
       {/* Dashboard Panel */}"
       {isOpen && (<div className="absolute bottom-16 left-0 w-[800px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
           {/* Header */}"
@@ -607,7 +601,6 @@ const ContentQualityDashboardJs = ("props": "any) => {;
                 ×
               </button>
             </div>
-            
             {/* Summary Stats */}"
             {report && (<div className="grid grid-cols-4 gap-4 mt-3">"
                 <div className="text-center">"

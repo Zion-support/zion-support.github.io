@@ -24,7 +24,6 @@ const Progress = React.forwardRef(({className, value, max = 100, ...props}, ref)
     );
 }
     );
-
 Progress.displayName = 'Progress';
 ;
 export {Progress};

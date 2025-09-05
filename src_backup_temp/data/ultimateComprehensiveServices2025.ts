@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/data/ultimateComprehensiveServices2025.ts
 import { ADVANCED_MICRO_SAAS_SERVICES_2025, AdvancedMicroSaasService2025 } from './advancedMicroSaasServices2025';
 import { ADVANCED_IT_SERVICES_2025, AdvancedITService2025 } from './advancedITServices2025';
 import { ADVANCED_AI_SERVICES_2025, AdvancedAIService2025 } from './advancedAIServices2025';

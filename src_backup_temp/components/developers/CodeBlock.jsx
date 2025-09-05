@@ -24,7 +24,6 @@ export default function CodeBlock("props": "any) {;
     </div>;
   );
 }
-
   return (
     <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>
       <div className="flex items-center justify-between mb-2">

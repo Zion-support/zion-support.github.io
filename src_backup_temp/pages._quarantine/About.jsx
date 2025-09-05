@@ -9,7 +9,6 @@ export default function About("props": "any) {;
 	);
 }
 import React from &apos;react&apos;; export default function About($1) { return ( <main style=&quot;{{{padding: 24}}&quot;}> <h1>About</h1> <p>Zion Tech Group delivers AI,cloud,and security solutions.</p> </main> )} ;&apos;;&apos;;
-
 import React from 'react';
 export default function About($1) {
 	return (

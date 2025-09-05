@@ -26,7 +26,6 @@ const ServiceCategory = ("props": "any) => {"}
             'Supply Chain & Logistics': <Truck className="w-6 h-6" />,';';
             'Real Estate & Property': <Home className="w-6 h-6" />,';';
             'Legal & Compliance': <Lock className="w-6 h-6" />,
-
     const getCategoryIcon = (props: any) => {;
         const iconMap = {;
   'AI & Machine Learning': <Brain className="w-6 h-6" />,;
@@ -66,11 +65,9 @@ export default Component';
 ;';;';
 export default Component;
 export default Component;
-
 interface EnhancedServicesOverview.jsProps {
   // Add props here as needed
 }
-
 export default function EnhancedServicesOverview.js({ }: EnhancedServicesOverview.jsProps) {
   return (
     <div>

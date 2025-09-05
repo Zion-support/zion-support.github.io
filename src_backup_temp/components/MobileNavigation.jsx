@@ -178,7 +178,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}';';
                 duration: 0.3,'';';
   ease: 'easeInOut'
-
         setActiveDropdown(activeDropdown === label ? null : label)};
     const handleSearch = (props: any) => {}
                 {"label": 'About Us', "href": '/about'},''';
@@ -292,7 +291,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
                 {label: 'Press', href: '/press'},'''
                 {label: 'Contact', href: '/contact'}
             ]
-
     ];
     const toggleDropdown = (props: any) => {}
         setActiveDropdown(activeDropdown === label ? null : label)};
@@ -312,7 +310,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.3,'
   ease: 'easeInOut'
-
 }
         },
         open: {}
@@ -321,7 +318,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.3,'
                 ease: 'easeInOut'
-
     };
     const dropdownVariants = {}
   closed: {}
@@ -330,7 +326,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.2,'
   ease: 'easeInOut'
-
 }
         },
         open: {}
@@ -342,7 +337,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.2,'
                 ease: 'easeInOut'
-
             x: 0,;
             opacity: 1,;
             transition: {}
@@ -615,22 +609,15 @@ export {MobileNavigation};
 export {MobileNavigation};
 ;
 export {MobileNavigation};
-
 </motion>';
 </motion>;';;';
 ;
 </motion>;
 </motion>;
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 </motion>
 </motion>
