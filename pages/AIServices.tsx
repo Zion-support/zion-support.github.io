@@ -831,6 +831,443 @@ export default function AIServices() {
       ],
       marketPrice: "$6,000-12,000/month",
       savings: "Save up to $10,400/month"
+    },
+    {
+      name: "AI Financial Risk Assessment",
+      description: "Advanced financial risk analysis platform with AI-powered credit scoring, fraud detection, and investment risk evaluation.",
+      price: "$599/month",
+      features: [
+        "AI credit scoring algorithms",
+        "Real-time fraud detection",
+        "Investment risk analysis",
+        "Market volatility prediction",
+        "Regulatory compliance monitoring",
+        "Portfolio optimization",
+        "Stress testing scenarios",
+        "Custom risk models"
+      ],
+      benefits: [
+        "Reduce financial losses by 60%",
+        "Improve credit decision accuracy",
+        "Minimize fraud incidents",
+        "Optimize investment returns"
+      ],
+      marketPrice: "$1,200-2,000/month",
+      savings: "Save up to $1,400/month"
+    },
+    {
+      name: "AI Medical Diagnosis Assistant",
+      description: "Intelligent medical diagnosis platform with AI-powered symptom analysis, treatment recommendations, and patient monitoring.",
+      price: "$899/month",
+      features: [
+        "Symptom analysis and diagnosis",
+        "Treatment recommendation engine",
+        "Patient monitoring and alerts",
+        "Medical image analysis",
+        "Drug interaction checking",
+        "Clinical decision support",
+        "Electronic health record integration",
+        "Compliance with medical standards"
+      ],
+      benefits: [
+        "Improve diagnostic accuracy by 40%",
+        "Reduce misdiagnosis rates",
+        "Accelerate treatment decisions",
+        "Enhance patient outcomes"
+      ],
+      marketPrice: "$2,000-3,500/month",
+      savings: "Save up to $2,600/month"
+    },
+    {
+      name: "AI Legal Document Analyzer",
+      description: "Comprehensive legal document analysis platform with AI-powered contract review, compliance checking, and legal research automation.",
+      price: "$699/month",
+      features: [
+        "Contract analysis and review",
+        "Legal compliance checking",
+        "Document summarization",
+        "Legal research automation",
+        "Risk assessment scoring",
+        "Precedent case analysis",
+        "Document comparison tools",
+        "Custom legal templates"
+      ],
+      benefits: [
+        "Reduce legal review time by 80%",
+        "Improve contract accuracy",
+        "Minimize legal risks",
+        "Accelerate legal processes"
+      ],
+      marketPrice: "$1,500-2,500/month",
+      savings: "Save up to $1,800/month"
+    },
+    {
+      name: "AI Real Estate Valuation",
+      description: "Intelligent real estate valuation platform with AI-powered property analysis, market trend prediction, and investment recommendations.",
+      price: "$399/month",
+      features: [
+        "Property valuation algorithms",
+        "Market trend analysis",
+        "Investment opportunity scoring",
+        "Neighborhood analysis",
+        "Rental yield prediction",
+        "Property comparison tools",
+        "Market forecasting",
+        "Investment portfolio tracking"
+      ],
+      benefits: [
+        "Improve valuation accuracy by 35%",
+        "Identify profitable investments",
+        "Reduce market research time",
+        "Optimize real estate portfolios"
+      ],
+      marketPrice: "$800-1,200/month",
+      savings: "Save up to $800/month"
+    },
+    {
+      name: "AI Energy Management System",
+      description: "Smart energy management platform with AI-powered consumption optimization, renewable energy integration, and cost reduction strategies.",
+      price: "$499/month",
+      features: [
+        "Energy consumption analysis",
+        "Renewable energy optimization",
+        "Cost reduction algorithms",
+        "Predictive maintenance",
+        "Grid integration management",
+        "Carbon footprint tracking",
+        "Energy storage optimization",
+        "Real-time monitoring dashboards"
+      ],
+      benefits: [
+        "Reduce energy costs by 30%",
+        "Improve energy efficiency",
+        "Optimize renewable energy usage",
+        "Minimize carbon footprint"
+      ],
+      marketPrice: "$1,000-1,800/month",
+      savings: "Save up to $1,300/month"
+    },
+    {
+      name: "AI Language Translation Pro",
+      description: "Advanced AI-powered translation platform with real-time language processing, cultural context understanding, and multi-modal translation.",
+      price: "$199/month",
+      features: [
+        "Real-time translation",
+        "Cultural context adaptation",
+        "Multi-modal translation (text, voice, image)",
+        "Industry-specific terminology",
+        "Quality assurance algorithms",
+        "Batch processing capabilities",
+        "API integration",
+        "Custom translation models"
+      ],
+      benefits: [
+        "Achieve 95% translation accuracy",
+        "Reduce translation costs by 70%",
+        "Accelerate global communication",
+        "Maintain cultural sensitivity"
+      ],
+      marketPrice: "$400-700/month",
+      savings: "Save up to $500/month"
+    },
+    {
+      name: "AI Predictive Maintenance",
+      description: "Intelligent predictive maintenance platform with AI-powered equipment monitoring, failure prediction, and automated maintenance scheduling.",
+      price: "$799/month",
+      features: [
+        "Equipment health monitoring",
+        "Failure prediction algorithms",
+        "Automated maintenance scheduling",
+        "Spare parts optimization",
+        "Performance trend analysis",
+        "Alert and notification system",
+        "Maintenance cost optimization",
+        "Integration with IoT sensors"
+      ],
+      benefits: [
+        "Reduce unplanned downtime by 75%",
+        "Lower maintenance costs by 45%",
+        "Extend equipment lifespan",
+        "Improve operational efficiency"
+      ],
+      marketPrice: "$1,500-2,500/month",
+      savings: "Save up to $1,700/month"
+    },
+    {
+      name: "AI Voice Analytics Platform",
+      description: "Advanced voice analysis platform with AI-powered speech recognition, emotion detection, and conversation intelligence for customer service.",
+      price: "$299/month",
+      features: [
+        "Real-time speech recognition",
+        "Emotion and sentiment analysis",
+        "Conversation intelligence",
+        "Call quality monitoring",
+        "Agent performance analytics",
+        "Customer satisfaction scoring",
+        "Automated call summarization",
+        "Integration with call centers"
+      ],
+      benefits: [
+        "Improve customer satisfaction by 50%",
+        "Enhance agent performance",
+        "Reduce call handling time",
+        "Gain actionable insights"
+      ],
+      marketPrice: "$600-1,000/month",
+      savings: "Save up to $700/month"
+    },
+    {
+      name: "AI Fraud Detection System",
+      description: "Comprehensive fraud detection platform with AI-powered pattern recognition, real-time monitoring, and automated response capabilities.",
+      price: "$599/month",
+      features: [
+        "Real-time fraud detection",
+        "Pattern recognition algorithms",
+        "Behavioral analysis",
+        "Transaction monitoring",
+        "Risk scoring system",
+        "Automated response actions",
+        "Machine learning adaptation",
+        "Compliance reporting"
+      ],
+      benefits: [
+        "Reduce fraud losses by 85%",
+        "Minimize false positives",
+        "Real-time threat detection",
+        "Automate fraud prevention"
+      ],
+      marketPrice: "$1,200-2,000/month",
+      savings: "Save up to $1,400/month"
+    },
+    {
+      name: "AI Content Moderation",
+      description: "Intelligent content moderation platform with AI-powered content analysis, inappropriate content detection, and automated moderation actions.",
+      price: "$399/month",
+      features: [
+        "AI content analysis",
+        "Inappropriate content detection",
+        "Automated moderation actions",
+        "Multi-language support",
+        "Image and video analysis",
+        "Custom moderation rules",
+        "Real-time processing",
+        "Human review integration"
+      ],
+      benefits: [
+        "Reduce moderation costs by 80%",
+        "Improve content quality",
+        "Scale moderation capabilities",
+        "Maintain platform safety"
+      ],
+      marketPrice: "$800-1,400/month",
+      savings: "Save up to $1,000/month"
+    },
+    {
+      name: "AI Recommendation Engine",
+      description: "Advanced recommendation system with AI-powered personalization, behavioral analysis, and multi-channel recommendation delivery.",
+      price: "$499/month",
+      features: [
+        "Personalized recommendations",
+        "Behavioral analysis",
+        "Multi-channel delivery",
+        "A/B testing capabilities",
+        "Real-time optimization",
+        "Cross-platform integration",
+        "Performance analytics",
+        "Custom recommendation models"
+      ],
+      benefits: [
+        "Increase conversion rates by 120%",
+        "Improve user engagement",
+        "Personalize user experience",
+        "Optimize recommendation accuracy"
+      ],
+      marketPrice: "$1,000-1,800/month",
+      savings: "Save up to $1,300/month"
+    },
+    {
+      name: "AI Weather Prediction System",
+      description: "Advanced weather forecasting platform with AI-powered prediction models, climate analysis, and weather impact assessment.",
+      price: "$299/month",
+      features: [
+        "AI weather prediction models",
+        "Climate trend analysis",
+        "Weather impact assessment",
+        "Severe weather alerts",
+        "Agricultural weather insights",
+        "Energy demand forecasting",
+        "Custom weather APIs",
+        "Historical data analysis"
+      ],
+      benefits: [
+        "Improve weather prediction accuracy",
+        "Reduce weather-related risks",
+        "Optimize business planning",
+        "Enhance decision making"
+      ],
+      marketPrice: "$600-1,000/month",
+      savings: "Save up to $700/month"
+    },
+    {
+      name: "AI Traffic Optimization",
+      description: "Intelligent traffic management system with AI-powered route optimization, congestion prediction, and smart traffic control.",
+      price: "$799/month",
+      features: [
+        "Route optimization algorithms",
+        "Congestion prediction",
+        "Smart traffic light control",
+        "Real-time traffic monitoring",
+        "Incident detection",
+        "Public transport optimization",
+        "Environmental impact analysis",
+        "Integration with city systems"
+      ],
+      benefits: [
+        "Reduce traffic congestion by 40%",
+        "Improve travel times",
+        "Lower emissions",
+        "Enhance urban mobility"
+      ],
+      marketPrice: "$1,500-2,500/month",
+      savings: "Save up to $1,700/month"
+    },
+    {
+      name: "AI Drug Discovery Platform",
+      description: "Advanced drug discovery platform with AI-powered molecular analysis, drug interaction prediction, and clinical trial optimization.",
+      price: "$1,999/month",
+      features: [
+        "Molecular analysis algorithms",
+        "Drug interaction prediction",
+        "Clinical trial optimization",
+        "Target identification",
+        "Compound screening",
+        "Toxicity prediction",
+        "Patent analysis",
+        "Regulatory compliance"
+      ],
+      benefits: [
+        "Accelerate drug discovery by 50%",
+        "Reduce development costs",
+        "Improve success rates",
+        "Optimize clinical trials"
+      ],
+      marketPrice: "$4,000-7,000/month",
+      savings: "Save up to $5,000/month"
+    },
+    {
+      name: "AI Agricultural Intelligence",
+      description: "Smart agricultural platform with AI-powered crop monitoring, yield prediction, and precision farming recommendations.",
+      price: "$599/month",
+      features: [
+        "Crop health monitoring",
+        "Yield prediction models",
+        "Precision farming recommendations",
+        "Weather integration",
+        "Pest and disease detection",
+        "Soil analysis",
+        "Irrigation optimization",
+        "Market price forecasting"
+      ],
+      benefits: [
+        "Increase crop yields by 25%",
+        "Reduce resource usage",
+        "Minimize crop losses",
+        "Optimize farming operations"
+      ],
+      marketPrice: "$1,200-2,000/month",
+      savings: "Save up to $1,400/month"
+    },
+    {
+      name: "AI Personal Assistant Pro",
+      description: "Advanced personal AI assistant with natural language processing, task automation, and intelligent scheduling capabilities.",
+      price: "$99/month",
+      features: [
+        "Natural language processing",
+        "Task automation",
+        "Intelligent scheduling",
+        "Email management",
+        "Calendar optimization",
+        "Voice commands",
+        "Learning and adaptation",
+        "Multi-device synchronization"
+      ],
+      benefits: [
+        "Increase productivity by 60%",
+        "Automate routine tasks",
+        "Improve time management",
+        "Enhance work-life balance"
+      ],
+      marketPrice: "$200-350/month",
+      savings: "Save up to $250/month"
+    },
+    {
+      name: "AI Investment Advisor",
+      description: "Intelligent investment advisory platform with AI-powered portfolio analysis, market prediction, and automated trading strategies.",
+      price: "$799/month",
+      features: [
+        "Portfolio analysis and optimization",
+        "Market prediction algorithms",
+        "Automated trading strategies",
+        "Risk assessment",
+        "Tax optimization",
+        "Rebalancing recommendations",
+        "Performance tracking",
+        "Regulatory compliance"
+      ],
+      benefits: [
+        "Improve investment returns by 30%",
+        "Reduce investment risks",
+        "Optimize portfolio performance",
+        "Automate investment decisions"
+      ],
+      marketPrice: "$1,500-2,500/month",
+      savings: "Save up to $1,700/month"
+    },
+    {
+      name: "AI Quality Assurance Platform",
+      description: "Comprehensive quality assurance platform with AI-powered testing automation, defect prediction, and quality optimization.",
+      price: "$699/month",
+      features: [
+        "Automated testing generation",
+        "Defect prediction algorithms",
+        "Quality metrics analysis",
+        "Test case optimization",
+        "Performance testing",
+        "Security testing",
+        "Regression testing",
+        "Quality reporting"
+      ],
+      benefits: [
+        "Reduce testing time by 70%",
+        "Improve defect detection",
+        "Optimize test coverage",
+        "Ensure product quality"
+      ],
+      marketPrice: "$1,400-2,200/month",
+      savings: "Save up to $1,500/month"
+    },
+    {
+      name: "AI Environmental Monitoring",
+      description: "Intelligent environmental monitoring platform with AI-powered pollution detection, climate analysis, and sustainability tracking.",
+      price: "$499/month",
+      features: [
+        "Pollution detection algorithms",
+        "Climate trend analysis",
+        "Sustainability tracking",
+        "Environmental impact assessment",
+        "Compliance monitoring",
+        "Predictive environmental modeling",
+        "Real-time alerts",
+        "Reporting and analytics"
+      ],
+      benefits: [
+        "Improve environmental compliance",
+        "Reduce environmental impact",
+        "Optimize sustainability efforts",
+        "Enable proactive environmental management"
+      ],
+      marketPrice: "$1,000-1,800/month",
+      savings: "Save up to $1,300/month"
     }
   ];
 

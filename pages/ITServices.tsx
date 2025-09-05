@@ -877,6 +877,420 @@ export default function ITServices() {
       ],
       marketPrice: "$5,000-10,000/month",
       savings: "Save up to $7,800/month"
+    },
+    {
+      name: "IT Help Desk and Support",
+      description: "Comprehensive IT help desk services with 24/7 technical support, remote assistance, and proactive issue resolution.",
+      price: "$799/month",
+      features: [
+        "24/7 technical support",
+        "Remote desktop assistance",
+        "Hardware and software troubleshooting",
+        "User account management",
+        "Password reset services",
+        "Software installation and updates",
+        "Printer and network support",
+        "Knowledge base and documentation"
+      ],
+      benefits: [
+        "Reduce IT downtime by 70%",
+        "Improve user productivity",
+        "Minimize IT support costs",
+        "Ensure quick issue resolution"
+      ],
+      marketPrice: "$1,200-2,000/month",
+      savings: "Save up to $1,200/month"
+    },
+    {
+      name: "Data Backup and Recovery",
+      description: "Comprehensive data backup and disaster recovery solutions with automated backups, testing, and rapid recovery capabilities.",
+      price: "$599/month",
+      features: [
+        "Automated daily backups",
+        "Cloud and on-premise storage",
+        "Disaster recovery planning",
+        "Backup testing and validation",
+        "Rapid data restoration",
+        "Version control and retention",
+        "Encryption and security",
+        "Compliance monitoring"
+      ],
+      benefits: [
+        "Ensure 99.9% data availability",
+        "Minimize data loss risks",
+        "Meet compliance requirements",
+        "Enable rapid business recovery"
+      ],
+      marketPrice: "$1,000-1,800/month",
+      savings: "Save up to $1,200/month"
+    },
+    {
+      name: "Mobile Device Management",
+      description: "Complete mobile device management solution with device provisioning, security policies, and remote management capabilities.",
+      price: "$399/month",
+      features: [
+        "Device enrollment and provisioning",
+        "Security policy enforcement",
+        "Remote device management",
+        "App distribution and updates",
+        "Data encryption and protection",
+        "Lost device tracking and wiping",
+        "Compliance monitoring",
+        "User self-service portal"
+      ],
+      benefits: [
+        "Enhance mobile security by 90%",
+        "Simplify device management",
+        "Ensure compliance requirements",
+        "Reduce IT administrative overhead"
+      ],
+      marketPrice: "$700-1,200/month",
+      savings: "Save up to $800/month"
+    },
+    {
+      name: "IT Asset Management",
+      description: "Comprehensive IT asset management with inventory tracking, lifecycle management, and cost optimization for all IT resources.",
+      price: "$499/month",
+      features: [
+        "Asset inventory and tracking",
+        "Lifecycle management",
+        "Cost optimization analysis",
+        "License compliance monitoring",
+        "Asset disposal management",
+        "Depreciation tracking",
+        "Vendor management",
+        "Reporting and analytics"
+      ],
+      benefits: [
+        "Reduce IT costs by 25%",
+        "Improve asset utilization",
+        "Ensure license compliance",
+        "Optimize IT investments"
+      ],
+      marketPrice: "$800-1,400/month",
+      savings: "Save up to $900/month"
+    },
+    {
+      name: "Network Design and Implementation",
+      description: "Professional network design and implementation services with scalable architecture, security, and performance optimization.",
+      price: "$2,999/project",
+      features: [
+        "Network architecture design",
+        "Hardware selection and procurement",
+        "Network installation and configuration",
+        "Security implementation",
+        "Performance optimization",
+        "Documentation and training",
+        "Testing and validation",
+        "Ongoing support and maintenance"
+      ],
+      benefits: [
+        "Improve network performance by 200%",
+        "Enhance network security",
+        "Enable business scalability",
+        "Reduce network downtime"
+      ],
+      marketPrice: "$5,000-8,000/project",
+      savings: "Save up to $5,000/project"
+    },
+    {
+      name: "IT Compliance and Audit",
+      description: "Comprehensive IT compliance services with audit preparation, policy development, and regulatory compliance management.",
+      price: "$1,299/month",
+      features: [
+        "Compliance assessment and audit",
+        "Policy development and implementation",
+        "Regulatory requirement analysis",
+        "Risk assessment and mitigation",
+        "Documentation and reporting",
+        "Staff training and awareness",
+        "Ongoing compliance monitoring",
+        "Audit support and preparation"
+      ],
+      benefits: [
+        "Ensure regulatory compliance",
+        "Reduce compliance risks",
+        "Minimize audit findings",
+        "Improve security posture"
+      ],
+      marketPrice: "$2,000-3,500/month",
+      savings: "Save up to $2,200/month"
+    },
+    {
+      name: "IT Training and Education",
+      description: "Comprehensive IT training programs with customized curriculum, hands-on workshops, and certification preparation for your team.",
+      price: "$899/month",
+      features: [
+        "Customized training programs",
+        "Hands-on workshops and labs",
+        "Certification preparation",
+        "Online and in-person training",
+        "Skill assessment and evaluation",
+        "Training material development",
+        "Progress tracking and reporting",
+        "Ongoing support and mentoring"
+      ],
+      benefits: [
+        "Improve team technical skills",
+        "Increase productivity and efficiency",
+        "Reduce IT support requests",
+        "Enhance job satisfaction"
+      ],
+      marketPrice: "$1,500-2,500/month",
+      savings: "Save up to $1,600/month"
+    },
+    {
+      name: "IT Project Management",
+      description: "Professional IT project management services with planning, execution, and delivery of complex technology projects.",
+      price: "$1,499/month",
+      features: [
+        "Project planning and scoping",
+        "Resource allocation and management",
+        "Timeline and milestone tracking",
+        "Risk assessment and mitigation",
+        "Stakeholder communication",
+        "Quality assurance and testing",
+        "Change management",
+        "Project documentation and reporting"
+      ],
+      benefits: [
+        "Ensure project success",
+        "Reduce project risks",
+        "Improve delivery timelines",
+        "Optimize resource utilization"
+      ],
+      marketPrice: "$2,500-4,000/month",
+      savings: "Save up to $2,500/month"
+    },
+    {
+      name: "IT Consulting and Strategy",
+      description: "Strategic IT consulting services with technology roadmap development, digital transformation planning, and IT strategy alignment.",
+      price: "$1,999/month",
+      features: [
+        "IT strategy development",
+        "Technology roadmap planning",
+        "Digital transformation consulting",
+        "Technology assessment and evaluation",
+        "Vendor selection and management",
+        "Cost-benefit analysis",
+        "Implementation planning",
+        "Ongoing strategic guidance"
+      ],
+      benefits: [
+        "Align IT with business goals",
+        "Optimize technology investments",
+        "Accelerate digital transformation",
+        "Improve competitive advantage"
+      ],
+      marketPrice: "$3,500-6,000/month",
+      savings: "Save up to $4,000/month"
+    },
+    {
+      name: "IT Security Assessment",
+      description: "Comprehensive IT security assessment with vulnerability scanning, penetration testing, and security recommendations.",
+      price: "$1,599/month",
+      features: [
+        "Vulnerability scanning and assessment",
+        "Penetration testing",
+        "Security policy review",
+        "Compliance gap analysis",
+        "Risk assessment and prioritization",
+        "Security recommendations",
+        "Remediation planning",
+        "Follow-up testing and validation"
+      ],
+      benefits: [
+        "Identify security vulnerabilities",
+        "Improve security posture",
+        "Ensure compliance requirements",
+        "Reduce security risks"
+      ],
+      marketPrice: "$2,500-4,500/month",
+      savings: "Save up to $2,900/month"
+    },
+    {
+      name: "IT Infrastructure Monitoring",
+      description: "Advanced IT infrastructure monitoring with 24/7 surveillance, alerting, and proactive issue resolution for optimal performance.",
+      price: "$899/month",
+      features: [
+        "24/7 infrastructure monitoring",
+        "Performance metrics tracking",
+        "Automated alerting system",
+        "Capacity planning and forecasting",
+        "Trend analysis and reporting",
+        "Proactive issue resolution",
+        "Custom dashboard creation",
+        "Integration with existing tools"
+      ],
+      benefits: [
+        "Prevent system failures",
+        "Improve system performance",
+        "Reduce downtime by 80%",
+        "Optimize resource utilization"
+      ],
+      marketPrice: "$1,500-2,500/month",
+      savings: "Save up to $1,600/month"
+    },
+    {
+      name: "IT Vendor Management",
+      description: "Comprehensive IT vendor management with contract negotiation, performance monitoring, and cost optimization for all IT suppliers.",
+      price: "$699/month",
+      features: [
+        "Vendor evaluation and selection",
+        "Contract negotiation and management",
+        "Performance monitoring and SLA tracking",
+        "Cost optimization and analysis",
+        "Vendor relationship management",
+        "Risk assessment and mitigation",
+        "Compliance monitoring",
+        "Regular vendor reviews"
+      ],
+      benefits: [
+        "Reduce IT costs by 30%",
+        "Improve vendor performance",
+        "Minimize vendor risks",
+        "Optimize IT investments"
+      ],
+      marketPrice: "$1,200-2,000/month",
+      savings: "Save up to $1,300/month"
+    },
+    {
+      name: "IT Disaster Recovery Planning",
+      description: "Comprehensive disaster recovery planning with business continuity strategies, testing, and rapid recovery procedures.",
+      price: "$1,199/month",
+      features: [
+        "Business impact analysis",
+        "Recovery time objective planning",
+        "Disaster recovery strategy development",
+        "Backup and recovery procedures",
+        "Testing and validation",
+        "Staff training and awareness",
+        "Documentation and maintenance",
+        "Regular testing and updates"
+      ],
+      benefits: [
+        "Minimize business disruption",
+        "Ensure rapid recovery",
+        "Meet compliance requirements",
+        "Protect business continuity"
+      ],
+      marketPrice: "$2,000-3,500/month",
+      savings: "Save up to $2,300/month"
+    },
+    {
+      name: "IT Performance Optimization",
+      description: "Advanced IT performance optimization with system tuning, resource optimization, and performance monitoring for maximum efficiency.",
+      price: "$1,399/month",
+      features: [
+        "System performance analysis",
+        "Resource optimization",
+        "Database tuning and optimization",
+        "Network performance improvement",
+        "Application performance enhancement",
+        "Capacity planning",
+        "Performance monitoring",
+        "Ongoing optimization"
+      ],
+      benefits: [
+        "Improve system performance by 150%",
+        "Reduce response times",
+        "Optimize resource utilization",
+        "Enhance user experience"
+      ],
+      marketPrice: "$2,200-3,800/month",
+      savings: "Save up to $2,400/month"
+    },
+    {
+      name: "IT Change Management",
+      description: "Professional IT change management with change planning, approval processes, and implementation coordination for smooth transitions.",
+      price: "$799/month",
+      features: [
+        "Change planning and coordination",
+        "Change approval processes",
+        "Risk assessment and mitigation",
+        "Implementation coordination",
+        "Rollback planning",
+        "Communication and training",
+        "Change documentation",
+        "Post-implementation review"
+      ],
+      benefits: [
+        "Reduce change-related risks",
+        "Improve change success rates",
+        "Minimize business disruption",
+        "Ensure smooth transitions"
+      ],
+      marketPrice: "$1,300-2,200/month",
+      savings: "Save up to $1,400/month"
+    },
+    {
+      name: "IT Capacity Planning",
+      description: "Strategic IT capacity planning with growth forecasting, resource planning, and scalability analysis for future-proof infrastructure.",
+      price: "$999/month",
+      features: [
+        "Current capacity analysis",
+        "Growth forecasting and modeling",
+        "Resource requirement planning",
+        "Scalability assessment",
+        "Cost optimization analysis",
+        "Technology roadmap development",
+        "Investment planning",
+        "Regular capacity reviews"
+      ],
+      benefits: [
+        "Prevent capacity bottlenecks",
+        "Optimize IT investments",
+        "Plan for future growth",
+        "Reduce unexpected costs"
+      ],
+      marketPrice: "$1,600-2,800/month",
+      savings: "Save up to $1,800/month"
+    },
+    {
+      name: "IT Service Level Management",
+      description: "Comprehensive IT service level management with SLA monitoring, performance tracking, and continuous improvement processes.",
+      price: "$599/month",
+      features: [
+        "SLA definition and monitoring",
+        "Performance metrics tracking",
+        "Service quality assessment",
+        "Customer satisfaction monitoring",
+        "Continuous improvement processes",
+        "Reporting and analytics",
+        "Vendor SLA management",
+        "Service optimization"
+      ],
+      benefits: [
+        "Improve service quality",
+        "Meet SLA commitments",
+        "Enhance customer satisfaction",
+        "Optimize service delivery"
+      ],
+      marketPrice: "$1,000-1,800/month",
+      savings: "Save up to $1,200/month"
+    },
+    {
+      name: "IT Innovation and Research",
+      description: "Strategic IT innovation services with emerging technology research, proof-of-concept development, and innovation strategy planning.",
+      price: "$1,799/month",
+      features: [
+        "Emerging technology research",
+        "Proof-of-concept development",
+        "Innovation strategy planning",
+        "Technology evaluation",
+        "Pilot project management",
+        "ROI analysis and assessment",
+        "Innovation workshops",
+        "Technology trend analysis"
+      ],
+      benefits: [
+        "Stay ahead of technology trends",
+        "Identify innovation opportunities",
+        "Reduce technology risks",
+        "Drive competitive advantage"
+      ],
+      marketPrice: "$3,000-5,000/month",
+      savings: "Save up to $3,200/month"
     }
   ];
 
