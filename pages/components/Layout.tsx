@@ -1,9 +1,20 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Header from './Header';
 import Footer from './Footer';
 
 interface LayoutProps {
+=======
+import Navigation from './Navigation';
+import Footer from './Footer';
+
+interface LayoutProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-f1b5
   children: React.ReactNode;
   title?: string;
   description?: string;
@@ -15,6 +26,7 @@ interface LayoutProps {
   noIndex?: boolean;
 }
 
+<<<<<<< HEAD
 const Layout: React.FC<LayoutProps> = ({
   children,
   title = 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -31,6 +43,15 @@ const Layout: React.FC<LayoutProps> = ({
   const finalOgDescription = ogDescription || description;
   const finalOgUrl = ogUrl || 'https://ziontechgroup.com';
 
+=======
+export default function Layout({ 
+  title, 
+  description, 
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
+  canonical,
+  children 
+}: LayoutProps) {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-f1b5
   return (
     <>
       <Head>
@@ -56,6 +77,7 @@ const Layout: React.FC<LayoutProps> = ({
         
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
+<<<<<<< HEAD
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -77,6 +99,66 @@ const Layout: React.FC<LayoutProps> = ({
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
+=======
+        {canonical && <link rel="canonical" href={canonical} />}
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonical || "https://ziontechgroup.com"} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="theme-color" content="#2563eb" />
+        
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.svg",
+              "description": "Leading AI, IT & Micro SAAS Solutions Provider",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
+                "email": "kleber@ziontechgroup.com"
+              },
+              "sameAs": [
+                "https://linkedin.com/company/ziontechgroup",
+                "https://twitter.com/ziontechgroup"
+              ]
+            })
+          }}
+        />
+      </Head>
+      
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
+        <main className="flex-1">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-f1b5
           {children}
         </main>
         <Footer />
