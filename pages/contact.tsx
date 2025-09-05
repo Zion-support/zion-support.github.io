@@ -238,10 +238,6 @@ export default function ContactPage() {
         </div>
       </div>
       </div>
-    </Layout>
+    </MainLayout>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-76dc
