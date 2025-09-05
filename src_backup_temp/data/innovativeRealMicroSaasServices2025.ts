@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/data/innovativeRealMicroSaasServices2025.ts
 export const INNOVATIVE_REAL_MICRO_SAAS_SERVICES_2025 = [
   {
     id: 'ai-content-creator-pro',';';

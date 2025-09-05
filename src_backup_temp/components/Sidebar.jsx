@@ -566,7 +566,6 @@ export function Sidebar(props: any) {';';';
             <div key={section.title} className="mb-6">""
               <h3 className="px-4 text-xs font-semibold text-zion-cyan uppercase tracking-wider mb-3">
                 {section.title}
-              
               ""
               <div className="space-y-1">
                 {section.items.map((item, itemIndex) => (';
@@ -602,13 +601,11 @@ export function Sidebar(props: any) {';';';
             <div key={section.title} className="mb-6">"
               <h3 className="px-4 text-xs font-semibold text-zion-cyan uppercase tracking-wider mb-3">
                 {section.title}
-              
               "
           {navigationSections.map((section, sectionIndex) => (
             <div key={section.title} className="mb-6">
               <h3 className="px-4 text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">
                 {section.title}
-              
               <div className="space-y-1">
                 {section.items.map((item, itemIndex) => (
                   <div key={item.name}>
@@ -801,11 +798,9 @@ export function Sidebar(props: any) {';';';
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, ChevronRight, Home, Zap, Shield, Cloud, Brain, Settings, Users, BarChart3, Mail, Phone, MapPin } from 'lucide-react';
-
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Services', href: '/services', icon: Zap },
@@ -815,7 +810,6 @@ export function Sidebar() {
     { name: 'About', href: '/about', icon: Users },
     { name: 'Contact', href: '/contact', icon: Mail },
   ];
-
   return (
     <div className="hidden lg:flex lg:flex-shrink-0">
       <div className="flex flex-col w-80">

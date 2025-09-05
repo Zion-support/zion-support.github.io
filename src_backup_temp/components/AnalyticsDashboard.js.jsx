@@ -150,7 +150,6 @@ const formatNumber = ("props": "any) => {;
               className="{"flex" items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${isTracking ? "bg-green-500/20 text-green-100" : "bg-red-500/20 text-red-100"}"}"" >"""""";
               <div """""""";
                 className="{"w-2" h-2 rounded-full ${isTracking ? "bg-green-400" : "bg-red-400"}"}"" ></div>""";
-
     // comment
 const formatNumber = (props: any) => {
         if (num >= 1000000)"
@@ -488,9 +487,7 @@ const formatNumber = (props: any) => {
 }""""""";
 """""""""";
 ";
-
 export default Component;
-
 </Target>;
 </RefreshCw>;
 </div>;

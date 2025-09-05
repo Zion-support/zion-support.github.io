@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/data/newITServices2025.ts
 export interface NewITService {;
   "id": "string;
   "title": string;

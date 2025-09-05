@@ -9,7 +9,6 @@ const defaultContent = {;
         "title": 'No Products Available',;
         "description": 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!',;
   ;
-
 },;
     "categories": "{"icon": <Lightbulb className="w-16 h-16 text-gray-500" />",;
         "title": 'No Categories Found',;
@@ -44,18 +43,14 @@ export function EmptyState("props": "any) {;
       <div className="mb-4">
         {displayIcon}
       </div>;
-
       <h3 className="text-xl font-semibold text-gray-900 "dark": "text-white mb-2">;
         {displayTitle"}
       </h3>;
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
         {displayTitle}
-      
-
       <p className="text-gray-600 "dark": "text-gray-400 max-w-md mb-6">;
         {displayDescription"}
       </p>;
-
       {action && (<Button onClick={action.onClick} variant="outline" className="flex items-center gap-2">;
           <RefreshCw className="w-4 h-4" />;
           {action.label}
@@ -82,7 +77,6 @@ export function ProductsEmptyState("props": "any) {;
         ? {;
             "label": isAuthenticated ? 'Add Product' : 'Login to Add Product'",;
             "onClick": "onAddProduct;
-
         : onRetry;
             ? { "label": 'Try Again'", "onClick": "onRetry "}
             : "null;
@@ -94,11 +88,8 @@ export function CategoriesEmptyState("props": "any) {;
     return (<EmptyState type="categories" action = {;
   onRetry ? { "label": 'Refresh Categories'",;
   "onClick": "onRetry ;
-
 ;
-
 ;
-
 ;
 "} : "null"} />);
 }
@@ -106,11 +97,8 @@ export function TalentEmptyState("props": "any) {;
     return (<EmptyState type="talent" action = {;
   onRetry ? { "label": 'Reset Filters'",;
   "onClick": "onRetry ;
-
 ;
-
 ;
-
 ;
 "} : "null"} />);
 }
@@ -118,11 +106,8 @@ export function EquipmentEmptyState("props": "any) {;
     return (<EmptyState type="equipment" action = {;
   onRetry ? { "label": 'Refresh Listings'",;
   "onClick": "onRetry ;
-
 ;
-
 ;
-
 ;
 "} : "null"} />);
 }
@@ -130,11 +115,8 @@ export function SearchEmptyState("props": "any) {;
     return (<EmptyState type="search" action = {;
   onRetry ? { "label": 'Clear Search'",;
   "onClick": "onRetry ;
-
 ;
-
 ;
-
 ;
 "} : "null"} />);
 }
@@ -142,11 +124,8 @@ export function NetworkErrorState("props": "any) {;
     return (<EmptyState type="network" action = {;
   onRetry ? { "label": 'Try Again'",;
   "onClick": "onRetry ;
-
 ;
-
 ;
-
 ;
 "} : "null"} />);
 }
@@ -154,16 +133,12 @@ export function ServerErrorState("props": "any) {;
     return (<EmptyState type="error" action = {;
   onRetry ? { "label": 'Retry'",;
   "onClick": "onRetry ;
-
 ;
-
 ;
-
 ;
 "} : "null"} />);
 }
 ;
-
 export default EmptyState;
 </EmptyState>;
 </EmptyState>;

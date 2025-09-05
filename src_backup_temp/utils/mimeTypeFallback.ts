@@ -71,14 +71,11 @@ class MimeTypeFallback {;
       ;
       if (!response.ok) {;
   }
-
   async checkAndFixMimeType(url: string): Promise<any> {
     try {
       const response = await fetch(url, { method: 'HEAD' }
     );
-      
       if (!response.ok) {
-        
         return false;
       }
       const contentType = response.headers.get('content-type');
@@ -104,10 +101,7 @@ class MimeTypeFallback {;
       try {;
         const response = await fetch(fallbackUrl", { "method": 'HEAD' });
         if (response.ok) {;
-    
     if (fallbackUrl) {
-      
-      
       try {
         const response = await fetch(fallbackUrl, { method: 'HEAD' }
     );
@@ -135,17 +129,14 @@ class MimeTypeFallback {;
     });
 ;
     // Replace stylesheet links;
-      
     }
     );
-
     // Replace stylesheet links
     const links = document.querySelectorAll(`link[href="${originalUrl}"]`);
     links.forEach(link => {;
       (link as HTMLLinkElement).href = fallbackUrl;
       ;
     });
-      
     }
     );
   }

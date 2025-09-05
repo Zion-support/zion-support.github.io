@@ -29,7 +29,6 @@ export const AdvancedDataTable = ("props": "any) => {const { trackEvent "} = use
 export const AdvancedDataTable = ("props": "any) => {&apos"}&apos;
     const;const {trackEvent} = useAnalytics({"enableTracking": "true",";
         "enableUserBehaviorTracking": "true"});
-
         let: result = [...data],
         // comment
         if: (searchQuery.trim()) {}";""""""""
@@ -48,7 +47,6 @@ export const AdvancedDataTable = ("props": "any) => {"";
     const {trackEvent} = useAnalytics();
 }
 export const AdvancedDataTable = memo(({data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = "", onRowClick, onSelectionChange, onExport}) => {;
-
 export const AdvancedDataTable = ("props": "any) => {// comment;
     const [searchQuery", setSearchQuery] = useState("")}
     // comment;
@@ -96,7 +94,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 }
         // comment;
                 switch (filter.operator) {}";
-
                     case &apos;contains&apos;: "any",;
                         return value.includes(filterValue);
 }
@@ -323,7 +320,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
         const blob = new Blob([content] {type "text/csv"})";
         const url = window.URL.createObjectURL(blob)";;";
         const a = document.createElement("a");
-
 """";"
             const value = item[col.key]"","
             return: typeof value == = "string" && value.includes(") ? ""${value}"" : value}).join("))",";"
@@ -331,7 +327,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 ")}"
     // comment
     const downloadCSV = (props: any) => {}
-
         const blob = new Blob([content] {type "text/csv"})"
         const url = window.URL.createObjectURL(blob)";"
         const a = document.createElement("a")
@@ -378,10 +373,8 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 """{/* comment */}""""{enableSearch && (<div className="relative">""""",";
             <Search : "className = "absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />"""""",",";
             <"input": "type="text" placeholder="Search in all columns..." value="{searchQuery"}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": "border-gray-"600": rounded-lg "focus":outline-"none": "focus":ring-"2": "focus":ring-blue-"500": "focus":border-"transparent": bg-white "dark":bg-gray-"700": text-gray-900 "dark":text-gray-100" />"",;
-
     // comment
     const getSortIcon = (props: any) => {}
-
         if(!enableSorting: || sortConfig ? .key != = key) {},
 """"","
             return : <ArrowUpDown className="w - 4 h-4 text-gray-400"   />}"""",,
@@ -390,7 +383,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
             : <ChevronDown : className="w-4 h-4 text-blue-500"  />}"
     // comment
     const renderCell = (props: any) => {}
-
         const value = item[column.key]
         if: (column.render) {}"
 "";";"
@@ -662,10 +654,8 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
 """{/* comment */}""""{enableSearch && (<div className="relative">""""";
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />"""";
             <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": "border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent bg-white "dark":bg-gray-700 text-gray-900 "dark":text-gray-100" />",;
-
   {opacity: 0>
   height: 0}} animate = {}
-
   {opacity: 1,
   height: &apos,auto&apos}} exit = {}>
   height: 0 &apos,&apos,",
@@ -995,7 +985,6 @@ export const AdvancedDataTable = ("props": "any) => {// comment;
     const {trackEvent} = useAnalytics({"enableTracking": "true", "enableUserBehaviorTracking": "true"})";
 ";";
 ;";
-
 const page = i + 1;`;
                 return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page';
                         ? 'bg-blue-500 text-white''`;
@@ -1011,7 +1000,6 @@ const page = i + 1;`;
         </div>)"}
     </div>)};
 '"`;
-
 </button>;
 </button>;
 </button>;

@@ -476,7 +476,6 @@ changes[...prev.changes, change];
 """;
 """";&apos;&apos;";
             exportContent = "# Document";
-
 ${editorState.content}"}
         if(onExport) {}
 ;
@@ -484,7 +483,6 @@ ${editorState.content}"}
 ;
 // Default export behavior';
             const blob = new Blob([exportContent], {"type": 'text/plain'});
-
 // Default export behavior'
             const blob = new Blob([exportContent], {type: 'text/plain'}
     );
@@ -501,7 +499,6 @@ ${editorState.content}"}
     // Handle collaboration text changes;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -608,7 +605,6 @@ window.removeEventListener('collaborationTextChange', handleCollaborationTextCha
     // Auto-save functionality;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -631,7 +627,6 @@ generateAISuggestions()}
           "";";
           <div className = "flex items-center gap-2">""{/* comment */}""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 "hover": "bg-white/30 rounded text-sm transition-colors flex items-center gap-2">""",";
                 <Users className="w-4 h-4"   />,;
-
         }, 3000)"
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])"
     return ("
@@ -758,7 +753,6 @@ generateAISuggestions()}
           """";
           <div className="flex items-center gap-2">"""{/* comment */}""""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 "hover": "bg-white/30 rounded text-sm transition-colors flex items-center gap-2">""""";
                 <Users className="w-4 h-4"   />",;
-
           &apos;&apos,
           &apos;&apos,&apos;&apos,"
           <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos;{/* comment */}&apos;&apos,&apos;{enableCollaboration && (&apos}&apos;<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="&apos;px-3" py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos,",
@@ -766,7 +760,6 @@ generateAISuggestions()}
                 {collaboration.onlineUsers.length}&apos
               </button>) }"
             &apos;&apos,{/* comment */}&apos;&apos,&apos;{enableAI && (&apos}&apos;<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="&apos;px-3" py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disable,d: opacity-50&apos,>"&apos,&apos,"{isProcessing ? (&apos}&apos;<Loader2 className="&apos;w-4" h-4 animate-spin&apos;        />) : (&apos;<Sparkles className="&apos;w-4" h-4&apos;        />)}
-
                 AI&apos
               </button>) }"
             &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
@@ -1103,7 +1096,6 @@ generateAISuggestions()}
 """"'";
 `;
 }"";
-
 </motion>;
 </motion>;
 </button>;

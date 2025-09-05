@@ -51,9 +51,7 @@ const categories: Arra y<any> = [''';';
   'IoT Solutions Pro','';';
   'DataGenius Consulting','';';
   'Innovation Labs','  'FutureTech Systems'];
-
 export function generateRandomListing(): MarketplaceItem {
-
   return {
 ';
     id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,';';
@@ -78,10 +76,8 @@ export function generateRandomListing(): MarketplaceItem {
     deliveryTime: categor y === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,'`';';
     warranty: categor y === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`};
 export function generateRandomListings(count: number): MarketplaceItem[] {
-
   const listings: MarketplaceIte m[] = [];
   for(let i = 0; i < count; i++) {
-
     listings.push(generateRandomListing());';
 ';';
   return listings}}}'`';

@@ -23,7 +23,6 @@ const [validation, setValidation] = useState({}
     // Initialize form data and validation;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -1156,7 +1155,6 @@ const validateField = useCallback((name, value) => {}
                 "message": '',;
                 "isTouched": "false;
             "}});
-
 isValid: !field.required,
                 message: '',
                 isTouched: false
@@ -1167,7 +1165,6 @@ isValid: !field.required,
     // Update progress based on filled fields;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -1435,7 +1432,6 @@ const renderField = useCallback((field) => {}"";
         </h3>""""";
         <p className="text-green-600 "dark":text-green-300">"""",;
           Your message has been sent successfully. We&apos,ll get back to you soon!";
-
         return (<motion.div initial = {}"
   {opacity: 0, scale: 0.9}} animate = {}""
   {opacity: 1, scale: 1 """"">
@@ -1507,10 +1503,8 @@ const renderField = useCallback((field) => {}"";
     </motion.div>)}""""""";
 """"""`'";
 ";
-
   } catch (error) {console.error(error);}
 export default Component;
-
 </motion>;
 </Send>;
 </Loader2>;

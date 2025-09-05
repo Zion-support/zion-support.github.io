@@ -1,4 +1,12 @@
 import React from 'react';
+;
+interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {;
+  "children": "React.ReactNode;
+"}
+;
+export function Form("props": "any) {;
+interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
+  children: React.ReactNode;
 interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {;
   "children": React.ReactNode;
 }
@@ -10,11 +18,24 @@ export function Form($1) {;
     </form>;
   );
 }
+interface FormItemProps {
+  children: React.ReactNode;
 ;
 interface FormItemProps {;
+  "children": "React.ReactNode;
+  className?: string;
+;
+"}
+;
+export function FormItem("props": "any) {;
+  return (;
+    <div className={`space-y-2 ${className"}`}>;
   "children": React.ReactNode;
   className?: string;
 }
+export function FormItem(props: any) {
+  return (
+    <div className="min-h-screen bg-white">
 ;
 export function FormItem(props: any) {;
   return (;
@@ -23,11 +44,23 @@ export function FormItem($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
+    </div>
+    );
+}
+interface FormLabelProps {
+  children: React.ReactNode;
     </div>;
   );
 }
 ;
 interface FormLabelProps {;
+  "children": "React.ReactNode;
+  className?: string;
+  htmlFor?: string;
+;
+"}
+;
+export function FormLabel("props": "any) {;
   "children": React.ReactNode;
   className?: string;
   htmlFor?: string;
@@ -43,11 +76,24 @@ export function FormLabel($1) {;
     </label>;
   );
 }
+interface FormFieldProps {
+  children: React.ReactNode;
 ;
 interface FormFieldProps {;
+  "children": "React.ReactNode;
+  className?: string;
+;
+"}
+;
+export function FormField("props": "any) {;
+  return (;
+    <div className={`space-y-1 ${className"}`}>;
   "children": React.ReactNode;
   className?: string;
 }
+export function FormField(props: any) {
+  return (
+    <div className="min-h-screen bg-white">
 ;
 export function FormField(props: any) {;
   return (;
@@ -56,11 +102,19 @@ export function FormField($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
+    </div>
+    );
+    </div>;
+  );
 }
 ;
 interface FormMessageProps {;
   children?: "React.ReactNode;
   className?: string;
+;
+"}
+;
+export function FormMessage("props": "any) {;
 }
 ;
 export function FormMessage($1) {;
@@ -70,6 +124,8 @@ export function FormMessage($1) {;
       {children}
     </p>;
   );
+}';
+</HTMLFormElement>;';;';
 }
 </HTMLFormElement>;
 }

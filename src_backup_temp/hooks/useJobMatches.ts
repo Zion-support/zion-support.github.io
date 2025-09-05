@@ -9,7 +9,6 @@ export default function Page() {
       setIsLoading(false);
     }
   }, [jobId]); // jobId is a dependency of fetchMatches
-
   const triggerAIMatching = async () => {
     setIsProcessing(true);
     try {
@@ -17,15 +16,12 @@ export default function Page() {
         body: { jobId },
       }
     );
-      
       if(response.error) throw new Error(response.error.message);
-      
       toast({
         title: "AI Matching Complete",
         description: `Found ${response.data.matches || 0} potential talent matches for this job.`,
       }
     );
-      
       await fetchMatches();
     } catch(error) {
       console.error("Error triggering AI matching:", error);
@@ -39,7 +35,6 @@ export default function Page() {
       setIsProcessing(false);
     }
   };
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
@@ -47,7 +42,6 @@ export default function Page() {
       fetchMatches();
     }
   }, [jobId, fetchMatches]); // Added fetchMatches
-
   return {
     matches,
     isLoading,

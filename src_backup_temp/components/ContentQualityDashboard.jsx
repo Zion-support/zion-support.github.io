@@ -42,7 +42,6 @@ const ContentQualityDashboard = ("props": "any) => {;
                     images['/images/about-team.jpg'],;
                     links['/services',/team',/contact',/mission'];},;
                 {;
-
                     "url": '/contact',;
                     "title": 'Contact Us - Get in Touch',;
                     "content": 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business with cutting-edge solutions.',;

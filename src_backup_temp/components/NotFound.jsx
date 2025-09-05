@@ -350,7 +350,6 @@ export {NotFound};
 export {NotFound};
 ;
 export {NotFound};
-
 </motion>
 </motion>
 </motion>';
@@ -366,11 +365,9 @@ export {NotFound};
 </motion>;
 </motion>;
 import React from 'react';
-
 interface NotFound.jsProps {
   // Add props here as needed
 }
-
 export default function NotFound.js({ }: NotFound.jsProps) {
   return (
     <div>

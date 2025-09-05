@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/integrations/supabase/client.ts
 import { createClient } from '@supabase/supabase-js';';
 ';';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';';';
@@ -23,16 +22,12 @@ export const supabaseHelpers = {;
   // User management;
   async getUser() {;
     const { "data": "{ user "}, error } = await supabase.auth.getUser();
-
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || &apos;&quot;https&quot;: //placeholder.supabase.co
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || &apos;placeholder-key
-
 if (!supabaseUrl || !supabaseAnonKey) {
-  
 }
-
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     autoRefreshToken: tru e,
@@ -41,7 +36,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   }
 }
     );
-
 // Helper functions for common operations
 export const supabaseHelpers = {
   // User management
@@ -80,7 +74,6 @@ export const supabaseHelpers = {
       .from(table);
       .insert(data);
   },
-
   async insertData(table: string, data: an y) {
     const { data: resul t, error } = await supabase
       .from(table)
@@ -95,7 +88,6 @@ export const supabaseHelpers = {
       .from(table);
       .update(data);
   },
-
   async updateData(table: string, id: string, data: an y) {
     const { data: resul t, error } = await supabase
       .from(table)';
@@ -110,11 +102,9 @@ export const supabaseHelpers = {
       .update(data)
       .eq('id', id)
       .select();
-    
     if (error) throw error;
     return result;
   },
-
   async deleteData(table: string, id: string) {
     const { error } = await supabase
       .from(table)
@@ -136,7 +126,6 @@ export const supabaseHelpers = {
 };
 ;
 export default supabase;
-
 export default supabase;
 import { createClient } from '@supabase/supabase-js
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '"https": //placeholder.supabase.co

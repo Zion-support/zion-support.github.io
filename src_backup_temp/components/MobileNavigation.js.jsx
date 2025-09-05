@@ -180,7 +180,6 @@ const MobileNavigation = (props: any) => {}
             transition: {}';';
                 duration: 0.3,'';';
   ease: 'easeInOut'
-
         setActiveDropdown(activeDropdown === label ? null : label)};
     const handleSearch = (props: any) => {}
                 {"label": 'About Us', "href": '/about'},''';
@@ -305,7 +304,6 @@ const MobileNavigation = (props: any) => {}
             transition: {}
                 duration: 0.3,'
   ease: 'easeInOut'
-
 }
         },
         open: {}
@@ -324,7 +322,6 @@ const MobileNavigation = (props: any) => {}
             transition: {}';';
                 duration: 0.2,'';';
   ease: 'easeInOut'
-
 }
         },';
         open: {}';';
@@ -366,7 +363,6 @@ const MobileNavigation = (props: any) => {}
                 ease: 'easeInOut';
                 duration: 0.2,'
   ease: 'easeInOut'
-
 }
         },
         open: {}
@@ -627,22 +623,15 @@ export {MobileNavigation};
 export {MobileNavigation};
 ;
 export {MobileNavigation};
-
 </motion>';
 </motion>;';;';
 ;
 </motion>;
 </motion>;
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 </motion>
 </motion>

@@ -5,11 +5,8 @@ export default function Page() {
  else if(user.userType === "employer" || user.userType === "buyer") {
         query = query.eq("client_id", user.id)}
       // Consider if a case where userType is none of these should fetch all or none
-      
       const { data, error: fetchErro r } = await query;
-      
       if(fetchError) throw fetchError;
-      
       const transformedData = data.map((project: an y) => ({
         ...project,
         talent_profile: projec t.talent_profile ? {
@@ -18,7 +15,6 @@ export default function Page() {
         } : undefined,
         // client_profile is already in the correct shape from select
       }));
-      
       setProjects(transformedData as Project[]);
       setError(null)} catch(err: an y) {
       console.error("Error fetching projects:", err);
@@ -28,7 +24,6 @@ export default function Page() {
     } finally {
       setIsLoading(false)}
   }, [user]); // user is a dependency of fetchProjects
-
   const getProjectById = async(projectId: string): Promise<Project | null> => {
     try {
       const { data, error } = await supabase
@@ -41,9 +36,7 @@ export default function Page() {
         `)
         .eq("id", projectId)
         .single();
-      
       if(error) throw error;
-      
       const transformedProject = {
         ...data,
         talent_profile: dat a.talent_profile ? {
@@ -51,33 +44,27 @@ export default function Page() {
           full_name: dat a.talent_profile.display_name
         } : undefined
       };
-      
       return transformedProject as Project} catch(err: an y) {
       console.error("Error fetching project:", err);
       toast.error("Failed to fetch project details");
       return null}
   };
-
   const updateProjectStatus = async(projectId: string, status: ProjectStatu s): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("projects")
         .update({ status })
         .eq("id", projectId);
-      
       if(error) throw error;
-      
       setProjects(prev => 
         prev.map(project => project.id === projectId ? { ...project, status } : project)
       );
-      
       toast.success(`Project status updated to ${status}`);
       return true} catch(err: an y) {
       console.error("Error updating project status:", err);
       toast.error("Failed to update project status");
       return false}
   };
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
@@ -86,7 +73,6 @@ export default function Page() {
       setProjects([]); // Clear projects if user logs out
       setError(null)}
   }, [user, fetchProjects]); // Added fetchProjects
-
   return {
     projects,
     isLoading,

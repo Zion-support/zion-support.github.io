@@ -48,7 +48,6 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
         <div className="relative bg-black/90 backdrop-blur-xl rounded-2xl p-6 h-full">"""""
           {/* comment */}""""
           <div className="absolute inset-0 overflow-hidden pointer-events-none">""""            {[...Array(8)].map((_, i) => (<motion .div key="{i}" className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {}
-
   {}
 ;
                 x[0, Math.random() * 100 - 50], y[0, Math.random() * 100 - 50], opacity[0.6, 0.2, 0.6];
@@ -75,7 +74,6 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
                     {service.category}""""";
                   </span>"""";
                   <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">;
-
                 x[0, Math.random() * 100 - 50], y[0, Math.random() * 100 - 50], opacity[0.6, 0.2, 0.6]
   }} transition = {}"
   {}"""
@@ -101,7 +99,6 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
                   </span>""""
                   <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">
                     {service.subcategory}
-
                   </span>
                 </div>"
               </div>""
@@ -160,7 +157,6 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
             {service.technologyStack && (<div className="mt-4 pt-4 border-t border-gray-700/50">"""";
                 <h4 className="text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>"""";
                 <div className="flex flex-wrap gap-1">"""";
-
               </div>"
             </div>""
 """""
@@ -184,7 +180,6 @@ const ServiceCard = ("props": "any) => {    const [isHovered", setIsHovered] = u
                 <h4 className="text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>""""
                 <div className="flex flex-wrap gap-1">""""
                   {service.technologyStack.slice(0, 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30">                      {tech}
-
                     </span>) ) }
 ;
                 </div>";
@@ -225,7 +220,6 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}"";
     const [searchTerm, setSearchTerm] = useState("")";
     const [visibleServices, setVisibleServices] = useState(new Set())";
     const categories = [];
-
                 </div>"
               </div>) }""
 """""
@@ -244,7 +238,6 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}"";
                   <span className="text-purple-400">🌐</span>""""
                   <a href="{service.contactInfo.website}" className="hover: text-purple-300 transition-colors">,
                     {service.contactInfo.website}
-
                   </a>
                 </div>
             </div>"
@@ -265,7 +258,6 @@ export const FuturisticServicesShowcase = (props: any) => {}""
     const [visibleServices, setVisibleServices] = useState(new Set())"
     const categories = []
     const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {}
-
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -363,7 +355,6 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     // Set all services as visible initially for better UX
     useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
@@ -392,7 +383,6 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 """"
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         {/* comment */}
-
         <motion.div initial = {}"
   {opacity: 0, y: -50}} animate = {}""
   {opacity: 1, y: 0 """"">
@@ -422,9 +412,7 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
                 ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30"""""""",
                 : "bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20"}"}>"""
                   {category === "all" ? "All Services" : category}
-
                 </button>) ) }
-
             </div>
           </div>"
         </motion.div>""
@@ -436,7 +424,6 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
           </AnimatePresence>
         </div>
         {/* comment */}
-
         <motion.div initial = {}
 ;
   {"opacity": "0", "y": "50"}} animate = {}";
@@ -473,7 +460,6 @@ export default Component;
 </div>;
 </div>;
 </motion>;
-
   {opacity: 0, y: 50}} animate = {}"
   {opacity: 1, y: 0}} transition = {}""
   {duration: 0.8, delay: 0.5 """"">
@@ -498,9 +484,7 @@ export default Component;
     </div>)}"""""""
 """"""`""
 "
-
 export default Component
-
 </motion>
 </ServiceCard>
 </motion>

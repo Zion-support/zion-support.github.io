@@ -113,7 +113,6 @@ const CardDescription = (props: any) => {
 const CardContent = (props: any) => {
     return (
     <div className="min-h-screen bg-white">
-
 const CardFooter = ({ className, children, ...props }) => {
   return (
     <div className={`flex items-center p-6 pt-0 ${className || ''}`} {...props}>
@@ -132,17 +131,11 @@ const CardFooter = (props: any) => {
     );
 };
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};';
 ;';;';
-
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};

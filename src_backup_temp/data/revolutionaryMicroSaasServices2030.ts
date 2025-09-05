@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/data/revolutionaryMicroSaasServices2030.ts
 import { ProductListing } from '@/types/listings'; ;'',"}),"})';';';
 import React from "react";';';';';
 import { ProductListing } from '@/types/listings';';';';';';
