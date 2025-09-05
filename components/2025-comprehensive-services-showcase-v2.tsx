@@ -1,24 +1,22 @@
-import React from 'react',
-import SEO from '../components/SEO',
-import { motion } from 'framer-motion',
+import React from 'react';
+import SEO from './seo/Seo';
+import { motion } from 'framer-motion';
 import { 
-  Brain, Atom, Shield, Target, Rocket,
-  ArrowRight, Check, Star, TrendingUp, Users,
-  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
-} from 'lucide-react',
+  Brain, Zap, Shield, Circle, ArrowRight,
+  Check, Star, TrendingUp, Users,
+  Globe, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
+} from 'lucide-react';
 
 // Import our new 2025 V2 innovative services
-import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2',
-import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2',
-import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2',
-import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2',
-import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2',
+import { advancedMicroSaasExpansion2025V2 } from '../data/2025-advanced-micro-saas-expansion-v2';
+import { advancedITServices2025 } from '../data/2025-advanced-it-services';
+import { advancedAIServices2025 } from '../data/2025-advanced-ai-services';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 }
-},
+};
 
 const staggerContainer = {
   animate: {
@@ -26,16 +24,14 @@ const staggerContainer = {
       staggerChildren: 0.1
     }
   }
-},
+};
 
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [
-    ...innovativeMicroSaas2025ExpansionV2,
-    ...innovativeITServices2025ExpansionV2,
-    ...innovativeAIServices2025ExpansionV2,
-    ...industrySpecificSolutions2025V2,
-    ...emergingTechBreakthroughs2025V2
-  ],
+    ...advancedMicroSaasExpansion2025V2,
+    ...advancedITServices2025,
+    ...advancedAIServices2025
+  ];
 
   const serviceCategories = [
     {
@@ -43,7 +39,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
       name: 'Innovative Micro SAAS',
       icon: <Smartphone className="w-8 h-8" />,
       color: 'from-blue-500 to-cyan-500',
-      services: innovativeMicroSaas2025ExpansionV2,
+      services: advancedMicroSaasExpansion2025V2,
       description: 'Cutting-edge micro SAAS solutions for modern businesses'
     },
     {
@@ -51,7 +47,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
       name: 'IT Infrastructure Services',
       icon: <Cloud className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-500',
-      services: innovativeITServices2025ExpansionV2,
+      services: advancedITServices2025,
       description: 'Advanced IT infrastructure and security solutions'
     },
     {
@@ -59,7 +55,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
       name: 'AI & Machine Learning',
       icon: <Brain className="w-8 h-8" />,
       color: 'from-green-500 to-emerald-500',
-      services: innovativeAIServices2025ExpansionV2,
+      services: advancedAIServices2025,
       description: 'Intelligent AI solutions for business transformation'
     },
     {
@@ -67,24 +63,24 @@ export default function ComprehensiveServicesShowcase2025V2() {
       name: 'Industry Solutions',
       icon: <Building className="w-8 h-8" />,
       color: 'from-orange-500 to-red-500',
-      services: industrySpecificSolutions2025V2,
+      services: advancedITServices2025,
       description: 'Specialized solutions for specific industries'
     },
     {
       id: 'emerging-tech',
       name: 'Emerging Technology',
-      icon: <Atom className="w-8 h-8" />,
+      icon: <Zap className="w-8 h-8" />,
       color: 'from-indigo-500 to-purple-500',
-      services: emergingTechBreakthroughs2025V2,
+      services: advancedAIServices2025,
       description: 'Breakthrough technologies of the future'
     }
-  ],
+  ];
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -211,14 +207,14 @@ export default function ComprehensiveServicesShowcase2025V2() {
                 </div>
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {category.services.map((service) => (
+                  {category.services.map((service, index) => (
                     <motion.div
-                      key={service.id}
+                      key={('id' in service ? service.id : index)}
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
                       whileHover={{ y: -5 }}
                     >
                       <h4 className="text-xl font-semibold text-white mb-3">
-                        {service.title}
+                        {service.name}
                       </h4>
                       <p className="text-gray-300 mb-4">
                         {service.description}
@@ -227,28 +223,28 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
-                          {service.marketSize}
+                          {(service as any).marketSize || 'Growing Market'}
                         </div>
                         <div className="flex items-center text-sm text-green-400">
                           <Star className="w-4 h-4 mr-2" />
-                          {service.growthRate}
+                          {(service as any).growthRate || 'High Growth'}
                         </div>
                       </div>
                       
                       <div className="mb-6">
                         <div className="text-2xl font-bold text-white mb-2">
-                          Starting at {(service as any).pricing?.starter || service.price}
+                          Starting at {(service as any).pricing?.starter || (service as any).price || 'Contact Us'}
                         </div>
                         <div className="text-sm text-gray-400">
                           {(service as any).pricing?.professional ? 
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :
-                            `${service.price} ${service.period}`
+                            `${(service as any).price || 'Contact Us'} ${(service as any).period || ''}`
                           }
                         </div>
                       </div>
                       
                       <a
-                        href={`/services/${service.slug}`}
+                        href={`/services/${(service as any).slug || service.name.toLowerCase().replace(/\s+/g, '-')}`}
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
                       >
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />
