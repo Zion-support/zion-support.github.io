@@ -177,9 +177,10 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• Micro "SaaS": $29 - $4,999/month</li>
+                <li>• Micro "SaaS": $9 - $15,999/month</li>
                 <li>• IT "Services": $120 - $500/hour</li>
-                <li>• AI Solutions: $1,000 - $1M/project</li>
+                <li>• AI Solutions: $1,000 - $20M/project</li>
+                <li>• Quantum Computing: $50K - $10M/project</li>
                 <li>• Transparent, no hidden fees</li>
               </ul>
             </motion.div>
@@ -193,9 +194,10 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Innovation Focus</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• 50+ cutting-edge services</li>
-                <li>• AI, Blockchain, IoT expertise</li>
-                <li>• Quantum computing solutions</li>
+                <li>• 100+ cutting-edge services</li>
+                <li>• AI, Quantum, Blockchain, IoT expertise</li>
+                <li>• Space technology & autonomous systems</li>
+                <li>• Neural interfaces & synthetic biology</li>
                 <li>• Future-ready technology stack</li>
               </ul>
             </motion.div>

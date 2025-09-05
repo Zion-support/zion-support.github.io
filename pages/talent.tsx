@@ -305,7 +305,7 @@ export default function TalentPage() {
                     </div>
                     <Link
                       href={`/talent/${job.id}`}
-                      className="mt-4 "lg": mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
+                      className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
                     >
                       Apply Now
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -316,7 +316,7 @@ export default function TalentPage() {
                     {job.description}
                   </p>
                   
-                  <div className="grid grid-cols-1 "md": grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
                       <ul className="space-y-1">
@@ -355,7 +355,7 @@ export default function TalentPage() {
               transition={{ "duration": 0.8 }}
               viewport={{ "once": true }}
             >
-              <h2 className="text-3xl "md": text-4xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don&apos;t See the Right Role?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">

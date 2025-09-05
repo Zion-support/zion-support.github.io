@@ -22,34 +22,34 @@ import {
 
 const services = {
   'AI Solutions': [
-    { "name": 'AI-Powered Email Responder', "href": '/ai-services#ai-email-responder' },
-    { "name": 'Predictive Analytics Platform', "href": '/ai-services#predictive-analytics' },
-    { "name": 'Intelligent Chatbot System', "href": '/ai-services#intelligent-chatbot' },
-    { "name": 'Computer Vision Solutions', "href": '/ai-services#computer-vision' },
-    { "name": 'AI Drug Discovery', "href": '/ai-services#ai-drug-discovery' },
-    { "name": 'AI Autonomous Vehicles', "href": '/ai-services#ai-autonomous-vehicles' },
-    { "name": 'AI Climate Modeling', "href": '/ai-services#ai-climate-modeling' },
-    { "name": 'AI Cybersecurity', "href": '/ai-services#ai-cybersecurity' }
+    { "name": 'Quantum Machine Learning', "href": '/ai-services#quantum-ml' },
+    { "name": 'Autonomous Vehicles AI', "href": '/ai-services#autonomous-vehicles' },
+    { "name": 'Neural Interface AI', "href": '/ai-services#neural-interface' },
+    { "name": 'AI Climate Modeling', "href": '/ai-services#climate-ai' },
+    { "name": 'AI Space Mission Planning', "href": '/ai-services#space-ai' },
+    { "name": 'Metaverse AI Platform', "href": '/ai-services#metaverse-ai' },
+    { "name": 'AI Cybersecurity Defense', "href": '/ai-services#ai-cybersecurity' },
+    { "name": 'AI Digital Twins', "href": '/ai-services#ai-digital-twins' }
   ],
   'IT Services': [
-    { "name": 'Cloud Infrastructure Management', "href": '/it-services#cloud-infrastructure' },
-    { "name": 'Zero Trust Security', "href": '/it-services#zero-trust-security' },
-    { "name": 'Edge Computing', "href": '/it-services#edge-computing' },
+    { "name": 'Quantum Computing Infrastructure', "href": '/it-services#quantum-computing' },
+    { "name": 'Edge Computing Infrastructure', "href": '/it-services#edge-computing' },
     { "name": '5G Network Implementation', "href": '/it-services#5g-networks' },
-    { "name": 'Blockchain Infrastructure', "href": '/it-services#blockchain-infrastructure' },
-    { "name": 'IoT Platform Management', "href": '/it-services#iot-platform' },
-    { "name": 'Digital Twin Technology', "href": '/it-services#digital-twins' },
+    { "name": 'AI Infrastructure & ML Ops', "href": '/it-services#ai-infrastructure' },
+    { "name": 'Blockchain Infrastructure', "href": '/it-services#blockchain' },
+    { "name": 'IoT Platform Management', "href": '/it-services#iot' },
+    { "name": 'Zero Trust Security', "href": '/it-services#zero-trust' },
     { "name": 'Green IT Solutions', "href": '/it-services#green-it' }
   ],
   'Micro SaaS': [
-    { "name": 'Cloud Cost Guard', "href": '/micro-saas#cloud-cost-guard' },
-    { "name": 'AI Email Responder', "href": '/micro-saas#ai-email-responder' },
-    { "name": 'Voice Meeting Assistant', "href": '/micro-saas#voice-meeting-assistant' },
-    { "name": 'Smart Contract Analyzer', "href": '/micro-saas#smart-contract-analyzer' },
-    { "name": 'Predictive Maintenance AI', "href": '/micro-saas#predictive-maintenance' },
-    { "name": 'Blockchain Analytics', "href": '/micro-saas#blockchain-analytics' },
-    { "name": 'AI SEO Optimizer', "href": '/micro-saas#ai-seo-optimizer' },
-    { "name": 'Smart Energy Management', "href": '/micro-saas#smart-energy' }
+    { "name": 'Quantum-Safe Encryption', "href": '/micro-saas#quantum-encryption' },
+    { "name": 'AI Legal Document Analyzer', "href": '/micro-saas#ai-legal' },
+    { "name": 'Autonomous Drone Fleet', "href": '/micro-saas#drone-fleet' },
+    { "name": 'Neural Interface Analytics', "href": '/micro-saas#neural-analytics' },
+    { "name": 'Carbon Footprint Intelligence', "href": '/micro-saas#carbon-intelligence' },
+    { "name": 'Edge Computing Orchestration', "href": '/micro-saas#edge-orchestration' },
+    { "name": 'Digital Twin Management', "href": '/micro-saas#digital-twins' },
+    { "name": 'AI Drug Discovery Platform', "href": '/micro-saas#ai-drug-discovery' }
   ]
 };
 

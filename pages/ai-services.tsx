@@ -201,6 +201,122 @@ const aiServices = [{
     "category": 'Legal Tech'
   },
   {
+    "title": 'Quantum Machine Learning Platform',
+    "description": 'Quantum-enhanced machine learning for complex optimization and pattern recognition.',
+    "icon": Brain,
+    "features": ['Quantum Algorithms', 'Hybrid Classical-Quantum Models', 'Optimization Problems', 'Quantum Advantage'],
+    "pricing": '$100,000 - $1,000,000 project',
+    "category": 'Quantum AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Autonomous Vehicles',
+    "description": 'Complete autonomous vehicle AI system with perception, planning, and control.',
+    "icon": Car,
+    "features": ['Computer Vision', 'Path Planning', 'Decision Making', 'Safety Systems'],
+    "pricing": '$500,000 - $5,000,000 project',
+    "category": 'Autonomous Vehicles',
+    "popular": true
+  },
+  {
+    "title": 'Neural Interface AI System',
+    "description": 'Brain-computer interface AI for medical applications and assistive technology.',
+    "icon": Brain,
+    "features": ['Signal Processing', 'Pattern Recognition', 'Real-time Translation', 'Medical Applications'],
+    "pricing": '$200,000 - $2,000,000 project',
+    "category": 'Neurotechnology',
+    "popular": true
+  },
+  {
+    "title": 'AI Climate Change Modeling',
+    "description": 'Advanced climate modeling and environmental impact prediction using AI.',
+    "icon": Sprout,
+    "features": ['Climate Simulation', 'Impact Prediction', 'Policy Optimization', 'Carbon Footprint Analysis'],
+    "pricing": '$50,000 - $500,000 project',
+    "category": 'Climate AI',
+    "popular": true
+  },
+  {
+    "title": 'AI Space Mission Planning',
+    "description": 'Autonomous space mission planning and satellite constellation management.',
+    "icon": Rocket,
+    "features": ['Mission Optimization', 'Satellite Coordination', 'Resource Planning', 'Risk Assessment'],
+    "pricing": '$1,000,000 - $10,000,000 project',
+    "category": 'Space Technology',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Metaverse Platform',
+    "description": 'Complete metaverse infrastructure with AI-driven virtual worlds and avatars.',
+    "icon": Globe,
+    "features": ['Virtual World Generation', 'AI Avatars', 'Real-time Interaction', 'Content Creation'],
+    "pricing": '$100,000 - $1,000,000 project',
+    "category": 'Metaverse',
+    "popular": true
+  },
+  {
+    "title": 'AI Cybersecurity Defense',
+    "description": 'Advanced AI-powered cybersecurity with autonomous threat detection and response.',
+    "icon": Shield,
+    "features": ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Zero-day Protection'],
+    "pricing": '$25,000 - $200,000 setup',
+    "category": 'Cybersecurity AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Digital Twin',
+    "description": 'Complete digital twin creation with AI-driven simulation and optimization.',
+    "icon": Monitor,
+    "features": ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Optimization Engine'],
+    "pricing": '$75,000 - $500,000 project',
+    "category": 'Digital Twins',
+    "popular": true
+  },
+  {
+    "title": 'AI Edge Computing Intelligence',
+    "description": 'Distributed AI processing at the edge for real-time decision making.',
+    "icon": Cpu,
+    "features": ['Edge AI Models', 'Real-time Processing', 'Distributed Learning', 'Latency Optimization'],
+    "pricing": '$30,000 - $200,000 project',
+    "category": 'Edge AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Synthetic Biology',
+    "description": 'AI-driven synthetic biology for drug discovery and bioengineering.',
+    "icon": Heart,
+    "features": ['DNA Design', 'Protein Engineering', 'Metabolic Modeling', 'Biological Simulation'],
+    "pricing": '$150,000 - $1,500,000 project',
+    "category": 'Synthetic Biology',
+    "popular": true
+  },
+  {
+    "title": 'AI Quantum Cryptography',
+    "description": 'Quantum-resistant AI systems for future-proof security and encryption.',
+    "icon": Lock,
+    "features": ['Quantum Key Distribution', 'Post-Quantum Algorithms', 'AI Security Analysis', 'Future-proofing'],
+    "pricing": '$100,000 - $800,000 project',
+    "category": 'Quantum Security',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Space Mining',
+    "description": 'Autonomous space mining operations with AI-driven resource extraction.',
+    "icon": Rocket,
+    "features": ['Resource Detection', 'Mining Optimization', 'Autonomous Operations', 'Risk Management'],
+    "pricing": '$2,000,000 - $20,000,000 project',
+    "category": 'Space Mining',
+    "popular": true
+  },
+  {
+    "title": 'AI Legal Document Analysis',
+    "description": 'Intelligent legal document review and contract analysis.',
+    "icon": BookOpen,
+    "features": ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
+    "pricing": '$5,000 - $25,000 setup',
+    "category": 'Legal Tech'
+  },
+  {
     "title": 'AI Customer Sentiment Analysis',
     "description": 'Real-time customer sentiment analysis across multiple channels.',
     "icon": MessageSquare,

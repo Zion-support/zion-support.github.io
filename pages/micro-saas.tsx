@@ -44,7 +44,8 @@ import {
   BookOpen,
   ShoppingCart,
   Home,
-  Database
+  Database,
+  Brain
 } from 'lucide-react';
 
 const microSaaSProducts = [{
@@ -294,6 +295,87 @@ const microSaaSProducts = [{
     "features": ['Demand Forecasting', 'Inventory Optimization', 'Supplier Analytics', 'Risk Assessment'],
     "pricing": '$599 - $3,999/month',
     "category": 'Supply Chain',
+    "popular": true
+  },
+  {
+    "title": 'Quantum-Safe Encryption Manager',
+    "description": 'Post-quantum cryptography solution for future-proof data protection and compliance.',
+    "icon": Lock,
+    "features": ['Quantum-Safe Algorithms', 'Key Management', 'Compliance Tools', 'Migration Support'],
+    "pricing": '$999 - $4,999/month',
+    "category": 'Cybersecurity',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Legal Document Analyzer',
+    "description": 'Intelligent legal document analysis with contract review, risk assessment, and compliance checking.',
+    "icon": FileText,
+    "features": ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    "pricing": '$399 - $2,499/month',
+    "category": 'Legal Tech',
+    "popular": true
+  },
+  {
+    "title": 'Autonomous Drone Fleet Management',
+    "description": 'AI-powered drone fleet coordination for delivery, surveillance, and inspection services.',
+    "icon": Rocket,
+    "features": ['Fleet Coordination', 'Route Optimization', 'Battery Management', 'Regulatory Compliance'],
+    "pricing": '$1,999 - $9,999/month',
+    "category": 'Autonomous Systems',
+    "popular": true
+  },
+  {
+    "title": 'Neural Interface Analytics Platform',
+    "description": 'Advanced brain-computer interface analytics for medical and research applications.',
+    "icon": Brain,
+    "features": ['Signal Processing', 'Pattern Recognition', 'Real-time Analysis', 'Medical Integration'],
+    "pricing": '$2,999 - $15,999/month',
+    "category": 'Neurotechnology',
+    "popular": true
+  },
+  {
+    "title": 'Carbon Footprint Intelligence Suite',
+    "description": 'AI-driven carbon tracking and sustainability optimization for enterprises.',
+    "icon": Sprout,
+    "features": ['Carbon Tracking', 'Sustainability Scoring', 'Optimization Recommendations', 'ESG Reporting'],
+    "pricing": '$299 - $1,999/month',
+    "category": 'Sustainability',
+    "popular": true
+  },
+  {
+    "title": 'Edge Computing Orchestration Platform',
+    "description": 'Intelligent edge computing resource management and application deployment.',
+    "icon": Cpu,
+    "features": ['Resource Optimization', 'Auto-scaling', 'Latency Monitoring', 'Multi-cloud Support'],
+    "pricing": '$499 - $2,999/month',
+    "category": 'Edge Computing',
+    "popular": true
+  },
+  {
+    "title": 'Digital Twin Management System',
+    "description": 'Comprehensive digital twin creation and management for IoT and industrial applications.',
+    "icon": Monitor,
+    "features": ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'Simulation Engine'],
+    "pricing": '$799 - $4,999/month',
+    "category": 'IoT & Digital Twins',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Drug Discovery Platform',
+    "description": 'Machine learning platform for pharmaceutical research and drug development.',
+    "icon": Heart,
+    "features": ['Molecular Analysis', 'Drug Interaction Prediction', 'Clinical Trial Optimization', 'Patent Analysis'],
+    "pricing": '$1,999 - $9,999/month',
+    "category": 'Pharmaceutical AI',
+    "popular": true
+  },
+  {
+    "title": 'Blockchain Identity Verification',
+    "description": 'Decentralized identity verification and KYC/AML compliance solution.',
+    "icon": Shield,
+    "features": ['Decentralized Identity', 'KYC/AML Automation', 'Privacy Protection', 'Cross-platform Verification'],
+    "pricing": '$199 - $1,499/month',
+    "category": 'Blockchain Identity',
     "popular": true
   },
   {

@@ -193,6 +193,78 @@ const itServices = [{
     "category": 'Procurement'
   },
   {
+    "title": 'Quantum Computing Infrastructure',
+    "description": 'Quantum computing setup, integration, and optimization for enterprise applications.',
+    "icon": Cpu,
+    "features": ['Quantum Hardware Setup', 'Algorithm Optimization', 'Hybrid Classical-Quantum Systems', 'Performance Monitoring'],
+    "pricing": '$50,000 - $500,000/project',
+    "category": 'Quantum Computing',
+    "popular": true
+  },
+  {
+    "title": 'Edge Computing Infrastructure',
+    "description": 'Distributed edge computing infrastructure for low-latency applications and IoT.',
+    "icon": Network,
+    "features": ['Edge Node Deployment', 'Latency Optimization', 'Distributed Management', 'IoT Integration'],
+    "pricing": '$25,000 - $150,000/project',
+    "category": 'Edge Computing',
+    "popular": true
+  },
+  {
+    "title": '5G Network Implementation',
+    "description": '5G network design, implementation, and optimization for enterprise connectivity.',
+    "icon": Wifi,
+    "features": ['5G Network Design', 'Coverage Optimization', 'Private 5G Networks', 'Performance Testing'],
+    "pricing": '$30,000 - $200,000/project',
+    "category": '5G Networks',
+    "popular": true
+  },
+  {
+    "title": 'AI Infrastructure & ML Ops',
+    "description": 'Complete AI infrastructure setup with MLOps pipelines and model deployment.',
+    "icon": Brain,
+    "features": ['GPU Cluster Setup', 'MLOps Pipeline', 'Model Deployment', 'Performance Monitoring'],
+    "pricing": '$40,000 - $300,000/project',
+    "category": 'AI Infrastructure',
+    "popular": true
+  },
+  {
+    "title": 'Blockchain Infrastructure Services',
+    "description": 'Enterprise blockchain setup, smart contract deployment, and DApp development.',
+    "icon": Shield,
+    "features": ['Blockchain Setup', 'Smart Contract Development', 'DApp Integration', 'Security Auditing'],
+    "pricing": '$35,000 - $250,000/project',
+    "category": 'Blockchain',
+    "popular": true
+  },
+  {
+    "title": 'IoT Platform & Device Management',
+    "description": 'Comprehensive IoT platform setup with device management and data analytics.',
+    "icon": Settings,
+    "features": ['IoT Platform Setup', 'Device Management', 'Data Analytics', 'Security Implementation'],
+    "pricing": '$20,000 - $100,000/project',
+    "category": 'IoT',
+    "popular": true
+  },
+  {
+    "title": 'Zero Trust Security Architecture',
+    'description': 'Complete zero trust security implementation with identity verification and micro-segmentation.',
+    "icon": Lock,
+    "features": ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    "pricing": '$45,000 - $200,000/project',
+    "category": 'Zero Trust Security',
+    "popular": true
+  },
+  {
+    "title": 'Green IT & Sustainability Solutions',
+    "description": 'Sustainable IT infrastructure with energy optimization and carbon footprint reduction.',
+    "icon": Sprout,
+    "features": ['Energy Optimization', 'Carbon Tracking', 'Sustainable Hardware', 'Green Data Centers'],
+    "pricing": '$15,000 - $75,000/project',
+    "category": 'Green IT',
+    "popular": true
+  },
+  {
     "title": 'IT Governance & Strategy',
     "description": 'IT governance framework development and strategic technology planning.',
     "icon": Building,
