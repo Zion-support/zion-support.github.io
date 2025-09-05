@@ -31,7 +31,6 @@ const AccessibilityEnhancer: React.FC = () => {
 
     document.addEventListener('mousedown', handleMouseDown);
     document.addEventListener('keydown', handleKeyDown);
-
     // Add ARIA live region for announcements
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
@@ -73,8 +72,6 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // Cleanup
     return () => {
-      document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('keydown', handleKeyDown);
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink);
       }

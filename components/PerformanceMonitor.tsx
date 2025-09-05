@@ -36,6 +36,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       window.removeEventListener('load', measurePerformance);
     }
   }, [onPerformanceData]);
-  return null
+
+  return null;
 };
+
 export default PerformanceMonitor;

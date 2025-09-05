@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Head from 'next/head';
 
 interface AnalyticsProps {
   trackingId?: string;
@@ -95,31 +94,29 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   }
 
   return (
-    <Head>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            // Performance monitoring
-            if ('performance' in window) {
-              window.addEventListener('load', function() {
-                setTimeout(function() {
-                  const perfData = performance.getEntriesByType('navigation')[0];
-                  if (perfData) {
-                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-                    if (window.gtag) {
-                      window.gtag('event', 'timing_complete', {
-                        name: 'load',
-                        value: Math.round(loadTime),
-                      });
-                    }
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+          // Performance monitoring
+          if ('performance' in window) {
+            window.addEventListener('load', function() {
+              setTimeout(function() {
+                const perfData = performance.getEntriesByType('navigation')[0];
+                if (perfData) {
+                  const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                  if (window.gtag) {
+                    window.gtag('event', 'timing_complete', {
+                      name: 'load',
+                      value: Math.round(loadTime),
+                    });
                   }
-                }, 0);
-              });
-            }
-          `,
-        }}
-      />
-    </Head>
+                }
+              }, 0);
+            });
+          }
+        `,
+      }}
+    />
   );
 };
 
