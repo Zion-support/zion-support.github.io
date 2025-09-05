@@ -91,7 +91,7 @@ export default function BlogPage() {
               transition={{ "duration": 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl "md": text-6xl font-bold mb-6">
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">
                 Technology Insights & Trends
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
@@ -104,9 +104,9 @@ export default function BlogPage() {
         {/* Blog Posts Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 "lg": grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-4 gap-8">
               {/* Main Content */}
-              <div className=""lg": col-span-3">
+              <div className="lg: col-span-3">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {blogPosts.map((post, index) => (
                     <motion.article
@@ -183,7 +183,7 @@ export default function BlogPage() {
               </div>
 
               {/* Sidebar */}
-              <div className=""lg": col-span-1">
+              <div className="lg: col-span-1">
                 <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
                   <h3 className="text-lg font-bold text-gray-900 mb-4">Categories</h3>
                   <ul className="space-y-2">

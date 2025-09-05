@@ -206,8 +206,8 @@ const report = monitor.generateReport();
 
 const reportPath = path.join(process.cwd(), 'performance-report.json');
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-console.log('Performance report "generated": ', reportPath);
-";
+console.log('Performance report generated: ', reportPath);
+`;
 
     const scriptPath = path.join(process.cwd(), 'performance-monitor.js');
     fs.writeFileSync(scriptPath, performanceScript);

@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 
-type EnhancedMarketplaceCardProps = {
+interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   price: string;
   image?: string;
-};
+}
 
 export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
   return (
