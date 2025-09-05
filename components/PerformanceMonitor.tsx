@@ -1,64 +1,66 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    // Monitor Core Web Vitals
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Largest Contentful Paint (LCP)
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-        }
-      });
-      
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch {
-        // Fallback for browsers that don't support LCP
-      }
-
-      // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-        }
-      });
-
-      try {
-        fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch {
-        // Fallback for browsers that don't support FID
-      }
-
-      // Monitor Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        console.log('CLS:', clsValue);
-      });
-
-      try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch {
-        // Fallback for browsers that don't support CLS
-      }
-
-      return () => {
-        observer.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
-    }
-  }, []);
-
-  return null; // This component doesn't render anything
+interface PerformanceMonitorProps {
+  onPerformanceData?: (data: any) => void;
 }
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+  // Only render on client side
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
+  useEffect(() => {
+    if (typeof performance === 'undefined') return;
+
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      
+      const performanceData = {
+        // Navigation timing
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+        
+        // Paint timing
+        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        
+        // Resource timing
+        resourceCount: performance.getEntriesByType('resource').length,
+        
+        // Memory usage (if available)
+        memory: (performance as any).memory ? {
+          used: (performance as any).memory.usedJSHeapSize,
+          total: (performance as any).memory.totalJSHeapSize,
+          limit: (performance as any).memory.jsHeapSizeLimit
+        } : null
+      };
+
+      if (onPerformanceData) {
+        onPerformanceData(performanceData);
+      }
+
+      // Log performance data in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Metrics:', performanceData);
+      }
+    };
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [onPerformanceData]);
+
+  return null;
+};
+
 export default PerformanceMonitor;
