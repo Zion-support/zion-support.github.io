@@ -22,464 +22,473 @@ import {
   Rocket,
   Code,
   Layers,
-  Bot,
-  FileText,
-  DollarSign,
+  Phone,
   Mail,
-  Calendar
+  MapPin
 } from 'lucide-react';
 
 const microSaasServices = [
   {
-    title: "Custom Web Applications",
-    description: "Tailored web applications designed to solve specific business problems with modern technology stacks",
-    icon: Globe,
+    title: "AI-Powered Business Intelligence Dashboard",
+    description: "Real-time analytics platform with AI-driven insights and predictive analytics for data-driven decision making",
+    icon: BarChart3,
     features: [
-      "Responsive Design",
-      "Cross-browser Compatibility",
-      "Progressive Web App (PWA)",
-      "Real-time Updates",
-      "User Authentication",
-      "API Integration"
+      "Real-time Data Visualization",
+      "AI-Powered Insights",
+      "Predictive Analytics",
+      "Custom Dashboards",
+      "Automated Reporting",
+      "Multi-source Data Integration"
     ],
     color: "from-blue-500 to-cyan-500",
     benefits: [
-      "Improved efficiency",
-      "Better user experience",
-      "Scalable architecture",
-      "Cost-effective solution"
-    ]
+      "50% faster decision making",
+      "Real-time insights",
+      "Predictive capabilities",
+      "Customizable dashboards"
+    ],
+    pricing: "Starting at $299/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Mobile Applications",
-    description: "Native and cross-platform mobile apps that deliver exceptional user experiences",
-    icon: Smartphone,
+    title: "Smart Customer Relationship Management",
+    description: "AI-enhanced CRM platform with automated lead scoring, customer segmentation, and sales forecasting",
+    icon: Users,
     features: [
-      "iOS & Android Development",
-      "React Native Solutions",
-      "Flutter Applications",
-      "App Store Optimization",
-      "Push Notifications",
-      "Offline Functionality"
+      "AI Lead Scoring",
+      "Customer Segmentation",
+      "Sales Forecasting",
+      "Automated Follow-ups",
+      "Pipeline Management",
+      "Performance Analytics"
     ],
     color: "from-green-500 to-emerald-500",
     benefits: [
-      "Increased accessibility",
-      "Better engagement",
-      "Mobile-first design",
-      "App store presence"
-    ]
+      "40% increase in conversions",
+      "Automated lead qualification",
+      "Better customer insights",
+      "Streamlined sales process"
+    ],
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "API Development & Integration",
-    description: "Robust APIs and seamless integrations to connect your systems and data",
-    icon: Code,
+    title: "Intelligent Project Management Suite",
+    description: "AI-powered project management with automated task assignment, resource optimization, and risk prediction",
+    icon: Target,
     features: [
-      "RESTful API Design",
-      "GraphQL Implementation",
-      "Third-party Integrations",
-      "API Documentation",
-      "Rate Limiting & Security",
-      "Webhook Support"
+      "AI Task Assignment",
+      "Resource Optimization",
+      "Risk Prediction",
+      "Time Tracking",
+      "Collaboration Tools",
+      "Progress Analytics"
     ],
     color: "from-purple-500 to-pink-500",
     benefits: [
-      "System connectivity",
-      "Data synchronization",
-      "Automated workflows",
-      "Reduced manual work"
-    ]
+      "30% faster project delivery",
+      "Optimized resource allocation",
+      "Proactive risk management",
+      "Improved team collaboration"
+    ],
+    pricing: "Starting at $179/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Data Management Solutions",
-    description: "Comprehensive data handling, processing, and analytics platforms",
-    icon: Database,
+    title: "Automated Marketing Platform",
+    description: "Comprehensive marketing automation with AI-powered campaign optimization and customer journey mapping",
+    icon: Rocket,
     features: [
-      "Data Collection & Storage",
-      "ETL Processes",
-      "Data Visualization",
-      "Real-time Analytics",
-      "Data Security & Privacy",
-      "Automated Reporting"
+      "AI Campaign Optimization",
+      "Customer Journey Mapping",
+      "Email Automation",
+      "Social Media Management",
+      "A/B Testing",
+      "ROI Analytics"
     ],
     color: "from-orange-500 to-red-500",
     benefits: [
-      "Better decision making",
-      "Improved efficiency",
-      "Data-driven insights",
-      "Automated processes"
-    ]
-  },
-  {
-    title: "AI-Powered SaaS Tools",
-    description: "Intelligent software solutions that leverage artificial intelligence for enhanced functionality",
-    icon: Cpu,
-    features: [
-      "Machine Learning Integration",
-      "Natural Language Processing",
-      "Predictive Analytics",
-      "Automated Decision Making",
-      "Smart Recommendations",
-      "Intelligent Automation"
+      "60% higher engagement rates",
+      "Automated campaign optimization",
+      "Personalized customer journeys",
+      "Measurable ROI"
     ],
-    color: "from-violet-500 to-purple-500",
-    benefits: [
-      "Enhanced intelligence",
-      "Automated insights",
-      "Better predictions",
-      "Reduced manual work"
-    ]
-  },
-  {
-    title: "Blockchain & Web3 Applications",
-    description: "Decentralized applications and Web3 solutions for the next generation of internet",
-    icon: Lock,
-    features: [
-      "Smart Contract Development",
-      "DeFi Applications",
-      "NFT Marketplaces",
-      "Decentralized Identity",
-      "Token Economics",
-      "Cross-chain Integration"
-    ],
-    color: "from-indigo-500 to-blue-500",
-    benefits: [
-      "Enhanced security",
-      "Transparency",
-      "Decentralization",
-      "Future-proof technology"
-    ]
-  },
-  {
-    title: "IoT & Edge Computing Platforms",
-    description: "Internet of Things solutions and edge computing platforms for connected devices",
-    icon: Settings,
-    features: [
-      "Device Management",
-      "Real-time Data Processing",
-      "Edge Analytics",
-      "Firmware Updates",
-      "Device Security",
-      "Cloud Integration"
-    ],
-    color: "from-teal-500 to-cyan-500",
-    benefits: [
-      "Real-time insights",
-      "Reduced latency",
-      "Cost efficiency",
-      "Scalable solutions"
-    ]
-  },
-  {
-    title: "Quantum Computing SaaS",
-    description: "Next-generation quantum computing solutions as a service",
-    icon: Rocket,
-    features: [
-      "Quantum Algorithm Development",
-      "Quantum Simulation",
-      "Quantum Machine Learning",
-      "Quantum Optimization",
-      "Hybrid Classical-Quantum Systems",
-      "Quantum Security"
-    ],
-    color: "from-pink-500 to-rose-500",
-    benefits: [
-      "Exponential processing power",
-      "Advanced problem solving",
-      "Competitive advantage",
-      "Future technology leadership"
-    ]
-  },
-  {
-    title: "AR/VR & Metaverse Platforms",
-    description: "Augmented and virtual reality applications for immersive experiences",
-    icon: Layers,
-    features: [
-      "AR/VR Development",
-      "3D Modeling & Animation",
-      "Spatial Computing",
-      "Metaverse Integration",
-      "Haptic Feedback",
-      "Cross-platform Compatibility"
-    ],
-    color: "from-emerald-500 to-green-500",
-    benefits: [
-      "Immersive experiences",
-      "Enhanced engagement",
-      "Innovative solutions",
-      "Future-ready technology"
-    ]
-  }
-  {
-    title: "Workflow Automation",
-    description: "Intelligent automation solutions that streamline business processes",
-    icon: Zap,
-    features: [
-      "Process Automation",
-      "Task Scheduling",
-      "Email Automation",
-      "Document Processing",
-      "Approval Workflows",
-      "Integration Automation"
-    ],
-    color: "from-yellow-500 to-orange-500",
-    benefits: [
-      "Reduced manual work",
-      "Faster processing",
-      "Fewer errors",
-      "Improved efficiency"
-    ]
-  },
-  {
-    title: "E-commerce Solutions",
-    description: "Complete e-commerce platforms with payment processing and inventory management",
-    icon: Layers,
-    features: [
-      "Online Store Setup",
-      "Payment Gateway Integration",
-      "Inventory Management",
-      "Order Processing",
-      "Customer Management",
-      "Analytics & Reporting"
-    ],
-    color: "from-indigo-500 to-purple-500",
-    benefits: [
-      "Online presence",
-      "Revenue generation",
-      "Customer management",
-      "Business growth"
-    ]
-  },
-  {
-    title: "AI-Powered Customer Support Chatbot",
-    description: "Intelligent customer support automation with natural language processing and multi-language support",
-    icon: Bot,
-    features: [
-      "24/7 Customer Support",
-      "Multi-language Support",
-      "Ticket Management",
-      "Knowledge Base Integration",
-      "Sentiment Analysis",
-      "Live Agent Handoff"
-    ],
-    color: "from-cyan-500 to-blue-500",
-    benefits: [
-      "Reduced support costs",
-      "Instant responses",
-      "Improved customer satisfaction",
-      "Scalable support"
-    ],
-    pricing: "Starting at $299/month"
+    pricing: "Starting at $249/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
     title: "Smart Inventory Management System",
-    description: "AI-driven inventory optimization with predictive analytics and automated reordering",
-    icon: BarChart3,
+    description: "AI-powered inventory optimization with demand forecasting, automated reordering, and waste reduction",
+    icon: Database,
     features: [
-      "Predictive Analytics",
+      "Demand Forecasting",
       "Automated Reordering",
-      "Multi-location Support",
-      "Barcode Scanning",
-      "Supplier Management",
+      "Waste Reduction",
+      "Multi-location Management",
+      "Supplier Integration",
       "Cost Optimization"
-    ],
-    color: "from-orange-500 to-red-500",
-    benefits: [
-      "Reduced stockouts",
-      "Lower carrying costs",
-      "Improved cash flow",
-      "Data-driven decisions"
-    ],
-    pricing: "Starting at $199/month"
-  },
-  {
-    title: "Employee Time Tracking & Productivity Analytics",
-    description: "Advanced workforce management with productivity insights and automated reporting",
-    icon: Users,
-    features: [
-      "Time Tracking",
-      "Productivity Analytics",
-      "Project Management",
-      "Automated Invoicing",
-      "Team Performance Reports",
-      "Mobile App"
-    ],
-    color: "from-green-500 to-teal-500",
-    benefits: [
-      "Improved productivity",
-      "Accurate billing",
-      "Better project management",
-      "Team insights"
-    ],
-    pricing: "Starting at $149/month"
-  },
-  {
-    title: "AI-Powered Social Media Management",
-    description: "Automated social media posting, engagement, and analytics across all platforms",
-    icon: Globe,
-    features: [
-      "Multi-platform Posting",
-      "Content Scheduling",
-      "Engagement Analytics",
-      "Hashtag Optimization",
-      "Competitor Analysis",
-      "ROI Tracking"
-    ],
-    color: "from-pink-500 to-purple-500",
-    benefits: [
-      "Increased engagement",
-      "Time savings",
-      "Better content strategy",
-      "Measurable results"
-    ],
-    pricing: "Starting at $179/month"
-  },
-  {
-    title: "Smart Document Processing & OCR",
-    description: "Automated document digitization, data extraction, and intelligent form processing",
-    icon: FileText,
-    features: [
-      "OCR Technology",
-      "Data Extraction",
-      "Form Processing",
-      "Document Classification",
-      "Batch Processing",
-      "API Integration"
-    ],
-    color: "from-indigo-500 to-purple-500",
-    benefits: [
-      "Reduced manual work",
-      "Faster processing",
-      "Improved accuracy",
-      "Cost savings"
-    ],
-    pricing: "Starting at $249/month"
-  },
-  {
-    title: "Real-time Analytics Dashboard",
-    description: "Custom business intelligence dashboards with real-time data visualization and reporting",
-    icon: BarChart3,
-    features: [
-      "Real-time Data",
-      "Custom Dashboards",
-      "Interactive Charts",
-      "Automated Reports",
-      "Data Export",
-      "Mobile Access"
-    ],
-    color: "from-blue-500 to-cyan-500",
-    benefits: [
-      "Data-driven decisions",
-      "Real-time insights",
-      "Improved performance",
-      "Competitive advantage"
-    ],
-    pricing: "Starting at $399/month"
-  },
-  {
-    title: "AI-Powered Lead Generation & CRM",
-    description: "Intelligent lead scoring, automated follow-ups, and comprehensive customer relationship management",
-    icon: Target,
-    features: [
-      "Lead Scoring",
-      "Automated Follow-ups",
-      "Email Sequences",
-      "Pipeline Management",
-      "Contact Enrichment",
-      "Sales Analytics"
-    ],
-    color: "from-emerald-500 to-green-500",
-    benefits: [
-      "Higher conversion rates",
-      "Automated nurturing",
-      "Better lead quality",
-      "Increased sales"
-    ],
-    pricing: "Starting at $299/month"
-  },
-  {
-    title: "Smart Financial Management & Invoicing",
-    description: "Automated accounting, invoicing, expense tracking, and financial reporting for small businesses",
-    icon: DollarSign,
-    features: [
-      "Automated Invoicing",
-      "Expense Tracking",
-      "Financial Reporting",
-      "Tax Preparation",
-      "Payment Processing",
-      "Budget Management"
     ],
     color: "from-yellow-500 to-orange-500",
     benefits: [
-      "Time savings",
-      "Reduced errors",
-      "Better cash flow",
-      "Tax compliance"
+      "25% reduction in inventory costs",
+      "Eliminated stockouts",
+      "Reduced waste",
+      "Optimized supplier relationships"
     ],
-    pricing: "Starting at $199/month"
+    pricing: "Starting at $229/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI-Powered Email Marketing Automation",
-    description: "Intelligent email campaigns with personalization, A/B testing, and advanced segmentation",
-    icon: Mail,
+    title: "AI-Powered HR Management Platform",
+    description: "Intelligent HR solution with automated recruitment, performance analytics, and employee engagement tracking",
+    icon: Users,
     features: [
-      "Email Automation",
-      "Personalization",
-      "A/B Testing",
-      "Segmentation",
-      "Behavioral Triggers",
-      "Performance Analytics"
+      "AI Resume Screening",
+      "Performance Analytics",
+      "Employee Engagement",
+      "Skills Gap Analysis",
+      "Retention Prediction",
+      "Compliance Management"
     ],
-    color: "from-red-500 to-pink-500",
+    color: "from-indigo-500 to-purple-500",
     benefits: [
-      "Higher open rates",
-      "Better engagement",
-      "Automated nurturing",
-      "Increased conversions"
+      "80% faster recruitment",
+      "Data-driven performance insights",
+      "Improved employee retention",
+      "Automated compliance"
     ],
-    pricing: "Starting at $149/month"
+    pricing: "Starting at $279/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Smart Project Management & Collaboration",
-    description: "AI-enhanced project management with task automation, resource optimization, and team collaboration",
-    icon: Calendar,
+    title: "Smart Financial Management Suite",
+    description: "AI-powered financial platform with automated bookkeeping, expense tracking, and financial forecasting",
+    icon: BarChart3,
     features: [
-      "Task Automation",
-      "Resource Planning",
-      "Team Collaboration",
+      "Automated Bookkeeping",
+      "Expense Categorization",
+      "Financial Forecasting",
+      "Invoice Management",
+      "Tax Preparation",
+      "Cash Flow Analysis"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    benefits: [
+      "90% time savings on bookkeeping",
+      "Accurate financial forecasting",
+      "Automated tax preparation",
+      "Better cash flow management"
+    ],
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Intelligent Document Management",
+    description: "AI-powered document processing with automated classification, extraction, and workflow management",
+    icon: Layers,
+    features: [
+      "AI Document Classification",
+      "Automated Data Extraction",
+      "Workflow Automation",
+      "Version Control",
+      "Search & Retrieval",
+      "Compliance Tracking"
+    ],
+    color: "from-pink-500 to-rose-500",
+    benefits: [
+      "95% faster document processing",
+      "Automated data extraction",
+      "Improved compliance",
+      "Enhanced searchability"
+    ],
+    pricing: "Starting at $149/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Smart E-commerce Platform",
+    description: "AI-enhanced e-commerce solution with personalized recommendations, dynamic pricing, and automated customer service",
+    icon: Globe,
+    features: [
+      "AI Product Recommendations",
+      "Dynamic Pricing",
+      "Automated Customer Service",
+      "Inventory Optimization",
+      "Fraud Detection",
+      "Analytics Dashboard"
+    ],
+    color: "from-emerald-500 to-teal-500",
+    benefits: [
+      "35% increase in sales",
+      "Personalized shopping experience",
+      "Automated customer support",
+      "Optimized pricing strategy"
+    ],
+    pricing: "Starting at $329/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Learning Management System",
+    description: "Intelligent learning platform with personalized content delivery, progress tracking, and skill assessment",
+    icon: Lightbulb,
+    features: [
+      "Personalized Learning Paths",
       "Progress Tracking",
-      "Risk Management",
-      "Integration Hub"
+      "Skill Assessment",
+      "Content Recommendation",
+      "Gamification",
+      "Analytics & Reporting"
     ],
     color: "from-violet-500 to-purple-500",
     benefits: [
-      "Better project delivery",
-      "Improved collaboration",
-      "Resource optimization",
-      "Risk mitigation"
+      "40% faster learning outcomes",
+      "Personalized education",
+      "Engaging learning experience",
+      "Measurable skill development"
     ],
-    pricing: "Starting at $229/month"
+    pricing: "Starting at $219/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI-Powered Content Management System",
-    description: "Intelligent content creation, optimization, and management with SEO and performance analytics",
-    icon: FileText,
+    title: "Smart Supply Chain Management",
+    description: "AI-powered supply chain optimization with demand forecasting, route optimization, and supplier management",
+    icon: Settings,
     features: [
-      "Content Creation",
+      "Demand Forecasting",
+      "Route Optimization",
+      "Supplier Management",
+      "Risk Assessment",
+      "Cost Optimization",
+      "Real-time Tracking"
+    ],
+    color: "from-amber-500 to-yellow-500",
+    benefits: [
+      "30% cost reduction",
+      "Optimized logistics",
+      "Proactive risk management",
+      "Improved supplier relationships"
+    ],
+    pricing: "Starting at $399/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Intelligent Content Management System",
+    description: "AI-powered CMS with automated content generation, SEO optimization, and multi-channel publishing",
+    icon: Code,
+    features: [
+      "AI Content Generation",
       "SEO Optimization",
+      "Multi-channel Publishing",
+      "Content Personalization",
       "Performance Analytics",
-      "Content Scheduling",
-      "Multi-language Support",
-      "Version Control"
+      "Workflow Automation"
+    ],
+    color: "from-rose-500 to-pink-500",
+    benefits: [
+      "70% faster content creation",
+      "Improved SEO performance",
+      "Personalized content delivery",
+      "Streamlined publishing workflow"
+    ],
+    pricing: "Starting at $189/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Cybersecurity Monitoring",
+    description: "Real-time threat detection and response system with automated security incident management",
+    icon: Shield,
+    features: [
+      "Real-time Threat Detection",
+      "Automated Incident Response",
+      "Vulnerability Assessment",
+      "Compliance Monitoring",
+      "Security Analytics",
+      "24/7 Monitoring"
+    ],
+    color: "from-red-500 to-orange-500",
+    benefits: [
+      "99.9% threat detection accuracy",
+      "Automated response to threats",
+      "Reduced security incidents",
+      "Compliance assurance"
+    ],
+    pricing: "Starting at $449/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Smart Energy Management Platform",
+    description: "AI-driven energy optimization for buildings and facilities with predictive maintenance and cost reduction",
+    icon: Zap,
+    features: [
+      "Energy Consumption Analytics",
+      "Predictive Maintenance",
+      "Cost Optimization",
+      "Carbon Footprint Tracking",
+      "Smart Grid Integration",
+      "Automated Controls"
+    ],
+    color: "from-green-500 to-lime-500",
+    benefits: [
+      "35% energy cost reduction",
+      "Predictive maintenance alerts",
+      "Reduced carbon footprint",
+      "Automated energy optimization"
+    ],
+    pricing: "Starting at $299/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Legal Document Analysis",
+    description: "Intelligent contract review and legal document analysis with risk assessment and compliance checking",
+    icon: Layers,
+    features: [
+      "Contract Analysis",
+      "Risk Assessment",
+      "Compliance Checking",
+      "Document Comparison",
+      "Legal Research",
+      "Automated Summaries"
+    ],
+    color: "from-slate-500 to-gray-500",
+    benefits: [
+      "90% faster contract review",
+      "Reduced legal risks",
+      "Automated compliance checking",
+      "Improved accuracy"
+    ],
+    pricing: "Starting at $399/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Intelligent Fleet Management System",
+    description: "AI-powered fleet optimization with route planning, fuel efficiency, and predictive maintenance",
+    icon: Settings,
+    features: [
+      "Route Optimization",
+      "Fuel Efficiency Tracking",
+      "Predictive Maintenance",
+      "Driver Behavior Analysis",
+      "Cost Management",
+      "Real-time Monitoring"
+    ],
+    color: "from-blue-500 to-indigo-500",
+    benefits: [
+      "25% fuel cost reduction",
+      "Optimized routes",
+      "Reduced maintenance costs",
+      "Improved driver safety"
+    ],
+    pricing: "Starting at $349/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Healthcare Analytics",
+    description: "Comprehensive healthcare data analysis with patient insights, treatment optimization, and outcome prediction",
+    icon: Target,
+    features: [
+      "Patient Data Analysis",
+      "Treatment Optimization",
+      "Outcome Prediction",
+      "Risk Stratification",
+      "Clinical Decision Support",
+      "Population Health Analytics"
+    ],
+    color: "from-emerald-500 to-cyan-500",
+    benefits: [
+      "Improved patient outcomes",
+      "Optimized treatment plans",
+      "Reduced healthcare costs",
+      "Better clinical decisions"
+    ],
+    pricing: "Starting at $599/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Smart Real Estate Management",
+    description: "AI-powered property management with tenant screening, maintenance prediction, and market analysis",
+    icon: Globe,
+    features: [
+      "Tenant Screening",
+      "Maintenance Prediction",
+      "Market Analysis",
+      "Rent Optimization",
+      "Property Valuation",
+      "Investment Analytics"
+    ],
+    color: "from-amber-500 to-orange-500",
+    benefits: [
+      "40% reduction in vacancies",
+      "Predictive maintenance",
+      "Optimized rental income",
+      "Better investment decisions"
+    ],
+    pricing: "Starting at $279/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Social Media Intelligence",
+    description: "Comprehensive social media monitoring and analysis with sentiment tracking and influencer identification",
+    icon: Users,
+    features: [
+      "Sentiment Analysis",
+      "Influencer Identification",
+      "Trend Monitoring",
+      "Brand Mention Tracking",
+      "Competitor Analysis",
+      "Campaign Performance"
+    ],
+    color: "from-pink-500 to-purple-500",
+    benefits: [
+      "Real-time brand monitoring",
+      "Improved social strategy",
+      "Better influencer partnerships",
+      "Enhanced brand reputation"
+    ],
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "Intelligent Quality Assurance Platform",
+    description: "AI-powered quality control with automated testing, defect prediction, and process optimization",
+    icon: CheckCircle,
+    features: [
+      "Automated Testing",
+      "Defect Prediction",
+      "Process Optimization",
+      "Quality Metrics",
+      "Compliance Monitoring",
+      "Continuous Improvement"
     ],
     color: "from-teal-500 to-cyan-500",
     benefits: [
-      "Better SEO performance",
-      "Content consistency",
-      "Time savings",
-      "Improved engagement"
+      "95% defect detection rate",
+      "Reduced testing time",
+      "Improved product quality",
+      "Automated compliance"
     ],
-    pricing: "Starting at $179/month"
+    pricing: "Starting at $329/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Customer Feedback Analysis",
+    description: "Intelligent analysis of customer feedback with sentiment analysis, trend identification, and action recommendations",
+    icon: MessageSquare,
+    features: [
+      "Sentiment Analysis",
+      "Trend Identification",
+      "Action Recommendations",
+      "Multi-channel Feedback",
+      "Competitor Comparison",
+      "ROI Tracking"
+    ],
+    color: "from-violet-500 to-purple-500",
+    benefits: [
+      "Real-time feedback insights",
+      "Improved customer satisfaction",
+      "Data-driven improvements",
+      "Competitive advantage"
+    ],
+    pricing: "Starting at $179/month",
+    contact: "kleber@ziontechgroup.com"
   }
 ];
 
@@ -575,7 +584,7 @@ const benefits = [
 
 const pricingTiers = [
   {
-    name: "Starter SaaS",
+    name: "Starter",
     price: "$2,999",
     description: "Perfect for small businesses and startups",
     features: [
@@ -584,14 +593,12 @@ const pricingTiers = [
       "User authentication",
       "Basic analytics",
       "3 months support",
-      "Source code included",
-      "Hosting setup"
+      "Source code included"
     ],
-    color: "from-blue-500 to-cyan-500",
-    monthlyPricing: "Starting at $99/month for hosted solutions"
+    color: "from-blue-500 to-cyan-500"
   },
   {
-    name: "Professional SaaS",
+    name: "Professional",
     price: "$7,999",
     description: "Ideal for growing businesses with complex needs",
     features: [
@@ -601,15 +608,13 @@ const pricingTiers = [
       "Database integration",
       "Advanced analytics",
       "6 months support",
-      "Source code included",
-      "Cloud deployment"
+      "Source code included"
     ],
     color: "from-purple-500 to-pink-500",
-    popular: true,
-    monthlyPricing: "Starting at $299/month for hosted solutions"
+    popular: true
   },
   {
-    name: "Enterprise SaaS",
+    name: "Enterprise",
     price: "Custom",
     description: "Tailored solutions for large organizations",
     features: [
@@ -619,40 +624,9 @@ const pricingTiers = [
       "Custom analytics dashboard",
       "12 months support",
       "Dedicated project manager",
-      "Source code included",
-      "White-label options"
+      "Source code included"
     ],
-    color: "from-green-500 to-emerald-500",
-    monthlyPricing: "Custom pricing based on requirements"
-  }
-];
-
-const microSaasPricing = [
-  {
-    category: "AI-Powered Solutions",
-    services: [
-      { name: "AI Customer Support Chatbot", price: "$299/month", features: "24/7 support, multi-language, sentiment analysis" },
-      { name: "AI Lead Generation & CRM", price: "$299/month", features: "Lead scoring, automated follow-ups, sales analytics" },
-      { name: "AI Email Marketing", price: "$149/month", features: "Personalization, A/B testing, behavioral triggers" },
-      { name: "AI Content Management", price: "$179/month", features: "Content creation, SEO optimization, analytics" }
-    ]
-  },
-  {
-    category: "Business Management",
-    services: [
-      { name: "Smart Inventory Management", price: "$199/month", features: "Predictive analytics, automated reordering, multi-location" },
-      { name: "Time Tracking & Analytics", price: "$149/month", features: "Productivity insights, project management, reporting" },
-      { name: "Financial Management", price: "$199/month", features: "Automated invoicing, expense tracking, tax prep" },
-      { name: "Project Management", price: "$229/month", features: "Task automation, resource planning, collaboration" }
-    ]
-  },
-  {
-    category: "Marketing & Analytics",
-    services: [
-      { name: "Social Media Management", price: "$179/month", features: "Multi-platform posting, analytics, competitor analysis" },
-      { name: "Real-time Analytics Dashboard", price: "$399/month", features: "Custom dashboards, real-time data, mobile access" },
-      { name: "Document Processing & OCR", price: "$249/month", features: "Data extraction, form processing, batch processing" }
-    ]
+    color: "from-green-500 to-emerald-500"
   }
 ];
 
@@ -717,7 +691,7 @@ export default function MicroSaasPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {microSaasServices.map((service, index) => (
               <motion.div
                 key={index}
@@ -766,13 +740,37 @@ export default function MicroSaasPage() {
                     </div>
                   </div>
 
-                  <Link
-                    href="/contact"
-                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
-                  >
-                    Learn More
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium text-gray-600">Pricing:</span>
+                      <span className="text-lg font-bold text-gray-900">{service.pricing}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-gray-600">Contact:</span>
+                      <a 
+                        href={`mailto:${service.contact}`}
+                        className="text-sm text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        {service.contact}
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3">
+                    <Link
+                      href="/contact"
+                      className={`flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
+                    >
+                      Get Started
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    <a
+                      href={`mailto:${service.contact}?subject=Inquiry about ${service.title}`}
+                      className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 font-semibold"
+                    >
+                      Contact
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -830,185 +828,6 @@ export default function MicroSaasPage() {
                 </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Micro SaaS Pricing
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Flexible pricing models for custom software solutions that scale with your business.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* MVP Plan */}
-            <motion.div
-              className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-blue-500 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">MVP Development</h3>
-                <p className="text-gray-600 mb-4">Minimum viable product</p>
-                <div className="text-4xl font-bold text-blue-600 mb-2">$15,000</div>
-                <p className="text-gray-500">starting price</p>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Basic Web Application</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">User Authentication</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Database Setup</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Basic API</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">3 Months Support</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-center block font-semibold"
-              >
-                Get Started
-              </Link>
-            </motion.div>
-
-            {/* Professional Plan */}
-            <motion.div
-              className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8 relative transform scale-105"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
-                  Most Popular
-                </span>
-              </div>
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2">Full SaaS Platform</h3>
-                <p className="text-blue-100 mb-4">Complete software solution</p>
-                <div className="text-4xl font-bold mb-2">$45,000</div>
-                <p className="text-blue-100">starting price</p>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Advanced Web App</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Mobile Application</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>AI Integration</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Payment Processing</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Analytics Dashboard</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>6 Months Support</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="w-full bg-white text-blue-600 py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-center block font-semibold"
-              >
-                Get Started
-              </Link>
-            </motion.div>
-
-            {/* Enterprise Plan */}
-            <motion.div
-              className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-purple-500 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise SaaS</h3>
-                <p className="text-gray-600 mb-4">Advanced enterprise solution</p>
-                <div className="text-4xl font-bold text-purple-600 mb-2">Custom</div>
-                <p className="text-gray-500">pricing</p>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Quantum Computing SaaS</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Blockchain Integration</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">AR/VR Applications</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">IoT Platform</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">White-label Solution</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">12 Months Support</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg hover:bg-purple-700 transition-colors duration-300 text-center block font-semibold"
-              >
-                Contact Sales
-              </Link>
-            </motion.div>
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">
-              All projects include free consultation and custom implementation
-            </p>
-            <Link
-              href="/contact"
-              className="text-blue-600 hover:text-blue-700 font-semibold underline"
-            >
-              Schedule a free consultation →
-            </Link>
           </div>
         </div>
       </section>
@@ -1170,8 +989,8 @@ export default function MicroSaasPage() {
         </div>
       </section>
 
-      {/* Micro SaaS Pricing Section */}
-      <section className="py-20 bg-white">
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -1181,142 +1000,64 @@ export default function MicroSaasPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Micro SaaS Monthly Pricing
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Affordable monthly pricing for our ready-to-use micro SaaS solutions. 
-              No setup fees, cancel anytime.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {microSaasPricing.map((category, categoryIndex) => (
-              <motion.div
-                key={categoryIndex}
-                className="bg-gray-50 rounded-lg p-6"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
-                  {category.category}
-                </h3>
-                <div className="space-y-4">
-                  {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="font-semibold text-gray-900 text-sm">{service.name}</h4>
-                        <span className="text-blue-600 font-bold text-sm">{service.price}</span>
-                      </div>
-                      <p className="text-gray-600 text-xs">{service.features}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">
-              All plans include 24/7 support, regular updates, and 99.9% uptime guarantee
-            </p>
-            <Link
-              href="/contact"
-              className="text-blue-600 hover:text-blue-700 font-semibold underline"
-            >
-              Contact us for custom pricing →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Get Started Today
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Ready to transform your business with our micro SaaS solutions? 
-              Contact us for a free consultation and custom quote.
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Ready to build your micro SAAS solution? Contact our experts for a personalized consultation and custom development.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <motion.div
-              className="text-center p-6 bg-white/10 rounded-lg backdrop-blur-sm"
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Call Us</h3>
-              <p className="text-gray-300 mb-2">+1 302 464 0950</p>
-              <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
+              <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+              <p className="text-gray-600 mb-4">Speak directly with our development team</p>
+              <a 
+                href="tel:+13024640950" 
+                className="text-blue-600 hover:text-blue-800 font-semibold text-lg"
+              >
+                +1 (302) 464-0950
+              </a>
             </motion.div>
 
             <motion.div
-              className="text-center p-6 bg-white/10 rounded-lg backdrop-blur-sm"
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Email Us</h3>
-              <p className="text-gray-300 mb-2">kleber@ziontechgroup.com</p>
-              <p className="text-sm text-gray-400">24/7 response within 2 hours</p>
+              <Mail className="w-12 h-12 text-green-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-4">Send us your project requirements</p>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="text-green-600 hover:text-green-800 font-semibold text-lg"
+              >
+                kleber@ziontechgroup.com
+              </a>
             </motion.div>
 
             <motion.div
-              className="text-center p-6 bg-white/10 rounded-lg backdrop-blur-sm"
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <MapPin className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Visit Us</h3>
-              <p className="text-gray-300 mb-2">364 E Main St STE 1008</p>
-              <p className="text-sm text-gray-400">Middletown, DE 19709</p>
-            </motion.div>
-          </div>
-
-          <div className="text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold mb-4">Why Choose Zion Tech Group?</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                <div className="text-center">
-                  <Award className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                  <p className="text-sm text-gray-300">500+ Projects Completed</p>
-                </div>
-                <div className="text-center">
-                  <Users className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                  <p className="text-sm text-gray-300">50+ Expert Team Members</p>
-                </div>
-                <div className="text-center">
-                  <Shield className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                  <p className="text-sm text-gray-300">99.9% Uptime Guarantee</p>
-                </div>
-                <div className="text-center">
-                  <Globe className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                  <p className="text-sm text-gray-300">Global Client Base</p>
-                </div>
-              </div>
+              <MapPin className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+              <p className="text-gray-600 mb-4">Our headquarters location</p>
+              <p className="text-purple-600 font-semibold text-sm">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </p>
             </motion.div>
           </div>
         </div>

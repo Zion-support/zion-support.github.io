@@ -20,130 +20,131 @@ import {
   Bot,
   TrendingUp,
   Target,
-  Lightbulb,
-  Shield,
-  Heart,
-  Truck,
-  FileText,
-  Home,
-  Scale,
-  Leaf,
-  Car,
-  BookOpen
+  Lightbulb
 } from 'lucide-react';
 
 const aiServices = [
   {
-    title: "Machine Learning Solutions",
-    description: "Custom ML models tailored to your business needs and data patterns",
+    title: "AI-Powered Business Intelligence Suite",
+    description: "Comprehensive AI analytics platform with real-time insights and predictive modeling",
     icon: Brain,
     features: [
+      "Real-time Data Processing",
       "Predictive Analytics",
-      "Pattern Recognition",
-      "Automated Decision Making",
-      "Real-time Processing",
-      "Model Training & Optimization",
-      "Continuous Learning"
+      "Custom Dashboard Creation",
+      "Automated Report Generation",
+      "Anomaly Detection",
+      "Natural Language Queries"
     ],
     color: "from-purple-500 to-pink-500",
     useCases: [
-      "Customer behavior prediction",
       "Sales forecasting",
-      "Risk assessment",
-      "Quality control automation"
-    ]
+      "Customer behavior analysis",
+      "Market trend prediction",
+      "Operational efficiency optimization"
+    ],
+    pricing: "Starting at $299/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Natural Language Processing",
-    description: "Advanced text analysis and language understanding capabilities",
+    title: "AI Content Generation & SEO Optimization",
+    description: "Automated content creation with AI-powered SEO optimization for maximum visibility",
     icon: MessageSquare,
     features: [
-      "Sentiment Analysis",
-      "Text Classification",
-      "Language Translation",
-      "Chatbot Development",
-      "Document Processing",
-      "Voice Recognition"
+      "AI Content Writing",
+      "SEO Optimization",
+      "Multi-language Support",
+      "Content Strategy Planning",
+      "Performance Analytics",
+      "Brand Voice Consistency"
     ],
     color: "from-blue-500 to-cyan-500",
     useCases: [
-      "Customer support automation",
-      "Content moderation",
-      "Document analysis",
-      "Multilingual support"
-    ]
+      "Blog content automation",
+      "Social media posts",
+      "Product descriptions",
+      "Marketing copy generation"
+    ],
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Computer Vision",
-    description: "Image and video analysis powered by advanced AI algorithms",
+    title: "AI Visual Recognition & Analysis",
+    description: "Advanced computer vision solutions for image and video analysis across industries",
     icon: Eye,
     features: [
-      "Object Detection",
-      "Image Classification",
+      "Object Detection & Classification",
       "Facial Recognition",
-      "Medical Imaging",
-      "Quality Inspection",
-      "Augmented Reality"
+      "Quality Control Automation",
+      "Medical Image Analysis",
+      "Security Monitoring",
+      "AR/VR Integration"
     ],
     color: "from-green-500 to-emerald-500",
     useCases: [
-      "Automated quality control",
-      "Security monitoring",
+      "Manufacturing quality control",
+      "Security surveillance",
       "Medical diagnosis support",
-      "Retail analytics"
-    ]
+      "Retail customer analytics"
+    ],
+    pricing: "Starting at $399/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI Chatbots & Virtual Assistants",
-    description: "Intelligent conversational agents for customer engagement",
+    title: "Intelligent Customer Service Automation",
+    description: "AI-powered chatbots and virtual assistants with advanced conversational capabilities",
     icon: Bot,
     features: [
-      "24/7 Customer Support",
-      "Multi-language Support",
-      "Context Awareness",
-      "Integration with CRM",
+      "24/7 Multilingual Support",
+      "Context-Aware Conversations",
+      "CRM Integration",
       "Voice & Text Interface",
-      "Learning from Interactions"
+      "Learning & Adaptation",
+      "Escalation Management"
     ],
     color: "from-orange-500 to-red-500",
     useCases: [
-      "Customer service automation",
+      "Customer support automation",
       "Lead qualification",
       "Internal helpdesk",
       "E-commerce assistance"
-    ]
+    ],
+    pricing: "Starting at $149/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Predictive Analytics",
-    description: "Data-driven insights and forecasting for business intelligence",
+    title: "AI-Powered Financial Analytics",
+    description: "Advanced financial modeling and risk assessment using machine learning algorithms",
     icon: TrendingUp,
     features: [
-      "Demand Forecasting",
-      "Risk Prediction",
-      "Market Analysis",
-      "Performance Optimization",
-      "Anomaly Detection",
-      "Trend Analysis"
+      "Fraud Detection",
+      "Credit Risk Assessment",
+      "Algorithmic Trading",
+      "Portfolio Optimization",
+      "Regulatory Compliance",
+      "Real-time Monitoring"
     ],
     color: "from-indigo-500 to-purple-500",
     useCases: [
-      "Inventory management",
-      "Financial risk assessment",
-      "Market trend analysis",
-      "Operational optimization"
-    ]
+      "Banking risk management",
+      "Investment optimization",
+      "Insurance underwriting",
+      "Financial forecasting"
+    ],
+    pricing: "Starting at $499/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Process Automation",
-    description: "Intelligent automation of business processes and workflows",
+    title: "Smart Process Automation Platform",
+    description: "Intelligent automation of complex business processes with AI decision-making",
     icon: Zap,
     features: [
       "Workflow Automation",
       "Document Processing",
-      "Data Entry Automation",
       "Email Classification",
       "Task Scheduling",
-      "Exception Handling"
+      "Exception Handling",
+      "Process Optimization"
     ],
     color: "from-yellow-500 to-orange-500",
     useCases: [
@@ -151,339 +152,295 @@ const aiServices = [
       "HR automation",
       "Supply chain optimization",
       "Compliance monitoring"
-    ]
+    ],
+    pricing: "Starting at $249/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI-Powered Cybersecurity Suite",
-    description: "Advanced threat detection and prevention using machine learning algorithms",
-    icon: Shield,
+    title: "AI-Powered Marketing Intelligence",
+    description: "Comprehensive marketing analytics and campaign optimization using AI",
+    icon: Target,
     features: [
-      "Real-time Threat Detection",
-      "Behavioral Analysis",
-      "Automated Response",
-      "Zero-day Attack Prevention",
-      "Network Anomaly Detection",
-      "Incident Response Automation"
+      "Customer Segmentation",
+      "Campaign Optimization",
+      "A/B Testing Automation",
+      "ROI Prediction",
+      "Personalization Engine",
+      "Cross-channel Analytics"
     ],
-    color: "from-red-500 to-pink-500",
+    color: "from-pink-500 to-rose-500",
     useCases: [
-      "Enterprise security monitoring",
-      "Financial fraud detection",
-      "Network intrusion prevention",
-      "Compliance automation"
+      "Marketing campaign optimization",
+      "Customer lifetime value prediction",
+      "Personalized recommendations",
+      "Ad spend optimization"
     ],
-    pricing: "Starting at $2,999/month"
+    pricing: "Starting at $349/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI-Powered Healthcare Analytics",
-    description: "Medical data analysis and diagnostic support using advanced AI models",
-    icon: Heart,
+    title: "AI Document Processing & Analysis",
+    description: "Intelligent document processing with natural language understanding and extraction",
+    icon: Database,
     features: [
-      "Medical Image Analysis",
-      "Drug Discovery Support",
-      "Patient Risk Assessment",
-      "Treatment Recommendation",
-      "Clinical Trial Optimization",
-      "Health Outcome Prediction"
+      "Document Classification",
+      "Data Extraction",
+      "Contract Analysis",
+      "Compliance Checking",
+      "Multi-format Support",
+      "Batch Processing"
     ],
-    color: "from-green-500 to-teal-500",
+    color: "from-cyan-500 to-blue-500",
     useCases: [
-      "Radiology assistance",
-      "Pharmaceutical research",
-      "Personalized medicine",
-      "Population health management"
+      "Legal document review",
+      "Invoice processing",
+      "Contract management",
+      "Compliance monitoring"
     ],
-    pricing: "Starting at $4,999/month"
-  },
-  {
-    title: "AI-Powered Financial Trading",
-    description: "Algorithmic trading and investment analysis using machine learning",
-    icon: TrendingUp,
-    features: [
-      "Algorithmic Trading",
-      "Market Sentiment Analysis",
-      "Risk Assessment",
-      "Portfolio Optimization",
-      "Fraud Detection",
-      "Credit Scoring"
-    ],
-    color: "from-yellow-500 to-orange-500",
-    useCases: [
-      "Automated trading strategies",
-      "Investment portfolio management",
-      "Credit risk assessment",
-      "Market prediction"
-    ],
-    pricing: "Starting at $3,999/month"
-  },
-  {
-    title: "AI-Powered Supply Chain Optimization",
-    description: "Intelligent supply chain management and logistics optimization",
-    icon: Truck,
-    features: [
-      "Demand Forecasting",
-      "Inventory Optimization",
-      "Route Planning",
-      "Supplier Risk Assessment",
-      "Quality Control",
-      "Cost Optimization"
-    ],
-    color: "from-blue-500 to-cyan-500",
-    useCases: [
-      "Manufacturing optimization",
-      "Retail inventory management",
-      "Logistics planning",
-      "Supplier relationship management"
-    ],
-    pricing: "Starting at $2,499/month"
-  },
-  {
-    title: "AI-Powered Content Generation",
-    description: "Automated content creation and marketing using advanced language models",
-    icon: FileText,
-    features: [
-      "Blog Post Generation",
-      "Social Media Content",
-      "Email Marketing Copy",
-      "Product Descriptions",
-      "SEO Optimization",
-      "Multi-language Support"
-    ],
-    color: "from-purple-500 to-pink-500",
-    useCases: [
-      "Content marketing automation",
-      "E-commerce product descriptions",
-      "Social media management",
-      "SEO content strategy"
-    ],
-    pricing: "Starting at $799/month"
+    pricing: "Starting at $179/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
     title: "AI-Powered HR & Talent Management",
-    description: "Intelligent human resources management and talent acquisition",
+    description: "Intelligent HR solutions for recruitment, performance management, and employee engagement",
     icon: Users,
     features: [
       "Resume Screening",
       "Candidate Matching",
-      "Interview Scheduling",
-      "Performance Analysis",
-      "Employee Retention Prediction",
-      "Skills Gap Analysis"
+      "Performance Analytics",
+      "Employee Sentiment Analysis",
+      "Skills Gap Analysis",
+      "Retention Prediction"
     ],
-    color: "from-indigo-500 to-purple-500",
+    color: "from-emerald-500 to-teal-500",
     useCases: [
       "Automated recruitment",
-      "Employee performance tracking",
-      "Talent development planning",
-      "Workforce analytics"
+      "Performance evaluation",
+      "Employee engagement",
+      "Talent retention"
     ],
-    pricing: "Starting at $1,499/month"
+    pricing: "Starting at $229/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI-Powered Real Estate Analytics",
-    description: "Property valuation and market analysis using machine learning",
-    icon: Home,
+    title: "AI Cybersecurity & Threat Detection",
+    description: "Advanced AI-powered security solutions for threat detection and prevention",
+    icon: Lock,
     features: [
-      "Property Valuation",
-      "Market Trend Analysis",
-      "Investment Recommendations",
-      "Risk Assessment",
-      "Price Prediction",
-      "Neighborhood Analysis"
+      "Threat Detection",
+      "Anomaly Detection",
+      "Behavioral Analysis",
+      "Incident Response",
+      "Vulnerability Assessment",
+      "Security Monitoring"
     ],
-    color: "from-emerald-500 to-green-500",
+    color: "from-red-500 to-pink-500",
     useCases: [
-      "Real estate investment",
-      "Property management",
-      "Market research",
-      "Mortgage risk assessment"
+      "Network security monitoring",
+      "Malware detection",
+      "Insider threat detection",
+      "Compliance monitoring"
     ],
-    pricing: "Starting at $1,999/month"
+    pricing: "Starting at $399/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI-Powered Legal Document Analysis",
-    description: "Automated legal document review and contract analysis",
-    icon: Scale,
+    title: "AI-Powered Predictive Maintenance",
+    description: "Intelligent equipment monitoring and maintenance prediction using IoT and machine learning",
+    icon: Cpu,
     features: [
-      "Contract Analysis",
-      "Legal Document Review",
-      "Compliance Checking",
-      "Risk Assessment",
-      "Due Diligence",
-      "Legal Research"
-    ],
-    color: "from-gray-500 to-slate-500",
-    useCases: [
-      "Contract management",
-      "Legal compliance",
-      "Due diligence processes",
-      "Legal research automation"
-    ],
-    pricing: "Starting at $2,999/month"
-  },
-  {
-    title: "AI-Powered Energy Management",
-    description: "Smart energy consumption optimization and renewable energy integration",
-    icon: Zap,
-    features: [
-      "Energy Consumption Analysis",
-      "Renewable Energy Optimization",
-      "Grid Management",
-      "Carbon Footprint Tracking",
-      "Predictive Maintenance",
-      "Cost Optimization"
-    ],
-    color: "from-yellow-500 to-amber-500",
-    useCases: [
-      "Smart grid management",
-      "Renewable energy integration",
-      "Energy efficiency optimization",
-      "Carbon neutrality planning"
-    ],
-    pricing: "Starting at $3,499/month"
-  },
-  {
-    title: "AI-Powered Agriculture & Food Tech",
-    description: "Precision agriculture and food production optimization using AI",
-    icon: Leaf,
-    features: [
-      "Crop Yield Prediction",
-      "Soil Analysis",
-      "Pest Detection",
-      "Irrigation Optimization",
-      "Food Quality Control",
-      "Supply Chain Tracking"
-    ],
-    color: "from-green-500 to-lime-500",
-    useCases: [
-      "Precision farming",
-      "Food safety monitoring",
-      "Supply chain optimization",
-      "Sustainable agriculture"
-    ],
-    pricing: "Starting at $2,199/month"
-  },
-  {
-    title: "AI-Powered Transportation & Logistics",
-    description: "Smart transportation management and autonomous vehicle systems",
-    icon: Car,
-    features: [
-      "Route Optimization",
-      "Fleet Management",
-      "Autonomous Vehicle Control",
-      "Traffic Prediction",
+      "Equipment Monitoring",
+      "Failure Prediction",
       "Maintenance Scheduling",
-      "Fuel Efficiency Optimization"
+      "Cost Optimization",
+      "Performance Analytics",
+      "IoT Integration"
     ],
     color: "from-blue-500 to-indigo-500",
     useCases: [
-      "Fleet management",
-      "Autonomous driving",
-      "Traffic optimization",
-      "Logistics planning"
+      "Manufacturing equipment",
+      "HVAC systems",
+      "Fleet vehicles",
+      "Industrial machinery"
     ],
-    pricing: "Starting at $4,499/month"
+    pricing: "Starting at $449/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "AI-Powered Education & E-Learning",
-    description: "Personalized learning and educational content optimization",
-    icon: BookOpen,
+    title: "AI-Powered Language Translation & NLP",
+    description: "Advanced natural language processing with real-time translation and sentiment analysis",
+    icon: MessageSquare,
     features: [
-      "Personalized Learning Paths",
-      "Content Recommendation",
-      "Student Performance Analysis",
-      "Automated Grading",
-      "Learning Style Adaptation",
-      "Progress Tracking"
+      "Real-time Translation",
+      "Sentiment Analysis",
+      "Language Detection",
+      "Text Summarization",
+      "Voice Recognition",
+      "Multi-language Support"
     ],
     color: "from-purple-500 to-violet-500",
     useCases: [
-      "Online education platforms",
-      "Corporate training",
-      "Student assessment",
-      "Educational content creation"
+      "Global communication",
+      "Content localization",
+      "Customer support",
+      "Market research"
     ],
-    pricing: "Starting at $1,299/month"
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Quantum AI Solutions",
-    description: "Next-generation quantum machine learning and optimization algorithms",
-    icon: Cpu,
+    title: "AI-Powered Supply Chain Optimization",
+    description: "Intelligent supply chain management with demand forecasting and logistics optimization",
+    icon: Globe,
     features: [
-      "Quantum Machine Learning",
-      "Quantum Optimization",
-      "Quantum Neural Networks",
-      "Quantum Data Processing",
-      "Hybrid Classical-Quantum AI",
-      "Quantum Error Correction"
+      "Demand Forecasting",
+      "Inventory Optimization",
+      "Route Planning",
+      "Supplier Management",
+      "Risk Assessment",
+      "Cost Optimization"
     ],
-    color: "from-violet-500 to-purple-500",
+    color: "from-green-500 to-emerald-500",
     useCases: [
-      "Complex optimization problems",
-      "Drug discovery acceleration",
-      "Financial portfolio optimization",
-      "Climate modeling"
-    ]
+      "Retail inventory management",
+      "Manufacturing supply chains",
+      "Logistics optimization",
+      "Procurement automation"
+    ],
+    pricing: "Starting at $379/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Edge AI & IoT Intelligence",
-    description: "Real-time AI processing at the edge for IoT devices and smart systems",
+    title: "AI-Powered Drug Discovery & Research",
+    description: "Advanced AI solutions for pharmaceutical research, drug discovery, and molecular analysis",
+    icon: Target,
+    features: [
+      "Molecular Analysis",
+      "Drug Discovery",
+      "Clinical Trial Optimization",
+      "Side Effect Prediction",
+      "Drug Interaction Analysis",
+      "Research Automation"
+    ],
+    color: "from-cyan-500 to-teal-500",
+    useCases: [
+      "Pharmaceutical research",
+      "Drug development",
+      "Clinical trials",
+      "Medical research"
+    ],
+    pricing: "Starting at $799/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Autonomous Vehicle Systems",
+    description: "Advanced AI for autonomous vehicle navigation, safety, and fleet management",
     icon: Smartphone,
     features: [
-      "Edge Computing AI",
-      "IoT Data Processing",
-      "Real-time Inference",
-      "Federated Learning",
-      "Edge Model Optimization",
-      "Distributed AI Networks"
+      "Autonomous Navigation",
+      "Object Detection",
+      "Path Planning",
+      "Safety Monitoring",
+      "Fleet Management",
+      "Real-time Analytics"
     ],
-    color: "from-teal-500 to-cyan-500",
+    color: "from-orange-500 to-red-500",
     useCases: [
-      "Smart city management",
-      "Industrial IoT monitoring",
-      "Autonomous vehicle systems",
-      "Smart home automation"
-    ]
+      "Autonomous vehicles",
+      "Fleet management",
+      "Delivery optimization",
+      "Transportation safety"
+    ],
+    pricing: "Starting at $999/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Generative AI & Content Creation",
-    description: "Advanced AI for content generation, creative writing, and multimedia production",
-    icon: Lightbulb,
+    title: "AI-Powered Climate & Environmental Analysis",
+    description: "Intelligent environmental monitoring and climate prediction using satellite data and AI",
+    icon: Globe,
     features: [
-      "Text Generation",
-      "Image Creation",
-      "Video Production",
-      "Audio Synthesis",
-      "Code Generation",
-      "Creative Writing"
-    ],
-    color: "from-pink-500 to-rose-500",
-    useCases: [
-      "Marketing content creation",
-      "Software development assistance",
-      "Creative design automation",
-      "Educational content generation"
-    ]
-  },
-  {
-    title: "AI Ethics & Governance",
-    description: "Responsible AI implementation with ethical frameworks and compliance",
-    icon: Shield,
-    features: [
-      "AI Ethics Auditing",
-      "Bias Detection & Mitigation",
-      "Explainable AI",
-      "Privacy-Preserving AI",
-      "AI Governance Frameworks",
-      "Compliance Monitoring"
+      "Climate Modeling",
+      "Environmental Monitoring",
+      "Weather Prediction",
+      "Carbon Footprint Analysis",
+      "Sustainability Metrics",
+      "Satellite Data Processing"
     ],
     color: "from-emerald-500 to-green-500",
     useCases: [
-      "Fair hiring practices",
-      "Ethical decision making",
-      "Regulatory compliance",
-      "Transparent AI systems"
-    ]
+      "Climate research",
+      "Environmental monitoring",
+      "Sustainability planning",
+      "Weather forecasting"
+    ],
+    pricing: "Starting at $549/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Personalization Engine",
+    description: "Advanced personalization platform for content, products, and user experiences",
+    icon: Users,
+    features: [
+      "User Behavior Analysis",
+      "Content Personalization",
+      "Product Recommendations",
+      "Dynamic Pricing",
+      "A/B Testing",
+      "Real-time Adaptation"
+    ],
+    color: "from-pink-500 to-rose-500",
+    useCases: [
+      "E-commerce personalization",
+      "Content platforms",
+      "Marketing automation",
+      "User experience optimization"
+    ],
+    pricing: "Starting at $279/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Voice & Speech Analytics",
+    description: "Advanced voice analysis for emotion detection, speaker identification, and speech optimization",
+    icon: MessageSquare,
+    features: [
+      "Emotion Detection",
+      "Speaker Identification",
+      "Speech Recognition",
+      "Voice Cloning",
+      "Audio Enhancement",
+      "Real-time Processing"
+    ],
+    color: "from-indigo-500 to-purple-500",
+    useCases: [
+      "Call center analytics",
+      "Voice assistants",
+      "Security applications",
+      "Media production"
+    ],
+    pricing: "Starting at $329/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "AI-Powered Quantum Computing Solutions",
+    description: "Cutting-edge quantum computing applications for optimization and complex problem solving",
+    icon: Cpu,
+    features: [
+      "Quantum Optimization",
+      "Complex Problem Solving",
+      "Cryptography",
+      "Simulation",
+      "Machine Learning",
+      "Research Applications"
+    ],
+    color: "from-violet-500 to-purple-500",
+    useCases: [
+      "Financial modeling",
+      "Drug discovery",
+      "Cryptography",
+      "Scientific research"
+    ],
+    pricing: "Starting at $1,299/month",
+    contact: "kleber@ziontechgroup.com"
   }
 ];
 
@@ -631,7 +588,7 @@ export default function AIServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
               <motion.div
                 key={index}
@@ -680,13 +637,37 @@ export default function AIServicesPage() {
                     </div>
                   </div>
 
-                  <Link
-                    href="/contact"
-                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
-                  >
-                    Learn More
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium text-gray-600">Pricing:</span>
+                      <span className="text-lg font-bold text-gray-900">{service.pricing}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-gray-600">Contact:</span>
+                      <a 
+                        href={`mailto:${service.contact}`}
+                        className="text-sm text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        {service.contact}
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3">
+                    <Link
+                      href="/contact"
+                      className={`flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
+                    >
+                      Get Started
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    <a
+                      href={`mailto:${service.contact}?subject=Inquiry about ${service.title}`}
+                      className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 font-semibold"
+                    >
+                      Contact
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -745,185 +726,6 @@ export default function AIServicesPage() {
                 </ul>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              AI Services Pricing
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Transparent, competitive pricing for AI solutions that deliver real business value.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Starter Plan */}
-            <motion.div
-              className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-blue-500 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter AI</h3>
-                <p className="text-gray-600 mb-4">Perfect for small businesses</p>
-                <div className="text-4xl font-bold text-blue-600 mb-2">$2,500</div>
-                <p className="text-gray-500">per month</p>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Basic AI Chatbot</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Document Processing</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Email Support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Basic Analytics</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Monthly Reports</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-center block font-semibold"
-              >
-                Get Started
-              </Link>
-            </motion.div>
-
-            {/* Professional Plan */}
-            <motion.div
-              className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8 relative transform scale-105"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
-                  Most Popular
-                </span>
-              </div>
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2">Professional AI</h3>
-                <p className="text-blue-100 mb-4">Ideal for growing companies</p>
-                <div className="text-4xl font-bold mb-2">$7,500</div>
-                <p className="text-blue-100">per month</p>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Advanced AI Models</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Custom ML Solutions</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>24/7 Priority Support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Real-time Analytics</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>API Integration</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
-                  <span>Dedicated Account Manager</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="w-full bg-white text-blue-600 py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-center block font-semibold"
-              >
-                Get Started
-              </Link>
-            </motion.div>
-
-            {/* Enterprise Plan */}
-            <motion.div
-              className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-purple-500 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise AI</h3>
-                <p className="text-gray-600 mb-4">For large organizations</p>
-                <div className="text-4xl font-bold text-purple-600 mb-2">Custom</div>
-                <p className="text-gray-500">pricing</p>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Quantum AI Solutions</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Custom AI Development</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">White-label Solutions</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">On-premise Deployment</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">Dedicated AI Team</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-gray-700">SLA Guarantee</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg hover:bg-purple-700 transition-colors duration-300 text-center block font-semibold"
-              >
-                Contact Sales
-              </Link>
-            </motion.div>
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">
-              All plans include free consultation and custom implementation
-            </p>
-            <Link
-              href="/contact"
-              className="text-blue-600 hover:text-blue-700 font-semibold underline"
-            >
-              Schedule a free consultation →
-            </Link>
           </div>
         </div>
       </section>
@@ -1010,6 +812,80 @@ export default function AIServicesPage() {
                 </p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Get Started Today
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Ready to transform your business with AI? Contact our experts for a personalized consultation and custom solution.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+              <p className="text-gray-600 mb-4">Speak directly with our AI experts</p>
+              <a 
+                href="tel:+13024640950" 
+                className="text-blue-600 hover:text-blue-800 font-semibold text-lg"
+              >
+                +1 (302) 464-0950
+              </a>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Mail className="w-12 h-12 text-green-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-4">Send us your requirements</p>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="text-green-600 hover:text-green-800 font-semibold text-lg"
+              >
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <MapPin className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+              <p className="text-gray-600 mb-4">Our headquarters location</p>
+              <p className="text-purple-600 font-semibold text-sm">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
