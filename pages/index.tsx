@@ -2,12 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin } from 'lucide-react';
-=======
 import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin, Star, TrendingUp, Clock, DollarSign } from 'lucide-react';
 import Layout from './components/Layout';
->>>>>>> cursor/website-audit-and-update-with-deployment-560a
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -44,12 +40,6 @@ const services = [
     description: "120+ innovative micro SaaS solutions for modern businesses across all industries with real-time pricing, market analysis, and instant deployment",
     icon: Cloud,
     href: "/micro-saas",
-<<<<<<< HEAD
-    count: "120+ Platforms",
-    pricing: "Starting at $29/month",
-    marketPrice: "$50-500/month",
-    benefits: ["10x productivity", "Instant setup", "White-label options"]
-=======
     price: "Starting at $1,500/month"
   }
 ];
@@ -119,31 +109,17 @@ const whyChooseUs = [
     title: "Competitive Pricing",
     description: "Transparent pricing with no hidden costs",
     icon: "💰"
->>>>>>> cursor/website-audit-and-update-with-deployment-560a
   }
 ];
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
-    <>
-      <Head>
-        <title>Zion Tech Group - Leading AI, IT & Micro SAAS Solutions Provider</title>
-        <meta name="description" content="Zion Tech Group provides cutting-edge AI services, IT solutions, and innovative micro SAAS platforms. Transform your business with our comprehensive technology services and solutions." />
-        <meta name="keywords" content="AI development, cloud solutions, blockchain, IoT platforms, micro SAAS, IT services, technology solutions" />
-        <meta property="og:title" content="Zion Tech Group - Leading Technology Solutions Provider" />
-        <meta property="og:description" content="Transform your business with our AI, IT, and micro SAAS solutions. Expert technology services for modern enterprises." />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:type" content="website" />
-      </Head>
-=======
     <Layout
       title="Zion Tech Group - Leading AI, IT & Micro SAAS Solutions Provider"
       description="Zion Tech Group provides cutting-edge AI services, IT solutions, and innovative micro SAAS platforms. Transform your business with our comprehensive technology services and solutions."
       keywords="AI development, cloud solutions, blockchain, IoT platforms, micro SAAS, IT services, technology solutions"
       canonical="https://ziontechgroup.com"
     >
->>>>>>> cursor/website-audit-and-update-with-deployment-560a
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -262,9 +238,6 @@ export default function HomePage() {
               })}
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-=======
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
@@ -291,20 +264,19 @@ export default function HomePage() {
           </div>
         </div>
       </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-560a
 
-        {/* Stats Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+      {/* Stats Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -334,9 +306,6 @@ export default function HomePage() {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <motion.div
-<<<<<<< HEAD
-                className="bg-white p-6 rounded-lg shadow-lg"
-=======
                 key={index}
                 className="text-center"
                 initial={{ opacity: 0, y: 20 }}
@@ -366,7 +335,6 @@ export default function HomePage() {
               <motion.div 
                 key={index}
                 className="text-center"
->>>>>>> cursor/website-audit-and-update-with-deployment-560a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
@@ -382,106 +350,10 @@ export default function HomePage() {
                   <li>• Transparent, no hidden fees</li>
                 </ul>
               </motion.div>
-<<<<<<< HEAD
-              <motion.div
-                className="bg-white p-6 rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Innovation Focus</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• 100+ cutting-edge services</li>
-                  <li>• AI, Blockchain, IoT, Quantum expertise</li>
-                  <li>• Metaverse & AR/VR solutions</li>
-                  <li>• Space technology infrastructure</li>
-                  <li>• Future-ready technology stack</li>
-                </ul>
-              </motion.div>
-              <motion.div
-                className="bg-white p-6 rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-bold text-gray-900 mb-4">📞 Expert Support</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• 24/7 technical support</li>
-                  <li>• Dedicated project managers</li>
-                  <li>• Free consultation & quotes</li>
-                  <li>• Rapid response times</li>
-                </ul>
-              </motion.div>
-            </div>
-            <motion.div
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-              <p className="text-lg mb-6">
-                Contact us today for a free consultation and custom quote tailored to your needs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <div className="text-center sm:text-left">
-                  <p className="text-blue-100 mb-1">📞 <strong>Call:</strong> +1 302 464 0950</p>
-                  <p className="text-blue-100 mb-1">📧 <strong>Email:</strong> kleber@ziontechgroup.com</p>
-                  <p className="text-blue-100">📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
-                </div>
-                <Link href="/contact" className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">Get Free Quote</Link>
-              </div>
-            </motion.div>
-=======
             ))}
->>>>>>> cursor/website-audit-and-update-with-deployment-560a
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Let our expert team help you leverage cutting-edge technology to drive growth and innovation.
-                <br className="hidden md:block" />
-                <span className="text-blue-200 font-semibold">Get your free consultation today!</span>
-              </p>
-              <div className="mb-8">
-                <p className="text-lg text-blue-100 mb-2">
-                  📞 <strong>Call us:</strong> +1 302 464 0950
-                </p>
-                <p className="text-lg text-blue-100 mb-2">
-                  📧 <strong>Email us:</strong> kleber@ziontechgroup.com
-                </p>
-                <p className="text-lg text-blue-100">
-                  📍 <strong>Visit us:</strong> 364 E Main St STE 1008, Middletown DE 19709
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Free Consultation
-                </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  Learn About Us
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
       {/* Contact CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -514,6 +386,5 @@ export default function HomePage() {
         </div>
       </section>
     </Layout>
->>>>>>> cursor/website-audit-and-update-with-deployment-560a
   );
 }
