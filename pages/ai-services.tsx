@@ -23,6 +23,7 @@ import {
   Mic, 
   Code, 
   Settings, 
+  Cog,
   Monitor, 
   Smartphone, 
   Cloud, 

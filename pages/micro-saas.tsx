@@ -40,7 +40,9 @@ import {
   Trash2,
   Camera,
   HardDrive,
-  Droplets
+  Droplets,
+  Settings,
+  Code
 } from 'lucide-react';
 import Layout from '../components/Layout';
 

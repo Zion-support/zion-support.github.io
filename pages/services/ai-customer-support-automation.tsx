@@ -22,7 +22,8 @@ import {
   Settings,
   Phone as PhoneIcon,
   MapPin,
-  Mail as MailIcon
+  Mail as MailIcon,
+  Brain
 } from 'lucide-react';
 
 const contactInfo = {

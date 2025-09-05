@@ -39,6 +39,50 @@ const values = [
   }
 ];
 
+const team = [
+  {
+    name: 'Dr. Sarah Johnson',
+    role: 'Chief Technology Officer',
+    image: '/api/placeholder/300/300',
+    bio: 'Leading AI research and development with 15+ years of experience in machine learning and enterprise solutions.'
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Head of Engineering',
+    image: '/api/placeholder/300/300',
+    bio: 'Expert in cloud architecture and scalable systems with a passion for building innovative technology solutions.'
+  },
+  {
+    name: 'Emily Rodriguez',
+    role: 'VP of Product Strategy',
+    image: '/api/placeholder/300/300',
+    bio: 'Driving product innovation and market strategy with deep expertise in SaaS and micro-services architecture.'
+  }
+];
+
+const achievements = [
+  {
+    number: '500+',
+    label: 'Projects Completed',
+    description: 'Successfully delivered projects across various industries'
+  },
+  {
+    number: '50+',
+    label: 'Enterprise Clients',
+    description: 'Trusted by leading companies worldwide'
+  },
+  {
+    number: '99.9%',
+    label: 'Uptime Guarantee',
+    description: 'Reliable and secure solutions for mission-critical applications'
+  },
+  {
+    number: '24/7',
+    label: 'Support Available',
+    description: 'Round-the-clock technical support and monitoring'
+  }
+];
+
 export default function AboutPage() {
   return (
     <Layout
