@@ -1,47 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Settings, 
-  Brain, 
-  Network, 
-  Cloud, 
-  Globe, 
-  Shield, 
-  Building, 
-  Heart, 
-  DollarSign, 
-  ShoppingCart, 
-  BookOpen, 
-  Zap, 
-  Video, 
-  Users, 
-  Rocket, 
-  MessageSquare, 
-  Phone, 
-  FileText 
-=======
-import { useRouter } from 'next/router';
-import { motion } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  Sun, 
-  Moon, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock,
-  ChevronDown,
-  DollarSign
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
-=======
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -62,7 +20,6 @@ import {
   Target,
   ArrowRight,
   ExternalLink
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
 } from 'lucide-react';
 
 const navigation = [
@@ -74,213 +31,47 @@ const navigation = [
   {
     name: 'Services',
     href: '/services',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    icon: Settings,
-    children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '40+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '40+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '45+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '125+' }
-=======
     children: [
       { name: 'AI Services', href: '/ai-services', description: 'Cutting-edge AI solutions' },
       { name: 'IT Services', href: '/it-services', description: 'Comprehensive IT solutions' },
       { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Cloud infrastructure solutions' },
       { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security solutions' },
-<<<<<<< HEAD
       { name: 'Data Analytics', href: '/services/data-analytics', description: 'Data insights and analytics' },
       { name: 'All Services', href: '/services', description: 'Complete service portfolio' }
-=======
-      { name: 'Data Analytics', href: '/services/data-analytics', description: 'Data insights and analytics' }
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
-=======
-    type: 'dropdown',
-    children: [
-      {
-        name: 'All Services',
-        href: '/services',
-        description: 'Comprehensive technology solutions'
-      },
-      {
-        name: 'AI Services',
-        href: '/ai-services',
-        description: 'Artificial Intelligence solutions',
-        icon: Brain
-      },
-      {
-        name: 'IT Services',
-        href: '/it-services',
-        description: 'Information Technology services',
-        icon: Network
-      },
-      {
-        name: 'Micro SaaS',
-        href: '/micro-saas',
-        description: 'Software as a Service solutions',
-        icon: Cloud
-      },
-      {
-        name: 'Cloud & DevOps',
-        href: '/services/cloud-devops',
-        description: 'Cloud infrastructure and DevOps solutions'
-      },
-      {
-        name: 'Cybersecurity',
-        href: '/services/cybersecurity',
-        description: 'Advanced security solutions'
-      },
-      {
-        name: 'Data Analytics',
-        href: '/services/data-analytics',
-        description: 'Data analysis and business intelligence'
-      }
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
->>>>>>> db49e3d85ef86349882b1133a9775950c233879f
     ]
   },
   {
     name: 'Solutions',
     href: '/solutions',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    icon: Shield,
-    children: [
-      { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Zap },
-      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud }
-=======
     children: [
       { name: 'Enterprise', href: '/solutions/enterprise', description: 'Enterprise solutions' },
       { name: 'Healthcare', href: '/solutions/healthcare', description: 'Healthcare technology' },
       { name: 'Finance', href: '/solutions/finance', description: 'Financial services' },
       { name: 'Education', href: '/solutions/education', description: 'Educational technology' },
-<<<<<<< HEAD
-      { name: 'Government', href: '/solutions/government', description: 'Government solutions' },
-      { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Manufacturing solutions' },
-      { name: 'Retail', href: '/solutions/retail', description: 'Retail technology' }
-=======
       { name: 'Government', href: '/solutions/government', description: 'Government solutions' }
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
-=======
-    type: 'dropdown',
-    children: [
-      {
-        name: 'All Solutions',
-        href: '/solutions',
-        description: 'Complete solution portfolio'
-      },
-      {
-        name: 'Enterprise',
-        href: '/solutions/enterprise',
-        description: 'Large-scale business solutions'
-      },
-      {
-        name: 'Healthcare',
-        href: '/solutions/healthcare',
-        description: 'Healthcare technology solutions'
-      },
-      {
-        name: 'Finance',
-        href: '/solutions/finance',
-        description: 'Financial technology solutions'
-      },
-      {
-        name: 'Retail',
-        href: '/solutions/retail',
-        description: 'Retail technology solutions'
-      },
-      {
-        name: 'Education',
-        href: '/solutions/education',
-        description: 'Educational technology solutions'
-      },
-      {
-        name: 'Government',
-        href: '/solutions/government',
-        description: 'Government and public sector solutions'
-      }
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
->>>>>>> db49e3d85ef86349882b1133a9775950c233879f
     ]
   },
   {
     name: 'Industries',
     href: '/industries',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    icon: Building,
-    children: [
-      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-      { name: 'Finance', href: '/industries/finance', icon: DollarSign },
-      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
-      { name: 'Retail', href: '/industries/retail', icon: ShoppingCart },
-      { name: 'Education', href: '/industries/education', icon: BookOpen },
-      { name: 'Government', href: '/industries/government', icon: Building }
-=======
     children: [
       { name: 'Healthcare', href: '/industries/healthcare', description: 'Healthcare industry' },
       { name: 'Finance', href: '/industries/finance', description: 'Financial services' },
       { name: 'Education', href: '/industries/education', description: 'Education sector' },
       { name: 'Government', href: '/industries/government', description: 'Government sector' },
-<<<<<<< HEAD
-      { name: 'Manufacturing', href: '/industries/manufacturing', description: 'Manufacturing sector' },
-      { name: 'Retail', href: '/industries/retail', description: 'Retail industry' },
-      { name: 'Technology', href: '/industries/technology', description: 'Technology sector' }
-=======
       { name: 'Manufacturing', href: '/industries/manufacturing', description: 'Manufacturing industry' },
       { name: 'Retail', href: '/industries/retail', description: 'Retail industry' }
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
->>>>>>> db49e3d85ef86349882b1133a9775950c233879f
     ]
   },
   {
     name: 'Resources',
     href: '/resources',
-<<<<<<< HEAD
-    icon: FileText,
     children: [
-      { name: 'White Papers', href: '/white-papers', icon: FileText },
-      { name: 'Webinars', href: '/webinars', icon: Video }
-=======
-    type: 'dropdown',
-    children: [
-      {
-        name: 'All Industries',
-        href: '/industries',
-        description: 'Industry-specific solutions'
-      },
-      {
-        name: 'Healthcare',
-        href: '/industries/healthcare',
-        description: 'Healthcare industry solutions'
-      },
-      {
-        name: 'Finance',
-        href: '/industries/finance',
-        description: 'Financial services solutions'
-      },
-      {
-        name: 'Education',
-        href: '/industries/education',
-        description: 'Education sector solutions'
-      },
-      {
-        name: 'Government',
-        href: '/industries/government',
-        description: 'Government solutions'
-      },
-      {
-        name: 'Manufacturing',
-        href: '/industries/manufacturing',
-        description: 'Manufacturing industry solutions'
-      },
-      {
-        name: 'Retail',
-        href: '/industries/retail',
-        description: 'Retail industry solutions'
-      }
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
+      { name: 'White Papers', href: '/white-papers', description: 'Technical documentation' },
+      { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+      { name: 'Blog', href: '/blog', description: 'Latest insights' }
     ]
   },
   {
@@ -395,7 +186,6 @@ export default function Header() {
   };
 
   return (
-<<<<<<< HEAD
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -403,164 +193,75 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-=======
-    children: [
-      { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
-      { name: 'API Reference', href: '/api', description: 'API documentation' },
-      { name: 'Help Center', href: '/help', description: 'Support and help' },
-      { name: 'Community', href: '/community', description: 'Join our community' },
-      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-<<<<<<< HEAD
-      { name: 'Blog', href: '/blog', description: 'Latest insights' },
-      { name: 'White Papers', href: '/whitepapers', description: 'Technical papers' }
-=======
-      { name: 'White Papers', href: '/whitepapers', description: 'Technical papers' },
-      { name: 'Webinars', href: '/webinars', description: 'Educational content' },
-      { name: 'Tutorials', href: '/tutorials', description: 'Learning guides' },
-      { name: 'Help Center', href: '/help', description: 'Support resources' },
-      { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' }
->>>>>>> db49e3d85ef86349882b1133a9775950c233879f
-    ]
-  },
-  {
-    name: 'Company',
-    href: '/about',
-    children: [
-      { name: 'About Us', href: '/about', description: 'Learn about our company' },
-      { name: 'Our Team', href: '/team', description: 'Meet our experts' },
-      { name: 'Careers', href: '/careers', description: 'Join our team' },
-      { name: 'Partners', href: '/partners', description: 'Our partner network' },
-      { name: 'News', href: '/news', description: 'Latest news' },
-      { name: 'Contact', href: '/contact', description: 'Get in touch' }
-    ]
-  },
-  {
-    name: 'Pricing',
-    href: '/pricing',
-    children: [
-      { name: 'Service Pricing', href: '/pricing', description: 'View our pricing' },
-      { name: 'AI Services Pricing', href: '/pricing#ai-services', description: 'AI service pricing' },
-      { name: 'IT Services Pricing', href: '/pricing#it-services', description: 'IT service pricing' },
-      { name: 'Micro SaaS Pricing', href: '/pricing#micro-saas', description: 'SaaS pricing' },
-      { name: 'Enterprise Pricing', href: '/pricing#enterprise', description: 'Enterprise pricing' }
-    ]
-  }
-];
-
-const contactInfo = {
-  phone: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown, DE 19709'
-};
-
-interface HeaderProps {
-  className?: string;
-  onMenuClick?: () => void;
-}
-
-export default function Header({ className = '', onMenuClick }: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState<string | null>(null);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [searchQuery, setSearchQuery] = useState('');
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
-      setIsSearchOpen(false);
-      setSearchQuery('');
-    }
-  };
-
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
-
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${className}`}>
-      {/* Top Bar */}
-      <div className="bg-gray-900 text-gray-300 text-sm py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-blue-400" />
-                <span>{contactInfo.phone}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-blue-400" />
-                <span>{contactInfo.email}</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-blue-400" />
-                <span>24/7 Support</span>
-              </div>
-              <button
-                onClick={toggleTheme}
-                className="p-1 rounded hover:bg-gray-800 transition-colors"
-              >
-                {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Navigation */}
-      <div className="bg-white/95 backdrop-blur-md border-b border-gray-200">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            {/* Mobile Menu Button */}
-            <button
-              onClick={onMenuClick}
-              className="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
-                <span className="text-white font-bold text-sm">Z</span>
+                <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
           </div>
 
-<<<<<<< HEAD
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
+          <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <button
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  onMouseEnter={() => setOpenDropdown(item.name)}
-                  onMouseLeave={() => setOpenDropdown(null)}
+              <div key={item.name} className="relative">
+                <Link
+                  href={item.href}
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  onMouseEnter={() => item.children && setIsDropdownOpen(item.name)}
+                  onMouseLeave={() => setIsDropdownOpen(null)}
                 >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.children && <ChevronDown className="w-4 h-4" />}
-                </button>
+                  {item.name}
+                </Link>
+                {item.children && isDropdownOpen === item.name && (
+                  <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.name}
+                        href={child.href}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                        onClick={handleLinkClick}
+                      >
+                        <div className="font-medium">{child.name}</div>
+                        {child.description && (
+                          <div className="text-xs text-gray-500 mt-1">{child.description}</div>
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
 
-                {item.children && (
-                  <AnimatePresence>
-                    {openDropdown === item.name && (
-                      <motion.div
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <a
+              href="tel:+13024640950"
+              className="text-gray-600 hover:text-blue-600 text-sm font-medium transition-colors duration-200"
+            >
+              +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="text-gray-600 hover:text-blue-600 text-sm font-medium transition-colors duration-200"
+            >
+              kleber@ziontechgroup.com
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-blue-600 p-2"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}

@@ -781,6 +781,228 @@ const itServices = [
     pricing: '$30,000 - $150,000/project',
     category: 'Green IT',
     popular: true
+  },
+  {
+    title: 'Enterprise Software Development',
+    description: 'Custom enterprise software solutions tailored to your business requirements.',
+    icon: Code,
+    features: ['Custom Development', 'Scalable Architecture', 'Integration Services', 'Maintenance & Support'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Software Development',
+    popular: true,
+    link: 'https://enterprisesoftware.ziontechgroup.com'
+  },
+  {
+    title: 'Mobile App Development',
+    description: 'Native and cross-platform mobile applications for iOS and Android.',
+    icon: Smartphone,
+    features: ['iOS Development', 'Android Development', 'Cross-platform', 'App Store Optimization'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Mobile Development',
+    link: 'https://mobileapps.ziontechgroup.com'
+  },
+  {
+    title: 'Web Application Development',
+    description: 'Modern web applications with responsive design and advanced functionality.',
+    icon: Monitor,
+    features: ['Responsive Design', 'Progressive Web Apps', 'API Integration', 'Performance Optimization'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Web Development',
+    link: 'https://webapps.ziontechgroup.com'
+  },
+  {
+    title: 'API Development & Integration',
+    description: 'Custom API development and third-party system integration services.',
+    icon: Network,
+    features: ['RESTful APIs', 'GraphQL APIs', 'Third-party Integration', 'API Documentation'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'API Services',
+    link: 'https://apidevelopment.ziontechgroup.com'
+  },
+  {
+    title: 'IT Security Audit & Assessment',
+    description: 'Comprehensive security assessment and vulnerability analysis.',
+    icon: Shield,
+    features: ['Security Audit', 'Vulnerability Assessment', 'Penetration Testing', 'Compliance Review'],
+    pricing: '$5,000 - $25,000/assessment',
+    category: 'Security',
+    link: 'https://securityaudit.ziontechgroup.com'
+  },
+  {
+    title: 'Business Intelligence Solutions',
+    description: 'Data analytics and business intelligence platform development.',
+    icon: BarChart3,
+    features: ['Data Warehousing', 'Dashboard Development', 'Report Generation', 'Data Visualization'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Business Intelligence',
+    popular: true,
+    link: 'https://businessintelligence.ziontechgroup.com'
+  },
+  {
+    title: 'IT Infrastructure Monitoring',
+    description: 'Advanced monitoring and alerting systems for IT infrastructure.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Performance Metrics', 'Alert Management', 'Capacity Planning'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Monitoring',
+    link: 'https://infrastructuremonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'Disaster Recovery Solutions',
+    description: 'Comprehensive disaster recovery planning and implementation.',
+    icon: Shield,
+    features: ['Recovery Planning', 'Backup Solutions', 'Failover Systems', 'Testing & Validation'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Disaster Recovery',
+    link: 'https://disasterrecovery.ziontechgroup.com'
+  },
+  {
+    title: 'IT Asset Management',
+    description: 'Complete IT asset lifecycle management and optimization.',
+    icon: Package,
+    features: ['Asset Tracking', 'License Management', 'Lifecycle Planning', 'Cost Optimization'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Asset Management',
+    link: 'https://assetmanagement.ziontechgroup.com'
+  },
+  {
+    title: 'Network Security Implementation',
+    description: 'Advanced network security solutions and firewall management.',
+    icon: Shield,
+    features: ['Firewall Configuration', 'Intrusion Detection', 'VPN Setup', 'Network Segmentation'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Network Security',
+    link: 'https://networksecurity.ziontechgroup.com'
+  },
+  {
+    title: 'IT Training & Support',
+    description: 'Comprehensive IT training programs and ongoing technical support.',
+    icon: Users,
+    features: ['Technical Training', 'User Support', 'Documentation', 'Knowledge Transfer'],
+    pricing: '$100 - $300/hour',
+    category: 'Training & Support',
+    link: 'https://ittraining.ziontechgroup.com'
+  },
+  {
+    title: 'Cloud Cost Optimization',
+    description: 'Cloud resource optimization and cost reduction strategies.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Resource Optimization', 'Right-sizing', 'Reserved Instances'],
+    pricing: '$3,000 - $15,000/project',
+    category: 'Cloud Optimization',
+    popular: true,
+    link: 'https://cloudoptimization.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance & Governance',
+    description: 'IT governance framework implementation and compliance management.',
+    icon: FileText,
+    features: ['Compliance Framework', 'Policy Development', 'Risk Assessment', 'Audit Support'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Compliance',
+    link: 'https://itcompliance.ziontechgroup.com'
+  },
+  {
+    title: 'Hybrid Cloud Solutions',
+    description: 'Hybrid cloud architecture design and implementation services.',
+    icon: Cloud,
+    features: ['Hybrid Architecture', 'Multi-cloud Strategy', 'Data Synchronization', 'Security Integration'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Hybrid Cloud',
+    link: 'https://hybridcloud.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Desk Solutions',
+    description: 'Comprehensive IT service desk implementation and management.',
+    icon: Headphones,
+    features: ['Ticketing System', 'Knowledge Base', 'SLA Management', 'User Portal'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Service Desk',
+    link: 'https://servicedesk.ziontechgroup.com'
+  },
+  {
+    title: 'IT Support & Maintenance',
+    description: 'Comprehensive IT support and maintenance services for ongoing operations.',
+    icon: Headphones,
+    features: ['24/7 Support', 'Proactive Monitoring', 'Hardware Maintenance', 'Software Updates'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Support',
+    link: 'https://itsupport.ziontechgroup.com'
+  },
+  {
+    title: 'Kubernetes & Container Orchestration',
+    description: 'Advanced container orchestration and microservices architecture implementation.',
+    icon: Server,
+    features: ['Kubernetes Deployment', 'Microservices Architecture', 'Service Mesh', 'Auto-scaling'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Containers',
+    popular: true,
+    link: 'https://kubernetes.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model for modern enterprise environments.',
+    icon: Shield,
+    features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Continuous Monitoring'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Security',
+    popular: true,
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure and application deployment services.',
+    icon: Cpu,
+    features: ['Edge Infrastructure', 'Latency Optimization', 'Data Processing', 'IoT Integration'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization services.',
+    icon: Network,
+    features: ['5G Architecture', 'Network Slicing', 'Performance Optimization', 'IoT Integration'],
+    pricing: '$50,000 - $250,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Quantum computing solutions and hybrid quantum-classical systems.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Hybrid Systems', 'Quantum Security', 'Performance Optimization'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Quantum Computing',
+    link: 'https://quantumcomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Blockchain network design, implementation, and management services.',
+    icon: Network,
+    features: ['Blockchain Architecture', 'Smart Contracts', 'Consensus Mechanisms', 'Security Implementation'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Internet of Things platform design and implementation services.',
+    icon: Network,
+    features: ['IoT Architecture', 'Device Management', 'Data Processing', 'Security Implementation'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'IoT',
+    link: 'https://iotplatform.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure Setup',
+    description: 'AI and machine learning infrastructure design and implementation.',
+    icon: Brain,
+    features: ['ML Infrastructure', 'GPU Clusters', 'Data Pipelines', 'Model Deployment'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'AI Infrastructure',
+    popular: true,
+    link: 'https://aiinfrastructure.ziontechgroup.com'
   }
 ];
 
@@ -1430,7 +1652,9 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               <p className="text-gray-600 mb-4">Schedule a visit to our state-of-the-art IT operations center in Delaware.</p>
               <address className="text-green-600 font-semibold not-italic">
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709
+                Middletown, DE 19709<br />
+                <a href="tel:+13024640950" className="text-green-600 hover:text-green-800">+1 302 464 0950</a><br />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-800">kleber@ziontechgroup.com</a>
               </address>
             </motion.div>
           </div>

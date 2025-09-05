@@ -62,7 +62,6 @@ const blogPosts = [
     category: 'Quantum Computing',
     image: '/blog/quantum-computing.jpg',
     tags: ['Quantum Computing', 'Technology', 'Innovation', 'Future']
-<<<<<<< HEAD
   },
   {
     id: 2,
@@ -75,7 +74,7 @@ const blogPosts = [
     image: "/api/placeholder/600/300"
   },
   {
-    id: 2,
+    id: 3,
     title: "Cloud Migration Best Practices",
     excerpt: "Learn how to successfully migrate your infrastructure to the cloud with minimal downtime.",
     author: "Michael Rodriguez",
@@ -103,9 +102,6 @@ const blogPosts = [
     category: "SaaS",
     readTime: "8 min read",
     image: "/api/placeholder/600/300"
->>>>>>> cursor/expand-services-advertise-and-build-project-dc3f
-=======
->>>>>>> db49e3d85ef86349882b1133a9775950c233879f
   }
 ];
 

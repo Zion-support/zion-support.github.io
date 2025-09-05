@@ -699,6 +699,492 @@ const microSaaSProducts = [{
     description: 'Graph-based AI solutions for complex relationship modeling.',
     icon: Network,
     features: ['Graph Analysis', 'Node Classification', 'Link Prediction', 'Graph Generation'],
+    pricing: '$199 - $999/month',
+    category: 'Graph AI'
+  },
+  {
+    title: 'AI Time Series Forecasting Platform',
+    description: 'Advanced time series analysis and forecasting using AI and machine learning.',
+    icon: TrendingUp,
+    features: ['Seasonal Analysis', 'Anomaly Detection', 'Multi-step Forecasting', 'Confidence Intervals'],
+    pricing: '$149 - $799/month',
+    category: 'Time Series AI',
+    popular: true,
+    link: 'https://timeseriesai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Recommendation Engine Pro',
+    description: 'Advanced recommendation systems with deep learning and real-time personalization.',
+    icon: Target,
+    features: ['Collaborative Filtering', 'Content-based Filtering', 'Hybrid Approaches', 'Real-time Updates'],
+    pricing: '$199 - $999/month',
+    category: 'Recommendation AI',
+    popular: true,
+    link: 'https://recommendationai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Fraud Detection Suite',
+    description: 'Real-time fraud detection and prevention using advanced AI algorithms.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'False Positive Reduction'],
+    pricing: '$299 - $1,499/month',
+    category: 'Fraud Detection',
+    popular: true,
+    link: 'https://fraudai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Content Moderation Platform',
+    description: 'Automated content moderation for text, images, and videos using AI.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'Human-in-the-loop'],
+    pricing: '$99 - $599/month',
+    category: 'Content Moderation',
+    link: 'https://contentmoderation.ziontechgroup.com'
+  },
+  {
+    title: 'AI Document Processing Suite',
+    description: 'Intelligent document extraction, classification, and data processing.',
+    icon: FileText,
+    features: ['OCR & Text Extraction', 'Document Classification', 'Data Validation', 'Workflow Automation'],
+    pricing: '$149 - $799/month',
+    category: 'Document AI',
+    popular: true,
+    link: 'https://documentai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Video Analytics Platform',
+    description: 'Advanced video analysis and understanding using computer vision AI.',
+    icon: Video,
+    features: ['Object Detection', 'Activity Recognition', 'Facial Recognition', 'Scene Understanding'],
+    pricing: '$199 - $999/month',
+    category: 'Video AI',
+    link: 'https://videoai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Audio Processing Suite',
+    description: 'Intelligent audio analysis, transcription, and enhancement platform.',
+    icon: Mic,
+    features: ['Speech Recognition', 'Audio Enhancement', 'Speaker Identification', 'Emotion Detection'],
+    pricing: '$99 - $599/month',
+    category: 'Audio AI',
+    link: 'https://audioai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Search & Discovery Engine',
+    description: 'Intelligent search and discovery platform with semantic understanding.',
+    icon: Search,
+    features: ['Semantic Search', 'Query Understanding', 'Result Ranking', 'Personalization'],
+    pricing: '$149 - $799/month',
+    category: 'Search AI',
+    link: 'https://searchai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Translation & Localization',
+    description: 'Advanced translation and localization services powered by AI.',
+    icon: Globe,
+    features: ['Multi-language Support', 'Context Awareness', 'Cultural Adaptation', 'Quality Assessment'],
+    pricing: '$79 - $399/month',
+    category: 'Translation AI',
+    link: 'https://translationai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Customer Service Automation',
+    description: 'Intelligent customer service automation with natural language understanding.',
+    icon: MessageSquare,
+    features: ['Intent Recognition', 'Context Management', 'Escalation Handling', 'Performance Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'Customer Service AI',
+    popular: true,
+    link: 'https://customerserviceai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Sales Intelligence Platform',
+    description: 'AI-powered sales insights, forecasting, and optimization tools.',
+    icon: TrendingUp,
+    features: ['Sales Forecasting', 'Lead Scoring', 'Pipeline Analysis', 'Performance Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Sales AI',
+    link: 'https://salesai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Marketing Automation Suite',
+    description: 'Comprehensive marketing automation with AI-powered personalization.',
+    icon: Target,
+    features: ['Campaign Optimization', 'Audience Segmentation', 'Content Personalization', 'ROI Analysis'],
+    pricing: '$199 - $999/month',
+    category: 'Marketing AI',
+    popular: true,
+    link: 'https://marketingai.ziontechgroup.com'
+  },
+  {
+    title: 'AI HR & Talent Management',
+    description: 'AI-powered human resources and talent management solutions.',
+    icon: Users,
+    features: ['Resume Screening', 'Candidate Matching', 'Performance Analysis', 'Retention Prediction'],
+    pricing: '$149 - $799/month',
+    category: 'HR AI',
+    link: 'https://hrai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Financial Analysis Platform',
+    description: 'Intelligent financial analysis, risk assessment, and investment insights.',
+    icon: DollarSign,
+    features: ['Risk Assessment', 'Investment Analysis', 'Market Prediction', 'Portfolio Optimization'],
+    pricing: '$299 - $1,499/month',
+    category: 'FinTech AI',
+    popular: true,
+    link: 'https://fintechai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Legal Document Analysis',
+    description: 'AI-powered legal document review, analysis, and contract intelligence.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Legal Research', 'Risk Assessment', 'Compliance Checking'],
+    pricing: '$399 - $1,999/month',
+    category: 'Legal AI',
+    link: 'https://legalai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Insurance Claims Processing',
+    description: 'Automated insurance claims processing and fraud detection using AI.',
+    icon: Shield,
+    features: ['Claims Assessment', 'Fraud Detection', 'Damage Estimation', 'Automated Processing'],
+    pricing: '$199 - $999/month',
+    category: 'Insurance AI',
+    link: 'https://insuranceai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Real Estate Valuation',
+    description: 'AI-powered property valuation and real estate market analysis.',
+    icon: Home,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Insights', 'Risk Assessment'],
+    pricing: '$99 - $599/month',
+    category: 'PropTech AI',
+    link: 'https://proptechai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Manufacturing Optimization',
+    description: 'AI-driven manufacturing process optimization and quality control.',
+    icon: Settings,
+    features: ['Process Optimization', 'Quality Control', 'Predictive Maintenance', 'Supply Chain Management'],
+    pricing: '$299 - $1,499/month',
+    category: 'Manufacturing AI',
+    link: 'https://manufacturingai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Energy Management System',
+    description: 'Intelligent energy consumption optimization and renewable energy integration.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Demand Forecasting', 'Renewable Integration', 'Cost Analysis'],
+    pricing: '$149 - $799/month',
+    category: 'Energy AI',
+    link: 'https://energyai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Transportation Optimization',
+    description: 'AI-powered transportation and logistics optimization platform.',
+    icon: Car,
+    features: ['Route Optimization', 'Fleet Management', 'Demand Prediction', 'Cost Reduction'],
+    pricing: '$199 - $999/month',
+    category: 'Transportation AI',
+    link: 'https://transportationai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Agriculture Intelligence',
+    description: 'Smart farming solutions with AI-powered crop and livestock management.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Disease Detection', 'Resource Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'AgTech AI',
+    link: 'https://agtechai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Healthcare Diagnostics',
+    description: 'AI-powered medical diagnostics and health monitoring solutions.',
+    icon: Heart,
+    features: ['Medical Imaging', 'Symptom Analysis', 'Treatment Recommendations', 'Health Monitoring'],
+    pricing: '$399 - $1,999/month',
+    category: 'Healthcare AI',
+    popular: true,
+    link: 'https://healthcareai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Education Personalization',
+    description: 'Personalized learning experiences powered by AI and adaptive learning.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Progress Tracking', 'Content Recommendation', 'Assessment Generation'],
+    pricing: '$99 - $599/month',
+    category: 'EdTech AI',
+    link: 'https://edtechai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Gaming Intelligence',
+    description: 'AI-powered game development, player analysis, and content generation.',
+    icon: Target,
+    features: ['Procedural Generation', 'Player Behavior Analysis', 'Game Balancing', 'Anti-cheat Systems'],
+    pricing: '$149 - $799/month',
+    category: 'Gaming AI',
+    link: 'https://gamingai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Sports Analytics',
+    description: 'Advanced sports performance analysis and prediction using AI.',
+    icon: TrendingUp,
+    features: ['Performance Analysis', 'Injury Prediction', 'Tactical Analysis', 'Player Scouting'],
+    pricing: '$199 - $999/month',
+    category: 'Sports AI',
+    link: 'https://sportsai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Retail Intelligence',
+    description: 'AI-powered retail analytics and customer experience optimization.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Inventory Optimization', 'Price Optimization', 'Personalization'],
+    pricing: '$149 - $799/month',
+    category: 'Retail AI',
+    link: 'https://retailai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Supply Chain Intelligence',
+    description: 'End-to-end supply chain optimization with AI-powered insights.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Supplier Risk Analysis', 'Route Optimization', 'Inventory Management'],
+    pricing: '$299 - $1,499/month',
+    category: 'Supply Chain AI',
+    popular: true,
+    link: 'https://supplychainai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Environmental Monitoring',
+    description: 'AI-powered environmental data collection and analysis system.',
+    icon: Sprout,
+    features: ['Air Quality Monitoring', 'Water Quality Analysis', 'Pollution Detection', 'Environmental Reporting'],
+    pricing: '$199 - $999/month',
+    category: 'Environmental AI',
+    link: 'https://environmentalai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Digital Twin Platform',
+    description: 'AI-powered digital twin creation and simulation platform.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analysis', 'Virtual Testing'],
+    pricing: '$399 - $1,999/month',
+    category: 'Digital Twin AI',
+    link: 'https://digitaltwinai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Edge Computing Platform',
+    description: 'AI processing at the edge for real-time decision making.',
+    icon: Cpu,
+    features: ['Real-time Processing', 'Low Latency', 'Offline Capability', 'Resource Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Edge AI',
+    link: 'https://edgeai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Robotic Process Automation',
+    description: 'Intelligent automation of complex business processes.',
+    icon: Settings,
+    features: ['Process Discovery', 'Workflow Automation', 'Exception Handling', 'Performance Monitoring'],
+    pricing: '$99 - $599/month',
+    category: 'RPA AI',
+    link: 'https://rpaai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Augmented Reality Platform',
+    description: 'AI-enhanced AR applications and experiences.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Gesture Control', 'Real-time Rendering'],
+    pricing: '$199 - $999/month',
+    category: 'AR AI',
+    link: 'https://arai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Virtual Reality Experiences',
+    description: 'Immersive VR experiences powered by AI.',
+    icon: Monitor,
+    features: ['Virtual World Generation', 'AI Avatars', 'Behavioral Simulation', 'Haptic Feedback'],
+    pricing: '$299 - $1,499/month',
+    category: 'VR AI',
+    link: 'https://vrai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Internet of Things Platform',
+    description: 'AI-powered IoT device management and analytics.',
+    icon: Network,
+    features: ['Device Management', 'Data Analytics', 'Predictive Maintenance', 'Security Monitoring'],
+    pricing: '$149 - $799/month',
+    category: 'IoT AI',
+    link: 'https://iotai.ziontechgroup.com'
+  },
+  {
+    title: 'AI 5G Network Optimization',
+    description: 'AI-powered 5G network management and optimization.',
+    icon: Network,
+    features: ['Network Slicing', 'Traffic Optimization', 'Quality of Service', 'Resource Allocation'],
+    pricing: '$399 - $1,999/month',
+    category: '5G AI',
+    link: 'https://5gai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Blockchain Smart Contracts',
+    description: 'AI-enhanced smart contract development and auditing.',
+    icon: Code,
+    features: ['Smart Contract Generation', 'Security Auditing', 'Gas Optimization', 'Automated Testing'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain AI',
+    link: 'https://blockchainai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Quantum Machine Learning',
+    description: 'Quantum-enhanced machine learning algorithms.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Pattern Recognition', 'Quantum Simulation'],
+    pricing: '$499 - $2,499/month',
+    category: 'Quantum ML',
+    link: 'https://quantumml.ziontechgroup.com'
+  },
+  {
+    title: 'AI Synthetic Data Generation',
+    description: 'AI-powered synthetic data creation for ML training.',
+    icon: Database,
+    features: ['Data Synthesis', 'Privacy Preservation', 'Bias Reduction', 'Quality Validation'],
+    pricing: '$99 - $499/month',
+    category: 'Synthetic Data AI',
+    link: 'https://syntheticdataai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Explainable AI Platform',
+    description: 'Platform for creating explainable AI models.',
+    icon: Brain,
+    features: ['Model Interpretability', 'Bias Detection', 'Fairness Metrics', 'Transparency Reports'],
+    pricing: '$149 - $799/month',
+    category: 'XAI',
+    link: 'https://xai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Federated Learning Platform',
+    description: 'Distributed ML while preserving data privacy.',
+    icon: Network,
+    features: ['Privacy-Preserving ML', 'Distributed Training', 'Model Aggregation', 'Secure Communication'],
+    pricing: '$299 - $1,499/month',
+    category: 'Federated Learning AI',
+    link: 'https://federatedlearningai.ziontechgroup.com'
+  },
+  {
+    title: 'AI AutoML Platform',
+    description: 'Automated machine learning model development.',
+    icon: Settings,
+    features: ['Automated Feature Engineering', 'Model Selection', 'Hyperparameter Tuning', 'Auto Deployment'],
+    pricing: '$49 - $299/month',
+    category: 'AutoML',
+    popular: true,
+    link: 'https://automl.ziontechgroup.com'
+  },
+  {
+    title: 'AI MLOps Platform',
+    description: 'Complete ML operations and model lifecycle management.',
+    icon: Settings,
+    features: ['Model Versioning', 'Experiment Tracking', 'Model Monitoring', 'Automated Deployment'],
+    pricing: '$99 - $599/month',
+    category: 'MLOps AI',
+    link: 'https://mlopsai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Data Pipeline Automation',
+    description: 'Intelligent data pipeline creation and management.',
+    icon: Database,
+    features: ['Pipeline Generation', 'Data Quality Monitoring', 'Error Handling', 'Performance Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Data Engineering AI',
+    link: 'https://dataengineeringai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Model Monitoring Platform',
+    description: 'Comprehensive AI model performance monitoring.',
+    icon: Monitor,
+    features: ['Performance Tracking', 'Drift Detection', 'Alert Management', 'Root Cause Analysis'],
+    pricing: '$79 - $399/month',
+    category: 'Model Monitoring AI',
+    link: 'https://modelmonitoringai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Bias Detection & Mitigation',
+    description: 'AI system bias detection and fairness optimization.',
+    icon: Shield,
+    features: ['Bias Detection', 'Fairness Metrics', 'Mitigation Strategies', 'Compliance Reporting'],
+    pricing: '$99 - $499/month',
+    category: 'AI Ethics',
+    link: 'https://aiethics.ziontechgroup.com'
+  },
+  {
+    title: 'AI Model Compression Platform',
+    description: 'AI model size reduction and performance optimization.',
+    icon: Cpu,
+    features: ['Model Pruning', 'Quantization', 'Knowledge Distillation', 'Hardware Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Model Optimization AI',
+    link: 'https://modeloptimizationai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Edge Model Deployment',
+    description: 'Deployment of AI models on edge devices.',
+    icon: Smartphone,
+    features: ['Model Conversion', 'Hardware Optimization', 'Performance Tuning', 'Deployment Automation'],
+    pricing: '$199 - $999/month',
+    category: 'Edge Deployment AI',
+    link: 'https://edgedeploymentai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Multi-Modal Learning',
+    description: 'AI systems processing multiple data types.',
+    icon: Eye,
+    features: ['Text-Image Processing', 'Audio-Visual Analysis', 'Cross-Modal Learning', 'Fusion Techniques'],
+    pricing: '$299 - $1,499/month',
+    category: 'Multi-Modal AI',
+    link: 'https://multimodalai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Transfer Learning Platform',
+    description: 'Platform for transferring knowledge between AI models.',
+    icon: Network,
+    features: ['Pre-trained Models', 'Domain Adaptation', 'Fine-tuning Tools', 'Knowledge Transfer'],
+    pricing: '$99 - $499/month',
+    category: 'Transfer Learning AI',
+    link: 'https://transferlearningai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Reinforcement Learning',
+    description: 'Platform for developing RL agents.',
+    icon: Target,
+    features: ['Environment Simulation', 'Agent Training', 'Policy Optimization', 'Reward Engineering'],
+    pricing: '$199 - $999/month',
+    category: 'Reinforcement Learning AI',
+    link: 'https://reinforcementlearningai.ziontechgroup.com'
+  },
+  {
+    title: 'AI GAN Platform',
+    description: 'GAN-based solutions for data generation.',
+    icon: Image,
+    features: ['Image Generation', 'Data Augmentation', 'Style Transfer', 'Anomaly Generation'],
+    pricing: '$149 - $799/month',
+    category: 'GAN AI',
+    link: 'https://ganai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Transformer Models Platform',
+    description: 'Advanced transformer-based AI models.',
+    icon: Brain,
+    features: ['Language Models', 'Vision Transformers', 'Multimodal Transformers', 'Custom Architectures'],
+    pricing: '$199 - $999/month',
+    category: 'Transformer AI',
+    link: 'https://transformerai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Graph Neural Networks',
+    description: 'Graph-based AI solutions for relationship modeling.',
+    icon: Network,
+    features: ['Graph Analysis', 'Node Classification', 'Link Prediction', 'Graph Generation'],
     pricing: '$149 - $799/month',
     category: 'Graph AI'
   },
@@ -1957,7 +2443,9 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
               <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
               <address className="text-purple-600 font-semibold not-italic">
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709
+                Middletown, DE 19709<br />
+                <a href="tel:+13024640950" className="text-purple-600 hover:text-purple-800">+1 302 464 0950</a><br />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-purple-600 hover:text-purple-800">kleber@ziontechgroup.com</a>
               </address>
             </motion.div>
           </div>
@@ -2059,7 +2547,9 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
               <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
               <address className="text-purple-600 font-semibold not-italic">
                 364 E Main St STE 1008<br />
-                Middletown, DE 19709
+                Middletown, DE 19709<br />
+                <a href="tel:+13024640950" className="text-purple-600 hover:text-purple-800">+1 302 464 0950</a><br />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-purple-600 hover:text-purple-800">kleber@ziontechgroup.com</a>
               </address>
             </motion.div>
           </div>

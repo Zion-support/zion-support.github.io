@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-import React from 'react'
-import Link from 'next/link'
->>>>>>> 5a26b90779d51bf7627c9dcb90ec57f4a22fa8ec
 import {
   MapPin,
   Phone,
@@ -15,69 +9,34 @@ import {
   Twitter,
   Github,
   ArrowRight,
-<<<<<<< HEAD
   ExternalLink
 } from 'lucide-react';
-=======
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram, 
-  Github,
-  ExternalLink
-} from 'lucide-react';
-
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
 const services = {
   'AI Solutions': [
     { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
     { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
     { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
     { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
-<<<<<<< HEAD
     { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
     { name: 'Natural Language Processing', href: '/ai-services#nlp-engine' },
     { name: 'Fraud Detection AI', href: '/ai-services#fraud-detection' },
     { name: 'Quantum Machine Learning', href: '/ai-services#quantum-ml' }
-=======
-<<<<<<< HEAD
-    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
-    { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' }
-=======
-    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' }
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
->>>>>>> db49e3d85ef86349882b1133a9775950c233879f
   ],
   'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
     { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
     { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
     { name: 'Database Management', href: '/it-services#database-management' },
-<<<<<<< HEAD
     { name: 'System Administration', href: '/it-services#system-administration' },
     { name: 'DevOps Implementation', href: '/it-services#devops' },
     { name: 'Managed IT Services', href: '/it-services#managed-it' },
     { name: 'Cloud Migration', href: '/it-services#cloud-migration' }
-=======
-<<<<<<< HEAD
-    { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
-    { name: 'Data Center Migration', href: '/it-services#data-center-migration' }
-=======
-    { name: 'System Administration', href: '/it-services#system-administration' }
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
->>>>>>> db49e3d85ef86349882b1133a9775950c233879f
   ],
   'Micro SaaS': [
     { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
     { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
     { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
     { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-<<<<<<< HEAD
     { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
     { name: 'Smart Inventory Optimizer', href: '/micro-saas#inventory-optimizer' },
     { name: 'Meeting Assistant', href: '/micro-saas#meeting-assistant' },
@@ -110,14 +69,10 @@ const services = {
     { name: 'News', href: '/news' },
     { name: 'Contact', href: '/contact' },
     { name: 'Pricing', href: '/pricing' }
-=======
-<<<<<<< HEAD
-    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
-    { name: 'Email Sequencer', href: '/micro-saas#email-sequencer' }
   ]
 };
+
 const companyLinks = [
-=======
   ExternalLink,
   Youtube,
   Facebook,

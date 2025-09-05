@@ -35,18 +35,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         : [...prev, section]
     );
   };
-<<<<<<< HEAD
 
-  const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Target },
-    { name: 'Services', href: '/services', icon: Briefcase },
-    { name: 'Contact', href: '/contact', icon: Heart }
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   const navigationItems = [
     {
       label: 'Home',
@@ -105,13 +94,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       hasSubmenu: true,
       submenu: [
         { label: 'Blog', href: '/blog' },
-<<<<<<< HEAD
-        { label: 'White Papers', href: '/white-papers' },
-        { label: 'Case Studies', href: '/case-studies' },
-        { label: 'Webinars', href: '/webinars' },
-        { label: 'Help Center', href: '/help' },
-        { label: 'FAQ', href: '/faq' },
-=======
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'White Papers', href: '/whitepapers' },
         { label: 'Webinars', href: '/webinars' },
@@ -119,8 +101,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Guides', href: '/guides' },
         { label: 'Help Center', href: '/help' },
         { label: 'FAQ', href: '/faq' },
-        { label: 'Documentation', href: '/docs' },
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
+        { label: 'Documentation', href: '/docs' }
       ]
     },
     {
@@ -135,28 +116,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'News', href: '/news' },
         { label: 'Contact', href: '/contact' },
       ]
-<<<<<<< HEAD
     }
   ];
-=======
-    },
-    {
-      label: 'Support',
-      href: '/support',
-      icon: HelpCircle,
-      hasSubmenu: true,
-      submenu: [
-        { label: 'Support Center', href: '/support' },
-        { label: 'Help Center', href: '/help' },
-        { label: 'FAQ', href: '/faq' },
-        { label: 'Contact Support', href: '/contact' },
-        { label: 'Documentation', href: '/docs' },
-        { label: 'API Docs', href: '/api-docs' },
-      ]
-    }
-  ];
-
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   const quickLinks = [
     { label: 'Get Started', href: '/contact', icon: ChevronRight },
     { label: 'Pricing', href: '/pricing', icon: DollarSign },

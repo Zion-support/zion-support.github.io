@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Brain,
   Users,
@@ -15,27 +14,12 @@ import {
   CheckCircle,
   ArrowRight,
   Star,
-=======
-import { 
-  Brain, 
-  Users, 
-  Award, 
-  Target, 
-  Heart, 
-  Globe, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   TrendingUp,
   Building,
   Rocket,
   Lightbulb,
   Handshake
 } from 'lucide-react';
-<<<<<<< HEAD
 const values = [{
     icon: Lightbulb,
     title: 'Innovation',
@@ -349,27 +333,35 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-blue-600" />
-=======
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
+}
 
 const values = [{
-    "icon": Lightbulb,
-    "title": 'Innovation',
-    "description": 'We constantly push the boundaries of what&apos;s possible with technology, always seeking new and better ways to solve problems.'
+    icon: Lightbulb,
+    title: 'Innovation',
+    description: 'We constantly push the boundaries of what&apos;s possible with technology, always seeking new and better ways to solve problems.'
   },
   {
-    "icon": Shield,
-    "title": 'Integrity',
-    "description": 'We conduct business with the highest ethical standards, building trust through transparency and honest communication.'
+    icon: Shield,
+    title: 'Integrity',
+    description: 'We conduct business with the highest ethical standards, building trust through transparency and honest communication.'
   },
   {
-    "icon": Star,
-    "title": 'Excellence',
-    "description": 'We strive for excellence in everything we do, delivering solutions that exceed expectations and drive real results.'
+    icon: Star,
+    title: 'Excellence',
+    description: 'We strive for excellence in everything we do, delivering solutions that exceed expectations and drive real results.'
   },
   {
-    "icon": Handshake,
-    "title": 'Client Success',
-    "description": 'Our success is measured by our clients&apos; success. We are committed to being true partners in their growth journey.'
+    icon: Handshake,
+    title: 'Client Success',
+    description: 'Our success is measured by our clients&apos; success. We are committed to being true partners in their growth journey.'
   }
 ];
 

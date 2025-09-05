@@ -42,17 +42,14 @@ import {
   Mail,
   ShoppingCart,
   BookOpen,
-<<<<<<< HEAD
   Database,
   Truck,
   PenTool,
-  Scale
-=======
+  Scale,
   Home,
   Gamepad2,
   Factory,
   Trash2
->>>>>>> db49e3d85ef86349882b1133a9775950c233879f
 } from 'lucide-react';
 const aiServices = [
   {
@@ -86,7 +83,6 @@ const aiServices = [
     title: 'Computer Vision Solutions',
     description: 'Image and video analysis using deep learning and computer vision.',
     icon: Eye,
-<<<<<<< HEAD
     features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Real-time Processing'],
     pricing: '$2,500 - $10,000/month',
     category: 'Computer Vision',
@@ -207,10 +203,11 @@ const aiServices = [
   {
     title: 'Intelligent Financial Analysis',
     description: 'AI-driven financial modeling, risk assessment, and investment analysis.',
-=======
-    features: ['Object Detection', 'Image Classification', 'Facial Recognition', 'Video Analytics'],
-    pricing: '$3,000 - $15,000 project',
-    category: 'Computer Vision'
+    icon: DollarSign,
+    features: ['Financial Modeling', 'Risk Assessment', 'Portfolio Optimization', 'Market Analysis'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Finance',
+    link: 'https://financialai.ziontechgroup.com'
   },
   {
     title: 'AI Content Generation',
@@ -1236,7 +1233,6 @@ title: 'Generative AI Content Creation Suite',
     popular: true
   },
   {
-<<<<<<< HEAD
     title: 'AI-Powered Environmental Monitoring',
     description: 'Intelligent environmental monitoring and climate change analysis.',
     icon: Globe,
@@ -1739,6 +1735,272 @@ title: 'Generative AI Content Creation Suite',
     pricing: '$100,000 - $1,000,000/project',
     category: 'Theoretical Physics AI',
     popular: true
+  },
+  {
+    title: 'AI-Powered Email Security Gateway',
+    description: 'Advanced email protection against phishing, malware, and advanced persistent threats.',
+    icon: Mail,
+    features: ['Phishing Detection', 'Malware Scanning', 'URL Analysis', 'Quarantine Management'],
+    pricing: '$2 - $8 per user/month',
+    category: 'Email Security',
+    popular: true,
+    link: 'https://emailsecurity.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Threat Intelligence',
+    description: 'Real-time threat detection and intelligence gathering using advanced AI algorithms.',
+    icon: Shield,
+    features: ['Threat Hunting', 'IOC Analysis', 'Behavioral Analysis', 'Incident Response'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Threat Intelligence',
+    popular: true,
+    link: 'https://threatintelligence.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review and quality analysis using machine learning.',
+    icon: Code,
+    features: ['Code Quality Analysis', 'Security Vulnerability Detection', 'Performance Optimization', 'Best Practices Check'],
+    pricing: '$500 - $2,500/month',
+    category: 'Code Analysis',
+    link: 'https://codereviewai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Test Automation',
+    description: 'Intelligent test case generation and automated testing using AI.',
+    icon: CheckCircle,
+    features: ['Test Case Generation', 'Automated Testing', 'Bug Detection', 'Performance Testing'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Test Automation',
+    link: 'https://testautomationai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered API Management',
+    description: 'Intelligent API lifecycle management and optimization using AI.',
+    icon: Network,
+    features: ['API Discovery', 'Performance Optimization', 'Security Analysis', 'Usage Analytics'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'API Management',
+    link: 'https://apimanagementai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Database Optimization',
+    description: 'Intelligent database performance tuning and optimization using machine learning.',
+    icon: Database,
+    features: ['Query Optimization', 'Index Recommendations', 'Performance Monitoring', 'Capacity Planning'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Database AI',
+    link: 'https://databaseai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Network Optimization',
+    description: 'Intelligent network performance optimization and traffic management using AI.',
+    icon: Network,
+    features: ['Traffic Analysis', 'Bandwidth Optimization', 'Quality of Service', 'Anomaly Detection'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Network AI',
+    link: 'https://networkai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Cloud Cost Optimization',
+    description: 'Intelligent cloud resource optimization and cost reduction using machine learning.',
+    icon: Cloud,
+    features: ['Resource Right-sizing', 'Cost Forecasting', 'Usage Optimization', 'Reserved Instance Recommendations'],
+    pricing: '$2,500 - $12,500/month',
+    category: 'Cloud AI',
+    popular: true,
+    link: 'https://cloudai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered DevOps Automation',
+    description: 'Intelligent DevOps pipeline optimization and automation using AI.',
+    icon: Settings,
+    features: ['Pipeline Optimization', 'Deployment Automation', 'Performance Monitoring', 'Error Prediction'],
+    pricing: '$3,500 - $17,500/month',
+    category: 'DevOps AI',
+    link: 'https://devopsai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Infrastructure Monitoring',
+    description: 'Intelligent infrastructure monitoring and alerting using machine learning.',
+    icon: Monitor,
+    features: ['Anomaly Detection', 'Predictive Alerting', 'Performance Analysis', 'Capacity Planning'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Infrastructure AI',
+    link: 'https://infrastructureai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Log Analysis',
+    description: 'Intelligent log analysis and correlation using machine learning algorithms.',
+    icon: FileText,
+    features: ['Log Correlation', 'Anomaly Detection', 'Pattern Recognition', 'Incident Analysis'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Log Analysis AI',
+    link: 'https://loganalysisai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Performance Optimization',
+    description: 'Intelligent application and system performance optimization using AI.',
+    icon: TrendingUp,
+    features: ['Performance Analysis', 'Bottleneck Detection', 'Optimization Recommendations', 'Load Testing'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Performance AI',
+    link: 'https://performanceai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Security Orchestration',
+    description: 'Intelligent security orchestration and automated response using AI.',
+    icon: Shield,
+    features: ['Incident Response', 'Threat Hunting', 'Security Orchestration', 'Automated Remediation'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Security Orchestration AI',
+    popular: true,
+    link: 'https://securityorchestrationai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Compliance Management',
+    description: 'Intelligent compliance monitoring and management using machine learning.',
+    icon: FileText,
+    features: ['Compliance Monitoring', 'Risk Assessment', 'Policy Enforcement', 'Audit Automation'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Compliance AI',
+    link: 'https://complianceai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Data Governance',
+    description: 'Intelligent data governance and management using AI algorithms.',
+    icon: Database,
+    features: ['Data Classification', 'Privacy Protection', 'Data Quality', 'Governance Automation'],
+    pricing: '$2,500 - $12,500/month',
+    category: 'Data Governance AI',
+    link: 'https://datagovernanceai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Backup & Recovery',
+    description: 'Intelligent backup and disaster recovery using machine learning.',
+    icon: HardDrive,
+    features: ['Backup Optimization', 'Recovery Planning', 'Data Deduplication', 'RTO/RPO Optimization'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Backup AI',
+    link: 'https://backupai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Capacity Planning',
+    description: 'Intelligent capacity planning and resource forecasting using AI.',
+    icon: BarChart3,
+    features: ['Demand Forecasting', 'Resource Planning', 'Capacity Optimization', 'Cost Analysis'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Capacity Planning AI',
+    link: 'https://capacityplanningai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Change Management',
+    description: 'Intelligent change management and impact analysis using machine learning.',
+    icon: Settings,
+    features: ['Change Impact Analysis', 'Risk Assessment', 'Rollback Planning', 'Change Automation'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Change Management AI',
+    link: 'https://changemanagementai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Service Level Management',
+    description: 'Intelligent SLA monitoring and management using AI algorithms.',
+    icon: Clock,
+    features: ['SLA Monitoring', 'Performance Prediction', 'Service Optimization', 'Incident Prevention'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'SLA Management AI',
+    link: 'https://slamanagementai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Vendor Management',
+    description: 'Intelligent vendor performance monitoring and management using AI.',
+    icon: Users,
+    features: ['Vendor Performance Analysis', 'Risk Assessment', 'Contract Optimization', 'Relationship Management'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Vendor Management AI',
+    link: 'https://vendormanagementai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Knowledge Management',
+    description: 'Intelligent knowledge base creation and management using machine learning.',
+    icon: BookOpen,
+    features: ['Knowledge Extraction', 'Content Organization', 'Search Optimization', 'Expertise Mapping'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Knowledge Management AI',
+    link: 'https://knowledgemanagementai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Training & Development',
+    description: 'Intelligent employee training and development using AI algorithms.',
+    icon: Users,
+    features: ['Skill Assessment', 'Personalized Learning', 'Progress Tracking', 'Competency Mapping'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Training AI',
+    link: 'https://trainingai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Project Management',
+    description: 'Intelligent project planning and management using machine learning.',
+    icon: Kanban,
+    features: ['Project Planning', 'Resource Allocation', 'Risk Assessment', 'Timeline Optimization'],
+    pricing: '$2,500 - $12,500/month',
+    category: 'Project Management AI',
+    link: 'https://projectmanagementai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Quality Assurance',
+    description: 'Intelligent quality assurance and testing using AI algorithms.',
+    icon: CheckCircle,
+    features: ['Quality Prediction', 'Defect Detection', 'Test Optimization', 'Quality Metrics'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Quality Assurance AI',
+    link: 'https://qualityassuranceai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Innovation Management',
+    description: 'Intelligent innovation and idea management using machine learning.',
+    icon: Lightbulb,
+    features: ['Idea Analysis', 'Innovation Tracking', 'Patent Analysis', 'Technology Scouting'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Innovation AI',
+    link: 'https://innovationai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Sustainability Management',
+    description: 'Intelligent sustainability monitoring and optimization using AI.',
+    icon: Sprout,
+    features: ['Carbon Footprint Analysis', 'Energy Optimization', 'Sustainability Metrics', 'Green Technology'],
+    pricing: '$2,500 - $12,500/month',
+    category: 'Sustainability AI',
+    link: 'https://sustainabilityai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Risk Management',
+    description: 'Intelligent risk assessment and management using machine learning.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Threat Modeling', 'Mitigation Planning', 'Risk Monitoring'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Risk Management AI',
+    link: 'https://riskmanagementai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Business Continuity',
+    description: 'Intelligent business continuity planning and management using AI.',
+    icon: Shield,
+    features: ['Continuity Planning', 'Disaster Recovery', 'Business Impact Analysis', 'Recovery Optimization'],
+    pricing: '$2,500 - $12,500/month',
+    category: 'Business Continuity AI',
+    link: 'https://businesscontinuityai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Digital Transformation',
+    description: 'Intelligent digital transformation strategy and implementation using AI.',
+    icon: Zap,
+    features: ['Transformation Planning', 'Technology Assessment', 'Change Management', 'ROI Optimization'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Digital Transformation AI',
+    popular: true,
+    link: 'https://digitaltransformationai.ziontechgroup.com'
   }
 ];
 const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
@@ -1772,85 +2034,9 @@ const benefits = [{
     description: 'Personalized user interactions',
     stat: '85%'
   }
-=======
-    title: 'AI-Powered Voice Synthesis',
-    description: 'High-quality text-to-speech and voice synthesis for various applications.',
-    icon: Mic,
-    features: ['Text-to-Speech', 'Voice Cloning', 'Emotion Synthesis', 'Multi-language Support'],
-    pricing: '$1,500 - $7,500/month',
-    category: 'Speech AI',
-    link: 'https://voicesynthesis.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Cybersecurity Intelligence',
-    description: 'Advanced AI-driven threat detection, incident response, and security orchestration.',
-    icon: Shield,
-    features: ['Threat Hunting', 'Behavioral Analysis', 'Automated Response', 'Security Orchestration'],
-    pricing: '$5,000 - $25,000/month',
-    category: 'Cybersecurity AI',
-    popular: true,
-    link: 'https://cybersecai.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Drug Discovery Platform',
-    description: 'Machine learning platform for pharmaceutical research and drug development.',
-    icon: Heart,
-    features: ['Molecular Analysis', 'Drug Interaction Prediction', 'Clinical Trial Optimization', 'Side Effect Analysis'],
-    pricing: '$15,000 - $75,000/month',
-    category: 'Healthcare AI',
-    popular: true,
-    link: 'https://drugdiscovery.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Autonomous Vehicle Simulation',
-    description: 'Advanced simulation platform for autonomous vehicle testing and validation.',
-    icon: Car,
-    features: ['Virtual Testing', 'Scenario Generation', 'Safety Validation', 'Performance Analysis'],
-    pricing: '$10,000 - $50,000/month',
-    category: 'Autonomous Systems',
-    popular: true,
-    link: 'https://avsimulation.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Quantum Computing Optimizer',
-    description: 'Quantum algorithm optimization and quantum machine learning platform.',
-    icon: Cpu,
-    features: ['Quantum Algorithm Design', 'Optimization Problems', 'Quantum ML', 'Error Correction'],
-    pricing: '$8,000 - $40,000/month',
-    category: 'Quantum AI',
-    popular: true,
-    link: 'https://quantumai.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Climate Change Modeling',
-    description: 'Advanced climate modeling and environmental impact prediction using AI.',
-    icon: Globe,
-    features: ['Climate Prediction', 'Impact Analysis', 'Carbon Footprint Optimization', 'Sustainability Planning'],
-    pricing: '$12,000 - $60,000/month',
-    category: 'Environmental AI',
-    popular: true,
-    link: 'https://climateai.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Space Mission Planning',
-    description: 'Intelligent mission planning and optimization for space exploration missions.',
-    icon: Rocket,
-    features: ['Mission Optimization', 'Resource Planning', 'Risk Assessment', 'Trajectory Analysis'],
-    pricing: '$20,000 - $100,000/month',
-    category: 'Space AI',
-    popular: true,
-    link: 'https://spaceai.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Financial Risk Management',
-    description: 'Advanced financial risk assessment and portfolio optimization using AI.',
->>>>>>> db49e3d85ef86349882b1133a9775950c233879f
-    icon: DollarSign,
-    features: ['Financial Modeling', 'Risk Assessment', 'Portfolio Optimization', 'Market Analysis'],
-    pricing: '$4,000 - $20,000/month',
-    category: 'FinTech',
-    link: 'https://financialai.ziontechgroup.com'
-  },
+];
+
+const aiServices = [
   {
     title: 'AI-Powered Healthcare Diagnostics',
     description: 'Medical image analysis, diagnosis assistance, and treatment recommendations.',
@@ -1944,7 +2130,6 @@ const categories = [
   { name: 'FinTech AI', count: aiServices.filter(s => s.category === 'FinTech AI').length },
   { name: 'Smart City AI', count: aiServices.filter(s => s.category === 'Smart City AI').length },
   { name: 'AgTech AI', count: aiServices.filter(s => s.category === 'AgTech AI').length }
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
 ];
 export default function AIServicesPage() {
   return (
@@ -2060,46 +2245,6 @@ whileHover={{ y: -5 }} ">
               );
             })}
           </div>
-<<<<<<< HEAD
-                  </div>
-                  </section>
-      {/* Industries Section */}
-      <section className="py-20 bg-white">
-                  <div className="container mx-auto px-4">
-                  <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our AI solutions are tailored for various industries and use cases.
-            </p>
-                  </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => {
-              const IconComponent = industry.icon;
-              return (
-                <motion.div
-                  key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {industry.name}
-                  </h3>
-                  <p className="text-gray-600">
-                    {industry.description}
-                  </p>
-                  </motion.div>
-              );
-            })}
-=======
         </section>
 
         {/* Contact Information Section */}
@@ -2169,7 +2314,9 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 <p className="text-gray-600 mb-4">Schedule a visit to our AI research and development facility in Delaware.</p>
                 <address className="text-blue-600 font-semibold not-italic">
                   364 E Main St STE 1008<br />
-                  Middletown, DE 19709
+                  Middletown, DE 19709<br />
+                  <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800">+1 302 464 0950</a><br />
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">kleber@ziontechgroup.com</a>
                 </address>
               </motion.div>
             </div>
@@ -2237,7 +2384,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 </Link>
               </div>
             </motion.div>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
           </div>
                   </div>
                   </section>
