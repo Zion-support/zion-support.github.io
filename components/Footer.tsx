@@ -16,32 +16,47 @@ import {
 
 <<<<<<< HEAD
 const services = {
-  'AI Solutions': [{ name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
+  'AI Solutions': [
+    { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
     { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
     { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
     { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
     { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
     { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
     { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
-    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
+    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' },
+    { name: 'Quantum Machine Learning', href: '/ai-services#quantum-ml' },
+    { name: 'AI Space Debris Management', href: '/ai-services#space-debris' },
+    { name: 'AI Climate Engineering', href: '/ai-services#climate-engineering' },
+    { name: 'AI Neural Interface', href: '/ai-services#neural-interface' }
   ],
-  'IT Services': [{ name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
+  'IT Services': [
+    { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
     { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
     { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
     { name: 'Database Management', href: '/it-services#database-management' },
     { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
     { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
     { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
-    { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
+    { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' },
+    { name: 'Quantum Computing Infrastructure', href: '/it-services#quantum-computing' },
+    { name: 'Space Technology Infrastructure', href: '/it-services#space-technology' },
+    { name: 'Fusion Energy IT Systems', href: '/it-services#fusion-energy' },
+    { name: 'Smart City IT Infrastructure', href: '/it-services#smart-cities' }
   ],
-  'Micro SaaS': [{ name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
+  'Micro SaaS': [
+    { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
     { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
     { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
     { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
     { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
     { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
     { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
-    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
+    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' },
+    { name: 'Quantum Computing Simulator', href: '/micro-saas#quantum-simulator' },
+    { name: 'Digital Twin Platform', href: '/micro-saas#digital-twin' },
+    { name: 'AI-Powered Metaverse Builder', href: '/micro-saas#metaverse-builder' },
+    { name: 'Autonomous Drone Fleet Management', href: '/micro-saas#drone-fleet' }
   ]
 };
 
