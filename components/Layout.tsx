@@ -36,18 +36,22 @@ export default function Layout({ title, description, children, keywords }: Layou
     { name: 'AI Services', href: '/ai-services', description: 'Machine Learning, NLP, Computer Vision' },
     { name: 'IT Services', href: '/it-services', description: 'Cloud, DevOps, Cybersecurity' },
     { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom SaaS Solutions' },
-    { name: 'Blockchain', href: '/blockchain', description: 'Smart Contracts, DeFi, NFTs' },
-    { name: 'IoT Solutions', href: '/iot', description: 'Connected Devices, Edge Computing' },
-    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security Audits, Compliance' }
+    { name: 'Cloud Solutions', href: '/cloud-solutions', description: 'AWS, Azure, GCP Migration' },
+    { name: 'Data Analytics', href: '/data-analytics', description: 'Business Intelligence, Big Data' },
+    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security Audits, Compliance' },
+    { name: 'Automation', href: '/automation', description: 'Process Automation, RPA' },
+    { name: 'Quantum Computing', href: '/quantum-computing', description: 'Quantum Algorithms, Optimization' }
   ];
 
   const solutions = [
-    { name: 'Enterprise Solutions', href: '/enterprise', description: 'Large-scale business solutions' },
-    { name: 'Startup Solutions', href: '/startup', description: 'Scalable startup platforms' },
-    { name: 'E-commerce', href: '/ecommerce', description: 'Online store solutions' },
-    { name: 'Healthcare', href: '/healthcare', description: 'Medical technology solutions' },
-    { name: 'Finance', href: '/finance', description: 'Fintech and banking solutions' },
-    { name: 'Education', href: '/education', description: 'EdTech platforms' }
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large-scale business solutions' },
+    { name: 'Startup Solutions', href: '/solutions/startup', description: 'Scalable startup platforms' },
+    { name: 'Custom Solutions', href: '/solutions/custom', description: 'Tailored technology solutions' },
+    { name: 'Cloud Migration', href: '/solutions/cloud-migration', description: 'Seamless cloud transitions' },
+    { name: 'Industry Solutions', href: '/solutions/industry', description: 'Industry-specific solutions' },
+    { name: 'Healthcare', href: '/industries/healthcare', description: 'Medical technology solutions' },
+    { name: 'Finance', href: '/industries/finance', description: 'Fintech and banking solutions' },
+    { name: 'Education', href: '/industries/education', description: 'EdTech platforms' }
   ];
 
   const quickLinks = [
@@ -56,7 +60,13 @@ export default function Layout({ title, description, children, keywords }: Layou
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'News', href: '/news' },
+    { name: 'Events', href: '/events' },
+    { name: 'Support', href: '/support' },
+    { name: 'API Docs', href: '/api-docs' }
   ];
 
   return (
@@ -356,7 +366,7 @@ export default function Layout({ title, description, children, keywords }: Layou
         {/* Footer */}
         <footer className="bg-gray-900 text-white">
           <div className="container mx-auto px-4 py-16">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
               {/* Company Info */}
               <div className="lg:col-span-1">
                 <div className="flex items-center space-x-2 mb-4">
@@ -395,7 +405,7 @@ export default function Layout({ title, description, children, keywords }: Layou
               <div>
                 <h3 className="text-lg font-semibold mb-4">Services</h3>
                 <ul className="space-y-2">
-                  {services.slice(0, 6).map((service, index) => (
+                  {services.map((service, index) => (
                     <li key={index}>
                       <Link 
                         href={service.href} 
@@ -412,13 +422,30 @@ export default function Layout({ title, description, children, keywords }: Layou
               <div>
                 <h3 className="text-lg font-semibold mb-4">Solutions</h3>
                 <ul className="space-y-2">
-                  {solutions.slice(0, 6).map((solution, index) => (
+                  {solutions.map((solution, index) => (
                     <li key={index}>
                       <Link 
                         href={solution.href} 
                         className="text-gray-400 hover:text-white transition-colors"
                       >
                         {solution.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Quick Links */}
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul className="space-y-2">
+                  {quickLinks.map((link, index) => (
+                    <li key={index}>
+                      <Link 
+                        href={link.href} 
+                        className="text-gray-400 hover:text-white transition-colors"
+                      >
+                        {link.name}
                       </Link>
                     </li>
                   ))}

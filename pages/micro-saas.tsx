@@ -26,9 +26,19 @@ import {
   Wifi,
   Brain,
   Video,
-  Smartphone
+  Smartphone,
+  Cpu,
+  Atom,
+  Eye,
+  Car,
+  Building,
+  Bot,
+  Heart,
+  TreePine,
+  Mic,
+  Monitor
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 
 const microSaasSolutions = [
   {
@@ -471,6 +481,244 @@ const microSaasSolutions = [
     price: "Starting at $2,500/month",
     marketPrice: "$4,000-10,000/month",
     benefits: ["Scalable backend", "Real-time features", "Cross-platform support"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "AI-Powered Content Creation",
+    description: "Automated content generation and optimization platform",
+    icon: FileText,
+    features: [
+      "AI Content Writing",
+      "SEO Optimization",
+      "Multi-language Support",
+      "Content Templates",
+      "Brand Voice Training",
+      "Performance Analytics"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-7,000/month",
+    benefits: ["10x faster content creation", "Consistent brand voice", "SEO optimized"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Smart Contract Development",
+    description: "Blockchain smart contract creation and deployment platform",
+    icon: Shield,
+    features: [
+      "Contract Templates",
+      "Automated Testing",
+      "Security Auditing",
+      "Deployment Tools",
+      "Monitoring Dashboard",
+      "Gas Optimization"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-12,000/month",
+    benefits: ["Secure contracts", "Faster deployment", "Cost optimization"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Real-time Collaboration Suite",
+    description: "Advanced team collaboration and productivity platform",
+    icon: Users,
+    features: [
+      "Real-time Editing",
+      "Video Conferencing",
+      "File Sharing",
+      "Task Management",
+      "Whiteboard Tools",
+      "Integration Hub"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Improved productivity", "Seamless collaboration", "All-in-one solution"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "Predictive Maintenance System",
+    description: "AI-powered equipment maintenance and failure prediction",
+    icon: Settings,
+    features: [
+      "IoT Integration",
+      "Predictive Analytics",
+      "Maintenance Scheduling",
+      "Cost Optimization",
+      "Alert System",
+      "Performance Tracking"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-10,000/month",
+    benefits: ["Reduce downtime by 60%", "Lower maintenance costs", "Extended equipment life"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "Digital Twin Platform",
+    description: "Create and manage digital replicas of physical assets",
+    icon: Monitor,
+    features: [
+      "3D Modeling",
+      "Real-time Simulation",
+      "Performance Monitoring",
+      "Predictive Analysis",
+      "Virtual Testing",
+      "Integration APIs"
+    ],
+    price: "Starting at $4,500/month",
+    marketPrice: "$7,000-20,000/month",
+    benefits: ["Virtual testing", "Optimized operations", "Risk reduction"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Edge Computing Platform",
+    description: "Distributed computing infrastructure for IoT and real-time processing",
+    icon: Cpu,
+    features: [
+      "Edge Node Management",
+      "Data Processing",
+      "Latency Optimization",
+      "Offline Capabilities",
+      "Security Protocols",
+      "Monitoring Dashboard"
+    ],
+    price: "Starting at $3,200/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["Ultra-low latency", "Reduced bandwidth", "Enhanced security"],
+    setupTime: "3-6 weeks"
+  },
+  {
+    title: "Quantum Computing Interface",
+    description: "Quantum computing access and algorithm development platform",
+    icon: Atom,
+    features: [
+      "Quantum Algorithm Development",
+      "Simulation Environment",
+      "Hardware Access",
+      "Performance Optimization",
+      "Educational Resources",
+      "API Integration"
+    ],
+    price: "Starting at $5,000/month",
+    marketPrice: "$8,000-25,000/month",
+    benefits: ["Quantum advantage", "Future-proof technology", "Competitive edge"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "AR/VR Development Platform",
+    description: "Complete augmented and virtual reality application development",
+    icon: Eye,
+    features: [
+      "3D Content Creation",
+      "Cross-platform Support",
+      "Real-time Rendering",
+      "Gesture Recognition",
+      "Spatial Audio",
+      "Analytics Dashboard"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$6,000-18,000/month",
+    benefits: ["Immersive experiences", "Multi-platform deployment", "Advanced interactions"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Autonomous Vehicle Management",
+    description: "Fleet management and monitoring for autonomous vehicles",
+    icon: Car,
+    features: [
+      "Fleet Tracking",
+      "Route Optimization",
+      "Safety Monitoring",
+      "Predictive Maintenance",
+      "Performance Analytics",
+      "Remote Control"
+    ],
+    price: "Starting at $4,000/month",
+    marketPrice: "$6,500-20,000/month",
+    benefits: ["Optimized operations", "Enhanced safety", "Cost reduction"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Smart City Infrastructure",
+    description: "IoT platform for smart city management and optimization",
+    icon: Building,
+    features: [
+      "Traffic Management",
+      "Energy Optimization",
+      "Waste Management",
+      "Environmental Monitoring",
+      "Citizen Services",
+      "Data Analytics"
+    ],
+    price: "Starting at $5,000/month",
+    marketPrice: "$8,000-30,000/month",
+    benefits: ["Improved efficiency", "Better citizen services", "Environmental benefits"],
+    setupTime: "6-12 weeks"
+  },
+  {
+    title: "Robotic Process Automation",
+    description: "Intelligent automation for repetitive business processes",
+    icon: Bot,
+    features: [
+      "Process Discovery",
+      "Bot Development",
+      "Workflow Automation",
+      "Exception Handling",
+      "Performance Monitoring",
+      "Integration Hub"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["80% process automation", "Error reduction", "Cost savings"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "Digital Health Platform",
+    description: "Comprehensive digital health and telemedicine solution",
+    icon: Heart,
+    features: [
+      "Patient Management",
+      "Telemedicine",
+      "Health Monitoring",
+      "Prescription Management",
+      "Appointment Scheduling",
+      "Compliance Tracking"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["Improved patient care", "Reduced costs", "Better outcomes"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Sustainable Technology Platform",
+    description: "Environmental monitoring and sustainability management system",
+    icon: TreePine,
+    features: [
+      "Carbon Footprint Tracking",
+      "Energy Monitoring",
+      "Waste Management",
+      "Sustainability Reporting",
+      "Green Certification",
+      "Impact Analytics"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Environmental compliance", "Cost reduction", "Brand enhancement"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "Voice Commerce Platform",
+    description: "Voice-activated shopping and commerce solution",
+    icon: Mic,
+    features: [
+      "Voice Recognition",
+      "Natural Language Processing",
+      "Payment Integration",
+      "Order Management",
+      "Customer Support",
+      "Analytics Dashboard"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Hands-free shopping", "Better accessibility", "Increased engagement"],
     setupTime: "3-5 weeks"
   }
 ];
