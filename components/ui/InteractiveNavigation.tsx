@@ -21,12 +21,11 @@ const InteractiveNavigation = () => {};
           </div>,
         </div>,
       </div>,
-    </nav>,
-),
+    </nav>)
 };,
 export default InteractiveNavigation,
 import Link from 'next/link';
-const InteractiveNavigation = () => {,
+const InteractiveNavigation = () => {;
   return (,
     <nav className="bg-white shadow-lg">,
       <div className="container mx-auto px-4">,
@@ -48,7 +47,7 @@ const InteractiveNavigation = () => {,
           </div>,
         </div>,
       </div>,
-    </nav>),
+    </nav>)
 };
 export default InteractiveNavigation,
 ,

@@ -11,6 +11,6 @@ export const cspConfig = {,
     objectSrc: ["'none'"],
     baseUri: ["'self'"],
     formAction: ["'self'"],
-    upgradeInsecureRequests: [],
+    upgradeInsecureRequests: []
   };
 };

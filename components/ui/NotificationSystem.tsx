@@ -1,11 +1,11 @@
   type: 'success' | 'error' | 'warning' | 'info',
   message: string,
-  title?: string,
+  title?: string
 };
 interface NotificationSystemProps {,
   notifications: Notification[],
   onDismiss?: (id: string) => void,
-  className?: string,
+  className?: string
 };
 }) => {,
   const getNotificationStyles = (type: Notification['type']) => {,
@@ -19,7 +19,7 @@ interface NotificationSystemProps {,
       case 'info':,
         return 'bg-blue-50 border-blue-200 text-blue-800',
       default:,
-        return 'bg-gray-50 border-gray-200 text-gray-800',
+        return 'bg-gray-50 border-gray-200 text-gray-800'
     };
   };
   return (,

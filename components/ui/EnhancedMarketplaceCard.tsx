@@ -2,7 +2,7 @@ interface EnhancedMarketplaceCardProps {,
   title: string,
   description: string,
   price?: string,
-  image?: string,
+  image?: string
 };
 export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {,
   return (,
@@ -21,5 +21,5 @@ export default function EnhancedMarketplaceCard({ title, description, price, ima
         </a>,
       </div>,
     </div>,
-  ),
+  )
 };

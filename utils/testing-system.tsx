@@ -39,7 +39,7 @@ export class TestingSystem {,
         // Hover action implementation,
         break,
       default: ,
-        break,
+        break
     };
   };
 };

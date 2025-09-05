@@ -1,6 +1,6 @@
 import React from 'react';
 };
-export const "LazyComponent": React.FC<LazyComponentProps> = ({,
+export const "LazyComponent": React.FC<LazyComponentProps> = ({;
   component,
   fallback = <div>Loading...</div>,
   ...props

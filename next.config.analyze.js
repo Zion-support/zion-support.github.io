@@ -15,6 +15,6 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"), module.expo
       )
     };
     return config
-  },
+  }
 };
 ,

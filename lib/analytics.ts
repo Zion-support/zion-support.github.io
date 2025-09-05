@@ -9,7 +9,7 @@ export const trackEvent = (,
 export const trackPageView = (url: string) => {,
   if (typeof window !== 'undefined' && window.gtag) {',
     window.gtag('configGA_MEASUREMENT_ID', {',
-      page_path: url,
+      page_path: url
 })};
 };
 ,
@@ -27,7 +27,7 @@ export const measurePerformance = () => {,
         performance.getEntriesByName('first-paint')[0]?.startTime || 0,',
       firstContentfulPaint: ,
         performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||',
-        0,
+        0
 }};
   return null};
 ,
@@ -43,7 +43,7 @@ export const trackWebVitals = (metric: WebVitalMetric) => {,
       value: Math.round(metric.value),
       event_category: 'Web Vitals,
       event_label: metric.id,
-      non_interaction: true,
+      non_interaction: true
 })};
 };
 ,

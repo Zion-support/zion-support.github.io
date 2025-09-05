@@ -7,7 +7,7 @@ interface PerformanceMetrics {,
   memoryUsage: number,
   networkSpeed: number,
   isOnline: boolean,
-  timestamp: number,
+  timestamp: number
 };
 const PerformanceMonitor: React.FC = () => {,
   const [metrics, setMetrics] = useState<PerformanceMetrics>({,
@@ -15,7 +15,7 @@ const PerformanceMonitor: React.FC = () => {,
     memoryUsage: 0,
     networkSpeed: 0,
     isOnline: navigator.onLine,
-    timestamp: Date.now(),
+    timestamp: Date.now()
   }),
   const [isVisible, setIsVisible] = useState(false),
   const location = useLocation(),
@@ -30,7 +30,7 @@ const PerformanceMonitor: React.FC = () => {,
           setMetrics(prev => ({,
             ...prev,
             pageLoadTime: loadTime,
-            timestamp: Date.now(),
+            timestamp: Date.now()
           }))
         };
       };
@@ -43,7 +43,7 @@ const PerformanceMonitor: React.FC = () => {,
         const usedMemory = memory.usedJSHeapSize / 1024 / 1024, // Convert to MB,
         setMetrics(prev => ({,
           ...prev,
-          memoryUsage: Math.round(usedMemory * 100) / 100,
+          memoryUsage: Math.round(usedMemory * 100) / 100
         }))
       };
     };
@@ -62,7 +62,7 @@ const PerformanceMonitor: React.FC = () => {,
           };
           setMetrics(prev => ({,
             ...prev,
-            networkSpeed: speedMap[connection.effectiveType] || 0,
+            networkSpeed: speedMap[connection.effectiveType] || 0
           }))
         };
       };

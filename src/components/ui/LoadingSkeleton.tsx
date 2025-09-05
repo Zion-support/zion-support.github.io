@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-,
+;
 interface SkeletonProps {,
   className?: string,
   width?: string | number,
@@ -33,7 +33,7 @@ const Skeleton: React.FC<SkeletonProps> = ({,
       transition={{,
         duration: 1.5,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: "easeInOut"
       }};
       className={finalClasses};
       style={{ width, height }};

@@ -4,7 +4,7 @@ export interface Service {,
   description: string,
   category: string,
   price?: number,
-  features: string[],
+  features: string[]
 };
 export const findService = (query: string, services: Service[]): Service[] => {,
   const searchTerm = query.toLowerCase(),
@@ -12,13 +12,13 @@ export const findService = (query: string, services: Service[]): Service[] => {,
     service.name.toLowerCase().includes(searchTerm) ||,
     service.description.toLowerCase().includes(searchTerm) ||,
     service.category.toLowerCase().includes(searchTerm),
-  ),
+  )
 };
 ,
 export const getServicesByCategory = (category: string, services: Service[]): Service[] => {,
   return services.filter(service =>,
     service.category.toLowerCase() === category.toLowerCase(),
-  ),
+  )
 };
 ,
 export default {,

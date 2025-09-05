@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-,
+;
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
 ,
@@ -20,7 +20,7 @@ function fixMergeConflicts(filePath) {,
     content = content.replace(/benefits:\s*[[^]]*]\s*benefits:\s*[[^]]*]/g, (match) => {,
       const benefits = match.match(/benefits: \s*[([^]]*)]/g),
       if (benefits && benefits.length > 1) {,
-        return benefits[0], // Keep the first one,
+        return benefits[0], // Keep the first one
       };
       return match
     }),
@@ -41,7 +41,7 @@ function fixMergeConflicts(filePath) {,
   };
 };
 // Function to find all TypeScript/JavaScript files,
-function findFiles(dir, extensions = ['.tsx.ts', '.jsx.js']) {,
+function findFiles(dir, extensions = ['.tsx.ts.jsx.js']) {,
   const files = [],
 ,
   function traverse(currentDir) {,

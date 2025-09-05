@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-,
+;
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
 ,
@@ -54,7 +54,7 @@ function fixAllRemainingSyntax(content) {,
     // Fix array items that are outside brackets,
     if (inArray && line.trim().startsWith('{') && !line.includes('[') && !line.includes(']')) {,
       if (!line.includes()) {,
-        fixedLines.push(line + ',')
+        fixedLines.push(line + )
       } else {,
         fixedLines.push(line)
       };

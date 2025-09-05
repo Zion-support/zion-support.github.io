@@ -3,7 +3,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
-interface MainLayoutProps {,
+interface MainLayoutProps {;
   title: string,
   description: string,
   children: React.ReactNode,
@@ -13,7 +13,7 @@ interface MainLayoutProps {,
   type?: 'website' | 'article' | 'product',
   noindex?: boolean,
   nofollow?: boolean,
-  canonical?: string,
+  canonical?: string
 };
 const MainLayout: React.FC<MainLayoutProps> = ({,
   children,

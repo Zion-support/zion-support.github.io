@@ -1,5 +1,5 @@
 import React from 'react';
-// App optimization utilities,
+// App optimization utilities;
 export const optimizeImages = (src, width, height) => {,
   return `/api/optimize-image?src=${encodeURIComponent(src)}&w=${width}&h=${height}`
 };

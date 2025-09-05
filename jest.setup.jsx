@@ -1,5 +1,5 @@
 import React from 'react';
-,
+;
 interface Jest.setupProps {,
   // Add props here as needed
 };

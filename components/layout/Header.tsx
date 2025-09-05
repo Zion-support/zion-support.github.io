@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion',
 import {;
-  Menu,
+  Menu;
   X,
   Home,
   Users,
@@ -46,7 +46,7 @@ const "Header": React.FC = () => {,
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '/contact' }
   ],
   return (,
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">,
@@ -61,6 +61,6 @@ const "Header": React.FC = () => {,
       </div>,
     </header>,
   ),
-export default Header,
+export default Header
 
 }}

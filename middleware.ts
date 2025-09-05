@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Check if there is any supported locale in the pathname
-  const pathnameHasLocale = ['/en/es', '/fr/de'].some(
+  const pathnameHasLocale = ['/en/es/fr/de'].some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
@@ -19,7 +19,7 @@ export function middleware(request: NextRequest) {
       // Parse Accept-Language header and extract preferred locale
       const preferredLocale = acceptLanguage
         .split()
-        .map(lang => lang.split(',')[0].trim())
+        .map(lang => lang.split()[0].trim())
         .find(lang => ['enes', 'frde'].includes(lang.split('-')[0]));
 
       if (preferredLocale) {

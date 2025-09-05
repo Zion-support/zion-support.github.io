@@ -8,7 +8,7 @@ export class ApiClient {,
   constructor(baseURL: string = API_BASE_URL) {,
     this.baseURL = baseURL,
     this.defaultHeaders = {,
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     };
   };
   private async request<T>(,
@@ -20,8 +20,8 @@ export class ApiClient {,
       ...options,
       headers: {,
         ...this.defaultHeaders,
-        ...options.headers,
-      },
+        ...options.headers
+      }
     };
 ,
     try {,
@@ -73,7 +73,7 @@ declare global {,
 interface ApiResponse<T = unknown> {,
   data?: T,
   error?: string,
-  success: boolean,
+  success: boolean
 };
 interface RequestOptions extends RequestInit {,
   timeout?: number
@@ -83,7 +83,7 @@ class ApiClient {,
   private defaultTimeout: number,
   constructor(baseUrl: string = '', defaultTimeout: number = 10000) {,
     this.baseUrl = baseUrl,
-    this.defaultTimeout = defaultTimeout,
+    this.defaultTimeout = defaultTimeout
   };
   private async request<T>(,
     endpoint: string,
@@ -111,7 +111,7 @@ class ApiClient {,
       console.error('API request failed: ', error),
       return {,
         error: error instanceof Error ? error.message : 'Unknown error occurred',
-        success: false,
+        success: false
       };
     };
   };
@@ -122,14 +122,14 @@ class ApiClient {,
     return this.request<T>(endpoint, {,
       ...options,
       method: 'POST',
-      body: data ? JSON.stringify(data) : undefined,
+      body: data ? JSON.stringify(data) : undefined
     })
   };
   async put<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {,
     return this.request<T>(endpoint, {,
       ...options,
       method: 'PUT',
-      body: data ? JSON.stringify(data) : undefined,
+      body: data ? JSON.stringify(data) : undefined
     })
   };
   async delete<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {,

@@ -1,5 +1,5 @@
 import React from 'react';
-,
+;
 const EnhancedFooter: React.FC = () => {,
   const currentYear = new Date().getFullYear(),
 ,
@@ -28,11 +28,11 @@ const EnhancedFooter: React.FC = () => {,
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
     { name: 'Micro SaaS', href: '/micro-saas' },
     { name: 'Security', href: '/security' },
-    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Case Studies', href: '/case-studies' }
   ],
 ,
   const company = [,
-    { name: 'About Us', href: '/about' },
+    { name: 'About Us', href: '/about' }
   ],
 ,
   return (,
@@ -60,5 +60,5 @@ const EnhancedFooter: React.FC = () => {,
   )
 };
 ,
-export default EnhancedFooter,
+export default EnhancedFooter
 ],

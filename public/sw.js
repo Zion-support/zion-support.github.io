@@ -5,8 +5,7 @@ const DYNAMIC_CACHE = 'ziontech-dynamic-v1';
 
 // Files to cache immediately
 const STATIC_FILES = [
-  '//static/js/bundle.js',
-  '/static/css/main.css/manifest.json'
+  '//static/js/bundle.js/static/css/main.css/manifest.json'
 ];
 
 // Install event - cache static files

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-,
+;
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
 ,
@@ -47,7 +47,7 @@ function fixAllRemainingIssues(content) {,
     // Fix array items that are outside brackets,
     if (inArray && line.trim().startsWith('{') && !line.includes('[') && !line.includes(']')) {,
       if (!line.includes()) {,
-        fixedLines.push(line + ',')
+        fixedLines.push(line + )
       } else {,
         fixedLines.push(line)
       };
@@ -78,8 +78,7 @@ function processFile(filePath) {,
 };
 // Process the specific files that have errors,
 const errorFiles = [,
-  'pages/about.tsxpages/accessibility.tsx',
-  'pages/ai-services.tsxpages/api.tsx',
+  'pages/about.tsxpages/accessibility.tsxpages/ai-services.tsxpages/api.tsx',
   'pages/blog.tsx'
 ],
 ,

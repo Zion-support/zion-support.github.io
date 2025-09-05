@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu;
-  X,
+  X;
   ChevronDown,
   Phone,
   Mail,

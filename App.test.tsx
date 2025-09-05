@@ -2,7 +2,7 @@ import { render, screen } from &amp;apos;@testing-library/react&amp;apos;,
 import { describe, it, expect } from &amp;apos;vitest&amp;apos;,
 import App from &amp;apos;./App&amp;apos;;
 import React from &amp;apos;react&amp;apos;;
-,
+;
 describe(&amp;apos;App&amp;apos;, () =&amp;gt; {,
   it(&amp;apos;renders without crashing&amp;apos;, () =&amp;gt; {,
     render(&amp;lt;App /&amp;gt;),

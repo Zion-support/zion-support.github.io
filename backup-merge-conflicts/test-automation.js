@@ -93,8 +93,7 @@ class TestAutomation {
     try {
       // Check if coverage report exists
       const coverageFiles = [
-        'coverage/lcov.infocoverage/coverage.json',
-        'coverage/coverage-summary.json'
+        'coverage/lcov.infocoverage/coverage.jsoncoverage/coverage-summary.json'
       ];
 
       let coverageFile = null;

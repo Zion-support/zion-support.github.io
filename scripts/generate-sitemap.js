@@ -3,10 +3,8 @@ const path = require('path');
 
 const pages = [
   '',
-  '/about/services',
-  '/ai-services/micro-saas',
-  '/cybersecurity/blockchain',
-  '/contact/pricing',
+  '/about/services/ai-services/micro-saas',
+  '/cybersecurity/blockchain/contact/pricing',
   '/faq/terms'
 ];
 

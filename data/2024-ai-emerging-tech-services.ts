@@ -1,6 +1,6 @@
 import React from 'react';
 import { ServiceVariant } from "../types/service-variants";
-,
+;
 export interface AIEmergingTechService {,
   id: string,
   name: string,
@@ -32,14 +32,14 @@ export interface AIEmergingTechService {,
     mobile: string,
     email: string,
     address: string,
-    website: string,
+    website: string
   };
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
+  reviews: number
 };
 export const aiEmergingTechServices: AIEmergingTechService[] = [,
   {,
@@ -84,13 +84,13 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
     realImplementation: true,
     implementationDetails: "Production-ready AI video generation platform with state-of-the-art models, GPU acceleration, and comprehensive video editing tools. Includes mobile apps and API access.",
     launchDate: "2024-02-01",
     customers: 3200,
     rating: 4.8,
-    reviews: 1800,
+    reviews: 1800
   };
 ],

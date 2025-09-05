@@ -1,9 +1,9 @@
 import React from 'react';
-export interface ServiceTier {,
+export interface ServiceTier {;
   name: string,
   price: string,
   includes: string[],
-  features: string[],
+  features: string[]
 };
 export interface ServiceItem {,
   slug: string,
@@ -20,7 +20,7 @@ export interface ServiceItem {,
     docs?: string, ,
     contact?: string,
     demo?: string,
-    pricing?: string,
+    pricing?: string
   };
   marketPrice: string,
   roi: string,
@@ -32,7 +32,7 @@ export interface ServiceItem {,
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
+    security: string[]
   };
   competitors?: string[],
   marketSize?: string,
@@ -40,13 +40,13 @@ export interface ServiceItem {,
   betaAccess?: boolean,
   estimatedDelivery: string,
   supportLevel: 'Standard' | 'Premium' | 'Enterprise',
-  tags: string[],
+  tags: string[]
 };
 export const contact = {,
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
+  website: 'https://ziontechgroup.com'
 };
 ,
 export const enhancedServices2025: ServiceItem[] = [,
@@ -62,60 +62,57 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Includes SEO optimization, brand voice consistency, and multi-platform distribution automation."
     ],
     features: [,
-      'Multi-format content generation (blogs, social, email, ads)SEO optimization and keyword research',
-      'Brand voice training and consistencyMulti-platform publishing automation',
-      'Content performance analyticsA/B testing and optimization',
-      'Plagiarism detection and originality scoringMulti-language support (50+ languages)'
+      'Multi-format content generation (blogs, social, email, ads)SEO optimization and keyword researchBrand voice training and consistencyMulti-platform publishing automation',
+      'Content performance analyticsA/B testing and optimizationPlagiarism detection and originality scoringMulti-language support (50+ languages)'
     ],
     benefits: [,
-      'Reduce content creation time by 80%Increase engagement rates by 45%',
-      'Improve SEO rankings significantlyMaintain consistent brand voice across all channels'
+      'Reduce content creation time by 80%Increase engagement rates by 45%Improve SEO rankings significantlyMaintain consistent brand voice across all channels'
     ],
     pricing: [,
       {,
         name: 'Starter',
         price: '$199/mo',
-        includes: ['10k words/month5 social platforms', 'Basic analytics'],
-        features: ['Content generationSEO optimization', 'Email support']
+        includes: ['10k words/month5 social platformsBasic analytics'],
+        features: ['Content generationSEO optimizationEmail support']
       },
       {,
         name: 'Professional',
         price: '$499/mo',
-        includes: ['50k words/monthUnlimited platforms', 'Advanced analytics'],
-        features: ['All Starter featuresBrand voice training', 'A/B testingPriority support']
+        includes: ['50k words/monthUnlimited platformsAdvanced analytics'],
+        features: ['All Starter featuresBrand voice trainingA/B testingPriority support']
       },
       {,
         name: 'Enterprise',
         price: '$1,299/mo',
-        includes: ['Unlimited wordsCustom integrations', 'Dedicated support'],
-        features: ['All Professional featuresCustom AI models', 'White-label optionsSLA guarantee']
+        includes: ['Unlimited wordsCustom integrationsDedicated support'],
+        features: ['All Professional featuresCustom AI modelsWhite-label optionsSLA guarantee']
       };
     ],
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-content-studio-pro',
       docs: 'https://ziontechgroup.com/services/ai-content-studio-pro#docs',
       demo: 'https://ziontechgroup.com/demo/ai-content-studio',
-      contact: 'mailto:kleber@ziontechgroup.com',
+      contact: 'mailto:kleber@ziontechgroup.com'
     },
     marketPrice: '$199-$1,299/month',
     roi: '300-500% ROI within 6 months',
     innovationLevel: 'Cutting-edge',
-    targetAudience: ['Marketing agenciesContent creators', 'E-commerce businessesSaaS companies'],
-    useCases: ['Blog content automationSocial media management', 'Email marketing campaignsSEO content strategy'],
+    targetAudience: ['Marketing agenciesContent creatorsE-commerce businessesSaaS companies'],
+    useCases: ['Blog content automationSocial media managementEmail marketing campaignsSEO content strategy'],
     technicalSpecs: {,
-      technology: ['GPT-4Claude-3', 'Custom NLP modelsReact/Node.js'],
-      integrations: ['WordPressHubSpot', 'MailchimpHootsuite', 'Google Analytics'],
+      technology: ['GPT-4Claude-3Custom NLP modelsReact/Node.js'],
+      integrations: ['WordPressHubSpotMailchimpHootsuite', 'Google Analytics'],
       apiEndpoints: 25,
       uptime: '99.9%',
-      security: ['SOC 2GDPR compliant', 'End-to-end encryption']
+      security: ['SOC 2GDPR compliantEnd-to-end encryption']
     },
-    competitors: ['Jasper AICopy.ai', 'Writesonic'],
+    competitors: ['Jasper AICopy.aiWritesonic'],
     marketSize: '$4.2B content marketing market',
     launchDate: 'Q1 2025',
     betaAccess: true,
     estimatedDelivery: '2-4 weeks',
     supportLevel: 'Premium',
-    tags: ['AIContent', 'MarketingSEO', 'Automation']
+    tags: ['AIContentMarketingSEO', 'Automation']
   },
   // AI-Powered Email Automation,
   {,
@@ -129,59 +126,56 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Uses machine learning to predict optimal email timing, subject lines, and content for maximum open and conversion rates."
     ],
     features: [,
-      'Behavioral trigger automationAI-powered subject line optimization',
-      'Send time optimizationDynamic content personalization',
-      'A/B testing with AI insightsDeliverability optimization',
-      'Unsubscribe prediction and preventionCross-channel campaign coordination'
+      'Behavioral trigger automationAI-powered subject line optimizationSend time optimizationDynamic content personalization',
+      'A/B testing with AI insightsDeliverability optimizationUnsubscribe prediction and preventionCross-channel campaign coordination'
     ],
     benefits: [,
-      'Increase open rates by 60%Boost conversion rates by 40%',
-      'Reduce unsubscribe rates by 50%Save 20+ hours per week on email management'
+      'Increase open rates by 60%Boost conversion rates by 40%Reduce unsubscribe rates by 50%Save 20+ hours per week on email management'
     ],
     pricing: [,
       {,
         name: 'Starter',
         price: '$149/mo',
-        includes: ['10k contacts5 campaigns', 'Basic analytics'],
-        features: ['Email automationBasic personalization', 'Email support']
+        includes: ['10k contacts5 campaignsBasic analytics'],
+        features: ['Email automationBasic personalizationEmail support']
       },
       {,
         name: 'Growth',
         price: '$399/mo',
-        includes: ['50k contactsUnlimited campaigns', 'Advanced analytics'],
-        features: ['All Starter featuresAI optimization', 'A/B testingPriority support']
+        includes: ['50k contactsUnlimited campaignsAdvanced analytics'],
+        features: ['All Starter featuresAI optimizationA/B testingPriority support']
       },
       {,
         name: 'Enterprise',
         price: '$999/mo',
-        includes: ['Unlimited contactsCustom integrations', 'Dedicated support'],
-        features: ['All Growth featuresCustom AI models', 'White-label optionsSLA guarantee']
+        includes: ['Unlimited contactsCustom integrationsDedicated support'],
+        features: ['All Growth featuresCustom AI modelsWhite-label optionsSLA guarantee']
       };
     ],
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-email-orchestrator',
       demo: 'https://ziontechgroup.com/demo/ai-email-orchestrator',
-      contact: 'mailto:kleber@ziontechgroup.com',
+      contact: 'mailto:kleber@ziontechgroup.com'
     },
     marketPrice: '$149-$999/month',
     roi: '250-400% ROI within 3 months',
     innovationLevel: 'Cutting-edge',
-    targetAudience: ['E-commerceSaaS companies', 'Marketing agenciesLead generation'],
-    useCases: ['Lead nurturingCustomer onboarding', 'Retention campaignsSales follow-up'],
+    targetAudience: ['E-commerceSaaS companiesMarketing agenciesLead generation'],
+    useCases: ['Lead nurturingCustomer onboardingRetention campaignsSales follow-up'],
     technicalSpecs: {,
-      technology: ['Machine LearningNLP', 'Predictive AnalyticsPython/Node.js'],
-      integrations: ['SalesforceHubSpot', 'MailchimpKlaviyo', 'Zapier'],
+      technology: ['Machine LearningNLPPredictive AnalyticsPython/Node.js'],
+      integrations: ['SalesforceHubSpotMailchimpKlaviyo', 'Zapier'],
       apiEndpoints: 15,
       uptime: '99.9%',
-      security: ['SOC 2GDPR compliant', 'Data encryption']
+      security: ['SOC 2GDPR compliantData encryption']
     },
-    competitors: ['KlaviyoActiveCampaign', 'ConvertKit'],
+    competitors: ['KlaviyoActiveCampaignConvertKit'],
     marketSize: '$7.5B email marketing market',
     launchDate: 'Q1 2025',
     betaAccess: true,
     estimatedDelivery: '2-3 weeks',
     supportLevel: 'Premium',
-    tags: ['AIEmail', 'MarketingAutomation', 'Personalization']
+    tags: ['AIEmailMarketingAutomation', 'Personalization']
   },
   // AI-Powered Project Management,
   {,
@@ -195,59 +189,56 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Provides real-time insights, automated reporting, and intelligent recommendations for project success."
     ],
     features: [,
-      'AI-powered risk predictionAutomated task assignment',
-      'Resource optimization algorithmsReal-time project health monitoring',
-      'Predictive timeline adjustmentsTeam performance analytics',
-      'Automated status reportingIntegration with 50+ tools'
+      'AI-powered risk predictionAutomated task assignmentResource optimization algorithmsReal-time project health monitoring',
+      'Predictive timeline adjustmentsTeam performance analyticsAutomated status reportingIntegration with 50+ tools'
     ],
     benefits: [,
-      'Reduce project delays by 35%Improve team productivity by 45%',
-      'Increase project success rate by 60%Save 15+ hours per week on project management'
+      'Reduce project delays by 35%Improve team productivity by 45%Increase project success rate by 60%Save 15+ hours per week on project management'
     ],
     pricing: [,
       {,
         name: 'Team',
         price: '$299/mo',
-        includes: ['10 team members5 projects', 'Basic AI features'],
-        features: ['Project trackingBasic AI insights', 'Email support']
+        includes: ['10 team members5 projectsBasic AI features'],
+        features: ['Project trackingBasic AI insightsEmail support']
       },
       {,
         name: 'Business',
         price: '$699/mo',
-        includes: ['50 team membersUnlimited projects', 'Advanced AI features'],
-        features: ['All Team featuresRisk prediction', 'Resource optimizationPriority support']
+        includes: ['50 team membersUnlimited projectsAdvanced AI features'],
+        features: ['All Team featuresRisk predictionResource optimizationPriority support']
       },
       {,
         name: 'Enterprise',
         price: '$1,499/mo',
-        includes: ['Unlimited membersCustom integrations', 'Dedicated support'],
-        features: ['All Business featuresCustom AI models', 'White-label optionsSLA guarantee']
+        includes: ['Unlimited membersCustom integrationsDedicated support'],
+        features: ['All Business featuresCustom AI modelsWhite-label optionsSLA guarantee']
       };
     ],
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-project-orchestrator',
       demo: 'https://ziontechgroup.com/demo/ai-project-orchestrator',
-      contact: 'mailto:kleber@ziontechgroup.com',
+      contact: 'mailto:kleber@ziontechgroup.com'
     },
     marketPrice: '$299-$1,499/month',
     roi: '200-350% ROI within 4 months',
     innovationLevel: 'Revolutionary',
-    targetAudience: ['Project managersAgencies', 'Software teamsConsulting firms'],
-    useCases: ['Software developmentMarketing campaigns', 'Event planningProduct launches'],
+    targetAudience: ['Project managersAgenciesSoftware teamsConsulting firms'],
+    useCases: ['Software developmentMarketing campaignsEvent planningProduct launches'],
     technicalSpecs: {,
-      technology: ['Machine LearningPredictive Analytics', 'React/Node.jsPostgreSQL'],
-      integrations: ['SlackJira', 'AsanaTrello', 'Microsoft Teams'],
+      technology: ['Machine LearningPredictive AnalyticsReact/Node.jsPostgreSQL'],
+      integrations: ['SlackJiraAsanaTrello', 'Microsoft Teams'],
       apiEndpoints: 30,
       uptime: '99.9%',
-      security: ['SOC 2GDPR compliant', 'Role-based access']
+      security: ['SOC 2GDPR compliantRole-based access']
     },
-    competitors: ['Monday.comAsana', 'Wrike'],
+    competitors: ['Monday.comAsanaWrike'],
     marketSize: '$6.8B project management market',
     launchDate: 'Q2 2025',
     betaAccess: true,
     estimatedDelivery: '3-4 weeks',
     supportLevel: 'Enterprise',
-    tags: ['AIProject Management', 'ProductivityAnalytics', 'Automation']
+    tags: ['AIProject ManagementProductivityAnalytics', 'Automation']
   },
   // AI-Powered Financial Analytics,
   {,
@@ -261,59 +252,56 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Uses advanced machine learning algorithms to identify patterns, detect anomalies, and forecast financial performance."
     ],
     features: [,
-      'Real-time financial data analysisPredictive financial modeling',
-      'Anomaly detection and fraud preventionMarket trend analysis',
-      'Cash flow forecastingInvestment opportunity identification',
-      'Risk assessment and mitigationAutomated financial reporting'
+      'Real-time financial data analysisPredictive financial modelingAnomaly detection and fraud preventionMarket trend analysis',
+      'Cash flow forecastingInvestment opportunity identificationRisk assessment and mitigationAutomated financial reporting'
     ],
     benefits: [,
-      'Improve financial decision accuracy by 70%Reduce financial risks by 50%',
-      'Increase profit margins by 25%Save 20+ hours per week on financial analysis'
+      'Improve financial decision accuracy by 70%Reduce financial risks by 50%Increase profit margins by 25%Save 20+ hours per week on financial analysis'
     ],
     pricing: [,
       {,
         name: 'Professional',
         price: '$799/mo',
-        includes: ['Basic analyticsMonthly reports', 'Email support'],
-        features: ['Financial analysisBasic forecasting', 'Standard integrations']
+        includes: ['Basic analyticsMonthly reportsEmail support'],
+        features: ['Financial analysisBasic forecastingStandard integrations']
       },
       {,
         name: 'Business',
         price: '$1,999/mo',
-        includes: ['Advanced analyticsWeekly reports', 'Priority support'],
-        features: ['All Professional featuresPredictive modeling', 'Risk assessmentCustom dashboards']
+        includes: ['Advanced analyticsWeekly reportsPriority support'],
+        features: ['All Professional featuresPredictive modelingRisk assessmentCustom dashboards']
       },
       {,
         name: 'Enterprise',
         price: '$4,999/mo',
-        includes: ['Full analytics suiteReal-time reports', 'Dedicated support'],
-        features: ['All Business featuresCustom AI models', 'White-label optionsSLA guarantee']
+        includes: ['Full analytics suiteReal-time reportsDedicated support'],
+        features: ['All Business featuresCustom AI modelsWhite-label optionsSLA guarantee']
       };
     ],
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-financial-analytics-pro',
       demo: 'https://ziontechgroup.com/demo/ai-financial-analytics',
-      contact: 'mailto:kleber@ziontechgroup.com',
+      contact: 'mailto:kleber@ziontechgroup.com'
     },
     marketPrice: '$799-$4,999/month',
     roi: '400-600% ROI within 6 months',
     innovationLevel: 'Revolutionary',
-    targetAudience: ['CFOsFinancial analysts', 'Investment firmsAccounting firms'],
-    useCases: ['Financial planningInvestment analysis', 'Risk managementCompliance reporting'],
+    targetAudience: ['CFOsFinancial analystsInvestment firmsAccounting firms'],
+    useCases: ['Financial planningInvestment analysisRisk managementCompliance reporting'],
     technicalSpecs: {,
-      technology: ['Machine LearningDeep Learning', 'Python/RTensorFlow'],
-      integrations: ['QuickBooksXero', 'SAPOracle', 'Bloomberg API'],
+      technology: ['Machine LearningDeep LearningPython/RTensorFlow'],
+      integrations: ['QuickBooksXeroSAPOracle', 'Bloomberg API'],
       apiEndpoints: 20,
       uptime: '99.9%',
-      security: ['SOC 2PCI DSS', 'GDPR compliantBank-level encryption']
+      security: ['SOC 2PCI DSSGDPR compliantBank-level encryption']
     },
-    competitors: ['PalantirTableau', 'Power BI'],
+    competitors: ['PalantirTableauPower BI'],
     marketSize: '$12.3B financial analytics market',
     launchDate: 'Q2 2025',
     betaAccess: true,
     estimatedDelivery: '4-6 weeks',
     supportLevel: 'Enterprise',
-    tags: ['AIFinance', 'AnalyticsForecasting', 'Risk Management']
+    tags: ['AIFinanceAnalyticsForecasting', 'Risk Management']
   },
   // Quantum Computing Services,
   {,
@@ -327,59 +315,56 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Uses quantum algorithms to find optimal solutions for NP-hard problems that are intractable for classical computers."
     ],
     features: [,
-      'Quantum annealing optimizationQuantum machine learning algorithms',
-      'Hybrid quantum-classical workflowsReal-time quantum circuit optimization',
-      'Quantum error correctionMulti-objective optimization',
-      'Quantum simulation capabilitiesClassical fallback algorithms'
+      'Quantum annealing optimizationQuantum machine learning algorithmsHybrid quantum-classical workflowsReal-time quantum circuit optimization',
+      'Quantum error correctionMulti-objective optimizationQuantum simulation capabilitiesClassical fallback algorithms'
     ],
     benefits: [,
-      'Solve problems 1000x faster than classical computersFind optimal solutions for complex logistics',
-      'Reduce operational costs by 30-50%Enable breakthrough discoveries in research'
+      'Solve problems 1000x faster than classical computersFind optimal solutions for complex logisticsReduce operational costs by 30-50%Enable breakthrough discoveries in research'
     ],
     pricing: [,
       {,
         name: 'Research',
         price: '$2,999/mo',
-        includes: ['10 quantum hours/monthBasic algorithms', 'Email support'],
-        features: ['Quantum optimizationBasic algorithms', 'Standard support']
+        includes: ['10 quantum hours/monthBasic algorithmsEmail support'],
+        features: ['Quantum optimizationBasic algorithmsStandard support']
       },
       {,
         name: 'Business',
         price: '$7,999/mo',
-        includes: ['50 quantum hours/monthAdvanced algorithms', 'Priority support'],
-        features: ['All Research featuresCustom algorithms', 'Dedicated supportSLA guarantee']
+        includes: ['50 quantum hours/monthAdvanced algorithmsPriority support'],
+        features: ['All Research featuresCustom algorithmsDedicated supportSLA guarantee']
       },
       {,
         name: 'Enterprise',
         price: 'Custom',
-        includes: ['Unlimited quantum hoursCustom solutions', 'Dedicated team'],
-        features: ['All Business featuresCustom quantum circuits', 'White-label options24/7 support']
+        includes: ['Unlimited quantum hoursCustom solutionsDedicated team'],
+        features: ['All Business featuresCustom quantum circuitsWhite-label options24/7 support']
       };
     ],
     links: {,
       landing: 'https://ziontechgroup.com/services/quantum-optimization-suite',
       demo: 'https://ziontechgroup.com/demo/quantum-optimization',
-      contact: 'mailto:kleber@ziontechgroup.com',
+      contact: 'mailto:kleber@ziontechgroup.com'
     },
     marketPrice: '$2,999-$7,999/month',
     roi: '500-1000% ROI for complex optimization problems',
     innovationLevel: 'Revolutionary',
-    targetAudience: ['Research institutionsFinancial firms', 'Logistics companiesManufacturing'],
-    useCases: ['Portfolio optimizationSupply chain optimization', 'Drug discoveryClimate modeling'],
+    targetAudience: ['Research institutionsFinancial firmsLogistics companiesManufacturing'],
+    useCases: ['Portfolio optimizationSupply chain optimizationDrug discoveryClimate modeling'],
     technicalSpecs: {,
-      technology: ['Quantum AnnealingGate-based Quantum Computing', 'QiskitCirq'],
-      integrations: ['IBM QuantumGoogle Quantum AI', 'RigettiIonQ'],
+      technology: ['Quantum AnnealingGate-based Quantum ComputingQiskitCirq'],
+      integrations: ['IBM QuantumGoogle Quantum AIRigettiIonQ'],
       apiEndpoints: 10,
       uptime: '99.5%',
-      security: ['Quantum-safe encryptionZero-knowledge proofs', 'Secure multi-party computation']
+      security: ['Quantum-safe encryptionZero-knowledge proofsSecure multi-party computation']
     },
-    competitors: ['IBM QuantumGoogle Quantum AI', 'Rigetti'],
+    competitors: ['IBM QuantumGoogle Quantum AIRigetti'],
     marketSize: '$1.2B quantum computing market',
     launchDate: 'Q3 2025',
     betaAccess: true,
     estimatedDelivery: '6-8 weeks',
     supportLevel: 'Enterprise',
-    tags: ['QuantumOptimization', 'AIResearch', 'Advanced Computing']
+    tags: ['QuantumOptimizationAIResearch', 'Advanced Computing']
   },
   // Blockchain & DeFi Services,
   {,
@@ -393,59 +378,56 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Supports multiple consensus mechanisms, smart contracts, and provides enterprise-grade security and compliance."
     ],
     features: [,
-      'Multi-blockchain support (Ethereum, Hyperledger, Corda)Smart contract development and deployment',
-      'Enterprise-grade security and complianceScalable consensus mechanisms',
-      'Interoperability solutionsTokenization platform',
-      'DeFi protocol integrationRegulatory compliance tools'
+      'Multi-blockchain support (Ethereum, Hyperledger, Corda)Smart contract development and deploymentEnterprise-grade security and complianceScalable consensus mechanisms',
+      'Interoperability solutionsTokenization platformDeFi protocol integrationRegulatory compliance tools'
     ],
     benefits: [,
-      'Reduce transaction costs by 60%Increase transparency and trust',
-      'Enable new business modelsImprove supply chain traceability'
+      'Reduce transaction costs by 60%Increase transparency and trustEnable new business modelsImprove supply chain traceability'
     ],
     pricing: [,
       {,
         name: 'Starter',
         price: '$1,999/mo',
-        includes: ['Basic blockchain setupStandard support', 'Email support'],
-        features: ['Blockchain deploymentBasic smart contracts', 'Standard security']
+        includes: ['Basic blockchain setupStandard supportEmail support'],
+        features: ['Blockchain deploymentBasic smart contractsStandard security']
       },
       {,
         name: 'Professional',
         price: '$4,999/mo',
-        includes: ['Advanced featuresPriority support', 'Custom development'],
-        features: ['All Starter featuresCustom smart contracts', 'Advanced securityDedicated support']
+        includes: ['Advanced featuresPriority supportCustom development'],
+        features: ['All Starter featuresCustom smart contractsAdvanced securityDedicated support']
       },
       {,
         name: 'Enterprise',
         price: '$12,999/mo',
-        includes: ['Full platform accessDedicated support', 'Custom solutions'],
-        features: ['All Professional featuresWhite-label options', 'Custom blockchain24/7 support']
+        includes: ['Full platform accessDedicated supportCustom solutions'],
+        features: ['All Professional featuresWhite-label optionsCustom blockchain24/7 support']
       };
     ],
     links: {,
       landing: 'https://ziontechgroup.com/services/enterprise-blockchain-platform',
       demo: 'https://ziontechgroup.com/demo/blockchain-platform',
-      contact: 'mailto:kleber@ziontechgroup.com',
+      contact: 'mailto:kleber@ziontechgroup.com'
     },
     marketPrice: '$1,999-$12,999/month',
     roi: '300-500% ROI within 12 months',
     innovationLevel: 'Cutting-edge',
-    targetAudience: ['Financial institutionsSupply chain companies', 'HealthcareGovernment'],
-    useCases: ['Supply chain trackingDigital identity', 'TokenizationSmart contracts'],
+    targetAudience: ['Financial institutionsSupply chain companiesHealthcareGovernment'],
+    useCases: ['Supply chain trackingDigital identityTokenizationSmart contracts'],
     technicalSpecs: {,
-      technology: ['EthereumHyperledger Fabric', 'CordaSolidity', 'Web3.js'],
-      integrations: ['AWSAzure', 'Google CloudOracle', 'SAP'],
+      technology: ['EthereumHyperledger FabricCordaSolidity', 'Web3.js'],
+      integrations: ['AWSAzureGoogle CloudOracle', 'SAP'],
       apiEndpoints: 50,
       uptime: '99.9%',
-      security: ['Multi-signatureHardware security modules', 'Zero-knowledge proofs']
+      security: ['Multi-signatureHardware security modulesZero-knowledge proofs']
     },
-    competitors: ['IBM BlockchainMicrosoft Azure Blockchain', 'Amazon Managed Blockchain'],
+    competitors: ['IBM BlockchainMicrosoft Azure BlockchainAmazon Managed Blockchain'],
     marketSize: '$7.2B blockchain market',
     launchDate: 'Q2 2025',
     betaAccess: true,
     estimatedDelivery: '6-8 weeks',
     supportLevel: 'Enterprise',
-    tags: ['BlockchainDeFi', 'Smart ContractsEnterprise', 'Security']
+    tags: ['BlockchainDeFiSmart ContractsEnterprise', 'Security']
   },
   // IoT & Edge Computing,
   {,
@@ -459,59 +441,56 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Provides low-latency inference, offline capabilities, and seamless cloud synchronization."
     ],
     features: [,
-      'Edge AI model deploymentReal-time inference processing',
-      'Offline operation capabilitiesCloud-edge synchronization',
-      'Device management and monitoringModel versioning and updates',
-      'Data preprocessing pipelinesSecurity and encryption'
+      'Edge AI model deploymentReal-time inference processingOffline operation capabilitiesCloud-edge synchronization',
+      'Device management and monitoringModel versioning and updatesData preprocessing pipelinesSecurity and encryption'
     ],
     benefits: [,
-      'Reduce latency by 90%Enable offline AI processing',
-      'Reduce bandwidth costs by 70%Improve data privacy and security'
+      'Reduce latency by 90%Enable offline AI processingReduce bandwidth costs by 70%Improve data privacy and security'
     ],
     pricing: [,
       {,
         name: 'Edge Starter',
         price: '$499/mo',
-        includes: ['5 edge devicesBasic AI models', 'Email support'],
-        features: ['Edge deploymentBasic monitoring', 'Standard support']
+        includes: ['5 edge devicesBasic AI modelsEmail support'],
+        features: ['Edge deploymentBasic monitoringStandard support']
       },
       {,
         name: 'Edge Professional',
         price: '$1,299/mo',
-        includes: ['25 edge devicesAdvanced AI models', 'Priority support'],
-        features: ['All Starter featuresCustom models', 'Advanced monitoringDedicated support']
+        includes: ['25 edge devicesAdvanced AI modelsPriority support'],
+        features: ['All Starter featuresCustom modelsAdvanced monitoringDedicated support']
       },
       {,
         name: 'Edge Enterprise',
         price: '$2,999/mo',
-        includes: ['Unlimited devicesCustom solutions', 'Dedicated support'],
-        features: ['All Professional featuresWhite-label options', 'Custom hardware24/7 support']
+        includes: ['Unlimited devicesCustom solutionsDedicated support'],
+        features: ['All Professional featuresWhite-label optionsCustom hardware24/7 support']
       };
     ],
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-edge-computing-platform',
       demo: 'https://ziontechgroup.com/demo/edge-computing',
-      contact: 'mailto:kleber@ziontechgroup.com',
+      contact: 'mailto:kleber@ziontechgroup.com'
     },
     marketPrice: '$499-$2,999/month',
     roi: '250-400% ROI within 6 months',
     innovationLevel: 'Cutting-edge',
-    targetAudience: ['ManufacturingHealthcare', 'RetailSmart cities'],
-    useCases: ['Predictive maintenanceReal-time monitoring', 'Autonomous systemsSmart sensors'],
+    targetAudience: ['ManufacturingHealthcareRetailSmart cities'],
+    useCases: ['Predictive maintenanceReal-time monitoringAutonomous systemsSmart sensors'],
     technicalSpecs: {,
-      technology: ['TensorFlow LiteONNX', 'DockerKubernetes', 'MQTT'],
-      integrations: ['AWS IoTAzure IoT', 'Google Cloud IoTInfluxDB', 'Grafana'],
+      technology: ['TensorFlow LiteONNXDockerKubernetes', 'MQTT'],
+      integrations: ['AWS IoTAzure IoTGoogle Cloud IoTInfluxDB', 'Grafana'],
       apiEndpoints: 20,
       uptime: '99.9%',
-      security: ['TLS encryptionDevice authentication', 'Secure boot']
+      security: ['TLS encryptionDevice authenticationSecure boot']
     },
-    competitors: ['AWS IoT GreengrassAzure IoT Edge', 'Google Cloud IoT Edge'],
+    competitors: ['AWS IoT GreengrassAzure IoT EdgeGoogle Cloud IoT Edge'],
     marketSize: '$15.7B edge computing market',
     launchDate: 'Q2 2025',
     betaAccess: true,
     estimatedDelivery: '4-6 weeks',
     supportLevel: 'Premium',
-    tags: ['IoTEdge Computing', 'AIReal-time', 'Automation']
+    tags: ['IoTEdge ComputingAIReal-time', 'Automation']
   },
   // Cybersecurity Services,
   {,
@@ -525,59 +504,56 @@ export const enhancedServices2025: ServiceItem[] = [,
       "Uses machine learning to identify and prevent advanced persistent threats, zero-day attacks, and insider threats."
     ],
     features: [,
-      'AI-powered threat detectionReal-time security monitoring',
-      'Automated incident responseBehavioral analytics',
-      'Vulnerability assessmentCompliance reporting',
-      'Security orchestrationThreat intelligence integration'
+      'AI-powered threat detectionReal-time security monitoringAutomated incident responseBehavioral analytics',
+      'Vulnerability assessmentCompliance reportingSecurity orchestrationThreat intelligence integration'
     ],
     benefits: [,
-      'Detect threats 10x faster than traditional methodsReduce false positives by 80%',
-      'Prevent 95% of cyber attacksEnsure compliance with security standards'
+      'Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksEnsure compliance with security standards'
     ],
     pricing: [,
       {,
         name: 'Essential',
         price: '$999/mo',
-        includes: ['Basic threat detectionEmail support', 'Standard monitoring'],
-        features: ['Threat detectionBasic analytics', 'Email alerts']
+        includes: ['Basic threat detectionEmail supportStandard monitoring'],
+        features: ['Threat detectionBasic analyticsEmail alerts']
       },
       {,
         name: 'Professional',
         price: '$2,499/mo',
-        includes: ['Advanced threat detectionPriority support', 'Custom rules'],
-        features: ['All Essential featuresBehavioral analytics', 'Automated responseDedicated support']
+        includes: ['Advanced threat detectionPriority supportCustom rules'],
+        features: ['All Essential featuresBehavioral analyticsAutomated responseDedicated support']
       },
       {,
         name: 'Enterprise',
         price: '$5,999/mo',
-        includes: ['Full security suiteDedicated support', 'Custom solutions'],
-        features: ['All Professional featuresCustom AI models', 'White-label options24/7 support']
+        includes: ['Full security suiteDedicated supportCustom solutions'],
+        features: ['All Professional featuresCustom AI modelsWhite-label options24/7 support']
       };
     ],
     links: {,
       landing: 'https://ziontechgroup.com/services/ai-cybersecurity-suite',
       demo: 'https://ziontechgroup.com/demo/cybersecurity-suite',
-      contact: 'mailto:kleber@ziontechgroup.com',
+      contact: 'mailto:kleber@ziontechgroup.com'
     },
     marketPrice: '$999-$5,999/month',
     roi: '400-600% ROI through threat prevention',
     innovationLevel: 'Revolutionary',
-    targetAudience: ['EnterprisesGovernment', 'HealthcareFinancial services'],
-    useCases: ['Threat detectionIncident response', 'ComplianceRisk assessment'],
+    targetAudience: ['EnterprisesGovernmentHealthcareFinancial services'],
+    useCases: ['Threat detectionIncident responseComplianceRisk assessment'],
     technicalSpecs: {,
-      technology: ['Machine LearningDeep Learning', 'SIEMSOAR', 'Python/Go'],
-      integrations: ['SplunkQRadar', 'CrowdStrikePalo Alto', 'Cisco'],
+      technology: ['Machine LearningDeep LearningSIEMSOAR', 'Python/Go'],
+      integrations: ['SplunkQRadarCrowdStrikePalo Alto', 'Cisco'],
       apiEndpoints: 40,
       uptime: '99.9%',
-      security: ['SOC 2ISO 27001', 'FedRAMPZero-trust architecture']
+      security: ['SOC 2ISO 27001FedRAMPZero-trust architecture']
     },
-    competitors: ['CrowdStrikePalo Alto Networks', 'Darktrace'],
+    competitors: ['CrowdStrikePalo Alto NetworksDarktrace'],
     marketSize: '$173B cybersecurity market',
     launchDate: 'Q1 2025',
     betaAccess: true,
     estimatedDelivery: '3-4 weeks',
     supportLevel: 'Enterprise',
-    tags: ['CybersecurityAI', 'Threat DetectionCompliance', 'Security']
+    tags: ['CybersecurityAIThreat DetectionCompliance', 'Security']
   };
 ],
 ,

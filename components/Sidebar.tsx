@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion',
 import { useRouter } from 'next/router';
 import {;
   X;
-  ChevronDown,
+  ChevronDown;
   ChevronRight,
   Home,
   Briefcase,

@@ -3,7 +3,7 @@ import path from "path", function fixParsingErrors(filePath) { try { let content
 #!/usr/bin/env node,
 import fs from "fs";
 import path from "path";
-// Fix simple parsing issues in a file content using regex-based heuristics,
+// Fix simple parsing issues in a file content using regex-based heuristics;
 function fixParsingErrors(filePath) {,
   try {,
     let content = fs.readFileSync(filePath, "utf8"),

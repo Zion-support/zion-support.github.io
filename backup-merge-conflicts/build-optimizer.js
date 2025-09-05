@@ -108,7 +108,7 @@ class BuildOptimizer {
       // Check for duplicate dependencies
       const duplicateDeps = await this.findDuplicateDependencies();
       if (duplicateDeps.length > 0) {
-        this.log(`Duplicate dependencies found: ${duplicateDeps.join(', ')}`);
+        this.log(`Duplicate dependencies found: ${duplicateDeps.join()}`);
       }
 
     } catch (error) {

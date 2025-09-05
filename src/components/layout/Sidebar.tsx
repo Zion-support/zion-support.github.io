@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
   Brain;
-  Cloud,
+  Cloud;
   Shield,
   Code,
   Database,

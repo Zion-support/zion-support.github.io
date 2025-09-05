@@ -1,12 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-,
+;
 export default defineConfig({,
   plugins: [react()],
   server: {,
     port: 3000,
     open: true,
-    host: true,
+    host: true
   },
   build: {,
     outDir: "dist",
@@ -17,14 +17,14 @@ export default defineConfig({,
         manualChunks: {,
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
-          router: ["react-router-dom"],
+          router: ["react-router-dom"]
         };
       };
     },
     terserOptions: {,
       compress: {,
         drop_console: true,
-        drop_debugger: true,
+        drop_debugger: true
       };
     };
   },

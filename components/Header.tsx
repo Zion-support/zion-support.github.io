@@ -5,7 +5,7 @@ import React, { useState } from 'react',
 import Link from 'next/link';
 import {;
 ;
-const servicesDropdown = [,
+const servicesDropdown = [;
   {,
     "icon": Brain,
     "title": 'AI & Machine Learning',
@@ -148,28 +148,28 @@ const servicesDropdown = [,
     title: 'AI & Machine Learning',
     description: 'Intelligent solutions for business automation',
     href: '/ai-services',
-    features: ['Custom ML ModelsNLP Solutions', 'Computer VisionPredictive Analytics']
+    features: ['Custom ML ModelsNLP SolutionsComputer VisionPredictive Analytics']
   },
   {,
     icon: Server,
     title: 'IT Services',
     description: 'Comprehensive technology infrastructure',
     href: '/it-services',
-    features: ['Cloud MigrationDevOps', 'CybersecuritySystem Integration']
+    features: ['Cloud MigrationDevOpsCybersecuritySystem Integration']
   },
   {,
     icon: Rocket,
     title: 'Micro SaaS',
     description: 'Scalable software solutions',
     href: '/micro-saas',
-    features: ['Custom DevelopmentAPI Integration', 'Scalable ArchitectureMaintenance']
+    features: ['Custom DevelopmentAPI IntegrationScalable ArchitectureMaintenance']
   },
   {,
     icon: Shield,
     title: 'Cybersecurity',
     description: 'Protect your digital assets',
     href: '/cybersecurity',
-    features: ['Security AuditsThreat Detection', 'ComplianceIncident Response']
+    features: ['Security AuditsThreat DetectionComplianceIncident Response']
   };
 ],
 ,
@@ -179,21 +179,21 @@ const solutionsDropdown = [,
     title: 'Enterprise Solutions',
     description: 'Large-scale business transformation',
     href: '/enterprise',
-    features: ['Digital TransformationProcess Automation', 'Data AnalyticsCloud Strategy']
+    features: ['Digital TransformationProcess AutomationData AnalyticsCloud Strategy']
   },
   {,
     icon: Target,
     title: 'Startup Solutions',
     description: 'Rapid growth and scaling',
     href: '/solutions/startup',
-    features: ['MVP DevelopmentTech Stack Selection', 'Growth StrategyFunding Support']
+    features: ['MVP DevelopmentTech Stack SelectionGrowth StrategyFunding Support']
   },
   {,
     icon: Globe,
     title: 'E-commerce',
     description: 'Online store optimization',
     href: '/ecommerce',
-    features: ['Platform DevelopmentPayment Integration', 'SEO OptimizationAnalytics']
+    features: ['Platform DevelopmentPayment IntegrationSEO OptimizationAnalytics']
   };
 ],
 ,

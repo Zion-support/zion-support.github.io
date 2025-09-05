@@ -3,11 +3,11 @@ import React from 'react', type Href = string | { pathname?: string, href?: stri
 type Href = string | { pathname?: string, href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {,
   href: Href,
-  children: React.ReactNode,
+  children: React.ReactNode
 };
 function resolveHref(href: Href): string {,
   if (typeof href === 'string') return href,
-  return href?.pathname || (href as any)?.href || '#',
+  return href?.pathname || (href as any)?.href || '#'
 };
 export default function Link({ href, children, className, ...rest }: LinkProps) {,
   const resolved = resolveHref(href),
@@ -17,13 +17,13 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
     return React.cloneElement(children as any, {,
       href: resolved,
       className: mergedClassName,
-      ...rest,
+      ...rest
     })
   };
 type Href = string | { pathname?: string, href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {,
   "href": Href,
-  children: React.ReactNode,
+  children: React.ReactNode
 };
 function resolveHref("href": Href): string {,
   if (typeof href === 'string') return href,

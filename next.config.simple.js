@@ -4,11 +4,11 @@ const nextConfig = {,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsxts', 'jsxjs'],
+  pageExtensions: ['tsxtsjsxjs'],
   trailingSlash: true,
   // Disable experimental features that might cause issues,
   experimental: {,
-    // Remove problematic features,
+    // Remove problematic features
   },
   // Image optimization,
   images: {,
@@ -35,9 +35,9 @@ const nextConfig = {,
           {,
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin'
-          },
-        ],
-      },
+          }
+        ]
+      }
     ]
   },
   // Redirects for SEO,
@@ -47,7 +47,7 @@ const nextConfig = {,
         source: '/home',
         destination: '/',
         permanent: true
-      },
+      }
     ]
   };
 };

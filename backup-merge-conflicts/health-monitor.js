@@ -143,7 +143,7 @@ class HealthMonitor {
   async checkApplicationHealth() {
     try {
       // Check if the application is responding
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
       const isNextJS = packageJson.dependencies?.next || packageJson.devDependencies?.next;
       
       if (isNextJS) {

@@ -377,7 +377,7 @@ class SEOAccessibilityChecker {
             scanDirectory(fullPath);
           } else if (stat.isFile()) {
             const ext = path.extname(item).toLowerCase();
-            if (['.jpg.jpeg', '.png.gif', '.webp'].includes(ext) && stat.size > maxSize) {
+            if (['.jpg.jpeg.png.gif', '.webp'].includes(ext) && stat.size > maxSize) {
               largeImages.push({
                 path: path.relative(process.cwd(), fullPath),
                 size: stat.size

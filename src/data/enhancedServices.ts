@@ -8,13 +8,13 @@ export interface ProductListing {,
   tags: string[],
   author: {,
     name: string,
-    id: string,
+    id: string
   };
   &quot,rating&quot,: number,
   reviews: number,
   deliveryTime: string,
   features: string[],
-  image?: string,
+  image?: string
 };
     },
     &quot,rating&quot,: 4.8,
@@ -37,7 +37,7 @@ export interface ProductListing {,
     &quot,tags&quot,: [&quot,SaaS &quot,Platform &quot,Billing &quot,Analytics&quot],
     &quot,author&quot,: {,
       name: &quot,Zion Tech Group,
-      &quot,id&quot,: &quot,zion-tech-group&quot,
+      &quot,id&quot,: &quot,zion-tech-group&quot
     },
     &quot,rating&quot,: 4.9,
     &quot,reviews&quot,: 89,

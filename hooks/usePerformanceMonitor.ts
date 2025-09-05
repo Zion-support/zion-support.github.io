@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-,
+;
 export const usePerformanceMonitor = () => {,
   useEffect(() => {,
     // Monitor Core Web Vitals,

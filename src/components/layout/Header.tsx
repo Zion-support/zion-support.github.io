@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion',
 import {;
-  Menu,
+  Menu;
   X,
   ChevronDown,
   Phone,
@@ -68,13 +68,13 @@ export default function Header({ className = '' }: HeaderProps) {,
           name: 'Micro SaaS',
           href: '/micro-saas',
           icon: Cloud,
-          description: 'Ready-to-use SaaS applications',
+          description: 'Ready-to-use SaaS applications'
         },
         {,
           name: 'Cybersecurity',
           href: '/cybersecurity',
           icon: Shield,
-          description: 'Advanced security solutions',
+          description: 'Advanced security solutions'
         },
         {,
           name: 'Cloud Solutions',
@@ -86,7 +86,7 @@ export default function Header({ className = '' }: HeaderProps) {,
           name: 'Custom Development',
           href: '/custom-development',
           icon: Settings,
-          description: 'Bespoke software solutions',
+          description: 'Bespoke software solutions'
         };
       ]
     },
@@ -98,25 +98,25 @@ export default function Header({ className = '' }: HeaderProps) {,
           name: 'Enterprise Solutions',
           href: '/enterprise-solutions',
           icon: Building2,
-          description: 'Large-scale business solutions',
+          description: 'Large-scale business solutions'
         },
         {,
           name: 'Startup Solutions',
           href: '/startup-solutions',
           icon: Rocket,
-          description: 'Scalable startup solutions',
+          description: 'Scalable startup solutions'
         },
         {,
           name: 'Industry Solutions',
           href: '/industries',
           icon: Factory,
-          description: 'Industry-specific solutions',
+          description: 'Industry-specific solutions'
         },
         {,
           name: 'Digital Transformation',
           href: '/digital-transformation',
           icon: Zap,
-          description: 'Complete digital transformation',
+          description: 'Complete digital transformation'
         };
       ]
     },
@@ -128,31 +128,31 @@ export default function Header({ className = '' }: HeaderProps) {,
           name: 'Blog',
           href: '/blog',
           icon: FileText,
-          description: 'Latest insights and trends',
+          description: 'Latest insights and trends'
         },
         {,
           name: 'Case Studies',
           href: '/case-studies',
           icon: BarChart3,
-          description: 'Success stories and results',
+          description: 'Success stories and results'
         },
         {,
           name: 'White Papers',
           href: '/white-papers',
           icon: BookOpen,
-          description: 'In-depth research and analysis',
+          description: 'In-depth research and analysis'
         },
         {,
           name: 'Webinars',
           href: '/webinars',
           icon: Video,
-          description: 'Educational sessions and demos',
+          description: 'Educational sessions and demos'
         },
         {,
           name: 'API Documentation',
           href: '/api-docs',
           icon: Code,
-          description: 'Technical documentation',
+          description: 'Technical documentation'
         };
       ]
     },
@@ -250,7 +250,7 @@ export default function Header({ className = '' }: HeaderProps) {,
                                 </div>,
                               </div>,
                               <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-blue-600 transition-colors ml-auto" />,
-                            </Link>),
+                            </Link>)
                         })};
                       </motion.div>,
                     )};

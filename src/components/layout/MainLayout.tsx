@@ -3,13 +3,13 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
-,
+;
 interface LayoutProps {,
   children: React.ReactNode,
   title?: string,
   description?: string,
   keywords?: string,
-  showSidebar?: boolean,
+  showSidebar?: boolean
 };
 export default function MainLayout({,
   children,

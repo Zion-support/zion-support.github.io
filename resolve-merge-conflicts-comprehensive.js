@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-,
+;
 console.log('🔧 Resolving merge conflicts comprehensively...'),
 ,
 // Get list of conflicted files,
@@ -48,7 +48,7 @@ const resolveConflicts = (filePath) => {,
     // For other files, accept HEAD version,
     console.log(`Accepting HEAD version for: ${filePath}`),
     execSync(`git checkout --ours "${filePath}"`, { stdio: 'inherit' }),
-    return true,
+    return true
 
   } catch (error) {,
     console.error(`Error resolving conflicts in ${filePath}:`, error.message),

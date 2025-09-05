@@ -40,7 +40,7 @@ async function main() {,
       runCommand(`git merge ${currentBranch}`, 'Merge changes to main'),
       runCommand('git push origin mainPush to main branch')
     };
-    console.log('✅ All git operations completed successfully!'),
+    console.log('✅ All git operations completed successfully!')
 
   } catch (error) {,
     console.error('❌ Git operations failed:', error.message),

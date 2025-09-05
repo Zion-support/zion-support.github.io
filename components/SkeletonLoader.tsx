@@ -1,6 +1,6 @@
 import React from 'react';
 ;
-interface SkeletonLoaderProps {,
+interface SkeletonLoaderProps {;
   lines?: number,
   className?: string
 };

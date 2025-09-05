@@ -1,6 +1,6 @@
 import React from 'react';
 import { ServiceVariant } from "../types/service-variants";
-,
+;
 export interface RealMarketService {,
   id: string,
   name: string,
@@ -32,14 +32,14 @@ export interface RealMarketService {,
     mobile: string,
     email: string,
     address: string,
-    website: string,
+    website: string
   };
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
+  reviews: number
 };
 export const realMarketServices: RealMarketService[] = [,
   {,
@@ -84,13 +84,13 @@ export const realMarketServices: RealMarketService[] = [,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
     realImplementation: true,
     implementationDetails: "Production-ready SaaS platform with real-time data processing, machine learning models, and comprehensive analytics dashboard. Includes data connectors for major business tools.",
     launchDate: "2024-03-01",
     customers: 1800,
     rating: 4.7,
-    reviews: 950,
+    reviews: 950
   };
 ],
