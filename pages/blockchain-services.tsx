@@ -15,8 +15,6 @@ import {
   Clock, 
   Award,
   Smartphone,
-  Building,
-  TrendingUp,
   Target
 } from 'lucide-react';
 import Layout from '../components/Layout';
