@@ -1,1 +1,1 @@
-import React from "react"; ); export default function Authslice() {}; return null} }
+import _React from "react"; ); export default function Authslice() {}; return null} }

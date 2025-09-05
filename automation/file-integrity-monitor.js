@@ -1,42 +1,42 @@
 
-  async scanProject() {
-    this.log('Starting file integrity scan...');
-    const checksums = {};
-    const issues = [];
+  async scanProject() {}
+    this.log('Starting file integrity scan...');',
+    const checksums = {};,
+    const issues = [];,
 
-    try {
-      const files = this.getProjectFiles();
-      this.log(`Scanning ${files.length} files...`);
+    try {}
+      const files = this.getProjectFiles();,
+      this.log(`Scanning ${files.length} files...`);,
 
-      for (const file of files) {
-        const checksum = this.calculateFileChecksum(file);
-        if (checksum) {
-          checksums[file] = checksum;
+      for (const file of, files) {}
+        const checksum = this.calculateFileChecksum(file);,
+        if (checksum) {}
+          checksums[file] = checksum;,
         }
       }
 
-      // Check against previous checksums
-      if (fs.existsSync(this.checksumsFile)) {
-        const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, 'utf8'));
+      // Check against previous checksums;
+      if (fs.existsSync(this.checksumsFile)) {}
+        const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, 'utf8'));',
         
-        for (const [file, currentChecksum] of Object.entries(checksums)) {
-          if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) {
-            issues.push({
+        for (const [file, currentChecksum] of Object.entries(checksums)) {}
+          if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) {}
+            issues.push({}),
               file,
-              "type": 'modified',
-              "message": 'File has been modified since last scan'
-            });
+              "type": 'modified',',
+              "message": 'File has been modified since last scan'';,
+;            });,
           }
         }
 
-        // Check for deleted files
-        for (const file of Object.keys(previousChecksums)) {
-          if (!checksums[file] && fs.existsSync(file)) {
-            issues.push({
+        // Check for deleted files;
+        for (const file of Object.keys(previousChecksums)) {}
+          if (!checksums[file] && fs.existsSync(file)) {}
+            issues.push({}),
               file,
-              "type": 'deleted',
-              "message": 'File was deleted'
-            });
+              "type": 'deleted',',
+              "message": 'File was deleted'';,
+            });,
           }
         }
       }
@@ -45,52 +45,52 @@
       this.integrityChecks++;
       this.issuesFound += issues.length;
 
-      if (issues.length > 0) {
-        this.log("Found ${issues.length} integrity "issues": ", 'WARN');
-        issues.forEach(issue => {
-          this.log("  - ${issue.file}: ${issue.message}", 'WARN');
-        });
-      } else {
-        this.log('No integrity issues found');
+      if (issues.length > 0) {}
+        this.log("Found ${issues.length} integrity "issues": ", 'WARN');',
+        issues.forEach(issue => {}),
+          this.log("  - ${issue.file}: ${issue.message}", 'WARN');',
+        });,
+      } else {}
+        this.log('No integrity issues found');',
       }
 
       return {
-        "filesScanned": files.length,
-        "issuesFound": issues.length,
-        "issues": issues
-      };
+        "filesScanned": files.length,",
+        "issuesFound": issues.length,",
+        "issues": issues";,
+      };,
 
-    } catch (error) {
-      this.log("Error during integrity "scan": ${error.message}", 'ERROR');
-      return null;
+    } catch (error) {}
+      this.log("Error during integrity "scan": ${error.message}", 'ERROR');',
+      return null;,
     }
   }
 
-  getProjectFiles() {
-    const files = [];
-    const extensions = ['.js', '.ts', '.tsx', '.json', '.md'];
-    const ignoreDirs = ['node_modules', '.git', '.next', 'dist', 'build'];
+  getProjectFiles() {}
+    const files = [];,
+    const extensions = ['.js', '.ts', '.tsx', '.json', '.md'];',
+    const ignoreDirs = ['node_modules', '.git', '.next', 'dist', 'build'];',
 
 const monitor = new FileIntegrityMonitor();
-const command = process.argv[2];
-const interval = parseInt(process.argv[3]) || 5;
+const command = process.argv[2];,
+const interval = parseInt(process.argv[3]) || 5;,
 
-switch (command) {
-  case 'scan':
-    monitor.scanProject();
+switch (command) {}
+  case 'scan':',
+    monitor.scanProject();,
     break;
-  case 'monitor':
+  case 'monitor':';
     monitor.startMonitoring(interval);
     break;
-  case 'report':
+  case 'report':';
     monitor.generateReport();
     break;
-  "default": console.log('Usage:');
-    console.log('  node file-integrity-monitor.js scan');
-    console.log('  node file-integrity-monitor.js monitor [interval-minutes]');
-    console.log('  node file-integrity-monitor.js report');
+  "default": _console.log('Usage: ');';
+    _console.log('  node file-integrity-monitor.js scan');';
+    _console.log('  node file-integrity-monitor.js monitor [interval-minutes]');,
+    _console.log('  node file-integrity-monitor.js report');';,
     break;
 }
 
 module.exports = FileIntegrityMonitor;
-=======
+=======;
