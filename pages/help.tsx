@@ -125,9 +125,31 @@ const faqs = [{
     question: "Can I cancel my subscription anytime?",
     answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period."
   }]
+
+const supportMethods = [
+  {
+    title: "Email Support",
+    description: "Send us an email and we'll get back to you within 24 hours."
+  },
+  {
+    title: "Phone Support", 
+    description: "Call us during business hours for immediate assistance."
+  },
+  {
+    title: "Live Chat",
+    description: "Chat with our support team in real-time."
+  }
+]
 export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('')
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({})
+  
+  const toggleCategory = (categoryTitle: string) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [categoryTitle]: !prev[categoryTitle]
+    }))
+  }
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
@@ -188,32 +210,29 @@ export default function HelpPage() {
               Frequently Asked Questions
             </h2>
             <div className="space-y-6">
-              {helpCategories.map((category, categoryIndex) => (
+              {faqs.map((faq, faqIndex) => (
                 <motion.div
-                  key={categoryIndex}
+                  key={faqIndex}
                   className="bg-white rounded-lg shadow-lg overflow-hidden"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: categoryIndex * 0.1 }}
+                  transition={{ delay: faqIndex * 0.1 }}
                 >
                   <button
-                    onClick={() => toggleCategory(category.title)}
+                    onClick={() => toggleCategory(faq.question)}
                     className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                   >
-                    <div className="flex items-center gap-4">
-                      <category.icon className="w-6 h-6 text-blue-600" />
-                      <h3 className="text-xl font-semibold text-gray-900">
-                        {category.title}
-                      </h3>
-                    </div>
-                    {expandedCategories[category.title] ? (
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {faq.question}
+                    </h3>
+                    {expandedCategories[faq.question] ? (
                       <ChevronDown className="w-5 h-5 text-gray-500" />
                     ) : (
                       <ChevronRight className="w-5 h-5 text-gray-500" />
                     )}
                   </button>
                   <AnimatePresence>
-                    {expandedCategories[category.title] && (
+                    {expandedCategories[faq.question] && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
@@ -222,30 +241,9 @@ export default function HelpPage() {
                         className="overflow-hidden"
                       >
                         <div className="px-6 pb-6">
-                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {category.articles.map((article, articleIndex) => (
-                              <motion.div
-                                key={articleIndex}
-                                className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors group"
-                                whileHover={{ y: -2 }}
-                              >
-                                <div className="flex items-start justify-between mb-2">
-                                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                                    {article.type}
-                                  </span>
-                                  <span className="text-xs text-gray-500">
-                                    {article.readTime}
-                                  </span>
-                                </div>
-                                <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
-                                  {article.title}
-                                </h4>
-                                <p className="text-sm text-gray-600">
-                                  {article.description}
-                                </p>
-                              </motion.div>
-                            ))}
-                          </div>
+                          <p className="text-gray-600">
+                            {faq.answer}
+                          </p>
                         </div>
                       </motion.div>
                     )}
