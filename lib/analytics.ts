@@ -6,7 +6,7 @@ export const pageview = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', GA_TRACKING_ID, {
       page_path: url
-    }),
+    })
   }
 },
 
@@ -27,7 +27,7 @@ export const event = ({
       event_category: category,
       event_label: label,
       value: value
-    }),
+    })
   }
 },
 
@@ -41,10 +41,10 @@ export const initGA = () => {
 
     window.dataLayer = window.dataLayer || [],
     window.gtag = function() {
-      window.dataLayer.push(arguments),
+      window.dataLayer.push(arguments)
     },
     window.gtag('js', new Date()),
-    window.gtag('config', GA_TRACKING_ID),
+    window.gtag('config', GA_TRACKING_ID)
   }
 },
 

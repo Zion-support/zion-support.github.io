@@ -1,8 +1,7 @@
 import { PerformanceMetrics } from '../types',
-
 export const measurePerformance = (): PerformanceMetrics | null => {
   if (typeof window === 'undefined' || !('performance' in window)) {
-    return null,
+    return null
   }
 
   try {
@@ -21,7 +20,7 @@ export const measurePerformance = (): PerformanceMetrics | null => {
     const cls = performance
       .getEntriesByType('layout-shift')
       .reduce((acc, entry) => {
-        return acc + (entry as any).value,
+        return acc + (entry as any).value
       }, 0),
 
     const fid = performance.getEntriesByType(
@@ -34,10 +33,10 @@ export const measurePerformance = (): PerformanceMetrics | null => {
       largestContentfulPaint: lcp ? lcp.startTime : 0,
       cumulativeLayoutShift: cls,
       firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
-    },
+    }
   } catch (error) {
     console.warn('Error measuring performance:', error),
-    return null,
+    return null
   }
 },
 
@@ -51,7 +50,7 @@ export const getPerformanceScore = (
     largestContentfulPaint: 'good' | 'needs-improvement' | 'poor',
     cumulativeLayoutShift: 'good' | 'needs-improvement' | 'poor',
     firstInputDelay: 'good' | 'needs-improvement' | 'poor'
-  },
+  }
 } => {
   const thresholds = {
     loadTime: { good: 2000, needsImprovement: 4000 },
@@ -77,7 +76,7 @@ export const getPerformanceScore = (
         : threshold.needsImprovement / threshold.good)
     )
       return 'needs-improvement',
-    return 'poor',
+    return 'poor'
   },
 
   const scores = {
@@ -112,12 +111,12 @@ export const getPerformanceScore = (
   if (poorCount > 0) {
     overall = 'poor'
   } else if (needsImprovementCount > 0) {
-    overall = 'needs-improvement',
+    overall = 'needs-improvement'
   } else {
-    overall = 'good',
+    overall = 'good'
   }
 
-  return { overall, scores },
+  return { overall, scores }
 },
 
 export const logPerformanceMetrics = (
@@ -139,5 +138,5 @@ export const logPerformanceMetrics = (
     metrics.cumulativeLayoutShift.toFixed(4)
   ),
   console.log('First Input Delay:', `${metrics.firstInputDelay.toFixed(2)}ms`),
-  console.groupEnd(),
+  console.groupEnd()
 },

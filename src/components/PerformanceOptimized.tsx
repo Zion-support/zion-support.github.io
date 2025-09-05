@@ -24,5 +24,5 @@ export const usePerformanceMetrics = () => {,
       renderCount: prev.renderCount + 1,
       lastRenderTime: renderTime,
 
-  return { metrics, recordRender },
+  return { metrics, recordRender }
 },

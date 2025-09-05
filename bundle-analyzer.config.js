@@ -4,5 +4,5 @@
           openAnalyzer: false,
           reportFilename: 'bundle-analysis.htm,l'}),
       )},
-    return config},
+    return config}
 },

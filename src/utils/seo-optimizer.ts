@@ -14,7 +14,7 @@ export const generateMetaTags = pageData => {
     ogImage: pageData.ogImage || '/images/og-image.jpg',
     twitterCard: 'summary_large_image',
     canonical: pageData.canonical || window.location.href
-  },
+  }
 },
 
 export const generateStructuredData = pageData => {
@@ -33,5 +33,5 @@ export const generateStructuredData = pageData => {
       telephone: '+1-555-0123',
       contactType: 'customer service'
     }
-  },
+  }
 },

@@ -5,12 +5,12 @@ const { execSync } = require('child_process'),
 class SecurityAuditor {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs'),
-    this.ensureLogsDir(),
+    this.ensureLogsDir()
   }
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true }),
+      fs.mkdirSync(this.logsDir, { recursive: true })
     }
   }
 
@@ -20,7 +20,7 @@ class SecurityAuditor {
     console.log(logMessage),
 
     const logFile = path.join(this.logsDir, 'security-audit.log'),
-    fs.appendFileSync(logFile, logMessage + '\n'),
+    fs.appendFileSync(logFile, logMessage + '\n')
   }
 
   async runCommand(command, description) {
@@ -32,10 +32,10 @@ class SecurityAuditor {
         stdio: 'pipe'
       }),
       this.log(`✅ ${description} completed successfully`),
-      return { success: true, output },
+      return { success: true, output }
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'error'),
-      return { success: false, error: error.message },
+      return { success: false, error: error.message }
     }
   }
 
@@ -57,11 +57,11 @@ class SecurityAuditor {
     const results = [],
     for (const audit of audits) {
       const result = await this.runCommand(audit.command, audit.description),
-      results.push({ ...audit, result }),
+      results.push({ ...audit, result })
     }
 
     this.log('✅ Security audit completed'),
-    return { success: true, results },
+    return { success: true, results }
   }
 
   async generateReport() {
@@ -80,9 +80,9 @@ class SecurityAuditor {
     // Calculate summary
     report.security.results.forEach(result => {
       if (result.result.success) {
-        report.summary.successfulAudits++,
+        report.summary.successfulAudits++
       } else {
-        report.summary.failedAudits++,
+        report.summary.failedAudits++
       }
     }),
 
@@ -94,14 +94,14 @@ class SecurityAuditor {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
 
     this.log(`📄 Report saved to: ${reportFile}`),
-    return report,
+    return report
   }
 
   async start() {
     this.log('🎯 Starting Security Auditor...'),
     const report = await this.generateReport(),
     this.log('🏁 Security Auditor completed'),
-    return report,
+    return report
   }
 }
 
@@ -112,12 +112,12 @@ if (require.main === module) {
     .start()
     .then(report => {
       console.log('Security audit completed:', report.summary),
-      process.exit(0),
+      process.exit(0)
     })
     .catch(error => {
       console.error('Security audit failed:', error),
-      process.exit(1),
-    }),
+      process.exit(1)
+    })
 }
 
 module.exports = SecurityAuditor,

@@ -5,8 +5,8 @@
       const npmVersion = execSync('npm --version', {,
         cwd: this.projectRoot,
 
-      return { nodeVersion, npmVersion },
+      return { nodeVersion, npmVersion }
     } catch (error) {,
-      return { error: error.message },
+      return { error: error.message }
     },
 

@@ -3,12 +3,12 @@ export const optimizeImages = () => {
   const images = document.querySelectorAll('img'),
   images.forEach(img => {
     if (!img.loading) {
-      img.loading = 'lazy',
+      img.loading = 'lazy'
     }
     if (!img.decoding) {
-      img.decoding = 'async',
+      img.decoding = 'async'
     }
-  }),
+  })
 },
 
 export const preloadCriticalResources = () => {
@@ -19,15 +19,15 @@ export const preloadCriticalResources = () => {
     link.rel = 'preload',
     link.href = resource,
     link.as = resource.endsWith('.css') ? 'style' : 'font',
-    document.head.appendChild(link),
-  }),
+    document.head.appendChild(link)
+  })
 },
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
   const loadComponent = componentName => {
-    return import(`./components/${componentName}`),
+    return import(`./components/${componentName}`)
   },
 
-  return { loadComponent },
+  return { loadComponent }
 },

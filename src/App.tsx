@@ -1,10 +1,8 @@
 import React from 'react',
-
 import HomePage from '../pages/index',
 import AboutPage from '../pages/about',
 import ContactPage from '../pages/contact',
 import ServicesPage from '../pages/services',
-
 export default function App() {,
   return (,
     <ErrorBoundary>,

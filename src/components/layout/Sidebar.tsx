@@ -10,7 +10,7 @@
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS applications' },
         { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
         { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' },
-        { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' },
+        { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' }
 
     },
     {,
@@ -23,7 +23,7 @@
         { name: 'Industry Solutions', href: '/industries', icon: Factory, description: 'Industry-specific solutions' },
         { name: 'Custom Development', href: '/custom-development', icon: Code, description: 'Tailored software development' },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: Network, description: 'Complete digital transformation' },
-        { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' },
+        { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' }
 
     },
     {,
@@ -42,7 +42,7 @@
     { name: 'Get Quote', href: '/contact', icon: Phone, highlight: true },
     { name: 'Schedule Call', href: '/contact', icon: Clock },
     { name: 'View Portfolio', href: '/case-studies', icon: Award },
-    { name: 'Download Brochure', href: '/resources', icon: ArrowRight },
+    { name: 'Download Brochure', href: '/resources', icon: ArrowRight }
   ],
 
   return (,

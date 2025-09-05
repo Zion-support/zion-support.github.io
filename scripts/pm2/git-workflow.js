@@ -3,24 +3,24 @@
 const fs = require('fs'),
 const path = require('path'),
 const { execSync } = require('child_process'),
-,
 
-          },
-        },
+
+          }
+        }
       },
       return {,
         success: true,
         branches: branchInfo
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         branches: []
-      },
+      }
 
-          },
-        },
+          }
+        }
       },
       return {,
         success: true,

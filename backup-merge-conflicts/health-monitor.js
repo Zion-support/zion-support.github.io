@@ -4,9 +4,9 @@
       },
       if (this.monitorSystem) {,
         await this.checkSystemStatus()
-      },
+      }
 
-    },
+    }
   },
   async start() {,
     this.log('Health monitor service started'),

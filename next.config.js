@@ -6,12 +6,11 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true
   },
-  pageExtensions: ['tsxts', 'jsxjs'],
+  pageExtensions: ['tsxtsjsxjs'],
   trailingSlash: true,
   images: {
     domains: [
-      'localhostziontechgroup.com',
-      'images.unsplash.comvia.placeholder.com'
+      'localhostziontechgroup.comimages.unsplash.comvia.placeholder.com'
     ],
     formats: ['image/webpimage/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -26,9 +25,9 @@ const nextConfig = {
         ],
         poll: 1000,
         aggregateTimeout: 300
-      },
+      }
     }
-    return config,
+    return config
   }
 },
 

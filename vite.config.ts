@@ -1,7 +1,6 @@
 import { defineConfig, splitVendorChunkPlugin } from 'vite',
 import react from '@vitejs/plugin-react',
 import path from 'node: path',
-
 export default defineConfig({
   plugins: [
     react({
@@ -15,7 +14,7 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src')
     },
-    extensions: ['.js.jsx', '.ts.tsx']
+    extensions: ['.js.jsx.ts.tsx']
   },
   build: {
     target: 'esnext',
@@ -26,21 +25,15 @@ export default defineConfig({
         manualChunks: {
           'react-vendor': ['reactreact-dom'],
           'ui-vendor': [
-            '@radix-ui/react-accordion@radix-ui/react-alert-dialog',
-            '@radix-ui/react-avatar@radix-ui/react-checkbox',
-            '@radix-ui/react-collapsible@radix-ui/react-dialog',
-            '@radix-ui/react-dropdown-menu@radix-ui/react-hover-card',
-            '@radix-ui/react-label@radix-ui/react-menubar',
-            '@radix-ui/react-navigation-menu@radix-ui/react-popover',
-            '@radix-ui/react-progress@radix-ui/react-radio-group',
-            '@radix-ui/react-scroll-area@radix-ui/react-select',
-            '@radix-ui/react-separator@radix-ui/react-slider',
-            '@radix-ui/react-slot@radix-ui/react-switch',
-            '@radix-ui/react-tabs@radix-ui/react-toast',
-            '@radix-ui/react-toggle@radix-ui/react-tooltip'
+            '@radix-ui/react-accordion@radix-ui/react-alert-dialog@radix-ui/react-avatar@radix-ui/react-checkbox',
+            '@radix-ui/react-collapsible@radix-ui/react-dialog@radix-ui/react-dropdown-menu@radix-ui/react-hover-card',
+            '@radix-ui/react-label@radix-ui/react-menubar@radix-ui/react-navigation-menu@radix-ui/react-popover',
+            '@radix-ui/react-progress@radix-ui/react-radio-group@radix-ui/react-scroll-area@radix-ui/react-select',
+            '@radix-ui/react-separator@radix-ui/react-slider@radix-ui/react-slot@radix-ui/react-switch',
+            '@radix-ui/react-tabs@radix-ui/react-toast@radix-ui/react-toggle@radix-ui/react-tooltip'
           ],
           'animation-vendor': ['framer-motion'],
-          'utils-vendor': ['clsxtailwind-merge', 'class-variance-authority'],
+          'utils-vendor': ['clsxtailwind-mergeclass-variance-authority'],
           'icons-vendor': ['lucide-react'],
           'state-vendor': ['@reduxjs/toolkitreact-redux'],
           'router-vendor': ['react-router-dom']
@@ -59,7 +52,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.logconsole.info', 'console.debugconsole.warn'],
+        pure_funcs: ['console.logconsole.infoconsole.debugconsole.warn'],
         passes: 2,
         unsafe: true,
         unsafe_comps: true,
@@ -82,18 +75,12 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: [
-      'reactreact-dom',
-      'react-router-domframer-motion',
-      'lucide-react@radix-ui/react-accordion',
-      '@radix-ui/react-alert-dialog@radix-ui/react-avatar',
-      '@radix-ui/react-checkbox@radix-ui/react-collapsible',
-      '@radix-ui/react-dialog@radix-ui/react-dropdown-menu',
-      '@radix-ui/react-label@radix-ui/react-popover',
-      '@radix-ui/react-progress@radix-ui/react-radio-group',
-      '@radix-ui/react-scroll-area@radix-ui/react-select',
-      '@radix-ui/react-separator@radix-ui/react-slider',
-      '@radix-ui/react-slot@radix-ui/react-switch',
-      '@radix-ui/react-tabs@radix-ui/react-toast',
+      'reactreact-domreact-router-domframer-motion',
+      'lucide-react@radix-ui/react-accordion@radix-ui/react-alert-dialog@radix-ui/react-avatar',
+      '@radix-ui/react-checkbox@radix-ui/react-collapsible@radix-ui/react-dialog@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-label@radix-ui/react-popover@radix-ui/react-progress@radix-ui/react-radio-group',
+      '@radix-ui/react-scroll-area@radix-ui/react-select@radix-ui/react-separator@radix-ui/react-slider',
+      '@radix-ui/react-slot@radix-ui/react-switch@radix-ui/react-tabs@radix-ui/react-toast',
       '@radix-ui/react-tooltip'
     ],
     exclude: ['@radix-ui/react-icons'],
@@ -133,9 +120,9 @@ export default defineConfig({
   experimental: {
     renderBuiltUrl(filename, { hostType }) {
       if (hostType === 'js') {
-        return { js: `__ASSET__${filename}__` },
+        return { js: `__ASSET__${filename}__` }
       } else {
-        return { relative: true },
+        return { relative: true }
       }
     }
   }

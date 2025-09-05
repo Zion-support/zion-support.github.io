@@ -1,8 +1,8 @@
-          fs.writeFileSync(fullPath, '// Auto-generated module\nexport {},')},
+          fs.writeFileSync(fullPath, '// Auto-generated module\nexport {},')}
 
       } catch (error) {,
-        console.log(`Error processing ${fullPath}: ${error.message}`)},
-},
+        console.log(`Error processing ${fullPath}: ${error.message}`)}
+}
   })},
 // Fix all TypeScript files in api-disabled directory,
 const apiDisabledDir = path.join(__dirname, 'api-disabled'),

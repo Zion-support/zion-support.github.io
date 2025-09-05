@@ -6,7 +6,7 @@ function fixedCount = 0,
     if (stat.isDirectory()) {,
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {,
       if (fixFile(filePath)) {,
-        fixedCount++},
-},
+        fixedCount++}
+}
 },
   return fixedCount},

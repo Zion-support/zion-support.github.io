@@ -1,5 +1,5 @@
 
-    },
+    }
   },
   async start() {,
     this.log('Build optimizer service started'),

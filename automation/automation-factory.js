@@ -2,9 +2,9 @@
   optimizeImages() {,
     try {,
       // Placeholder for image optimization,
-      return { optimized: 0, totalImages: 0, savings: "0KB" },
+      return { optimized: 0, totalImages: 0, savings: "0KB" }
     } catch (error) {,
-      return { error: error.message },
+      return { error: error.message }
     },
 
   analyzeDependencies() {,
@@ -18,9 +18,9 @@
         productionDependencies: dependencies.length,
         devDependencies: devDependencies.length
 
-      },
+      }
     } catch (error) {,
-      return { error: error.message },
+      return { error: error.message }
     },
 
   generateRecommendations() {,

@@ -2,7 +2,6 @@ import React from 'react',
 import Head from 'next/head',
 import ContactForm from '../components/ContactForm',
 import ErrorBoundary from '../components/ErrorBoundary',
-
 export default function Contact() {
   return (
     <>

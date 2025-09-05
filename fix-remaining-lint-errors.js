@@ -4,20 +4,20 @@
         // Skip node_modules, .git, and other common directories},
         if (!['node_modules.gitdistbuild.next'].includes(item)) {'},
           files = files.concat(findFiles(fullPath, extensions))
-        },
+        }
       } else if (extensions.some(ext => item.endsWith(ext))) {},
         files.push(fullPath)
-      },
+      }
 
     } catch (error) {,
       // Skip files that can't be accessed'},
       continue
 },
 // Function to fix specific parsing errors,
-function fixParsingErrors(content) {},
+function fixParsingErrors(content) {}
 },
 // Function to fix unused variables,
-function fixUnusedVariables(content) {},
+function fixUnusedVariables(content) {}
 },
 // Function to fix specific syntax issues,
 function fixSyntaxIssues(content) {},
@@ -31,11 +31,11 @@ function fixSyntaxIssues(content) {},
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
         _console.log(`✅ Fixed: ${file}`)
-      },
+      }
     } catch (error) {},
       errorCount++,
       _console.error(`❌ Error fixing ${file}:`, error.message)
-},
+}
 },
   try {},
     const result = execSync('npm run lint 2>&1', { encoding: 'utf8' }),',
@@ -44,9 +44,9 @@ function fixSyntaxIssues(content) {},
     _console.log(`📈 Lint result: ${lastLine}`)
   } catch (error) {},
     _console.log('⚠️  Some lint errors remain. Check the output above.'),'
+}
 },
-},
-        fixedCount++},
+        fixedCount++}
     } catch (error) {,
   console.error(`Error processing ${file}:`, error.message),
       errorCount++},
