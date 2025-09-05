@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import SimpleLayout from '../components/SimpleLayout';
 import { motion } from 'framer-motion';
 import { Users, MessageCircle, Calendar, Award, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -32,7 +32,7 @@ export default function CommunityPage() {
   ];
 
   return (
-    <Layout 
+    <SimpleLayout 
       title="Community - Zion Tech Group"
       description="Join our vibrant community of developers, technologists, and innovators. Connect, learn, and grow together."
     >
@@ -155,6 +155,6 @@ export default function CommunityPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </SimpleLayout>
   );
 }

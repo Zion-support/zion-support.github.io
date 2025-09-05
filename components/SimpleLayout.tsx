@@ -1,28 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Footer from './Footer';
 
-interface LayoutProps {
+interface SimpleLayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
-  ogImage?: string;
   noIndex?: boolean;
 }
 
-export default function Layout({
+export default function SimpleLayout({
   children,
   title = 'Zion Tech Group - Leading AI & Technology Solutions',
   description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.',
   keywords = 'AI solutions, cloud services, technology consulting, digital transformation, IT services, machine learning, cybersecurity',
-  ogImage = '/og-image.jpg',
   noIndex = false
-}: LayoutProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+}: SimpleLayoutProps) {
   return (
     <>
       <Head>
@@ -40,13 +33,11 @@ export default function Layout({
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:image" content={ogImage} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
         
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
@@ -58,51 +49,10 @@ export default function Layout({
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": description,
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
-              },
-              "sameAs": [
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
-              ]
-            })
-          }}
-        />
       </Head>
       
-      <div className="min-h-screen flex">
-        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-        <div className="flex-1 flex flex-col lg:ml-80">
-          <Header onMenuClick={() => setIsSidebarOpen(true)} />
-          <main className="flex-1 pt-16">
-            {children}
-          </main>
-          <Footer />
-        </div>
+      <div className="min-h-screen">
+        {children}
       </div>
     </>
   );
