@@ -37,8 +37,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
   ];
 
   return (
@@ -70,7 +69,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="border-t border-slate-800 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-gray-400 text-sm">
-          <div>© {year} Zion Tech Group. All rights reserved.</div>
+          <div>© {currentYear} Zion Tech Group. All rights reserved.</div>
           <div className="flex gap-4">
             <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a>
             <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a>

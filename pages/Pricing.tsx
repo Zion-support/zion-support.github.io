@@ -1,184 +1,99 @@
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
+import Link from 'next/link'
 
 export default function Pricing() {
   const pricingPlans = [
     {
-      category: "AI Services",
-      plans: [
+      category: "AI Services", plans: [
         {
-          name: "AI Content Creation",
-          price: "$299",
-          period: "month",
-          description: "AI-powered content creation for blogs, social media, and marketing",
+          name: "AI Content Creation", price: "$299", period: "month", description: "AI-powered content creation for blogs, social media, and marketing", ;
           features: [
-            "Unlimited content generation",
-            "Brand voice customization",
-            "Multi-platform publishing",
-            "SEO optimization",
-            "Analytics dashboard",
-            "24/7 support"
-          ],
-          marketPrice: "$500-800",
-          savings: "Save up to $500/month"
-        },
+            "Unlimited content generation", "Brand voice customization", ;
+            "Multi-platform publishing", ;
+            "SEO optimization", ;
+            "Analytics dashboard", ;
+            "24/7 support"], ;
+          marketPrice: "$500-800", savings: "Save up to $500/month" },;
         {
-          name: "AI Email Automation",
-          price: "$199",
-          period: "month",
-          description: "Intelligent email management and automation",
-          features: [
-            "Smart email routing",
-            "Automated responses",
-            "Priority flagging",
-            "Sentiment analysis",
-            "CRM integration",
-            "Performance analytics"
-          ],
-          marketPrice: "$300-500",
-          savings: "Save up to $300/month"
-        },
+          name: "AI Email Automation", price: "$199", period: "month", description: "Intelligent email management and automation", features: ["Smart email routing", "Automated responses", ;
+            "Priority flagging", ;
+            "Sentiment analysis", ;
+            "CRM integration", ;
+            "Performance analytics"], ;
+          marketPrice: "$300-500", savings: "Save up to $300/month" },;
         {
-          name: "AI Business Intelligence",
-          price: "$499",
-          period: "month",
-          description: "Advanced analytics and business intelligence platform",
-          features: [
-            "Real-time dashboards",
-            "Predictive analytics",
-            "Custom reports",
-            "Data visualization",
-            "Machine learning models",
-            "Executive summaries"
-          ],
-          marketPrice: "$800-1200",
-          savings: "Save up to $700/month"
-        }
-      ]
-    },
+          name: "AI Business Intelligence", price: "$499", period: "month", description: "Advanced analytics and business intelligence platform", features: ["Real-time dashboards", "Predictive analytics", ;
+            "Custom reports", ;
+            "Data visualization", ;
+            "Machine learning models", ;
+            "Executive summaries"], ;
+          marketPrice: "$800-1200", savings: "Save up to $700/month" }]},;
     {
-      category: "IT Services",
-      plans: [
+      category: "IT Services", plans: [
         {
-          name: "Cloud Migration",
-          price: "$2,999",
-          period: "project",
-          description: "Complete cloud infrastructure migration",
-          features: [
-            "Zero-downtime migration",
-            "Security assessment",
-            "Performance optimization",
-            "24/7 support",
-            "Training included",
-            "Post-migration monitoring"
-          ],
-          marketPrice: "$5,000-10,000",
-          savings: "Save up to $7,000"
-        },
+          name: "Cloud Migration", price: "$1,999", ;
+          period: "project", description: "Complete cloud infrastructure migration", features: [
+            "Zero-downtime migration", "Security assessment", ;
+            "Performance optimization", ;
+            "24/7 support", ;
+            "Training included", ;
+            "Post-migration monitoring"], ;
+          marketPrice: "$1,000-10, 000", ;
+          savings: "Save up to $1,000" },;
         {
-          name: "Cybersecurity",
-          price: "$799",
-          period: "month",
-          description: "Comprehensive cybersecurity protection",
-          features: [
-            "24/7 threat monitoring",
-            "Vulnerability scanning",
-            "Incident response",
-            "Security training",
-            "Compliance management",
-            "Regular audits"
-          ],
-          marketPrice: "$1,500-2,500",
-          savings: "Save up to $1,700/month"
-        },
+          name: "Cybersecurity", price: "$799", period: "month", description: "Comprehensive cybersecurity protection", features: ["24/7 threat monitoring", "Vulnerability scanning", ;
+            "Incident response", ;
+            "Security training", ;
+            "Compliance management", ;
+            "Regular audits"], ;
+          marketPrice: "$1,500-2, 500", ;
+          savings: "Save up to $1,700/month" },;
         {
-          name: "Digital Transformation",
-          price: "$5,999",
-          period: "project",
-          description: "End-to-end digital transformation",
-          features: [
-            "Process automation",
-            "Legacy modernization",
-            "Technology integration",
-            "Change management",
-            "Staff training",
-            "ROI tracking"
-          ],
-          marketPrice: "$10,000-20,000",
-          savings: "Save up to $14,000"
-        }
-      ]
-    },
+          name: "Digital Transformation", price: "$1,999", ;
+          period: "project", description: "End-to-end digital transformation", features: ["Process automation", "Legacy modernization", ;
+            "Technology integration", ;
+            "Change management", ;
+            "Staff training", ;
+            "ROI tracking"], ;
+          marketPrice: "$1,000-20, 000", ;
+          savings: "Save up to $1,000" }]},;
     {
-      category: "Micro SaaS Solutions",
-      plans: [
+      category: "Micro SaaS Solutions", plans: [
         {
-          name: "E-commerce Returns",
-          price: "$149",
-          period: "month",
-          description: "Automated return management for e-commerce",
-          features: [
-            "Automated returns",
-            "Label generation",
-            "Status tracking",
-            "Analytics",
-            "Multi-platform support",
-            "Customer notifications"
-          ],
-          marketPrice: "$300-500",
-          savings: "Save up to $350/month"
-        },
+          name: "E-commerce Returns", price: "$149", period: "month", description: "Automated return management for e-commerce", features: [
+            "Automated returns", "Label generation", ;
+            "Status tracking", ;
+            "Analytics", ;
+            "Multi-platform support", ;
+            "Customer notifications"], ;
+          marketPrice: "$300-500", savings: "Save up to $350/month" },;
         {
-          name: "Customer Support",
-          price: "$299",
-          period: "month",
-          description: "AI-powered customer support platform",
-          features: [
-            "AI chatbots",
-            "Ticket management",
-            "Knowledge base",
-            "Multi-channel support",
-            "Analytics",
-            "CRM integration"
-          ],
-          marketPrice: "$500-800",
-          savings: "Save up to $500/month"
-        },
+          name: "Customer Support", price: "$299", period: "month", description: "AI-powered customer support platform", features: ["AI chatbots", "Ticket management", ;
+            "Knowledge base", ;
+            "Multi-channel support", ;
+            "Analytics", ;
+            "CRM integration"], ;
+          marketPrice: "$500-800", savings: "Save up to $500/month" },;
         {
-          name: "Project Management",
-          price: "$199",
-          period: "month",
-          description: "AI-powered project management tool",
-          features: [
-            "Smart task assignment",
-            "Progress tracking",
-            "Resource optimization",
-            "Team collaboration",
-            "Automated reporting",
-            "Integration support"
-          ],
-          marketPrice: "$400-600",
-          savings: "Save up to $400/month"
-        }
-      ]
-    }
-  ];
+          name: "Project Management", price: "$199", period: "month", description: "AI-powered project management tool", features: ["Smart task assignment", "Progress tracking", ;
+            "Resource optimization", ;
+            "Team collaboration", ;
+            "Automated reporting", ;
+            "Integration support"], ;
+          marketPrice: "$400-600", savings: "Save up to $400/month" }]}]
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Header */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+  return(<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      { /* Header */ }
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Pricing
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transparent, competitive pricing for all our services. Save up to 70% compared to market rates.
+            Transparent, competitive pricing for all our services. Save up to 70% compared to market rates.;
           </p>
           <div className="bg-cyan-500/20 border border-cyan-500/30 rounded-lg p-6 max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-cyan-400 mb-4">Why Our Pricing is Better</h2>
-            <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="grid md: grid-cols-3 gap-6 text-left">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">Cost Effective</h3>
                 <p className="text-gray-300">Save 40-70% compared to competitors</p>
@@ -195,52 +110,48 @@ export default function Pricing() {
           </div>
         </div>
       </section>
-
-      {/* Pricing Plans */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      { /* Pricing Plans */ }
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {pricingPlans.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
-                {category.category}
+          { pricingPlans.map((category, categoryIndex) => (;
+            <div key={categoryIndex } className="mb-16">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-8 text-center">
+                { category.category }
               </h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                {category.plans.map((plan, planIndex) => (
-                  <div key={planIndex} className="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-colors">
+              <div className="grid md: grid-cols-3 gap-8">
+                { category.plans.map((plan, planIndex) => (;
+                  <div key={planIndex } className="bg-gray-800 p-8 rounded-lg hover: bg-gray-700 transition-colors">
                     <div className="text-center mb-6">
                       <h3 className="text-2xl font-semibold text-cyan-400 mb-2">
-                        {plan.name}
+                        { plan.name }
                       </h3>
                       <p className="text-gray-300 mb-4">
-                        {plan.description}
+                        { plan.description }
                       </p>
                       <div className="mb-4">
                         <span className="text-4xl font-bold text-green-400">
-                          {plan.price}
+                          { plan.price }
                         </span>
-                        <span className="text-gray-400">/{plan.period}</span>
+                        <span className="text-gray-400">/{ plan.period }</span>
                       </div>
                       <div className="text-sm text-gray-400 mb-2">
-                        Market: {plan.marketPrice}
+                        Market: { plan.marketPrice }
                       </div>
                       <div className="text-sm text-green-400 font-semibold">
-                        {plan.savings}
+                        { plan.savings }
                       </div>
                     </div>
-                    
                     <ul className="text-gray-300 space-y-3 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
+                      { plan.features.map((feature, featureIndex) => (;
+                        <li key={featureIndex } className="flex items-center">
                           <span className="text-cyan-400 mr-3">✓</span>
-                          {feature}
-                        </li>
-                      ))}
+                          { feature }
+                        </li>))}
                     </ul>
-
                     <div className="space-y-3">
                       <Link
                         href="/contact"
-                        className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block"
+                        className="w-full bg-cyan-500 hover: bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block"
                       >
                         Get Started
                       </Link>
@@ -258,9 +169,8 @@ export default function Pricing() {
           ))}
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+      { /* Contact Section */ }
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             Need a Custom Solution?
@@ -299,5 +209,5 @@ export default function Pricing() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,4 +1,10 @@
-// Security Headers Configuration
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+// Security headers configuration
 export const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
@@ -6,7 +12,7 @@ export const securityHeaders = [
   },
   {
     key: 'Strict-Transport-Security',
-    value: 'max-age=630720;0;0; includeSubDomains; preload'
+    value: 'max-age=63072000; includeSubDomains; preload'
   },
   {
     key: 'X-XSS-Protection',
@@ -25,7 +31,20 @@ export const securityHeaders = [
     value: 'origin-when-cross-origin'
   },
   {
+    key: 'Permissions-Policy',
+    value: 'camera=(), microphone=(), geolocation=()'
+  },
+  {
     key: 'Content-Security-Policy',
-    value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none';"
+    value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'self';"
   }
 ];
+
+export const getSecurityHeaders = () => securityHeaders;
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

@@ -1,18 +1,25 @@
 import AICodeGenerator from './AICodeGenerator;
-;
 describe('AICodeGenerator', () => {;
   it('renders without crashing', () => {;
     render(<AICodeGenerator />);
-;
     expect(screen.getByRole('main')).toBeInTheDocument();'  });';
   it('displays correct content', () => {;
     render(<AICodeGenerator />);
-;
-    // Add specific content checks based on component functionality;,
-});
-;
+    // Add specific content checks based on component functionality});
   it('handles user interactions', () => {;
     render(<AICodeGenerator />);
-// Add interaction tests based on component functionality;,
-});,
+<<<<<<< HEAD
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />); }); ; it('handles user interactions',() => {; render(<AICodeGenerator />)});,});
+// Add interaction tests based on component functionality})});
+<<<<<<< HEAD
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+=======
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+>>>>>>> pr-11914
+=======
+// Add interaction tests based on component functionality,
+}),
 });
+// Add interaction tests based on component functionality})});
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+>>>>>>> pr-11913

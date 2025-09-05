@@ -1,13 +1,9 @@
-import React from 'react';
-import Image from 'next/image';
-
-type EnhancedMarketplaceCardProps = {
+interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
-  price: string;
+  price?: string;
   image?: string;
-};
-
+}
 export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
   return (
     <div className="rounded-xl border bg-white shadow-sm hover:shadow-md transition p-4 flex flex-col">
@@ -21,7 +17,7 @@ export default function EnhancedMarketplaceCard({ title, description, price, ima
       </div>
       <p className="text-sm text-gray-600 mb-4">{description}</p>
       <div className="mt-auto flex items-center justify-between">
-        <span className="text-sm font-medium text-blue-600">{price}</span>
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
         <a href="/contact" className="text-sm text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded">
           Get started
         </a>
@@ -29,4 +25,3 @@ export default function EnhancedMarketplaceCard({ title, description, price, ima
     </div>
   );
 }
-

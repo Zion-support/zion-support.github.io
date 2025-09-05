@@ -1,56 +1,35 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-// Mock Next.js router;
-jest.mock(
-  'next/router', () => ({
-  useRouter() {
-    return {
-      route: '/,
-      pathname:;
-  '/',
-      query: {},
-      asPath:;
-  '/',
-      push: jest.fn(),
-      pop: jest.fn(),
-      reload: jest.fn(),
-      back: jest.fn(),
-      prefetch: jest.fn().mockResolvedValue(undefined),
-      beforePopState: jest.fn(),
-      events: {
-        on: jest.fn(),
-        off: jest.fn(),
-        emit: jest.fn()},
-      isFallback: false}
-  }}));
-// Mock Next.js Image component
-jest.mock(
-  'next/image', () => ({
-  __esModule: true,
-  default: props => {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />
-  }}))
-// Mock Next.js Link component
-jest.mock(
-  'next/link', () => ({
-  __esModule: true,
-  default: ({ children, href, ...props }) => {
-    return (
-      <a href={href} {...props}>
-        {children}
-      </a>
-    )}}));
-// Global test utilities;
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn()}))
-global.matchMedia = jest.fn().mockImplementation(query => ({
-  matches: false,
-  media: query,
-  onchange: null,
-  addListener: jest.fn(),
-  removeListener: jest.fn(),
-  addEventListener: jest.fn(),
-  removeEventListener: jest.fn(),
-  dispatchEvent: jest.fn()}))
+import React from 'react';
+
+interface Jest.setupProps {
+  // Add props here as needed
+}
+
+export default function Jest.setup({ }: Jest.setupProps) {
+  return (
+    <div>
+      <h1>Jest.setup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+=======
+}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

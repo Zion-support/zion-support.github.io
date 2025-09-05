@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> pr-11935
+<<<<<<< HEAD
+<<<<<<< HEAD
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {; const: response = NextResponse.next(); response.headers.set("X-Content-Type-Options,","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,"; "frame-ancestors: "none,"; ].join("; "); response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {; const response = NextResponse.next(); ; response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,; "frame-ancestors "none; ].join("; "); response.headers.set("Content-Security-Policy",csp); console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``); const { pathname } = request.nextUrl; if (pathname.startsWith("/old-")) {; return NextResponse.redirect(new URL(pathname.replace("/old-","/"),request.url))} ; if (pathname.includes("..") || pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response.headers.set("X-Response-Time",`${Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*),",'; ]}
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11913
 import: { NextResponse } from "next/server";
 import: type { NextRequest } from "next/server";
 export: function middleware(request: NextRequest) {;
@@ -16,8 +27,7 @@ export: function middleware(request: NextRequest) {;
     "img-src: "self" data: https:,",";
     "font-src: "self"",";
     "connect-src: "self"",";
-    "frame-ancestors: "none"",";
-  ].join("; ");
+    "frame-ancestors: "none"","].join("; ");
   response.headers.set("Content-Security-Policy", csp);
 export function middleware(_request: NextRequest) {;
   const response = NextResponse.next();
@@ -32,14 +42,13 @@ export function middleware(_request: NextRequest) {;
   response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
   // Content Security Policy;
   const csp = [;
-    "default-src "self"",;
-    "script-src "self" "unsafe-eval" "unsafe-inline"",;
-    "style-src "self" "unsafe-inline"",;
-    "img-src "self" data: https:",;
-    "font-src "self"",;
-    "connect-src "self"",;
-    "frame-ancestors "none"";
-  ].join("; ");
+    "default-src "self"",
+    "script-src "self" "unsafe-eval" "unsafe-inline"",
+    "style-src "self" "unsafe-inline"",
+    "img-src "self" data: https:",
+    "font-src "self"",
+    "connect-src "self"",
+    "frame-ancestors "none""].join("; ");
   response.headers.set("Content-Security-Policy", csp);
   // Log request for monitoring;
   console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``);
@@ -47,13 +56,11 @@ export function middleware(_request: NextRequest) {;
   const { pathname } = request.nextUrl;
   // Redirect old routes to new ones;
   if (pathname.startsWith("/old-")) {;
-    return NextResponse.redirect(new URL(pathname.replace("/old-", "/"), request.url));
-}
+    return NextResponse.redirect(new URL(pathname.replace("/old-", "/"), request.url))}
 ;
   // Block suspicious requests;
   if (pathname.includes("..") || pathname.includes("//")) {;
-    return new NextResponse("Forbidden", { status: 403 });
-}
+    return new NextResponse("Forbidden", { status: 403 })}
 ;
   // Add response time header;
   response.headers.set("X-Response-Time", `${Date.now() - startTime}ms`);
@@ -64,5 +71,26 @@ export const config = {";
 ";
 export const config = {;
   matcher: [;
-    "/((?!api|_next/static|_next/image|favicon.ico).*),",';
-  ]}
+    "/((?!api|_next/static|_next/image|favicon.ico).*),",']}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {; const: response = NextResponse.next(); response.headers.set("X-Content-Type-Options,","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,"; "frame-ancestors: "none,"; ].join("; "); response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {; const response = NextResponse.next(); ; response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,; "frame-ancestors "none; ].join("; "); response.headers.set("Content-Security-Policy",csp); console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``); const { pathname } = request.nextUrl; if (pathname.startsWith("/old-")) {; return NextResponse.redirect(new URL(pathname.replace("/old-","/"),request.url))} ; if (pathname.includes("..") || pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response.headers.set("X-Response-Time",`${Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*),",'; ]}
+=======
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {; const: response = NextResponse.next(); response.headers.set("X-Content-Type-Options,","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,"; "frame-ancestors: "none,"; ].join("; "); response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {; const response = NextResponse.next(); ; response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,; "frame-ancestors "none; ].join("; "); response.headers.set("Content-Security-Policy",csp); console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``); const { pathname } = request.nextUrl; if (pathname.startsWith("/old-")) {; return NextResponse.redirect(new URL(pathname.replace("/old-","/"),request.url))} ; if (pathname.includes("..") || pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response.headers.set("X-Response-Time",`${Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*),",'; ]}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {; const: response = NextResponse.next(); response.headers.set("X-Content-Type-Options,","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,"; "frame-ancestors: "none,"; ].join("; "); response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {; const response = NextResponse.next(); ; response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,; "frame-ancestors "none; ].join("; "); response.headers.set("Content-Security-Policy",csp); console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``); const { pathname } = request.nextUrl; if (pathname.startsWith("/old-")) {; return NextResponse.redirect(new URL(pathname.replace("/old-","/"),request.url))} ; if (pathname.includes("..") || pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response.headers.set("X-Response-Time",`${Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*),",'; ]}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {; const: response = NextResponse.next(); response.headers.set("X-Content-Type-Options,","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,"; "frame-ancestors: "none,"; ].join("; "); response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {; const response = NextResponse.next(); ; response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,; "frame-ancestors "none; ].join("; "); response.headers.set("Content-Security-Policy",csp); console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``); const { pathname } = request.nextUrl; if (pathname.startsWith("/old-")) {; return NextResponse.redirect(new URL(pathname.replace("/old-","/"),request.url))} ; if (pathname.includes("..") || pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response.headers.set("X-Response-Time",`${Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*),",'; ]}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+<<<<<<< HEAD
+>>>>>>> pr-11914
+=======
+>>>>>>> pr-11913
+=======
+=======
+import: { NextResponse } from "next/server"; import: type { NextRequest } from "next/server"; export: function middleware(request: NextRequest) {; const: response = NextResponse.next(); response.headers.set("X-Content-Type-Options,","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [; "default-src "self,"; "script-src: "selfunsafe-eval" "unsafe-inline,"; "style-src: "selfunsafe-inline"","; "img-src: "self" data: https:,","; "font-src: "self,"; "connect-src: "self,"; "frame-ancestors: "none,"; ].join("; "); response.headers.set("Content-Security-Policy",csp); export function middleware(_request: NextRequest) {; const response = NextResponse.next(); ; response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-Content-Type-Options","nosniff"); response.headers.set("X-Frame-Options","DENY"); response.headers.set("X-XSS-Protection","1; mode=block"); response.headers.set("Referrer-Policy","strict-origin-when-cross-origin"); response.headers.set("Permissions-Policy","camera=(),microphone=(),geolocation=()"); const csp = [; "default-src "self,; "script-src "selfunsafe-eval" "unsafe-inline,; "style-src "selfunsafe-inline"",; "img-src "self" data: https:",; "font-src "self,; "connect-src "self,; "frame-ancestors "none; ].join("; "); response.headers.set("Content-Security-Policy",csp); console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``); const { pathname } = request.nextUrl; if (pathname.startsWith("/old-")) {; return NextResponse.redirect(new URL(pathname.replace("/old-","/"),request.url))} ; if (pathname.includes("..") || pathname.includes(" return new NextResponse("Forbidden",{ status: '403' })} ; response.headers.set("X-Response-Time",`${Date.now() - startTime}ms`); return response} ; export const config = {"; matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]} "; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*),",'; ]}
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> pr-11935
