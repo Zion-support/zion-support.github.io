@@ -160,10 +160,18 @@ const supportOptions = [
   {
     title: 'Video Tutorials',
     description: 'Step-by-step video guides',
-  ChevronRight,
-  ArrowRight
-} from 'lucide-react';
-import Layout from '../components/Layout';
+    icon: Video,
+    color: 'purple',
+    articles: [
+      {
+        title: 'Getting Started Video',
+        description: 'Watch our comprehensive getting started guide',
+        readTime: '8 min watch',
+        type: 'Video'
+      }
+    ]
+  }
+];
 
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState('');
