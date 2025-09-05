@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface ProfileProjectsProps {
   // Add props here as needed
 }
+
 export default function ProfileProjects({ }: ProfileProjectsProps) {
   return (
     <div>

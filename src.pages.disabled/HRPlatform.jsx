@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface HRPlatformProps {
   // Add props here as needed
 }
+
 export default function HRPlatform({ }: HRPlatformProps) {
   return (
     <div>

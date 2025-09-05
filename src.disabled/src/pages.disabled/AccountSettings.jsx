@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface AccountSettingsProps {
   // Add props here as needed
 }
+
 export default function AccountSettings({ }: AccountSettingsProps) {
   return (
     <div>

@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface FuturisticServicesShowcaseProps {
   // Add props here as needed
 }
+
 export default function FuturisticServicesShowcase({ }: FuturisticServicesShowcaseProps) {
   return (
     <div>

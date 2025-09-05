@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface WebsiteImprovementDashboardProps {
   // Add props here as needed
 }
+
 export default function WebsiteImprovementDashboard({ }: WebsiteImprovementDashboardProps) {
   return (
     <div>

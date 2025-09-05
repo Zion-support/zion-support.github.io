@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface ForumCategoryPageProps {
   // Add props here as needed
 }
+
 export default function ForumCategoryPage({ }: ForumCategoryPageProps) {
   return (
     <div>

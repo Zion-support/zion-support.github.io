@@ -10,11 +10,14 @@ console.log('=====================================');
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
     .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
     .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
     .replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
     .replace(/<<<<<<< HEAD/g, '')
     .replace(/=======/g, '')
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
     .replace(/>>>>>>> [a-f0-9]+/g, '');
 }
 
@@ -95,6 +98,7 @@ function processFile(filePath) {
     let modified = false;
 
     // Check for merge conflict markers
+<<<<<<< HEAD
     if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
       console.log(`🔧 Removing merge conflict markers from ${filePath}`);
       content = removeMergeConflictMarkers(content);
@@ -140,6 +144,8 @@ function findFilesWithConflicts() {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
             files.push(fullPath);
           }
         } catch (error) {

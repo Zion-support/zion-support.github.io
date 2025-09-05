@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface LoadingFallbackProps {
   // Add props here as needed
 }
+
 export default function LoadingFallback({ }: LoadingFallbackProps) {
   return (
     <div>

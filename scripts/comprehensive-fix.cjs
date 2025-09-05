@@ -24,8 +24,11 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers
+<<<<<<< HEAD
     content = content.replace(/<<<<<<< HEAD\n?/g, '');
     content = content.replace(/=======\n?/g, '');
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
     content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
     
     // Fix common syntax issues

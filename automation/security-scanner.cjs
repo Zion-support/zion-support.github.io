@@ -145,6 +145,7 @@ if (require.main === module) {}
 });
 };
 module.exports = SecurityScanner;
+=======
 #!/usr/bin/env node
 
 /**
@@ -257,6 +258,10 @@ runSecurityCheck('Sensitive Data Scan', () => {
 });
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 // Check for outdated dependencies
 runSecurityCheck('Dependency Security', () => {
     try {
@@ -492,3 +497,7 @@ if (securityReport.status === 'vulnerable') {
 } else {
     process.exit(0);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652

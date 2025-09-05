@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface HomePageSkeletonProps {
   // Add props here as needed
 }
+
 export default function HomePageSkeleton({ }: HomePageSkeletonProps) {
   return (
     <div>

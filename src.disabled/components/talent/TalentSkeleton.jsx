@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface TalentSkeletonProps {
   // Add props here as needed
 }
+
 export default function TalentSkeleton({ }: TalentSkeletonProps) {
   return (
     <div>

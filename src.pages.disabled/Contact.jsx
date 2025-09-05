@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface ContactProps {
   // Add props here as needed
 }
+
 export default function Contact({ }: ContactProps) {
   return (
     <div>

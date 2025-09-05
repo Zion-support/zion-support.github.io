@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface EnterpriseCallToActionProps {
   // Add props here as needed
 }
+
 export default function EnterpriseCallToAction({ }: EnterpriseCallToActionProps) {
   return (
     <div>

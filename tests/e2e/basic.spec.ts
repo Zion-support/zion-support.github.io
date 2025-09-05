@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface Basic.specProps {
   // Add props here as needed
 }
+
 export default function Basic.spec({ }: Basic.specProps) {
   return (
     <div>

@@ -379,7 +379,6 @@ class IntelligentMonitor {
 
   displaySummary() {
     console.log('\n🎯 INTELLIGENT MONITOR SUMMARY');
-    console.log('================================');
     
     const system = this.metrics.system;
     const app = this.metrics.application;

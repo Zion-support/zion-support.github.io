@@ -72,6 +72,11 @@
           }
         }
       }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
       this.integrityChecks++;
       this.issuesFound += issues.length;
 

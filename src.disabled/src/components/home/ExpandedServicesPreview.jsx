@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface ExpandedServicesPreviewProps {
   // Add props here as needed
 }
+
 export default function ExpandedServicesPreview({ }: ExpandedServicesPreviewProps) {
   return (
     <div>

@@ -11,6 +11,7 @@ const filesToFix = [
     'src/components/ui/card.tsx',
     'src/components/ui/input.tsx',
     'src/components/talent/TalentCard.jsx'
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 ];
 
 function fixFile(filePath) {
@@ -19,6 +20,10 @@ function fixFile(filePath) {
         return;
     }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 // Function to fix remaining syntax errors in a file;
 function fixRemainingSyntax(filePath) {}
   try {}
@@ -152,6 +157,7 @@ function fixFilesInDirectory(dirPath) {}
     
     const handleRequestHire = (talentId) => {
         // Handle hire request logic here
+=======
     if (stat.isDirectory()) {}
       fixedCount += fixFilesInDirectory(filePath);
     } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {}
@@ -164,6 +170,7 @@ function fixFilesInDirectory(dirPath) {}
 // Main execution
 
 const fixedCount = fixFilesInDirectory('./src');
+=======
 };
 // Main execution;
 console.log('Starting remaining syntax error fixing...');

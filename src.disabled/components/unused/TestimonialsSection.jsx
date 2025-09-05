@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface TestimonialsSectionProps {
   // Add props here as needed
 }
+
 export default function TestimonialsSection({ }: TestimonialsSectionProps) {
   return (
     <div>

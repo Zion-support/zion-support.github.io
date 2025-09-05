@@ -5,19 +5,6 @@ import {
   ArrowRight,
   Award,
   BarChart3,
-<<<<<<< HEAD
-=======
-  Shield,
-  Code,
-  Zap,
-  Globe,
-  Home,
-  Building,
-  FileText,
-  MessageSquare,
-  Calendar,
-  ShoppingCart,
->>>>>>> origin/main
   BookOpen,
   Brain,
   Building,
@@ -29,8 +16,8 @@ import {
   Clock,
   Cloud,
   Code,
+  Cpu,
   CreditCard,
-  Document,
   DollarSign,
   Eye,
   FileText,
@@ -53,16 +40,10 @@ import {
   Star,
   Target,
   TrendingUp,
-<<<<<<< HEAD
   Truck,
   Users,
   X,
-  Zap
-=======
-  Clock,
-  DollarSign,
-  Cpu,
-  Rocket,
+  Zap,
   Car,
   Sprout,
   Wifi,
@@ -96,7 +77,6 @@ import {
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money
->>>>>>> origin/main
 } from 'lucide-react';
 
 const navigationItems = [

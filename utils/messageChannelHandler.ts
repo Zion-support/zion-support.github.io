@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-export const messageChannelHandler = {
-  sendMessage: (message: string) => {},
-  receiveMessage: (callback: (message: string) => void) => {},
-  sendMessage: (message: any) => {},
-  receiveMessage: (callback: any) => {},
-=======
->>>>>>> origin/main
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;

@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface MainNavigationProps {
   // Add props here as needed
 }
+
 export default function MainNavigation({ }: MainNavigationProps) {
   return (
     <div>

@@ -79,6 +79,8 @@ const filesToFix = [
     'src/components/ui/card.tsx',
     'src/components/ui/textarea.tsx',
     'src/components/ui/use-toast.ts'
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
 ];
 
 function fixFile(filePath) {
@@ -126,20 +128,31 @@ function walkDirectory(dir) {
   
   return fixedCount}
     let fixes = 0;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 
 
 
 
 
+<<<<<<< HEAD
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
 
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 if (totalFixes > 0) {
     
 } else {
     
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

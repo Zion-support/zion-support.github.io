@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface EditPostPageProps {
   // Add props here as needed
 }
+
 export default function EditPostPage({ }: EditPostPageProps) {
   return (
     <div>

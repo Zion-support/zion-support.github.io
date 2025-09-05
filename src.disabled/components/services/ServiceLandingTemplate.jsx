@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface ServiceLandingTemplateProps {
   // Add props here as needed
 }
+
 export default function ServiceLandingTemplate({ }: ServiceLandingTemplateProps) {
   return (
     <div>

@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface EnterpriseHeroProps {
   // Add props here as needed
 }
+
 export default function EnterpriseHero({ }: EnterpriseHeroProps) {
   return (
     <div>

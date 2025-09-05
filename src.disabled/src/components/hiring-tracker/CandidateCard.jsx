@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface CandidateCardProps {
   // Add props here as needed
 }
+
 export default function CandidateCard({ }: CandidateCardProps) {
   return (
     <div>

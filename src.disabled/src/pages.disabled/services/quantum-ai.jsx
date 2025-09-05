@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface QuantumaiProps {
   // Add props here as needed
 }
+
 export default function Quantumai({ }: QuantumaiProps) {
   return (
     <div>

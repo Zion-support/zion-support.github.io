@@ -8,44 +8,59 @@ interface MainLayoutProps {
   title?: string;
   description?: string;
   keywords?: string;
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product';
+  noindex?: boolean;
+  nofollow?: boolean;
   canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  noIndex?: boolean;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title = "Zion Tech Group",
-  description = "Leading technology solutions provider",
-  keywords = "technology, AI, IT, micro SaaS, solutions",
-  canonical = "https://ziontechgroup.com",
-  ogTitle,
-  ogDescription,
-  ogImage,
-  noIndex = false,
+const MainLayout: React.FC<MainLayoutProps> = ({ 
+  children, 
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  description = 'Transform your business with cutting-edge AI, IT services, and micro SaaS solutions. Expert technology consulting and implementation services.',
+  keywords = 'technology solutions, AI services, IT consulting, micro SaaS, cloud computing, digital transformation, cybersecurity, software development',
+  image, 
+  url, 
+  type = 'website', 
+  noindex = false, 
+  nofollow = false, 
+  canonical 
 }) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
+        {keywords && <meta name="keywords" content={keywords} />}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
-        {ogTitle && <meta property="og:title" content={ogTitle} />}
-        {ogDescription && <meta property="og:description" content={ogDescription} />}
-        {ogImage && <meta property="og:image" content={ogImage} />}
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
-        {noIndex && <meta name="robots" content="noindex, nofollow" />}
+        {noindex && <meta name="robots" content="noindex" />}
+        {nofollow && <meta name="robots" content="nofollow" />}
+        
+        {/* Open Graph */}
+        <meta property="og:type" content={type} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        {image && <meta property="og:image" content={image} />}
+        {url && <meta property="og:url" content={url} />}
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        {image && <meta name="twitter:image" content={image} />}
       </Head>
-      <Header />
-      <main className="flex-grow">
-        {children}
-      </main>
-      <Footer />
-    </div>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

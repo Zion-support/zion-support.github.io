@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface IoTEdgeProps {
   // Add props here as needed
 }
+
 export default function IoTEdge({ }: IoTEdgeProps) {
   return (
     <div>

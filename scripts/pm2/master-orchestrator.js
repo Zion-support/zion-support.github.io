@@ -260,7 +260,6 @@ class MasterOrchestrator {
 
   displayStatus() {
     console.log('\n🎯 MASTER ORCHESTRATOR STATUS');
-    console.log('==============================');
     
     const health = this.status.health;
     const processes = this.status.processes;

@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface CategoriesProps {
   // Add props here as needed
 }
+
 export default function Categories({ }: CategoriesProps) {
   return (
     <div>

@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface BlockchainProps {
   // Add props here as needed
 }
+
 export default function Blockchain({ }: BlockchainProps) {
   return (
     <div>

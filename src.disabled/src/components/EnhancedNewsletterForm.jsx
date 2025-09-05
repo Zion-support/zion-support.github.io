@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface EnhancedNewsletterFormProps {
   // Add props here as needed
 }
+
 export default function EnhancedNewsletterForm({ }: EnhancedNewsletterFormProps) {
   return (
     <div>

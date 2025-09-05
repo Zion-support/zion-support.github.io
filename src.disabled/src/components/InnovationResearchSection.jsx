@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface InnovationResearchSectionProps {
   // Add props here as needed
 }
+
 export default function InnovationResearchSection({ }: InnovationResearchSectionProps) {
   return (
     <div>

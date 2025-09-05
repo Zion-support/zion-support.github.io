@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface Playwright.configProps {
   // Add props here as needed
 }
+
 export default function Playwright.config({ }: Playwright.configProps) {
   return (
     <div>

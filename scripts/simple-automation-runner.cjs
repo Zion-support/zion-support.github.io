@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -105,6 +106,12 @@ const path = require('path')
       await this.runSecurityAudit();
       await this.applyImprovements();
       
+=======
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
       return size}}
 
     totalSize = getDirectorySize(buildDir);
@@ -142,6 +149,7 @@ module.exports = { runSimpleAutomation }) {
   runSimpleAutomation().catch(console.error)}
 
 module.exports = { runSimpleAutomation }}
+=======
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
     "overallStatus"

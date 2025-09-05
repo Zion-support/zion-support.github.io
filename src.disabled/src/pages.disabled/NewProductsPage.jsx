@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface NewProductsPageProps {
   // Add props here as needed
 }
+
 export default function NewProductsPage({ }: NewProductsPageProps) {
   return (
     <div>

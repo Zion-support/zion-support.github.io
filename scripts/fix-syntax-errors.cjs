@@ -7,6 +7,7 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
   }
 
   log(message) {
@@ -56,6 +57,8 @@ const path = require('path')
     
     // Fix merge conflict markers
     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
     
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
@@ -139,6 +142,7 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxErrorFixer;
+=======
   log(message, level = 'INFO')
     this.log(' Starting syntax error fixing...')
       this.log('Running ESLint auto-fix...')

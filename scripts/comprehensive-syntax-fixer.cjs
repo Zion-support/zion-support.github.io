@@ -49,6 +49,7 @@
     let fixed = content;
     
     // Fix merge conflicts by keeping the HEAD version
+<<<<<<< HEAD
     fixed = fixed.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1\n');
     
     // Fix common syntax patterns
@@ -296,6 +297,8 @@ if (require.main === module) {
   }
 }
 
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

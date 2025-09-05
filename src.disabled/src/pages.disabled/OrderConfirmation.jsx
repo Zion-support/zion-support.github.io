@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface OrderConfirmationProps {
   // Add props here as needed
 }
+
 export default function OrderConfirmation({ }: OrderConfirmationProps) {
   return (
     <div>

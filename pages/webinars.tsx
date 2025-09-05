@@ -59,12 +59,17 @@ export default function WebinarsPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Webinars</h1>
+<<<<<<< HEAD
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+=======
+              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
                 Join our educational webinars and learn from industry experts.
               </p>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
   Download
 } from 'lucide-react';
 
@@ -336,6 +341,8 @@ export default function WebinarsPage() {
             </div>
           </div>
         </section>
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 
         {/* Upcoming Webinars */}
         <section className="py-16 px-4">
@@ -433,6 +440,7 @@ export default function WebinarsPage() {
                     Download
                   </button>
                 </div>
+<<<<<<< HEAD
         {/* Upcoming Webinars */}
         {upcomingWebinars.length > 0 && (
           <section className="py-16 bg-gray-50">
@@ -581,12 +589,15 @@ export default function WebinarsPage() {
                     </div>
                   </motion.div>
                 ))}
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -615,6 +626,34 @@ export default function WebinarsPage() {
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
                 >
                   Browse Tutorials
+=======
+        <section className="py-20 bg-indigo-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Stay Updated
+              </h2>
+              <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter to get notified about upcoming webinars.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/newsletter"
+                  className="inline-flex items-center px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Subscribe
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-colors font-semibold"
+                >
+                  Contact Us
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
                 </Link>
               </div>
             </motion.div>
@@ -622,6 +661,9 @@ export default function WebinarsPage() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
     </MainLayout>
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
   );
 }

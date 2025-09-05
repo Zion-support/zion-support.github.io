@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface LoginErrorFallbackProps {
   // Add props here as needed
 }
+
 export default function LoginErrorFallback({ }: LoginErrorFallbackProps) {
   return (
     <div>

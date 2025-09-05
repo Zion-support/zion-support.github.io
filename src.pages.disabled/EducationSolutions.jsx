@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface EducationSolutionsProps {
   // Add props here as needed
 }
+
 export default function EducationSolutions({ }: EducationSolutionsProps) {
   return (
     <div>

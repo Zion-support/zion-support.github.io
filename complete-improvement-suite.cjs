@@ -171,6 +171,11 @@
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
+<<<<<<< HEAD
+=======
+        content.includes('>>>>>>> ')
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
       );
     } catch (error) {
       return false;
@@ -184,10 +189,19 @@
 
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
         '$1'
       );
 
       // Clean up any remaining markers
+<<<<<<< HEAD
+=======
+      content = content.replace(/>>>>>>> [^\n]+\n/g, '');
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
@@ -364,6 +378,10 @@
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

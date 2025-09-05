@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface ServiceProcessStepsProps {
   // Add props here as needed
 }
+
 export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {
   return (
     <div>

@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface QuantumComputingProps {
   // Add props here as needed
 }
+
 export default function QuantumComputing({ }: QuantumComputingProps) {
   return (
     <div>

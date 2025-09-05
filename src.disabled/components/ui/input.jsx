@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface InputProps {
   // Add props here as needed
 }
+
 export default function Input({ }: InputProps) {
   return (
     <div>

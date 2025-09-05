@@ -21,6 +21,7 @@ import {
   Zap
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const services = [
   { name: 'All Services', href: '/services' },
   { name: 'AI Services', href: '/ai-services' },
@@ -31,6 +32,76 @@ const services = [
   { name: 'Data Analytics', href: '/services/data-analytics' },
   { name: 'Quantum Computing', href: '/services/quantum-computing' }
 ];
+=======
+const footerSections = {
+  'Services': [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Quantum Computing', href: '/quantum-computing' },
+    { name: 'Blockchain', href: '/blockchain' },
+    { name: 'IoT Solutions', href: '/iot-solutions' },
+    { name: 'Data Analytics', href: '/data-analytics' },
+    { name: 'Custom Development', href: '/custom-development' }
+  ],
+  'Solutions': [
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+    { name: 'Startup Solutions', href: '/solutions/startup' },
+    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'Custom Development', href: '/solutions/custom' },
+    { name: 'AI Implementation', href: '/solutions/ai-implementation' },
+    { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
+    { name: 'Legacy Modernization', href: '/solutions/legacy-modernization' },
+    { name: 'API Development', href: '/solutions/api-development' }
+  ],
+  'Industries': [
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Finance', href: '/industries/finance' },
+    { name: 'Education', href: '/industries/education' },
+    { name: 'Government', href: '/industries/government' },
+    { name: 'Manufacturing', href: '/industries/manufacturing' },
+    { name: 'Retail', href: '/industries/retail' },
+    { name: 'Agriculture', href: '/industries/agriculture' },
+    { name: 'Energy', href: '/industries/energy' },
+    { name: 'Transportation', href: '/industries/transportation' },
+    { name: 'Real Estate', href: '/industries/real-estate' }
+  ],
+  'Resources': [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Documentation', href: '/docs/api' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Training', href: '/training' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Best Practices', href: '/best-practices' }
+  ],
+  'Company': [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'News', href: '/news' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Security', href: '/security' }
+  ],
+  'Support': [
+    { name: 'Help Center', href: '/help' },
+    { name: 'Contact Support', href: '/contact' },
+    { name: 'Status Page', href: '/status' },
+    { name: 'Free Consultation', href: '/consultation' },
+    { name: 'Get Quote', href: '/quote' },
+    { name: 'Terms of Service', href: '/terms' }
+  ]
+};
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 
 const solutions = [
   { name: 'All Solutions', href: '/solutions' },

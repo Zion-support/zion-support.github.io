@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface KanbanBoardProps {
   // Add props here as needed
 }
+
 export default function KanbanBoard({ }: KanbanBoardProps) {
   return (
     <div>

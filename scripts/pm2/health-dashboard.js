@@ -449,7 +449,6 @@ class HealthDashboard {
 
   displaySummary() {
     console.log('\n🌐 HEALTH DASHBOARD SUMMARY');
-    console.log('============================');
     
     const system = this.dashboardData.system;
     const app = this.dashboardData.application;

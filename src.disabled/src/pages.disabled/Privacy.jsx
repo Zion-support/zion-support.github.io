@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface PrivacyProps {
   // Add props here as needed
 }
+
 export default function Privacy({ }: PrivacyProps) {
   return (
     <div>

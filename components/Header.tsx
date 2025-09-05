@@ -20,16 +20,22 @@ const navigation = {
     { name: 'Cloud Solutions', href: '/cloud-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
-    { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'Blockchain', href: '/blockchain' },
     { name: 'IoT Solutions', href: '/iot-solutions' },
-    { name: 'Edge Computing', href: '/edge-computing' },
-    { name: '5G Networks', href: '/5g-networks' }
+    { name: 'Data Analytics', href: '/data-analytics' },
+    { name: 'Custom Development', href: '/custom-development' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
+    { name: 'Enterprise Solutions', href: '/enterprise-solutions' }
   ],
   'Solutions': [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Startup Solutions', href: '/solutions/startup' },
     { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-    { name: 'Custom Development', href: '/solutions/custom' }
+    { name: 'Custom Development', href: '/solutions/custom' },
+    { name: 'AI Implementation', href: '/solutions/ai-implementation' },
+    { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
+    { name: 'Legacy Modernization', href: '/solutions/legacy-modernization' },
+    { name: 'API Development', href: '/solutions/api-development' }
   ],
   'Industries': [
     { name: 'Healthcare', href: '/industries/healthcare' },
@@ -39,7 +45,11 @@ const navigation = {
     { name: 'Manufacturing', href: '/industries/manufacturing' },
     { name: 'Retail', href: '/industries/retail' },
     { name: 'Agriculture', href: '/industries/agriculture' },
-    { name: 'Energy', href: '/industries/energy' }
+    { name: 'Energy', href: '/industries/energy' },
+    { name: 'Transportation', href: '/industries/transportation' },
+    { name: 'Real Estate', href: '/industries/real-estate' },
+    { name: 'Media & Entertainment', href: '/industries/media' },
+    { name: 'Legal', href: '/industries/legal' }
   ],
   'Resources': [
     { name: 'Blog', href: '/blog' },
@@ -49,7 +59,11 @@ const navigation = {
     { name: 'White Papers', href: '/white-papers' },
     { name: 'Webinars', href: '/webinars' },
     { name: 'Training', href: '/training' },
-    { name: 'FAQ', href: '/faq' }
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Best Practices', href: '/best-practices' },
+    { name: 'Industry Reports', href: '/industry-reports' },
+    { name: 'Newsletter', href: '/newsletter' }
   ],
   'Company': [
     { name: 'About Us', href: '/about' },
@@ -59,7 +73,11 @@ const navigation = {
     { name: 'News', href: '/news' },
     { name: 'Partners', href: '/partners' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' }
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Security', href: '/security' },
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Investor Relations', href: '/investors' }
   ]
 };
 
@@ -102,29 +120,31 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {Object.entries(navigation).map(([title, links]) => (
               <div key={title} className="relative group">
                 <button
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2"
                   onMouseEnter={() => setActiveDropdown(title)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  <span>{title}</span>
+                  <span className="font-medium">{title}</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 
                 {activeDropdown === title && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                    {links.map((link) => (
-                      <Link
-                        key={link.name}
-                        href={link.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
+                  <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 py-3 z-50 max-h-96 overflow-y-auto">
+                    <div className="grid grid-cols-1 gap-1">
+                      {links.map((link) => (
+                        <Link
+                          key={link.name}
+                          href={link.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-md mx-2"
+                        >
+                          {link.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
@@ -132,19 +152,19 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
           </nav>
 
           {/* Quick Links */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3">
             {quickLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-gray-700 hover:text-blue-600 transition-colors text-sm font-medium"
               >
                 {link.name}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
               Contact Us
             </Link>

@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface EnhancedAboutProps {
   // Add props here as needed
 }
+
 export default function EnhancedAbout({ }: EnhancedAboutProps) {
   return (
     <div>

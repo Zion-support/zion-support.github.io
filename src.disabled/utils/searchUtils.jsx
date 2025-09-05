@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface SearchUtilsProps {
   // Add props here as needed
 }
+
 export default function SearchUtils({ }: SearchUtilsProps) {
   return (
     <div>

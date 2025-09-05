@@ -1,4 +1,5 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
       { "encoding": "utf8" }
     );
     return result;
@@ -83,6 +84,8 @@ if (require.main === module) {;
   main()}
 ;
 module.exports = { resolveMergeConflict, findConflictedFiles }))
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
