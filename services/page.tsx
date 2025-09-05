@@ -1,9 +1,13 @@
-<<<<<<< HEAD
 };
 ];
+<<<<<<< HEAD
 ;
 export default function ServicesPage() {;
   return (;
+=======
+export default function ServicesPage() {
+  return (
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c
     <Layout;
       title="Our Services - Zion Tech Group";
       description="Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses.";
@@ -27,7 +31,7 @@ export default function ServicesPage() {;
                     <div className="mb-6">;
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>;
                       <ul className="space-y-2">;
-                        {service.services.map((item, idx) => (;
+                        {service.services.map((item, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">;
                             <CheckCircle className={`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />;
                             {item};
@@ -38,11 +42,11 @@ export default function ServicesPage() {;
                       <ArrowRight className="w-4 h-4 ml-2" />;
                     </Link>;
                   </div>;
-                </motion.div>;
-              ))};
+                </motion.div>))};
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
   };
@@ -94,3 +98,6 @@ export default function ServicesPage() {,
 =======
         {/* Why Choose Us */};
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
+=======
+        {/* Why Choose Us */};
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c

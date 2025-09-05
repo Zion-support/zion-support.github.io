@@ -1,17 +1,16 @@
+<<<<<<< HEAD
     return { hasError: true, error };
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c
 };
-;
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this.setState({;
+    this.setState({
       error;
-      errorInfo;
-    });
-};
-;
-  render() {;
-    if (this.state.hasError) {;
-      return (;
+      errorInfo})};
+  render() {
+    if (this.state.hasError) {
+      return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">;
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">;
             <div className="flex items-center mb-4">;
@@ -39,7 +38,7 @@
                 Try Again;
               </button>;
             </div>;
-            {process.env.NODE_ENV === 'development' && this.state.error && (;
+            {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-4 p-4 bg-gray-100 rounded-lg">;
                 <summary className="cursor-pointer text-sm font-medium text-gray-700">;
                   Error Details (Development);
@@ -48,9 +47,9 @@
                   {this.state.error.toString();
                   {this.state.errorInfo?.componentStack};
                 </pre>;
-              </details>;
-            )};
+              </details>)};
           </div>;
+<<<<<<< HEAD
         </div>;
       );
 };
@@ -119,4 +118,8 @@
   };
 };
 ,
+=======
+        </div>)};
+    return this.props.children}};
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c
 export { ErrorBoundary };

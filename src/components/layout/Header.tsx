@@ -1,9 +1,15 @@
 };
+<<<<<<< HEAD
 ;
   return (;
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent';
     } ${className}`}>;
+=======
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'} ${className}`}>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c
       {/* Top Contact Bar */};
       <div className="bg-blue-900 text-white py-2 px-4 hidden lg: block">;
         <div className="container mx-auto flex justify-between items-center text-sm">;
@@ -40,7 +46,7 @@
           </Link>;
           {/* Desktop Navigation */};
           <div className="hidden lg: flex items-center space-x-8">;
-            {navigationItems.map((item) => (;
+            {navigationItems.map((item) => (
               <div key={item.name} className="relative group">;
                 <Link;
                   href={item.href};
@@ -52,9 +58,9 @@
                   {item.dropdown && <ChevronDown className="w-4 h-4" />};
                 </Link>;
                 {/* Dropdown Menu */};
-                {item.dropdown && (;
+                {item.dropdown && (
                   <AnimatePresence>;
-                    {activeDropdown === item.name && (;
+                    {activeDropdown === item.name && (
                       <motion.div;
                         initial={{ opacity: 0, y: 10 }};
                         animate={{ opacity: 1, y: 0 }};
@@ -63,9 +69,9 @@
                         onMouseEnter={() => setActiveDropdown(item.name)};
                         onMouseLeave={() => setActiveDropdown(null)};
                       >;
-                        {item.dropdown.map((subItem, index) => {;
+                        {item.dropdown.map((subItem, index) => {
                           const IconComponent = subItem.icon;
-                          return (;
+                          return (
                             <Link;
                               key={index};
                               href={subItem.href};
@@ -79,14 +85,10 @@
                                   {subItem.name};
                                 </div>;
                                 <div className="text-sm text-gray-500">;
-                                  {subItem.description};
-                        })};
-                      </motion.div>;
-                    )};
-                  </AnimatePresence>;
-                )};
-              </div>;
-            ))};
+                                  {subItem.description}})};
+                      </motion.div>)};
+                  </AnimatePresence>)};
+              </div>))};
           </div>;
           {/* CTA Button */};
           <div className="hidden lg: flex items-center space-x-4">;
@@ -107,7 +109,7 @@
         </div>;
         {/* Mobile Navigation */};
         <AnimatePresence>;
-          {isOpen && (;
+          {isOpen && (
             <motion.div;
               initial={{ opacity: 0, height: 0 }};
               animate={{ opacity: 1, height: 'auto' }};
@@ -115,7 +117,7 @@
               className="lg: hidden mt-4 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden";
             >;
               <div className="py-4">;
-                {navigationItems.map((item, index) => (;
+                {navigationItems.map((item, index) => (
                   <div key={index}>;
                     <Link;
                       href={item.href};
@@ -124,11 +126,11 @@
                     >;
                       {item.name};
                     </Link>;
-                    {item.dropdown && (;
+                    {item.dropdown && (
                       <div className="pl-6 space-y-2">;
-                        {item.dropdown.map((subItem, subIndex) => {;
+                        {item.dropdown.map((subItem, subIndex) => {
                           const IconComponent = subItem.icon;
-                          return (;
+                          return (
                             <Link;
                               key={subIndex};
                               href={subItem.href};
@@ -137,13 +139,9 @@
                             >;
                               <IconComponent className="w-4 h-4" />;
                               <span>{subItem.name}</span>;
-                            </Link>;
-                          );
-                        })};
-                      </div>;
-                    )};
-                  </div>;
-                ))};
+                            </Link>)})};
+                      </div>)};
+                  </div>))};
                 <div className="px-6 py-4 border-t border-gray-200">;
                   <Link;
                     href="/contact";
@@ -154,10 +152,10 @@
                   </Link>;
                 </div>;
               </div>;
-            </motion.div>;
-          )};
+            </motion.div>)};
         </AnimatePresence>;
       </nav>;
+<<<<<<< HEAD
     </header>;
   );
   };
@@ -323,3 +321,6 @@
     </header>,
   ),
 };
+=======
+    </header>)};
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c

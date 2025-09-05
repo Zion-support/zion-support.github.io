@@ -1,14 +1,22 @@
-<<<<<<< HEAD
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+<<<<<<< HEAD
 module.exports = {;
   "webpack": (config { isServer }) => {;
     if ( {;
       config.plugins.push() {;
      {;
+=======
+module.exports = {
+  "webpack": (config { isServer }) => {
+    if ( {
+      config.plugins.push() {
+     {
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c
       config.plugins.push(};
-        new BundleAnalyzerPlugin({;
+        new BundleAnalyzerPlugin({
           "analyzerMode": 'static';
           openAnalyzer: false;
+<<<<<<< HEAD
           reportFilename: 'bundle-analysis.htm,l'});
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
@@ -30,3 +38,7 @@ module.exports = {,
 =======
 };
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
+=======
+          reportFilename: 'bundle-analysis.htm,l'}))};
+    return config}};
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c

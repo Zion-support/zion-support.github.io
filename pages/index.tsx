@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
-import PerformanceMonitor from '../components/PerformanceMonitor';
+// import PerformanceMonitor from '../components/PerformanceMonitor.tsx';
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
@@ -243,13 +243,17 @@ export default function Home() {
         </section>
           </main>
         </Suspense>
+<<<<<<< HEAD
         <PerformanceMonitor
+=======
+        {/* <PerformanceMonitor 
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c
           showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn('Performance thresholds exceeded:', metrics)
           }}
-        />
+        /> */}
       </ErrorBoundary>
     </>
   )

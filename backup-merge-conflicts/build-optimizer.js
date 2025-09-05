@@ -1,32 +1,25 @@
+<<<<<<< HEAD
         const dependencies = lockFile.dependencies || {};
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c
 ;
         // This would need more sophisticated analysis;
-        return [];
-      };
-      return [];
-    } catch (error) {;
+        return []};
+      return []} catch (error) {
       this.log(`Duplicate dependency check error: ${error.message}`);
-      return [];
-};
-};
-;
-  async start() {;
+      return []}};
+  async start() {
     this.log('Build optimizer service started');
-;
     // Run optimization immediately;
     await this.optimizeBuild();
-;
     // Set up interval for periodic optimization;
-    setInterval(async () => {;
-      await this.optimizeBuild();
-    }, 24 * 60 * 60 * 1000), // Every 24 hours;
-};
-};
-;
+    setInterval(async () => {
+      await this.optimizeBuild()}, 24 * 60 * 60 * 1000), // Every 24 hours}};
 // Start the service;
 const buildOptimizer = new BuildOptimizer();
 buildOptimizer.start().catch(console.error);
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
 ,
@@ -60,3 +53,5 @@ buildOptimizer.start().catch(console.error),
 =======
 buildOptimizer.start().catch(console.error),
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c

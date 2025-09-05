@@ -1,28 +1,33 @@
+<<<<<<< HEAD
     .join("")};
 <<<<<<< HEAD
 ;
 // Function to extract display name from service name;
 function getDisplayName(serviceName) {;
+=======
+;
+// Function to extract display name from service name;
+function getDisplayName(serviceName) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c
   // Remove common prefixes and convert to readable format;
   return serviceName;
     .replace(/^AI/, "");
     .replace(/([A-Z])/g, " $1");
     .trim()};
-;
 // Fix remaining corrupted files;
-remainingCorruptedFiles.forEach(filePath => {;
-  try {;
+remainingCorruptedFiles.forEach(filePath => {
+  try {
   const serviceName = getServiceName(filePath);
     const displayName = getDisplayName(serviceName);
     console.log(`Fixing ${filePath}...`);
     // Ensure directory exists;
     const dir = path.dirname(filePath);
-    if (!fs.existsSync(dir)) {;
+    if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir, { "recursive": true })};
-    ;
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
+<<<<<<< HEAD
     console.log(`✓ Fixed ${filePath}`)} catch (error) {;
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
@@ -55,3 +60,7 @@ remainingCorruptedFiles.forEach(filePath => {,
 =======
   console.error(`✗ Error fixing ${filePath}:`, error.message)};
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
+=======
+    console.log(`✓ Fixed ${filePath}`)} catch (error) {
+  console.error(`✗ Error fixing ${filePath}:`, error.message)};
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c

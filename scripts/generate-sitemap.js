@@ -32,6 +32,7 @@ const generateSitemap = () => {
   const writeStream = createWriteStream(sitemapPath);
   writeStream.write(sitemap);
   writeStream.end();
+<<<<<<< HEAD
   console.log('Sitemap generated successfully at:', sitemapPath);
 };
 <<<<<<< HEAD
@@ -42,3 +43,8 @@ generateSitemap();
 =======
 generateSitemap();
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
+=======
+
+  console.log('Sitemap generated successfully at:', sitemapPath)};
+generateSitemap();
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c

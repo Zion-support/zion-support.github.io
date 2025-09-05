@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
@@ -19,3 +20,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
+=======
+{children}; </div>)};
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c

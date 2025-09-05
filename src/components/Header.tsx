@@ -2,17 +2,19 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+<<<<<<< HEAD
 ;
 const Header = () => {;
+=======
+const Header = () => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-;
   const navigation = [;
-    {;
+    {
       name: 'Home';
       href: '/';
-    ;
-    {;
+    {
       name: 'Services';
       href: '/services';
       dropdown: [;
@@ -22,9 +24,8 @@ const Header = () => {;
         { name: 'Cloud Solutions', href: '/solutions/cloud-migration' ;
         { name: 'Cybersecurity', href: '/services/cybersecurity' ;
         { name: 'Data Analytics', href: '/services/data-analytics' ;
-      ];
-};
-    {;
+      ]};
+    {
       name: 'Solutions';
       href: '/solutions';
       dropdown: [;
@@ -34,9 +35,8 @@ const Header = () => {;
         { name: 'Government', href: '/solutions/government' ;
         { name: 'Retail', href: '/solutions/retail' ;
         { name: 'Education', href: '/solutions/education' ;
-      ];
-};
-    {;
+      ]};
+    {
       name: 'Industries';
       href: '/industries';
       dropdown: [;
@@ -45,9 +45,8 @@ const Header = () => {;
         { name: 'Manufacturing', href: '/industries/manufacturing' ;
         { name: 'Retail', href: '/industries/retail' ;
         { name: 'Government', href: '/industries/government' ;
-      ];
-};
-    {;
+      ]};
+    {
       name: 'Company';
       href: '/about';
       dropdown: [;
@@ -56,9 +55,8 @@ const Header = () => {;
         { name: 'Careers', href: '/careers' ;
         { name: 'Partners', href: '/partners' ;
         { name: 'Case Studies', href: '/case-studies' ;
-      ];
-};
-    {;
+      ]};
+    {
       name: 'Resources';
       href: '/resources';
       dropdown: [;
@@ -67,20 +65,16 @@ const Header = () => {;
         { name: 'Webinars', href: '/webinars' ;
         { name: 'Tutorials', href: '/tutorials' ;
         { name: 'API Documentation', href: '/api-docs' ;
-      ];
-};
-    {;
+      ]};
+    {
       name: 'Contact';
       href: '/contact';
-    ;
   ];
-;
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleDropdown = (name: string) => {;
+  const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
-  ;
 ;
-  return (;
+  return (
     <header className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */};
       <div className="bg-blue-900 text-white py-2">;
@@ -118,30 +112,28 @@ const Header = () => {;
           </Link>;
           {/* Desktop Navigation */};
           <div className="hidden lg: flex items-center space-x-8">;
-            {navigation.map((item) => (;
+            {navigation.map((item) => (
               <div key={item.name} className="relative group">;
                 <button;
                   onClick={() => item.dropdown && toggleDropdown(item.name)};
                   className="flex items-center space-x-1 text-gray-700 hover: text-blue-600 transition-colors duration-200 font-medium";
                 >;
                   <Link href={item.href}>{item.name}</Link>;
-                  {item.dropdown && (;
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${;
-                      activeDropdown === item.name ? 'rotate-180' : '';
-                    }`} />;
-                  )};
+                  {item.dropdown && (
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''}`} />)};
                 </button>;
                 {/* Dropdown Menu */};
-                {item.dropdown && (;
+                {item.dropdown && (
                   <AnimatePresence>;
-                    {activeDropdown === item.name && (;
+                    {activeDropdown === item.name && (
                       <motion.div;
                         initial={{ opacity: 0, y: 10 }};
                         animate={{ opacity: 1, y: 0 }};
                         exit={{ opacity: 0, y: 10 }};
                         className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50";
                       >;
-                        {item.dropdown.map((subItem) => (;
+                        {item.dropdown.map((subItem) => (
                           <Link;
                             key={subItem.name};
                             href={subItem.href};
@@ -149,14 +141,10 @@ const Header = () => {;
                             onClick={() => setActiveDropdown(null);
                           >;
                             {subItem.name};
-                          </Link>;
-                        ))};
-                      </motion.div>;
-                    )};
-                  </AnimatePresence>;
-                )};
-              </div>;
-            ))};
+                          </Link>))};
+                      </motion.div>)};
+                  </AnimatePresence>)};
+              </div>))};
           </div>;
           {/* Mobile Menu Button */};
           <button;
@@ -168,14 +156,14 @@ const Header = () => {;
         </div>;
         {/* Mobile Navigation */};
         <AnimatePresence>;
-          {isMenuOpen && (;
+          {isMenuOpen && (
             <motion.div;
               initial={{ opacity: 0, height: 0 }};
               animate={{ opacity: 1, height: 'auto' }};
               exit={{ opacity: 0, height: 0 }};
               className="lg: hidden mt-4 border-t border-gray-200 pt-4";
             >;
-              {navigation.map((item) => (;
+              {navigation.map((item) => (
                 <div key={item.name} className="mb-2">;
                   <div className="flex items-center justify-between">;
                     <Link;
@@ -185,20 +173,18 @@ const Header = () => {;
                     >;
                       {item.name};
                     </Link>;
-                    {item.dropdown && (;
+                    {item.dropdown && (
                       <button;
                         onClick={() => toggleDropdown(item.name)};
                         className="p-1";
                       >;
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${;
-                          activeDropdown === item.name ? 'rotate-180' : '';
-                        }`} />;
-                      </button>;
-                    )};
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                          activeDropdown === item.name ? 'rotate-180' : ''}`} />;
+                      </button>)};
                   </div>;
-                  {item.dropdown && activeDropdown === item.name && (;
+                  {item.dropdown && activeDropdown === item.name && (
                     <div className="ml-4 mt-2 space-y-1">;
-                      {item.dropdown.map((subItem) => (;
+                      {item.dropdown.map((subItem) => (
                         <Link;
                           key={subItem.name};
                           href={subItem.href};
@@ -206,12 +192,9 @@ const Header = () => {;
                           onClick={() => setIsMenuOpen(false);
                         >;
                           {subItem.name};
-                        </Link>;
-                      ))};
-                    </div>;
-                  )};
-                </div>;
-              ))};
+                        </Link>))};
+                    </div>)};
+                </div>))};
               <div className="mt-4 pt-4 border-t border-gray-200">;
                 <Link;
                   href="/contact";
@@ -221,15 +204,12 @@ const Header = () => {;
                   Get Started;
                 </Link>;
               </div>;
-            </motion.div>;
-          )};
+            </motion.div>)};
         </AnimatePresence>;
       </nav>;
-    </header>;
-  );
-};
-;
+    </header>)};
 export default Header;
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -462,3 +442,5 @@ const Header = () => {,
 };
 ,
 export default Header,
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-948c
