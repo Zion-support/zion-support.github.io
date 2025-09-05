@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import Sidebar from './Sidebar';
 import { 
   Menu, 
   X, 
@@ -21,7 +22,8 @@ import {
   Rocket,
   BookOpen,
   Handshake,
-  Calendar
+  Calendar,
+  Search
 } from 'lucide-react';
 
 const navigation = [
@@ -85,10 +87,13 @@ const contactInfo = {
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+  const closeSidebar = () => setIsSidebarOpen(false);
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -180,6 +185,18 @@ export default function Header() {
             ))}
           </div>
 
+          {/* Search Bar */}
+          <div className="hidden md:flex items-center flex-1 max-w-md mx-8">
+            <div className="relative w-full">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Search services, solutions..."
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+          </div>
+
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -196,13 +213,21 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Controls */}
+          <div className="flex items-center space-x-2 lg:hidden">
+            <button
+              onClick={toggleSidebar}
+              className="p-2 text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+            <button
+              onClick={toggleMenu}
+              className="p-2 text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -272,6 +297,9 @@ export default function Header() {
           )}
         </AnimatePresence>
       </nav>
+
+      {/* Sidebar */}
+      <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
     </header>
   );
 }
