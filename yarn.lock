@@ -701,7 +701,7 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@eslint/js@9.35.0":
+"@eslint/js@^9.35.0", "@eslint/js@9.35.0":
   version "9.35.0"
   resolved "https://registry.npmjs.org/@eslint/js/-/js-9.35.0.tgz"
   integrity sha512-30iXE9whjlILfWobBkNerJo+TXYsgVM5ERQwMcMKCHckHflCmf7wXDAHlARoWnh0s1U72WqlbeyE7iAcCzuCPw==
@@ -2980,6 +2980,11 @@ aria-hidden@^1.2.4:
   dependencies:
     tslib "^2.0.0"
 
+aria-query@^5.3.2:
+  version "5.3.2"
+  resolved "https://registry.npmjs.org/aria-query/-/aria-query-5.3.2.tgz"
+  integrity sha512-COROpnaoap1E2F000S62r6A60uHZnmlvomhfyT2DlTcrY1OrBKn2UhH7qn5wTC9zMvD0AY7csdPSNwKP+7WiQw==
+
 array-buffer-byte-length@^1.0.1, array-buffer-byte-length@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/array-buffer-byte-length/-/array-buffer-byte-length-1.0.2.tgz"
@@ -3024,7 +3029,7 @@ array.prototype.flat@^1.3.1:
     es-abstract "^1.23.5"
     es-shim-unscopables "^1.0.2"
 
-array.prototype.flatmap@^1.3.3:
+array.prototype.flatmap@^1.3.2, array.prototype.flatmap@^1.3.3:
   version "1.3.3"
   resolved "https://registry.npmjs.org/array.prototype.flatmap/-/array.prototype.flatmap-1.3.3.tgz"
   integrity sha512-Y7Wt51eKJSyi80hFrJCePGGNo5ktJCslFuboqJsbf57CCPcm5zztluPlc4/aD8sWsKvlwatezpV4U1efk8kpjg==
@@ -3057,6 +3062,11 @@ arraybuffer.prototype.slice@^1.0.4:
     es-errors "^1.3.0"
     get-intrinsic "^1.2.6"
     is-array-buffer "^3.0.4"
+
+ast-types-flow@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.npmjs.org/ast-types-flow/-/ast-types-flow-0.0.8.tgz"
+  integrity sha512-OH/2E5Fg20h2aPrbe+QL8JZQFko0YZaF+j4mnQ7BGhfavO7OpSLa8a0y9sBwomHdSbkhTS8TQNayBfnW5DwbvQ==
 
 ast-types@^0.13.4:
   version "0.13.4"
@@ -3121,7 +3131,7 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-axe-core@^4.10.3:
+axe-core@^4.10.0, axe-core@^4.10.3:
   version "4.10.3"
   resolved "https://registry.npmjs.org/axe-core/-/axe-core-4.10.3.tgz"
   integrity sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==
@@ -3134,6 +3144,11 @@ axios@^1.11.0:
     follow-redirects "^1.15.6"
     form-data "^4.0.4"
     proxy-from-env "^1.1.0"
+
+axobject-query@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.npmjs.org/axobject-query/-/axobject-query-4.1.0.tgz"
+  integrity sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==
 
 b4a@^1.6.4:
   version "1.6.7"
@@ -3783,6 +3798,11 @@ d3-time-format@^4.1.0:
   dependencies:
     d3-array "2 - 3"
 
+damerau-levenshtein@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz"
+  integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
+
 data-uri-to-buffer@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npmjs.org/data-uri-to-buffer/-/data-uri-to-buffer-4.0.1.tgz"
@@ -4305,6 +4325,27 @@ escodegen@^2.1.0:
     esutils "^2.0.2"
   optionalDependencies:
     source-map "~0.6.1"
+
+eslint-plugin-jsx-a11y@^6.10.2:
+  version "6.10.2"
+  resolved "https://registry.npmjs.org/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.10.2.tgz"
+  integrity sha512-scB3nz4WmG75pV8+3eRUQOHZlNSUhFNq37xnpgRkCCELU3XMvXAxLk1eqWWyE22Ki4Q01Fnsw9BA3cJHDPgn2Q==
+  dependencies:
+    aria-query "^5.3.2"
+    array-includes "^3.1.8"
+    array.prototype.flatmap "^1.3.2"
+    ast-types-flow "^0.0.8"
+    axe-core "^4.10.0"
+    axobject-query "^4.1.0"
+    damerau-levenshtein "^1.0.8"
+    emoji-regex "^9.2.2"
+    hasown "^2.0.2"
+    jsx-ast-utils "^3.3.5"
+    language-tags "^1.0.9"
+    minimatch "^3.1.2"
+    object.fromentries "^2.0.8"
+    safe-regex-test "^1.0.3"
+    string.prototype.includes "^2.0.1"
 
 eslint-plugin-react-hooks@^5.2.0:
   version "5.2.0"
@@ -6082,7 +6123,7 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-"jsx-ast-utils@^2.4.1 || ^3.0.0":
+"jsx-ast-utils@^2.4.1 || ^3.0.0", jsx-ast-utils@^3.3.5:
   version "3.3.5"
   resolved "https://registry.npmjs.org/jsx-ast-utils/-/jsx-ast-utils-3.3.5.tgz"
   integrity sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ==
@@ -6116,6 +6157,18 @@ keyv@^4.5.4:
   dependencies:
     json-buffer "3.0.1"
 
+language-subtag-registry@^0.3.20:
+  version "0.3.23"
+  resolved "https://registry.npmjs.org/language-subtag-registry/-/language-subtag-registry-0.3.23.tgz"
+  integrity sha512-0K65Lea881pHotoGEa5gDlMxt3pctLi2RplBb7Ezh4rRdLEOtgi7n4EwK9lamnUCkKBqaeKRVebTq6BAxSkpXQ==
+
+language-tags@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.npmjs.org/language-tags/-/language-tags-1.0.9.tgz"
+  integrity sha512-MbjN408fEndfiQXbFQ1vnd+1NoLDsnQW41410oQBXiyXDMYH5z505juWa4KUE1LqxRC7DgOgZDbKLxHIwm27hA==
+  dependencies:
+    language-subtag-registry "^0.3.20"
+
 legacy-javascript@latest:
   version "0.0.1"
   resolved "https://registry.npmjs.org/legacy-javascript/-/legacy-javascript-0.0.1.tgz"
@@ -6147,7 +6200,7 @@ lighthouse-stack-packs@1.12.2:
   resolved "https://registry.npmjs.org/lighthouse-stack-packs/-/lighthouse-stack-packs-1.12.2.tgz"
   integrity sha512-Ug8feS/A+92TMTCK6yHYLwaFMuelK/hAKRMdldYkMNwv+d9PtWxjXEg6rwKtsUXTADajhdrhXyuNCJ5/sfmPFw==
 
-lighthouse@^12.0.0:
+lighthouse@^12.8.2:
   version "12.8.2"
   resolved "https://registry.npmjs.org/lighthouse/-/lighthouse-12.8.2.tgz"
   integrity sha512-+5SKYzVaTFj22MgoYDPNrP9tlD2/Ay7j3SxPSFD9FpPyVxGr4UtOQGKyrdZ7wCmcnBaFk0mCkPfARU3CsE0nvA==
@@ -7926,7 +7979,7 @@ safe-push-apply@^1.0.0:
     es-errors "^1.3.0"
     isarray "^2.0.5"
 
-safe-regex-test@^1.1.0:
+safe-regex-test@^1.0.3, safe-regex-test@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/safe-regex-test/-/safe-regex-test-1.1.0.tgz"
   integrity sha512-x/+Cz4YrimQxQccJf5mKEbIa1NzeCRNI5Ecl/ekmlYaampdNLPalVyIcCZNNH3MvmqBugV5TMYZXv0ljslUlaw==
@@ -8309,6 +8362,15 @@ string-width@^5.0.1, string-width@^5.1.2:
     eastasianwidth "^0.2.0"
     emoji-regex "^9.2.2"
     strip-ansi "^7.0.1"
+
+string.prototype.includes@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/string.prototype.includes/-/string.prototype.includes-2.0.1.tgz"
+  integrity sha512-o7+c9bW6zpAdJHTtujeePODAhkuicdAryFsfVKwA+wGw89wJ4GTY484WTucM9hLtDEOpOvI+aHnzqnC5lHp4Rg==
+  dependencies:
+    call-bind "^1.0.7"
+    define-properties "^1.2.1"
+    es-abstract "^1.23.3"
 
 string.prototype.matchall@^4.0.12:
   version "4.0.12"
