@@ -21,7 +21,9 @@ import {
   Lightbulb,
   Rocket,
   Code,
-  Layers
+  Layers,
+  Mail,
+  MessageSquare
 } from 'lucide-react';
 
 const microSaasServices = [
@@ -244,6 +246,237 @@ const microSaasServices = [
       "Customer management",
       "Business growth"
     ]
+  },
+  {
+    title: "AI-Powered Analytics Dashboard",
+    description: "Real-time business intelligence with predictive analytics and automated insights",
+    icon: BarChart3,
+    features: [
+      "Real-time Data Visualization",
+      "Predictive Analytics",
+      "Custom KPI Tracking",
+      "Automated Reporting",
+      "Data Integration",
+      "Mobile Dashboard Access"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    benefits: [
+      "Data-driven decisions",
+      "Competitive insights",
+      "Automated reporting",
+      "Real-time monitoring"
+    ],
+    pricing: "Starting at $299/month"
+  },
+  {
+    title: "Smart Document Management System",
+    description: "AI-powered document processing, storage, and collaboration platform",
+    icon: Database,
+    features: [
+      "OCR & Text Extraction",
+      "Smart Search & Indexing",
+      "Version Control",
+      "Collaborative Editing",
+      "Automated Workflows",
+      "Compliance Management"
+    ],
+    color: "from-emerald-500 to-teal-500",
+    benefits: [
+      "Reduced paper usage",
+      "Faster document retrieval",
+      "Better collaboration",
+      "Compliance automation"
+    ],
+    pricing: "Starting at $199/month"
+  },
+  {
+    title: "Customer Relationship Intelligence",
+    description: "AI-enhanced CRM with automated lead scoring and customer insights",
+    icon: Users,
+    features: [
+      "Automated Lead Scoring",
+      "Customer Journey Mapping",
+      "Predictive Churn Analysis",
+      "Email Campaign Automation",
+      "Sales Pipeline Management",
+      "Customer Health Monitoring"
+    ],
+    color: "from-purple-500 to-pink-500",
+    benefits: [
+      "Higher conversion rates",
+      "Better customer retention",
+      "Automated follow-ups",
+      "Data-driven sales"
+    ],
+    pricing: "Starting at $149/month"
+  },
+  {
+    title: "Smart Inventory Management",
+    description: "AI-powered inventory optimization with demand forecasting and automated reordering",
+    icon: Target,
+    features: [
+      "Demand Forecasting",
+      "Automated Reordering",
+      "Multi-location Management",
+      "Supplier Integration",
+      "Cost Optimization",
+      "Real-time Tracking"
+    ],
+    color: "from-orange-500 to-red-500",
+    benefits: [
+      "Reduced stockouts",
+      "Lower inventory costs",
+      "Automated operations",
+      "Better cash flow"
+    ],
+    pricing: "Starting at $179/month"
+  },
+  {
+    title: "AI-Powered HR Management",
+    description: "Comprehensive HR platform with AI-driven recruitment and employee analytics",
+    icon: Users,
+    features: [
+      "AI Resume Screening",
+      "Candidate Matching",
+      "Employee Performance Analytics",
+      "Automated Scheduling",
+      "Benefits Management",
+      "Compliance Tracking"
+    ],
+    color: "from-blue-500 to-indigo-500",
+    benefits: [
+      "Faster hiring process",
+      "Better candidate matching",
+      "Reduced bias",
+      "Improved retention"
+    ],
+    pricing: "Starting at $129/month"
+  },
+  {
+    title: "Smart Financial Management",
+    description: "AI-powered accounting and financial planning with automated bookkeeping",
+    icon: BarChart3,
+    features: [
+      "Automated Bookkeeping",
+      "Expense Categorization",
+      "Financial Forecasting",
+      "Tax Preparation",
+      "Invoice Management",
+      "Cash Flow Analysis"
+    ],
+    color: "from-green-500 to-emerald-500",
+    benefits: [
+      "Automated accounting",
+      "Better financial insights",
+      "Tax compliance",
+      "Time savings"
+    ],
+    pricing: "Starting at $159/month"
+  },
+  {
+    title: "AI Content Marketing Platform",
+    description: "Automated content creation, SEO optimization, and social media management",
+    icon: Lightbulb,
+    features: [
+      "AI Content Generation",
+      "SEO Optimization",
+      "Social Media Automation",
+      "Content Calendar Management",
+      "Performance Analytics",
+      "Multi-platform Publishing"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    benefits: [
+      "Consistent content output",
+      "Better SEO rankings",
+      "Social media growth",
+      "Time efficiency"
+    ],
+    pricing: "Starting at $99/month"
+  },
+  {
+    title: "Smart Project Management",
+    description: "AI-enhanced project tracking with resource optimization and risk prediction",
+    icon: Settings,
+    features: [
+      "AI Resource Allocation",
+      "Risk Prediction",
+      "Automated Scheduling",
+      "Progress Tracking",
+      "Team Collaboration",
+      "Performance Analytics"
+    ],
+    color: "from-violet-500 to-purple-500",
+    benefits: [
+      "Better project outcomes",
+      "Resource optimization",
+      "Risk mitigation",
+      "Team productivity"
+    ],
+    pricing: "Starting at $119/month"
+  },
+  {
+    title: "AI-Powered Security Monitoring",
+    description: "Real-time security threat detection and automated incident response",
+    icon: Shield,
+    features: [
+      "Threat Detection",
+      "Automated Response",
+      "Compliance Monitoring",
+      "Security Analytics",
+      "Incident Management",
+      "Vulnerability Scanning"
+    ],
+    color: "from-red-500 to-pink-500",
+    benefits: [
+      "Proactive security",
+      "Reduced breach risk",
+      "Compliance assurance",
+      "24/7 monitoring"
+    ],
+    pricing: "Starting at $249/month"
+  },
+  {
+    title: "Smart Email Marketing Automation",
+    description: "AI-driven email campaigns with personalization and behavioral targeting",
+    icon: Mail,
+    features: [
+      "Behavioral Targeting",
+      "Personalized Content",
+      "A/B Testing Automation",
+      "Send Time Optimization",
+      "List Segmentation",
+      "Performance Analytics"
+    ],
+    color: "from-indigo-500 to-blue-500",
+    benefits: [
+      "Higher open rates",
+      "Better engagement",
+      "Automated optimization",
+      "Increased conversions"
+    ],
+    pricing: "Starting at $79/month"
+  },
+  {
+    title: "AI-Powered Customer Support",
+    description: "Intelligent helpdesk with automated ticket routing and chatbot integration",
+    icon: MessageSquare,
+    features: [
+      "Smart Ticket Routing",
+      "AI Chatbot Integration",
+      "Knowledge Base Management",
+      "SLA Monitoring",
+      "Customer Satisfaction Tracking",
+      "Multi-channel Support"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    benefits: [
+      "Faster response times",
+      "24/7 availability",
+      "Consistent service quality",
+      "Reduced support costs"
+    ],
+    pricing: "Starting at $89/month"
   }
 ];
 

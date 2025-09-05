@@ -3,16 +3,6 @@ import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight, Copy, Check, ExternalLink, Search, Filter, BookOpen, Globe, Terminal, Database, Server, Cpu, Lock, Clock, Users, BarChart3, Settings, Play, Pause, RotateCcw } from 'lucide-react';
 
----
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-
-
-
----
-import React from "react";
-import Head from 'next/head';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-
 
 export default function APIPage() {
   const apiFeatures = [
@@ -178,7 +168,6 @@ export default function APIPage() {
       description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
     >
 
----
     <>
       <Head>
         <title>API Reference - Zion Tech Group</title>
@@ -217,7 +206,6 @@ export default function APIPage() {
               className="text-center"
             >
 
----
             <div className="text-center max-w-4xl mx-auto">
 
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -235,9 +223,6 @@ export default function APIPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {apiFeaturesDetailed.map((feature, index) => {
-
----
               {apiFeatures.map((feature, index) => {
 
                 const IconComponent = feature.icon;
@@ -250,7 +235,6 @@ export default function APIPage() {
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
 
----
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
 
@@ -315,7 +299,6 @@ export default function APIPage() {
                     <span className="text-sm text-gray-600">POST /api/ai/process</span>
                     <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">AI</span>
 
----
         {/* Features Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -384,7 +367,6 @@ export default function APIPage() {
                 </div>
               </div>
 
----
               ))}
 
             </div>
@@ -408,7 +390,6 @@ export default function APIPage() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </motion.a>
 
----
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -429,7 +410,6 @@ export default function APIPage() {
             </div>
 
 
----
         {/* CTA Section */}
         <section className="py-20 bg-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">

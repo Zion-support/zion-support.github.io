@@ -21,7 +21,11 @@ import {
   Settings,
   Monitor,
   Wifi,
-  HardDrive
+  HardDrive,
+  Brain,
+  Phone,
+  Mail,
+  MapPin
 } from 'lucide-react';
 
 const itServices = [
@@ -203,11 +207,533 @@ const itServices = [
       "Advanced problem solving",
       "Competitive advantage",
       "Future technology leadership"
-    ]
-  }
+    ],
+    pricing: "Starting at $2,999/month"
+  },
   {
-    title: "Database Management",
-    description: "Expert database design, optimization, and management services",
+    title: "AI Infrastructure & ML Ops",
+    description: "Complete AI infrastructure setup and machine learning operations management",
+    icon: Brain,
+    features: [
+      "ML Pipeline Development",
+      "Model Training Infrastructure",
+      "Model Deployment & Serving",
+      "A/B Testing Frameworks",
+      "Model Monitoring",
+      "Data Pipeline Automation"
+    ],
+    color: "from-purple-500 to-pink-500",
+    benefits: [
+      "Scalable AI operations",
+      "Faster model deployment",
+      "Automated workflows",
+      "Production-ready AI"
+    ],
+    pricing: "Starting at $1,499/month"
+  },
+  {
+    title: "Advanced Analytics & BI",
+    description: "Enterprise business intelligence and advanced analytics solutions",
+    icon: BarChart3,
+    features: [
+      "Data Warehouse Design",
+      "ETL/ELT Processes",
+      "Real-time Analytics",
+      "Predictive Modeling",
+      "Dashboard Development",
+      "Self-service BI"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    benefits: [
+      "Data-driven decisions",
+      "Real-time insights",
+      "Self-service analytics",
+      "Competitive intelligence"
+    ],
+    pricing: "Starting at $899/month"
+  },
+  {
+    title: "Zero Trust Security Architecture",
+    description: "Comprehensive zero trust security implementation and management",
+    icon: Shield,
+    features: [
+      "Identity & Access Management",
+      "Micro-segmentation",
+      "Continuous Monitoring",
+      "Threat Detection",
+      "Security Orchestration",
+      "Compliance Management"
+    ],
+    color: "from-red-500 to-orange-500",
+    benefits: [
+      "Enhanced security posture",
+      "Reduced attack surface",
+      "Compliance assurance",
+      "Proactive threat response"
+    ],
+    pricing: "Starting at $1,299/month"
+  },
+  {
+    title: "Hybrid Cloud Management",
+    description: "Seamless management of hybrid cloud environments across multiple providers",
+    icon: Cloud,
+    features: [
+      "Multi-cloud Strategy",
+      "Cloud Cost Optimization",
+      "Data Synchronization",
+      "Disaster Recovery",
+      "Security Management",
+      "Performance Monitoring"
+    ],
+    color: "from-blue-500 to-indigo-500",
+    benefits: [
+      "Vendor flexibility",
+      "Cost optimization",
+      "High availability",
+      "Risk mitigation"
+    ],
+    pricing: "Starting at $1,199/month"
+  },
+  {
+    title: "API Management & Integration",
+    description: "Comprehensive API lifecycle management and system integration",
+    icon: Network,
+    features: [
+      "API Gateway Setup",
+      "API Design & Development",
+      "Rate Limiting & Security",
+      "Third-party Integrations",
+      "API Documentation",
+      "Performance Monitoring"
+    ],
+    color: "from-green-500 to-teal-500",
+    benefits: [
+      "Improved connectivity",
+      "Better security",
+      "Easier maintenance",
+      "Enhanced performance"
+    ],
+    pricing: "Starting at $699/month"
+  },
+  {
+    title: "Edge Computing Solutions",
+    description: "Distributed computing infrastructure for real-time processing",
+    icon: Wifi,
+    features: [
+      "Edge Server Deployment",
+      "Real-time Processing",
+      "Data Synchronization",
+      "Edge Security",
+      "Performance Optimization",
+      "Monitoring & Management"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    benefits: [
+      "Reduced latency",
+      "Better performance",
+      "Cost efficiency",
+      "Real-time processing"
+    ],
+    pricing: "Starting at $799/month"
+  },
+  {
+    title: "Disaster Recovery & Business Continuity",
+    description: "Comprehensive disaster recovery planning and business continuity solutions",
+    icon: HardDrive,
+    features: [
+      "Disaster Recovery Planning",
+      "Backup Solutions",
+      "Failover Systems",
+      "Data Replication",
+      "Recovery Testing",
+      "Business Continuity Planning"
+    ],
+    color: "from-gray-500 to-slate-500",
+    benefits: [
+      "Minimal downtime",
+      "Data protection",
+      "Business continuity",
+      "Risk mitigation"
+    ],
+    pricing: "Starting at $599/month"
+  },
+  {
+    title: "IT Compliance & Governance",
+    description: "Comprehensive IT governance and compliance management",
+    icon: Shield,
+    features: [
+      "Compliance Assessment",
+      "Policy Development",
+      "Risk Management",
+      "Audit Support",
+      "Training Programs",
+      "Documentation Management"
+    ],
+    color: "from-indigo-500 to-purple-500",
+    benefits: [
+      "Regulatory compliance",
+      "Risk reduction",
+      "Better governance",
+      "Audit readiness"
+    ],
+    pricing: "Starting at $499/month"
+  },
+  {
+    title: "Digital Transformation Consulting",
+    description: "Strategic digital transformation planning and implementation",
+    icon: Globe,
+    features: [
+      "Digital Strategy Development",
+      "Technology Assessment",
+      "Change Management",
+      "Process Optimization",
+      "Technology Roadmap",
+      "Implementation Support"
+    ],
+    color: "from-purple-500 to-pink-500",
+    benefits: [
+      "Competitive advantage",
+      "Improved efficiency",
+      "Better customer experience",
+      "Future-ready technology"
+    ],
+    pricing: "Starting at $1,999/month"
+  },
+  {
+    title: "IT Asset Management",
+    description: "Comprehensive IT asset lifecycle management and optimization",
+    icon: Monitor,
+    features: [
+      "Asset Discovery & Inventory",
+      "License Management",
+      "Lifecycle Planning",
+      "Cost Optimization",
+      "Compliance Tracking",
+      "Automated Reporting"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    benefits: [
+      "Cost optimization",
+      "Compliance assurance",
+      "Better visibility",
+      "Reduced risks"
+    ],
+    pricing: "Starting at $399/month"
+  },
+  {
+    title: "Remote Work Infrastructure",
+    description: "Secure and efficient remote work solutions and infrastructure",
+    icon: Smartphone,
+    features: [
+      "VPN Solutions",
+      "Remote Desktop Services",
+      "Collaboration Tools",
+      "Security Policies",
+      "Device Management",
+      "Performance Monitoring"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    benefits: [
+      "Secure remote access",
+      "Improved productivity",
+      "Better collaboration",
+      "Cost efficiency"
+    ],
+    pricing: "Starting at $299/month"
+  }
+];
+
+const platforms = [
+  {
+    name: "Cloud Platforms",
+    icon: Cloud,
+    technologies: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud", "Alibaba Cloud"],
+    description: "Leading cloud platforms for scalable and secure infrastructure"
+  },
+  {
+    name: "Security Solutions",
+    icon: Shield,
+    technologies: ["Firewall", "VPN", "SIEM", "EDR", "Zero Trust", "Compliance"],
+    description: "Comprehensive security solutions for enterprise protection"
+  },
+  {
+    name: "Database Systems",
+    icon: Database,
+    technologies: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Oracle", "SQL Server"],
+    description: "Reliable and scalable database solutions for all business needs"
+  },
+  {
+    name: "Monitoring & Analytics",
+    icon: BarChart3,
+    technologies: ["Prometheus", "Grafana", "ELK Stack", "Splunk", "DataDog", "New Relic"],
+    description: "Advanced monitoring and analytics for optimal performance"
+  },
+  {
+    name: "DevOps Tools",
+    icon: Zap,
+    technologies: ["Docker", "Kubernetes", "Jenkins", "GitLab CI", "Terraform", "Ansible"],
+    description: "Modern DevOps tools for automated deployment and management"
+  },
+  {
+    name: "Network Infrastructure",
+    icon: Network,
+    technologies: ["Cisco", "Juniper", "Fortinet", "Palo Alto", "Aruba", "Meraki"],
+    description: "Enterprise-grade networking equipment and solutions"
+  }
+];
+
+const developmentProcess = [
+  {
+    step: "01",
+    title: "Assessment & Planning",
+    description: "We analyze your current IT infrastructure, identify gaps, and create a comprehensive improvement plan."
+  },
+  {
+    step: "02",
+    title: "Design & Architecture",
+    description: "Design scalable and secure IT solutions tailored to your business requirements and future growth."
+  },
+  {
+    step: "03",
+    title: "Implementation & Migration",
+    description: "Execute the implementation with minimal disruption to your business operations."
+  },
+  {
+    step: "04",
+    title: "Testing & Optimization",
+    description: "Thoroughly test all systems and optimize performance for maximum efficiency and reliability."
+  },
+  {
+    step: "05",
+    title: "Training & Support",
+    description: "Provide comprehensive training to your team and ongoing support for smooth operations."
+  },
+  {
+    step: "06",
+    title: "Monitoring & Maintenance",
+    description: "Continuous monitoring and proactive maintenance to ensure optimal performance and security."
+  }
+];
+
+const testimonials = [
+  {
+    name: "David Thompson",
+    company: "TechCorp Solutions",
+    content: "Zion Tech Group transformed our IT infrastructure. Their cloud migration saved us 40% in costs while improving performance.",
+    rating: 5
+  },
+  {
+    name: "Lisa Chen",
+    company: "InnovateLabs",
+    content: "Outstanding cybersecurity implementation. We feel much more secure with their zero trust architecture.",
+    rating: 5
+  },
+  {
+    name: "Michael Rodriguez",
+    company: "FutureTech Inc.",
+    content: "Their DevOps solutions accelerated our deployment process by 300%. Highly recommend their expertise.",
+    rating: 5
+  }
+];
+
+const pricingPlans = [
+  {
+    name: "Basic IT Support",
+    price: "$299",
+    period: "per month",
+    features: [
+      "24/7 Helpdesk Support",
+      "Basic Security Monitoring",
+      "Software Updates",
+      "Remote Assistance",
+      "Monthly Health Checks"
+    ],
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    name: "Professional IT Services",
+    price: "$799",
+    period: "per month",
+    features: [
+      "Everything in Basic",
+      "Advanced Security Solutions",
+      "Cloud Management",
+      "Network Optimization",
+      "Backup & Recovery",
+      "Quarterly Reviews"
+    ],
+    color: "from-purple-500 to-pink-500",
+    popular: true
+  },
+  {
+    name: "Enterprise IT Solutions",
+    price: "$1,999",
+    period: "per month",
+    features: [
+      "Everything in Professional",
+      "Dedicated Account Manager",
+      "Custom Solutions",
+      "Advanced Analytics",
+      "Compliance Management",
+      "Priority Support"
+    ],
+    color: "from-orange-500 to-red-500"
+  }
+];
+
+export default function ITServicesPage() {
+  return (
+    <Layout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services including cloud migration, cybersecurity, network infrastructure, and digital transformation solutions."
+      keywords="IT services, cloud migration, cybersecurity, network infrastructure, digital transformation, IT consulting"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">IT Services</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Transform your business with our expert IT services. From cloud migration to cybersecurity, 
+                we provide comprehensive solutions to keep your technology infrastructure secure, efficient, and future-ready.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-300"
+                >
+                  View Pricing
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our IT Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive IT solutions designed to meet your business needs and drive growth
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {itServices.map((service, index) => (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                >
+                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.color} mb-6`}>
+                    <service.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                    <ul className="space-y-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {service.pricing && (
+                    <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                      <p className="text-lg font-semibold text-gray-900">{service.pricing}</p>
+                    </div>
+                  )}
+
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your IT Infrastructure?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Contact us today to discuss your IT needs and discover how we can help your business thrive.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-white">
+                <div className="flex items-center">
+                  <Phone className="h-6 w-6 mr-3" />
+                  <span className="text-lg">+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="h-6 w-6 mr-3" />
+                  <span className="text-lg">kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="h-6 w-6 mr-3" />
+                  <span className="text-lg">364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
+}
     icon: Database,
     features: [
       "Database Design",

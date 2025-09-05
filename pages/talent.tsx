@@ -47,7 +47,7 @@ const jobOpenings = [
     type: "Full-time",
     experience: "7+ years",
     description: "Design and implement cloud infrastructure solutions for enterprise clients.",
-requirements: ["Bachelor's degree in Computer Science or related field",ursor/add-new-services-and-deploy-updates-1b90
+    requirements: ["Bachelor's degree in Computer Science or related field",
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",

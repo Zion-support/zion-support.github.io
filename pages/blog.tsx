@@ -68,8 +68,6 @@ const blogPosts = [
   }
 ];
 
-
----
 const categories = [{ name: "AI & Machine Learning", count: 12 },
   { name: "Cloud Computing", count: 8 },
   { name: "Cybersecurity", count: 6 },
@@ -166,7 +164,6 @@ export default function BlogPage() {
                 </div>
               </div>
 
----
 
               {/* Sidebar */}
               <div className="lg:col-span-1">

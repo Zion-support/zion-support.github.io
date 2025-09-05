@@ -89,9 +89,6 @@ import {
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const microSaasProducts = [
-
----
 const microSaaSProducts = [
   {
     title: 'Cloud Cost Guard (FinOps Assistant)',
@@ -275,9 +272,13 @@ const microSaaSProducts = [
   {
     title: 'Smart Energy Management',
     description: 'AI-powered energy monitoring and optimization for businesses and homes.',
-
----
-  {}
+    icon: Zap,
+    features: ['Energy Monitoring', 'Cost Optimization', 'Predictive Analytics', 'Smart Controls'],
+    pricing: '$199 - $899/month',
+    category: 'Energy',
+    link: 'https://ziontechgroup.com/smart-energy'
+  },
+  {
     title: 'AI-Powered Personal Learning Assistant',
     description: 'Personalized learning platform with adaptive content and skill assessment.',
     icon: BookOpen,
@@ -286,7 +287,7 @@ const microSaaSProducts = [
     category: 'EdTech'
   },
   // NEW INNOVATIVE MICRO SAAS SERVICES - 2024/2025
-  {}
+  {
     title: 'AI-Powered Content Creation Suite',
     description: 'Complete AI content generation platform for articles, social media, and marketing materials with brand voice consistency.',
     icon: FileText,
@@ -295,7 +296,7 @@ const microSaaSProducts = [
     category: 'Content Marketing',
     popular: true
   },
-  {}
+  {
     title: 'AI Email Response Assistant',
     description: 'Intelligent email management with auto-responses, sentiment analysis, and priority flagging for business communications.',
     icon: Mail,
@@ -304,7 +305,7 @@ const microSaaSProducts = [
     category: 'Productivity',
     popular: true
   },
-  {}
+  {
     title: 'Mobile-First Survey & Feedback Platform',
     description: 'Conversational survey tool optimized for mobile with advanced analytics and real-time response tracking.',
     icon: MessageSquare,
@@ -312,7 +313,7 @@ const microSaaSProducts = [
     pricing: '$39 - $299/month',
     category: 'Customer Research'
   },
-  {}
+  {
     title: 'AI Video Clip Generator',
     description: 'Automated video editing platform that creates social media clips from long-form content with AI-powered highlights.',
     icon: Video,
@@ -320,7 +321,7 @@ const microSaaSProducts = [
     pricing: '$49 - $399/month',
     category: 'Video Marketing'
   },
-  {}
+  {
     title: 'E-Commerce Return Automation',
     description: 'Complete return management system with automated processing, label generation, and customer communication.',
     icon: Package,
@@ -328,7 +329,7 @@ const microSaaSProducts = [
     pricing: '$79 - $499/month',
     category: 'E-commerce'
   },
-  {}
+  {
     title: 'AI-Powered SEO Content Optimizer',
     description: 'Advanced SEO tool with AI content suggestions, keyword optimization, and competitor analysis.',
     icon: Search,
@@ -336,7 +337,7 @@ const microSaaSProducts = [
     pricing: '$59 - $399/month',
     category: 'SEO Tools'
   },
-  {}
+  {
     title: 'Smart Contract Security Auditor',
     description: 'Automated blockchain smart contract security analysis with vulnerability detection and gas optimization.',
     icon: Shield,
@@ -344,7 +345,7 @@ const microSaaSProducts = [
     pricing: '$199 - $1,999/month',
     category: 'Blockchain Security'
   },
-  {}
+  {
     title: 'AI-Powered Legal Document Generator',
     description: 'Automated legal document creation with compliance checking, customization, and e-signature integration.',
     icon: FileText,
@@ -352,7 +353,7 @@ const microSaaSProducts = [
     pricing: '$149 - $999/month',
     category: 'Legal Tech'
   },
-  {}
+  {
     title: 'Voice AI Assistant Platform',
     description: 'Custom voice AI assistants with natural language processing, multi-language support, and custom training.',
     icon: Mic,
@@ -360,7 +361,7 @@ const microSaaSProducts = [
     pricing: '$199 - $1,499/month',
     category: 'Voice AI'
   },
-  {}
+  {
     title: 'AI-Powered Fraud Detection System',
     description: 'Real-time fraud detection for financial transactions with machine learning models and risk scoring.',
     icon: Shield,
@@ -368,7 +369,7 @@ const microSaaSProducts = [
     pricing: '$299 - $2,499/month',
     category: 'FinTech Security'
   },
-  {}
+  {
     title: 'Smart Building IoT Management',
     description: 'Comprehensive IoT platform for smart buildings with sensor integration, automation, and predictive maintenance.',
     icon: Building,
@@ -376,7 +377,7 @@ const microSaaSProducts = [
     pricing: '$199 - $1,499/month',
     category: 'Smart Buildings'
   },
-  {}
+  {
     title: 'AI-Powered Medical Diagnosis Assistant',
     description: 'Healthcare AI platform for symptom analysis, diagnosis support, and treatment recommendations.',
     icon: Heart,
@@ -384,7 +385,7 @@ const microSaaSProducts = [
     pricing: '$999 - $4,999/month',
     category: 'Healthcare AI'
   },
-  {}
+  {
     title: 'Real-Time Supply Chain Optimizer',
     description: 'AI-driven supply chain optimization with demand forecasting, inventory management, and cost reduction.',
     icon: Network,
@@ -392,7 +393,7 @@ const microSaaSProducts = [
     pricing: '$499 - $2,999/month',
     category: 'Supply Chain AI'
   },
-  {}
+  {
     title: 'AI-Powered Quality Control System',
     description: 'Automated quality inspection using computer vision and machine learning for manufacturing processes.',
     icon: Eye,
@@ -400,7 +401,7 @@ const microSaaSProducts = [
     pricing: '$399 - $2,499/month',
     category: 'Manufacturing AI'
   },
-  {}
+  {
     title: 'Digital Twin Management Platform',
     description: 'Create and manage digital twins for physical assets with real-time simulation and predictive analytics.',
     icon: Monitor,
@@ -408,7 +409,7 @@ const microSaaSProducts = [
     pricing: '$599 - $3,999/month',
     category: 'Digital Twin'
   },
-  {}
+  {
     title: 'AI-Powered Energy Management',
     description: 'Smart energy optimization for buildings and facilities using AI algorithms and predictive analytics.',
     icon: Zap,
@@ -843,7 +844,6 @@ const microSaasServices = [
     title: "Workflow Automation",
     description: "Intelligent automation solutions that streamline business processes",
 
----
 const features = [
   {
 

@@ -99,7 +99,6 @@ const serviceCategories = [
       'Drug Discovery'
     ],
 
----
     href: "/ai-services",
     features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation"],
     pricing: "Starting at $1,000/month",
@@ -126,7 +125,6 @@ const serviceCategories = [
       'IT Consulting'
     ],
 
----
     href: "/it-services",
     features: ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration"],
     pricing: "Starting at $120/hour",
@@ -153,7 +151,6 @@ const serviceCategories = [
       'Project Management'
     ],
 
----
     href: "/micro-saas",
     features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management"],
     pricing: "Starting at $29/month",
@@ -355,7 +352,6 @@ const allServices = [
 ];
 
 
----
 
 const benefits = [
   {
@@ -803,6 +799,9 @@ export default function ServicesPage() {
           </div>
         </section>
       </div>
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

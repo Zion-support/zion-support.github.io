@@ -199,10 +199,243 @@ const aiServices = [
     color: "from-pink-500 to-rose-500",
     useCases: [
       "Marketing content creation",
-      "Software development assistance",
-      "Creative design automation",
-      "Educational content generation"
-    ]
+      "Product descriptions",
+      "Social media posts",
+      "Technical documentation"
+    ],
+    pricing: "Starting at $199/month"
+  },
+  {
+    title: "AI-Powered Cybersecurity",
+    description: "Advanced threat detection and automated security response using machine learning",
+    icon: Shield,
+    features: [
+      "Threat Detection",
+      "Anomaly Detection",
+      "Automated Response",
+      "Behavioral Analysis",
+      "Zero-day Protection",
+      "Security Orchestration"
+    ],
+    color: "from-red-500 to-pink-500",
+    useCases: [
+      "Network security monitoring",
+      "Endpoint protection",
+      "Cloud security",
+      "Incident response automation"
+    ],
+    pricing: "Starting at $399/month"
+  },
+  {
+    title: "AI-Driven Healthcare Solutions",
+    description: "Medical AI for diagnosis, treatment planning, and patient care optimization",
+    icon: Brain,
+    features: [
+      "Medical Image Analysis",
+      "Diagnostic Assistance",
+      "Treatment Recommendations",
+      "Drug Discovery",
+      "Patient Monitoring",
+      "Clinical Decision Support"
+    ],
+    color: "from-green-500 to-emerald-500",
+    useCases: [
+      "Radiology analysis",
+      "Pathology diagnosis",
+      "Drug development",
+      "Personalized medicine"
+    ],
+    pricing: "Starting at $599/month"
+  },
+  {
+    title: "Autonomous Business Intelligence",
+    description: "Self-learning AI systems that continuously optimize business operations",
+    icon: BarChart3,
+    features: [
+      "Autonomous Data Analysis",
+      "Self-Optimizing Algorithms",
+      "Continuous Learning",
+      "Predictive Maintenance",
+      "Dynamic Resource Allocation",
+      "Intelligent Automation"
+    ],
+    color: "from-blue-500 to-cyan-500",
+    useCases: [
+      "Supply chain optimization",
+      "Energy management",
+      "Financial trading",
+      "Manufacturing optimization"
+    ],
+    pricing: "Starting at $499/month"
+  },
+  {
+    title: "AI-Powered Legal Tech",
+    description: "Legal document analysis, contract review, and compliance monitoring",
+    icon: Shield,
+    features: [
+      "Contract Analysis",
+      "Legal Document Review",
+      "Compliance Monitoring",
+      "Risk Assessment",
+      "Case Law Research",
+      "Document Generation"
+    ],
+    color: "from-indigo-500 to-purple-500",
+    useCases: [
+      "Contract management",
+      "Due diligence",
+      "Regulatory compliance",
+      "Legal research automation"
+    ],
+    pricing: "Starting at $299/month"
+  },
+  {
+    title: "AI-Enhanced Financial Services",
+    description: "Intelligent financial analysis, fraud detection, and automated trading",
+    icon: BarChart3,
+    features: [
+      "Fraud Detection",
+      "Algorithmic Trading",
+      "Credit Risk Assessment",
+      "Portfolio Optimization",
+      "Regulatory Compliance",
+      "Real-time Monitoring"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    useCases: [
+      "Banking operations",
+      "Investment management",
+      "Insurance underwriting",
+      "Payment processing"
+    ],
+    pricing: "Starting at $399/month"
+  },
+  {
+    title: "AI-Powered Supply Chain Intelligence",
+    description: "End-to-end supply chain optimization with predictive analytics and automation",
+    icon: Network,
+    features: [
+      "Demand Forecasting",
+      "Supplier Risk Assessment",
+      "Route Optimization",
+      "Inventory Management",
+      "Quality Control",
+      "Sustainability Tracking"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    useCases: [
+      "Logistics optimization",
+      "Supplier management",
+      "Quality assurance",
+      "Sustainability compliance"
+    ],
+    pricing: "Starting at $349/month"
+  },
+  {
+    title: "AI-Driven Customer Experience",
+    description: "Personalized customer experiences with AI-powered recommendations and support",
+    icon: Users,
+    features: [
+      "Personalization Engine",
+      "Recommendation Systems",
+      "Sentiment Analysis",
+      "Customer Journey Mapping",
+      "Predictive Support",
+      "Omnichannel Integration"
+    ],
+    color: "from-purple-500 to-pink-500",
+    useCases: [
+      "E-commerce personalization",
+      "Customer service optimization",
+      "Marketing automation",
+      "User experience enhancement"
+    ],
+    pricing: "Starting at $179/month"
+  },
+  {
+    title: "AI-Powered Research & Development",
+    description: "Accelerated R&D processes with AI-driven hypothesis generation and testing",
+    icon: Lightbulb,
+    features: [
+      "Hypothesis Generation",
+      "Literature Review Automation",
+      "Experimental Design",
+      "Data Analysis",
+      "Patent Analysis",
+      "Innovation Tracking"
+    ],
+    color: "from-violet-500 to-purple-500",
+    useCases: [
+      "Scientific research",
+      "Product development",
+      "Patent research",
+      "Innovation management"
+    ],
+    pricing: "Starting at $449/month"
+  },
+  {
+    title: "AI-Enhanced Manufacturing",
+    description: "Smart manufacturing with AI-driven quality control and predictive maintenance",
+    icon: Settings,
+    features: [
+      "Predictive Maintenance",
+      "Quality Control",
+      "Production Optimization",
+      "Defect Detection",
+      "Energy Management",
+      "Safety Monitoring"
+    ],
+    color: "from-orange-500 to-red-500",
+    useCases: [
+      "Production line optimization",
+      "Quality assurance",
+      "Equipment maintenance",
+      "Safety compliance"
+    ],
+    pricing: "Starting at $399/month"
+  },
+  {
+    title: "AI-Powered Real Estate Intelligence",
+    description: "Property valuation, market analysis, and investment optimization",
+    icon: Globe,
+    features: [
+      "Property Valuation",
+      "Market Analysis",
+      "Investment Recommendations",
+      "Risk Assessment",
+      "Tenant Screening",
+      "Property Management"
+    ],
+    color: "from-emerald-500 to-green-500",
+    useCases: [
+      "Property investment",
+      "Market analysis",
+      "Tenant management",
+      "Portfolio optimization"
+    ],
+    pricing: "Starting at $199/month"
+  },
+  {
+    title: "AI-Driven Energy Management",
+    description: "Smart energy optimization and renewable energy integration",
+    icon: Zap,
+    features: [
+      "Energy Consumption Optimization",
+      "Renewable Energy Integration",
+      "Grid Management",
+      "Carbon Footprint Tracking",
+      "Predictive Maintenance",
+      "Cost Optimization"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    useCases: [
+      "Building energy management",
+      "Renewable energy optimization",
+      "Grid stability",
+      "Carbon reduction"
+    ],
+    pricing: "Starting at $249/month"
+  }
   },
   {
     title: "AI Ethics & Governance",

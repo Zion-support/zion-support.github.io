@@ -109,8 +109,24 @@ const itServices = [
   {
     title: 'Cloud Migration & Management',
     description: 'Seamless migration to cloud platforms with ongoing management and optimization.',
-
----
+    icon: Cloud,
+    features: [
+      "AWS/Azure/GCP Migration",
+      "Cloud Architecture Design",
+      "Cost Optimization",
+      "Security Implementation",
+      "Disaster Recovery",
+      "24/7 Monitoring"
+    ],
+    color: "from-blue-500 to-cyan-500",
+    benefits: [
+      "Reduced infrastructure costs",
+      "Improved scalability",
+      "Enhanced security",
+      "Better performance"
+    ]
+  },
+  {
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
 
@@ -309,8 +325,8 @@ const categories = [
   'Compliance',
   'Project Management',
   'Cost Optimization'
+];
 
----
 const technologies = [
   { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
