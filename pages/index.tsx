@@ -85,8 +85,7 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
+              '@context': 'https://schema.org@type': 'Organization',
               name: 'Zion Tech Group',
               url: contact.site,
               logo: `${contact.site}/favicon.svg`,

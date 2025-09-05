@@ -1,6 +1,6 @@
-import fs from 'fs',
-import path from 'path',
-import { execSync } from 'child_process',
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 class UltimateAutomationFactory {
   constructor() {
     this.logsDir = path.join(process.cwd(), 'logs'),

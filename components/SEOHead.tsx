@@ -11,7 +11,7 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - AI-Powered Solutions',
+  title = 'Zion Tech Group - AI-Powered Solutions';
   description = 'Leading provider of AI-powered solutions, web development, and digital transformation services.',
   keywords = 'AI, artificial intelligence, web development, digital transformation, tech solutions',
   image = '/images/og-image.jpg',

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react',
-import Link from 'next/link',
+import Link from 'next/link';
 interface SearchResult {
   title: string,
   description: string,

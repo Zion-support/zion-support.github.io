@@ -30,7 +30,7 @@ const generateSitemap = () => {
   </url>
 </urlset>`;
 
-  const sitemapPath = join(process.cwd(), 'public', 'sitemap.xml');
+  const sitemapPath = join(process.cwd(), 'publicsitemap.xml');
   const writeStream = createWriteStream(sitemapPath);
   writeStream.write(sitemap);
   writeStream.end();

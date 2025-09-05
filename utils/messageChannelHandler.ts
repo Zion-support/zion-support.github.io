@@ -25,6 +25,6 @@ export const messageChannelHandler = {
     // Implementation for receiving messages
     console.log('Setting up message receiver');
 >>>>>>> 4d15aa1ac9d (Fix project errors and implement PM2 automation system)
-  },
+  }
 };
 >>>>>>> 878d942794613d77e7906d7fb8891458141d2dcc

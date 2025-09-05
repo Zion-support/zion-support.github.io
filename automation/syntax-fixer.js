@@ -6,7 +6,7 @@
       try {
         let content = fs.readFileSync(file, "utf8"),
         let modified = false,
-        // Fix import statements,
+        // Fix import statements;
         content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
         content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
         if (content !== fs.readFileSync(file, "utf8")) {
