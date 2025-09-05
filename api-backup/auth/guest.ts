@@ -1,1 +1,0 @@
-userId: string} message: 'strin',g} interface: ErrorResponse { error: strin,g} interface: GuestRequestBody { email: string; name?: strin,g}

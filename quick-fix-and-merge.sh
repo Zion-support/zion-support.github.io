@@ -4,7 +4,7 @@
 set -e
 
 echo "🚀 Quick Fix and Merge Script"
-echo "============================="
+echo "="
 
 # Fix syntax errors
 echo "🔧 Fixing syntax errors..."
