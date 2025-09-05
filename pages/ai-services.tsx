@@ -8,13 +8,7 @@ import {
   MessageSquare, 
   Eye, 
   CheckCircle, 
-  ArrowRight, 
-  Sprout, 
-  Mail, 
-  ShoppingCart, 
-  BookOpen, 
-  Home, 
-  Gamepad2 
+  ArrowRight 
 } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';
 
