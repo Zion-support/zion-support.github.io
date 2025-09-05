@@ -1,1 +1,14 @@
-"HEAD": src.pages.disabled/ComprehensiveITServices2025.tsx import React from 'react'; import { motion, Link } from 'lucide-react'; import { ; Server,Shield,Cloud,Code,Network,Database,Lock,Users,; Zap,CheckCircle,ArrowRight,Phone,Mail,MapPin,Globe,; Star,Award,Clock,Calendar,Sparkles,Cpu,HardDrive,; Wifi,Bluetooth,Satellite,Telescope,Robot,Brain} from 'lucide-react'; import React from 'react'; import { motion, Link } from 'lucide-react'; import { ; Server,Shield,Cloud,Code,Network,Database,Lock,Users,; Zap,CheckCircle,ArrowRight,Phone,Mail,MapPin,Globe,; Star,Award,Clock,Calendar,Sparkles,Cpu,HardDrive,; Wifi,Bluetooth,Satellite,Telescope,Robot,Brain} from 'lucide - react'; ';';''
+import React from 'react';
+
+interface ComprehensiveITServices2025Props {
+  // Add props here as needed
+}
+
+export default function ComprehensiveITServices2025({ }: ComprehensiveITServices2025Props) {
+  return (
+    <div>
+      <h1>ComprehensiveITServices2025</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
