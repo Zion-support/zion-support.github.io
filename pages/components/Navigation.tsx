@@ -28,7 +28,6 @@ import {
   MessageSquare,
   Calendar,
   ShoppingCart,
-  Rocket,
   BookOpen,
   Camera,
   Music,
@@ -108,27 +107,6 @@ const navigationItems = [
         popular: true
       },
       {
-        title: 'Cybersecurity',
-        href: '/cybersecurity',
-        icon: Shield,
-        description: 'Enterprise security solutions',
-        popular: false
-      },
-      {
-        title: 'Cloud Solutions',
-        href: '/cloud-solutions',
-        icon: Cloud,
-        description: 'Scalable cloud infrastructure',
-        popular: false
-      },
-      {
-        title: 'Data Analytics',
-        href: '/data-analytics',
-        icon: BarChart3,
-        description: 'Advanced analytics platform',
-        popular: false
-      },
-      {
         title: 'Quantum Computing',
         href: '/quantum-computing',
         icon: Cpu,
@@ -197,18 +175,6 @@ const navigationItems = [
         icon: Shield,
         description: 'Enterprise security solutions',
         popular: true
-      },
-      {
-        title: 'Industry Solutions',
-        href: '/solutions/industry',
-        icon: BarChart3,
-        description: 'Industry-specific solutions'
-      },
-      {
-        title: 'Custom Solutions',
-        href: '/solutions/custom',
-        icon: Settings,
-        description: 'Tailored custom solutions'
       },
       {
         title: 'Data Analytics',
@@ -344,24 +310,17 @@ const navigationItems = [
         popular: false
       },
       {
-        title: 'Tutorials',
-        href: '/tutorials',
-        icon: BookOpen,
-        description: 'Step-by-step guides',
-        popular: false
-      },
-      {
-        title: 'Documentation',
-        href: '/docs',
-        icon: FileText,
-        description: 'Technical documentation',
-        popular: false
-      },
-      {
         title: 'Webinars',
         href: '/webinars',
         icon: Calendar,
         description: 'Educational sessions',
+        popular: false
+      },
+      {
+        title: 'Tutorials',
+        href: '/tutorials',
+        icon: BookOpen,
+        description: 'Step-by-step guides',
         popular: false
       },
       {
@@ -428,13 +387,6 @@ const navigationItems = [
         popular: false
       },
       {
-        title: 'Press',
-        href: '/press',
-        icon: FileText,
-        description: 'Press releases and media',
-        popular: false
-      },
-      {
         title: 'Contact',
         href: '/contact',
         icon: Phone,
@@ -464,8 +416,6 @@ const quickLinks = [
   { title: 'Contact', href: '/contact', icon: Phone },
   { title: 'Support', href: '/support', icon: MessageSquare },
   { title: 'Status', href: '/status', icon: BarChart3 },
-  { title: 'Quote', href: '/quote', icon: FileText },
-  { title: 'API Docs', href: '/api-docs', icon: Code },
   { title: 'Free Consultation', href: '/consultation', icon: Calendar },
   { title: 'Get Quote', href: '/quote', icon: FileText }
 ];

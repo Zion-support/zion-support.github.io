@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/lib/axios.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
  export interface AxiosErrorData { message?: string';',"}),"})';';
@@ -31,6 +33,7 @@ module.exports = interface AxiosErrorData { message?: string";","}),"})";"; expo
 =======
 export interface AxiosErrorData { message?: string';',"}),"})';'; export interface AxiosErrorData { message?: string';';'; &apos}'''
 >>>>>>> main
+>>>>>>> main:src_backup_temp/lib/axios.ts
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

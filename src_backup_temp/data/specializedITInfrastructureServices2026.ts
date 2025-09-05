@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/specializedITInfrastructureServices2026.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -591,3 +593,4 @@ export interface SpecializedITInfrastructureService2026 { id: string; title: str
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/specializedITInfrastructureServices2026.ts

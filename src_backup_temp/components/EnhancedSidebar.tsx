@@ -96,21 +96,6 @@ export default function Page("props": "any) {;
   { "duration": "0.5",;
   "delay": "0.5;
 
-<<<<<<< HEAD
-"}}
-        >";
-          <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>";
-          <div className="space-y-2 text-xs text-zion-slate-light">";
-            <div className="flex items-center space-x-2">";
-              <Phone className="w-3 h-3"   />;
-              <span>+1 302 464 0950</span>;
-            </div>";
-            <div className="flex items-center space-x-3 text-sm text-slate-400">";
-              <Mail className="w-4 h-4"   />;
-              <span>kleber@ziontechgroup.com</span>;
-            </div>";
-            <div className="flex items-center space-x-2">";
-=======
 }}
         >"
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?"
@@ -124,7 +109,6 @@ export default function Page("props": "any) {;
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center space-x-2">"
->>>>>>> main
               <MapPin className="w-3 h-3"   />;              <span>Middletown, DE</span>;
             </div>;
           </div>;

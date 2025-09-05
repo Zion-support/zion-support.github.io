@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',;',';';';';
-    ';';';';';';
-=======
 import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function ResourceManagementSystem.test() {return ( <div className="min-h-screen bg-white"> <SEO title="ResourceManagementSystem.test - Zion Tech Group" description="Professional ResourceManagementSystem.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">ResourceManagementSystem.test</h1> <p className="text-gray-300 text-lg"> Professional ResourceManagementSystem.test services to help your business grow. </p> </div>'; </div>';'; );';';'}";
 =======
 import React from 'react',;',';';
     ';';';';
->>>>>>> main
 import {SEO } from '@/components/SEO';
 export default function ResourceManagementSystem.test() {return (
         <div className="min-h-screen bg-white">
@@ -15,16 +9,7 @@ export default function ResourceManagementSystem.test() {return (
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">ResourceManagementSystem.test</h1>
         <p className="text-gray-300 text-lg">
-<<<<<<< HEAD
-          Professional ResourceManagementSystem.test services to help your business grow.';
-        </p>';';
-      </div>';';';
-    </div>';';';';
-  );';';';';';
-}"';';';';;';;';
-=======
 import React from 'react',;',';'; ';';';'; import {SEO } from '@/components/SEO'; export default function ResourceManagementSystem.test() {return ( <div className="min-h-screen bg-white"> <SEO title="ResourceManagementSystem.test - Zion Tech Group" description="Professional ResourceManagementSystem.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">ResourceManagementSystem.test</h1> <p className="text-gray-300 text-lg"> Professional ResourceManagementSystem.test services to help your business grow. </p> </div>'; </div>';'; );';';'}"';';';';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
           Professional ResourceManagementSystem.test services to help your business grow.
         </p>
@@ -32,5 +17,3 @@ import React from 'react',;',';'; ';';';'; import {SEO } from '@/components/SEO'
     </div>';';
   );';';';
 }"';';';';
->>>>>>> main
->>>>>>> main

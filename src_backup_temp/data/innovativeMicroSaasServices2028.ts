@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/innovativeMicroSaasServices2028.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -664,3 +666,4 @@ export interface ServiceContact { phone: string; email: string; website: string;
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/innovativeMicroSaasServices2028.ts

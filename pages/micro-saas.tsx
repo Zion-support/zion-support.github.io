@@ -1,35 +1,87 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Cloud, 
   Zap, 
+  Shield, 
+  Users, 
   BarChart3, 
+  CheckCircle, 
+  ArrowRight, 
+  Clock, 
+  Star, 
+  DollarSign, 
+  Award, 
+  Globe, 
+  Lock, 
+  Cpu, 
+  Bot, 
+  FileText, 
+  Video, 
+  Mic, 
   Code, 
   Settings, 
-  CheckCircle, 
-  ArrowRight,
+  Monitor, 
+  Smartphone, 
+  Server, 
+  Network, 
+  Car, 
+  Rocket, 
+  Heart, 
+  Building, 
+  Sprout, 
+  Mail, 
+  MessageSquare, 
+  Search, 
+  Eye, 
+  Target, 
+  Brain, 
+  TrendingUp, 
+  Package, 
+  Calendar, 
+  BookOpen, 
+  ShoppingCart, 
+  Home, 
+  Trash2, 
+  Camera, 
+  HardDrive,
+  Database,
   Phone,
-  Mail,
   MapPin,
-  Users,
-  Shield,
-  Globe,
-  ShoppingCart,
-  Target,
-  DollarSign,
+  Droplets,
+  Wifi,
+  Laptop,
+  CreditCard,
+  PieChart,
+  Truck,
   GraduationCap,
-  Package,
-  FileText,
-  MessageSquare
+  ClipboardList,
+  TreePine,
+  Gamepad2
 } from 'lucide-react';
-import Layout from './components/Layout';
 
-const microSaasSolutions = [
+const contactInfo = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
+
+const microSaaSProducts = [
+  // AI & Machine Learning Solutions
   {
-    title: "Workflow Automation",
-    description: "Streamline business processes with intelligent automation tools",
+    id: 1,
+    title: 'AI Content Marketing Suite',
+    description: 'Automated content creation, SEO optimization, and social media management platform with advanced AI capabilities.',
+    icon: FileText,
+    features: ['AI Content Generation', 'SEO Optimization', 'Social Media Scheduling', 'Analytics Dashboard', 'Multi-language Support', 'Brand Voice Training'],
+    pricing: '$29 - $199/month',
+    category: 'AI Marketing',
+    popular: true,
+    benefits: ['10x Content Output', 'SEO Boost', 'Time Savings', 'Better Engagement', 'Cost Reduction'],
+    marketPrice: '$50 - $300/month',
+    link: 'https://ziontechgroup.com/ai-content-marketing-suite',
     contact: '+1 302 464 0950'
   },
   {
@@ -766,519 +818,353 @@ const microSaasSolutions = [
     title: 'Real-time Data Streaming',
     description: 'High-performance real-time data streaming platform with event processing and analytics capabilities.',
     icon: Zap,
-    features: [
-      "Process Automation",
-      "Task Scheduling",
-      "Data Integration",
-      "Custom Workflows",
-      "API Integrations",
-      "Real-time Notifications"
-    ],
-    price: "Starting at $1,500/month",
-    marketPrice: "$2,500-4,000/month",
-    benefits: ["Reduce manual work by 80%", "Increase efficiency by 60%", "Save 20+ hours/week"]
+    features: ['Real-time Streaming', 'Event Processing', 'Data Analytics', 'Scalability', 'Monitoring', 'Integration'],
+    pricing: '$79 - $399/month',
+    category: 'Data Streaming',
+    popular: true,
+    benefits: ['Real-time Processing', 'Event Analytics', 'Scalability', 'Monitoring', 'Integration'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/real-time-data-streaming',
+    contact: '+1 302 464 0950'
   },
   {
-    title: "Data Processing Tools",
-    description: "Powerful data analysis and processing solutions",
+    title: 'AI Data Quality Platform',
+    description: 'Automated data quality management with AI-powered validation, cleansing, and monitoring capabilities.',
+    icon: Database,
+    features: ['Data Validation', 'Data Cleansing', 'Quality Monitoring', 'Anomaly Detection', 'Automation', 'Reporting'],
+    pricing: '$59 - $299/month',
+    category: 'Data Quality',
+    popular: true,
+    benefits: ['Data Quality', 'Automated Validation', 'Anomaly Detection', 'Automation', 'Cost Savings'],
+    marketPrice: '$100 - $500/month',
+    link: 'https://ziontechgroup.com/ai-data-quality-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Predictive Analytics Engine',
+    description: 'Advanced predictive analytics platform with machine learning models and automated forecasting capabilities.',
     icon: BarChart3,
-    features: [
-      "Data Visualization",
-      "ETL Processes",
-      "Real-time Analytics",
-      "Custom Dashboards",
-      "Report Generation",
-      "Data Export/Import"
-    ],
-    price: "Starting at $2,000/month",
-    marketPrice: "$3,500-6,000/month",
-    benefits: ["Process 10x more data", "Generate insights 5x faster", "Reduce errors by 90%"]
+    features: ['ML Models', 'Automated Forecasting', 'Predictive Modeling', 'Data Visualization', 'API Integration', 'Customization'],
+    pricing: '$99 - $499/month',
+    category: 'Predictive Analytics',
+    popular: true,
+    benefits: ['Predictive Insights', 'Automated Forecasting', 'ML Models', 'Data Visualization', 'Customization'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/predictive-analytics-engine',
+    contact: '+1 302 464 0950'
+  },
+
+  // Emerging Technology Solutions
+  {
+    title: 'Edge Computing Platform',
+    description: 'Distributed edge computing platform with low-latency processing and IoT device management capabilities.',
+    icon: Cpu,
+    features: ['Edge Processing', 'Low Latency', 'IoT Management', 'Distributed Computing', 'Real-time Analytics', 'Security'],
+    pricing: '$149 - $599/month',
+    category: 'Edge Computing',
+    popular: true,
+    benefits: ['Low Latency', 'Edge Processing', 'IoT Management', 'Real-time Analytics', 'Distributed Computing'],
+    marketPrice: '$250 - $900/month',
+    link: 'https://ziontechgroup.com/edge-computing-platform',
+    contact: '+1 302 464 0950'
   },
   {
-    title: "API Integration Services",
-    description: "Connect your systems with seamless API solutions",
-    icon: Code,
-    features: [
-      "REST API Development",
-      "Third-party Integrations",
-      "Webhook Management",
-      "API Documentation",
-      "Rate Limiting",
-      "Authentication & Security"
-    ],
-    price: "Starting at $1,800/month",
-    marketPrice: "$3,000-5,500/month",
-    benefits: ["Connect 50+ systems", "Reduce integration time by 70%", "99.9% uptime guarantee"]
+    title: 'AR/VR Development Platform',
+    description: 'Comprehensive AR/VR development platform with 3D modeling, immersive experiences, and cross-platform deployment.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Immersive Experiences', 'Cross-platform Deployment', 'AR/VR SDK', 'Analytics', 'Cloud Rendering'],
+    pricing: '$199 - $799/month',
+    category: 'AR/VR',
+    popular: true,
+    benefits: ['Immersive Experiences', '3D Modeling', 'Cross-platform', 'Cloud Rendering', 'Analytics'],
+    marketPrice: '$300 - $1,200/month',
+    link: 'https://ziontechgroup.com/ar-vr-development-platform',
+    contact: '+1 302 464 0950'
   },
   {
-    title: "Custom Dashboard Solutions",
-    description: "Tailored dashboards for your business needs",
-    icon: Settings,
-    features: [
-      "Real-time Monitoring",
-      "Custom Widgets",
-      "User Management",
-      "Role-based Access",
-      "Mobile Responsive",
-      "Export Capabilities"
-    ],
-    price: "Starting at $1,200/month",
-    marketPrice: "$2,000-3,500/month",
-    benefits: ["Improve decision making", "Save 15+ hours/week", "Real-time insights"]
-  },
-  {
-    title: "SaaS Platform Development",
-    description: "Complete SaaS solutions from concept to deployment",
-    icon: Cloud,
-    features: [
-      "Multi-tenant Architecture",
-      "Subscription Management",
-      "Payment Integration",
-      "User Onboarding",
-      "Analytics & Reporting",
-      "Scalable Infrastructure"
-    ],
-    price: "Starting at $3,500/month",
-    marketPrice: "$6,000-15,000/month",
-    benefits: ["Scale to millions of users", "Generate recurring revenue", "Reduce development costs by 60%"]
-  },
-  {
-    title: "Business Intelligence Tools",
-    description: "Advanced BI solutions for data-driven decisions",
-    icon: BarChart3,
-    features: [
-      "Interactive Dashboards",
-      "Predictive Analytics",
-      "Data Mining",
-      "Custom Reports",
-      "Machine Learning Integration",
-      "Real-time Insights"
-    ],
-    price: "Starting at $2,500/month",
-    marketPrice: "$4,500-8,000/month",
-    benefits: ["Increase revenue by 25%", "Reduce costs by 30%", "Make data-driven decisions"]
-  },
-  {
-    title: "Customer Relationship Management",
-    description: "Comprehensive CRM solution for managing customer relationships and sales pipelines",
-    icon: Users,
-    features: [
-      "Contact Management",
-      "Sales Pipeline Tracking",
-      "Email Marketing Automation",
-      "Lead Scoring",
-      "Customer Analytics",
-      "Integration with 100+ tools"
-    ],
-    price: "Starting at $2,200/month",
-    marketPrice: "$4,000-7,000/month",
-    benefits: ["Increase sales by 35%", "Improve customer retention", "Automate follow-ups"]
-  },
-  {
-    title: "Project Management Suite",
-    description: "Complete project management solution with team collaboration and resource planning",
-    icon: Globe,
-    features: [
-      "Task Management",
-      "Team Collaboration",
-      "Resource Planning",
-      "Time Tracking",
-      "Budget Management",
-      "Progress Reporting"
-    ],
-    price: "Starting at $1,800/month",
-    marketPrice: "$3,200-6,000/month",
-    benefits: ["Complete projects 40% faster", "Improve team productivity", "Reduce project costs"]
-  },
-  {
-    title: "E-commerce Management",
-    description: "All-in-one e-commerce platform with inventory, orders, and customer management",
-    icon: ShoppingCart,
-    features: [
-      "Inventory Management",
-      "Order Processing",
-      "Customer Management",
-      "Payment Processing",
-      "Shipping Integration",
-      "Analytics & Reporting"
-    ],
-    price: "Starting at $2,800/month",
-    marketPrice: "$5,000-12,000/month",
-    benefits: ["Increase sales by 50%", "Reduce order processing time", "Improve customer experience"]
-  },
-  {
-    title: "HR Management System",
-    description: "Comprehensive HR solution for employee management, payroll, and performance tracking",
-    icon: Users,
-    features: [
-      "Employee Database",
-      "Payroll Management",
-      "Performance Reviews",
-      "Time & Attendance",
-      "Benefits Administration",
-      "Compliance Tracking"
-    ],
-    price: "Starting at $2,000/month",
-    marketPrice: "$3,500-8,000/month",
-    benefits: ["Reduce HR workload by 60%", "Improve employee satisfaction", "Ensure compliance"]
-  },
-  {
-    title: "Marketing Automation",
-    description: "Advanced marketing automation platform for lead nurturing and campaign management",
-    icon: Target,
-    features: [
-      "Email Marketing",
-      "Lead Nurturing",
-      "Campaign Management",
-      "A/B Testing",
-      "Social Media Integration",
-      "Analytics & ROI Tracking"
-    ],
-    price: "Starting at $1,600/month",
-    marketPrice: "$3,000-6,500/month",
-    benefits: ["Increase leads by 200%", "Improve conversion rates", "Automate marketing tasks"]
-  },
-  {
-    title: "Financial Management",
-    description: "Complete financial management solution for accounting, invoicing, and expense tracking",
-    icon: DollarSign,
-    features: [
-      "Accounting & Bookkeeping",
-      "Invoice Generation",
-      "Expense Tracking",
-      "Financial Reporting",
-      "Tax Preparation",
-      "Bank Integration"
-    ],
-    price: "Starting at $1,900/month",
-    marketPrice: "$3,500-7,000/month",
-    benefits: ["Save 25+ hours/month", "Improve cash flow", "Ensure tax compliance"]
-  },
-  {
-    title: "Learning Management System",
-    description: "Comprehensive LMS for online courses, training, and educational content delivery",
-    icon: GraduationCap,
-    features: [
-      "Course Creation",
-      "Student Management",
-      "Progress Tracking",
-      "Assessment Tools",
-      "Certification System",
-      "Mobile Learning"
-    ],
-    price: "Starting at $2,300/month",
-    marketPrice: "$4,000-9,000/month",
-    benefits: ["Scale education programs", "Improve learning outcomes", "Reduce training costs"]
-  },
-  {
-    title: "Inventory Management",
-    description: "Advanced inventory management system with real-time tracking and automated reordering",
-    icon: Package,
-    features: [
-      "Real-time Inventory Tracking",
-      "Automated Reordering",
-      "Supplier Management",
-      "Barcode Scanning",
-      "Multi-location Support",
-      "Analytics & Forecasting"
-    ],
-    price: "Starting at $2,100/month",
-    marketPrice: "$3,800-7,500/month",
-    benefits: ["Reduce stockouts by 80%", "Lower inventory costs", "Improve accuracy"]
-  },
-  {
-    title: "Document Management",
-    description: "Secure document management system with version control and collaboration features",
-    icon: FileText,
-    features: [
-      "Document Storage",
-      "Version Control",
-      "Collaboration Tools",
-      "Search & Retrieval",
-      "Access Control",
-      "Audit Trail"
-    ],
-    price: "Starting at $1,400/month",
-    marketPrice: "$2,500-5,000/month",
-    benefits: ["Improve document security", "Reduce search time by 90%", "Enable remote collaboration"]
-  },
-  {
-    title: "Communication Platform",
-    description: "Unified communication platform with messaging, video calls, and file sharing",
-    icon: MessageSquare,
-    features: [
-      "Team Messaging",
-      "Video Conferencing",
-      "File Sharing",
-      "Screen Sharing",
-      "Integration with 200+ apps",
-      "Mobile & Desktop Apps"
-    ],
-    price: "Starting at $1,700/month",
-    marketPrice: "$3,000-6,000/month",
-    benefits: ["Improve team collaboration", "Reduce meeting costs", "Increase productivity"]
+    title: '5G Network Optimization',
+    description: 'AI-powered 5G network optimization with performance monitoring, capacity planning, and automated optimization.',
+    icon: Network,
+    features: ['5G Optimization', 'Performance Monitoring', 'Capacity Planning', 'Automated Optimization', 'Analytics', 'Predictive Maintenance'],
+    pricing: '$299 - $1,499/month',
+    category: '5G',
+    popular: true,
+    benefits: ['5G Optimization', 'Performance Monitoring', 'Capacity Planning', 'Automated Optimization', 'Predictive Maintenance'],
+    marketPrice: '$500 - $2,000/month',
+    link: 'https://ziontechgroup.com/5g-network-optimization',
+    contact: '+1 302 464 0950'
   }
 ];
 
-const industries = [
-  {
-    title: "Healthcare",
-    description: "Patient management, telemedicine, and medical data processing",
-    icon: "🏥"
-  },
-  {
-    title: "Finance",
-    description: "Payment processing, risk analysis, and financial reporting",
-    icon: "💰"
-  },
-  {
-    title: "E-commerce",
-    description: "Inventory management, order processing, and customer analytics",
-    icon: "🛒"
-  },
-  {
-    title: "Education",
-    description: "Learning management, student tracking, and assessment tools",
-    icon: "🎓"
-  },
-  {
-    title: "Manufacturing",
-    description: "Production monitoring, quality control, and supply chain management",
-    icon: "🏭"
-  },
-  {
-    title: "Real Estate",
-    description: "Property management, lead tracking, and market analysis",
-    icon: "🏠"
-  }
+const categories = [
+  { name: "All", count: microSaaSProducts.length },
+  { name: "AI Marketing", count: microSaaSProducts.filter(p => p.category === "AI Marketing").length },
+  { name: "AI Sales", count: microSaaSProducts.filter(p => p.category === "AI Sales").length },
+  { name: "AI Analytics", count: microSaaSProducts.filter(p => p.category === "AI Analytics").length },
+  { name: "AI Productivity", count: microSaaSProducts.filter(p => p.category === "AI Productivity").length },
+  { name: "AI Customer Service", count: microSaaSProducts.filter(p => p.category === "AI Customer Service").length },
+  { name: "AI Operations", count: microSaaSProducts.filter(p => p.category === "AI Operations").length },
+  { name: "AI Project Management", count: microSaaSProducts.filter(p => p.category === "AI Project Management").length },
+  { name: "AI Finance", count: microSaaSProducts.filter(p => p.category === "AI Finance").length },
+  { name: "AI HR", count: microSaaSProducts.filter(p => p.category === "AI HR").length },
+  { name: "AI Social Media", count: microSaaSProducts.filter(p => p.category === "AI Social Media").length },
+  { name: "AI E-commerce", count: microSaaSProducts.filter(p => p.category === "AI E-commerce").length },
+  { name: "AI Video", count: microSaaSProducts.filter(p => p.category === "AI Video").length },
+  { name: "AI Data Visualization", count: microSaaSProducts.filter(p => p.category === "AI Data Visualization").length },
+  { name: "AI Development", count: microSaaSProducts.filter(p => p.category === "AI Development").length },
+  { name: "AI Web Optimization", count: microSaaSProducts.filter(p => p.category === "AI Web Optimization").length },
+  { name: "AI Customer Analytics", count: microSaaSProducts.filter(p => p.category === "AI Customer Analytics").length },
+  { name: "AI Supply Chain", count: microSaaSProducts.filter(p => p.category === "AI Supply Chain").length }
 ];
 
-const whyChooseUs = [
-  {
-    title: "Rapid Development",
-    description: "Fast delivery with agile methodologies and modern tech stack",
-    icon: "⚡"
-  },
-  {
-    title: "Scalable Solutions",
-    description: "Built to grow with your business from startup to enterprise",
-    icon: "📈"
-  },
-  {
-    title: "Cost-Effective",
-    description: "Affordable pricing with transparent costs and no hidden fees",
-    icon: "💰"
-  },
-  {
-    title: "24/7 Support",
-    description: "Round-the-clock support and maintenance for your solutions",
-    icon: "🛡️"
-  }
-];
+export default function MicroSAASPage() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
 
-export default function MicroSaasPage() {
+  const filteredProducts = microSaaSProducts.filter(product => {
+    const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
+    const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
   return (
-    <Layout
-      title="Micro SaaS Solutions - Zion Tech Group"
-      description="Innovative micro SaaS solutions for modern businesses. Custom automation tools, data processing, and API integrations to accelerate your growth."
-      keywords="micro SaaS, SaaS development, automation tools, API integration, business intelligence, custom software"
-      canonical="https://ziontechgroup.com/micro-saas"
-    >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1 
-              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
+    <>
+      <Head>
+        <title>Micro SaaS Solutions - Zion Tech Group | 120+ Innovative AI-Powered Platforms</title>
+        <meta name="description" content="Discover 120+ innovative micro SaaS solutions powered by AI. From content marketing to analytics, project management to customer service. Competitive pricing starting at $19/month." />
+        <meta name="keywords" content="micro SaaS, AI platforms, business automation, SaaS solutions, AI tools, business software" />
+        <meta property="og:title" content="Micro SaaS Solutions - Zion Tech Group" />
+        <meta property="og:description" content="120+ innovative micro SaaS solutions with competitive pricing and instant deployment. Transform your business with AI-powered platforms." />
+        <meta property="og:url" content="https://ziontechgroup.com/micro-saas" />
+        <meta property="og:type" content="website" />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-center"
             >
-              Innovative 
-              <span className="text-purple-400"> Micro SaaS Solutions</span>
-            </motion.h1>
-            <motion.p 
-              className="text-xl mb-8 text-blue-100"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Transform your business with our cutting-edge micro SaaS platforms. 
-              From workflow automation to data processing, we create powerful tools 
-              that drive efficiency and growth.
-            </motion.p>
-            <motion.div 
-              className="flex flex-col sm:flex-row justify-center gap-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <Link href="/contact" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Get Free Consultation
-              </Link>
-              <Link href="/quote" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Request Quote
-              </Link>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Micro SaaS Solutions
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                120+ innovative micro SaaS solutions powered by AI for modern businesses. 
+                From content marketing to analytics, project management to customer service. 
+                Competitive pricing with instant deployment and white-label options.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Get Free Demo
+                </Link>
+                <Link href="#products" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  Browse Solutions
+                </Link>
+              </div>
             </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Solutions Overview */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Micro SaaS Solutions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Powerful, focused solutions designed to solve specific business challenges and drive operational efficiency.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {microSaasSolutions.map((solution, index) => (
-              <motion.div 
-                key={index}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-3xl mb-4">
-                  <solution.icon className="w-12 h-12 text-purple-600" />
+        {/* Contact Info Bar */}
+        <section className="bg-purple-900 text-white py-4">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-between items-center text-sm">
+              <div className="flex items-center space-x-6 mb-2 md:mb-0">
+                <div className="flex items-center">
+                  <Phone className="w-4 h-4 mr-2" />
+                  <a href="tel:+13024640950" className="hover:text-purple-300">{contactInfo.phone}</a>
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">{solution.title}</h3>
-                <p className="text-gray-600 mb-4">{solution.description}</p>
-                <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {solution.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl font-bold text-purple-600">{solution.price}</span>
-                    {solution.marketPrice && (
-                      <span className="text-sm text-gray-500 line-through">
-                        {solution.marketPrice}
-                      </span>
+                <div className="flex items-center">
+                  <Mail className="w-4 h-4 mr-2" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300">{contactInfo.email}</a>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <span className="text-purple-200">Instant Setup & 24/7 Support</span>
+                <div className="flex space-x-2">
+                  <a href="#" className="hover:text-purple-300"><Globe className="w-4 h-4" /></a>
+                  <a href="#" className="hover:text-purple-300"><Mail className="w-4 h-4" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Search and Filter Section */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="mb-8">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search micro SaaS solutions..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap gap-2 justify-center">
+                {categories.map((category) => (
+                  <button
+                    key={category.name}
+                    onClick={() => setSelectedCategory(category.name)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                      selectedCategory === category.name
+                        ? 'bg-purple-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Products Grid */}
+        <section id="products" className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredProducts.map((product, index) => {
+                const IconComponent = product.icon;
+                return (
+                  <motion.div
+                    key={product.id}
+                    className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 group relative"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -5 }}
+                  >
+                    {product.popular && (
+                      <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        POPULAR
+                      </div>
                     )}
-                  </div>
-                  {solution.marketPrice && (
-                    <div className="text-xs text-green-600 font-medium mb-2">
-                      Save up to 40% vs market rate
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-purple-600 group-hover:text-blue-600 transition-colors">
+                        <IconComponent className="w-8 h-8" />
+                      </div>
+                      <span className="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded-full">
+                        {product.category}
+                      </span>
                     </div>
-                  )}
-                  {solution.benefits && (
-                    <div className="text-xs text-gray-600">
-                      <div className="font-semibold mb-1">Key Benefits:</div>
-                      <ul className="space-y-1">
-                        {solution.benefits.slice(0, 2).map((benefit, idx) => (
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                      {product.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                      {product.description}
+                    </p>
+                    
+                    <div className="mb-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-lg font-bold text-green-600">
+                          {product.pricing}
+                        </span>
+                        <span className="text-sm text-gray-500 line-through">
+                          {product.marketPrice}
+                        </span>
+                      </div>
+                      <div className="text-xs text-green-600 font-medium">
+                        Save up to 40% vs market rate
+                      </div>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+                      <ul className="text-xs text-gray-600 space-y-1">
+                        {product.features.slice(0, 4).map((feature, idx) => (
                           <li key={idx} className="flex items-center">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-1" />
-                            {benefit}
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                            {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our micro SaaS solutions are tailored to meet the unique needs of various industries.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
-              <motion.div 
-                key={index}
-                className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-4xl mb-4">{industry.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{industry.title}</h3>
-                <p className="text-gray-600">{industry.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Micro SaaS Solutions?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyChooseUs.map((item, index) => (
-              <motion.div 
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">{item.icon}</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Build Your Micro SaaS Solution?</h2>
-          <p className="text-xl mb-8 text-purple-100 max-w-3xl mx-auto">
-            Join hundreds of companies that trust Zion Tech Group for their micro SaaS needs. 
-            Let's discuss how we can help accelerate your digital transformation.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <Link href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-              Get Free Consultation
-            </Link>
-          </div>
-          
-          {/* Contact Information */}
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            <div className="flex items-center justify-center">
-              <Phone className="w-6 h-6 mr-2" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <Mail className="w-6 h-6 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <MapPin className="w-6 h-6 mr-2" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                    
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {product.benefits.slice(0, 3).map((benefit, idx) => (
+                          <span key={idx} className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">
+                            {benefit}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-2">
+                      <Link
+                        href="/contact"
+                        className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-center py-2 px-4 rounded-lg text-sm font-semibold transition-colors"
+                      >
+                        Get Started
+                      </Link>
+                      <Link
+                        href={product.link}
+                        className="px-4 py-2 border border-purple-600 text-purple-600 hover:bg-purple-50 rounded-lg text-sm font-semibold transition-colors"
+                      >
+                        Learn More
+                      </Link>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
-        </div>
-      </section>
-    </Layout>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Choose from 120+ micro SaaS solutions or get a custom platform built for your specific needs.
+                All solutions include instant setup, 24/7 support, and white-label options.
+              </p>
+              <div className="mb-8">
+                <p className="text-lg text-purple-100 mb-2">
+                  📞 <strong>Call us:</strong> {contactInfo.phone}
+                </p>
+                <p className="text-lg text-purple-100 mb-2">
+                  📧 <strong>Email us:</strong> {contactInfo.email}
+                </p>
+                <p className="text-lg text-purple-100">
+                  📍 <strong>Visit us:</strong> {contactInfo.address}
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Get Free Consultation
+                </Link>
+                <Link href="/ai-services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                  Explore AI Services
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

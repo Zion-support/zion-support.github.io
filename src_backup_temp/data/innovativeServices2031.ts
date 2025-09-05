@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/innovativeServices2031.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -186,3 +188,4 @@ export interface ServiceContact { phone: string; email: string; website: string;
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/innovativeServices2031.ts
