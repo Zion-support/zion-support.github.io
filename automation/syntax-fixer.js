@@ -1,14 +1,10 @@
-<<<<<<< HEAD
       };
-<<<<<<< HEAD
     });
 };
 ;
   async fixImportIssues() {;
-=======
     })};
   async fixImportIssues() {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     const files = this.getSourceFiles();
     files.forEach(file => {
       try {
@@ -65,9 +61,6 @@ if (import.meta.url === `file: //${process.argv[1]}`) {
   const fixer = new SyntaxFixer();
   fixer.run().catch(console.error)};
 export default SyntaxFixer;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
     }),
   };
 ,
@@ -168,10 +161,4 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
   fixer.run().catch(console.error),
 };
 ,
-<<<<<<< HEAD
 export default SyntaxFixer,
-=======
-export default SyntaxFixer,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

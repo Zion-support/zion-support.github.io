@@ -1,12 +1,9 @@
 import React, { memo, useMemo, useCallback } from 'react';
-<<<<<<< HEAD
 ;
 // Higher-order component for performance optimization;
 export const withPerformanceOptimization = <P extends object>(;
-=======
 // Higher-order component for performance optimization;
 export const withPerformanceOptimization = <P extends object>(
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
   Component: React.ComponentType<P>;
   options: {
     memo?: boolean;
@@ -89,7 +86,6 @@ export const OptimizedImage: React.FC<{
       {hasError && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">;
           Failed to load image;
-<<<<<<< HEAD
         </div>;
       )};
     </div>;
@@ -265,7 +261,6 @@ export const usePerformanceMetrics = () => {,
 ,
   return { metrics, recordRender };
 };
-=======
         </div>)};
     </div>)}}};
 // Debounced search hook;
@@ -289,4 +284,3 @@ export const usePerformanceMetrics = () => {
       lastRenderTime: renderTime;
       averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)}))}, []);
   return { metrics, recordRender }};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

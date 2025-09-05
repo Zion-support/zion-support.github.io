@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 };
 ;
@@ -18,8 +16,6 @@
 ;
   generateCodeQualityScript() {;
     const script = `#!/usr/bin/env node;
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -162,7 +158,6 @@ const { execSync } = require("child_process");
 ;
 class PerformanceOptimizer {;
   constructor() {;
-=======
 }}; loadStatus() { try { if (fs.existsSync(this.statusFile)) { const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8")); this.runningScripts = new Map(Object.entries(status.runningScripts || {}))}} catch (error) { this.log(`Error loading status: ${error.message}`)}}}}; generateCodeQualityScript() { const script = `#!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
@@ -175,7 +170,6 @@ const path = require("path");
 const { execSync } = require("child_process");
 class PerformanceOptimizer {
   constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     this.optimizations = [];
     this.logFile = path.join(__dirname, "logs", "performance-optimizer.log")};
   log(message) {
@@ -302,7 +296,6 @@ optimizer.optimizePerformance().then(report => {
     for (const [name, script] of this.scripts) {
       if (script.status === "available") {
         const success = await this.runScript(name);
-<<<<<<< HEAD
         results.push({ name, success });
     };
   };
@@ -654,11 +647,4 @@ optimizer.optimizePerformance().then(report => {,
       if (script.status === "available") {,
         const success = await this.runScript(name),
         results.push({ name, success }),
-<<<<<<< HEAD
-      };
-=======
-      };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-        results.push({ name, success })};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
+      };        results.push({ name, success })};

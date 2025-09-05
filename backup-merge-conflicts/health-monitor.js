@@ -1,6 +1,4 @@
-<<<<<<< HEAD
       };
-<<<<<<< HEAD
 ;
       if (this.monitorProcesses) {;
         await this.checkProcessHealth();
@@ -17,7 +15,6 @@
 ;
   async checkResourceUsage() {;
     try {;
-=======
 ;
       if (this.monitorProcesses) {
         await this.checkProcessHealth()};
@@ -26,7 +23,6 @@
       this.log(`Health check error: ${error.message}`)}};
   async checkResourceUsage() {
     try {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
       // Check memory usage;
       const totalMem = os.totalmem();
       const freeMem = os.freemem();
@@ -137,9 +133,6 @@
 // Start the service;
 const healthMonitor = new HealthMonitor();
 healthMonitor.start().catch(console.error);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
 ,
       if (this.monitorProcesses) {,
         await this.checkProcessHealth(),
@@ -330,10 +323,4 @@ healthMonitor.start().catch(console.error);
 ,
 // Start the service,
 const healthMonitor = new HealthMonitor(),
-<<<<<<< HEAD
 healthMonitor.start().catch(console.error),
-=======
-healthMonitor.start().catch(console.error),
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

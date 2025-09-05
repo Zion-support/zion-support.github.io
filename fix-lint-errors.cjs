@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-    content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, "");
-    
+    content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?    
     // Clean up any remaining conflict markers
     content = content.replace(/^<<<<<<< .*$/gm, "");
     content = content.replace(/^=======.*$/gm, "");
-    content = content.replace(/^>>>>>>> .*$/gm, "");
-    
+    content = content.replace(/^    
     // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
     
@@ -128,14 +125,6 @@ try {
 } catch (error) {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
-#!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")

@@ -2,14 +2,11 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 ;
 class DependencyMonitor {;
   constructor() {;
-=======
 class DependencyMonitor {
   constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log');
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json');
@@ -215,7 +212,6 @@ class DependencyMonitor {
       process.exit(1)}}};
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
-<<<<<<< HEAD
 monitor.run().catch(error => {;
   process.exit(1);
 });
@@ -540,12 +536,5 @@ class DependencyMonitor {,
 const monitor = new DependencyMonitor(),
 monitor.run().catch(error => {,
   process.exit(1),
-<<<<<<< HEAD
-}),
-=======
-}),
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-monitor.run().catch(error => {
+}),monitor.run().catch(error => {
   process.exit(1)});
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

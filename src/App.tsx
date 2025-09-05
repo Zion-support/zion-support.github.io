@@ -10,14 +10,11 @@ import AboutPage from '../pages/about';
 import ContactPage from '../pages/contact';
 import ServicesPage from '../pages/services';
 import PricingPage from '../pages/pricing';
-<<<<<<< HEAD
 ;
 export default function App() {;
   return (;
-=======
 export default function App() {
   return (
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     <ErrorBoundary>;
       <Router>;
         <div className="min-h-screen bg-gray-50">;
@@ -35,7 +32,6 @@ export default function App() {
           <Footer />;
         </div>;
       </Router>;
-<<<<<<< HEAD
     </ErrorBoundary>;
   );
 import React from 'react',
@@ -74,6 +70,4 @@ export default function App() {,
     </ErrorBoundary>,
   ),
 };
-=======
     </ErrorBoundary>)};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

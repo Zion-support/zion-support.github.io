@@ -2,16 +2,13 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-<<<<<<< HEAD
 ;
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
-=======
 class CodeQualityMonitor {
   constructor() {
     this.metrics = {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
       complexity: 0;
       maintainability: 0;
       testCoverage: 0;
@@ -35,7 +32,6 @@ class CodeQualityMonitor {
       this.log("Code quality analysis completed successfully");
       return this.metrics} catch (error) {
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR");
-<<<<<<< HEAD
       return null;
 };
 #!/usr/bin/env node,
@@ -78,11 +74,4 @@ class CodeQualityMonitor {,
     } catch (error) {,
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
       return null,
-<<<<<<< HEAD
-    };
-=======
-    };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-      return null};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
+    };      return null};

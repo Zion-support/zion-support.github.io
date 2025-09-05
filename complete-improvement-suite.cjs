@@ -185,8 +185,7 @@ class CompleteImprovementSuite {
       return (
         content.includes('<<<<<<< HEAD') ||
         content.includes('=======') ||
-        content.includes('>>>>>>> ')
-      );
+        content.includes('      );
     } catch (error) {
       return false;
     }
@@ -199,20 +198,11 @@ class CompleteImprovementSuite {
 
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-        '$1'
+        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n        '$1'
       );
 
       // Clean up any remaining markers
-<<<<<<< HEAD
-      content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-
+      content = content.replace(/
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
@@ -388,33 +378,3 @@ class CompleteImprovementSuite {
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.reportsDir = path.join(this.projectRoot, 'improvement-reports')
-        "encoding"
-    this.log(' Phase "1")
-    this.log(' Phase "2")
-    this.log(' Phase "3")
-        "name"
-        "name"
-        "name"
-    this.log(' Phase "4")
-    const commands = [{ cmd: 'git add .', "desc"}]
-        "cmd": 'git commit -m "feat: Complete improvement suite - merge conflicts, syntax fixes, and enhancements"
-        "desc"
-      { "cmd": 'git push origin main', "desc"}
-        /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'')]
-        "
-      content = content.replace(/['"];\s*['')]
-          "
-        "endpoints"
-        "format"
-                "name"
-                "chunks"
-cursor/fix-lint-push-and-merge-to-main-f3c1;

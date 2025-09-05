@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 };
 ;
   log(message, level = "INFO") {;
-=======
 }};
   log(message, level = "INFO") {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(`[${level}] ${message}`);
@@ -87,9 +83,6 @@ if (import.meta.url === `file: //${process.argv[1]}`) {
   const scanner = new SecurityScanner();
   scanner.run().catch(console.error)};
 export default SecurityScanner;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
     };
   };
 ,
@@ -218,10 +211,4 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
   scanner.run().catch(console.error),
 };
 ,
-<<<<<<< HEAD
 export default SecurityScanner,
-=======
-export default SecurityScanner,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

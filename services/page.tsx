@@ -1,13 +1,10 @@
 };
 ];
-<<<<<<< HEAD
 ;
 export default function ServicesPage() {;
   return (;
-=======
 export default function ServicesPage() {
   return (
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     <Layout;
       title="Our Services - Zion Tech Group";
       description="Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses.";
@@ -46,9 +43,6 @@ export default function ServicesPage() {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
   };
 ],
 ,
@@ -93,11 +87,4 @@ export default function ServicesPage() {,
             </div>,
           </div>,
         </section>,
-<<<<<<< HEAD
-        {/* Why Choose Us */};
-=======
-        {/* Why Choose Us */};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-        {/* Why Choose Us */};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
+        {/* Why Choose Us */};        {/* Why Choose Us */};

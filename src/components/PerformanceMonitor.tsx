@@ -1,8 +1,5 @@
-<<<<<<< HEAD
         };
       };
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
 };
     // Initial tracking;
     trackPageLoad();
@@ -40,7 +37,6 @@
           <BarChart3 className="w-5 h-5 text-blue-400" />;
           <span className="text-sm font-medium text-white">Performance Monitor</span>;
           <button;
-<<<<<<< HEAD
     };
 ,
     // Initial tracking,
@@ -92,6 +88,4 @@
           <BarChart3 className="w-5 h-5 text-blue-400" />,
           <span className="text-sm font-medium text-white">Performance Monitor</span>,
           <button,
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
             onClick={() => setIsVisible(false)};

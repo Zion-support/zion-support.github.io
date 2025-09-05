@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 };
 ;
   async analyzeBuild() {;
     try {;
-=======
 }};
   async analyzeBuild() {
     try {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
       this.log('🏗️  Analyzing current build...');
       if (!fs.existsSync('dist')) {
         this.log('📦 Building project first...');
@@ -197,12 +193,9 @@
       process.exit(1)}}};
 // Run the build optimizer;
 const optimizer = new BuildOptimizer();
-<<<<<<< HEAD
 optimizer.run().catch(error => {;
   process.exit(1);
 });
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
     };
   };
 ,
@@ -485,12 +478,5 @@ optimizer.run().catch(error => {;
 const optimizer = new BuildOptimizer(),
 optimizer.run().catch(error => {,
   process.exit(1),
-<<<<<<< HEAD
-}),
-=======
-}),
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-optimizer.run().catch(error => {
+}),optimizer.run().catch(error => {
   process.exit(1)});
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

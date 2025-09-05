@@ -2,14 +2,11 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 ;
 class SEOAccessibility {;
   constructor() {;
-=======
 class SEOAccessibility {
   constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log');
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json');
@@ -38,7 +35,6 @@ class SEOAccessibility {
       items.forEach(item => {
         const fullPath = path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
 ;
         if (stat.isDirectory()) {;
           scanDirectory(fullPath);
@@ -105,13 +101,6 @@ class SEOAccessibility {,
           files.push(fullPath),
         };
       }),
-<<<<<<< HEAD
-    };
-=======
-    };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-        if (stat.isDirectory()) {
+    };        if (stat.isDirectory()) {
           scanDirectory(fullPath)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
           files.push(fullPath)}})};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

@@ -2,14 +2,11 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 ;
 class GitWorkflow {;
   constructor() {;
-=======
 class GitWorkflow {
   constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log');
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json');
@@ -216,7 +213,6 @@ class GitWorkflow {
       process.exit(1)}}};
 // Run the git workflow monitor;
 const gitWorkflow = new GitWorkflow();
-<<<<<<< HEAD
 gitWorkflow.run().catch(error => {;
   process.exit(1);
 });
@@ -548,7 +544,5 @@ const gitWorkflow = new GitWorkflow(),
 gitWorkflow.run().catch(error => {,
   process.exit(1),
 }),
-=======
 gitWorkflow.run().catch(error => {
   process.exit(1)});
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

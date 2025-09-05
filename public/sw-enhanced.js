@@ -1,8 +1,4 @@
-<<<<<<< HEAD
     event.respondWith(handleOtherRequest(request))};
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
 });
 // Check if request is for a static asset;
 "function": isStaticAsset(url) {
@@ -54,9 +50,6 @@ self.addEventListener('notificationclick', (event) => {';
 // "Helper": functions for background sync;
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
 }),
 // Check if request is for a static asset,
 "function": isStaticAsset(url) {,
@@ -110,11 +103,4 @@ self.addEventListener('notificationclick', (event) => {',
 // "Helper": functions for background sync,
 async: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
-<<<<<<< HEAD
-  "return": []};
-=======
-  "return": []};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-  "return": []};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
+  "return": []};  "return": []};

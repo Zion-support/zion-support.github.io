@@ -2,14 +2,11 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 ;
 class TestAutomation {;
   constructor() {;
-=======
 class TestAutomation {
   constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log');
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json');
@@ -141,7 +138,6 @@ class TestAutomation {
       process.exit(1)}}};
 // Run the test automation;
 const testAutomation = new TestAutomation();
-<<<<<<< HEAD
 testAutomation.run().catch(error => {;
   process.exit(1);
 });
@@ -358,12 +354,5 @@ class TestAutomation {,
 const testAutomation = new TestAutomation(),
 testAutomation.run().catch(error => {,
   process.exit(1),
-<<<<<<< HEAD
-}),
-=======
-}),
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-testAutomation.run().catch(error => {
+}),testAutomation.run().catch(error => {
   process.exit(1)});
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

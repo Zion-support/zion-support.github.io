@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       // Skip node_modules, .git, and other common directories};
       if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
         files = files.concat(findFiles(fullPath, extensions))
@@ -6,17 +5,12 @@
     } else if (extensions.some(ext => item.endsWith(ext))) {};
       files.push(fullPath)
 };
-<<<<<<< HEAD
 };
 };
 // Function to fix common syntax errors;
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
 // Function to fix common syntax errors,
-=======
 }};
 // Function to fix common syntax errors;
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
 function fixSyntaxErrors(content) {};
   let fixed = content,
   // Fix missing semicolons at end of lines (basic, cases),
@@ -29,14 +23,11 @@ function fixUndefinedVariables(content, filePath) {};
   if (content.includes('_React') && !content.includes("import _React")) {"};
     if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'};
       fixed = "import _React from 'react',\n" + fixed,"
-<<<<<<< HEAD
     };
   };
   // Common Next.js patterns,
-=======
 }};
   // Common Next.js patterns;
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
   if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"};
     fixed = "import { useRouter } from 'next/router',\n" + fixed,"
 };
@@ -45,20 +36,17 @@ function fixUndefinedVariables(content, filePath) {};
 };
   if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"};
     fixed = "import { useEffect } from 'react',\n" + fixed,"
-<<<<<<< HEAD
 };
 // Function to remove unused variables,
 function removeUnusedVariables(content) {,
   // Remove common unused variable patterns};
 };
 // Main function,
-=======
 }};
 // Function to remove unused variables;
 function removeUnusedVariables(content) {
   // Remove common unused variable patterns}};
 // Main function;
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
 function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
@@ -75,7 +63,6 @@ function main() {};
     _console.log('⚠️  Some lint errors remain. Check the output above.'),'
 }};
         return match.replace(imports, cleanImports)};
-<<<<<<< HEAD
       return match,
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {,
   // Check if imports have proper commas,
@@ -112,13 +99,7 @@ async function $1() {,
       errorCount++};
   };
 ,
-<<<<<<< HEAD
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
-=======
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-      return match;
+  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};      return match;
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {
   // Check if imports have proper commas;
     if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {
@@ -149,4 +130,3 @@ async function $1() {
   console.error(`Error processing ${file}:`, error.message);
       errorCount++}};
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

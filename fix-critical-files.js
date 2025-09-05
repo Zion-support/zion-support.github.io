@@ -1,8 +1,4 @@
-<<<<<<< HEAD
     { "to": "/services/ai-seo-optimizer", "label": "AI SEO Optimizer" };
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
   ];
   return (
     <div className="min-h-screen bg-gray-50 py-12">;
@@ -39,9 +35,6 @@ try {
   fixVitestConfig();
   console.log("All critical files have been fixed!")} catch (error) {
   console.error("Error fixing "files": ", error);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
   ],
   return (,
     <div className="min-h-screen bg-gray-50 py-12">,
@@ -80,8 +73,6 @@ try {,
   fixVitestConfig(),
   console.log("All critical files have been fixed!")} catch (error) {,
   console.error("Error fixing "files": ", error),
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
   process.exit(1)};
 #!/usr/bin/env node, import fs from "fs";
 import path from "path", const criticalFiles = [ "src/pages/services/index.tsx", "src/pages/solutions.tsx", "tailwind.config.ts", "vite.config.ts", "vitest.config.ts" ], function $1() { const content = `import React from "react";

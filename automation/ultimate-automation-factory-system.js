@@ -1,14 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-<<<<<<< HEAD
 ;
 class UltimateAutomationFactory {;
   constructor() {;
-=======
 class UltimateAutomationFactory {
   constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     this.logsDir = path.join(process.cwd(), 'logs');
     this.ensureLogsDir()};
   ensureLogsDir() {
@@ -80,7 +77,6 @@ if (import.meta.url === `file: //${process.argv[1]}`) {
     console.error('Ultimate Automation Factory failed:', error);
     process.exit(1)})};
 export default UltimateAutomationFactory;
-<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path',
 import { execSync } from 'child_process',
@@ -194,10 +190,4 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
   }),
 };
 ,
-<<<<<<< HEAD
 export default UltimateAutomationFactory,
-=======
-export default UltimateAutomationFactory,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

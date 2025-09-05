@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   };
 };
 ,
@@ -10,7 +9,6 @@ fixApiDocs(),
 fixCareers(),
 ,
 console.log('🎉 Syntax error fixes completed'),
-=======
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -111,4 +109,3 @@ for (const file of files) {
 }
 
 console.log(`Fixed ${fixedCount} files`);
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

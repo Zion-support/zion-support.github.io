@@ -243,12 +243,7 @@ export default function Home() {
         </section>
           </main>
         </Suspense>
-<<<<<<< HEAD
-        <PerformanceMonitor
-=======
-        {/* <PerformanceMonitor 
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
-          showMetrics={process.env.NODE_ENV === 'development'}
+        <PerformanceMonitor          showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn('Performance thresholds exceeded:', metrics)

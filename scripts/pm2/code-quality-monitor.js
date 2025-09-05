@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 };
 ;
   async analyzeFile(filePath) {;
     try {;
-=======
 }};
   async analyzeFile(filePath) {
     try {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
       const content = fs.readFileSync(filePath, 'utf8');
       const stats = fs.statSync(filePath);
       const analysis = {
@@ -195,12 +191,9 @@
       process.exit(1)}}};
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
-<<<<<<< HEAD
 monitor.run().catch(error => {;
   process.exit(1);
 });
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
     };
   };
 ,
@@ -495,12 +488,5 @@ monitor.run().catch(error => {;
 const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
   process.exit(1),
-<<<<<<< HEAD
-}),
-=======
-}),
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-monitor.run().catch(error => {
+}),monitor.run().catch(error => {
   process.exit(1)});
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

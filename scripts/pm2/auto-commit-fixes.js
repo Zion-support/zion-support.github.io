@@ -2,14 +2,11 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 ;
 class AutoCommitFixes {;
   constructor() {;
-=======
 class AutoCommitFixes {
   constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log');
     this.startTime = Date.now();
@@ -18,7 +15,6 @@ class AutoCommitFixes {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-<<<<<<< HEAD
 ;
     try {;
       fs.appendFileSync(this.logFile, logMessage);
@@ -47,13 +43,6 @@ class AutoCommitFixes {,
       fs.appendFileSync(this.logFile, logMessage),
     } catch (error) {,
       console.error('Error writing to log file:', error.message),
-<<<<<<< HEAD
-    };
-=======
-    };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-    try {
+    };    try {
       fs.appendFileSync(this.logFile, logMessage)} catch (error) {
       console.error('Error writing to log file:', error.message)};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

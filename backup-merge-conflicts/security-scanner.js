@@ -2,14 +2,11 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 ;
 class SecurityScanner {;
   constructor() {;
-=======
 class SecurityScanner {
   constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     this.processName = process.env.PM2_PROCESS_NAME || 'security-scanner';
     this.scanDependencies = process.env.SCAN_DEPENDENCIES === 'true';
     this.scanCode = process.env.SCAN_CODE === 'true';
@@ -36,7 +33,6 @@ class SecurityScanner {
           stdio: 'pipe';
           cwd: process.cwd()});
         const auditData = JSON.parse(auditOutput);
-<<<<<<< HEAD
 #!/usr/bin/env node,
 const { execSync } = require('child_process'),
 const fs = require('fs'),
@@ -81,11 +77,4 @@ class SecurityScanner {,
         }),
 ,
         const auditData = JSON.parse(auditOutput),
-<<<<<<< HEAD
-        const vulnerabilities = auditData.vulnerabilities || {};
-=======
-        const vulnerabilities = auditData.vulnerabilities || {};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-        const vulnerabilities = auditData.vulnerabilities || {};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
+        const vulnerabilities = auditData.vulnerabilities || {};        const vulnerabilities = auditData.vulnerabilities || {};

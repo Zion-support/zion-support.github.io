@@ -1,7 +1,4 @@
-<<<<<<< HEAD
     return { hasError: true, error };
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
 };
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
@@ -49,7 +46,6 @@
                 </pre>;
               </details>)};
           </div>;
-<<<<<<< HEAD
         </div>;
       );
 };
@@ -118,8 +114,6 @@
   };
 };
 ,
-=======
         </div>)};
     return this.props.children}};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
 export { ErrorBoundary };

@@ -5,14 +5,11 @@ import { execSync, spawn } from "child_process";
 import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-<<<<<<< HEAD
 ;
 class ComprehensiveAutomationRunner {;
   constructor() {;
-=======
 class ComprehensiveAutomationRunner {
   constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log");
     this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json");
     this.ensureDirectories();
@@ -161,7 +158,6 @@ if (import.meta.url === `file: //${process.argv[1]}`) {
   const runner = new ComprehensiveAutomationRunner();
   runner.runAll().catch(console.error)};
 export default ComprehensiveAutomationRunner;
-<<<<<<< HEAD
 #!/usr/bin/env node,
 import fs from "fs",
 import path from "path",
@@ -396,10 +392,4 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
   runner.runAll().catch(console.error),
 };
 ,
-<<<<<<< HEAD
 export default ComprehensiveAutomationRunner,
-=======
-export default ComprehensiveAutomationRunner,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

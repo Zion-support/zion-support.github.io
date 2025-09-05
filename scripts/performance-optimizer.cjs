@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 class PerformanceOptimizer {
   constructor() {
     this.optimizations = [];
@@ -87,7 +86,6 @@ class PerformanceOptimizer {
       return { error: error.message };
     }
   }
-=======
 function log(message, level = 'INFO') {
   const timestamp = new Date().toISOString();
   console.log(`[${timestamp}] [${level}] ${message}`)}
@@ -188,7 +186,6 @@ const BundleAnalyzer: React.FC = () => {
       })};
 
     analyzeBundle()}, []);
->>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
 
   getFilesRecursively(dir) {
     let files = [];
@@ -213,12 +210,9 @@ const BundleAnalyzer: React.FC = () => {
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-<<<<<<< HEAD
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
-=======
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
->>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
 
   getBundleRecommendations(totalSize, fileCount) {
     const recommendations = [];
@@ -252,13 +246,11 @@ const BundleAnalyzer: React.FC = () => {
         const stats = fs.statSync(file);
         totalSize += stats.size;
         
-<<<<<<< HEAD
         // Check if image is already optimized (WebP, compressed)
         if (file.endsWith('.webp') || file.endsWith('.avif')) {
           optimizedCount++;
         }
       });
-=======
         <div className="space-y-2">
           <div className="flex justify-between items-center p-2 bg-blue-50 rounded">
             <span>JavaScript</span>
@@ -278,7 +270,6 @@ const BundleAnalyzer: React.FC = () => {
       </div>
     </div>
   )};
->>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
 
       return {
         totalImages: imageFiles.length,
@@ -291,7 +282,6 @@ const BundleAnalyzer: React.FC = () => {
     }
   }
 
-<<<<<<< HEAD
   getImageFiles(dir) {
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.avif', '.svg'];
     const files = this.getFilesRecursively(dir);
@@ -391,7 +381,6 @@ const BundleAnalyzer: React.FC = () => {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Performance report saved to: ${reportFile}`);
   }
-=======
   const bundlePath = path.join(process.cwd(), 'src/components/BundleAnalyzer.tsx');
   fs.writeFileSync(bundlePath, bundleAnalyzerContent);
   log('Created BundleAnalyzer component')}
@@ -405,7 +394,6 @@ function main() {
     log('✅ Performance optimizations completed successfully')} catch (error) {
     log(`❌ Performance optimizations failed: ${error.message}`, 'ERROR');
     process.exit(1)}
->>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
 }
 
 // Run the optimizer

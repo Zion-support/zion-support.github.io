@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
-<<<<<<< HEAD
 ;
 const Header = () => {;
-=======
 const Header = () => {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const navigation = [;
@@ -209,7 +206,6 @@ const Header = () => {
       </nav>;
     </header>)};
 export default Header;
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -442,5 +438,3 @@ const Header = () => {,
 };
 ,
 export default Header,
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
         const dependencies = lockFile.dependencies || {};
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
 ;
         // This would need more sophisticated analysis;
         return []};
@@ -19,9 +15,6 @@
 // Start the service;
 const buildOptimizer = new BuildOptimizer();
 buildOptimizer.start().catch(console.error);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
 ,
         // This would need more sophisticated analysis,
         return [],
@@ -48,10 +41,4 @@ buildOptimizer.start().catch(console.error);
 ,
 // Start the service,
 const buildOptimizer = new BuildOptimizer(),
-<<<<<<< HEAD
 buildOptimizer.start().catch(console.error),
-=======
-buildOptimizer.start().catch(console.error),
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

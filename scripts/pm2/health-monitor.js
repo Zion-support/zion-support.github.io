@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 };
 ;
   async checkSystemResources() {;
     try {;
-=======
 }};
   async checkSystemResources() {
     try {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
       this.log('💻 Checking system resources...');
       const memInfo = execSync('free -m', { encoding: 'utf8' });
       const diskInfo = execSync('df -h', { encoding: 'utf8' });
@@ -280,12 +276,9 @@
       process.exit(1)}}};
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
-<<<<<<< HEAD
 healthMonitor.run().catch(error => {;
   process.exit(1);
 });
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
     };
   };
 ,
@@ -692,12 +685,5 @@ healthMonitor.run().catch(error => {;
 const healthMonitor = new HealthMonitor(),
 healthMonitor.run().catch(error => {,
   process.exit(1),
-<<<<<<< HEAD
-}),
-=======
-}),
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-healthMonitor.run().catch(error => {
+}),healthMonitor.run().catch(error => {
   process.exit(1)});
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

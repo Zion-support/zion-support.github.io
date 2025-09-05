@@ -1,8 +1,5 @@
 };
-<<<<<<< HEAD
 ;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
   const navigationSections = [;
     {
       id: 'services';
@@ -57,7 +54,6 @@
 ;
   return (
     <motion.aside;
-<<<<<<< HEAD
   };
 ,
   const navigationSections = [,
@@ -122,13 +118,10 @@
 ,
   return (,
     <motion.aside,
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
       initial={false};
       animate={{ x: isOpen ? 0 : -320 }};
       transition={{ duration: 0.3, ease: 'easeInOut' }};
       className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`};
-<<<<<<< HEAD
     >,
       <div className="p-6">,
         {/* Header */};
@@ -265,7 +258,6 @@
     </motion.aside>,
   ),
 };
-=======
     >;
       <div className="p-6">;
         {/* Header */};
@@ -388,4 +380,3 @@
         </div>;
       </div>;
     </motion.aside>)};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

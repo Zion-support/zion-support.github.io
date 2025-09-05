@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -85,7 +84,6 @@ function findAndFixFiles(dir) {
 console.log('Starting merge conflict fix...');
 const fixedCount = findAndFixFiles('.');
 console.log(`Fixed ${fixedCount} files with merge conflicts.`);
-=======
 class MergeConflictFixer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -172,10 +170,7 @@ class MergeConflictFixer {
 
       // Additional cleanup: remove any remaining conflict markers
       fixedContent = fixedContent
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-        .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-        .replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-
+        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?        .replace(/<<<<<<< HEAD[\s\S]*?        .replace(/=======[\s\S]*?
       // Clean up extra semicolons and syntax issues
       fixedContent = fixedContent
         .replace(/;\s*;/g, ';')
@@ -262,4 +257,3 @@ if (require.main === module) {
 }
 
 module.exports = MergeConflictFixer;
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

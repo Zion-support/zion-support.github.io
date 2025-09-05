@@ -2,14 +2,11 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 ;
 class SecurityScanner {;
   constructor() {;
-=======
 class SecurityScanner {
   constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log');
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json');
@@ -180,7 +177,6 @@ class SecurityScanner {
       process.exit(1)}}};
 // Run the security scanner;
 const scanner = new SecurityScanner();
-<<<<<<< HEAD
 scanner.run().catch(error => {;
   process.exit(1);
 #!/usr/bin/env node,
@@ -445,12 +441,5 @@ class SecurityScanner {,
 const scanner = new SecurityScanner(),
 scanner.run().catch(error => {,
   process.exit(1),
-<<<<<<< HEAD
-}),);
-=======
-}),);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
-=======
-scanner.run().catch(error => {
+}),);scanner.run().catch(error => {
   process.exit(1)}),);
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

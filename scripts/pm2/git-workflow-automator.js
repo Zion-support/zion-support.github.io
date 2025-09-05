@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 ;
 class GitWorkflowAutomator {;
   constructor() {;
-=======
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
 const { execSync } = require('child_process');
@@ -13,7 +11,6 @@ const fs = require('fs');
 const path = require('path');
 class GitWorkflowAutomator {
   constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
     this.logFile = './logs/pm2/git-workflow.log';
     this.errorFile = './logs/pm2/git-workflow-error.log';
     this.workflowReport = './logs/git-workflow-report.json';
@@ -167,7 +164,6 @@ async function main() {
 if (require.main === module) {
   main()};
 module.exports = GitWorkflowAutomator;
-<<<<<<< HEAD
 #!/usr/bin/env node,
 /**,
  * Git Workflow Automator Script,
@@ -430,5 +426,3 @@ if (require.main === module) {,
 };
 ,
 module.exports = GitWorkflowAutomator,
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-948c

@@ -1,15 +1,12 @@
 };
-<<<<<<< HEAD
 ;
   return (;
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent';
     } ${className}`}>;
-=======
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'} ${className}`}>;
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
       {/* Top Contact Bar */};
       <div className="bg-blue-900 text-white py-2 px-4 hidden lg: block">;
         <div className="container mx-auto flex justify-between items-center text-sm">;
@@ -155,7 +152,6 @@
             </motion.div>)};
         </AnimatePresence>;
       </nav>;
-<<<<<<< HEAD
     </header>;
   );
   };
@@ -321,6 +317,4 @@
     </header>,
   ),
 };
-=======
     </header>)};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
