@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { }
+import {
   HelpCircle, 
   Ticket, 
   MessageSquare, 
@@ -16,16 +16,16 @@ import { }
   FileText,
   User,
   Calendar,
-  Priority;
+  Priority
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const ticketCategories = []
+const ticketCategories = [
   { id: 'technical', label: 'Technical Support', icon: HelpCircle, color: 'blue' },
   { id: 'billing', label: 'Billing & Payments', icon: FileText, color: 'green' },
   { id: 'account', label: 'Account Issues', icon: User, color: 'purple' },
   { id: 'feature', label: 'Feature Request', icon: MessageSquare, color: 'orange' },
-  { id: 'bug', label: 'Bug Report', icon: AlertCircle, color: 'red' };
+  { id: 'bug', label: 'Bug Report', icon: AlertCircle, color: 'red' }
 ];
 
 const priorityLevels = []
