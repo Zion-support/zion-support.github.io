@@ -86,8 +86,7 @@ const codeExamples = [
 };
 });
 
-const data = await response.json();
-``
+const data = await response.json();`
   },
   {
     language: 'Python',
@@ -105,39 +104,39 @@ data = {
     'company': 'Tech Corp'
 }
 response = requests.post(url, json=data, headers=headers)
-print(response.json())``
+print(response.json())`
   },
   {
     language: 'cURL',
     title: 'Get System Status',
-    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\`
+    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
   }
 ];
 
-const sdkLibraries = []
-  {}
+const sdkLibraries = [
+  {
     name: 'JavaScript SDK',
     description: 'Official JavaScript SDK for easy integration',
     version: '1.2.0',
     install: 'npm install @ziontechgroup/sdk',
     documentation: '/docs/sdk/javascript'
   },
-  {}
+  {
     name: 'Python SDK',
     description: 'Python SDK with full API support',
     version: '1.1.5',
     install: 'pip install ziontechgroup-sdk',
     documentation: '/docs/sdk/python'
   },
-  {}
+  {
     name: 'PHP SDK',
     description: 'PHP SDK for server-side integration',
     version: '1.0.8',
     install: 'composer require ziontechgroup/sdk',
     documentation: '/docs/sdk/php'
-  };
+  }
 ];
 
 export default function APIDocumentationPage() {}
@@ -145,37 +144,37 @@ export default function APIDocumentationPage() {}
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedMethod, setSelectedMethod] = useState('all');
 
-  const copyToClipboard = async (code: string, id: string) => {}
-    try {}
+  const copyToClipboard = async (code: string, id: string) => {
+    try {
       await navigator.clipboard.writeText(code);
       setCopiedCode(id);
       setTimeout(() => setCopiedCode(null), 2000);
-    } catch (err) {}
+    } catch (err) {
       console.error('Failed to copy: ', err);
-    };
+    }
   };
 
-  const filteredEndpoints = apiEndpoints.filter(endpoint => {})
+  const filteredEndpoints = apiEndpoints.filter(endpoint => {
     const matchesSearch = endpoint.path.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          endpoint.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesMethod = selectedMethod === 'all' || endpoint.method.toLowerCase() === selectedMethod.toLowerCase();
     return matchesSearch && matchesMethod;
   });
 
-  return ()
-    <Layout;
+  return (
+    <Layout
       title="API Documentation - Zion Tech Group"
       description="Complete API documentation for Zion Tech Group services. Learn how to integrate with our APIs, view endpoints, and access code examples."
       keywords="API documentation, REST API, integration, developer docs, endpoints, Zion Tech Group API"
     >
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen">
-        {/* Header */};
+        {/* Header */}
         <section className="bg-white/10 backdrop-blur-md border-b border-white/20">
           <div className="container mx-auto px-4 py-8">
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.6 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="flex flex-col md:flex-row items-center justify-between"
             >
               <div>
@@ -200,13 +199,13 @@ export default function APIDocumentationPage() {}
           </div>
         </section>
 
-        {/* Quick Start */};
+        {/* Quick Start */}
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.6, delay: 0.2 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-white/10 backdrop-blur-md rounded-lg p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4">Quick Start</h2>
@@ -245,17 +244,17 @@ export default function APIDocumentationPage() {}
             <div className="mb-8 flex flex-col md:flex-row gap-4">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input;
+                <input
                   type="text"
                   placeholder="Search endpoints..."
-                  value={searchQuery};
-                  onChange={(e) => setSearchQuery(e.target.value)};
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              <select;
-                value={selectedMethod};
-                onChange={(e) => setSelectedMethod(e.target.value)};
+              <select
+                value={selectedMethod}
+                onChange={(e) => setSelectedMethod(e.target.value)}
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="all">All Methods</option>
@@ -266,15 +265,15 @@ export default function APIDocumentationPage() {}
               </select>
             </div>
 
-            {/* API Endpoints */};
+            {/* API Endpoints */}
             <div className="space-y-6">
-              {filteredEndpoints.map((endpoint, index) => (})
-                <motion.div;
-                  key={index};
+              {filteredEndpoints.map((endpoint, index) => (
+                <motion.div
+                  key={index}
                   className="bg-white/10 backdrop-blur-md rounded-lg p-6 hover:bg-white/15 transition-colors"
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-4">
@@ -283,8 +282,8 @@ export default function APIDocumentationPage() {}
                         endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
                         endpoint.method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
                         'bg-red-100 text-red-800'
-                      }`}>`
-                        {endpoint.method};
+                      }`}>
+                        {endpoint.method}
                       </span>
                       <code className="text-white font-mono text-lg">
                         {endpoint.path};
@@ -334,10 +333,10 @@ export default function APIDocumentationPage() {}
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3">Responses</h4>
                     <div className="space-y-3">
-                      {endpoint.responses.map((response, responseIndex) => (})
+                      {endpoint.responses.map((response, responseIndex) => (
                         <div key={responseIndex} className="bg-white/5 rounded p-4">
                           <div className="flex items-center justify-between mb-2">
-                            <span className={`px-2 py-1 rounded text-sm font-medium ${`}
+                            <span className={`px-2 py-1 rounded text-sm font-medium ${
                               response.code >= 200 && response.code < 300 ? 'bg-green-100 text-green-800' :
                               response.code >= 400 ? 'bg-red-100 text-red-800' :
                               'bg-yellow-100 text-yellow-800'
