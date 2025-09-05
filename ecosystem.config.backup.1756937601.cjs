@@ -11,16 +11,16 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 3000,
       },
       env_development: {
         NODE_ENV: 'development',
-        PORT: 3000
+        PORT: 3000,
       },
       log_file: './logs/web.log',
       out_file: './logs/web-out.log',
       error_file: './logs/web-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
     {
       name: 'automation-health-check',
@@ -32,11 +32,11 @@ module.exports = {
       watch: false,
       cron_restart: '*/5 * * * *', // Restart every 5 minutes
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       log_file: './logs/health-check.log',
       out_file: './logs/health-check-out.log',
-      error_file: './logs/health-check-error.log'
+      error_file: './logs/health-check-error.log',
     },
     {
       name: 'automation-security-scanner',
@@ -48,11 +48,11 @@ module.exports = {
       watch: false,
       cron_restart: '0 */6 * * *', // Restart every 6 hours
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       log_file: './logs/security-scanner.log',
       out_file: './logs/security-scanner-out.log',
-      error_file: './logs/security-scanner-error.log'
+      error_file: './logs/security-scanner-error.log',
     },
     {
       name: 'automation-performance-monitor',
@@ -64,11 +64,11 @@ module.exports = {
       watch: false,
       cron_restart: '0 */2 * * *', // Restart every 2 hours
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       log_file: './logs/performance-monitor.log',
       out_file: './logs/performance-monitor-out.log',
-      error_file: './logs/performance-monitor-error.log'
-    }
-  ]
+      error_file: './logs/performance-monitor-error.log',
+    },
+  ],
 };

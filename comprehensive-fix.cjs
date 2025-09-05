@@ -5,7 +5,7 @@ const path = require('path');
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Fix common syntax patterns
     content = content
       // Fix function calls with missing semicolons
@@ -16,15 +16,19 @@ function fixFile(filePath) {
       // Fix object method calls
       .replace(/(\w+)\s*\(\s*\)\s*}/g, '$1();')
       // Fix missing semicolons in variable declarations
-      .replace(/(const|let|var)\s+(\w+)\s*=\s*[^;]+$/gm, (match) => {
+      .replace(/(const|let|var)\s+(\w+)\s*=\s*[^;]+$/gm, match => {
         if (!match.endsWith(';')) {
           return match + ';';
         }
         return match;
       })
       // Fix missing semicolons in function calls
-      .replace(/(\w+)\s*\(\s*[^)]*\)\s*$/gm, (match) => {
-        if (!match.endsWith(';') && !match.includes('{') && !match.includes('}')) {
+      .replace(/(\w+)\s*\(\s*[^)]*\)\s*$/gm, match => {
+        if (
+          !match.endsWith(';') &&
+          !match.includes('{') &&
+          !match.includes('}')
+        ) {
           return match + ';';
         }
         return match;
@@ -33,15 +37,22 @@ function fixFile(filePath) {
       .replace(/(\w+)\s*\(\s*\)\s*}/g, '$1();')
       .replace(/(\w+)\s*\(\s*\)\s*,/g, '$1();')
       // Fix missing semicolons in useEffect
-      .replace(/useEffect\s*\(\s*\(\)\s*=>\s*\{[^}]*\}\s*,\s*\[\s*\]\s*\)\s*$/gm, (match) => {
-        if (!match.endsWith(';')) {
-          return match + ';';
+      .replace(
+        /useEffect\s*\(\s*\(\)\s*=>\s*\{[^}]*\}\s*,\s*\[\s*\]\s*\)\s*$/gm,
+        match => {
+          if (!match.endsWith(';')) {
+            return match + ';';
+          }
+          return match;
         }
-        return match;
-      })
+      )
       // Fix missing semicolons in return statements
-      .replace(/return\s+[^;]+$/gm, (match) => {
-        if (!match.endsWith(';') && !match.includes('{') && !match.includes('}')) {
+      .replace(/return\s+[^;]+$/gm, match => {
+        if (
+          !match.endsWith(';') &&
+          !match.includes('{') &&
+          !match.includes('}')
+        ) {
           return match + ';';
         }
         return match;
@@ -53,7 +64,7 @@ function fixFile(filePath) {
       // Fix multiple semicolons
       .replace(/;\s*;/g, ';')
       // Fix missing semicolons in if statements
-      .replace(/if\s*\([^)]+\)\s*\{[^}]*\}\s*$/gm, (match) => {
+      .replace(/if\s*\([^)]+\)\s*\{[^}]*\}\s*$/gm, match => {
         if (!match.endsWith(';')) {
           return match + ';';
         }
@@ -88,7 +99,7 @@ const filesToFix = [
   'components/performance/OptimizedImage.tsx',
   'components/ui/EnhancedMarketplaceCard.tsx',
   'components/ui/InteractiveNavigation.tsx',
-  'components/ui/NotificationSystem.tsx'
+  'components/ui/NotificationSystem.tsx',
 ];
 
 console.log('🔧 Starting comprehensive syntax fixes...');

@@ -62,6 +62,7 @@ A comprehensive, AI-powered PM2 automation system that provides intelligent code
 ## 🛠️ Installation
 
 1. **Prerequisites**
+
    ```bash
    # Install Node.js (v16 or higher)
    curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
@@ -72,6 +73,7 @@ A comprehensive, AI-powered PM2 automation system that provides intelligent code
    ```
 
 2. **Install Dependencies**
+
    ```bash
    npm install
    ```
@@ -84,11 +86,13 @@ A comprehensive, AI-powered PM2 automation system that provides intelligent code
 ## 🚀 Quick Start
 
 1. **Start the Intelligent PM2 System**
+
    ```bash
    ./start-intelligent-pm2-system.sh
    ```
 
 2. **Monitor the System**
+
    ```bash
    # Check PM2 status
    pm2 status
@@ -302,31 +306,34 @@ The system includes automated backup and recovery:
 ### Common Issues
 
 1. **Process Not Starting**
+
    ```bash
    # Check PM2 status
    pm2 status
-   
+
    # Check logs
    pm2 logs [process-name]
-   
+
    # Restart process
    pm2 restart [process-name]
    ```
 
 2. **High Memory Usage**
+
    ```bash
    # Check memory usage
    pm2 monit
-   
+
    # Restart high memory processes
    pm2 restart [process-name]
    ```
 
 3. **Permission Issues**
+
    ```bash
    # Check file permissions
    ls -la scripts/automation/
-   
+
    # Fix permissions
    chmod +x scripts/automation/*.cjs
    ```

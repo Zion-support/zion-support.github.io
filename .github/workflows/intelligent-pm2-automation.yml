@@ -2,11 +2,11 @@ name: Intelligent PM2 Automation CI/CD
 
 on:
   push:
-    branches: [ main, develop, feature/* ]
+    branches: [main, develop, feature/*]
   pull_request:
-    branches: [ main, develop ]
+    branches: [main, develop]
   schedule:
-    - cron: '0 2 * * *'  # Daily at 2 AM
+    - cron: '0 2 * * *' # Daily at 2 AM
   workflow_dispatch:
     inputs:
       environment:
@@ -15,9 +15,9 @@ on:
         default: 'staging'
         type: choice
         options:
-        - staging
-        - production
-        - development
+          - staging
+          - production
+          - development
 
 env:
   NODE_VERSION: '18'
@@ -213,7 +213,13 @@ jobs:
   notification:
     name: Intelligent Notifications
     runs-on: ubuntu-latest
-    needs: [intelligent-analysis, intelligent-testing, intelligent-build, intelligent-deployment]
+    needs:
+      [
+        intelligent-analysis,
+        intelligent-testing,
+        intelligent-build,
+        intelligent-deployment,
+      ]
     if: always()
     steps:
       - name: Send Intelligent Notifications

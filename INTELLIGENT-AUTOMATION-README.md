@@ -36,18 +36,20 @@ This intelligent automation system provides 10 specialized automation modules th
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - PM2 (installed globally)
 - Git
 
 ### Setup
 
 1. **Install PM2 globally**:
+
    ```bash
    npm install -g pm2
    ```
 
 2. **Start the intelligent automation system**:
+
    ```bash
    npm run pm2:intelligent:start
    ```
@@ -179,60 +181,70 @@ export SECURITY_LEVEL=strict
 ## 📈 Module Details
 
 ### 1. Intelligent Error Prevention System
+
 - **Schedule**: Every 15 minutes
 - **Purpose**: Proactive error detection and fixing
 - **Features**: Pattern recognition, auto-fixing, preventive checks
 - **Reports**: Error patterns, fix history, recommendations
 
 ### 2. Smart Performance Optimizer
+
 - **Schedule**: Every 2 hours
 - **Purpose**: Continuous performance optimization
 - **Features**: Bundle optimization, dependency optimization, code optimization
 - **Reports**: Performance metrics, optimization results, improvements
 
 ### 3. Intelligent Dependency Manager
+
 - **Schedule**: Every 6 hours
 - **Purpose**: Dependency management and security
 - **Features**: Vulnerability scanning, auto-updates, cleanup
 - **Reports**: Dependency analysis, security fixes, recommendations
 
 ### 4. Smart Code Quality Monitor
+
 - **Schedule**: Every 30 minutes
 - **Purpose**: Code quality monitoring and improvement
 - **Features**: Linting, type checking, complexity analysis
 - **Reports**: Quality scores, issues, auto-fixes
 
 ### 5. Intelligent Build Monitor
+
 - **Schedule**: Every 20 minutes
 - **Purpose**: Build health and optimization
 - **Features**: Build monitoring, error detection, optimization
 - **Reports**: Build metrics, performance, recommendations
 
 ### 6. Smart Security Auditor
+
 - **Schedule**: Every 4 hours
 - **Purpose**: Security monitoring and vulnerability management
 - **Features**: Vulnerability scanning, code analysis, auto-patching
 - **Reports**: Security scores, vulnerabilities, fixes
 
 ### 7. Intelligent Git Workflow Automator
+
 - **Schedule**: Every 10 minutes
 - **Purpose**: Git workflow automation
 - **Features**: Auto-commit, auto-push, conflict resolution
 - **Reports**: Git operations, workflow status, recommendations
 
 ### 8. Smart Health Monitor
+
 - **Schedule**: Every 5 minutes
 - **Purpose**: System health monitoring and recovery
 - **Features**: Health checks, auto-recovery, system monitoring
 - **Reports**: Health scores, recovery actions, recommendations
 
 ### 9. Intelligent Log Analyzer
+
 - **Schedule**: Every hour
 - **Purpose**: Advanced log analysis and pattern detection
 - **Features**: Error pattern analysis, anomaly detection, trend analysis
 - **Reports**: Log insights, patterns, anomalies, trends
 
 ### 10. Smart Resource Optimizer
+
 - **Schedule**: Every 3 hours
 - **Purpose**: Resource optimization and cleanup
 - **Features**: Memory optimization, disk cleanup, process optimization
@@ -243,11 +255,13 @@ export SECURITY_LEVEL=strict
 ### Common Issues
 
 1. **PM2 not found**:
+
    ```bash
    npm install -g pm2
    ```
 
 2. **Permission errors**:
+
    ```bash
    chmod +x scripts/start-intelligent-automations.sh
    ```

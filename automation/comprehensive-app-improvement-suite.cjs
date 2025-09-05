@@ -11,43 +11,44 @@ const improvements = [
   {
     name: 'Performance Optimization',
     command: 'npm run build && npm run analyze',
-    description: 'Building and analyzing bundle size'
+    description: 'Building and analyzing bundle size',
   },
   {
     name: 'Security Audit',
     command: 'npm audit --audit-level moderate',
-    description: 'Running security audit'
+    description: 'Running security audit',
   },
   {
     name: 'Code Quality Check',
     command: 'npm run lint:check',
-    description: 'Running linting checks'
+    description: 'Running linting checks',
   },
   {
     name: 'TypeScript Check',
     command: 'npm run type-check',
-    description: 'Running TypeScript type checking'
+    description: 'Running TypeScript type checking',
   },
   {
     name: 'Test Suite',
     command: 'npm run test:smoke',
-    description: 'Running smoke tests'
+    description: 'Running smoke tests',
   },
   {
     name: 'Accessibility Check',
-    command: 'npx eslint . --rule "jsx-a11y/alt-text: warn" --rule "jsx-a11y/aria-role: warn"',
-    description: 'Running accessibility checks'
+    command:
+      'npx eslint . --rule "jsx-a11y/alt-text: warn" --rule "jsx-a11y/aria-role: warn"',
+    description: 'Running accessibility checks',
   },
   {
     name: 'SEO Optimization',
     command: 'node scripts/generate-sitemap.js',
-    description: 'Generating sitemap for SEO'
+    description: 'Generating sitemap for SEO',
   },
   {
     name: 'Bundle Analysis',
     command: 'npm run build:analyze',
-    description: 'Analyzing bundle size and performance'
-  }
+    description: 'Analyzing bundle size and performance',
+  },
 ];
 
 const results = {
@@ -55,42 +56,43 @@ const results = {
   improvements: [],
   totalDuration: 0,
   successCount: 0,
-  failureCount: 0
+  failureCount: 0,
 };
 
 async function runImprovement(improvement) {
   const startTime = Date.now();
   console.log(`\n🔧 Running: ${improvement.name}`);
   console.log(`📝 ${improvement.description}`);
-  
+
   try {
-    execSync(improvement.command, { 
+    execSync(improvement.command, {
       stdio: 'pipe',
       cwd: process.cwd(),
-      timeout: 300000 // 5 minutes timeout
+      timeout: 300000, // 5 minutes timeout
     });
-    
+
     const duration = Date.now() - startTime;
-    console.log(`✅ ${improvement.name} completed successfully (${duration}ms)`);
-    
+    console.log(
+      `✅ ${improvement.name} completed successfully (${duration}ms)`
+    );
+
     results.improvements.push({
       name: improvement.name,
       status: 'success',
       duration: duration,
-      error: null
+      error: null,
     });
     results.successCount++;
-    
   } catch (error) {
     const duration = Date.now() - startTime;
     console.log(`❌ ${improvement.name} failed (${duration}ms)`);
     console.log(`Error: ${error.message}`);
-    
+
     results.improvements.push({
       name: improvement.name,
       status: 'failed',
       duration: duration,
-      error: error.message
+      error: error.message,
     });
     results.failureCount++;
   }
@@ -100,29 +102,33 @@ async function runAllImprovements() {
   for (const improvement of improvements) {
     await runImprovement(improvement);
   }
-  
+
   results.endTime = new Date().toISOString();
   results.totalDuration = Date.now() - new Date(results.startTime).getTime();
-  
+
   // Generate report
-  const reportPath = path.join(__dirname, 'reports', `improvement-report-${Date.now()}.json`);
+  const reportPath = path.join(
+    __dirname,
+    'reports',
+    `improvement-report-${Date.now()}.json`
+  );
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
-  
+
   console.log('\n📊 COMPREHENSIVE IMPROVEMENT REPORT');
   console.log('====================================');
   console.log(`Total Duration: ${results.totalDuration}ms`);
   console.log(`Successful: ${results.successCount}/${improvements.length}`);
   console.log(`Failed: ${results.failureCount}/${improvements.length}`);
   console.log(`Report saved to: ${reportPath}`);
-  
+
   // Create additional automation scripts
   await createAdditionalScripts();
 }
 
 async function createAdditionalScripts() {
   console.log('\n🛠️ Creating Additional Automation Scripts');
-  
+
   // 1. Health Check Script
   const healthCheckScript = `#!/usr/bin/env node
 const { execSync } = require('child_process');

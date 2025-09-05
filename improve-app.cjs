@@ -20,7 +20,7 @@ class AppImprover {
 
   analyzeApp() {
     this.log('Analyzing application structure...');
-    
+
     // Check for common issues
     this.checkNextConfig();
     this.checkPackageJson();
@@ -33,20 +33,20 @@ class AppImprover {
       const configPath = 'next.config.js';
       if (fs.existsSync(configPath)) {
         const content = fs.readFileSync(configPath, 'utf8');
-        
+
         // Check for performance optimizations
         if (!content.includes('swcMinify')) {
           this.improvements.push('Add SWC minification to next.config.js');
         }
-        
+
         if (!content.includes('compress')) {
           this.improvements.push('Enable compression in next.config.js');
         }
-        
+
         if (!content.includes('poweredByHeader')) {
           this.improvements.push('Remove X-Powered-By header for security');
         }
-        
+
         this.log('✅ Next.js config analyzed');
       } else {
         this.issues.push('next.config.js not found');
@@ -59,7 +59,7 @@ class AppImprover {
   checkPackageJson() {
     try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      
+
       // Check for missing scripts
       const requiredScripts = ['build', 'dev', 'start', 'test'];
       requiredScripts.forEach(script => {
@@ -67,12 +67,12 @@ class AppImprover {
           this.improvements.push(`Add ${script} script to package.json`);
         }
       });
-      
+
       // Check for security
       if (!packageJson.scripts.audit) {
         this.improvements.push('Add security audit script');
       }
-      
+
       this.log('✅ Package.json analyzed');
     } catch (error) {
       this.issues.push(`Error reading package.json: ${error.message}`);
@@ -94,14 +94,16 @@ class AppImprover {
     // Check for image optimization
     if (fs.existsSync('public')) {
       const publicFiles = fs.readdirSync('public');
-      const images = publicFiles.filter(file => 
+      const images = publicFiles.filter(file =>
         file.match(/\.(jpg|jpeg|png|gif|webp|svg)$/i)
       );
       if (images.length > 0) {
-        this.improvements.push(`Optimize ${images.length} images in public directory`);
+        this.improvements.push(
+          `Optimize ${images.length} images in public directory`
+        );
       }
     }
-    
+
     // Check for unused dependencies
     this.improvements.push('Run npm audit to check for unused dependencies');
   }
@@ -328,36 +330,41 @@ module.exports = SecurityAuditor;`;
       improvements: this.improvements,
       summary: {
         totalIssues: this.issues.length,
-        totalImprovements: this.improvements.length
-      }
+        totalImprovements: this.improvements.length,
+      },
     };
 
-    fs.writeFileSync('app-analysis-report.json', JSON.stringify(report, null, 2));
-    
+    fs.writeFileSync(
+      'app-analysis-report.json',
+      JSON.stringify(report, null, 2)
+    );
+
     console.log('\n📊 App Analysis Report:');
     console.log(`❌ Issues found: ${this.issues.length}`);
     console.log(`🚀 Improvements suggested: ${this.improvements.length}`);
-    
+
     if (this.issues.length > 0) {
       console.log('\nIssues:');
       this.issues.forEach(issue => console.log(`  - ${issue}`));
     }
-    
+
     if (this.improvements.length > 0) {
       console.log('\nImprovements:');
-      this.improvements.forEach(improvement => console.log(`  - ${improvement}`));
+      this.improvements.forEach(improvement =>
+        console.log(`  - ${improvement}`)
+      );
     }
   }
 
   async run() {
     this.log('🚀 Starting app improvement analysis...');
-    
+
     this.analyzeApp();
     this.createOptimizedNextConfig();
     this.createPerformanceScript();
     this.createSecurityScript();
     this.generateReport();
-    
+
     this.log('✅ App improvement analysis completed');
   }
 }
