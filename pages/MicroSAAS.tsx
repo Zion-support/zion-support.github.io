@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import Head from 'next/head';
-=======
->>>>>>> origin/main
 import Link from 'next/link';
 import Layout from '../components/Layout';
 

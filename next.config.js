@@ -15,9 +15,8 @@ const nextConfig = {
     minimumCacheTTL: 31536000,
   },
   
-<<<<<<< HEAD
-  // Webpack configuration to exclude problematic directories
-  webpack: (config, { dev, isServer }) => {
+  // Webpack configuration
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     if (dev) {
       // Exclude problematic directories from file watching
       config.watchOptions = {
@@ -57,9 +56,9 @@ const nextConfig = {
         ],
         poll: 1000,
         aggregateTimeout: 300,
-=======
-  // Webpack optimizations
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+      };
+    }
+    
     // Optimize bundle size
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
@@ -71,7 +70,6 @@ const nextConfig = {
             chunks: 'all',
           },
         },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
       };
     }
     

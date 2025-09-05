@@ -292,13 +292,9 @@
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
-<<<<<<< HEAD
-    "@supabase/supabase-js": "^2.39.0",
-=======
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
