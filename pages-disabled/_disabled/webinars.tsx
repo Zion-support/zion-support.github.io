@@ -1,27 +1,23 @@
-import React, { useState } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion;
-import {},
-  {
-  // TODO: Implement
-  },
-  {
-  Calendar, 
-  Clock, 
-  User, 
-  ArrowRight, 
-  Tag, 
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  Calendar,
+  Clock,
+  User,
+  ArrowRight,
+  Tag,
   ExternalLink,
   Play,
   Download,
   Users,
   Award,
-  CheckCircle;'
-} from 'lucide-react;
+  CheckCircle
+} from 'lucide-react';
 const webinars = [
   {
-    id: 1,'
+    id: 1,
     title: "The Future of AI in Business: 2025 Trends and Predictions",
     description: "Join our experts as they discuss the latest AI trends, emerging technologies, and how businesses can prepare for the future of artificial intelligence.",
     presenter: "Dr. Sarah Chen",
@@ -110,373 +106,287 @@ const webinars = [
     status: "recorded",
     recordingUrl: "/webinars/recordings/digital-transformation-strategy"
   }
-]
 ];
-
-const categories = []
+const categories = [
   "All Webinars",
   "Artificial Intelligence",
   "Cloud Computing",
   "Cybersecurity",
   "SaaS",
   "Data Analytics",
-  "Digital Transformation"]
+  "Digital Transformation"
 ];
-
-const statuses = []
+const statuses = [
   "All Status",
   "Upcoming",
-  "Recorded"]
+  "Recorded"
 ];
-
-export default function WebinarsPage() {},
-  {
-  const ["selectedCategory", "setSelectedCategory"] = useState("All Webinars");"
-  const ["selectedStatus", "setSelectedStatus"] = useState("All Status");"
-  const filteredWebinars = webinars.filter(webinar => {})
-    const categoryMatch = selectedCategory === "All Webinars" || webinar.category === selectedCategory;"
-    const statusMatch = selectedStatus === "All Status" ||")"
-      (selectedStatus === "Upcoming" && webinar.status === "upcoming") ||"
-      (selectedStatus === "Recorded" && webinar.status === "recorded");"
-    return categoryMatch && statusMatch
+export default function WebinarsPage() {
+  const [selectedCategory, setSelectedCategory] = useState("All Webinars");
+  const [selectedStatus, setSelectedStatus] = useState("All Status");
+  const filteredWebinars = webinars.filter(webinar => {
+    const categoryMatch = selectedCategory === "All Webinars" || webinar.category === selectedCategory;
+    const statusMatch = selectedStatus === "All Status" ||
+      (selectedStatus === "Upcoming" && webinar.status === "upcoming") ||
+      (selectedStatus === "Recorded" && webinar.status === "recorded");
+    return categoryMatch && statusMatch;
   });
-
-  return (")
+  return (
     <div className="min-h-screen bg-gray-50">
-</div>
       <Head>
-</Head>
-        <title>Webinars - Zion Tech Group
-        <meta name="description" content="Join our expert-led webinars on AI, cloud computing, cybersecurity, and technology trends. Learn from industry leaders." />"
-</meta>
-      
-      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-
-        <div className="min-h-screen bg-gray-50">
-
-          <div className="min-h-screen bg-gray-50">
-
-            <h1 className="text-5xl font-bold mb-6">"
-</h1>
-            
-            <p className="text-xl text-blue-100">"
-</p>
+        <title>Webinars - Zion Tech Group</title>
+        <meta name="description" content="Join our expert-led webinars on AI, cloud computing, cybersecurity, and technology trends. Learn from industry leaders." />
+      </Head>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl font-bold mb-6">
+              Expert Webinars
+            </h1>
+            <p className="text-xl text-blue-100">
+              Learn from industry experts through our comprehensive webinar series on AI, cloud computing, and technology trends
             </p>
           </div>
         </div>
-      
-      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-
-        <div className="min-h-screen bg-gray-50">
-
-          <div className="min-h-screen bg-gray-50">
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Webinar
-              <motion.article;
-                key={webinar.id},
-  {
+      </section>
+      {/* Featured Webinar */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Webinar</h2>
+            {webinars.filter(webinar => webinar.featured).map((webinar) => (
+              <motion.article
+                key={webinar.id}
                 className="bg-white rounded-lg shadow-lg overflow-hidden mb-8"
-                initial={{ opacity: 0, y: 20 }},
-  {
-                animate={{ opacity: 1, y: 0 }},
-  {
-                transition={{ duration: 0.6 }},
-  {
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
               >
-
-                <div className="min-h-screen bg-gray-50">
-
-                  <div className="min-h-screen bg-gray-50">
-
-                    <div className="min-h-screen bg-gray-50">
-
-                      <Play className="w-24 h-24 text-white" />"
-</Play>
+                <div className="md:flex">
+                  <div className="md:w-1/3">
+                    <div className="h-64 md:h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                      <Play className="w-24 h-24 text-white" />
                     </div>
-                  
-                  <div className="min-h-screen bg-gray-50">
-
-                    <div className="min-h-screen bg-gray-50">
-
-                      <Tag className="w-4 h-4 text-blue-600" />"
-
-                      <span className="text-sm text-blue-600 font-medium">"
-</span>
+                  </div>
+                  <div className="md:w-2/3 p-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Tag className="w-4 h-4 text-blue-600" />
+                      <span className="text-sm text-blue-600 font-medium">
+                        {webinar.category}
                       </span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${`},
-  {
-                        webinar.status === 'upcoming'''
-                          ? 'bg-green-100 text-green-800'''
-                          : 'bg-gray-100 text-gray-800''
-                      }`}>`
-</span>
+                      <span className={`text-xs px-2 py-1 rounded-full ${
+                        webinar.status === 'upcoming'
+                          ? 'bg-green-100 text-green-800'
+                          : 'bg-gray-100 text-gray-800'
+                      }`}>
+                        {webinar.status === 'upcoming' ? 'Upcoming' : 'Recorded'}
                       </span>
                     </div>
-                    ``
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">"
-</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      {webinar.title}
                     </h2>
-                    "
-                    <p className="text-gray-600 mb-6 text-lg">"
-</p>
+                    <p className="text-gray-600 mb-6 text-lg">
+                      {webinar.description}
                     </p>
-                    "
-                    <div className="min-h-screen bg-gray-50">
-</div>
+                    <div className="grid grid-cols-2 gap-4 mb-6">
                       <div>
-
-                        <h3 className="font-semibold text-gray-900 mb-1">Presenter:
-                        <p className="text-gray-600">{webinar.presenter},
-  {
-                        <p className="text-sm text-gray-500">{webinar.presenterTitle},
-  {
+                        <h3 className="font-semibold text-gray-900 mb-1">Presenter:</h3>
+                        <p className="text-gray-600">{webinar.presenter}</p>
+                        <p className="text-sm text-gray-500">{webinar.presenterTitle}</p>
                       </div>
                       <div>
-
-                        <h3 className="font-semibold text-gray-900 mb-1">Date & Time:
-                        <p className="text-gray-600">{webinar.date} at {webinar.time},
-  {
-                        <p className="text-sm text-gray-500">{webinar.duration},
-  {
+                        <h3 className="font-semibold text-gray-900 mb-1">Date & Time:</h3>
+                        <p className="text-gray-600">{webinar.date} at {webinar.time}</p>
+                        <p className="text-sm text-gray-500">{webinar.duration}</p>
                       </div>
                     </div>
-                    "
-                    <div className="min-h-screen bg-gray-50">
-
-                      <div className="min-h-screen bg-gray-50">
-
-                        <div className="min-h-screen bg-gray-50">
-
-                          <Users className="w-4 h-4" />"
-</Users>
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2">
+                          <Users className="w-4 h-4" />
                           <span>{webinar.attendees} registered</span>
-                        
-                        <div className="min-h-screen bg-gray-50">
-
-                          <Clock className="w-4 h-4" />"
-</Clock>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-4 h-4" />
                           <span>{webinar.duration}</span>
                         </div>
                       </div>
                     </div>
+                    {webinar.status === 'upcoming' ? (
                       <Link
-                        href={webinar.registrationUrl},
-  {
+                        href={webinar.registrationUrl}
                         className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                       >
-
-                        <ArrowRight className="w-4 h-4" />"
-</ArrowRight>
-                      
-                      <div className="min-h-screen bg-gray-50">
-</div>
+                        Register Now
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    ) : (
+                      <div className="flex gap-4">
                         <Link
-                          href={webinar.recordingUrl},
-  {
+                          href={webinar.recordingUrl}
                           className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                         >
-
-                          <Play className="w-4 h-4" />"
-</Play>
-                        
-                        <button className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors">"
-
-                          <Download className="w-4 h-4" />"
-</Download>
+                          <Play className="w-4 h-4" />
+                          Watch Recording
+                        </Link>
+                        <button className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors">
+                          <Download className="w-4 h-4" />
+                          Download
                         </button>
                       </div>
+                    )}
                   </div>
                 </div>
-              </motion.article>);
-            );
+              </motion.article>
+            ))}
           </div>
         </div>
-      
-      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-
-        <div className="min-h-screen bg-gray-50">
-
-          <div className="min-h-screen bg-gray-50">
-
-            <div className="min-h-screen bg-gray-50">
-</div>
+      </section>
+      {/* Filters */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-wrap gap-4 justify-center mb-4">
               <div>
-
-                <label className="block text-sm font-medium text-gray-700 mb-2">Category:
+                <label className="block text-sm font-medium text-gray-700 mb-2">Category:</label>
                 <select
-                  value={selectedCategory},
-  {
-                  onChange={(e) => setSelectedCategory(e.target.value)},
-  {
-</select>
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  {categories.map((category) => (
                     <option key={category} value={category}>{category}</option>
+                  ))}
                 </select>
               </div>
               <div>
-
-                <label className="block text-sm font-medium text-gray-700 mb-2">Status:
+                <label className="block text-sm font-medium text-gray-700 mb-2">Status:</label>
                 <select
-                  value={selectedStatus},
-  {
-                  onChange={(e) => setSelectedStatus(e.target.value)},
-  {
-</select>
+                  value={selectedStatus}
+                  onChange={(e) => setSelectedStatus(e.target.value)}
+                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  {statuses.map((status) => (
                     <option key={status} value={status}>{status}</option>
+                  ))}
                 </select>
               </div>
             </div>
           </div>
         </div>
-      
-      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-
-        <div className="min-h-screen bg-gray-50">
-
-          <div className="min-h-screen bg-gray-50">
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">All Webinars
-            <div className="min-h-screen bg-gray-50">
-</div>
-                <motion.article;
-                  key={webinar.id},
-  {
+      </section>
+      {/* Webinars Grid */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">All Webinars</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredWebinars.filter(webinar => !webinar.featured).map((webinar, index) => (
+                <motion.article
+                  key={webinar.id}
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 20 }},
-  {
-                  animate={{ opacity: 1, y: 0 }},
-  {
-                  transition={{ delay: index * 0.1 }},
-  {
-                  whileHover={{ y: -5 }},
-  {
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
                 >
-
-                  <div className="min-h-screen bg-gray-50">
-
-                    <Play className="w-16 h-16 text-white" />"
-</Play>
-                  
-                  <div className="min-h-screen bg-gray-50">
-
-                    <div className="min-h-screen bg-gray-50">
-
-                      <Tag className="w-4 h-4 text-blue-600" />"
-
-                      <span className="text-sm text-blue-600 font-medium">"
-</span>
+                  <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                    <Play className="w-16 h-16 text-white" />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Tag className="w-4 h-4 text-blue-600" />
+                      <span className="text-sm text-blue-600 font-medium">
+                        {webinar.category}
                       </span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${`},
-  {
-                        webinar.status === 'upcoming'''
-                          ? 'bg-green-100 text-green-800'''
-                          : 'bg-gray-100 text-gray-800''
-                      }`}>`
-</span>
+                      <span className={`text-xs px-2 py-1 rounded-full ${
+                        webinar.status === 'upcoming'
+                          ? 'bg-green-100 text-green-800'
+                          : 'bg-gray-100 text-gray-800'
+                      }`}>
+                        {webinar.status === 'upcoming' ? 'Upcoming' : 'Recorded'}
                       </span>
                     </div>
-                    ``
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">"
-</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                      {webinar.title}
                     </h3>
-                    "
-                    <p className="text-gray-600 mb-4 line-clamp-3">"
-</p>
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {webinar.description}
                     </p>
-                    "
-                    <div className="min-h-screen bg-gray-50">
-
-                      <div className="min-h-screen bg-gray-50">
-
-                        <User className="w-4 h-4" />"
-</User>
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <User className="w-4 h-4" />
                         <span>{webinar.presenter}</span>
-                      
-                      <div className="min-h-screen bg-gray-50">
-
-                        <Calendar className="w-4 h-4" />"
-</Calendar>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <Calendar className="w-4 h-4" />
                         <span>{webinar.date} at {webinar.time}</span>
-                      
-                      <div className="min-h-screen bg-gray-50">
-
-                        <Clock className="w-4 h-4" />"
-</Clock>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <Clock className="w-4 h-4" />
                         <span>{webinar.duration}</span>
-                      
-                      <div className="min-h-screen bg-gray-50">
-
-                        <Users className="w-4 h-4" />"
-</Users>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <Users className="w-4 h-4" />
                         <span>{webinar.attendees} registered</span>
                       </div>
                     </div>
-                    "
-                    <div className="min-h-screen bg-gray-50">
-</div>
+                    <div className="flex gap-2">
+                      {webinar.status === 'upcoming' ? (
                         <Link
-                          href={webinar.registrationUrl},
-  {
+                          href={webinar.registrationUrl}
                           className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
                         >
-
-                          <ArrowRight className="w-4 h-4" />"
-</ArrowRight>
+                          Register
+                          <ArrowRight className="w-4 h-4" />
                         </Link>
+                      ) : (
                         <>
                           <Link
-                            href={webinar.recordingUrl},
-  {
+                            href={webinar.recordingUrl}
                             className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
                           >
-
-                            <Play className="w-4 h-4" />"
-</Play>
-                          
-                          <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm">"
-
-                            <Download className="w-4 h-4" />"
-</Download>
+                            <Play className="w-4 h-4" />
+                            Watch
+                          </Link>
+                          <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm">
+                            <Download className="w-4 h-4" />
                           </button>
                         </>
-                      )},
-  {
+                      )}
                     </div>
                   </div>
                 </motion.article>
-              );
-            
-            <div className="min-h-screen bg-gray-50">
-
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
-</button>
+              ))}
+            </div>
+            {/* Load More Button */}
+            <div className="text-center mt-12">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Load More Webinars
               </button>
             </div>
           </div>
         </div>
-      
-      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-
-        <div className="min-h-screen bg-gray-50">
-
-          <div className="min-h-screen bg-gray-50">
-
-            <h2 className="text-3xl font-bold text-white mb-4">"
-</h2>
-            
-            <p className="text-xl text-blue-100 mb-8">"
-</p>
+      </section>
+      {/* Newsletter Signup */}
+      <section className="py-16 bg-blue-600">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Stay Updated
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Subscribe to get notified about upcoming webinars and exclusive content
             </p>
-            "
-            <div className="min-h-screen bg-gray-50">
-</div>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
               />
-
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">"
-</button>
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Subscribe
               </button>
             </div>
           </div>
@@ -484,3 +394,4 @@ export default function WebinarsPage() {},
       </section>
     </div>
   );
+}

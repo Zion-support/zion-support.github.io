@@ -1,3 +1,14 @@
-import React from 'react'''
-""
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+import React from 'react';
+interface PageTransitionProps {;
+  "children": React.ReactNode;
+}
+const "PageTransition": Reac t.FC<PageTransitionProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen bg-white">
+      {children};
+    </div>;
+  );
+};
+"export default PageTransition;';
+</PageTransitionProps>;';';
+import React from 'react'; ; interface PageTransitionProps {; children: React.ReactNode} const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => { return ( <div className="min-h-screen bg-white"> {children}; </div>; )}; "export default PageTransition;'; </PageTransitionProps>;';';

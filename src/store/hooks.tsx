@@ -1,5 +1,2 @@
-import { useDispatch, useSelector  } from 'react-redux';  export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ';';';''
-import { useDispatch,useSelector } from 'react-redux'; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; '; ;';';'
-origin/cursor/automate-test-improve-and-merge-code-eafe;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;'
+import { useDispatch, useSelector  } from 'react-redux';  export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ';';';
+import { useDispatch,useSelector } from 'react-redux'; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; '; ;';';

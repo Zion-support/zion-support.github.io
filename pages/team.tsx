@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Users, Award, Globe } from 'lucide-react';
-
 const teamMembers = [
   {
     name: 'Dr. Sarah Chen',
@@ -41,17 +40,15 @@ const teamMembers = [
     icon: Users
   }
 ];
-
 const stats = [
   { number: '50+', label: 'Team Members' },
   { number: '15+', label: 'Years Average Experience' },
   { number: '25+', label: 'Countries Represented' },
   { number: '100+', label: 'Certifications' }
 ];
-
 export default function TeamPage() {
   return (
-    <Layout 
+    <Layout
       title="Our Team - Zion Tech Group"
       description="Meet the expert team behind Zion Tech Group's innovative technology solutions."
     >
@@ -74,13 +71,12 @@ export default function TeamPage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xl text-gray-300 mb-8"
               >
-                We're a diverse group of passionate technologists, innovators, and problem-solvers 
+                We're a diverse group of passionate technologists, innovators, and problem-solvers
                 dedicated to transforming businesses through cutting-edge technology.
               </motion.p>
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -100,7 +96,6 @@ export default function TeamPage() {
             </div>
           </div>
         </section>
-
         {/* Team Members */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -111,7 +106,6 @@ export default function TeamPage() {
                   Our leadership team brings together decades of experience in technology and business.
                 </p>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {teamMembers.map((member, index) => (
                   <motion.div
@@ -144,7 +138,6 @@ export default function TeamPage() {
             </div>
           </div>
         </section>
-
         {/* Join Our Team */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">

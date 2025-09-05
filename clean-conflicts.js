@@ -1,15 +1,12 @@
 #!/usr/bin/env node
 const fs = require('fs');
-
+const path = require('path');
 function cleanMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
     // Remove all merge conflict markers and keep the main branch content
     // Clean up syntax issues
     content = content
-      .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
       .replace(/,,+/g, ',')
       .replace(/;+/g, ';')
       .replace(/\{\s*,/g, '{')
@@ -18,17 +15,14 @@ function cleanMergeConflicts(filePath) {
       .replace(/,\s*\)/g, ')')
       .replace(/\s+/g, ' ')
       .replace(/\n\s*\n\s*\n/g, '\n\n');
-    
     fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`✅ Cleaned: ${filePath}`);
+    console.log(`"Cleaned": ${filePath}`);
   } catch (error) {
-    console.error(`❌ Error cleaning ${filePath}:`, error.message);
+    console.error(`Error cleaning ${filePath}:`, error.message);
   }
 }
-
 // Clean specific files
-const filesToClean = [
-  'pages/whitepapers.tsx',
+const filesToClean = ['pages/whitepapers.tsx',
   'pages/training.tsx',
   'pages/solutions.tsx',
   'pages/support.tsx',
@@ -37,14 +31,12 @@ const filesToClean = [
   'src/utils/serviceWorkerRegistration.ts',
   'src/utils/serviceMapper.ts',
   'src/utils/safeStorage.js',
-  'src/utils/passwordStrength.tsx'
+  'src/utils/passwordStrength.tsx',
 ];
-
 filesToClean.forEach(file => {
   if (fs.existsSync(file)) {
     cleanMergeConflicts(file);
   }
-}
 });
-
-console.log('✅ Merge conflict cleanup complete!');
+console.log('Merge conflict cleanup complete!');
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function cleanMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .replace(/\n\s*\n\s*\n/g,'\n\n'); fs.writeFileSync(filePath,content,'utf8'); console.log(`Cleaned: ${filePath}`)} catch (error) { console.error(`Error cleaning ${filePath}:`,error.message)} } const filesToClean = [ 'pages/whitepapers.tsx','pages/training.tsx','pages/solutions.tsx','pages/support.tsx','pages/terms.tsx','src/utils/sitemapGenerator.ts','src/utils/serviceWorkerRegistration.ts','src/utils/serviceMapper.ts','src/utils/safeStorage.js','src/utils/passwordStrength.tsx',]; filesToClean.forEach(file => { if (fs.existsSync(file)) { cleanMergeConflicts(file)} }); console.log('Merge conflict cleanup complete!');

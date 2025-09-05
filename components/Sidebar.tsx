@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { 
-  Home, 
-  Briefcase, 
-  Target, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
+import {
+  Home,
+  Briefcase,
+  Target,
+  Building2,
+  FileText,
+  HelpCircle,
   Search,
   X,
   ChevronRight,
@@ -18,13 +18,8 @@ import {
   DollarSign,
   ShoppingCart,
   GraduationCap,
-  Globe,
-  Cpu as CpuIcon,
-  Lock,
-  Network,
-  Monitor
+  Globe
 } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -32,15 +27,13 @@ interface SidebarProps {
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
+    setExpandedSections(prev =>
       prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
   };
-
   const navigationItems = [
     {
       label: 'Home',
@@ -60,11 +53,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
         { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { label: 'Data Analytics', href: '/services/data-analytics', icon: Brain },
-        { label: 'Quantum Computing', href: '/services/quantum-computing', icon: CpuIcon },
-        { label: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
-        { label: 'IoT & Smart Cities', href: '/services/iot-smart-cities', icon: Globe },
-        { label: 'Edge Computing', href: '/services/edge-computing', icon: Network },
-        { label: 'Digital Twins', href: '/services/digital-twins', icon: Monitor }
       ]
     },
     {
@@ -79,7 +67,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Finance', href: '/solutions/finance', icon: DollarSign },
         { label: 'Retail', href: '/solutions/retail', icon: ShoppingCart },
         { label: 'Education', href: '/solutions/education', icon: GraduationCap },
-        { label: 'Government', href: '/solutions/government', icon: Globe }
+        { label: 'Government', href: '/solutions/government', icon: Globe },
       ]
     },
     {
@@ -125,18 +113,15 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       ]
     }
   ];
-
   const quickLinks = [
     { label: 'Get Started', href: '/contact', icon: ChevronRight },
     { label: 'Pricing', href: '/pricing', icon: DollarSign },
     { label: 'Support', href: '/support', icon: HelpCircle },
     { label: 'Documentation', href: '/docs', icon: FileText },
   ];
-
   const isActive = (href: string) => {
     return router.pathname === href;
   };
-
   return (
     <>
       {/* Overlay */}
@@ -148,11 +133,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       )}
       {/* Sidebar */}
       <div className={`
-        fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out;
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'};
-        lg:translate-x-0 lg:static lg:block;
+        fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+        lg:translate-x-0 lg:static lg:block
       `}>
-        {/* Header */};
+        {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-700">
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -167,8 +152,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <X className="w-6 h-6" />
           </button>
         </div>
-
-        {/* Search */};
+        {/* Search */}
         <div className="p-6 border-b border-gray-700">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -179,8 +163,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             />
           </div>
         </div>
-
-        {/* Navigation */};
+        {/* Navigation */}
         <nav className="flex-1 overflow-y-auto">
           <div className="p-6">
             {navigationItems.map((item, index) => (
@@ -198,7 +181,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     <item.icon className="w-5 h-5" />
                     <span className="font-medium">{item.label}</span>
                   </Link>
-                  
                   {item.hasSubmenu && (
                     <button
                       onClick={() => toggleSection(item.label)}
@@ -210,9 +192,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         }`}
                       />
                     </button>
-                  )};
+                  )}
                 </div>
-
                 {item.hasSubmenu && expandedSections.includes(item.label) && (
                   <div className="ml-8 mt-2 space-y-1">
                     {item.submenu?.map((subItem, subIndex) => (
@@ -229,18 +210,17 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         {subItem.icon && <subItem.icon className="w-4 h-4" />}
                         <span>{subItem.label}</span>
                       </Link>
-                    ))};
+                    ))}
                   </div>
-                )};
+                )}
               </div>
-            ))};
+            ))}
           </div>
         </nav>
-
-        {/* Quick Links */};
+        {/* Quick Links */}
         <div className="p-6 border-t border-gray-700">
           <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-            Quick Links;
+            Quick Links
           </h3>
           <div className="space-y-2">
             {quickLinks.map((link, index) => (
@@ -253,20 +233,18 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <link.icon className="w-4 h-4" />
                 <span>{link.label}</span>
               </Link>
-            ))};
+            ))}
           </div>
         </div>
-
-        {/* Contact Info */};
+        {/* Contact Info */}
         <div className="p-6 border-t border-gray-700">
-                  <div className="text-sm text-gray-400">
-          <p className="mb-2">Need help?</p>
-          <p className="text-blue-400">kleber@ziontechgroup.com</p>
-          <p className="text-blue-400">+1 302 464 0950</p>
-          <p className="text-blue-400 text-xs mt-1">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-        </div>
+          <div className="text-sm text-gray-400">
+            <p className="mb-2">Need help?</p>
+            <p className="text-blue-400">contact@ziontechgroup.com</p>
+            <p className="text-blue-400">+1 (555) 123-4567</p>
+          </div>
         </div>
       </div>
     </>
   );
-};
+}

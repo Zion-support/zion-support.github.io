@@ -1,16 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { 
-  Code, 
+import {
+  Code,
   ArrowRight,
   CheckCircle,
   Copy,
   Play,
   Download
 } from 'lucide-react';
-
+import Layout from '../components/Layout';
 const endpoints = [
   {
     method: "GET",
@@ -62,7 +61,6 @@ const endpoints = [
   -H "Authorization: Bearer YOUR_API_KEY"`
   }
 ];
-
 const sdks = [
   { name: "JavaScript", version: "2.1.0", description: "Node.js and browser support" },
   { name: "Python", version: "1.8.2", description: "Python 3.6+ support" },
@@ -71,7 +69,6 @@ const sdks = [
   { name: "Go", version: "1.2.0", description: "Go 1.16+ support" },
   { name: "Ruby", version: "1.3.0", description: "Ruby 2.7+ support" }
 ];
-
 export default function ApiDocsPage() {
   return (
     <Layout
@@ -87,7 +84,6 @@ export default function ApiDocsPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -102,7 +98,7 @@ export default function ApiDocsPage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Complete API reference with endpoints, authentication, examples, and SDKs. 
+                Complete API reference with endpoints, authentication, examples, and SDKs.
                 Everything you need to integrate with our services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -116,7 +112,6 @@ export default function ApiDocsPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Quick Start */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -134,7 +129,6 @@ export default function ApiDocsPage() {
                 Get up and running with our API in minutes
               </p>
             </motion.div>
-
             <div className="max-w-4xl mx-auto">
               <div className="bg-gray-900 rounded-lg p-6 text-green-400 font-mono text-sm overflow-x-auto">
                 <div className="mb-4">
@@ -163,7 +157,6 @@ export default function ApiDocsPage() {
             </div>
           </div>
         </section>
-
         {/* API Endpoints */}
         <section id="endpoints" className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -181,7 +174,6 @@ export default function ApiDocsPage() {
                 Complete reference for all available endpoints
               </p>
             </motion.div>
-
             <div className="space-y-8">
               {endpoints.map((endpoint, index) => (
                 <motion.div
@@ -211,7 +203,6 @@ export default function ApiDocsPage() {
                       <Copy className="w-5 h-5" />
                     </button>
                   </div>
-
                   {endpoint.parameters.length > 0 && (
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-3">Parameters:</h4>
@@ -245,7 +236,6 @@ export default function ApiDocsPage() {
                       </div>
                     </div>
                   )}
-
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-3">Example:</h4>
                     <div className="bg-gray-900 rounded-lg p-4 text-green-400 font-mono text-sm overflow-x-auto">
@@ -257,7 +247,6 @@ export default function ApiDocsPage() {
             </div>
           </div>
         </section>
-
         {/* SDKs Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -275,7 +264,6 @@ export default function ApiDocsPage() {
                 Official SDKs for popular programming languages
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {sdks.map((sdk, index) => (
                 <motion.div
@@ -308,7 +296,6 @@ export default function ApiDocsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">

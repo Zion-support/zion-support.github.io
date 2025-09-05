@@ -1,120 +1,172 @@
+#!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix all syntax errors
-function fixAllSyntax(content) {
-  // Fix array declarations missing = and [
-  content = content.replace(/const\s+(\w+)\s*=\s*\[\]\s*\{/g, 'const $1 = [\n  {');
-  
-  // Fix standalone objects that should be in arrays
-  content = content.replace(/\n\s*\{([^}]+)\}\s*,?\s*\n/g, (match, objContent) => {
-    return `\n  {${objContent}},\n`;
-  });
-  
-  // Fix missing commas between array items
-  content = content.replace(/\}\s*\n\s*\{/g, '},\n  {');
-  
-  // Fix semicolons that should be commas in arrays
-  content = content.replace(/;\s*\n\s*\]/g, '\n]');
-  
-  // Fix malformed function returns
-  content = content.replace(/return\s*\(\)\s*\n\s*<([^>]+);/g, 'return (\n    <$1');
-  
-  // Fix unterminated strings and malformed JSX
-  content = content.replace(/<([^>]+);"/g, '<$1');
-  content = content.replace(/<\/[^>]+>"/g, '</$1>');
-  
-  // Fix missing opening parentheses in return statements
-  content = content.replace(/return\s*\(\)\s*\n\s*<([^>]+)/g, 'return (\n    <$1');
-  
-  // Fix missing closing parentheses in return statements
-  content = content.replace(/<\/[^>]+>\s*$/g, '</div>\n  );');
-  
-  // Fix array items that are outside array brackets
-  content = content.replace(/\]\s*\n\s*\{([^}]+)\}/g, ',\n  {$1}');
-  
-  // Fix missing opening brackets for arrays
-  content = content.replace(/const\s+(\w+)\s*=\s*\[\s*\{/g, 'const $1 = [\n  {');
-  
-  // Fix trailing commas in arrays
-  content = content.replace(/,(\s*\])/g, '$1');
-  
-  // Fix missing closing brackets
-  const lines = content.split('\n');
-  let fixedLines = [];
-  let inArray = false;
-  let bracketCount = 0;
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    if (line.includes('const') && line.includes('= [')) {
-      inArray = true;
-      bracketCount = 1;
-    } else if (inArray) {
-      if (line.includes('[')) bracketCount++;
-      if (line.includes(']')) bracketCount--;
-      if (bracketCount === 0) {
-        inArray = false;
-      }
-    }
-    
-    // Fix array items that are outside brackets
-    if (inArray && line.trim().startsWith('{') && !line.includes('[') && !line.includes(']')) {
-      if (!line.includes(',')) {
-        fixedLines.push(line + ',');
-      } else {
-        fixedLines.push(line);
-      }
-    } else {
-      fixedLines.push(line);
-    }
+import { execSync } from 'child_process';
+// Get all TypeScript/JavaScript files;
+function getAllFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  let files = [];
+  const items = fs.readdirSync(dir;);
+  for (const item of items) {
+    const fullPath = path.join(dir, item;);
+    const stat = fs.statSync(fullPath;);
+    if (&& !item.startsWith('.') && item !== 'node_modules') {
+      files = files.concat(getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath)}
   }
-  
-  content = fixedLines.join('\n');
-  
-  // Fix function declarations
-  content = content.replace(/export default function (\w+)\(\)\s*\{\s*return\s*\(\s*<div>Content<\/div>\s*\);\s*\}/g, 
-    'export default function $1() {\n  return (\n    <div>Content</div>\n  );\n}');
-  
-  return content;
-}
-
-// Function to process a file
-function processFile(filePath) {
+  return files) {
+    && !item.startsWith('.') && item !== 'node_modules') {
+      files = files.concat(getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath)}
+  }
+  return files}}
+// Fix common syntax errors;
+function fixSyntaxErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixAllSyntax(content);
-    
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    let content = fs.readFileSync(filePath, 'utf8';);
+    let modified = fal;s;e;
+    // Fix missing semicolons after return statement;s;
+    content = content.replace(/return \{([^}]+)\}(?!;)/g, (match, p1) => {
+      if () {
+        modified = true) {
+    ) {
+        modified = true}
+        return `return {${p1}};`}
+      return match});
+    // Fix missing commas in object literals and style objects;
+    content = content.replace(/(\w+):\s*([^}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
+      if (.endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith(') {
+    .endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith('}')) {
+        modified = true;
+        return `${key}: ${value.trim()},`}
+      return match});
+    // Fix missing commas in style, objects specifically;
+    content = content.replace(/(\w+):\s*([^}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
+      if (|| key.includes('Style') || key.includes('Style')) {
+        if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) {
+          modified = true) {
+    || key.includes('Style') || key.includes('Style')) {
+        if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) {
+          modified = true}
+          return `${key}: ${value.trim()},`}
+      }
+      return match});
+    // Fix unescaped quotes in JSX;
+    content = content.replace(/([^\\])'([^']*[^\\])'([^>]*>)/g, (match, before, text, after) => {
+      if (&& !text.includes('&apos) {
+    && !text.includes('&apos}') && !text.includes('&#39;')) {
+        modified = true;
+        return `${before}&apos;${text}&apos;${after}`}
+      return match});
+    // Fix missing closing braces;
+    const openBraces = (content.match(/\{/g) || []).lengt;h;
+    const closeBraces = (content.match(/\}/g) || []).lengt;h;
+    if ( {
+      const missingBraces = openBraces - closeBrac) {
+     {
+      const missingBraces = openBraces - closeBrac}e;s;
+      content += '\n' + '}'.repeat(missingBraces);
+      modified = true}
+    // Fix missing closing JSX tags;
+    const openTags = (content.match(/<[^/][^>]*>/g) || []).lengt;h;
+    const closeTags = (content.match(/<\/[^>]*>/g) || []).lengt;h;
+    if ( {
+      // This is a simplified fix - in practice, you'd need more sophisticated parsing) {
+     {
+      // This is a simplified fix - in practice, you'd need more sophisticated parsing}
+      const missingTags = openTags - closeTa;g;s;
+      // Add closing div tags as a fallback;
+      content += '\n' + '</div>'.repeat(missingTags);
+      modified = true}
+    // Fix unterminated string literals";
+    content = content.replace(/([^\\])"([^"]*)$/gm, (match, before, text) => {";
+      if () {
+        modified = true) {
+    ) {
+        modified = true}";
+        return `${before}"${text}"`}
+      return match});
+    // Fix missing commas in function parameters;
+    content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g, (match, p1, p2) => {
+      if (|| p1.includes('Style')) {
+        if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) {
+          modified = true) {
+    || p1.includes('Style')) {
+        if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) {
+          modified = true}
+          return `${p1}, ${p2}`}
+      }
+      return match});
+    // Fix missing colons in object properties;
+    content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g, (match, p1, p2) => {
+      if (|| p1.includes('Style')) {
+        if (!p2.trim().includes(':')) {
+          modified = true) {
+    || p1.includes('Style')) {
+        if (!p2.trim().includes(':')) {
+          modified = true}
+          return `${p1}: ${p2}`}
+      }
+      return match});
+    // Fix missing closing parentheses;
+    const openParens = (content.match(/\(/g) || []).lengt;h;
+    const closeParens = (content.match(/\)/g) || []).lengt;h;
+    if ( {
+      const missingParens = openParens - closePare) {
+     {
+      const missingParens = openParens - closePare}n;s;
+      content += ')'.repeat(missingParens);
+      modified = true}
+    // Fix missing closing brackets;
+    const openBrackets = (content.match(/\[/g) || []).lengt;h;
+    const closeBrackets = (content.match(/\]/g) || []).lengt;h;
+    if ( {
+      const missingBrackets = openBrackets - closeBracke) {
+     {
+      const missingBrackets = openBrackets - closeBracke}t;s;
+      content += ']'.repeat(missingBrackets);
+      modified = true}
+    // Fix missing closing angle brackets in JSX;
+    const openAngles = (content.match(/</g) || []).lengt;h;
+    const closeAngles = (content.match(/>/g) || []).lengt;h;
+    if ( {
+      const missingAngles = openAngles - closeAngl) {
+     {
+      const missingAngles = openAngles - closeAngl}e;s;
+      content += '>'.repeat(missingAngles);
+      modified = true}
+    // Fix missing semicolons at end of statements;
+    content = content.replace(/([^}])\n/g, (match, p1) => {
+      if (&& !p1.trim().endsWith(') {
+    && !p1.trim().endsWith('}') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {
+        modified = true;
+        return `${p1};\n`}
+      return match});
+    if ( {
+      fs.writeFileSync(filePath, content, 'utf8')) {
+     {
+      fs.writeFileSync(filePath, content, 'utf8')}
+      console.log(`Fixed syntax errors "in": ${filePat,h}`);
+      return true}
+    return false} catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false}
 }
-
-// Process all .tsx files in pages directory
-const pagesDir = './pages';
-const files = fs.readdirSync(pagesDir)
-  .filter(file => file.endsWith('.tsx'))
-  .map(file => path.join(pagesDir, file));
-
-console.log(`Processing ${files.length} .tsx files`);
-
-let fixedCount = 0;
-files.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-});
-
-console.log(`Fixed ${fixedCount} files`);
+// Main execution;
+console.log('Starting comprehensive syntax error fixes...');
+const files = getAllFiles('/workspace;';);
+let fixedCount = ;0;
+for (const file of files) {
+  if () {
+    fixedCount++}
+}
+console.log(`Fixed syntax errors in ${fixedCount} files.`)) {
+    ) {
+    fixedCount++}
+}
+console.log(`Fixed syntax errors in ${fixedCount} files.`)}
+// Run ESLint again to check remaining issues;
+console.log('\nRunning ESLint to check remaining issues...');
+try {
+  execSync('npm run lint', { "stdio": 'inheri,t' })} catch (error) {
+  console.log('ESLint found remaining issues that need manual fixing.')}"
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; function getAllFiles(dir,extensions = ['.tsx','.ts','.jsx','.js']) { let files = []; const items = fs.readdirSync(dir;); for (const item of items) { const fullPath = path.join(dir,item;); const stat = fs.statSync(fullPath;); if (&& !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files) { && !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files}} function fixSyntaxErrors(filePath) { try { let content = fs.readFileSync(filePath,'utf8';); let modified = fal;s;e; content = content.replace(/return \{([^}]+)\}(?!;)/g,(match,p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}};`} return match}); content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g,(match,key,value) => { if (.endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith(') { .endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith('}')) { modified = true; return `${key}: ${value.trim()},`} return match}); content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g,(match,key,value) => { if (|| key.includes('Style') || key.includes('Style')) { if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) { modified = true) { || key.includes('Style') || key.includes('Style')) { if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) { modified = true} return `${key}: ${value.trim()},`} } return match}); content = content.replace(/([^\\])'([^']*[^\\])'([^>]*>)/g,(match,before,text,after) => { if (&& !text.includes('&apos) { && !text.includes('&apos}') && !text.includes('&#39;')) { modified = true; return `${before}&apos;${text}&apos;${after}`} return match}); const openBraces = (content.match(/\{/g) || []).lengt;h; const closeBraces = (content.match(/\}/g) || []).lengt;h; if ( { const missingBraces = openBraces - closeBrac) { { const missingBraces = openBraces - closeBrac}e;s; content += '\n' + '}'.repeat(missingBraces); modified = true} const openTags = (content.match(/<[^/][^>]*>/g) || []).lengt;h; const closeTags = (content.match(/<\/[^>]*>/g) || []).lengt;h; if ( { { const missingTags = openTags - closeTa;g;s; content += '\n' + '</div>'.repeat(missingTags); modified = true} content = content.replace(/([^\\])"([^"]*)$/gm,(match,before,text) => {"; if () { modified = true) { ) { modified = true}"; return `${before}"${text}"`} return match}); content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g,(match,p1,p2) => { if (|| p1.includes('Style')) { if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) { modified = true) { || p1.includes('Style')) { if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) { modified = true} return `${p1},${p2}`} } return match}); content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g,(match,p1,p2) => { if (|| p1.includes('Style')) { if (!p2.trim().includes(':')) { modified = true) { || p1.includes('Style')) { if (!p2.trim().includes(':')) { modified = true} return `${p1}: ${p2}`} } return match}); const openParens = (content.match(/\(/g) || []).lengt;h; const closeParens = (content.match(/\)/g) || []).lengt;h; if ( { const missingParens = openParens - closePare) { { const missingParens = openParens - closePare}n;s; content += ')'.repeat(missingParens); modified = true} const openBrackets = (content.match(/\[/g) || []).lengt;h; const closeBrackets = (content.match(/\]/g) || []).lengt;h; if ( { const missingBrackets = openBrackets - closeBracke) { { const missingBrackets = openBrackets - closeBracke}t;s; content += ']'.repeat(missingBrackets); modified = true} const openAngles = (content.match(/</g) || []).lengt;h; const closeAngles = (content.match(/>/g) || []).lengt;h; if ( { const missingAngles = openAngles - closeAngl) { { const missingAngles = openAngles - closeAngl}e;s; content += '>'.repeat(missingAngles); modified = true} content = content.replace(/([^}])\n/g,(match,p1) => { if (&& !p1.trim().endsWith(') { && !p1.trim().endsWith('}') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) { modified = true; return `${p1};\n`} return match}); if ( { fs.writeFileSync(filePath,content,'utf8')) { { fs.writeFileSync(filePath,content,'utf8')} console.log(`Fixed syntax errors in: ${filePat,h}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } console.log('Starting comprehensive syntax error fixes...'); const files = getAllFiles('/workspace;';); let fixedCount = ;0; for (const file of files) { if () { fixedCount++} } console.log(`Fixed syntax errors in ${fixedCount} files.`)) { ) { fixedCount++} } console.log(`Fixed syntax errors in ${fixedCount} files.`)} console.log('\nRunning ESLint to check remaining issues...'); try { execSync('npm run lint',{ stdio: 'inheri,t' })} catch (error) { console.log('ESLint found remaining issues that need manual fixing.')}"

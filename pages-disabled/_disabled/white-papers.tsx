@@ -1,11 +1,11 @@
-import React from "react";
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { FileText, Download, Calendar, User, ArrowRight, Tag, ExternalLink } from 'lucide-react;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { FileText, Download, Calendar, User, ArrowRight, Tag, ExternalLink } from 'lucide-react';
 const whitePapers = [
   {
-    id: 1,'
+    id: 1,
     title: "The Future of AI in Enterprise: A Comprehensive Guide",
     description: "Explore how artificial intelligence is transforming enterprise operations and what businesses need to know to stay competitive.",
     author: "Dr. Sarah Chen",
@@ -76,296 +76,220 @@ const whitePapers = [
     featured: false,
     pdfUrl: "/whitepapers/data-privacy-ai-compliance.pdf"
   }
-]
 ];
-
-const categories = []
+const categories = [
   "All Papers",
   "Artificial Intelligence",
   "Cybersecurity",
   "Quantum Computing",
   "Healthcare Technology",
   "SaaS",
-  "Data Privacy"]
+  "Data Privacy"
 ];
-
-export default function WhitePapersPage() {},
-  {
-  return (")
+export default function WhitePapersPage() {
+  return (
     <div className="min-h-screen bg-gray-50">
-</div>
       <Head>
-</Head>
-        <title>White Papers - Zion Tech Group
-        <meta name="description" content="Download our comprehensive white papers on AI, cloud computing, cybersecurity, and technology trends." />"
-</meta>
-      
-      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-
-        <div className="min-h-screen bg-gray-50">
-
-          <div className="min-h-screen bg-gray-50">
-
-            <FileText className="w-16 h-16 mx-auto mb-6" />"
-
-            <h1 className="text-5xl font-bold mb-6">"
-</h1>
-            
-            <p className="text-xl text-blue-100">"
-</p>
+        <title>White Papers - Zion Tech Group</title>
+        <meta name="description" content="Download our comprehensive white papers on AI, cloud computing, cybersecurity, and technology trends." />
+      </Head>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <FileText className="w-16 h-16 mx-auto mb-6" />
+            <h1 className="text-5xl font-bold mb-6">
+              White Papers
+            </h1>
+            <p className="text-xl text-blue-100">
+              In-depth research and insights on the latest technology trends and best practices
             </p>
           </div>
         </div>
-      
-      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-
-        <div className="min-h-screen bg-gray-50">
-
-          <div className="min-h-screen bg-gray-50">
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured White Paper
-              <motion.article;
-                key={paper.id},
-  {
+      </section>
+      {/* Featured White Paper */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured White Paper</h2>
+            {whitePapers.filter(paper => paper.featured).map((paper) => (
+              <motion.article
+                key={paper.id}
                 className="bg-white rounded-lg shadow-lg overflow-hidden mb-8"
-                initial={{ opacity: 0, y: 20 }},
-  {
-                animate={{ opacity: 1, y: 0 }},
-  {
-                transition={{ duration: 0.6 }},
-  {
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
               >
-
-                <div className="min-h-screen bg-gray-50">
-
-                  <div className="min-h-screen bg-gray-50">
-
-                    <div className="min-h-screen bg-gray-50">
-
-                      <FileText className="w-24 h-24 text-white" />"
-</FileText>
+                <div className="md:flex">
+                  <div className="md:w-1/3">
+                    <div className="h-64 md:h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                      <FileText className="w-24 h-24 text-white" />
                     </div>
-                  
-                  <div className="min-h-screen bg-gray-50">
-
-                    <div className="min-h-screen bg-gray-50">
-
-                      <Tag className="w-4 h-4 text-blue-600" />"
-
-                      <span className="text-sm text-blue-600 font-medium">"
-</span>
+                  </div>
+                  <div className="md:w-2/3 p-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Tag className="w-4 h-4 text-blue-600" />
+                      <span className="text-sm text-blue-600 font-medium">
+                        {paper.category}
                       </span>
                     </div>
-                    "
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">"
-</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      {paper.title}
                     </h2>
-                    "
-                    <p className="text-gray-600 mb-6 text-lg">"
-</p>
+                    <p className="text-gray-600 mb-6 text-lg">
+                      {paper.description}
                     </p>
-                    "
-                    <div className="min-h-screen bg-gray-50">
-
-                      <div className="min-h-screen bg-gray-50">
-
-                        <div className="min-h-screen bg-gray-50">
-
-                          <User className="w-4 h-4" />"
-</User>
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2">
+                          <User className="w-4 h-4" />
                           <span>{paper.author}</span>
-                        
-                        <div className="min-h-screen bg-gray-50">
-
-                          <Calendar className="w-4 h-4" />"
-</Calendar>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4" />
                           <span>{paper.date}</span>
-                        
-                        <div className="min-h-screen bg-gray-50">
-
-                          <Download className="w-4 h-4" />"
-</Download>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Download className="w-4 h-4" />
                           <span>{paper.downloadCount} downloads</span>
                         </div>
                       </div>
                       <span>{paper.readTime}</span>
                     </div>
-                    "
-                    <div className="min-h-screen bg-gray-50">
-</div>
+                    <div className="flex gap-4">
                       <a
-                        href={paper.pdfUrl},
-  {
+                        href={paper.pdfUrl}
                         download
                         className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                       >
-
-                        <Download className="w-4 h-4" />"
-</Download>
-                      
-                      <button className="inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors">"
-
-                        <ExternalLink className="w-4 h-4" />"
-</ExternalLink>
+                        <Download className="w-4 h-4" />
+                        Download PDF
+                      </a>
+                      <button className="inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                        <ExternalLink className="w-4 h-4" />
+                        Preview
                       </button>
                     </div>
                   </div>
                 </div>
-              </motion.article>);
-            );
+              </motion.article>
+            ))}
           </div>
         </div>
-      
-      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-
-        <div className="min-h-screen bg-gray-50">
-
-          <div className="min-h-screen bg-gray-50">
-
-            <div className="min-h-screen bg-gray-50">
-</div>
+      </section>
+      {/* Categories */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-wrap gap-4 justify-center">
+              {categories.map((category, index) => (
                 <button
-                  key={index},
-  {
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${`},
-  {
-                    index === 0;``
-                      ? 'bg-blue-600 text-white'''
-                      : 'bg-gray-100 text-gray-700 hover:bg-blue-50''
-                  }`}`
+                  key={index}
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                    index === 0
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-blue-50'
+                  }`}
                 >
-</button>
+                  {category}
                 </button>
+              ))}
             </div>
           </div>
         </div>
-      </section>``
-      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-
-        <div className="min-h-screen bg-gray-50">
-
-          <div className="min-h-screen bg-gray-50">
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">All White Papers
-            <div className="min-h-screen bg-gray-50">
-</div>
-                <motion.article;
-                  key={paper.id},
-  {
+      </section>
+      {/* White Papers Grid */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">All White Papers</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {whitePapers.filter(paper => !paper.featured).map((paper, index) => (
+                <motion.article
+                  key={paper.id}
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 20 }},
-  {
-                  animate={{ opacity: 1, y: 0 }},
-  {
-                  transition={{ delay: index * 0.1 }},
-  {
-                  whileHover={{ y: -5 }},
-  {
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
                 >
-
-                  <div className="min-h-screen bg-gray-50">
-
-                    <FileText className="w-16 h-16 text-white" />"
-</FileText>
-                  
-                  <div className="min-h-screen bg-gray-50">
-
-                    <div className="min-h-screen bg-gray-50">
-
-                      <Tag className="w-4 h-4 text-blue-600" />"
-
-                      <span className="text-sm text-blue-600 font-medium">"
-</span>
+                  <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                    <FileText className="w-16 h-16 text-white" />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Tag className="w-4 h-4 text-blue-600" />
+                      <span className="text-sm text-blue-600 font-medium">
+                        {paper.category}
                       </span>
                     </div>
-                    "
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">"
-</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                      {paper.title}
                     </h3>
-                    "
-                    <p className="text-gray-600 mb-4 line-clamp-3">"
-</p>
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {paper.description}
                     </p>
-                    "
-                    <div className="min-h-screen bg-gray-50">
-
-                      <div className="min-h-screen bg-gray-50">
-
-                        <User className="w-4 h-4" />"
-</User>
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <div className="flex items-center gap-2">
+                        <User className="w-4 h-4" />
                         <span>{paper.author}</span>
-                      
-                      <div className="min-h-screen bg-gray-50">
-
-                        <Calendar className="w-4 h-4" />"
-</Calendar>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
                         <span>{paper.date}</span>
                       </div>
                     </div>
-                    "
-                    <div className="min-h-screen bg-gray-50">
-
-                      <span className="text-sm text-gray-500">{paper.readTime},
-  {
-                      <span className="text-sm text-gray-500 flex items-center gap-1">"
-
-                        <Download className="w-4 h-4" />"
-</Download>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-sm text-gray-500">{paper.readTime}</span>
+                      <span className="text-sm text-gray-500 flex items-center gap-1">
+                        <Download className="w-4 h-4" />
+                        {paper.downloadCount}
                       </span>
                     </div>
-                    "
-                    <div className="min-h-screen bg-gray-50">
-</div>
+                    <div className="flex gap-2">
                       <a
-                        href={paper.pdfUrl},
-  {
+                        href={paper.pdfUrl}
                         download
                         className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
                       >
-
-                        <Download className="w-4 h-4" />"
-</Download>
-                      
-                      <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm">"
-</button>
+                        <Download className="w-4 h-4" />
+                        Download
+                      </a>
+                      <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm">
+                        Preview
                       </button>
                     </div>
                   </div>
                 </motion.article>
-              );
-            
-            <div className="min-h-screen bg-gray-50">
-
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
-</button>
+              ))}
+            </div>
+            {/* Load More Button */}
+            <div className="text-center mt-12">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Load More Papers
               </button>
             </div>
           </div>
         </div>
-      
-      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-
-        <div className="min-h-screen bg-gray-50">
-
-          <div className="min-h-screen bg-gray-50">
-
-            <h2 className="text-3xl font-bold text-white mb-4">"
-</h2>
-            
-            <p className="text-xl text-blue-100 mb-8">"
-</p>
+      </section>
+      {/* Newsletter Signup */}
+      <section className="py-16 bg-blue-600">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Stay Informed
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Subscribe to receive new white papers and research insights directly in your inbox
             </p>
-            "
-            <div className="min-h-screen bg-gray-50">
-</div>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
               />
-
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">"
-</button>
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Subscribe
               </button>
             </div>
           </div>
@@ -373,3 +297,4 @@ export default function WhitePapersPage() {},
       </section>
     </div>
   );
+}

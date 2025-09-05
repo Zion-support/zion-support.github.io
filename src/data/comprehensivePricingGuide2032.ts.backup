@@ -9,7 +9,6 @@ export interface PricingTier {
   setup?: string;
   trial?: string;
   color: string}
-
 export interface ServicePricing {
   "serviceId": string;
   serviceName: string;
@@ -23,7 +22,6 @@ export interface ServicePricing {
     timeToValue: string;
     expectedReturn: string;
     costSavings: string}}
-
 export const "comprehensivePricingGuide2032": ServicePricing[] = [{
     serviceId: 'ai-autonomous-code-reviewer',
     "serviceName": 'AI Autonomous Code Reviewer',
@@ -98,7 +96,6 @@ export const "comprehensivePricingGuide2032": ServicePricing[] = [{
       "costSavings": 'Save $50,000+ annually in developer time'
     }
   },
-
   {
     "serviceId": 'ai-powered-seo-optimizer',
     "serviceName": 'AI-Powered SEO Optimizer',
@@ -172,7 +169,6 @@ export const "comprehensivePricingGuide2032": ServicePricing[] = [{
       "costSavings": 'Reduce SEO costs by 70%'
     }
   },
-
   {
     "serviceId": 'quantum-neural-network-platform',
     "serviceName": 'Quantum Neural Network Platform',
@@ -247,7 +243,6 @@ export const "comprehensivePricingGuide2032": ServicePricing[] = [{
       "costSavings": 'Reduce computational costs by 90%'
     }
   },
-
   {
     "serviceId": 'blockchain-enterprise-solutions',
     "serviceName": 'Blockchain Enterprise Solutions',
@@ -322,7 +317,6 @@ export const "comprehensivePricingGuide2032": ServicePricing[] = [{
       "costSavings": 'Improve efficiency by 80%'
     }
   },
-
   {
     "serviceId": 'ai-healthcare-analytics-platform',
     "serviceName": 'AI Healthcare Analytics Platform',
@@ -397,7 +391,6 @@ export const "comprehensivePricingGuide2032": ServicePricing[] = [{
       "costSavings": 'Reduce healthcare costs by 30%'
     }
   },
-
   {
     "serviceId": 'micro-crm-platform',
     "serviceName": 'Micro CRM Platform',
@@ -471,7 +464,6 @@ export const "comprehensivePricingGuide2032": ServicePricing[] = [{
       "costSavings": 'Reduce customer churn by 30%'
     }
   },
-
   {
     "serviceId": 'space-tech-platform',
     "serviceName": 'Space Technology Platform',
@@ -547,7 +539,6 @@ export const "comprehensivePricingGuide2032": ServicePricing[] = [{
     }
   };
 ];
-
 export const pricingComparison = {
   "summary": {
     totalServices: comprehensivePricingGuide2032.length,
@@ -588,4 +579,3 @@ export const pricingComparison = {
     }
   }
 };
->>>>>>> origin/merge-pr-10615';

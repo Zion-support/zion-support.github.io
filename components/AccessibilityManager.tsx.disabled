@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-
 interface AccessibilitySettings {
   highContrast: boolean
   fontSize: "small" | "normal" | "large" | "xlarge"
@@ -7,7 +6,6 @@ interface AccessibilitySettings {
   focusVisible: boolean
   screenReader: boolean
 }
-
 const AccessibilityManager = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -16,7 +14,6 @@ const AccessibilityManager = () => {
     focusVisible: false,
     screenReader: false
   })
-
   useEffect(() => {
     const savedSettings = localStorage.getItem('accessibilitySettings')
     if (savedSettings) {
@@ -27,14 +24,12 @@ const AccessibilityManager = () => {
       }
     }
   }, [])
-
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean | string) => {
     const newSettings = { ...settings, [key]: value }
     setSettings(newSettings)
     localStorage.setItem('accessibilitySettings', JSON.stringify(newSettings))
     applyAccessibilityStyles(newSettings)
   }
-
   const applyAccessibilityStyles = (s: AccessibilitySettings) => {
     const root = document.documentElement
     if (s.highContrast) {
@@ -55,11 +50,9 @@ const AccessibilityManager = () => {
       root.classList.remove('focus-visible')
     }
   }
-
   return (
     <div className="accessibility-manager">
       <h2>Accessibility Settings</h2>
-
       <div className="setting-group">
         <label>
           <input
@@ -70,7 +63,6 @@ const AccessibilityManager = () => {
           High Contrast Mode
         </label>
       </div>
-
       <div className="setting-group">
         <label>
           Font Size:
@@ -85,7 +77,6 @@ const AccessibilityManager = () => {
           </select>
         </label>
       </div>
-
       <div className="setting-group">
         <label>
           <input
@@ -96,7 +87,6 @@ const AccessibilityManager = () => {
           Reduce Motion
         </label>
       </div>
-
       <div className="setting-group">
         <label>
           <input
@@ -107,7 +97,6 @@ const AccessibilityManager = () => {
           Enhanced Focus Indicators
         </label>
       </div>
-
       <div className="setting-group">
         <label>
           <input
@@ -121,7 +110,6 @@ const AccessibilityManager = () => {
     </div>
   )
 }
-
 export default AccessibilityManager
 import React, { useEffect, useState } from "react";
 ;
@@ -259,4 +247,3 @@ const AccessibilityManager: React.FC = () => {;
 };
 ;
 export default AccessibilityManager;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-1702

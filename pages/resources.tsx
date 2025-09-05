@@ -1,19 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  BarChart3, 
-  MessageSquare, 
-  Settings, 
+import {
+  FileText,
+  BarChart3,
+  MessageSquare,
+  Settings,
   ArrowRight,
   CheckCircle,
   BookOpen,
   Video,
   Download
 } from 'lucide-react';
-import Layout from "../components/Layout";
-
+import Layout from '../components/Layout';
 const resources = [
   {
     title: "Documentation",
@@ -48,14 +47,12 @@ const resources = [
     items: ["REST API", "GraphQL", "SDKs", "Code Examples"]
   }
 ];
-
 const quickLinks = [
   { title: "Getting Started", href: "/docs/getting-started", icon: BookOpen },
   { title: "Video Tutorials", href: "/tutorials", icon: Video },
   { title: "Download SDKs", href: "/downloads", icon: Download },
   { title: "Support Center", href: "/support", icon: MessageSquare }
 ];
-
 export default function ResourcesPage() {
   return (
     <Layout
@@ -71,7 +68,6 @@ export default function ResourcesPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -86,7 +82,7 @@ export default function ResourcesPage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Everything you need to succeed with our technology solutions. 
+                Everything you need to succeed with our technology solutions.
                 Documentation, guides, case studies, and more.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -100,7 +96,6 @@ export default function ResourcesPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Resources Grid */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -118,7 +113,6 @@ export default function ResourcesPage() {
                 Comprehensive resources to help you succeed
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {resources.map((resource, index) => {
                 const IconComponent = resource.icon;
@@ -135,15 +129,12 @@ export default function ResourcesPage() {
                     <div className={`w-16 h-16 bg-gradient-to-r ${resource.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       {resource.title}
                     </h3>
-                    
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {resource.description}
                     </p>
-
                     <div className="space-y-2 mb-6">
                       {resource.items.map((item, itemIndex) => (
                         <div key={itemIndex} className="flex items-center space-x-2">
@@ -152,7 +143,6 @@ export default function ResourcesPage() {
                         </div>
                       ))}
                     </div>
-
                     <Link
                       href={resource.href}
                       className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${resource.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
@@ -166,7 +156,6 @@ export default function ResourcesPage() {
             </div>
           </div>
         </section>
-
         {/* Quick Links Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -184,7 +173,6 @@ export default function ResourcesPage() {
                 Popular resources and quick access to important information
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {quickLinks.map((link, index) => {
                 const IconComponent = link.icon;
@@ -201,11 +189,9 @@ export default function ResourcesPage() {
                     <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
-                    
                     <h3 className="text-lg font-bold text-gray-900 mb-2">
                       {link.title}
                     </h3>
-                    
                     <Link
                       href={link.href}
                       className="text-indigo-600 hover:text-indigo-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"
@@ -219,7 +205,6 @@ export default function ResourcesPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">

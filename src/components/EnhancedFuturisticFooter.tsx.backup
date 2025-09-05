@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 <<<<<<<HEADexport function EnhancedFuturisticFooter($1) {
   const year = new Date().getFullYear();
   return (';
@@ -35,16 +34,12 @@ import { Link } from 'react-router-dom';
     </footer>
   );
 }
-
 export default EnhancedFuturisticFooter;
-    
-  const footerSections = [>>>>>>> origin/merge-pr-10615';
-    {
+  const footerSections = [    {
       "title": 'Revolutionary 2030 Services',
       "featured": true,
       "links": [
         { name: 'Revolutionary Services 2030', "href": '/revolutionary-services-2030', "featured": true },
-
         { "name": 'Quantum AI Trading Platform', "href": '/services/quantum-ai-trading', "featured": true },
         { "name": 'Neural Interface Platform', "href": '/services/neural-interface', "featured": true },
         { "name": 'Holographic Workspace Platform', "href": '/services/holographic-workspace', "featured": true },
@@ -58,7 +53,6 @@ export default EnhancedFuturisticFooter;
       ]
     },
     {
-
       "title": 'AI & Analytics Services',
       "featured": true,
       "links": [{ name: 'AI Enterprise Orchestrator', "href": '/services/ai-enterprise-orchestrator' },
@@ -181,7 +175,6 @@ export default EnhancedFuturisticFooter;
       ]
     }
   ];
-
   return ()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
       {/* Enhanced Animated Background */}"
       <div className="absolute inset-0 bg-futuristic-enhanced">"
@@ -196,15 +189,12 @@ export default EnhancedFuturisticFooter;
           <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60 neon-glow"></div>
         </div>
       </div>
-
     { "name": 'Terms of Service', "href": '/terms', "description": 'Service terms' },;';';
     { "name": 'Cookie Policy', "href": '/cookies', "description": 'Cookie usage' },;';';
     { "name": 'Accessibility', "href": '/accessibility', "description": 'Accessibility statement' },;';';
     { "name": 'Security', "href": '/security', "description": 'Security practices' },;';';
     { "name": 'Compliance', "href": '/compliance', "description": 'Regulatory compliance' };  ];
-
   // Create missing pages for broken links
-  
       </Link>;) };
   return ("
           <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
@@ -212,7 +202,6 @@ export default EnhancedFuturisticFooter;
         <div className="absolute inset-0 opacity-30">"
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>
         </div>
-
       <div  className="relative">
         {/* Main Footer Content */}
         <div  className="container - responsive py-16">
@@ -242,7 +231,6 @@ export default EnhancedFuturisticFooter;
               </motion.div>
             ))}
           </motion.div>
-
           {/* Main Footer Grid */}
           <div  className="grid grid - cols - 1 "md": grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap-8 mb-12">
             {/* Company Info */}
@@ -284,7 +272,6 @@ export default EnhancedFuturisticFooter;
                 </div>
               </div>
             </div>
-
               {/* Social Links */}"
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
@@ -301,10 +288,8 @@ export default EnhancedFuturisticFooter;
                 ))}
               </div>
             </div>
-
             <p className="text-gray - 300 mb-6 max - w-md">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,              and digital transformation services.Transforming businesses with cutting - edge technology.</p>
-
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <div key={section.title}>"
@@ -326,7 +311,6 @@ export default EnhancedFuturisticFooter;
                 </ul>
               </motion.div>) ) }
           </div>
-
           {/* Additional Links Grid */}"
           <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company */}
@@ -344,7 +328,6 @@ export default EnhancedFuturisticFooter;
                   </li>) ) }
               </ul>
             </div>
-
             {/* Support */}
             <div>"
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>"
@@ -360,7 +343,6 @@ export default EnhancedFuturisticFooter;
                   </li>) ) }
               </ul>
             </div>
-
             {/* Legal */}
             <div>"
               <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>"
@@ -376,7 +358,6 @@ export default EnhancedFuturisticFooter;
                   </li>) ) }
               </ul>
             </div>
-
             {/* Social & Newsletter */}
             <div>"
               <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>"
@@ -407,7 +388,6 @@ export default EnhancedFuturisticFooter;
               </div>
             </div>
           </div>
-
           {/* Bottom Bar */}"
           <div className="pt-8 border-t border-slate-800/50">"
             <div className="flex flex-col "md": flex-row justify-between items-center space-y-4 md:space-y-0">"
@@ -438,7 +418,6 @@ export default EnhancedFuturisticFooter;
       ]
     },
     {
-
       "title": 'Company',
       "icon": Building,
       "color": 'from-green-600 to-emerald-600',
@@ -454,7 +433,6 @@ export default EnhancedFuturisticFooter;
       ]
     },
     {
-
       "title": 'Resources & Learning',
       "icon": BookOpen,
       "color": 'from-orange-600 to-red-600',
@@ -471,7 +449,6 @@ export default EnhancedFuturisticFooter;
       ]
     },
     {
-
       "title": 'Platform & Tools',
       "icon": Settings,
       "color": 'from-slate-600 to-gray-600',
@@ -485,7 +462,6 @@ export default EnhancedFuturisticFooter;
       ]
     },
     {
-
       "title": 'Legal & Compliance',
       "icon": Shield,
       "color": 'from-gray-600 to-slate-600',
@@ -497,7 +473,6 @@ export default EnhancedFuturisticFooter;
         { "name": 'Compliance', "href": '/compliance' },;';';
         { "name": 'Accessibility', "href": '/accessibility' },;';';
         { "name": 'Sitemap', "href": '/sitemap' }
->>>>>>> origin/merge-pr-10615
       ]
     }
   ];
