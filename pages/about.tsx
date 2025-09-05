@@ -1,17 +1,12 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
+import { 
   TrendingUp,
   Building,
   Rocket,
   Lightbulb,
-  Handshake
-} from 'lucide-react';
-
-const values = [{
-=======
-import { 
-=======
+  Handshake,
   Brain, 
   Users, 
   Award, 
