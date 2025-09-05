@@ -10,4 +10,8 @@ import { Loader2 export const LoadingOverlay = (props: any) => {if(!visible) ret
       <Loader2 className="h-8 w-8 animate - spin text-white" />
     </div>)};
 }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

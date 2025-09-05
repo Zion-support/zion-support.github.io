@@ -59,5 +59,4 @@ export function PointsBadge("props": "any) {;
       </DropdownMenuContent>;
     </DropdownMenu>)}
 ;
-
 export default PointsBadge;

@@ -6,4 +6,8 @@ const * as React from "react"; const ThemeProvider = (props) => {; const [theme,
 import { useEffect } from 'react';,
 import { useState } from 'react';,
 import _React from 'react';';
+<<<<<<< HEAD
 import * as _React from 'react'; const ThemeProvider = (props) => {; const [theme,setTheme] = _React.useState('system'); _React.useEffect(() => {; const root = window.document.documentElement; root.classList.remove('light','dark'); if(theme === 'system') {; const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; root.classList.add(systemTheme)}; else {; root.classList.add(theme)}},[theme]); return(<ThemeContext.Provider value = {; { theme,; setTheme}}>; {children}; </ThemeContext.Provider>)}; export const useTheme = (props) => {; const context = _React.useContext(ThemeContext); if(context === null) {; throw new Error('useTheme must be used within a ThemeProvider')}; return context}; ; </ThemeContext>;';';
+=======
+import * as _React from 'react'; const ThemeProvider = (props) => {; const [theme,setTheme] = _React.useState('system'); _React.useEffect(() => {; const root = window.document.documentElement; root.classList.remove('light','dark'); if(theme === 'system') {; const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; root.classList.add(systemTheme)}; else {; root.classList.add(theme)}},[theme]); return(<ThemeContext.Provider value = {; { theme,; setTheme}}>; {children}; </ThemeContext.Provider>)}; export const useTheme = (props) => {; const context = _React.useContext(ThemeContext); if(context === null) {; throw new Error('useTheme must be used within a ThemeProvider')}; return context}; ; </ThemeContext>;';';
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

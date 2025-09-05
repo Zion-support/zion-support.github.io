@@ -1379,9 +1379,11 @@ designed to transform your business and drive exponential growth.";
         </motion.div>"",;
         {/* comment */}""""";
         <motion .div """";
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
   {opacity: 0, y: 30}}
-
           animate = {}"
   {opacity: 1, y: 0}}"""
           transition="{{" duration: 0.6 }}""" >""""""
@@ -1517,7 +1519,10 @@ designed to transform your business and drive exponential growth."
                     {service.features.length > 3 && ("""";
                       <span className="bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full">;
                         +{service.features.length-3} more,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
               <span>{category.name}</span>
             </button>) ) }"
         </motion.div>""
@@ -1666,9 +1671,11 @@ designed to transform your business and drive exponential growth."
             onClick="{" () =" > setSelectedService (null)}";
           >""""";
             <motion .div"""";
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
   {opacity: 1, y: 0}}
-
           transition = {}">
   {duration: 0.6, delay: 0.4",";"}}""" >""""""
           <div className = "bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">""""
@@ -1788,9 +1795,11 @@ designed to transform your business and drive exponential growth."
                   </a>;
                 </div>;
             </motion.div>,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
   {scale: 1, opacity: 1}}
-
               exit = {}"
   {scale: 0.9, opacity: 0}}"""
               onClick="{(e)" =" > e.stopPropagation()}""""
@@ -1817,7 +1826,6 @@ designed to transform your business and drive exponential growth."
                         <span className="text-zion-cyan-light">{feature}</span>
                       </li>
                     ))}
-
                   </ul>"
                 </div>""
 """""
@@ -1874,9 +1882,7 @@ designed to transform your business and drive exponential growth."
   )}""""""";
 """""""'";
 ";
-
 export default Component;
-
 </div>;
 </CheckCircle>;
 </motion>;

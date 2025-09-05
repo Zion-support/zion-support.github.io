@@ -1,2 +1,27 @@
+it(displays expected content', () => {';';';';';
+    render(<Spinner  />)',';';';';
+    ';';';';';
+import { render, screen } from &apos;@testing-library/react',';';';';';
+    ',';';';';
+    ';';';';';
+import Spinner from &apos;./Spinner';
+describe(&apos;Spinner&apos, () => {
+  it(&apos;renders without crashing&apos, () => {
+    render(&apos}}&apos;<Spinner  />)';
+    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it(&apos;displays expected content&apos, () => {';';';
+    render(&apos}<Spinner  />)';';';';
+    // Add specific test assertions based on component content})})';';';';';
+    render(<Spinner  />)',';';';';
+    ';';';';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""';';
+})';';';
+";';';';';
+}}';';';';';
+"';';';';;';;';
 it(displays expected content',() => {';';'; render(<Spinner />)',';'; ';';'; import { render,screen } from &apos;@testing-library/react',';';'; ',';'; ';';'; import Spinner from &apos;./Spinner'; describe(&apos;Spinner&apos,() => { it(&apos;renders without crashing&apos,() => { render(&apos}}&apos;<Spinner />) expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()}) it(&apos;displays expected content&apos,() => {'; render(&apos}<Spinner />)';'; render(<Spinner />)',';'; ';';'; expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"" })'; ";';'}}';';'; "';';';';
+<<<<<<< HEAD
 it(displays expected content',() => {';';'; render(<Spinner />)',';'; ';';'; import { render,screen } from &apos;@testing-library/react',';';'; ',';'; ';';'; import Spinner from &apos;./Spinner'; describe(&apos;Spinner&apos,() => { it(&apos;renders without crashing&apos,() => { render(&apos}}&apos;<Spinner />) expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()}) it(&apos;displays expected content&apos,() => {'; render(&apos}<Spinner />)';'; render(<Spinner />)',';'; ';';'; expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"" })'; ";';'}}';';'; ";
+=======
+it(displays expected content',() => {';';'; render(<Spinner />)',';'; ';';'; import { render,screen } from &apos;@testing-library/react',';';'; ',';'; ';';'; import Spinner from &apos;./Spinner'; describe(&apos;Spinner&apos,() => { it(&apos;renders without crashing&apos,() => { render(&apos}}&apos;<Spinner />) expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()}) it(&apos;displays expected content&apos,() => {'; render(&apos}<Spinner />)';'; render(<Spinner />)',';'; ';';'; expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"" })'; ";';'}}';';'; ";
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

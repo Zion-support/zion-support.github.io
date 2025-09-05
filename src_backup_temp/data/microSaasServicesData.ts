@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src/data/microSaasServicesData.ts
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 export interface MicroSaasService {;
   "id": "string;
   "title": string;
@@ -99,7 +102,6 @@ export const "MICRO_SAAS_SERVICES": "MicroSaasService[] = [;
     "competitors": "["Hootsuite"", "Buffer", "Sprout Social", "Later", "CoSchedule"],;
     "marketSize": "$15.6 billion by 2025";
   },;
-
   // Email Marketing Automation Platform;
   {;
     "id": "email-marketing-automation-platform",;
@@ -164,7 +166,6 @@ export const "MICRO_SAAS_SERVICES": "MicroSaasService[] = [;
     "competitors": "["Mailchimp"", "Constant Contact", "AWeber", "ConvertKit", "ActiveCampaign"],;
     "marketSize": "$7.5 billion by 2025";
   },;
-
   // Project Management & Collaboration Tool;
   {;
     "id": "project-management-collaboration-tool",;
@@ -229,7 +230,6 @@ export const "MICRO_SAAS_SERVICES": "MicroSaasService[] = [;
     "competitors": "["Asana"", "Monday.com", "Trello", "Wrike", "Basecamp"],;
     "marketSize": "$6.7 billion by 2025";
   },;
-
   // Customer Relationship Management (CRM) System;
   {;
     "id": "customer-relationship-management-crm",;
@@ -294,7 +294,6 @@ export const "MICRO_SAAS_SERVICES": "MicroSaasService[] = [;
     "competitors": "["Salesforce"", "HubSpot", "Pipedrive", "Zoho CRM", "Freshworks"],;
     "marketSize": "$58.2 billion by 2025";
   },;
-
   // Inventory Management System;
   {;
     "id": "inventory-management-system",;
@@ -359,7 +358,6 @@ export const "MICRO_SAAS_SERVICES": "MicroSaasService[] = [;
     "competitors": "["TradeGecko"", "inFlow", "Zoho Inventory", "Cin7", "Lightspeed"],;
     "marketSize": "$4.2 billion by 2025";
   },;
-
   // Accounting & Financial Management Software;
   {;
     "id": "accounting-financial-management",;
@@ -424,7 +422,6 @@ export const "MICRO_SAAS_SERVICES": "MicroSaasService[] = [;
     "competitors": "["QuickBooks"", "Xero", "FreshBooks", "Wave", "Sage"],;
     "marketSize": "$19.8 billion by 2025";
   },;
-
   // Employee Scheduling & Time Tracking Platform;
   {;
     "id": "employee-scheduling-time-tracking",;
@@ -489,7 +486,6 @@ export const "MICRO_SAAS_SERVICES": "MicroSaasService[] = [;
     "competitors": "["When I Work"", "Deputy", "Homebase", "Sling", "7shifts"],;
     "marketSize": "$3.8 billion by 2025";
   },;
-
   // Website Builder & Hosting Platform;
   {;
     "id": "website-builder-hosting-platform",;
@@ -554,7 +550,6 @@ export const "MICRO_SAAS_SERVICES": "MicroSaasService[] = [;
     "competitors": "["Wix"", "Squarespace", "Weebly", "WordPress.com", "Shopify"],;
     "marketSize": "$12.4 billion by 2025";
   },;
-
   // Customer Support & Help Desk Platform;
   {;
     "id": "customer-support-help-desk",;
@@ -619,7 +614,6 @@ export const "MICRO_SAAS_SERVICES": "MicroSaasService[] = [;
     "competitors": "["Zendesk"", "Freshdesk", "Intercom", "Help Scout", "LiveChat"],;
     "marketSize": "$8.9 billion by 2025";
   },;
-
   // Analytics & Business Intelligence Dashboard;
   {;
     "id": "analytics-business-intelligence-dashboard",;
@@ -715,7 +709,6 @@ export interface MicroSaasService {}
     security: string[]};,
   competitors?: string[];,
   marketSize?: string}
-
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
   // Social Media Management & Analytics Platform;,
   {}
@@ -782,7 +775,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["Hootsuite", "Buffer", "Sprout Social", "Later", "CoSchedule"],",
     marketSize: "_5.6 billion by 2025";,",
   },
-
   // Email Marketing Automation Platform;
   {}
     id: "email-marketing-automation-platform",",
@@ -848,7 +840,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["Mailchimp", "Constant Contact", "AWeber", "ConvertKit", "ActiveCampaign"],",
     marketSize: "$7.5 billion by 2025";,",
   },
-
   // Project Management & Collaboration Tool;
   {}
     id: "project-management-collaboration-tool",",
@@ -914,7 +905,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["Asana", "Monday.com", "Trello", "Wrike", "Basecamp"],",
     marketSize: "$6.7 billion by 2025";,",
   },
-
   // Customer Relationship Management (CRM) System;
   {}
     id: "customer-relationship-management-crm",",
@@ -980,7 +970,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["Salesforce", "HubSpot", "Pipedrive", "Zoho CRM", "Freshworks"],",
     marketSize: "$58.2 billion by 2025";,",
   },
-
   // Inventory Management System;
   {}
     id: "inventory-management-system",",
@@ -1046,7 +1035,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["TradeGecko", "inFlow", "Zoho Inventory", "Cin7", "Lightspeed"],",
     marketSize: "$4.2 billion by 2025";,",
   },
-
   // Accounting & Financial Management Software;
   {}
     id: "accounting-financial-management",",
@@ -1112,7 +1100,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["QuickBooks", "Xero", "FreshBooks", "Wave", "Sage"],",
     marketSize: "_9.8 billion by 2025";,",
   },
-
   // Employee Scheduling & Time Tracking Platform;
   {}
     id: "employee-scheduling-time-tracking",",
@@ -1178,7 +1165,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["When I Work", "Deputy", "Homebase", "Sling", "7shifts"],",
     marketSize: "$3.8 billion by 2025";,",
   },
-
   // Website Builder & Hosting Platform;
   {}
     id: "website-builder-hosting-platform",",
@@ -1244,7 +1230,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["Wix", "Squarespace", "Weebly", "WordPress.com", "Shopify"],",
     marketSize: "_2.4 billion by 2025";,",
   },
-
   // Customer Support & Help Desk Platform;
   {}
     id: "customer-support-help-desk",",
@@ -1310,7 +1295,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["Zendesk", "Freshdesk", "Intercom", "Help Scout", "LiveChat"],",
     marketSize: "$8.9 billion by 2025";,",
   },
-
   // Analytics & Business Intelligence Dashboard;
   {}
     id: "analytics-business-intelligence-dashboard",",
@@ -1376,7 +1360,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["Tableau", "Power BI", "Looker", "Domo", "Sisense"],",
     marketSize: "$33.3 billion by 2025";,",
   },
-
   // AI-Powered Customer Support Automation Platform;
   {}
     id: "ai-customer-support-automation",",
@@ -1442,7 +1425,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["Zendesk", "Intercom", "Freshworks", "Drift", "Ada"],",
     marketSize: "_5.8 billion by 2025";,",
   },
-
   // Smart Inventory Management System;
   {}
     id: "smart-inventory-management",",
@@ -1508,7 +1490,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["TradeGecko", "inFlow", "Cin7", "Zoho Inventory", "Lightspeed"],",
     marketSize: "$4.2 billion by 2025";,",
   },
-
   // Automated Email Marketing Platform;
   {}
     id: "automated-email-marketing",",
@@ -1574,7 +1555,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["Mailchimp", "Constant Contact", "Campaign Monitor", "SendGrid", "ConvertKit"],",
     marketSize: "$7.5 billion by 2025";,",
   },
-
   // AI-Powered Project Management Tool;
   {}
     id: "ai-project-management-tool",",
@@ -1640,7 +1620,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["Asana", "Monday.com", "Trello", "Wrike", "Smartsheet"],",
     marketSize: "$6.7 billion by 2025";,",
   },
-
   // Smart Financial Planning & Budgeting Tool;
   {}
     id: "smart-financial-planning-budgeting",",
@@ -1706,7 +1685,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["Mint", "YNAB", "Personal Capital", "Quicken", "Tiller"],",
     marketSize: "$3.8 billion by 2025";,",
   },
-
   // AI-Powered Content Creation Platform;
   {}
     id: "ai-content-creation-platform",",
@@ -1772,7 +1750,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["Jasper", "Copy.ai", "Writesonic", "Rytr", "ContentBot"],",
     marketSize: "$2.1 billion by 2025";,",
   },
-
   // Smart HR Management System;
   {}
     id: "smart-hr-management-system",",
@@ -2976,4 +2953,8 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     competitors: ["BambooHR", "Workday", "ADP", "Zenefits", "Gusto"],
     marketSize: "$5.9 billion by 2025"
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

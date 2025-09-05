@@ -224,7 +224,10 @@ const InnovativeServicesShowcase = ("props": "any) => {;
                     {selectedService.benefits.map((benefit, idx) => ("""";
                       <li key="{idx}" className="text-gray-300 flex items-center">"""";
                         <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
                     </div>"
                   </div>""
                 </div>"""""
@@ -268,7 +271,6 @@ const InnovativeServicesShowcase = ("props": "any) => {;
                   </div>
               </div>,
             ))}
-
           </div>
         </div>"
       </section>""
@@ -320,7 +322,6 @@ const InnovativeServicesShowcase = ("props": "any) => {;
                       <li key="{idx}" className="text-gray-300 flex items-center">""""
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {feature}
-
                       </li>"
                     ))}""
                   </ul>"""""
@@ -374,7 +375,10 @@ const InnovativeServicesShowcase = ("props": "any) => {;
                           <div className="flex justify-between">"""";
                             <span className="text-gray-300">"ROI": "</span>"""";
                             <span className="text-white text-green-400">",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
                   </ul>"
                 </div>""
 """""
@@ -534,7 +538,10 @@ const InnovativeServicesShowcase = ("props": "any) => {;
                           /" >"""";
                         </svg>"""";
                         <span className="text-white">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
                             </span>
                           </div>
 </>

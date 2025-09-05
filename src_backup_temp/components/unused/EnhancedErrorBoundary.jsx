@@ -7,10 +7,12 @@ export default function Page("props": "any) {;
         // Log error to console';
         // // // // // // // // console.error('Error caught by "boundary":', error, errorInfo);
         // Call custom error handler if provided;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 export default function Page(props: any) {
     componentDidCatch(error, errorInfo) {
-
         this.setState({ errorInfo }
     );
         // Log error to console'
@@ -30,7 +32,6 @@ export default function Page(props: any) {
                 "name": error.name;
                 "message": error.message;
   "stack": error.stack;
-
 "}
             "errorInfo": "{"componentStack": errorInfo.componentStack"}
             "userAgent": "navigator.userAgent;
@@ -49,11 +50,13 @@ export default function Page(props: any) {
 ;
             // ;
             // ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport }
     );
-
             // 
             // 
             console.groupEnd()}
@@ -85,7 +88,10 @@ export default function Page(props: any) {
             return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
           <motion.div initial = {
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 "}} animate = {;
   { "opacity": "1;
   "scale": 1;
@@ -97,7 +103,6 @@ export default function Page(props: any) {
                 <div>";
                   <h1 className="text-2xl font-bold">Something went wrong</h1>'";
                   <p className="text-red-100">We've encountered an unexpected error</p>;
-
     // Add global error handler';
     window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', (event) => {;
@@ -105,12 +110,14 @@ export default function Page(props: any) {
     });
 ;
     window.addEventListener('unhandledrejection', (event) => {
-
       handleError(event.reason, { componentStack: 'Promise rejection' }
     );
     }
     );
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
     return () => {window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleError);};
   }, []);
@@ -122,12 +129,10 @@ export default function Page(props: any) {
           initial = {;
   { "opacity": "0;
   "y": 20;
-
 "}}
           animate = {;
   { "opacity": "1;
   "y": 0;
-
 "}}";
           className="max-w-md mx-auto text-center p-8 bg-white rounded-xl shadow-lg";
         >";
@@ -136,7 +141,6 @@ export default function Page(props: any) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"  />;
             </svg>;
           </div>;
-
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>;
           <p className="text-gray-600 mb-6">;
             We're sorry, but something unexpected happened.Please try refreshing the page.</p>;
@@ -147,7 +151,6 @@ export default function Page(props: any) {
             >;
               Refresh Page;
             </button>;
-
             <button;
               onClick={() => window.history.back()"}";
               className="w-full bg-gray-200 text-gray-800 py-2 px-4 rounded-lg "hover": "bg-gray-300 transition-colors";
@@ -155,7 +158,6 @@ export default function Page(props: any) {
               Go Back;
             </button>;
           </div>;
-
           {process.env.NODE_ENV === 'development' && error && (;
             <details className="mt-6 text-left">              <summary className="cursor-pointer text-sm text-gray-600 "hover":text-gray-800">;
                 Error Details(Development);
@@ -188,7 +190,6 @@ export default function Page(props: any) {
 export {EnhancedErrorBoundary};
 export default EnhancedErrorBoundary;'"`;
 }}}}}}}}}}}}}'"`'"`;
-
 export {Page};
 ;
 </motion>;
@@ -196,11 +197,18 @@ export {Page};
 </div>;
 </motion>;
 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 </motion>
 </div>
 </div>
 </motion>
 </div>
 import React,{Component} from 'react'; import { motion, ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from 'lucide-react'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; hasError: false,; error: null,; errorInfo: null,; errorId: null,; showStackTrace: false}}; static getDerivedStateFromError(error) {; return {; hasError: true,; error,; errorId: this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }
+<<<<<<< HEAD
 });'; ;';';''
+=======
+});'; ;';';''
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

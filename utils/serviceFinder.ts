@@ -6,7 +6,6 @@ export interface Service {
   price?: number;
   features: string[];
 }
-
 export const findService = (query: string, services: Service[]): Service[] => {
   const searchTerm = query.toLowerCase();
   return services.filter(service => 
@@ -15,13 +14,11 @@ export const findService = (query: string, services: Service[]): Service[] => {
     service.category.toLowerCase().includes(searchTerm)
   );
 };
-
 export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
   return services.filter(service => 
     service.category.toLowerCase() === category.toLowerCase()
   );
 };
-
 export default {
   findService,
   getServicesByCategory
@@ -31,4 +28,8 @@ export const findService = ("_serviceName": string) => {
   // Implementation placeholder
   return null;
 };
+<<<<<<< HEAD
 export const findService = (_serviceName: string) => { return null};
+=======
+export const findService = (_serviceName: string) => { return null};
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

@@ -3,10 +3,8 @@ import {LoadingSpinner} from './ui / loading -spinner';
 ;
  from './ui/loading-spinner';
 ) => {;
-
   const processedData = useMemo(() => {;
     return data.map(item => ({;
-
       ...item,;
       "processed": "item.value * 2",;
       "timestamp": "new Date().toISOString()"}));
@@ -76,7 +74,10 @@ const VirtualList = ("props": "any) => {;
         <div style="{{{ height: containerHeight; overflow: 'auto'}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">
       <div style="{{{ height: items.length * itemHeight; position: 'relative'
       ...item; index: startIndex + index; style: {
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
         position; "top": (startIndex + index) * itemHeight; "height": itemHeight; "width": '100%'"}}"}));
   }, [items, scrollTop, itemHeight, containerHeight]);
   const handleScroll = useCallback(e => {setScrollTop(e.currentTarget.scrollTop);}, []);
@@ -121,7 +122,6 @@ export function PerformanceOptimizations("props": "any) {;
   const addItem = useCallback(() => {;
     setData(prev => [...prev,;
       {;
-
         "id": "Date.now()",;
         "title": "`Service ${prev.length + 1"}`,`;
         "description": "`Description ${prev.length + 1"}`,;
@@ -141,7 +141,6 @@ export function PerformanceOptimizations("props": "any) {;
   );
 }
 }"";
-
 </div>;
 </div>;
 </div>

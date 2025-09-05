@@ -1239,7 +1239,6 @@ message: '',
     // Update progress based on filled fields;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -1251,7 +1250,6 @@ const;const;const field = fields.find(f => f.name === name);
             return null;
         // comment;
         if (field.required) {}";
-
             if (typeof value === &apos;boolean&apos; && !value) {}";
 ";
                 return "This field is required"}";
@@ -1260,7 +1258,6 @@ const;const;const field = fields.find(f => f.name === name);
                 return &apos;This field is required&apos}
 ;
             if (typeof value === &apos;string&apos; && value.trim() === &apos;&apos) {}";
-
                 return &apos;This field is required&apos}";
         }";
         // comment;
@@ -1283,7 +1280,6 @@ const;const;const field = fields.find(f => f.name === name);
             if (field.type === &apos;email&apos; && stringValue) {}&apos;&apos;
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(stringValue)) {}";
-
                     return &apos;Please enter a valid email address&apos}";
             }
 ;
@@ -1291,7 +1287,6 @@ const;const;const field = fields.find(f => f.name === name);
             if (field.type === &apos;tel&apos; && stringValue) {}&apos;&apos;
                 const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;
                 if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g))) {}";
-
 &apos;
 &apos;&apos;
                     return &apos;Please enter a valid phone number&apos}";
@@ -1462,7 +1457,6 @@ const;const;const field = fields.find(f => f.name === name);
 ;
             // comment;
             if (enableAnalytics) {}";
-
                 trackEvent(&apos;form&apos,validation_error&apos,form_submission_failed&apos, null, {}";
 ";"";
                 trackEvent("form", validation_error",form_submission_failed", null, {}
@@ -1529,13 +1523,11 @@ const;const;const field = fields.find(f => f.name === name);
 ;
             // comment;
             if (enableAnalytics) {}";
-
                 trackEvent(&apos;form&apos,submission_error&apos,form_failed&apos, null, {}";
 ";
 "";
                     "error": "error instanceof Error ? error.message  : "Unknown error"""})}"",;
             // comment;
-
 &apos;
 &apos;&apos,;
                     "error": "error instanceof Error ? error.message : &apos",Unknown error&apos,&apos,"})}&apos;&apos;
@@ -1816,10 +1808,12 @@ const;const;const field = fields.find(f => f.name === name);
         </h3>"";";
         <p className="text-green-600 "dark": "text-green-300">"",",;
           Your message has been sent successfully. We"ll get back to you soon!,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
   {opacity: 0>
 scale: 0.9}} animate = {}
-
   {opacity: 1,
 scale: 1 "",">
 ""}} className="text-center p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">"","
@@ -1891,10 +1885,12 @@ scale: 1 "",">
           Your message has been sent successfully. We"ll get back to you soon!"",;
         <p className="text-green-600 "dark": "text-green-300">"","";
           Your message has been sent successfully. We&apos,ll get back to you soon!";
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
         </motion.button>
   {opacity: 0, scale: 0.9}} animate = {}
-
   {opacity: 1,
   scale: 1 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;text-center" p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700&apos,>"&apos,&apos,&apos;&apos;"
@@ -2048,10 +2044,8 @@ scale: 1 "",">
 ";
 }";
 ";
-
   } catch (error) {console.error(error);}
 export default Component;
-
 </motion>;
 </motion>;
 </motion>;

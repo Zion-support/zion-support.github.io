@@ -12,7 +12,10 @@ export const Sidebar = React.forwardRef((props, ref) => {;
         return (
         <div className = {  cn("flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
   props.className)
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 } ref={ref} {...props}>;
         {props.children}
       </div>)}
@@ -44,7 +47,6 @@ export const Sidebar = React.forwardRef((props, ref) => {;
   props.variant === "floating" || props.variant === "inset"""";
             ? "group-data-[collapsible=icon]: "w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]"""";
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]");
-
 "} />;
       <div className = {}
 """;
@@ -57,7 +59,10 @@ export const Sidebar = React.forwardRef((props, ref) => {;
             ? "p-2 group-data-[collapsible=icon]: "w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]"""";
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l"",;
   props.className);
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 """;
 } {...props}>"""";
         <div data-sidebar="sidebar" className="flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]: "rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow">;
@@ -82,7 +87,10 @@ export const SidebarRail = React.forwardRef((props, ref) => {}
 """";
   cn("absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear "after": "absolute "after":inset-y-0 "after":left-1/2 "after":w-[2px] "hover":"after":bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 "sm":flex"", "[[data-side=left]_&]: "cursor-w-resize [[data-side=right]_&]:cursor-e-resize"", "[[data-side=left][data-state=collapsed]_&]: "cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize"", "group-data-[collapsible=offcanvas]: "translate-x-0 group-data-[collapsible=offcanvas]:"after":left-full group-data-[collapsible=offcanvas]:"hover":bg-sidebar"", "[[data-side=left][data-collapsible=offcanvas]_&]: "-right-2"", "[[data-side=right][data-collapsible=offcanvas]_&]: "-left-2"",;
   props.className);
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 } {...props} />);""";
 });"""";
 } {...props} />);"""
@@ -95,7 +103,10 @@ export const SidebarInset = React.forwardRef((props, ref) => {}
 """";
   cn("relative flex min-h-svh flex-1 flex-col bg-background", "peer-data-[variant=inset]: "min-h-[calc(100svh-theme(spacing.4))] "md":peer-data-[variant=inset]:m-2 "md":peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 "md":peer-data-[variant=inset]:ml-0 "md":peer-data-[variant=inset]:rounded-xl "md":peer-data-[variant=inset]:shadow"",;
   props.className);
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 } {...props} />);""";
 });"""";
 SidebarInset.displayName = "SidebarInset";""";
@@ -105,7 +116,10 @@ SidebarInset.displayName = "SidebarInset";""";
     );""""
 SidebarInset.displayName = "SidebarInset";"""
 }}""""
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 </main>;
 </button>;
 </div>

@@ -1,2 +1,6 @@
 ' \' \' \' \' \' \'"export\": const MobileLaunchPage = () => {\'';
+<<<<<<< HEAD
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
+=======
+' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

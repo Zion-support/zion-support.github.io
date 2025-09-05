@@ -1,16 +1,13 @@
 import React from 'react';
 export function BlogSection("props": "any) {;
-
 import { Link  "} from 'react-router-dom';
 ,;
         {;
-
             "id": '2',;
             "title": 'Building Scalable Web Applications',;
             "excerpt": 'Best practices and architectural patterns for creating scalable web apps...',;
             "date": '2024-01-10',;
             "readTime": '12 min read';
-
     ];
     return (<section className="py-16">";
       <div className="container mx-auto px-4">";
@@ -32,17 +29,22 @@ import { Link  "} from 'react-router-dom';
                 <span>{post.date}</span>;
                 <span>{post.readTime}</span>;
               </div>;
+<<<<<<< HEAD
 
 interface BlogSection.jsProps {
   // Add props here as needed
 }
 
+=======
+interface BlogSection.jsProps {
+  // Add props here as needed
+}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
             id: '2',
             title: 'Building Scalable Web Applications',
             excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
             date: '2024-01-10',
             readTime: '12 min read'
-
     ];
     return (<section className="py-16">"
       <div className="container mx-auto px-4">"
@@ -77,4 +79,8 @@ export default function BlogSection.js({ }: BlogSection.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

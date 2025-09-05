@@ -1196,7 +1196,10 @@ technology solutions designed to transform your business.</motion.p>"";
                     {service.name}""""";
                   </h3>""""";
                   <p className="text-sm text-blue-400 font-medium">""";
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
             </div>
           </motion.div>
         </div>"
@@ -1449,7 +1452,10 @@ technology solutions designed to transform your business.</motion.p>"";
         </div>;
 </section>;
     </div>)"};
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
         </div>"
       </section>""
 """""

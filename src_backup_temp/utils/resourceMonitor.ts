@@ -202,16 +202,16 @@ class ResourceMonitor {;
   getErrorSummary() {;
     this.errors.forEach(error => {;
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1});
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
   getErrorSummary() {
-    
     this.errors.forEach(error => {
-
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}
     );
     return summary}
 }
 // Create singleton instance;
-
 export default resourceMonitor;
 '`;

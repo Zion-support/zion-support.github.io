@@ -2,7 +2,10 @@ import {Link} from 'react-router-dom';';';
 import {MainNavigation} from './header/MainNavigation';
 import {Link} from 'react-router-dom';
 import MainNavigation from './header/MainNavigation';
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 export function Header(props) {return (
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,4 +37,8 @@ export function Header(props) {return (;
           </div>;
         </div>;
       </header>;
+<<<<<<< HEAD
     );"}
+=======
+    );"}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

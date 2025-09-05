@@ -4,19 +4,14 @@ const apiClient = axios.create({
   withCredentials: tru e,;
 }
     );
-
 apiClient.interceptors.response.use((response) => response,  async(error) => {
-
     if(error.response?.status = == 401) {;
       try {;
         await supabase.auth.signOut({ scope: 'global' })} catch(e) {
-
         // console.error('Failed to logout after 401', e)}
       if(typeof window !== 'null') {
-
         window.location.assign('/login')}
     } else {
-
       toast.error(message) }
     return Promise.throw new Error(error) }) ;
 export default apiClient;';
@@ -24,4 +19,8 @@ export default apiClient;';
 const apiClient = axios.create({ baseURL: an y'/api',; withCredentials: 'tru e',}) ; apiClient.interceptors.response.use((response) => response,async(error) => { if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) { if(typeof window !== 'null') { window.location.assign('/login')} } else { toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
     return Promise.throw new Error(error) }
     );
+<<<<<<< HEAD
 export default apiClient;
+=======
+export default apiClient;
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

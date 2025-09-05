@@ -1,17 +1,12 @@
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
 import { supabase } from '@/integrations/supabase/client';
-
 export default function Page() {
   return (
 );
-      
       if(status) {
         query = query.eq("status", status)}
-      
       const { data, error: fetchErro r } = await query;
-      
       if(fetchError) throw fetchError;
-      
       setJobs(data as Job[] || []); // Ensure data is not null
       setError(null)} catch(err: an y) {
       console.error("Error fetching jobs:", err);
@@ -21,7 +16,6 @@ export default function Page() {
     } finally {
       setIsLoading(false)}
   }, [clientId, status]); // Dependencies for fetchJobs
-
   const updateJobStatus = async(jobId: string, newStatus: JobStatu s) => {
     if(!clientId) return false;
     try {
@@ -30,9 +24,7 @@ export default function Page() {
         .update({ status: newStatu s })
         .eq("id", jobId)
         .eq("client_id", clientId); 
-      
       if(updateError) throw updateError;
-      
       setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job, status: newStatu s} : job));
       toast.success("Job status updated successfully");
       return true} catch(err: an y) {
@@ -40,7 +32,6 @@ export default function Page() {
       toast.error("Failed to update job status");
       return false}
   };
-  
   const deleteJob = async(jobId: string) => {
     if(!clientId) return false;
     try {
@@ -49,9 +40,7 @@ export default function Page() {
         .delete()
         .eq("id", jobId)
         .eq("client_id", clientId); 
-        
       if(deleteError) throw deleteError;
-      
       setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId));
       toast.success("Job deleted successfully");
       return true} catch(err: an y) {
@@ -59,12 +48,10 @@ export default function Page() {
       toast.error("Failed to delete job");
       return false}
   };
-  
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     fetchJobs()}, [fetchJobs]); // Changed dependencies to just fetchJobs
-  
   return {
     jobs,
     isLoading,
@@ -78,4 +65,8 @@ export default function Page() {
   }};';
 ;';;';
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() { ); if(status) { query = query.eq("status",status)} const { data,error: 'fetchErro r' } = await query; if(fetchError) throw fetchError; setJobs(data as Job[] || []); setError(null)} catch(err: an y) { console.error("Error fetching jobs:",err); setError("Failed to fetch jobs.Please try again."); toast.error("Failed to fetch jobs"); setJobs([])} finally { setIsLoading(false)} },[clientId,status]); const updateJobStatus = async(jobId: 'string',newStatus: JobStatu s) => { if(!clientId) return false; try { const { error: updateErro r } = await supabase .from("jobs") .update({ status: 'newStatu s' }) .eq("id",jobId) .eq("client_id",clientId); if(updateError) throw updateError; setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job,status: 'newStatu s'} : job)); toast.success("Job status updated successfully"); return true} catch(err: an y) { console.error("Error updating job status:",err); toast.error("Failed to update job status"); return false} }; const deleteJob = async(jobId: string) => { if(!clientId) return false; try { const { error: deleteErro r } = await supabase .from("jobs") .delete() .eq("id",jobId) .eq("client_id",clientId); if(deleteError) throw deleteError; setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId)); toast.success("Job deleted successfully"); return true} catch(err: an y) { console.error("Error deleting job:",err); toast.error("Failed to delete job"); return false} }; useEffect(() => { },[]); fetchJobs()},[fetchJobs]); return { jobs,isLoading,error,refetch: 'fetchJob s',updateJobStatus,deleteJob,createJob: 'createJobServic e',updateJob: 'updateJobServic e',getJobById }};
+<<<<<<< HEAD
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() { ); if(status) { query = query.eq("status",status)} const { data,"error": 'fetchErro r' } = await query; if(fetchError) throw fetchError; setJobs(data as Job[] || []); setError(null)} catch("err": "an y) { console.error("Error fetching "jobs":"",err); setError("Failed to fetch jobs.Please try again."); toast.error("Failed to fetch jobs"); setJobs([])} finally { setIsLoading(false)} },[clientId,status]); const updateJobStatus = async("jobId": 'string',"newStatus": "JobStatu s) => { if(!clientId) return false; try { const { "error": updateErro r "} = await supabase .from("jobs") .update({ "status": 'newStatu s' }) .eq("id",jobId) .eq("client_id",clientId); if(updateError) throw updateError; setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job,"status": 'newStatu s'} : "job)); toast.success("Job status updated successfully"); return true"} catch("err": "an y) { console.error("Error updating job "status":"",err); toast.error("Failed to update job status"); return false} }; const deleteJob = async("jobId": "string) => { if(!clientId) return false; try { const { "error": deleteErro r "} = await supabase .from("jobs") .delete() .eq("id",jobId) .eq("client_id",clientId); if(deleteError) throw deleteError; setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId)); toast.success("Job deleted successfully"); return true} catch("err": "an y) { console.error("Error deleting "job":"",err); toast.error("Failed to delete job"); return false} }; useEffect(() => { },[]); fetchJobs()},[fetchJobs]); return { jobs,isLoading,error,"refetch": 'fetchJob s',updateJobStatus,deleteJob,"createJob": 'createJobServic e',"updateJob": 'updateJobServic e',getJobById }};
+=======
+import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() { ); if(status) { query = query.eq("status",status)} const { data,"error": 'fetchErro r' } = await query; if(fetchError) throw fetchError; setJobs(data as Job[] || []); setError(null)} catch("err": "an y) { console.error("Error fetching "jobs":"",err); setError("Failed to fetch jobs.Please try again."); toast.error("Failed to fetch jobs"); setJobs([])} finally { setIsLoading(false)} },[clientId,status]); const updateJobStatus = async("jobId": 'string',"newStatus": "JobStatu s) => { if(!clientId) return false; try { const { "error": updateErro r "} = await supabase .from("jobs") .update({ "status": 'newStatu s' }) .eq("id",jobId) .eq("client_id",clientId); if(updateError) throw updateError; setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job,"status": 'newStatu s'} : "job)); toast.success("Job status updated successfully"); return true"} catch("err": "an y) { console.error("Error updating job "status":"",err); toast.error("Failed to update job status"); return false} }; const deleteJob = async("jobId": "string) => { if(!clientId) return false; try { const { "error": deleteErro r "} = await supabase .from("jobs") .delete() .eq("id",jobId) .eq("client_id",clientId); if(deleteError) throw deleteError; setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId)); toast.success("Job deleted successfully"); return true} catch("err": "an y) { console.error("Error deleting "job":"",err); toast.error("Failed to delete job"); return false} }; useEffect(() => { },[]); fetchJobs()},[fetchJobs]); return { jobs,isLoading,error,"refetch": 'fetchJob s',updateJobStatus,deleteJob,"createJob": 'createJobServic e',"updateJob": 'updateJobServic e',getJobById }};
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

@@ -799,17 +799,15 @@ const InteractiveServiceShowcase = (props: any) => {}
       </div>
     </section>)};
 export default InteractiveServiceShowcase;
-
 export {InteractiveServiceShowcase};
-
 export {InteractiveServiceShowcase};
-
 export {InteractiveServiceShowcase};
-
 export {InteractiveServiceShowcase};
-
 export {InteractiveServiceShowcase};
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 </motion>
 </motion>';
 </motion>;';;';
@@ -819,9 +817,16 @@ export {InteractiveServiceShowcase};
 </motion>;
 </motion>;
 </motion>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 </motion>
 </motion>
 </motion>
 </motion>
+<<<<<<< HEAD
 </motion>
+=======
+</motion>
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

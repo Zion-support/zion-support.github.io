@@ -834,7 +834,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </div>
         </div>
       </motion.div>
-
       {/* Portfolio Metrics */}
       <motion.div;
         initial={{ "opacity": "0", "y": "20 "}}
@@ -1033,7 +1032,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </CardContent>
         </Card>
       </motion.div>
-
       {/* Filters and Controls */}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}
@@ -1155,7 +1153,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </div>
         </div>
       </motion.div>
-
       {/* Portfolio Table */}
       <motion.div;
         initial={{ "opacity": "0", "y": "20 "}}
@@ -1358,7 +1355,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </CardContent>
         </Card>
       </motion.div>
-
       {/* Portfolio Insights */}
       <motion.div;
         initial={{ "opacity": "0", "y": "20 "}}
@@ -1553,7 +1549,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
             </div>
           </CardContent>
         </Card>
-
         {/* Portfolio Insights */}
         <Card>"""
           <CardHeader>""""
@@ -1652,7 +1647,6 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </CardContent>
         </Card>
       </motion.div>
-
       {/* CTA Section */}
       <motion.div;
         initial={{ "opacity": "0", "y": "20 "}}
@@ -1743,17 +1737,15 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       </motion.div>
     </div>)};
 export default AdvancedServicePortfolioDashboard;
-
 export {AdvancedServicePortfolioDashboard};
-
 export {AdvancedServicePortfolioDashboard};
-
 export {AdvancedServicePortfolioDashboard};
-
 export {AdvancedServicePortfolioDashboard};
-
 export {AdvancedServicePortfolioDashboard};
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 </motion>
 </motion>
 </motion>';
@@ -1767,7 +1759,10 @@ export {AdvancedServicePortfolioDashboard};
 </motion>;
 </motion>;
 </motion>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 </motion>
 </motion>
 </motion>
@@ -1775,4 +1770,8 @@ export {AdvancedServicePortfolioDashboard};
 </motion>
 </motion>
 </motion>
+<<<<<<< HEAD
 </motion>
+=======
+</motion>
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

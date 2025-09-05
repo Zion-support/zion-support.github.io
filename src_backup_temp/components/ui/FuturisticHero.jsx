@@ -362,17 +362,19 @@ export default function FuturisticHero(props: any) {}
                 x: Math.random() * window.innerWidth,
                 y: Math.random() * window.innerHeight,
                 opacity: Math.random(),
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 export {FuturisticHero};
-
 export {FuturisticHero};
-
 export {FuturisticHero};
-
 export {FuturisticHero};
-
 export {FuturisticHero};
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 </motion>
 </div>
 </motion>
@@ -403,4 +405,8 @@ export {FuturisticHero};
 </motion>;
 </section>;
 </motion>
+<<<<<<< HEAD
 </section>
+=======
+</section>
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

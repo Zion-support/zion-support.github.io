@@ -14,4 +14,8 @@ import React from 'react',;',';';';';
     ';';';
 import React from 'react',;',';';
     ';';';';
+<<<<<<< HEAD
 ';'"';';';';
+=======
+';'"';';';';
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b

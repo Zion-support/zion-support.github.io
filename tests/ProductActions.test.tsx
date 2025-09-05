@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface ProductActions.testProps {
   // Add props here as needed
 }
-
 export default function ProductActions.test({ }: ProductActions.testProps) {
   return (
     <div>
