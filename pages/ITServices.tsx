@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-
 export default function ITServices() {
   const itServices = [
     {
@@ -879,9 +878,8 @@ export default function ITServices() {
       savings: "Save up to $7,800/month"
     }
   ];
-
   return (
-    <Layout 
+    <Layout
       title="IT Services - Zion Tech Group"
       description="Comprehensive IT services including cloud migration, cybersecurity, data analytics, and infrastructure management."
     >
@@ -918,7 +916,6 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -935,11 +932,9 @@ export default function ITServices() {
                     <div className="text-sm text-green-400 font-semibold">{service.savings}</div>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6">
                   {service.description}
                 </p>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                   <ul className="text-gray-300 space-y-2">
@@ -951,7 +946,6 @@ export default function ITServices() {
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
                   <ul className="text-gray-300 space-y-2">
@@ -963,7 +957,6 @@ export default function ITServices() {
                     ))}
                   </ul>
                 </div>
-
                 <div className="flex gap-4">
                   <Link
                     href="/contact"
@@ -983,7 +976,6 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
         <div className="max-w-7xl mx-auto text-center">

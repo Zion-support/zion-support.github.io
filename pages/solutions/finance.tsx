@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, Database, CheckCircle, ArrowRight } from 'lucide-react';
-
 const features = [
   {
     icon: DollarSign,
@@ -29,7 +28,6 @@ const features = [
     description: 'Real-time fraud detection and prevention systems using advanced analytics.'
   }
 ];
-
 const solutions = [
   'Digital Banking Platforms',
   'Payment Processing Systems',
@@ -42,10 +40,9 @@ const solutions = [
   'Cryptocurrency Solutions',
   'Financial Mobile Applications'
 ];
-
 export default function FinanceSolutionsPage() {
   return (
-    <Layout 
+    <Layout
       title="Financial Services Solutions - Zion Tech Group"
       description="Transform financial services with our secure, compliant solutions including digital banking, payment processing, risk management, and fraud detection."
     >
@@ -61,8 +58,8 @@ export default function FinanceSolutionsPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize financial services with our secure, compliant technology solutions. 
-                From digital banking to fraud detection, we help financial institutions deliver 
+                Revolutionize financial services with our secure, compliant technology solutions.
+                From digital banking to fraud detection, we help financial institutions deliver
                 exceptional customer experiences while maintaining regulatory compliance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -77,7 +74,6 @@ export default function FinanceSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -86,11 +82,10 @@ export default function FinanceSolutionsPage() {
                 Comprehensive Financial Technology Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our financial services solutions are designed to enhance security, 
+                Our financial services solutions are designed to enhance security,
                 improve efficiency, and ensure compliance with financial regulations.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">
@@ -104,7 +99,6 @@ export default function FinanceSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">
           <div className="container mx-auto px-4">
@@ -123,7 +117,6 @@ export default function FinanceSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Compliance Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -133,11 +126,10 @@ export default function FinanceSolutionsPage() {
                   Regulatory Compliant & Secure
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  All our financial solutions are built with security and compliance in mind, 
+                  All our financial solutions are built with security and compliance in mind,
                   ensuring your financial data is protected and your organization meets regulatory requirements.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -164,7 +156,6 @@ export default function FinanceSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -173,7 +164,7 @@ export default function FinanceSolutionsPage() {
                 Ready to Transform Financial Services?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let our financial technology experts help you implement solutions that 
+                Let our financial technology experts help you implement solutions that
                 enhance security, improve efficiency, and ensure regulatory compliance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

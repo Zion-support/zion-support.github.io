@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
-
 export default function CybersecurityPage() {
   const securityServices = [
     {
@@ -30,9 +29,8 @@ export default function CybersecurityPage() {
       features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]
     }
   ];
-
   return (
-    <Layout 
+    <Layout
       title="Cybersecurity Services - Zion Tech Group"
       description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance."
     >
@@ -50,13 +48,12 @@ export default function CybersecurityPage() {
                 Cybersecurity Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Protect your business with our comprehensive cybersecurity solutions. 
+                Protect your business with our comprehensive cybersecurity solutions.
                 Stay ahead of threats with advanced security measures and expert support.
               </p>
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -95,7 +92,6 @@ export default function CybersecurityPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">

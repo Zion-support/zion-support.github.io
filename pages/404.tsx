@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react';
-
 export default function Custom404() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -11,7 +10,6 @@ export default function Custom404() {
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />
       </Head>
-
       <div className="max-w-4xl mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,11 +20,11 @@ export default function Custom404() {
           <div className="mb-8">
             <motion.div
               className="text-9xl font-bold text-blue-600 mb-4"
-              animate={{ 
+              animate={{
                 scale: [1, 1.1, 1],
                 rotate: [0, 5, -5, 0]
               }}
-              transition={{ 
+              transition={{
                 duration: 2,
                 repeat: Infinity,
                 repeatType: "reverse"
@@ -41,7 +39,6 @@ export default function Custom404() {
               The page you're looking for doesn't exist or has been moved.
             </p>
           </div>
-
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
@@ -59,7 +56,6 @@ export default function Custom404() {
               Go Back
             </button>
           </div>
-
           {/* Quick Links */}
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
@@ -82,7 +78,6 @@ export default function Custom404() {
                   </p>
                 </div>
               </Link>
-
               <Link
                 href="/about"
                 className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
@@ -99,7 +94,6 @@ export default function Custom404() {
                   </p>
                 </div>
               </Link>
-
               <Link
                 href="/contact"
                 className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
@@ -118,7 +112,6 @@ export default function Custom404() {
               </Link>
             </div>
           </div>
-
           {/* Help Text */}
           <div className="mt-8 text-center">
             <p className="text-gray-600">

@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-  Clock, 
-  User, 
-  ArrowRight, 
-  Tag, 
+import {
+  Calendar,
+  Clock,
+  User,
+  ArrowRight,
+  Tag,
   ExternalLink,
   Play,
   Download,
@@ -15,7 +15,6 @@ import {
   Award,
   CheckCircle
 } from 'lucide-react';
-
 const webinars = [
   {
     id: 1,
@@ -108,7 +107,6 @@ const webinars = [
     recordingUrl: "/webinars/recordings/digital-transformation-strategy"
   }
 ];
-
 const categories = [
   "All Webinars",
   "Artificial Intelligence",
@@ -118,32 +116,27 @@ const categories = [
   "Data Analytics",
   "Digital Transformation"
 ];
-
 const statuses = [
   "All Status",
   "Upcoming",
   "Recorded"
 ];
-
 export default function WebinarsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All Webinars");
   const [selectedStatus, setSelectedStatus] = useState("All Status");
-
   const filteredWebinars = webinars.filter(webinar => {
     const categoryMatch = selectedCategory === "All Webinars" || webinar.category === selectedCategory;
-    const statusMatch = selectedStatus === "All Status" || 
+    const statusMatch = selectedStatus === "All Status" ||
       (selectedStatus === "Upcoming" && webinar.status === "upcoming") ||
       (selectedStatus === "Recorded" && webinar.status === "recorded");
     return categoryMatch && statusMatch;
   });
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Webinars - Zion Tech Group</title>
         <meta name="description" content="Join our expert-led webinars on AI, cloud computing, cybersecurity, and technology trends. Learn from industry leaders." />
       </Head>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -157,13 +150,11 @@ export default function WebinarsPage() {
           </div>
         </div>
       </section>
-
       {/* Featured Webinar */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Webinar</h2>
-            
             {webinars.filter(webinar => webinar.featured).map((webinar) => (
               <motion.article
                 key={webinar.id}
@@ -185,22 +176,19 @@ export default function WebinarsPage() {
                         {webinar.category}
                       </span>
                       <span className={`text-xs px-2 py-1 rounded-full ${
-                        webinar.status === 'upcoming' 
-                          ? 'bg-green-100 text-green-800' 
+                        webinar.status === 'upcoming'
+                          ? 'bg-green-100 text-green-800'
                           : 'bg-gray-100 text-gray-800'
                       }`}>
                         {webinar.status === 'upcoming' ? 'Upcoming' : 'Recorded'}
                       </span>
                     </div>
-                    
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">
                       {webinar.title}
                     </h2>
-                    
                     <p className="text-gray-600 mb-6 text-lg">
                       {webinar.description}
                     </p>
-                    
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-1">Presenter:</h3>
@@ -213,7 +201,6 @@ export default function WebinarsPage() {
                         <p className="text-sm text-gray-500">{webinar.duration}</p>
                       </div>
                     </div>
-                    
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-2">
@@ -226,7 +213,6 @@ export default function WebinarsPage() {
                         </div>
                       </div>
                     </div>
-                    
                     {webinar.status === 'upcoming' ? (
                       <Link
                         href={webinar.registrationUrl}
@@ -257,7 +243,6 @@ export default function WebinarsPage() {
           </div>
         </div>
       </section>
-
       {/* Filters */}
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
@@ -291,13 +276,11 @@ export default function WebinarsPage() {
           </div>
         </div>
       </section>
-
       {/* Webinars Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">All Webinars</h2>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredWebinars.filter(webinar => !webinar.featured).map((webinar, index) => (
                 <motion.article
@@ -318,22 +301,19 @@ export default function WebinarsPage() {
                         {webinar.category}
                       </span>
                       <span className={`text-xs px-2 py-1 rounded-full ${
-                        webinar.status === 'upcoming' 
-                          ? 'bg-green-100 text-green-800' 
+                        webinar.status === 'upcoming'
+                          ? 'bg-green-100 text-green-800'
                           : 'bg-gray-100 text-gray-800'
                       }`}>
                         {webinar.status === 'upcoming' ? 'Upcoming' : 'Recorded'}
                       </span>
                     </div>
-                    
                     <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                       {webinar.title}
                     </h3>
-                    
                     <p className="text-gray-600 mb-4 line-clamp-3">
                       {webinar.description}
                     </p>
-                    
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center gap-2 text-sm text-gray-600">
                         <User className="w-4 h-4" />
@@ -352,7 +332,6 @@ export default function WebinarsPage() {
                         <span>{webinar.attendees} registered</span>
                       </div>
                     </div>
-                    
                     <div className="flex gap-2">
                       {webinar.status === 'upcoming' ? (
                         <Link
@@ -381,7 +360,6 @@ export default function WebinarsPage() {
                 </motion.article>
               ))}
             </div>
-
             {/* Load More Button */}
             <div className="text-center mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
@@ -391,7 +369,6 @@ export default function WebinarsPage() {
           </div>
         </div>
       </section>
-
       {/* Newsletter Signup */}
       <section className="py-16 bg-blue-600">
         <div className="container mx-auto px-4">
@@ -402,7 +379,6 @@ export default function WebinarsPage() {
             <p className="text-xl text-blue-100 mb-8">
               Subscribe to get notified about upcoming webinars and exclusive content
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"

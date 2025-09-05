@@ -2,25 +2,24 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Users, 
-  Award, 
-  Target, 
-  Heart, 
-  Globe, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Building, 
-  Rocket, 
-  Lightbulb, 
-  Handshake 
+import {
+  Brain,
+  Users,
+  Award,
+  Target,
+  Heart,
+  Globe,
+  Shield,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Building,
+  Rocket,
+  Lightbulb,
+  Handshake
 } from 'lucide-react';
-
 const values = [{
     icon: Lightbulb,
     title: 'Innovation',
@@ -42,7 +41,6 @@ const values = [{
     description: 'Our success is measured by our clients&apos; success. We are committed to being true partners in their growth journey.'
   }
 ];
-
 const team = [{
     name: 'Dr. Sarah Chen',
     role: 'Chief Technology Officer',
@@ -72,7 +70,6 @@ const team = [{
     image: '/team/david-kim.jpg'
   }
 ];
-
 const achievements = [{
     icon: Award,
     title: 'Industry Recognition',
@@ -98,7 +95,6 @@ const achievements = [{
     stat: '300%'
   }
 ];
-
 const timeline = [{
     year: '2018',
     title: 'Company Founded',
@@ -120,7 +116,6 @@ const timeline = [{
     description: 'Introduced our Micro SaaS solutions platform for rapid business application deployment.'
   }
 ];
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -129,7 +124,6 @@ export default function AboutPage() {
                   <meta name="description" content="Learn about Zion Tech Group's mission to provide cutting-edge technology solutions and our team of expert professionals." />
                   <meta name="keywords" content="about us, team, mission, values, company history, technology experts" />
                   </Head>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
                   <div className="absolute inset-0">
@@ -145,19 +139,18 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<h1 className="text-4xl md:text-6xl font-bold mb-6">ursor/add-new-services-and-deploy-updates-1b90
+<h1 className="text-4xl md:text-6xl font-bold mb-6">
               About{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
 </h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">ursor/add-new-services-and-deploy-updates-1b90
+                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
             </p>
                   </motion.div>
                   </div>
                   </section>
-
       {/* Mission, Vision, Values */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -168,7 +161,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Our Foundation
             </h2>
                   <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -224,7 +217,6 @@ export default function AboutPage() {
                   </div>
                   </div>
                   </section>
-
       {/* Values Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -235,7 +227,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Our Core Values
             </h2>
                   <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -252,7 +244,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }} ">ursor/add-new-services-and-deploy-updates-1b90
+                  viewport={{ once: true }} ">
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-blue-600" />
                   </div>
@@ -268,7 +260,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           </div>
                   </div>
                   </section>
-
       {/* Team Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -279,7 +270,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Expert professionals dedicated to delivering exceptional technology solutions.
             </p>
@@ -291,7 +282,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
 className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">
-                  <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">ursor/add-new-services-and-deploy-updates-1b90
+                  <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-2xl font-bold text-white">
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </span>
@@ -313,7 +304,6 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
           </div>
                   </div>
                   </section>
-
       {/* Achievements Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -324,7 +314,7 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Achievements</h2>ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Achievements</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Recognition and results that speak to our commitment to excellence.
             </p>
@@ -359,7 +349,6 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
           </div>
                   </div>
                   </section>
-
       {/* Timeline Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -370,7 +359,7 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Key milestones in our company&apos;s growth and evolution.
             </p>
@@ -405,7 +394,6 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
                   </div>
                   </div>
                   </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
                   <div className="container mx-auto px-4 text-center">
@@ -415,7 +403,7 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work With Us?</h2>ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work With Us?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how our team can help transform your business with cutting-edge technology solutions.
             </p>

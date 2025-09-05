@@ -2,36 +2,36 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Cloud, 
-  Zap, 
-  Shield, 
-  Users, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight, 
-  Clock, 
-  Star, 
-  DollarSign, 
-  Award, 
-  Globe, 
-  Lock, 
-  Cpu, 
-  Bot, 
-  FileText, 
-  Image, 
-  Video, 
-  Mic, 
-  Code, 
-  Settings, 
-  Monitor, 
-  Smartphone, 
-  Server, 
-  Network, 
-  Car, 
-  Rocket, 
-  Heart, 
-  Building, 
+import {
+  Cloud,
+  Zap,
+  Shield,
+  Users,
+  BarChart3,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Star,
+  DollarSign,
+  Award,
+  Globe,
+  Lock,
+  Cpu,
+  Bot,
+  FileText,
+  Image,
+  Video,
+  Mic,
+  Code,
+  Settings,
+  Monitor,
+  Smartphone,
+  Server,
+  Network,
+  Car,
+  Rocket,
+  Heart,
+  Building,
   Sprout,
   Mail,
   MessageSquare,
@@ -48,8 +48,7 @@ import {
   Camera,
   HardDrive
 } from 'lucide-react';
-
-const microSaaSProducts = [{ursor/add-new-services-and-deploy-updates-1b90
+const microSaaSProducts = [{
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
     icon: DollarSign,
@@ -425,8 +424,7 @@ description: 'Automated code review with security scanning, performance optimiza
     popular: true
   }
 ];
-
-const features = [{ursor/add-new-services-and-deploy-updates-1b90
+const features = [{
     icon: Zap,
     title: 'Rapid Deployment',
     description: 'Get up and running in days, not months'
@@ -457,8 +455,7 @@ const features = [{ursor/add-new-services-and-deploy-updates-1b90
     description: 'GDPR and SOC 2 compliant by default'
   }
 ];
-
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
+const benefits = [{
     icon: Clock,
     title: 'Fast Time to Market',
     description: 'Launch your SaaS in weeks, not months',
@@ -483,8 +480,7 @@ const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
     stat: '10x'
   }
 ];
-
-const pricingTiers = [{ursor/add-new-services-and-deploy-updates-1b90
+const pricingTiers = [{
     name: 'Starter',
     description: 'Perfect for small teams and MVPs',
     price: '$299',
@@ -503,7 +499,7 @@ const pricingTiers = [{ursor/add-new-services-and-deploy-updates-1b90
     description: 'Ideal for growing businesses',
     price: '$799',
     period: '/month',
-features: ['Up to 10,000 users',ursor/add-new-services-and-deploy-updates-1b90
+features: ['Up to 10,000 users',
       'Advanced analytics',
       'Priority support',
       'Enhanced security',
@@ -517,7 +513,7 @@ features: ['Up to 10,000 users',ursor/add-new-services-and-deploy-updates-1b90
     description: 'For large organizations',
     price: 'Custom',
     period: '',
-features: ['Unlimited users',ursor/add-new-services-and-deploy-updates-1b90
+features: ['Unlimited users',
       'Custom analytics',
       'Dedicated support',
       'Enterprise security',
@@ -527,7 +523,6 @@ features: ['Unlimited users',ursor/add-new-services-and-deploy-updates-1b90
     popular: false
   }
 ];
-
 export default function MicroSaaSPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -536,7 +531,6 @@ export default function MicroSaaSPage() {
                   <meta name="description" content="Scalable Micro SaaS solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics." />
                   <meta name="keywords" content="Micro SaaS, SaaS solutions, cloud applications, scalable software, business automation" />
                   </Head>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
 <div className="absolute inset-0">
@@ -546,7 +540,7 @@ export default function MicroSaaSPage() {
                   </div>
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -562,7 +556,7 @@ export default function MicroSaaSPage() {
                   </div>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">ursor/add-new-services-and-deploy-updates-1b90
+                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Start Your SaaS
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
@@ -572,7 +566,6 @@ export default function MicroSaaSPage() {
                   </motion.div>
                   </div>
                   </section>
-
       {/* Products Grid */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -583,7 +576,7 @@ export default function MicroSaaSPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Micro SaaS Products</h2>ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Micro SaaS Products</h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Ready-to-deploy SaaS solutions that solve specific business problems with minimal setup time.
             </p>
@@ -594,7 +587,7 @@ export default function MicroSaaSPage() {
               return (
                 <motion.div
                   key={index}
-className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${ursor/add-new-services-and-deploy-updates-1b90
+className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${
                     product.popular ? 'ring-2 ring-purple-200' : ''
                   }`}
                   initial={{ opacity: 0, y: 30 }}
@@ -610,12 +603,11 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
                       </span>
                   </div>
                   )}
-                  
                   <div className="flex items-center justify-between mb-4">
 <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
                   <IconComponent className="w-10 h-10" />
                   </div>
-                  <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">ursor/add-new-services-and-deploy-updates-1b90
+                  <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
                       {product.category}
                     </span>
                   </div>
@@ -627,7 +619,7 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
                   </p>
                   <div className="mb-4">
 <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">ursor/add-new-services-and-deploy-updates-1b90
+                  <ul className="space-y-1">
                       {product.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
                   <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
@@ -652,7 +644,6 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
           </div>
                   </div>
                   </section>
-
       {/* Features Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -669,12 +660,12 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {features.map((feature, index) => {ursor/add-new-services-and-deploy-updates-1b90
+                    {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/add-new-services-and-deploy-updates-1b90
+className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -695,7 +686,6 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
           </div>
                   </div>
                   </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -706,7 +696,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our Micro SaaS solutions deliver measurable business impact.
             </p>
@@ -741,7 +731,6 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
           </div>
                   </div>
                   </section>
-
       {/* Pricing Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -758,7 +747,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {pricingTiers.map((tier, index) => (ursor/add-new-services-and-deploy-updates-1b90
+                    {pricingTiers.map((tier, index) => (
               <motion.div
                 key={index}
                 className={`p-8 rounded-xl shadow-lg ${
@@ -776,7 +765,6 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
                     </span>
                   </div>
                 )}
-                
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {tier.name}
                 </h3>
@@ -799,7 +787,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
-? 'bg-purple-600 hover: bg-purple-700 text-white'ursor/add-new-services-and-deploy-updates-1b90
+? 'bg-purple-600 hover: bg-purple-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
@@ -811,7 +799,6 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
           </div>
                   </div>
                   </section>
-
       {/* Contact Information Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -829,7 +816,6 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
               Ready to transform your business with cutting-edge micro SaaS solutions? Our expert team is here to help you build, deploy, and scale your next-generation software products. Contact us for a free consultation and discover how we can accelerate your digital transformation.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <motion.div
               className="text-center p-6 bg-white rounded-lg shadow-lg"
@@ -847,7 +833,6 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
                 Call Now: +1 302 464 0950
               </a>
             </motion.div>
-
             <motion.div
               className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
@@ -864,7 +849,6 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
                 kleber@ziontechgroup.com
               </a>
             </motion.div>
-
             <motion.div
               className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
@@ -883,7 +867,6 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
               </address>
             </motion.div>
           </div>
-
           <motion.div
             className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center"
             initial={{ opacity: 0, y: 30 }}
@@ -915,23 +898,22 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
 <div className="container mx-auto px-4 text-center">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Join 500+ successful businesses that trust Zion Tech Group for their micro SaaS development needs. Let&apos;s build the perfect solution for your business.
             </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Start Buildingursor/add-new-services-and-deploy-updates-1b90
+                Start Building
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                 View All Services
@@ -940,6 +922,6 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
                   </motion.div>
                   </div>
                   </section>
-                  </div>ursor/add-new-services-and-deploy-updates-1b90
+                  </div>
   );
 }

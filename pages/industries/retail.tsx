@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  ShoppingCart, 
-  Brain, 
-  BarChart3, 
+import {
+  ShoppingCart,
+  Brain,
+  BarChart3,
   CheckCircle,
   ArrowRight,
   Package,
@@ -15,7 +15,6 @@ import {
   Database
 } from 'lucide-react';
 import Layout from '../../components/Layout';
-
 const services = [
   {
     title: 'E-commerce Platforms',
@@ -84,7 +83,6 @@ const services = [
     ]
   }
 ];
-
 const benefits = [
   {
     title: 'Increased Sales',
@@ -107,10 +105,9 @@ const benefits = [
     icon: Database
   }
 ];
-
 export default function RetailPage() {
   return (
-    <Layout 
+    <Layout
       title="Retail Technology Solutions - Zion Tech Group"
       description="Transform retail with e-commerce platforms, inventory management AI, customer analytics, and omnichannel solutions."
       keywords="retail technology, e-commerce, inventory management, customer analytics, omnichannel retail, retail AI"
@@ -123,7 +120,6 @@ export default function RetailPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -141,7 +137,7 @@ export default function RetailPage() {
                 </h1>
               </div>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize retail with cutting-edge e-commerce platforms, AI-powered analytics, 
+                Revolutionize retail with cutting-edge e-commerce platforms, AI-powered analytics,
                 and omnichannel solutions that drive sales and customer satisfaction.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -155,7 +151,6 @@ export default function RetailPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -169,11 +164,10 @@ export default function RetailPage() {
                 Retail Technology Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive retail technology solutions designed for modern businesses, 
+                Comprehensive retail technology solutions designed for modern businesses,
                 from small boutiques to large retail chains.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -186,10 +180,8 @@ export default function RetailPage() {
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -203,7 +195,6 @@ export default function RetailPage() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -217,11 +208,10 @@ export default function RetailPage() {
                 Why Choose Our Retail Solutions?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our retail technology solutions deliver measurable improvements in sales, 
+                Our retail technology solutions deliver measurable improvements in sales,
                 customer experience, and operational efficiency.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -241,7 +231,6 @@ export default function RetailPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-violet-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -254,7 +243,7 @@ export default function RetailPage() {
                 Ready to Transform Retail?
               </h2>
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-                Let our retail technology experts help you implement solutions that drive sales 
+                Let our retail technology experts help you implement solutions that drive sales
                 and enhance customer experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

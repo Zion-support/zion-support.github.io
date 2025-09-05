@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
-
 const features = [
   {
     icon: Cloud,
@@ -29,7 +28,6 @@ const features = [
     description: 'Build automated deployment pipelines for faster, more reliable software delivery.'
   }
 ];
-
 const services = [
   'Cloud Architecture Design',
   'Container Orchestration (Kubernetes)',
@@ -40,10 +38,9 @@ const services = [
   'Cost Optimization',
   'Security Hardening'
 ];
-
 export default function CloudDevOpsPage() {
   return (
-    <Layout 
+    <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
       description="Expert cloud migration, infrastructure automation, and DevOps solutions. Transform your operations with scalable, secure cloud infrastructure."
     >
@@ -59,7 +56,7 @@ export default function CloudDevOpsPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Accelerate your digital transformation with our comprehensive cloud migration, 
+                Accelerate your digital transformation with our comprehensive cloud migration,
                 infrastructure automation, and DevOps expertise. Build, deploy, and scale with confidence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -74,7 +71,6 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -83,11 +79,10 @@ export default function CloudDevOpsPage() {
                 Comprehensive Cloud & DevOps Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From cloud migration to continuous deployment, we provide end-to-end solutions 
+                From cloud migration to continuous deployment, we provide end-to-end solutions
                 that modernize your infrastructure and accelerate your development cycles.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">
@@ -101,7 +96,6 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
-
         {/* Services List */}
         <section className="py-20 bg-gray-800/30">
           <div className="container mx-auto px-4">
@@ -120,7 +114,6 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -129,7 +122,7 @@ export default function CloudDevOpsPage() {
                 Ready to Transform Your Infrastructure?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let our cloud and DevOps experts help you build a scalable, secure, 
+                Let our cloud and DevOps experts help you build a scalable, secure,
                 and efficient infrastructure that grows with your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

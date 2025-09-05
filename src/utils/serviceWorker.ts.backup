@@ -1,20 +1,15 @@
 :src/utils/serviceWorker.ts.backup
 export const serviceWorker = {};
-
 export const registerServiceWorker = () => {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          
         })
         .catch((registrationError) => {
-          
         };);
     });
   }
 };
-
 export default serviceWorker;ursor/migrate-github-actions-to-pm2-and-clean-up-5599
  export const serviceWorker = {};; export const registerServiceWorker = () => { if ('serviceWorker' in navigator) { window.addEventListener('load',() => { navigator.serviceWorker.register('/sw.js') .then((registration) => { }) .catch((registrationError) => { };)})} }; export default serviceWorker;  export const serviceWorker = {}; export default serviceWorker ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/utils/serviceWorker.ts

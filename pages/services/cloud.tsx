@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-
 export default function CloudServicesPage() {
   const cloudServices = [
     {
@@ -30,9 +29,8 @@ export default function CloudServicesPage() {
       features: ["Cost Analysis", "Performance Tuning", "Resource Management"]
     }
   ];
-
   return (
-    <Layout 
+    <Layout
       title="Cloud Solutions - Zion Tech Group"
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
     >
@@ -50,13 +48,12 @@ export default function CloudServicesPage() {
                 Cloud Solutions
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your business with our comprehensive cloud solutions. 
+                Transform your business with our comprehensive cloud solutions.
                 From migration to optimization, we help you leverage the power of the cloud.
               </p>
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -95,7 +92,6 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">

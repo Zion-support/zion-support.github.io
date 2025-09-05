@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Settings, 
-  Brain, 
-  Shield, 
-  BarChart3, 
+import {
+  Settings,
+  Brain,
+  Shield,
+  BarChart3,
   CheckCircle,
   ArrowRight,
   Cpu,
@@ -16,7 +16,6 @@ import {
   Users
 } from 'lucide-react';
 import Layout from '../../components/Layout';
-
 const services = [
   {
     title: 'Smart Factory Solutions',
@@ -85,7 +84,6 @@ const services = [
     ]
   }
 ];
-
 const benefits = [
   {
     title: 'Increased Efficiency',
@@ -108,10 +106,9 @@ const benefits = [
     icon: BarChart3
   }
 ];
-
 export default function ManufacturingPage() {
   return (
-    <Layout 
+    <Layout
       title="Manufacturing Technology Solutions - Zion Tech Group"
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
       keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0"
@@ -124,7 +121,6 @@ export default function ManufacturingPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -142,7 +138,7 @@ export default function ManufacturingPage() {
                 </h1>
               </div>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize manufacturing with Industry 4.0 technologies including smart factories, 
+                Revolutionize manufacturing with Industry 4.0 technologies including smart factories,
                 IoT networks, predictive maintenance, and digital twin solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -156,7 +152,6 @@ export default function ManufacturingPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -170,11 +165,10 @@ export default function ManufacturingPage() {
                 Manufacturing Technology Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive Industry 4.0 solutions designed for modern manufacturing operations, 
+                Comprehensive Industry 4.0 solutions designed for modern manufacturing operations,
                 from small workshops to large industrial facilities.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -187,10 +181,8 @@ export default function ManufacturingPage() {
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -204,7 +196,6 @@ export default function ManufacturingPage() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -218,11 +209,10 @@ export default function ManufacturingPage() {
                 Why Choose Our Manufacturing Solutions?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our manufacturing technology solutions deliver measurable improvements in efficiency, 
+                Our manufacturing technology solutions deliver measurable improvements in efficiency,
                 quality, and cost reduction.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -242,7 +232,6 @@ export default function ManufacturingPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -255,7 +244,7 @@ export default function ManufacturingPage() {
                 Ready to Transform Manufacturing?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Let our manufacturing technology experts help you implement Industry 4.0 solutions 
+                Let our manufacturing technology experts help you implement Industry 4.0 solutions
                 that improve efficiency and reduce costs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

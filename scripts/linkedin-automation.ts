@@ -5,6 +5,4 @@ export const linkedinAutomation = {
     // TODO: Implement actual LinkedIn automation functionality
   }
 };
-
 export default linkedinAutomation;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

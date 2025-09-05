@@ -7,4 +7,3 @@ export const serviceWorkerRegistration = {
 };
 export default serviceWorkerRegistration;
 export const serviceWorkerRegistration = { init: () => { ,} }; export default serviceWorkerRegistration;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/utils/serviceWorkerRegistration.ts

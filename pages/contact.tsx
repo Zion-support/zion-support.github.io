@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
-
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -11,7 +10,6 @@ export default function ContactPage() {
         <meta name="description" content="Get in touch with our expert team for technology solutions and consulting." />
         <meta name="keywords" content="contact, support, consultation, technology services" />
       </Head>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -37,10 +35,9 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
-{/* Contact Information Cards */}ursor/add-new-services-and-deploy-updates-1b90
+{/* Contact Information Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <motion.div
               className="bg-white rounded-lg shadow-lg p-6 text-center"
@@ -55,7 +52,6 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
               <p className="text-gray-600">+1 302 464 0950</p>
             </motion.div>
-
             <motion.div
               className="bg-white rounded-lg shadow-lg p-6 text-center"
               initial={{ opacity: 0, y: 30 }}
@@ -69,7 +65,6 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
               <p className="text-gray-600">kleber@ziontechgroup.com</p>
             </motion.div>
-
             <motion.div
               className="bg-white rounded-lg shadow-lg p-6 text-center"
               initial={{ opacity: 0, y: 30 }}
@@ -87,7 +82,6 @@ export default function ContactPage() {
               </p>
             </motion.div>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
               className="bg-white rounded-lg shadow-lg p-8"
@@ -178,7 +172,6 @@ export default function ContactPage() {
                 </button>
               </form>
             </motion.div>
-
             <motion.div
               className="bg-white rounded-lg shadow-lg p-8"
               initial={{ opacity: 0, x: 30 }}

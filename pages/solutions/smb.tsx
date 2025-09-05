@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-
 export default function SMBSolutionsPage() {
   const smbServices = [
     {
@@ -30,9 +29,8 @@ export default function SMBSolutionsPage() {
       features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]
     }
   ];
-
   return (
-    <Layout 
+    <Layout
       title="SMB Solutions - Zion Tech Group"
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
     >
@@ -50,13 +48,12 @@ export default function SMBSolutionsPage() {
                 SMB Solutions
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Technology solutions designed specifically for small and medium businesses. 
+                Technology solutions designed specifically for small and medium businesses.
                 Get enterprise-level capabilities at SMB-friendly prices.
               </p>
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -95,7 +92,6 @@ export default function SMBSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
           <div className="container mx-auto px-4 text-center">

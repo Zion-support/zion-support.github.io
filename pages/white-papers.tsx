@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FileText, Download, Calendar, User, ArrowRight, Tag, ExternalLink } from 'lucide-react';
-
 const whitePapers = [
   {
     id: 1,
@@ -78,7 +77,6 @@ const whitePapers = [
     pdfUrl: "/whitepapers/data-privacy-ai-compliance.pdf"
   }
 ];
-
 const categories = [
   "All Papers",
   "Artificial Intelligence",
@@ -88,7 +86,6 @@ const categories = [
   "SaaS",
   "Data Privacy"
 ];
-
 export default function WhitePapersPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -96,7 +93,6 @@ export default function WhitePapersPage() {
         <title>White Papers - Zion Tech Group</title>
         <meta name="description" content="Download our comprehensive white papers on AI, cloud computing, cybersecurity, and technology trends." />
       </Head>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -111,13 +107,11 @@ export default function WhitePapersPage() {
           </div>
         </div>
       </section>
-
       {/* Featured White Paper */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured White Paper</h2>
-            
             {whitePapers.filter(paper => paper.featured).map((paper) => (
               <motion.article
                 key={paper.id}
@@ -139,15 +133,12 @@ export default function WhitePapersPage() {
                         {paper.category}
                       </span>
                     </div>
-                    
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">
                       {paper.title}
                     </h2>
-                    
                     <p className="text-gray-600 mb-6 text-lg">
                       {paper.description}
                     </p>
-                    
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-2">
@@ -165,7 +156,6 @@ export default function WhitePapersPage() {
                       </div>
                       <span>{paper.readTime}</span>
                     </div>
-                    
                     <div className="flex gap-4">
                       <a
                         href={paper.pdfUrl}
@@ -187,7 +177,6 @@ export default function WhitePapersPage() {
           </div>
         </div>
       </section>
-
       {/* Categories */}
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
@@ -209,13 +198,11 @@ export default function WhitePapersPage() {
           </div>
         </div>
       </section>
-
       {/* White Papers Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">All White Papers</h2>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {whitePapers.filter(paper => !paper.featured).map((paper, index) => (
                 <motion.article
@@ -236,15 +223,12 @@ export default function WhitePapersPage() {
                         {paper.category}
                       </span>
                     </div>
-                    
                     <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                       {paper.title}
                     </h3>
-                    
                     <p className="text-gray-600 mb-4 line-clamp-3">
                       {paper.description}
                     </p>
-                    
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center gap-2">
                         <User className="w-4 h-4" />
@@ -255,7 +239,6 @@ export default function WhitePapersPage() {
                         <span>{paper.date}</span>
                       </div>
                     </div>
-                    
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-sm text-gray-500">{paper.readTime}</span>
                       <span className="text-sm text-gray-500 flex items-center gap-1">
@@ -263,7 +246,6 @@ export default function WhitePapersPage() {
                         {paper.downloadCount}
                       </span>
                     </div>
-                    
                     <div className="flex gap-2">
                       <a
                         href={paper.pdfUrl}
@@ -281,7 +263,6 @@ export default function WhitePapersPage() {
                 </motion.article>
               ))}
             </div>
-
             {/* Load More Button */}
             <div className="text-center mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
@@ -291,7 +272,6 @@ export default function WhitePapersPage() {
           </div>
         </div>
       </section>
-
       {/* Newsletter Signup */}
       <section className="py-16 bg-blue-600">
         <div className="container mx-auto px-4">
@@ -302,7 +282,6 @@ export default function WhitePapersPage() {
             <p className="text-xl text-blue-100 mb-8">
               Subscribe to receive new white papers and research insights directly in your inbox
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"

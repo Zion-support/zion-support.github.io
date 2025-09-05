@@ -2,13 +2,13 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
-  FileText, 
-  HelpCircle, 
+import {
+  Home,
+  Users,
+  Briefcase,
+  Phone,
+  FileText,
+  HelpCircle,
   DollarSign,
   Shield,
   Cookie,
@@ -19,7 +19,6 @@ import {
   Globe,
   ArrowRight
 } from 'lucide-react';
-
 const sitemapData = {
   main: [
     { path: "/", label: "Home", description: "Welcome to Zion Tech Group" },
@@ -73,14 +72,12 @@ const sitemapData = {
     { path: "/helpdesk", label: "Helpdesk", description: "Submit support tickets" }
   ]
 };
-
 const contactInfo = {
   email: "contact@ziontechgroup.com",
   phone: "+1 (555) 123-4567",
   address: "123 Technology Drive, Innovation City, IC 12345",
   website: "https://ziontechgroup.com"
 };
-
 export default function SitemapPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -88,7 +85,6 @@ export default function SitemapPage() {
         <title>Sitemap - Zion Tech Group</title>
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all pages and resources easily." />
       </Head>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -103,7 +99,6 @@ export default function SitemapPage() {
           </div>
         </div>
       </section>
-
       {/* Sitemap Content */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -140,7 +135,6 @@ export default function SitemapPage() {
                   ))}
                 </div>
               </motion.div>
-
               {/* Services */}
               <motion.div
                 className="bg-white rounded-lg shadow-lg p-6"
@@ -172,7 +166,6 @@ export default function SitemapPage() {
                   ))}
                 </div>
               </motion.div>
-
               {/* Solutions */}
               <motion.div
                 className="bg-white rounded-lg shadow-lg p-6"
@@ -204,7 +197,6 @@ export default function SitemapPage() {
                   ))}
                 </div>
               </motion.div>
-
               {/* Resources */}
               <motion.div
                 className="bg-white rounded-lg shadow-lg p-6"
@@ -236,7 +228,6 @@ export default function SitemapPage() {
                   ))}
                 </div>
               </motion.div>
-
               {/* Company */}
               <motion.div
                 className="bg-white rounded-lg shadow-lg p-6"
@@ -268,7 +259,6 @@ export default function SitemapPage() {
                   ))}
                 </div>
               </motion.div>
-
               {/* Legal */}
               <motion.div
                 className="bg-white rounded-lg shadow-lg p-6"
@@ -301,7 +291,6 @@ export default function SitemapPage() {
                 </div>
               </motion.div>
             </div>
-
             {/* Contact Information */}
             <motion.div
               className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white"

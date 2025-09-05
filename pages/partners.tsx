@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Handshake, Award, Globe, Users, Zap, Shield, Cloud } from 'lucide-react';
-
 const partners = [
   {
     name: 'Microsoft',
@@ -53,7 +52,6 @@ const partners = [
     icon: Award
   }
 ];
-
 const partnershipTypes = [
   {
     title: 'Technology Partners',
@@ -71,10 +69,9 @@ const partnershipTypes = [
     icon: Handshake
   }
 ];
-
 export default function PartnersPage() {
   return (
-    <Layout 
+    <Layout
       title="Partners - Zion Tech Group"
       description="Learn about our strategic partnerships and how to become a Zion Tech Group partner."
     >
@@ -97,13 +94,12 @@ export default function PartnersPage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xl text-gray-300 mb-8"
               >
-                We work with industry leaders to deliver comprehensive technology solutions 
+                We work with industry leaders to deliver comprehensive technology solutions
                 and create value for our clients through strategic partnerships.
               </motion.p>
             </div>
           </div>
         </section>
-
         {/* Partnership Types */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -114,7 +110,6 @@ export default function PartnersPage() {
                   We offer various partnership opportunities to suit different business models.
                 </p>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {partnershipTypes.map((type, index) => (
                   <motion.div
@@ -139,7 +134,6 @@ export default function PartnersPage() {
             </div>
           </div>
         </section>
-
         {/* Partners Grid */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -150,7 +144,6 @@ export default function PartnersPage() {
                   Trusted by leading technology companies worldwide.
                 </p>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {partners.map((partner, index) => (
                   <motion.div
@@ -174,7 +167,6 @@ export default function PartnersPage() {
                         {partner.description}
                       </p>
                     </div>
-                    
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-3">Partnership Benefits:</h4>
                       <ul className="space-y-2">
@@ -192,7 +184,6 @@ export default function PartnersPage() {
             </div>
           </div>
         </section>
-
         {/* Become a Partner */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">

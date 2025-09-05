@@ -1,30 +1,29 @@
-export interface AdvancedMicroSaaSService { 
-  "id": string; 
-  title: string; 
-  description: string; 
-  category: string; 
-  subcategory: string; 
-  price: number; 
-  currency: string; 
-  pricingModel: string; 
-  features: string[]; 
-  benefits: string[]; 
-  useCases: string[]; 
-  targetAudience: string[]; 
-  tags: string[]; 
-  estimatedDelivery: string; 
-  supportLevel: string; 
-  marketPrice: string; 
-  roi: string; 
-  innovationLevel: string; 
-  contactInfo: { phone: string; email: string; website: string; address: string }; 
-  technicalSpecs?: { "technology": string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[] }; 
-  competitors?: string[]; 
-  marketSize?: string; 
-  demoUrl?: string; 
+export interface AdvancedMicroSaaSService {
+  "id": string;
+  title: string;
+  description: string;
+  category: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  pricingModel: string;
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
+  tags: string[];
+  estimatedDelivery: string;
+  supportLevel: string;
+  marketPrice: string;
+  roi: string;
+  innovationLevel: string;
+  contactInfo: { phone: string; email: string; website: string; address: string };
+  technicalSpecs?: { "technology": string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[] };
+  competitors?: string[];
+  marketSize?: string;
+  demoUrl?: string;
   documentationUrl?: string;
 }
-
 export const "ADVANCED_MICRO_SAAS_2026": AdvancedMicroSaaSService[] = [{
     id: 'ai-code-review-security',
     "title": 'AI-Powered Code Review & Security Scanner',
@@ -73,13 +72,13 @@ export const "ADVANCED_MICRO_SAAS_2026": AdvancedMicroSaaSService[] = [{
     "marketPrice": '$200-500/month (market average)',
     "roi": '300-400% over 12 months',
     "innovationLevel": 'cutting-edge',
-    "contactInfo": { 
+    "contactInfo": {
       phone: '+1 302 464 0950',
       "email": 'kleber@ziontechgroup.com',
       "website": 'https://ziontechgroup.com',
       "address": '364 E Main St STE 1008 Middletown DE 19709'
     },
-    "technicalSpecs": { 
+    "technicalSpecs": {
       technology: ['AI/ML models', 'Static analysis', 'Dynamic analysis', 'REST APIs', 'GraphQL'],
       "integrations": ['GitHub', 'GitLab', 'Bitbucket', 'Jenkins', 'Azure DevOps', 'VS Code'],
       "apiEndpoints": 45,
@@ -91,5 +90,4 @@ export const "ADVANCED_MICRO_SAAS_2026": AdvancedMicroSaaSService[] = [{
     "demoUrl": 'https://ziontechgroup.com/demo',
     "documentationUrl": 'https://ziontechgroup.com/docs'
   };
-];ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+];

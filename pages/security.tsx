@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
 import Layout from '../components/Layout';
-
 const securityFeatures = [
   {
     title: 'Data Encryption',
@@ -33,7 +32,6 @@ const securityFeatures = [
     details: ['24/7 security monitoring', 'Real-time threat detection', 'Comprehensive audit logs', 'Incident response']
   }
 ];
-
 const complianceStandards = [
   {
     name: 'SOC 2 Type II',
@@ -64,7 +62,6 @@ const complianceStandards = [
     color: 'text-yellow-600'
   }
 ];
-
 const securityPractices = [
   {
     category: 'Data Protection',
@@ -103,14 +100,12 @@ const securityPractices = [
     ]
   }
 ];
-
 const securityMetrics = [
   { label: 'Uptime', value: '99.9%', description: 'System availability' },
   { label: 'Response Time', value: '< 1 min', description: 'Security incident response' },
   { label: 'Audit Score', value: '98%', description: 'Last security audit' },
   { label: 'Vulnerabilities', value: '0', description: 'Critical vulnerabilities' }
 ];
-
 export default function SecurityPage() {
   return (
     <Layout
@@ -125,7 +120,6 @@ export default function SecurityPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -145,7 +139,6 @@ export default function SecurityPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Security Metrics */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -166,7 +159,6 @@ export default function SecurityPage() {
             </div>
           </div>
         </section>
-
         {/* Security Features */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -183,7 +175,6 @@ export default function SecurityPage() {
                 Comprehensive security measures to protect your data and systems
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {securityFeatures.map((feature, index) => (
                 <motion.div
@@ -202,7 +193,6 @@ export default function SecurityPage() {
                       <p className="text-gray-600">{feature.description}</p>
                     </div>
                   </div>
-
                   <ul className="space-y-3">
                     {feature.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-center text-gray-600">
@@ -216,7 +206,6 @@ export default function SecurityPage() {
             </div>
           </div>
         </section>
-
         {/* Compliance Standards */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -233,7 +222,6 @@ export default function SecurityPage() {
                 We maintain compliance with industry-leading security and privacy standards
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {complianceStandards.map((standard, index) => (
                 <motion.div
@@ -258,7 +246,6 @@ export default function SecurityPage() {
             </div>
           </div>
         </section>
-
         {/* Security Practices */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -275,7 +262,6 @@ export default function SecurityPage() {
                 Our comprehensive approach to security across all aspects of our operations
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {securityPractices.map((category, index) => (
                 <motion.div
@@ -299,7 +285,6 @@ export default function SecurityPage() {
             </div>
           </div>
         </section>
-
         {/* Incident Response */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -317,7 +302,6 @@ export default function SecurityPage() {
                   Our commitment to rapid and effective incident response
                 </p>
               </motion.div>
-
               <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8 border border-red-200">
                 <div className="flex items-center mb-6">
                   <AlertTriangle className="w-8 h-8 text-red-600 mr-4" />
@@ -338,14 +322,13 @@ export default function SecurityPage() {
                   </div>
                 </div>
                 <p className="text-gray-600 mt-6">
-                  Our security team is available 24/7 to respond to any security incidents. We have established 
+                  Our security team is available 24/7 to respond to any security incidents. We have established
                   procedures for rapid detection, containment, and resolution of security issues.
                 </p>
               </div>
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">

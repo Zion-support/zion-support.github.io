@@ -29,7 +29,6 @@ export interface ITService {
     security: string[]};
   competitors?: string[];
   marketSize?: string}
-
 export const IT_SERVICES: ITService[] = [
   // Cloud Infrastructure Migration & Management
   {
@@ -96,7 +95,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["Accenture", "Deloitte", "IBM", "Capgemini"],
     marketSize: "$178 billion by 2025"
   },
-
   // Cybersecurity Assessment & Implementation
   {
     id: "cybersecurity-assessment-implementation",
@@ -162,7 +160,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["CrowdStrike", "Palo Alto Networks", "Fortinet", "Check Point"],
     marketSize: "$248 billion by 2025"
   },
-
   // Digital Transformation Consulting
   {
     id: "digital-transformation-consulting",
@@ -228,7 +225,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["McKinsey", "BCG", "Deloitte", "PwC", "Accenture"],
     marketSize: "$1.3 trillion by 2025"
   },
-
   // Enterprise Application Development
   {
     id: "enterprise-application-development",
@@ -294,7 +290,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["IBM", "Accenture", "Capgemini", "Infosys", "TCS"],
     marketSize: "$456 billion by 2025"
   },
-
   // Data Analytics & Business Intelligence
   {
     id: "data-analytics-business-intelligence",
@@ -360,7 +355,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["Tableau", "Microsoft Power BI", "Qlik", "SAS", "IBM Cognos"],
     marketSize: "$33.3 billion by 2025"
   },
-
   // IT Infrastructure Management
   {
     id: "it-infrastructure-management",
@@ -426,7 +420,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["IBM", "HPE", "Dell Technologies", "Cisco", "VMware"],
     marketSize: "$89 billion by 2025"
   },
-
   // DevOps & CI/CD Implementation
   {
     id: "devops-cicd-implementation",
@@ -492,7 +485,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["GitLab", "GitHub", "Azure DevOps", "AWS CodePipeline", "CircleCI"],
     marketSize: "$12.2 billion by 2025"
   },
-
   // Network Security & Firewall Management
   {
     id: "network-security-firewall-management",
@@ -558,7 +550,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point", "SonicWall"],
     marketSize: "$45.6 billion by 2025"
   },
-
   // Database Administration & Optimization
   {
     id: "database-administration-optimization",
@@ -624,7 +615,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["Oracle", "Microsoft", "Amazon RDS", "MongoDB Atlas", "PlanetScale"],
     marketSize: "$67.8 billion by 2025"
   },
-
   // IT Support & Help Desk Services
   {
     id: "it-support-help-desk-services",
@@ -690,7 +680,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["IBM", "HPE", "Dell Technologies", "Cisco", "Microsoft"],
     marketSize: "$23.4 billion by 2025"
   },
-
   // Cloud Migration & Modernization Services
   {
     id: "cloud-migration-modernization",
@@ -756,7 +745,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["Accenture", "Deloitte", "IBM", "Microsoft", "Amazon Professional Services"],
     marketSize: "$35.2 billion by 2025"
   },
-
   // Cybersecurity Assessment & Implementation
   {
     id: "cybersecurity-assessment-implementation",
@@ -822,7 +810,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["IBM Security", "Deloitte", "PwC", "KPMG", "EY"],
     marketSize: "$18.7 billion by 2025"
   },
-
   // DevOps & CI/CD Implementation
   {
     id: "devops-cicd-implementation",
@@ -888,7 +875,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["Red Hat", "GitLab", "Atlassian", "Microsoft", "Amazon"],
     marketSize: "$28.9 billion by 2025"
   },
-
   // Data Analytics & Business Intelligence Implementation
   {
     id: "data-analytics-bi-implementation",
@@ -954,7 +940,6 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["Tableau", "Microsoft", "IBM", "SAS", "Oracle"],
     marketSize: "$33.4 billion by 2025"
   },
-
   // Network Infrastructure & Security
   {
     id: "network-infrastructure-security",

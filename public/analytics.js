@@ -1,4 +1,3 @@
-
 // Analytics enhancements for Zion Tech Group;
 const analyticsEnhancements = {
   // Track page views;
@@ -9,7 +8,6 @@ const analyticsEnhancements = {
         "page_location": window.location.href,
         "page_path": page})}
   },
-
   // Track user interactions;
   "trackInteraction": (action, category, label) => {
   if (typeof gtag !== "undefined") {
@@ -17,11 +15,9 @@ const analyticsEnhancements = {
   "event_category": category,
         "event_label": label})}
   },
-
   // Track form submissions;
   "trackFormSubmission": (formName) => {
   this.trackInteraction("form_submit", "engagement", formName)},
-
   // Initialize analytics;
   "init": () => {
   // Track initial page view;
@@ -37,4 +33,3 @@ if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", analyticsEnhancements.init)} else {
   analyticsEnhancements.init()}
 const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

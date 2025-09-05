@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag, ExternalLink } from 'lucide-react';
-
 const newsArticles = [
   {
     id: 1,
@@ -72,7 +71,6 @@ const newsArticles = [
     featured: false
   }
 ];
-
 const categories = [
   "All News",
   "Product Launch",
@@ -82,7 +80,6 @@ const categories = [
   "Product Update",
   "Expansion"
 ];
-
 export default function NewsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -90,7 +87,6 @@ export default function NewsPage() {
         <title>News & Updates - Zion Tech Group</title>
         <meta name="description" content="Stay updated with the latest news, announcements, and updates from Zion Tech Group." />
       </Head>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -104,13 +100,11 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
-
       {/* Featured Article */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured News</h2>
-            
             {newsArticles.filter(article => article.featured).map((article) => (
               <motion.article
                 key={article.id}
@@ -130,15 +124,12 @@ export default function NewsPage() {
                         {article.category}
                       </span>
                     </div>
-                    
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">
                       {article.title}
                     </h2>
-                    
                     <p className="text-gray-600 mb-6 text-lg">
                       {article.excerpt}
                     </p>
-                    
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-2">
@@ -152,7 +143,6 @@ export default function NewsPage() {
                       </div>
                       <span>{article.readTime}</span>
                     </div>
-                    
                     <Link
                       href={`/news/${article.id}`}
                       className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
@@ -167,7 +157,6 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
-
       {/* Categories */}
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
@@ -189,13 +178,11 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
-
       {/* News Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Latest News</h2>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.filter(article => !article.featured).map((article, index) => (
                 <motion.article
@@ -214,15 +201,12 @@ export default function NewsPage() {
                         {article.category}
                       </span>
                     </div>
-                    
                     <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                       {article.title}
                     </h3>
-                    
                     <p className="text-gray-600 mb-4 line-clamp-3">
                       {article.excerpt}
                     </p>
-                    
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center gap-2">
                         <User className="w-4 h-4" />
@@ -233,7 +217,6 @@ export default function NewsPage() {
                         <span>{article.date}</span>
                       </div>
                     </div>
-                    
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">{article.readTime}</span>
                       <Link
@@ -248,7 +231,6 @@ export default function NewsPage() {
                 </motion.article>
               ))}
             </div>
-
             {/* Load More Button */}
             <div className="text-center mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
@@ -258,7 +240,6 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
-
       {/* Newsletter Signup */}
       <section className="py-16 bg-blue-600">
         <div className="container mx-auto px-4">
@@ -269,7 +250,6 @@ export default function NewsPage() {
             <p className="text-xl text-blue-100 mb-8">
               Subscribe to our newsletter for the latest news and updates
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"

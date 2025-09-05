@@ -1,21 +1,39 @@
 #!/bin/bash
 
+echo "Starting git operations..."
+
+# Check current branch
+echo "Current branch:"
+git branch --show-current
+
+# Add all changes
 echo "Adding all changes..."
 git add .
 
+# Commit changes
 echo "Committing changes..."
-git commit -m "Fix syntax errors: Add missing semicolon in main.tsx and complete App.tsx structure"
+git commit -m "Fix syntax errors and merge conflicts
 
-echo "Pushing to current branch..."
-git push origin HEAD
+- Fixed merge conflict markers in test files
+- Fixed malformed code in App.test.ts, AccessibilityEnhancer.test.tsx, and products.test.ts
+- Cleaned up TypeScript syntax errors
+- Removed duplicate code sections
+- Fixed quote and bracket issues"
 
-echo "Checking out main branch..."
+# Push changes
+echo "Pushing changes..."
+git push origin cursor/fix-syntax-push-and-merge-to-main-1c2c
+
+# Switch to main branch
+echo "Switching to main branch..."
 git checkout main
 
-echo "Merging current branch into main..."
-git merge cursor/fix-syntax-push-and-merge-to-main-ba8a
+# Merge the feature branch
+echo "Merging feature branch..."
+git merge cursor/fix-syntax-push-and-merge-to-main-1c2c
 
-echo "Pushing main branch..."
+# Push to main
+echo "Pushing to main..."
 git push origin main
 
-echo "Operations completed successfully!"
+echo "Git operations completed successfully!"

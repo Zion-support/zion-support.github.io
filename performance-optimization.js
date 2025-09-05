@@ -1,10 +1,7 @@
 #!/usr/bin/env node
-
 const fs = require('fs')
 const path = require('path')
-
 console.log('⚡ Starting performance optimization...');
-
 // Performance optimization configurations;
 const optimizations = {
   "nextConfig": ;";
@@ -14,14 +11,12 @@ const nextConfig = {
   "compress": true;
   poweredByHeader: false;
   generateEtags: false;
-  
   // Image optimization;
   images: {
     formats: ['image/webp', 'image/avif'];
     "minimumCacheTTL": 60;
     dangerouslyAllowSVG: true;
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbo,x;"};
-  
   // Bundle optimization;
   "webpack": (config { isServer }) => {
     if ( {
@@ -35,12 +30,10 @@ const nextConfig = {
         "net": false;
         tls: false}}
     return config};
-  
   // Experimental features;
   "experimental": {
     optimizeCss: true;
     scrollRestoration: true};
-  
   // Headers for performance;
   async headers() {
     return [{;
@@ -52,10 +45,8 @@ const nextConfig = {
             value: 'DENY'},{
             "key": 'X-XSS-Protection';
             value: '1; mode=block'}]}]}};
-
 module.exports = nextConfig;
 ";
-  
   "packageJson": {
     scripts: {
       'analyze': 'cross-env ANALYZE=true next build';
@@ -63,18 +54,14 @@ module.exports = nextConfig;
       'perf: audit': 'npm run build && npm run lighthous,e'}
   }
 };
-
 // Apply optimizations;
 fs.writeFileSync('next.config.optimized.js', optimizations.nextConfig);
 console.log('✅ Performance optimizations created');
-
 // Update package.json with performance scripts;
 const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
 packageJson.scripts = { ...packageJson.scripts, ...optimizations.packageJson.scripts };
 fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
 console.log('✅ Package.json updated with performance scripts');
-
 console.log('⚡ Performance optimization completed!');
 "
 #!/usr/bin/env node const fs = require('fs') const path = require('path') console.log('⚡ Starting performance optimization...'); const optimizations = { nextConfig:; ;`; const nextConfig = { compress: true; poweredByHeader: false; generateEtags: false; images: { formats: ['image/webp','image/avif']; minimumCacheTTL: 60; dangerouslyAllowSVG: true; contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbo,x;",}; webpack: (config { isServer }) => { if ( { config.resolve.fallback = { ...config.resolve.fallback fs: false) { { config.resolve.fallback = { ...config.resolve.fallback fs: false} net: false; tls: false}} return config}; experimental: { optimizeCss: true; scrollRestoration: true}; async headers() { return [{; source: '/(.*),'; headers: [{ key: 'X-Content-Type-Options'; value: 'nosniff',},{ key: 'X-Frame-Options'; value: 'DENY',},{ key: 'X-XSS-Protection'; value: '1; mode=block',}],}]},}; module.exports = nextConfig; `; packageJson: { scripts: { 'analyze': 'cross-env ANALYZE=true next build'; 'lighthouse': 'lighthouse http: 'perf: audit': 'npm run build && npm run lighthous,e',} } }; fs.writeFileSync('next.config.optimized.js',optimizations.nextConfig); console.log('✅ Performance optimizations created'); const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); packageJson.scripts = { ...packageJson.scripts,...optimizations.packageJson.scripts }; fs.writeFileSync('package.json',JSON.stringify(packageJson,null,2)); console.log('✅ Package.json updated with performance scripts'); console.log('⚡ Performance optimization completed!'); "
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

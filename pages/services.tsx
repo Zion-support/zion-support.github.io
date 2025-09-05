@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight, CheckCircle, Star, Zap, Shield } from 'lucide-react';
-
 const services = [{
     title: "AI Services",
     description: "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and intelligent automation.",
@@ -11,17 +10,17 @@ const services = [{
     href: "/ai-services",
     features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation"],
     pricing: "Starting at $1,000/month",
-    count: "20+ Services",ursor/add-new-services-and-deploy-updates-1b90
+    count: "20+ Services",
     popular: true
   },
   {
-    title: "IT Services", 
+    title: "IT Services",
 description: "Comprehensive information technology services including cloud infrastructure, cybersecurity, and system administration.",
     icon: Network,
     href: "/it-services",
     features: ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration"],
     pricing: "Starting at $120/hour",
-    count: "20+ Services",ursor/add-new-services-and-deploy-updates-1b90
+    count: "20+ Services",
     popular: true
   },
   {
@@ -31,12 +30,11 @@ description: "Scalable software as a service solutions designed for specific bus
     href: "/micro-saas",
     features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management"],
     pricing: "Starting at $29/month",
-    count: "25+ Products",ursor/add-new-services-and-deploy-updates-1b90
+    count: "25+ Products",
     popular: true
   }
 ];
-
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
+const benefits = [{
     icon: CheckCircle,
     title: "Expert Team",
     description: "50+ certified professionals with years of experience"
@@ -57,7 +55,6 @@ const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
     description: "Round-the-clock technical support"
   }
 ];
-
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -66,7 +63,6 @@ export default function ServicesPage() {
                   <meta name="description" content="Comprehensive technology solutions including AI services, IT services, and Micro SaaS solutions. Expert team delivering innovative results." />
                   <meta name="keywords" content="AI services, IT services, Micro SaaS, cloud solutions, technology consulting" />
                   </Head>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
 <div className="absolute inset-0">
@@ -76,13 +72,13 @@ export default function ServicesPage() {
                   </div>
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<h1 className="text-4xl md:text-6xl font-bold mb-6">ursor/add-new-services-and-deploy-updates-1b90
+<h1 className="text-4xl md:text-6xl font-bold mb-6">
               Our{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Services
@@ -92,7 +88,6 @@ export default function ServicesPage() {
                   </motion.div>
                   </div>
                   </section>
-
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -103,7 +98,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }} ">
                   <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">What We Offer</h2>
-                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">ursor/add-new-services-and-deploy-updates-1b90
+                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               We provide end-to-end technology solutions tailored to your business needs. From AI-powered automation to robust IT infrastructure and scalable SaaS applications.
             </p>
                   </motion.div>
@@ -113,20 +108,20 @@ export default function ServicesPage() {
               return (
                 <motion.div
                   key={index}
-className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relativeursor/add-new-services-and-deploy-updates-1b90
+className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 whileHover={{ y: -5 }} ">
                   {service.popular && ( <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">ursor/add-new-services-and-deploy-updates-1b90
+                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                   </div>
                   )}
                   <div className="text-blue-600 mb-6 group-hover:text-purple-600 transition-colors">
-<IconComponent className="w-12 h-12" />ursor/add-new-services-and-deploy-updates-1b90
+<IconComponent className="w-12 h-12" />
                   </div>
                   <div className="flex items-center justify-between mb-4">
                   <h3 className="text-2xl font-bold text-gray-900">
@@ -141,7 +136,7 @@ whileHover={{ y: -5 }} ">
                   </p>
                   <div className="mb-6">
 <h4 className="font-semibold text-gray-900 mb-3">Key "Features": </h4>
-                  <ul className="space-y-2">ursor/add-new-services-and-deploy-updates-1b90
+                  <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
@@ -166,7 +161,6 @@ whileHover={{ y: -5 }} ">
           </div>
                   </div>
                   </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -183,7 +177,7 @@ whileHover={{ y: -5 }} ">
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {benefits.map((benefit, index) => {ursor/add-new-services-and-deploy-updates-1b90
+                    {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
                 <motion.div
@@ -209,17 +203,16 @@ whileHover={{ y: -5 }} ">
           </div>
                   </div>
                   </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
 <div className="container mx-auto px-4 text-center">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how our services can help transform your business and drive growth.
             </p>

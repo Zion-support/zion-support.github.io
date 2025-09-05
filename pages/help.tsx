@@ -2,21 +2,20 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  HelpCircle, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
+import {
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
   Video,
   Download,
   ExternalLink,
   ChevronDown,
   ChevronRight
 } from 'lucide-react';
-
 const helpCategories = [
   {
     title: "Getting Started",
@@ -115,14 +114,12 @@ const helpCategories = [
     ]
   }
 ];
-
 const quickLinks = [
   { title: "API Documentation", href: "/docs/api", icon: FileText },
   { title: "Video Tutorials", href: "/tutorials", icon: Video },
   { title: "Download Resources", href: "/downloads", icon: Download },
   { title: "Community Forum", href: "/community", icon: MessageCircle }
 ];
-
 const faqs = [
   {
     question: "How do I get started with your AI services?",
@@ -141,22 +138,18 @@ const faqs = [
     answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period."
   }
 ];
-
 export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-
   const toggleCategory = (categoryTitle: string) => {
     setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
   };
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Help Center - Zion Tech Group</title>
         <meta name="description" content="Get help with Zion Tech Group services. Find guides, tutorials, and support resources." />
       </Head>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -168,7 +161,6 @@ export default function HelpPage() {
             <p className="text-xl text-blue-100 mb-8">
               Find answers, guides, and support to help you succeed
             </p>
-            
             {/* Search Bar */}
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -183,7 +175,6 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
-
       {/* Quick Links */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
@@ -209,7 +200,6 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
-
       {/* Help Categories */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -217,7 +207,6 @@ export default function HelpPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
               Browse by Category
             </h2>
-            
             <div className="space-y-6">
               {helpCategories.map((category, categoryIndex) => (
                 <motion.div
@@ -243,7 +232,6 @@ export default function HelpPage() {
                       <ChevronRight className="w-5 h-5 text-gray-500" />
                     )}
                   </button>
-                  
                   <AnimatePresence>
                     {expandedCategory === category.title && (
                       <motion.div
@@ -288,7 +276,6 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -296,7 +283,6 @@ export default function HelpPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
               Frequently Asked Questions
             </h2>
-            
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <motion.div
@@ -318,7 +304,6 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
-
       {/* Contact Support */}
       <section className="py-16 bg-blue-600">
         <div className="container mx-auto px-4">
@@ -329,7 +314,6 @@ export default function HelpPage() {
             <p className="text-xl text-blue-100 mb-8">
               Our support team is here to help you succeed
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white/10 rounded-lg p-6">
                 <Mail className="w-8 h-8 text-white mx-auto mb-4" />
@@ -342,7 +326,6 @@ export default function HelpPage() {
                   support@ziontechgroup.com
                 </a>
               </div>
-              
               <div className="bg-white/10 rounded-lg p-6">
                 <Phone className="w-8 h-8 text-white mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
@@ -354,7 +337,6 @@ export default function HelpPage() {
                   +1 (555) 123-4567
                 </a>
               </div>
-              
               <div className="bg-white/10 rounded-lg p-6">
                 <MessageCircle className="w-8 h-8 text-white mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>

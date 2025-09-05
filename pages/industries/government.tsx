@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Building, 
-  Shield, 
-  Users, 
+import {
+  Building,
+  Shield,
+  Users,
   CheckCircle,
   ArrowRight,
   Globe,
@@ -16,7 +16,6 @@ import {
   Mail
 } from 'lucide-react';
 import Layout from '../../components/Layout';
-
 const services = [
   {
     title: 'Citizen Service Portals',
@@ -85,7 +84,6 @@ const services = [
     ]
   }
 ];
-
 const benefits = [
   {
     title: 'Enhanced Security',
@@ -108,10 +106,9 @@ const benefits = [
     icon: Globe
   }
 ];
-
 export default function GovernmentPage() {
   return (
-    <Layout 
+    <Layout
       title="Government Technology Solutions - Zion Tech Group"
       description="Transform government operations with citizen service portals, secure data management, digital identity solutions, and public safety systems."
       keywords="government technology, citizen services, digital government, public safety, government security, civic tech"
@@ -124,7 +121,6 @@ export default function GovernmentPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -142,7 +138,7 @@ export default function GovernmentPage() {
                 </h1>
               </div>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Transform government operations with secure, efficient, and citizen-centric technology solutions. 
+                Transform government operations with secure, efficient, and citizen-centric technology solutions.
                 Enhance service delivery, improve transparency, and ensure public safety.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -156,7 +152,6 @@ export default function GovernmentPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -170,11 +165,10 @@ export default function GovernmentPage() {
                 Government Technology Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive government technology solutions designed for federal, state, 
+                Comprehensive government technology solutions designed for federal, state,
                 and local government agencies.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -187,10 +181,8 @@ export default function GovernmentPage() {
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -204,7 +196,6 @@ export default function GovernmentPage() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -218,11 +209,10 @@ export default function GovernmentPage() {
                 Why Choose Our Government Solutions?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our government technology solutions deliver enhanced security, improved efficiency, 
+                Our government technology solutions deliver enhanced security, improved efficiency,
                 and better citizen services.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -242,7 +232,6 @@ export default function GovernmentPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -255,7 +244,7 @@ export default function GovernmentPage() {
                 Ready to Transform Government?
               </h2>
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-                Let our government technology experts help you implement solutions that enhance 
+                Let our government technology experts help you implement solutions that enhance
                 citizen services and improve operational efficiency.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

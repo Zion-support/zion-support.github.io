@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Building, Shield, Users, BarChart3, ArrowRight, CheckCircle, Clock, Globe, Database, Lock } from 'lucide-react';
 import Layout from "../../components/Layout";
-
 const features = [
   {
     title: 'Scalable Architecture',
@@ -30,7 +29,6 @@ const features = [
     benefits: ['API Integration', 'Legacy System Migration', 'Data Synchronization', 'Workflow Automation']
   }
 ];
-
 const capabilities = [
   { title: 'Cloud Migration', description: 'Seamless migration to cloud infrastructure' },
   { title: 'DevOps Automation', description: 'Automated deployment and continuous integration' },
@@ -39,14 +37,12 @@ const capabilities = [
   { title: 'Compliance Management', description: 'SOC 2, HIPAA, GDPR compliance solutions' },
   { title: 'Disaster Recovery', description: 'Comprehensive backup and recovery solutions' }
 ];
-
 const stats = [
   { number: '50+', label: 'Enterprise Clients' },
   { number: '200+', label: 'Projects Delivered' },
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' }
 ];
-
 export default function EnterpriseSolutionsPage() {
   return (
     <Layout
@@ -61,7 +57,6 @@ export default function EnterpriseSolutionsPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -96,7 +91,6 @@ export default function EnterpriseSolutionsPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -116,7 +110,6 @@ export default function EnterpriseSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -133,7 +126,6 @@ export default function EnterpriseSolutionsPage() {
                 Our enterprise solutions are designed to meet the complex needs of large organizations with robust security, scalability, and compliance features
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -152,7 +144,6 @@ export default function EnterpriseSolutionsPage() {
                       <p className="text-gray-600">{feature.description}</p>
                     </div>
                   </div>
-
                   <ul className="space-y-3">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-600">
@@ -166,7 +157,6 @@ export default function EnterpriseSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Capabilities Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -183,7 +173,6 @@ export default function EnterpriseSolutionsPage() {
                 Comprehensive enterprise services covering all aspects of your technology infrastructure and digital transformation
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {capabilities.map((capability, index) => (
                 <motion.div
@@ -200,7 +189,6 @@ export default function EnterpriseSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">

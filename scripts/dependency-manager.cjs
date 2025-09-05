@@ -28,7 +28,6 @@ class DependencyManager {
           cwd: this.projectRoot,
           encoding: 'utf8'
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
         outdatedPackages = JSON.parse(outdatedResult)} catch (error) {
         // npm outdated returns non-zero exit code when packages are outdated
         if (error.stdout) {

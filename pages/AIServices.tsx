@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-
 export default function AIServices() {
   const aiServices = [
     {
@@ -833,9 +832,8 @@ export default function AIServices() {
       savings: "Save up to $10,400/month"
     }
   ];
-
   return (
-    <Layout 
+    <Layout
       title="AI Services - Zion Tech Group"
       description="Cutting-edge AI services including content creation, automation, machine learning, and intelligent solutions."
     >
@@ -868,7 +866,6 @@ export default function AIServices() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -885,11 +882,9 @@ export default function AIServices() {
                     <div className="text-sm text-green-400 font-semibold">{service.savings}</div>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6">
                   {service.description}
                 </p>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                   <ul className="text-gray-300 space-y-2">
@@ -901,7 +896,6 @@ export default function AIServices() {
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
                   <ul className="text-gray-300 space-y-2">
@@ -913,7 +907,6 @@ export default function AIServices() {
                     ))}
                   </ul>
                 </div>
-
                 <div className="flex gap-4">
                   <Link
                     href="/contact"
@@ -933,7 +926,6 @@ export default function AIServices() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
         <div className="max-w-7xl mx-auto text-center">

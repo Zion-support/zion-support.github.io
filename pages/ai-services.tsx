@@ -2,22 +2,22 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Database, 
-  BarChart3, 
-  Users, 
-  MessageSquare, 
-  Search, 
-  Eye, 
-  Target, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Clock, 
-  Award, 
+import {
+  Brain,
+  Zap,
+  Shield,
+  Database,
+  BarChart3,
+  Users,
+  MessageSquare,
+  Search,
+  Eye,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Award,
   Star,
   Globe,
   Lock,
@@ -45,8 +45,8 @@ import {
   Home,
   Gamepad2
 } from 'lucide-react';
-
-const aiServices = [{ursor/add-new-services-and-deploy-updates-1b90
+const aiServices = [
+  {
     title: 'AI-Powered Email Responder',
     description: 'Automated email responses using advanced NLP and machine learning algorithms.',
     icon: Mail,
@@ -215,7 +215,7 @@ const aiServices = [{ursor/add-new-services-and-deploy-updates-1b90
 description: 'Complete autonomous vehicle systems with advanced perception and decision-making capabilities.',
     icon: Car,
     features: ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Real-time Decision Making'],
-    pricing: '$100,000 - $500,000/project',ursor/add-new-services-and-deploy-updates-1b90
+    pricing: '$100,000 - $500,000/project',
     category: 'Autonomous Systems',
     popular: true
   },
@@ -553,16 +553,14 @@ title: 'Generative AI Content Creation Suite',
     popular: true
   }
 ];
-
-const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },ursor/add-new-services-and-deploy-updates-1b90
+const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
   { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
   { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
   { name: 'Manufacturing', icon: Settings, description: 'Predictive maintenance and quality control' },
   { name: 'Education', icon: BookOpen, description: 'Personalized learning and assessment' },
   { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' }
 ];
-
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
+const benefits = [{
     icon: Zap,
     title: 'Increased Efficiency',
     description: 'Automate repetitive tasks and processes',
@@ -587,7 +585,6 @@ const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
     stat: '85%'
   }
 ];
-
 export default function AIServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -596,7 +593,6 @@ export default function AIServicesPage() {
                   <meta name="description" content="Cutting-edge AI solutions including machine learning, natural language processing, computer vision, and intelligent automation." />
                   <meta name="keywords" content="AI services, machine learning, NLP, computer vision, artificial intelligence, automation" />
                   </Head>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
 <div className="absolute inset-0">
@@ -606,7 +602,7 @@ export default function AIServicesPage() {
                   </div>
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -614,7 +610,7 @@ export default function AIServicesPage() {
           >
 <div className="flex items-center justify-center mb-6">
                   <Brain className="h-16 w-16 text-blue-400 mr-4" />
-                  <h1 className="text-4xl md:text-6xl font-bold">ursor/add-new-services-and-deploy-updates-1b90
+                  <h1 className="text-4xl md:text-6xl font-bold">
                 AI{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Services
@@ -625,7 +621,7 @@ export default function AIServicesPage() {
               Transform your business with cutting-edge artificial intelligence solutions. From machine learning to natural language processing, we deliver AI that works.
             </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">ursor/add-new-services-and-deploy-updates-1b90
+                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get AI Consultation
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
@@ -635,7 +631,6 @@ export default function AIServicesPage() {
                   </motion.div>
                   </div>
                   </section>
-
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -646,7 +641,7 @@ export default function AIServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our AI Solutions
             </h2>
                   <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -659,7 +654,7 @@ export default function AIServicesPage() {
               return (
                 <motion.div
                   key={index}
-className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 groupursor/add-new-services-and-deploy-updates-1b90
+className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -669,7 +664,7 @@ whileHover={{ y: -5 }} ">
                   <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
                   <IconComponent className="w-10 h-10" />
                   </div>
-                  <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">ursor/add-new-services-and-deploy-updates-1b90
+                  <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
                       {service.category}
                     </span>
                   </div>
@@ -681,7 +676,7 @@ whileHover={{ y: -5 }} ">
                   </p>
                   <div className="mb-4">
 <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">ursor/add-new-services-and-deploy-updates-1b90
+                  <ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
                   <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
@@ -706,7 +701,6 @@ whileHover={{ y: -5 }} ">
           </div>
                   </div>
                   </section>
-
       {/* Industries Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -717,7 +711,7 @@ whileHover={{ y: -5 }} ">
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our AI solutions are tailored for various industries and use cases.
             </p>
@@ -730,7 +724,7 @@ whileHover={{ y: -5 }} ">
                   key={index}
 className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">ursor/add-new-services-and-deploy-updates-1b90
+                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-blue-600" />
                   </div>
@@ -746,7 +740,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           </div>
                   </div>
                   </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -757,7 +750,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our AI Services?</h2>ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our AI Services?</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Proven results and measurable impact for your business.
             </p>
@@ -792,17 +785,16 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           </div>
                   </div>
                   </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
 <div className="container mx-auto px-4 text-center">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>ursor/add-new-services-and-deploy-updates-1b90
+<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how our AI solutions can drive innovation and growth for your organization.
             </p>

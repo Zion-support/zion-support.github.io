@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  Sun, 
-  Moon, 
-  User, 
-  Phone, 
+import {
+  Menu,
+  X,
+  Search,
+  Sun,
+  Moon,
+  User,
+  Phone,
   Mail,
   ChevronDown,
   Zap,
@@ -20,7 +20,6 @@ import {
   HelpCircle,
   DollarSign
 } from 'lucide-react';
-
 const navigation = [{
     name: 'Services',
     href: '/services',
@@ -63,33 +62,27 @@ const navigation = [{
     icon: Phone
   }
 ];
-
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709'
-};ursor/add-new-services-and-deploy-updates-1b90
-
+};
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
     }
   };
-
   const navigationItems = [
     {
       label: 'Home',
@@ -163,11 +156,10 @@ const contactInfo = {
       ]
     },
   ];
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-800/50' 
+      isScrolled
+        ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-800/50'
         : 'bg-transparent'
     } ${className || ''}`}>
       {/* Top Bar */}
@@ -175,7 +167,7 @@ const contactInfo = {
         <div className="container mx-auto px-4">
 <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
             <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
-              <div className="flex items-center gap-2">ursor/add-new-services-and-deploy-updates-1b90
+              <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 <span>+1 (555) 123-4567</span>
               </div>
@@ -193,7 +185,6 @@ const contactInfo = {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <div className="bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div className="container mx-auto px-4">
@@ -205,7 +196,6 @@ const contactInfo = {
             >
               <Menu className="w-6 h-6 text-gray-700" />
             </button>
-
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -213,7 +203,6 @@ const contactInfo = {
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
-
 {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
@@ -228,7 +217,6 @@ const contactInfo = {
                   <span>{item.name}</span>
                   {item.children && <ChevronDown className="w-4 h-4" />}
                 </Link>
-
                 {/* Dropdown Menu */}
                 {item.children && (
                   <AnimatePresence>
@@ -260,10 +248,9 @@ const contactInfo = {
                         ))}
                       </motion.div>
                     )}
-                  </AnimatePresence>ursor/add-new-services-and-deploy-updates-1b90
+                  </AnimatePresence>
                 )}
               </div>
-
               {/* CTA Button */}
               <Link
                 href="/contact"
@@ -271,7 +258,6 @@ const contactInfo = {
               >
                 Get Started
               </Link>
-
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -281,7 +267,6 @@ const contactInfo = {
               </button>
             </div>
           </div>
-
 {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -297,7 +282,6 @@ const contactInfo = {
               Free Consultation
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -306,7 +290,6 @@ const contactInfo = {
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (
@@ -351,7 +334,6 @@ const contactInfo = {
                     )}
                   </div>
                 ))}
-                
                 {/* Mobile CTA Buttons */}
                 <div className="px-4 pt-4 border-t border-gray-200 space-y-2">
                   <Link
@@ -366,7 +348,7 @@ const contactInfo = {
                     className="block w-full px-4 py-3 text-center bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors font-medium"
                     onClick={closeMenu}
                   >
-                    Free Consultationursor/add-new-services-and-deploy-updates-1b90
+                    Free Consultation
                   </Link>
                   {item.hasDropdown && item.dropdownItems && (
                     <div className="ml-4 space-y-2 mt-2">

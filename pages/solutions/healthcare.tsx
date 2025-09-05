@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight } from 'lucide-react';
-
 const features = [
   {
     icon: Heart,
@@ -29,7 +28,6 @@ const features = [
     description: 'AI-powered analytics for population health management and predictive insights.'
   }
 ];
-
 const solutions = [
   'HIPAA-Compliant Cloud Infrastructure',
   'Electronic Health Record (EHR) Systems',
@@ -42,10 +40,9 @@ const solutions = [
   'Healthcare Cybersecurity',
   'Population Health Management'
 ];
-
 export default function HealthcareSolutionsPage() {
   return (
-    <Layout 
+    <Layout
       title="Healthcare Solutions - Zion Tech Group"
       description="Transform healthcare delivery with our HIPAA-compliant solutions, EHR systems, telemedicine platforms, and healthcare analytics."
     >
@@ -61,8 +58,8 @@ export default function HealthcareSolutionsPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform healthcare delivery with our HIPAA-compliant technology solutions. 
-                From EHR systems to telemedicine platforms, we help healthcare organizations 
+                Transform healthcare delivery with our HIPAA-compliant technology solutions.
+                From EHR systems to telemedicine platforms, we help healthcare organizations
                 deliver better patient care through innovative technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -77,7 +74,6 @@ export default function HealthcareSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -86,11 +82,10 @@ export default function HealthcareSolutionsPage() {
                 Comprehensive Healthcare Technology Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our healthcare solutions are designed to improve patient outcomes, 
+                Our healthcare solutions are designed to improve patient outcomes,
                 streamline operations, and ensure compliance with healthcare regulations.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">
@@ -104,7 +99,6 @@ export default function HealthcareSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">
           <div className="container mx-auto px-4">
@@ -123,7 +117,6 @@ export default function HealthcareSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Compliance Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -133,11 +126,10 @@ export default function HealthcareSolutionsPage() {
                   HIPAA Compliant & Secure
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  All our healthcare solutions are built with security and compliance in mind, 
+                  All our healthcare solutions are built with security and compliance in mind,
                   ensuring your patient data is protected and your organization meets regulatory requirements.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -164,7 +156,6 @@ export default function HealthcareSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -173,7 +164,7 @@ export default function HealthcareSolutionsPage() {
                 Ready to Transform Healthcare Delivery?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let our healthcare technology experts help you implement solutions that 
+                Let our healthcare technology experts help you implement solutions that
                 improve patient care while ensuring compliance and security.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

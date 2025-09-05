@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-
 export default function MicroSAAS() {
   const microSAASServices = [
     {
@@ -677,16 +676,13 @@ export default function MicroSAAS() {
       category: "Event Management"
     }
   ];
-
   const categories = [...new Set(microSAASServices.map(service => service.category))];
-
   return (
-    <Layout 
+    <Layout
       title="Micro SAAS Services - Zion Tech Group"
       description="Innovative micro SAAS solutions designed to boost productivity and streamline business operations with AI-powered tools."
     >
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-
       {/* Header */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -719,7 +715,6 @@ export default function MicroSAAS() {
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -735,7 +730,6 @@ export default function MicroSAAS() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -759,11 +753,9 @@ export default function MicroSAAS() {
                     <div className="text-sm text-green-400 font-semibold">{service.savings}</div>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6">
                   {service.description}
                 </p>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                   <ul className="text-gray-300 space-y-2">
@@ -775,7 +767,6 @@ export default function MicroSAAS() {
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
                   <ul className="text-gray-300 space-y-2">
@@ -787,7 +778,6 @@ export default function MicroSAAS() {
                     ))}
                   </ul>
                 </div>
-
                 <div className="flex gap-4">
                   <Link
                     href="/contact"
@@ -807,7 +797,6 @@ export default function MicroSAAS() {
           </div>
         </div>
       </section>
-
       {/* Pricing Comparison */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
         <div className="max-w-7xl mx-auto text-center">
@@ -833,7 +822,6 @@ export default function MicroSAAS() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

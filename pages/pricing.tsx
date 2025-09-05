@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Check, X, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react';
-
 const plans = [
   {
     name: "Starter",
@@ -68,7 +67,6 @@ const plans = [
     cta: "Contact Sales"
   }
 ];
-
 const addOns = [
   {
     name: "Additional AI Models",
@@ -95,7 +93,6 @@ const addOns = [
     description: "Team training and onboarding sessions"
   }
 ];
-
 const faqs = [
   {
     question: "Can I change my plan anytime?",
@@ -114,17 +111,14 @@ const faqs = [
     answer: "Yes, we offer a 14-day free trial for all plans. No credit card required to get started."
   }
 ];
-
 export default function PricingPage() {
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly');
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Transparent pricing for AI solutions, IT services, and technology consulting. Choose the plan that fits your business needs." />
       </Head>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -135,7 +129,6 @@ export default function PricingPage() {
             <p className="text-xl text-blue-100 mb-8">
               Choose the plan that fits your business needs. No hidden fees, no surprises.
             </p>
-            
             {/* Billing Toggle */}
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className={`text-sm ${billingPeriod === 'monthly' ? 'text-white' : 'text-blue-300'}`}>
@@ -161,7 +154,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing Plans */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -181,7 +173,6 @@ export default function PricingPage() {
                       Most Popular
                     </div>
                   )}
-                  
                   <div className="p-8">
                     <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -199,7 +190,6 @@ export default function PricingPage() {
                         </span>
                       </div>
                     </div>
-
                     <div className="space-y-4 mb-8">
                       {plan.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-start">
@@ -214,7 +204,6 @@ export default function PricingPage() {
                         </div>
                       ))}
                     </div>
-
                     <Link
                       href={plan.name === 'Enterprise' ? '/contact' : '/contact'}
                       className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
@@ -232,7 +221,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-
       {/* Add-ons */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -245,7 +233,6 @@ export default function PricingPage() {
                 Enhance your plan with additional services
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {addOns.map((addOn, index) => (
                 <motion.div
@@ -271,7 +258,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-
       {/* FAQ */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -281,7 +267,6 @@ export default function PricingPage() {
                 Frequently Asked Questions
               </h2>
             </div>
-
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <motion.div
@@ -303,7 +288,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-blue-600">
         <div className="container mx-auto px-4">

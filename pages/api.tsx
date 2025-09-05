@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-
 export default function APIPage() {
   const apiFeatures = [
     {
@@ -30,9 +29,8 @@ export default function APIPage() {
       features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
     }
   ];
-
   return (
-    <Layout 
+    <Layout
       title="API Reference - Zion Tech Group"
       description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
     >
@@ -50,13 +48,12 @@ export default function APIPage() {
                 API Reference
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Integrate with Zion Tech Group services using our comprehensive APIs. 
+                Integrate with Zion Tech Group services using our comprehensive APIs.
                 Build powerful applications with our developer-friendly platform.
               </p>
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -95,7 +92,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-
         {/* API Endpoints Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -113,7 +109,6 @@ export default function APIPage() {
                 Explore our comprehensive API endpoints for AI services, IT solutions, and micro SaaS platforms.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">AI Services API</h3>
@@ -132,7 +127,6 @@ export default function APIPage() {
                   </div>
                 </div>
               </div>
-
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">IT Services API</h3>
                 <div className="space-y-2">
@@ -150,7 +144,6 @@ export default function APIPage() {
                   </div>
                 </div>
               </div>
-
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Micro SaaS API</h3>
                 <div className="space-y-2">
@@ -171,7 +164,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">

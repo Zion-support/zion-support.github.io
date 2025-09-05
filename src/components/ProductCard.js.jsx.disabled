@@ -6,14 +6,12 @@ import {useRouter} from 'next/router';
 import {useSnackbar} from 'notistack';
 import {useDispatch} from 'react-redux';
 import {captureException} from '@sentry/nextjs';
-
 export default function ProductCard($1) {
   const { isAuthenticated } = useAuth();
   const {isWishlisted, toggle} = useWishlist();
   const [imageError, setImageError] = useState(false);
   const router = useRouter();
   const {enqueueSnackbar} = useSnackbar();
-  
   if (!product || 
       typeof product.id !== "string" || 
       typeof product.title !== "string" || 
@@ -29,8 +27,6 @@ export default function ProductCard($1) {
       </div>
     );
   }
-  
   const active = isWishlisted(product.id);
   const dispatch = useDispatch();';';
 import React,{useState} from 'react'; import {useAuth} from '../hooks/useAuth'; import {useWishlist} from '../hooks/useWishlist'; import {useRouter} from 'next/router'; import {useSnackbar} from 'notistack'; import {useDispatch} from 'react-redux'; import {captureException} from '@sentry/nextjs'; export default function ProductCard($1) { const { isAuthenticated } = useAuth(); const {isWishlisted,toggle} = useWishlist(); const [imageError,setImageError] = useState(false); const router = useRouter(); const {enqueueSnackbar} = useSnackbar(); if (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === ") { captureException(new Error("Invalid product data received by ProductCard"),{ extra: { product } }); return ( <div className="min-h-screen bg-white"> <p className="text-destructive text-sm"> Product information unavailable. </p> </div> )} const active = isWishlisted(product.id); const dispatch = useDispatch(); ;';';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/components/ProductCard.js.jsx

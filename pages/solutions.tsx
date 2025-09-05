@@ -2,17 +2,17 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Rocket, 
-  BarChart3, 
-  Settings, 
-  Globe, 
-  Cloud, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Zap, 
+import {
+  Shield,
+  Rocket,
+  BarChart3,
+  Settings,
+  Globe,
+  Cloud,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Zap,
   Users,
   Brain,
   Network,
@@ -21,7 +21,6 @@ import {
   Clock,
   Award
 } from 'lucide-react';
-
 const solutions = [
   {
     title: 'Enterprise Solutions',
@@ -158,7 +157,6 @@ const solutions = [
     timeline: '2-12 weeks'
   }
 ];
-
 const process = [
   {
     step: '01',
@@ -191,7 +189,6 @@ const process = [
     icon: Rocket
   }
 ];
-
 const technologies = [
   { name: 'AI & Machine Learning', icon: Brain, description: 'Advanced AI solutions' },
   { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP' },
@@ -200,7 +197,6 @@ const technologies = [
   { name: 'IoT & Edge', icon: Network, description: 'Connected systems' },
   { name: 'Blockchain', icon: Lock, description: 'Secure transactions' }
 ];
-
 export default function SolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -209,14 +205,12 @@ export default function SolutionsPage() {
         <meta name="description" content="Comprehensive technology solutions for enterprises, startups, and industries. Custom development, digital transformation, and cloud migration services." />
         <meta name="keywords" content="enterprise solutions, startup solutions, custom development, digital transformation, cloud migration, industry solutions" />
       </Head>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
           <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
         </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -244,7 +238,6 @@ export default function SolutionsPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -262,7 +255,6 @@ export default function SolutionsPage() {
               We offer a wide range of technology solutions tailored to different business sizes, industries, and requirements.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {solutions.map((solution, index) => {
               const IconComponent = solution.icon;
@@ -283,19 +275,15 @@ export default function SolutionsPage() {
                       </span>
                     </div>
                   )}
-                  
                   <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     {solution.title}
                   </h3>
-                  
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {solution.description}
                   </p>
-
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -307,7 +295,6 @@ export default function SolutionsPage() {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                     <ul className="space-y-2">
@@ -319,7 +306,6 @@ export default function SolutionsPage() {
                       ))}
                     </ul>
                   </div>
-
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <div className="text-lg font-semibold text-blue-600">{solution.pricing}</div>
@@ -339,7 +325,6 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -357,7 +342,6 @@ export default function SolutionsPage() {
               We follow a proven 5-step process to ensure successful project delivery and client satisfaction.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {process.map((step, index) => {
               const IconComponent = step.icon;
@@ -390,7 +374,6 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -408,7 +391,6 @@ export default function SolutionsPage() {
               We leverage cutting-edge technologies and frameworks to build robust, scalable, and secure solutions.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => {
               const IconComponent = tech.icon;
@@ -436,7 +418,6 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">

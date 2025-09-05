@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe, CheckCircle, ArrowRight } from 'lucide-react';
-
 const features = [
   {
     icon: GraduationCap,
@@ -29,7 +28,6 @@ const features = [
     description: 'ADA-compliant educational technology that ensures equal access for all students.'
   }
 ];
-
 const solutions = [
   'Learning Management Systems (LMS)',
   'Student Information Systems (SIS)',
@@ -42,10 +40,9 @@ const solutions = [
   'Student Analytics & Reporting',
   'Educational Data Integration'
 ];
-
 export default function EducationSolutionsPage() {
   return (
-    <Layout 
+    <Layout
       title="Education Solutions - Zion Tech Group"
       description="Transform education with our comprehensive learning management systems, virtual classrooms, student information systems, and educational technology solutions."
     >
@@ -61,8 +58,8 @@ export default function EducationSolutionsPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform education with our comprehensive technology solutions. 
-                From learning management systems to virtual classrooms, we help 
+                Transform education with our comprehensive technology solutions.
+                From learning management systems to virtual classrooms, we help
                 educational institutions deliver exceptional learning experiences.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -77,7 +74,6 @@ export default function EducationSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -86,11 +82,10 @@ export default function EducationSolutionsPage() {
                 Comprehensive Educational Technology Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our education solutions are designed to enhance learning outcomes, 
+                Our education solutions are designed to enhance learning outcomes,
                 improve administrative efficiency, and support modern educational practices.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">
@@ -104,7 +99,6 @@ export default function EducationSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">
           <div className="container mx-auto px-4">
@@ -123,7 +117,6 @@ export default function EducationSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Accessibility Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -133,11 +126,10 @@ export default function EducationSolutionsPage() {
                   Accessible & Inclusive Education
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Our education solutions are built with accessibility in mind, 
+                  Our education solutions are built with accessibility in mind,
                   ensuring equal access to learning opportunities for all students.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -164,7 +156,6 @@ export default function EducationSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -173,7 +164,7 @@ export default function EducationSolutionsPage() {
                 Ready to Transform Education?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let our education technology experts help you implement solutions that 
+                Let our education technology experts help you implement solutions that
                 enhance learning outcomes and support modern educational practices.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
