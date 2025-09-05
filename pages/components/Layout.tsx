@@ -33,12 +33,14 @@ export default function Layout({ title, description, children, keywords }: Layou
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
 
   const services = [
-    { name: 'AI Services', href: '/ai-services', description: 'Machine Learning, NLP, Computer Vision' },
-    { name: 'IT Services', href: '/it-services', description: 'Cloud, DevOps, Cybersecurity' },
-    { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom SaaS Solutions' },
-    { name: 'Blockchain', href: '/blockchain', description: 'Smart Contracts, DeFi, NFTs' },
-    { name: 'IoT Solutions', href: '/iot', description: 'Connected Devices, Edge Computing' },
-    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security Audits, Compliance' }
+    { name: 'AI Services', href: '/ai-services', description: 'Machine Learning, NLP, Computer Vision, Quantum AI' },
+    { name: 'IT Services', href: '/it-services', description: 'Cloud, DevOps, Cybersecurity, Quantum Computing' },
+    { name: 'Micro SaaS', href: '/micro-saas', description: 'CRM, Project Management, E-commerce, HR Systems' },
+    { name: 'Blockchain', href: '/blockchain', description: 'Smart Contracts, DeFi, NFTs, Cryptocurrency' },
+    { name: 'IoT Solutions', href: '/iot', description: 'Connected Devices, Edge Computing, Real-time Analytics' },
+    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security Audits, Compliance, Threat Detection' },
+    { name: 'Quantum Computing', href: '/quantum-computing', description: 'Quantum Algorithms, Optimization, Simulation' },
+    { name: 'Edge Computing', href: '/edge-computing', description: 'Distributed Computing, Low Latency, 5G' }
   ];
 
   const solutions = [
@@ -47,7 +49,11 @@ export default function Layout({ title, description, children, keywords }: Layou
     { name: 'E-commerce', href: '/ecommerce', description: 'Online store solutions' },
     { name: 'Healthcare', href: '/healthcare', description: 'Medical technology solutions' },
     { name: 'Finance', href: '/finance', description: 'Fintech and banking solutions' },
-    { name: 'Education', href: '/education', description: 'EdTech platforms' }
+    { name: 'Education', href: '/education', description: 'EdTech platforms' },
+    { name: 'Manufacturing', href: '/manufacturing', description: 'Industrial automation and IoT' },
+    { name: 'Retail', href: '/retail', description: 'Omnichannel retail solutions' },
+    { name: 'Government', href: '/government', description: 'Public sector technology solutions' },
+    { name: 'Non-Profit', href: '/nonprofit', description: 'Technology for social impact' }
   ];
 
   const quickLinks = [
@@ -56,7 +62,11 @@ export default function Layout({ title, description, children, keywords }: Layou
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Support', href: '/support' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api-docs' }
   ];
 
   return (
@@ -360,9 +370,9 @@ export default function Layout({ title, description, children, keywords }: Layou
         {/* Footer */}
         <footer className="bg-gray-900 text-white">
           <div className="container mx-auto px-4 py-16">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
               {/* Company Info */}
-              <div className="lg:col-span-1">
+              <div className="lg:col-span-2">
                 <div className="flex items-center space-x-2 mb-4">
                   <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-xl">Z</span>
@@ -374,7 +384,8 @@ export default function Layout({ title, description, children, keywords }: Layou
                 </div>
                 <p className="text-gray-400 mb-6">
                   Leading provider of AI services, IT solutions, and innovative micro SAAS platforms. 
-                  We help businesses scale, automate, and innovate with cutting-edge technology.
+                  We help businesses scale, automate, and innovate with cutting-edge technology including 
+                  quantum computing, blockchain, edge computing, and autonomous systems.
                 </p>
                 <div className="flex space-x-4">
                   <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -399,7 +410,7 @@ export default function Layout({ title, description, children, keywords }: Layou
               <div>
                 <h3 className="text-lg font-semibold mb-4">Services</h3>
                 <ul className="space-y-2">
-                  {services.slice(0, 6).map((service, index) => (
+                  {services.slice(0, 8).map((service, index) => (
                     <li key={index}>
                       <Link 
                         href={service.href} 
@@ -416,7 +427,7 @@ export default function Layout({ title, description, children, keywords }: Layou
               <div>
                 <h3 className="text-lg font-semibold mb-4">Solutions</h3>
                 <ul className="space-y-2">
-                  {solutions.slice(0, 6).map((solution, index) => (
+                  {solutions.slice(0, 8).map((solution, index) => (
                     <li key={index}>
                       <Link 
                         href={solution.href} 
