@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-
-
-
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, "utf8");
-    
-    // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, "");
     content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, "");
     
     // Clean up any remaining conflict markers
@@ -143,9 +128,6 @@ try {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
 =======
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Starting lint error fixes.");/ Function to resolve merge conflicts in a filefunction resolveMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove merge conflict markers""
-=======
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -163,5 +145,3 @@ console.log(" Starting lint error fixes...")
       if (line.includes('from "lucide-react"') || line.includes(')
         const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*["']lucide-react[']
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> main
->>>>>>> main

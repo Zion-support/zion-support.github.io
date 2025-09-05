@@ -1,43 +1,3 @@
-<<<<<<< HEAD
-  Clock, 
-  User, 
-  ArrowRight, 
-  Tag, 
-  ExternalLink,
-  Play,
-  Download,
-  Users,
-  Award,
-  CheckCircle;
-import {
-  Calendar, 
-  Clock, 
-  User, 
-  ArrowRight, 
-  Play, 
-  Download, 
-  Share2, 
-  Tag,
-  ExternalLink,
-  Video,
-  Mic,
-  Users,
-  Star,
-  Award,
-  Globe,
-  BookOpen,
-  MessageSquare,
-  Search,
-  Filter,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
-
-  }
-];
-
-const categories = [
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -101,20 +61,11 @@ export default function WebinarsPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Webinars</h1>
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
                 Join our educational webinars and learn from industry experts.
->>>>>>> main
               </p>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-
-                    </div>
-                  </div>
-=======
         {/* Upcoming Webinars */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -157,19 +108,12 @@ export default function WebinarsPage() {
                   <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">
                     Register Now
                   </button>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-=======
         {/* Past Webinars */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
@@ -252,14 +196,10 @@ export default function WebinarsPage() {
                   Contact Us
                 </Link>
               </div>
->>>>>>> main
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-=======
     </>
->>>>>>> main
   );
 }

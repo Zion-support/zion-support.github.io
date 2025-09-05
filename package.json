@@ -2,39 +2,6 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "prebuild": "echo \"Starting build...\""
-  },
-  "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/typography": "^0.5.16",
-    "autoprefixer": "^10.4.14",
-    "framer-motion": "^10.16.4",
-    "lucide-react": "^0.263.1",
-    "next": "^15.5.2",
-    "postcss": "^8.4.24",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.3.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.4.5",
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
-    "eslint": "^8.45.0",
-    "eslint-config-next": "^15.5.2",
-    "typescript": "^5.0.0"
-  }
-=======
->>>>>>> main
   "type": "module",
   "scripts": {
     "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",
@@ -274,15 +241,12 @@
     "quick:test": "bash scripts/quick-test.sh",
     "deploy:app": "bash scripts/deploy.sh",
     "health:check": "bash scripts/health-check.sh",
-<<<<<<< HEAD
     "error:fix": "node scripts/comprehensive-error-fix.cjs",
     "error:prevention:start": "pm2 start ecosystem.error-prevention.cjs",
     "error:prevention:stop": "pm2 stop ecosystem.error-prevention.cjs",
     "error:prevention:restart": "pm2 restart ecosystem.error-prevention.cjs",
     "error:prevention:status": "pm2 status",
     "error:prevention:logs": "pm2 logs --lines 100",
-=======
->>>>>>> main
     "build:production": "NODE_ENV=production npm run build",
     "error:detect": "node automation/intelligent-error-detector.cjs",
     "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs",
@@ -463,8 +427,6 @@
     "tailwindcss": "^3.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.0.0"
-<<<<<<< HEAD
-=======
   },
   "devDependencies": {
     "identity-obj-proxy": "^3.0.0",
@@ -496,7 +458,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zion-Holdings/zion.app.git"
->>>>>>> main
   },
   "keywords": [
     "nextjs",
@@ -509,8 +470,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
->>>>>>> main
 }

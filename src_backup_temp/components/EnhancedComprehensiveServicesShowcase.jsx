@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, {useState} from 'react';'''';';
-import {innovativeServices2025} from '../data/innovativeServices2025';'''';';
-import {ULTIMATE_INNOVATIVE_SERVICES_2027} from '../data/ultimateInnovativeServices2027';'''';';
-=======
 import React, {useState} from 'react';'''
 import {innovativeServices2025} from '../data/innovativeServices2025';'''
 import {ULTIMATE_INNOVATIVE_SERVICES_2027} from '../data/ultimateInnovativeServices2027';'''
->>>>>>> main
 import {motion} from 'framer-motion';
 import {}
   Brain,
@@ -17,20 +10,6 @@ import {}
   Zap,
   Atom,
   TrendingUp,
-<<<<<<< HEAD
-  Star,';
-  ArrowRight,';';
-  CheckCircle,'';';
-  Phone,''';';
-  Mail,'''';';
-  MapPin} from 'lucide-react';
-';
-const EnhancedComprehensiveServicesShowcase = (props: any) => {}';';
-'';';
-''';';
-'''';';
-  const [activeCategory, setActiveCategory] = useState('all');'''';';
-=======
 import React, {useState} from 'react';
 import {innovativeServices2025} from '../data/innovativeServices2025';
 import {ULTIMATE_INNOVATIVE_SERVICES_2027} from '../data/ultimateInnovativeServices2027';
@@ -48,42 +27,24 @@ import {}
   CheckCircle,';
   Phone,'';
   Mail,''';
-=======
   Star,
   ArrowRight,
   CheckCircle,'
   Phone,''
   Mail,'''
->>>>>>> main
   MapPin} from 'lucide-react';
-<<<<<<< HEAD
-;
-const EnhancedComprehensiveServicesShowcase = ("props": "any) => {"}
-';
-'';
-''';
-  const [activeCategory, setActiveCategory] = useState('all');''';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
 
 const EnhancedComprehensiveServicesShowcase = (props: any) => {}
 '
 ''
 '''
   const [activeCategory, setActiveCategory] = useState('all');'''
->>>>>>> main
->>>>>>> main
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState(null);
 
   // Transform services for the showcase;
   const transformedServices = []
     ...innovativeServices2025.map(service => ({}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       ...service,;
       "category": "service.category",;
       "price": "service.price",;
@@ -104,8 +65,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       "icon": "service.icon || '🚀'",';
       "color": "service.color || 'from-purple-600 to-indigo-700'",';
       "badge": "service.badge || 'New'"}));
-=======
->>>>>>> main
       ...service,
       category: service.category,
       price: service.price,
@@ -114,20 +73,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       benefits: service.benefits,
       icon: service.icon,
       color: service.color,
-<<<<<<< HEAD
-      badge: service.badge})),';
-    ...ULTIMATE_INNOVATIVE_SERVICES_2027.map(service => ({}';';
-      ...service,'';';
-      category: service.category || 'Innovation','';';
-      price: service.price || '$2,999','';';
-      description:''';';
-        service.description || service.tagline || 'Revolutionary service',';
-      features: service.features || [],';';
-      benefits: service.benefits || [],'';';
-      icon: service.icon || '🚀','';';
-      color: service.color || 'from-purple-600 to-indigo-700','';';
-      badge: service.badge || 'New'}))
-=======
       ...service,;
       category: service.category,;
       price: service.price,;
@@ -148,8 +93,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       icon: service.icon || '🚀',';
       color: service.color || 'from-purple-600 to-indigo-700',';
       badge: service.badge || 'New'}));
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
       badge: service.badge})),
     ...ULTIMATE_INNOVATIVE_SERVICES_2027.map(service => ({}
       ...service,'
@@ -162,8 +105,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       icon: service.icon || '🚀','
       color: service.color || 'from-purple-600 to-indigo-700','
       badge: service.badge || 'New'}))
->>>>>>> main
->>>>>>> main
   ];
 
   const filteredServices = transformedServices.filter(service => {}
@@ -172,187 +113,17 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
-<<<<<<< HEAD
-  });
-<<<<<<< HEAD
-
-  const serviceCategories = []';
-    {}';';
-'';';
-''';';
-'''';';
-      id: 'AI & Innovation Services','''';';
-      name: 'AI & Innovation Services',
-      count: innovativeServices2025.length},';
-    {}';';
-'';';
-''';';
-'''';';
-      id: 'Quantum Computing','''';';
-      name: 'Quantum Computing','''';';
-      count: transformedServices.filter(s => s.category.includes('Quantum'))
-        .length},';
-    {}';';
-'';';
-''';';
-'''';';
-      id: 'Blockchain & Web3','''';';
-      name: 'Blockchain & Web3','''';';
-      count: transformedServices.filter(s => s.category.includes('Blockchain'))
-        .length},';
-    {}';';
-'';';
-''';';
-'''';';
-      id: 'Space Technology','''';';
-      name: 'Space Technology','''';';
-      count: transformedServices.filter(s => s.category.includes('Space'))
-        .length},';
-    {}';';
-'';';
-''';';
-'''';';
-      id: 'Green Technology','''';';
-      name: 'Green Technology','''';';
-      count: transformedServices.filter(s => s.category.includes('Green'))
-        .length},';
-    {}';';
-'';';
-''';';
-'''';';
-      id: 'Cybersecurity','''';';
-      name: 'Cybersecurity',''';';
-      count: transformedServices.filter(s =>'''';';
-        s.category.includes('Cybersecurity')
-      ).length},';
-    {}';';
-'';';
-''';';
-'''';';
-      id: 'Micro SaaS','''';';
-      name: 'Micro SaaS','''';';
-      count: transformedServices.filter(s => s.category.includes('Micro SaaS'))
-        .length},';
-    {}';';
-'';';
-''';';
-'''';';
-      id: 'Data & Analytics','''';';
-      name: 'Data & Analytics','''';';
-      count: transformedServices.filter(s => s.category.includes('Data'))
-        .length},';
-    {}';';
-'';';
-''';';
-'''';';
-      id: 'Cloud & DevOps','''';';
-      name: 'Cloud & DevOps','''';';
-      count: transformedServices.filter(s => s.category.includes('Cloud'))
-        .length},';
-    {}';';
-'';';
-''';';
-'''';';
-      id: 'Digital Transformation','''';';
-      name: 'Digital Transformation','''';';
-      count: transformedServices.filter(s => s.category.includes('Digital'))
-=======
 ;
   const serviceCategories = [];
-=======
   }
     );
 
   const serviceCategories = []
     {}
-<<<<<<< HEAD
-';
-'';
-''';
-      "id": 'AI & Innovation Services',''';
-      "name": 'AI & Innovation Services',;
-      "count": "innovativeServices2025.length"},;
->>>>>>> main
-    {}
-';
-'';
-''';
-      "id": 'Quantum Computing',''';
-      "name": 'Quantum Computing',''';
-      "count": "transformedServices.filter(s => s.category.includes('Quantum'));
-        .length"},;
-    {}
-';
-'';
-''';
-      "id": 'Blockchain & Web3',''';
-      "name": 'Blockchain & Web3',''';
-      "count": "transformedServices.filter(s => s.category.includes('Blockchain'));
-        .length"},;
-    {}
-';
-'';
-''';
-      "id": 'Space Technology',''';
-      "name": 'Space Technology',''';
-      "count": "transformedServices.filter(s => s.category.includes('Space'));
-        .length"},;
-    {}
-';
-'';
-''';
-      "id": 'Green Technology',''';
-      "name": 'Green Technology',''';
-      "count": "transformedServices.filter(s => s.category.includes('Green'));
-        .length"},;
-    {}
-';
-'';
-''';
-      "id": 'Cybersecurity',''';
-      "name": 'Cybersecurity','';
-      "count": "transformedServices.filter(s =>''';
-        s.category.includes('Cybersecurity');
-      ).length"},;
-    {}
-';
-'';
-''';
-      "id": 'Micro SaaS',''';
-      "name": 'Micro SaaS',''';
-      "count": "transformedServices.filter(s => s.category.includes('Micro SaaS'));
-        .length"},;
-    {}
-';
-'';
-''';
-      "id": 'Data & Analytics',''';
-      "name": 'Data & Analytics',''';
-      "count": "transformedServices.filter(s => s.category.includes('Data'));
-        .length"},;
-    {}
-';
-'';
-''';
-      "id": 'Cloud & DevOps',''';
-      "name": 'Cloud & DevOps',''';
-      "count": "transformedServices.filter(s => s.category.includes('Cloud'));
-        .length"},;
-    {}
-';
-'';
-''';
-<<<<<<< HEAD
-      id: 'Digital Transformation',''';
-      name: 'Digital Transformation',''';
-      count: transformedServices.filter(s => s.category.includes('Digital'));
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
       "id": 'Digital Transformation',''';
       "name": 'Digital Transformation',''';
       "count": "transformedServices.filter(s => s.category.includes('Digital'));
         .length"}
-=======
 '
 ''
 '''
@@ -431,49 +202,22 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
       id: 'Digital Transformation','''
       name: 'Digital Transformation','''
       count: transformedServices.filter(s => s.category.includes('Digital'))
->>>>>>> main
         .length}
->>>>>>> main
   ];
 
   const handleServiceClick = service => {}
     setSelectedService(service);
   };
-<<<<<<< HEAD
-;
-  const closeModal = ("props": "any) => {"}
-    setSelectedService(null);
-  };
-;
-  return();
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""";
-      {/* Header Section */}"""";
-      <section className="py-20 px-4 "sm": "px-6 "lg":px-8">"""";
-        <div className="max-w-7xl mx-auto text-center">"""";
-          <h1 className="text-4xl "md":text-6xl font-bold mb-6">""";
-            Zion Tech Group"""";
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">';
-              {' '"}
-=======
 
   const closeModal = (props: any) => {}
     setSelectedService(null);
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
       {/* Header Section */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
-<<<<<<< HEAD
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">"""';
-            Zion Tech Group""""';';
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'';';
-=======
 ;
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""";
@@ -483,14 +227,10 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
           <h1 className="text-4xl md:text-6xl font-bold mb-6">""";
             Zion Tech Group"""";
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
           <h1 className="text-4xl md:text-6xl font-bold mb-6">"""
             Zion Tech Group""""
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
->>>>>>> main
               {' '}
->>>>>>> main
               Innovative Services 2025;
             </span>"""
           </h1>""""
@@ -498,63 +238,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
             Discover our cutting-edge portfolio of micro SAAS solutions, IT;
             services, and AI-powered innovations designed to transform your;
             business and drive competitive advantage in the digital age;
-<<<<<<< HEAD
-          </p>;
-""";
-          {/* Key Statistics */}"""";
-          <div className="grid grid-cols-1 "md": "grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">"""";
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"""";
-              <div className="text-3xl font-bold text-blue-400 mb-2">;
-                {transformedServices.length"}+""";
-              </div>"""";
-              <div className="text-sm text-gray-300">Innovative Services</div>""";
-            </div>"""";
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"""";
-              <div className="text-3xl font-bold text-cyan-400 mb-2">15+</div>"""";
-              <div className="text-sm text-gray-300">Technology Categories</div>""";
-            </div>"""";
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"""";
-              <div className="text-3xl font-bold text-green-400 mb-2">99%</div>"""";
-              <div className="text-sm text-gray-300">Client Satisfaction</div>""";
-            </div>"""";
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"""";
-              <div className="text-3xl font-bold text-purple-400 mb-2">;
-                24/7""";
-              </div>"""";
-              <div className="text-sm text-gray-300">Support Available</div>;
-            </div>;
-          </div>;
-""";
-          {/* Search and Filter */}"""";
-          <div className="max-w-2xl mx-auto mb-8">"""";
-            <div className="relative">""";
-              <input"""";
-                type="text"""";
-                placeholder="Search services, features, or technologies...""";
-                value={searchTerm}""";
-                onChange={e => setSearchTerm(e.target.value)}"""";
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 "focus": "outline-none "focus":border-blue-400""";
-              />""";
-              <svg"""";
-                className="absolute right-3 top-3 h-6 w-6 text-gray-400"""";
-                fill="none"""";
-                stroke="currentColor"""";
-                viewBox="0 0 24 24""";
-              >""";
-                <path """";
-                  strokeLinecap="round"""";
-                  strokeLinejoin="round"""";
-                  strokeWidth={2"}"""";
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z""";
-                 />;
-              </svg>;
-            </div>;
-          </div>;
-""";
-          {/* Category Filter */}"""";
-          <div className="flex flex-wrap justify-center gap-4 mb-12">;
-            {serviceCategories.map(category => (;
-=======
           </p>
 """
           {/* Key Statistics */}""""
@@ -610,38 +293,12 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
           {/* Category Filter */}""""
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {serviceCategories.map(category => (
->>>>>>> main
               <button;
                 key={category.id}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                onClick={() => setActiveCategory(category.id)}';
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}';';
-'';';
-''';';
-'''`';';
-                  activeCategory === category.id'''`'`';';
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'''`'`'`';';
-                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'````
-=======
-=======
->>>>>>> main
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}
-<<<<<<< HEAD
-';
-'';
-'''`;
-                  activeCategory === category.id'''`'`;
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'''`'`'`;
-<<<<<<< HEAD
-                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'````;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-                }`}
-=======
                     : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 "hover": "bg-white/20'````;
                 "}`}
->>>>>>> main
               >;
                 {category.name} ({category.count});
               </button>;
@@ -665,7 +322,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
                   {service.name}""";
                 """";
                 <p className="text-gray-300 mb-4 line-clamp-3">;
-=======
 '
 ''
 '''`
@@ -696,21 +352,11 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
                   {service.name}"""
                 """"
                 <p className="text-gray-300 mb-4 line-clamp-3">
->>>>>>> main
                   {service.description}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                 </p>"""
 """"
                 <div className="flex items-center justify-between mb-4">""""
                   <span className="px-3 py-1 bg-white/10 rounded-full text-sm text-white">
-<<<<<<< HEAD
-                    {service.category}"""';
-                  </span>""""';';
-                  <span className="text-lg font-bold text-blue-400">'';';
-=======
                 </p>""";
 """";
                 <div className="flex items-center justify-between mb-4">"""";
@@ -718,12 +364,9 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
                     {service.category}""";
                   </span>"""";
                   <span className="text-lg font-bold text-blue-400">';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
                     {service.category}"""
                   </span>""""
                   <span className="text-lg font-bold text-blue-400">'
->>>>>>> main
                     ${service.displayPrice?.toLocaleString() || 'Contact Us'}
                   </span>
                 </div>"""
@@ -737,43 +380,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
                       {tag}
                     </span>
                   ))}
-<<<<<<< HEAD
-                </div>""";
-"""";
-                <div className="text-sm text-gray-400">"""";
-                  <div className="flex items-center justify-between">;
-                    <span>"ROI": "{service.roi"}</span>;
-                    <span>"Delivery": "{service.estimatedDelivery"}</span>;
-                  </div>;
-                </div>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-""";
-      {/* Why Choose Zion Tech Group */}"""";
-      <section className="py-20 px-4 "sm": "px-6 "lg":px-8 bg-white/5">"""";
-        <div className="max-w-7xl mx-auto">"""";
-          <div className="text-center mb-16">"""";
-            <h2 className="text-3xl "md":text-4xl font-bold text-white mb-4">;
-              Why Choose Zion Tech Group?""";
-            </h2>"""";
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              We combine cutting-edge technology with proven business expertise;
-              to deliver solutions that drive real results;
-            </p>;
-          </div>""";
-"""";
-          <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">"""";
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"""";
-              <div className="text-4xl mb-4">🚀</div>"""";
-              <h3 className="text-xl font-semibold text-white mb-3">;
-                Innovation First""";
-              """";
-              <p className="text-gray-300">;
-                We stay ahead of technology trends", offering the latest AI,;
-=======
                 </div>"""
 """"
                 <div className="text-sm text-gray-400">""""
@@ -809,7 +415,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
               """"
               <p className="text-gray-300">
                 We stay ahead of technology trends, offering the latest AI,
->>>>>>> main
                 quantum computing, and emerging tech solutions;
               </p>
             </div>"""
@@ -833,9 +438,6 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {}
               <p className="text-gray-300">
                 Built with security, scalability, and compliance in mind for;
                 enterprise-level reliability;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               </p>;
             </div>;
           </div>;
@@ -872,8 +474,6 @@ export default EnhancedComprehensiveServicesShowcase;
 ;
 export {EnhancedComprehensiveServicesShowcase"};
 ;
-=======
->>>>>>> main
               </p>
             </div>
           </div>
@@ -884,11 +484,6 @@ export {EnhancedComprehensiveServicesShowcase"};
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
-            Ready to Transform Your Business?"""';
-          </h2>""""';';
-          <p className="text-xl text-gray-300 mb-8">'';';
-=======
               </p>;
             </div>;
           </div>;
@@ -902,12 +497,9 @@ export {EnhancedComprehensiveServicesShowcase"};
             Ready to Transform Your Business?""";
           </h2>"""";
           <p className="text-xl text-gray-300 mb-8">';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
             Ready to Transform Your Business?"""
           </h2>""""
           <p className="text-xl text-gray-300 mb-8">'
->>>>>>> main
             Let's discuss how our innovative services can help drive your;
             digital transformation and competitive advantage"""
           </p>""""
@@ -923,32 +515,9 @@ export {EnhancedComprehensiveServicesShowcase"};
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"""
             >
               Call Us: +1 302 464 0950;
-<<<<<<< HEAD
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-export default EnhancedComprehensiveServicesShowcase;
-;
-export {EnhancedComprehensiveServicesShowcase};
-;
-export {EnhancedComprehensiveServicesShowcase};
-;
-export {EnhancedComprehensiveServicesShowcase};
-;
-export {EnhancedComprehensiveServicesShowcase};
-;
-export {EnhancedComprehensiveServicesShowcase};
-<<<<<<< HEAD
-
-</path>';
-</div>;';;';
-=======
 ;
 </path>;
 </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
             </a>
           </div>
         </div>
@@ -958,7 +527,6 @@ export default EnhancedComprehensiveServicesShowcase;
 
 export {EnhancedComprehensiveServicesShowcase};
 
->>>>>>> main
 export {EnhancedComprehensiveServicesShowcase};
 
 export {EnhancedComprehensiveServicesShowcase};
@@ -969,4 +537,3 @@ export {EnhancedComprehensiveServicesShowcase};
 
 </path>
 </div>
->>>>>>> main

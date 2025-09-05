@@ -1,14 +1,9 @@
 const nextConfig = {
   reactStrictMode: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-<<<<<<< HEAD
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   
   // Performance optimizations
@@ -28,26 +23,21 @@ const nextConfig = {
   },
   
   // Webpack optimizations
-  webpack: (config, { dev, isServer }) => {
-    // Production optimizations
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Optimize bundle size
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
         cacheGroups: {
           vendor: {
-            test: /[\/]node_modules[\/]/,
+            test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
-          },
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
           },
         },
       };
     }
+    
     return config;
   },
   
@@ -69,12 +59,25 @@ const nextConfig = {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
           },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+      {
+        source: '/api/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate',
+          },
         ],
       },
     ];
   },
   
-  // Redirects for SEO
+  // Redirects
   async redirects() {
     return [
       {
@@ -83,35 +86,35 @@ const nextConfig = {
         permanent: true,
       },
     ];
-  }
-};
-
-export default nextConfig;
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true
-<<<<<<< HEAD
-  }
-};
-
-module.exports = nextConfig;
-=======
   },
+  
+  // Environment variables
   env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
-  eslint: {
-    ignoreDuringBuilds: true
+  
+  // Output configuration
+  output: 'standalone',
+  
+  // Trailing slash
+  trailingSlash: false,
+  
+  // Base path
+  basePath: '',
+  
+  // Asset prefix
+  assetPrefix: '',
+  
+  // Generate ETags
+  generateEtags: true,
+  
+  // Dist directory
+  distDir: '.next',
+  
+  // Build ID
+  generateBuildId: async () => {
+    return 'build-' + Date.now();
   },
-  typescript: {
-    ignoreBuildErrors: true
-  }
 };
 
 export default nextConfig;
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
->>>>>>> main

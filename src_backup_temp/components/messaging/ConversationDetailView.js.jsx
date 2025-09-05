@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, {useState, useEffect, useRef} from 'react';'''';';
-import {format} from 'date-fns';'''';';
-import {MessageSquare} from 'lucide-react';'''';';
-import {useMessaging} from '@/context/MessagingContext';'''';';
-import {Button} from '@/components/ui/button';'''';';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';'''';';
-import {AspectRatio} from '@/components/ui/aspect-ratio';'''';';
-import {useAuth} from '@/hooks/useAuth';
-;';
-export function ConversationDetailView(props: any) {    const { user } = useAuth();';';
-    const {activeConversation, activeMessages, sendMessage, loadMessages} = useMessaging();'';';
-=======
 import React, {useState, useEffect, useRef} from 'react';
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
@@ -19,7 +5,6 @@ import {useMessaging} from '@/context/MessagingContext';
 import {Button} from '@/components/ui/button';
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
 import {AspectRatio} from '@/components/ui/aspect-ratio';
-=======
 import React, {useState, useEffect, useRef} from 'react';'''
 import {format} from 'date-fns';'''
 import {MessageSquare} from 'lucide-react';'''
@@ -27,21 +12,11 @@ import {useMessaging} from '@/context/MessagingContext';'''
 import {Button} from '@/components/ui/button';'''
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';'''
 import {AspectRatio} from '@/components/ui/aspect-ratio';'''
->>>>>>> main
 import {useAuth} from '@/hooks/useAuth';
 ;
 ;
-<<<<<<< HEAD
-export function ConversationDetailView("props": "any) {    const { user "} = useAuth();
-    const {activeConversation, activeMessages, sendMessage, loadMessages} = useMessaging();';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
 export function ConversationDetailView(props: any) {    const { user } = useAuth();
     const {activeConversation, activeMessages, sendMessage, loadMessages} = useMessaging();'
->>>>>>> main
->>>>>>> main
     const [messageText, setMessageText] = useState('');
     const messagesEndRef = useRef(null);
     useEffect(() => {}
@@ -50,45 +25,17 @@ export function ConversationDetailView(props: any) {    const { user } = useAuth
     }, [activeConversation?.id, loadMessages]);
     useEffect(() => {}
 scrollToBottom()}, [activeMessages]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const scrollToBottom = (props: any) => {';
-';';
-=======
     const scrollToBottom = ("props": "any) => {;
         messagesEndRef.current?.scrollIntoView({ "behavior": 'smooth' "})};
-=======
     const scrollToBottom = (props: any) => {
 
->>>>>>> main
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
->>>>>>> main
     const handleSendMessage = async(e) => {e.preventDefault();
         if(!messageText.trim() || !activeConversation)
-<<<<<<< HEAD
-            return;';
-        await sendMessage(activeConversation.id, messageText);';';
-        setMessageText('')};
-    if(!activeConversation) {"
-        return (<div className="flex-1 flex flex-col items-center justify-center p-8">"
-        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />"
-        <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>"
-        <p className="text-zion-slate text-center max-w-md">
-          Select a conversation from the list to view and send messages.</p>
-          </div>
-  );
-}
-    // Group messages by date
-    const groupedMessages = [];
-    activeMessages.forEach(message => {';
-';';
-=======
     const scrollToBottom = (props: any) => {;
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
     const handleSendMessage = async(e) => {e.preventDefault();
         if(!messageText.trim() || !activeConversation);
-=======
->>>>>>> main
             return;
         await sendMessage(activeConversation.id, messageText);
         setMessageText('')};
@@ -102,38 +49,22 @@ scrollToBottom()}, [activeMessages]);
       </div>)}
     // Group messages by date
     const groupedMessages = [];
-<<<<<<< HEAD
-    activeMessages.forEach(message => {;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     activeMessages.forEach(message => {
 
->>>>>>> main
         const messageDate = format(new Date(message.created_at),yyyy-MM-dd');
         const existingGroup = groupedMessages.find(group => group.date === messageDate);
         if(existingGroup) {
 
             existingGroup.messages.push(message)}
-<<<<<<< HEAD
-        else {;
-            groupedMessages.push({;
-                "date": "messageDate",;
-=======
         else {
 
             groupedMessages.push({
 
                 date: messageDate,
->>>>>>> main
                 messages[message];
             })}
-<<<<<<< HEAD
-    });
-<<<<<<< HEAD
-=======
     }
     );
->>>>>>> main
     const hasContextData = activeConversation.context_data &&
         (activeConversation.context_data.title || activeConversation.context_data.description);"
     return (
@@ -144,8 +75,6 @@ scrollToBottom()}, [activeMessages]);
           <Avatar className="h-10 w-10 border border-zion-purple/20">
             <AvatarImage src={activeConversation.other_user.avatar_url} alt={activeConversation.other_user.name} />"
             <AvatarFallback className="bg-zion-blue-dark text-white">
-<<<<<<< HEAD
-=======
     const hasContextData = activeConversation.context_data &&;
         (activeConversation.context_data.title || activeConversation.context_data.description);";
     return (<div className="flex-1 flex flex-col h-full">;
@@ -155,27 +84,16 @@ scrollToBottom()}, [activeMessages]);
           <Avatar className="h-10 w-10 border border-zion-purple/20">;
             <AvatarImage src={activeConversation.other_user.avatar_url} alt={activeConversation.other_user.name} />";
             <AvatarFallback className="bg-zion-blue-dark text-white">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
               {activeConversation.other_user.name.charAt(0).toUpperCase()}
             </AvatarFallback>
           </Avatar>
           <div>"
             <div className="font-medium text-white">
               {activeConversation.other_user.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>"';
-            <div className="text-xs text-zion-slate">';';
-              {activeConversation.other_user.user_type === 'talent' ? 'Talent' :'';';
-            activeConversation.other_user.user_type === 'employer' ? 'Employer' :'';';
-=======
             </div>"
             <div className="text-xs text-zion-slate">
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :'
             activeConversation.other_user.user_type === 'employer' ? 'Employer' :'
->>>>>>> main
                 activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
@@ -189,15 +107,6 @@ scrollToBottom()}, [activeMessages]);
                 <AspectRatio ratio={1 / 1} className="rounded bg-zion-blue-dark/30 overflow-hidden">"
                   <img loading="lazy" src={activeConversation.context_data.image_url} alt={activeConversation.context_data.title || "Context"} className="object-cover"  />
                 </AspectRatio>
-<<<<<<< HEAD
-                  </div>
-  );
-}
-            <div>"';
-              <div className="font-medium text-white mb-1">';';
-                {activeConversation.context_type === 'job' ? 'Regarding Job:' :'';';
-                activeConversation.context_type === 'talent' ? 'Regarding Talent:' :'';';
-=======
             </div>";
             <div className="text-xs text-zion-slate">;
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :';
@@ -214,25 +123,12 @@ scrollToBottom()}, [activeMessages]);
                 <AspectRatio ratio={1 / 1} className="rounded bg-zion-blue-dark/30 overflow-hidden">";
                   <img loading="lazy" src={activeConversation.context_data.image_url} alt={activeConversation.context_data.title || "Context"} className="object-cover"  />;
                 </AspectRatio>;
-=======
->>>>>>> main
               </div>)}
-<<<<<<< HEAD
-            <div>";
-              <div className="font-medium text-white mb-1">;
-<<<<<<< HEAD
-                {activeConversation.context_type === 'job' ? 'Regarding Job:' :';
-                activeConversation.context_type === 'talent' ? 'Regarding Talent:' :';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-                    'Regarding:'}
-=======
                 {activeConversation.context_type === 'job' ? 'Regarding "Job":' :';
                 activeConversation.context_type === 'talent' ? 'Regarding "Talent":' :';
                     '"Regarding":'}
->>>>>>> main
               </div>";
               <div className="text-zion-cyan font-medium">;
-=======
             <div>"
               <div className="font-medium text-white mb-1">
                 {activeConversation.context_type === 'job' ? 'Regarding Job:' :'
@@ -240,32 +136,14 @@ scrollToBottom()}, [activeMessages]);
                     'Regarding:'}
               </div>"
               <div className="text-zion-cyan font-medium">
->>>>>>> main
                 {activeConversation.context_data && activeConversation.context_data.title}
               </div>"
               {activeConversation.context_data && activeConversation.context_data.description && (<div className="text-xs text-zion-slate mt-1 line-clamp-2">
                   {activeConversation.context_data.description}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    </div>
-  );
-}
-=======
                 </div>)}
->>>>>>> main
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-;
-      {/* Messages */}";
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">";
-        {groupedMessages.length === 0 ? (<div className="text-center text-zion-slate py-12">;
-            <p>No messages yet.Start the conversation!</p>;
-          </div>) : "(groupedMessages.map((group", groupIndex) => (<div key={group.date}>;
-              <DateDivider date={new Date(group.date)} />";
-              <div className="space-y-3">;
-=======
       
       {/* Messages */}"
       <div className="flex-1 overflow-y-auto p-4 space-y-4">"
@@ -274,8 +152,6 @@ scrollToBottom()}, [activeMessages]);
           </div>) : (groupedMessages.map((group, groupIndex) => (<div key={group.date}>
               <DateDivider date={new Date(group.date)} />"
               <div className="space-y-3">
-<<<<<<< HEAD
-=======
                 </div>)}
             </div>;
           </div>;
@@ -288,16 +164,9 @@ scrollToBottom()}, [activeMessages]);
           </div>) : (groupedMessages.map((group, groupIndex) => (<div key={group.date}>;
               <DateDivider date={new Date(group.date)} />";
               <div className="space-y-3">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
->>>>>>> main
                 {group.messages.map((message) => (<MessageBubble key={message.id} message={message} isUserMessage={message.sender_id === user?.id} />))}
               </div>
             </div>)))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         <div ref={messagesEndRef} />;
       </div>;
       {/* Input */}";
@@ -312,8 +181,6 @@ scrollToBottom()}, [activeMessages]);
     </div>)"}
 '";
 </textarea>;
-=======
->>>>>>> main
         <div ref={messagesEndRef} />
       </div>
       
@@ -325,13 +192,6 @@ scrollToBottom()}, [activeMessages]);
             Send
           </Button>
         </form>
-<<<<<<< HEAD
-      </div>';
-    </div>)}';';
-'"
-';
-</textarea>;';;';
-=======
         <div ref={messagesEndRef} />;
       </div>;
       {/* Input */}";
@@ -346,12 +206,8 @@ scrollToBottom()}, [activeMessages]);
     </div>)}
 '";
 </textarea>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
       </div>
     </div>)}
 '"
 
 </textarea>
->>>>>>> main
->>>>>>> main

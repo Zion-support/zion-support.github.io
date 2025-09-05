@@ -1,12 +1,18 @@
-import React from 'react';
-import SimpleLayout from './components/SimpleLayout';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
 
 export default function TestPage() {
   return (
-    <SimpleLayout title="Test Page">
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
+    <Layout title="Test - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Test Page</h1>
+            <p className="text-xl text-blue-100">This is a test page</p>
+          </div>
+        </section>
       </div>
-    </SimpleLayout>
+    </Layout>
   );
 }

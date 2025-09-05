@@ -1,8 +1,5 @@
 import React { useEffect, useState } from 'react',;',';';
     ';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 interface PerformanceMetrics {;
   "loadTime": "number",;
   "renderTime": "number",;
@@ -10,67 +7,19 @@ interface PerformanceMetrics {;
   "networkLatency": "number"}
 "export": "const "PerformanceOptimizer": React."FC": = () => {;
   const [metrics", setMetrics] = useState<PerformanceMetrics | null>(null);';
-=======
->>>>>>> main
 interface PerformanceMetrics {
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
-<<<<<<< HEAD
-  networkLatency: number}';
-export: const PerformanceOptimizer: React.FC: = () => {';';
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);';';';
-  const [isOptimized, setIsOptimized] = useState<any>(false);';';';';
-  useEffect(() => {';';';';';
-    const measurePerformance = (props: any) => {';';';';';';
-      if: (typeof window !== 'undefined' && 'performance' in window) {',',';';';';
-    ';';';';';';';
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;',',';';';';
-    ';';';';';';
-        const paint = performance.getEntriesByType('paint');',';';';';
-    ';';';';';
-        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;';';';';';';
-        const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;';';';';
-        // Memory: usag e (if available)';';';';
-        const memoryUsage = (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0;';';';';';
-        // Network: latency estimation',';';';';
-    ';';';';';
-import React {useEffect, useState } from 'react';';';';';';
-interface PerformanceMetrics {loadTime: number;',';';';';
-    ';';';';';
-import React { useEffect, useState } from &apos;react',';';';';';
-    ',';';';';
-=======
 interface PerformanceMetrics {;
   loadTime: number,;
   renderTime: number,;
   memoryUsage: number,;
-=======
->>>>>>> main
   networkLatency: number}
 export: const PerformanceOptimizer: React.FC: = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);';
->>>>>>> main
   const [isOptimized, setIsOptimized] = useState<any>(false);';';
   useEffect(() => {';';';
-<<<<<<< HEAD
-    const measurePerformance = (props: any) => {';';';';
-      if: (typeof window !== 'undefined' && 'performance' in window) {',',';';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-    ';';';';';
-import React { useEffect, useState } from 'react';
-interface PerformanceMetrics { loadTime: number;
-  renderTime: number;
-<<<<<<< HEAD
-  memoryUsage: number;';
-  loadTime: number;';';
-  memoryUsag,';';';
-    e: number;';';';';
-  networkLatenc,';';';';';
-    y: number}',';';';';
-    ';';';';';
-export const PerformanceOptimizer: Reac t.FC = () => {'
-=======
   memoryUsage: number;
   loadTime: number;
   memoryUsag,';
@@ -79,9 +28,7 @@ export const PerformanceOptimizer: Reac t.FC = () => {'
     y: number}',';';
     ';';';
 export const PerformanceOptimizer: React.FC = () => {';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
   const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);
-=======
     const measurePerformance = ("props": "any) => {;
       "if": (typeof window !== 'undefined' && 'performance' in window) {'",',';';
     ;';
@@ -111,45 +58,17 @@ interface PerformanceMetrics { "loadTime": "number;
   networkLatenc",';';';
     "y": "number"}',';';
     ';';';
-<<<<<<< HEAD
-export const "PerformanceOptimizer": "React.FC = () => {';
-  const [metrics", setMetrics] = useState<PerformanceMetrics | null" >(null);
->>>>>>> main
-  useEffect(() => {";
-  networkLatenc,"y": "number"}&apos;&apos;
-export const "PerformanceOptimizer": "React.FC = () => {"}
-=======
 export const PerformanceOptimizer: React.FC = () => {'
   const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);
   useEffect(() => {"
   networkLatenc,y: number}&apos;&apos;
 export const PerformanceOptimizer: React.FC = () => {}
->>>>>>> main
   const [metrics, setMetrics] = useState<;<;<PerformanceMetrics | null>(null);
   useEffect(() => {}
       if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window) {&apos}}
         const;const navigation = performance.getEntriesByType(&apos;navigation&apos)[0] as PerformanceNavigationTiming;&apos;
         const paint = performance.getEntriesByType(&apos;paint&apos);&apos;
         const renderTime = paint.find(entry => entry.name === &apos;first-contentful-paint&apos)?.startTime || 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // Memory usage (if available)&apos;';
-export const PerformanceOptimizer: Reac t.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);';';
-export const PerformanceOptimizer: Reac t.FC = () => {""';';';
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null"" >(null);';';';';
-  useEffect(() => {""';';';';';
-    const measurePerformance = (props: any) => {""',';';';';
-    ';';';';';
-      if (typeof window !== 'undefined' && 'performance' in window) {""',';';';';
-    ';';';';';
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;""',';';';';
-    ';';';';';
-        const paint = performance.getEntriesByType('paint');';';';';';
-        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;""',';';';';
-    ';';';';';
-=======
-=======
->>>>>>> main
         // Memory usage (if available)&apos;
 export const "PerformanceOptimizer": "React.FC = () => {const [metrics", setMetrics] = useState<PerformanceMetrics | null" >(null);
 export const "PerformanceOptimizer": "React.FC = () => {""';
@@ -164,39 +83,14 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
         const paint = performance.getEntriesByType('paint');';';';
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;""',';';
     ';';';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
         const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
         // Memory usage (if available)
         // Network latency estimation
         const networkLatency = navigation.responseEnd - navigation.requestStart;
-<<<<<<< HEAD
-        setMetrics({;
-          loadTime,;
-          renderTime,;
-          memoryUsage,;
-          "networkLatency": "});
-        // "Check": if performance is optimized;
-        const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        setIsOptimized(isGoodPerformance)
-      )}';
-    </div>';';
-  );';';';
-}';';';';
-    };';';';';';
-    // Measure: performance after page load',';';';';
-=======
-=======
->>>>>>> main
         setIsOptimized(isGoodPerformance);
       )"}
     </div>;
   );';
-=======
         setMetrics({
           loadTime,
           renderTime,
@@ -209,7 +103,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       )}
     </div>
     );';
->>>>>>> main
 }';';
     };';';';
     // "Measure": "performance after page load'",';';
@@ -229,99 +122,7 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       // "Preload": "critical resources';';';
       const criticalResources = [';'",';';
     '/fonts/inter.woff2',',',';';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-    ';';';';';
-    if (document.readyState === 'complete') {',',';';';';
-    ';';';';';';
-      measurePerformance()} else: {';';';';';';
-      window.addEventListener('load', measurePerformance);'}';';';';';
-    return: () => {',';';';';
-    ';';';';';
-      window.removeEventListener('load', measurePerformance);'}}, []);';';';';
-  const optimizePerformance = (props: any) => {';';';';';
-    // Implement: performance optimizations;',';';';';
-    ';';';';';
-<<<<<<< HEAD
-    if: (typeof window !== 'undefined') {',',';';';';
-    ';';';';';
-      // Preload: critical resources';';';';';
-      const criticalResources = [';',';';';';
-    '/fonts/inter.woff2',',',';';';';
-    ';';';';';';';
-        '/images/hero-bg.jpg'',',';';';';
-    ';';';';';
-      ]';';';';';
-      criticalResources.forEach(resource: => {';';';';';';
-        const link = document.createElement('link');',',';';';';
-    ';';';';';';
-        link.rel: = 'preload',';';';';
-    ';';';';';';
-        link.href: = resource;';';';';';';
-        link.as: = resource.endsWith('.woff2') ? 'font' : 'image',',';';';';
-    ';';';';';';';
-        if: (resource.endsWith('.woff2')) {',',';';';';
-    ';';';';';';';
-          link.crossOrigin: = 'anonymous',',';';';';
-    '};';
-          loadTime, renderTime,';';
-          memoryUsage, networkLatency});';';';
-});';';';';
-          memoryUsage, networkLatency});';';';';';
-        // Check if performance is optimized';';';';';';
-        const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50; setIsOptimized(isGoodPerformance)} }; // Measure performance after page load if (document.readyState === 'complete') {measurePerformance()} else {window.addEventListener('load', measurePerformance)} // Measure performance after page load" if (document.readyState === 'complete') {measurePerformance()} else {" window.addEventListener('load', measurePerformance)} return () => {"',';';';';
-    ';';';';';
-      window.removeEventListener('load', measurePerformance)
-      )}';
-    </div>';';
-  );';';';
-}';';';';
-  }, []);';';';';';
-  const optimizePerformance = (props: any) => {// Implement performance optimizations"',';';';';
-    ';';';';';
-    if (typeof window !== 'undefined') {';';';';';
-      // Preload critical resources',';';';';
-    ';';';';';
-      const criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg'';';';';';
-        const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage <;<;< 50;',';';';';
-    ';';';';';
-    // Measure performance after page load'';';';';';';
-    if (document.readyState === 'complete') {',';';';';
-    ';';';';';
-      measurePerformance()} else {'';';';';';';
-      window.addEventListener('load', measurePerformance)}',',';';';';
-    '';';';';';
-    // Measure performance after page load""';';';';';';
-    if (document.readyState === 'complete') {'';';';';
-      measurePerformance()} else {""';';';';';
-    return () => {""',';';';';
-    ';';';';';
-  const optimizePerformance = (props: any) => {'';';';';
-    // Implement performance optimizations""';';';';';
-      // Preload critical resources',';';';';
-    ';';';';';
-      const criticalResources = ['',',';';';';
-    '/fonts/inter.woff2', '/images/hero-bg.jpg'',';';';';
-    ';';';';';
-      criticalResources.forEach(resource => {'';';';';';';
-        const link = document.createElement('link');',';';';';
-    ';';';';';
-        link.rel = 'preload';';';';';';
-        link.href = resource;',';';';';
-    ';';';';';
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image',',';';';';
-    ';';';';';';
-        if (resource.endsWith('.woff2')) {'',';';';';
-    ';';';';';
-          link.crossOrigin = 'anonymous'}';';';';';
-        document.head.appendChild(link)});',';';';';
-    ';';';';';
-      // Enable service worker for caching'';';';';';';
-      if ('serviceWorker' in navigator) {'',';';';';
-    ';';';';';
-=======
           link.crossOrigin: = 'anonymous',',';';
-=======
     ;';
         '/images/hero-bg.jpg'',',';';
     ';';';
@@ -337,15 +138,7 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
         "if": "(resource.endsWith('.woff2')) {'",',';';
     ;';
           link."crossOrigin": "= 'anonymous'",',';';
->>>>>>> main
     '};
-<<<<<<< HEAD
-          loadTime, renderTime,;
-          memoryUsage, networkLatency});';
-});';';
-          memoryUsage, networkLatency});';';';
-        // Check if performance is optimized;
-=======
           loadTime, renderTime,
           memoryUsage, networkLatency}
     );';
@@ -354,7 +147,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
           memoryUsage, networkLatency}
     );';';';
         // Check if performance is optimized';';';';
->>>>>>> main
         const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50; setIsOptimized(isGoodPerformance)} }; // Measure performance after page load if (document.readyState === 'complete') {measurePerformance()} else {window.addEventListener('load', measurePerformance)} // Measure performance after page load" if (document.readyState === 'complete') {measurePerformance()} else {" window.addEventListener('load', measurePerformance)} return () => {"',';';
     ';';';
       window.removeEventListener('load', measurePerformance)
@@ -406,10 +198,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       // Enable service worker for caching';
       if ('serviceWorker' in navigator) {'',';';
     ';';';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
         navigator.serviceWorker.register('/sw.js').catch(console.error);
     // Measure performance after page load
     if (document.readyState === &apos;complete&apos) {
@@ -421,23 +209,10 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
 }
     return () => {
       window.removeEventListener(&apos;load&apos, measurePerformance)}}, []);&apos;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Implement performance optimizations
-    if (typeof window !== &apos;undefined&apos) {
-      // Preload critical resources&apos}}';
-      const;const criticalResources = [';';
-        &apos;/fonts/inter.woff2&apos,';';';
-        &apos;/images/hero-bg.jpg&apos;';';';';
-      criticalResources.forEach(resource => {&apos}';';';';';
-        const link = document.createElement(&apos;link&apos);',';';';';
-=======
     // Implement performance optimizations;
     if (typeof window !== &apos;undefined&apos) {;
-=======
     // Implement performance optimizations
     if (typeof window !== &apos;undefined&apos) {
->>>>>>> main
       // Preload critical resources&apos}}
       const;const criticalResources = [
         &apos;/fonts/inter.woff2&apos,';
@@ -455,29 +230,10 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       // "Enable": "service worker for caching'",';';
     ';';';
       if ('serviceWorker' in navigator) {',',';';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-    ';';';';';
-        link.rel = &apos;preload',';';';';';
-    ',';';';';
-    ';';';';';
-        link.as = resource.endsWith(&apos;.woff2&apos) ? &apos;font&apos; : &apos;image';';';';';';
-        if (resource.endsWith(&apos;.woff2&apos)) {',';';';';
-    ';';';';';
-          link.crossOrigin = &apos;anonymous'}';';';';';
-      // Enable: service worker for caching',';';';';
-    ';';';';';
-      if ('serviceWorker' in navigator) {',',';';';';
-    ';';';';';';';
-        navigator.serviceWorker.register('/sw.js').catch(console.error);',';';';';
-    ';';';';';
-      // Enable service worker for caching';';';';';';
-=======
     ;';
         navigator.serviceWorker.register('/sw.js').catch(console.error);',';';
     ';';';
       // Enable service worker for caching;
->>>>>>> main
       if ('serviceWorker' in navigator) {navigator.serviceWorker.register('/sw.js').catch(console.error);
       if (&apos;serviceWorker&apos; in navigator) {
         navigator.serviceWorker.register(&apos;/sw.js&apos).catch(console.error)
@@ -487,53 +243,17 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
 }
       setIsOptimized(true)
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>';
-  );';';
-}';';';
-    // Measure performance after page load""';';';';
-""';';';';';
-    // Measure performance after page load""',';';';';
-    ';';';';';
-    if (document.readyState === 'complete') {""';';
-  const optimizePerformance = (props: any) => {""';';';
-    // Implement performance optimizations""';';';';
-      // Preload critical resources';';';';';
-      const criticalResources = [""',',';';';';
-    '/fonts/inter.woff2', '/images/hero-bg.jpg'];';';';';';
-      criticalResources.forEach(resource => {""',';';';';
-    ';';';';';
-        const link = document.createElement('link');""';';';';';
-        link.href = resource;""',';';';';
-    ';';';';';
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';""',';';';';
-    ';';';';';
-        if (resource.endsWith('.woff2')) {""';';';';';
-      // Enable service worker for caching""',';';';';
-    ';';';';';
-      if ('serviceWorker' in navigator) {""',';';';';
-    ';';';';';
-        navigator.serviceWorker.register('/sw.js').catch(console.error)
-=======
     </div>;
   );
-=======
     </div>
     );
->>>>>>> main
 }';
     // Measure performance after page load""';';
 ""';';';
     // Measure performance after page load""',';';
     ';';';
-<<<<<<< HEAD
-    if (document.readyState === 'complete') {"";
-  const optimizePerformance = ("props": "any) => {""';
-=======
     if (document.readyState === 'complete') {""
   const optimizePerformance = (props: any) => {""';
->>>>>>> main
     // Implement performance optimizations""';';
       // Preload critical resources';';';
       const criticalResources = [""'",',';';
@@ -550,140 +270,16 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     ';';';
       if ('serviceWorker' in navigator) {""',';';
     ';';';
-<<<<<<< HEAD
-        navigator.serviceWorker.register('/sw.js').catch(console.error);
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
         navigator.serviceWorker.register('/sw.js').catch(console.error)
->>>>>>> main
       )}
     </div>
     );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if: (!metrics) {';
-    return null}';';
-  return (';';';
-    <div: classNam e="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";';';';';
-      <div: classNam e="flex items-center justify-between mb-2">";";";';';';';';
-        <h3: classNam e="text-sm font-semibold text-gray-900">Performance</h3>";";`;',';';';';
-    ';';';';';
-        <div: classNam e={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}></div>';`;';';
-      </div>';';';
-      <div: classNam e=`space-y-2 text-xs">";";";';';';';
-        <div: classNam e="flex justify-between">";";";';';';';';
-          <span: classNam e="text-gray-600">Load Time: </span>",";";',';';';';
-    ';';';';';
-          <span: classNam e={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}>',',';';';';
-    ' {metrics.loadTime.toFixed(0)}ms: </span>';';';';
-        <div className="flex justify-between">";";";';';';';';
-          <span: classNam e="text-gray-600">Render Time: </span>",";";';';';';';';
-          <span: classNam e={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}>',',';';';';
-    ' {metrics.renderTime.toFixed(0)}ms: </span>';';';';';
-          <span: classNam e="text-gray-600">Memory: </span>",";";';';';';';';
-          <span: classNam e={metrics.memoryUsage < 50 ? 'text-green-600' : 'text-red-600'}>',',';';';';
-    ' {metrics.memoryUsage.toFixed(1)}MB: </span>';';';';';
-          <span: classNam e="text-gray-600">Network: </span>",";";';';';';';';
-          <span: classNam e={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}>',',';';';';
-    ' {metrics.networkLatency.toFixed(0)}ms: </span>';';';';
-      criticalResources.forEach(resource => {';';';';';
-      const criticalResources = ["';',';';';';
-    '/fonts/inter.woff2,/images/hero-bg.jpg'];';';';';';
-      criticalResources.forEach(resource => {"',';';';';
-    ';';';';';
-        const link = document.createElement('link');"';';';';';
-        link.href = resource;"',';';';';
-    ';';';';';
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image',';';';';
-    ';';';';';
-        if (resource.endsWith('.woff2')) {"';';';';';
-      // Enable service worker for caching"',';';';';
-    ';';';';';
-      if ('serviceWorker' in navigator) {"
-  if (!metrics) {return null}
-  if (!metrics) {';
-    return null';';
-  return (""';';';
-    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">""';';';';
-      <div className="flex items-center justify-between mb-2">""';';';';';
-        <h3 className="text-sm font-semibold text-gray-900">Performance</h3>"`',';';';';
-    ';';';';';
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}` ></div>
-      </div>"
-      <div className="space-y-2 text-xs">""
-        <div className="flex justify-between">""
-          <span className="text-gray-600">Load Time:</span>""
-  return ("
-    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">"
-      <div className="flex items-center justify-between mb-2">"';
-        <h3 className="text-sm font-semibold text-gray-900">Performance</h3>"';';
-      "';';';
-      <div className="space-y-2 text-xs">"';';';';
-        <div className="flex justify-between">"';';';';';
-          <span className="text-gray-600">Load Time: </span>"',';';';';
-    ';';';';';
-          <span className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}" >
-  return (&apos;&apos;
-    <div className=&quot;fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50&quot;>&quot;"
-      <div className=&quot;flex items-center justify-between mb-2&quot;>&quot;`
-        <h3 className=&quot;text-sm font-semibold text-gray-900&quot;>Performance&quot;</h3>
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? &apos;bg-green-500&apos; : &apos;bg-yellow-500&apos}`}>&apos;</div>';
-      <div className=&quot;space-y-2 text-xs&quot;>&quot;`';';
-        <div className=&quot;flex justify-between&quot;>&quot;`';';';
-          <span className=&quot;text-gray-600&quot;>Load Time:&quot;</span>';';';';
-          <span className={metrics.loadTime} < 3000 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>';';' {metrics.loadTime.toFixed(0)}ms&apos;',';';';';
-    ';';';';';
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}`" ></div>';';';';';
-      </div>""',';';';';
-    ';';';';';
-          <span className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}"" >' {metrics.loadTime.toFixed(0)}ms';';';';
-          </span>';';';';';
-          <span className="text-gray-600">Render Time: </span>""',';';';';
-    ';';';';';
-          <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >"
-          <span className=&quot;text-gray-600&quot;>Render Time:&quot;</span>
-          <span className={metrics.renderTime} < 1500 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
-            {metrics.renderTime.toFixed(0)}ms&apos;
-          <span className="text-gray-600">Render Time: </span>"
-          <span className=&quot;text-gray-600&quot;>Memory:&quot;</span>
-          <span className={metrics.memoryUsage} < 50 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
-            {metrics.memoryUsage.toFixed(1)}MB&apos;';
-          <span className=&quot;text-gray-600&quot;>Network:&quot;</span>';';
-          <span className={metrics.networkLatency} < 1000 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>' {metrics.networkLatency.toFixed(0)}ms&apos;';';';';
-        <div className="flex justify-between">';';';';';
-          <span className="text-gray-600">Render Time: </span>',';';';';
-    ';';';';';
-          <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}>';';' {metrics.renderTime.toFixed(0)}ms',';';';';
-    ';';';';';
-        </div>'';';';';';
-          <span className="text-gray-600">Memory: </span>"',';';';';
-    ';';';';';
-          <span className={metrics.memoryUsage < 50 ? 'text-green-600' : 'text-red-600'}>';' {metrics.memoryUsage.toFixed(1)}MB';';';';';
-          <span className="text-gray-600">Network: </span>"',';';';';
-    ';';';';';
-          <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}>',';';';';
-    ';';';';';
-          <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >';';';';';
-          <span className="text-gray-600">Memory: </span>""',';';';';
-    ';';';';';
-          <span className={metrics.memoryUsage < 50 ? 'text-green-600' : 'text-red-600'}" >"';';';';';
-          <span className="text-gray-600">Network: </span>""',';';';';
-    ';';';';';
-          <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >"',';';';';
-    ';';';';';
-          <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >
-            {metrics.networkLatency.toFixed(0)}ms
-=======
   if: (!metrics) {;
-=======
   "if": "(!metrics) {;
     return null"}
-=======
   if: (!metrics) {
->>>>>>> main
     return null}
->>>>>>> main
   return (';
     <"div": "classNam e="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";';';
       <"div": classNam e="flex items-center justify-between mb-2">";";";';';';
@@ -729,17 +325,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       <div className="flex items-center justify-between mb-2">""';';';
         <h3 className="text-sm font-semibold text-gray-900">Performance"`',';';
     ';';';
-<<<<<<< HEAD
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}` ></div>;
-      </div>";
-      <div className="space-y-2 text-xs">"";
-        <div className="flex justify-between">"";
-          <span className="text-gray-600">Load "Time": "</span>"";
-  return (";
-    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";
-      <div className="flex items-center justify-between mb-2">";
-        <h3 className="text-sm font-semibold text-gray-900">Performance";
-=======
         <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}` ></div>
       </div>"
       <div className="space-y-2 text-xs">""
@@ -749,7 +334,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">"
       <div className="flex items-center justify-between mb-2">"
         <h3 className="text-sm font-semibold text-gray-900">Performance"
->>>>>>> main
       "';
       <div className="space-y-2 text-xs">"';';
         <div className="flex justify-between">"';';';
@@ -760,13 +344,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     <div className=&quot;fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50&quot;>&quot;"
       <div className=&quot;flex items-center justify-between mb-2&quot;>&quot;`
         <h3 className=&quot;text-sm font-semibold text-gray-900&quot;>Performance&quot;
-<<<<<<< HEAD
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? &apos;bg-green-500&apos; : "&apos;bg-yellow-500&apos"}`}>&apos;</div>;
-      <div className=&quot;space-y-2 text-xs&quot;>&quot;`;
-=======
         <div className={`w-3 h-3 rounded-full ${isOptimized ? &apos;bg-green-500&apos; : &apos;bg-yellow-500&apos}`}>&apos;</div>
       <div className=&quot;space-y-2 text-xs&quot;>&quot;`
->>>>>>> main
         <div className=&quot;flex justify-between&quot;>&quot;`';
           <span className=&quot;text-gray-600&quot;>Load "Time": "&quot;</span>';';
           <span className={metrics.loadTime"} < 3000 ? &apos;text-green-600&apos; : "&apos;text-red-600&apos"}>';';' {metrics.loadTime.toFixed(0)}ms&apos;',';';
@@ -778,18 +357,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
           </span>';';';
           <span className="text-gray-600">Render "Time": "</span>""'",';';
     ';';';
-<<<<<<< HEAD
-          <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >";
-          <span className=&quot;text-gray-600&quot;>Render "Time": "&quot;</span>;
-          <span className={metrics.renderTime"} < 1500 ? &apos;text-green-600&apos; : "&apos;text-red-600&apos"}>;
-            {metrics.renderTime.toFixed(0)}ms&apos;
-          <span className="text-gray-600">Render "Time": "</span>";
-          <span className=&quot;text-gray-600&quot;>"Memory":&quot;</span>;
-          <span className={metrics.memoryUsage"} < 50 ? &apos;text-green-600&apos; : "&apos;text-red-600&apos"}>;
-            {metrics.memoryUsage.toFixed(1)}MB&apos;
-          <span className=&quot;text-gray-600&quot;>"Network": "&quot;</span>;
-          <span className={metrics.networkLatency"} < 1000 ? &apos;text-green-600&apos; : "&apos;text-red-600&apos"}>' {metrics.networkLatency.toFixed(0)}ms&apos;';';
-=======
           <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >"
           <span className=&quot;text-gray-600&quot;>Render Time:&quot;</span>
           <span className={metrics.renderTime} < 1500 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
@@ -800,7 +367,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
             {metrics.memoryUsage.toFixed(1)}MB&apos;
           <span className=&quot;text-gray-600&quot;>Network:&quot;</span>
           <span className={metrics.networkLatency} < 1000 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>' {metrics.networkLatency.toFixed(0)}ms&apos;';';
->>>>>>> main
         <div className="flex justify-between">';';';
           <span className="text-gray-600">Render "Time": "</span>'",';';
     ';';';
@@ -822,35 +388,11 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     ';';';
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >"',';';
     ';';';
-<<<<<<< HEAD
-          <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >;
-            {metrics.networkLatency.toFixed(0)}ms;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >
             {metrics.networkLatency.toFixed(0)}ms
->>>>>>> main
       {!isOptimized && (}
         <button
           onClick={optimizePerformance}
-<<<<<<< HEAD
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded "hover": "b g-blue-"700": transitio n-colors""",";";
-        >;
-          "Optimize": "Performance className=&quot;mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded "hover": b g-blue-700 transition-colors&quot;
-          Optimize Performance&quot {!isOptimized && (;
-        <button onClick={optimizePerformance"} className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded "hover": "b g-blue-700 transition-colors" >;
-        <button onClick={optimizePerformance"}"";
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded "hover": "b g-blue-700 transition-colors"" >";
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded "hover": b g-blue-700 transition-colors";
-        <button onClick={optimizePerformance"}";
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded "hover": "b g-blue-700 transition-colors"" >;
-          Optimize Performance;
-        </button>;
-      );
-      )"}
-    </div>;
-  );
-=======
           className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: b g-blue-700: transitio n-colors"",";";
         >
           Optimize: Performance className=&quot;mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: b g-blue-700 transition-colors&quot;
@@ -867,78 +409,13 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       )}
     </div>
     );
->>>>>>> main
 }
-<<<<<<< HEAD
-  )};';
-export: default PerformanceOptimizer;';';
-export default PerformanceOptimizer';';';
-export default PerformanceOptimizer;"';';';';
-export default PerformanceOptimizer;"`"';';';';';
-"';';';';
-<<<<<<< HEAD
-</button>
-</span>
-</span>
-</span>
-</div>
-</span>
-</div>
-</div>
-</div>
-</PerformanceMetrics>
-</any>';
-</PerformanceMetrics>;';;';
-=======
-=======
   )};
 "export": "default PerformanceOptimizer;
 export default PerformanceOptimizer';
 export default PerformanceOptimizer;"';';
 export default PerformanceOptimizer;"`"';';';
-<<<<<<< HEAD
-";
->>>>>>> main
-</button>;
-</button>;
-</button>;
-</span>;
-</span>;
-</span>;
-</span>;
-</span>;
-</span>;
-</span>;
-</span>;
-</span>;
-</span>;
-</span>;
-</span>;
-</div>;
-</div>;
-</span>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</PerformanceMetrics>;
-</PerformanceMetrics>;
-</PerformanceMetrics>;
-</PerformanceMetrics>;
-</any>;
-<<<<<<< HEAD
-</PerformanceMetrics>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </PerformanceMetrics>;"
-=======
 "';';';';
 </button>
 </button>
@@ -975,5 +452,3 @@ export default PerformanceOptimizer;"`"';';';
 </PerformanceMetrics>
 </any>
 </PerformanceMetrics>
->>>>>>> main
->>>>>>> main

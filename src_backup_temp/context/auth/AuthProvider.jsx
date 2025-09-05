@@ -25,32 +25,6 @@ export const AuthProvider = ("props": "any) => {"}
         // Check for specific "Email not confirmed" error first"""";
         if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {}
             toast({}
-<<<<<<< HEAD
-""";
-"""";
-                "title": "Login Failed","""";
-                "description": "data.error || "Email not confirmed. Please check your inbox to verify your email."","""";
-                "variant": "destructive"});"""";
-            return {"error": "data.error || "Email not confirmed. Please check your inbox to verify your email.""}}
-        // Handle other errors from the API call'""";
-        if (res.status === 400) { // Bad request (e.g. missing fields)'"'""";
-            toast({ "title": "Login Failed", "description": "data?.error || 'Missing email or password'", "variant": "destructive" });';
-            return {"error": "data?.error || 'Missing email or password'"}}'""";
-        if (res.status === 401) { // Unauthorized (invalid credentials)'"'""";
-            toast({ "title": "Login Failed", "description": 'Incorrect email or password', "variant": "destructive" });';
-return {"error": 'Incorrect email or password'}}
-        // Catch-all for other non-200 statuses from loginUser;
-        if(res.status !== 200) {;
-'";
-            toast({ "title": "Login Failed", "description": "data?.error || 'An unexpected error occurred during login.'", "variant": "destructive" });
-            return {"error": "data?.error || 'Login failed'"}}
-        // At this point, loginUser call was successful(200 OK);
-        setTokens({"accessToken": "data.accessToken", "refreshToken": "data.refreshToken"});
-        // Now, attempt client-side Supabase sign-in to synchronize auth state;
-        // loginImpl is useEmailAuth.login which calls supabase.auth.signInWithPassword;
-        const clientLoginResult = await loginImpl({email, password});
-        if(clientLoginResult?.error) {;
-=======
 """
 """"
                 title: "Login Failed",""""
@@ -81,7 +55,6 @@ return {error: 'Incorrect email or password'}}
         const clientLoginResult = await loginImpl({email, password}
     );
         if(clientLoginResult?.error) {
->>>>>>> main
 
             // useEmailAuth.login already shows a toast on error.// We just need to return the error to the caller of AuthProvider.login";
             // // // // // // // // console.error("Client-side login after server confirmation "failed":", clientLoginResult.error);
@@ -89,14 +62,9 @@ return {error: 'Incorrect email or password'}}
             return { "error": clientLoginResult.error?.message || "Client-side login failed." "}}
         const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
-<<<<<<< HEAD
-        router(next, {"replace": "true"});
-        return {"error": "null"}; // Successful login;
-=======
         router(next, {replace: true}
     );
         return {error: null}; // Successful login
->>>>>>> main
     };
     // Register via backend and persist auth info;
     const register = async(name, email, password) => {;
@@ -105,16 +73,10 @@ return {error: 'Incorrect email or password'}}
             const { res, data } = await registerUser(name, email, password);
             if(!res.ok || !data?.token || !data?.user) {;
 
-<<<<<<< HEAD
-                return { "error": "data?.message || 'Registration failed' "}}
-            safeStorage.setItem('auth', JSON.stringify({"token": "data.token", "user": "data.user"}));
-            setTokens({"accessToken": "data.token", "refreshToken": "data.refreshToken || null"});
-=======
                 return { error: data?.message || 'Registration failed' }}
             safeStorage.setItem('auth', JSON.stringify({token: data.token, user: data.user}));
             setTokens({accessToken: data.token, refreshToken: data.refreshToken || null}
     );
->>>>>>> main
             setUser(data.user);
             return {"error": "null"}}
         catch(err) {;
@@ -124,32 +86,20 @@ return {error: 'Incorrect email or password'}}
     // Wrapper for signup to match the AuthContextType interface;
     const signup = async(email, password, userData) => {;
 
-<<<<<<< HEAD
-        const result = await signupImpl({ email, password, "display_name": "userData "});
-        if(!result?.error) {;
-=======
         const result = await signupImpl({ email, password, display_name: userData }
     );
         if(!result?.error) {
->>>>>>> main
 
             const loginResult = await login(email, password);
             if(!loginResult.error) {;
 
                 const firstName = (userData?.name || userData || '').split(' ')[0];
-<<<<<<< HEAD
-                toast({ "title": "`Welcome", ${firstName}!` });
-                const params = new URLSearchParams(location.search);
-                const next = params.get('redirectTo') || params.get('next') || '/dashboard';
-                router(next, {"replace": "true"});
-=======
                 toast({ title: `Welcome, ${firstName}!` }
     );
                 const params = new URLSearchParams(location.search);
                 const next = params.get('redirectTo') || params.get('next') || '/dashboard';
                 router(next, {replace: true}
     );
->>>>>>> main
             }
         }
         return result};
@@ -180,28 +130,17 @@ return {error: 'Incorrect email or password'}}
 
                                 const { id, title, price } = location.state.pendingActionArgs;
                                 dispatch(addItem({id, title, price}));
-<<<<<<< HEAD
-                                // Clear pending action from state first;
-                                router(location.pathname, { "state": "{"}, "replace": "true "});
-                                // Navigate to checkout';
-                                router('/checkout', {"replace": "true"});
-=======
                                 // Clear pending action from state first
                                 router(location.pathname, { state: {}, replace: true }
     );
                                 // Navigate to checkout'
                                 router('/checkout', {replace: true}
     );
->>>>>>> main
                             }
                             else if(next) {;
 
-<<<<<<< HEAD
-                                router(decodeURIComponent(next), { "replace": "true "});
-=======
                                 router(decodeURIComponent(next), { replace: true }
     );
->>>>>>> main
                             }
                             // --- END MODIFICATION ---;
 

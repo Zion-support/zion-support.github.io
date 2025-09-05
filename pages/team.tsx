@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-=======
 import React from 'react';
->>>>>>> main
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Users } from 'lucide-react';

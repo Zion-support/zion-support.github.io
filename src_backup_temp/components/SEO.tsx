@@ -1,17 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 
-<<<<<<< HEAD
-interface SEOProps {;
-  title?: "string;
-=======
 interface SEOProps {
   title?: string;
   description?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 }
 
 // Lightweight SEO helper compatible with Next.js pages
@@ -37,13 +29,7 @@ import React from 'react';
 interface SEOProps {
 
   title?: string;
->>>>>>> main
   description?: string;
-<<<<<<< HEAD
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
   keywords?: string;
   image?: string;
   url?: string;
@@ -54,99 +40,8 @@ interface SEOProps {
   section?: string;
   tags?: string[];
   noindex?: boolean;
-<<<<<<< HEAD
-"}
-;
-export const "SEO": "React.FC<SEOProps> = ({;
-  title = 'Zion Tech Group - Leading Technology Solutions'",;
-  description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',;
-  keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',;
-  image = '/og-image.svg',;
-  url = '"https": "//ziontechgroup.com'",;
-  type = 'website',;
-  author = 'Zion Tech Group',;
-  publishedTime,;
-  modifiedTime,;
-  section,;
-  tags = [],;
-  noindex = false;
-}) => {;
-  const structuredData = {;
-    '@context': '"https": "//schema.org'",;
-    '@type': 'WebPage',;
-    "name": "title",;
-    description,;
-    url,;
-    "author": "{;
-      '@type': 'Organization'",;
-      "name": "author;
-    "},;
-    "publisher": "{;
-      '@type': 'Organization'",;
-      "name": 'Zion Tech Group',;
-      "logo": "{;
-        '@type': 'ImageObject'",;
-        "url": '"https": "//ziontechgroup.com/logo.png';
-      "}
-    },;
-    ...(publishedTime && { "datePublished": "publishedTime "}),;
-    ...(modifiedTime && { "dateModified": "modifiedTime "}),;
-    ...(section && { "articleSection": "section "}),;
-    ...(tags.length > 0 && { "keywords": "tags.join('", ') });
-  }
-;
-  return (;
-    <Head>;
-      <title>{title}</title>;
-      <meta name="description" content={description} />;
-      <meta name="keywords" content={keywords} />;
-      <meta name="author" content={author} />;
-      <meta name="viewport" content="width=device-width, initial-scale=1" />;
-      <meta name="theme-color" content="#0ea5e9" />;
-      ;
-      {/* Open Graph */}
-      <meta property=""og": "title" content={title"} />;
-      <meta property=""og": "description" content={description"} />;
-      <meta property=""og": "image" content={image"} />;
-      <meta property=""og": "url" content={url"} />;
-      <meta property=""og": "type" content={type"} />;
-      <meta property=""og": "site_name" content="Zion Tech Group" />;
-      ;
-      {/* Twitter */"}
-      <meta name=""twitter": "card" content="summary_large_image" />;
-      <meta name=""twitter":title" content={title"} />;
-      <meta name=""twitter": "description" content={description"} />;
-      <meta name=""twitter": "image" content={image"} />;
-      ;
-      {/* Additional meta tags */}
-      <link rel="icon" href="/favicon.svg" />;
-      <link rel="canonical" href={url} />;
-      ;
-      {/* Structured Data */}
-      <script;
-        type="application/ld+json";
-        dangerouslySetInnerHTML={{ "__html": "JSON.stringify(structuredData) "}}
-      />;
-      ;
-      {/* Noindex if specified */}
-      {noindex && <meta name="robots" content="noindex,nofollow" />}
-    </Head>;
-  );
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-';
-export const SEO: Reac t.FC<SEOProps> = ({';';
-  title = 'Zion Tech Group - Leading Technology Solutions',';';
-  description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',';';
-  keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',';';
-  image = '/og-image.svg',';';
-  url = 'https://ziontechgroup.com',';';
-  type = 'website',';';
-=======
 ;
 export default SEO
-=======
 
 }
 
@@ -157,7 +52,6 @@ export const SEO: React.FC<SEOProps> = ({
   image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
   type = 'website',
->>>>>>> main
   author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
@@ -257,8 +151,6 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og: descriptio n" content={description}   />
       <meta property="og: imag e" content={image}   />
       <meta property="og: site_nam e" content="Zion Tech Group"   />
-<<<<<<< HEAD
-=======
 
 export const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions',
@@ -303,9 +195,6 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
       {/* Twitter */}
       <meta property="twitter: car d" content="summary_large_image"   />
       <meta property="twitter: ur l" content={url}   />
@@ -317,10 +206,6 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0"   />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge"   />
       {/* Structured Data */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -702,22 +587,13 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <link rel="canonical" href="{url}" /" >""
       <meta name="robots" content="index, follow" /" >""
       <meta name="author" content="Zion Tech Group" /" >"
-<<<<<<< HEAD
-=======
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
     </Head>
   )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 "
 export default SEO;"
 ""
@@ -738,14 +614,6 @@ export default SEO;"
 </script>
 </Helmet>
 </SEOProps>
-<<<<<<< HEAD
-</script>';
-</SEOProps>;';;';
-=======
 export default SEO;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </script>
 </SEOProps>
->>>>>>> main
->>>>>>> main

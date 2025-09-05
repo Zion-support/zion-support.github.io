@@ -1,136 +1,28 @@
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import { Users, MapPin, Clock, Star } from 'lucide-react';
+
+const talentPositions = [
+  {
     id: 1,
     title: "Senior AI/ML Engineer",
     department: "AI Services",
     location: "Remote",
     type: "Full-time",
     experience: "5+ years",
-    description: "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",
-    requirements: [
-      'Master\'s degree in Computer Science or related field',
-      '5+ years of experience in AI/ML',
-      'Proficiency in Python, TensorFlow, PyTorch',
-      'Experience with cloud platforms (AWS, Azure, GCP)',
-      'Strong problem-solving and communication skills'
-    ],
-    benefits: [
-      'Competitive salary and equity',
-      'Health, dental, and vision insurance',
-      'Flexible work arrangements',
-      'Professional development opportunities',
-      '401(k) with company matching'
-    ],
-    posted: '2024-01-15',
-    featured: true
-  },
-  {
-    id: 2,
-      "3+ years experience in full-stack development",
-      "Proficiency in React, Node.js, TypeScript",
-      "Experience with databases (PostgreSQL, MongoDB)",
-      "Knowledge of cloud deployment and DevOps"
-    ],
-    benefits: [
-      'Competitive salary',
-      'Health and dental insurance',
-      'Remote work options',
-      'Learning and development budget',
-      'Team building events'
-    ],
-    posted: '2024-01-10',
-    featured: false
-  },
-  {
-    id: 3,
-      "7+ years experience in cloud architecture",
-      "AWS/Azure/GCP certifications preferred",
-      "Experience with containerization (Docker, Kubernetes)",
-      "Strong understanding of security best practices"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
-  },
-  {
-    id: 4,
-    title: "Cybersecurity Specialist",
-    department: "Security",
-    location: "San Francisco, CA",
-    type: "Full-time",
-    experience: "4+ years",
-    description: "Protect our clients' digital assets and implement security best practices.",
-      "4+ years experience in cybersecurity",
-      "Certifications (CISSP, CISM, CEH) preferred",
-      "Experience with security tools and frameworks",
-      "Knowledge of compliance standards (SOC 2, ISO 27001)"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
-  },
-  {
-    id: 5,
-    title: "DevOps Engineer",
-    department: "Engineering",
-    location: "Austin, TX",
-    type: "Full-time",
-    experience: "3+ years",
-    description: "Streamline our development and deployment processes with modern DevOps practices.",
-      "3+ years experience in DevOps",
-      "Proficiency in CI/CD pipelines",
-      "Experience with infrastructure as code (Terraform, CloudFormation)",
-      "Knowledge of monitoring and logging tools"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
-  },
-  {
-    id: 6,
-    title: "UX/UI Designer",
-    department: "Design",
-    location: "Remote",
-    type: "Full-time",
-    experience: "2+ years",
-    description: "Create intuitive and beautiful user experiences for our digital products.",
-      "2+ years experience in UX/UI design",
-      "Proficiency in Figma, Sketch, Adobe Creative Suite",
-      "Experience with user research and testing",
-      "Strong portfolio demonstrating design skills"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
+    description: "Lead the development of cutting-edge AI solutions and machine learning models."
   }
 ];
 
-    title: "Competitive Compensation",
-    description: "We offer competitive salaries and performance-based bonuses",
-    icon: Star
-  },
-  {
-    icon: Users,
-    title: 'Collaborative Culture',
-    description: 'Work with talented professionals in a supportive and inclusive environment'
-  },
-  {
-    icon: Star,
-    title: 'Growth Opportunities',
-    description: 'Continuous learning and career development opportunities'
-  },
-  {
-    icon: Clock,
-    title: 'Work-Life Balance',
-    description: 'Flexible work arrangements and generous time off policies'
-  }
-];
-
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                            {req}
-                          </li>
-                        ))}
-                      </ul>
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-              </Link>
-            </motion.div>
+export default function TalentPage() {
+  return (
+    <Layout title="Talent - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
+            <p className="text-xl text-blue-100">Find your next career opportunity</p>
           </div>
         </section>
       </div>

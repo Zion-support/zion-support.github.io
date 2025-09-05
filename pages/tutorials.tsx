@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-const tutorials = [;
-  {}
-    title: 'Building a Full-Stack Web Application with Next.js,',
-    description: 'Learn how to build a complete web application using Next.js, _React, and Node.js',',
-    duration: '2 hours,',
-    difficulty: 'Intermediate,',
-    category: 'Web Development,',
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -26,7 +16,6 @@ import {
 
 const tutorialCategories = [
   {
->>>>>>> main
     icon: Code,
     title: 'Web Development',
     description: 'Learn modern web development technologies',
@@ -177,8 +166,6 @@ export default function TutorialsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Start Learning?
@@ -206,6 +193,5 @@ export default function TutorialsPage() {
         </section>
       </div>
     </>
->>>>>>> main
   );
 }

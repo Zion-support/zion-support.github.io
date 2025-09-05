@@ -4,16 +4,10 @@ import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
 import CodeBlock from "./CodeBlock.jsx";
-<<<<<<< HEAD
-export function ApiPlayground("props": "any) {;
-    const [apiKey", setApiKey] = useLocalStorage("zion_api_key", "");
-    const [paramValues, setParamValues] = useState({});    const [body, setBody] = useState("{}");
-=======
 export function ApiPlayground(props: any) {
     const [apiKey, setApiKey] = useLocalStorage("zion_api_key", "");
     const [paramValues, setParamValues] = useState({}
     );    const [body, setBody] = useState("{}");
->>>>>>> main
     const [response, setResponse] = useState(null);
     const [loading, setLoading] = useState(false);
     const handleParamChange = ("props": "any) => {"}
@@ -27,18 +21,11 @@ export function ApiPlayground(props: any) {
         if (method === "GET" || method === "DELETE") {}
             params.forEach((p) => {}
                 const val = paramValues[p.name];
-<<<<<<< HEAD
-                if(val)`;
-                    searchParams.append(p.name, val)});``;
-            const query = searchParams.toString();```;
-            if (query)````;
-=======
                 if(val)`
                     searchParams.append(p.name, val)}
     );``
             const query = searchParams.toString();```
             if (query)````
->>>>>>> main
                 url += `?${query}`}
         const options = {}
   method,;
@@ -63,18 +50,11 @@ export function ApiPlayground(props: any) {
         catch(err) {}
             setResponse(err.message)}
         finally {}
-<<<<<<< HEAD
-            setLoading(false)}""";
-    };"""";
-    return (<div className="space-y-4">"""";
-      <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>"""";
-=======
             setLoading(false)}"""
     };""""
     return (
         <div className="space-y-4">""""
       <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>""""
->>>>>>> main
       {params.map((p) => (<Input key={p.name} value={paramValues[p.name] || ""} onChange = {}
   (e) => handleParamChange(p.name,;
   e.target.value);

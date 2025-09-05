@@ -1,41 +1,9 @@
-<<<<<<< HEAD:src/components/SEO/EnhancedSEOOptimizer.tsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'; import Head from 'next/head'; interface SEOProps {';';
- title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: 'website' | 'article' | 'product'; author?: string; publishedTime?: string; modifiedTime?: string; section?: string; tags?: string[]; locale?: string; alternateLocales?: { locale: string; url: string   ';';
-}[]; noindex?: boolean; nofollow?: boolean; canonical?: string; structuredData?: any; } const EnhancedSEOOptimizer: Reac t.FC<SEOProps> = ({ title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.Trusted by 500+ companies worldwide.', keywords = 'technology solutions, AI services, quantum computing, blockchain, software development, digital transformation, enterprise solutions', image = 'https:
-';
-</SEOProps>;';;';
-=======
 import React from 'react'; import Head from 'next/head'; interface SEOProps {;
  title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: 'website' | 'article' | 'product'; author?: string; publishedTime?: string; modifiedTime?: string; section?: string; tags?: string[]; locale?: string; alternateLocales?: { locale: string; url: string;
 }[]; noindex?: boolean; nofollow?: boolean; canonical?: string; structuredData?: any; } const EnhancedSEOOptimizer: React.FC<SEOProps> = ({ title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.Trusted by 500+ companies worldwide.', keywords = 'technology solutions, AI services, quantum computing, blockchain, software development, digital transformation, enterprise solutions', image = 'https:;
 </SEOProps>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 import React from 'react'; import Head from 'next/head'; interface SEOProps {;
  title?: "string; description?: string; keywords?: string; image?: string; url?: string; type?: 'website' | 'article' | 'product'; author?: string; publishedTime?: string; modifiedTime?: string; section?: string; tags?: string[]; locale?: string; alternateLocales?: { "locale": string; "url": string;
 "}[]; noindex?: "boolean; nofollow?: boolean; canonical?: string; structuredData?: any; "} const "EnhancedSEOOptimizer": "React.FC<SEOProps> = ({ title = 'Zion Tech Group - Leading Technology Solutions Provider'", description = 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.Trusted by 500+ companies worldwide.', keywords = 'technology solutions, AI services, quantum computing, blockchain, software development, digital transformation, enterprise solutions', image = '"https": ";
 </SEOProps>;"
-=======
-<<<<<<< HEAD
-import React from 'react'; import Head from 'next/head'; interface SEOProps {
- title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: 'website' | 'article' | 'product'; author?: string; publishedTime?: string; modifiedTime?: string; section?: string; tags?: string[]; locale?: string; alternateLocales?: { locale: string; url: string   
-}[]; noindex?: boolean; nofollow?: boolean; canonical?: string; structuredData?: any; } const EnhancedSEOOptimizer: React.FC<SEOProps> = ({ title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.Trusted by 500+ companies worldwide.', keywords = 'technology solutions, AI services, quantum computing, blockchain, software development, digital transformation, enterprise solutions', image = 'https:
-
-</SEOProps>
-=======
-<<<<<<< HEAD
-import React from &apos;react&apos;; import Head from &apos;next/head&apos;; interface SEOProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: &apos;website&apos; | &apos;article&apos; | &apos;product&apos;; author?: string; publishedTime?: string; modifiedTime?: string; section?: string; tags?: string[]; locale?: string; alternateLocales?: { locale: string; url: string &apos;;&apos;}[]; noindex?: boolean; nofollow?: boolean; canonical?: string; structuredData?: any} const EnhancedSEOOptimizer: Reac t.FC<SEOProps> = ({ title = &apos;Zion Tech Group - Leading Technology Solutions Provider&apos;,description = &apos;Transform your business with cutting-edge AI,quantum computing,blockchain infrastructure,and innovative development services.Trusted by 500+ companies worldwide.&apos;,keywords = &apos;technology solutions,AI services,quantum computing,blockchain,software development,digital transformation,enterprise solutions&apos;,image = &apos;https: </SEOProps>;&apos;;&apos;;
-=======
-<<<<<<< HEAD
-const React from "react"; import Head from "next/head"; interface SEOProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: "website" | "article" | "product"; author?: string; publishedTime?: string; modifiedTime?: string; section?: string; tags?: string[]; locale?: string; alternateLocales?: { locale: string; url: string ";"}[]; noindex?: boolean; nofollow?: boolean; canonical?: string; structuredData?: any} const EnhancedSEOOptimizer: Reac t.FC<SEOProps> = ({ title = "Zion Tech Group - Leading Technology Solutions Provider",description = "Transform your business with cutting-edge AI,quantum computing,blockchain infrastructure,and innovative development services.Trusted by 500+ companies worldwide.",keywords = "technology solutions,AI services,quantum computing,blockchain,software development,digital transformation,enterprise solutions",image = "https: </SEOProps>;";";""
-=======
 import _React from 'react'; import Head from 'next/head'; interface SEOProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: 'website' | 'article' | 'product'; author?: string; publishedTime?: string; modifiedTime?: string; section?: string; tags?: string[]; locale?: string; alternateLocales?: { locale: string; url: string ';'}[]; noindex?: boolean; nofollow?: boolean; canonical?: string; structuredData?: any} const EnhancedSEOOptimizer: Reac t.FC<SEOProps> = ({ title = 'Zion Tech Group - Leading Technology Solutions Provider,description = 'Transform your business with cutting-edge AI,quantum computing,blockchain infrastructure,and innovative development services.Trusted by 500+ companies worldwide.',keywords = 'technology solutions,AI services,quantum computing,blockchain,software development,digital transformation,enterprise solutions',image = 'https: </SEOProps>;';';
->>>>>>> main
->>>>>>> main:src_backup_temp/components/SEO/EnhancedSEOOptimizer.tsx
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-const mobileMenuItems = [\' { \"name\": \'Services,\',\"icon\": <Briefcase: className=\'w-5 h-5\'/,>,\"href\": \'/services\'},\' { \"name\": \'Talent,\',\"icon\": <Users: className=\'w-5 h-5\'/,>,\"href\": \'/talent\'},\' { \"name\": \'Equipment,\',\"icon\": <HardDrive: className=\'w-5 h-5\'/,>,\"href\": \'/equipment\'},\' { \"name\": \'Innovation,\',\"icon\": <Lightbulb: className=\'w-5 h-5\'/,>,\"href\": \'/category/innovation\'}] \"export\": function MobileNavigation() { const [isOpen,setIsOpen] = useState(false) const toggleMenu = () => { setIsOpen(!isOpen)\';\"";
-=======
-<<<<<<< HEAD
-const mobileMenuItems = [" { name: "Services,",icon: <Briefcase: className="w-5 h-5"/,>,href: "/services"}," { name: "Talent,",icon: <Users: className="w-5 h-5"/,>,href: "/talent"}," { name: "Equipment,",icon: <HardDrive: className="w-5 h-5"/,>,href: "/equipment"}," { name: "Innovation,",icon: <Lightbulb: className="w-5 h-5"/,>,href: "/category/innovation"}] export: function MobileNavigation() { const [isOpen,setIsOpen] = useState(false) const toggleMenu = () => { setIsOpen(!isOpen)";"";"""
-=======
 import React from 'react';
 
 interface MobileNavigationProps {
@@ -18,5 +12,3 @@ export default function MobileNavigation({ }: MobileNavigationProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

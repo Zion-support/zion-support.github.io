@@ -103,17 +103,6 @@ export default function Page("props": "any) {;
             case 'Leading': return 'bg-purple-100 text-purple-800';
             "default": return 'bg-gray-100 text-gray-800'"}
     };
-<<<<<<< HEAD
-    const categories = [';
-        {"id": 'all', "name": 'All Categories', "count": "portfolioData.length"},;
-        {"id": 'ai', "name": 'AI & Machine Learning', "count": "portfolioData.filter(s => s.category === 'ai').length"},;
-        {"id": 'quantum', "name": 'Quantum Computing', "count": "portfolioData.filter(s => s.category === 'quantum').length"},;
-        {"id": 'space-tech', "name": 'Space Technology', "count": "portfolioData.filter(s => s.category === 'space-tech').length"},;
-        {"id": 'biotech-ai', "name": 'Biotech AI', "count": "portfolioData.filter(s => s.category === 'biotech-ai').length"},;
-        {"id": 'green-tech', "name": 'Green Technology', "count": "portfolioData.filter(s => s.category === 'green-tech').length"}
-    ];";
-    return (<div className="max-w-7xl mx-auto p-6">;
-=======
     const categories = ['
         {id: 'all', name: 'All Categories', count: portfolioData.length},
         {id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length},
@@ -124,7 +113,6 @@ export default function Page("props": "any) {;
     ];"
     return (
         <div className="max-w-7xl mx-auto p-6">
->>>>>>> main
       {/* Header */}
       <motion.div initial = {;
 
@@ -189,87 +177,6 @@ export default function Page("props": "any) {;
           <CardContent>";
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
               {portfolioMetrics.totalServices}
-<<<<<<< HEAD
-            </h3>";
-            <p className="text-sm text-zion-slate-light">;
-              Total Services;
-            </p>;
-          </CardContent>;
-        </Card>;
-";
-        <Card className=""hover": "shadow-lg transition-shadow">";
-          <CardHeader className="pb-3">";
-            <div className="flex items-center justify-between">";
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white">";
-                <DollarSign className="w-6 h-6" />;
-              </div>";
-              <div className="flex items-center gap-1">";
-                <ArrowUpRight className="w-4 h-4 text-green-500" />";
-                <span className="text-sm font-medium text-green-600">;
-                  +{Math.round(portfolioMetrics.portfolioGrowth)"}%;
-                </span>;
-              </div>;
-            </div>;
-          </CardHeader>;
-          <CardContent>";
-            <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
-              ${(portfolioMetrics.totalRevenue / 1000000).toFixed(1)}M;
-            </h3>";
-            <p className="text-sm text-zion-slate-light">;
-              Total Revenue;
-            </p>;
-          </CardContent>;
-        </Card>;
-";
-        <Card className=""hover": "shadow-lg transition-shadow">";
-          <CardHeader className="pb-3">";
-            <div className="flex items-center justify-between">";
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">";
-                <Users className="w-6 h-6" />;
-              </div>";
-              <div className="flex items-center gap-1">";
-                <ArrowUpRight className="w-4 h-4 text-green-500" />";
-                <span className="text-sm font-medium text-green-600">;
-                  +{Math.round(portfolioMetrics.portfolioGrowth)"}%;
-                </span>;
-              </div>;
-            </div>;
-          </CardHeader>;
-          <CardContent>";
-            <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
-              {portfolioMetrics.activeClients}
-            </h3>";
-            <p className="text-sm text-zion-slate-light">;
-              Active Clients;
-            </p>;
-          </CardContent>;
-        </Card>;
-";
-        <Card className=""hover": "shadow-lg transition-shadow">";
-          <CardHeader className="pb-3">";
-            <div className="flex items-center justify-between">";
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">";
-                <Target className="w-6 h-6" />;
-              </div>";
-              <div className="flex items-center gap-1">";
-                <ArrowUpRight className="w-4 h-4 text-green-500" />";
-                <span className="text-sm font-medium text-green-600">;
-                  +{Math.round(portfolioMetrics.portfolioGrowth)"}%;
-                </span>;
-              </div>;
-            </div>;
-          </CardHeader>;
-          <CardContent>";
-            <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
-              {portfolioMetrics.averagePerformance}%;
-            </h3>";
-            <p className="text-sm text-zion-slate-light">;
-              Avg Performance;
-            </p>;
-          </CardContent>;
-        </Card>;
-      </motion.div>;
-=======
             "
             <p className="text-sm text-zion-slate-light">
               Total Services
@@ -349,7 +256,6 @@ export default function Page("props": "any) {;
           </CardContent>
         </Card>
       </motion.div>
->>>>>>> main
 
       {/* Filters and Controls */}
       <motion.div initial = {;
@@ -631,26 +537,6 @@ export default function Page("props": "any) {;
   { "opacity": "1",;
   "y": "0;
 
-<<<<<<< HEAD
-";
-"}} transition={{ "delay": "0.5 "}} className="text-center">";
-        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">";
-          <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>";
-          <p className="text-xl mb-6 max-w-2xl mx-auto">;
-            Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors.Contact us to discuss how we can help you achieve your business goals.</p>";
-          <div className="flex flex-col "sm": "flex-row gap-4 justify-center">";
-            <Button className="bg-white text-zion-purple "hover":bg-zion-slate-light" onClick={() => window.open('"mailto":kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation'",_blank')}>";
-              <Users className="w-5 h-5 mr-2" />;
-              Get Portfolio Consultation;
-            </Button>";
-            <Button variant="outline" className="border-white text-white "hover": "bg-white "hover":text-zion-purple" onClick={() => window.open('"tel":+13024640950'",_blank')}>";
-              <Zap className="w-5 h-5 mr-2" />;
-              Call Now;
-            </Button>;
-          </div>;
-        </div>;
-      </motion.div>;
-=======
 "
 }} transition={{ delay: 0.5 }} className="text-center">"
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"
@@ -669,7 +555,6 @@ export default function Page("props": "any) {;
           </div>
         </div>
       </motion.div>
->>>>>>> main
     </div>)};
 export default AdvancedServicePortfolioDashboard;
 }}}}}}

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -126,7 +124,6 @@ export default function APIDocumentationPage() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
->>>>>>> main
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
@@ -157,17 +154,11 @@ export default function APIDocumentationPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* API Endpoints Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-=======
         {/* API Endpoints */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
->>>>>>> main
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
@@ -177,14 +168,6 @@ export default function APIDocumentationPage() {
                 Explore our comprehensive API endpoints for AI services.
               </p>
             </motion.div>
-<<<<<<< HEAD
-                      <span className={`px-3 py-1 rounded text-sm font-medium ${
-                        endpoint.method === 'GET' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
-                      }`}>
-                        {endpoint.method}
-                      </span>
-                    </div>
-=======
             <div className="space-y-8">
               {endpoints.map((endpoint, index) => (
                 <motion.div
@@ -269,21 +252,17 @@ export default function APIDocumentationPage() {
                   </pre>
                 </motion.div>
               ))}
->>>>>>> main
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-=======
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> main
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
@@ -309,16 +288,7 @@ export default function APIDocumentationPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-    <Layout title="API Docs">
-      <div className="max-w-5xl mx-auto px-4 py-16">
-        <h1 className="text-3xl font-bold mb-4">API Documentation</h1>
-        <p className="text-gray-600">Reference content will return after fixes. Basic page added to restore build.</p>
-      </div>
-    </Layout>
-=======
       </div>
     </Layout>
   );
 }
->>>>>>> main

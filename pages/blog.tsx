@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -16,24 +14,10 @@ import {
   Filter
 } from 'lucide-react';
 import Layout from '../components/Layout';
->>>>>>> main
 
 const blogPosts = [
   {
     id: 1,
-<<<<<<< HEAD
-  }
-]
-    title: 'Cloud Security Best Practices for Enterprise Applications',
-    excerpt: 'Essential security measures every enterprise should implement in their cloud infrastructure.',
-    content: 'Cloud security is paramount in today\'s digital landscape...',
-    author: 'Michael Chen',
-    date: '2024-01-05',
-    readTime: '6 min read',
-    category: 'Security',
-    image: '/blog/cloud-security.jpg',
-    tags: ['Security', 'Cloud', 'Enterprise', 'Best Practices']
-=======
     title: "The Future of AI in Business: Trends and Predictions for 2024",
     excerpt: "Explore the latest AI trends and how they're transforming business operations across industries.",
     author: "Zion Tech Team",
@@ -82,7 +66,6 @@ const blogPosts = [
     category: "Data Analytics",
     readTime: "9 min read",
     image: "/api/placeholder/600/300"
->>>>>>> main
   },
   {
     id: 6,
@@ -96,22 +79,11 @@ const blogPosts = [
   }
 ];
 
-<<<<<<< HEAD
-];
-
-const blogCategories = [
-=======
 const categories = [
->>>>>>> main
   "All Posts",
   "AI & Machine Learning",
   "Cloud Computing",
   "Cybersecurity",
-<<<<<<< HEAD
-  "SaaS",
-  "Digital Transformation"
-];
-=======
   "SaaS Development",
   "Data Analytics",
   "Real Estate Tech",
@@ -119,30 +91,15 @@ const categories = [
 ];
 
 const featuredPost = blogPosts.find(post => post.featured);
->>>>>>> main
 
 export default function BlogPage() {
   return (
-<<<<<<< HEAD
-=======
     <Layout
->>>>>>> main
       title="Blog - Zion Tech Group"
       description="Latest insights, trends, and best practices in technology. Stay updated with our expert articles on AI, cloud computing, cybersecurity, and more."
       keywords="technology blog, AI insights, cloud computing, cybersecurity, SaaS development, data analytics, tech trends"
       canonical="https://ziontechgroup.com/blog"
     >
-<<<<<<< HEAD
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              </p>
-            </motion.div>
-=======
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -208,21 +165,10 @@ export default function BlogPage() {
                 </div>
               </div>
             </div>
->>>>>>> main
           </div>
         </section>
       )}
 
-<<<<<<< HEAD
-                <button
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-=======
       {/* Blog Posts */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -333,57 +279,11 @@ export default function BlogPage() {
                   </button>
                 </div>
               </div>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-        {/* Blog Posts */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post, index) => (
-                <motion.article
-                >
-                  <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-                    <BookOpen className="w-16 h-16 text-white" />
-                  </div>
-                  
-                  <div className="p-6">
-                      </div>
-                    </div>
-                    
-                    </div>
-                    
-                    <Link
-                      href={`/blog/${post.id}`}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-                    >
-                      Read More
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-            {/* Load More Button */}
-            <div className="text-center mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Load More Posts
-              </button>
-            </div>
-            {filteredPosts.length === 0 && (
-              <div className="text-center py-12">
-                <div className="text-gray-400 mb-4">
-                  <BookOpen className="w-16 h-16 mx-auto" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">No posts found</h3>
-                <p className="text-gray-600">Try selecting a different category.</p>
-              </div>
-            )}
-=======
       {/* Contact CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -411,7 +311,6 @@ export default function BlogPage() {
               <MapPin className="w-6 h-6 mr-2" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
->>>>>>> main
           </div>
         </div>
       </section>

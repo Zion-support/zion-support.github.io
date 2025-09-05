@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import {
   ArrowRight,
   Users,
   Calendar,
@@ -5,7 +7,8 @@
   Video,
   Globe,
   Shield,
-  Zap,
+  Zap
+} from 'lucide-react';
 
 const benefits = [
   {
@@ -13,9 +16,24 @@ const benefits = [
     description: 'Get access to exclusive white papers, case studies, and industry insights.',
     icon: FileText
   },
-  {}
-    title: 'Webinar Invitations,',
-    description: 'Receive invitations to our expert-led webinars and virtual events.,',
-    icon: Video;
-  },
+  {
+    title: 'Webinar Invitations',
+    description: 'Receive invitations to our expert-led webinars and virtual events',
+    icon: Video
+  }
+];
+
+export default function NewsletterPage() {
+  return (
+    <Layout title="Newsletter - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Stay Updated</h1>
+            <p className="text-xl text-blue-100">Get the latest insights and updates from our team</p>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
 }

@@ -1,0 +1,6 @@
+import { import { motion } from 'framer-motion';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+import { import { motion } from &apos;framer-motion&apos;; ;&apos;;&apos;;
+=======
+import { import { motion } from 'framer-motion'; ;';';''
