@@ -1,34 +1,36 @@
 #!/bin/bash
 
-echo "🔧 Fixing merge conflicts in source files..."
+# Script to fix merge conflicts by keeping HEAD version
+echo "Fixing merge conflicts in pages/ directory..."
 
 # Find all files with merge conflicts
+<<<<<<< HEAD
 files_with_conflicts=$(grep -r "" src/ --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" -l)
+=======
+files_with_conflicts=$(find pages/ -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \;)
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-82f1
 
 for file in $files_with_conflicts; do
-    echo "Fixing: $file"
+    echo "Fixing merge conflicts in: $file"
     
     # Create a backup
     cp "$file" "$file.backup"
     
     # Use sed to remove merge conflict markers and keep HEAD version
+<<<<<<< HEAD
     sed -i '/^/,/^/!d' "$file"
     sed -i '/^/,/^>>>>>>> /d' "$file"
     sed -i '/^/d' "$file"
     sed -i '/^/d' "$file"
     sed -i '/^>>>>>>> /d' "$file"
+=======
+    # Remove lines from <<<<<<< HEAD to ======= (inclusive)
+    # Remove lines from ======= to >>>>>>> (inclusive)
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/=======/,/>>>>>>> /d' "$file"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-82f1
     
-    # Clean up any remaining syntax issues
-    sed -i 's/",'"'"'//g' "$file"
-    sed -i 's/'"'"'",//g' "$file"
-    sed -i 's/;'"'"'//g' "$file"
-    sed -i 's/'"'"';//g' "$file"
-    sed -i 's/",//g' "$file"
-    sed -i 's/",//g' "$file"
-    sed -i 's/;'"'"'//g' "$file"
-    sed -i 's/'"'"';//g' "$file"
-    
-    echo "✅ Fixed: $file"
+    echo "Fixed: $file"
 done
 
-echo "🎉 Merge conflicts fixed!"
+echo "Merge conflicts fixed!"

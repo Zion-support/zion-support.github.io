@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
@@ -21,8 +21,6 @@ export default function Layout({
   ogImage = '/og-image.jpg',
   noIndex = false
 }: LayoutProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   return (
     <>
       <Head>
@@ -55,7 +53,7 @@ export default function Layout({
         
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https: //fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />ursor/add-new-services-and-deploy-updates-1b90
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Structured Data */}
         <script
@@ -68,7 +66,7 @@ name: "Zion Tech Group",
               url: "https: //ziontechgroup.com",
               logo: "https: //ziontechgroup.com/logo.png",
               description: description,
-              address: {ursor/add-new-services-and-deploy-updates-1b90
+              address: {
                 "@type": "PostalAddress",
                 "streetAddress": "123 Technology Drive",
                 "addressLocality": "Innovation City",
@@ -78,28 +76,25 @@ name: "Zion Tech Group",
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-telephone: "+1-302-464-0950",ursor/add-new-services-and-deploy-updates-1b90
+telephone: "+1-302-464-0950",
                 "contactType": "customer service",
                 "email": "contact@ziontechgroup.com"
               },
 "sameAs": ["https: //linkedin.com/company/ziontechgroup",
                 "https: //twitter.com/ziontechgroup",
-                "https: //github.com/ziontechgroup"ursor/add-new-services-and-deploy-updates-1b90
+                "https: //github.com/ziontechgroup"
               ]
             })
           }}
         />
       </Head>
       
-      <div className="min-h-screen flex">
-        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-        <div className="flex-1 flex flex-col lg:ml-80">
-          <Header onMenuClick={() => setIsSidebarOpen(true)} />
-          <main className="flex-1 pt-16">
-            {children}
-          </main>
-          <Footer />
-        </div>
+      <div className="min-h-screen bg-slate-50">
+        <AppHeader />
+        <main className="flex-1">
+          {children}
+        </main>
+        <FuturisticFooter />
       </div>
     </>
   );

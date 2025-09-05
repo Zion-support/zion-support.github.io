@@ -10,4 +10,6 @@ describe('AIChatbotSystem', () => {;
     render(<AIChatbotSystem />);
 // Add interaction tests based on component functionality})});
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+origin/cursor/automate-test-improve-and-merge-code-eafe
+cursor/website-audit-and-update-with-deployment-76dc
+cursor/fix-lint-push-and-merge-to-main-f3c1

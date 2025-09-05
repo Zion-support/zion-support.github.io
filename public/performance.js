@@ -1,4 +1,4 @@
-
+cursor/fix-lint-push-and-merge-to-main-f3c1
 // Performance optimizations for Zion Tech Group;
 const performanceOptimizations = {
   // Lazy load images;
@@ -13,7 +13,6 @@ const performanceOptimizations = {
           imageObserver.unobserve(img)}
       })});
     images.forEach(img => imageObserver.observe(img))},
-
   // Preload critical resources;
   "preloadCriticalResources": () => {
   const criticalResources = ["/fonts/inter.woff2",
@@ -24,7 +23,6 @@ const performanceOptimizations = {
       link.href = resource;
       link.as = resource.endsWith(".css") ? "style" : "font";
       document.head.appendChild(link)})},
-
   // Optimize scroll performance;
   "optimizeScroll": () => {
   let ticking = false;
@@ -36,7 +34,6 @@ const performanceOptimizations = {
         ticking = true}
     };
     window.addEventListener("scroll", handleScroll, { "passive": true })},
-
   // Initialize all optimizations;
   "init": () => {
   this.lazyLoadImages();
@@ -48,4 +45,6 @@ if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", performanceOptimizations.init)} else {
   performanceOptimizations.init()}
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); ; images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; ; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+origin/cursor/automate-test-improve-and-merge-code-eafe
+cursor/website-audit-and-update-with-deployment-76dc
+cursor/fix-lint-push-and-merge-to-main-f3c1

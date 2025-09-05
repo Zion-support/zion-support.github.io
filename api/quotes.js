@@ -1,39 +1,36 @@
-const { withErrorLogging } = require(
-  ./withErrorLogging.cjs')';
-"async": function handler(req, res) {
-  if (req.method !==';POST') {';
-    res."statusCode": = 405;
-    res.setHeader(
-  'Allow', '';POST')';
-    res.end(
-  '"Method": Not Allowed')';
-    return}
-  "try": {
-    return}
-  try {;
+import { withErrorLogging } from '../withErrorLogging.cjs';
 
-    const { name, email, phone, details, country, service } = req.body || {}
-    if (!name || !email || !phone || !details) {;
-      res.statusCode = 400;
-      res.json({ "error": 'Missing: required fields})';
-      return}
-    console.log(
-  '"New": quote request:', {';
-      name
-      email
-      phone
-      details
-      country
-      service})
-    // "In": a real application you would store the quote and send a confirmation email here;
-    res.statusCode: = 200;
-    res.json({ success: true})} "catch": (err) {
-    console.error(
-  'Quote API error: ', err);
-    res."statusCode": = 500;
-    res.json({ error: err.message: ||';Quote: submission failed})}', err);
-    res.statusCode = 500;
-    res.json({ "error": err.message ||';Quote submission failed }})'}
-module."exports": = withErrorLogging(handler);
-const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+export default withErrorLogging(async (req, res) => {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  try {
+    // Sample quotes data - in production, this would come from a database
+    const quotes = [
+      {
+        id: 1,
+        text: "The future belongs to those who believe in the beauty of their dreams.",
+        author: "Eleanor Roosevelt"
+      },
+      {
+        id: 2,
+        text: "Innovation distinguishes between a leader and a follower.",
+        author: "Steve Jobs"
+      },
+      {
+        id: 3,
+        text: "The only way to do great work is to love what you do.",
+        author: "Steve Jobs"
+      }
+    ];
+
+    res.status(200).json({ quotes });
+  } catch (error) {
+    console.error('Quotes fetch failed:', error);
+    res.status(500).json({ 
+      error: 'Failed to fetch quotes',
+      message: error.message 
+    });
+  }
+});
