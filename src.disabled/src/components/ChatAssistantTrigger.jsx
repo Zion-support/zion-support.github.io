@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface ChatAssistantTriggerProps {
   // Add props here as needed
 }
-
 export default function ChatAssistantTrigger({ }: ChatAssistantTriggerProps) {
   return (
     <div>

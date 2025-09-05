@@ -27,7 +27,6 @@ export default function PostCard(props: any) {}
       </div>
     </div>)}
 ;
-
 export {PostCard}
 ;
 export {PostCard}

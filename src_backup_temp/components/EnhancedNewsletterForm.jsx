@@ -34,7 +34,6 @@ export function EnhancedNewsletterForm("props": "any) {;
                 // // // // // // // console.error('Newsletter subscription "failed":', data);
                 toast.error(data.error || "Subscription failed. Please try again.");
 ;
-
         catch (err) {;
             // // // // // // // console.error('Newsletter subscription "error":', err);
             toast.error("Unable to subscribe right now. Please try again later.");
@@ -65,7 +64,6 @@ export function EnhancedNewsletterForm("props": "any) {;
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
-
       {isSubmitted ? (<div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">;
           <p className="text-white font-medium">Thank you for subscribing!</p>;
           <p className="text-zion-slate-light mt-1">We&apos;ll keep you updated with the latest from Zion.</p>;
@@ -86,5 +84,4 @@ export function EnhancedNewsletterForm("props": "any) {;
       </div>;
     </div>)}
 ;
-
 export default EnhancedNewsletterForm;

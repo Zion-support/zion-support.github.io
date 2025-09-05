@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface CategoryDetailProps {
   // Add props here as needed
 }
-
 export default function CategoryDetail({ }: CategoryDetailProps) {
   return (
     <div>

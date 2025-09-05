@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface PerformanceOptimizedHeroProps {
   // Add props here as needed
 }
-
 export default function PerformanceOptimizedHero({ }: PerformanceOptimizedHeroProps) {
   return (
     <div>

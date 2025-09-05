@@ -513,9 +513,7 @@ export function ContactInfo(props: any) {
 """""";""
 """""'
 "
-
 export default Component
-
 </div>
 </div>
 </Star>

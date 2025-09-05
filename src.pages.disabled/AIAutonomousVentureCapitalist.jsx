@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface AIAutonomousVentureCapitalistProps {
   // Add props here as needed
 }
-
 export default function AIAutonomousVentureCapitalist({ }: AIAutonomousVentureCapitalistProps) {
   return (
     <div>

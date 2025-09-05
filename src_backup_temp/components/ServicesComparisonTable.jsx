@@ -290,7 +290,6 @@ return()""
                     variant="outline"""""
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">,
                     View {category}
-
                   </Button>
                 </CardContent>
               </Card>
@@ -417,9 +416,7 @@ your business needs"
 }"""""
 """"""
 "
-
 export default Component
-
 </Button>
 </Badge>
 </div>
@@ -432,7 +429,6 @@ export default Component
 </div>
 </CardHeader>
 </div>
-
 </div>
 </Phone>
 </Phone>

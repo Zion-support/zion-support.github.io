@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface FiveGSolutionsProps {
   // Add props here as needed
 }
-
 export default function FiveGSolutions({ }: FiveGSolutionsProps) {
   return (
     <div>

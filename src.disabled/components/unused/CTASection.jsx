@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface CTASectionProps {
   // Add props here as needed
 }
-
 export default function CTASection({ }: CTASectionProps) {
   return (
     <div>

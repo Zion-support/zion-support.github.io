@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface LanguageSelectorProps {
   // Add props here as needed
 }
-
 export default function LanguageSelector({ }: LanguageSelectorProps) {
   return (
     <div>

@@ -17,7 +17,6 @@ jest.mock('@prisma/client', () => {
   };
   return { PrismaClient: jest.fn(() => mPrismaClient) };
 });
-
 let prisma: PrismaClient;
 interface ProductLike {
   id: string
@@ -28,11 +27,9 @@ interface ProductLike {
   currency?: string
   tags?: string[]
 }
-
 describe('/api/products API Endpoint', () => {
   let req: ReturnType<typeof createRequest>;
   let res: ReturnType<typeof createResponse>;
-
   beforeEach(() => {
     jest.clearAllMocks();
     prisma = new PrismaClient(); // Get the mocked instance

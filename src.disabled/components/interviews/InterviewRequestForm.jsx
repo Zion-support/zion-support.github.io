@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface InterviewRequestFormProps {
   // Add props here as needed
 }
-
 export default function InterviewRequestForm({ }: InterviewRequestFormProps) {
   return (
     <div>

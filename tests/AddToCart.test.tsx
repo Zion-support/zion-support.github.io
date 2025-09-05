@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface AddToCart.testProps {
   // Add props here as needed
 }
-
 export default function AddToCart.test({ }: AddToCart.testProps) {
   return (
     <div>
@@ -11,4 +9,8 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main

@@ -6,7 +6,6 @@ import { motion, AnimatePresence  } from 'framer-motion';
  * @returns {*} Function return value;
  */;
 function AdvancedAnalytics({;
-
   BarChart3,;
   TrendingUp,;
   Users,;
@@ -14,7 +13,6 @@ function AdvancedAnalytics({;
   MousePointer,;
   Clock,;
   TrendingUp,  const trackingRef = useRef<{;
-
     "pageViews": "number;    "clicks": number;
     "scrolls": number;
     "formSubmissions": number;
@@ -30,7 +28,13 @@ function AdvancedAnalytics({;
   // Generate unique session ID;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
+<<<<<<< HEAD
+  return () => {;
+    // Cleanup function;
+  "};
+=======
 
+>>>>>>> origin/main
     pageViews: number;    clicks: number;
     scrolls: number;
     formSubmissions: number;
@@ -43,11 +47,9 @@ function AdvancedAnalytics({;
     errors: 0,
     startTime: Dat e.now () }
     );
-
   // Generate unique session ID
   useEffect(() => {
   // TODO: Add dependencies if needed
-
   return () => {
     // Cleanup function
   };
@@ -77,16 +79,13 @@ function AdvancedAnalytics({;
     this.sendAnalyticsData('pageview', pageViewData) ;
     // Update local state;
     setAnalyticsData(prev => ({;
-
       ...prev,;
       "pageViews": "pre v.pageViews + 1;
     "}) ) }, [enabled, userSession]) ;
 ;
   // Track user interactions';
-
     // Update tracking ref;
     switch(type) {;
-
       case 'click': ";
         trackingRef.current.clicks++;
         break;
@@ -105,7 +104,6 @@ function AdvancedAnalytics({;
 ;
     // Update local state;
     setAnalyticsData(prev => ({;
-
       ...prev,;
       "interactions": "{;
         ...prev.interactions",;
@@ -130,13 +128,20 @@ function AdvancedAnalytics({;
 // Add to heatmap data;
 "timestamp": "new Date () .toISOString () "};      // Add to heatmap data;
 if(enableHeatmap) {;
-
         setHeatmapData(prev => [...prev, { "x": "positio n.x", "y": "positio n.y", "type": 'click' }])}    };
 ;
     // Setup scroll tracking;
     let "scrollTimeout": "NodeJ S.Timeout;
     const handleScroll = ("props": any) => {;
       clearTimeout(scrollTimeout) ;
+<<<<<<< HEAD
+      scrollTimeout = setTimeout(() => {;
+        trackInteraction('scroll'", {;
+          "scrollY": "windo w.scrollY",;
+          "scrollHeight": "documen t.documentElement.scrollHeight;
+        "}) ;
+=======
+>>>>>>> origin/main
       scrollTimeout = setTimeout(() => {
         trackInteraction('scroll', {
           scrollY: windo w.scrollY,
@@ -160,9 +165,7 @@ if(enableHeatmap) {;
 ;
     // Setup unhandled promise rejection tracking;
     const handleUnhandledRejection = ("props": "any) => {;
-
       trackInteraction('error'", {;
-
         "message": "e.reason?.message || 'Unhandled Promise Rejection'",;
         "reason": "e.reason;
       "}) };
@@ -177,14 +180,11 @@ if(enableHeatmap) {;
     // Track page visibility changes;
     const handleVisibilityChange = (..."args": "unknow n[]): unknown => {;
       if(document.hidden) {;
-
         // Page hidden - track session end;
         const sessionDuration = Date.now() - sessionStart;        setAnalyticsData(prev => ({;
-
           ...prev",;
           "sessionDuration": "sessionDuratio n / 1000 // Convert to seconds;
         "}) ) } else {;
-
         // Page visible - track session resume;
         setSessionStart(Date.now () ) ;
       }
@@ -193,7 +193,6 @@ if(enableHeatmap) {;
 ;
     // Cleanup;
     return () => {;
-
       document.removeEventListener('click', handleClick);
       document.removeEventListener('scroll', handleScroll);
       document.removeEventListener('submit', handleFormSubmit);
@@ -204,7 +203,6 @@ if(enableHeatmap) {;
   // Setup performance observer for LCP;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -215,24 +213,30 @@ if(enableHeatmap) {;
     try {;
       ;
         const lastEntry = entries[entries.length-1];        if(lastEntry) {;
-
           setAnalyticsData(prev => ({;
-
             ...prev,;
             "performance": "{;
-
               ...prev.performance",;
               "largestContentfulPaint": "lastEntr y.startTime;
             "}
           }) ) ;
         }
+<<<<<<< HEAD
+      });
+      lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
+;
+      return () => lcpObserver.disconnect () } catch(error) {;
+=======
+>>>>>>> origin/main
       }
     );
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
     );
-
       return () => lcpObserver.disconnect () } catch(error) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
       // }
   }, [enabled]) ;
 ;
@@ -244,16 +248,13 @@ if(enableHeatmap) {;
       await fetch('/api/analytics', {;
         "method": 'POST',;
         "headers": "{;
-
           'Content-Type': 'application/json'"},;
         "body": "JSO N.stringify(analyticsPayload)"})} catch(error) {;
-
       // }
   }, [trackingId, userSession]) ;
   // Generate mock data for demonstration;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -262,7 +263,6 @@ if(enableHeatmap) {;
 ;
     // Simulate data collection;
     const "mockData": "AnalyticsDat a = {;
-
       "pageViews": Mat h.floor(Math.random() * 1000) + 500",;
       "uniqueVisitors": "Mat h.floor(Math.random() * 500) + 200",;
       "sessionDuration": "Mat h.floor(Math.random() * 300) + 120",;
@@ -286,14 +286,12 @@ if(enableHeatmap) {;
         { "country": 'Germany', "count": "Mat h.floor(Math.random() * 80) + 40 "}
       ],;
       "performance": "{;
-
         "loadTime": Mat h.random() * 2000 + 500",;
         "firstPaint": "Mat h.random() * 1000 + 200",;
         "firstContentfulPaint": "Mat h.random() * 1500 + 300",;
         "largestContentfulPaint": "Mat h.random() * 2000 + 500;
       "},;
       "interactions": "{;
-
         "clicks": Mat h.floor(Math.random() * 500) + 200",;
         "scrolls": "Mat h.floor(Math.random() * 1000) + 500",;
         "formSubmissions": "Mat h.floor(Math.random() * 50) + 20",;
@@ -318,7 +316,6 @@ if(enableHeatmap) {;
       >";
         <BarChart3 className="w-6 h-6"  />;
       </motion.button>;
-
       {/* Analytics Panel */}
       <AnimatePresence>;
         {isOpen && (<motion.div;
@@ -343,7 +340,6 @@ if(enableHeatmap) {;
                 <X className="w-5 h-5"   />;
               </button>;
             </div>;
-
             {/* Key Metrics */"}";
             <div className="grid grid-cols-2 gap-4 mb-6">";
               <div className="bg-blue-50 p-3 rounded-lg">";
@@ -352,7 +348,6 @@ if(enableHeatmap) {;
                 </div>";
                 <div className="text-lg font-bold text-blue-700">{analyticsData.pageViews.toLocaleString()}</div>;
               </div>;
-
               <div className="bg-green - 50 p - 3 rounded-lg">;
                 <div className="flex items - center gap-2 mb-1">;
                   <Users className="w-4 h-4 text-green -500"  />;
@@ -360,7 +355,6 @@ if(enableHeatmap) {;
                 </div>;
                 <div className="text-lg font - bold text-green -700">{analyticsData.uniqueVisitors.toLocaleString () }</div>;
               </div>;
-
               <div className="bg-purple - 50 p - 3 rounded-lg">;
                 <div className="flex items - center gap-2 mb-1">;
                   <Clock className="w-4 h-4 text-purple -500"  />;
@@ -368,7 +362,6 @@ if(enableHeatmap) {;
                 </div>;
                 <div className="text-lg font - bold text-purple -700">{Math.round(analyticsData.sessionDuration) }s</div>;
               </div>;
-
               <div className="bg-orange - 50 p - 3 rounded-lg">;
                 <div className="flex items - center gap-2 mb-1">;
                   <Target className="w-4 h-4 text-orange -500"  />;
@@ -376,7 +369,43 @@ if(enableHeatmap) {;
                 </div>;
                 <div className="text-lg font - bold text-orange -700">{analyticsData.conversionRate.toFixed(1) }%</div>              </div>;
             </div>;
+<<<<<<< HEAD
+            {/* Performance Metrics */}";
+            <div className="mb-6">";
+              <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">";
+                <Zap className="w-4 h-4 text-yellow-500"   />                Performance;
+              </h3>";
+              <div className="space-y-2 text-xs">";
+                <div className="flex justify-between">;
+                  <span>Load "Time": "</span>";
+                  <span className="font-mono">{Math.round(analyticsData.performance.loadTime)"}ms</span>;
+                </div>";
+                <div className="flex justify-between">;
+                  <span>First "Paint": "</span>";
+                  <span className="font-mono">{Math.round(analyticsData.performance.firstPaint)"}ms</span>;
+                </div>";
+                <div className="flex justify-between">;
+                  <span>"FCP": "</span>";
+                  <span className="font-mono">{Math.round(analyticsData.performance.firstContentfulPaint)"}ms</span>;
+                </div>";
+                <div className="flex justify-between">;
+                  <span>"LCP": "</span>";
+                  <span className="font-mono">{Math.round(analyticsData.performance.largestContentfulPaint)"}ms</span>;
+                </div>;
+              </div>;
+            </div>;
+            {/* Top Pages */}";
+            <div className="mb-6">";
+              <h3 className="text-sm font-medium text-gray-700 mb-3">Top Pages</h3>";
+              <div className="space-y-2">;
+                {analyticsData.topPages.map((page, index) => (";
+                  <div key={index} className="flex justify-between items-center text-xs">";
+                    <span className="truncate flex-1">{page.path}</span>";
+                    <span className="font-mono text-gray-600">{page.views}</span>;
+                  </div>;
+=======
 
+>>>>>>> origin/main
             {/* Performance Metrics */}"
             <div className="mb-6">"
               <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">"
@@ -401,7 +430,6 @@ if(enableHeatmap) {;
                 </div>
               </div>
             </div>
-
             {/* Top Pages */}"
             <div className="mb-6">"
               <h3 className="text-sm font-medium text-gray-700 mb-3">Top Pages"
@@ -414,7 +442,21 @@ if(enableHeatmap) {;
                 ))}
               </div>;
             </div>;
+<<<<<<< HEAD
+            {/* Device Distribution */}";
+            <div className="mb-6">";
+              <h3 className="text-sm font-medium text-gray-700 mb-3">Device Distribution</h3>";
+              <div className="space-y-2">;
+                {analyticsData.userAgents.map((device, index) => (";
+                  <div key={index} className="flex items-center gap-2 text-xs">'";
+                    {device.device === 'Desktop' && <Monitor className="w-3 h-3 text-blue-500"   />}'";
+                    {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-500"   />}'";
+                    {device.device === 'Tablet' && <Tablet className="w-3 h-3 text-purple-500"   />}";
+                    <span className="flex-1">{device.device}</span>"                    <span className="font-mono text-gray-600">{device.count}</span>;
+                  </div>;
+=======
 
+>>>>>>> origin/main
             {/* Device Distribution */}"
             <div className="mb-6">"
               <h3 className="text-sm font-medium text-gray-700 mb-3">Device Distribution"
@@ -429,7 +471,31 @@ if(enableHeatmap) {;
                 ))}
               </div>;
             </div>;
+<<<<<<< HEAD
+            {/* Status Indicators */}";
+            <div className="pt-4 border-t border-gray-200">";
+              <div className="flex items-center justify-between text-xs text-gray-500">";
+                <div className="flex items-center gap-2">'`;
+                  <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`}  />;
+                  <span>{isTracking ? 'Tracking Active' : 'Tracking Inactive'}</span>;
+                </div>;
+                <button;
+                  onClick={() => window.location.reload()}";
+                  className="text-blue-500 "hover": "tex t-blue-600";
+                >";
+                  <RefreshCw className="w-3 h-3"   />                </button>;
+              </div>;
+            </div>;
+          </motion.div>) "}
+      </AnimatePresence>;
+    </>;
+  )}}}}}}}}}}}}}'"`;
+;,"});})";
+;
+</motion>;
+=======
 
+>>>>>>> origin/main
             {/* Status Indicators */}"
             <div className="pt-4 border-t border-gray-200">"
               <div className="flex items-center justify-between text-xs text-gray-500">"
@@ -450,6 +516,5 @@ if(enableHeatmap) {;
   )}}}}}}}}}}}}}'"`
 ;,"}
     );,})";
-
 </motion>
 </motion>

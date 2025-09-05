@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface PricingSectionProps {
   // Add props here as needed
 }
-
 export default function PricingSection({ }: PricingSectionProps) {
   return (
     <div>

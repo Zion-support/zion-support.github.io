@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface AisearchProps {
   // Add props here as needed
 }
-
 export default function Aisearch({ }: AisearchProps) {
   return (
     <div>

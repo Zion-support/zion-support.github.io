@@ -43,7 +43,6 @@
         await new Promise(resolve => setTimeout(resolve, 1500));
         // Mock SEO analysis;
         const mockSEO = {;
-
 export { WebsiteImprovementDashboard };
 ;
 export {WebsiteImprovementDashboard};

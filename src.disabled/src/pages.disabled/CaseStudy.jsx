@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface CaseStudyProps {
   // Add props here as needed
 }
-
 export default function CaseStudy({ }: CaseStudyProps) {
   return (
     <div>

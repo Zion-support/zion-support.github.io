@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface CartUtilsProps {
   // Add props here as needed
 }
-
 export default function CartUtils({ }: CartUtilsProps) {
   return (
     <div>

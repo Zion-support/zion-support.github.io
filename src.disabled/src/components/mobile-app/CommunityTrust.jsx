@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface CommunityTrustProps {
   // Add props here as needed
 }
-
 export default function CommunityTrust({ }: CommunityTrustProps) {
   return (
     <div>

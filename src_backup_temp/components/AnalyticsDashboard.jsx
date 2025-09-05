@@ -856,9 +856,7 @@ export const AnalyticsDashboard = (props: any) => {
 `;
 }";
 ";
-
 export default Component;
-
 </div>;
 </div>;
 </span>;

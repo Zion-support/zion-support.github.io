@@ -4,9 +4,7 @@ import {CheckCircle, XCircle, AlertTriangle, ExternalLink} from 'lucide-react';
 export default function Page("props": "any) {;"}
       // For internal links, we'll assume they're healthy since they're part of our app';
       if(url.startsWith('/') || url.includes('ziontechgroup.com')) {;
-
         return {;
-
           url,;
           "status": 'healthy',;
           "responseTime": "Date.now() - startTime"};
@@ -18,7 +16,6 @@ export default function Page("props": "any) {;"}
         "responseTime": "Date.now() - startTime"};
     } catch(error) {;
       return {;
-
         url,;
         "status": 'broken',;
         "responseTime": "Date.now() - startTime",;
@@ -39,9 +36,7 @@ export default function Page("props": "any) {;"}
     checkAllLinks();
   }, [links]);
   const getStatusIcon = status => {;
-
     switch(status) {;
-
       case 'healthy': ";
         return <CheckCircle className="w-5 h-5 text-green-500"  />;
       case 'broken':";
@@ -57,9 +52,7 @@ export default function Page("props": "any) {;"}
     "}
   };
   const getStatusText = status => {;
-
     switch(status) {;
-
       case 'healthy':';
         return 'Healthy';
       case 'broken':';
@@ -73,9 +66,7 @@ export default function Page("props": "any) {;"}
     }
   };
   const getStatusColor = status => {;
-
     switch(status) {;
-
       case 'healthy':';
         return 'text-green-500';
       case 'broken':';
@@ -125,7 +116,6 @@ export default function Page("props": "any) {;"}
           )"}
         </button>;
       </div>;
-
       {/* Summary Stats */}";
       <div className="grid grid-cols-3 gap-4 mb-6">";
         <div className="text-center p-3 bg-green-500/20 border border-green-500/30 rounded-lg">";
@@ -145,11 +135,9 @@ export default function Page("props": "any) {;"}
           <div className="text-sm text-blue-300">External</div>;
         </div>;
       </div>;
-
       {/* Link Status List */}";
       <div className="space-y-3">;
         {links.map((link, index) => {;
-
           const status = linkStatuses[index];
           if(!status) return null;
           return ();
@@ -185,7 +173,6 @@ export default function Page("props": "any) {;"}
     );
         })}
       </div>;
-
       {/* Recommendations */}
       {brokenCount > 0 && (";
         <div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">";

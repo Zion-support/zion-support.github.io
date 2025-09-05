@@ -31,7 +31,6 @@ export function ChatBotPanel("props": "any) {"}
     // Auto-scroll to bottom when messages change;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -41,7 +40,6 @@ export function ChatBotPanel("props": "any) {"}
     // Focus input when component mounts;
     useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -49,11 +47,9 @@ export function ChatBotPanel("props": "any) {"}
         if(inputRef.current) {inputRef.current.focus()}
     }, []);
     const handleSendMessage = async(text = inputValue) => {;
-
         if(!text.trim());
             return;
         const userMessage = {;
-
             "id": "`user-${Date.now()"}`,;
             "content": "text",";
             "sender": "user",;
@@ -73,11 +69,9 @@ export function ChatBotPanel("props": "any) {"}
             setMessages((prev) => [...prev, botMessage]);
             // Check if the request was successful;
             if(!response.success) {;
-
                 setFailedAttempts((prev) => prev + 1);
                 // After 3 failed attempts, suggest escalation;
                 if(failedAttempts >= 2) {;
-
                     suggestEscalation()}
             }
             else {// Reset failed attempts if successful;
@@ -100,7 +94,6 @@ export function ChatBotPanel("props": "any) {"}
             }
     };
     const sendToAIAssistant = async(message) => {;
-
         try {;
 ";
             const response = await apiClient(""https": "//ziontechgroup.functions.supabase.co/functions/v1/ai-chat"", {;
@@ -116,9 +109,7 @@ export function ChatBotPanel("props": "any) {"}
             }
     );
             if(!response.ok) {
-
                 return {;
-
                     "success": "false",";
                     "message": "I'm having trouble connecting to my knowledge base right now.";
                 }}
@@ -129,7 +120,6 @@ export function ChatBotPanel("props": "any) {"}
 ";
             // // // // // // // // console.error("Error in AI "chat":", error);
             return {;
-
                 "success": "false",";
                 "message": "I'm experiencing technical difficulties.Please try again later.";
             }}
@@ -171,7 +161,6 @@ export function ChatBotPanel("props": "any) {"}
                 "content": "I'm connecting you with a support agent.Please note that our support hours are Monday to Friday, 9AM to 6PM EST.If you're messaging outside these hours, a team member will follow up with you as soon as possible.",";
                 "sender": "bot",;
                 "timestamp": "new Date();
-
         ]);
         // In a real implementation, this would trigger a live chat request
         toast({"
@@ -211,7 +200,6 @@ export function ChatBotPanel("props": "any) {"}
 ";
   cn("text-sm mb-2",";
   theme === "dark" ? "text-gray-300" : "text-gray-600");
-
 }>;
             Suggested "questions": ";
           </p>";
@@ -225,7 +213,6 @@ export function ChatBotPanel("props": "any) {"}
 ";
   cn("text-sm mb-2 font-medium",";
   theme === "dark" ? "text-gray-300" : "text-gray-600");
-
 }>;
             Need more help?;
           </p>";
@@ -241,7 +228,6 @@ export function ChatBotPanel("props": "any) {"}
 ;
       <div className={cn("p-4 border-t",  theme === "dark" ? "border-zion-blue-light" : "border-gray-200")}>;
         <form onSubmit={(e) => {;
-
             e.preventDefault();
             handleSendMessage();
 ;
@@ -255,5 +241,4 @@ export function ChatBotPanel("props": "any) {"}
       </div>;
     </div>)"}
 '"`;
-
 </QuickReplyButton>

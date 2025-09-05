@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface SearchModalProps {
   // Add props here as needed
 }
-
 export default function SearchModal({ }: SearchModalProps) {
   return (
     <div>

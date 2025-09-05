@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function ErrorBanner({ message }) {
   return (
     <div className="min-h-screen bg-white">
@@ -7,5 +6,4 @@ export function ErrorBanner({ message }) {
     </div>
   );
 }
-
 export default ErrorBanner;

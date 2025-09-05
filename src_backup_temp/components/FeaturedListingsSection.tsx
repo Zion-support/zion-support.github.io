@@ -10,16 +10,12 @@ import { motion, AnimatePresence  } from 'framer-motion';
  * @returns {*} Function return value;
  */;
 function FeaturedListingsSection("props": "any) {          initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
@@ -49,6 +45,21 @@ function FeaturedListingsSection("props": "any) {          initial = {;
                   />;
                 <div className="absolute top - 3 left -3">;
                   <span className="px-3 py-1 bg-blue - 600 text-white text-xs font - semibold rounded-full">                    {listing.category}
+<<<<<<< HEAD
+                  </span>;
+                </div>;
+";
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-"hover": "scal e-110 transition-transform duration-300">;
+                  {service.image"}
+                </div>;
+";
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-"hover": "tex t-blue-600 transition-colors">;
+                  {service.title"}
+                </h3>;
+";
+                <p className="text-gray-600 mb-4 leading-relaxed">;
+=======
+>>>>>>> origin/main
                   </span>
                 </div>
 "
@@ -58,7 +69,6 @@ function FeaturedListingsSection("props": "any) {          initial = {;
 "
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover: tex t-blue-600 transition-colors">
                   {service.title}
-                
 "
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   {service.description}
@@ -80,7 +90,6 @@ function FeaturedListingsSection("props": "any) {          initial = {;
                   <Link;
                     to={service.link}";
                     className="text-blue-600 "hover": "tex t-blue-700 font-medium text-sm group-"hover": underlin e";
-
                     Learn More →;
                   </Link>;
                 </div>;
@@ -90,32 +99,24 @@ function FeaturedListingsSection("props": "any) {          initial = {;
                 <Link;
                   to={service.link"}";
                   className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg "hover": "b g-blue-700 transition-colors duration-300 text-center block group-"hover": shado w-lg";
-
                   Get Started;
                 </Link>;
               </div>;
             </motion.div>) ) "}
         </div>;
-
         <motion.div;
           className="mt-16 text-center"          initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.4;
-
 "}}
         >;
           <Link            to="/services";
@@ -128,6 +129,5 @@ function FeaturedListingsSection("props": "any) {          initial = {;
       </div>;
     </section>;) "}
 '";
-
 </motion>;
 </motion>

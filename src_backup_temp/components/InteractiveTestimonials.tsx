@@ -23,16 +23,12 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
       <div  className="max - w-7xl mx - auto px-6">;
         <motion.div;
           className="text-center mb-16"          initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
@@ -44,7 +40,6 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
             Real stories from real clients.Discover how we've transformed businesses;
             across industries with our innovative technology solutions.</p>;
         </motion.div>;
-
         {/* Category Filter */"}
         <motion.div";
           className="flex flex-wrap justify-center gap-3 mb-12";
@@ -75,6 +70,15 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
                 </div>";
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">;
                   {currentTestimonial.name}
+<<<<<<< HEAD
+                </h3>";
+                <p className="text-gray-600 mb-1">{currentTestimonial.role}</p>";
+                <p className="text-blue-600 font-semibold">{currentTestimonial.comp}</p>";
+                <div className="flex items-center justify-center gap-4 mt-3 text-sm text-gray-500">";
+                  <span className="flex items-center">";
+                    <Users className="h-4 w-4 mr-1"   />;
+=======
+>>>>>>> origin/main
                 "
                 <p className="text-gray-600 mb-1">{currentTestimonial.role}</p>"
                 <p className="text-blue-600 font-semibold">{currentTestimonial.comp}</p>"
@@ -108,7 +112,6 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
               </div>;
             </motion.div>;
           </AnimatePresence>;
-
           {/* Navigation Arrows */}
           <button;
             onClick={previousTestimonial}";
@@ -121,7 +124,6 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
           >";
             <ChevronRight className="h-6 w-6 text-gray-600"   />          </button>;
         </div>;
-
         {/* Testimonial Indicators */"}";
         <div className="flex justify-center mb-8">;";
           <div className="flex space-x-2">;
@@ -134,7 +136,6 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
               />) ) }
           </div>;
         </div>;
-
         {/* Play/Pause Controls */}";
         <div className="flex justify-center mb-8">;
           <button;
@@ -152,30 +153,49 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
               </>) "}
           </button>;
         </div>;
-
         {/* CTA Section */}
         <motion.div;
           initial = {;
-
   { "opacity": "0",;
   "y": "2 0 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0 "}}
         {/* Category Filter */}
         <motion.div;
           className="flex flex - wrap justify - center gap-3 mb-12"          initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
+<<<<<<< HEAD
+"}}
+          viewport={{ "once": "tru e "}}
+          transition={{ "duration": "0.6", "delay": "0.2 "}}
+        >";
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">";
+            <h3 className="text-2xl font-bold mb-4">;
+              Ready to Join Our Success Stories?;
+            </h3>";
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">;
+              Let's discuss how we can transform your business with innovative;
+              technology solutions tailored to your specific needs.</p>";
+            <div className="flex flex-col "sm": "fle x-row gap-4 justify-center">";
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 "hover": b g-gray-100 rounded-lg font-medium transition-colors duration-200">;
+                Start Your Project";
+                <Award className="ml-2 h-5 w-5"   />;
+              </button>";
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white "hover": b g-white "hover": tex t-blue-600 rounded-lg font-medium transition-colors duration-200">;
+                Schedule Consultation";
+                <Users className="ml-2 h-5 w-5"   />              </button>;
+            </div>;
+          </div>;
+        </motion.div>;
+=======
 
+>>>>>>> origin/main
 }}
           viewport={{ once: tru e }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -210,7 +230,6 @@ export default InteractiveTestimonials;";
 export default InteractiveTestimonials;
 export default InteractiveTestimonials;
 '"`;
-
 </motion>;
 </motion>;
 </button>;

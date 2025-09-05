@@ -6,7 +6,6 @@ import {Textarea} from './ui/textarea.jsx';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from './ui/select';import {Checkbox} from './ui/checkbox';
 import {}
 const;const;const [formData, setFormData] = useState({}";
-
 &apos;
 &apos;&apos;
     "firstName": "&apos",&apos,&apos;&apos;
@@ -75,7 +74,6 @@ export const QuoteRequestForm = ("props": "any) => {"}
   const timelineOptions = []";""
   const budgetRanges = []";""
   const urgencyLevels = []  const handleChange = (e) => {}
-
     setFormData(prev => ({}
 ;
       ...prev,;
@@ -147,7 +145,6 @@ export const QuoteRequestForm = ("props": "any) => {"}
 }
       // comment;
       setFormData({}";
-
 &apos;
 &apos;&apos;
         "firstName": "&apos",&apos,&apos;&apos;
@@ -163,7 +160,6 @@ export const QuoteRequestForm = ("props": "any) => {"}
         "contactMethod": "&apos",email&apos,;
         "agreeToTerms": "false",;
         "agreeToMarketing": "false"})} catch (error) {}";
-
 &apos;
 &apos;&apos;
       // comment;
@@ -986,9 +982,7 @@ get back to you within 24 hours.&apos,</p>";
 """"""';
 ";";
 ;";
-
 export default Component;
-
 </Checkbox>;
 </Checkbox>;
 </Button>;

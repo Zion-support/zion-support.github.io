@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface RolePickerProps {
   // Add props here as needed
 }
-
 export default function RolePicker({ }: RolePickerProps) {
   return (
     <div>

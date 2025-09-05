@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface ProfileDetailProps {
   // Add props here as needed
 }
-
 export default function ProfileDetail({ }: ProfileDetailProps) {
   return (
     <div>

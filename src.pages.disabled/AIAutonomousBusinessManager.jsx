@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface AIAutonomousBusinessManagerProps {
   // Add props here as needed
 }
-
 export default function AIAutonomousBusinessManager({ }: AIAutonomousBusinessManagerProps) {
   return (
     <div>

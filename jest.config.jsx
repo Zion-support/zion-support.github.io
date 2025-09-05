@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface Jest.configProps {
   // Add props here as needed
 }
-
 export default function Jest.config({ }: Jest.configProps) {
   return (
     <div>

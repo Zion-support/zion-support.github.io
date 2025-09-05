@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface WithAuthProps {
   // Add props here as needed
 }
-
 export default function WithAuth({ }: WithAuthProps) {
   return (
     <div>

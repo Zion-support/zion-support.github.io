@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface TokenManagerProps {
   // Add props here as needed
 }
-
 export default function TokenManager({ }: TokenManagerProps) {
   return (
     <div>

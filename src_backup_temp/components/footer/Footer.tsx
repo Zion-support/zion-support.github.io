@@ -100,8 +100,18 @@ export function Footer("props": "any) {;
               </div>;
             </div>;
           </div>;
-
           {/* Footer Links */}
+<<<<<<< HEAD
+          {footerSections.map((section) => (;
+            <div key={section.title}>;
+              <h3 className="text-white font-semibold mb-4">{section.title}</h3>;
+              <ul className="space-y-3">;
+                {section.links.map((link) => (;
+                  <li key={link.name}>;
+                    <Link href={link.href} className="text-slate-300 "hover": "text-cyan-400 transition-colors duration-200">{link.name"}</Link>;
+                  </li>;
+=======
+>>>>>>> origin/main
           {footerSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-white font-semibold mb-4">{section.title}
@@ -116,8 +126,29 @@ export function Footer("props": "any) {;
           ))}
         </div>;
       </div>;
-
       {/* Newsletter Signup */}
+<<<<<<< HEAD
+      <div className="border-t border-slate-700 py-8">;
+        <div className="container mx-auto px-4 "sm": "p x-6 "lg": p x-8">;
+          <div className="flex flex-col "md": fle x-row items-center justify-between">;
+            <div className="mb-4 "md": m b-0">;
+              <h3 className="text-white font-semibold mb-2">Stay Updated</h3>;
+              <p className="text-slate-300">Get the latest news and updates from Zion Tech Group</p>;
+            </div>;
+            <div className="flex w-full "md":w-auto">;
+              <input type="email";
+                placeholder="Enter your email";
+                className="flex-1 "md":w-64 px-4 py-2 bg-slate-800 text-white rounded-l-lg border border-slate-600 "focus": borde r-cyan-400 "focus": outlin e-none "focus": rin g-2 "focus": rin g-cyan-400/20";
+                />;
+              <button className="px-6 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-r-lg "hover": fro m-cyan-500 "hover": t o-blue-600 transition-all duration-200">;
+                Subscribe;
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+=======
+>>>>>>> origin/main
       <div className="border-t border-slate-700 py-8">
         <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="flex flex-col md: fle x-row items-center justify-between">
@@ -137,7 +168,10 @@ export function Footer("props": "any) {;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
       {/* Bottom Footer */"}
       <div className="border-t border-slate-700 py-6">;
         <div className="container mx-auto px-4 "sm": "p x-6 "lg": p x-8">;
@@ -158,7 +192,6 @@ export function Footer("props": "any) {;
                 Cookie Policy;
               </Link>;
             </div>;
-
             {/* Social Links */"}
             <div className="flex items-center space-x-4">;
               {socialLinks.map((social) => (;
