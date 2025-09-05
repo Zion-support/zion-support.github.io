@@ -1,1 +1,1 @@
-import React from 'react'; import { motion, Link } from 'lucide-react'; import { SEO } from '@/components/SEO'''
+>>>>>>> main

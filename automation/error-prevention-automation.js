@@ -47,6 +47,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       results.checks.dependencies = await this.checkDependencies();
       results.checks.security = await this.checkSecurity();
       results.checks.performance = await this.checkPerformance();
+=======
       // Apply fixes if needed
       results.fixes = await this.applyFixes(results.checks);
       const endTime = Date.now();
@@ -229,11 +230,14 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       const moderateMatch = output.match(/(\d+) moderate;/;);
       const lowMatch = output.match(/(\d+) low;/;);
       if (vulnerabilities.critical = parseInt(criticalMatch[1])) {
-    vulnerabilities.critical = parseInt(criticalMatch[1])}
+    vulnerabilities.critical = parseInt(criticalMatch[1]);
+  }
       if (vulnerabilities.high = parseInt(highMatch[1])) {
-    vulnerabilities.high = parseInt(highMatch[1])}
+    vulnerabilities.high = parseInt(highMatch[1]);
+  }
       if (vulnerabilities.moderate = parseInt(moderateMatch[1])) {
-    vulnerabilities.moderate = parseInt(moderateMatch[1])}
+    vulnerabilities.moderate = parseInt(moderateMatch[1]);
+  }
       if (vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
       this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
     return vulnerabilities) {
@@ -270,7 +274,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       if ( {
         this.log('Applying linting fixes...')) {
      {
-        this.log('Applying linting fixes...')}
+        this.log('Applying linting fixes...');
+  }
         try {
           execSync('npm run "lint": fix', { "cwd": this.projectRoot, "timeout": 60000 });
           fixes.linting = { "success": true, "message": 'Linting fixes applied' }} catch (error) {
@@ -280,7 +285,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       if ( {
         this.log('Updating dependencies...')) {
      {
-        this.log('Updating dependencies...')}
+        this.log('Updating dependencies...');
+  }
         try {
           execSync('npm update', { "cwd": this.projectRoot, "timeout": 300000 });
           fixes.dependencies = { "success": true, "message": 'Dependencies updated' }} catch (error) {
@@ -290,7 +296,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       if ( {
         this.log('Applying security fixes...')) {
      {
-        this.log('Applying security fixes...')}
+        this.log('Applying security fixes...');
+  }
         try {
           execSync('npm audit fix', { "cwd": this.projectRoot, "timeout": 300000 });
           fixes.security = { "success": true, "message": 'Security fixes applied' }} catch (error) {
@@ -300,7 +307,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       if ( {
         this.log('Applying performance optimizations...')) {
      {
-        this.log('Applying performance optimizations...')}
+        this.log('Applying performance optimizations...');
+  }
         try {
           execSync('npm run clean', { "cwd": this.projectRoot, "timeout": 30000 });
           execSync('npm run build', { "cwd": this.projectRoot, "timeout": 300000 });

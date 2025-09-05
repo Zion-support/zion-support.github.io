@@ -52,7 +52,8 @@ class PerformanceOptimizer {
             fileOptimizations++}
           // Add useMemo to expensive calculations
           if (content.includes('useState') && content.includes('map(') && !content.includes('useMemo')) {
-            fileOptimizations++}
+            fileOptimizations++;
+          }
         }
         // Optimize imports - remove unused imports
         const importLines = newContent.split('\n').filter(line => line.trim().startsWith('import'));
@@ -64,8 +65,10 @@ class PerformanceOptimizer {
             const imports = matches[1].split(',').map(imp => imp.trim());
             imports.forEach(imp => {
               if (newContent.includes(imp) && !importLine.includes(imp)) {
-                usedImports.add(imp)}
-            })}
+                usedImports.add(imp);
+              }
+            });
+          }
         });
         // Add performance optimizations for React components
         if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
@@ -75,7 +78,8 @@ class PerformanceOptimizer {
               /import React from 'react';/g,
               "import React, { memo, useCallback, useMemo } from 'react';"
             );
-            fileOptimizations++}
+            fileOptimizations++;
+          }
         }
         if (newContent !== content) {
           fs.writeFileSync(filePath, newContent, 'utf8');
@@ -127,7 +131,8 @@ class PerformanceMonitor {
             switch (entry.entryType) {
               case 'paint':
                 if (entry.name === 'first-contentful-paint') {
-                  this.metrics.firstContentfulPaint = entry.startTime}
+                  this.metrics.firstContentfulPaint = entry.startTime;
+                }
                 break;
               case 'largest-contentful-paint':
                 this.metrics.largestContentfulPaint = entry.startTime;
@@ -137,7 +142,8 @@ class PerformanceMonitor {
                 break;
               case 'first-input':
                 this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
-                break}
+                break;
+            }
           }
         });
         observer.observe({ "entryTypes": ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] })}
@@ -171,7 +177,8 @@ if (require.main === module) {
     .then(() => optimizer.createPerformanceMonitoringScript())
     .then(() => {
       console.log('🎉 Performance optimization completed successfully');
-      process.exit(0)})
+      process.exit(0);
+    })
     .catch((error) => {
       console.error('❌ Performance optimization "failed": ', error);
       process.exit(1)})}

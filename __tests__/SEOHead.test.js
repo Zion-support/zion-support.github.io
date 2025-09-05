@@ -1,14 +1,1 @@
-import React from 'react';''
-import { render, screen } from '@testing-library/react';''
-import '@testing-library/jest-dom';''
-import SEOHead from '../components/SEOHead';''
-describe('SEOHead', () => {''}
-  test('renders without crashing', () => {'}
-    render(<SEOHead />);
-</SEOHead>
-    render(<SEOHead />);
-</SEOHead>
-    render(<SEOHead />);
-</SEOHead>
-    render(<SEOHead />);
-</SEOHead>'
+import _React from 'react"  import '@testing-library/jest-dom import SEOHead from '../components/SEOHead" describe('SEOHead',() => {' test('renders without crashing',() => {' render(<SEOHead / />) expect(screen.getByTestId("seohead")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SEOHead / />) }) test('handles user interactions',() => {' render(<SEOHead / />) }) test('applies correct styling',() => {' render(<SEOHead / />) }) })

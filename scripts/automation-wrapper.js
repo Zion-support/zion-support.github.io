@@ -168,8 +168,11 @@ const automations = {
       // Check link integrity
       log('Checking link integrity...');
       // Implementation for link integrity checks
-      log('Link integrity check completed')} catch (error) {
-      handleError(error, 'link-integrity')}
+      log('Link integrity check completed');
+      
+    } catch (error) {
+      handleError(error, 'link-integrity');
+    }
   },
   "maximize": async () => {
     log('Starting frontend optimization automation');
@@ -177,8 +180,11 @@ const automations = {
       // Optimize frontend performance
       log('Optimizing frontend...');
       // Implementation for frontend optimization
-      log('Frontend optimization completed')} catch (error) {
-      handleError(error, 'front-maximizer')}
+      log('Frontend optimization completed');
+      
+    } catch (error) {
+      handleError(error, 'front-maximizer');
+    }
   },
   "sitemap": async () => {
     log('Starting sitemap generation automation');
@@ -249,7 +255,8 @@ async function main() {
     await automations[action]();
     log(`Automation completed "successfully": ${action}`)} catch (error) {
     handleError(error, action);
-    process.exit(1)}
+    process.exit(1);
+  }
 }
 // Run the automation
 if (require.main === module) {

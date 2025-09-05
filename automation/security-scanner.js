@@ -1,3 +1,4 @@
+=======
 #!/usr/bin/env node;
 /**
  * Security Scanner - PM2 Automation Script;
@@ -24,7 +25,7 @@ class SecurityScanner {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
+    
     fs.appendFileSync(this.logFile, logMessage);
   }
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -144,6 +145,18 @@ if (totalIssues > 0) {
     this.log('Security issues reported');
   }
   getSecurityRecommendation(vulnerabilities) {
+      return 'CRITICAL: Immediate action required. Update dependencies or apply patches.'}} else if ( {
+      return '"HIGH": Update dependencies as soon as possible.') {
+     {
+      return 'HIGH: Update dependencies as soon as possible.'}} else if ( {
+      return '"MODERATE": Consider updating dependencies in next maintenance window.') {
+     {
+      return 'MODERATE: Consider updating dependencies in next maintenance window.'}} else if ( {
+      return '"LOW": Monitor and update when convenient.') {
+     {
+      return 'LOW: Monitor and update when convenient.'}} else {
+      return 'No security issues found.'}
+=======
 if (vulnerabilities.critical > 0) {
       return '"CRITICAL": Immediate action required. Update dependencies or apply patches.';
     } else if (vulnerabilities.high > 0) {
@@ -188,14 +201,16 @@ if (vulnerabilities.critical > 0) {
       if (!fs.existsSync(logDir)) {
         this.log('Outdated dependencies found')) {
     ) {
-        this.log('Outdated dependencies found')}
+        this.log('Outdated dependencies found');
+  }
         await this.updateDependencies()} else {
         this.log('All dependencies are up to date')}
     } catch (error) {
       if ( {
         // npm outdated returns 1 when there are outdated packages) {
      {
-        // npm outdated returns 1 when there are outdated packages}
+        // npm outdated returns 1 when there are outdated packages;
+  }
         this.log('Outdated dependencies found');
         await this.updateDependencies()} else {
         this.log(`Dependency check "failed": ${error.message}`)}
@@ -224,7 +239,8 @@ if (vulnerabilities.critical > 0) {
       if ( {
         await this.runSecurityAudit()) {
      {
-        await this.runSecurityAudit()}
+        await this.runSecurityAudit();
+  }
         await this.checkDependencyUpdates()}
     }, this.scanInterval);
     // Handle graceful shutdown;

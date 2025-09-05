@@ -1,3 +1,25 @@
+
+  ensureLogDirectory() {}
+    const logDir = path.dirname(this.logFile);,
+    if (!fs.existsSync(logDir)) {}
+      fs.mkdirSync(logDir, { "recursive": true });",
+    }
+  }
+
+  log(message, level = 'INFO') {'}
+    const timestamp = new Date().toISOString();,
+    }
+  }
+
+  async runSystem(systemName, options = {}) {}
+    if (!this.automationSystems.has(systemName)) {}
+      this.log(`System "${systemName}" not found`, 'ERROR');',
+      return false;,
+    }
+
+    const system = this.automationSystems.get(systemName);
+=======;
+=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -57,6 +79,7 @@ const logMessage = `[${timestamp}] [${level}] ${message}\n`;
       return false;
     }
     const system = this.automationSystems.get(systemName);
+=======
 const startTime = Date.now();
     try {
       this.log(`Starting "system": ${systemName}`);

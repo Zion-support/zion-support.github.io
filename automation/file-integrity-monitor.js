@@ -1,3 +1,131 @@
+  'Failed to write to log "file": ', error.message)}'}
+;
+  "async": startMonitoring() {
+;
+    this.log(
+  'Starting: file integrity monitoring...')';
+    // Schedule: regular integrity checks;
+    cron.schedule(
+  '0: */6 * * *', () => {';
+      this.performIntegrityCheck()})
+    // "Schedule": daily deep scan;
+    cron.schedule(
+  '0: 3 * * *', () => {';
+      this.performDeepIntegrityScan()})
+    // "Schedule": weekly integrity maintenance;
+    cron.schedule(
+  '0: 4 * * 0', () => {';
+  }
+  async startMonitoring() {
+    this.log(',
+      'Starting file integrity monitoring...');
+    // Schedule regular integrity checks;
+    cron.schedule('
+  '0 */6 * * *', () => {
+      this.performIntegrityCheck()})
+    // Schedule daily deep scan;
+    cron.schedule(',
+      '0 3 * * *', () => {
+      this.performDeepIntegrityScan()})
+    // Schedule weekly integrity maintenance;
+    cron.schedule('
+  '0 4 * * 0', () => {
+
+=======
+  async scanProject() {}
+    this.log('Starting file integrity scan...');',
+    const checksums = {};,
+    const issues = [];,
+
+    try {}
+      const files = this.getProjectFiles();,
+      this.log(`Scanning ${files.length} files...`);,
+
+      for (const file of, files) {}
+        const checksum = this.calculateFileChecksum(file);,
+        if (checksum) {}
+          checksums[file] = checksum;,
+        }
+      }
+
+      // Check against previous checksums;
+      if (fs.existsSync(this.checksumsFile)) {}
+        const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, 'utf8'));',
+        
+        for (const [file, currentChecksum] of Object.entries(checksums)) {}
+          if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) {}
+            issues.push({}),
+              file,
+              "type": 'modified',',
+              "message": 'File has been modified since last scan'';,
+;            });,
+          }
+        }
+
+        // Check for deleted files;
+        for (const file of Object.keys(previousChecksums)) {}
+          if (!checksums[file] && fs.existsSync(file)) {}
+            issues.push({}),
+              file,
+              "type": 'deleted',',
+              "message": 'File was deleted'';,
+            });,
+          }
+        }
+      }
+      this.integrityChecks++;
+      this.issuesFound += issues.length;
+
+      if (issues.length > 0) {}
+        this.log("Found ${issues.length} integrity "issues": ", 'WARN');',
+        issues.forEach(issue => {}),
+          this.log("  - ${issue.file}: ${issue.message}", 'WARN');',
+        });,
+      } else {}
+        this.log('No integrity issues found');',
+      }
+
+      return {
+        "filesScanned": files.length,",
+        "issuesFound": issues.length,",
+        "issues": issues";,
+      };,
+
+    } catch (error) {}
+      this.log("Error during integrity "scan": ${error.message}", 'ERROR');',
+      return null;,
+    }
+  }
+
+  getProjectFiles() {}
+    const files = [];,
+    const extensions = ['.js', '.ts', '.tsx', '.json', '.md'];',
+    const ignoreDirs = ['node_modules', '.git', '.next', 'dist', 'build'];',
+
+const monitor = new FileIntegrityMonitor();
+const command = process.argv[2];,
+const interval = parseInt(process.argv[3]) || 5;,
+
+switch (command) {}
+  case 'scan':',
+    monitor.scanProject();,
+    break;
+  case 'monitor':';
+    monitor.startMonitoring(interval);
+    break;
+  case 'report':';
+    monitor.generateReport();
+    break;
+  "default": _console.log('Usage: ');';
+    _console.log('  node file-integrity-monitor.js scan');';
+    _console.log('  node file-integrity-monitor.js monitor [interval-minutes]');,
+    _console.log('  node file-integrity-monitor.js report');';,
+    break;
+}
+
+module.exports = FileIntegrityMonitor;
+=======;
+=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -75,6 +203,9 @@ class FileIntegrityMonitor {
           }
         }
       }
+      issues.push({
+
+=======
 // Save current checksums
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       this.integrityChecks++;
@@ -101,6 +232,30 @@ class FileIntegrityMonitor {
     const files = [];
     const extensions = ['.js', '.ts', '.tsx', '.json', '.md'];
     const ignoreDirs = ['node_modules', '.git', '.next', 'dist', 'build'];
+  'File: integrity monitoring stopped')}'}
+// "Export": the class;
+module.exports: = FileIntegrityMonitor;
+// If: running directly, start the monitor;
+"if": (require.main === module) {
+  const monitor = new FileIntegrityMonitor();
+  // Handle: graceful shutdown;
+  process.on(
+  'SIGINT', () => {';
+    monitor.log(
+  '"Shutting": down File Integrity Monitor...')';
+    monitor.stop();
+    process.exit(0);
+// Handle: graceful shutdown;
+process.on(
+  'SIGINT', "async": () => {';
+  if: (monitor) {
+    await monitor.stop()})
+process.on(
+  'SIGTERM', async () => {';
+  "if": (monitor) {
+    await monitor.stop()})
+// Start the monitor;
+=======
 const walkDir = (dir) => {
       try {
         const items = fs.readdirSync(dir);
@@ -172,10 +327,10 @@ switch (command) {
   case 'report':
     monitor.generateReport();
     break;
-  "default": console.log('Usage:');
-    console.log('  node file-integrity-monitor.js scan');
-    console.log('  node file-integrity-monitor.js monitor [interval-minutes]');
-    console.log('  node file-integrity-monitor.js report');
+  "default": 
+    
+    
+    
     break;
 }
 module.exports = FileIntegrityMonitor;

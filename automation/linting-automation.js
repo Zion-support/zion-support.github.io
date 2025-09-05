@@ -24,7 +24,7 @@ class LintingAutomation {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
+    
     fs.appendFileSync(this.logFile, logMessage);
   }
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -99,6 +99,26 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   }
   getEslintConfig() {
     try {
+        return {}
+          "exists": true;
+          path: configPath;
+          size: fs.statSync(configPath).size;
+        }}
+    } catch (error) {
+      // Ignore errors;
+    }
+    
+    return { "exists": false }}
+
+  async reportLintingFailure(error) {
+    const failureReport = {
+      "timestamp": new Date().toISOString()
+      error: error.message;
+      stack: error.stack;
+      projectRoot: this.projectRoot;
+   };
+    
+=======
 const configPath = path.join(this.projectRoot, 'eslint.config.js');
       if (!fs.existsSync(configPath)) {
         return {
@@ -162,6 +182,8 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
     } catch (error) {
       // Ignore errors;
     }
+    return recentFiles}
+=======
 return recentFiles;
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   getFilesInDirectory(dir, fileList = []) {
@@ -179,6 +201,30 @@ if (stat.isDirectory()) {
     } catch (error) {
       // Ignore errors;
     }
+    return fileList}}
+=======
+    
+    // Handle graceful shutdown;}
+    process.on('SIGTERM', () => {'}
+      this.log('Received SIGTERM, shutting down gracefully');',
+      this.isRunning = false;,
+      process.exit(0);
+    });,
+    
+    process.on('SIGINT', () => {'}
+      this.log('Received SIGINT, shutting down gracefully');',
+      this.isRunning = false;,
+      process.exit(0);
+    });,
+  }
+}
+
+automation.start().catch(error => {}),
+  _console.error('Failed to start linting "automation": ', error);',
+  process.exit(1);
+});,
+=======;
+=======
 return fileList;
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async start() {

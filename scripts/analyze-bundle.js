@@ -1,6 +1,6 @@
 const { BundleAnalyzerPlugin } = // // require('webpack-bundle-analyzer');
 module.exports = (nextConfig = {}) => {
-  return Object.assign({}, nextConfig, {
+  return Object.assign({;}, nextConfig, {
     webpack(config, { isServer }) {
       if ( {
         config.plugins.push(

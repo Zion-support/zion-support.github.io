@@ -1,1 +1,1 @@
-import React,{ useState } from 'react.ts'; import { motion, SEO } from 'lucide-react'; import { Link } from 'react-router-dom.ts'; import {}} from 'lucide-react.ts'''
+>>>>>>> main

@@ -5,7 +5,8 @@
           if (message.includes('✅ Fixed') || message.includes('fixes applied')) {
             const match = message.match(/(d+)/);
             if (match) {
-              fixCount = parseInt(match[1])}
+              fixCount = parseInt(match[1]);
+            }
           }
           originalLog(...args)};
         try {

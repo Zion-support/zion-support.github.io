@@ -22,8 +22,10 @@ try {
     // Check if build size is reasonable (less than 50MB)
     const sizeInMB = parseInt(buildSize.split('\t')[0]);
     if (sizeInMB < 50) {
-      console.log('✅ Build size is within acceptable limits')} else {
-      console.log('⚠️  Build size is large, consider optimization')}
+      console.log('✅ Build size is within acceptable limits');
+    } else {
+      console.log('⚠️  Build size is large, consider optimization');
+    }
   }
 try {
   // Bundle analysis

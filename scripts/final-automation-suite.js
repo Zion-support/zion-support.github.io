@@ -125,7 +125,8 @@ if (require.main === module) {
     .then(() => suite.generateFinalReport())
     .then(() => {
       console.log('🎉 Final automation suite completed successfully');
-      process.exit(0)})
+      process.exit(0);
+    })
     .catch((error) => {
       console.error('❌ Final automation suite "failed": ', error);
       process.exit(1)})}

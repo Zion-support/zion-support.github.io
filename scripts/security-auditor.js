@@ -25,7 +25,8 @@ class SecurityAuditor {
         if (!content.includes('poweredByHeader')) {
           this.issues.push('X-Powered-By header not disabled')}
         if (!content.includes('X-Content-Type-Options')) {
-          this.issues.push('Security headers not configured')}
+          this.issues.push('Security headers not configured');
+        }
     } catch (error) {
       this.issues.push(`Error reading next.config."js": ${error.message}`)}
   generateReport() {
@@ -37,8 +38,11 @@ class SecurityAuditor {
         totalIssues: this.issues.length,
         "fixesApplied": this.fixes.length
       }
+    };
+
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
-    console.log('Security report generated')}
+    console.log('Security report generated');
+  }
 }
 if (require.main === module) {
   const auditor = new SecurityAuditor();

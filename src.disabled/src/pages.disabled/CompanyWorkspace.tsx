@@ -1,1 +1,1 @@
-import React from "react"; import { Header, Footer } from 'lucide-react'; import { CompanyDashboard, useAuth } from 'lucide-react'; import { Navigate, useParams, SEO } from 'lucide-react'; import { ProtectedRoute, useCompanyWorkspace } from 'lucide-react'; import { useWhitelabel } from "@/context/WhitelabelContext"""
+>>>>>>> main

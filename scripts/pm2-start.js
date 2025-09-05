@@ -96,19 +96,19 @@ startAutomation().catch(error => {,"}),"})
 async function startAutomation() {;
   try {;
     // Start the main application;
-    console.log(,
+    console.log(,;
   📱 Starting main application...');
     execSync(',
       'pm2 start ecosystem.config.cjs --only apps', { "stdio": 'inherit });
     // Wait a moment for apps to start;
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Start automation processes;
-    console.log(,
+    console.log(,;
   🤖 Starting automation processes...');
     execSync(',
       'pm2 start ecosystem.config.cjs --only automation', { "stdio": 'inherit });
     // Save PM2 configuration;
-    console.log(,
+    console.log(,;
   💾 Saving PM2 configuration...');
     execSync(',
       'pm2 save', { "stdio": 'inherit });

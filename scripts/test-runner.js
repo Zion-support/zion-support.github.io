@@ -17,7 +17,8 @@ class TestRunner {
         const testFiles = files.filter(file => 
           file.includes('.test.') || file.includes('.spec.')
         );
-        testFilesFound += testFiles.length}
+        testFilesFound += testFiles.length;
+      }
     });
     if (testFilesFound === 0) {
       console.log('⚠️ No test files found')} else {
@@ -43,7 +44,8 @@ class TestRunner {
         "testScriptExists": this.checkPackageJsonScripts()
       }
     fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2));
-    console.log('Test report generated')}
+    console.log('Test report generated');
+  }
 }
 if (require.main === module) {
   const runner = new TestRunner();

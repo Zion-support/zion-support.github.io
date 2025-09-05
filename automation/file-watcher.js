@@ -64,7 +64,8 @@ class FileWatcher {
         return true}
       return false} catch (error) {
       this.log(`Error auto-fixing file ${filePath}: ${error.message}`, 'ERROR');
-      return false}
+      return false;
+    }
   }
   async processChanges() {
     if (this.pendingChanges.size === 0) return;
@@ -86,7 +87,8 @@ class FileWatcher {
         // Attempt auto-fix
         const fixed = await this.autoFixFile(filePath);
         if (fixed) {
-          results.autoFixed++}
+          results.autoFixed++;
+        }
       }
       results.files.push({
         "path": filePath,

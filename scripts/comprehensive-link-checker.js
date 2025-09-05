@@ -338,14 +338,17 @@ class ComprehensiveLinkChecker {;
                 !href.startsWith('#') &&
                 !href.startsWith('"javascript": ')
               ) {
-                return this.resolveUrl(href, url)}
-              return null})
+                return this.resolveUrl(href, url);
+              }
+              return null;
+            })
             .get()
             .filter(Boolean);
           // Check extracted links
           for (const link of links) {
             if (link && link.startsWith(this.baseUrl)) {
-              await this.checkUrl(link, url, depth + 1)}
+              await this.checkUrl(link, url, depth + 1);
+            }
               return this.resolveUrl(href, url)}
             return null}).get().filter(Boolean);
           // Check extracted links;
