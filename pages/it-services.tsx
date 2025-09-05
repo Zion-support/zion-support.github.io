@@ -415,176 +415,101 @@ const itServices = [
     popular: false
   }
 ];
-      pricing: '$120 – $220/hour',
-      projectPricing: '$6,000 – $30,000/project',
-      timeline: '2–8 weeks',
-      benefits: [
-        '99.9% uptime guarantee',
-        'Automated deployment processes',
-        'Reduced infrastructure costs',
-        'Improved system reliability'
-      ],
-      category: 'Cloud & Infrastructure'
-    },
-    {
-      icon: Shield,
-      name: 'Cybersecurity Hardening & SOC',
-      description: 'Comprehensive security solutions including zero trust architecture, endpoint detection, and security operations center setup.',
-      features: [
-        'Zero Trust security architecture',
-        'Endpoint Detection and Response (EDR)',
-        'Security Operations Center (SOC) setup',
-        'Vulnerability assessment and penetration testing',
-        'Compliance and regulatory adherence',
-        'Security awareness training programs'
-      ],
-      pricing: '$5,000 – $40,000/project',
-      projectPricing: '$2,000 – $8,000/month managed',
-      timeline: '4–12 weeks',
-      benefits: [
-        'Enhanced security posture',
-        'Reduced security incidents',
-        'Compliance with regulations',
-        '24/7 security monitoring'
-      ],
-      category: 'Security'
-    },
-    {
-      icon: Cloud,
-      name: 'Cloud Migration & Modernization',
-      description: 'Seamless migration to cloud platforms with application modernization and optimization.',
-      features: [
-        'Lift and shift migration strategies',
-        'Application containerization',
-        'Serverless architecture implementation',
-        'Data platform upgrades and migration',
-        'Legacy system modernization',
-        'Performance optimization and tuning'
-      ],
-      pricing: '$10,000 – $150,000/project',
-      projectPricing: 'Custom pricing based on complexity',
-      timeline: '3–20 weeks',
-      benefits: [
-        'Reduced infrastructure costs',
-        'Improved scalability and performance',
-        'Enhanced security and compliance',
-        'Modern technology stack adoption'
-      ],
-      category: 'Cloud & Infrastructure'
-    },
-    {
-      icon: Code,
-      name: 'Enterprise Architecture Consulting',
-      description: 'Strategic technology planning, system design, and architecture optimization for enterprise-scale solutions.',
-      features: [
-        'Technology stack evaluation and selection',
-        'System architecture design and documentation',
-        'Scalability and performance planning',
-        'Integration strategy and roadmap development',
-        'Technical debt assessment and remediation',
-        'Digital transformation consulting'
-      ],
-      pricing: '$150 – $300/hour',
-      projectPricing: '$15,000 – $75,000/project',
-      timeline: '2–8 weeks',
-      benefits: [
-        'Optimized technology architecture',
-        'Reduced technical debt',
-        'Improved system performance',
-        'Strategic technology roadmap'
-      ],
-      category: 'Consulting'
-    },
-    {
-      icon: Database,
-      name: 'Database Design & Optimization',
-      description: 'Database architecture, performance tuning, and migration services for optimal data management.',
-      features: [
-        'Database architecture design and implementation',
-        'Performance tuning and optimization',
-        'Data migration and consolidation',
-        'Backup and disaster recovery setup',
-        'Database security and compliance',
-        'Monitoring and maintenance automation'
-      ],
-      pricing: '$100 – $250/hour',
-      projectPricing: '$8,000 – $40,000/project',
-      timeline: '2–6 weeks',
-      benefits: [
-        'Improved database performance',
-        'Enhanced data security',
-        'Reduced maintenance overhead',
-        'Optimized storage costs'
-      ],
-      category: 'Data Management'
-    },
-    {
-      icon: LinkIcon,
-      name: 'API Development & Integration',
-      description: 'RESTful and GraphQL API development, microservices architecture, and third-party integrations.',
-      features: [
-        'RESTful and GraphQL API development',
-        'Microservices architecture implementation',
-        'Third-party service integration',
-        'API documentation and testing frameworks',
-        'API security and authentication',
-        'Performance monitoring and optimization'
-      ],
-      pricing: '$120 – $280/hour',
-      projectPricing: '$10,000 – $50,000/project',
-      timeline: '3–12 weeks',
-      benefits: [
-        'Scalable API architecture',
-        'Improved system integration',
-        'Enhanced developer experience',
-        'Reduced development time'
-      ],
-      category: 'Development'
-    },
-    {
-      icon: Smartphone,
-      name: 'Mobile App Development',
-      description: 'Native iOS/Android applications, React Native, and Flutter development for cross-platform solutions.',
-      features: [
-        'Native iOS and Android development',
-        'React Native cross-platform apps',
-        'Flutter mobile applications',
-        'UI/UX design and implementation',
-        'App store optimization and deployment',
-        'Performance optimization and testing'
-      ],
-      pricing: '$100 – $250/hour',
-      projectPricing: '$25,000 – $150,000/project',
-      timeline: '8–24 weeks',
-      benefits: [
-        'High-performance mobile applications',
-        'Cross-platform compatibility',
-        'Optimized user experience',
-        'Reduced development costs'
-      ],
-      category: 'Development'
-    },
-    {
-      icon: Globe,
-      name: 'Web Application Development',
-      description: 'Modern web applications using React, Next.js, Vue.js, and full-stack development solutions.',
-      features: [
-        'React and Next.js applications',
-        'Vue.js and Nuxt.js development',
-        'Full-stack web applications',
-        'Progressive Web App (PWA) development',
-        'Performance optimization and SEO',
-        'Responsive design and accessibility'
-      ],
-      pricing: '$80 – $200/hour',
-      projectPricing: '$15,000 – $100,000/project',
-      timeline: '4–16 weeks',
-      benefits: [
-        'Modern, scalable web applications',
-        'Optimized performance and SEO',
-        'Responsive and accessible design',
-        'Reduced maintenance costs'
-      ],
+
+const categories = [
+  'All',
+  'AI Operations',
+  'Quantum Security',
+  'Edge Computing',
+  '5G Networks',
+  'Blockchain Infrastructure',
+  'IoT Platforms',
+  'AI Infrastructure',
+  'Green IT',
+  'Zero Trust Security',
+  'Cloud Management',
+  'Analytics Platform',
+  'Disaster Recovery',
+  'Network Security',
+  'IT Compliance',
+  'Digital Transformation',
+  'Asset Management',
+  'Data Protection',
+  'Performance Monitoring',
+  'Cloud Security',
+  'ITSM'
+];
+
+export default function ITServicesPage() {
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const [searchTerm, setSearchTerm] = React.useState('');
+
+  const filteredServices = itServices.filter(service => {
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  return (
+    <Layout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services and solutions for modern businesses. From AI operations to cybersecurity, we provide cutting-edge technology solutions."
+      keywords="IT services, technology solutions, AI operations, cybersecurity, cloud computing, digital transformation"
+    >
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                IT Services & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Comprehensive IT services and solutions designed to transform your business operations, 
+                enhance security, and drive innovation across all technology domains.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Search and Filter Section */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              {/* Search Bar */}
+              <div className="mb-8">
+                <div className="relative max-w-2xl mx-auto">
+                  <input
+                    type="text"
+                    placeholder="Search IT services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                </div>
+              </div>
+
+              {/* Category Filter */}
+              <div className="flex flex-wrap gap-2 justify-center mb-8">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
       category: 'Development'
     },
     {
