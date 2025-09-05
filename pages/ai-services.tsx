@@ -201,6 +201,122 @@ const aiServices = [{
     "category": 'Legal Tech'
   },
   {
+    "title": 'Quantum Machine Learning Platform',
+    "description": 'Quantum-enhanced machine learning for complex optimization and pattern recognition.',
+    "icon": Brain,
+    "features": ['Quantum Algorithms', 'Hybrid Classical-Quantum Models', 'Optimization Problems', 'Quantum Advantage'],
+    "pricing": '$100,000 - $1,000,000 project',
+    "category": 'Quantum AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Autonomous Vehicles',
+    "description": 'Complete autonomous vehicle AI system with perception, planning, and control.',
+    "icon": Car,
+    "features": ['Computer Vision', 'Path Planning', 'Decision Making', 'Safety Systems'],
+    "pricing": '$500,000 - $5,000,000 project',
+    "category": 'Autonomous Vehicles',
+    "popular": true
+  },
+  {
+    "title": 'Neural Interface AI System',
+    "description": 'Brain-computer interface AI for medical applications and assistive technology.',
+    "icon": Brain,
+    "features": ['Signal Processing', 'Pattern Recognition', 'Real-time Translation', 'Medical Applications'],
+    "pricing": '$200,000 - $2,000,000 project',
+    "category": 'Neurotechnology',
+    "popular": true
+  },
+  {
+    "title": 'AI Climate Change Modeling',
+    "description": 'Advanced climate modeling and environmental impact prediction using AI.',
+    "icon": Sprout,
+    "features": ['Climate Simulation', 'Impact Prediction', 'Policy Optimization', 'Carbon Footprint Analysis'],
+    "pricing": '$50,000 - $500,000 project',
+    "category": 'Climate AI',
+    "popular": true
+  },
+  {
+    "title": 'AI Space Mission Planning',
+    "description": 'Autonomous space mission planning and satellite constellation management.',
+    "icon": Rocket,
+    "features": ['Mission Optimization', 'Satellite Coordination', 'Resource Planning', 'Risk Assessment'],
+    "pricing": '$1,000,000 - $10,000,000 project',
+    "category": 'Space Technology',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Metaverse Platform',
+    "description": 'Complete metaverse infrastructure with AI-driven virtual worlds and avatars.',
+    "icon": Globe,
+    "features": ['Virtual World Generation', 'AI Avatars', 'Real-time Interaction', 'Content Creation'],
+    "pricing": '$100,000 - $1,000,000 project',
+    "category": 'Metaverse',
+    "popular": true
+  },
+  {
+    "title": 'AI Cybersecurity Defense',
+    "description": 'Advanced AI-powered cybersecurity with autonomous threat detection and response.',
+    "icon": Shield,
+    "features": ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Zero-day Protection'],
+    "pricing": '$25,000 - $200,000 setup',
+    "category": 'Cybersecurity AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Digital Twin',
+    "description": 'Complete digital twin creation with AI-driven simulation and optimization.',
+    "icon": Monitor,
+    "features": ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Optimization Engine'],
+    "pricing": '$75,000 - $500,000 project',
+    "category": 'Digital Twins',
+    "popular": true
+  },
+  {
+    "title": 'AI Edge Computing Intelligence',
+    "description": 'Distributed AI processing at the edge for real-time decision making.',
+    "icon": Cpu,
+    "features": ['Edge AI Models', 'Real-time Processing', 'Distributed Learning', 'Latency Optimization'],
+    "pricing": '$30,000 - $200,000 project',
+    "category": 'Edge AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Synthetic Biology',
+    "description": 'AI-driven synthetic biology for drug discovery and bioengineering.',
+    "icon": Heart,
+    "features": ['DNA Design', 'Protein Engineering', 'Metabolic Modeling', 'Biological Simulation'],
+    "pricing": '$150,000 - $1,500,000 project',
+    "category": 'Synthetic Biology',
+    "popular": true
+  },
+  {
+    "title": 'AI Quantum Cryptography',
+    "description": 'Quantum-resistant AI systems for future-proof security and encryption.',
+    "icon": Lock,
+    "features": ['Quantum Key Distribution', 'Post-Quantum Algorithms', 'AI Security Analysis', 'Future-proofing'],
+    "pricing": '$100,000 - $800,000 project',
+    "category": 'Quantum Security',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Space Mining',
+    "description": 'Autonomous space mining operations with AI-driven resource extraction.',
+    "icon": Rocket,
+    "features": ['Resource Detection', 'Mining Optimization', 'Autonomous Operations', 'Risk Management'],
+    "pricing": '$2,000,000 - $20,000,000 project',
+    "category": 'Space Mining',
+    "popular": true
+  },
+  {
+    "title": 'AI Legal Document Analysis',
+    "description": 'Intelligent legal document review and contract analysis.',
+    "icon": BookOpen,
+    "features": ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
+    "pricing": '$5,000 - $25,000 setup',
+    "category": 'Legal Tech'
+  },
+  {
     "title": 'AI Customer Sentiment Analysis',
     "description": 'Real-time customer sentiment analysis across multiple channels.',
     "icon": MessageSquare,
@@ -440,17 +556,17 @@ export default function AIServicesPage() {
           >
             <div className="flex items-center justify-center mb-6">
               <Brain className="h-16 w-16 text-blue-400 mr-4" />
-              <h1 className="text-4xl "md": text-6xl font-bold">
+              <h1 className="text-4xl md:text-6xl font-bold">
                 AI{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Services
                 </span>
               </h1>
             </div>
-            <p className="text-xl "md": text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business with cutting-edge artificial intelligence solutions. From machine learning to natural language processing, we deliver AI that works.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get AI Consultation
               </Link>
@@ -472,7 +588,7 @@ export default function AIServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our AI Solutions
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -486,7 +602,7 @@ export default function AIServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg "hover": shadow-xl transition-all duration-300 group"
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -494,7 +610,7 @@ export default function AIServicesPage() {
                   whileHover={{ "y": -5 }}
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-blue-600 group-"hover": text-purple-600 transition-colors">
+                    <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
@@ -527,7 +643,7 @@ export default function AIServicesPage() {
 
                   <Link
                     href="/contact"
-                    className="w-full bg-blue-600 "hover": bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Quote</span>
                     <ArrowRight className="w-3 h-3 ml-1" />
@@ -549,7 +665,7 @@ export default function AIServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Industries We Serve
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -563,7 +679,7 @@ export default function AIServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg "hover": bg-gray-50 transition-colors"
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -595,7 +711,7 @@ export default function AIServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our AI Services?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -643,7 +759,7 @@ export default function AIServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">

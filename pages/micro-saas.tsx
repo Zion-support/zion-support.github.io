@@ -44,7 +44,8 @@ import {
   BookOpen,
   ShoppingCart,
   Home,
-  Database
+  Database,
+  Brain
 } from 'lucide-react';
 
 const microSaaSProducts = [{
@@ -294,6 +295,87 @@ const microSaaSProducts = [{
     "features": ['Demand Forecasting', 'Inventory Optimization', 'Supplier Analytics', 'Risk Assessment'],
     "pricing": '$599 - $3,999/month',
     "category": 'Supply Chain',
+    "popular": true
+  },
+  {
+    "title": 'Quantum-Safe Encryption Manager',
+    "description": 'Post-quantum cryptography solution for future-proof data protection and compliance.',
+    "icon": Lock,
+    "features": ['Quantum-Safe Algorithms', 'Key Management', 'Compliance Tools', 'Migration Support'],
+    "pricing": '$999 - $4,999/month',
+    "category": 'Cybersecurity',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Legal Document Analyzer',
+    "description": 'Intelligent legal document analysis with contract review, risk assessment, and compliance checking.',
+    "icon": FileText,
+    "features": ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    "pricing": '$399 - $2,499/month',
+    "category": 'Legal Tech',
+    "popular": true
+  },
+  {
+    "title": 'Autonomous Drone Fleet Management',
+    "description": 'AI-powered drone fleet coordination for delivery, surveillance, and inspection services.',
+    "icon": Rocket,
+    "features": ['Fleet Coordination', 'Route Optimization', 'Battery Management', 'Regulatory Compliance'],
+    "pricing": '$1,999 - $9,999/month',
+    "category": 'Autonomous Systems',
+    "popular": true
+  },
+  {
+    "title": 'Neural Interface Analytics Platform',
+    "description": 'Advanced brain-computer interface analytics for medical and research applications.',
+    "icon": Brain,
+    "features": ['Signal Processing', 'Pattern Recognition', 'Real-time Analysis', 'Medical Integration'],
+    "pricing": '$2,999 - $15,999/month',
+    "category": 'Neurotechnology',
+    "popular": true
+  },
+  {
+    "title": 'Carbon Footprint Intelligence Suite',
+    "description": 'AI-driven carbon tracking and sustainability optimization for enterprises.',
+    "icon": Sprout,
+    "features": ['Carbon Tracking', 'Sustainability Scoring', 'Optimization Recommendations', 'ESG Reporting'],
+    "pricing": '$299 - $1,999/month',
+    "category": 'Sustainability',
+    "popular": true
+  },
+  {
+    "title": 'Edge Computing Orchestration Platform',
+    "description": 'Intelligent edge computing resource management and application deployment.',
+    "icon": Cpu,
+    "features": ['Resource Optimization', 'Auto-scaling', 'Latency Monitoring', 'Multi-cloud Support'],
+    "pricing": '$499 - $2,999/month',
+    "category": 'Edge Computing',
+    "popular": true
+  },
+  {
+    "title": 'Digital Twin Management System',
+    "description": 'Comprehensive digital twin creation and management for IoT and industrial applications.',
+    "icon": Monitor,
+    "features": ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'Simulation Engine'],
+    "pricing": '$799 - $4,999/month',
+    "category": 'IoT & Digital Twins',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Drug Discovery Platform',
+    "description": 'Machine learning platform for pharmaceutical research and drug development.',
+    "icon": Heart,
+    "features": ['Molecular Analysis', 'Drug Interaction Prediction', 'Clinical Trial Optimization', 'Patent Analysis'],
+    "pricing": '$1,999 - $9,999/month',
+    "category": 'Pharmaceutical AI',
+    "popular": true
+  },
+  {
+    "title": 'Blockchain Identity Verification',
+    "description": 'Decentralized identity verification and KYC/AML compliance solution.',
+    "icon": Shield,
+    "features": ['Decentralized Identity', 'KYC/AML Automation', 'Privacy Protection', 'Cross-platform Verification'],
+    "pricing": '$199 - $1,499/month',
+    "category": 'Blockchain Identity',
     "popular": true
   },
   {
@@ -551,17 +633,17 @@ export default function MicroSaaSPage() {
           >
             <div className="flex items-center justify-center mb-6">
               <Cloud className="h-16 w-16 text-purple-400 mr-4" />
-              <h1 className="text-4xl "md": text-6xl font-bold">
+              <h1 className="text-4xl md:text-6xl font-bold">
                 Micro{' '}
                 <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
                   SaaS
                 </span>
               </h1>
             </div>
-            <p className="text-xl "md": text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Start Your SaaS
               </Link>
@@ -583,7 +665,7 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our Micro SaaS Products
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -615,7 +697,7 @@ export default function MicroSaaSPage() {
                   )}
                   
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-purple-600 group-"hover": text-indigo-600 transition-colors">
+                    <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
@@ -648,7 +730,7 @@ export default function MicroSaaSPage() {
 
                   <Link
                     href="/contact"
-                    className="w-full bg-purple-600 "hover": bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Started</span>
                     <ArrowRight className="w-3 h-3 ml-1" />
@@ -670,7 +752,7 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Micro SaaS?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -678,13 +760,13 @@ export default function MicroSaaSPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg "hover": bg-gray-50 transition-colors"
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -716,7 +798,7 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Proven Results
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -765,7 +847,7 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -773,7 +855,7 @@ export default function MicroSaaSPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={index}
@@ -837,13 +919,13 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Launch Your Micro SaaS?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s build the perfect SaaS solution for your business needs. Fast, secure, and scalable.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Building
               </Link>

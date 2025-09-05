@@ -18,7 +18,14 @@ import {
   Globe,
   FileText,
   MessageSquare,
-  Rocket
+  Rocket,
+  Cpu,
+  Lock,
+  Video,
+  BookOpen,
+  Clock,
+  Award,
+  DollarSign
 } from 'lucide-react';
 
 const navigation = [{
@@ -26,41 +33,62 @@ const navigation = [{
     "href": '/services',
     "icon": Settings,
     "children": [
-      { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '20+' },
-      { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '20+' },
-      { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '25+' },
-      { "name": 'All Services', "href": '/services', "icon": Globe, "count": '65+' }
+      { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '35+' },
+      { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '25+' },
+      { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '40+' },
+      { "name": 'All Services', "href": '/services', "icon": Globe, "count": '100+' }
     ]
   },
   {
     "name": 'Solutions',
     "href": '/solutions',
     "icon": Shield,
-    "children": [{ name: 'Enterprise Solutions', "href": '/solutions/enterprise', "icon": Shield },
+    "children": [
+      { name: 'Enterprise Solutions', "href": '/solutions/enterprise', "icon": Shield },
       { "name": 'Startup Solutions', "href": '/solutions/startup', "icon": Rocket },
       { "name": 'Industry Solutions', "href": '/solutions/industry', "icon": BarChart3 },
-      { "name": 'Custom Development', "href": '/solutions/custom', "icon": Settings }
+      { "name": 'Custom Development', "href": '/solutions/custom', "icon": Settings },
+      { "name": 'Quantum Computing', "href": '/solutions/quantum', "icon": Cpu },
+      { "name": 'Edge Computing', "href": '/solutions/edge', "icon": Network },
+      { "name": 'Blockchain Solutions', "href": '/solutions/blockchain', "icon": Lock }
     ]
   },
   {
     "name": 'Resources',
     "href": '/resources',
     "icon": FileText,
-    "children": [{ name: 'Documentation', "href": '/docs', "icon": FileText },
+    "children": [
+      { name: 'Documentation', "href": '/docs', "icon": FileText },
       { "name": 'Case Studies', "href": '/case-studies', "icon": BarChart3 },
       { "name": 'Blog', "href": '/blog', "icon": MessageSquare },
-      { "name": 'API Reference', "href": '/api-docs', "icon": Settings }
+      { "name": 'API Reference', "href": '/api-docs', "icon": Settings },
+      { "name": 'White Papers', "href": '/whitepapers', "icon": FileText },
+      { "name": 'Webinars', "href": '/webinars', "icon": Video },
+      { "name": 'Tutorials', "href": '/tutorials', "icon": BookOpen }
     ]
   },
   {
     "name": 'About',
     "href": '/about',
-    "icon": Users
+    "icon": Users,
+    "children": [
+      { name: 'Our Team', "href": '/about#team', "icon": Users },
+      { "name": 'Company History', "href": '/about#history', "icon": Clock },
+      { "name": 'Careers', "href": '/careers', "icon": Rocket },
+      { "name": 'Partners', "href": '/partners', "icon": Network },
+      { "name": 'Awards', "href": '/awards', "icon": Award }
+    ]
   },
   {
     "name": 'Contact',
     "href": '/contact',
-    "icon": Phone
+    "icon": Phone,
+    "children": [
+      { name: 'Get Quote', "href": '/contact#quote', "icon": DollarSign },
+      { "name": 'Free Consultation', "href": '/contact#consultation', "icon": MessageSquare },
+      { "name": 'Support', "href": '/support', "icon": Settings },
+      { "name": 'Emergency Contact', "href": '/contact#emergency', "icon": Phone }
+    ]
   }
 ];
 
@@ -82,7 +110,7 @@ export default function Header() {
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col "sm": flex-row justify-between items-center text-sm">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
             <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
@@ -116,12 +144,12 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden "lg": flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
                   href={item.href}
-                  className="flex items-center space-x-1 text-gray-700 "hover": text-blue-600 font-medium transition-colors"
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors"
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
@@ -146,7 +174,7 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="flex items-center justify-between px-4 py-3 text-gray-700 "hover": bg-blue-50 hover:text-blue-600 transition-colors"
+                            className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                           >
                             <div className="flex items-center space-x-3">
                               <child.icon className="w-4 h-4" />
@@ -168,7 +196,7 @@ export default function Header() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden "lg": flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
               className="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium"
@@ -186,7 +214,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className=""lg": hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -199,14 +227,14 @@ export default function Header() {
               initial={{ "opacity": 0, "height": 0 }}
               animate={{ "opacity": 1, "height": 'auto' }}
               exit={{ "opacity": 0, "height": 0 }}
-              className=""lg": hidden border-t border-gray-200 bg-white"
+              className="lg:hidden border-t border-gray-200 bg-white"
             >
               <div className="py-4 space-y-2">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     <Link
                       href={item.href}
-                      className="flex items-center space-x-2 px-4 py-3 text-gray-700 "hover": bg-blue-50 hover:text-blue-600 transition-colors font-medium"
+                      className="flex items-center space-x-2 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
                       onClick={closeMenu}
                     >
                       <item.icon className="w-4 h-4" />
@@ -218,7 +246,7 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 "hover": bg-blue-50 hover:text-blue-600 transition-colors"
+                            className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                             onClick={closeMenu}
                           >
                             <div className="flex items-center space-x-2">
@@ -241,14 +269,14 @@ export default function Header() {
                 <div className="px-4 pt-4 border-t border-gray-200 space-y-2">
                   <Link
                     href="/contact"
-                    className="block w-full px-4 py-3 text-center border border-blue-600 text-blue-600 rounded-lg "hover": bg-blue-50 transition-colors font-medium"
+                    className="block w-full px-4 py-3 text-center border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium"
                     onClick={closeMenu}
                   >
                     Get Quote
                   </Link>
                   <Link
                     href="/contact"
-                    className="block w-full px-4 py-3 text-center bg-blue-600 text-white rounded-lg "hover": bg-blue-700 transition-colors font-medium"
+                    className="block w-full px-4 py-3 text-center bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
                     onClick={closeMenu}
                   >
                     Free Consultation

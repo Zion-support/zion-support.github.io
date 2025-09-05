@@ -17,7 +17,7 @@ const publicRoutes = ["/",
   "/auth/verify",
 ];
 
-export function middleware("request": NextRequest) {
+export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Allow public routes
