@@ -33,6 +33,7 @@ import {
   Heart,
   Building,
   Sprout,
+  Database,
   Mail,
   MessageSquare,
   Search,

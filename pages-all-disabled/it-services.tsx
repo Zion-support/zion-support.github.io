@@ -33,6 +33,9 @@ import {
   BookOpen,
   Brain,
   DollarSign,
+  Sprout,
+  Eye,
+  Bot,
   Rocket
 } from 'lucide-react';
 const itServices = [{

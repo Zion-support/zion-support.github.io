@@ -343,43 +343,8 @@ export default function HelpPage() {
     <Layout>
       <Head>
         <title>Help Center - Zion Tech Group</title>
-    icon: Video,
-    href: '/tutorials'
-  },
-  {
-    title: 'Community Forum',
-    description: 'Connect with other users and experts',
-    icon: MessageCircle,
-    href: '/community'
-  },
-  {
-    title: 'Contact Support',
-    description: 'Get help from our support team',
-    icon: Phone,
-    href: '/contact'
-  }
-];
-
-export default function HelpPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
-
-  const toggleCategory = (index: number) => {
-    setExpandedCategory(expandedCategory === index ? null : index);
-  };
-
-  const filteredCategories = helpCategories.map(category => ({
-    ...category,
-    articles: category.articles.filter(article => 
-      article.title.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  })).filter(category => category.articles.length > 0);
-
-  return (
-    <>
-      <Head>
-        <title>Help Center - Zion Tech Group</title>
-        <meta name="description" content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources." />
+        <meta name="description" content="Get help and support for Zion Tech Group services. Find answers to common questions, tutorials, and contact our support team." />
+        <meta name="keywords" content="help, support, documentation, FAQ, tutorials, guides" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -408,11 +373,9 @@ export default function HelpPage() {
                   className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
-        <meta name="description" content="Get help and support for Zion Tech Group services. Find guides, tutorials, FAQs, and contact information." />
-        <meta name="keywords" content="help, support, documentation, FAQ, tutorials, guides" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            </motion.div>
+          </div>
+        </section>
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">

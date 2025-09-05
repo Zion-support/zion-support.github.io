@@ -114,6 +114,6 @@ export default function TermsPage() {
           </div>
         </section>
       </div>
-    </>
+    </MainLayout>
   );
 }

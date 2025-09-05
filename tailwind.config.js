@@ -42,13 +42,9 @@ module.exports = {
       },
     },
   },
-<<<<<<< HEAD
-  plugins: []
-=======
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
->>>>>>> 26a23840d0afc28627aae94549d1ebed59f462f6
 };
