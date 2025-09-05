@@ -25,7 +25,6 @@ export default {
     es2021: true
   },
   ignorePatterns: [
-    'node_modules/.next/out/dist/pages._archive_corrupted/pages.disabled/pages.disabled.full/pages.disabled_auto/pages_api.disabled/pages_backup_conflict/temp_backup/temp_broken_files/temp_working/tests.disabled/zion-os.disabled/*.backup',
-    '*.disabled*.corrupted*.brokenperformance-optimizations.jsseo-improvements.jsservices-broken.tsxtest-automation.jsutils/testing-system.tsxutils/serviceFinder.tsutils/validation.tsutils/supabase/client.tsutils/next-link-shim.tsxutils/messageChannelHandler.tsutils/api.ts'
+    'node_modules/.next/out/dist/pages._archive_corrupted/pages.disabled/pages.disabled.full/pages.disabled_auto/pages_api.disabled/pages_backup_conflict/temp_backup/temp_broken_files/temp_working/tests.disabled/zion-os.disabled/*.backup*.disabled*.corrupted*.brokenperformance-optimizations.jsseo-improvements.jsservices-broken.tsxtest-automation.jsutils/testing-system.tsxutils/serviceFinder.tsutils/validation.tsutils/supabase/client.tsutils/next-link-shim.tsxutils/messageChannelHandler.tsutils/api.ts'
   ]
 };

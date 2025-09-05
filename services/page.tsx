@@ -8,7 +8,7 @@ import {;
   Brain;
   Cloud;
   Shield;
-  BarChart3,
+  BarChart3;
   CheckCircle,
   ArrowRight,
   Clock,

@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Function to fix remaining syntax errors;
-function fixRemainingSyntax(content) {,
+function fixRemainingSyntax(content) {;
   // Fix semicolons that should be commas in object arrays,
   content = content.replace(/,\s*\n\s*]/g, '\n]'),
   // Fix missing commas between array items,

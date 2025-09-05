@@ -3,7 +3,7 @@ import * as React from 'react';
 ;
 interface LayoutProps {;
   children: React.ReactNode;
-  title?: string,
+  title?: string;
   description?: string,
   keywords?: string
 };

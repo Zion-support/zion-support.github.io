@@ -6,7 +6,7 @@ import Sidebar from './Sidebar';
 ;
 interface LayoutProps {;
   children: React.ReactNode;
-  title?: string,
+  title?: string;
   description?: string,
   keywords?: string,
   showSidebar?: boolean

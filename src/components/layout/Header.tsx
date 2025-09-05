@@ -6,7 +6,7 @@ import {;
   Menu;
   X;
   ChevronDown;
-  Phone,
+  Phone;
   Mail,
   MapPin,
   Brain,

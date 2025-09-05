@@ -6,7 +6,7 @@ import {
   X;
   ChevronDown;
   Phone;
-  Mail,
+  Mail;
   Facebook,
   Twitter,
   Linkedin,

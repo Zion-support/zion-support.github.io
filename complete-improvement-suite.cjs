@@ -1,7 +1,8 @@
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
-      "improvements": { applied: 0, "failed": 0 }};
+      "improvements": { applied: 0, "failed": 0 }
+    };
   }
 
   ensureDirectories() {

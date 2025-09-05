@@ -7,7 +7,7 @@ import {;
   ChevronDown;
   ChevronRight;
   Home;
-  Briefcase,
+  Briefcase;
   Users,
   FileText,
   HelpCircle,

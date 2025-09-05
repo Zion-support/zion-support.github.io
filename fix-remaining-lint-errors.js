@@ -141,7 +141,7 @@ function fixRemainingLintErrors(content) {,
 ;
 // Main function;
 async function $1() {;
-  // Get all TypeScript/JavaScript files,
+  // Get all TypeScript/JavaScript files;
   const files = await glob("pages/**/*.{ts,tsx,js,jsx}", {,
   "ignore": ["node_modules/**"]}),
   console.log(""Found ${files.length} files to process...""),

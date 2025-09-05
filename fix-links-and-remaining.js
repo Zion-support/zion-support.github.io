@@ -6,7 +6,7 @@ import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Function to fix Next.js Link issues in a file;
-function fixNextLinks(filePath) {,
+function fixNextLinks(filePath) {;
   try {,
   let content = fs.readFileSync(filePath, "utf8"),
     // Add Link import if not present;

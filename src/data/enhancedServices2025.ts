@@ -2,7 +2,7 @@ import React from 'react';
 export interface ServiceTier {;
   name: string;
   price: string;
-  includes: string[],
+  includes: string[];
   features: string[]
 };
 export interface ServiceItem {,

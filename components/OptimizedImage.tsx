@@ -4,7 +4,7 @@ import Image from 'next/image';
 interface OptimizedImageProps {;
   src: string;
   alt: string;
-  width?: number,
+  width?: number;
   height?: number,
   className?: string,
   priority?: boolean,

@@ -7,7 +7,7 @@ import {
   Cloud;
   Shield;
   Code;
-  Database,
+  Database;
   Network,
   Settings,
   Users,

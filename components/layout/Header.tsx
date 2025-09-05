@@ -13,7 +13,7 @@ import {;
   Menu;
   X;
   Home;
-  Users,
+  Users;
   Briefcase,
   Phone,
   Mail,
