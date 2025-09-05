@@ -44,9 +44,14 @@ import {
   HardDrive,
   Droplets,
   Calendar
->>>>>>> 17b17a8f81ff85e1faa2d953a804b4369cc38def
 } from 'lucide-react';
 import Layout from '../components/Layout';
+
+const contactInfo = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
 
 const microSaasServices = [
   {
@@ -1529,6 +1534,487 @@ const microSaasServices = [
         'Cutting-edge research capabilities'
       ],
       category: 'Quantum Computing'
+    },
+    // NEW INNOVATIVE MICRO SAAS SERVICES
+    {
+      icon: Brain,
+      name: 'AI-Powered Personal Finance Coach',
+      description: 'Intelligent personal finance management with AI-driven budgeting, investment advice, and financial goal tracking.',
+      features: [
+        'AI-powered spending analysis and categorization',
+        'Personalized budgeting recommendations',
+        'Investment portfolio optimization',
+        'Financial goal tracking and planning',
+        'Bill payment automation and reminders',
+        'Credit score monitoring and improvement tips',
+        'Tax optimization strategies',
+        'Retirement planning assistance'
+      ],
+      pricing: '$19 – $99/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        'Save 20% more money annually',
+        'Automated financial management',
+        'Personalized investment advice',
+        'Achieve financial goals 40% faster'
+      ],
+      category: 'FinTech'
+    },
+    {
+      icon: Camera,
+      name: 'AI Real Estate Photo Enhancer',
+      description: 'Professional real estate photo enhancement using AI to improve lighting, staging, and visual appeal.',
+      features: [
+        'AI-powered photo enhancement and retouching',
+        'Virtual staging and furniture placement',
+        'Sky replacement and weather correction',
+        'HDR processing and lighting optimization',
+        'Batch processing for multiple photos',
+        'Integration with MLS and real estate platforms',
+        'Before/after comparison tools',
+        'Mobile app for on-the-go editing'
+      ],
+      pricing: '$49 – $299/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        'Increase property views by 60%',
+        'Reduce photo editing time by 80%',
+        'Professional-quality results',
+        'Higher property sale prices'
+      ],
+      category: 'Real Estate Tech'
+    },
+    {
+      icon: Stethoscope,
+      name: 'AI Health Symptom Checker',
+      description: 'AI-powered health assessment tool that analyzes symptoms and provides preliminary health insights.',
+      features: [
+        'AI-powered symptom analysis and assessment',
+        'Health risk evaluation and recommendations',
+        'Integration with wearable devices',
+        'Medication interaction checking',
+        'Appointment scheduling with healthcare providers',
+        'Health trend tracking and reporting',
+        'Emergency situation detection',
+        'Privacy-focused health data management'
+      ],
+      pricing: '$29 – $149/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Early health issue detection',
+        'Reduced unnecessary doctor visits',
+        'Better health awareness',
+        'Improved healthcare outcomes'
+      ],
+      category: 'HealthTech'
+    },
+    {
+      icon: GraduationCap,
+      name: 'AI Learning Path Generator',
+      description: 'Personalized learning platform that creates custom educational paths based on career goals and skill gaps.',
+      features: [
+        'AI-powered skill assessment and gap analysis',
+        'Personalized learning path creation',
+        'Micro-learning modules and bite-sized content',
+        'Progress tracking and achievement badges',
+        'Industry-specific curriculum recommendations',
+        'Mentor matching and peer learning',
+        'Certification tracking and management',
+        'Integration with job market requirements'
+      ],
+      pricing: '$39 – $199/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Learn 3x faster with personalized paths',
+        'Stay relevant with industry skills',
+        'Career advancement opportunities',
+        'Continuous professional development'
+      ],
+      category: 'EdTech'
+    },
+    {
+      icon: Truck,
+      name: 'Smart Logistics Optimizer',
+      description: 'AI-powered logistics and delivery optimization for e-commerce and supply chain management.',
+      features: [
+        'Route optimization and delivery planning',
+        'Real-time tracking and status updates',
+        'Dynamic pricing for shipping costs',
+        'Inventory positioning and demand forecasting',
+        'Last-mile delivery optimization',
+        'Carrier performance analytics',
+        'Customer communication automation',
+        'Sustainability and carbon footprint tracking'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Reduce shipping costs by 25%',
+        'Improve delivery times by 40%',
+        'Enhanced customer satisfaction',
+        'Optimized supply chain efficiency'
+      ],
+      category: 'Logistics'
+    },
+    {
+      icon: Gamepad2,
+      name: 'AI Game Development Assistant',
+      description: 'AI-powered game development platform with automated asset generation, level design, and testing.',
+      features: [
+        'AI-generated game assets and characters',
+        'Automated level design and balancing',
+        'Intelligent NPC behavior programming',
+        'Automated game testing and bug detection',
+        'Procedural content generation',
+        'Multi-platform deployment tools',
+        'Analytics and player behavior tracking',
+        'Monetization optimization recommendations'
+      ],
+      pricing: '$99 – $599/month',
+      timeline: '2–4 weeks',
+      benefits: [
+        'Reduce game development time by 50%',
+        'Lower development costs by 40%',
+        'Enhanced game quality and balance',
+        'Faster time to market'
+      ],
+      category: 'Game Development'
+    },
+    {
+      icon: PieChart,
+      name: 'AI Market Research Analyzer',
+      description: 'Intelligent market research platform that analyzes trends, competitors, and customer sentiment.',
+      features: [
+        'AI-powered market trend analysis',
+        'Competitor monitoring and benchmarking',
+        'Customer sentiment analysis across platforms',
+        'Market opportunity identification',
+        'Consumer behavior prediction',
+        'Brand reputation monitoring',
+        'Automated research report generation',
+        'Real-time market alerts and notifications'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Make data-driven business decisions',
+        'Identify market opportunities 60% faster',
+        'Stay ahead of competitors',
+        'Reduce market research costs by 70%'
+      ],
+      category: 'Market Research'
+    },
+    {
+      icon: ClipboardList,
+      name: 'AI Project Risk Predictor',
+      description: 'Intelligent project management tool that predicts risks and suggests mitigation strategies.',
+      features: [
+        'AI-powered risk identification and assessment',
+        'Project timeline prediction and optimization',
+        'Resource allocation recommendations',
+        'Budget overrun prevention',
+        'Team performance analysis',
+        'Automated risk mitigation strategies',
+        'Project success probability scoring',
+        'Integration with popular PM tools'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Reduce project failures by 45%',
+        'Improve project delivery times by 30%',
+        'Better resource utilization',
+        'Proactive risk management'
+      ],
+      category: 'Project Management'
+    },
+    {
+      icon: Droplets,
+      name: 'Smart Water Management System',
+      description: 'IoT-powered water monitoring and conservation platform for homes and businesses.',
+      features: [
+        'Real-time water usage monitoring',
+        'Leak detection and automatic shutoff',
+        'Water quality testing and reporting',
+        'Conservation recommendations and tips',
+        'Bill prediction and cost optimization',
+        'Mobile app for remote monitoring',
+        'Integration with smart home systems',
+        'Environmental impact tracking'
+      ],
+      pricing: '$79 – $399/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Reduce water usage by 30%',
+        'Prevent costly water damage',
+        'Lower utility bills',
+        'Environmental sustainability'
+      ],
+      category: 'IoT & Smart Home'
+    },
+    {
+      icon: TreePine,
+      name: 'Carbon Footprint Tracker',
+      description: 'AI-powered carbon footprint monitoring and reduction platform for individuals and businesses.',
+      features: [
+        'Automated carbon footprint calculation',
+        'Emission source identification and tracking',
+        'Personalized reduction recommendations',
+        'Carbon offset marketplace integration',
+        'Sustainability goal setting and tracking',
+        'Team and organization carbon challenges',
+        'Environmental impact reporting',
+        'Integration with financial and travel data'
+      ],
+      pricing: '$29 – $149/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        'Reduce carbon footprint by 40%',
+        'Meet sustainability goals',
+        'Improve environmental awareness',
+        'Corporate sustainability compliance'
+      ],
+      category: 'Sustainability'
+    },
+    {
+      icon: Phone,
+      name: 'AI Voice Assistant Builder',
+      description: 'No-code platform for creating custom voice assistants and chatbots for businesses.',
+      features: [
+        'Visual voice assistant builder',
+        'Multi-language voice recognition',
+        'Custom voice personality creation',
+        'Integration with business systems',
+        'Analytics and conversation tracking',
+        'Voice command customization',
+        'Multi-channel deployment',
+        'Advanced natural language processing'
+      ],
+      pricing: '$149 – $899/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Improve customer engagement by 50%',
+        'Reduce support costs by 60%',
+        '24/7 automated assistance',
+        'Enhanced user experience'
+      ],
+      category: 'Voice Technology'
+    },
+    {
+      icon: MapPin,
+      name: 'Smart Location Analytics',
+      description: 'AI-powered location intelligence platform for retail, real estate, and urban planning.',
+      features: [
+        'Foot traffic analysis and prediction',
+        'Demographic and psychographic insights',
+        'Competitor location analysis',
+        'Site selection optimization',
+        'Customer journey mapping',
+        'Market penetration analysis',
+        'Real-time location data processing',
+        'Integration with mapping services'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Increase foot traffic by 35%',
+        'Optimize store locations',
+        'Better market understanding',
+        'Data-driven location decisions'
+      ],
+      category: 'Location Intelligence'
+    },
+    {
+      icon: HardDrive,
+      name: 'AI Data Backup & Recovery',
+      description: 'Intelligent data backup and disaster recovery platform with automated testing and monitoring.',
+      features: [
+        'Automated backup scheduling and management',
+        'AI-powered data deduplication',
+        'Disaster recovery testing and validation',
+        'Cross-platform data synchronization',
+        'Version control and file history',
+        'Security encryption and compliance',
+        'Real-time backup monitoring',
+        'Instant recovery and restoration'
+      ],
+      pricing: '$49 – $299/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '99.9% data protection guarantee',
+        'Reduce backup costs by 50%',
+        'Faster disaster recovery',
+        'Automated backup management'
+      ],
+      category: 'Data Management'
+    },
+    {
+      icon: Wifi,
+      name: 'Smart Network Optimizer',
+      description: 'AI-powered network performance monitoring and optimization for businesses and homes.',
+      features: [
+        'Real-time network performance monitoring',
+        'Automatic bandwidth optimization',
+        'Device prioritization and QoS management',
+        'Security threat detection and prevention',
+        'Network coverage analysis and improvement',
+        'Usage analytics and reporting',
+        'Parental controls and content filtering',
+        'Integration with smart home devices'
+      ],
+      pricing: '$39 – $199/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        'Improve network speed by 40%',
+        'Reduce connectivity issues by 80%',
+        'Enhanced security protection',
+        'Better device management'
+      ],
+      category: 'Network Management'
+    },
+    {
+      icon: Laptop,
+      name: 'AI Remote Work Optimizer',
+      description: 'Comprehensive remote work platform with productivity analytics and team collaboration tools.',
+      features: [
+        'Productivity tracking and analytics',
+        'Focus time management and blocking',
+        'Team collaboration and communication',
+        'Work-life balance monitoring',
+        'Ergonomic workspace recommendations',
+        'Meeting optimization and scheduling',
+        'Wellness and mental health tracking',
+        'Performance goal setting and tracking'
+      ],
+      pricing: '$29 – $149/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        'Increase productivity by 35%',
+        'Improve work-life balance',
+        'Better team collaboration',
+        'Enhanced remote work experience'
+      ],
+      category: 'Remote Work'
+    },
+    {
+      icon: ShoppingCart,
+      name: 'AI E-commerce Personalization Engine',
+      description: 'Advanced personalization platform for e-commerce with AI-driven product recommendations.',
+      features: [
+        'AI-powered product recommendations',
+        'Dynamic pricing optimization',
+        'Personalized email marketing campaigns',
+        'Customer behavior analysis and segmentation',
+        'A/B testing for personalization strategies',
+        'Real-time personalization updates',
+        'Cross-selling and upselling optimization',
+        'Mobile app personalization'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Increase conversion rates by 45%',
+        'Boost average order value by 30%',
+        'Improve customer retention by 50%',
+        'Enhanced shopping experience'
+      ],
+      category: 'E-commerce'
+    },
+    {
+      icon: Home,
+      name: 'Smart Home Energy Manager',
+      description: 'AI-powered energy management system for smart homes with cost optimization and sustainability tracking.',
+      features: [
+        'Real-time energy usage monitoring',
+        'Smart appliance control and scheduling',
+        'Energy cost optimization and forecasting',
+        'Solar panel integration and management',
+        'Peak demand management',
+        'Energy efficiency recommendations',
+        'Carbon footprint tracking',
+        'Integration with utility companies'
+      ],
+      pricing: '$79 – $399/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Reduce energy costs by 25%',
+        'Optimize renewable energy usage',
+        'Improve home efficiency',
+        'Environmental sustainability'
+      ],
+      category: 'Smart Home'
+    },
+    {
+      icon: Trash2,
+      name: 'AI Waste Management Optimizer',
+      description: 'Intelligent waste management platform for businesses with recycling optimization and cost reduction.',
+      features: [
+        'Waste stream analysis and categorization',
+        'Recycling optimization recommendations',
+        'Waste reduction strategies and tracking',
+        'Cost analysis and budget optimization',
+        'Compliance monitoring and reporting',
+        'Vendor management and comparison',
+        'Sustainability goal tracking',
+        'Integration with waste management systems'
+      ],
+      pricing: '$149 – $899/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Reduce waste costs by 30%',
+        'Improve recycling rates by 50%',
+        'Meet sustainability goals',
+        'Enhanced environmental compliance'
+      ],
+      category: 'Waste Management'
+    },
+    {
+      icon: Calendar,
+      name: 'AI Event Planning Assistant',
+      description: 'Intelligent event planning platform with vendor management, budget optimization, and guest experience enhancement.',
+      features: [
+        'Automated event planning workflows',
+        'Vendor sourcing and management',
+        'Budget tracking and optimization',
+        'Guest experience personalization',
+        'Event timeline and task management',
+        'Real-time event analytics',
+        'Mobile app for event management',
+        'Integration with calendar and booking systems'
+      ],
+      pricing: '$99 – $599/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Reduce event planning time by 60%',
+        'Lower event costs by 25%',
+        'Improve guest satisfaction',
+        'Streamlined event management'
+      ],
+      category: 'Event Management'
+    },
+    {
+      icon: BookOpen,
+      name: 'AI Content Research Assistant',
+      description: 'Intelligent content research platform that finds trending topics, analyzes competitors, and suggests content strategies.',
+      features: [
+        'Trending topic identification and analysis',
+        'Competitor content analysis and benchmarking',
+        'Content gap analysis and opportunity identification',
+        'SEO keyword research and optimization',
+        'Content performance prediction',
+        'Audience interest analysis',
+        'Content calendar planning and scheduling',
+        'Integration with content management systems'
+      ],
+      pricing: '$79 – $399/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        'Increase content engagement by 55%',
+        'Reduce research time by 70%',
+        'Better content strategy',
+        'Competitive advantage insights'
+      ],
+      category: 'Content Marketing'
     }
   ];
 
@@ -1544,7 +2030,28 @@ const categories = [
   'Security',
   'Storage',
   'Web Development',
-  'CRM'
+  'CRM',
+  'FinTech',
+  'Real Estate Tech',
+  'HealthTech',
+  'EdTech',
+  'Logistics',
+  'Game Development',
+  'Market Research',
+  'Project Management',
+  'IoT & Smart Home',
+  'Sustainability',
+  'Voice Technology',
+  'Location Intelligence',
+  'Data Management',
+  'Network Management',
+  'Remote Work',
+  'E-commerce',
+  'Smart Home',
+  'Waste Management',
+  'Event Management',
+  'Content Marketing',
+  'Quantum Computing'
 ];
 
 export default function MicroSaasPage() {

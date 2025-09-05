@@ -17,12 +17,7 @@ import {
   Zap, 
   CheckCircle, 
   ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Building, 
-  Rocket, 
-  Lightbulb, 
-  Handshake 
+  Star
 } from 'lucide-react';
 
 const values = [
@@ -326,5 +321,6 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
         </div>
       </section>
     </div>
+    </Layout>
   );
 }
