@@ -44,7 +44,6 @@ import {
   HardDrive,
   Droplets,
   Calendar
->>>>>>> 17b17a8f81ff85e1faa2d953a804b4369cc38def
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -192,6 +191,247 @@ const microSaasServices = [
     marketPrice: '$25-150/month',
     link: '/contact',
     popular: true
+  },
+  // New Innovative Micro SaaS Services
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with AI suggestions, security scanning, and performance optimization recommendations.',
+    icon: Code,
+    features: ['AI code analysis', 'Security vulnerability detection', 'Performance optimization', 'Best practices suggestions'],
+    pricing: '$79/month',
+    category: 'Development Tools',
+    benefits: ['Reduce code review time by 70%', 'Catch bugs before deployment', 'Improve code quality'],
+    marketPrice: '$50-200/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: true
+  },
+  {
+    title: 'Smart Inventory Management',
+    description: 'AI-driven inventory optimization with demand forecasting and automated reordering.',
+    icon: Package,
+    features: ['Demand forecasting', 'Automated reordering', 'Stock level optimization', 'Multi-location management'],
+    pricing: '$89/month',
+    category: 'E-commerce',
+    benefits: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Automated procurement'],
+    marketPrice: '$60-300/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: true
+  },
+  {
+    title: 'Voice-to-Text Meeting Transcriber',
+    description: 'Real-time meeting transcription with AI-powered insights, action items, and follow-up automation.',
+    icon: Mic,
+    features: ['Real-time transcription', 'AI meeting insights', 'Action item extraction', 'Integration with calendars'],
+    pricing: '$45/month',
+    category: 'Productivity',
+    benefits: ['Never miss important details', 'Automated meeting summaries', 'Better follow-up'],
+    marketPrice: '$20-100/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Management',
+    description: 'Automated contract lifecycle management with AI-powered risk assessment and compliance monitoring.',
+    icon: FileText,
+    features: ['Contract templates', 'AI risk analysis', 'Compliance monitoring', 'Automated renewals'],
+    pricing: '$129/month',
+    category: 'Legal Tech',
+    benefits: ['Reduce contract risks by 50%', 'Automate compliance checks', 'Faster contract processing'],
+    marketPrice: '$80-400/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: false
+  },
+  {
+    title: 'AI-Powered Customer Feedback Analyzer',
+    description: 'Analyze customer feedback across all channels with sentiment analysis and actionable insights.',
+    icon: MessageSquare,
+    features: ['Multi-channel feedback collection', 'Sentiment analysis', 'Trend identification', 'Actionable insights'],
+    pricing: '$65/month',
+    category: 'Customer Experience',
+    benefits: ['Improve customer satisfaction by 35%', 'Identify issues early', 'Data-driven improvements'],
+    marketPrice: '$40-150/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: true
+  },
+  {
+    title: 'Smart Energy Management System',
+    description: 'AI-powered energy monitoring and optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Real-time energy monitoring', 'Usage optimization', 'Cost analysis', 'Predictive maintenance'],
+    pricing: '$99/month',
+    category: 'IoT & Smart Buildings',
+    benefits: ['Reduce energy costs by 30%', 'Improve efficiency', 'Predictive maintenance'],
+    marketPrice: '$70-250/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: false
+  },
+  {
+    title: 'AI-Powered HR Screening',
+    description: 'Automated resume screening and candidate matching with bias-free AI algorithms.',
+    icon: Users,
+    features: ['Resume parsing', 'Skill matching', 'Bias detection', 'Interview scheduling'],
+    pricing: '$149/month',
+    category: 'HR Tech',
+    benefits: ['Reduce screening time by 80%', 'Improve candidate quality', 'Eliminate bias'],
+    marketPrice: '$100-400/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: true
+  },
+  {
+    title: 'Smart Document Workflow',
+    description: 'Automated document processing with OCR, classification, and workflow routing.',
+    icon: FileText,
+    features: ['OCR processing', 'Document classification', 'Workflow automation', 'Digital signatures'],
+    pricing: '$79/month',
+    category: 'Document Management',
+    benefits: ['Process documents 10x faster', 'Reduce errors', 'Automate workflows'],
+    marketPrice: '$50-200/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: false
+  },
+  {
+    title: 'AI-Powered Social Media Analytics',
+    description: 'Advanced social media monitoring with AI insights, competitor analysis, and content optimization.',
+    icon: TrendingUp,
+    features: ['Social listening', 'Competitor analysis', 'Content optimization', 'ROI tracking'],
+    pricing: '$89/month',
+    category: 'Social Media',
+    benefits: ['Increase engagement by 50%', 'Better content strategy', 'Competitive advantage'],
+    marketPrice: '$60-300/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: true
+  },
+  {
+    title: 'Smart Expense Management',
+    description: 'AI-powered expense tracking with receipt scanning, categorization, and compliance monitoring.',
+    icon: DollarSign,
+    features: ['Receipt scanning', 'Auto-categorization', 'Policy compliance', 'Approval workflows'],
+    pricing: '$39/month',
+    category: 'Finance',
+    benefits: ['Reduce processing time by 70%', 'Improve compliance', 'Better expense control'],
+    marketPrice: '$25-100/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: false
+  },
+  {
+    title: 'AI-Powered Lead Generation',
+    description: 'Automated lead identification and qualification with AI-powered prospecting tools.',
+    icon: Target,
+    features: ['Lead identification', 'Contact enrichment', 'Qualification scoring', 'CRM integration'],
+    pricing: '$119/month',
+    category: 'Sales',
+    benefits: ['Increase qualified leads by 200%', 'Reduce prospecting time', 'Better conversion rates'],
+    marketPrice: '$80-350/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: true
+  },
+  {
+    title: 'Smart Fleet Management',
+    description: 'AI-powered fleet tracking with route optimization, maintenance scheduling, and driver analytics.',
+    icon: Truck,
+    features: ['Real-time tracking', 'Route optimization', 'Maintenance alerts', 'Driver analytics'],
+    pricing: '$199/month',
+    category: 'Logistics',
+    benefits: ['Reduce fuel costs by 20%', 'Improve delivery times', 'Better fleet utilization'],
+    marketPrice: '$150-500/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: false
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation with AI detection of inappropriate content across platforms.',
+    icon: Shield,
+    features: ['AI content detection', 'Multi-language support', 'Custom rules', 'Real-time moderation'],
+    pricing: '$149/month',
+    category: 'Content Management',
+    benefits: ['Reduce moderation costs by 80%', 'Improve response time', 'Consistent enforcement'],
+    marketPrice: '$100-400/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: true
+  },
+  {
+    title: 'Smart Learning Management System',
+    description: 'AI-powered LMS with personalized learning paths, progress tracking, and skill assessment.',
+    icon: GraduationCap,
+    features: ['Personalized learning', 'Progress tracking', 'Skill assessment', 'Certification management'],
+    pricing: '$89/month',
+    category: 'Education',
+    benefits: ['Improve learning outcomes by 40%', 'Personalized experience', 'Better engagement'],
+    marketPrice: '$60-250/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: false
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Real-time fraud detection and prevention with machine learning algorithms.',
+    icon: Lock,
+    features: ['Real-time monitoring', 'Pattern recognition', 'Risk scoring', 'Alert system'],
+    pricing: '$179/month',
+    category: 'Security',
+    benefits: ['Reduce fraud by 90%', 'Real-time protection', 'Lower false positives'],
+    marketPrice: '$120-500/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: true
+  },
+  {
+    title: 'Smart Appointment Scheduling',
+    description: 'AI-powered scheduling with availability optimization, conflict resolution, and automated reminders.',
+    icon: Calendar,
+    features: ['Smart scheduling', 'Conflict resolution', 'Automated reminders', 'Calendar integration'],
+    pricing: '$49/month',
+    category: 'Scheduling',
+    benefits: ['Reduce no-shows by 40%', 'Optimize schedules', 'Better customer experience'],
+    marketPrice: '$30-120/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: false
+  },
+  {
+    title: 'AI-Powered Market Research',
+    description: 'Automated market research with trend analysis, competitor monitoring, and opportunity identification.',
+    icon: Search,
+    features: ['Trend analysis', 'Competitor monitoring', 'Opportunity identification', 'Market reports'],
+    pricing: '$199/month',
+    category: 'Market Research',
+    benefits: ['Stay ahead of trends', 'Identify opportunities', 'Competitive intelligence'],
+    marketPrice: '$150-600/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: true
+  },
+  {
+    title: 'Smart Quality Assurance',
+    description: 'AI-powered QA testing with automated test generation, execution, and defect prediction.',
+    icon: CheckCircle,
+    features: ['Automated testing', 'Defect prediction', 'Test optimization', 'Quality metrics'],
+    pricing: '$159/month',
+    category: 'Quality Assurance',
+    benefits: ['Reduce testing time by 60%', 'Improve quality', 'Early defect detection'],
+    marketPrice: '$100-400/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: false
+  },
+  {
+    title: 'AI-Powered Translation Service',
+    description: 'Real-time translation with context awareness, industry-specific terminology, and quality assurance.',
+    icon: Globe,
+    features: ['Real-time translation', 'Context awareness', 'Industry terminology', 'Quality assurance'],
+    pricing: '$69/month',
+    category: 'Language Services',
+    benefits: ['Break language barriers', 'Improve accuracy', 'Industry-specific translations'],
+    marketPrice: '$40-200/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: true
+  },
+  {
+    title: 'Smart Compliance Monitoring',
+    description: 'Automated compliance tracking with regulatory updates, risk assessment, and reporting.',
+    icon: Shield,
+    features: ['Regulatory monitoring', 'Risk assessment', 'Compliance reporting', 'Alert system'],
+    pricing: '$229/month',
+    category: 'Compliance',
+    benefits: ['Stay compliant automatically', 'Reduce compliance costs', 'Proactive risk management'],
+    marketPrice: '$150-600/month',
+    link: 'https://ziontechgroup.com/contact',
+    popular: false
   }
 ];
         'Automated rightsizing recommendations',
