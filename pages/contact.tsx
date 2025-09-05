@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -385,4 +383,3 @@ export default function ContactPage() {
     </Layout>
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb

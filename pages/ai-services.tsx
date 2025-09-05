@@ -2,8 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import Layout from './components/Layout';
 import { 
   Brain, 
@@ -2228,4 +2226,3 @@ export default function AIServicesPage() {
     </>
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb

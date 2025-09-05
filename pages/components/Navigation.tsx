@@ -189,11 +189,7 @@ const navigationItems = [
       {
         title: 'White Papers',
         href: '/white-papers',
-<<<<<<< HEAD
-        icon: FileText,
-=======
         icon: Document,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb
         description: 'In-depth research reports'
       },
       {
@@ -203,11 +199,7 @@ const navigationItems = [
         description: 'Step-by-step guides'
       },
       {
-<<<<<<< HEAD
-        title: 'FileTextation',
-=======
         title: 'Documentation',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb
         href: '/docs',
         icon: FileText,
         description: 'Technical documentation'

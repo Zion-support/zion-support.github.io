@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -518,4 +516,3 @@ export default function Home() {
     </Layout>
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb
