@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 interface DocsProps {
@@ -12,3 +14,4 @@ export default function Docs({ }: DocsProps) {
     </div>
   );
 }
+>>>>>>> main

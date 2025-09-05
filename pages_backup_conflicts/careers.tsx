@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 interface CareersProps {
@@ -12,3 +14,4 @@ export default function Careers({ }: CareersProps) {
     </div>
   );
 }
+>>>>>>> main

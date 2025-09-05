@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
   Users, 
   Target, 
   Award, 
@@ -118,8 +118,8 @@ const leadership = [
 
 export default function CompanyPage() {
   return (
-    <Layout
-      title="About Our Company - Zion Tech Group"
+    <Layout,
+    title="About Our Company - Zion Tech Group"
       description="Learn about Zion Tech Group's mission, values, and commitment to delivering innovative AI and technology solutions."
       keywords="about us, company, mission, values, team, leadership, AI company"
     >
@@ -127,8 +127,8 @@ export default function CompanyPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
@@ -137,18 +137,18 @@ export default function CompanyPage() {
                 Building the Future of Technology
               </h1>
               <p className="text-xl text-blue-100 mb-8">
-                At Zion Tech Group, we're passionate about transforming businesses through 
-                innovative AI solutions and cutting-edge technology.
+                At Zion Tech Group, we're passionate about transforming businesses through,
+    innovative AI solutions and cutting-edge technology.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a
-                  href="/contact"
+                <a,
+    href="/contact"
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get in Touch
                 </a>
-                <a
-                  href="/careers"
+                <a,
+    href="/careers"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   Join Our Team
@@ -162,8 +162,8 @@ export default function CompanyPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
+              <motion.div,
+    initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
@@ -177,9 +177,9 @@ export default function CompanyPage() {
                     </h3>
                     <p className="text-gray-600 text-lg">
                       To democratize artificial intelligence and advanced technology solutions, 
-                      making them accessible and beneficial for businesses of all sizes. We believe 
-                      that every company, regardless of its size or industry, should have access to 
-                      cutting-edge technology that can drive growth and innovation.
+                      making them accessible and beneficial for businesses of all sizes. We believe,
+    that every company, regardless of its size or industry, should have access to,
+    cutting-edge technology that can drive growth and innovation.
                     </p>
                   </div>
                   <div>
@@ -187,15 +187,15 @@ export default function CompanyPage() {
                       Vision
                     </h3>
                     <p className="text-gray-600 text-lg">
-                      To be the world's leading provider of AI-powered solutions, creating a future 
-                      where technology seamlessly integrates with human creativity to solve complex 
-                      challenges and unlock unprecedented opportunities for growth and success.
+                      To be the world's leading provider of AI-powered solutions, creating a future,
+    where technology seamlessly integrates with human creativity to solve complex,
+    challenges and unlock unprecedented opportunities for growth and success.
                     </p>
                   </div>
                 </div>
               </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
+              <motion.div,
+    initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8"
@@ -206,8 +206,8 @@ export default function CompanyPage() {
                     Our Impact
                   </h3>
                   <p className="text-gray-600 mb-6">
-                    Since our founding, we've helped hundreds of companies transform their operations 
-                    and achieve their goals through innovative technology solutions.
+                    Since our founding, we've helped hundreds of companies transform their operations,
+    and achieve their goals through innovative technology solutions.
                   </p>
                   <div className="grid grid-cols-2 gap-4">
                     {stats.slice(0, 4).map((stat, index) => (
@@ -230,8 +230,8 @@ export default function CompanyPage() {
         {/* Values */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -247,8 +247,8 @@ export default function CompanyPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {values.map((value, index) => (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
@@ -272,8 +272,8 @@ export default function CompanyPage() {
         {/* Leadership Team */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -288,8 +288,8 @@ export default function CompanyPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {leadership.map((leader, index) => (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
@@ -316,8 +316,8 @@ export default function CompanyPage() {
         {/* Company Timeline */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -334,8 +334,8 @@ export default function CompanyPage() {
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500"></div>
               <div className="space-y-12">
                 {milestones.map((milestone, index) => (
-                  <motion.div
-                    key={index}
+                  <motion.div,
+    key={index}
                     initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
@@ -368,8 +368,8 @@ export default function CompanyPage() {
         {/* Stats Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -384,8 +384,8 @@ export default function CompanyPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
               {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
+                <motion.div,
+    key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
@@ -406,8 +406,8 @@ export default function CompanyPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div,
+    initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -418,15 +418,15 @@ export default function CompanyPage() {
                 Join the hundreds of companies that trust Zion Tech Group for their technology needs.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a
-                  href="/contact"
+                <a,
+    href="/contact"
                   className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2"
                 >
                   <span>Get Started Today</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
-                <a
-                  href="/services"
+                <a,
+    href="/services"
                   className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
                 >
                   Explore Our Services

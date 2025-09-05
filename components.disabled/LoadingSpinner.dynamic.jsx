@@ -1,2 +1,10 @@
+<<<<<<< HEAD
+const LoadingSpinner = dynamic(() => import(\"./LoadingSpinner\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default LoadingSpinner\' ,
+=======
+<<<<<<< HEAD
+const LoadingSpinner = dynamic(() => import("./LoadingSpinner"),{"; loading: () => <p>Loading.</p,>}) export: "default LoadingSpinner" ,"""
+=======
 const LoadingSpinner = dynamic(() => import("./LoadingSpinner"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default LoadingSpinner' ,'
 </p>'
+>>>>>>> main
+>>>>>>> main

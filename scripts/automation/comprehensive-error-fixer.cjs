@@ -1,9 +1,15 @@
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env node;
+=======
 #!/usr/bin/env node;
 /**;
  * Comprehensive Error Fixer Automation;
  * Fixes multiple types of errors comprehensively;
  * Runs every 30 minutes;
  */;
+<<<<<<< HEAD
+
+=======
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -551,6 +557,7 @@ process.on("SIGTERM", () => {
 fixer.runContinuous().catch(error => {
   fixer.log(`Unhandled "error": ${error.message}`);
   process.exit(1)})
+>>>>>>> main
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -572,7 +579,12 @@ class ComprehensiveErrorFixer {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
+<<<<<<< HEAD
+    
+    
+=======
     console.log(logMessage);
+>>>>>>> main
     // Write to log file
     const logFile = path.join(this.logsDir, 'comprehensive-error-fixer.log');
     fs.appendFileSync(logFile, logMessage + '\n')}
@@ -690,13 +702,18 @@ class ComprehensiveErrorFixer {
       "fixDetails": []
     }}
   async run() {
+<<<<<<< HEAD
+    
+    
+=======
     console.log('🔧 Starting comprehensive error fixing...');
+>>>>>>> main
     try {
       // First, analyze all errors
       const analyzer = new ErrorAnalyzer();
       this.errorReport = await analyzer.analyzeAllErrors();
       if (this.errorReport.totalErrors === 0) {
-        console.log('✅ No errors found! Project is clean.');
+        
         return this.fixReport}
       // Apply fixes based on error categories
       await this.fixTypeScriptErrors();
@@ -707,13 +724,22 @@ class ComprehensiveErrorFixer {
       // Generate and save fix report
       await this.generateFixReport();
       await this.saveFixReport();
+<<<<<<< HEAD
+      
+      
+=======
       console.log('✅ Comprehensive error fixing completed');
+>>>>>>> main
       return this.fixReport} catch (error) {
       console.error('❌ Error during "fixing": ', error.message);
       throw error;
     }
   }
   async fixTypeScriptErrors() {
+<<<<<<< HEAD
+    
+    
+=======
     this.log('Fixing TypeScript errors...');
     try {
       // Run TypeScript check to get errors
@@ -829,14 +855,21 @@ class ComprehensiveErrorFixer {
       this.log(`Failed to fix ESLint "errors": ${error.message}`, 'ERROR');
       return false;
     console.log('🔧 Fixing TypeScript errors...');
+>>>>>>> main
     // Check if we have TypeScript errors in the priority errors
     const tsErrors = this.errorReport.priorityErrors.filter(error => 
       error.file && (error.file.endsWith('.ts') || error.file.endsWith('.tsx'))
     );
     if (!tsErrors || tsErrors.length === 0) {
-      console.log('📝 No TypeScript errors to fix');
+      
       return}
+<<<<<<< HEAD
+
+    
+    
+=======
     console.log(`📝 Found ${tsErrors.length} TypeScript errors to fix`);
+>>>>>>> main
     for (const error of tsErrors) {
       try {
         await this.fixTypeScriptError(error)} catch (fixError) {
@@ -954,13 +987,18 @@ class ComprehensiveErrorFixer {
     }
   }
   async fixESLintErrors() {
+<<<<<<< HEAD
+    
+    
+=======
     console.log('🔧 Fixing ESLint errors...');
+>>>>>>> main
     // Check if we have ESLint errors
     const eslintErrors = this.errorReport.priorityErrors.filter(error => 
       error.message && error.message.includes('eslint')
     );
     if (!eslintErrors || eslintErrors.length === 0) {
-      console.log('🔍 No ESLint errors to fix');
+      
       return}
     try {
       // Try to auto-fix ESLint errors
@@ -968,13 +1006,18 @@ class ComprehensiveErrorFixer {
         "stdio": 'pipe',
         "cwd": process.cwd()
       });
+<<<<<<< HEAD
+      
+      
+=======
       console.log('✅ ESLint auto-fix completed');
+>>>>>>> main
       this.fixesApplied.push({
         "type": 'eslint',
         "action": 'Auto-fix applied',
         "count": eslintErrors.length
       })} catch (error) {
-      console.log('⚠️ ESLint auto-fix completed with warnings');
+      
       this.fixesApplied.push({
         "type": 'eslint',
         "action": 'Auto-fix applied with warnings',
@@ -983,6 +1026,10 @@ class ComprehensiveErrorFixer {
     }
   }
   async fixDependencyIssues() {
+<<<<<<< HEAD
+    
+    
+=======
     this.log('Fixing dependency issues...');
     try {
       // Check for missing dependencies
@@ -998,8 +1045,9 @@ class ComprehensiveErrorFixer {
       this.log(`Failed to fix dependency "issues": ${error.message}`, 'ERROR');
       return false;
     console.log('🔧 Fixing dependency issues...');
+>>>>>>> main
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.dependency || this.errorReport.errors.dependency.length === 0) {
-      console.log('📦 No dependency issues to fix');
+      
       return}
     try {
       // Try to fix security vulnerabilities
@@ -1007,13 +1055,18 @@ class ComprehensiveErrorFixer {
         "stdio": 'pipe',
         "cwd": process.cwd()
       });
+<<<<<<< HEAD
+      
+      
+=======
       console.log('✅ Dependency fixes applied');
+>>>>>>> main
       this.fixesApplied.push({
         "type": 'dependency',
         "action": 'Security vulnerabilities fixed',
         "count": this.errorReport.errors.dependency.length
       })} catch (error) {
-      console.log('⚠️ Dependency fixes completed with warnings');
+      
       this.fixesApplied.push({
         "type": 'dependency',
         "action": 'Security vulnerabilities fixed with warnings',
@@ -1021,9 +1074,14 @@ class ComprehensiveErrorFixer {
       })}
   }
   async fixSecurityIssues() {
+<<<<<<< HEAD
+    
+    
+=======
     console.log('🔧 Fixing security issues...');
+>>>>>>> main
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.security || this.errorReport.errors.security.length === 0) {
-      console.log('🔒 No security issues to fix');
+      
       return}
     try {
       // Update dependencies to fix security issues
@@ -1031,13 +1089,18 @@ class ComprehensiveErrorFixer {
         "stdio": 'pipe',
         "cwd": process.cwd()
       });
+<<<<<<< HEAD
+      
+      
+=======
       console.log('✅ Security fixes applied');
+>>>>>>> main
       this.fixesApplied.push({
         "type": 'security',
         "action": 'Dependencies updated for security',
         "count": this.errorReport.errors.security.length
       })} catch (error) {
-      console.log('⚠️ Security fixes completed with warnings');
+      
       this.fixesApplied.push({
         "type": 'security',
         "action": 'Dependencies updated with warnings',
@@ -1132,15 +1195,28 @@ if (require.main === module) {
     console.error('Error fixer "failed": ', error);
     process.exit(1)})}
 module.exports = ComprehensiveErrorFixer;
+<<<<<<< HEAD
+    
+    
+=======
     console.log('🔧 Fixing build errors...');
+>>>>>>> main
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.build || this.errorReport.errors.build.length === 0) {
-      console.log('🏗️ No build errors to fix');
+      
       return}
     // Build errors are usually resolved by fixing TypeScript and ESLint errors
     // This method will be called after those fixes are applied
+<<<<<<< HEAD
+    }
+
+  async generateFixReport() {
+    
+    
+=======
     console.log('✅ Build errors should be resolved by previous fixes')}
   async generateFixReport() {
     console.log('📊 Generating fix report...');
+>>>>>>> main
     this.fixReport.totalFixes = this.fixesApplied.length + this.fixesFailed.length;
     this.fixReport.successfulFixes = this.fixesApplied.length;
     this.fixReport.failedFixes = this.fixesFailed.length;
@@ -1150,6 +1226,21 @@ module.exports = ComprehensiveErrorFixer;
   async saveFixReport() {
     const reportPath = path.join(process.cwd(), 'error-fix-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(this.fixReport, null, 2));
+<<<<<<< HEAD
+    }
+
+  printSummary() {
+    
+    );
+    
+    
+    
+    
+    
+    this.fixesApplied.forEach((fix, index) => {
+      }] ${fix.action || fix.file}`)});
+    
+=======
     console.log(`📄 Fix report saved "to": ${reportPath}`)}
   printSummary() {
     console.log('\n🔧 ERROR FIXING SUMMARY');
@@ -1160,10 +1251,11 @@ module.exports = ComprehensiveErrorFixer;
     console.log('\nSuccessful "Fixes": ');
     this.fixesApplied.forEach((fix, index) => {
       console.log(`  ${index + 1}. [${fix.type.toUpperCase()}] ${fix.action || fix.file}`)});
+>>>>>>> main
     if (this.fixesFailed.length > 0) {
-      console.log('\nFailed "Fixes": ');
+      
       this.fixesFailed.forEach((fix, index) => {
-        console.log(`  ${index + 1}. [${fix.type.toUpperCase()}] ${fix.error.file}: ${fix.reason}`)})}
+        }] ${fix.error.file}: ${fix.reason}`)})}
   }
 }
 // Main execution
@@ -1182,3 +1274,7 @@ module.exports = { ComprehensiveErrorFixer };
 // Run if called directly
 if (require.main === module) {
   main()}
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main

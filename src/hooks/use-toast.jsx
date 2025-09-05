@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React,{useState,useCallback} from &apos;react&apos;; &apos;;&apos;;&apos;; export const toast = (props) => { return Date.now()}; export const useToast = (props) => {; const [toasts,setToasts] = useState([]); `&apos;; const toast = useCallback(({ title,description,variant = &apos;default&apos; };) => { const id = Date.now(); const newToast = { id,title,description,variant };; setToasts(prev => [...prev,newToast]); setTimeout(() => {setToasts(prev => prev.filter(t => t.id !== id))},5000); return id},[]); const dismiss = useCallback((id) => {setToasts(prev => prev.filter(t => t.id !== id))},[]);&apos;;&apos;; return {toast,dismiss,toasts}};&quot;`&quot;;&apos;;&apos;;&apos;;
+=======
+<<<<<<< HEAD
+
+=======
 import React, {useState, useCallback} from 'react';
 ';';';
 // Simple toast function for direct import"
@@ -18,3 +24,5 @@ export const useToast = (props) => {;
   return {toast, dismiss,
     toasts};};"`";';';';
 import React,{useState,useCallback} from 'react'; ';';'; export const toast = (props) => { return Date.now()}; export const useToast = (props) => {; const [toasts,setToasts] = useState([]); `'; const toast = useCallback(({ title,description,variant = 'default' };) => { const id = Date.now(); const newToast = { id,title,description,variant };; setToasts(prev => [...prev,newToast]); setTimeout(() => {setToasts(prev => prev.filter(t => t.id !== id))},5000); return id},[]); const dismiss = useCallback((id) => {setToasts(prev => prev.filter(t => t.id !== id))},[]);';'; return {toast,dismiss,toasts}};"`";';';';
+>>>>>>> main
+>>>>>>> main

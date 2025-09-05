@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 interface _appProps {
@@ -12,3 +14,4 @@ export default function _app({ }: _appProps) {
     </div>
   );
 }
+>>>>>>> main

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // generateRandomBlogPost utility,
 export const generateRandomBlogPost = {
   // Placeholder utility functions,
@@ -5,4 +7,5 @@ export const generateRandomBlogPost = {
   }
 };
 export default generateRandomBlogPost;
+>>>>>>> main
 export const generateRandomBlogPost = { init: function() { } }; export default generateRandomBlogPost;
