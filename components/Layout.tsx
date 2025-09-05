@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -32,3 +33,15 @@ export default function Layout({
     </>
   );
 }
+=======
+ interface LayoutProps {
+  children: ReactNode;
+}const Layout: React.FC<LayoutProps> = ({
+  children 
+}) => {
+  return <main className="min-h-screen"> {
+  children 
+}</main>;
+};
+export default Layout;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

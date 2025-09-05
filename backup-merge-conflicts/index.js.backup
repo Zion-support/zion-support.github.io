@@ -1,13 +1,5 @@
 "use strict";Object.defineProperty(exports, "__esModule", {value: true});
 
-
-
-
-
-
-
-
-
 var _index = require('../../tokenizer/index');
 var _types = require('../../tokenizer/types');
 var _base = require('../../traverser/base');
@@ -315,9 +307,9 @@ function jsxParseElementAt() {
   jsxParseElementAt();
 } exports.jsxParseElement = jsxParseElement;
 
-// ==================================
+// ======
 // Overrides
-// ==================================
+// ======
 
  function nextJSXTagToken() {
   _base.state.tokens.push(new (0, _index.Token)());

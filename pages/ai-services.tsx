@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
@@ -269,3 +270,8 @@ export default function AIServices() {
     </Layout>
   );
 }
+=======
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function AIServices () {
+  return (<> <Head> <title>AI Services - Zion Tech Group</title> </main> </ErrorBoundary> </> 
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

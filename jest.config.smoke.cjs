@@ -1,16 +1,29 @@
-module.exports = {
-  preset: 'ts-jest',
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({
+  dir: './'
+});
+
+const config = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testMatch: ['<rootDir>/tests/smoke/**/*.test.(ts|tsx|js|jsx)'],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
-  },
+  testMatch: [
+    '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
+    '**/*.smoke.(test|spec).(js|jsx|ts|tsx)'
+  ],
+  collectCoverage: false,
+  verbose: true,
+  testTimeout: 10000,
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest'
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+<<<<<<< HEAD
   testPathIgnorePatterns: ['/node_modules/', '/dist/']
 }
+=======
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
+};
+
+module.exports = createJestConfig(config);
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

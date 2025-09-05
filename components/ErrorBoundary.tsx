@@ -1,12 +1,26 @@
-'use client';
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+ class ErrorBoundary extends Component<Props, State> {
+  constructor (props: Props) {
+  super (props);
+this.state = {
+  hasError: false 
+};
+}static getDerivedStateFromError (error: Error) : State {
+  return {
+  hasError: true, error 
+};
+}> Reload Page </button> >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 console.error ('Error caught by boundary:', error, errorInfo);
+this.setState ({
+  error;
+errorInfo 
+});
+//Call the onError prop if provided if (this.props.onError) {
+  this.props.onError (error, errorInfo);
+}//Log error to external service (e.g., Sentry) if (typeof window !== 'undefined' && (window as any) .Sentry) {
+  (window as any) .Sentry.captureException (error, {
+  extra: errorInfo 
+});
 }
+<<<<<<< HEAD
 
 interface State {
   hasError: boolean;
@@ -56,3 +70,14 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+=======
+}render () {
+  if (this.state.hasError) {
+  if (this.props.fallback) {
+  return this.props.fallback 
+}return (</p> {
+  process.env.NODE ENV === 'development' && this.state.error && (</button> <button </div> </div>) 
+}return this.props.children 
+}
+}export default ErrorBoundary;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

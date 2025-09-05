@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -218,3 +219,6 @@ if (require.main === module) {
 }
 
 module.exports = AutoCommitFixes;
+=======
+ 
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

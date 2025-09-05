@@ -1,0 +1,1 @@
+export type GovernanceMode = "Admin" | "DAO" | "Hybrid";

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
 =======
@@ -67,3 +68,5 @@ async function handler(req, res) {
 
 export default withErrorLogging(handler);
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

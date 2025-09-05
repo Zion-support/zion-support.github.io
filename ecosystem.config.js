@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default {
   apps: [
     {
@@ -202,3 +203,7 @@ module.exports = {
     time: true
   }]
 };
+=======
+ 
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

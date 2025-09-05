@@ -1,15 +1,7 @@
-<<<<<<< HEAD:backup-merge-conflicts/listings.ts.backup
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export: interface Listing {
-=======
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/types/listings.ts
+
+
 "export": interface Listing {
->>>>>>> main
+
    id: string;
    title: string;
    description: string;
@@ -22,14 +14,9 @@ export: interface Listing {
    seller: { id: string;
    name: string;
    rating: number;
-<<<<<<< HEAD:backup-merge-conflicts/listings.ts.backup
-<<<<<<< HEAD
-   reviews: numbe,r} location: string ,
-=======
-export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number} reviews: 'numbe',r} location: 'string' ,;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
+
    reviews: numbe,r} "location": string ,
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/listings.ts.backup
 >>>>>>> main
 >>>>>>> main
@@ -43,3 +30,14 @@ export: interface Listing { id: string; title: string; description: string; pric
    reviews: numbe,r} "location": string ,
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/types/listings.ts
+=======
+
+export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
+
+export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number} reviews: 'numbe',r} location: 'string' ,;
+   reviews: numbe,r} "location": string ,
+export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
+
+export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

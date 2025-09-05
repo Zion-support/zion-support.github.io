@@ -1,18 +1,11 @@
-<<<<<<< HEAD:backup-merge-conflicts/integration-setup.ts.backup
-<<<<<<< HEAD:backup-merge-conflicts/integration-setup.ts.backup
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> main
-=======
 
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/test/integration-setup.ts
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/src/test/integration-setup.ts
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 // Integration test setup
 import { setupServer } from 'msw/node';
 import { rest } from 'msw';
@@ -24,21 +17,26 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 export { server };
-<<<<<<< HEAD:backup-merge-conflicts/integration-setup.ts.backup
-<<<<<<< HEAD
-=======
+
 import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/integration-setup.ts.backup
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 >>>>>>> main
 >>>>>>> main
-import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
->>>>>>> main
 =======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/test/integration-setup.ts
-=======
+
 import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
+import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
+<<<<<<< HEAD
 import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/src/test/integration-setup.ts
+=======
+
+import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

@@ -114,23 +114,34 @@ export function AnalyticsManager("props": "any) {;
 
       saveSessionData(currentSession)}
   }, [currentSession]) };
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 ;
     // Scroll tracking';
     document.addEventListener('scroll', handleScroll, { "passive": "tru e "});
 ;
     // Page unload tracking';
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 
     // Scroll tracking'
     document.addEventListener('scroll', handleScroll, { passive: tru e }
     );
 
     // Page unload tracking'
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     window.addEventListener('beforeunload', handleBeforeUnload)}, []);
 ;
     // Track button clicks';
@@ -173,66 +184,99 @@ export function AnalyticsManager("props": "any) {;
         if(fcp) {;
 
           trackPerformance('fcp', fcp.startTime)}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       });
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
       // Largest Contentful Paint;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       }
     );
       fcpObserver.observe({ entryTypes: ['paint'] }
     );
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 
         if(lcp) {;
 
           trackPerformance('lcp', lcp.startTime)}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       });
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
 ;
       // First Input Delay;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       }
     );
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
     );
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 
         if(fid) {;
 
           trackPerformance('fid', fid.processingStart - fid.startTime)}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       });
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
       // Cumulative Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       }
     );
       fidObserver.observe({ entryTypes: ['first-input'] }
     );
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 
         let clsValue = 0;        for (const entry of list.getEntries()) {;
 
@@ -240,6 +284,7 @@ export function AnalyticsManager("props": "any) {;
 
             clsValue += (entry as any).value}
         }
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
         trackPerformance('cls', clsValue)});
@@ -251,12 +296,26 @@ export function AnalyticsManager("props": "any) {;
     );
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
 >>>>>>> main
+=======
+
+        trackPerformance('cls', clsValue)}
+    );
+      clsObserver.observe({ entryTypes: ['layout-shift'] })}
+
+        trackPerformance('cls', clsValue)});
+      clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   }, []) }
     }, 30000) ;
 ;
     return () => clearInterval(activityInterval) }, [currentSession]) ;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 ;
         trackEvent('page_view', { path });
 ;
@@ -264,9 +323,12 @@ export function AnalyticsManager("props": "any) {;
         sendAnalyticsData('page_view', { path, "timestamp": "Dat e.now() "})}
     },;
     [currentSession];
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 
         trackEvent('page_view', { path }
     );
@@ -275,7 +337,11 @@ export function AnalyticsManager("props": "any) {;
         sendAnalyticsData('page_view', { path, timestamp: Dat e.now() })}
     },
     [currentSession]
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   );
 ;
         setCurrentSession(prev =>;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 import {cn} from '@/lib/utils';
@@ -15,11 +16,12 @@ import {cn} from &apos;@/lib/utils&apos;; export function Skeleton($1) { const r
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 =======
 >>>>>>> main
-
-<<<<<<< HEAD
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/LoadingSkeleton.js.jsx
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
     return (<div className = {cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',;
   className)} style="{{{;
@@ -32,6 +34,9 @@ export function CardSkeleton("props": "any) {;
 =======
 
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     return (
         <div className = {cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',
   className)} style="{{{
@@ -41,6 +46,7 @@ export function CardSkeleton(props: any) {
         <div className = {
   cn('space-y-4',
   className)
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 >>>>>>> main
@@ -50,6 +56,9 @@ export function CardSkeleton(props: any) {
 =======
 
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 }>;
       {showImage && (<Skeleton className="w-full h-48 rounded-lg" />)}
       ;
@@ -67,6 +76,7 @@ export function CardSkeleton(props: any) {
           </div>)}
       </div>;
     </div>)}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 export function ListSkeleton("props": "any) {;
@@ -76,11 +86,15 @@ export function ListSkeleton("props": "any) {;
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 export function ListSkeleton(props: any) {
     return (
         <div className = {
   cn('space-y-4',
   className)
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 >>>>>>> main
@@ -90,6 +104,9 @@ export function ListSkeleton(props: any) {
 =======
 
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 }>;
       {Array.from({ "length": "items "}).map((_, i) => (<div key={i} className="flex gap-4 items-start">;
           {showAvatar && (<Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />)}
@@ -106,6 +123,7 @@ export function ListSkeleton(props: any) {
           </div>;
         </div>))}
     </div>)}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 export function TableSkeleton("props": "any) {;
@@ -115,11 +133,15 @@ export function TableSkeleton("props": "any) {;
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 export function TableSkeleton(props: any) {
     return (
         <div className = {
   cn('space-y-3',
   className)
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 >>>>>>> main
@@ -129,6 +151,9 @@ export function TableSkeleton(props: any) {
 =======
 
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 }>;
       {showHeader && (<div className="flex gap-4 pb-2 border-b border-border">;
           {Array.from({ "length": "columns "}).map((_, i) => (<Skeleton key={i} className="h-5 flex-1" />))}
@@ -141,6 +166,7 @@ export function TableSkeleton(props: any) {
           </div>))}
       </div>;
     </div>)}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 export function GridSkeleton("props": "any) {;
@@ -150,11 +176,15 @@ export function GridSkeleton("props": "any) {;
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 export function GridSkeleton(props: any) {
     return (
         <div className = {
   cn('grid gap-4',
   className)
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 >>>>>>> main
@@ -164,12 +194,16 @@ export function GridSkeleton(props: any) {
 =======
 
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 } style="{{{;
             "gridTemplateColumns": "`repeat(${columns"}}", minmax(0, 1fr))`,;
             "gap": "`${gap * 0.25"}rem`;
         }}>;
       {Array.from({ "length": "items "}).map((_, i) => (<CardSkeleton key={i} showImage={showImage} showTitle={showTitle} showDescription={showDescription} showActions={false} lines={2} />))}
     </div>)}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 export function HeroSkeleton("props": "any) {;
@@ -179,11 +213,15 @@ export function HeroSkeleton("props": "any) {;
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 export function HeroSkeleton(props: any) {
     return (
         <div className = {
   cn('flex flex-col lg:flex-row gap-8 items-center',
   className)
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 >>>>>>> main
@@ -193,6 +231,9 @@ export function HeroSkeleton(props: any) {
 =======
 
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 }>;
       {showImage && (<div className=""lg": "w-1/2">;
           <Skeleton className="w-full h-96 rounded-2xl" />;
@@ -216,6 +257,7 @@ export function HeroSkeleton(props: any) {
           </div>)"}
       </div>;
     </div>)}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 // Shimmer effect component;
@@ -226,12 +268,16 @@ export function Shimmer("props": "any) {;
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 // Shimmer effect component
 export function Shimmer(props: any) {
     return (
         <div className = {
   cn('relative overflow-hidden',
   className)
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 >>>>>>> main
@@ -241,6 +287,9 @@ export function Shimmer(props: any) {
 =======
 
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 }>;
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />;
     </div>)}
@@ -252,6 +301,7 @@ export const shimmerAnimation = `;
     100% {"transform": "translateX(100%)"}
   }
 `;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 ;
@@ -260,10 +310,13 @@ export const shimmerAnimation = `;
 </div>
 <<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 
 </Skeleton>
 </Skeleton>
 </div>
+<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> main
@@ -279,3 +332,10 @@ export const shimmerAnimation = `;
 </Skeleton>
 </div>
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/LoadingSkeleton.js.jsx
+=======
+
+</Skeleton>
+</Skeleton>
+</div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-05T02:59:23.056Z",
   "optimizations": [],
   "issues": [],
@@ -12,4 +13,21 @@
       ]
     }
   ]
+=======
+  "timestamp": "2025-09-05T22:25:16.020Z",
+  "metrics": {
+    "bundleSize": 8568279,
+    "loadTime": 0,
+    "performanceScore": 0
+  },
+  "optimizations": [
+    "Bundle analysis completed",
+    "Found 3 images for optimization"
+  ],
+  "summary": {
+    "totalOptimizations": 2,
+    "bundleSize": 8568279,
+    "performanceScore": 0
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -90,3 +91,6 @@ export default function TeamPage() {
     </>
   );
 }
+=======
+ 
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
@@ -34,7 +35,7 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
     }
     return config;
   },
-};
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+ 
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+};

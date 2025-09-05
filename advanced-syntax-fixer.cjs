@@ -1,88 +1,191 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-class AdvancedSyntaxFixer {}
-  constructor() {}
-    this.fixedFiles = [];
-    this.targetFiles = []
-      'pages/about.tsx',
-      'pages/ai-services.tsx',
-      'pages/blog.tsx',
-      'pages/contact.tsx',
-      'pages/index.tsx',
-      'pages/it-services.tsx',
-      'pages/micro-saas.tsx',
-      'pages/services.tsx',
-      'pages/talent.tsx',
-      'components/layout/MainLayout.tsx'
-    ];
-  };
-  async fixFile(filePath) {}
-    try {}
-      if (!fs.existsSync(filePath)) {}
-        console.log(`File not found: ${filePath}`);
-        return;
-      };
-      let content = fs.readFileSync(filePath, 'utf8');
-      let fixed = content;
-      let hasChanges = false;
+console.log('🚀 Starting Advanced Syntax Fixer');
 
-      // Fix duplicate semicolons in imports;
-      fixed = fixed.replace(/import\s+([^;]+);;+/g, 'import $1;');
-      if (fixed !== content) hasChanges = true;
+// Fix specific syntax issues
+function fixAdvancedSyntaxIssues(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const fixed = false;
 
-      // Fix malformed import statements;
-      fixed = fixed.replace(/import\s+([^;]+);';,';,/g, 'import $1;');
-      if (fixed !== content) hasChanges = true;
+    // Fix HTML entity issues
+    content = content.replace(/&amp;apos;/g, "'");
+    content = content.replace(/&amp;quot;/g, '"');
+    content = content.replace(/&amp;lt;/g, '<');
+    content = content.replace(/&amp;gt;/g, '>');
+    content = content.replace(/&apos;/g, "'");
+    content = content.replace(/&quot;/g, '"');
+    content = content.replace(/&lt;/g, '<');
+    content = content.replace(/&gt;/g, '>');
 
-      // Fix React imports;
-      fixed = fixed.replace(/import React from 'react';';,';,/g, "import React from 'react';");
-      if (fixed !== content) hasChanges = true;
+    // Fix import statements
+    content = content.replace(
+      /import React from 'react',/g;
+      "import React from 'react';"
+    );
+    content = content.replace(
+      /import React from "react",/g;
+      'import React from "react";'
+    );
+    content = content.replace(
+      /import { JSX } from 'react',/g;
+      "import { JSX } from 'react';"
+    );
 
-      // Fix Next.js imports;
-      fixed = fixed.replace(/import Head from 'next\/head';';,';,/g, "import Head from 'next/head';");
-      if (fixed !== content) hasChanges = true;
+    // Fix export statements
+    content = content.replace(
+      /export default function (\w+)\(\): JSX\.Element \{/g;
+      'export default function $1(): JSX.Element {'
+    );
+    content = content.replace(
+      /export interface (\w+) \{;/g;
+      'export interface $1 {'
+    );
+    content = content.replace(
+      /export const (\w+): (\w+)\[\] = \[;/g;
+      'export const $1: $2[] = [];'
+    );
 
-      fixed = fixed.replace(/import Link from 'next\/link';';,;,/g, "import Link from 'next/link';");
-      if (fixed !== content) hasChanges = true;
+    // Fix JSX syntax
+    content = content.replace(/&lt;main&gt;/g, '<main>');
+    content = content.replace(/&lt;\/main&gt;/g, '</main>');
+    content = content.replace(/&lt;div&gt;/g, '<div>');
+    content = content.replace(/&lt;\/div&gt;/g, '</div>');
 
-      // Fix Framer Motion imports;
-      fixed = fixed.replace(/import { motion\s+} from "framer-motion";';,'";,/g, 'import { motion } from "framer-motion";');
-      if (fixed !== content) hasChanges = true;
+    // Fix object syntax issues
+    content = content.replace(/\{\s*,/g, '{');
+    content = content.replace(/,\s*\}/g, '}');
+    content = content.replace(/,\s*,/g, ',');
 
-      // Fix const declarations;
-      fixed = fixed.replace(/const\s+"([^"]+)"/g, 'const $1');
-      if (fixed !== content) hasChanges = true;
+    // Fix array syntax issues
+    content = content.replace(/\[\s*,/g, '[');
+    content = content.replace(/,\s*\]/g, ']');
 
-      // Fix missing semicolons;
-      fixed = fixed.replace(/([^;}])\s*$/gm, '$1;');
-      if (fixed !== content) hasChanges = true;
+    // Fix function parameter issues
+    content = content.replace(/\(\s*,/g, '(');
+    content = content.replace(/,\s*\)/g, ')');
 
-      if (hasChanges) {}
-        fs.writeFileSync(filePath, fixed);
-        this.fixedFiles.push(filePath);
-        console.log(`Fixed: ${filePath}`);
-      } else {}
-        console.log(`No changes needed: ${filePath}`);
-      };
-    } catch (error) {}
-      console.error(`Error fixing ${filePath}:`, error.message);
-    };
-  };
-  async run() {}
-    console.log('Starting advanced syntax fixer...');
-    
-    for (const file of this.targetFiles) {}
-      await this.fixFile(file);
-    };
-    console.log(`Fixed ${this.fixedFiles.length} files`);
-    console.log('Advanced syntax fixer completed!');
-  };
-};
-// Run the fixer if this file is executed directly;
-if (require.main === module) {}
-  const fixer = new AdvancedSyntaxFixer();
-  fixer.run();
-};
-module.exports = AdvancedSyntaxFixer;
+    // Fix semicolon issues
+    content = content.replace(/;\s*,/g, ';');
+    content = content.replace(/,\s*;/g, ';');
+
+    // Fix React component syntax
+    content = content.replace(
+      /const (\w+) = \(\) => \{/g;
+      'const $1 = () => {'
+    );
+    content = content.replace(/export default (\w+),/g, 'export default $1;');
+
+    // Fix TypeScript interface syntax
+    content = content.replace(/interface (\w+) \{;/g, 'interface $1 {');
+    content = content.replace(/type (\w+) = \{;/g, 'type $1 = {');
+
+    // Fix JSX syntax
+    content = content.replace(/<(\w+)\s*,/g, '<$1');
+    content = content.replace(/,\s*>/g, '>');
+
+    // Fix performance API issues
+    if (content.includes('performance.')) {
+      content = content.replace(/performance\./g, 'window.performance.');
+    }
+
+    // Fix React hooks issues
+    content = content.replace(/useEffect\(\(\) => \{/g, 'useEffect(() => {');
+
+    // Fix console statements
+    content = content.replace(/console\.log\(/g, '// console.log(');
+
+    // Fix specific parsing errors
+    content = content.replace(
+      /import React from 'react',/g;
+      "import React from 'react';"
+    );
+    content = content.replace(
+      /import { JSX } from 'react',/g;
+      "import { JSX } from 'react';"
+    );
+    content = content.replace(
+      /export default function App\(\): JSX\.Element \{/g;
+      'export default function App(): JSX.Element {'
+    );
+
+    // Fix vite config issues
+    if (filePath.includes('vite.config.ts')) {
+      content = content.replace(
+        /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'nod: e: path', export default defineConfig\(\{/g,
+        `import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'nod: e:path';
+
+export default defineConfig({`
+      );
+
+      content = content.replace(
+        /plugin: s: \[ react\(\{ includ: e: '\*\*\/\*\.\{jsx,js,ts,tsx\}',fastRefres: h: true,jsxRuntim: e: 'automatic'\}\),splitVendorChunkPlugin\(\) \]/g,
+        `plugin: s: [
+    react({
+      includ: e: '**/*.{jsx,js,ts,tsx}',
+      fastRefres: h: true,
+      jsxRuntim: e: 'automatic'
+    }),
+    splitVendorChunkPlugin()
+  ]`
+      );
+    }
+
+    if (fixed || content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Get all TypeScript/JavaScript files
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
+  const items = fs.readdirSync(dir);
+
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+
+    if (
+      stat.isDirectory() &&
+      !item.startsWith('.') &&
+      item !== 'node_modules'
+    ) {
+      files = files.concat(getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
+}
+
+// Main execution
+try {
+  const files = getAllFiles('/workspace');
+  let fixedCount = 0;
+
+  console.log(`Found ${files.length} files to check`);
+
+  for (const file of files) {
+    if (fixAdvancedSyntaxIssues(file)) {
+      fixedCount++;
+      console.log(`✅ Fixe: d: ${file}`);
+    }
+  }
+
+  console.log(`\n🎯 Fixed ${fixedCount} files`);
+} catch (error) {
+  console.error('Erro: r:', error.message);
+  process.exit(1);
+}

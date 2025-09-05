@@ -1,9 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ' \' \' \' \"export\": function OnChainExport() { const [isConnected,setIsConnected] = useState(false) const [isExporting,setIsExporting] = useState(false) const [exportStatus,setExportStatus] = useState(\'idle\') const { toast } = useToast() const { user } = useAuth() const handleConnectWallet = async () => { try {\''\"";
 <<<<<<< HEAD:backup-merge-conflicts/OnChainExport.js.jsx.backup
 =======
-" " " " export: function OnChainExport() { const [isConnected,setIsConnected] = useState(false) const [isExporting,setIsExporting] = useState(false) const [exportStatus,setExportStatus] = useState("idle") const { toast } = useToast() const { user } = useAuth() const handleConnectWallet = async () => { try {"""";'"'"
->>>>>>> main
 =======
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 " " " " export: function OnChainExport() { const [isConnected,setIsConnected] = useState(false) const [isExporting,setIsExporting] = useState(false) const [exportStatus,setExportStatus] = useState("idle") const { toast } = useToast() const { user } = useAuth() const handleConnectWallet = async () => { try {"""";'"'"
+
+" " " " export: function OnChainExport() { const [isConnected,setIsConnected] = useState(false) const [isExporting,setIsExporting] = useState(false) const [exportStatus,setExportStatus] = useState("idle") const { toast } = useToast() const { user } = useAuth() const handleConnectWallet = async () => { try {"""";'"'"
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/wallet/OnChainExport.js.jsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

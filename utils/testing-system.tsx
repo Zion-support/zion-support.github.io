@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "@testing-library/jest-dom";
 export class TestingSystem {
   static async testUserInteraction(
@@ -56,3 +57,6 @@ import "@testing-library/jest-dom"; interface HTMLElement { click(): void} expor
 import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }
 =======
 import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }
+=======
+ 
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

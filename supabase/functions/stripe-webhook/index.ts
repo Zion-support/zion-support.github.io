@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { serve } from
   "https": //deno.land/std@0.190.0/http/server.ts'';
 import Stripe from';https://esm.sh/stripe@14.21.0';
@@ -76,3 +77,41 @@ import { serve } from https: import Stripe from';https: import { createClient} f
 =======
 =======
 =======
+=======
+ return new Response (JSON.stringify ({
+  "received": true 
+}), {
+  "status": 200 
+}) 
+};
+}
+};
+return new Response (JSON.stringify ({
+  "received": true 
+}), {
+  "status": 200 
+}) 
+};
+return new Response ('Not found', {
+  "status": 404 
+}) 
+});
+return new Response (JSON.stringify ({
+  "received": true 
+}), {
+  "status": 200 
+}) 
+};
+;
+return new Response ('Not found', {
+  "status": 404 
+}) 
+});
+return new Response (JSON.stringify ({
+  "received": true 
+}), {
+  "status": 200 
+}) 
+};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13 
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

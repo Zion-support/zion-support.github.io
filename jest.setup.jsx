@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface Jest.setupProps {
@@ -21,3 +22,6 @@ export default function Jest.setup({ }: Jest.setupProps) {
 }
 =======
 }
+=======
+}}},
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

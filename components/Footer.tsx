@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { 
@@ -139,3 +140,5 @@ const Footer = () => {
 };
 
 export default Footer;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

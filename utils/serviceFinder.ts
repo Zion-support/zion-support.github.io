@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface Service {
   id: string;
@@ -48,3 +49,5 @@ export const findService = (_serviceName: string) => { return null};
 export const findService = (_serviceName: string) => { return null};
 =======
 export const findService = (_serviceName: string) => { return null};
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

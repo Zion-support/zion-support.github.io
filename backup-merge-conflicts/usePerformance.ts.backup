@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD:src/hooks/usePerformance.ts
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
@@ -9,6 +10,13 @@
 import React, { useState } from 'react';
 import { useEffect, useRef, useState } from 'react';
 <<<<<<< HEAD
+=======
+
+
+import React, { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 interface PerformanceMetrics {;
   "fcp": "number | null; // First Contentful Paint;
   "lcp": number | null; // Largest Contentful Paint;
@@ -20,11 +28,18 @@ interface PerformanceMetrics {;
 "}
 interface PerformanceOptions {;
   enableRealUserMonitoring?: "boolean;
+<<<<<<< HEAD
 =======
 =======
 import React, { useState } from 'react';
 import { useEffect, useRef, useState } from 'react';
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+import React, { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 interface PerformanceMetrics {
   "fcp": number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint
@@ -36,11 +51,16 @@ interface PerformanceMetrics {
 }
 interface PerformanceOptions {
   enableRealUserMonitoring?: boolean;
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   enableWebVitals?: boolean;
   enableResourceTiming?: boolean;
   enableNavigationTiming?: boolean;
   logToConsole?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD
   sendToAnalytics?: boolean;
@@ -100,6 +120,9 @@ export function usePerformance("options": "PerformanceOptions = {"}) {;
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   sendToAnalytics?: boolean}
 export function usePerformance("options": PerformanceOptions = {}) {
   const {
@@ -111,6 +134,7 @@ export function usePerformance("options": PerformanceOptions = {}) {
     sendToAnalytics = false
   }; = options;
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD
     fcp: null,
@@ -130,6 +154,9 @@ export function usePerformance("options": PerformanceOptions = {}) {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/usePerformance.ts
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     "fcp": null,
     "lcp": null,
     "fid": null,
@@ -138,11 +165,15 @@ export function usePerformance("options": PerformanceOptions = {}) {
     "domLoad": null,
     "windowLoad": null,
     "navigationStart": null};);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 >>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformance.ts
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   const [isMonitoring, setIsMonitoring] = useState(false);
   const observerRef = useRef<PerformanceObserver | null>(null);
       // // // // // // //
@@ -170,6 +201,7 @@ export function usePerformance("options": PerformanceOptions = {}) {
         const layoutShiftEntry = entry as LayoutShiftEntry;
         if (!layoutShiftEntry.hadRecentInput) {;
           clsValue += layoutShiftEntry.value;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD:src/hooks/usePerformance.ts
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
@@ -177,6 +209,9 @@ export function usePerformance("options": PerformanceOptions = {}) {
 <<<<<<< HEAD
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 ;
       setMetrics(prev => ({ ...prev, "cls": "clsValue "}));
     });
@@ -188,12 +223,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
       clsObserver.observe({ "entryTypes": "['layout-shift'] "});
     } catch (error) {;
       // // // // // // // ;
-<<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/usePerformance.ts
-
 
       setMetrics(prev => ({ ...prev, cls: clsValue }));
     }
@@ -210,9 +239,13 @@ export function usePerformance("options": PerformanceOptions = {}) {
     );
     } catch (error) {
       // // // // // // // 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       setMetrics(prev => ({ ...prev, "cls": clsValue }))});
     // Start observing
     try {
@@ -221,16 +254,21 @@ export function usePerformance("options": PerformanceOptions = {}) {
       fidObserver.observe({ "entryTypes": ['first-input'] });';';
       clsObserver.observe({ "entryTypes": ['layout-shift'] })} catch (error) {
       // // // // // // //
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformance.ts
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     }
     // Navigation timing metrics;
   const lcpObserverRef = useRef<PerformanceObserver | null>(null);
   const clsObserverRef = useRef<PerformanceObserver | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD
 ;
@@ -245,11 +283,19 @@ export function usePerformance("options": PerformanceOptions = {}) {
   const getNavigationTiming = useCallback(() => {
     if (!enableNavigationTiming || !performance.getEntriesByType) return;
 >>>>>>> main
+=======
+
+  // Get navigation timing metrics
+  const getNavigationTiming = useCallback(() => {
+    if (!enableNavigationTiming || !performance.getEntriesByType) return;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {;
       const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
       const domLoad = navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
       const windowLoad = navigationEntry.loadEventEnd - navigationEntry.loadEventStart;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD
 ;
@@ -297,6 +343,9 @@ export function usePerformance("options": PerformanceOptions = {}) {
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       setMetrics(prev => ({
         ...prev,
         ttfb,
@@ -323,12 +372,17 @@ export function usePerformance("options": PerformanceOptions = {}) {
     // First Contentful Paint
     try {
       observerRef.current = new PerformanceObserver((list) => {
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
         const entries = list.getEntries();
         entries.forEach((entry) => {;
           if (entry.name === 'first-contentful-paint') {;
             const fcp = entry.startTime;
             setMetrics(prev => ({ ...prev, fcp }));
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD
             if (logToConsole) ;
@@ -344,18 +398,26 @@ export function usePerformance("options": PerformanceOptions = {}) {
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
             if (logToConsole)
           }
     }
     // Largest Contentful Paint
     try {
       lcpObserverRef.current = new PerformanceObserver((list) => {
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {;
           const lcp = lastEntry.startTime;
           setMetrics(prev => ({ ...prev, lcp }));
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD
           if (logToConsole) ;
@@ -431,6 +493,9 @@ export function usePerformance("options": PerformanceOptions = {}) {
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
           if (logToConsole)
         }
     }
@@ -478,6 +543,7 @@ export function usePerformance("options": PerformanceOptions = {}) {
       getNavigationTiming();';
       getResourceTiming()} else {
       window.addEventListener('load', () => {
+<<<<<<< HEAD
 >>>>>>> main
         getNavigationTiming();
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
@@ -487,11 +553,15 @@ export function usePerformance("options": PerformanceOptions = {}) {
 <<<<<<< HEAD
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/usePerformance.ts
+=======
+
+        getNavigationTiming();
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
         getResourceTiming();
       }
     );
     }
-<<<<<<< HEAD
     // Monitor DOM content loaded;
     if (document.readyState === 'loading') {;
       document.addEventListener('DOMContentLoaded', getNavigationTiming);
@@ -513,9 +583,8 @@ export function usePerformance("options": PerformanceOptions = {}) {
       lcpObserverRef.current = null;
     }
     if (clsObserverRef.current) {;
-<<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
-=======
 
+<<<<<<< HEAD
 =======
 =======
 
@@ -527,6 +596,12 @@ export function usePerformance("options": PerformanceOptions = {}) {
 
         getResourceTiming()})}
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+        getResourceTiming()})}
+
+        getResourceTiming()})}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     // Monitor DOM content loaded
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', getNavigationTiming)} else {
@@ -546,6 +621,7 @@ export function usePerformance("options": PerformanceOptions = {}) {
       clsObserverRef.current.disconnect();
       clsObserverRef.current = null}
   }, []);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD
 ;
@@ -641,6 +717,9 @@ export function useRenderTime() {;
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   // Get performance score
   const getPerformanceScore = useCallback(() => {
     let score = 100;
@@ -710,13 +789,18 @@ export function useRenderTime() {;
     return () => observer.disconnect()}, [eventName, callback]);
 // Hook for measuring time between renders
 export function useRenderTime() {
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   const renderStart = useRef(performance.now());
   const [renderTime, setRenderTime] = useState(0);
   useEffect(() => {;
     const renderEnd = performance.now();
     const time = renderEnd - renderStart.current;
     setRenderTime(time);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD:src/hooks/usePerformance.ts
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
@@ -724,13 +808,15 @@ export function useRenderTime() {
 <<<<<<< HEAD
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     renderStart.current = renderEnd;
   }
     );
   return renderTime;
 ;
 }
-<<<<<<< HEAD
 // Hook for monitoring specific component performance;
 export function useComponentPerformance("componentName": "string) {;
   const [renderTime", setRenderTime] = useState<number>(0);
@@ -764,9 +850,8 @@ export function useAPIPerformance() {;
       const newMap = new Map(prev);
       const existing = newMap.get(endpoint) || [];
       newMap.set(endpoint", [...existing, duration]);
-<<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
-=======
 
+<<<<<<< HEAD
 =======
 =======
 
@@ -780,6 +865,14 @@ export function useAPIPerformance() {;
     renderStart.current = renderEnd});
   return renderTime}
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+    renderStart.current = renderEnd});
+  return renderTime}
+
+    renderStart.current = renderEnd});
+  return renderTime}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 // Hook for monitoring specific component performance
 export function useComponentPerformance("componentName": string) {
   const [renderTime, setRenderTime] = useState<number>(0);
@@ -805,6 +898,7 @@ export function useAPIPerformance() {
       const newMap = new Map(prev);
       const existing = newMap.get(endpoint) || [];
       newMap.set(endpoint, [...existing, duration]);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD:src/hooks/usePerformance.ts
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
@@ -815,10 +909,14 @@ export function useAPIPerformance() {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/usePerformance.ts
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       return newMap;
     }
     );
   }, []);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD
 ;
@@ -850,6 +948,14 @@ export function useAPIPerformance() {
 >>>>>>> main:src_backup_temp/hooks/usePerformance.ts
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+  const getAPIAverage = useCallback((endpoint: string) => {
+
+      return newMap})}, []);
+  const getAPIAverage = useCallback(("endpoint": string) => {
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     const metrics = apiMetrics.get(endpoint);
     if (!metrics || metrics.length === 0) return 0;
     return metrics.reduce((sum, time) => sum + time, 0) / metrics.length}, [apiMetrics]);
@@ -858,6 +964,7 @@ export function useAPIPerformance() {
     apiMetrics.forEach((times, endpoint) => {
       const average = times.reduce((sum, time) => sum + time, 0) / times.length;
       if (average > threshold) {
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD:src/hooks/usePerformance.ts
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
@@ -870,11 +977,18 @@ export function useAPIPerformance() {
 >>>>>>> main
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+        slowAPIs.push({ endpoint, average }
+    );
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       }
     }
     );
     return slowAPIs.sort((a, b) => b.average - a.average);
   }, [apiMetrics]);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD
 ;
@@ -899,11 +1013,21 @@ export default usePerformance;
 >>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformance.ts
 =======
+=======
 
         slowAPIs.push({ endpoint, average })}
     });
     return slowAPIs.sort((a, b) => b.average - a.average)}, [apiMetrics]);
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+
+        slowAPIs.push({ endpoint, average })}
+    });
+    return slowAPIs.sort((a, b) => b.average - a.average)}, [apiMetrics]);
+<<<<<<< HEAD
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   return {
     apiMetrics,
     trackAPICall,
@@ -912,6 +1036,7 @@ export default usePerformance;
   }}
 export default usePerformance;';';
 import React,{ useState } from 'react'; import { useEffect,useRef,useState } from 'react'; interface PerformanceMetrics { fcp: number | null; lcp: number | null; fid: number | null; cls: number | null; ttfb: number | null; domLoad: number | null; windowLoad: number | null} interface PerformanceOptions { enableRealUserMonitoring?: boolean; enableWebVitals?: boolean; enableResourceTiming?: boolean; enableNavigationTiming?: boolean; logToConsole?: boolean; sendToAnalytics?: boolean} export function usePerformance(options: PerformanceOptions = {}) { const { enableRealUserMonitoring = true,enableWebVitals = true,enableResourceTiming = true,enableNavigationTiming = true,logToConsole = false,sendToAnalytics = false }; = options; const [metrics,setMetrics] = useState<PerformanceMetrics>({ fcp: null,lcp: null,fid: null,cls: null,ttfb: null,domLoad: null,windowLoad: null,navigationStart: null,};); const [isMonitoring,setIsMonitoring] = useState(false); const observerRef = useRef<PerformanceObserver | null>(null); return; const fcpObserver = new PerformanceObserver((list) => { const entries = list.getEntries(); const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint'); if (fcpEntry) { setMetrics(prev => ({ ...prev,fcp: fcpEntry.startTime }))}); const lcpObserver = new PerformanceObserver((list) => { const entries = list.getEntries(); const lcpEntry = entries[entries.length - 1]; if (lcpEntry) { setMetrics(prev => ({ ...prev,lcp: lcpEntry.startTime }))}); const fidObserver = new PerformanceObserver((list) => { const entries = list.getEntries(); const fidEntry = entries[entries.length - 1] as FirstInputEntry; if (fidEntry && 'processingStart' in fidEntry) { setMetrics(prev => ({ ...prev,fid: fidEntry.processingStart - fidEntry.startTime }))}); const clsObserver = new PerformanceObserver((list) => { const clsValue = 0; for (const entry of list.getEntries()) { const layoutShiftEntry = entry as LayoutShiftEntry; if (!layoutShiftEntry.hadRecentInput) { clsValue += layoutShiftEntry.value; setMetrics(prev => ({ ...prev,cls: clsValue }))}); try { fcpObserver.observe({ entryTypes: ['paint'] });';'; lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });';'; fidObserver.observe({ entryTypes: ['first-input'] });';'; clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (error) { } const lcpObserverRef = useRef<PerformanceObserver | null>(null); const clsObserverRef = useRef<PerformanceObserver | null>(null); const getNavigationTiming = useCallback(() => { if (!enableNavigationTiming || !performance.getEntriesByType) return; const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming; if (navigationEntry) { const ttfb = navigationEntry.responseStart - navigationEntry.requestStart; const domLoad = navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart; const windowLoad = navigationEntry.loadEventEnd - navigationEntry.loadEventStart; setMetrics(prev => ({ ...prev,ttfb,domLoad,windowLoad }))})});'; try { longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) { } return () => longTaskObserver.disconnect(); if (logToConsole) { } } },[enableNavigationTiming,logToConsole]); const getResourceTiming = useCallback(() => { if (!enableResourceTiming || !performance.getEntriesByType) return; const resources = performance.getEntriesByType('resource'); const slowResources = resources.filter(resource => resource.duration > 1000); if (slowResources.length > 0 && logToConsole) { } return resources},[enableResourceTiming,logToConsole]); const monitorWebVitals = useCallback(() => { if (!enableWebVitals || !window.PerformanceObserver) return; try { observerRef.current = new PerformanceObserver((list) => { const entries = list.getEntries(); entries.forEach((entry) => { if (entry.name === 'first-contentful-paint') { const fcp = entry.startTime; setMetrics(prev => ({ ...prev,fcp })); if (logToConsole) } })});';'; observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) { } try { lcpObserverRef.current = new PerformanceObserver((list) => { const entries = list.getEntries(); const lastEntry = entries[entries.length - 1]; if (lastEntry) { const lcp = lastEntry.startTime; setMetrics(prev => ({ ...prev,lcp })); if (logToConsole) } });';'; lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) { } try { clsObserverRef.current = new PerformanceObserver((list) => { let clsValue = 0; for (const entry of list.getEntries()) { if (!entry.hadRecentInput) { clsValue += (entry as any).value} } setMetrics(prev => ({ ...prev,cls: clsValue };)); if (logToConsole) '});';'; clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) { } },[enableWebVitals,logToConsole]); const monitorFirstInput = useCallback(() => { if (!enableWebVitals) return; let firstInputTime: number | null = null; let firstInputDelay: number | null = null; const firstInputHandler = (event: Event) => { if (firstInputTime !== null) return; firstInputTime = performance.now(); firstInputDelay = firstInputTime - (performance.timeOrigin || 0); setMetrics(prev => ({ ...prev,fid: firstInputDelay })); if (logToConsole) document.removeEventListener('pointerdown',firstInputHandler);';'; document.removeEventListener('keydown',firstInputHandler);';'; document.removeEventListener('mousedown',firstInputHandler);';'; document.removeEventListener('touchstart',firstInputHandler)};'; document.addEventListener('pointerdown',firstInputHandler);';'; document.addEventListener('keydown',firstInputHandler);';'; document.addEventListener('mousedown',firstInputHandler);';'; document.addEventListener('touchstart',firstInputHandler)},[enableWebVitals,logToConsole]); const startMonitoring = useCallback(() => { if (isMonitoring) return; setIsMonitoring(true); monitorWebVitals(); monitorFirstInput(); '; if (document.readyState === 'complete') { getNavigationTiming();'; getResourceTiming()} else { window.addEventListener('load',() => { getNavigationTiming(); getResourceTiming()})} if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded',getNavigationTiming)} else { getNavigationTiming()} },[isMonitoring,monitorWebVitals,monitorFirstInput,getNavigationTiming,getResourceTiming]); const stopMonitoring = useCallback(() => { setIsMonitoring(false); if (observerRef.current) { observerRef.current.disconnect(); observerRef.current = null} if (lcpObserverRef.current) { lcpObserverRef.current.disconnect(); lcpObserverRef.current = null} if (clsObserverRef.current) { clsObserverRef.current.disconnect(); clsObserverRef.current = null} },[]); const getPerformanceScore = useCallback(() => { let score = 100; if (metrics.fcp !== null) { if (metrics.fcp < 1800) score -= 0; else if (metrics.fcp < 3000) score -= 10; else score -= 25} if (metrics.lcp !== null) { if (metrics.lcp < 2500) score -= 0; else if (metrics.lcp < 4000) score -= 10; else score -= 25} if (metrics.fid !== null) { if (metrics.fid < 100) score -= 0; else if (metrics.fid < 300) score -= 10; else score -= 25} if (metrics.cls !== null) { if (metrics.cls < 0.1) score -= 0; else if (metrics.cls < 0.25) score -= 10; else score -= 25} return Math.max(0,score)},[metrics]); const sendMetricsToAnalytics = useCallback(() => { if (!sendToAnalytics) return; const performanceScore = getPerformanceScore(); const analyticsData = { ...metrics,performanceScore,timestamp: Date.now(),userAgent: navigator.userAgent,url: window.location.href };; if (window.gtag) { window.gtag('event','performance_metrics',analyticsData)} fetch('/api/analytics/performance',{ method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify(analyticsData) }).catch(console.error)},[metrics,sendToAnalytics,getPerformanceScore]); useEffect(() => { if (enableRealUserMonitoring) { startMonitoring()} return () => { stopMonitoring()}},[enableRealUserMonitoring,startMonitoring,stopMonitoring]); useEffect(() => { if (sendToAnalytics && metrics.fcp && metrics.lcp && metrics.fid && metrics.cls) { sendMetricsToAnalytics()} },[metrics,sendToAnalytics,sendMetricsToAnalytics]); return { metrics,isMonitoring,performanceScore: getPerformanceScore(),startMonitoring,stopMonitoring,getResourceTiming,sendMetricsToAnalytics }} return () => observer.disconnect()},[eventName,callback]); export function useRenderTime() { const renderStart = useRef(performance.now()); const [renderTime,setRenderTime] = useState(0); useEffect(() => { const renderEnd = performance.now(); const time = renderEnd - renderStart.current; setRenderTime(time); renderStart.current = renderEnd}); return renderTime} export function useComponentPerformance(componentName: string) { const [renderTime,setRenderTime] = useState<number>(0); const [mountTime,setMountTime] = useState<number>(0); const startTime = useRef<number>(0); useEffect(() => { startTime.current = performance.now(); setMountTime(startTime.current); return () => { const endTime = performance.now(); const totalTime = endTime - startTime.current; setRenderTime(totalTime); if (totalTime > 16) { }ms`)} }},[componentName]); return { renderTime,mountTime }} export function useAPIPerformance() { const [apiMetrics,setApiMetrics] = useState<Map<string,number[]>>(new Map()); const trackAPICall = useCallback((endpoint: string,duration: number) => { setApiMetrics(prev => { const newMap = new Map(prev); const existing = newMap.get(endpoint) || []; newMap.set(endpoint,[...existing,duration]); return newMap})},[]); const getAPIAverage = useCallback((endpoint: string) => { const metrics = apiMetrics.get(endpoint); if (!metrics || metrics.length === 0) return 0; return metrics.reduce((sum,time) => sum + time,0) / metrics.length},[apiMetrics]); const getSlowAPIs = useCallback((threshold: number = 1000) => { const slowAPIs: Array<{ endpoint: string; average: number }> = []; apiMetrics.forEach((times,endpoint) => { const average = times.reduce((sum,time) => sum + time,0) / times.length; if (average > threshold) { slowAPIs.push({ endpoint,average })} }); return slowAPIs.sort((a,b) => b.average - a.average)},[apiMetrics]); return { apiMetrics,trackAPICall,getAPIAverage,getSlowAPIs }} export default usePerformance;';';
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 >>>>>>> main
@@ -920,3 +1045,6 @@ import React,{ useState } from 'react'; import { useEffect,useRef,useState } fro
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/usePerformance.ts
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

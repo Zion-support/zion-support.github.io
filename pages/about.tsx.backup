@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import { 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   Brain, 
   Users, 
   Award, 
@@ -20,7 +19,7 @@ import {
   Rocket, 
   Lightbulb, 
   Handshake 
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
 } from 'lucide-react';
 
 const values = [
@@ -28,13 +27,13 @@ const values = [
     icon: Lightbulb,
     title: 'Innovation',
     description: 'We constantly push the boundaries of technology to create cutting-edge solutions that drive real business value.'
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   },
   {
     icon: Shield,
     title: 'Security',
     description: 'Security is at the core of everything we do, ensuring your data and systems are protected with enterprise-grade security.'
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   },
   {
     icon: Users,
@@ -381,7 +380,7 @@ const timeline = [{
     "year": '2024',
     "title": 'Micro SaaS Platform',
     "description": 'Introduced our Micro SaaS solutions platform for rapid business application deployment.'
-=======
+
     icon: Award,
     title: 'Excellence',
     description: 'We strive for excellence in everything we do, delivering quality results every time.'
@@ -413,7 +412,7 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-=======
+
     description: 'We work closely with our clients as partners, understanding their unique challenges and co-creating solutions.'
   },
   {
@@ -465,7 +464,7 @@ export default function About() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold text-white mb-6"
@@ -476,7 +475,7 @@ export default function About() {
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 We are a leading technology company specializing in AI solutions, cloud infrastructure, 
                 and digital transformation services. Our mission is to empower businesses with cutting-edge technology.
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -512,7 +511,7 @@ export default function About() {
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
-=======
+
                   <div className="text-gray-600">{stat.label}</div>
                 </motion.div>
               ))}
@@ -584,7 +583,7 @@ export default function About() {
                 </div>
               </motion.div>
             </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
           </div>
         </section>
 
@@ -594,7 +593,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -618,7 +617,7 @@ export default function About() {
                   </motion.div>
                 );
               })}
-=======
+
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 These core values guide everything we do and shape our company culture.
@@ -640,12 +639,11 @@ export default function About() {
                   <p className="text-gray-600">{value.description}</p>
                 </motion.div>
               ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
             </div>
           </div>
         </section>
 
-=======
         {/* Team Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -679,7 +677,6 @@ export default function About() {
           </div>
         </section>
 
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -707,7 +704,7 @@ export default function About() {
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   View Our Services
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
                 </Link>
                 <a href="tel:+13024640950" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                   Call +1 302 464 0950

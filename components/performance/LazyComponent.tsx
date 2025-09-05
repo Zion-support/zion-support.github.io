@@ -1,14 +1,14 @@
-}
-export const "LazyComponent": React.FC<LazyComponentProps> = ({
-  component,
-  fallback = <div>Loading...</div>,
-  ...props
+ import LoadingSpinner from '../LoadingSpinner';
+interface LazyComponentProps {
+  children: ReactNode;
+fallback?: ReactNode;
+}const LazyComponent: React.FC<LazyComponentProps> = ({
+  children, fallback = <LoadingSpinner />;
 }) => {
-  const LazyLoadedComponent = lazy(component)
-  return (
-    <Suspense fallback={fallback}>
-      <LazyLoadedComponent {...props} />
-    </Suspense>
-  )
-}
-export default LazyComponent
+  return <Suspense fallback= {
+  fallback 
+}> {
+  children 
+}</Suspense>;
+};
+export default LazyComponent;

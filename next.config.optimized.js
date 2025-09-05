@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -143,3 +144,5 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.e
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

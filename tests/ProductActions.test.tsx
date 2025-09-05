@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface ProductActions.testProps {
@@ -18,3 +19,10 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
 }
 =======
 }
+=======
+ fireEvent.click (button);
+vi.advanceTimersByTime (1500);
+// Wait for the status to reset vi.useRealTimers () 
+}) 
+});
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

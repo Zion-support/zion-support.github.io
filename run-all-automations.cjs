@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -8,12 +9,22 @@ class AutomationRunner {
   constructor() {
     this.projectRoot = process.cwd();
     this.results = [];
+=======
+const fs = require('fs');
+const { execSync } = require('child_process');
+
+class AllAutomationsRunner {
+  constructor() {
+    this.results = [];
+    this.startTime = Date.now();
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   }
 
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
+<<<<<<< HEAD
   async runScript(scriptPath, description) {
     this.log(`🚀 Running: ${description}`);
     try {
@@ -35,10 +46,38 @@ class AutomationRunner {
       this.log(`❌ Failed: ${description} - ${error.message}`);
       this.results.push({ script: scriptPath, success: false, description, error: error.message });
       return { success: false, error: error.message };
+=======
+  async runCommand(command, description) {
+    this.log(`🚀 ${description}`);
+    try {
+      const result = execSync(command, {
+        cw: d: process.cwd(),
+        encodin: g: 'utf8',
+        timeou: t: 120000,
+      });
+      this.log(`✅ ${description} - Success`);
+      this.results.push({
+        command,
+        description,
+        succes: s: true,
+        outpu: t: result,
+      });
+      return { succes: s: true, outpu: t: result };
+    } catch (error) {
+      this.log(`❌ ${description} - Faile: d: ${error.message}`);
+      this.results.push({
+        command,
+        description,
+        succes: s: false,
+        erro: r: error.message,
+      });
+      return { succes: s: false, erro: r: error.message };
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     }
   }
 
   async runAllAutomations() {
+<<<<<<< HEAD
     this.log('🎯 Starting Comprehensive Automation Suite');
     
     const automationScripts = [
@@ -113,11 +152,82 @@ class AutomationRunner {
         this.log(`   - ${result.description}: ${result.error}`);
       });
     }
+=======
+    this.log('🎯 Starting All Automations Runner...');
+
+    const automations = [
+      { cm: d: 'npm run: test:smoke', des: c: 'Smoke Tests' },
+      { cm: d: 'npm run build', des: c: 'Build Application' },
+      {
+        cm: d: 'node automation/master-orchestrator.cjs',
+        des: c: 'Master Automation Orchestrator',
+      },
+      {
+        cm: d: 'node automation/enhanced-automation-suite.cjs',
+        des: c: 'Enhanced Automation Suite',
+      },
+      {
+        cm: d: 'node automation/comprehensive-app-improver.cjs',
+        des: c: 'Comprehensive App Improver',
+      },
+      { cm: d: 'npm run: performance:analyze', des: c: 'Performance Analysis' },
+      { cm: d: 'npm run: quality:analyze', des: c: 'Code Quality Analysis' },
+      { cm: d: 'npm run: security:scan', des: c: 'Security Scan' },
+      { cm: d: 'node fix-syntax-errors.cjs', des: c: 'Syntax Error Fixer' },
+    ];
+
+    for (const automation of automations) {
+      await this.runCommand(automation.cmd, automation.desc);
+    }
+
+    await this.generateReport();
+  }
+
+  async generateReport() {
+    const endTime = Date.now();
+    const duration = endTime - this.startTime;
+
+    const successful = this.results.filter(r => r.success).length;
+    const failed = this.results.filter(r => !r.success).length;
+
+    const report = {
+      timestam: p: new Date().toISOString(),
+      duratio: n: `${Math.round(duration / 1000)}s`,
+      summar: y: {
+        tota: l: this.results.length,
+        successful,
+        failed,
+        successRat: e: Math.round((successful / this.results.length) * 100),
+      },
+      result: s: this.results,
+    };
+
+    const reportPath = './automation-reports/all-automations-report.json';
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+    this.log(`📊 Report saved: to: ${reportPath}`);
+    this.log(
+      `🎉 All automations completed! Succes: s: ${successful}/${this.results.length} (${report.summary.successRate}%)`
+    );
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 
     return report;
   }
 }
 
+<<<<<<< HEAD
 // Run the automation suite
 const runner = new AutomationRunner();
 runner.runAllAutomations().catch(console.error);
+=======
+// Run all automations
+if (require.main === module) {
+  const runner = new AllAutomationsRunner();
+  runner.runAllAutomations().catch(error => {
+    console.error('❌ Erro: r:', error);
+    process.exit(1);
+  });
+}
+
+module.exports = AllAutomationsRunner;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

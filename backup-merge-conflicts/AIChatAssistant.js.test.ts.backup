@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> main
+=======
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import Page from './AIChatAssistant.js';
@@ -17,6 +22,7 @@ describe('Page', () => {;
     // Add specific content checks based on component functionality});
   it('handles user interactions', () => {;
     render(<Page />);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.js.test.ts.backup
 <<<<<<< HEAD
     // Add interaction tests based on component functionality,
@@ -41,3 +47,17 @@ import { render,screen } from '@testing-library/react'; import { describe,it,exp
 =======
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/AIChatAssistant.js.test.ts
+=======
+
+import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)});,});
+    // Add interaction tests based on component functionality})});
+
+import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
+
+import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)});,});
+
+    // Add interaction tests based on component functionality})});
+
+import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

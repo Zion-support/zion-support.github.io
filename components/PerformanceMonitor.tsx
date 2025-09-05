@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import { useEffect } from 'react';
@@ -132,11 +133,11 @@ export default function PerformanceMonitor() {
   }, []);
 
   return null; // This component doesn't render anything
+=======
+ 
+}return () => {
+  window.removeEventListener ('load', measurePerformance) 
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 }
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
+}, [onPerformanceData]);
+export default PerformanceMonitor;

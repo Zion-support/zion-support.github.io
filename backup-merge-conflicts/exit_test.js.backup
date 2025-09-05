@@ -1,7 +1,7 @@
 'use strict';
 
 /*
-  ======== A Handy Little Nodeunit Reference ========
+  = A Handy Little Nodeunit Reference =
   https://github.com/caolan/nodeunit
 
   Test methods:

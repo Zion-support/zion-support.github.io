@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 // Security headers configuration
@@ -42,3 +43,6 @@ export const securityHeaders = [
 export const getSecurityHeaders = () => securityHeaders;
 =======
 =======
+=======
+ 
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

@@ -153,7 +153,7 @@ class LintingFixer {
     }
     
     this.log('\n📊 Linting Issue Resolution Report');
-    this.log('=====================================');
+    this.log('==');
     this.log(`Files processed: ${criticalFiles.length}`);
     this.log(`Files fixed: ${this.fixedFiles.length}`);
     this.log(`Errors: ${this.errors.length}`);

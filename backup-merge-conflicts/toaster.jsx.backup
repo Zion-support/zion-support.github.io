@@ -1,21 +1,11 @@
-<<<<<<< HEAD:backup-merge-conflicts/toaster.jsx.backup
-<<<<<<< HEAD
-import * as React from "react";
-import {Toaster as HotToaster} from "react-hot-toast";
-export function Toaster("props": "any) {return (<HotToaster position="top-right" />)"}
-;
 
-export default toaster;
-=======
-<<<<<<< HEAD
-import * as React from &quot;react&quot;; import {Toaster as HotToaster} from &quot;react-hot-toast&quot;; export function Toaster($1) {return (<HotToaster position=&quot;top-right&quot; />)} export default toaster;
-=======
-<<<<<<< HEAD
+
 const * as React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster($1) {return (<HotToaster position="top-right" />)} export default toaster;""
-=======
+
 import _React from 'react';,
-<<<<<<< HEAD:backup-merge-conflicts/toaster.jsx.backup
+
 import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster(_) {return (<HotToaster position="top-right" />)} export default toaster;
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -26,3 +16,11 @@ import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-
 import _React from 'react';,
 import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster(_) {return (<HotToaster position="top-right" />)} export default toaster;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/toaster.jsx
+=======
+
+import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster(_) {return (<HotToaster position="top-right" />)} export default toaster;
+
+import _React from 'react';,
+import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster(_) {return (<HotToaster position="top-right" />)} export default toaster;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

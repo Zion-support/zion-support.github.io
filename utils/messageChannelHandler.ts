@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const messageChannelHandler = {
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
@@ -28,3 +29,6 @@ export const messageChannelHandler: MessageHandler = {
 };
 =======
 };
+=======
+ 
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

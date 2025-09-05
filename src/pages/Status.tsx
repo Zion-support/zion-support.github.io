@@ -1,0 +1,65 @@
+ interface ServiceStatus {
+  name: string;
+status: 'operational' | 'degraded' | 'outage' | 'maintenance';
+description: string;
+lastChecked: string 
+}const FALLBACK SERVICES: ServiceStatus[] = [ {
+  name: "Marketplace API";
+status: "operational";
+description: "Product listings and search functionality";
+lastChecked: new Date () .toISOString () 
+};
+{
+  name: "Authentication Service";
+status: "operational";
+description: "User login and registration";
+lastChecked: new Date () .toISOString () 
+};
+{
+  name: "Payment Processing";
+status: "operational";
+description: "Checkout and payment handling";
+lastChecked: new Date () .toISOString () 
+};
+{
+  name: "Talent Directory";
+status: "operational";
+description: "AI talent profiles and matching";
+lastChecked: new Date () .toISOString () 
+}];
+export default function Status () {
+  //Try to load external status page, fallback after timeout const timeout = setTimeout ( () => {
+  if (!externalStatusLoaded) {
+  return () => clearTimeout (timeout) 
+}, [externalStatusLoaded]);
+useEffect ( () => {
+  async function fetchUptime () {
+  try {
+  
+}
+}fetchUptime () 
+}, []);
+const getStatusIcon = (status: ServiceStatus['status']) => {
+  switch (status) {
+  case 'operational': 
+}
+};
+switch (status) {
+  case 'operational': return 'Operational';
+case 'degraded': return 'Degraded Performance';
+case 'outage': return 'Service Outage';
+case 'maintenance': return 'Scheduled Maintenance';
+default: const getStatusColor = (status: ServiceStatus['status']) => {
+  switch (status) {
+  case 'operational': return 'text-green-500';
+case 'degraded': return 'text-yellow-500';
+case 'outage': return 'text-red-500';
+case 'maintenance': return 'text-blue-500';
+default: return (<> <SEO title="API Status" description="View real-time service availability and uptime statistics." canonical="https://app.ziontechgroup.com/status" /> <main className="min-h-screen bg-zion-blue pt-24 pb-20" > <div className="container mx-auto px-4" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-white mb-4" >System Status</h1> <p className="text-zion-slate-light text-lg" > Real-time monitoring of Zion platform services </p> <CardHeader> <CardTitle className="text-white flex items-center gap-2" > <ExternalLink className="h-5 w-5" /> Live Status Dashboard </CardTitle> <CardDescription> Loading detailed status information... </CardDescription> </CardHeader> <CardContent> <iframe src= {
+  statusUrl 
+}/> <div className="mt-4 text-center" > <Button > View Simplified Status </Button> </div> </CardContent> </Card> </div>) 
+}<CardHeader> <CardTitle className="text-white" >Service Status Overview</CardTitle> <CardDescription> Current status of core platform services </CardDescription> </CardHeader> <CardContent className="space-y-4" > {
+  FALLBACK SERVICES.map ( (service) => (</div> </div> </div>) ) 
+}</CardContent> </Card> </div> <div className="text-center" > <p className="text-zion-slate-light mb-4" > For detailed incident history and real-time updates: </p> <Button variant="outline" asChild className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10" > <a > <ExternalLink className="h-4 w-4" /> Visit Full Status Page </Link> </Button> </div> </>) 
+}<div className="mt-12 text-center" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle className="text-white" >Need Help?</CardTitle> </CardHeader> <CardContent className="space-y-4" > <p className="text-zion-slate-light" > If you're experiencing issues not reflected here, please contact our support team. </p> <Button variant="outline" asChild className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10" > <Link href="/contact" >Contact Support</Link> </Button> <Button variant="outline" asChild className="text-zion-purple border-zion-purple hover:bg-zion-purple/10" > <a href="https://twitter.com/ZionTechGroup" target="blank" rel="noopener noreferrer" > @ZionTechGroup </Link> </Button> </div> </CardContent> </Card> </div> </div> </main> </>) 
+}

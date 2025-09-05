@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/use-toast.ts.backup
 <<<<<<< HEAD:src/components/ui/use-toast.ts
 =======
@@ -5,6 +6,13 @@
 <<<<<<< HEAD
 import { toast   } from 'react-hot-toast';
 =======
+=======
+
+
+import { toast   } from 'react-hot-toast';
+import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "number"} position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"} export function useToast(...args[]): "{ const showToast = ("message": 'string'",options?: "ToastOptions) => { return toast(message",options) return { showToast }};
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 import { toast } from 'react-hot-toast'
 
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
@@ -20,6 +28,7 @@ import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "num
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/use-toast.ts
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/use-toast.ts.backup
 =======
 =======
@@ -32,6 +41,10 @@ import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "num
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/use-toast.ts
 import { toast } from 'react-hot-toast'
 >>>>>>> main
+=======
+import { toast } from 'react-hot-toast'
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 interface ToastOptions {
   duration?: number;
   position?: &quot;top-right&quot; | &quot;top-center&quot; | &quot;top-left&quot; | &quot;bottom-right&quot; | &quot;bottom-center&quot; | &quot;bottom-left&quot;;
@@ -42,6 +55,7 @@ export function useToast() {
   };
   return { showToast };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/use-toast.ts.backup
 <<<<<<< HEAD:backup-merge-conflicts/use-toast.ts.backup
 >>>>>>> main
@@ -51,3 +65,6 @@ export function useToast() {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/use-toast.ts
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/use-toast.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

@@ -105,7 +105,7 @@ export function categoryOfInteraction(interaction) {
  * 3. The interactions are of the same category [each interaction is either
  * categorised as keyboard, or pointer.]
  *
- * =============A=[pointerup]=
+ * ======A=[pointerup]=
  *        ====B=[pointerdown]=
  *        ===C=[pointerdown]==
  *         ===D=[pointerup]===
@@ -115,8 +115,8 @@ export function categoryOfInteraction(interaction) {
  *
  * However, in this example we would only consider B nested (under A) and D
  * nested (under C). A and C both stay because they are of different types.
- * ========A=[keydown]====
- *   =======B=[keyup]=====
+ * =A=[keydown]====
+ *   B=[keyup]=====
  *    ====C=[pointerdown]=
  *         =D=[pointerup]=
  **/

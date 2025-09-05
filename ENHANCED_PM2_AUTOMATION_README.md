@@ -66,7 +66,7 @@ pm2 start ecosystem.config.cjs
 
 ### 3. Monitor Automations
 
-```bash
+````bash
 # View all running processes
 pm2 status
 
@@ -89,7 +89,7 @@ pm2 monit
 
 # Clear all logs
 pm2 flush
-```
+````
 
 ## 📋 Available Automation Processes
 
@@ -174,6 +174,7 @@ node scripts/automation/intelligent-automation-orchestrator.cjs
 - Code splitting opportunities
 
 ### Import Errors
+
 - Relative path issues
 - Missing file extensions
 - Module not found errors
@@ -210,7 +211,7 @@ node scripts/automation/intelligent-automation-orchestrator.cjs
 
 ### Real-time Monitoring
 
-```bash
+````bash
 # View all automation processes
 pm2 list
 
@@ -249,9 +250,10 @@ Each automation process generates three types of logs:
     "unescapedEntities": 12
   }
 }
-```
+````
 
 ### Scheduling Optimization
+
 - Different schedules for different error types
 - Critical errors checked every minute
 - Less critical errors checked less frequently
@@ -290,7 +292,7 @@ export QUALITY_INTERVAL=1200000    # 20 minutes
 
 #### Automation Not Starting
 
-```bash
+````bash
 # View recent logs
 pm2 logs --lines 50
 
@@ -305,7 +307,7 @@ pm2 logs | grep "ERROR"
 ```bash
 # Check memory usage
 pm2 monit
-```
+````
 
 #### Automation Failures
 

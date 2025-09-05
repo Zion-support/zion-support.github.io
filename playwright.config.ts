@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface Playwright.configProps {
@@ -21,3 +22,6 @@ export default function Playwright.config({ }: Playwright.configProps) {
 }
 =======
 }
+=======
+}}},
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

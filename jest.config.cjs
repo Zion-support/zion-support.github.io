@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,3 +83,27 @@ module.exports = {
 };
 >>>>>>> origin/chore/fix-build-nav-links
 >>>>>>> 5d987fe43090d7728810c06da2fede859a7f3c62
+=======
+module.exports = {
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
+  testMatch: [
+    '**/__tests__/**/*.(js|jsx|ts|tsx)';
+    '**/*.(test|spec).(js|jsx|ts|tsx)';
+  ];
+  collectCoverageFrom: [
+    'components/**/*.{js,jsx,ts,tsx}';
+    'pages/**/*.{js,jsx,ts,tsx}';
+    '!**/*.d.ts';
+    '!**/node_modules/**';
+  ];
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
