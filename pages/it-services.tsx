@@ -48,7 +48,8 @@ import {
   ClipboardList,
   Phone,
   MapPin,
-  Mail
+  Mail,
+  Car
 } from 'lucide-react';
 
 const contactInfo = {
@@ -203,22 +204,267 @@ const itServices = [
     features: [
       '24/7 helpdesk support',
       'Remote desktop assistance',
+      'On-site technical support',
       'Hardware & software troubleshooting',
       'User training & onboarding',
       'IT asset management',
-      'Software license management',
-      'Security updates & patches',
-      'On-site support when needed'
+      'Ticket tracking & resolution',
+      'SLA compliance monitoring'
     ],
     benefits: [
-      'Resolve 95% of issues remotely',
-      'Reduce IT downtime by 80%',
-      'Improve user productivity',
-      'Lower IT support costs by 50%'
+      'Reduce IT downtime by 70%',
+      'Improve user satisfaction by 85%',
+      'Lower IT support costs by 40%',
+      'Faster issue resolution'
     ],
     marketPrice: '$1,500-3,000/month',
     setupTime: '1 week',
-    targetUsers: 'All businesses, Remote teams, Growing companies'
+    targetUsers: 'All businesses, Remote teams, SMBs'
+  },
+
+  // Advanced IT Services
+  {
+    id: 7,
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing solutions and infrastructure setup for advanced computational needs and research applications.',
+    icon: Cpu,
+    category: 'Quantum Computing',
+    price: 'Starting at $5,000/month',
+    features: [
+      'Quantum hardware integration',
+      'Quantum algorithm development',
+      'Quantum software optimization',
+      'Quantum security implementation',
+      'Hybrid classical-quantum systems',
+      'Quantum cloud access',
+      'Research collaboration',
+      'Training and education'
+    ],
+    benefits: [
+      'Exponential computational power',
+      'Advanced problem solving',
+      'Future-proof technology',
+      'Competitive advantage'
+    ],
+    marketPrice: '$8,000-15,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Research institutions, Financial services, Pharmaceutical companies'
+  },
+  {
+    id: 8,
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure for real-time processing, IoT integration, and low-latency applications.',
+    icon: Wifi,
+    category: 'Edge Computing',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Edge server deployment',
+      'IoT device integration',
+      'Real-time data processing',
+      'Edge AI implementation',
+      '5G network optimization',
+      'Latency reduction',
+      'Distributed computing',
+      'Edge security management'
+    ],
+    benefits: [
+      'Reduce latency by 80%',
+      'Improve real-time performance',
+      'Lower bandwidth costs',
+      'Enhanced data privacy'
+    ],
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Manufacturing, Healthcare, Autonomous vehicles, IoT companies'
+  },
+  {
+    id: 9,
+    title: 'Blockchain Infrastructure & Development',
+    description: 'Complete blockchain solutions including smart contracts, DeFi platforms, and enterprise blockchain integration.',
+    icon: Lock,
+    category: 'Blockchain',
+    price: 'Starting at $3,500/month',
+    features: [
+      'Smart contract development',
+      'DeFi platform creation',
+      'NFT marketplace development',
+      'Blockchain integration',
+      'Cryptocurrency wallet development',
+      'Token economics design',
+      'Security auditing',
+      'Compliance implementation'
+    ],
+    benefits: [
+      'Decentralized solutions',
+      'Enhanced security',
+      'Transparent transactions',
+      'Reduced intermediaries'
+    ],
+    marketPrice: '$5,000-12,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Financial services, Supply chain, Healthcare, Gaming'
+  },
+  {
+    id: 10,
+    title: 'AI Infrastructure & MLOps',
+    description: 'Complete AI infrastructure setup with machine learning pipelines, model deployment, and MLOps automation.',
+    icon: Brain,
+    category: 'AI Infrastructure',
+    price: 'Starting at $2,800/month',
+    features: [
+      'ML pipeline development',
+      'Model training infrastructure',
+      'Model deployment & serving',
+      'MLOps automation',
+      'Data pipeline optimization',
+      'Model monitoring & governance',
+      'A/B testing frameworks',
+      'AI security implementation'
+    ],
+    benefits: [
+      'Faster AI model deployment',
+      'Automated ML workflows',
+      'Better model performance',
+      'Reduced operational overhead'
+    ],
+    marketPrice: '$4,500-9,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'AI companies, Data science teams, Enterprises'
+  },
+  {
+    id: 11,
+    title: 'IoT Platform & Device Management',
+    description: 'Comprehensive IoT solutions including device management, data collection, and analytics platforms.',
+    icon: Smartphone,
+    category: 'IoT Services',
+    price: 'Starting at $1,800/month',
+    features: [
+      'IoT device integration',
+      'Data collection & processing',
+      'Device management platform',
+      'Real-time monitoring',
+      'Predictive maintenance',
+      'IoT security implementation',
+      'Custom dashboard development',
+      'API development & integration'
+    ],
+    benefits: [
+      'Centralized device management',
+      'Real-time insights',
+      'Predictive maintenance',
+      'Improved operational efficiency'
+    ],
+    marketPrice: '$3,000-6,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Manufacturing, Agriculture, Smart cities, Healthcare'
+  },
+  {
+    id: 12,
+    title: 'AR/VR Infrastructure & Development',
+    description: 'Augmented and virtual reality solutions including infrastructure setup, content creation, and application development.',
+    icon: Eye,
+    category: 'AR/VR Services',
+    price: 'Starting at $2,500/month',
+    features: [
+      'AR/VR application development',
+      '3D content creation',
+      'Hardware integration',
+      'Performance optimization',
+      'Multi-platform deployment',
+      'User experience design',
+      'Analytics & tracking',
+      'Training & support'
+    ],
+    benefits: [
+      'Immersive user experiences',
+      'Enhanced training programs',
+      'Better customer engagement',
+      'Innovative solutions'
+    ],
+    marketPrice: '$4,000-8,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Education, Healthcare, Real estate, Gaming, Training'
+  },
+  {
+    id: 13,
+    title: 'Space Technology Infrastructure',
+    description: 'Space technology solutions including satellite data processing, space mission support, and astronomical research tools.',
+    icon: Rocket,
+    category: 'Space Technology',
+    price: 'Starting at $4,500/month',
+    features: [
+      'Satellite data processing',
+      'Space mission planning',
+      'Orbital mechanics calculations',
+      'Space weather monitoring',
+      'Research tool development',
+      'Data visualization',
+      'Mission control systems',
+      'Space communication protocols'
+    ],
+    benefits: [
+      'Space data insights',
+      'Mission optimization',
+      'Research acceleration',
+      'Innovation support'
+    ],
+    marketPrice: '$7,000-15,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Space agencies, Research institutions, Satellite companies'
+  },
+  {
+    id: 14,
+    title: 'Green IT & Sustainability Solutions',
+    description: 'Eco-friendly IT solutions focusing on energy efficiency, carbon footprint reduction, and sustainable technology practices.',
+    icon: TreePine,
+    category: 'Green IT',
+    price: 'Starting at $1,500/month',
+    features: [
+      'Energy-efficient infrastructure',
+      'Carbon footprint monitoring',
+      'Renewable energy integration',
+      'E-waste management',
+      'Green cloud solutions',
+      'Sustainability reporting',
+      'Environmental compliance',
+      'Green procurement'
+    ],
+    benefits: [
+      'Reduce carbon footprint by 50%',
+      'Lower energy costs by 30%',
+      'Meet sustainability goals',
+      'Improve brand reputation'
+    ],
+    marketPrice: '$2,500-5,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'All industries, ESG-focused companies, Government'
+  },
+  {
+    id: 15,
+    title: 'Autonomous Systems Infrastructure',
+    description: 'Infrastructure for autonomous vehicles, drones, and robotic systems with AI integration and safety protocols.',
+    icon: Car,
+    category: 'Autonomous Systems',
+    price: 'Starting at $3,200/month',
+    features: [
+      'Autonomous vehicle infrastructure',
+      'Drone fleet management',
+      'Robotic system integration',
+      'AI safety protocols',
+      'Real-time monitoring',
+      'Simulation environments',
+      'Regulatory compliance',
+      'Performance optimization'
+    ],
+    benefits: [
+      'Advanced automation',
+      'Enhanced safety',
+      'Operational efficiency',
+      'Future-ready technology'
+    ],
+    marketPrice: '$5,000-10,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Automotive, Logistics, Agriculture, Manufacturing'
   }
 ];
 

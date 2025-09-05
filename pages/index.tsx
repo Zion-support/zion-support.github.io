@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin } from 'lucide-react';
+import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin, Cpu, Rocket, Car, Eye } from 'lucide-react';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -16,33 +16,36 @@ const stats = [
 const services = [
   {
     title: "AI Services",
-    description: "100+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, autonomous systems, and advanced analytics with real-world applications",
+    description: "100+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, autonomous systems, drug discovery, climate analytics, space technology, and advanced analytics with real-world applications",
     icon: Brain,
     href: "/ai-services",
     count: "100+ Solutions",
-    pricing: "Starting at $2,500/month",
-    marketPrice: "$4,000-15,000/month",
-    benefits: ["40-60% accuracy improvement", "80% automation", "25-35% ROI increase"]
+    pricing: "Starting at $1,800/month",
+    marketPrice: "$3,000-20,000/month",
+    benefits: ["40-60% accuracy improvement", "80% automation", "25-35% ROI increase", "Future-proof technology"],
+    categories: ["Machine Learning", "Computer Vision", "NLP", "Quantum AI", "Healthcare AI", "Climate AI", "Space AI"]
   },
   {
     title: "IT Services", 
-    description: "85+ comprehensive IT services from cloud infrastructure to cybersecurity, quantum computing, zero-trust architecture, and enterprise digital transformation",
+    description: "85+ comprehensive IT services from cloud infrastructure to cybersecurity, quantum computing, blockchain, IoT, AR/VR, space technology, edge computing, and enterprise digital transformation",
     icon: Network,
     href: "/it-services",
     count: "85+ Services",
-    pricing: "Starting at $150/hour",
-    marketPrice: "$200-500/hour",
-    benefits: ["99.9% uptime", "50% cost reduction", "24/7 support"]
+    pricing: "Starting at $800/month",
+    marketPrice: "$1,500-15,000/month",
+    benefits: ["99.9% uptime", "50% cost reduction", "24/7 support", "Future-ready infrastructure"],
+    categories: ["Cloud Computing", "Cybersecurity", "DevOps", "Quantum Computing", "Blockchain", "IoT", "AR/VR"]
   },
   {
     title: "Micro SaaS",
-    description: "120+ innovative micro SaaS solutions for modern businesses across all industries with real-time pricing, market analysis, and instant deployment",
+    description: "120+ innovative micro SaaS solutions for modern businesses across all industries including AI-powered tools, quantum security, blockchain analytics, space technology, and autonomous systems with real-time pricing and instant deployment",
     icon: Cloud,
     href: "/micro-saas",
     count: "120+ Platforms",
-    pricing: "Starting at $29/month",
-    marketPrice: "$50-500/month",
-    benefits: ["10x productivity", "Instant setup", "White-label options"]
+    pricing: "Starting at $19/month",
+    marketPrice: "$50-4,999/month",
+    benefits: ["10x productivity", "Instant setup", "White-label options", "Advanced AI integration"],
+    categories: ["AI Marketing", "AI Analytics", "Quantum Security", "Blockchain", "IoT Management", "AR/VR", "Space Tech"]
   }
 ];
 
@@ -197,6 +200,86 @@ export default function HomePage() {
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Innovative Technologies Section */}
+        <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Cutting-Edge Technologies
+              </h2>
+              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+                We leverage the latest technologies to deliver innovative solutions that drive business growth and competitive advantage.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  title: "Quantum Computing",
+                  description: "Quantum algorithms and quantum-resistant security solutions",
+                  icon: Cpu,
+                  color: "from-purple-500 to-indigo-600",
+                  features: ["Quantum algorithms", "Post-quantum cryptography", "Quantum simulation", "Quantum optimization"]
+                },
+                {
+                  title: "Space Technology",
+                  description: "Satellite data analysis and space mission optimization",
+                  icon: Rocket,
+                  color: "from-blue-500 to-cyan-600",
+                  features: ["Satellite analytics", "Mission planning", "Space weather", "Orbital mechanics"]
+                },
+                {
+                  title: "Autonomous Systems",
+                  description: "AI-powered autonomous vehicles and robotic systems",
+                  icon: Car,
+                  color: "from-green-500 to-emerald-600",
+                  features: ["Autonomous vehicles", "Drone fleets", "Robotic automation", "Safety systems"]
+                },
+                {
+                  title: "AR/VR Solutions",
+                  description: "Immersive augmented and virtual reality experiences",
+                  icon: Eye,
+                  color: "from-pink-500 to-rose-600",
+                  features: ["AR applications", "VR experiences", "3D content", "Mixed reality"]
+                }
+              ].map((tech, index) => {
+                const IconComponent = tech.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className={`w-12 h-12 bg-gradient-to-r ${tech.color} rounded-lg flex items-center justify-center mb-4`}>
+                      <IconComponent className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{tech.title}</h3>
+                    <p className="text-gray-600 mb-4 text-sm">{tech.description}</p>
+                    <ul className="space-y-2">
+                      {tech.features.map((feature, idx) => (
+                        <li key={idx} className="text-xs text-gray-500 flex items-center">
+                          <CheckCircle className="w-3 h-3 text-green-500 mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>

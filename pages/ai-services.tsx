@@ -201,198 +201,281 @@ const aiServices = [
       'Improve customer satisfaction by 40%',
       'Lower support costs by 60%'
     ],
-    marketPrice: '$3,000-8,000/month',
+    marketPrice: '$3,000-6,000/month',
     setupTime: '2-3 weeks',
-    targetUsers: 'Customer service, E-commerce, Healthcare, Education'
+    targetUsers: 'E-commerce, Healthcare, Finance, Customer service'
   },
+
+  // Advanced AI Services
   {
     id: 6,
-    title: 'AI Content Generation',
-    description: 'Automated content creation for marketing, documentation, and communication using advanced language models.',
-    icon: FileText,
-    category: 'Content AI',
-    price: 'Starting at $1,500/month',
+    title: 'Quantum AI & Machine Learning',
+    description: 'Quantum-enhanced machine learning solutions for complex optimization problems and advanced computational tasks.',
+    icon: Cpu,
+    category: 'Quantum AI',
+    price: 'Starting at $5,500/month',
     features: [
-      'Blog posts & articles generation',
-      'Social media content creation',
-      'Email marketing automation',
-      'Product descriptions & copywriting',
-      'Technical documentation',
-      'Multilingual content creation',
-      'SEO-optimized content',
-      'Brand voice customization'
+      'Quantum machine learning algorithms',
+      'Quantum optimization solutions',
+      'Quantum neural networks',
+      'Hybrid classical-quantum models',
+      'Quantum data processing',
+      'Advanced pattern recognition',
+      'Quantum simulation capabilities',
+      'Research collaboration'
     ],
     benefits: [
-      'Generate 10x more content',
-      'Reduce content creation time by 85%',
-      'Improve SEO performance by 50%',
-      'Maintain consistent brand voice'
+      'Exponential computational speedup',
+      'Solve previously intractable problems',
+      'Advanced optimization capabilities',
+      'Future-proof AI solutions'
     ],
-    marketPrice: '$2,500-6,000/month',
-    setupTime: '1-2 weeks',
-    targetUsers: 'Marketing agencies, Publishers, E-commerce, Blogs'
+    marketPrice: '$8,000-15,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Research institutions, Financial services, Pharmaceutical companies'
   },
   {
     id: 7,
-    title: 'AI-Powered Process Automation',
-    description: 'Intelligent automation platform that learns and optimizes business processes using advanced AI algorithms.',
-    icon: Settings,
-    category: 'Process Automation',
-    price: 'Starting at $4,000/month',
+    title: 'AI Drug Discovery & Development',
+    description: 'AI-powered drug discovery platform with molecular analysis, compound screening, and clinical trial optimization.',
+    icon: Heart,
+    category: 'AI Healthcare',
+    price: 'Starting at $4,500/month',
     features: [
-      'Process mining & discovery',
-      'Intelligent workflow automation',
-      'Exception handling & resolution',
-      'Performance monitoring & optimization',
-      'Integration with existing systems',
-      'Predictive maintenance',
-      'Resource allocation optimization',
-      'Compliance monitoring'
+      'Molecular structure analysis',
+      'Drug-target interaction prediction',
+      'Compound screening & optimization',
+      'Clinical trial design optimization',
+      'Side effect prediction',
+      'Patent landscape analysis',
+      'Regulatory compliance support',
+      'Collaborative research tools'
     ],
     benefits: [
-      'Reduce process time by 70%',
-      'Eliminate 90% of manual errors',
-      'Improve efficiency by 50%',
-      'Lower operational costs by 40%'
+      'Accelerate drug discovery by 50%',
+      'Reduce development costs by 40%',
+      'Improve success rates by 30%',
+      'Faster time to market'
     ],
-    marketPrice: '$6,000-15,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Manufacturing, Finance, Healthcare, Logistics'
+    marketPrice: '$7,000-20,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Pharmaceutical companies, Biotech firms, Research institutions'
   },
   {
     id: 8,
-    title: 'AI Fraud Detection',
-    description: 'Advanced fraud detection and prevention system using machine learning and behavioral analytics.',
-    icon: Shield,
-    category: 'Security AI',
-    price: 'Starting at $3,000/month',
+    title: 'AI Climate & Environmental Solutions',
+    description: 'AI-powered climate analysis, environmental monitoring, and sustainability optimization solutions.',
+    icon: TreePine,
+    category: 'AI Climate',
+    price: 'Starting at $2,200/month',
     features: [
-      'Real-time fraud detection',
-      'Behavioral pattern analysis',
-      'Risk scoring & assessment',
-      'Anomaly detection algorithms',
-      'Transaction monitoring',
-      'Identity verification',
-      'Adaptive learning models',
-      'Compliance reporting'
+      'Climate data analysis & prediction',
+      'Environmental impact assessment',
+      'Carbon footprint optimization',
+      'Renewable energy optimization',
+      'Weather pattern analysis',
+      'Sustainability reporting',
+      'Environmental risk assessment',
+      'Green technology recommendations'
     ],
     benefits: [
-      'Detect 99.5% of fraudulent transactions',
-      'Reduce false positives by 80%',
-      'Lower fraud losses by 90%',
-      'Improve customer trust'
+      'Improve environmental outcomes by 40%',
+      'Reduce carbon footprint by 35%',
+      'Optimize resource usage',
+      'Meet sustainability goals'
     ],
-    marketPrice: '$5,000-12,000/month',
-    setupTime: '3-5 weeks',
-    targetUsers: 'Banking, E-commerce, Insurance, Fintech'
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Environmental agencies, Energy companies, Manufacturing, Government'
   },
   {
     id: 9,
-    title: 'AI Supply Chain Optimization',
-    description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.',
-    icon: Truck,
-    category: 'Supply Chain AI',
+    title: 'AI Space Technology & Research',
+    description: 'AI solutions for space exploration, satellite data analysis, and astronomical research applications.',
+    icon: Rocket,
+    category: 'AI Space',
     price: 'Starting at $3,500/month',
     features: [
-      'Demand forecasting & planning',
-      'Inventory optimization',
-      'Route optimization & logistics',
-      'Supplier risk assessment',
-      'Quality control automation',
-      'Cost optimization algorithms',
-      'Sustainability tracking',
-      'Real-time monitoring'
+      'Satellite data processing & analysis',
+      'Space mission planning & optimization',
+      'Astronomical data analysis',
+      'Orbital mechanics calculations',
+      'Space weather prediction',
+      'Mission control AI systems',
+      'Research data visualization',
+      'Space communication protocols'
     ],
     benefits: [
-      'Reduce inventory costs by 30%',
-      'Improve forecast accuracy by 60%',
-      'Optimize delivery routes by 25%',
-      'Lower supply chain risks'
+      'Accelerate space research by 60%',
+      'Improve mission success rates',
+      'Optimize space operations',
+      'Enable new discoveries'
     ],
-    marketPrice: '$5,500-14,000/month',
-    setupTime: '4-6 weeks',
-    targetUsers: 'Manufacturing, Retail, Logistics, E-commerce'
+    marketPrice: '$5,500-12,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Space agencies, Research institutions, Satellite companies, Aerospace'
   },
   {
     id: 10,
-    title: 'AI Healthcare Diagnostics',
-    description: 'Medical image analysis, diagnostic assistance, and patient monitoring using advanced AI algorithms.',
-    icon: Heart,
-    category: 'Healthcare AI',
-    price: 'Starting at $5,000/month',
+    title: 'AI Autonomous Systems',
+    description: 'AI solutions for autonomous vehicles, drones, and robotic systems with advanced perception and decision-making.',
+    icon: Car,
+    category: 'AI Autonomous',
+    price: 'Starting at $4,200/month',
     features: [
-      'Medical image analysis (X-ray, MRI, CT)',
-      'Diagnostic assistance & recommendations',
-      'Patient risk assessment',
-      'Drug interaction analysis',
-      'Treatment outcome prediction',
-      'Clinical decision support',
-      'Patient monitoring & alerts',
-      'Research data analysis'
+      'Autonomous vehicle AI systems',
+      'Drone fleet management AI',
+      'Robotic process automation',
+      'Computer vision for autonomy',
+      'Path planning & navigation',
+      'Collision avoidance systems',
+      'Real-time decision making',
+      'Safety & compliance monitoring'
     ],
     benefits: [
-      'Improve diagnostic accuracy by 40%',
-      'Reduce diagnosis time by 60%',
-      'Lower misdiagnosis rates by 70%',
-      'Enhance patient outcomes'
+      'Enable fully autonomous operations',
+      'Improve safety by 95%',
+      'Reduce operational costs by 50%',
+      'Increase efficiency by 70%'
     ],
-    marketPrice: '$8,000-20,000/month',
-    setupTime: '6-10 weeks',
-    targetUsers: 'Hospitals, Clinics, Medical research, Telemedicine'
+    marketPrice: '$6,500-15,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Automotive, Logistics, Agriculture, Manufacturing, Transportation'
   },
   {
     id: 11,
-    title: 'AI Financial Trading',
-    description: 'Algorithmic trading, market analysis, and portfolio optimization using machine learning and quantitative analysis.',
-    icon: TrendingUp,
-    category: 'FinTech AI',
-    price: 'Starting at $4,500/month',
+    title: 'AI Legal & Compliance Solutions',
+    description: 'AI-powered legal research, contract analysis, and compliance monitoring for legal professionals.',
+    icon: BookOpen,
+    category: 'AI Legal',
+    price: 'Starting at $2,800/month',
     features: [
-      'Algorithmic trading strategies',
-      'Market sentiment analysis',
-      'Portfolio optimization',
-      'Risk management algorithms',
-      'Real-time market monitoring',
-      'Backtesting & validation',
-      'Regulatory compliance',
-      'Performance analytics'
+      'Legal document analysis',
+      'Contract review & extraction',
+      'Case law research & analysis',
+      'Compliance monitoring',
+      'Risk assessment & mitigation',
+      'Legal precedent identification',
+      'Document automation',
+      'Regulatory change tracking'
     ],
     benefits: [
-      'Improve trading returns by 25%',
-      'Reduce risk exposure by 40%',
-      'Automate 95% of trading decisions',
-      'Lower transaction costs by 30%'
+      'Reduce legal research time by 80%',
+      'Improve accuracy by 90%',
+      'Lower legal costs by 60%',
+      'Ensure compliance automatically'
     ],
-    marketPrice: '$7,000-18,000/month',
+    marketPrice: '$4,500-9,000/month',
     setupTime: '4-8 weeks',
-    targetUsers: 'Investment firms, Hedge funds, Banks, Trading platforms'
+    targetUsers: 'Law firms, Corporate legal, Government, Compliance teams'
   },
   {
     id: 12,
-    title: 'AI Voice & Speech Processing',
-    description: 'Advanced voice recognition, speech synthesis, and audio analysis for various applications.',
-    icon: Mic,
-    category: 'Voice AI',
-    price: 'Starting at $2,000/month',
+    title: 'AI Financial Services & Trading',
+    description: 'AI solutions for financial analysis, algorithmic trading, risk management, and fraud detection.',
+    icon: DollarSign,
+    category: 'AI Finance',
+    price: 'Starting at $3,200/month',
     features: [
-      'Speech-to-text conversion',
-      'Text-to-speech synthesis',
-      'Voice biometrics & authentication',
-      'Audio sentiment analysis',
-      'Multi-language support',
-      'Noise cancellation & enhancement',
-      'Voice cloning & customization',
-      'Real-time processing'
+      'Algorithmic trading systems',
+      'Risk assessment & management',
+      'Fraud detection & prevention',
+      'Credit scoring & underwriting',
+      'Portfolio optimization',
+      'Market analysis & prediction',
+      'Regulatory compliance',
+      'Real-time monitoring'
     ],
     benefits: [
-      'Achieve 99%+ speech recognition accuracy',
-      'Support 50+ languages',
-      'Reduce transcription costs by 80%',
-      'Enable hands-free operations'
+      'Improve trading performance by 40%',
+      'Reduce fraud losses by 85%',
+      'Optimize portfolio returns',
+      'Ensure regulatory compliance'
     ],
-    marketPrice: '$3,500-8,000/month',
-    setupTime: '2-4 weeks',
-    targetUsers: 'Call centers, Healthcare, Education, Accessibility'
+    marketPrice: '$5,000-12,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Banks, Investment firms, Insurance companies, Fintech'
+  },
+  {
+    id: 13,
+    title: 'AI Agriculture & Food Tech',
+    description: 'AI solutions for precision agriculture, crop monitoring, and food production optimization.',
+    icon: Sprout,
+    category: 'AI Agriculture',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Crop monitoring & analysis',
+      'Yield prediction & optimization',
+      'Pest & disease detection',
+      'Soil analysis & recommendations',
+      'Weather prediction & planning',
+      'Automated farming systems',
+      'Supply chain optimization',
+      'Quality control & grading'
+    ],
+    benefits: [
+      'Increase crop yields by 30%',
+      'Reduce water usage by 40%',
+      'Lower pesticide use by 50%',
+      'Improve food quality'
+    ],
+    marketPrice: '$4,000-8,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Farmers, Agribusiness, Food companies, Research institutions'
+  },
+  {
+    id: 14,
+    title: 'AI Energy & Utilities',
+    description: 'AI solutions for energy management, grid optimization, and renewable energy integration.',
+    icon: Zap,
+    category: 'AI Energy',
+    price: 'Starting at $2,800/month',
+    features: [
+      'Smart grid optimization',
+      'Energy consumption analysis',
+      'Renewable energy forecasting',
+      'Demand response management',
+      'Predictive maintenance',
+      'Energy trading optimization',
+      'Carbon footprint tracking',
+      'Sustainability reporting'
+    ],
+    benefits: [
+      'Reduce energy costs by 25%',
+      'Improve grid efficiency by 35%',
+      'Optimize renewable integration',
+      'Meet sustainability goals'
+    ],
+    marketPrice: '$4,500-9,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Utility companies, Energy providers, Manufacturing, Government'
+  },
+  {
+    id: 15,
+    title: 'AI Education & Learning',
+    description: 'AI-powered educational platforms with personalized learning, adaptive content, and intelligent tutoring.',
+    icon: GraduationCap,
+    category: 'AI Education',
+    price: 'Starting at $1,800/month',
+    features: [
+      'Personalized learning paths',
+      'Adaptive content delivery',
+      'Intelligent tutoring systems',
+      'Learning analytics & insights',
+      'Automated assessment & grading',
+      'Multi-language support',
+      'Accessibility features',
+      'Progress tracking & reporting'
+    ],
+    benefits: [
+      'Improve learning outcomes by 50%',
+      'Personalize education for each student',
+      'Reduce teaching workload by 40%',
+      'Enable scalable education'
+    ],
+    marketPrice: '$3,000-6,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Schools, Universities, Online education, Corporate training'
   }
 ];
 
