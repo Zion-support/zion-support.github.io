@@ -1,103 +1,71 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
-const PricingPage: React.FC = () => {
+export default function Pricing() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
         <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Transparent, flexible pricing for AI, IT, and Micro SaaS services." />
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
       </Head>
-      <section className="bg-white">
-        <div className="container mx-auto px-4 py-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
-          <p className="text-gray-600 mb-10 max-w-3xl">
-            We tailor solutions to your needs. Below are typical starting ranges observed in the market. Get a custom quote at any time.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">AI Development</h3>
-              <p className="text-gray-600 mb-4">Model prototyping, fine-tuning, RAG, and integrations.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>POC: $5,000–$15,000</li>
-                <li>MVP: $20,000–$60,000</li>
-                <li>Enterprise: $75,000+</li>
-              </ul>
-            </div>
-            
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Micro SaaS</h3>
-              <p className="text-gray-600 mb-4">Idea validation, build, payments, analytics, hosting.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Starter: $8,000–$25,000</li>
-                <li>Growth: $30,000–$80,000</li>
-                <li>Scale: $100,000+</li>
-              </ul>
-            </div>
-            
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Cloud & DevOps</h3>
-              <p className="text-gray-600 mb-4">AWS/GCP/Azure architecture, IaC, observability.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Audit & Setup: $3,000–$12,000</li>
-                <li>Migration: $10,000–$40,000</li>
-                <li>Managed: from $2,000/mo</li>
-              </ul>
-            </div>
-            
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Cybersecurity</h3>
-              <p className="text-gray-600 mb-4">Pen-testing, hardening, SOC, compliance.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Security Audit: $4,000–$15,000</li>
-                <li>Remediation: $8,000–$50,000</li>
-                <li>Managed SOC: from $3,000/mo</li>
-              </ul>
-            </div>
-            
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Data & Analytics</h3>
-              <p className="text-gray-600 mb-4">Warehouses, pipelines, BI, ML ops.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Strategy & Setup: $5,000–$20,000</li>
-                <li>Dashboards: $6,000–$25,000</li>
-                <li>ML Ops: $25,000+</li>
-              </ul>
-            </div>
-            
-            <div className="border rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Web & Mobile</h3>
-              <p className="text-gray-600 mb-4">React/Next.js, React Native, APIs.</p>
-              <ul className="text-gray-700 space-y-2 mb-4 list-disc list-inside">
-                <li>Website: $3,000–$15,000</li>
-                <li>MVP App: $20,000–$70,000</li>
-                <li>Enterprise: $80,000+</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="text-center mt-12">
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Pricing
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
               >
-                Get Custom Quote
+                Get Started Today
               </Link>
               <Link 
                 href="/services" 
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
               >
-                View All Services
+                Explore Services
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
-    </>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
-};
-
-export default PricingPage;
+}

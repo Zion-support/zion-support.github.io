@@ -1,127 +1,222 @@
 import React from 'react';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { FileText, Scale, Shield, AlertTriangle } from 'lucide-react';
 import Layout from '../components/Layout';
 
 export default function TermsPage() {
   return (
     <Layout
       title="Terms of Service - Zion Tech Group"
-      description="Terms of Service for Zion Tech Group. Please read these terms carefully before using our services."
+      description="Read our terms of service to understand the rules and guidelines for using Zion Tech Group's services."
+      keywords="terms of service, terms and conditions, user agreement, service terms"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="py-20">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Terms of Service
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Please read these terms carefully before using our services.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
+      {/* Content */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div 
+              className="bg-white rounded-lg shadow-lg p-8"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Acceptance of Terms
+              </h2>
+              
+              <p className="text-gray-600 mb-6">
+                These Terms of Service ("Terms") govern your use of Zion Tech Group's services, including our website, 
+                applications, and any related services (collectively, the "Services"). By accessing or using our Services, 
+                you agree to be bound by these Terms.
+              </p>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Description of Services
+              </h2>
+              
+              <p className="text-gray-600 mb-6">
+                Zion Tech Group provides technology consulting, AI solutions, cloud services, and software development 
+                services to businesses and organizations.
+              </p>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                User Responsibilities
+              </h2>
+              
+              <p className="text-gray-600 mb-6">
+                You are responsible for maintaining the confidentiality of your account information and for all activities 
+                that occur under your account.
+              </p>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Intellectual Property
+              </h2>
+              
+              <p className="text-gray-600 mb-6">
+                All content, trademarks, and other intellectual property rights in our Services are owned by Zion Tech Group 
+                or our licensors.
+              </p>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Limitation of Liability
+              </h2>
+              
+              <p className="text-gray-600 mb-6">
+                To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, incidental, 
+                special, consequential, or punitive damages.
+              </p>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Contact Information
+              </h2>
+              
+              <p className="text-gray-600 mb-6">
+                If you have any questions about these Terms, please contact us at:
+              </p>
+              
+              <div className="bg-blue-50 rounded-lg p-6">
+                <p className="text-gray-800">
+                  <strong>Email:</strong> kleber@ziontechgroup.com<br />
+                  <strong>Phone:</strong> +1 302 464 0950<br />
+                  <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709
+                </p>
+              </div>
+            </motion.div>
+=======
+        {/* Content Section */}
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
-                
-                <div className="mb-8">
-                  <p className="text-gray-600 mb-4">
-                    Last updated: December 15, 2024
-                  </p>
-                  <p className="text-gray-600">
-                    These Terms of Service ("Terms") govern your use of our website and services provided by Zion Tech Group ("we," "our," or "us"). By accessing or using our services, you agree to be bound by these Terms.
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="prose prose-lg max-w-none"
+              >
+                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
+                  <p className="text-yellow-800">
+                    <strong>Last updated:</strong> January 1, 2024
                   </p>
                 </div>
 
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Acceptance of Terms
-                </h2>
-                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Acceptance of Terms</h2>
                 <p className="text-gray-600 mb-6">
-                  By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                  By accessing and using Zion Tech Group's services, you accept and agree to be bound by 
+                  the terms and provision of this agreement.
                 </p>
 
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Use License
-                </h2>
-                
-                <p className="text-gray-600 mb-4">
-                  Permission is granted to temporarily download one copy of the materials on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
-                </p>
-                
-                <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                  <li>modify or copy the materials</li>
-                  <li>use the materials for any commercial purpose or for any public display</li>
-                  <li>attempt to reverse engineer any software contained on the website</li>
-                  <li>remove any copyright or other proprietary notations from the materials</li>
-                </ul>
-
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Service Availability
-                </h2>
-                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Description of Service</h2>
                 <p className="text-gray-600 mb-6">
-                  We strive to maintain high availability of our services, but we do not guarantee uninterrupted access. We reserve the right to modify, suspend, or discontinue any part of our services at any time without notice.
+                  Zion Tech Group provides technology solutions including AI services, IT services, 
+                  cloud infrastructure, and micro SaaS applications.
                 </p>
 
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  User Responsibilities
-                </h2>
-                
-                <p className="text-gray-600 mb-4">
-                  When using our services, you agree to:
-                </p>
-                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">User Responsibilities</h2>
                 <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                   <li>Provide accurate and complete information</li>
                   <li>Maintain the security of your account credentials</li>
                   <li>Use our services in compliance with applicable laws</li>
-                  <li>Not engage in any activity that could harm our systems or other users</li>
+                  <li>Respect the intellectual property rights of others</li>
                 </ul>
 
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Intellectual Property
-                </h2>
-                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Prohibited Uses</h2>
+                <p className="text-gray-600 mb-4">You may not use our services:</p>
+                <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
+                  <li>For any unlawful purpose or to solicit others to perform unlawful acts</li>
+                  <li>To violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances</li>
+                  <li>To infringe upon or violate our intellectual property rights or the intellectual property rights of others</li>
+                  <li>To harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Intellectual Property Rights</h2>
                 <p className="text-gray-600 mb-6">
-                  The content, organization, graphics, design, compilation, magnetic translation, digital conversion, and other matters related to the website are protected under applicable copyrights, trademarks, and other proprietary rights. The copying, redistribution, use, or publication by you of any such matters or any part of the website is strictly prohibited.
+                  The service and its original content, features, and functionality are and will remain 
+                  the exclusive property of Zion Tech Group and its licensors.
                 </p>
 
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Limitation of Liability
-                </h2>
-                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Termination</h2>
                 <p className="text-gray-600 mb-6">
-                  In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
+                  We may terminate or suspend your account and bar access to the service immediately, 
+                  without prior notice or liability, under our sole discretion, for any reason whatsoever.
                 </p>
 
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Privacy Policy
-                </h2>
-                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Disclaimer</h2>
                 <p className="text-gray-600 mb-6">
-                  Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the website, to understand our practices.
+                  The information on this service is provided on an "as is" basis. To the fullest extent 
+                  permitted by law, this Company excludes all representations, warranties, conditions 
+                  and terms relating to our service.
                 </p>
 
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Changes to Terms
-                </h2>
-                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Limitation of Liability</h2>
                 <p className="text-gray-600 mb-6">
-                  Zion Tech Group may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.
+                  In no event shall Zion Tech Group, nor its directors, employees, partners, agents, 
+                  suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, 
+                  or punitive damages.
                 </p>
 
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Contact Information
-                </h2>
-                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Governing Law</h2>
                 <p className="text-gray-600 mb-6">
-                  If you have any questions about these Terms of Service, please contact us at:
+                  These Terms shall be interpreted and governed by the laws of the State of Delaware, 
+                  without regard to its conflict of law provisions.
                 </p>
-                
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to Terms</h2>
+                <p className="text-gray-600 mb-6">
+                  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. 
+                  If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.
+                </p>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
+                <p className="text-gray-600 mb-6">
+                  If you have any questions about these Terms of Service, please contact us:
+                </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-gray-700">
-                    <strong>Zion Tech Group</strong><br />
-                    Email: kleber@ziontechgroup.com<br />
-                    Phone: +1 302 464 0950<br />
-                    Address: 364 E Main St STE 1008, Middletown DE 19709
+                    <strong>Email:</strong> legal@ziontechgroup.com<br />
+                    <strong>Phone:</strong> +1 302 464 0950<br />
+                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709
                   </p>
                 </div>
-              </div>
+
+                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-8">
+                  <p className="text-yellow-800">
+                    <strong>Note:</strong> These Terms of Service are effective as of the date listed above and will 
+                    remain in effect until modified or terminated in accordance with the provisions herein.
+                  </p>
+                </div>
+              </motion.div>
             </div>
+>>>>>>> main
           </div>
-        </div>
+        </section>
       </div>
     </Layout>
   );

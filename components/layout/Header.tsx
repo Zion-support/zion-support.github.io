@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
-  Mail, 
+import {
+  Menu,
+  X,
+  Home,
+  Users,
+  Briefcase,
+  Phone,
+  Mail,
   ChevronDown,
   Brain,
   Shield,
@@ -29,20 +29,15 @@ import {
 } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
-
-
 const "Header": React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const navigationItems = [{ name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
@@ -50,7 +45,6 @@ const "Header": React.FC = () => {
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
-
   return (
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between>
@@ -65,7 +59,5 @@ const "Header": React.FC = () => {
       </div>
     </header>
   );
-
 }
-
 export default Header;

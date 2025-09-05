@@ -1,1 +1,14 @@
-import React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent'; function ProjectMilestones() {} return null} return (<ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables"/> <ProjectMilestonesContent /> ></div> </ProtectedRoute>)} export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export default ProjectMilestones; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones }; export { ProjectMilestones };
+import React from 'react';
+
+interface ProjectMilestonesProps {
+  // Add props here as needed
+}
+
+export default function ProjectMilestones({ }: ProjectMilestonesProps) {
+  return (
+    <div>
+      <h1>ProjectMilestones</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

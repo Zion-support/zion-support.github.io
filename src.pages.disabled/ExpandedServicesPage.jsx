@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/ExpandedServicesPage.jsx import React from 'react'; export default function ExpandedServicesPage () { const [searchQuery,setSearchQuery] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [filteredServices,setFilteredServices] = useState (EXPANDED_SERVICES) ; const [sortBy,setSortBy] = useState ("rating") ; useEffect ( () => { let filtered = EXPANDED_SERVICES; import React from 'react'; export default function ExpandedServicesPage () { const [searchQuery,setSearchQuery] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [filteredServices,setFilteredServices] = useState (EXPANDED_SERVICES) ; const [sortBy,setSortBy] = useState ("rating") ; useEffect ( () => { let filtered = EXPANDED_SERVICES;"";
+import React from 'react';
+
+interface ExpandedServicesPageProps {
+  // Add props here as needed
+}
+
+export default function ExpandedServicesPage({ }: ExpandedServicesPageProps) {
+  return (
+    <div>
+      <h1>ExpandedServicesPage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

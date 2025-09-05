@@ -16,7 +16,7 @@ import {
   Smartphone,
   Brain
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from "../../components/Layout";
 
 const phases = [
   {
@@ -137,7 +137,7 @@ const benefits = [
 
 export default function CloudMigrationPage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Cloud Migration Solutions - Zion Tech Group"
       description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services."
       keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration"
@@ -348,6 +348,6 @@ export default function CloudMigrationPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

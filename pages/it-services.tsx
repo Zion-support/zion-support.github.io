@@ -2,23 +2,23 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Server, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Network, 
-  Monitor, 
-  Settings, 
-  CheckCircle, 
-  ArrowRight, 
-  Clock, 
-  Award, 
-  Star, 
-  Zap, 
-  TrendingUp, 
-  Users, 
-  Lock, 
+import {
+  Server,
+  Shield,
+  Cloud,
+  Database,
+  Network,
+  Monitor,
+  Settings,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Award,
+  Star,
+  Zap,
+  TrendingUp,
+  Users,
+  Lock,
   Globe,
   Cpu,
   HardDrive,
@@ -33,11 +33,12 @@ import {
   BookOpen,
   Brain,
   DollarSign,
-  Rocket
+  Rocket,
+  Sprout,
+  Eye,
+  Bot
 } from 'lucide-react';
-
-const itServices = [
-  {
+const itServices = [{
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
     icon: Cloud,
@@ -194,166 +195,6 @@ const itServices = [
   },
   {
     title: 'IT Governance & Strategy',
-    description: 'Strategic IT governance and technology roadmap development.',
-    icon: Building,
-    features: ['IT Strategy Development', 'Governance Framework', 'Technology Roadmap', 'Risk Management'],
-    pricing: '$10,000 - $50,000/project',
-    category: 'Governance'
-  },
-  {
-    title: 'Edge Computing Solutions',
-    description: 'Edge computing infrastructure and deployment for low-latency applications.',
-    icon: Cpu,
-    features: ['Edge Infrastructure', 'Latency Optimization', 'Distributed Computing', 'IoT Integration'],
-    pricing: '$15,000 - $75,000/project',
-    category: 'Edge Computing'
-  },
-  {
-    title: '5G Network Implementation',
-    description: '5G network design, implementation, and optimization services.',
-    icon: Wifi,
-    features: ['5G Planning', 'Network Optimization', 'Performance Testing', 'Coverage Analysis'],
-    pricing: '$25,000 - $150,000/project',
-    category: '5G Networks'
-  },
-  {
-    title: 'AI Infrastructure Setup',
-    description: 'AI and machine learning infrastructure deployment and optimization.',
-    icon: Brain,
-    features: ['GPU Clusters', 'ML Pipeline Setup', 'Model Deployment', 'Performance Optimization'],
-    pricing: '$20,000 - $100,000/project',
-    category: 'AI Infrastructure'
-  },
-  {
-    title: 'Blockchain Infrastructure',
-    description: 'Blockchain network setup, deployment, and management services.',
-    icon: Network,
-    features: ['Blockchain Deployment', 'Smart Contract Development', 'Node Management', 'Security Hardening'],
-    pricing: '$30,000 - $200,000/project',
-    category: 'Blockchain'
-  },
-  {
-    title: 'Quantum Computing Integration',
-    description: 'Quantum computing infrastructure and hybrid classical-quantum systems.',
-    icon: Cpu,
-    features: ['Quantum Hardware Setup', 'Hybrid Systems', 'Algorithm Optimization', 'Security Implementation'],
-    pricing: '$100,000 - $500,000/project',
-    category: 'Quantum Computing'
-  },
-  {
-    title: 'IoT Platform Development',
-    description: 'Internet of Things platform development and device management.',
-    icon: Smartphone,
-    features: ['IoT Architecture', 'Device Management', 'Data Processing', 'Security Implementation'],
-    pricing: '$25,000 - $125,000/project',
-    category: 'IoT'
-  },
-  {
-    title: 'Hybrid Cloud Solutions',
-    description: 'Hybrid cloud architecture design and implementation services.',
-    icon: Cloud,
-    features: ['Hybrid Architecture', 'Data Synchronization', 'Security Integration', 'Cost Optimization'],
-    pricing: '$20,000 - $100,000/project',
-    category: 'Hybrid Cloud'
-  },
-  {
-    title: 'IT Compliance & Regulatory',
-    description: 'IT compliance management for various industry regulations and standards.',
-    icon: Shield,
-    features: ['Compliance Assessment', 'Regulatory Alignment', 'Audit Preparation', 'Documentation'],
-    pricing: '$10,000 - $50,000/project',
-    category: 'Compliance'
-  },
-  {
-    title: 'Digital Transformation Services',
-    description: 'Complete digital transformation strategy and implementation services.',
-    icon: Rocket,
-    features: ['Digital Strategy', 'Process Automation', 'Technology Integration', 'Change Management'],
-    pricing: '$50,000 - $300,000/project',
-    category: 'Digital Transformation'
-  },
-  {
-    title: 'IT Cost Optimization',
-    description: 'IT cost analysis and optimization strategies for maximum ROI.',
-    icon: DollarSign,
-    features: ['Cost Analysis', 'Optimization Strategies', 'Vendor Negotiation', 'ROI Tracking'],
-    pricing: '$5,000 - $25,000/project',
-    category: 'Cost Optimization'
-  },
-  {
-    title: 'IT Performance Monitoring',
-    description: 'Advanced IT performance monitoring and optimization services.',
-    icon: Monitor,
-    features: ['Performance Monitoring', 'Capacity Planning', 'Optimization', 'Alerting Systems'],
-    pricing: '$3,000 - $15,000/setup',
-    category: 'Performance Monitoring'
-  },
-  {
-    title: 'IT Security Operations Center',
-    description: '24/7 security operations center and threat monitoring services.',
-    icon: Shield,
-    features: ['24/7 Monitoring', 'Threat Detection', 'Incident Response', 'Security Analytics'],
-    pricing: '$10,000 - $50,000/month',
-    category: 'SOC Services'
-  },
-  {
-    title: 'IT Business Continuity',
-    description: 'Business continuity planning and disaster recovery services.',
-    icon: Shield,
-    features: ['BCP Development', 'Disaster Recovery', 'Testing & Validation', 'Crisis Management'],
-    pricing: '$15,000 - $75,000/project',
-    category: 'Business Continuity'
-  },
-  {
-    title: 'IT Innovation Lab',
-    description: 'IT innovation lab setup and emerging technology exploration.',
-    icon: Rocket,
-    features: ['Lab Setup', 'Technology Research', 'Proof of Concepts', 'Innovation Strategy'],
-    pricing: '$25,000 - $125,000/project',
-    category: 'Innovation'
-  },
-  {
-    title: 'IT Managed Services',
-    description: 'Comprehensive IT managed services for complete infrastructure management.',
-    icon: Settings,
-    features: ['Infrastructure Management', 'Proactive Monitoring', 'Maintenance', 'Support'],
-    pricing: '$5,000 - $25,000/month',
-    category: 'Managed Services'
-  },
-  {
-    title: 'IT Vendor Consolidation',
-    description: 'IT vendor consolidation and relationship optimization services.',
-    icon: Users,
-    features: ['Vendor Analysis', 'Consolidation Strategy', 'Contract Optimization', 'Relationship Management'],
-    pricing: '$10,000 - $50,000/project',
-    category: 'Vendor Management'
-  },
-  {
-    title: 'IT Capacity Planning',
-    description: 'IT capacity planning and resource optimization services.',
-    icon: BarChart3,
-    features: ['Capacity Analysis', 'Growth Planning', 'Resource Optimization', 'Cost Projection'],
-    pricing: '$8,000 - $40,000/project',
-    category: 'Capacity Planning'
-  },
-  {
-    title: 'IT Risk Management',
-    description: 'Comprehensive IT risk assessment and management services.',
-    icon: Shield,
-    features: ['Risk Assessment', 'Mitigation Strategies', 'Risk Monitoring', 'Compliance'],
-    pricing: '$10,000 - $50,000/project',
-    category: 'Risk Management'
-  },
-  {
-    title: 'IT Service Management',
-    description: 'ITIL-based service management implementation and optimization.',
-    icon: Settings,
-    features: ['ITIL Implementation', 'Service Catalog', 'Incident Management', 'Change Management'],
-    pricing: '$15,000 - $75,000/project',
-    category: 'Service Management'
-  },
-  {
-    title: 'IT Governance & Strategy',
     description: 'IT governance framework development and strategic technology planning.',
     icon: Building,
     features: ['Governance Framework', 'Strategic Planning', 'Policy Development', 'Risk Management'],
@@ -367,19 +208,427 @@ const itServices = [
     features: ['Compliance Assessment', 'Regulatory Reporting', 'Policy Development', 'Audit Support'],
     pricing: '$8,000 - $40,000/project',
     category: 'Compliance'
+  },
+  {
+title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations using AI and machine learning for predictive maintenance and automation.',
+    icon: Cpu,
+    features: ['Predictive Analytics', 'Automated Incident Response', 'Anomaly Detection', 'Self-healing Systems'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model with continuous verification and micro-segmentation.',
+    icon: Lock,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Least Privilege Access'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Zero Trust',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Network,
+    features: ['Edge Nodes Deployment', 'Latency Optimization', 'IoT Integration', 'Distributed Processing'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Cryptography Implementation',
+    description: 'Migration to quantum-resistant cryptographic algorithms and security protocols.',
+    icon: Shield,
+    features: ['Algorithm Migration', 'Key Management', 'Compliance Testing', 'Future-proofing'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: '5G Network Infrastructure',
+    description: '5G network design, implementation, and optimization for enterprise applications.',
+    icon: Wifi,
+    features: ['5G Core Design', 'Network Slicing', 'Edge Integration', 'Performance Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: '5G Networks',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain solutions including private networks, smart contracts, and DApps.',
+    icon: Server,
+    features: ['Private Blockchain Networks', 'Smart Contract Development', 'Node Management', 'Consensus Mechanisms'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'IoT Security & Management Platform',
+    description: 'Comprehensive IoT security and device management for connected environments.',
+    icon: Smartphone,
+    features: ['Device Authentication', 'Firmware Updates', 'Threat Detection', 'Compliance Monitoring'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'IoT Security',
+    popular: true
+  },
+  {
+    title: 'Hybrid Cloud Orchestration',
+    description: 'Seamless orchestration and management across multiple cloud and on-premises environments.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Workload Migration', 'Cost Optimization', 'Unified Monitoring'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Hybrid Cloud',
+    popular: true
+  },
+  {
+    title: 'AI Model Infrastructure & MLOps',
+    description: 'Complete infrastructure for AI model deployment, monitoring, and lifecycle management.',
+    icon: Brain,
+    features: ['Model Deployment', 'A/B Testing', 'Performance Monitoring', 'Auto-scaling'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'MLOps',
+    popular: true
+  },
+  {
+    title: 'Green IT & Sustainability Solutions',
+    description: 'Sustainable IT practices including energy optimization and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Monitoring', 'Carbon Tracking', 'Efficient Cooling', 'Renewable Energy Integration'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Green IT',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin technology implementation for physical assets and processes.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Integration APIs'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'AR/VR Infrastructure & Development',
+    description: 'Augmented and virtual reality infrastructure setup and application development.',
+    icon: Eye,
+    features: ['VR/AR Hardware Setup', 'Content Development', 'Spatial Computing', 'User Experience Design'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'AR/VR',
+    popular: true
+  },
+  {
+    title: 'Robotic Process Automation (RPA)',
+    description: 'Implementation of RPA solutions for business process automation and optimization.',
+    icon: Bot,
+    features: ['Process Analysis', 'Bot Development', 'Workflow Automation', 'Performance Monitoring'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'RPA',
+    popular: true
+  },
+  {
+    title: 'Data Mesh Architecture Implementation',
+    description: 'Modern data architecture using data mesh principles for decentralized data management.',
+    icon: Database,
+    features: ['Domain-driven Design', 'Data Product Development', 'Federated Governance', 'Self-service Analytics'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Data Architecture',
+    popular: true
+  },
+  {
+    title: 'Serverless Architecture Design',
+    description: 'Serverless computing solutions for scalable and cost-effective application deployment.',
+    icon: Cloud,
+    features: ['Function-as-a-Service', 'Event-driven Architecture', 'Auto-scaling', 'Cost Optimization'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Serverless',
+    popular: true
+  },
+  {
+    title: 'API Gateway & Management Platform',
+    description: 'Comprehensive API management including security, monitoring, and developer portal.',
+    icon: Network,
+<<<<<<< HEAD
+    features: ['API Development', 'System Integration', 'Data Synchronization', 'Workflow Automation'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Integration'
+  },
+  {
+    title: 'AI-Powered IT Operations',
+    description: 'Intelligent IT operations with AI-driven automation and predictive maintenance.',
+    icon: Brain,
+    features: ['Predictive Maintenance', 'Automated Incident Response', 'Performance Optimization', 'Anomaly Detection'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Comprehensive zero trust security implementation for modern enterprises.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Security Architecture'
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Cpu,
+    features: ['Edge Node Deployment', 'Latency Optimization', 'IoT Integration', 'Real-time Processing'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Post-quantum cryptography implementation for future-proof security.',
+    icon: Lock,
+    features: ['Quantum-resistant Algorithms', 'Migration Planning', 'Compliance Testing', 'Performance Optimization'],
+    pricing: '$75,000 - $300,000/project',
+    category: 'Quantum Security'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization for enterprise use.',
+    icon: Network,
+    features: ['5G Infrastructure', 'Network Slicing', 'Performance Optimization', 'IoT Integration'],
+    pricing: '$100,000 - $500,000/project',
+    category: '5G Technology'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+    icon: Shield,
+    features: ['Blockchain Development', 'Smart Contracts', 'DApp Development', 'Consensus Mechanisms'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Blockchain'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform development with device management and analytics.',
+    icon: Settings,
+    features: ['Device Management', 'Data Analytics', 'Real-time Monitoring', 'Security Framework'],
+    pricing: '$35,000 - $175,000/project',
+    category: 'IoT Development'
+  },
+  {
+    title: 'AR/VR Infrastructure',
+    description: 'Augmented and virtual reality infrastructure for enterprise applications.',
+    icon: Monitor,
+    features: ['AR/VR Development', '3D Content Creation', 'Spatial Computing', 'User Experience Design'],
+    pricing: '$60,000 - $300,000/project',
+    category: 'AR/VR'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT solutions with energy efficiency and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Tracking', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Sustainability'
+  },
+  {
+    title: 'IT Compliance Automation',
+    description: 'Automated compliance management for GDPR, HIPAA, SOX, and other regulations.',
+    icon: CheckCircle,
+    features: ['Compliance Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Preparation'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Compliance'
+  },
+  {
+    title: 'Hybrid Cloud Management',
+    description: 'Unified management of hybrid cloud environments across multiple providers.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Cost Optimization', 'Security Orchestration', 'Workload Migration'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Cloud Management'
+  },
+  {
+    title: 'IT Service Mesh',
+    description: 'Service mesh implementation for microservices communication and security.',
+    icon: Network,
+    features: ['Service Discovery', 'Load Balancing', 'Security Policies', 'Observability'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Service Mesh'
+  },
+  {
+    title: 'IT Disaster Recovery as a Service',
+    description: 'Comprehensive disaster recovery solutions with automated failover and testing.',
+    icon: Shield,
+    features: ['Automated Failover', 'Regular Testing', 'RTO/RPO Optimization', 'Multi-site Replication'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'DRaaS'
+  },
+  {
+    title: 'IT Performance Engineering',
+    description: 'Performance optimization and engineering for high-traffic applications.',
+    icon: TrendingUp,
+    features: ['Performance Testing', 'Load Optimization', 'Scalability Planning', 'Bottleneck Analysis'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Performance Engineering'
+=======
+    features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Developer Portal'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'API Management',
+    popular: true
+  },
+  {
+    title: 'Microservices Architecture Migration',
+    description: 'Migration from monolithic to microservices architecture with container orchestration.',
+    icon: Server,
+    features: ['Service Decomposition', 'Container Orchestration', 'Service Mesh', 'Monitoring Setup'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Microservices',
+    popular: true
+  },
+  {
+    title: 'IT Service Management (ITSM) Platform',
+    description: 'Comprehensive ITSM solution with ITIL best practices and automation.',
+    icon: Settings,
+    features: ['Incident Management', 'Change Management', 'Service Catalog', 'Knowledge Management'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'ITSM',
+    popular: true
+  },
+  {
+    title: 'Cyber Threat Intelligence Platform',
+    description: 'Advanced threat intelligence and security information management system.',
+    icon: Shield,
+    features: ['Threat Detection', 'Intelligence Feeds', 'Incident Response', 'Threat Hunting'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'Threat Intelligence',
+    popular: true
+  },
+  {
+    title: 'Advanced Cloud Migration Services',
+    description: 'Comprehensive cloud migration strategy and execution for enterprise applications.',
+    icon: Cloud,
+    features: ['Migration Planning', 'Application Modernization', 'Data Migration', 'Performance Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Cloud Migration',
+    popular: true
+  },
+  {
+    title: 'Enterprise API Management Platform',
+    description: 'Complete API lifecycle management with security, monitoring, and developer portal.',
+    icon: Code,
+    features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Analytics Dashboard'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'API Management'
+  },
+  {
+    title: 'Advanced Database Performance Tuning',
+    description: 'Expert database optimization and performance tuning for high-traffic applications.',
+    icon: Database,
+    features: ['Query Optimization', 'Index Tuning', 'Performance Monitoring', 'Capacity Planning'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Database Optimization'
+  },
+  {
+    title: 'Enterprise Backup & Disaster Recovery',
+    description: 'Comprehensive backup and disaster recovery solutions with automated failover.',
+    icon: Shield,
+    features: ['Automated Backups', 'Disaster Recovery Testing', 'RTO/RPO Optimization', 'Compliance'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'Backup & Recovery'
+  },
+  {
+    title: 'Advanced Network Security Implementation',
+    description: 'Next-generation network security with zero-trust architecture and micro-segmentation.',
+    icon: Lock,
+    features: ['Zero Trust Architecture', 'Micro-segmentation', 'Advanced Threat Protection', 'Network Monitoring'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Network Security'
+  },
+  {
+    title: 'Enterprise Mobile Device Management',
+    description: 'Comprehensive mobile device management with advanced security and compliance.',
+    icon: Smartphone,
+    features: ['Device Enrollment', 'Policy Management', 'App Distribution', 'Security Controls'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Mobile Management'
+  },
+  {
+    title: 'Advanced IT Infrastructure Monitoring',
+    description: 'Comprehensive infrastructure monitoring with predictive analytics and alerting.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Predictive Analytics', 'Automated Alerting', 'Performance Optimization'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Infrastructure Monitoring'
+  },
+  {
+    title: 'Enterprise Identity & Access Management',
+    description: 'Advanced IAM solutions with single sign-on and multi-factor authentication.',
+    icon: Users,
+    features: ['Single Sign-On', 'Multi-Factor Authentication', 'Role-Based Access', 'Audit Logging'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'Identity Management'
+  },
+  {
+    title: 'Advanced IT Consulting & Strategy',
+    description: 'Strategic IT consulting with technology roadmap and digital transformation planning.',
+    icon: Building,
+    features: ['Technology Assessment', 'Strategic Planning', 'Digital Transformation', 'Vendor Selection'],
+    pricing: '$200 - $500/hour',
+    category: 'IT Consulting'
+  },
+  {
+    title: 'Enterprise Software Development',
+    description: 'Custom enterprise software development with modern technologies and best practices.',
+    icon: Code,
+    features: ['Custom Development', 'Legacy Modernization', 'API Development', 'Quality Assurance'],
+    pricing: '$150 - $400/hour',
+    category: 'Software Development'
+  },
+  {
+    title: 'Advanced IT Project Management',
+    description: 'Professional IT project management with agile methodologies and risk management.',
+    icon: BarChart3,
+    features: ['Agile Methodologies', 'Risk Management', 'Resource Planning', 'Quality Control'],
+    pricing: '$200 - $400/hour',
+    category: 'Project Management'
+  },
+  {
+    title: 'Enterprise IT Training & Certification',
+    description: 'Comprehensive IT training programs with certification preparation and hands-on labs.',
+    icon: BookOpen,
+    features: ['Custom Training Programs', 'Certification Prep', 'Hands-on Labs', 'Progress Tracking'],
+    pricing: '$300 - $800/person/day',
+    category: 'IT Training'
+  },
+  {
+    title: 'Advanced IT Audit & Compliance',
+    description: 'Comprehensive IT audit and compliance services for various industry standards.',
+    icon: Search,
+    features: ['Compliance Assessment', 'Security Auditing', 'Risk Assessment', 'Regulatory Reporting'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'IT Audit'
+  },
+  {
+    title: 'Enterprise IT Procurement & Vendor Management',
+    description: 'Strategic IT procurement and vendor relationship management with cost optimization.',
+    icon: ShoppingCart,
+    features: ['Vendor Evaluation', 'Contract Negotiation', 'Cost Optimization', 'Vendor Management'],
+    pricing: '$200 - $400/hour',
+    category: 'IT Procurement'
+  },
+  {
+    title: 'Advanced IT Governance & Risk Management',
+    description: 'Comprehensive IT governance framework with risk management and compliance monitoring.',
+    icon: Shield,
+    features: ['Governance Framework', 'Risk Management', 'Compliance Monitoring', 'Policy Development'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'IT Governance'
+>>>>>>> main
   }
 ];
-
-const technologies = [
+const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
   { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
   { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
 ];
-
-const benefits = [
-  {
+const benefits = [{
     icon: Clock,
     title: 'Reduced Downtime',
     description: 'Proactive monitoring and maintenance',
@@ -404,9 +653,7 @@ const benefits = [
     stat: 'Unlimited'
   }
 ];
-
-const supportLevels = [
-  {
+const supportLevels = [{
     name: 'Basic Support',
     description: 'Standard business hours support',
     features: ['Email Support', 'Phone Support', 'Basic Monitoring', 'Monthly Reports'],
@@ -425,7 +672,6 @@ const supportLevels = [
     pricing: 'Custom Pricing'
   }
 ];
-
 export default function ITServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -434,37 +680,44 @@ export default function ITServicesPage() {
                   <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration." />
                   <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />
                   </Head>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
-        <div className="container mx-auto px-4">
-          <motion.div
+<div className="absolute inset-0">
+                  <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+                  </div>
+                  <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+                  </div>
+                  </div>
+                  <div className="container mx-auto px-4 relative z-10">
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              IT{' '}
-              <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                Services
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Comprehensive IT solutions to keep your business running smoothly and securely.
+<div className="flex items-center justify-center mb-6">
+                  <Server className="h-16 w-16 text-green-400 mr-4" />
+                  <h1 className="text-4xl md:text-6xl font-bold">
+                IT{' '}
+                <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                  Services
+                </span>
+</h1>
+                  </div>
+                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we&apos;ve got you covered.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get IT Consultation
               </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
+                  </div>
+                  </motion.div>
+                  </div>
+                  </section>
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -475,27 +728,30 @@ export default function ITServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our IT Solutions
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               End-to-end IT services designed to optimize your infrastructure and ensure business continuity.
             </p>
-          </motion.div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+                  </motion.div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+whileHover={{ y: -5 }} ">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                  <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
+                  <IconComponent className="w-10 h-10" />
+                  </div>
+                  <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
                       {service.category}
                     </span>
                   </div>
@@ -506,17 +762,18 @@ export default function ITServicesPage() {
                     {service.description}
                   </p>
                   <div className="mb-4">
-                    <ul className="space-y-2">
+<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
+                  <ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-                          <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="mb-4">
-                    <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
+                  <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
                   </div>
                   <Link
                     href="/contact"
@@ -531,7 +788,6 @@ export default function ITServicesPage() {
           </div>
                   </div>
                   </section>
-
       {/* Technologies Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -542,25 +798,22 @@ export default function ITServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Technologies We Work With</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We leverage cutting-edge technologies to deliver robust IT solutions.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => {
               const IconComponent = tech.icon;
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
+                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-green-600" />
+                  <IconComponent className="w-8 h-8 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {tech.name}
@@ -568,13 +821,12 @@ export default function ITServicesPage() {
                   <p className="text-gray-600">
                     {tech.description}
                   </p>
-                </motion.div>
+                  </motion.div>
               );
             })}
           </div>
                   </div>
                   </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -585,12 +837,12 @@ export default function ITServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Proven expertise and measurable results for your technology infrastructure.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
@@ -620,7 +872,6 @@ export default function ITServicesPage() {
           </div>
                   </div>
                   </section>
-
       {/* Support Levels Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -631,12 +882,12 @@ export default function ITServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Support Levels</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Choose the support level that best fits your business needs.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {supportLevels.map((level, index) => (
               <motion.div
                 key={index}
@@ -666,48 +917,45 @@ export default function ITServicesPage() {
                   ))}
                 </ul>
                   <Link
-                    href="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
-                      index === 1
-                        ? 'bg-green-600 hover:bg-green-700 text-white'
-                        : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                    }`}
-                  >
-                    <span>Choose Plan</span>
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                  href="/contact"
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
+                    index === 1
+? 'bg-green-600 hover: bg-green-700 text-white'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }`}
+                >
+                  <span>Choose Plan</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                   </motion.div>
             ))}
           </div>
                   </div>
                   </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
+<div className="container mx-auto px-4 text-center">
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Optimize Your IT Infrastructure?
-            </h2>
+<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let our expert team help you build a robust, scalable, and secure IT environment.
+              Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get IT Assessment
               </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                  </div>
+                  </motion.div>
+                  </div>
+                  </section>
+                  </div>
   );
 }

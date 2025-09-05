@@ -1,28 +1,22 @@
-/** @type {import('next').NextConfig,
-  "experimental": { optimizeCss: true }
-} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
+  trailingSlash: true,
+  distDir: '.next',
   images: {
     domains: ['localhost'],
+    unoptimized: true
   },
   env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
+    CUSTOM_KEY: process.env.CUSTOM_KEY
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
   typescript: {
-    ignoreBuildErrors: true,
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: '/api/:path*',
-      },
-    ];
-  },
+    ignoreBuildErrors: true
+  }
 };
 
 export default nextConfig;

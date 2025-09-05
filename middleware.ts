@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
@@ -48,6 +47,3 @@ export const config = {
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
   ],
 };
-=======
-import { NextResponse } from "next/server"; import type { NextRequest } from "next/server"; const publicRoutes = [ "/","/about","/contact","/blog","/services","/products","/talent","/test","/auth/login","/auth/register","/auth/forgot-password","/auth/reset-password","/auth/verify",]; export function middleware(request: NextRequest) { const { pathname } = request.nextUrl; if (publicRoutes.includes(pathname)) { return NextResponse.next()} const authCookie = request.cookies.get("auth-token"); if (!authCookie) { return NextResponse.redirect(new URL("/auth/login",request.url))} return NextResponse.next()} export const config = { matcher: [ "/((?!api|_next/static|_next/image|favicon.ico).*)",],};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

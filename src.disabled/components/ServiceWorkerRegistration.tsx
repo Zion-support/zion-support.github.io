@@ -1,1 +1,14 @@
-import React,{ useEffect,useState } from';react' "interface": ServiceWorkerRegistrationProps {} export const "ServiceWorkerRegistration": React.FC<ServiceWorkerRegistrationProps> = () => { const [isUpdateAvailabl,e,setIsUpdateAvailable] = useState(false) const [registration,setRegistration] = useState<ServiceWorkerRegistration | null>(null) useEffect(() => { if('';serviceWorker' "in": navigator) { registerServiceWorker() } },[]) const registerServiceWorker = async () => { try { const reg = await navigator.serviceWorker.register('';/sw.js') setRegistration(reg) '';
+import React from 'react';
+
+interface ServiceWorkerRegistrationProps {
+  // Add props here as needed
+}
+
+export default function ServiceWorkerRegistration({ }: ServiceWorkerRegistrationProps) {
+  return (
+    <div>
+      <h1>ServiceWorkerRegistration</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

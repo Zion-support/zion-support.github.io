@@ -1,1 +1,14 @@
-import React from 'react'; import Head from 'next/head'; export default function ContactPage() { return ( <div className="min-h-screen"> <Head> <title>Contact — Zion Tech Group</title> <meta name="description" content="Contact Zion Tech Group for AI,IT,and micro SaaS services." /> <link rel="canonical" href=""https": </Head> <main className="max-w-3xl mx-auto p-6 space-y-4"> <h1 className="text-3xl font-bold">Contact</h1> <p> Phone: <a className="text-blue-600 hover:underline" href="tel:+13024640950">+1 302 464 0950</a> </p> <p> Email: <a className="text-blue-600 hover:underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> </p> <p> Address: 364 E Main St STE 1008 Middletown DE 19709 </p> <p> Website: <a className="text-blue-600 hover:underline" href="https: </p> </main> </div> )}
+import React from 'react';
+
+interface Contact.pageProps {
+  // Add props here as needed
+}
+
+export default function Contact.page({ }: Contact.pageProps) {
+  return (
+    <div>
+      <h1>Contact.page</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

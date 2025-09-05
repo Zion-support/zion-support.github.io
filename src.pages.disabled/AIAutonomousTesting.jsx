@@ -1,1 +1,14 @@
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousTesting.jsx import React from 'react'; export default AIAutonomousTesting; const AIAutonomousTesting = () => { return (<> <Helmet> <title > AI Autonomous Testing Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous testing platform that conducts comprehensive testing,ensures quality,and maintains testing excellence with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI testing,autonomous testing,automated testing,quality testing,autonomous quality,AI testing platform" / / /> <link rel="canonical" href=""https": import React from 'react'; export default AIAutonomousTesting; const AIAutonomousTesting = () => { return (<> <Helmet> <title > AI Autonomous Testing Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous testing platform that conducts comprehensive testing,ensures quality,and maintains testing excellence with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI testing,autonomous testing,automated testing,quality testing,autonomous quality,AI testing platform" / / / /> <link rel="canonical" href=""https": "";
+import React from 'react';
+
+interface AIAutonomousTestingProps {
+  // Add props here as needed
+}
+
+export default function AIAutonomousTesting({ }: AIAutonomousTestingProps) {
+  return (
+    <div>
+      <h1>AIAutonomousTesting</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

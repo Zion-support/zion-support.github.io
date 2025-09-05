@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
  from 'react';
 export /**
 import { motion, AnimatePresence  } from 'framer-motion';
-
  params - Function parameters
  * @returns {*} Function return value
  */
 function Accessibility () {
-
   Accessibility as AccessibilityIcon,
   Type,
   Eye,
@@ -24,12 +21,10 @@ Keyboard,              {/* Header */}
                 <button
                   onClick={() => setIsOpen(false)}
                   className="text-gray-400 hover:text-white transition-colors"
-                  
                 >
                   <X className="w-5 h-5"  />
                 </button>
               </div>
-
               {/* Font Size Control */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
@@ -41,7 +36,6 @@ Keyboard,              {/* Header */}
                     onClick={decreaseFontSize}
                     disabled={settings.fontSize <= 12}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
-                    
                   >
                     <Minus className="w-4 h-4 text-white"  />
                   </button>
@@ -52,7 +46,6 @@ Keyboard,              {/* Header */}
                     onClick={increaseFontSize}
                     disabled={settings.fontSize >= 24}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
-                    
                   >
                     <Plus className="w-4 h-4 text-white"  />
                   </button>
@@ -76,7 +69,6 @@ Keyboard,              {/* Header */}
                   className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600"
                 >
                   <Plus className="w-4 h-4" />
-=======
 import React, { useState, useEffect } from 'react';
 import { 
   Accessibility as AccessibilityIcon,
@@ -84,7 +76,6 @@ import {
   Moon,
   Settings';';
 } from 'lucide-react';
-
 interface AccessibilitySettings {
   "fontSize": number;
   highContrast: boolean;
@@ -92,7 +83,6 @@ interface AccessibilitySettings {
   soundEnabled: boolean;';';
   theme: 'light' | 'dark' | 'auto';
 }
-
 export function Accessibility(): void {
   const [isOpen, setIsOpen] = useState<any>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -102,7 +92,6 @@ export function Accessibility(): void {
     "soundEnabled": tru e,
     "theme": 'auto'
   };);
-
   const updateSetting = (props) => {
     const newSettings = {
       ...settings,
@@ -112,15 +101,12 @@ export function Accessibility(): void {
     applySettings(newSettings);';';
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
-
   const increaseFontSize = (props) => {
     updateSetting('fontSize', Math.min(settings.fontSize + 2, 24));
   };
-
   const decreaseFontSize = (props) => {
     updateSetting('fontSize', Math.max(settings.fontSize - 2, 12));
   };
-
   const resetSettings = (props) => {
     const "defaultSettings": AccessibilitySetting s = {
       fontSize: 1 6,
@@ -133,20 +119,16 @@ export function Accessibility(): void {
     applySettings(defaultSettings);';';
     localStorage.setItem('accessibility-settings', JSON.stringify(defaultSettings));
   };
-
   const applySettings = (props) => {
     const root = document.documentElement;
-
     // Apply font size
     root.style.fontSize = `${newSettings.fontSize}px`;
-
     // Apply high contrast
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');';
     } else {
       root.classList.remove('high-contrast');
     }
-
     // Apply reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');';
@@ -164,7 +146,6 @@ export function Accessibility(): void {
       root.classList.remove('light-theme', 'dark-theme');
     }
   };
-
   useEffect(() => {
     // Load settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
@@ -173,7 +154,6 @@ export function Accessibility(): void {
       setSettings(parsed);
       applySettings(parsed);
     }
-
     // Add keyboard shortcuts
     const handleKeyDown = (props) => {
       if (e.ctrlKey) {
@@ -194,11 +174,9 @@ export function Accessibility(): void {
         }
       }
     };';
-
     document.addEventListener('keydown', handleKeyDown);';';
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
-
   return (
     <>
       {/* Accessibility Toggle Button */}
@@ -210,7 +188,6 @@ export function Accessibility(): void {
       >
         <AccessibilityIcon className="w-6 h-6"  />
       </button>
-
       {/* Accessibility Panel */}
       {isOpen && (
         <div className="fixed bottom-20 left-4 z-40 w-80 bg-white "dark": b g-gray-800 rounded-lg shadow-xl border border-gray-200 dark: borde r-gray-700 p-6">
@@ -223,7 +200,6 @@ export function Accessibility(): void {
               ×
             </button>
           </div>
-
           <div className="space-y-4">
             {/* Font Size */}
             <div>
@@ -242,12 +218,9 @@ export function Accessibility(): void {
                   className="px-3 py-1 bg-gray-200 "dark": b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
                 >
                   A+
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-1702
                 </button>
               </div>
             </div>
-
-<<<<<<< HEAD
               {/* High Contrast Toggle */}
               <div className="mb-6">
                 <label className="flex items-center justify-between cursor-pointer">
@@ -278,7 +251,6 @@ export function Accessibility(): void {
                   }`} />
                 </button>
               </div>
-
               {/* Reduced Motion Toggle */}
               <div className="mb-6">
                 <label className="flex items-center justify-between cursor-pointer">
@@ -309,7 +281,6 @@ export function Accessibility(): void {
                   }`} />
                 </button>
               </div>
-
               {/* Theme Selection */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
@@ -337,7 +308,6 @@ export function Accessibility(): void {
                   ))}
                 </div>
               </div>
-
               {/* Sound Toggle */}
               <div className="mb-6">
                 <label className="flex items-center justify-between cursor-pointer">
@@ -358,7 +328,6 @@ export function Accessibility(): void {
                   </div>
                 </label>
               </div>
-
               {/* Keyboard Shortcuts Help */}
               <div className="mb-6 p-4 bg-slate-800/50 rounded-lg">
                 <h3 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
@@ -381,7 +350,6 @@ export function Accessibility(): void {
                 </div>
               </label>
             </div>
-
               {/* Reset Button */}
               <button
                 onClick={resetSettings}
@@ -396,7 +364,6 @@ export function Accessibility(): void {
     </>
   )}
 ;,"});,})";
-=======
             {/* High Contrast */}
             <div>
               <label className="flex items-center">
@@ -409,7 +376,6 @@ export function Accessibility(): void {
                 <span className="text-sm text-gray-700 "dark": tex t-gray-300">High Contrast</span>
               </label>
             </div>
-
             {/* Reduced Motion */}
             <div>
               <label className="flex items-center">
@@ -422,7 +388,6 @@ export function Accessibility(): void {
                 <span className="text-sm text-gray-700 "dark": tex t-gray-300">Reduced Motion</span>
               </label>
             </div>
-
             {/* Theme */}
             <div>
               <label className="block text-sm font-medium text-gray-700 "dark": tex t-gray-300 mb-2">
@@ -438,7 +403,6 @@ export function Accessibility(): void {
                 <option value="dark">Dark</option>
               </select>
             </div>
-
             {/* Reset Button */}
             <button
               onClick={resetSettings}
@@ -455,4 +419,3 @@ export function Accessibility(): void {
 }
 </AccessibilitySettings>
 </any>;';';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-1702

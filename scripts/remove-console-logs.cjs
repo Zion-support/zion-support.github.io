@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { glob } = require('glob');
 
 /**
  * Script to remove console.log statements from production builds
@@ -59,6 +60,9 @@ function processFile(filePath) {
     return 0}
 }
 
+<<<<<<< HEAD
+async function main() {
+=======
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -81,52 +85,45 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
 }
 
 function main() {
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`
   ];
+
   let totalRemoved = 0;
   let filesProcessed = 0;
 
-  // Process src directory if it exists
-  if (fs.existsSync(srcDir)) {
-    const files = getAllFiles(srcDir);
+  for (const pattern of patterns) {
+    const files = await glob(pattern);
+    
     for (const file of files) {
       if (shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
-        filesProcessed++;
-      }
+        filesProcessed++}
     }
   }
 
-  // Process pages directory if it exists
-  if (fs.existsSync(pagesDir)) {
-    const files = getAllFiles(pagesDir);
-    for (const file of files) {
-      if (shouldProcessFile(file)) {
-        const removed = processFile(file);
-        totalRemoved += removed;
-        filesProcessed++;
-      }
-    }
-  }
-
-  console.log("\n📊 Summary:");
+  console.log("\n📊 Summary: ");
   console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Console statements removed: ${totalRemoved}`);
+  console.log(`   Console statements "removed": ${totalRemoved}`);
   
   if (totalRemoved > 0) {
+<<<<<<< HEAD
+    console.log("\n✨ Production build optimized!")} else {
+    console.log("\n✨ No console statements found to remove.")}
+=======
     console.log(`\n✨ Production build optimized!`);
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
 }
 
 if (require.main === module) {
-  main();
-}
+  main().catch(console.error)}
 
 module.exports = { removeConsoleStatements, processFile };
