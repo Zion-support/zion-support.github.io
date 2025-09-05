@@ -150,6 +150,141 @@ const aiServices = [
     marketPrice: '$3,500-7,500/month',
     setupTime: '2-3 weeks',
     targetUsers: 'Customer Service, Content, Legal, Healthcare'
+  },
+  {
+    id: 4,
+    title: 'Quantum AI Solutions',
+    description: 'Next-generation quantum machine learning and quantum neural networks for complex optimization problems.',
+    icon: Cpu,
+    category: 'Quantum AI',
+    price: 'Starting at $8,500/month',
+    features: [
+      'Quantum machine learning algorithms',
+      'Quantum neural network optimization',
+      'Quantum data processing',
+      'Quantum cryptography integration',
+      'Hybrid classical-quantum models',
+      'Quantum advantage analysis',
+      'Quantum error correction',
+      'Quantum cloud computing access'
+    ],
+    benefits: [
+      'Solve problems 1000x faster than classical computers',
+      'Handle exponentially large datasets',
+      'Breakthrough optimization capabilities',
+      'Future-proof AI infrastructure'
+    ],
+    marketPrice: '$15,000-50,000/month',
+    setupTime: '8-12 weeks',
+    targetUsers: 'Research, Finance, Pharmaceuticals, Aerospace'
+  },
+  {
+    id: 5,
+    title: 'Autonomous Systems AI',
+    description: 'Self-driving vehicles, drones, and robotic systems with advanced AI decision-making capabilities.',
+    icon: Car,
+    category: 'Autonomous Systems',
+    price: 'Starting at $12,000/month',
+    features: [
+      'Autonomous vehicle AI systems',
+      'Drone navigation & control',
+      'Robotic process automation',
+      'Sensor fusion algorithms',
+      'Path planning & optimization',
+      'Real-time decision making',
+      'Safety & compliance monitoring',
+      'Fleet management systems'
+    ],
+    benefits: [
+      'Reduce operational costs by 60%',
+      'Improve safety by 95%',
+      'Enable 24/7 autonomous operations',
+      'Scale operations without human limitations'
+    ],
+    marketPrice: '$20,000-100,000/month',
+    setupTime: '12-16 weeks',
+    targetUsers: 'Logistics, Transportation, Manufacturing, Agriculture'
+  },
+  {
+    id: 6,
+    title: 'AI-Powered Analytics',
+    description: 'Advanced business intelligence with predictive analytics, anomaly detection, and automated insights.',
+    icon: BarChart3,
+    category: 'Analytics',
+    price: 'Starting at $4,200/month',
+    features: [
+      'Predictive business analytics',
+      'Anomaly detection & alerting',
+      'Automated report generation',
+      'Real-time dashboard creation',
+      'Customer behavior analysis',
+      'Market trend prediction',
+      'Risk assessment models',
+      'ROI optimization insights'
+    ],
+    benefits: [
+      'Increase revenue by 30-50%',
+      'Reduce operational risks by 80%',
+      'Automate 90% of reporting tasks',
+      'Enable data-driven decision making'
+    ],
+    marketPrice: '$6,000-15,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'E-commerce, Finance, Healthcare, Retail'
+  },
+  {
+    id: 7,
+    title: 'AI Content Generation',
+    description: 'Automated content creation, copywriting, and multimedia generation using advanced AI models.',
+    icon: FileText,
+    category: 'Content AI',
+    price: 'Starting at $1,800/month',
+    features: [
+      'Automated article writing',
+      'Social media content creation',
+      'Video script generation',
+      'Product description automation',
+      'Email marketing content',
+      'SEO-optimized content',
+      'Multi-language content creation',
+      'Brand voice consistency'
+    ],
+    benefits: [
+      'Reduce content creation time by 85%',
+      'Increase content output by 500%',
+      'Maintain consistent brand voice',
+      'Scale content marketing efforts'
+    ],
+    marketPrice: '$3,000-8,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'Marketing, E-commerce, Media, Education'
+  },
+  {
+    id: 8,
+    title: 'AI Voice & Speech',
+    description: 'Advanced voice recognition, speech synthesis, and conversational AI for enhanced user experiences.',
+    icon: Mic,
+    category: 'Voice AI',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Voice recognition & transcription',
+      'Text-to-speech synthesis',
+      'Voice cloning & personalization',
+      'Conversational AI assistants',
+      'Voice biometrics & security',
+      'Real-time language translation',
+      'Voice command processing',
+      'Audio content analysis'
+    ],
+    benefits: [
+      'Improve accessibility by 90%',
+      'Reduce customer service costs by 70%',
+      'Enable hands-free operations',
+      'Enhance user engagement'
+    ],
+    marketPrice: '$4,000-10,000/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'Customer Service, Healthcare, Education, Accessibility'
   }
 ];
 
@@ -157,7 +292,12 @@ const categories = [
   { name: "All", count: aiServices.length },
   { name: "Machine Learning", count: aiServices.filter(s => s.category === "Machine Learning").length },
   { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length },
-  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length }
+  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length },
+  { name: "Quantum AI", count: aiServices.filter(s => s.category === "Quantum AI").length },
+  { name: "Autonomous Systems", count: aiServices.filter(s => s.category === "Autonomous Systems").length },
+  { name: "Analytics", count: aiServices.filter(s => s.category === "Analytics").length },
+  { name: "Content AI", count: aiServices.filter(s => s.category === "Content AI").length },
+  { name: "Voice AI", count: aiServices.filter(s => s.category === "Voice AI").length }
 ];
 
 export default function AIServicesPage() {
@@ -214,7 +354,7 @@ export default function AIServicesPage() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
               {aiServices.map((service, index) => (
                 <motion.div
                   key={service.id}

@@ -40,7 +40,10 @@ const services = [
     description: "120+ innovative micro SaaS solutions for modern businesses across all industries with real-time pricing, market analysis, and instant deployment",
     icon: Cloud,
     href: "/micro-saas",
-    price: "Starting at $1,500/month"
+    count: "120+ Solutions",
+    pricing: "Starting at $1,500/month",
+    marketPrice: "$2,500-8,000/month",
+    benefits: ["80% efficiency gain", "50% cost reduction", "Instant deployment"]
   }
 ];
 
@@ -238,45 +241,56 @@ export default function HomePage() {
               })}
             </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
-              <motion.div 
-                key={index}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-3xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx}>• {feature}</li>
-                  ))}
-                </ul>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+        {/* Featured Services Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Services</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Discover our most popular technology solutions that drive business growth and innovation.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredServices.map((service, index) => (
+                <motion.div 
+                  key={index}
+                  className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <div className="text-3xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="text-sm text-gray-500 space-y-2 mb-4">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx}>• {feature}</li>
+                    ))}
+                  </ul>
+                  <div className="mt-4">
+                    <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -306,39 +320,10 @@ export default function HomePage() {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <motion.div
-                key={index}
                 className="text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyChooseUs.map((item, index) => (
-              <motion.div 
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
                 <ul className="text-gray-600 space-y-2">
@@ -350,41 +335,105 @@ export default function HomePage() {
                   <li>• Transparent, no hidden fees</li>
                 </ul>
               </motion.div>
-            ))}
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Fast Delivery</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Rapid development & deployment</li>
+                  <li>• Agile methodologies</li>
+                  <li>• 24/7 development cycles</li>
+                  <li>• Automated testing & QA</li>
+                  <li>• Continuous integration</li>
+                  <li>• Real-time project tracking</li>
+                </ul>
+              </motion.div>
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-4">🎯 Proven Results</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• 2,500+ projects completed</li>
+                  <li>• 99.9% client satisfaction</li>
+                  <li>• 18+ years experience</li>
+                  <li>• 150+ expert team members</li>
+                  <li>• 305+ services & solutions</li>
+                  <li>• 24/7 support available</li>
+                </ul>
+              </motion.div>
+            </div>
           </div>
         </section>
 
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Join hundreds of companies that trust Zion Tech Group for their technology needs. 
-            Let's discuss how we can help accelerate your digital transformation.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-              Get Free Consultation
-            </Link>
+        {/* Why Choose Us */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {whyChooseUs.map((item, index) => (
+                <motion.div 
+                  key={index}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">{item.icon}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-          
-          {/* Contact Information */}
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            <div className="flex items-center justify-center">
-              <Phone className="w-6 h-6 mr-2" />
-              <span>+1 302 464 0950</span>
+        </section>
+
+        {/* Contact CTA Section */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              Join hundreds of companies that trust Zion Tech Group for their technology needs. 
+              Let's discuss how we can help accelerate your digital transformation.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+              <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Get Free Consultation
+              </Link>
             </div>
-            <div className="flex items-center justify-center">
-              <Mail className="w-6 h-6 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <MapPin className="w-6 h-6 mr-2" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+            
+            {/* Contact Information */}
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="flex items-center justify-center">
+                <Phone className="w-6 h-6 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <Mail className="w-6 h-6 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <MapPin className="w-6 h-6 mr-2" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 }

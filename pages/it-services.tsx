@@ -15,7 +15,9 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Cpu,
+  Globe
 } from 'lucide-react';
 import Layout from './components/Layout';
 
@@ -32,7 +34,9 @@ const services = [
       "Auto-scaling Solutions",
       "Disaster Recovery"
     ],
-    price: "Starting at $1,800/month"
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-8,000/month",
+    benefits: ["99.99% uptime", "50% cost reduction", "Global scalability"]
   },
   {
     title: "Cybersecurity",
@@ -46,7 +50,9 @@ const services = [
       "Incident Response",
       "Security Training"
     ],
-    price: "Starting at $2,000/month"
+    price: "Starting at $2,000/month",
+    marketPrice: "$4,000-12,000/month",
+    benefits: ["99.9% threat detection", "24/7 monitoring", "Compliance guaranteed"]
   },
   {
     title: "DevOps & Automation",
@@ -60,7 +66,9 @@ const services = [
       "Automated Testing",
       "Deployment Automation"
     ],
-    price: "Starting at $1,500/month"
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-6,000/month",
+    benefits: ["Deploy 10x faster", "Reduce errors by 90%", "24/7 automation"]
   },
   {
     title: "Database Management",
@@ -74,7 +82,9 @@ const services = [
       "Data Security & Encryption",
       "Cloud Database Setup"
     ],
-    price: "Starting at $1,200/month"
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-5,000/month",
+    benefits: ["10x faster queries", "Zero data loss", "Automated backups"]
   },
   {
     title: "Network Solutions",
@@ -88,7 +98,9 @@ const services = [
       "Monitoring & Management",
       "Cloud Networking"
     ],
-    price: "Starting at $1,000/month"
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,800-4,500/month",
+    benefits: ["99.9% network uptime", "Global connectivity", "Advanced security"]
   },
   {
     title: "System Administration",
@@ -102,7 +114,105 @@ const services = [
       "Performance Optimization",
       "24/7 System Support"
     ],
-    price: "Starting at $800/month"
+    price: "Starting at $800/month",
+    marketPrice: "$1,500-3,500/month",
+    benefits: ["Proactive maintenance", "Instant support", "Zero downtime"]
+  },
+  {
+    title: "Quantum Computing Services",
+    description: "Next-generation quantum computing solutions for complex optimization problems",
+    icon: Cpu,
+    features: [
+      "Quantum Algorithm Development",
+      "Quantum Cloud Access",
+      "Hybrid Classical-Quantum Systems",
+      "Quantum Security Solutions",
+      "Quantum Machine Learning",
+      "Quantum Optimization"
+    ],
+    price: "Starting at $5,000/month",
+    marketPrice: "$10,000-50,000/month",
+    benefits: ["Solve impossible problems", "Exponential speedup", "Future-proof technology"]
+  },
+  {
+    title: "Edge Computing Solutions",
+    description: "Distributed computing infrastructure for real-time processing and low latency",
+    icon: Server,
+    features: [
+      "Edge Server Deployment",
+      "Real-time Data Processing",
+      "IoT Device Management",
+      "Content Delivery Networks",
+      "Edge AI Processing",
+      "Distributed Analytics"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["50ms response time", "99.9% reliability", "Global edge network"]
+  },
+  {
+    title: "Blockchain Infrastructure",
+    description: "Secure blockchain networks and smart contract development",
+    icon: Shield,
+    features: [
+      "Blockchain Network Setup",
+      "Smart Contract Development",
+      "DeFi Platform Development",
+      "NFT Marketplace Creation",
+      "Cryptocurrency Integration",
+      "Blockchain Security Audits"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$6,000-20,000/month",
+    benefits: ["Immutable records", "Decentralized security", "Transparent transactions"]
+  },
+  {
+    title: "IoT Platform Development",
+    description: "Connected device solutions and sensor network management",
+    icon: Globe,
+    features: [
+      "IoT Device Management",
+      "Sensor Data Collection",
+      "Real-time Analytics",
+      "Device Security",
+      "Remote Monitoring",
+      "Predictive Maintenance"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Connect 10,000+ devices", "Real-time insights", "Automated maintenance"]
+  },
+  {
+    title: "Data Center Services",
+    description: "Complete data center solutions with colocation and managed services",
+    icon: Server,
+    features: [
+      "Colocation Services",
+      "Managed Hosting",
+      "Disaster Recovery",
+      "Power & Cooling Solutions",
+      "Physical Security",
+      "Compliance Management"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,800-8,000/month",
+    benefits: ["Tier 3+ facilities", "99.99% uptime", "24/7 on-site support"]
+  },
+  {
+    title: "IT Consulting & Strategy",
+    description: "Strategic IT planning and digital transformation consulting",
+    icon: Settings,
+    features: [
+      "IT Strategy Development",
+      "Digital Transformation",
+      "Technology Roadmapping",
+      "Vendor Management",
+      "IT Governance",
+      "Change Management"
+    ],
+    price: "Starting at $200/hour",
+    marketPrice: "$300-800/hour",
+    benefits: ["Expert guidance", "Cost optimization", "Future-proof planning"]
   }
 ];
 
@@ -187,7 +297,7 @@ export default function ITServicesPage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {services.map((service, index) => (
               <motion.div 
                 key={index}
@@ -210,7 +320,32 @@ export default function ITServicesPage() {
                   ))}
                 </ul>
                 <div className="mt-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                    {service.marketPrice && (
+                      <span className="text-sm text-gray-500 line-through">
+                        {service.marketPrice}
+                      </span>
+                    )}
+                  </div>
+                  {service.marketPrice && (
+                    <div className="text-xs text-green-600 font-medium mb-2">
+                      Save up to 40% vs market rate
+                    </div>
+                  )}
+                  {service.benefits && (
+                    <div className="text-sm text-gray-600">
+                      <div className="font-medium mb-1">Key Benefits:</div>
+                      <ul className="space-y-1">
+                        {service.benefits.slice(0, 2).map((benefit, idx) => (
+                          <li key={idx} className="flex items-center">
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-1" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}

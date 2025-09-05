@@ -32,7 +32,9 @@ const microSaasSolutions = [
       "API Integrations",
       "Real-time Notifications"
     ],
-    price: "Starting at $1,500/month"
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-4,000/month",
+    benefits: ["Reduce manual work by 80%", "Increase efficiency by 60%", "Save 20+ hours/week"]
   },
   {
     title: "Data Processing Tools",
@@ -46,7 +48,9 @@ const microSaasSolutions = [
       "Report Generation",
       "Data Export/Import"
     ],
-    price: "Starting at $2,000/month"
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-6,000/month",
+    benefits: ["Process 10x more data", "Real-time insights", "Automated reporting"]
   },
   {
     title: "API Integration Services",
@@ -60,7 +64,9 @@ const microSaasSolutions = [
       "Rate Limiting",
       "Authentication & Security"
     ],
-    price: "Starting at $1,800/month"
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-5,500/month",
+    benefits: ["Connect 50+ systems", "Reduce integration time by 90%", "99.9% uptime"]
   },
   {
     title: "Custom Dashboard Solutions",
@@ -74,7 +80,9 @@ const microSaasSolutions = [
       "Mobile Responsive",
       "Export Capabilities"
     ],
-    price: "Starting at $1,200/month"
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-3,500/month",
+    benefits: ["Custom KPIs", "Real-time updates", "Mobile-first design"]
   },
   {
     title: "SaaS Platform Development",
@@ -88,7 +96,9 @@ const microSaasSolutions = [
       "Analytics & Reporting",
       "Scalable Infrastructure"
     ],
-    price: "Starting at $3,500/month"
+    price: "Starting at $3,500/month",
+    marketPrice: "$6,000-15,000/month",
+    benefits: ["Scale to millions of users", "99.99% uptime", "Global deployment"]
   },
   {
     title: "Business Intelligence Tools",
@@ -102,7 +112,105 @@ const microSaasSolutions = [
       "Machine Learning Integration",
       "Real-time Insights"
     ],
-    price: "Starting at $2,500/month"
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,500-8,000/month",
+    benefits: ["Increase revenue by 25%", "Reduce costs by 30%", "Better decision making"]
+  },
+  {
+    title: "Customer Relationship Management",
+    description: "Comprehensive CRM solution with AI-powered insights and automation",
+    icon: Users,
+    features: [
+      "Lead Management",
+      "Sales Pipeline Tracking",
+      "Customer Communication",
+      "AI-Powered Insights",
+      "Email Marketing Integration",
+      "Performance Analytics"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$4,000-7,000/month",
+    benefits: ["Increase sales by 35%", "Improve customer retention", "Automate follow-ups"]
+  },
+  {
+    title: "Project Management Suite",
+    description: "Advanced project management with team collaboration and resource optimization",
+    icon: Settings,
+    features: [
+      "Task Management",
+      "Team Collaboration",
+      "Resource Planning",
+      "Time Tracking",
+      "Budget Management",
+      "Progress Reporting"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,200-5,500/month",
+    benefits: ["Complete projects 40% faster", "Reduce project costs by 25%", "Improve team productivity"]
+  },
+  {
+    title: "E-commerce Management",
+    description: "Complete e-commerce solution with inventory, orders, and customer management",
+    icon: Globe,
+    features: [
+      "Inventory Management",
+      "Order Processing",
+      "Customer Management",
+      "Payment Processing",
+      "Shipping Integration",
+      "Analytics & Reporting"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$5,000-10,000/month",
+    benefits: ["Increase sales by 50%", "Reduce order processing time", "Automate inventory"]
+  },
+  {
+    title: "HR Management System",
+    description: "Comprehensive HR solution with recruitment, payroll, and performance management",
+    icon: Users,
+    features: [
+      "Employee Database",
+      "Payroll Management",
+      "Performance Tracking",
+      "Recruitment Tools",
+      "Time & Attendance",
+      "Benefits Administration"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-6,500/month",
+    benefits: ["Reduce HR workload by 60%", "Improve employee satisfaction", "Automate payroll"]
+  },
+  {
+    title: "Financial Management",
+    description: "Complete financial management with accounting, invoicing, and expense tracking",
+    icon: BarChart3,
+    features: [
+      "Accounting & Bookkeeping",
+      "Invoice Generation",
+      "Expense Tracking",
+      "Financial Reporting",
+      "Tax Preparation",
+      "Budget Planning"
+    ],
+    price: "Starting at $1,600/month",
+    marketPrice: "$2,800-5,000/month",
+    benefits: ["Save 15+ hours/week", "Reduce accounting errors", "Real-time financial insights"]
+  },
+  {
+    title: "Marketing Automation",
+    description: "AI-powered marketing automation with email campaigns, social media, and lead nurturing",
+    icon: Zap,
+    features: [
+      "Email Marketing",
+      "Social Media Management",
+      "Lead Nurturing",
+      "Campaign Analytics",
+      "A/B Testing",
+      "Customer Segmentation"
+    ],
+    price: "Starting at $2,100/month",
+    marketPrice: "$3,800-7,000/month",
+    benefits: ["Increase leads by 200%", "Improve conversion rates", "Automate marketing tasks"]
   }
 ];
 
@@ -220,7 +328,7 @@ export default function MicroSaasPage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {microSaasSolutions.map((solution, index) => (
               <motion.div 
                 key={index}
@@ -243,7 +351,32 @@ export default function MicroSaasPage() {
                   ))}
                 </ul>
                 <div className="mt-4">
-                  <span className="text-2xl font-bold text-purple-600">{solution.price}</span>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-2xl font-bold text-purple-600">{solution.price}</span>
+                    {solution.marketPrice && (
+                      <span className="text-sm text-gray-500 line-through">
+                        {solution.marketPrice}
+                      </span>
+                    )}
+                  </div>
+                  {solution.marketPrice && (
+                    <div className="text-xs text-green-600 font-medium mb-2">
+                      Save up to 40% vs market rate
+                    </div>
+                  )}
+                  {solution.benefits && (
+                    <div className="text-sm text-gray-600">
+                      <div className="font-medium mb-1">Key Benefits:</div>
+                      <ul className="space-y-1">
+                        {solution.benefits.slice(0, 2).map((benefit, idx) => (
+                          <li key={idx} className="flex items-center">
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-1" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
