@@ -71,9 +71,7 @@ const jobOpenings = [
       'Strong analytical skills',
       'Excellent communication skills'
     ],
-    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
-=======
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
+    benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget', 'Certification support']
   }
 ];
 
@@ -147,54 +145,6 @@ export default function CareersPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-=======
-    icon: Heart,
-    title: 'Health & Wellness',
-    description: 'Comprehensive health insurance and wellness programs'
-  },
-  {
-    icon: Laptop,
-    title: 'Remote Work',
-    description: 'Work from anywhere with flexible schedules'
-  },
-  {
-    icon: BookOpen,
-    title: 'Learning & Development',
-    description: 'Annual learning budget and conference attendance'
-  },
-  {
-    icon: Award,
-    title: 'Career Growth',
-    description: 'Clear career paths and promotion opportunities'
-  },
-  {
-    icon: Coffee,
-    title: 'Team Culture',
-    description: 'Collaborative and inclusive work environment'
-  },
-  {
-    icon: Globe,
-    title: 'Global Impact',
-    description: 'Work on projects that make a difference worldwide'
-  }
-];
-
-export default function Careers() {
-  return (
-    <>
-      <Head>
-        <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team of innovators and help shape the future of AI and technology. Explore career opportunities at Zion Tech Group." />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">

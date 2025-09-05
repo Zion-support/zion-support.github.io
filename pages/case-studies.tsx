@@ -1,4 +1,3 @@
-=======
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -10,13 +9,10 @@ import {
   TrendingUp,
   Users,
   Clock,
-=======
   CheckCircle,
-  Users,
   Building,
   Globe,
   Award,
-  Clock,
   BarChart3,
   Cloud,
   Shield
@@ -35,7 +31,6 @@ const caseStudies = [
     industry: "Healthcare",
     challenge: "Manual patient data processing and diagnosis delays",
     solution: "AI-powered diagnostic platform with real-time analysis",
-=======
     results: [
       "60% reduction in support costs",
       "40% faster response times",
@@ -67,7 +62,6 @@ const caseStudies = [
     icon: Brain
   },
   {
-=======
     id: 2,
     title: "Cloud Migration for Financial Services",
     client: "Regional Bank",
@@ -98,7 +92,6 @@ const caseStudies = [
       "24/7 threat monitoring",
       "50% faster incident response"
     ],
-=======
     technologies: ["IoT", "Data Analytics", "Machine Learning"],
     duration: "10 months",
     team: "20 experts",
@@ -162,12 +155,6 @@ const technologies = [
   "PropTech",
   "SaaS Development",
   "Data Analytics"
-=======
-    duration: "4 months",
-    team: "6 experts",
-    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],
-    image: "/images/case-studies/healthcare-security.jpg"
-  }
 ];
 
 const stats = [
@@ -179,8 +166,6 @@ const stats = [
 
 export default function CaseStudiesPage() {
   return (
-    <Layout
-=======
     <MainLayout
       title="Case Studies - Zion Tech Group"
       description="Explore our success stories and see how we've helped businesses transform through innovative technology solutions."

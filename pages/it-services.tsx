@@ -385,8 +385,225 @@ const itServices = [
     setupTime: '6-12 weeks',
     targetUsers: 'Education, Healthcare, Real estate, Gaming, Training'
   },
+  // NEW ADVANCED IT SERVICES - 2025 INNOVATIONS
   {
     id: 13,
+    title: 'Quantum Security Infrastructure',
+    description: 'Next-generation quantum-resistant security infrastructure with post-quantum cryptography and quantum key distribution.',
+    icon: Shield,
+    category: 'Quantum Security',
+    price: 'Starting at $4,200/month',
+    features: [
+      'Post-quantum cryptography implementation',
+      'Quantum key distribution (QKD)',
+      'Quantum random number generation',
+      'Quantum-resistant encryption',
+      'Hybrid security architectures',
+      'Quantum threat assessment',
+      'Migration planning & execution',
+      'Compliance & certification support'
+    ],
+    benefits: [
+      'Future-proof security against quantum threats',
+      'Unbreakable encryption with QKD',
+      'Enhanced data protection',
+      'Regulatory compliance assurance'
+    ],
+    marketPrice: '$6,500-15,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Government agencies, Financial institutions, Healthcare, Defense contractors'
+  },
+  {
+    id: 14,
+    title: 'Edge AI Computing Platform',
+    description: 'Advanced edge computing platform with AI processing capabilities for real-time decision making and ultra-low latency applications.',
+    icon: Cpu,
+    category: 'Edge AI',
+    price: 'Starting at $3,200/month',
+    features: [
+      'Edge AI model deployment',
+      'Real-time inference processing',
+      'Distributed AI architecture',
+      'Edge device management',
+      'Bandwidth optimization',
+      'Offline AI capabilities',
+      'Edge-to-cloud synchronization',
+      'Performance monitoring'
+    ],
+    benefits: [
+      'Ultra-low latency AI processing',
+      'Reduced bandwidth requirements',
+      'Offline AI capabilities',
+      'Improved user experience'
+    ],
+    marketPrice: '$5,000-10,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'IoT companies, Manufacturing, Smart cities, Autonomous vehicles'
+  },
+  {
+    id: 15,
+    title: '5G Network Infrastructure',
+    description: 'Complete 5G network infrastructure setup with ultra-high-speed connectivity, low latency, and massive IoT support.',
+    icon: Wifi,
+    category: '5G Networks',
+    price: 'Starting at $5,500/month',
+    features: [
+      '5G network design & deployment',
+      'Ultra-high-speed connectivity',
+      'Low latency optimization',
+      'Massive IoT support',
+      'Network slicing implementation',
+      'Edge computing integration',
+      'Security & compliance',
+      'Performance monitoring'
+    ],
+    benefits: [
+      '10x faster data speeds',
+      'Ultra-low latency (1ms)',
+      'Support for massive IoT',
+      'Enhanced mobile experiences'
+    ],
+    marketPrice: '$8,500-20,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Telecommunications, Smart cities, Manufacturing, Healthcare'
+  },
+  {
+    id: 16,
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin platform infrastructure for real-time monitoring, simulation, and optimization of physical assets and systems.',
+    icon: Monitor,
+    category: 'Digital Twin',
+    price: 'Starting at $3,800/month',
+    features: [
+      'Digital twin creation & management',
+      'Real-time asset monitoring',
+      'Simulation & modeling capabilities',
+      'IoT data integration',
+      'Predictive analytics',
+      'Performance optimization',
+      'Lifecycle management',
+      'API development'
+    ],
+    benefits: [
+      'Real-time asset insights',
+      'Predictive maintenance',
+      'Performance optimization',
+      'Reduced operational costs'
+    ],
+    marketPrice: '$6,000-15,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Manufacturing, Energy companies, Smart buildings, Transportation'
+  },
+  {
+    id: 17,
+    title: 'Zero-Trust Security Architecture',
+    description: 'Comprehensive zero-trust security architecture implementation with identity verification, micro-segmentation, and continuous monitoring.',
+    icon: Lock,
+    category: 'Zero-Trust Security',
+    price: 'Starting at $2,800/month',
+    features: [
+      'Identity & access management',
+      'Micro-segmentation implementation',
+      'Continuous security monitoring',
+      'Multi-factor authentication',
+      'Privileged access management',
+      'Network segmentation',
+      'Security policy automation',
+      'Threat detection & response'
+    ],
+    benefits: [
+      'Enhanced security posture',
+      'Reduced attack surface',
+      'Continuous verification',
+      'Compliance assurance'
+    ],
+    marketPrice: '$4,500-9,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Enterprises, Government agencies, Healthcare, Financial services'
+  },
+  {
+    id: 18,
+    title: 'Hybrid Cloud Management Platform',
+    description: 'Advanced hybrid cloud management platform with multi-cloud orchestration, cost optimization, and security management.',
+    icon: Cloud,
+    category: 'Hybrid Cloud',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Multi-cloud orchestration',
+      'Cost optimization & monitoring',
+      'Security & compliance management',
+      'Workload migration & balancing',
+      'Disaster recovery automation',
+      'Performance monitoring',
+      'Resource optimization',
+      'Governance & policy management'
+    ],
+    benefits: [
+      'Optimized cloud costs',
+      'Enhanced security',
+      'Improved performance',
+      'Simplified management'
+    ],
+    marketPrice: '$4,000-8,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Enterprises, Multi-cloud organizations, Government agencies'
+  },
+  {
+    id: 19,
+    title: 'AI-Powered IT Operations',
+    description: 'Intelligent IT operations platform with AI-driven automation, predictive maintenance, and self-healing infrastructure.',
+    icon: Settings,
+    category: 'AIOps',
+    price: 'Starting at $2,200/month',
+    features: [
+      'AI-driven incident management',
+      'Predictive maintenance',
+      'Automated root cause analysis',
+      'Self-healing infrastructure',
+      'Intelligent alerting',
+      'Performance optimization',
+      'Capacity planning',
+      'Anomaly detection'
+    ],
+    benefits: [
+      'Reduced downtime by 70%',
+      'Faster incident resolution',
+      'Proactive maintenance',
+      'Improved system reliability'
+    ],
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Enterprises, IT service providers, Cloud companies'
+  },
+  {
+    id: 20,
+    title: 'Quantum Computing Cloud Platform',
+    description: 'Quantum computing cloud platform with access to quantum processors, quantum algorithms, and hybrid classical-quantum computing.',
+    icon: Cpu,
+    category: 'Quantum Cloud',
+    price: 'Starting at $4,500/month',
+    features: [
+      'Quantum processor access',
+      'Quantum algorithm development',
+      'Hybrid classical-quantum computing',
+      'Quantum simulation capabilities',
+      'Quantum software development',
+      'Research collaboration tools',
+      'Performance monitoring',
+      'Training & education'
+    ],
+    benefits: [
+      'Access to cutting-edge quantum technology',
+      'Quantum advantage for specific problems',
+      'Research collaboration opportunities',
+      'Future-proof computing solutions'
+    ],
+    marketPrice: '$7,000-18,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Research institutions, Tech companies, Financial services, Government'
+  },
+  {
+    id: 21,
     title: 'Space Technology Infrastructure',
     description: 'Space technology solutions including satellite data processing, space mission support, and astronomical research tools.',
     icon: Rocket,

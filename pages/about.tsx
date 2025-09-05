@@ -1,6 +1,13 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
+import { 
+  Brain, 
+  Users, 
+  Award, 
+  Target, 
+  Heart, 
+  Globe,
   TrendingUp,
   Building,
   Rocket,
@@ -8,16 +15,7 @@ import Link from 'next/link';
   Handshake
 } from 'lucide-react';
 
-const values = [{
-=======
-import { 
-=======
-  Brain, 
-  Users, 
-  Award, 
-  Target, 
-  Heart, 
-  Globe, 
+const values = [{ 
   Shield, 
   Zap, 
   CheckCircle, 

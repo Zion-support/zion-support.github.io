@@ -396,8 +396,496 @@ const aiServices = [
     setupTime: '6-12 weeks',
     targetUsers: 'Banks, Investment firms, Insurance companies, Fintech'
   },
+  // NEW CUTTING-EDGE AI SERVICES - 2025 INNOVATIONS
   {
     id: 13,
+    title: 'AI Quantum Neural Networks',
+    description: 'Revolutionary quantum neural network solutions that leverage quantum computing for exponentially faster AI processing and complex problem solving.',
+    icon: Brain,
+    category: 'Quantum AI',
+    price: 'Starting at $6,500/month',
+    features: [
+      'Quantum neural network architecture',
+      'Quantum superposition learning',
+      'Quantum entanglement optimization',
+      'Hybrid quantum-classical training',
+      'Quantum error correction',
+      'Advanced quantum algorithms',
+      'Quantum data processing',
+      'Research collaboration & support'
+    ],
+    benefits: [
+      'Exponential speedup in AI training',
+      'Solve previously impossible problems',
+      'Quantum advantage in specific domains',
+      'Future-proof AI architecture'
+    ],
+    marketPrice: '$10,000-25,000/month',
+    setupTime: '12-24 weeks',
+    targetUsers: 'Research institutions, Tech giants, Government agencies, Quantum computing companies'
+  },
+  {
+    id: 14,
+    title: 'AI Space Weather Prediction',
+    description: 'Advanced AI system for predicting space weather events, solar storms, and their impact on Earth-based infrastructure and satellite operations.',
+    icon: Sun,
+    category: 'AI Space',
+    price: 'Starting at $4,800/month',
+    features: [
+      'Solar storm prediction & modeling',
+      'Geomagnetic activity forecasting',
+      'Satellite impact analysis',
+      'Space weather alerts & warnings',
+      'Radiation belt monitoring',
+      'Aurora prediction & tracking',
+      'Spacecraft anomaly correlation',
+      'Real-time space weather dashboard'
+    ],
+    benefits: [
+      'Protect critical infrastructure',
+      'Prevent satellite damage',
+      'Improve mission planning',
+      'Reduce space weather risks'
+    ],
+    marketPrice: '$7,500-15,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Space agencies, Satellite operators, Power grid companies, Aviation industry'
+  },
+  {
+    id: 15,
+    title: 'AI Metaverse Intelligence',
+    description: 'AI-powered metaverse solutions for virtual world creation, avatar intelligence, and immersive experience optimization.',
+    icon: Gamepad2,
+    category: 'AI Metaverse',
+    price: 'Starting at $3,800/month',
+    features: [
+      'Virtual world generation AI',
+      'Intelligent avatar behavior',
+      '3D content creation automation',
+      'Immersive experience optimization',
+      'Virtual economy management',
+      'Social interaction AI',
+      'Cross-platform compatibility',
+      'Real-time world adaptation'
+    ],
+    benefits: [
+      'Create immersive virtual worlds',
+      'Intelligent avatar interactions',
+      'Automated content generation',
+      'Enhanced user engagement'
+    ],
+    marketPrice: '$6,000-12,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Gaming companies, Virtual reality firms, Social platforms, Entertainment industry'
+  },
+  {
+    id: 16,
+    title: 'AI Edge Computing Intelligence',
+    description: 'AI solutions optimized for edge computing environments with ultra-low latency processing and real-time decision making.',
+    icon: Cpu,
+    category: 'AI Edge',
+    price: 'Starting at $2,900/month',
+    features: [
+      'Edge-optimized AI models',
+      'Ultra-low latency processing',
+      'Real-time inference capabilities',
+      'Distributed AI architecture',
+      'Edge device management',
+      'Bandwidth optimization',
+      'Offline AI capabilities',
+      'Edge-to-cloud synchronization'
+    ],
+    benefits: [
+      'Ultra-low latency responses',
+      'Reduced bandwidth usage',
+      'Offline AI capabilities',
+      'Improved user experience'
+    ],
+    marketPrice: '$4,500-9,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'IoT companies, Manufacturing, Smart cities, Mobile app developers'
+  },
+  {
+    id: 17,
+    title: 'AI Digital Twin Intelligence',
+    description: 'AI-powered digital twin solutions for real-time monitoring, simulation, and optimization of physical assets and systems.',
+    icon: Monitor,
+    category: 'AI Digital Twin',
+    price: 'Starting at $4,200/month',
+    features: [
+      'Real-time asset monitoring',
+      'Predictive maintenance AI',
+      'Simulation & modeling',
+      'Performance optimization',
+      'Anomaly detection',
+      'Lifecycle management',
+      'IoT data integration',
+      'Predictive analytics'
+    ],
+    benefits: [
+      'Prevent equipment failures',
+      'Optimize performance',
+      'Reduce maintenance costs',
+      'Extend asset lifespan'
+    ],
+    marketPrice: '$6,500-15,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Manufacturing, Energy companies, Smart buildings, Transportation'
+  },
+  {
+    id: 18,
+    title: 'AI Voice Cloning & Synthesis',
+    description: 'Advanced AI voice cloning and synthesis platform with natural speech generation, emotion control, and multi-language support.',
+    icon: Mic,
+    category: 'AI Voice',
+    price: 'Starting at $2,500/month',
+    features: [
+      'High-fidelity voice cloning',
+      'Emotion & tone control',
+      'Multi-language synthesis',
+      'Real-time voice generation',
+      'Voice aging & modification',
+      'Accent & dialect adaptation',
+      'Voice authentication',
+      'API integration'
+    ],
+    benefits: [
+      'Natural voice generation',
+      'Emotion control capabilities',
+      'Multi-language support',
+      'Easy integration'
+    ],
+    marketPrice: '$4,000-8,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Media companies, E-learning platforms, Accessibility services, Entertainment'
+  },
+  {
+    id: 19,
+    title: 'AI Quantum Cryptography',
+    description: 'Quantum-resistant AI security solutions with quantum key distribution, quantum random number generation, and unbreakable encryption.',
+    icon: Lock,
+    category: 'AI Security',
+    price: 'Starting at $5,500/month',
+    features: [
+      'Quantum key distribution',
+      'Quantum random number generation',
+      'Quantum-resistant encryption',
+      'Entanglement verification',
+      'Quantum authentication',
+      'Post-quantum cryptography',
+      'Quantum security protocols',
+      'Compliance monitoring'
+    ],
+    benefits: [
+      'Unbreakable security',
+      'Future-proof encryption',
+      'Quantum-safe communication',
+      'Advanced threat protection'
+    ],
+    marketPrice: '$8,500-20,000/month',
+    setupTime: '10-20 weeks',
+    targetUsers: 'Government agencies, Financial institutions, Healthcare, Defense contractors'
+  },
+  {
+    id: 20,
+    title: 'AI Autonomous Drone Intelligence',
+    description: 'AI-powered autonomous drone systems with intelligent flight planning, obstacle avoidance, and mission optimization capabilities.',
+    icon: Drone,
+    category: 'AI Autonomous',
+    price: 'Starting at $3,500/month',
+    features: [
+      'Autonomous flight planning',
+      'Intelligent obstacle avoidance',
+      'Mission optimization AI',
+      'Weather adaptation',
+      'Payload optimization',
+      'Fleet coordination',
+      'Real-time decision making',
+      'Safety monitoring'
+    ],
+    benefits: [
+      'Fully autonomous operations',
+      'Improved safety',
+      'Mission optimization',
+      'Cost reduction'
+    ],
+    marketPrice: '$5,500-12,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Delivery services, Agriculture, Surveillance, Emergency response'
+  },
+  {
+    id: 21,
+    title: 'AI Blockchain Intelligence',
+    description: 'AI-powered blockchain analysis and smart contract optimization with fraud detection and compliance monitoring.',
+    icon: Database,
+    category: 'AI Blockchain',
+    price: 'Starting at $3,200/month',
+    features: [
+      'Blockchain transaction analysis',
+      'Smart contract optimization',
+      'Fraud detection & prevention',
+      'Compliance monitoring',
+      'DeFi protocol analysis',
+      'NFT authenticity verification',
+      'Cryptocurrency tracking',
+      'Regulatory reporting'
+    ],
+    benefits: [
+      'Enhanced security',
+      'Fraud prevention',
+      'Compliance assurance',
+      'Optimized performance'
+    ],
+    marketPrice: '$5,000-10,000/month',
+    setupTime: '6-10 weeks',
+    targetUsers: 'Cryptocurrency exchanges, DeFi platforms, Financial institutions, Government'
+  },
+  {
+    id: 22,
+    title: 'AI Climate Change Mitigation',
+    description: 'AI solutions for climate change mitigation, carbon capture optimization, and environmental restoration planning.',
+    icon: TreePine,
+    category: 'AI Climate',
+    price: 'Starting at $4,000/month',
+    features: [
+      'Carbon capture optimization',
+      'Climate modeling & prediction',
+      'Environmental restoration planning',
+      'Renewable energy optimization',
+      'Emission reduction strategies',
+      'Biodiversity protection',
+      'Climate adaptation planning',
+      'Sustainability metrics'
+    ],
+    benefits: [
+      'Accelerate climate solutions',
+      'Optimize carbon capture',
+      'Protect biodiversity',
+      'Meet climate goals'
+    ],
+    marketPrice: '$6,500-15,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Environmental agencies, Energy companies, Government, NGOs'
+  },
+  {
+    id: 23,
+    title: 'AI Space Debris Management',
+    description: 'AI-powered space debris tracking, collision prediction, and orbital cleanup optimization for space sustainability.',
+    icon: Satellite,
+    category: 'AI Space',
+    price: 'Starting at $4,500/month',
+    features: [
+      'Space debris tracking',
+      'Collision prediction algorithms',
+      'Orbital cleanup optimization',
+      'Satellite constellation management',
+      'Space traffic control',
+      'Debris removal planning',
+      'Risk assessment',
+      'Mission coordination'
+    ],
+    benefits: [
+      'Prevent space collisions',
+      'Optimize space operations',
+      'Ensure space sustainability',
+      'Protect valuable assets'
+    ],
+    marketPrice: '$7,000-18,000/month',
+    setupTime: '10-20 weeks',
+    targetUsers: 'Space agencies, Satellite operators, Aerospace companies, Government'
+  },
+  {
+    id: 24,
+    title: 'AI Robotic Process Automation',
+    description: 'Intelligent RPA solutions with AI-powered decision making, process optimization, and cognitive automation capabilities.',
+    icon: Bot,
+    category: 'AI RPA',
+    price: 'Starting at $2,800/month',
+    features: [
+      'Intelligent process automation',
+      'Cognitive decision making',
+      'Workflow optimization',
+      'Document processing AI',
+      'Exception handling',
+      'Process mining',
+      'Performance analytics',
+      'Integration capabilities'
+    ],
+    benefits: [
+      'Automate complex processes',
+      'Reduce human errors',
+      'Improve efficiency',
+      'Cost savings'
+    ],
+    marketPrice: '$4,500-9,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Enterprises, Financial services, Healthcare, Manufacturing'
+  },
+  {
+    id: 25,
+    title: 'AI Augmented Reality Intelligence',
+    description: 'AI-powered AR solutions with intelligent object recognition, spatial mapping, and immersive experience optimization.',
+    icon: Eye,
+    category: 'AI AR',
+    price: 'Starting at $3,200/month',
+    features: [
+      'Intelligent object recognition',
+      'Spatial mapping & tracking',
+      'AR content generation',
+      'Real-time rendering optimization',
+      'Gesture recognition',
+      'Multi-user collaboration',
+      'Cross-platform compatibility',
+      'Performance analytics'
+    ],
+    benefits: [
+      'Enhanced AR experiences',
+      'Intelligent interactions',
+      'Better performance',
+      'Easy deployment'
+    ],
+    marketPrice: '$5,000-10,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Gaming companies, Education, Healthcare, Manufacturing'
+  },
+  {
+    id: 26,
+    title: 'AI Energy Grid Optimization',
+    description: 'AI solutions for smart grid management, renewable energy integration, and energy distribution optimization.',
+    icon: Zap,
+    category: 'AI Energy',
+    price: 'Starting at $3,800/month',
+    features: [
+      'Smart grid optimization',
+      'Renewable energy integration',
+      'Demand forecasting',
+      'Energy storage optimization',
+      'Grid stability monitoring',
+      'Load balancing',
+      'Predictive maintenance',
+      'Real-time analytics'
+    ],
+    benefits: [
+      'Optimize energy distribution',
+      'Integrate renewables',
+      'Reduce energy waste',
+      'Improve grid stability'
+    ],
+    marketPrice: '$6,000-15,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Utility companies, Energy providers, Smart cities, Government'
+  },
+  {
+    id: 27,
+    title: 'AI Quantum Error Correction',
+    description: 'Advanced quantum error correction AI for quantum computing systems with fault tolerance and reliability optimization.',
+    icon: Cpu,
+    category: 'Quantum AI',
+    price: 'Starting at $7,500/month',
+    features: [
+      'Quantum error detection',
+      'Fault-tolerant quantum codes',
+      'Error correction algorithms',
+      'Quantum state protection',
+      'Noise mitigation',
+      'Reliability optimization',
+      'Performance monitoring',
+      'Research collaboration'
+    ],
+    benefits: [
+      'Enable reliable quantum computing',
+      'Reduce quantum errors',
+      'Improve quantum performance',
+      'Advance quantum technology'
+    ],
+    marketPrice: '$12,000-30,000/month',
+    setupTime: '12-24 weeks',
+    targetUsers: 'Quantum computing companies, Research institutions, Tech giants, Government'
+  },
+  {
+    id: 28,
+    title: 'AI Mental Health Analytics',
+    description: 'AI-powered mental health monitoring, analysis, and intervention systems with privacy-preserving technology.',
+    icon: Heart,
+    category: 'AI Healthcare',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Mental health monitoring',
+      'Mood analysis & tracking',
+      'Crisis detection & intervention',
+      'Therapy recommendation AI',
+      'Privacy-preserving analytics',
+      'Wearable device integration',
+      'Personalized interventions',
+      'Clinical decision support'
+    ],
+    benefits: [
+      'Early intervention',
+      'Personalized care',
+      'Privacy protection',
+      'Improved outcomes'
+    ],
+    marketPrice: '$3,500-8,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Healthcare providers, Mental health clinics, Wellness companies, Insurance'
+  },
+  {
+    id: 29,
+    title: 'AI Space Mission Planning',
+    description: 'AI-powered space mission planning and optimization with orbital mechanics, resource management, and risk assessment.',
+    icon: Rocket,
+    category: 'AI Space',
+    price: 'Starting at $5,200/month',
+    features: [
+      'Mission planning optimization',
+      'Orbital mechanics calculations',
+      'Resource allocation AI',
+      'Risk assessment & mitigation',
+      'Trajectory optimization',
+      'Payload optimization',
+      'Mission simulation',
+      'Real-time adjustments'
+    ],
+    benefits: [
+      'Optimize mission success',
+      'Reduce mission costs',
+      'Minimize risks',
+      'Improve efficiency'
+    ],
+    marketPrice: '$8,500-20,000/month',
+    setupTime: '10-20 weeks',
+    targetUsers: 'Space agencies, Aerospace companies, Satellite operators, Research institutions'
+  },
+  {
+    id: 30,
+    title: 'AI Quantum Machine Learning',
+    description: 'Quantum machine learning platform combining quantum computing with AI for solving complex optimization and learning problems.',
+    icon: Brain,
+    category: 'Quantum AI',
+    price: 'Starting at $6,000/month',
+    features: [
+      'Quantum machine learning algorithms',
+      'Quantum neural networks',
+      'Quantum optimization',
+      'Hybrid quantum-classical learning',
+      'Quantum data processing',
+      'Quantum feature mapping',
+      'Quantum kernel methods',
+      'Research collaboration'
+    ],
+    benefits: [
+      'Exponential speedup',
+      'Solve complex problems',
+      'Quantum advantage',
+      'Future-proof solutions'
+    ],
+    marketPrice: '$10,000-25,000/month',
+    setupTime: '12-24 weeks',
+    targetUsers: 'Research institutions, Tech companies, Financial services, Government'
+  },
+
+  {
+    id: 31,
     title: 'AI Agriculture & Food Tech',
     description: 'AI solutions for precision agriculture, crop monitoring, and food production optimization.',
     icon: Sprout,
