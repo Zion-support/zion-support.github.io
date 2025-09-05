@@ -62,6 +62,9 @@ const aiServices = [
     icon: BarChart3,
     features: ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
     pricing: '$4,000 - $20,000 project',
+<<<<<<< HEAD
+    category: 'Analytics'
+=======
     category: 'Analytics',
     link: 'https://predictiveai.ziontechgroup.com'
   },
@@ -572,6 +575,7 @@ const aiServices = [
     pricing: '$30,000 - $300,000/project',
     category: 'Generative AI',
     link: 'https://aigenerative.ziontechgroup.com'
+>>>>>>> 1dab9786c49abc5641bed69cf666f521fa51a67c
   }
 ];
 
@@ -619,12 +623,26 @@ export default function AIServicesPage() {
         <meta name="description" content="Cutting-edge AI solutions including machine learning, natural language processing, computer vision, and intelligent automation." />
         <meta name="keywords" content="AI services, machine learning, NLP, computer vision, artificial intelligence, automation" />
       </Head>
+<<<<<<< HEAD
+      <main className="container mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold mb-6">AI Services</h1>
+        <p className="text-gray-600 mb-10">Explore our core AI offerings.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((s, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
+              <h2 className="text-xl font-semibold mb-2">{s.title}</h2>
+              <p className="text-gray-600 mb-4">{s.description}</p>
+              <div className="text-sm text-gray-500">{s.category} · {s.pricing}</div>
+            </div>
+          ))}
+=======
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
           <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+>>>>>>> 1dab9786c49abc5641bed69cf666f521fa51a67c
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
