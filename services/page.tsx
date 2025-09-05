@@ -7,8 +7,8 @@ import Layout from '../pages/components/Layout';
 import {;
   Brain;
   Cloud;
-  Shield,
-  BarChart3,
+  Shield;
+  BarChart3;
   CheckCircle,
   ArrowRight,
   Clock,

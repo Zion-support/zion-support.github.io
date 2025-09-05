@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion',
 import {;
   Menu;
   X;
-  ChevronDown,
-  Phone,
+  ChevronDown;
+  Phone;
   Mail,
   MapPin,
   Brain,

@@ -4,8 +4,8 @@ import path from 'path';
 import { execSync } from 'child_process';
 ;
 console.log('🔧 Resolving merge conflicts comprehensively...');
-,
-// Get list of conflicted files,
+;
+// Get list of conflicted files;
 const getConflictedFiles = () => {,
   try {,
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),

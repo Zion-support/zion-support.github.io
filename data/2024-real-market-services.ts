@@ -2,8 +2,8 @@ import React from 'react';
 import { ServiceVariant } from "../types/service-variants";
 ;
 export interface RealMarketService {;
-  id: string,
-  name: string,
+  id: string;
+  name: string;
   tagline: string,
   price: string,
   period: string,

@@ -75,8 +75,8 @@ class SyntaxFixer {
         let modified = false;
         
         // Fix import statements
-        content = content.replace(/import\s+([^,]+),\s*$/gm, 'import $1;');
-        content = content.replace(/import\s+([^,]+),\s*$/gm, 'import $1;');
+        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1;');
+        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1;');
         
         if (content !== fs.readFileSync(file, "utf8")) {
           modified = true;
@@ -101,7 +101,7 @@ class SyntaxFixer {
         let modified = false;
         
         // Fix export statements
-        content = content.replace(/export\s+([^,]+),\s*$/gm, 'export $1;');
+        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1;');
         
         if (content !== fs.readFileSync(file, "utf8")) {
           modified = true;

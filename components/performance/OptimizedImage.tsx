@@ -1,8 +1,8 @@
 import React from 'react';
   alt: string;
   width?: number;
-  height?: number,
-  priority?: boolean,
+  height?: number;
+  priority?: boolean;
   className?: string,
   sizes?: string
 };

@@ -6,8 +6,8 @@ import {
   Brain;
   Cloud;
   Shield;
-  Code,
-  Database,
+  Code;
+  Database;
   Network,
   Settings,
   Users,

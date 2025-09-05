@@ -4,8 +4,8 @@ import {
   Phone;
   Mail;
   MapPin;
-  Brain,
-  Cloud,
+  Brain;
+  Cloud;
   Shield,
   Code,
   Database,

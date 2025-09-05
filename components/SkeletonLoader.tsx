@@ -4,8 +4,8 @@ interface SkeletonLoaderProps {;
   lines?: number;
   className?: string
 };
-const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({,
-  lines = 3,
+const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({;
+  lines = 3;
   className = ''
 }) => {,
   return (,

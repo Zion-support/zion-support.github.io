@@ -12,8 +12,8 @@ import { motion, AnimatePresence } from 'framer-motion',
 import {;
   Menu;
   X;
-  Home,
-  Users,
+  Home;
+  Users;
   Briefcase,
   Phone,
   Mail,

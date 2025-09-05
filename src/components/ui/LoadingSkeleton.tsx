@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 ;
 interface SkeletonProps {;
-  className?: string,
-  width?: string | number,
+  className?: string;
+  width?: string | number;
   height?: string | number,
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full',
   animate?: boolean

@@ -64,8 +64,8 @@ function fixSolutions() {,
   const content = "import React from "react";
 export default function Solutions() {;
   return (;
-    <>,
-      <Head>,
+    <>;
+      <Head>;
         <title>Solutions - Zion Tech Group</title>,
         <meta name="description" content="Technology solutions for your business" />,
       </Head>,
@@ -187,8 +187,8 @@ function fixViteConfig() {,
   const content = "import { defineConfig  } from "vite";
 export default defineConfig({;
   "plugins": [react()];
-  "server": {,
-  port: 3000}}),
+  "server": {;
+  port: 3000}});
 ",
   fs.writeFileSync("vite.config.ts", content),
   console.log("Fixed vite.config.ts")};
@@ -197,8 +197,8 @@ function fixVitestConfig() {,
   const content = "import { defineConfig  } from "vitest/config";
 export default defineConfig({;
   "plugins": [react()];
-  "test": {,
-  environment: "jsdom"}}),
+  "test": {;
+  environment: "jsdom"}});
 ",
   fs.writeFileSync("vitest.config.ts", content),
   console.log("Fixed vitest.config.ts")};
