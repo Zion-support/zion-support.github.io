@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion'
+import {
+  Menu,
+  X,
+  ChevronDown,
   ArrowRight,
   Phone,
   Mail,
@@ -47,10 +47,8 @@ import {
   CheckCircle,
   ArrowUpRight,
   ExternalLink
-} from 'lucide-react';
-
-const navigation = [
-  {
+} from 'lucide-react'
+const navigation = [{
     name: 'Home',
     href: '/',
     icon: Home
@@ -64,8 +62,7 @@ const navigation = [
     name: 'Services',
     href: '/services',
     icon: Briefcase,
-    children: [
-      {
+    children: [{
         name: 'AI Services',
         href: '/ai-services',
         icon: Brain,
@@ -106,15 +103,13 @@ const navigation = [
         href: '/services/quantum-computing',
         icon: CpuIcon,
         description: 'Next-generation quantum computing solutions'
-      }
-    ]
+      }]
   },
   {
     name: 'Solutions',
     href: '/solutions',
     icon: Target,
-    children: [
-      {
+    children: [{
         name: 'Enterprise',
         href: '/solutions/enterprise',
         icon: Building2,
@@ -131,15 +126,13 @@ const navigation = [
         href: '/solutions/smb',
         icon: Users,
         description: 'Cost-effective solutions for small and medium businesses'
-      }
-    ]
+      }]
   },
   {
     name: 'Resources',
     href: '/resources',
     icon: FileText,
-    children: [
-      {
+    children: [{
         name: 'Blog',
         href: '/blog',
         icon: FileText,
@@ -162,15 +155,13 @@ const navigation = [
         href: '/webinars',
         icon: Users,
         description: 'Educational sessions and demos'
-      }
-    ]
+      }]
   },
   {
     name: 'Company',
     href: '/company',
     icon: Building2,
-    children: [
-      {
+    children: [{
         name: 'About Us',
         href: '/about',
         icon: Info,
@@ -193,38 +184,29 @@ const navigation = [
         href: '/contact',
         icon: Phone,
         description: 'Get in touch with us'
-      }
-    ]
-  }
-];
-
+      }]
+  }]
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+      setIsScrolled(window.scrollY > 10)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
+    setIsMenuOpen(!isMenuOpen)
+  }
   const toggleDropdown = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  };
-
+    setActiveDropdown(activeDropdown === itemName ? null : itemName)
+  }
   const closeDropdowns = () => {
-    setActiveDropdown(null);
-  };
-
+    setActiveDropdown(null)
+  }
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
@@ -250,7 +232,6 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav className={`transition-all duration-300 ${
         isScrolled ? 'py-4' : 'py-6'
@@ -267,7 +248,6 @@ const Header: React.FC = () => {
                 <p className="text-sm text-gray-600">AI & Technology Solutions</p>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => (
@@ -283,7 +263,6 @@ const Header: React.FC = () => {
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
-                      
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -324,7 +303,6 @@ const Header: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Action Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <button
@@ -340,7 +318,6 @@ const Header: React.FC = () => {
                 Get Started
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -350,7 +327,6 @@ const Header: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (
@@ -375,7 +351,6 @@ const Header: React.FC = () => {
                               activeDropdown === item.name ? 'rotate-180' : ''
                             }`} />
                           </button>
-                          
                           <AnimatePresence>
                             {activeDropdown === item.name && (
                               <motion.div
@@ -390,8 +365,8 @@ const Header: React.FC = () => {
                                     href={child.href}
                                     className="flex items-start space-x-3 py-2 text-gray-600 hover:text-blue-600 transition-colors"
                                     onClick={() => {
-                                      closeDropdowns();
-                                      setIsMenuOpen(false);
+                                      closeDropdowns()
+                                      setIsMenuOpen(false)
                                     }}
                                   >
                                     <child.icon className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
@@ -417,7 +392,6 @@ const Header: React.FC = () => {
                       )}
                     </div>
                   ))}
-                  
                   <div className="pt-4 border-t border-gray-200">
                     <Link
                       href="/contact"
@@ -433,7 +407,6 @@ const Header: React.FC = () => {
           )}
         </AnimatePresence>
       </nav>
-
       {/* Search Overlay */}
       <AnimatePresence>
         {isSearchOpen && (
@@ -473,7 +446,6 @@ const Header: React.FC = () => {
         )}
       </AnimatePresence>
     </header>
-  );
-};
-
-export default Header;
+  )
+}
+export default Header

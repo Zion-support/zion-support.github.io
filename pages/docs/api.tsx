@@ -31,11 +31,9 @@ const apiEndpoints = [{
   Play,
   Pause,
   RotateCcw
-} from 'lucide-react';
-import Layout from '../../components/Layout';
-
-const apiEndpoints = [
-  {
+} from 'lucide-react'
+import Layout from '../../components/Layout'
+const apiEndpoints = [{
 >>>>>>> df467122c9052046173f95c43f7339f58f0207bb
     method: 'GET',
     path: '/api/v1/services',
@@ -90,13 +88,9 @@ const apiEndpoints = [
 const codeExamples = []
   {}
 =======
-      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }
-    ]
-  }
-];
-
-const codeExamples = [
-  {
+      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }]
+  }]
+const codeExamples = [{
 >>>>>>> df467122c9052046173f95c43f7339f58f0207bb
     language: 'JavaScript',
     title: 'Fetch Services',
@@ -111,9 +105,8 @@ const codeExamples = [
 const data = await response.json()
 ``
 =======
-});
-
-const data = await response.json();
+})
+const data = await response.json()
 console.log(data);`
 >>>>>>> df467122c9052046173f95c43f7339f58f0207bb
   },
@@ -121,7 +114,6 @@ console.log(data);`
     language: 'Python',
     title: 'Submit Contact Form',
     code: `import requests
-
 url = 'https://ziontechgroup.com/api/v1/contact'
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -142,7 +134,6 @@ data = {
     'email': 'john@example.com',
     'message': 'Hello, I need help with...'
 }
-
 response = requests.post(url, json=data, headers=headers)
 print(response.json())`
 >>>>>>> df467122c9052046173f95c43f7339f58f0207bb
@@ -164,11 +155,8 @@ const sdkLibraries = []
     documentation: '/docs/sdk/javascript'
 =======
   -H "Content-Type: application/json"`
-  }
-];
-
-const apiFeatures = [
-  {
+  }]
+const apiFeatures = [{
     title: 'RESTful API Design',
     description: 'Clean, intuitive REST API endpoints following industry best practices',
     icon: Code,
@@ -438,40 +426,33 @@ export default function APIDocumentationPage() {}
     description: 'Built for high performance and scalability',
     icon: Server,
     features: ['Load balancing', 'Caching', 'CDN integration', 'Auto-scaling']
-  }
-];
-
+  }]
 const sdkLanguages = [
   { name: 'JavaScript', icon: 'JS', color: 'bg-yellow-500' },
   { name: 'Python', icon: 'PY', color: 'bg-blue-500' },
   { name: 'Java', icon: 'J', color: 'bg-red-500' },
   { name: 'C#', icon: 'C#', color: 'bg-purple-500' },
   { name: 'PHP', icon: 'PHP', color: 'bg-indigo-500' },
-  { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }
-];
-
+  { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }]
 export default function APIDocsPage() {
-  const [selectedEndpoint, setSelectedEndpoint] = useState(0);
-  const [copiedCode, setCopiedCode] = useState<number | null>(null);
-
+  const [selectedEndpoint, setSelectedEndpoint] = useState(0)
+  const [copiedCode, setCopiedCode] = useState<number | null>(null)
   const copyToClipboard = (text: string, index: number) => {
-    navigator.clipboard.writeText(text);
-    setCopiedCode(index);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-
+    navigator.clipboard.writeText(text)
+    setCopiedCode(index)
+    setTimeout(() => setCopiedCode(null), 2000)
+  }
   const generateCodeExample = (endpoint: any) => {
-    const baseUrl = 'https://api.ziontechgroup.com';
+    const baseUrl = 'https://api.ziontechgroup.com'
     const exampleParams = endpoint.parameters
       .filter((p: any) => p.required)
       .map((p: any) => `${p.name}: "example_${p.name}"`)
-      .join(', ');
-
+      .join(', ')
     if (endpoint.method === 'GET') {
       return `fetch('${baseUrl}${endpoint.path}?${endpoint.parameters.map((p: any) => `${p.name}=example_${p.name}`).join('&')}')
   .then(response => response.json())
   .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));`;
+  .catch(error => console.error('Error:', error));`
     } else {
       return `fetch('${baseUrl}${endpoint.path}', {
   method: '${endpoint.method}',
@@ -485,10 +466,9 @@ export default function APIDocsPage() {
 })
 .then(response => response.json())
 .then(data => console.log(data))
-.catch(error => console.error('Error:', error));`;
+.catch(error => console.error('Error:', error));`
     }
-  };
-
+  }
   return (
     <Layout>
       <div className="min-h-screen bg-gray-50">
@@ -575,7 +555,6 @@ export default function APIDocsPage() {
 =======
           </div>
         </section>
-
         {/* API Features Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -637,7 +616,6 @@ export default function APIDocsPage() {
                     </button>
 =======
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {apiFeatures.map((feature, index) => (
                 <motion.div
@@ -680,7 +658,6 @@ export default function APIDocsPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 =======
-
         {/* API Endpoints Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -692,7 +669,6 @@ export default function APIDocsPage() {
                 Explore our comprehensive API endpoints with interactive documentation
               </p>
             </div>
-
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Endpoint List */}
@@ -720,7 +696,6 @@ export default function APIDocsPage() {
                     </div>
                   </div>
                 </div>
-
                 {/* Endpoint Details */}
                 <div className="lg:col-span-2">
                   <div className="bg-white rounded-lg shadow-sm p-6">
@@ -743,7 +718,6 @@ export default function APIDocsPage() {
                         </p>
                       </div>
                     </div>
-
                     {/* Parameters */}
                     {apiEndpoints[selectedEndpoint].parameters.length > 0 && (
                       <div className="mb-8">
@@ -784,7 +758,6 @@ export default function APIDocsPage() {
                         </div>
                       </div>
                     )}
-
                     {/* Responses */}
                     <div className="mb-8">
                       <h4 className="text-lg font-semibold text-gray-900 mb-4">Responses</h4>
@@ -808,7 +781,6 @@ export default function APIDocsPage() {
                         ))}
                       </div>
                     </div>
-
                     {/* Code Example */}
                     <div>
                       <div className="flex items-center justify-between mb-4">
@@ -840,7 +812,6 @@ export default function APIDocsPage() {
             </div>
           </div>
         </section>
-
         {/* Code Examples Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -852,7 +823,6 @@ export default function APIDocsPage() {
                 Get started quickly with our code examples in multiple languages
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {codeExamples.map((example, index) => (
                 <motion.div
@@ -894,7 +864,6 @@ export default function APIDocsPage() {
             </div>
           </div>
         </section>
-
         {/* SDK Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -906,7 +875,6 @@ export default function APIDocsPage() {
                 Official SDKs and libraries for popular programming languages
               </p>
             </div>
-
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {sdkLanguages.map((sdk, index) => (
                 <motion.div
@@ -927,7 +895,6 @@ export default function APIDocsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -968,6 +935,6 @@ export default function APIDocsPage() {
 <<<<<<< HEAD
   )
 =======
-  );
+  )
 >>>>>>> df467122c9052046173f95c43f7339f58f0207bb
 }
