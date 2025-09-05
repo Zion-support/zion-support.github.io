@@ -4,12 +4,8 @@ import { motion } from 'framer-motion';
 import {
   Code,
   Check,
-  Globe,
   Shield,
   Zap,
-  Database,
-  Cpu,
-  Cloud,
   XCircle
 } from 'lucide-react';
 
