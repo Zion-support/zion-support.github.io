@@ -469,6 +469,7 @@ export default function SitemapPage() {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
+<<<<<<< HEAD
 :pages/sitemap.tsx.backup
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Sitemap</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -478,16 +479,63 @@ export default function SitemapPage() {
               </h1>
               <p className="text-xl mb-8 max-w-3xl mx-auto">
                 Navigate through all our pages, services, and resources
+=======
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Sitemap</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Complete overview of all pages and sections on our website.
+>>>>>>> pr-11914
               </p>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 :pages/sitemap.tsx.backup
               </div>
             </div>
           </div>
         </section>              transition={{ duration: 0.8 }}
+=======
+        {/* Sitemap Content */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {sitemapData.map((section, sectionIndex) => (
+                <motion.div
+                  key={sectionIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold mb-4 text-blue-600">{section.category}</h2>
+                  <div className="space-y-3">
+                    {section.pages.map((page, pageIndex) => (
+                      <Link
+                        key={pageIndex}
+                        href={page.url}
+                        className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                      >
+                        <page.icon className="w-4 h-4 mr-2" />
+                        <span>{page.name}</span>
+                        <ArrowRight className="w-3 h-3 ml-auto" />
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+>>>>>>> pr-11914
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Can't Find What You're Looking For?
@@ -498,7 +546,12 @@ export default function SitemapPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
+<<<<<<< HEAD
                   className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"                >
+=======
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+>>>>>>> pr-11914
                   Contact Us
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
@@ -508,18 +561,13 @@ export default function SitemapPage() {
                 >
                   Search
                 </Link>
-                <Link
-                  href="/help"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
-                >
-                  Get Help
-                </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </>
+<<<<<<< HEAD
         {/* Sitemap Content */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4">
@@ -559,5 +607,7 @@ export default function SitemapPage() {
         </section>
       </div>
     </>
+=======
+>>>>>>> pr-11914
   );
 }

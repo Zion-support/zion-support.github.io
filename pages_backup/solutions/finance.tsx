@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+>>>>>>> pr-11914
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
 import React from 'react';
@@ -29,7 +37,36 @@ const features = [;
     title: 'Fraud Detection,',
     description: 'Real-time fraud detection and prevention systems using advanced analytics.'';
 import Layout from '../../components/Layout';
+<<<<<<< HEAD
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';const features = [
+=======
+import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  DollarSign, 
+  Shield, 
+  TrendingUp, 
+  Users, 
+  Database, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+const features = [
+>>>>>>> pr-11914
   {
     icon: DollarSign,
     title: 'Financial Data Management',
@@ -51,6 +88,14 @@ import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRigh
   },
   {
     icon: Users,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+>>>>>>> pr-11914
     title: 'Customer Portal',
     description: 'Secure customer-facing applications and services'
   },
@@ -140,6 +185,7 @@ const benefits = [
   'Reduced operational costs',
   'Faster transaction processing'
 ];
+<<<<<<< HEAD
 export default function FinanceSolutions() {  return (
     <>
       <Head>
@@ -148,6 +194,33 @@ export default function FinanceSolutions() {  return (
       </Head>
 
       <div className="min-h-screen bg-gray-50">
+=======
+export default function FinanceSolutions() {
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+    title: 'User Management',
+    description: 'Secure user management with role-based access control',
+    benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
+  }
+];
+
+export default function FinanceSolutionsPage() {
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+  return (
+    <Layout
+      title="Finance Solutions - Zion Tech Group"
+      description="Secure financial technology solutions for banks, fintech companies, and financial institutions. Regulatory compliant and secure."
+      keywords="finance solutions, fintech, banking technology, financial services, regulatory compliance, risk management"
+    >
+      <div className="min-h-screen bg-white">
+>>>>>>> pr-11914
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
@@ -178,6 +251,7 @@ export default function FinanceSolutions() {  return (
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our finance solutions are built with security and compliance in mind.
               </p>
+<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">              {features.map((feature, index) => (
                 <motion.div
@@ -190,6 +264,35 @@ export default function FinanceSolutions() {  return (
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+<<<<<<< HEAD
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                    <feature.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+>>>>>>> pr-11914
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -313,7 +416,34 @@ export default function FinanceSolutions() {  return (
                   Schedule Consultation
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
+<<<<<<< HEAD
               </div>            </div>
+=======
+              </div>
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <div className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {benefit}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+            </div>
+>>>>>>> pr-11914
           </div>
         </section>
         {/* CTA Section */}
@@ -349,5 +479,22 @@ export default function FinanceSolutions() {  return (
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </Layout>  );
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </Layout>
+=======
+<<<<<<< HEAD
+    </Layout>
+=======
+    </>
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+    </>
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+  );
+>>>>>>> pr-11914
 }

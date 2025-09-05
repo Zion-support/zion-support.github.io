@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+<<<<<<< HEAD
 import { 
   Brain, 
   Cloud, 
@@ -261,6 +262,17 @@ export default function ProductsIndex() {
                 </Link>
               </div>
             </motion.div>
+=======
+
+const ProductsIndex: NextPage = () => {
+  return (
+    <Layout title="Products - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Products</h1>
+            <p className="text-xl text-blue-100">Innovative solutions for modern businesses</p>
+>>>>>>> pr-11914
           </div>
         </section>
       </div>

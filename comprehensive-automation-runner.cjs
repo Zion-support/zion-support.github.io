@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -276,6 +277,8 @@ if (require.main === module) {
 
 module.exports = ComprehensiveAutomationRunner;
 =======
+=======
+>>>>>>> pr-11914
 #!/usr/bin/env node;
 /**
  * Comprehensive Automation Runner;
@@ -320,4 +323,7 @@ const { execSync, spawn } = require('child_process')
     const automationScripts = [{ "path": 'scripts/health-check.cjs', "desc"}]
       { "path": 'scripts/performance-monitor.cjs', "desc"}
       { "path": 'scripts/security-audit.cjs', "desc"}
+<<<<<<< HEAD
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
+=======
+>>>>>>> pr-11914

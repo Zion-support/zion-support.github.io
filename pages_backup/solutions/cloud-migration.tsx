@@ -1,7 +1,47 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';const phases = [;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import { Cloud, 
+  Shield, 
+  Zap, 
+  CheckCircle,
+  ArrowRight,
+  BarChart3,
+  Users,
+  Settings,
+  Database,
+  Globe,
+  Lock,
+  Smartphone,
+  Brain;
+} from 'lucide-react';
+import Layout from "../../components/Layout";";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+const phases = [;
+>>>>>>> pr-11914
   {}
     title: 'Assessment & Planning,',
     description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',
@@ -297,6 +337,11 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> pr-11914
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
@@ -318,6 +363,13 @@ export default function CloudMigrationPage() {
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> pr-11914
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?

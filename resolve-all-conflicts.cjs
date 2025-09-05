@@ -1,20 +1,33 @@
-#!/usr/bin/env node
-/**
- * Resolve All Merge Conflicts
- * Automatically resolves merge conflicts by keeping HEAD version
- */
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class ConflictResolver {
-  constructor() {
-    this.resolvedFiles = [];
-    this.failedFiles = [];
-    this.totalFiles = 0;
+// List of files with conflicts
+const conflictedFiles = [
+  'components/Footer.tsx',
+  'components/Layout.tsx', 
+  'components/layout/MainLayout.tsx',
+  'pages/about.tsx',
+  'pages/ai-services.tsx',
+  'pages/api-docs.tsx',
+  'pages/compliance.tsx',
+  'pages/docs.tsx',
+  'pages/guides.tsx',
+  'pages/it-services.tsx',
+  'pages/micro-saas.tsx',
+  'pages/partners.tsx',
+  'pages/security.tsx',
+  'pages/sitemap.tsx',
+  'pages/support.tsx',
+  'pages/tutorials.tsx'
+];
+
+function resolveConflicts(filePath) {
+  if (!fs.existsSync(filePath)) {
+    console.log(`File not found: ${filePath}`);
+    return;
   }
 
+<<<<<<< HEAD
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
@@ -115,3 +128,15 @@ if (require.main === module) {
 }
 
 module.exports = ConflictResolver;
+=======
+  let content = fs.readFileSync(filePath, 'utf8');
+  
+  // Remove merge conflict markers and keep HEAD version (our changes)
+  content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
+  
+  // Clean up any remaining artifacts
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  
+  // Remove any remaining conflict markers
+>>>>>>> pr-11914

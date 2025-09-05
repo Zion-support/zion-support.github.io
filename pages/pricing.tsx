@@ -10,8 +10,12 @@ const plans = [
     period: "per month",
     description: "Perfect for small businesses getting started",
     features: [
+<<<<<<< HEAD
       "Up to 5 users",
       "Basic AI services",
+=======
+      "Basic AI integration",
+>>>>>>> pr-11914
       "Email support",
       "Standard security",
       "Basic analytics"
@@ -22,7 +26,11 @@ const plans = [
       "Basic integrations"
     ],
     popular: false,
+<<<<<<< HEAD
     icon: Users
+=======
+    color: "blue"
+>>>>>>> pr-11914
   },
   {
     name: "Professional",
@@ -30,19 +38,31 @@ const plans = [
     period: "per month",
     description: "Ideal for growing businesses with advanced needs",
     features: [
+<<<<<<< HEAD
       "Up to 25 users",
       "Advanced AI services",
+=======
+      "Advanced AI capabilities",
+>>>>>>> pr-11914
       "Priority support",
       "Enhanced security",
       "Advanced analytics",
       "Custom integrations",
+<<<<<<< HEAD
       "API access"
     ],
     limitations: [
       "Limited custom development"
+=======
+      "Training sessions"
+>>>>>>> pr-11914
     ],
     popular: true,
+<<<<<<< HEAD
     icon: Zap
+=======
+    color: "purple"
+>>>>>>> pr-11914
   },
   {
     name: "Enterprise",
@@ -56,12 +76,21 @@ const plans = [
       "Enterprise security",
       "Custom analytics",
       "Full customization",
+<<<<<<< HEAD
       "White-label options",
       "Dedicated account manager"
     ],
     limitations: [],
     popular: false,
     icon: Shield
+=======
+      "Dedicated account manager",
+      "SLA guarantee"
+    ],
+    limitations: [],
+    popular: false,
+    color: "green"
+>>>>>>> pr-11914
   }
 ];
 
@@ -87,8 +116,13 @@ const addOns = [
   {
     name: "Training & Onboarding",
     price: "$1,000",
+<<<<<<< HEAD
     period: "per session",
     description: "Comprehensive training for your team"
+=======
+    period: "per month",
+    description: "24/7 priority support"
+>>>>>>> pr-11914
   }
 ];
 
@@ -96,6 +130,7 @@ export default function PricingPage() {
   const [billingPeriod, setBillingPeriod] = useState('monthly');
 
   return (
+<<<<<<< HEAD
     <Layout
       title="Pricing - Zion Tech Group"
       description="Transparent pricing for our comprehensive technology solutions. Choose the plan that fits your business needs."
@@ -111,17 +146,35 @@ export default function PricingPage() {
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
+=======
+    <>
+      <Head>
+        <title>Pricing - Zion Tech Group</title>
+        <meta name="description" content="Transparent pricing for our AI, IT, and micro SaaS services. Choose the plan that fits your business needs." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+>>>>>>> pr-11914
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Simple, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Transparent</span> Pricing
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
+=======
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Pricing</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Transparent pricing for our comprehensive AI, IT, and micro SaaS services.
+>>>>>>> pr-11914
               </p>
             </motion.div>
           </div>
@@ -156,16 +209,98 @@ export default function PricingPage() {
                   </span>
                 </button>
               </div>
+<<<<<<< HEAD
+=======
             </div>
           </div>
         </section>
 
         {/* Pricing Plans */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className={`relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 ${
+                    plan.popular ? 'ring-2 ring-purple-500' : ''
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                    <p className="text-gray-600 mb-4">{plan.description}</p>
+                    <div className="mb-4">
+                      <span className="text-4xl font-bold">{plan.price}</span>
+                      <span className="text-gray-600 ml-2">{plan.period}</span>
+                    </div>
+                  </div>
+                  <div className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center">
+                        <Check className="w-5 h-5 text-green-500 mr-3" />
+                        <span className="text-gray-700">{feature}</span>
+                      </div>
+                    ))}
+                    {plan.limitations.map((limitation, limitationIndex) => (
+                      <div key={limitationIndex} className="flex items-center">
+                        <X className="w-5 h-5 text-red-500 mr-3" />
+                        <span className="text-gray-500">{limitation}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link
+                    href="/contact"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                      plan.popular
+                        ? 'bg-purple-600 text-white hover:bg-purple-700'
+                        : 'bg-gray-900 text-white hover:bg-gray-800'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
+                </motion.div>
+              ))}
+>>>>>>> pr-11914
+            </div>
+          </div>
+        </section>
 
+<<<<<<< HEAD
+        {/* Pricing Plans */}
+
+=======
+        {/* Add-ons Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Add-ons</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Enhance your plan with additional services and features.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {addOns.map((addOn, index) => (
+>>>>>>> pr-11914
                 <motion.div
                   key={plan.name}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
                     plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
@@ -217,12 +352,24 @@ export default function PricingPage() {
                       <ArrowRight className="w-4 h-4 ml-2 inline" />
                     </button>
                   </div>
+=======
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
+                >
+                  <h3 className="text-xl font-semibold mb-2">{addOn.name}</h3>
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-blue-600">{addOn.price}</span>
+                    <span className="text-gray-600 ml-1">{addOn.period}</span>
+                  </div>
+                  <p className="text-gray-600">{addOn.description}</p>
+>>>>>>> pr-11914
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Add-ons */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -322,6 +469,11 @@ export default function PricingPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
+=======
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+>>>>>>> pr-11914
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -346,6 +498,10 @@ export default function PricingPage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </Layout>
+=======
+    </>
+>>>>>>> pr-11914
   );
 }

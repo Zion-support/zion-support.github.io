@@ -1,7 +1,25 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import { Mail, ArrowRight, Users, Calendar, FileText, Video, Globe, Shield, Zap } from 'lucide-react';
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Users,
+  Calendar,
+  FileText,
+  Video,
+  Globe,
+  Shield,
+  Zap
+} from 'lucide-react';
+import Layout from '../components/Layout';
+>>>>>>> pr-11914
 
 const benefits = [
   {
@@ -10,6 +28,7 @@ const benefits = [
     icon: FileText
   },
   {
+<<<<<<< HEAD
     title: 'Early Access',
     description: 'Be the first to know about new features, products, and services.',
     icon: Zap
@@ -47,11 +66,17 @@ const newsletterIssues = [
     description: 'Technology trends shaping the future of remote and hybrid work.',
     readTime: '7 min read',
     featured: false
+=======
+    title: 'Webinar Invitations',
+    description: 'Receive invitations to our expert-led webinars and virtual events',
+    icon: Video
+>>>>>>> pr-11914
   }
 ];
 
 export default function NewsletterPage() {
   return (
+<<<<<<< HEAD
     <Layout
       title="Newsletter - Zion Tech Group"
       description="Subscribe to our newsletter for exclusive content, industry insights, and the latest technology updates."
@@ -236,6 +261,14 @@ export default function NewsletterPage() {
                 </button>
               </div>
             </motion.div>
+=======
+    <Layout title="Newsletter - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Stay Updated</h1>
+            <p className="text-xl text-blue-100">Get the latest insights and updates from our team</p>
+>>>>>>> pr-11914
           </div>
         </section>
       </div>

@@ -143,4 +143,8 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary;
+=======
+export default ErrorBoundary;
+>>>>>>> pr-11914

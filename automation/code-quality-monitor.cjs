@@ -22,6 +22,7 @@ const glob = require('glob');
 async function checkCodeDuplication() {
   
   const duplications = [{
+=======
 async function checkCodeComplexity() {}
   console.log('[INFO] Checking code complexity...');
   const complexFiles = [{ "file": 'components/PerformanceMonitor.tsx', "complexity": 12 },]
@@ -65,6 +66,10 @@ async function checkCodeStyle() {
   try {
     execSync('npm run "lint": check', { "stdio": 'pipe' });
     
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11914
   if (duplications.length > 0) {}
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications;
@@ -119,6 +124,10 @@ async function checkDocumentationCoverage() {
     return { "passed": false, "error": 'Low documentation coverage' };
   }
   
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11914
   };
 };
 async function checkTestCoverage() {}
@@ -165,9 +174,12 @@ async function runCodeQualityMonitor() {}
   const endTime = Date.now();
   const duration = endTime - startTime;
 
+<<<<<<< HEAD
     process.exit(1);
   } else {
     
+=======
+>>>>>>> pr-11914
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );

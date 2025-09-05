@@ -1,10 +1,15 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
 const publicRoutes = [
   "/",
   "/about",
   "/contact",
+<<<<<<< HEAD
+=======
+  "/services",
+  "/ai-services",
+>>>>>>> pr-11914
   "/blog",
   "/services",
   "/solutions",
@@ -17,6 +22,7 @@ const publicRoutes = [
   "/careers",
   "/privacy",
   "/terms",
+<<<<<<< HEAD
   "/cookies",
 <<<<<<< HEAD
   "/accessibility",
@@ -81,16 +87,26 @@ const publicRoutes = [
   "/auth/reset-password",
   "/auth/verify",
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
+=======
+  "/case-studies",
+  "/guides",
+  "/api"
+>>>>>>> pr-11914
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Check if the route is public
 =======
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
   if (publicRoutes.includes(pathname)) {
+=======
+  // Allow public routes
+  if (publicRoutes.includes(pathname) || pathname.startsWith('/api/')) {
+>>>>>>> pr-11914
     return NextResponse.next();
   }
   
@@ -103,23 +119,40 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("/auth/login", request.url));
   }
   
+<<<<<<< HEAD
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
   return NextResponse.next();
+=======
+  // Security headers
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  
+  return response;
+>>>>>>> pr-11914
 }
 
 export const config = {
   matcher: [
     /*
      * Match all request paths except for the ones starting with:
+<<<<<<< HEAD
      * - api (API routes)
+=======
+>>>>>>> pr-11914
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
 =======
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
+=======
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+>>>>>>> pr-11914
   ],
 };

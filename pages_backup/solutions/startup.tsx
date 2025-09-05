@@ -1,7 +1,34 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Zap, DollarSign, TrendingUp, Users } from 'lucide-react';const features = [;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Zap, DollarSign, TrendingUp, Users } from 'lucide-react';
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
+import Layout from "../../components/Layout";";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+const features = [;
+>>>>>>> pr-11914
   {}
     title: 'Rapid Prototyping,',
     description: 'Quick MVP development to validate your ideas and get to market fast,',

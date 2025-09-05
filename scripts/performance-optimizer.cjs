@@ -97,6 +97,10 @@ if (require.main === module) {
 }
 
 module.exports = PerformanceOptimizer;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11914
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

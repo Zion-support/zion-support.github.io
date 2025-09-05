@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface Cache.testProps {
   // Add props here as needed
 }
+
 export default function Cache.test({ }: Cache.testProps) {
   return (
     <div>
@@ -9,4 +11,16 @@ export default function Cache.test({ }: Cache.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

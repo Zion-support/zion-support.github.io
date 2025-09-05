@@ -1,0 +1,17 @@
+<<<<<<< HEAD:components.disabled/SEOHead.dynamic.jsx
+=======
+<<<<<<< HEAD
+const SEOHead = dynamic(() => import(\"./SEOHead\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SEOHead\' ,
+=======
+<<<<<<< HEAD
+const SEOHead = dynamic(() => import("./SEOHead"),{"; loading: () => <p>Loading.</p,>,}) export: "default SEOHead" ,"""
+=======
+>>>>>>> pr-11914:backup-merge-conflicts/SEOHead.dynamic.jsx.backup
+const SEOHead = dynamic(() => import("./SEOHead"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOHead' ,'
+<<<<<<< HEAD:backup-merge-conflicts/SEOHead.dynamic.jsx.backup
+</p>'
+>>>>>>> main
+>>>>>>> main
+=======
+</p>'
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/SEOHead.dynamic.jsx

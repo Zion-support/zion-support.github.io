@@ -1,12 +1,18 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { Brain, Server, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+=======
+import Layout from '../components/Layout';
+import { Brain, Server, Cloud } from 'lucide-react';
+>>>>>>> pr-11914
 
 const serviceCategories = [
   {
     title: 'AI Services',
+<<<<<<< HEAD
     description: 'Cutting-edge artificial intelligence solutions for modern businesses',
     icon: Brain,
     services: [
@@ -40,11 +46,26 @@ const serviceCategories = [
       'User Management'
     ],
     color: 'from-purple-500 to-pink-500'
+=======
+    description: 'Cutting-edge artificial intelligence solutions',
+    icon: Brain
+  },
+  {
+    title: 'IT Services',
+    description: 'Comprehensive IT infrastructure and support',
+    icon: Server
+  },
+  {
+    title: 'Cloud Services',
+    description: 'Scalable cloud solutions for modern businesses',
+    icon: Cloud
+>>>>>>> pr-11914
   }
 ];
 
 export default function ServicesOverviewPage() {
   return (
+<<<<<<< HEAD
     <Layout
       title="Services Overview - Zion Tech Group"
       description="Comprehensive technology services including AI, cloud infrastructure, and micro SaaS solutions."
@@ -152,6 +173,14 @@ export default function ServicesOverviewPage() {
                 </Link>
               </div>
             </motion.div>
+=======
+    <Layout title="Services Overview - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+            <p className="text-xl text-blue-100">Comprehensive technology solutions</p>
+>>>>>>> pr-11914
           </div>
         </section>
       </div>

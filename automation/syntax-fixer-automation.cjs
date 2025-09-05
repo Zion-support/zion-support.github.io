@@ -100,9 +100,14 @@ class SyntaxFixerAutomation {
       const content = fs.readFileSync(filePath, 'utf8');
 
       const corruptionPatterns = [
+<<<<<<< HEAD
         //,
         //,
         /        /""',';';'/,
+=======
+        />>>>>>> cursor/,
+        /""',';';'/,
+>>>>>>> pr-11914
         /';';';'/,
         /""';';';'/,
         /,\s*$/,
@@ -125,10 +130,14 @@ class SyntaxFixerAutomation {
 
       // Remove merge conflict markers
       content = content.replace(
+<<<<<<< HEAD
         /[\s\S]*?[\s\S]*?        ''
       );
       content = content.replace(
         /[\s\S]*?[\s\S]*?        ''
+=======
+        ''
+>>>>>>> pr-11914
       );
 
       // Fix common corruption patterns

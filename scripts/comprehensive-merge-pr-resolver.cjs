@@ -9,9 +9,14 @@ console.log('=');
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
+=======
+    .replace(/>>>>>>> [a-f0-9]+/g, '');
+}
+>>>>>>> pr-11914
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -76,6 +81,7 @@ function processFile(filePath) {
     let modified = false;
 
     // Check for merge conflict markers
+<<<<<<< HEAD
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Removing merge conflict markers from ${filePath}`);
       content = removeMergeConflictMarkers(content);
@@ -224,3 +230,5 @@ async function main() {
 }
 
 main();
+=======
+>>>>>>> pr-11914

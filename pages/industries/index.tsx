@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+<<<<<<< HEAD
 import MainLayout from '../../src/components/layout/MainLayout';import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
+=======
+import Layout from '../../components/Layout';
+import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
+>>>>>>> pr-11914
 
 const industries = [
   {,

@@ -5,14 +5,23 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Merge Conflict Resolver');
+<<<<<<< HEAD
 console.log('==');
+=======
+console.log('=====================================');
+>>>>>>> pr-11914
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
+=======
+    .replace(/>>>>>>> [a-f0-9]+/g, '');
+}
+>>>>>>> pr-11914
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -91,6 +100,7 @@ function processFile(filePath) {
     let modified = false;
 
     // Check for merge conflict markers
+<<<<<<< HEAD
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Removing merge conflict markers from ${filePath}`);
       content = removeMergeConflictMarkers(content);
@@ -136,6 +146,8 @@ function findFilesWithConflicts() {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+=======
+>>>>>>> pr-11914
             files.push(fullPath);
           }
         } catch (error) {

@@ -1,0 +1,9 @@
+<<<<<<< HEAD:src.disabled/components/summit/PartnersSection.jsx
+const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
+=======
+<<<<<<< HEAD
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+=======
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
+>>>>>>> main
+>>>>>>> pr-11914:backup-merge-conflicts/PartnersSection.js.jsx.backup

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11914
 #!/usr/bin/env node;
 /*
   Automated syntax repair for widespread mangling and merge markers.

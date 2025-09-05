@@ -1,0 +1,17 @@
+<<<<<<< HEAD:components.disabled/ContactForm.dynamic.jsx
+=======
+<<<<<<< HEAD
+const ContactForm = dynamic(() => import(\"./ContactForm\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default ContactForm\' ,
+=======
+<<<<<<< HEAD
+const ContactForm = dynamic(() => import("./ContactForm"),{"; loading: () => <p>Loading.</p,>}) export: "default ContactForm" ,"""
+=======
+>>>>>>> pr-11914:backup-merge-conflicts/ContactForm.dynamic.jsx.backup
+const ContactForm = dynamic(() => import("./ContactForm"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ContactForm' ,'
+<<<<<<< HEAD:backup-merge-conflicts/ContactForm.dynamic.jsx.backup
+</p>'
+>>>>>>> main
+>>>>>>> main
+=======
+</p>'
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/ContactForm.dynamic.jsx

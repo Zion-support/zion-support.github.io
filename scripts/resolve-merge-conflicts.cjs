@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11914
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -12,6 +16,7 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false;
     }
@@ -34,6 +39,8 @@ function resolveMergeConflicts(filePath) {
       }
       
       if (line.includes('')) {
+=======
+>>>>>>> pr-11914
         conflictType = 'incoming';
         continue;
       }
@@ -80,6 +87,7 @@ function findConflictedFiles(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             conflictedFiles.push(fullPath);
           }
@@ -128,3 +136,5 @@ try {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
+=======
+>>>>>>> pr-11914

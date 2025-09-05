@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11914
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -10,3 +14,7 @@ console.log('=====')
       console.error('Error resolving "conflicts")
   console.log('Run "git add ." and "git commit")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
+=======
+>>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
+>>>>>>> pr-11914

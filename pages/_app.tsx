@@ -1,7 +1,11 @@
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import PerformanceMonitor from '../components/PerformanceMonitor';
+=======
+import PerformanceMonitor from '../components/PerformanceMonitor.tsx';
+>>>>>>> pr-11914
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ErrorBoundary from '../components/ErrorBoundary';
 

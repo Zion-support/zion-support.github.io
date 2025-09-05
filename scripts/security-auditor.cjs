@@ -279,6 +279,10 @@ if (require.main === module) {
       process.exit(1)})}
 
 module.exports = SecurityAuditor;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11914
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

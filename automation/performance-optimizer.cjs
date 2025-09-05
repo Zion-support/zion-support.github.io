@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -85,16 +86,25 @@ module.exports = nextConfig`;
       this.optimizations.push("Build test successful");
       this.log("✅ Build test successful");
 =======
+=======
+>>>>>>> pr-11914
 /**
  * Performance Optimization Script for Zion Tech Group
  * Analyzes and optimizes application performance
  */
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+>>>>>>> pr-11914
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> pr-11914
     if (!config.includes('optimizeCss')) {}
       optimizations.push('Add CSS optimization');
     };
@@ -259,6 +269,7 @@ if (require.main === module) {}
 });
 };
 module.exports = PerformanceOptimizer;
+=======
 console.log('⚡ Zion Tech Group - Performance Optimizer');
 console.log('==========================================');
 
@@ -366,9 +377,12 @@ function analyzeDependencies() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const optimizer = new PerformanceOptimizer();
 optimizer.run().catch(console.error);
 =======
+=======
+>>>>>>> pr-11914
 function generateOptimizationRecommendations() {
     console.log('\n💡 Generating optimization recommendations...');
     
@@ -414,4 +428,8 @@ console.log(`Medium Priority: ${performanceReport.recommendations.filter(r => r.
 console.log(`\n📄 Report saved to: ${reportPath}`);
 
 process.exit(0);
+<<<<<<< HEAD
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+>>>>>>> pr-11914

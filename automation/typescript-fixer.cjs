@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require("fs");
@@ -186,6 +187,8 @@ class TypeScriptFixer {
 const fixer = new TypeScriptFixer();
 fixer.run().catch(console.error);
 =======
+=======
+>>>>>>> pr-11914
 #!/usr/bin/env node;
 
 const fs = require("fs")
@@ -271,4 +274,7 @@ export {};"
   this.log("\\n "Errors": ")
       this.log("\\n� TypeScript fixing completed!")
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
+=======
+>>>>>>> pr-11914

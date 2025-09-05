@@ -14,7 +14,11 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testPathIgnorePatterns: ['/node_modules/', '/dist/']
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 }
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
+=======
+}
+>>>>>>> pr-11914

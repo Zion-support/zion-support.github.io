@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11914
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {

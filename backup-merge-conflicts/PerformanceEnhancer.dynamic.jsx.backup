@@ -1,0 +1,17 @@
+<<<<<<< HEAD:components.disabled/PerformanceEnhancer.dynamic.jsx
+=======
+<<<<<<< HEAD
+const PerformanceEnhancer = dynamic(() => import(\"./PerformanceEnhancer\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default PerformanceEnhancer\' ,
+=======
+<<<<<<< HEAD
+const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{"; loading: () => <p>Loading.</p,>}) export: "default PerformanceEnhancer" ,"""
+=======
+>>>>>>> pr-11914:backup-merge-conflicts/PerformanceEnhancer.dynamic.jsx.backup
+const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceEnhancer' ,'
+<<<<<<< HEAD:backup-merge-conflicts/PerformanceEnhancer.dynamic.jsx.backup
+</p>'
+>>>>>>> main
+>>>>>>> main
+=======
+</p>'
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/PerformanceEnhancer.dynamic.jsx

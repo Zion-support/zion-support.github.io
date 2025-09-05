@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 describe(\'AIChatAssistant\', () => {
   it(\'renders without crashing\', () => {
     render(<AIChatAssistant />);
@@ -29,3 +30,8 @@ describe('AIChatAssistant', () => {'}
     expect(input).toBeInTheDocument();
   });
 });
+=======
+    expect(input).toBeInTheDocument();
+  });
+});
+>>>>>>> pr-11914

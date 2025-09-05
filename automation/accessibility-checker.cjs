@@ -125,6 +125,10 @@ const reportFile = path.join(
 );
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11914
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

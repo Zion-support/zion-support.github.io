@@ -10,6 +10,7 @@ class IntelligentErrorDetector {
     this.errors = [];
     this.fixes = [];
     this.patterns = {
+<<<<<<< HEAD
       mergeConflicts: /[\s\S]*?>>>>>>>/g,
       syntaxErrors: /SyntaxError|ParseError|Unexpected token/g,
       typeErrors: /TypeError|Cannot read property|is not defined/g,
@@ -149,6 +150,8 @@ class IntelligentErrorDetector {
           conflictType = 'head';
           continue;
         } else if (line.includes('')) {
+=======
+>>>>>>> pr-11914
           conflictType = 'branch';
           continue;
         } else if (line.includes('>>>>>>>')) {

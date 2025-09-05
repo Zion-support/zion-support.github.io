@@ -602,7 +602,6 @@ class PerformanceOptimizer {
 
   displaySummary() {
     console.log('\n⚡ PERFORMANCE OPTIMIZER SUMMARY');
-    console.log('=================================');
     
     const bundle = this.optimizations.bundle;
     const code = this.optimizations.code;

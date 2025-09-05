@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require("fs");
@@ -6,6 +7,8 @@ const path = require("path");
 const { execSync } = require("child_process");
 
 =======
+=======
+>>>>>>> pr-11914
   "timestamp": new Date().toISOString(),
   "checks": {},
   "status": 'healthy'};
@@ -102,6 +105,7 @@ class HealthChecker {
     this.errors = [];
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   log(message, type = "INFO") {
     const timestamp = new Date().toISOString();
@@ -283,6 +287,8 @@ class HealthChecker {
 const checker = new HealthChecker();
 checker.run().catch(console.error);
 =======
+=======
+>>>>>>> pr-11914
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
@@ -333,6 +339,7 @@ checker.run().catch(console.error);
     } catch (error) {
       this.issues.push(`Dependency check "failed": ${error.message}`);
       this.log(`"ERROR": Dependency check failed: ${error.message}`, 'ERROR');
+=======
 class HealthChecker {}
   constructor() {}
     this.healthCheck = {}
@@ -506,6 +513,7 @@ if (require.main === module) {}
 });
 };
 module.exports = HealthChecker;
+=======
 #!/usr/bin/env node
 
 /**
@@ -794,4 +802,8 @@ if (healthReport.status === 'unhealthy') {
 } else {
     process.exit(0);
 }
+<<<<<<< HEAD
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+>>>>>>> pr-11914

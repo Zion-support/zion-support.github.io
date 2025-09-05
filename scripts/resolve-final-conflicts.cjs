@@ -9,9 +9,14 @@ console.log('');
 // Function to resolve merge conflicts by keeping the first version
 function resolveMergeConflicts(content) {
   return content
+<<<<<<< HEAD
     .replace(/[\s\S]*?([\s\S]*?)    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
+=======
+    .replace(/>>>>>>> [a-f0-9]+/g, '');
+}
+>>>>>>> pr-11914
 
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
@@ -94,6 +99,7 @@ for (const file of filesToFix) {
     let modified = false;
 
     // Check for merge conflict markers
+<<<<<<< HEAD
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Resolving merge conflicts in ${file}`);
       content = resolveMergeConflicts(content);
@@ -155,3 +161,5 @@ try {
 }
 
 console.log('\n🎉 Final conflict resolution completed!');
+=======
+>>>>>>> pr-11914

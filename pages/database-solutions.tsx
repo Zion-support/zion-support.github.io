@@ -2,7 +2,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Database, Server, Shield, Zap, Users, CheckCircle, ArrowRight, Phone, Mail, BarChart3, Lock, RefreshCw } from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const services = [
   {
@@ -117,7 +117,7 @@ const pricingPlans = [
 
 export default function DatabaseSolutionsPage() {
   return (
-    <MainLayout
+    <Layout
       title="Database Solutions - Zion Tech Group"
       description="Expert database design, migration, optimization, and management services. Transform your data infrastructure with our comprehensive database solutions."
       keywords="database solutions, database migration, database optimization, PostgreSQL, MySQL, MongoDB, database management"
@@ -363,6 +363,6 @@ export default function DatabaseSolutionsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

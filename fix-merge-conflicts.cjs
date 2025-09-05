@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11914
 const fs = require('fs');
 const path = require('path');
 function fixMergeConflicts(filePath) {}

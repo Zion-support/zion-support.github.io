@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require("fs");
@@ -21,6 +22,8 @@ class SecurityScanner {
   async runNpmAudit() {
     this.log("🔍 Running npm audit...");
 =======
+=======
+>>>>>>> pr-11914
 
 class SecurityScanner {}
   constructor() {}
@@ -168,6 +171,7 @@ if (require.main === module) {}
 });
 };
 module.exports = SecurityScanner;
+=======
 #!/usr/bin/env node
 
 /**
@@ -200,7 +204,10 @@ function runSecurityCheck(name, checkFunction) {
     securityReport.summary.total++;
     console.log(`\n🔍 Security Check: ${name}`);
     
+<<<<<<< HEAD
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
+=======
+>>>>>>> pr-11914
     try {
       const result = execSync("npm audit --json", {
         cwd: this.projectRoot,
@@ -278,6 +285,10 @@ runSecurityCheck('Sensitive Data Scan', () => {
 });
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11914
 // Check for outdated dependencies
 runSecurityCheck('Dependency Security', () => {
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
@@ -303,6 +314,7 @@ runSecurityCheck('Dependency Security', () => {
           this.log(`⚠️ Sensitive file found: ${file}`, "WARN");
           foundSensitive = true;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
       
@@ -361,6 +373,11 @@ runSecurityCheck('Dependency Security', () => {
         const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
         const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
+=======
+        
+        const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+        const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+>>>>>>> pr-11914
         
         // Check for known vulnerable packages
         const vulnerablePackages = [
@@ -369,6 +386,7 @@ runSecurityCheck('Dependency Security', () => {
           "handlebars@4.0.0"
         ];
         
+<<<<<<< HEAD
 <<<<<<< HEAD
         let foundVulnerable = false;
         
@@ -380,6 +398,8 @@ runSecurityCheck('Dependency Security', () => {
             foundVulnerable = true;
           }
 =======
+=======
+>>>>>>> pr-11914
         const foundVulnerable = Object.keys(dependencies).filter(dep => 
             vulnerablePackages.includes(dep)
         );
@@ -703,4 +723,8 @@ if (securityReport.status === 'vulnerable') {
 } else {
     process.exit(0);
 }
+<<<<<<< HEAD
 >>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
+=======
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+>>>>>>> pr-11914

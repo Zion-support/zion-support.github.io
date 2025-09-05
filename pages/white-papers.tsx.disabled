@@ -83,6 +83,7 @@ import { FileText, Download, Calendar, Eye } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 =======
 import React from 'react';
+<<<<<<< HEAD:pages/white-papers.tsx.disabled
 <<<<<<< HEAD
 =======
 =======
@@ -221,6 +222,8 @@ const stats = [
   { number: '15+', label: 'Industry Experts' },
   { number: '95%', label: 'Reader Satisfaction' }
 =======
+=======
+>>>>>>> pr-11914:pages/white-papers.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -378,6 +381,7 @@ export default function WhitePapers() {
                 {paper.description}
 =======
 export default function WhitePapersPage() {
+<<<<<<< HEAD:pages/white-papers.tsx.disabled
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -532,6 +536,9 @@ export default function WhitePapersPage() {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
 =======
+=======
+  return (
+>>>>>>> pr-11914:pages/white-papers.tsx
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
@@ -551,6 +558,7 @@ export default function WhitePapersPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Download our comprehensive white papers on technology trends and best practices.
+<<<<<<< HEAD:pages/white-papers.tsx.disabled
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
 =======
@@ -561,6 +569,8 @@ export default function WhitePapersPage() {
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> main
+=======
+>>>>>>> pr-11914:pages/white-papers.tsx
               </p>
               
               <div className="mb-4">
@@ -727,6 +737,7 @@ export default function WhitePapersPage() {
           </div>
         </section>
 
+<<<<<<< HEAD:pages/white-papers.tsx.disabled
 <<<<<<< HEAD
               </Link>
 =======
@@ -984,6 +995,8 @@ export default function WhitePapersPage() {
 <<<<<<< HEAD
     </Layout>
 =======
+=======
+>>>>>>> pr-11914:pages/white-papers.tsx
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -1018,6 +1031,7 @@ export default function WhitePapersPage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD:pages/white-papers.tsx.disabled
 <<<<<<< HEAD
 =======
     </>
@@ -1029,5 +1043,8 @@ export default function WhitePapersPage() {
     </MainLayout>
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> main
+=======
+    </>
+>>>>>>> pr-11914:pages/white-papers.tsx
   );
 }
