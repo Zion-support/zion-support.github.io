@@ -20,38 +20,28 @@ const sitemapData = [
   {
     category: 'Main Pages',
     pages: [
-      { name: 'Home', url: '/', icon: Home },
-      { name: 'About', url: '/about', icon: Users },
-      { name: 'Contact', url: '/contact', icon: Globe },
-      { name: 'Services', url: '/services', icon: Settings }
+      { name: 'Home', url: '/', icon: Home, description: 'Main landing page' },
+      { name: 'About', url: '/about', icon: Users, description: 'Learn about our company' },
+      { name: 'Contact', url: '/contact', icon: Globe, description: 'Get in touch with us' },
+      { name: 'Services', url: '/services', icon: Settings, description: 'Our comprehensive services' }
     ]
   },
   {
     category: 'Services',
     pages: [
-      { name: 'AI Services', url: '/ai-services', icon: Brain },
-      { name: 'IT Services', url: '/it-services', icon: Network },
-      { name: 'Micro SaaS', url: '/micro-saas', icon: Target },
-      { name: 'Cloud Services', url: '/services/cloud', icon: Cloud },
-      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: Shield },
-      { name: 'Data Analytics', url: '/services/data-analytics', icon: BarChart3 }
-    ]
-  },
-  {
-    category: 'Solutions',
-    pages: [
-      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud },
-      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings },
-      { name: 'Custom Solutions', url: '/solutions/custom', icon: Target }
+      { name: 'AI Services', url: '/ai-services', icon: Brain, description: 'AI and machine learning solutions' },
+      { name: 'IT Services', url: '/it-services', icon: Network, description: 'Information technology services' },
+      { name: 'Cloud Solutions', url: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure and services' },
+      { name: 'Security', url: '/security', icon: Shield, description: 'Cybersecurity solutions' }
     ]
   },
   {
     category: 'Resources',
     pages: [
-      { name: 'Documentation', url: '/docs', icon: Globe },
-      { name: 'API Documentation', url: '/api-docs', icon: Settings },
-      { name: 'Guides', url: '/guides', icon: Globe },
-      { name: 'FAQ', url: '/faq', icon: Users }
+      { name: 'Blog', url: '/blog', icon: Globe, description: 'Latest insights and updates' },
+      { name: 'Documentation', url: '/docs', icon: Globe, description: 'Technical documentation' },
+      { name: 'Help Center', url: '/help', icon: Globe, description: 'Support and help articles' },
+      { name: 'Sitemap', url: '/sitemap', icon: Globe, description: 'This page' }
     ]
   }
 ];
@@ -60,8 +50,10 @@ export default function SitemapPage() {
   return (
     <>
       <Head>
-        <title>Sitemap - Zion Tech Group</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />
+        <title>Site Map - Zion Tech Group</title>
+        <meta name="description" content="Navigate through all our pages and discover everything we offer" />
+        <meta name="keywords" content="sitemap, navigation, pages, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">
@@ -75,17 +67,17 @@ export default function SitemapPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Site <span className="text-yellow-400">Map</span>
+                Site Map
               </h1>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                Navigate through all our pages, services, and resources
+              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+                Navigate through all our pages and discover everything we offer
               </p>
             </motion.div>
           </div>
         </section>
 
         {/* Sitemap Content */}
-        <section className="py-16">
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {sitemapData.map((section, sectionIndex) => (
@@ -96,9 +88,9 @@ export default function SitemapPage() {
                   transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
                   className="bg-white rounded-lg shadow-lg p-6"
                 >
-                  <h3 className="text-xl font-bold mb-4 text-gray-800">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                     {section.category}
-                  </h3>
+                  </h2>
                   <div className="space-y-3">
                     {section.pages.map((page, pageIndex) => (
                       <Link
@@ -108,9 +100,14 @@ export default function SitemapPage() {
                       >
                         <page.icon className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />
                         <div>
-                          <div className="font-medium text-gray-800 group-hover:text-blue-600">
+                          <div className="font-semibold text-gray-900 group-hover:text-blue-600">
                             {page.name}
                           </div>
+                          {page.description && (
+                            <div className="text-sm text-gray-600">
+                              {page.description}
+                            </div>
+                          )}
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 ml-auto" />
                       </Link>
