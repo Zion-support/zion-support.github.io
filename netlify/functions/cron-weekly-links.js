@@ -1,5 +1,4 @@
-const { upsertFile } = require('./_lib/github'),
-
+const { upsertFile } = require('./_lib/github');
 async function fetchHtml(url) {
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),

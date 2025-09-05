@@ -1,5 +1,5 @@
-import fs from 'fs',
-import path from 'path',
+import fs from 'fs';
+import path from 'path';
 type Props = {
   content: string | null,
   generatedAt: string | null

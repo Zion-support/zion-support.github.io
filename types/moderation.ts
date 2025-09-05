@@ -1,6 +1,5 @@
-export type ContentType = 'listing' | 'message' | 'cv' | 'job',
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned',
-
+export type ContentType = 'listing' | 'message' | 'cv' | 'job';
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 export type AiScores = {
   toxicity: number, // 0-1
   nsfw: number, // 0-1

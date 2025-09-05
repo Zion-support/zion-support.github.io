@@ -5,12 +5,10 @@
  * Creates a search index for the website content
  */
 
-const fs = require('fs'),
-const path = require('path'),
-
-const PAGES_DIR = path.join(__dirname, '..pages'),
-const OUTPUT_DIR = path.join(__dirname, '..publicsearch'),
-
+const fs = require('fs');
+const path = require('path');
+const PAGES_DIR = path.join(__dirname, '..pages');
+const OUTPUT_DIR = path.join(__dirname, '..publicsearch');
 // Content types to index
 const CONTENT_TYPES = {
   'pages': {

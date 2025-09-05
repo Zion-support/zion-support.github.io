@@ -1,7 +1,6 @@
-const fs = require('fs'),
-const path = require('path'),
-const { upsertFile } = require('./_lib/github'),
-
+const fs = require('fs');
+const path = require('path');
+const { upsertFile } = require('./_lib/github');
 exports.handler = async function() {
   try {
     // Demo ranking: based on certifications and progress

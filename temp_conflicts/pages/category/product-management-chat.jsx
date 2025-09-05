@@ -1,6 +1,6 @@
 
-import Head from 'next/head',
-import Link from 'next/link',
+import Head from 'next/head';
+import Link from 'next/link';
 const ProductManagementChat = () => {
   return (
     <div>
@@ -18,4 +18,4 @@ const ProductManagementChat = () => {
   )
 },
 
-export default ProductManagementChat,
+export default ProductManagementChat;

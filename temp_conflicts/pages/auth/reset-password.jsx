@@ -1,5 +1,5 @@
 
-import Head from 'next/head',
+import Head from 'next/head';
 const ResetPassword = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const ResetPassword = () => {
   )
 },
 
-export default ResetPassword,
+export default ResetPassword;

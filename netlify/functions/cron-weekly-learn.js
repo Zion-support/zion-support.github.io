@@ -1,7 +1,6 @@
-const fs = require('fs'),
-const path = require('path'),
-const { upsertFile } = require('./_lib/github'),
-
+const fs = require('fs');
+const path = require('path');
+const { upsertFile } = require('./_lib/github');
 exports.handler = async function() {
   try {
     const usersPath = path.join(process.cwd(), 'datalearnusers.json'),

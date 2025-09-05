@@ -1,5 +1,4 @@
-const { upsertFile } = require('./_lib/github'),
-
+const { upsertFile } = require('./_lib/github');
 async function fetchJson(url, token) {
   const resp = await fetch(url, {
     headers: token ? { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github+json' } : {}

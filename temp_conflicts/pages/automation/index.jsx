@@ -1,7 +1,7 @@
 
-import Head from 'next/head',
-import Link from 'next/link',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import Head from 'next/head';
+import Link from 'next/link';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
 const Talent = () => {
   const openPositions = [
     {
@@ -273,4 +273,4 @@ const Talent = () => {
   )
 },
 
-export default Talent,
+export default Talent;

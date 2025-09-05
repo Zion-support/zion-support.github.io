@@ -1,5 +1,5 @@
 
-import Head from 'next/head',
+import Head from 'next/head';
 const InnovationInEnterpriseTechnology = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const InnovationInEnterpriseTechnology = () => {
   )
 },
 
-export default InnovationInEnterpriseTechnology,
+export default InnovationInEnterpriseTechnology;

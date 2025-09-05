@@ -291,7 +291,7 @@
 },
 ,
 // Run the code quality monitor,
-const monitor = new CodeQualityMonitor(),
+const monitor = new CodeQualityMonitor();
 monitor.run().catch(error => {,
   process.exit(1)
 }),

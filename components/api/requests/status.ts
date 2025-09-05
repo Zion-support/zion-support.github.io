@@ -1,8 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
-const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json'),
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');
 function readAll() {
   try {
     return JSON.parse(fs.readFileSync(REQUESTS_PATH, 'utf-8'))

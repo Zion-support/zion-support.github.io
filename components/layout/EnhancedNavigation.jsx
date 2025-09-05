@@ -1,5 +1,5 @@
-import React, { useState } from 'react',
-import Link from 'next/link',
+import React, { useState } from 'react';
+import Link from 'next/link';
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
 
@@ -84,4 +84,4 @@ const EnhancedNavigation = () => {
   )
 },
 
-export default EnhancedNavigation,
+export default EnhancedNavigation;

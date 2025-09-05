@@ -1,5 +1,4 @@
-export type ProjectStatus = 'InProgress' | 'Completed',
-
+export type ProjectStatus = 'InProgress' | 'Completed';
 export type Project = {
   id: string,
   clientId: string, // slug for client/user
@@ -9,8 +8,7 @@ export type Project = {
   completedAt?: string, // ISO string
 },
 
-export type ReviewRole = 'client' | 'talent',
-
+export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {
   communication?: number, // 1-5 optional
   qualityOfWork?: number, // 1-5 optional
@@ -36,8 +34,7 @@ export type Review = {
   createdAt: string, // ISO
 },
 
-export type PublicReview = Omit<Review, 'fromId'> & { authorName: string },
-
+export type PublicReview = Omit<Review, 'fromId'> & { authorName: string };
 export type ReviewsSummary = {
   averageRating: number,
   totalReviews: number,

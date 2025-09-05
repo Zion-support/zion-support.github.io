@@ -1,8 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
-const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json'),
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');
 async function loadRequests(): Promise<any[]> {
   try {
     const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8'),

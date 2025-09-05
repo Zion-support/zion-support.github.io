@@ -1,5 +1,5 @@
 
-import Head from 'next/head',
+import Head from 'next/head';
 const ForgotPassword = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const ForgotPassword = () => {
   )
 },
 
-export default ForgotPassword,
+export default ForgotPassword;

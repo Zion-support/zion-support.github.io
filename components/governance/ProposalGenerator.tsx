@@ -1,7 +1,6 @@
-import React, { useState } from 'react',
-import EnhancedLayout from '../layout/EnhancedLayout',
-export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education',
-
+import React, { useState } from 'react';
+import EnhancedLayout from '../layout/EnhancedLayout';
+export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = {
   targetInstitution: string,
   type: ProposalType,

@@ -1,8 +1,8 @@
 
 #!/usr/bin/env node,
-const fs = require('fs'),
-const path = require('path'),
-const { execSync } = require('child_process'),
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 ,
 class TestAutomation {,
   constructor() {,
@@ -209,7 +209,7 @@ class TestAutomation {,
 },
 ,
 // Run the test automation,
-const testAutomation = new TestAutomation(),
+const testAutomation = new TestAutomation();
 testAutomation.run().catch(error => {,
   process.exit(1)
 }),

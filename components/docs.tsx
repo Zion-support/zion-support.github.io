@@ -1,7 +1,7 @@
-import Head from 'next/head',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 export default function DocsPage() {
   const contact = {
     mobile: '+1 302 464 0950',

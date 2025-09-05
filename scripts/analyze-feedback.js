@@ -1,11 +1,9 @@
-const fs = require('fs'),
-const path = require('path'),
-const { OpenAI } = require('openai'),
-
-const DATA_DIR = path.join(process.cwd(), 'data'),
-const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json'),
-const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback'),
-
+const fs = require('fs');
+const path = require('path');
+const { OpenAI } = require('openai');
+const DATA_DIR = path.join(process.cwd(), 'data');
+const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json');
+const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback');
 function readAll() {
   try {
     const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8'),

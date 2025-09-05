@@ -1,5 +1,5 @@
 
-import Head from 'next/head',
+import Head from 'next/head';
 const Verify = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const Verify = () => {
   )
 },
 
-export default Verify,
+export default Verify;

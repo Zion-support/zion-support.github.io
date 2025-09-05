@@ -279,7 +279,7 @@
 },
 ,
 // Run the build optimizer,
-const optimizer = new BuildOptimizer(),
+const optimizer = new BuildOptimizer();
 optimizer.run().catch(error => {,
   process.exit(1)
 }),

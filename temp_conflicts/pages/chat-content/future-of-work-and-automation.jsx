@@ -1,5 +1,5 @@
 
-import Head from 'next/head',
+import Head from 'next/head';
 const FutureOfWorkAndAutomation = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const FutureOfWorkAndAutomation = () => {
   )
 },
 
-export default FutureOfWorkAndAutomation,
+export default FutureOfWorkAndAutomation;

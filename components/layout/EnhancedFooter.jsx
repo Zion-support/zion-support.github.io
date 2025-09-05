@@ -1,5 +1,5 @@
-import React from 'react',
-import Link from 'next/link',
+import React from 'react';
+import Link from 'next/link';
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear(),
 
@@ -58,4 +58,4 @@ const EnhancedFooter = () => {
   )
 },
 
-export default EnhancedFooter,
+export default EnhancedFooter;

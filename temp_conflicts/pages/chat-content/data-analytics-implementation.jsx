@@ -1,5 +1,5 @@
 
-import Head from 'next/head',
+import Head from 'next/head';
 const DataAnalyticsImplementation = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const DataAnalyticsImplementation = () => {
   )
 },
 
-export default DataAnalyticsImplementation,
+export default DataAnalyticsImplementation;

@@ -1,5 +1,5 @@
 
-import Head from 'next/head',
+import Head from 'next/head';
 const SustainableTechnologyPractices = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const SustainableTechnologyPractices = () => {
   )
 },
 
-export default SustainableTechnologyPractices,
+export default SustainableTechnologyPractices;

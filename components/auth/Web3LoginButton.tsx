@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react',
-import dynamic from 'next/dynamic',
-const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false }),
-
+import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false });
 async function resolveDisplayName(addr: string): Promise<string | null> {
   try {
     const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`),

@@ -1,5 +1,5 @@
 
-import Head from 'next/head',
+import Head from 'next/head';
 const CloudComputingStrategies = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const CloudComputingStrategies = () => {
   )
 },
 
-export default CloudComputingStrategies,
+export default CloudComputingStrategies;

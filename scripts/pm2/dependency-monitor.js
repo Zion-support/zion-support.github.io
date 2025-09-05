@@ -1,8 +1,8 @@
 
 #!/usr/bin/env node,
-const fs = require('fs'),
-const path = require('path'),
-const { execSync } = require('child_process'),
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 ,
 class DependencyMonitor {,
   constructor() {,
@@ -318,7 +318,7 @@ class DependencyMonitor {,
 },
 ,
 // Run the dependency monitor,
-const monitor = new DependencyMonitor(),
+const monitor = new DependencyMonitor();
 monitor.run().catch(error => {,
   process.exit(1)
 }),

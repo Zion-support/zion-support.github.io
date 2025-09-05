@@ -1,13 +1,12 @@
 
 #!/usr/bin/env node,
-const fs = require('fs'),
-const path = require('path'),
-const { execSync } = require('child_process'),
-
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 #!/usr/bin/env node,
-const fs = require('fs'),
-const path = require('path'),
-const { execSync } = require('child_process'),
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 ,
 class GitWorkflow {,
   constructor() {,
@@ -338,7 +337,7 @@ ursor/automate-test-improve-and-merge-code-8ee2
 },
 ,
 // Run the git workflow monitor,
-const gitWorkflow = new GitWorkflow(),
+const gitWorkflow = new GitWorkflow();
 gitWorkflow.run().catch(error => {,
   process.exit(1)
 }),

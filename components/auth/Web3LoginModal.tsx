@@ -1,7 +1,6 @@
-import React, { useCallback, useEffect, useState } from 'react',
-import dynamic from 'next/dynamic',
-const isClient = typeof window !== 'undefined',
-
+import React, { useCallback, useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+const isClient = typeof window !== 'undefined';
 type Web3LoginModalProps = {
   isOpen: boolean,
   onClose: () => void,

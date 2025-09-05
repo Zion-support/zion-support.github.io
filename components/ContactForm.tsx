@@ -1,5 +1,4 @@
-import React, { useState } from 'react',
-
+import React, { useState } from 'react';
 interface ContactFormData {
   name: string,
   email: string,
@@ -11,8 +10,8 @@ interface ContactFormData {
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
-import React, { useState } from 'react',
-import LoadingSpinner from './LoadingSpinner',
+import React, { useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
 ,
 interface FormData {,
   name: string,
@@ -23,7 +22,7 @@ interface FormData {,
   message: string
 },
 ,
-const ContactForm: React.FC = () => {,
+const ContactForm: React.FC = () => {;
   const [formData, setFormData] = useState<FormData>({,
     name: '',
     email: '',
@@ -190,6 +189,6 @@ const ContactForm: React.FC = () => {,
   )
 },
 
-export default ContactForm,
+export default ContactForm;
 ,
-export default ContactForm,
+export default ContactForm;

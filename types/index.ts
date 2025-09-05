@@ -10,14 +10,14 @@ export interface ContactInfo {
 export interface AnimationState {
   isLoaded: boolean,
   hasError: boolean,
-export interface ContactInfo {,
+export interface ContactInfo {;
   phone: string,
   email: string,
   address: string,
   site: string
 },
 ,
-export interface Service {,
+export interface Service {;
   title: string,
   description: string,
   features: string[],
@@ -26,7 +26,7 @@ export interface Service {,
   color: string
 },
 ,
-export interface ServiceCategory {,
+export interface ServiceCategory {;
   title: string,
   description: string,
   count: number,
@@ -35,7 +35,7 @@ export interface ServiceCategory {,
   color: string
 },
 ,
-export interface SEOProps {,
+export interface SEOProps {;
   title: string,
   description: string,
   keywords?: string,
@@ -44,12 +44,12 @@ export interface SEOProps {,
   noindex?: boolean
 },
 ,
-export interface LoadingState {,
+export interface LoadingState {;
   isLoading: boolean,
   error?: string
 },
 ,
-export interface AnimationState {,
+export interface AnimationState {;
   isLoaded: boolean,
   hasError: boolean
 },

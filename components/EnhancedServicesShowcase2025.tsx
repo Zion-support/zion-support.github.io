@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useEffect, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaRocket,
   FaBrain, 
@@ -522,4 +522,4 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   )
 },
 
-export default EnhancedServicesShowcase2025,
+export default EnhancedServicesShowcase2025;

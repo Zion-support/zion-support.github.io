@@ -1,5 +1,5 @@
 
-import Head from 'next/head',
+import Head from 'next/head';
 const BlockchainSolutions = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const BlockchainSolutions = () => {
   )
 },
 
-export default BlockchainSolutions,
+export default BlockchainSolutions;

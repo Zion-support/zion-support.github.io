@@ -402,7 +402,7 @@
 },
 ,
 // Run the health monitor,
-const healthMonitor = new HealthMonitor(),
+const healthMonitor = new HealthMonitor();
 healthMonitor.run().catch(error => {,
   process.exit(1)
 }),

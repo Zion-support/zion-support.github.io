@@ -1,7 +1,7 @@
 
-import Head from 'next/head',
-import { useState } from 'react',
-import EnhancedLayout from '../components/layout/EnhancedLayout',
+import Head from 'next/head';
+import { useState } from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -257,4 +257,4 @@ const Contact = () => {
   )
 },
 
-export default Contact,
+export default Contact;

@@ -1,5 +1,4 @@
-export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
-
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 export type DisputeReason =
   | 'Scope Disagreement'
   | 'Quality Issues'

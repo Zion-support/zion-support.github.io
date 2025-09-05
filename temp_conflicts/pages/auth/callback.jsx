@@ -1,5 +1,5 @@
 
-import Head from 'next/head',
+import Head from 'next/head';
 const Callback = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const Callback = () => {
   )
 },
 
-export default Callback,
+export default Callback;

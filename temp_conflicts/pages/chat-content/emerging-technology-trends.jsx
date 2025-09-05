@@ -1,5 +1,5 @@
 
-import Head from 'next/head',
+import Head from 'next/head';
 const EmergingTechnologyTrends = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const EmergingTechnologyTrends = () => {
   )
 },
 
-export default EmergingTechnologyTrends,
+export default EmergingTechnologyTrends;

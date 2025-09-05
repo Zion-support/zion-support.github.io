@@ -1,5 +1,5 @@
-import React, { useMemo, useState } from 'react',
-import { v4 as uuidv4 } from 'uuid',
+import React, { useMemo, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 export type FeedbackWidgetProps = {
   responseId?: string,
   aiModel?: string

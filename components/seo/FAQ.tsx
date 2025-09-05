@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 type QA = { q: string, a: string },
 
 type Props = { items: QA[] },

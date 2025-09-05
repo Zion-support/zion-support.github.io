@@ -1,8 +1,8 @@
 
 #!/usr/bin/env node,
-const fs = require('fs'),
-const path = require('path'),
-const { execSync } = require('child_process'),
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 ,
 class SecurityScanner {,
   constructor() {,
@@ -256,7 +256,7 @@ class SecurityScanner {,
 },
 ,
 // Run the security scanner,
-const scanner = new SecurityScanner(),
+const scanner = new SecurityScanner();
 scanner.run().catch(error => {,
   process.exit(1)
 }),),

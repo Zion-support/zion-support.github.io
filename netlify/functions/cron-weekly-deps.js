@@ -1,7 +1,6 @@
-const { upsertFile } = require('./_lib/github'),
-const fs = require('fs'),
-const path = require('path'),
-
+const { upsertFile } = require('./_lib/github');
+const fs = require('fs');
+const path = require('path');
 async function getLatest(pkg) {
   try {
     const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`),

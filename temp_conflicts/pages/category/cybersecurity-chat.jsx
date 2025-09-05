@@ -1,6 +1,6 @@
 
-import Head from 'next/head',
-import Link from 'next/link',
+import Head from 'next/head';
+import Link from 'next/link';
 const CybersecurityChat = () => {
   return (
     <div>
@@ -18,4 +18,4 @@ const CybersecurityChat = () => {
   )
 },
 
-export default CybersecurityChat,
+export default CybersecurityChat;

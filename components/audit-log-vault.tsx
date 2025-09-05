@@ -1,10 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Button from '../components/ui/Button',
-import Card from '../components/ui/Card',
-import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react',
-
+import React from 'react';
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
 export default function AuditLogVaultPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',

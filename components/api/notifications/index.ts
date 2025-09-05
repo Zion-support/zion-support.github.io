@@ -1,7 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { supabase } from '../../../utils/supabase/client',
-import { NotificationItem, NotificationType } from '../../../utils/notifications',
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { supabase } from '../../../utils/supabase/client';
+import { NotificationItem, NotificationType } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie || '',
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id=')),

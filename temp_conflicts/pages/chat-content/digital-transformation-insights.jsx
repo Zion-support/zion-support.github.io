@@ -1,5 +1,5 @@
 
-import Head from 'next/head',
+import Head from 'next/head';
 const DigitalTransformationInsights = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const DigitalTransformationInsights = () => {
   )
 },
 
-export default DigitalTransformationInsights,
+export default DigitalTransformationInsights;

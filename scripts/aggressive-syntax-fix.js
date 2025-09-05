@@ -1,6 +1,5 @@
 
-const winston = require('winston'),
-
+const winston = require('winston');
 const logger = winston.createLogger({
   level: 'info',
   format: winston.format.combine(
@@ -22,10 +21,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 
-const fs = require('fs'),
-const path = require('path'),
-const { glob } = require('glob'),
-
+const fs = require('fs');
+const path = require('path');
+const { glob } = require('glob');
 class AggressiveSyntaxFixer {
     constructor() {
         this.projectRoot = process.cwd(),

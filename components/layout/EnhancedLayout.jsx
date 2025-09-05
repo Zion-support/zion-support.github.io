@@ -1,6 +1,6 @@
-import React from 'react',
-import EnhancedNavigation from './EnhancedNavigation',
-import EnhancedFooter from './EnhancedFooter',
+import React from 'react';
+import EnhancedNavigation from './EnhancedNavigation';
+import EnhancedFooter from './EnhancedFooter';
 const EnhancedLayout = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -13,4 +13,4 @@ const EnhancedLayout = ({ children }) => {
   )
 },
 
-export default EnhancedLayout,
+export default EnhancedLayout;
