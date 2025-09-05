@@ -72,7 +72,6 @@ const response = await fetch('/api/ai/email-responder', {
   body: JSON.stringify({
     message: 'I need help with my account',
     context: { userId: '12345' }
-=======
 import React, { useState } from 'react';
 import MainLayout from '../../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -398,7 +397,6 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
                   </div>
                 </motion.div>
               ))}
-=======
         {/* Navigation Tabs */}
         <section className="py-8 bg-white border-b">
           <div className="container mx-auto px-4">
@@ -782,7 +780,6 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
                 >
                   View AI Services
                 </Link>
-=======
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -820,7 +817,6 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
     </Layout>
   );
 }
-=======
       </div>
     </MainLayout>
   );
