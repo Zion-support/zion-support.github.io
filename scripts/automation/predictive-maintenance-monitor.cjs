@@ -15,7 +15,7 @@ console.log(""� Starting Predictive Maintenance Monitor...")
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
   console.log(""No historical maintenance data found, starting fresh")
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
-  console.log(""No historical maintenance data found, starting fresh")
+// console.log(""No historical maintenance data found, starting fresh")
   console.log("� Running predictive maintenance monitoring at ${new Date().toISOString()}"
   console.log("No historical maintenance data found, starting fresh")
         " Predictive maintenance monitoring completed successfully"
@@ -34,7 +34,7 @@ console.log(""� Starting Predictive Maintenance Monitor...")
   "timestamp"
         "metrics"
       console.log( Performance metrics "collected": Build time: ${performanceMetrics.buildTime}ms, Bundle "size": ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB"
-  console.log("⚠ Performance analysis "failed": ")
+// console.log("⚠ Performance analysis "failed": ")
   console.log("� Monitoring build health...")
   "success"
       "errors"
@@ -43,10 +43,11 @@ console.log(""� Starting Predictive Maintenance Monitor...")
       "dependencies"
       const buildOutput = execSync("npm run build")
   "encoding": "utf8"
-        "stdio": "pipe"});"
+        "stdio": "pipe"}
+});"
 "
       console.log( Performance metrics "collected": Build time: ${performanceMetrics.buildTime}ms, Bundle "size": ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB"
-  console.log("⚠ Performance analysis "failed": ")
+// console.log("⚠ Performance analysis "failed": ")
   console.log("� Monitoring build health...")
   "success"
       "errors"
@@ -71,7 +72,7 @@ console.log(""� Starting Predictive Maintenance Monitor...")
           "severity": "high"
           "description": "Build process is failing"
           "timestamp"
-      console.log( Build "health": ${buildHealth.success ? "Healthy" : "Issues detected"})
+// console.log( Build "health": ${buildHealth.success ? "Healthy" : "Issues detected"})
   console.log(`⚠ Build health monitoring "failed": "`)
   "type": "build_monitoring_failure"
         "severity": "medium"
@@ -103,9 +104,9 @@ console.log(""� Starting Predictive Maintenance Monitor...")
           "severity": "high","description": Found ${dependencyHealth.securityVulnerabilities} security vulnerabilities"
           "timestamp": new Date(")
           "timestamp": new Date(")
-      console.log(` Dependency "health"`)
+// console.log(` Dependency "health"`)
   console.log("⚠ Dependency health analysis "failed": ")
-      console.log(` Dependency "health": ${dependencyHealth.totalDependencies} total, ${dependencyHealth.outdatedDependencies} outdated, ${dependencyHealth.securityVulnerabilities} vulnerabilities"`)
+// console.log(` Dependency "health": ${dependencyHealth.totalDependencies} total, ${dependencyHealth.outdatedDependencies} outdated, ${dependencyHealth.securityVulnerabilities} vulnerabilities"`)
   console.log("⚠ Dependency health analysis "failed": ")
   console.log(" Monitoring code quality trends...")
       const lintOutput = execSync("npm run lint")
@@ -121,15 +122,15 @@ console.log(""� Starting Predictive Maintenance Monitor...")
       const warningMatches = lintOutput.match(/"warning/g")
       const srcPath = path.join(process.cwd(), "src"
   const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx", ")]
-  "type": `code_quality_degradation``
+  "type": `code_quality_degradation
           "severity": "
           "description"
           "timestamp"
+// console.log( Code "quality": ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, "maintainability": ${qualityMetrics.maintainabilityIndex}")
       console.log( Code "quality": ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, "maintainability": ${qualityMetrics.maintainabilityIndex}")
-      console.log( Code "quality": ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, "maintainability": ${qualityMetrics.maintainabilityIndex}")
-  console.log("⚠ Code quality monitoring "failed")
+// console.log("⚠ Code quality monitoring "failed")
       console.log( Code "quality": ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, "maintainability")
-  console.log("⚠ Code quality monitoring "failed": ")
+// console.log("⚠ Code quality monitoring "failed": ")
   console.log("� Predicting potential issues...")
   "type": "performance_degradation"
           "probability": "high"
@@ -174,7 +175,7 @@ console.log(""� Starting Predictive Maintenance Monitor...")
         "estimatedImpact": "high"})}"
 "
     this.maintenanceMetrics.predictedIssues = predictions;console.log(� Predicted ${predictions.length} potential issues"")
-  console.log("" Generating maintenance recommendations...")
+// console.log("" Generating maintenance recommendations...")
     console.log(" Generating maintenance recommendations...")
   "priority": "high"
           "category": "performance"
@@ -242,9 +243,9 @@ console.log(""� Starting Predictive Maintenance Monitor...")
         "description": "Multiple outdated dependencies detected"
         "action": "Regularly update dependencies and test compatibility"
         "estimatedEffort": "low"
-    console.log(" Generated ${recommendations.length} maintenance recommendations")
+// console.log(" Generated ${recommendations.length} maintenance recommendations")
   console.log("" Calculating system health score...")
-    console.log(` Generated ${recommendations.length} maintenance recommendations``)
+// console.log(` Generated ${recommendations.length} maintenance recommendations``)
   console.log(`" Calculating system health score..."`)
 "
   async calculateSystemHealth() {"}
@@ -259,7 +260,7 @@ console.log(""� Starting Predictive Maintenance Monitor...")
   case "high"
         case "medium"
         case "low"
-    console.log( System health "score")
+// console.log( System health "score")
   console.log(" Generating maintenance report...")
   "timestamp"
       "summary"
@@ -273,7 +274,7 @@ console.log(""� Starting Predictive Maintenance Monitor...")
       this.reportDir,maintenance-${Date.now()}.json"
       "
     // Ensure health score doesn"
-    console.log( System health "score": ${this.maintenanceMetrics.systemHealth}/100")
+// console.log( System health "score": ${this.maintenanceMetrics.systemHealth}/100")
   console.log(" Generating maintenance report...")
   "timestamp"
       "summary"

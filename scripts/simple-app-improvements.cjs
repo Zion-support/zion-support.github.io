@@ -2,7 +2,7 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-console.log(' Simple App Improvements System')
+// console.log(' Simple App Improvements System')
 console.log('=====')
   log(message, type = 'info')
         "encoding"
@@ -11,7 +11,7 @@ console.log('=====')
     "status"
         "status"
       this.log(`Improvements "failed"`)
-      console.log('\n Improvements "made")
+// console.log('\n Improvements "made")
       console.log('\n Errors "encountered")
     console.log('\n Detailed report saved "to")
   console.error('Improvements "failed")

@@ -49,7 +49,7 @@ const { execSync } = require("child_process")
         "
   this.log( Error processing branch ${branchName}: ${error.message}")
         "ERROR"
-        `ERROR``
+        `ERROR
   this.log("� Attempting to merge ${branchName} into main...")
       // Try to merge the branchexecSync("git merge origin/${branchName} --no-edit")
   "stdio": "pipe"

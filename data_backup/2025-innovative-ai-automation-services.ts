@@ -16,7 +16,7 @@ export const innovativeAIAutomationServices2025 = [{}]
   'Performance analytics and continuous improvement''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 299,
         period:,"
   month',''
@@ -115,7 +115,7 @@ starter: {,}
   ''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 149,
         period:,
   month;"
@@ -220,7 +220,7 @@ starter: {,}
   ''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 99,
         period:,
   month;"
@@ -324,7 +324,7 @@ starter: {,}
   ''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 199,
         period:,
   month;"
@@ -429,7 +429,7 @@ starter: {,}
   ''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 79,
         period:,
   month;"

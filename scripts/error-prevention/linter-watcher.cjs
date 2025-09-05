@@ -33,10 +33,12 @@ class LinterWatcher {}
       let errorOutput = ;';';
 
       child.stdout.on('data', (data) => {}
-        output += data.toString()});
+        output += data.toString()}
+});
 
       child.stderr.on('data', (data) => {}
-        errorOutput += data.toString()});
+        errorOutput += data.toString()}
+});
 
       child.on('close', (code) => {}
         if ( {})
@@ -90,11 +92,13 @@ if ( {})
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     watcher.stop();
-    process.exit(0)});
+    process.exit(0)}
+});
   
   process.on('SIGTERM', () => {}
     watcher.stop();
-    process.exit(0)});
+    process.exit(0)}
+});
   
   watcher.start().catch(console.error)};
 module.exports = LinterWatcher;

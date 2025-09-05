@@ -9,5 +9,8 @@ describe('AIChatAssistant', () => {;''}
 </AIChatAssistant>
     render(<AIChatAssistant />);
 </AIChatAssistant>'
-import { render, screen, describe, it, expect } from 'lucide-react'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant',() => {; it('renders without crashing',() => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<AIChatAssistant />)}); ; it('handles user interactions',() => {; render(<AIChatAssistant />)}),});'
+import { render, screen, describe, it, expect } from 'lucide-react'; import AIChatAssistant from './AIChatAssistant'; ; describe('AIChatAssistant',() => {; it('renders without crashing',() => {; render(<AIChatAssistant />); expect(screen.getByRole('main')).toBeInTheDocument(),}
+}); ; it('displays correct content',() => {; render(<AIChatAssistant />)}
+}); ; it('handles user interactions',() => {; render(<AIChatAssistant />)}),}
+});'
 </AIChatAssistant>'

@@ -20,7 +20,7 @@ function resolveMergeConflicts(filePath) {}
     };
     return false;
   } catch (error) {}
-    console.error(`❌ Error processing ${filePath}:`, error.message);`
+    console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   };
 };
@@ -28,8 +28,9 @@ function resolveMergeConflicts(filePath) {}
 function findConflictedFiles() {}
   try {}
   // TODO: Implement;
-}``
-    const result = execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD"', { encoding: 'utf8' });''
+}
+    const result = execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD"', { encoding: 'utf8' }
+});''
     return result.trim().split('\n').map(line => line.split(' ').pop()).filter(Boolean);'
   } catch (error) {'}
     console.log('No conflicted files found or error:', error.message);'
@@ -45,7 +46,7 @@ async function main() {'}
     console.log('✅ No merge conflicts found');'
     return;
   };
-  console.log(`📁 Found ${conflictedFiles.length} files with conflicts`);`
+  console.log(`📁 Found ${conflictedFiles.length} files with conflicts`);
   
   let resolvedCount = 0;
   for (const file of conflictedFiles) {}
@@ -53,13 +54,14 @@ async function main() {'}
       resolvedCount++;
     };
   };
-  console.log(`✅ Resolved conflicts in ${resolvedCount} files`);`
+  console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
   
   // Add resolved files to git;
   try {}
   // TODO: Implement;
-}``
-    execSync('git add .', { stdio: 'inherit' });''
+}
+    execSync('git add .', { stdio: 'inherit' }
+});''
     console.log('📝 Added resolved files to git');'
   } catch (error) {'}
     console.error('❌ Error adding files to git:', error.message);'

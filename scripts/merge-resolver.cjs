@@ -12,7 +12,8 @@ async function runCommand(command, description) {
       encoding: 'utf8', 
       stdio: 'inherit',
       timeout: 300000 
-    });
+    }
+});
     console.log(`✅ ${description} completed`);
     return { success: true, output: result };
   } catch (error) {

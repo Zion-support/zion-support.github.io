@@ -22,7 +22,7 @@ class: IntelligentOrchestrator {}
   log(message, level =';INFO') {';'}
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
-    console.log(message);``
+    console.log(message);
     "try": {"}
       fs.appendFileSync(this.logFile, logEntry)} catch (error) {}
       console.error()"

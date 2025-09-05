@@ -10,5 +10,5 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;'
   '0': 'Zero'''
     const content = fs.readFileSync(filePath, 'utf8'')'
       new RegExp(`const\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`, 'g'''`}
-      new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&')};`, 'g''`
+      new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&')};, 'g''
 cursor/fix-lint-push-and-merge-to-main-f3c1;'

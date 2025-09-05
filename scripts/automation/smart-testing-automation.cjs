@@ -101,7 +101,7 @@ const crypto = require("crypto")
           "
   this.log(Error analyzing source file ${file}: ${error.message}")
           "WARN"
-          `WARN``
+          `WARN
   "components"
       "utilities"
       "hooks"
@@ -132,14 +132,14 @@ const crypto = require("crypto")
       "hook"
   getComponentTestTemplate(item) {return "import React from "react"}
 import { render, screen  } from "@testing-";"library/react""
-import { ${item.name} } from `${this.getRelativeImportPath(item.file)}``
+import { ${item.name} } from `${this.getRelativeImportPath(item.file)}
 describe("${item.name}")
   it(")
   import { render, screen  } from "@testing-";library/react""
 import { ${item.name} } from "${this.getRelativeImportPath(item.file)}"
 describe("${item.name}")
   it("renders without crashing")
-    expect(screen.getByTestId(`${item.name.toLowerCase()}``
+    expect(screen.getByTestId(`${item.name.toLowerCase()}
   it(")
   it("should work correctly with valid input")
   it("should handle edge cases")
@@ -149,8 +149,8 @@ describe("${item.name}")
   it("should work correctly with valid input")
   it("should handle edge cases")
   it("should handle invalid input gracefully")
-  return "import { renderHook, act  } from "@testing-";`library/react""`
-import { ${item.name} } from `${this.getRelativeImportPath(item.file)}``
+  return "import { renderHook, act  } from "@testing-";`library/react""
+import { ${item.name} } from `${this.getRelativeImportPath(item.file)}
 describe("${item.name}")
   it(")
       .replace(/\\/g, `/``)
@@ -207,7 +207,7 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
             "
   this.log(Failed to fix test failure in ${failure.testFile}: ${error.message}")
             "ERROR"
-            `ERROR``
+            `ERROR
     } catch (error) {  this.log("Auto-fix process "failed": ${error.message  }", "ERROR")
   // This would typically involve parsing Jest"
     // For now, we"

@@ -7,7 +7,7 @@ class ErrorDetector {}
     this.logFile = path.join(this.projectRoot, "automation-reports", "error-detection.log")};
   log(message) {}
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}``
+    const logMessage = `[${timestamp}] ${message}
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n")};
   async detect() {}

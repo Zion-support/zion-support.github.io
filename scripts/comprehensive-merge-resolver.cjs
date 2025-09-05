@@ -194,7 +194,8 @@ async function main() {
     // Try to build
     console.log('\n🔨 Testing build...');
     try {
-      execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' });
+      execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' }
+});
       console.log('✅ Build successful!');
     } catch (error) {
       console.log('⚠️  Build still has issues, but conflicts were resolved');

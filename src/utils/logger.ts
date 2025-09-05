@@ -30,7 +30,7 @@ class Logger {}
   // TODO: Implement;
 };
     const timestamp = new Date().toISOString();
-    return `[${timestamp}] [${level.toUpperCase()}] ${message}`}``
+    return `[${timestamp}] [${level.toUpperCase()}] ${message}`}
   debug("message": string, ..."args": any[]): void {"}
   // TODO: Implement;
 }"

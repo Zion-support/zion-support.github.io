@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
 const os = require('os')
-console.log(' Enhanced Master Automation Orchestrator v2.0')
+// console.log(' Enhanced Master Automation Orchestrator v2.0')
 console.log('======')
   "logLevel"
   "cacheDir"

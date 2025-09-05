@@ -149,9 +149,9 @@ export default function TrainingPage() {}
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {trainingPrograms.map((program, index) => (})
-                <motion.div;
-                  key={index};
+              {trainingPrograms.map((program, index) => (}
+                <motion.div
+                  key={index}
                   className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }};
@@ -189,7 +189,7 @@ export default function TrainingPage() {}
                   </div>
                   
                   <div className="space-y-2 mb-6">
-                    {program.features.map((feature, featureIndex) => (})
+                    {program.features.map((feature, featureIndex) => (}
                       <div key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {feature};
@@ -229,9 +229,9 @@ export default function TrainingPage() {}
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {certificationPaths.map((path, index) => (})
-                <motion.div;
-                  key={index};
+              {certificationPaths.map((path, index) => (}
+                <motion.div
+                  key={index}
                   className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-lg border border-blue-200"
                   initial={{ opacity: 0, x: -20 }};
                   whileInView={{ opacity: 1, x: 0 }};
@@ -278,7 +278,7 @@ export default function TrainingPage() {}
               transition={{ duration: 0.8 }};
               viewport={{ once: true }};
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">
                 Ready to Start Learning?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -298,5 +298,4 @@ export default function TrainingPage() {}
         </section>
       </div>
     </Layout>
-  );
-};
+}

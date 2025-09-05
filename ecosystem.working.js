@@ -128,7 +128,7 @@ module.exports = {}
     };
   ],"
   "deploy": {"}
-    production: {,"}
+    production: {"}
   user: 'ubuntu',''
       "host": 'your-server.com',''
       "ref": 'origin/main',''
