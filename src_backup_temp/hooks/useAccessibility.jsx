@@ -1,2 +1,0 @@
-}); const [settings,setSettings] = useState({; fontSize: 'medium' colorScheme: 'default' motionPreference: 'no-preference' focusStyle: 'default'}
-});");';';';';'; export default ComponentName;";';';';';';''

@@ -1,9 +1,12 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
+=======
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 
 export default [
   {
@@ -136,6 +139,7 @@ export default [
       '*.test.tsx',
       '*.spec.js',
       '*.spec.ts',
+<<<<<<< HEAD
       '*.spec.tsx',
       '*.backup.*',
       '*.broken.*',
@@ -227,12 +231,24 @@ export default [
         __filename: 'readonly',
         exports: 'readonly'
       },
+=======
+      '*.spec.tsx'
+    ]
+  },
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
       parserOptions: {
         ecmaFeatures: {
           jsx: true
         }
       }
     },
+<<<<<<< HEAD
     plugins: {
       react,
       'react-hooks': reactHooks
@@ -331,5 +347,24 @@ export default [
       'no-console': 'off',
       'no-unused-vars': 'warn',
     },
+=======
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'no-undef': 'error',
+      'no-unreachable': 'error',
+      'no-duplicate-case': 'error',
+      'no-empty': 'warn',
+      'no-extra-semi': 'warn',
+      'no-func-assign': 'error',
+      'no-invalid-regexp': 'error',
+      'no-irregular-whitespace': 'error',
+      'no-obj-calls': 'error',
+      'no-sparse-arrays': 'error',
+      'no-unexpected-multiline': 'error',
+      'use-isnan': 'error',
+      'valid-typeof': 'error'
+    }
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
   }
 ];

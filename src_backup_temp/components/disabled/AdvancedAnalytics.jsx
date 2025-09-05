@@ -1,1 +1,0 @@
-}); ; const [timeRange,setTimeRange] = useState('7d'); const [isLoading,setIsLoading] = useState(true); ; useEffect(() => {;'; ;';';''}

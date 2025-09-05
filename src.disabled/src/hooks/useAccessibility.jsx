@@ -1,1 +1,0 @@
-}); const [settings,setSettings] = useState();");,return <div>Component></div> }} "export default ComponentName;"""

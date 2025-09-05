@@ -1,5 +1,0 @@
-    ;
-export default ComponentName;";
-    ';';';';
-    ); const [isGenerating, setIsGenerating] = useState(false); const [isAnalyzing, setIsAnalyzing] = useState(false); const [generatedCode, setGeneratedCode] = useState(''); const [codeAnalysis, setCodeAnalysis] = useState(null); const [suggestions, setSuggestions] = useState([]); const [history, setHistory] = useState([]); const generationTimeoutRef = useRef(null);'');';';';
-export default ComponentName;"';';';';

@@ -4,17 +4,25 @@ const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
   ssr: 'false',
 });
 export default AnalyticsManager;
+<<<<<<< HEAD
 <<<<<<< HEAD;,
+=======
+;,
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 import dynamic from 'next/dynamic';';,
 const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {',
   "loading": () => null,",
 ;  "ssr": 'false'});',
 export default AnalyticsManager;,
-=======;
+;
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false,}); export default AnalyticsManager;',
 import dynamic from 'next/dynamic';
 const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
   "loading": () => null,
   "ssr": 'false'});
 export default AnalyticsManager;
+<<<<<<< HEAD
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
+=======
+import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086

@@ -1,1 +1,0 @@
-}); const [observers,setObservers] = useState([]); const observerRef = useRef(null); useEffect(() => {}; return null} } "export default ComponentName;"}""

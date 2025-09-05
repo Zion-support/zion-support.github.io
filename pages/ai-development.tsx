@@ -1,5 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import Layout from './components/Layout';
+=======
+import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+import { Brain, Code, Database, Zap, Shield, Cloud, ArrowRight, CheckCircle, Star, Users, Clock, DollarSign } from 'lucide-react';
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 
 const aiServices = [
   {

@@ -1,5 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import Layout from './components/Layout';
+=======
+import { motion } from 'framer-motion';
+import { CheckCircle, AlertTriangle, XCircle, Clock, Server, Database, Globe, Shield } from 'lucide-react';
+import Layout from '../components/Layout';
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 
 const services = [
   {

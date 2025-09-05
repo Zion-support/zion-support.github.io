@@ -1,5 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import Layout from './components/Layout';
+=======
+import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+import { Globe, Wifi, Database, Shield, Zap, Cloud, ArrowRight, CheckCircle, Star, Clock, DollarSign, TrendingUp } from 'lucide-react';
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 
 const iotServices = [
   {

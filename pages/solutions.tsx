@@ -11,6 +11,7 @@ import {
   Users, 
   Globe, 
   Award,
+<<<<<<< HEAD
   Zap,
   Database,
   Code,
@@ -20,6 +21,17 @@ import {
   Heart,
   ShoppingCart,
   Landmark
+=======
+  Globe,
+  Zap,
+  Cloud,
+  Code,
+  Heart,
+  ShoppingCart,
+  Settings,
+  GraduationCap,
+  Building
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
