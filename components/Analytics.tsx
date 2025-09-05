@@ -5,17 +5,6 @@ interface AnalyticsProps {
   trackingId?: string;
 }
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
-    trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-    trackButtonClick: (buttonName: string, location?: string) => void;
-    trackFormSubmission: (formName: string) => void;
-    trackExternalLink: (url: string, linkText: string) => void;
-  }
-}
-
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
   useEffect(() => {
     // Google Analytics 4
@@ -120,7 +109,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
                         name: 'load',
-                        value: Math.round(loadTime)
+                        value: Math.round(loadTime),
                       });
                     }
                   }

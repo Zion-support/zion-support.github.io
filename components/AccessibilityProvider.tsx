@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface AccessibilityContextType {
   highContrast: boolean;
@@ -13,14 +13,14 @@ const AccessibilityContext = createContext<AccessibilityContextType | undefined>
 
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
   }
   return context;
 };
 
 interface AccessibilityProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
