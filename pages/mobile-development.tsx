@@ -2,74 +2,52 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight, Globe, Database, Server, Lock } from 'lucide-react';
+import { Smartphone, Code, Globe, Zap, Shield, ArrowRight, CheckCircle, Star, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 
-const apiServices = [
+const services = [
   {
-    title: 'RESTful API',
-    description: 'Clean, intuitive REST API design',
+    title: "Native iOS Development",
+    description: "High-performance iOS apps using Swift and Objective-C",
+    icon: Smartphone,
+    features: ["Swift & Objective-C", "iOS SDK", "Core Data", "App Store Optimization"]
+  },
+  {
+    title: "Native Android Development",
+    description: "Robust Android applications with Java and Kotlin",
+    icon: Code,
+    features: ["Java & Kotlin", "Android SDK", "Room Database", "Google Play Optimization"]
+  },
+  {
+    title: "Cross-Platform Development",
+    description: "Single codebase for both iOS and Android using React Native and Flutter",
     icon: Globe,
-    features: ['RESTful Design', 'JSON Responses', 'HTTP Status Codes', 'Error Handling']
+    features: ["React Native", "Flutter", "Xamarin", "Ionic"]
   },
   {
-    title: 'GraphQL API',
-    description: 'Flexible query language for APIs',
-    icon: Code,
-    features: ['Single Endpoint', 'Type Safety', 'Real-time Subscriptions', 'Efficient Data Fetching']
-  },
-  {
-    title: 'Microservices',
-    description: 'Scalable microservices architecture',
-    icon: Server,
-    features: ['Independent Services', 'Scalability', 'Fault Tolerance', 'Technology Diversity']
-  },
-  {
-    title: 'API Security',
-    description: 'Enterprise-grade security for your APIs',
-    icon: Shield,
-    features: ['Authentication', 'Authorization', 'Rate Limiting', 'Data Encryption']
-  }
-];
-
-const apiFeatures = [
-  {
-    title: "RESTful APIs",
-    description: "Clean, intuitive REST API endpoints for easy integration",
-    icon: Code,
-    features: ["RESTful Design", "JSON Responses", "HTTP Status Codes", "Error Handling"]
-  },
-  {
-    title: "GraphQL APIs",
-    description: "Flexible query language for efficient data fetching",
-    icon: Book,
-    features: ["Single Endpoint", "Type Safety", "Real-time Subscriptions", "Efficient Queries"]
-  },
-  {
-    title: "API Documentation",
-    description: "Comprehensive documentation and testing tools",
+    title: "Progressive Web Apps",
+    description: "Web applications that work like native apps",
     icon: Zap,
-    features: ["Interactive Docs", "Code Examples", "Testing Tools", "Version Control"]
-  },
-  {
-    title: "API Security",
-    description: "Enterprise-grade security and authentication",
-    icon: Shield,
-    features: ["OAuth 2.0", "JWT Tokens", "Rate Limiting", "Data Encryption"]
+    features: ["PWA Technology", "Offline Support", "Push Notifications", "App-like Experience"]
   }
 ];
 
-export default function APIPage() {
+const platforms = [
+  "iOS", "Android", "React Native", "Flutter", "Xamarin", "Ionic", "Cordova", "PWA",
+  "Swift", "Kotlin", "Java", "JavaScript", "TypeScript", "Dart", "C#", "Objective-C"
+];
+
+export default function MobileDevelopment() {
   return (
     <>
       <Head>
-        <title>API Development Services - Zion Tech Group</title>
-        <meta name="description" content="Professional API development services including RESTful APIs, GraphQL, microservices, and API security. Expert implementation and documentation." />
-        <meta name="keywords" content="API development, RESTful API, GraphQL, microservices, API security, API documentation" />
-        <meta property="og:title" content="API Development Services - Zion Tech Group" />
-        <meta property="og:description" content="Build powerful, secure, and scalable APIs with our expert development team." />
-        <meta property="og:url" content="https://ziontechgroup.com/api" />
+        <title>Mobile Development Services - Zion Tech Group</title>
+        <meta name="description" content="Professional mobile app development for iOS and Android. Native and cross-platform solutions with expert implementation." />
+        <meta name="keywords" content="mobile development, iOS apps, Android apps, React Native, Flutter, cross-platform development" />
+        <meta property="og:title" content="Mobile Development Services - Zion Tech Group" />
+        <meta property="og:description" content="Create powerful mobile applications that engage users and drive business growth." />
+        <meta property="og:url" content="https://ziontechgroup.com/mobile-development" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/api" />
+        <link rel="canonical" href="https://ziontechgroup.com/mobile-development" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -88,21 +66,21 @@ export default function APIPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Professional{' '}
+                Expert{' '}
                 <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-                  API Development
+                  Mobile Development
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Build powerful, secure, and scalable APIs that connect your applications and services. 
-                From RESTful APIs to GraphQL, we deliver enterprise-grade solutions.
+                Create powerful mobile applications that engage users and drive business growth. 
+                From native iOS and Android apps to cross-platform solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Start Your API Project
+                  Start Your App
                 </Link>
-                <Link href="/docs" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  View API Docs
+                <Link href="/portfolio" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  View Portfolio
                 </Link>
               </div>
             </motion.div>
@@ -118,14 +96,14 @@ export default function APIPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our API Services</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Mobile Development Services</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive API development solutions tailored to your business needs
+                We specialize in creating mobile applications that deliver exceptional user experiences
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {apiServices.map((service, index) => (
+              {services.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -152,7 +130,7 @@ export default function APIPage() {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Platforms Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -161,34 +139,22 @@ export default function APIPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">API Features</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Platforms & Technologies</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Advanced features and capabilities for modern API development
+                We work with all major mobile development platforms and technologies
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {apiFeatures.map((feature, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+              {platforms.map((platform, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
                 >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.features.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <span className="text-gray-800 font-medium">{platform}</span>
                 </motion.div>
               ))}
             </div>
@@ -203,16 +169,16 @@ export default function APIPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl font-bold mb-6">Ready to Build Your API?</h2>
+              <h2 className="text-4xl font-bold mb-6">Ready to Build Your Mobile App?</h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto">
-                Let's create powerful APIs that connect your applications and drive business growth
+                Let's turn your mobile app idea into reality with our expert development team
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Started
+                  Get Free Quote
                 </Link>
-                <Link href="/docs" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
-                  View Documentation
+                <Link href="/portfolio" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                  View Our Work
                 </Link>
               </div>
             </motion.div>
