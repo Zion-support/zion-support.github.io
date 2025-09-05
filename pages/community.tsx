@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
-import SimpleLayout from '../components/SimpleLayout';
->>>>>>> main
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import { MessageCircle, Calendar, Users, Award } from 'lucide-react';
-
 
 export default function CommunityPage() {
   const communityFeatures = [
@@ -23,10 +18,10 @@ export default function CommunityPage() {
       features: ["Monthly Webinars", "Tech Talks", "Workshops"]
     },
     {
-      title: "Expert Network",
-      description: "Access to our network of technology experts",
+      title: "User Groups",
+      description: "Connect with like-minded professionals",
       icon: Users,
-      features: ["Mentorship", "Consultations", "Collaboration"]
+      features: ["Local Meetups", "Online Groups", "Networking"]
     },
     {
       title: "Recognition Program",
@@ -34,31 +29,24 @@ export default function CommunityPage() {
       icon: Award,
       features: ["Community Badges", "Contributor Recognition", "Special Access"]
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;  ];
-
-  return (;
-    <Layout );
-      title="Community - Zion Tech Group"";
-      description="Join our vibrant community of developers, technologists, and innovators. Connect, learn, and grow together.""
-    >;
-      <div className="min-h-screen bg-gray-50">";
-=======
->>>>>>> main
   ];
 
   return (
-    <SimpleLayout 
+    <Layout
       title="Community - Zion Tech Group"
-      description="Join our vibrant community of developers, technologists, and innovators. Connect, learn, and grow together."
+      description="Join our vibrant community of developers, innovators, and technology enthusiasts."
+      keywords="community, developers, forums, events, webinars, networking"
     >
       <div className="min-h-screen bg-gray-50">
-<<<<<<< HEAD
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-teal-900 via-blue-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -66,274 +54,86 @@ export default function CommunityPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Community
+                Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Community</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Join our vibrant community of developers, technologists, and innovators. 
-=======
->>>>>>> main
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-teal-900 via-blue-900 to-indigo-900 text-white py-20">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Connect with developers, innovators, and technology enthusiasts from around the world.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Community Features */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className="text-center""
-            >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-                Community;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-                Join our vibrant community of developers, technologists, and innovators. 
-                Connect, learn, and grow together in the world of technology.,
-              </p>;
-            </motion.div>;
-          </div>;
-        </section>;
-=======
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Community
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Join our vibrant community of developers, technologists, and innovators. 
->>>>>>> main
-                Connect, learn, and grow together in the world of technology.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-<<<<<<< HEAD
-
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {communityFeatures.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-=======
->>>>>>> main
-
-        {/* Features Section */}
-        <section className="py-20">"
-          <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {communityFeatures.map((feature, index) => {}
-                const IconComponent = feature.icon;
-                return (;
-                  <motion.div);
-                    key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
->>>>>>> main
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-<<<<<<< HEAD
-                  >
-                    <div className="text-teal-600 mb-4">
-                      <IconComponent className="w-10 h-10" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      {feature.description}
-                    </p>
-                    <ul className="space-y-2">
-                      {feature.features.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-=======
-                  >,
-                    <div className="text-teal-600 mb-4">";
-                      <IconComponent className="w-10 h-10" />";
-                    </div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
-                      {feature.title}
-                    </h3>,
-                    <p className="text-gray-600 mb-4">";
-                      {feature.description}
-                    </p>,
-                    <ul className="space-y-2">";
-                      {feature.features.map((item, itemIndex) => (,
-                        <li key={itemIndex} className="flex items-center text-sm text-gray-600">"
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
->>>>>>> main
-                          {item}
-                        </li>
-                      ))}
-<<<<<<< HEAD
-                    </ul>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Community Stats Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-=======
-                    </ul>,
-                  </motion.div>;
-                );
-              })}
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
-=======
-            </div>
-          </div>
-        </section>
->>>>>>> main
-
-        {/* Community Stats Section */}
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              className="text-center mb-16"";
->>>>>>> main
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-<<<<<<< HEAD
+              className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Community by the Numbers
+                Community Features
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our growing community of technology enthusiasts and professionals.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover all the ways you can engage with our community and grow your skills.
               </p>
             </motion.div>
 
-=======
-<<<<<<< HEAD
-            >,
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">";
-                Community by the Numbers;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">";
-                Our growing community of technology enthusiasts and professionals.;
-              </p>;
-            </motion.div>;
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">";
-              <div className="text-center">";
-                <div className="text-4xl font-bold text-teal-600 mb-2">2,500+</div>"
-                <div className="text-gray-600">Active Members</div>";
-              </div>;
-              <div className="text-center">";
-                <div className="text-4xl font-bold text-teal-600 mb-2">150+</div>";
-                <div className="text-gray-600">Monthly Events</div>";
-              </div>;
-              <div className="text-center">";
-                <div className="text-4xl font-bold text-teal-600 mb-2">5,000+</div>"
-                <div className="text-gray-600">Forum Posts</div>";
-              </div>;
-              <div className="text-center">";
-                <div className="text-4xl font-bold text-teal-600 mb-2">50+</div>";
-                <div className="text-gray-600">Expert Contributors</div>";
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-=======
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Community by the Numbers
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our growing community of technology enthusiasts and professionals.
-              </p>
-            </motion.div>
-
->>>>>>> main
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-teal-600 mb-2">2,500+</div>
-                <div className="text-gray-600">Active Members</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-teal-600 mb-2">150+</div>
-                <div className="text-gray-600">Monthly Events</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-teal-600 mb-2">5,000+</div>
-                <div className="text-gray-600">Forum Posts</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-teal-600 mb-2">50+</div>
-                <div className="text-gray-600">Expert Contributors</div>
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {communityFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.features.map((item, idx) => (
+                      <li key={idx} className="text-sm text-gray-500 flex items-center">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Join Our Community Today
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Ready to connect with like-minded professionals and expand your knowledge? Join our community today.
-            </p>
-            <motion.a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-teal-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              whileHover={{ scale: 1.05 }}
-=======
->>>>>>> main
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-teal-600 to-blue-600 text-white">"
-          <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-              Join Our Community Today;
-            </h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";
-              Ready to connect with like-minded professionals and expand your knowledge? Join our community today.;
-            </p>;
-            <motion.a;
-              href="/contact"";
-              className="inline-flex items-center px-8 py-4 bg-white text-teal-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
-              whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
-            >,
-              Join Community;
-              <ArrowRight className="w-5 h-5 ml-2" />";
-            </motion.a>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-=======
->>>>>>> main
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              Join Community
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </motion.a>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Join Our Community?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Connect with thousands of developers and start your journey with us today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Join Now
+                </button>
+                <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                  Learn More
+                </button>
+              </div>
+            </motion.div>
           </div>
         </section>
       </div>
-    </SimpleLayout>
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
+    </Layout>
   );
 }

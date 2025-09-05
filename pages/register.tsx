@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import { User, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import Layout from '../components/Layout';
 
 export default function RegisterPage() {
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -17,13 +15,6 @@ export default function RegisterPage() {
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle registration logic here
-    console.log('Registration attempt:', formData);
-  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -31,11 +22,16 @@ export default function RegisterPage() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle registration logic here
+    console.log('Registration attempt:', formData);
   };
 
   return (
-    <MainLayout
+    <Layout
       title="Register - Zion Tech Group"
       description="Create your Zion Tech Group account to access our comprehensive technology solutions and services."
       keywords="register, sign up, account, Zion Tech Group, technology solutions"
@@ -248,6 +244,6 @@ export default function RegisterPage() {
           </motion.div>
         </div>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
