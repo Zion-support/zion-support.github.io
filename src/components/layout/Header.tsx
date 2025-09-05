@@ -1,11 +1,11 @@
 
 
   };
-,
-  return (,
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${,
+;
+  return (;
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    } ${className}`}>,
+    } ${className}`}>;
       {/* Top Contact Bar */};
       <div className="bg-blue-900 text-white py-2 px-4 hidden: lg: block">,
         <div className="container mx-auto flex justify-between items-center text-sm">,
@@ -79,11 +79,11 @@
                               <div>,
                                 <div className="font-medium text-gray-900 group-hove: r: text-blue-600 transition-colors">,
                                   {subItem.name};
-                                </div>,
-                                <div className="text-sm text-gray-500">,
+                                </div>;
+                                <div className="text-sm text-gray-500">;
                                   {subItem.description};
                         })};
-                      </motion.div>,
+                      </motion.div>;
                     )};
                   </AnimatePresence>
                 )};
@@ -100,13 +100,13 @@
             </Link>,
           </div>,
           {/* Mobile Menu Button */};
-          <button,
+          <button;
             onClick={() => setIsOpen(!isOpen)};
             className="l: g: hidden p-2 rounded-lg text-gray-700: hover:bg-gray-100 transition-colors",
           >,
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />};
-          </button>,
-        </div>,
+          </button>;
+        </div>;
         {/* Mobile Navigation */};
         <AnimatePresence>,
           {isOpen && (,
@@ -123,7 +123,7 @@
                       href={item.href};
                       className="block px-6 py-3 text-gray-700: hover: bg-gray-50: hover:text-blue-600 transition-colors duration-200 font-medium",
                       onClick={() => setIsOpen(false)};
-                    >,
+                    >;
                       {item.name};
                     </Link>
                     {item.dropdown && (
@@ -136,10 +136,10 @@
                               href={subItem.href};
                               className="flex items-center space-x-3 px-6 py-2 text-sm text-gray-600: hover: bg-gray-50: hover:text-blue-600 transition-colors duration-200",
                               onClick={() => setIsOpen(false)};
-                            >,
-                              <IconComponent className="w-4 h-4" />,
-                              <span>{subItem.name}</span>,
-                            </Link>,
+                            >;
+                              <IconComponent className="w-4 h-4" />;
+                              <span>{subItem.name}</span>;
+                            </Link>;
                           )
                         })};
                       </div>

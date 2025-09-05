@@ -151,7 +151,7 @@ export default function AIServices() {
       popular: true,
       useCases: ['Customer Support', 'Lead Generation', 'Internal Helpdesk', 'E-commerce Assistant']
     }
-  ];
+  ],
 
   const filteredServices = selectedCategory === 'all' 
     ? services 
