@@ -88,8 +88,7 @@ export default function SearchPage() {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
-  };
+    router.push(`/search?q=${encodeURIComponent(searchTerm)}`);  };
 
   return (
     <Layout
@@ -106,8 +105,7 @@ export default function SearchPage() {
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
           
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
+          <div className="container mx-auto px-4 relative z-10">            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -168,8 +166,7 @@ export default function SearchPage() {
                   Clear Filters
                 </button>
               </div>
-            </div>
-          </div>
+            </div>          </div>
         </section>
 
         {/* Search Results */}
@@ -252,8 +249,7 @@ export default function SearchPage() {
                   >
                     Clear All Filters
                   </button>
-                </div>
-              )}
+                </div>              )}
             </div>
           </div>
         </section>

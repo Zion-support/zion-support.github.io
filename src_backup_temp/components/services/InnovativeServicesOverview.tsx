@@ -1,15 +1,12 @@
 import React, { useState, useMemo } from 'react';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/innovativeServices2025";
-  maxServices?: number;
+;
+  maxServices?: "number;
   category?: string;
-  showViewAllButton?: boolean}
-const "InnovativeServicesOverview": React.FC<InnovativeServicesOverviewProps> = ({
-maxServices:  6,;
-  category,;
-  showViewAllButton = true;';
-}) => {;';';
-  const [activeTab, setActiveTab] = useState<any>('featured');
-  const tabs = [;
+  showViewAllButton?: boolean"}
+;
+const "InnovativeServicesOverview": "React.FC<InnovativeServicesOverviewProps> = ({;
+"maxServices":  6",;  const tabs = [;
     { "id": 'featured', "label": 'Featured', "count": 3 },;';';
     { "id": 'ai', "label": 'AI Services', "count": getServicesByCategory('AI Services').length },;';';
     { "id": 'it', "label": 'IT Services', "count": getServicesByCategory('IT Services').length },;';';
@@ -70,25 +67,16 @@ maxServices:  6,;
               {feature}
             </li>;
           ))}
-        </ul>
-      </div>
-      <div className="border-t pt-3">
-        <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
-          <span>"Delivery": {service.estimatedDelivery}</span>
-          <span>"Support": {service.supportLevel};</span>
-        </div>
-        <div className="flex space-x-2">
-          <button className="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-sm "hover": bg-blue-700 transition-colors">
-            Get Quote
-          </button>;
-          <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-3 rounded text-sm "hover":bg-blue-50 transition-colors">;
-            Details;
-          </button>;
-        </div>;
+        </ul>;
       </div>;
-    </div>;
-  );
-  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
+      <div className="border-t pt-3">;
+        <div className="flex items-center justify-between text-xs text-gray-500 mb-3">;
+          <span>"Delivery": "{service.estimatedDelivery"}</span>;
+          <span>"Support": "{service.supportLevel"}</span>;
+        </div>;
+        <div className="flex space-x-2">;
+          <button className="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-sm "hover": "bg-blue-700 transition-colors">;
+            Get Quote;  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
   const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / totalServices;
   return (
     <div className="min-h-screen bg-white">
@@ -158,15 +146,38 @@ maxServices:  6,;
             </div>;
           </div>;
         )}
+;
         {/* Services Grid */}
-        <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {filteredServices.map((service)  => (
-            <ServiceCard key={service.id} service={service} />
+        <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-6 mb-8">;
+          {filteredServices.map((service)  => (;
+            <ServiceCard key={service.id"} service={service} />;
           ))}
-        </div>
+        </div>;
         {/* CTA Section */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h3>
+        <div className="text-center">;
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h3>;
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">;
+            Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.;
+          </p>;
+          <div className="flex flex-col "sm": "flex-row justify-center space-y-4 "sm":space-y-0 "sm":space-x-6">;
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold "hover":bg-blue-700 transition-colors">;
+              Schedule a Consultation;
+            </button>;
+            <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold "hover":bg-blue-50 transition-colors">;
+              View All Services;
+            </button>;
+          </div>;
+        </div>;
+        {/* View All Button */"}
+        {showViewAllButton && (;
+          <div className="text-center mt-8">;
+            <a;
+              href="/innovative-services-2025";
+              className="inline-flex items-center text-blue-600 "hover": "text-blue-700 font-medium";
+              View All {totalServices"} Services;
+              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />;
+              </svg>;          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h3>
           <pclassName="text-gray-600 mb-6 max-w-2xl mx-auto">';
             Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
           </p>
@@ -196,6 +207,10 @@ maxServices:  6,;
     </div>;
   );
 };
+;
+export default InnovativeServicesOverview;}}};
+</any>;
+</InnovativeServicesOverviewProps>
 export default InnovativeServicesOverview;}}};
 </any>
 </InnovativeServicesOverviewProps>;';';

@@ -10,16 +10,12 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
         <motion.div ";
           className="text-center mb-16";
           initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
@@ -30,7 +26,6 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             Built with cutting-edge technologies and industry best practices.Our comprehensive tech stack ensures scalability", security, and performance.</p>;
         </motion.div>;
-
         {/* Technology Categories */}";
         <div className="grid grid-cols-1 "lg": "gri d-cols-2 gap-8 mb-16">;
           {technologyCategories.map((category", index) => (;
@@ -47,15 +42,12 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                   <span className="text-sm">⚡</span>;
                 </div>;
                 {category.category}
-              
-
-              <div className="space - y-4">;
+              </h3>;              <div className="space - y-4">;
                 {category.technologies.map((tech, techIndex) => (<div key={tech.name} className="flex items - center justify -between">;
                     <div className="flex items - center gap-3">;
                       <span className="text-xl">{tech.icon}</span>;
                       <span className="text-gray - 300 font -medium">{tech.name}</span>;
                     </div>;
-
                     <div className="flex items - center gap-2">;
                       <div className="w-20 bg-slate - 700 rounded-full h-2">;
                         <motion.div;
@@ -63,10 +55,8 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                           initial={{ "width": "0 "}}                          whileInView={{ "width": "`${tech.proficiency"}%` }}
                           viewport={{ "once": "tru e "}}
                           transition = {;
-
   { "duration": "1",;
   "delay": "0.8 + techIndex * 0.1;
-
 "}}
                         />;
                       </div>";
@@ -78,28 +68,25 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
               </div>;
             </motion.div>) ) }
         </div>;
-
         {/* Emerging Technologies */}
         <motion.div;
           className="mb-16"          initial = {;
-
   { "opacity": "0",;
   "y": "3 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.4;
-
-}}
+"}}
+        >";
+          <h3 className="text-3xl font-bold text-white text-center mb-8">;
+            Emerging Technologies;
+          </h3>;}}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Emerging Technologies
@@ -121,24 +108,23 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
         </motion.div> {/* Technology Philosophy */}
         <motion.div;
           className="mb-12"          initial = {;
-
   { "opacity": "0",;
   "y": "3 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "0.8;
-
-}}
+"}}
+        >";
+          <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
+            <h3 className="text-2xl font-bold text-white text-center mb-6">;
+              Our Technology Philosophy;
+            </h3>;}}
         >"
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-6">
@@ -153,7 +139,6 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                 <h4 className="text-lg font - bold text-white mb-2">Innovation First</h4>;
                 <p className="text-gray - 400 text-sm">Always exploring cutting - edge technologies</p>;
               </div>;
-
               <div className="text-center">;
                 <div className="w-16 h-16 bg-gradient - to - br from - blue - 500 to - cyan - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">;
                   <span className="text-2xl">🛡️</span>;
@@ -161,7 +146,6 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
                 <h4 className="text-lg font - bold text-white mb-2">Security Focused</h4>;
                 <p className="text-gray - 400 text-sm">Enterprise - grade security in everything we build</p>;
               </div>;
-
               <div className="text-center">;
                 <div className="w-16 h-16 bg-gradient - to - br from - purple - 500 to - pink - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">;
                   <span className="text-2xl">⚡</span>;
@@ -171,27 +155,39 @@ function TechnologyStackSection("props": "any) {export function TechnologyStackS
             </div>;
           </div>;
         </motion.div>;
-
         <motion.div;
           className="text-center"          initial = {;
-
   { "opacity": 0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition = {;
-
   { "duration": "0.6",;
   "delay": "1.0;
-
-}}
+"}}
+        >";
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">";
+            <h3 className="text-2xl font-bold mb-4">;
+              Ready to Build with Modern Tech?;
+            </h3>";
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">;
+              Our expert team is ready to help you leverage the latest technologies;
+              to build scalable, secure, and innovative solutions.</p>";
+            <div className="flex flex-col "sm": "fle x-row gap-4 justify-center">";
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 "hover": b g-gray-100 rounded-lg font-medium transition-colors duration-200">;
+                Start Your Project";
+                <Code className="ml-2 h-5 w-5"   />;
+              </button>";
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white "hover": b g-white "hover": tex t-blue-600 rounded-lg font-medium transition-colors duration-200">;
+                View Tech Specs";
+                <Server className="ml-2 h-5 w-5"   />              </button>;
+            </div>;
+          </div>;
+        </motion.div>;}}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold mb-4">
@@ -223,7 +219,6 @@ export default TechnologyStackSection;";
 export default TechnologyStackSection;
 export default TechnologyStackSection;
 '"`;
-
 </motion>;
 </motion>;
 </motion>;

@@ -39,8 +39,6 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
       setIsOpen(true)} else {setFilteredSuggestions([]);
       setIsOpen(false);
       )}
-    </div>;
-  );
     </div>
     );
 }
@@ -126,8 +124,6 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
         <input";
         <input type="text" value={value} onChange={(e) => onChange(e.target.value);
       )}
-    </div>;
-  );
     </div>
     );
 }';
@@ -171,32 +167,6 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
           onKeyDown={handleKeyDown}
           onFocus={() => value.trim() && setIsOpen(true);
       )}
-    </div>;
-  );
-}
-          placeholder={placeholder}`;
-          className={`w-full pl-10 pr-10 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light "focus": "outline-none "focus":ring-2 focu;
-    "s":ring-zion-purple/50 focu;
-    "s":border-transparent transition-all duration-200 ${className"}`}
-        />;
-        {value && (;
-          <button;
-            onClick={handleClear}`;
-            className=`absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-zion-slate-light "hover": "text-white hove;
-    "r":bg-zion-purple/10 rounded transition-colors";
-          >`;
-          placeholder={placeholder"}
-          className={`w-full pl-10 pr-10 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light "focus": "outline-none "focus":ring-2 "focus":ring-zion-purple/50 "focus":border-transparent transition-all duration-200 ${className"}`}
-          <button onClick={handleClear} className=`absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-zion-slate-light "hover": "text-white "hover":bg-zion-purple/10 rounded transition-colors" >;
-            <X className="h-4 w-4"  />;
-          <button onClick={handleClear"}"";
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-zion-slate-light "hover": "text-white "hover":bg-zion-purple/10 rounded transition-colors"" >";
-            <X className="h-4 w-4" /" >";
-          </button>;
-        );
-      )"}
-    </div>;
-  );
     </div>
     );
 }
@@ -260,8 +230,6 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
                     <Icon className=`h-4 w-4 mr-3 text-zion-cyan flex-shrink-0"  />";
                   <button key={suggestion} onClick={() => handleSuggestionSelect(suggestion);
       )}
-    </div>;
-  );
     </div>
     );
 }';
@@ -295,8 +263,6 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
     "r":bg-zion-purple/10 transition-colors";
                 <button key={search"} onClick={() => handleSuggestionSelect(search);
       )}
-    </div>;
-  );
     </div>
     );
 }

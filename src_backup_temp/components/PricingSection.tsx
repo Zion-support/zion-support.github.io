@@ -1,13 +1,11 @@
 import React, { useState } from "react";
   Crown, Rocket,;
   Building} from "lucide-react";
-
  * PricingSection function;
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;
  */;
 function PricingSection("props": "any) {;
-
       "icon": Shiel d;
     "};  ];
 const pricingTiers = [{;
@@ -27,16 +25,12 @@ return (<section className="py-20 bg-gradient - to - br from - slate - 900 via -
       <div className="max - w-7xl mx - auto px-6">;
         <motion.div;
           className="text-center mb-16"          initial = {;
-
   { "opacity": "0",;
   "y": "2 0;
-
 "}}
           whileInView = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
           viewport={{ "once": "tru e "}}
           transition={{ "duration": "0.6 "}}
@@ -84,7 +78,6 @@ initial="{{" "opacity": "0", "scale": "0.8 "}}";
 ;
           </div>;
         </motion.div>;
-
         {/* comment */}";
         <div className="{"grid" grid-cols-1 "md": "gri d-cols-3 gap-8">",;
           {plans.map((plan, index) => {;
@@ -114,133 +107,24 @@ key = "{plan.name}"";
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : """}`}> {/*   */}";
                   <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-"hover": "scal e-110 transition-transform duration-300`"}>";
                     <IconComponent className="`w-8" h-8`}  />;
-                  </div> {/* comment */}"
-                <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: borde r-zion-cyan/50 hover: b g-zion-blue-light/20 transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20 ${">
-                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>
-                  {/* comment */}"
-                  <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover: scal e-110 transition-transform duration-300"}>"
-                    <IconComponent className=""w-8" h-8"}        />
-                  </div>
-                  {/* comment */}"
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}"
-                  <p className="text-zion-slate-light mb-6">{plan.description}</p>
-                  {/* comment */}"
-                  <div className="mb-6">"
-                    {typeof plan.price === "number" ? ("
-                      <div className="flex items-baseline gap-2">"
-                        <span className="{"text-4xl" font-bold text-white">${plan.price}</span>"
-                        <span className=""text-zion-slate-light"}">/month</span>
-                        {plan.originalPrice && ("
-                          <span className="{"text-lg" text-zion-slate-light line-through">
-                            ${plan.originalPrice}
-;
-                          </span>;
-                        )}
-;
-                      </div>;
-                    ) : "(";
-                      <div className=""text-3xl" font-bold text-white""}>{plan.price}</div>;
-                    )}
-;
+                  </div> {/* comment */}";
+                <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 "hover": "borde r-zion-cyan/50 "hover": b g-zion-blue-light/20 transition-all duration-300 "hover": shado w-2xl "hover": shado w-zion-cyan/20 ${">;
+                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : """}"}>;
+                  {/* comment */}";
+                  <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-"hover": "scal e-110 transition-transform duration-300""}>";
+                    <IconComponent className=""w-8" h-8"}        />;
                   </div>;
                   {/* comment */}";
-                  <ul className="space-y-3 mb-8">;
-                    {plan.features.map((feature, featureIndex) => (";
-                      <li key="{featureIndex}" className="flex items-center gap-3">";
-                        <Check className="w-5 h-5 text-zion-cyan flex-shrink-0"   />";
-                        <span className="text-zion-slate-light">{feature}</span>;
-                      </li>;
-                    ))}
-;
-                  </ul>;
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>";
+                  <p className="text-zion-slate-light mb-6">{plan.description}</p>;
                   {/* comment */}";
-                  <Link to="{plan.name" === "Enterprise" ? "/contact" : "/signup"}";
-                    className="{"block" w-full";
-                  >;
-                    <motion.button,";
-whileHover="{{" "scale": "1.02 "}}";
-                      whileTap="{{" "scale": "0.98 "}}";
-                      className="{"w-full" px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${;
-                        plan.popular";
-                          ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white "hover": "fro m-zion-cyan/90 "hover": t o-zion-purple/90"">;
-                          : "border border-zion-cyan text-zion-cyan "hover": b g-zion-cyan "hover": tex t-white""}"}
-;
-                    >;
-                      {plan.cta}";
-                      <ArrowRight className=""w-4" h-4"}        />;
-                    </motion.button>;
-                  </Link>;
-                </div>;
-                {/* comment */}";
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-"hover": "opacit y-20 transition-opacity duration-300 -z-10"></div>;
-              </motion.div>",;
-            )})}
-;
-        </div>;
-        {/* comment */}
-;
-<motion.div;
-          className="mt-16 text-center"          initial = {;
-
-  { "opacity": "0",;
-  "y": "2 0;
-
-"}}
-          whileInView = {;
-
-  { "opacity": "1",;
-  "y": "0;
-
-"}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-
-  { "duration": "0.6",;
-  "delay": "0.4;
-
-"}}
->";
-          <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">";
-            <h3 className="text-2xl font-bold text-white mb-4">;
-              Need a Custom Solution?;
-            </h3>";
-            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">;
-              We understand that every business is unique. Contact us to discuss custom pricing,;
-and solutions tailored to your specific requirements.;
-            </p>";
-            <div className="flex flex-col "sm": "fle x-row gap-4 justify-center">";
-              <Link to="/contact">",;
-                <motion.button,";
-whileHover="{{" "scale": "1.05 "}}";
-                  whileTap="{{" "scale": "0.95 "}}";
-                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold "hover": "shado w-xl "hover": shado w-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center";
-                >;
-                  Contact Sales";
-                  <ArrowRight className="w-5 h-5"   />;
-                </motion.button>;
-              </Link>";
-              <Link to="/request-quote">";
-                <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl text-lg font-semibold "hover": b g-zion-cyan "hover": tex t-white transition-all duration-300 flex items-center gap-2 justify-center">";
-                  <Zap className="w-5 h-5"   />;
-                  Get Free Quote",;
-                </button>;
-              </Link>;
-            </div>;
-        </motion.div>;
-      </div>;
-    </section>";,;
-export default function PricingSection("props": "any) {return (";
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
-      <SEO title="PricingSection - Zion Tech Group" description="Professional PricingSection services by Zion Tech Group"   />";
-      <div className="container mx-auto px-4 py-20">";
-        <h1 className="text-4xl font-bold text-white mb-8">PricingSection</h1>";
-        <p className="text-gray-300 text-lg">;
-          Professional PricingSection services to help your business grow.;
-        </p>;
-      </div>;
-  );""}";
-
-}}
+                  <div className="mb-6">";
+                    {typeof plan.price === "number" ? (";
+                      <div className="flex items-baseline gap-2">";
+                        <span className="{"text-4xl" font-bold text-white">${plan.price}</span>";
+                        <span className=""text-zion-slate-light"}">/month</span>;
+                        {plan.originalPrice && (";
+                          <span className="{"text-lg" text-zion-slate-light line-through">;}}
 >"
           <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -281,7 +165,6 @@ export default function PricingSection(props: any) {return ("
         </p>
       </div>
     );"}"
-
 </div>
 </motion>
 </motion>

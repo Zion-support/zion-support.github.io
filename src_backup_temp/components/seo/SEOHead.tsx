@@ -1,20 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 ;
-interface SEOHeadProps {
-  title: string;
-  description: string;
-interface SEOHeadProps {;
-  "title": "string;
-  "description": string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  noIndex?: boolean;
-  noFollow?: boolean;
-  ogType?: string;
-  ogImage?: string;
-  structuredData?: any;
-"}
+export function SEOHead(props: any) {
+  const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;';
+  const defaultKeywords = [';';
+    'AI services',';';
+    'technology solutions',';';
+    'enterprise automation',';';
+    'cybersecurity',';';
+    'quantum computing',';';
+    'blockchain solutions',';';
+    'cloud services',';';
+    'digital transformation',';';"}
 ;
 export function SEOHead({ ;
   title, ;
@@ -99,11 +96,10 @@ export function SEOHead({ ;
             "addressCountry": "US";
           }
         })}
-  );
-}
-
-export default SEOHead;
-      </script>;
+      </script>
+    </Helmet>
+  );';
+};';;';      </script>;
     </Helmet>;
   );
 }

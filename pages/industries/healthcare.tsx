@@ -82,8 +82,7 @@ const challenges = [
     challenge: 'Scalability',
     description: 'Supporting growing patient populations and increasing data volumes.',
     solution: 'Cloud-native architecture, auto-scaling, and performance optimization.',
-    icon: TrendingUp
-  }
+    icon: TrendingUp  }
 ];
 
 const benefits = [
@@ -148,8 +147,7 @@ export default function Healthcare() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
+          <div className="container mx-auto px-4 relative z-10">            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -405,15 +403,13 @@ export default function Healthcare() {
                 Transform Healthcare with Technology
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Join leading healthcare organizations in improving patient care through innovative technology solutions.
-              </p>
+                Join leading healthcare organizations in improving patient care through innovative technology solutions.              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                   Get Healthcare Consultation
                 </Link>
                 <Link href="/industries" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">
-                  View All Industries
-                </Link>
+                  View All Industries                </Link>
               </div>
             </motion.div>
           </div>

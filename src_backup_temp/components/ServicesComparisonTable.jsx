@@ -1,15 +1,3 @@
-import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''';';
-import React from 'react';
-;
-import {Badge} from "./ui/badge";';
-import {Button} from "./ui/button";';';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/card";import {Check, X, Star, Clock, Phone, Mail} from 'lucide-react';';
-import {}';';
-  COMPREHENSIVE_SERVICES,'';';
-  CONTACT_INFO} from '@/data/comprehensiveServices';';
-export function ServicesComparisonTable(props: any) {}';';
-''';';
-'''';';
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''
 import React from 'react';
@@ -20,9 +8,6 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/ca
 import {}
   COMPREHENSIVE_SERVICES,'
   CONTACT_INFO} from '@/data/comprehensiveServices';
-export function ServicesComparisonTable("props": "any) {"}
-'';
-''';
   const serviceCategories = ['AI Services',IT Services',Micro SAAS'];
   const getFeatureIcon = hasFeature => {}
     return hasFeature ? (;
@@ -305,7 +290,6 @@ return()""
                     variant="outline"""""
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">,
                     View {category}
-
                   </Button>
                 </CardContent>
               </Card>
@@ -432,9 +416,7 @@ your business needs"
 }"""""
 """"""
 "
-
 export default Component
-
 </Button>
 </Badge>
 </div>
@@ -447,7 +429,6 @@ export default Component
 </div>
 </CardHeader>
 </div>
-
 </div>
 </Phone>
 </Phone>
@@ -465,8 +446,6 @@ export default Component
 </X>
 </X>
 </Check>
-</div>';
-</div>;';;';
 ;
                   </Button>;
                 </CardContent>;

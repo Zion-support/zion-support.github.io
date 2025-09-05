@@ -1,10 +1,6 @@
-import React, { useState } from "react"
-export function ModernHeader($1) {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false)
-}
-  const [isServicesOpen, setIsServicesOpen] = useState<any>(false);
-}
-  const toggleMobileMenu = (props) => {
+import React, { useState } from "react";
+export function ModernHeader("props": "any) {;
+  const [isMobileMenuOpen", setIsMobileMenuOpen] = useState<any>(false);  const toggleMobileMenu = (props) => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
 }
   const closeMobileMenu = (props) => {

@@ -22,11 +22,6 @@ export function CandidateCard("props": "any) {;
         // Here you would save the notes to the database;
         // For now, we'll just show a toast;
         toast({}
-""";
-"""";
-            "title": "Notes saved","""";
-            "description": "Your notes have been saved""";
-        });
 """
 """"
             title: "Notes saved",""""
@@ -61,7 +56,6 @@ export function CandidateCard("props": "any) {;
                     </p>;
                   </div>;
                 </div>;
-
                 <DropdownMenu>;
                   <DropdownMenuTrigger asChild>";
                     <Button variant="ghost" className="h-8 w-8 p-0">";
@@ -88,7 +82,6 @@ export function CandidateCard("props": "any) {;
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
-
               {/* Application Info */}";
               <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">";
                 <div className="flex items-center">";
@@ -101,7 +94,6 @@ export function CandidateCard("props": "any) {;
                     Stalled;
                   </div>)}
               </div>;
-
               {/* Match Score */}";
               {application.match_score !== null && application.match_score !== null && (<div className="mb-2">;
                   <ScoreBadge application={application} />;
@@ -138,11 +130,9 @@ export function CandidateCard("props": "any) {;
             </CardContent>;
           </Card>)}
       </Draggable>;
-
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal isOpen={showHireModal} onClose={() => setShowHireModal(false)} application={application} onConfirm={handleHireConfirmed}/>;
     </>)}
 '"`;
-
 </HireConfirmationModal>;
 </Textarea>

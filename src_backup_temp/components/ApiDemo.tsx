@@ -1,51 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { api, ApiResponse } from '@/services / api';
-export default function Page(props: any) {
-}}}
-interface User {
-  id: number;
-  name: string;
-  email: string;
+export default function Page("props": "any) {;
+"}}}
+interface User {;
+  "id": "number;
+  "name": string;
+  "email": string;
   createdAt?: string;
-
-const ApiDemo: React.FC = (): JSX.Element => {;
-  const [users, setUsers] = useState<any>([]);
+;
+const "ApiDemo": React.FC = (): JSX.Element => {;
+  const [users", setUsers] = useState<any>([]);
   const [loading, setLoading] = useState<any>(false);
   const [error, setError] = useState<any>(null);
-const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
-    );
+const [newUser, setNewUser] = useState<any>({ "name": '', "email": ''});
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
-
-  // Check API health on component mount
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    checkHealth () ;
-    fetchUsers () }, []) ;
-
-    try {;
 ;
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {;
-      
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
-
-      setHealthStatus('❌ API Unhealthy')};
-
+  // Check API health on component mount;
+  useEffect(() => {;
+  // "TODO": "Add dependencies if needed;
+  return () => {;
+    // Cleanup function;
+  "};      setHealthStatus('❌ API Unhealthy')};
     setLoading(true) ;
     setError(null) ;
 
     try {
-      
       if(response.success && response.data) {
-
         setUsers(response.data)} catch(err) {
-
       setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
-
 ;
     try {;
       if(response.success && response.data) {;
@@ -54,29 +36,25 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
       setLoading(false)};
 ;
     e.preventDefault () ;
+    if(!newUser.name.trim() || !newUser.email.trim()) {';
+';';
 ;
-    if(!newUser.name.trim() || !newUser.email.trim()) {;
-      setLoading(false)};
-
+    if(!newUser.name.trim() || !newUser.email.trim()) {;      setLoading(false)};
     e.preventDefault () ;
-
     if(!newUser.name.trim() || !newUser.email.trim()) {
 
       setError('Name and email are required');
       return;
-
     setLoading(true) ;
     setError(null) ;
-
     try {
-      
       if(response.success && response.data) {
-
 ;
     try {;
       if(response.success && response.data) {;
         setUsers(prev => [...prev, response.data!]);
-      setLoading(false)};
+        setNewUser({ "name": '', "email": '' })} catch(err) {;
+      setError(err instanceof Error ? err.message : 'Failed to create user')} finally {;      setLoading(false)};
   return ();
     <div className="max-w-4xl mx-auto p-6 space-y-6">";
       <div className="bg-white rounded-lg shadow-md p-6">";
@@ -123,9 +101,7 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
           </form>;
         </div>;
         setNewUser({ name: '', email: '' })} catch(err) {
-
       setError(err instanceof Error ? err.message : 'Failed to create user')} finally {
-
       setLoading(false)};
   return ()
     <div className="max-w-4xl mx-auto p-6 space-y-6">"
@@ -133,13 +109,11 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           🚀 Vite + Node.js Hybrid App Demo
         </h2>
-
         {/* API Health Status */}"
         <div className="mb-6 p-4 bg-gray-50 rounded-lg">"
           <h3 className="text-lg font-semibold text-gray-700 mb-2">API Status"
           <p className="text-sm text-gray-600">{healthStatus}</p>
         </div>
-
         {/* Create User Form */}"
         <div className="mb-6 p-4 bg-blue-50 rounded-lg">"
           <h3 className="text-lg font-semibold text-blue-700 mb-4">Create New User"
@@ -169,20 +143,8 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
             <button"
               type="submit"
               disabled={loading}"
-                onChange={ (e) => setNewUser(prev => ({ ...prev,;
-  email: e.target.value;
-}))}";
-                className="px-3 py-2 border border-gray-300 rounded-md focus: outlin e-none focus: rin g-2 focus: rin g-blue-500";
-                required;
-              />;
-            </div>;
-            <button";
-              type="submit";
-              disabled={loading}";
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed";
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"
-
-              {loading ? 'Creating...' : 'Create User'}
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed"';
+';';              {loading ? 'Creating...' : 'Create User'}
             </button>
           </form>
         </div>
@@ -193,57 +155,37 @@ const [newUser, setNewUser] = useState<any>({ name: '', email: ''}
             <p className="text-red-700">{error}</p>
           </div>
         )}
-
         {/* Users List */}"
         <div className="p-4 bg-gray-50 rounded-lg">"
           <div className="flex justify-between items-center mb-4">"
             <h3 className="text-lg font-semibold text-gray-700">Users({users.length})
             <button
               onClick={fetchUsers}
-        {error && (";
-          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">";
-            <p className="text-red-700">{error}</p>;
-          </div>;
-        )}
-;
-        {/* Users List */}";
-        <div className="p-4 bg-gray-50 rounded-lg">";
-          <div className="flex justify-between items-center mb-4">";
-            <h3 className="text-lg font-semibold text-gray-700">Users({users.length});
-            <button;
-              onClick={fetchUsers}
-              disabled={loading}";
-              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50";
-              {loading ? 'Loading...' : 'Refresh'}
-            </div>) }
+              disabled={loading}"
+              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"';
+';';            </div>) }
         </div>;
         {/* Architecture Info */}";
         <div className="mt-8 p-4 bg-green-50 rounded-lg">";
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture";
           <div className="text-sm text-green-700 space-y-1">;
-    </div>;) };
-            <p>• <strong>"Frontend": "</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>;
-            <p>• <strong>"Backend":</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
-            <p>• <strong>"Development":</strong> Vite proxy forwards /api calls to Node.js</p>;
-            <p>• <strong>"Production":</strong> Node.js serves built frontend + API</p>;
+            <p>• <strong>Frontend:</strong> Vite + React(Port 3000) - Fast HMR & optimized builds</p>;
+            <p>• <strong>Backend:</strong> Node.js + Express(Port 5000) - API endpoints & business logic</p>;
+            <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>;
+            <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>;
           </div>;
         </div>;
       </div>;
-    </div>;) "};
-;
-export default ApiDemo}}}}}}}'"`;
-</any>;
-</any>;
-</any>;
-</any>;
-</any>;
-              disabled={loading}"
+    </div>;) };';
+';';
+export default ApiDemo}}}}}}}'"`
+</any>
+</any>';
+</any>;';;';              disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover: b g-gray-700 disabled: opacit y-50"
-
               {loading ? 'Loading...' : 'Refresh'}
             </button>
           </div>
-
           {loading ? ("
             <div className="text-center py-8">"
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>"
@@ -270,7 +212,6 @@ export default ApiDemo}}}}}}}'"`;
                 </div>) ) }
             </div>) }
         </div>
-
         {/* Architecture Info */}"
         <div className="mt-8 p-4 bg-green-50 rounded-lg">"
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture"
@@ -283,9 +224,7 @@ export default ApiDemo}}}}}}}'"`;
         </div>;
       </div>;
     </div>;) };
-
 export default ApiDemo}}}}}}}'"`
-
 </any>
 </any>
 </any>

@@ -1,4 +1,19 @@
-#!/usr/bin/env node
+);
+    fs.appendFileSync(this.logFile, logMessage);,
+  }
+  async runLint() {}
+    try {}
+      this.log('Starting lint automation...');',
+      // Run ESLint;
+      this.log('Running ESLint...');';
+      execSync('npm run lint', { "stdio": 'pipe' });',
+      this.log('ESLint completed successfully');';,
+      // Run type checking;
+      this.log('Running TypeScript type check...');';
+      execSync('npm run type-check', { "stdio": 'pipe' });',
+}
+module.exports = LintAutomation;
+;#!/usr/bin/env node
 /**
  * Lint Automation Script
  * Replaces GitHub Actions linting workflows with PM2 automation
@@ -34,16 +49,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-c10a
       // Run type checking
       this.log('Running TypeScript type check...');
       execSync('npm run type-check', { "stdio": 'pipe' });
-this.log('Type check completed successfully');
-      // Run smoke tests
-      this.log('Running smoke tests...');
-      execSync('npm run "test": smoke', { "stdio": 'pipe' });
-      this.log('Smoke tests completed successfully');
-      this.log('Lint automation completed successfully');
-      return true;
-    } catch (error) {
-      this.log(`Lint automation "failed": ${error.message}`);
-      // Try to fix linting issues
+  automation.start().catch(console.error);
+      this.log('TypeScript type check completed successfully');      // Try to fix linting issues
       try {
         this.log('Attempting to fix linting issues...');
         execSync('npm run "lint": fix', { "stdio": 'pipe' });

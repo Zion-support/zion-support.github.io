@@ -16,8 +16,10 @@ export function EnhancedSearch("props": "any) {;
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
   const [filters, setFilters] = useState<SearchFilter>({;
-
-    type: [],
+    "type": "[]",;
+    "category": "[]",;
+    "tags": "[];
+  "}) ;    type: [],
     category: [],
     tags: []
   }
@@ -34,22 +36,13 @@ const "mockSuggestions": "SearchSuggestio n[] = [';
 ];
 ;
 export function EnhancedSearch("props": "any) {;
-
   const [isOpen", setIsOpen] = useState<any>(false);
   const [query, setQuery] = useState<any>('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
-  const [filters, setFilters] = useState<SearchFilter>({
-
-    type: [],
-    category: [],
-    tags: []
-  }
-    );
-
-    "type": "[]",;
+  const [filters, setFilters] = useState<SearchFilter>({;    "type": "[]",;
     "category": "[]",;
     "tags": "[];
   "}) ;
@@ -61,7 +54,6 @@ export function EnhancedSearch("props": "any) {;
   // Handle keyboard navigation;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -85,19 +77,16 @@ handleResultClick(results[selectedIndex])}      }
     };
 ;
     if(isOpen) {;
-
       document.addEventListener('keydown', handleKeyDown)}
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex]);
   // Search functionality;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
 }, []);, []);
     if(debouncedQuery.trim().length < 2) {;
-
       setResults([]);
       return}
 ;
@@ -117,21 +106,18 @@ handleResultClick(results[selectedIndex])}      }
   // Handle click outside;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
 }, []);, []);
     ;
         setRecentSearches(JSON.parse (saved) ) } catch(error) {;
-
         // console.error('Failed to parse recent "searches":', error)}    }
   }, []) ;
 ;
   // Handle click outside;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -148,7 +134,6 @@ handleResultClick(results[selectedIndex])}      }
   // Handle keyboard navigation;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -173,7 +158,6 @@ handleResultClick(results[selectedIndex])}      }
     const handleKeyDown = ("props": "any) => {;      if(!isOpen) return;
 ;
       switch(event.key) {;
-
         case 'ArrowDown':;
           event.preventDefault();
           setSelectedIndex(prev = > ;
@@ -187,9 +171,7 @@ handleResultClick(results[selectedIndex])}      }
         case 'Enter':;
           event.preventDefault () ;
           if(selectedIndex >= 0 && results[selectedIndex]) {;
-
             handleResultClick(results[selectedIndex])"} else if(query.trim()) {;
-
             handleSearch()}
           break;
         case 'Escape': ";
@@ -208,16 +190,15 @@ handleResultClick(results[selectedIndex])}      }
     await new Promise(resolve => setTimeout (resolve, 300) ) ;
 ;
     // Filter search results based on query and filters;
-
                           result.description.toLowerCase () .includes(query.toLowerCase () ) ||;
                           result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
 ;
       const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
-
+;
+      return matchesQuery && matchesFilters}) ;
+;
       return matchesQuery && matchesFilters}
-    );
-
-    setIsOpen(false);
+    );    setIsOpen(false);
     setQuery('')};
 ;
     onSearch?.(suggestion.text)};
@@ -303,26 +284,19 @@ setFilters("prev": "> ({;
             <X className="h-4 w-4"   />          </button>;
         )"}
       </div>;
-
       <AnimatePresence>;
         {isOpen && (<motion.div;
             initial = {;
-
   { "opacity": "0",;
   "y": "-10;
-
 "}}
             animate = {;
-
   { "opacity": "1",;
   "y": "0;
-
 "}}
             exit = {;
-
   { "opacity": "0",;
   "y": "-10;
-
 "}}";
             className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-50 max-h-96 overflow-hidden";
           >;
@@ -342,27 +316,20 @@ setFilters("prev": "> ({;
                   Clear all;
                 </button>) "}
             </div>;
-
             {/* Filters Panel */}
             <AnimatePresence>;
               {showFilters && (<motion.div;
                   initial = {;
-
   { "height": "0",;
   "opacity": "0;
-
 "}}
                   animate = {;
-
   { "height": 'auto',;
   "opacity": "1;
-
 "}}
                   exit = {;
-
   { "height": "0",;
   "opacity": "0;
-
 "}}";
                   className="border-b border-gray-200 overflow-hidden";
                 >";
@@ -375,10 +342,8 @@ setFilters("prev": "> ({;
                           <button;
                             key={type}
                             onClick={;
-
   () => toggleFilter('type',;
   type);
-
 }`;
                             className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.type.includes(type);
                                 ? 'bg-blue-500 text-white'';
@@ -389,7 +354,6 @@ setFilters("prev": "> ({;
                           </button>) ) }
                       </div>;
                     </div>;
-
                     {/* Category Filters */}
                     <div>";
                       <h4 className="text-sm font-medium text-gray-900 mb-2">Category</h4>";
@@ -398,10 +362,8 @@ setFilters("prev": "> ({;
                           <button;
                             key={category.id}
                             onClick={;
-
   () => toggleFilter('category',;
   category.name);
-
 }`;
                             className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.category.includes(category.name);
                                 ? 'bg-blue-500 text-white'';
@@ -415,7 +377,6 @@ setFilters("prev": "> ({;
                   </div>;
                 </motion.div>) }
             </AnimatePresence>;
-
             {/* Search Results */}";
             <div className="max-h-96 overflow-y-auto">;
               {query.trim().length < 2 ? (";
@@ -492,24 +453,18 @@ setFilters("prev": "> ({;
                       </div>;
                     </button>;
                   ))}
-                </div>
-              ) : ("
-                <div className="p-8 text-center">"
-                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"   />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">
-                    No results found
-                  "
-                  <p className="text-gray-600">
-                    Try adjusting your search terms or filters
-                  </p>
-                </div>) }
-            </div>;
-          </motion.div>;) };
-      </AnimatePresence>;
-    </div>;) }
-'"`
+                </div>;
+              ) : "(";
+                <div className="p-8 text-center">";
+                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"   />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">;
+                    No results found;
+                  </h3>";
+                  <p className="text-gray-600">;
+                    Try adjusting your search terms or filters;
+                  </p>;
+                </div>) "}'"`
 ;,"}
     );,})";
-
 </motion>
 </motion>
 </div>

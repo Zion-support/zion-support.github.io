@@ -5,18 +5,6 @@ export default function Page("props": "any) {;
             // Check for very short content;
             if(words.length > 0 && words.length < 10) {;
 
-                issues.push({;
-`;
-                    "id": `short-content-${index"}`,;
-                    "type": 'warning',;
-                    "title": 'Very Short Content',`;
-                    "description": "`Element contains only ${words.length"} words`,;
-                    "severity": 'medium',;
-                    "element": "element",;
-                    "fixable": "true",;
-                    "suggestion": 'Expand content to provide more value to users',;
-                    "impact": 'engagement';
-                });
 export default function Page(props: any) {
             // Check for very short content
             if(words.length > 0 && words.length < 10) {
@@ -39,18 +27,6 @@ export default function Page(props: any) {
             // Check for very long paragraphs(hard to read);
             if(words.length > 100) {;
 
-                issues.push({;
-`;
-                    "id": "`long-paragraph-${index"}`,;
-                    "type": 'warning',;
-                    "title": 'Very Long Paragraph',`;
-                    "description": "`Paragraph contains ${words.length"} words`,;
-                    "severity": 'medium',;
-                    "element": "element",;
-                    "fixable": "true",;
-                    "suggestion": 'Break into smaller paragraphs for better readability',;
-                    "impact": 'readability';
-                });
                 issues.push({
 `
                     id: `long-paragraph-${index}`,
@@ -76,18 +52,6 @@ export default function Page(props: any) {
                     const lastLevel = parseInt(previousHeadings[previousHeadings.length-1].tagName.charAt(1));
                     if(level - lastLevel > 1) {;
 
-                        issues.push({;
-`;
-                            "id": "`heading-skip-${index"}`,;
-                            "type": 'warning',;
-                            "title": 'Heading Level Skipped',`;
-                            "description": "`Heading level jumps from h${lastLevel"} to h${level}`,;
-                            "severity": 'medium',;
-                            "element": "element",;
-                            "fixable": "true",;
-                            "suggestion": 'Ensure heading levels follow logical sequence',;
-                            "impact": 'accessibility';
-                        });
                         issues.push({
 `
                             id: `heading-skip-${index}`,
@@ -107,8 +71,6 @@ export default function Page(props: any) {
             // Check for keyword stuffing;
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
             const wordFrequency = {/* empty */};
-            commonWords.forEach(word => {wordFrequency[word] = (wordFrequency[word] || 0) + 1});
-            Object.entries(wordFrequency).forEach(([word, count]) => {;
             commonWords.forEach(word => {wordFrequency[word] = (wordFrequency[word] || 0) + 1}
     );
             Object.entries(wordFrequency).forEach(([word, count]) => {
@@ -118,23 +80,6 @@ export default function Page(props: any) {
                     const density = (count / commonWords.length) * 100;
                     if(density > 3) {;
 
-                        issues.push({;
-`;
-                            "id": "`keyword-stuffing-${index"}-${word}`,;
-                            "type": 'warning',;
-                            "title": 'Potential Keyword Stuffing',"`;
-                            "description": "`Word "${word"}" appears ${count} times (${density.toFixed(1)}% density)`,;
-                            "severity": 'medium',;
-                            "element": "element",;
-                            "fixable": "true",;
-                            "suggestion": 'Reduce keyword density for more natural content',;
-                            "impact": 'seo';
-                        });
-                        seoScore -= 5}
-                }
-            });
-            // Check for proper meta descriptions';
-            if(element.tagName === 'META' && element.getAttribute('name') === 'description') {;
                         issues.push({
 `
                             id: `keyword-stuffing-${index}-${word}`,
@@ -158,18 +103,6 @@ export default function Page(props: any) {
                 const content = element.getAttribute('content') || '';
                 if(content.length < 50) {;
 
-                    issues.push({;
-`;
-                        "id": "`short-meta-${index"}`,;
-                        "type": 'warning',;
-                        "title": 'Short Meta Description',`;
-                        "description": "`Meta description is only ${content.length"} characters`,;
-                        "severity": 'medium',;
-                        "element": "element",;
-                        "fixable": "true",;
-                        "suggestion": 'Meta descriptions should be 150-160 characters for optimal display',;
-                        "impact": 'seo';
-                    });
                     issues.push({
 `
                         id: `short-meta-${index}`,
@@ -186,18 +119,6 @@ export default function Page(props: any) {
                     seoScore -= 5}
                 else if(content.length > 160) {;
 
-                    issues.push({;
-`;
-                        "id": "`long-meta-${index"}`,;
-                        "type": 'warning',;
-                        "title": 'Long Meta Description',`;
-                        "description": "`Meta description is ${content.length"} characters`,;
-                        "severity": 'low',;
-                        "element": "element",;
-                        "fixable": "true",;
-                        "suggestion": 'Meta descriptions should be 150-160 characters for optimal display',;
-                        "impact": 'seo';
-                    });
                     issues.push({
 `
                         id: `long-meta-${index}`,
@@ -219,18 +140,6 @@ export default function Page(props: any) {
                 const href = element.getAttribute('href');
                 if(href && (href.startsWith('#') || href.startsWith('"javascript":'))) {;
 
-                    issues.push({;
-`;
-                        "id": "`broken-link-${index"}`,;
-                        "type": 'warning',;
-                        "title": 'Potential Broken Link',"`;
-                        "description": "`Link "${href"}" may not work properly`,;
-                        "severity": 'medium',;
-                        "element": "element",;
-                        "fixable": "true",;
-                        "suggestion": 'Ensure link points to valid URL or page section',;
-                        "impact": 'engagement';
-                    });
                     issues.push({
 `
                         id: `broken-link-${index}`,
@@ -252,24 +161,6 @@ export default function Page(props: any) {
                 const alt = element.getAttribute('alt');
                 if(!alt || alt.trim() === '') {;
 
-                    issues.push({;
-`;
-                        "id": "`missing-alt-${index"}`,;
-                        "type": 'error',;
-                        "title": 'Missing Alt Text',;
-                        "description": 'Image has no alternative text for accessibility',;
-                        "severity": 'high',;
-                        "element": "element",;
-                        "fixable": "true",;
-                        "suggestion": 'Add descriptive alt text for better accessibility and SEO',;
-                        "impact": 'accessibility';
-                    });
-                    seoScore -= 8;
-                    engagementScore -= 5}
-            }
-        });
-        // Generate suggestions based on analysis;
-        if(wordCount < 300) {;
                     issues.push({
 `
                         id: `missing-alt-${index}`,
@@ -384,8 +275,6 @@ export default function Page(props: any) {
                         // These would require more complex logic to fix;
                         break"}
             }
-        });
-        if(fixedCount > 0) {// Re-analyze content after fixes;
         }
     );
         if(fixedCount > 0) {// Re-analyze content after fixes
@@ -397,13 +286,6 @@ export default function Page(props: any) {
         // Remove previous highlights';
         document.querySelectorAll('.content-highlight').forEach(el => {;
 
-            el.classList.remove('content-highlight')});
-        // Add highlight to selected element';
-        element.classList.add('content-highlight');
-        setSelectedElement(element);
-        // Scroll to element';
-        element.scrollIntoView({"behavior": 'smooth', "block": 'center'});
-        // Remove highlight after 3 seconds;
             el.classList.remove('content-highlight')}
     );
         // Add highlight to selected element'

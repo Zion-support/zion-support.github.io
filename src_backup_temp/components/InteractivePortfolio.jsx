@@ -182,9 +182,6 @@ export function InteractivePortfolio("props": "any) {;
                     </div>;
                   </div>;
 
-                  <h3 className="text-xl font-bold text-zion-slate mb-3 group-"hover": "text-zion-cyan transition-colors">;
-                    {project.title"}
-                  </h3>;
                   <h3 className="text-xl font-bold text-zion-slate mb-3 group-hover:text-zion-cyan transition-colors">
                     {project.title}
                   
@@ -223,20 +220,6 @@ export function InteractivePortfolio("props": "any) {;
         </div>;
 
         {/* CTA Section */}
-        <div className="text-center mt-16">;
-          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">;
-            <h3 className="text-2xl font-bold text-zion-slate mb-4">;
-              Ready to Start Your Project?;
-            </h3>;
-            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">;
-              Let's collaborate to bring your vision to life with cutting-edge technology and innovative solutions;
-            </p>;
-            <button className="bg-gradient-to-r from-zion-cyan to-zion-purple "hover": "from-zion-cyan-light "hover":to-zion-purple-light text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 "hover":shadow-lg "hover":shadow-zion-cyan/30 "hover":-translate-y-1">;
-              Start Your Project;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">
             <h3 className="text-2xl font-bold text-zion-slate mb-4">
@@ -279,17 +262,6 @@ export function InteractivePortfolio("props": "any) {;
                 </button>;
               </div>;
 
-              {/* Project Details */"}
-              <div className="grid grid-cols-1 "lg": "grid-cols-3 gap-6">;
-                <div className=""lg":col-span-2">;
-                  <h3 className="text-lg font-semibold text-zion-slate mb-3">Description</h3>;
-                  <p className="text-zion-slate-light leading-relaxed mb-6">;
-                    {selectedProject.description"}
-                  </p>;
-
-                  <h3 className="text-lg font-semibold text-zion-slate mb-3">Technologies Used</h3>;
-                  <div className="flex flex-wrap gap-2 mb-6">;
-                    {selectedProject.technologies.map((tech, index) => (<span key={index} className="px-3 py-2 bg-zion-cyan/10 text-zion-cyan rounded-lg text-sm font-medium">;
               {/* Project Details */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2">
@@ -305,9 +277,6 @@ export function InteractivePortfolio("props": "any) {;
                       </span>))}
                   </div>;
 
-                  <h3 className="text-lg font-semibold text-zion-slate mb-3">Tags</h3>;
-                  <div className="flex flex-wrap gap-2">;
-                    {selectedProject.tags.map((tag, index) => (<span key={index} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm">;
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Tags
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.tags.map((tag, index) => (<span key={index} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm">

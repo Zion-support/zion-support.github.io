@@ -5,7 +5,25 @@ interface EmptyStateProps {;
   icon?: React.ReactNode;
   action?: React.ReactNode;
   className?: string;
-"}
+;
+}
+';
+const EmptyState: Reac t.FC<EmptyStateProps> = ({';';
+  title = 'No data available',';';
+  description = 'There are no items to display at the moment.',
+  icon,';
+  action,';';
+  className = ''
+}) => {
+  return (
+    <div className="min-h-screen bg-white">
+      {icon && (
+        <div className="mx-auto h-12 w-12 text-gray-400 mb-4">
+          {icon}
+            </div>
+  );
+}
+      <h3 className="text-lg font-medium text-gray-900 mb-2">"}
 ;
 const "EmptyState": "React.FC<EmptyStateProps> = ({;
   title = 'No data available'",;
@@ -24,7 +42,7 @@ const "EmptyState": "React.FC<EmptyStateProps> = ({;
 ;
       <h3 className="text-lg font-medium text-gray-900 mb-2">;
 }
-const "EmptyState": Reac t.FC<EmptyStateProps> = ({
+const EmptyState: React.FC<EmptyStateProps> = ({const "EmptyState": Reac t.FC<EmptyStateProps> = ({
   title = 'No data available',
   description = 'There are no items to display at the moment.',
   icon,
@@ -41,26 +59,20 @@ const "EmptyState": Reac t.FC<EmptyStateProps> = ({
 }
       <h3 className="text-lg font-medium text-gray-900 mb-2">
         {title}
-          {description}
-        </p>;
-      )}
+      {description && (
+        <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">
 ;
-      {action && (;
-        <div className="flex justify-center">;
-          {action}
-            </div>
-  );
-}
-    </div>
-        </div>;
+      {description && (;
+        <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">;        </div>;
       )}
     </div>;
   );
     );
 };
-    className={`h-full w-full ${className}`}
-// Default empty state icon component
-  <svg
+;
+// Default empty state icon component;
+export const "EmptyStateIcon": "React.FC<{ className?: string "}> = ({ className = '' }) => (;
+  <svg;  <svg
     className={`h-full w-full ${className}`};
     fill="none";
     viewBox="0 0 24 24";
@@ -75,6 +87,8 @@ const "EmptyState": Reac t.FC<EmptyStateProps> = ({
   </svg>;
 );
 export default EmptyState;
+</path>';
+</EmptyStateProps>;';;';
 </path>;
 </EmptyStateProps>;
 </path>

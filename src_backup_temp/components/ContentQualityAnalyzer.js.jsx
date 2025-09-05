@@ -18,15 +18,6 @@ export default function Page("props": "any) {;
     const lowIssues = issues.filter(i => i.severity === 'low').length;
     setReport({;
 
-      totalPages,;
-      pagesWithIssues,;
-      criticalIssues,;
-      mediumIssues,;
-      lowIssues,;
-      "averageContentLength": "5000", // Sample data;
-      "pagesWithImages": "45", // Sample data;
-      "pagesWithMetaDescriptions": "32", // Sample data;
-      "lastUpdated": "new Date()"});
       totalPages,
       pagesWithIssues,
       criticalIssues,
@@ -87,8 +78,6 @@ export default function Page("props": "any) {;
   const filteredIssues = contentIssues.filter(issue => {const matchesSearch =;
       issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesFilter && matchesSearch;});
-  const getIssueTypeLabel = type => {;
     return matchesFilter && matchesSearch;}
     );
   const getIssueTypeLabel = type => {
@@ -375,23 +364,6 @@ export default function Page("props": "any) {;
                 </div>;
               </div>;
 
-              {/* Quick Actions */}";
-              <div className="grid grid-cols-1 "md": "grid-cols-3 gap-4">";
-                <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-lg p-4">";
-                  <h3 className="text-lg font-semibold text-green-400 mb-2 flex items-center">";
-                    <CheckCircle className="w-5 h-5 mr-2"  />;
-                    Quick Fixes;
-                  </h3>";
-                  <ul className="text-green-200 text-sm space-y-1">;
-                    <li>• Add missing page titles</li>;
-                    <li>• Include meta descriptions</li>;
-                    <li>• Add proper heading structure</li>;
-                  </ul>;
-                </div>;
-</div>;
-            </div>;
-          </motion.div>;
-        </motion.div>)"}
               {/* Quick Actions */}"
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
                 <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-lg p-4">"

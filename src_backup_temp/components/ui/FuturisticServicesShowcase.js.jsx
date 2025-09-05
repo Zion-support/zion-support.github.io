@@ -46,8 +46,6 @@ const services = [;
         "price": '$249/month';
         features['Smart Contracts'", 'DeFi Platforms', 'NFT Marketplaces', 'DAO Governance'];}
 ];
-export default function FuturisticServicesShowcase;
-export {FuturisticServicesShowcase}() {;
 export default function FuturisticServicesShowcase()() {
     const [hoveredService, setHoveredService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -154,10 +152,6 @@ export default function FuturisticServicesShowcase()() {
                   </div>;
 
                   {/* Service Content */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-"hover": "text-cyan-400 transition-colors duration-300">;
-                    {service.name"}
-                  </h3>;
-                  <p className="text-gray-300 mb-4 leading-relaxed">;
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                     {service.name}
                   
@@ -236,32 +230,6 @@ export default function FuturisticServicesShowcase()() {
   { "duration": "0.8;
   "delay": 0.4 ;
 
-"}} className="text-center mt-16">;
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm">;
-            <h3 className="text-2xl "md": "text-3xl font-bold text-white mb-4">;
-              Ready to Transform Your Business?;
-            </h3>;
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
-              Join thousands of companies already leveraging our revolutionary technology solutions ;
-              to accelerate growth and innovation.;
-            </p>;
-            <div className="flex flex-col "sm":flex-row gap-4 justify-center">;
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 "hover":from-cyan-600 "hover":to-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform "hover":scale-105 "hover":shadow-lg "hover":shadow-cyan-500/25">;
-                View All Services;
-              </button>;
-              <button className="border-2 border-cyan-500/50 "hover":border-cyan-400 text-cyan-400 "hover":text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 "hover":bg-cyan-500/10">;
-                Schedule Demo;
-              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>)"}
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
 }} className="text-center mt-16">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 backdrop-blur-sm">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">

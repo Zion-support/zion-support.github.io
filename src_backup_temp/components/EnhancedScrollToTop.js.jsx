@@ -1,5 +1,3 @@
-import React, {useState, useEffect} from 'react';'''';';
-import {motion, AnimatePresence} from 'framer-motion';'''';';
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import React, {useState, useEffect} from 'react';
@@ -14,10 +12,6 @@ else {setIsVisible(false)}
         };
         window.addEventListener('scroll', toggleVisibility);
         return () => window.removeEventListener('scroll', toggleVisibility)}, []);
-    const scrollToTop = (props: any) => {
-        window.scrollTo({';
-            top: 0,';';
-            behavior: 'smooth'
     const scrollToTop = (props: any) => {;
         window.scrollTo({;
             top: 0,;
@@ -52,8 +46,6 @@ export {EnhancedScrollToTop};
 export {EnhancedScrollToTop};
 ;
 export {EnhancedScrollToTop};
-';
-</motion>;';;';
 ;
 </motion>;
 ;

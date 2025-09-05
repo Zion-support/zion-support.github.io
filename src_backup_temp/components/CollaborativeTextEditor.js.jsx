@@ -3,9 +3,6 @@ import {motion} from 'framer-motion';';
 import {Users, MessageSquare, Sparkles, Save, Download, Loader2} from 'lucide-react';
 ;
 ;
-export const CollaborativeTextEditor = ("props": "any) => {;
-    const { trackEvent "} = useAnalytics({"enableTracking": "true",;
-        "enableUserBehaviorTracking": "true;"});
 export const CollaborativeTextEditor = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
@@ -27,16 +24,6 @@ export const CollaborativeTextEditor = (props: any) => {
     const collaborationRef = useRef(null);
     // Initialize real-time collaboration;
     const collaboration = useRealTimeCollaboration({}
-        roomId,;
-        userId,;
-        userName,;
-        "enablePresence": "true",;
-        "enableCursors": "true",';
-        "enableSelection": "true",'';
-        "enableTextSync": "true",''';
-        "conflictResolution": 'client',;
-        "messageRetention": "1000;
-    "}) ;
         roomId,
         userId,
         userName,
@@ -274,9 +261,6 @@ useEffect(() => {}";
         const handleCollaborationTextChange = ("props": "any) => {"}"";
             const {message} = event.detail""";
             if (message.type === "text_change" && message.userId !== userId) {}
-;
-// Default export behavior';
-            const blob = new Blob([exportContent], {"type": 'text/plain'});
 
 // Default export behavior'
             const blob = new Blob([exportContent], {type: 'text/plain'}
@@ -316,13 +300,6 @@ useEffect(() => {}
         if();
 }
             return,const autoSaveInterval = setInterval(() => {}
-;
-// Simple merge strategy - in production, this would use operational transformation;
-                    return {...prev,;
-                        "content": "message.payload.content",;
-                        "version": "Math.max(prev.version", message.payload.version)}});
-                trackEvent('editor',collaboration_sync',text_synced', null, {"userId": "message.userId",;
-                    "version": "message.payload.version"})}
 
 // Simple merge strategy - in production, this would use operational transformation
                     return {...prev,
@@ -370,60 +347,6 @@ useEffect(() => {}
         if(!enableAI) return,const debounceTimer = setTimeout(() => {}
 ;
             if(editorState.content.length > 100) {}
-;
-                generateAISuggestions()}";
-}, 3000)"";
-        return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])"""";
-    return (";
-    <div className = "{"bg-white" "dark": "bg-gray-800 rounded-xl shadow-lg border border-gray-200 "dark":border-gray-700 overflow-hidden ${className"}"}" >"""";
-      {/* comment */}""""";
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"""";
-        <div className="flex items-center justify-between">"""";
-          <h3 className="text-lg font-semibold flex items-center gap-2">"""";
-            <MessageSquare className="w-5 h-5"/" >"""";
-            Collaborative Text Editor""""";
-            {collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">"""";
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>;
-                Live";
-              </div>)}"";
-          </h3>""""";
-          """"";
-          <div className="flex items-center gap-2">""""";
-            {/* comment */}"""";
-            {enableCollaboration && (<button onClick="{()" =" > setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 "hover": "bg-white/30 rounded text-sm transition-colors flex items-center gap-2">""""";
-                <Users className="w-4 h-4"/" >"",;
-                {collaboration.onlineUsers.length}";
-              </button>) }"";
-            """"";
-            {/* comment */}""""";
-            {enableAI && (<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="px-3 py-1 bg-white/20 "hover": "bg-white/30 rounded text-sm transition-colors flex items-center gap-2 "disabled":opacity-50">""""",;
-                {isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"/" >) : "(<Sparkles className="w-4 h-4"/" >)"}
-;
-                AI";
-              </button>) }"";
-            """"";
-            {/* comment */}""""";
-            <button onClick="{handleSave}" className="px-3 py-1 bg-green-500 "hover": "bg-green-600 rounded text-sm transition-colors flex items-center gap-2">"""";
-              <Save className="w-4 h-4"/" >";
-              Save",;
-            </button>;
-          </div>;
-        </div>";
-      </div>"";
-""""",;
-      {/* comment */}""""";
-      <div className="flex h-96">""""";
-        {/* comment */}"""";
-        <div className="flex-1 p-4">"""";
-          <textarea ref="{editorRef}" value="{editorState.content}" onChange="{handleTextChange}" onSelect="{handleSelectionChange}" onMouseMove="{handleCursorMove}" placeholder="Start typing your document..." className="w-full h-full p-4 border border-gray-300 "dark": "border-gray-600 rounded-lg "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent bg-white "dark":bg-gray-700 text-gray-900 "dark":text-gray-100 resize-none font-mono text-sm"/" >"";
-          """""",;
-          {/* comment */}"""";
-          <div className="flex items-center justify-between mt-2 text-xs text-gray-500">;
-            <span>;
-              {editorState.content.length} characters, {editorState.content.split(/\s+/) .filter(Boolean) .length} words,;
-            </span>";
-            <span>";
-              Version {editorState.version}"";
 
                 generateAISuggestions()}"
 }, 3000)""

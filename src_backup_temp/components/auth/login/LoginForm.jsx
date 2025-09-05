@@ -18,7 +18,6 @@ export default function Page("props": "any) {;
 
         form.setError('root', {;
 
-          "message": 'Login failed.Please check your credentials.'});
           message: 'Login failed.Please check your credentials.'}
     );
       }
@@ -26,7 +25,6 @@ export default function Page("props": "any) {;
 
       form.setError('root', {;
 
-        "message": 'An error occurred.Please try again.'});
         message: 'An error occurred.Please try again.'}
     );
     } finally {setIsSubmitting(false);}

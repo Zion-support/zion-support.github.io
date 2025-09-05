@@ -1,17 +1,10 @@
-interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
-
-  recommendation: TeamRecommendatio n;
-  projectBrief: ProjectBrie f; // For budget comparison
-  onInviteTalent: talentI d: string, roleTitle: string void;
-  // onEditRole: roleI d: string void; // For future add/remove
-  // onRemoveRole: roleI d: string void; // For future add/remove
-
-}
-;
-export 
-  if(!recommendation) return null;
-
-  return ("
+interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {;
+  "recommendation": "TeamRecommendatio n;
+  "projectBrief": ProjectBrie f; // For budget comparison;
+  "onInviteTalent": talentI "d": string", "roleTitle": "string void;
+  // "onEditRole": roleI "d": string void; // For future add/remove;
+  // "onRemoveRole": roleI "d": string void; // For future add/remove;
+"}  return ("
     <div className="space-y-8 mt-6">"
       <Alert className="border-green-500 bg-green-50 dark: b g-green-900/30 text-green-700 dark: tex t-green-300">"
         <CheckCircle className="h-5 w-5 text-green-500"   />"
@@ -40,34 +33,19 @@ export
           {/* Budget status display will be added here */}
           <BudgetStatusDisplay projectBriefBudget={projectBrief.budget}
             estimatedCost={recommendation.totalProjectEstimate}
-             />
-        </CardContent>
-      </Card>
-
-      <div>"
-        <h3 className="text-xl font-semibold mb-4 flex items-center">"
-          <Briefcase className="h-6 w-6 mr-2 text-primary"   />
-          Recommended Roles
-        
-        {recommendation.roles.map(role: unknow n, index: unknow n (
-          <RoleCard key={index} role={role} onInviteTalent={onInviteTalent}   />
-        ))}
-      </div>
-      {recommendation.roles.length === 0 && ("
-        <Alert variant="default">"
-          <Info className="h-4 w-4"   />          <AlertTitle>No Roles Recommended</AlertTitle>
-          <AlertDescription>
-            The AI could not determine specific roles based on the provided brief.You might want to refine your project goals or scope.</AlertDescription>
-        </Alert>
-      )};
-    </div>;
-  )};
-  </Card>;
+             />;
+        </CardContent>;
+      </Card>;
+      <div>";
+        <h3 className="text-xl font-semibold mb-4 flex items-center">";
+          <Briefcase className="h-6 w-6 mr-2 text-primary"   />;
+          Recommended Roles;
+        {recommendation.roles.map("role": "unknow n", "index": "unknow n (;
+          <RoleCard key={index"} role={role} onInviteTalent={onInviteTalent}   />;  </Card>;
 );
 '"`;
 </BudgetStatusDisplay>;
 </InfoCard>;
-
 // Helper component for summary cards
 const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: React.ReactNode })  => ("
   <Card className="bg-secondary/50 p-3 shadow-sm">"
@@ -79,6 +57,5 @@ const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: 
   </Card>;
 );
 '"`
-
 </BudgetStatusDisplay>
 </InfoCard>

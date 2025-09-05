@@ -1,23 +1,50 @@
-  const services = [{
-      title: \'AI Development\',
-      \"description\": \'Custom AI solutions and machine learning models for your business needs.\',
-      \"icon\": \'🤖\',
-      \"href\": \'/services/ai-development\'
+const \"Home\": NextPage = () => {
+import React, { memo } from 'react';
+import Link from 'next/link';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOHead from '../components/seo/SEOHead';
+import { ArrowRight, CheckCircle, Star, Phone, Mail, MapPin, Brain, Server, Smartphone, Globe, Zap, Shield, Users } from 'lucide-react';
+const Home = memo(() => {
+  const structuredData = {
+    "@context": ""https": //schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": ""https": //ziontechgroup.com",
+    "logo": ""https": //ziontechgroup.com/logo.png",
+    "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
     },
-    {
-      \"title\": \'Cloud Solutions\',
-      \"description\": \'Scalable cloud infrastructure and migration services for modern applications.\',
-      \"icon\": \'☁️\',
-      \"href\": \'/services/cloud-solutions\'
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
     },
-    {
-      \"title\": \'Web Development\',
-      \"description\": \'Modern, responsive web applications built with cutting-edge technologies.\',
-      \"icon\": \'🌐\',
-      \"href\": \'/services/web-development\'
-    },
-    {
-    },
+    "sameAs": [""https": //ziontechgroup.com"
+    ],
+    "foundingDate": "2020",
+    "numberOfEmployees": "10-50",
+    "industry": "Technology Services",
+    "services": ["AI Services",
+      "IT Solutions",
+      "Micro SaaS Development",
+      "Cloud Infrastructure",
+      "Cybersecurity",
+      "Digital Transformation"
+    ]
+  } as const;
+  const stats = [{ "number": '500+', "label": 'Projects Completed' },
+    { "number": '50+', "label": 'Happy Clients' },
+    { "number": '99.9%', "label": 'Uptime Guarantee' },
+    { "number": '24/7', "label": 'Support Available' }
+  ];    },
     {
       \"title\": \'Blockchain Solutions\',
       \"description\": \'Decentralized applications and smart contract development.\',
@@ -95,30 +122,8 @@
               Comprehensive technology solutions tailored to your business needs
             </p>
           </div>
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className=\"bg-white rounded-lg shadow-lg p-8 \"hover\": shadow-xl transition-shadow\"
-              >
-                <div className=\"text-4xl mb-4\">{service.icon}</div>
-                <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
-                  {service.title}
-                </h3>
-                <p className=\"text-gray-600 mb-6\">
-                  {service.description}
-                </p>
-                <Link
-                  href={service.href}
-                  className=\"text-blue-600 \"hover\": text-blue-700 font-medium flex items-center\"
-                >
-                  Learn More
-                  <ArrowRight className=\"ml-1 h-4 w-4\" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-            </div>
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">            </div>
           </div>
         </section>
       </main>
@@ -206,3 +211,4 @@
   );
 });
 export default Home;
+   import React,{ memo } from 'react';  import type { NextPage } from 'next'; import EnhancedLayout from '../components/layout/EnhancedLayout';

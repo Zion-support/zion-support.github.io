@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import MainLayout from '../../src/components/layout/MainLayout';
-import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
+import MainLayout from '../../src/components/layout/MainLayout';import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
 
 const industries = [
   {
@@ -77,8 +76,7 @@ export default function IndustriesPage() {
       title="Industries - Zion Tech Group"
       description="Discover how Zion Tech Group serves various industries with tailored technology solutions."
       keywords="industries, healthcare, finance, education, manufacturing, retail, government, technology solutions"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    >      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto">

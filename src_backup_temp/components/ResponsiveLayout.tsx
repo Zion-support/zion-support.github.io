@@ -1,34 +1,33 @@
 import React, { useState, useEffect } from 'react';
-interface ResponsiveLayoutProps {
-  "children": React.ReactNode;
-}
-export function ResponsiveLayout({ children }: ResponsiveLayoutProps) {
-  const [isMobile, setIsMobile] = useState(false);
+;
+interface ResponsiveLayoutProps {;
+  "children": "React.ReactNode;
+"}
+export function ResponsiveLayout({ children }: "ResponsiveLayoutProps) {;
+  const [isMobile", setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
-  useEffect(() => {
-    const checkScreenSize = () => {
+;
+  useEffect(() => {;
+    const checkScreenSize = () => {;
       setIsMobile(window.innerWidth < 768);
       setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
     };
+;
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
+;
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
-  return (
-    <div className={`
-      min-h-screen bg-gradient-to-br from-gray-50 to-gray-100
-      ${isMobile ? 'px-2 py-4' : isTablet ? 'px-4 py-6' : 'px-6 py-8'}
-    `}>
-      <div className={`
-        max-w-7xl mx-auto
-        ${isMobile ? 'space-y-4' : isTablet ? 'space-y-6' : 'space-y-8'}
-      `}>
-        {children}
-      </div>;
-    </div>;
-  );
-}
-// Responsive container component
+;
+  return (;
+    <div className={`;
+      min-h-screen bg-gradient-to-br from-gray-50 to-gray-100;
+      ${isMobile ? 'px-2 py-4' : "isTablet ? 'px-4 py-6' : 'px-6 py-8'"}
+    `}>;
+      <div className={`;
+        max-w-7xl mx-auto;
+        ${isMobile ? 'space-y-4' : "isTablet ? 'space-y-6' : 'space-y-8'"}
+      `}>;// Responsive container component
 export function ResponsiveContainer({
   children,
   className = ",
@@ -48,22 +47,16 @@ export function ResponsiveContainer({
     </div>;
   );
 }
-// Responsive grid component
-export function ResponsiveGrid({
-  children,
-  cols = { "sm": 1, "md": 2, "lg": 3, "xl": 4 },
-  gap = 6,
-  className = "
-}: {
+// Responsive grid component;
+export function ResponsiveGrid({;
+  children;
+  cols = { "sm": "1", "md": "2", "lg": "3", "xl": "4 "}
+  gap = 6;
+  className = '';
+}: "{;
   "children": React.ReactNode;
-  cols?: { sm?: number; md?: number; lg?: number; xl?: number };
-  gap?: number;
-  className?: string;
-"}) {;
-  const gridClasses = `;
-    grid gap-${gap}
-    grid-cols-${cols.sm || 1}
-    ${cols.md ? `"md": grid-cols-${cols.md}` : "}
+  cols?: { sm?: number; md?: number; lg?: number; xl?: number "};
+  gap?: "number;    ${cols.md ? `"md": grid-cols-${cols.md}` : "}
     ${cols.lg ? `"lg": grid-cols-${cols.lg}` : "}
     ${cols.xl ? `"xl": grid-cols-${cols.xl}` : "}
     ${className};
@@ -74,18 +67,13 @@ export function ResponsiveGrid({
     </div>;
   );
 }
-// Responsive card component
-export function ResponsiveCard({
-  children,
-  className = ",
-  hover = true,
-  padding = true
-}: {
-  "children": React.ReactNode;
-  className?: string;
-  hover?: boolean;
-  padding?: boolean;
-}) {
+// Responsive card component;
+export function ResponsiveCard({;
+  children;
+  className = '';
+  hover = true;
+  padding = true;
+}: "{;}) {
   return (
     <div className={`
       bg-white rounded-lg shadow-md border border-gray-200
@@ -97,33 +85,29 @@ export function ResponsiveCard({
     </div>;
   );
 }
-// Responsive text component
-export function ResponsiveText({
-  children,
-  size = 'base',
-  className = "
-}: {
+// Responsive text component;
+export function ResponsiveText({;
+  children;
+  size = 'base';
+  className = '';
+}: "{;
   "children": React.ReactNode;
   size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   className?: string;
-}) {
-  const sizeClasses = {
-    "xs": 'text-xs sm:text-sm',
-    "sm": 'text-sm sm:text-base',
-    "base": 'text-base sm:text-lg',
-    "lg": 'text-lg sm:text-xl',
-    "xl": 'text-xl sm:text-2xl',
-    '2xl': 'text-2xl "sm": text-3xl',
-    '3xl': 'text-3xl "sm": text-4xl',
-    '4xl': 'text-4xl "sm": text-5xl'
-  };
-  return (
-    <div className={`${sizeClasses[size]} ${className}`}>
-      {children}
-    </div>;
-  );
-}
-// Responsive button component
+"}) {;
+  const sizeClasses = {;
+    "xs": 'text-xs "sm": "text-sm';
+    "sm": 'text-sm "sm":text-base';
+    "base": 'text-base "sm":text-lg';
+    "lg": 'text-lg "sm":text-xl';
+    "xl": 'text-xl "sm":text-2xl';
+    '2xl': 'text-2xl "sm":text-3xl';
+    '3xl': 'text-3xl "sm":text-4xl';
+    '4xl': 'text-4xl "sm":text-5xl';
+  "};
+;
+  return (;
+    <div className={`${sizeClasses[size]} ${className}`}>;// Responsive button component
 export function ResponsiveButton({
   children,
   variant = 'primary',
@@ -140,33 +124,26 @@ export function ResponsiveButton({
   onClick?: () => void;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
-}) {
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 "focus": outline-none focus:ring-2 focus:ring-offset-2';
-  const variantClasses = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    "secondary": 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
-    "outline": 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
-    "ghost": 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500'
-  };
-  const sizeClasses = {
-    "sm": 'px-3 py-2 text-sm',
-    "md": 'px-4 py-2 text-base sm:px-6 sm:py-3',
-    "lg": 'px-6 py-3 text-lg sm:px-8 sm:py-4'
-  };
-  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : '
-  return (
-    <button
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-      className={`;
-        ${baseClasses}
-        ${variantClasses[variant]}
-        ${sizeClasses[size]}
-        ${disabledClasses}
-        ${className}
-      `}
-    >
+"}) {;
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 "focus": "outline-none "focus":ring-2 "focus":ring-offset-2';
+  ;
+  const variantClasses = {;
+    "primary": 'bg-blue-600 text-white "hover":bg-blue-700 "focus":ring-blue-500';
+    "secondary": 'bg-gray-600 text-white "hover":bg-gray-700 "focus":ring-gray-500';
+    "outline": 'border-2 border-blue-600 text-blue-600 "hover":bg-blue-600 "hover":text-white "focus":ring-blue-500';
+    "ghost": 'text-blue-600 "hover":bg-blue-50 "focus":ring-blue-500';
+  "};
+;
+  const sizeClasses = {;
+    "sm": 'px-3 py-2 text-sm';
+    "md": 'px-4 py-2 text-base "sm": "px-6 "sm":py-3';
+    "lg": 'px-6 py-3 text-lg "sm":px-8 "sm":py-4';
+  "};
+;
+  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : '';
+;
+  return (;
+    <button;    >
       {children};
     </button>
   );

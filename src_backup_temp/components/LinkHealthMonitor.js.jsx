@@ -19,12 +19,6 @@ export default function Page("props": "any) {;
       links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
     setReport({;
 
-      totalLinks,;
-      healthyLinks,;
-      brokenLinks,;
-      externalLinks,;
-      "averageResponseTime": "avgResponseTime",;
-      "lastUpdated": "new Date()"});
       totalLinks,
       healthyLinks,
       brokenLinks,
@@ -66,9 +60,6 @@ export default function Page("props": "any) {;
     }
   };
   const filteredLinks = linkStatuses.filter(link => {if (selectedFilter === 'all') return true;
-    return link.status === selectedFilter;});
-  return ();
-    <>;
     return link.status === selectedFilter;}
     );
   return ()
@@ -283,21 +274,6 @@ export default function Page("props": "any) {;
                 </div>;
               </div>;
 
-              {/* Recommendations */}";
-              <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">";
-                <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">";
-                  <AlertTriangle className="w-5 h-5 mr-2"  />;
-                  Recommendations;
-                </h3>";
-                <ul className="text-yellow-200 text-sm space-y-1">;
-                  <li>• Fix broken LinkedIn and social media links</li>;
-                  <li>• Implement proper redirects for moved pages</li>;
-                  <li>• Set up automated link monitoring</li>;
-                  <li>• Review external link validity regularly</li>;
-                </ul>;
-              </div>;
-            </div>;
-          </motion.div>;
               {/* Recommendations */}"
               <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">"

@@ -305,9 +305,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                       {getCategoryIcon(metric.category)"}";
                       <h3 className="font-semibold text-zion-slate text-sm">;
                         {metric.name}
-                      </h3>;
-                    </div>;
-                    <span`;
                       
                     </div>
                     <span`
@@ -349,54 +346,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
               ))}
             </div>;
 
-            {/* Quick Status */}";
-            <div className="grid grid-cols-1 "lg": "grid-cols-2 gap-6">";
-              <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">";
-                <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">";
-                  <CheckCircle className="w-5 h-5 text-zion-blue"  />;
-                  System Health Status;
-                </h3>";
-                <div className="space-y-3">";
-                  <div className="flex items-center justify-between">";
-                    <span className="text-sm text-zion-slate">;
-                      Overall Health;
-                    </span>";
-                    <span className="px-3 py-1 bg-green-100 text-green-700 "dark":bg-green-900/30 "dark":text-green-300 rounded-full text-sm font-medium">;
-                      Good;
-                    </span>;
-                  </div>";
-                  <div className="flex items-center justify-between">";
-                    <span className="text-sm text-zion-slate">;
-                      Active Alerts;
-                    </span>";
-                    <span className="px-3 py-1 bg-yellow-100 text-yellow-700 "dark":bg-yellow-900/30 "dark":text-yellow-300 rounded-full text-sm font-medium">;
-                      {performanceAlerts.filter(a => a.status === 'active');
-                          .length"}
-                    </span>;
-                  </div>";
-                  <div className="flex items-center justify-between">";
-                    <span className="text-sm text-zion-slate">;
-                      Last Updated;
-                    </span>";
-                    <span className="text-sm text-zion-slate-light">;
-                      {new Date().toLocaleTimeString()}
-                    </span>;
-                  </div>;
-                </div>;
-              </div>;
-";
-              <div className="bg-gradient-to-r from-zion-green/10 to-zion-emerald/10 p-6 rounded-xl border border-zion-green/20">";
-                <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">";
-                  <TrendingUp className="w-5 h-5 text-zion-green"  />;
-                  Scalability Overview;
-                </h3>";
-                <div className="space-y-3">;
-                  {scalabilityMetrics.slice(0, 3).map(metric => (;
-                    <div;
-                      key={metric.id}";
-                      className="flex items-center justify-between";
-                    >";
-                      <span className="text-sm text-zion-slate">;
             {/* Quick Status */}"
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">"
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">"
@@ -473,8 +422,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">";
                       <h3 className="font-semibold text-zion-slate">;
                         {metric.name}
-                      </h3>;
-                      <span`;
                       
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}
@@ -526,24 +473,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
             ))}
           </div>;
         )}
-;
-        {activeTab === 'alerts' && (";
-          <div className="space-y-4">;
-            {performanceAlerts.map(alert => (;
-              <div;
-                key={alert.id}";
-                className="p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-xl "hover":shadow-lg transition-shadow";
-              >";
-                <div className="flex items-start gap-3">";
-                  <div className="w-12 h-12 bg-zion-orange/20 rounded-lg flex items-center justify-center">";
-                    <AlertTriangle className="w-6 h-6 text-zion-orange"  />;
-                  </div>";
-                  <div className="flex-1">";
-                    <div className="flex items-center gap-3 mb-2">";
-                      <h3 className="font-semibold text-zion-slate">;
-                        {alert.title"}
-                      </h3>;
-                      <span`;
 
         {activeTab === 'alerts' && ("
           <div className="space-y-4">
@@ -620,24 +549,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
             ))}
           </div>;
         )}
-;
-        {activeTab === 'scalability' && (";
-          <div className="space-y-4">;
-            {scalabilityMetrics.map(metric => (;
-              <div;
-                key={metric.id}";
-                className="p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-xl "hover":shadow-lg transition-shadow";
-              >";
-                <div className="flex items-center gap-3">";
-                  <div className="w-12 h-12 bg-zion-green/20 rounded-lg flex items-center justify-center">";
-                    <TrendingUp className="w-6 h-6 text-zion-green"  />;
-                  </div>";
-                  <div className="flex-1">";
-                    <div className="flex items-center gap-3 mb-2">";
-                      <h3 className="font-semibold text-zion-slate">;
-                        {metric.name"}
-                      </h3>;
-                      <span`;
 
         {activeTab === 'scalability' && ("
           <div className="space-y-4">
@@ -708,25 +619,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
             ))}
           </div>;
         )}
-;
-        {activeTab === 'analytics' && (";
-          <div className="space-y-6">";
-            <div className="text-center text-zion-slate-light">";
-              <Zap className="w-16 h-16 mx-auto mb-4 opacity-50"  />";
-              <h3 className="text-lg font-semibold mb-2">;
-                Performance Analytics;
-              </h3>;
-              <p>;
-                Advanced performance analytics and predictive insights coming;
-                soon...;
-              </p>;
-            </div>;
-          </div>;
-        )}
-      </div>;
-    </div>;
-  );}
-"export default ComponentName;";
 
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"

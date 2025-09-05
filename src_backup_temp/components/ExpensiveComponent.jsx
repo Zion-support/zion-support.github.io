@@ -3,7 +3,6 @@ const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -34,10 +33,6 @@ export {ExpensiveComponent};
 ;
 export {ExpensiveComponent};
 }
-  })";
- export default function ExpensiveComponent("props": "any) { const [data", setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {"";";
-  });,"})";
-;,"});
   })"
  export default function ExpensiveComponent(props: any) { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {"";"
   }
@@ -46,13 +41,6 @@ export {ExpensiveComponent};
 }
   });
 }
- export default function ExpensiveComponent("props": "any) { const [data", setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;";
-  });,"});";
-}"});
-}
-  })"";
-  });,"})";
-export default function ExpensiveComponent("props": "any) {"}"});
  export default function ExpensiveComponent(props: any) { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;"
   }
     );,"}
@@ -66,16 +54,6 @@ export default function ExpensiveComponent(props: any) {}"})
 }
   });
 }
-  const [data, setData] = useState([]);";
-  });,"})";
-  const [loading, setLoading] = useState(true);,"});
-}
-  })";
-  useEffect(() => {}});,"})";
-    // comment;
-  })";
-    const timer = setTimeout(() => {}});,"})";
-      const expensiveData = Array.from();,"});
   const [data, setData] = useState([]);"
   }
     );,"})"
@@ -92,9 +70,6 @@ export default function ExpensiveComponent(props: any) {}"})
 }
   });
 }
-        {"length": "10000"},";
-  });,"})";
-        (_, i) => Math.sqrt(i) * Math.PI * Math.random();,"});
         {length: 10000},"
   }
     );,"})"
@@ -102,9 +77,6 @@ export default function ExpensiveComponent(props: any) {}"})
 }
   });
 }
-      );";
-  });,"})";
-      setData(expensiveData);,"});
     );"
   }
     );,"})"
@@ -112,9 +84,6 @@ export default function ExpensiveComponent(props: any) {}"})
 }
   });
 }
-      setLoading(false);";
-  });,"});";
-}, 2000);,"});
       setLoading(false);"
   }
     );,"}
@@ -123,13 +92,6 @@ export default function ExpensiveComponent(props: any) {}"})
 }
   });
 }
-    return () => clearTimeout(timer);";
-  });,"});";
-}, []);,"});
-}
-  })";
-  if(loading) {}});,"})";
-    return();,"});
     return () => clearTimeout(timer);"
   }
     );,"}
@@ -152,9 +114,6 @@ export default function ExpensiveComponent(props: any) {}"})
 }
   });
 }
-      </div>;";
-  });,"})";
-    </div>)}"});
       </div>;"
   }
     );,"})"
@@ -162,9 +121,6 @@ export default function ExpensiveComponent(props: any) {}"})
 }
   });
 }
-;";
-  });,"})";
-export {ExpensiveComponent};,"});
 ;"
   }
     );,"})"
@@ -172,9 +128,6 @@ export {ExpensiveComponent};,"})
 }
   });
 }
-;";
-  });,"})";
-export {ExpensiveComponent};,"});
 ;"
   }
     );,"})"
@@ -182,9 +135,6 @@ export {ExpensiveComponent};,"})
 }
   });
 }
-;";
-  });,"})";
-export {ExpensiveComponent};,"});
 ;"
   }
     );,"})"
@@ -192,9 +142,6 @@ export {ExpensiveComponent};,"})
 }
   });
 }
-;";
-  });,"})";
-export {ExpensiveComponent};,"});
 ;"
   }
     );,"})"
@@ -202,9 +149,6 @@ export {ExpensiveComponent};,"})
 }
   });
 }
-;";
-  });,"})";
-export {ExpensiveComponent};,"});
 ;"
   }
     );,"})"
@@ -278,7 +222,6 @@ export {ExpensiveComponent}"";
   )}
 export default ExpensiveComponent;";
 ";
-
 </SEO>;
 </div>;
 </div>;

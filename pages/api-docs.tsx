@@ -1,6 +1,7 @@
+import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
-import Link from 'next/link';
 import { 
   Code, 
   ArrowRight,
@@ -103,8 +104,7 @@ export default function APIDocsPage() {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
-                  initial={{ opacity: 0, y: 30 }}
+                  className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -165,6 +165,5 @@ export default function APIDocsPage() {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>  );
 }

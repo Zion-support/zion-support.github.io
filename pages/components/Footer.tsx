@@ -5,7 +5,6 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } f
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   const footerLinks = {
     services: [
       { name: 'AI Services', href: '/ai-services' },
@@ -196,8 +195,7 @@ const Footer = () => {
               className="text-gray-400 text-sm mb-4 md:mb-0"
             >
               © {currentYear} Zion Tech Group. All rights reserved.
-            </motion.div>
-            
+            </motion.div>            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

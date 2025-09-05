@@ -33,7 +33,7 @@ export default function Navigation() {
 
   const services = [
     { name: 'AI Services', href: '/ai-services', description: 'Machine Learning, NLP, Computer Vision', icon: BarChart3 },
-    { name: 'IT Services', href: '/it-services', description: 'Cloud, DevOps, Cybersecurity', icon: Shield },
+    { name: 'IT Services', href: '/services', description: 'Cloud, DevOps, Cybersecurity', icon: Shield },
     { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom SaaS Solutions', icon: Zap },
     { name: 'Blockchain', href: '/blockchain', description: 'Smart Contracts, DeFi, NFTs', icon: Building },
     { name: 'IoT Solutions', href: '/iot', description: 'Connected Devices, Edge Computing', icon: Globe },

@@ -18,7 +18,6 @@
     }
 
     const system = this.automationSystems.get(systemName);
-=======;
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');

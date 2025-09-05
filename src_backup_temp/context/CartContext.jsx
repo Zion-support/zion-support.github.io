@@ -63,8 +63,6 @@ const { user "} = useAuth();
         safeStorage.removeItem(getCartKey());
       }
     }
-;
-    dispatch({"type": 'SET_ITEMS', "payload": "items"});
 
     dispatch({type: 'SET_ITEMS', payload: items}
     );
@@ -77,7 +75,6 @@ const { user "} = useAuth();
 ;
   const addItem = item => {;
 
-    dispatch({ "type": 'ADD_ITEM', "payload": "item "});
   const addItem = item => {
 
     dispatch({ type: 'ADD_ITEM', payload: item }
@@ -86,7 +83,6 @@ const { user "} = useAuth();
 ;
   const removeItem = id => {;
 
-    dispatch({ "type": 'REMOVE_ITEM', "payload": "id "});
   const removeItem = id => {
 
     dispatch({ type: 'REMOVE_ITEM', payload: id }
@@ -100,7 +96,6 @@ const { user "} = useAuth();
       removeItem(id);
     "} else {;
 
-      dispatch({ "type": 'UPDATE_QUANTITY', "payload": "{ id", quantity } });
       dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } }
     );
     }
@@ -108,7 +103,6 @@ const { user "} = useAuth();
 ;
   const clearCart = ("props": "any) => {;
 
-    dispatch({ "type": 'CLEAR_CART' "});
   const clearCart = (props: any) => {
 
     dispatch({ type: 'CLEAR_CART' }
