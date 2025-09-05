@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'''
 import {Link} from 'react-router-dom';'''
 import {motion} from 'framer-motion';
@@ -134,24 +135,19 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
       </motion.div>
     </div>)};
 export default NotFound;
+=======
+import React from 'react';
+
+interface NotFound.jsProps {
+  // Add props here as needed
+>>>>>>> main
 }
 
-export {NotFound};
-
-export {NotFound};
-
-export {NotFound};
-
-export {NotFound};
-
-export {NotFound};
-
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+export default function NotFound.js({ }: NotFound.jsProps) {
+  return (
+    <div>
+      <h1>NotFound.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

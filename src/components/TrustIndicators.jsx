@@ -1,23 +1,10 @@
 import React from 'react';
-export function TrustIndicatorsCompact(props: any) {
-import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators(props: any) {
-    const indicators = [{
 
-            icon: Shield,
-            title: "Enterprise Security","
-            description: "SOC 2 Type II certified with end-to-end encryption","
-            color: "text-zion-cyan"
-        },
-        {icon: Lock,"
-            title: "Data Protection","
-            description: "GDPR & CCPA compliant with zero-knowledge architecture","
-            color: "text-zion-purple"},
-        {icon: Award,"
-            title: "Industry Leader","
-            description: "Recognized by Gartner & Forrester as market leader","
-            color: "text-zion-cyan"},
-        {
+interface TrustIndicators.jsProps {
+  // Add props here as needed
+}
 
+<<<<<<< HEAD
             icon: Users,"
             title: "Verified Community","
             description: "10,000+ verified professionals and companies","
@@ -132,3 +119,13 @@ export function TrustIndicatorsCompact(props: any) {
       </div>
     </div>)}
 '"`
+=======
+export default function TrustIndicators.js({ }: TrustIndicators.jsProps) {
+  return (
+    <div>
+      <h1>TrustIndicators.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main

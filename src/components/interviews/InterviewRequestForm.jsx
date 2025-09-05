@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from "react";"
 import {Button} from '@/components/ui/button';"
 import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';"
@@ -23,11 +24,15 @@ import {useInterviews} from '@/hooks/useInterviews';
     notes: z.string().optional()}
     );
 export function InterviewRequestForm(props: any) {
+=======
+import React from 'react';
+>>>>>>> main
 
-    const { requestInterview } = useInterviews();
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const form = useForm({
+interface InterviewRequestForm.jsProps {
+  // Add props here as needed
+}
 
+<<<<<<< HEAD
         resolver: zodResolver(formSchema),
         defaultValues: {
 
@@ -222,3 +227,13 @@ export function InterviewRequestForm(props: any) {
 </Calendar>
 </FormField>
 </FormField>
+=======
+export default function InterviewRequestForm.js({ }: InterviewRequestForm.jsProps) {
+  return (
+    <div>
+      <h1>InterviewRequestForm.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main

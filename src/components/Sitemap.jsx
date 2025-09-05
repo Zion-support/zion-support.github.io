@@ -1,6 +1,6 @@
 import React from 'react';
-export default Sitemap;
 
+<<<<<<< HEAD
 import {Link} from 'react-router-dom';
 export default function Page(props: any) {
 ,
@@ -134,3 +134,17 @@ export {Page, Sitemap};
 </li>
 </div>
 </div>
+=======
+interface Sitemap.jsProps {
+  // Add props here as needed
+}
+
+export default function Sitemap.js({ }: Sitemap.jsProps) {
+  return (
+    <div>
+      <h1>Sitemap.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main

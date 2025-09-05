@@ -1,32 +1,35 @@
-import path from "path";
-import { fileURLToPath  } from "url";
+<<<<<<< HEAD
+const path from "path";"const { fileURLToPath } from "url";const __filename = fileURLToPath(import.meta.url);const __dirname = path.dirname(__filename);const nextConfig = { reactStrictMode: true, experimental: { esmExternals: false, }, eslint: { ignoreDuringBuilds: true, }, typescript: { ignoreBuildErrors: true, }, images: {" domains: ["ziontechgroup.com"], unoptimized: true, }, compiler: {" removeConsole: process.env.NODE_ENV === "production", }, webpack: config => { config.module.rules.push({ test: /\.(ts|tsx)$/, exclude: [ /node_modules/, /api-backup/, /pages\.disabled/, /backup-pages/, /components\/, /\.backup/, /\.disabled/, /automation\/backups/, /automation_backup/, /broken_files_backup/, /contracts/, /hardhat/, ], }); config.resolve.alias = { .config.resolve.alias," "react-router-dom": path.resolve(__dirname, "utils/next-router-shim.tsx")," "react-router": path.resolve(__dirname, "utils/next-router-shim.tsx"), }; config.resolve.fallback = { .config.resolve.fallback, fs: false, net: false, tls: false, }; return config; }," pageExtensions: ["tsx", "ts", "jsx", "js"], onDemandEntries: { maxInactiveAge: 25 * 1000, pagesBufferLength: 2, },};module.exports = default nextConfig;'"'"
+=======
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /** @type {import("next").NextConfig} */
-const nextConfig = {
+const nextConfig = {}
   reactStrictMode: true,
-  experimental: {
+  experimental: {}
     esmExternals: false,
   },
-  eslint: {
+  eslint: {}
     ignoreDuringBuilds: true,
   },
-  typescript: {
+  typescript: {}
     ignoreBuildErrors: true,
   },
-  images: {
-    domains: ["ziontechgroup.com"],
+  images: {}
+    domains: ['ziontechgroup.com'],
     unoptimized: true,
   },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
+  compiler: {}
+    removeConsole: process.env.NODE_ENV === 'production',
   },
-  webpack: config => {
-    config.module.rules.push({
+  webpack: config => {}
+    config.module.rules.push({})
       test: /\.(ts|tsx)$/,
-      exclude: [
+      exclude: []
         /node_modules/,
         /api-backup/,
         /pages\.disabled/,
@@ -41,27 +44,28 @@ const nextConfig = {
         /hardhat/,
       ],
     });
-    
-    config.resolve.alias = {
+
+    config.resolve.alias = {}
       ...config.resolve.alias,
-      "react-router-dom": path.resolve(__dirname, "utils/next-router-shim.tsx"),
-      "react-router": path.resolve(__dirname, "utils/next-router-shim.tsx"),
+      'react-router-dom': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
+      'react-router': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
     };
-    
-    config.resolve.fallback = {
+
+    config.resolve.fallback = {}
       ...config.resolve.fallback,
       fs: false,
       net: false,
       tls: false,
     };
-    
+
     return config;
   },
-  pageExtensions: ["tsx", "ts", "jsx", "js"],
-  onDemandEntries: {
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  onDemandEntries: {}
     maxInactiveAge: 25 * 1000,
     pagesBufferLength: 2,
-  }
+  },
 };
 
 export default nextConfig;
+>>>>>>> main

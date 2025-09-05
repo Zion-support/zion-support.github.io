@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 export function StatsSection(props: any) {
   const stats = [{
       number: '500+',
@@ -95,6 +96,17 @@ export function StatsSection(props: any) {
       </div>
     </section>
   );
+=======
+interface StatsSection.jsProps {
+  // Add props here as needed
+>>>>>>> main
 }
 
-export default StatsSection;
+export default function StatsSection.js({ }: StatsSection.jsProps) {
+  return (
+    <div>
+      <h1>StatsSection.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

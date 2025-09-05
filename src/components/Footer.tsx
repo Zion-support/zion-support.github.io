@@ -1,27 +1,15 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/merge-pr-11190
 import Link from 'next/link';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Linkedin, 
-  Twitter, 
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
   Twitter, 
   Linkedin, 
-  Facebook, 
   Instagram, 
+<<<<<<< HEAD
   Github, 
   Mail, 
   Phone, 
@@ -415,21 +403,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}
   Facebook, 
   Instagram,
 >>>>>>> origin/merge-pr-11190
+=======
+>>>>>>> main
   Youtube,
-  Github,
-  Brain,
-  Code,
-<<<<<<< HEAD
-  Server,
+  ArrowRight,
   Shield,
-  Cloud,
-  Zap,
-  Users,
-  BarChart3,
-  Settings,
-  FileText,
-  HelpCircle,
   Award,
+<<<<<<< HEAD
   CheckCircle,
   Star,
   Lock,
@@ -593,161 +573,120 @@ export function Footer(props: any) {
 =======
   Building2,
   FileText,
-  Users,
-  Briefcase,
-  Network,
-  Newspaper
-} from 'lucide-react';
 =======
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
->>>>>>> origin/merge-pr-11195
+>>>>>>> main
+  Users,
+  Clock
+} from 'lucide-react';
 
-export function Footer() {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+<<<<<<< HEAD
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' }
     );
+=======
+  const footerLinks = {
+    services: [
+      { name: 'AI Services', href: '/ai-services' },
+      { name: 'IT Services', href: '/it-services' },
+      { name: 'Micro SaaS', href: '/micro-saas' },
+      { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
+      { name: 'Cybersecurity', href: '/services/cybersecurity' },
+      { name: 'Data Analytics', href: '/services/data-analytics' },
+    ],
+    solutions: [
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+      { name: 'Healthcare', href: '/solutions/healthcare' },
+      { name: 'Finance', href: '/solutions/finance' },
+      { name: 'Government', href: '/solutions/government' },
+      { name: 'Retail', href: '/solutions/retail' },
+      { name: 'Education', href: '/solutions/education' },
+    ],
+    company: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Team', href: '/team' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'News', href: '/news' },
+    ],
+    resources: [
+      { name: 'Blog', href: '/blog' },
+      { name: 'White Papers', href: '/white-papers' },
+      { name: 'Webinars', href: '/webinars' },
+      { name: 'Tutorials', href: '/tutorials' },
+      { name: 'API Documentation', href: '/api-docs' },
+      { name: 'Support', href: '/support' },
+    ],
+    legal: [
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Cookie Policy', href: '/cookies' },
+      { name: 'Compliance', href: '/compliance' },
+      { name: 'Security', href: '/security' },
+    ],
+>>>>>>> main
   };
 
-<<<<<<< HEAD
-  const footerSections = [
-    {
-      title: 'Company',
-      icon: Building2,
-      links: [
-        { name: 'About Us', path: '/about', icon: Users },
-        { name: 'Our Story', path: '/about/story', icon: FileText },
-        { name: 'Team', path: '/about/team', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Partners', path: '/partners', icon: Network },
-        { name: 'Press', path: '/press', icon: Newspaper },
-        { name: 'Contact', path: '/contact', icon: Phone }
-      ]
-    },
-    {
-      title: 'AI & Quantum Solutions',
-      icon: Brain,
-      category: 'Core Services',
-      services: [
-        { name: 'AI Customer Success Automation', href: '/services/ai-customer-success-automation', badge: 'Popular' },
-        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', badge: 'New' },
-        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management-enhanced', badge: 'Featured' },
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-enhanced', badge: 'Trending' },
-        { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation-platform', badge: 'Innovative' },
-        { name: 'AI Mental Health Support', href: '/services/ai-mental-health-support-platform', badge: 'Healthcare' },
-        { name: 'AI Smart Home Energy Management', href: '/services/ai-smart-home-energy-management-platform', badge: 'IoT' },
-        { name: 'AI Autonomous Logistics', href: '/services/ai-autonomous-logistics-platform', badge: 'Logistics' },
-        { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', badge: 'Marketing' },
-        { name: 'Quantum Edge Computing', href: '/services/quantum-edge-computing-solutions', badge: 'Quantum' },
-        { name: 'AI Space Technology', href: '/services/ai-space-technology-platform', badge: 'Space Tech' },
-        { name: 'AI Carbon Footprint Management', href: '/services/ai-carbon-footprint-management-platform', badge: 'Green Tech' },
-        { name: 'AI Autonomous Manufacturing', href: '/services/ai-autonomous-manufacturing-platform', badge: 'Manufacturing' },
-        { name: 'AI Enterprise Resource Planning', href: '/services/ai-enterprise-resource-planning', badge: 'ERP' },
-        { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform', badge: 'Automation' },
-        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics-platform', badge: 'Analytics' }
-      ]
-    },
-    {
-      title: 'AI Cybersecurity & Infrastructure',
-      icon: Shield,
-      category: 'Security & Infrastructure',
-      services: [
-        { name: 'AI-Powered DevOps Automation', href: '/services/ai-powered-devops-automation', badge: 'New' },
-        { name: 'AI-Powered Cybersecurity Suite', href: '/services/ai-powered-cybersecurity-suite', badge: 'Security' },
-        { name: 'Enterprise IT Infrastructure Management', href: '/services/enterprise-it-infrastructure-management', badge: 'Infrastructure' },
-        { name: 'Cloud Migration & Optimization', href: '/services/cloud-migration-and-optimization', badge: 'Cloud' },
-        { name: 'AI Data Analytics Platform', href: '/services/ai-data-analytics-platform', badge: 'Analytics' },
-        { name: 'AI DevOps Automation', href: '/services/ai-devops-automation', badge: 'DevOps' },
-        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', badge: 'Edge' }
-      ]
-    },
-    {
-      title: 'Micro SaaS Solutions',
-      icon: Code,
-      category: 'Micro SaaS',
-      services: [
-        { name: 'AI Email Automation Suite', href: '/services/ai-email-automation-suite', badge: 'New' },
-        { name: 'AI Social Media Scheduler', href: '/services/ai-social-media-scheduler', badge: 'New' },
-        { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights-platform', badge: 'New' },
-        { name: 'Micro CRM', href: '/services/micro-crm', badge: 'Popular' },
-        { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', badge: 'Support' },
-        { name: 'Website Analytics', href: '/services/website-analytics', badge: 'Analytics' }
-      ]
-    },
-    {
-      title: 'Solutions',
-      links: [
-        { name: 'Enterprise Solutions', href: '/enterprise' },
-        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
-        { name: 'Financial Solutions', href: '/financial-solutions' },
-        { name: 'Manufacturing', href: '/manufacturing-solutions' },
-        { name: 'Industry Solutions', href: '/industry-solutions' },
-        { name: 'Emerging Tech', href: '/emerging-tech' }
-      ]
-    },
-    {
-      title: 'Resources',
-      links: [
-        { name: 'Documentation', href: '/docs' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Support Center', href: '/help' },
-        { name: 'Training', href: '/training' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Research', href: '/research-development' }
-      ]
-    }
+  const socialLinks = [
+    { name: 'Facebook', href: '#', icon: Facebook },
+    { name: 'Twitter', href: '#', icon: Twitter },
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+    { name: 'Instagram', href: '#', icon: Instagram },
+    { name: 'YouTube', href: '#', icon: Youtube },
   ];
 
-  const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+  const stats = [
+    { icon: Users, value: '500+', label: 'Projects Completed' },
+    { icon: Award, value: '50+', label: 'Expert Team Members' },
+    { icon: Shield, value: '99.9%', label: 'Uptime Guarantee' },
+    { icon: Clock, value: '24/7', label: 'Support Available' },
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+          <div className="lg:col-span-2">
+            <Link href="/" className="flex items-center space-x-2 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-2xl">Z</span>
               </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 text-sm mb-4">
-              Leading provider of innovative AI, IT, and Micro SAAS solutions. 
-              Transforming businesses through cutting-edge technology and expert consulting.
+              <div>
+                <h3 className="text-2xl font-bold">Zion Tech Group</h3>
+                <p className="text-gray-400">AI & Technology Solutions</p>
+              </div>
+            </Link>
+            
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
+              and digital transformation services. We help businesses thrive in the digital age.
             </p>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                <Phone className="w-4 h-4" />
-                <a href="tel:+13024640950" className="hover:text-blue-400 transition-colors">
-                  +1 (302) 464-0950
-                </a>
+
+            {/* Contact Info */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                <Mail className="w-4 h-4" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-400 transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-start space-x-2 text-gray-300 text-sm">
-                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-blue-400 mt-1" />
+                <span className="text-gray-300">
                   364 E Main St STE 1008<br />
                   Middletown, DE 19709
                 </span>
               </div>
             </div>
-          </div>
 
+<<<<<<< HEAD
           {/* Service Sections */}
           {footerSections.slice(1, 4).map((section) => (
             <div key={section.title} className="space-y-4">
@@ -786,20 +725,24 @@ export function Footer() {
                 )}
               </div>
 >>>>>>> origin/merge-pr-11190
+=======
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors duration-200"
+                >
+                  <social.icon className="w-5 h-5" />
+                </Link>
+              ))}
+>>>>>>> main
             </div>
           </div>
 
-<<<<<<< HEAD
-{/* Contact Information */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-blue-400"  />
-              <div>
-                <p className="text-white font-medium">Phone</p>
-                <p className="text-gray-400 text-sm">+1 (555) 123-4567</p>
-=======
           {/* Services */}
+<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Services
             <ul className="space-y-2">
@@ -809,10 +752,45 @@ export function Footer() {
               <li><Link href="/blockchain-solutions" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Blockchain Solutions</Link></li>
               <li><Link href="/iot-solutions" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">IoT Solutions</Link></li>
               <li><Link href="/solutions" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">All Solutions</Link></li>
+=======
+          <div>
+            <h4 className="text-lg font-semibold mb-6">Services</h4>
+            <ul className="space-y-3">
+              {footerLinks.services.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6">Solutions</h4>
+            <ul className="space-y-3">
+              {footerLinks.solutions.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+>>>>>>> main
             </ul>
           </div>
 
           {/* Company */}
+<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Company
             <ul className="space-y-2">
@@ -1196,13 +1174,36 @@ export function Footer() {
                 {socialLinks.map((link) => (
                   <motion.a
                     key={link.name}
+=======
+          <div>
+            <h4 className="text-lg font-semibold mb-6">Company</h4>
+            <ul className="space-y-3">
+              {footerLinks.company.map((link) => (
+                <li key={link.name}>
+                  <Link
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-lg flex items-center justify-center text-slate-300 ${link.color} transition-all duration-200`}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
                   >
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6">Resources</h4>
+            <ul className="space-y-3">
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link
+>>>>>>> main
+                    href={link.href}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
+                  >
+<<<<<<< HEAD
                     <link .icon className="w-5 h-5"  />
                   </motion.a>
                 ))}
@@ -1482,40 +1483,16 @@ export function Footer(props: any) {
                 >
                   {social.icon}
                 </a>
+=======
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                    {link.name}
+                  </Link>
+                </li>
+>>>>>>> main
               ))}
-=======
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                <Globe className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-400 mb-6">
-              Leading provider of cutting-edge technology solutions including AI, cybersecurity, cloud infrastructure, and emerging technologies.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <MapPin className="w-4 h-4" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
-=======
->>>>>>> origin/merge-pr-11195
-            </div>
+            </ul>
           </div>
+<<<<<<< HEAD
 
           {/* Footer Sections */}
           {footerSections.map((section) => (
@@ -1558,29 +1535,32 @@ export function Footer(props: any) {
               </ul>
             </div>
           ))}
+=======
+>>>>>>> main
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Contact Information */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((contact, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <contact.icon className="w-5 h-5 text-blue-400" />
-                <div>
-                  <p className="text-white font-medium">{contact.label}</p>
-                  <a 
-                    href={contact.href} 
-                    className="text-gray-400 text-sm hover:text-white transition-colors"
-                  >
-                    {contact.value}
-                  </a>
+        {/* Stats Section */}
+        <div className="border-t border-gray-800 mt-12 pt-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-white" />
                 </div>
-              </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-400">{stat.label}</div>
+              </motion.div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 
         {/* Newsletter Signup */}
 >>>>>>> merge-all-prs-20250904-105408
@@ -1653,121 +1633,34 @@ Cookie Policy
             </div>
           </div>
         </div>
+=======
+>>>>>>> main
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-</footer>
-  );
-};
-=======
->>>>>>> origin/merge-pr-11190
 
-export default Footer;
-=======
-
-      {/* Scroll to Top Button */}
-      <button
-        id="scroll-to-top"
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 hidden z-50"
-        aria-label="Scroll to top"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </button>
-    </footer>
-  );
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe38
-=======
-=======
->>>>>>> origin/merge-pr-11195
-        {/* Social Links */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex space-x-6 mb-4 md:mb-0">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            <button
-              onClick={scrollToTop}
-              className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-            >
-              <span>Back to top</span>
-              <ArrowUp className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-
-        {/* Legal Links */}
-        <div className="border-t border-gray-800 mt-6 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex flex-wrap justify-center md:justify-start space-x-6 mb-4 md:mb-0">
-              {legalLinks.map((link) => (
+            
+            <div className="flex flex-wrap justify-center md:justify-end space-x-6">
+              {footerLinks.legal.map((link) => (
                 <Link
                   key={link.name}
-                  to={link.href}
-                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  href={link.href}
+                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm"
                 >
                   {link.name}
                 </Link>
               ))}
             </div>
-            <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>© 2024 Zion Tech Group. Made with</span>
-              <Heart className="w-4 h-4 text-red-500" />
-              <span>for innovation.</span>
-            </div>
           </div>
         </div>
       </div>
     </footer>
   );
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
->>>>>>> merge-all-prs-20250904-105408
+};
 
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</ChevronDown>
-</motion>
-</motion>
-</div>
-</div>
-</div>
-</div>
-</any>
-</string>
-</Set>
-</any>
-</string>
-</Set>
-</string>
-</Set>
-=======
-}
->>>>>>> origin/merge-pr-11190
-=======
-}
->>>>>>> origin/merge-pr-11195
+export default Footer;

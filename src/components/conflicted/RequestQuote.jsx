@@ -1,11 +1,10 @@
-import React, {useState} from 'react';                <Clock className="w-5 h-5 text-cyan-400" />
-                <span>24-Hour Response</span>
-              </motion.div>
-              <motion.div initial = {
+import React from 'react';
 
-  { opacity: 0,
-  y: 20
+interface RequestQuote.jsProps {
+  // Add props here as needed
+}
 
+<<<<<<< HEAD
 }} animate = {
 
   { opacity: 1,
@@ -354,3 +353,13 @@ export {RequestQuote};
 </motion>
 </motion>
 </motion>
+=======
+export default function RequestQuote.js({ }: RequestQuote.jsProps) {
+  return (
+    <div>
+      <h1>RequestQuote.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main
