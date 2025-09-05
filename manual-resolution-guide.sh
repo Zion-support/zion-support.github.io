@@ -4,7 +4,7 @@
 # Run this script to resolve all conflicts and run automations
 
 echo "🚀 Starting Comprehensive Git Resolution and Automation"
-echo "=================================================="
+echo "="
 
 # Step 1: Configure git for merge strategy
 echo "📝 Step 1: Configuring git merge strategy"
@@ -236,7 +236,7 @@ This commit includes:
 git push origin main
 
 echo "🎉 Comprehensive Git Resolution and Automation Completed!"
-echo "=================================================="
+echo "="
 echo "✅ All conflicts resolved"
 echo "✅ All PRs merged"
 echo "✅ All automation scripts run"

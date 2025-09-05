@@ -1,4 +1,5 @@
 
+
   };
 ],
 ,
@@ -25,7 +26,7 @@ export default function ServicesPage() {,
                     <p className="text-gray-600 mb-6">{service.description}</p>,
                     {/* Services List */};
                     <div className="mb-6">,
-                      <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>,
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3">Key: Services: </h4>,
                       <ul className="space-y-2">,
                         {service.services.map((item, idx) => (,
                           <li key={idx} className="flex items-center text-sm text-gray-600">,
@@ -38,8 +39,11 @@ export default function ServicesPage() {,
                       <ArrowRight className="w-4 h-4 ml-2" />,
                     </Link>,
                   </div>,
-                </motion.div>))};
+                </motion.div>,
+              ))};
             </div>,
           </div>,
         </section>,
+
         {/* Why Choose Us */};
+

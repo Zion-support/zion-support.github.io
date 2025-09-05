@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-09-05T22:22:49.023Z",
+  "system": "Intelligent Monitoring System",
+  "status": "active",
+  "metrics": {
+    "performance": {
+      "bundleSize": 4096,
+      "buildTime": "N/A",
+      "testCoverage": "Not available"
+    },
+    "errors": [],
+    "warnings": [],
+    "suggestions": [
+      "Consider implementing code splitting for better performance",
+      "Add more comprehensive error handling",
+      "Implement automated testing for better reliability",
+      "Consider adding performance monitoring",
+      "Add security headers for better protection",
+      "Implement caching strategies",
+      "Add accessibility improvements",
+      "Consider implementing PWA features"
+    ]
+  },
+  "health": {
+    "status": "healthy",
+    "uptime": 0.017457355,
+    "memoryUsage": {
+      "rss": 49647616,
+      "heapTotal": 5570560,
+      "heapUsed": 4511448,
+      "external": 1566157,
+      "arrayBuffers": 10515
+    },
+    "cpuUsage": {
+      "user": 12050,
+      "system": 8033
+    },
+    "timestamp": "2025-09-05T22:22:49.024Z"
+  }
+}

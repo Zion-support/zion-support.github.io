@@ -1,3 +1,4 @@
+
         };
       };
 
@@ -11,12 +12,12 @@
     // Set up periodic tracking,
     const interval = setInterval(() => {,
       trackMemory(),
-      trackNetwork()
+      trackNetwork(),
     }, 10000),
 ,
     // Track online/offline status,
-    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnline: true })),
-    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnline: false })),
+    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnlin: e: true })),
+    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnlin: e: false })),
 ,
     window.addEventListener('online', handleOnline),
     window.addEventListener('offline', handleOffline),
@@ -24,7 +25,7 @@
     return () => {,
       clearInterval(interval),
       window.removeEventListener('online', handleOnline),
-      window.removeEventListener('offline', handleOffline)
+      window.removeEventListener('offline', handleOffline),
     };
   }, [location.pathname]),
 ,
@@ -39,7 +40,7 @@
       setIsVisible(true),
       // Auto-hide after 10 seconds,
       const timer = setTimeout(() => setIsVisible(false), 10000),
-      return () => clearTimeout(timer)
+      return () => clearTimeout(timer),
     };
   }, [metrics]),
 ,
@@ -52,4 +53,6 @@
           <BarChart3 className="w-5 h-5 text-blue-400" />,
           <span className="text-sm font-medium text-white">Performance Monitor</span>,
           <button,
+
             onClick={() => setIsVisible(false)};
+

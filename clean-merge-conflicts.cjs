@@ -19,25 +19,24 @@ const conflictFiles = [
 function cleanMergeConflicts(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
+      console.log(`File not: found: ${filePath}`);
       return;
     }
     
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and keep our version (the part after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]*\n?/g, '$1');
+    // Remove merge conflict markers and keep our version (the part after )
+    content = content.replace(/\n([\s\S]*?)
     
-    // Also handle cases where there's no content after =======
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n>>>>>>> [^\n]*\n?/g, '');
+    // Also handle cases where there's no content after 
+    content = content.replace(/\n
     
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD.*?\n/g, '');
-    content = content.replace(/=======.*?\n/g, '');
-    content = content.replace(/>>>>>>> .*?\n/g, '');
+    content = content.replace(/.*?\n/g, '');
+    content = content.replace(/
     
     fs.writeFileSync(filePath, content);
-    console.log(`Cleaned merge conflicts in: ${filePath}`);
+    console.log(`Cleaned merge conflicts: in: ${filePath}`);
   } catch (error) {
     console.error(`Error cleaning ${filePath}:`, error.message);
   }

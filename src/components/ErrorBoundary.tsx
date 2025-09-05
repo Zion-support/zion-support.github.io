@@ -1,14 +1,14 @@
-    return { hasError: true, error };
 
-export { ErrorBoundary };
+    return { hasErro: r: true, error };
+
   };
 ,
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    console.error('ErrorBoundary caught an error:', error, errorInfo),
+  componentDidCatch(erro: r: Error, errorInf: o: ErrorInfo) {,
+    console.error('ErrorBoundary caught an: error:', error, errorInfo),
     this.setState({,
       error,
-      errorInfo
-    })
+      errorInfo,
+    }),
   };
 ,
   render() {,
@@ -30,13 +30,13 @@ export { ErrorBoundary };
             <div className="space-y-3">,
               <button,
                 onClick={() => window.location.reload()};
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors",
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg: hover: bg-blue-700 transition-colors",
               >,
                 Refresh Page,
               </button>,
               <button,
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })};
-                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover: bg-gray-200 transition-colors",
+                onClick={() => this.setState({ hasErro: r: false, erro: r: undefined, errorInf: o: undefined })};
+                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg: hover: bg-gray-200 transition-colors",
               >,
                 Try Again,
               </button>,
@@ -54,61 +54,12 @@ export { ErrorBoundary };
             )};
           </div>,
         </div>,
-      )
+      ),
     };
 ,
-    return this.props.children
+    return this.props.children,
   };
 };
 ,
+
 export { ErrorBoundary };
-import React, { Component, ReactNode } from 'react';
-import { Button } from './ui/button';
-import { AlertTriangle } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
-
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
-
-export class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: any) {
-    logErrorToProduction('ErrorBoundary caught an error:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
-        <div style={{ border: '5px solid red', padding: '20px', textAlign: 'center', backgroundColor: 'lightyellow' }}>
-          <h1>CUSTOM ERROR BOUNDARY (ErrorBoundary.tsx) TRIGGERED!</h1>
-          <p>If you see this, the page component crashed.</p>
-          {this.state.error && <pre>{this.state.error.message}</pre>}
-          <button onClick={() => window.location.reload()}>Refresh Page</button>
-          <button onClick={() => window.location.href = '/'}>Go Home</button>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}

@@ -272,13 +272,13 @@ export async function finalize() {
         // Network timings are complicated.
         // https://raw.githubusercontent.com/GoogleChrome/lighthouse/main/docs/Network-Timings.svg is generally correct, but.. less so for navigations/redirects/etc.
         // Start time
-        // =======================
+        // ==
         // The time where the request started, which is either the first willSendRequest
         // event if there is one, or, if there is not, the sendRequest.
         const startTime = (request.willSendRequests?.length) ? Types.Timing.Micro(request.willSendRequests[0].ts) :
             Types.Timing.Micro(firstSendRequest.ts);
         // End redirect time
-        // =======================
+        // ==
         // It's possible that when we start requesting data we will receive redirections.
         // Here we note the time of the *last* willSendRequest / sendRequest event,
         // which is used later on in the calculations for time queueing etc.
@@ -286,7 +286,7 @@ export async function finalize() {
             Types.Timing.Micro(request.willSendRequests[request.willSendRequests.length - 1].ts) :
             Types.Timing.Micro(finalSendRequest.ts);
         // Finish time and end time
-        // =======================
+        // ==
         // The finish time and the end time are subtly different.
         //  - Finish time: records the point at which the network stack stopped receiving the data
         //  - End time: the timestamp of the finish event itself (if one exists)
@@ -297,28 +297,28 @@ export async function finalize() {
             Types.Timing.Micro(request.resourceFinish.args.data.finishTime * SECONDS_TO_MICROSECONDS) :
             Types.Timing.Micro(endTime);
         // Network duration
-        // =======================
+        // ==
         // Time spent on the network.
         const networkDuration = Types.Timing.Micro(timing ? (finishTime || endRedirectTime) - endRedirectTime : 0);
         // Processing duration
-        // =======================
+        // ==
         // Time spent from start to end.
         const processingDuration = Types.Timing.Micro(endTime - (finishTime || endTime));
         // Redirection duration
-        // =======================
+        // ==
         // Time between the first willSendRequest / sendRequest and last. This we place in *front* of the
         // queueing, since the queueing time that we know about from the trace data is only the last request,
         // i.e., the one that occurs after all the redirects.
         const redirectionDuration = Types.Timing.Micro(endRedirectTime - startTime);
         // Queueing
-        // =======================
+        // ==
         // The amount of time queueing is the time between the request's start time to the requestTime
         // arg recorded in the receiveResponse event. In the cases where the recorded start time is larger
         // that the requestTime we set queueing time to zero.
         const queueingFromTraceData = timing ? timing.requestTime * SECONDS_TO_MICROSECONDS - endRedirectTime : 0;
         const queueing = Types.Timing.Micro(Platform.NumberUtilities.clamp(queueingFromTraceData, 0, Number.MAX_VALUE));
         // Stalled
-        // =======================
+        // ==
         // If the request is cached, the amount of time stalled is the time between the start time and
         // receiving a response.
         // Otherwise it is whichever positive number comes first from the following timing info:
@@ -333,19 +333,19 @@ export async function finalize() {
             ])) :
             (request.receiveResponse ? Types.Timing.Micro(request.receiveResponse.ts - startTime) : Types.Timing.Micro(0));
         // Sending HTTP request
-        // =======================
+        // ==
         // Time when the HTTP request is sent.
         const sendStartTime = timing ?
             Types.Timing.Micro(timing.requestTime * SECONDS_TO_MICROSECONDS + timing.sendStart * MILLISECONDS_TO_MICROSECONDS) :
             startTime;
         // Waiting
-        // =======================
+        // ==
         // Time from when the send finished going to when the headers were received.
         const waiting = timing ?
             Types.Timing.Micro((timing.receiveHeadersEnd - timing.sendEnd) * MILLISECONDS_TO_MICROSECONDS) :
             Types.Timing.Micro(0);
         // Download
-        // =======================
+        // ==
         // Time from receipt of headers to the finish time.
         const downloadStart = timing ?
             Types.Timing.Micro(timing.requestTime * SECONDS_TO_MICROSECONDS + timing.receiveHeadersEnd * MILLISECONDS_TO_MICROSECONDS) :

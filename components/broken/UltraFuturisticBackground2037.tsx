@@ -29,7 +29,7 @@ export default function UltraFuturisticBackground2037({
 
     let animationFrameId: number;
     let particles: Particle[] = [];
-    let quantumFields: QuantumField[] = [];
+    const quantumFields: QuantumField[] = [];
 
     // Enhanced theme-based color schemes
     const getThemeColors = () => {

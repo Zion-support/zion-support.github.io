@@ -93,7 +93,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   ];
 
   const filteredServices = useMemo(() => {
-    let filtered = services.filter(service => {
+    const filtered = services.filter(service => {
       const matchesCategory = selectedCategory === 'all' || 
                              (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||
                              (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||

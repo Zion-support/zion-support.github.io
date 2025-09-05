@@ -5,6 +5,7 @@ interface Props {
   children: ReactNode;
   level?: string;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {

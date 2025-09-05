@@ -1,18 +1,18 @@
-import React from 'react';
 
+
+import React from 'react',
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
-import { Header } from './components/Header';
-import { Footer } from './components/layout/Footer';
-import { Sidebar } from './components/layout/Sidebar';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { Header } from './components/Header',
+import { Footer } from './components/layout/Footer',
+import { Sidebar } from './components/layout/Sidebar',
+import { ErrorBoundary } from './components/ErrorBoundary',
 ,
 // Import pages,
-import HomePage from '../pages/index';
-import AboutPage from '../pages/about';
-import ContactPage from '../pages/contact';
-import ServicesPage from '../pages/services';
-
-import PricingPage from '../pages/pricing';
+import HomePage from '../pages/index',
+import AboutPage from '../pages/about',
+import ContactPage from '../pages/contact',
+import ServicesPage from '../pages/services',
+import PricingPage from '../pages/pricing',
 ,
 export default function App() {,
   return (,
@@ -21,7 +21,7 @@ export default function App() {,
         <div className="min-h-screen bg-gray-50">,
           <Header />,
           <Sidebar />,
-          <main className="flex-1 lg: ml-80">,
+          <main className="flex-1: lg: ml-80">,
             <Routes>,
               <Route path="/" element={<HomePage />} />,
               <Route path="/about" element={<AboutPage />} />,
@@ -33,6 +33,8 @@ export default function App() {,
           <Footer />,
         </div>,
       </Router>,
+    </ErrorBoundary>,
+  ),
 
-    </ErrorBoundary>)
 };
+
