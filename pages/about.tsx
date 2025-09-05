@@ -1,4 +1,14 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
+export default function About() {
+  return (
+    <div>
+      <main>
+        <h1>About Zion Tech Group</h1>
+        <p>We are a leading provider of advanced IT solutions and AI services.</p>
+      </main>
+    </div>
+  );
+}

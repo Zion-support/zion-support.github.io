@@ -13,3 +13,12 @@ import {
   Target,
   Zap
 } from 'lucide-react';
+
+export default function Training() {
+  return (
+    <div>
+      <h1>Training Programs</h1>
+      <p>Professional training and certification programs.</p>
+    </div>
+  );
+}
