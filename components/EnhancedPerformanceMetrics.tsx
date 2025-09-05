@@ -1,1 +1,0 @@
-import React from 'react'; interface PerformanceMetric { id: string; name: string; value: number; unit: string; change: number; changeType: "increase" | "decrease"; target: number; status: "excellent" | "good" | "warning" | "critical"; icon: Reac t.ComponentType<any> description: string} interface PerformanceMetricsProps {

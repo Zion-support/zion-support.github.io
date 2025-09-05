@@ -1,48 +1,39 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// Define public routes that don't require authentication
-const publicRoutes = [
-  "/",
-  "/about",
-  "/contact",
-  "/blog",
-  "/services",
-  "/products",
-  "/talent",
-  "/test",
-  "/auth/login",
-  "/auth/register",
-  "/auth/forgot-password",
-  "/auth/reset-password",
-  "/auth/verify",
-];
-
 export function middleware(request: NextRequest) {
+  // Get the pathname of the request (e.g. /, /about, /blog/[slug])
   const { pathname } = request.nextUrl;
 
-  // Allow public routes
-  if (publicRoutes.includes(pathname)) {
-    return NextResponse.next()}
+  // Check if there is any supported locale in the pathname
+  const pathnameHasLocale = ['/en', '/es', '/fr', '/de'].some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
 
-  // Check for authentication cookie
-  const authCookie = request.cookies.get("auth-token");
+  // Redirect if there is no locale
+  if (!pathnameHasLocale) {
+    // Get locale from Accept-Language header
+    const acceptLanguage = request.headers.get('accept-language');
+    let locale = 'en'; // default locale
+    if (acceptLanguage) {
+      // Parse Accept-Language header and extract preferred locale
+      const preferredLocale = acceptLanguage
+        .split(',')
+        .map(lang => lang.split(',')[0].trim())
+        .find(lang => ['en', 'es', 'fr', 'de'].includes(lang.split('-')[0]));
 
-  if (!authCookie) {
-    // Redirect to login if not authenticated
-    return NextResponse.redirect(new URL("/auth/login", request.url))}
-
-  return NextResponse.next()}
+      if (preferredLocale) {
+        locale = preferredLocale.split('-')[0];
+      }
+    }
+    // Redirect to the locale-specific URL
+    const url = new URL(`/${locale}${pathname}`, request.url);
+    return NextResponse.redirect(url);
+  }
+  return NextResponse.next();
+}
 
 export const config = {
-  matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    "/((?!api|_next/static|_next/image|favicon.ico).*)",
-  ],
+  // Matcher ignoring `/_next/` and `/api/`
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
 };
