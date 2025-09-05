@@ -184,7 +184,7 @@ const navigation = [
         icon: DollarSign,
         description: 'Financial services and banking'
       },
-      {}
+      {
         name: 'Education',
         href: '/industries/education',
         icon: GraduationCap,

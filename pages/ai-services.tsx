@@ -567,7 +567,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$5,000 - $25,000 setup',
     category: 'Creative AI'
   },
-  {}
+  {
     title: 'AI-Powered Gaming',
     description: 'Intelligent game AI with adaptive difficulty and procedural content generation.',
     icon: Gamepad2,
