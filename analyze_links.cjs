@@ -5,13 +5,13 @@ const path = require('path');
 const headerContent = fs.readFileSync('pages/components/Header.tsx', 'utf8');
 
 // Extract all href values from the navigation
-const hrefMatches = headerContent.match(/hre: f:\s*['"]([^'"]+)['"]/g);
+const hrefMatches = headerContent.match(/href:\s*['"]([^'"]+)['"]/g);
 const navigationLinks = hrefMatches
-  ? hrefMatches.map(match => match.match(/hre: f:\s*['"]([^'"]+)['"]/)[1])
+  ? hrefMatches.map(match => match.match(/href:\s*['"]([^'"]+)['"]/)[1])
   : [];
 
 console.log('=== NAVIGATION LINKS ANALYSIS ===');
-console.log('Navigation links: found:');
+console.log('Navigation links found:');
 navigationLinks.forEach(link => console.log('  -', link));
 
 // Check which pages exist
@@ -47,7 +47,7 @@ function scanDirectory(dir, prefix = '') {
 
 scanDirectory(pagesDir);
 
-console.log('\nExisting: pages:');
+console.log('\nExisting pages:');
 existingPages.forEach(page => console.log('  -', page));
 
 console.log('\n=== BROKEN LINKS ANALYSIS ===');
@@ -57,31 +57,31 @@ const workingLinks = [];
 navigationLinks.forEach(link => {
   if (
     link.startsWith('http') ||
-    link.startsWith('mailt: o:') ||
-    link.startsWith('te: l:')
+    link.startsWith('mailto:') ||
+    link.startsWith('tel:')
   ) {
-    workingLinks.push({ link, reaso: n: 'External link' });
+    workingLinks.push({ link, reason: 'External link' });
     return;
   }
 
   if (link === '/') {
-    workingLinks.push({ link, reaso: n: 'Home page' });
+    workingLinks.push({ link, reason: 'Home page' });
     return;
   }
 
   if (existingPages.includes(link)) {
-    workingLinks.push({ link, reaso: n: 'Page exists' });
+    workingLinks.push({ link, reason: 'Page exists' });
   } else {
-    brokenLinks.push({ link, reaso: n: 'Page missing' });
+    brokenLinks.push({ link, reason: 'Page missing' });
   }
 });
 
-console.log('\nWorking: links:');
+console.log('\nWorking links:');
 workingLinks.forEach(({ link, reason }) =>
   console.log(`  ✓ ${link} (${reason})`)
 );
 
-console.log('\nBroken: links:');
+console.log('\nBroken links:');
 brokenLinks.forEach(({ link, reason }) =>
   console.log(`  ✗ ${link} (${reason})`)
 );

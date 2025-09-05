@@ -1,42 +1,42 @@
 export interface MicroSaasService {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular: boolean,
-  icon: string,
-  color: string,
-  textColor: string,
-  link: string,
-  marketPosition: string,
-  targetAudience: string,
-  trialDays: number,
-  setupTime: string,
-  category: string,
-  realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
-  roi: string,
-  competitors: string[],
-  marketSize: string,
-  growthRate: string,
-  variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'quantum-futuristic' | 'blockchain-futuristic' | 'space-futuristic' | 'iot-futuristic' | 'ar-futuristic' | 'autonomous-futuristic' | 'biotech-futuristic' | 'energy-futuristic' | 'transportation-futuristic' | 'quantum-security-futuristic' | 'enterprise-futuristic',
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'quantum-futuristic' | 'blockchain-futuristic' | 'space-futuristic' | 'iot-futuristic' | 'ar-futuristic' | 'autonomous-futuristic' | 'biotech-futuristic' | 'energy-futuristic' | 'transportation-futuristic' | 'quantum-security-futuristic' | 'enterprise-futuristic';
   contactInfo: {
-    mobile: string,
-    email: string,
-    address: string,
-    website: string
-  },
-  realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
 }
 
 export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
@@ -2163,7 +2163,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 27
   }
-],
+];
 
 // Helper functions
 export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSaasService[] => {
@@ -2189,7 +2189,7 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
     'Analytics & Business Intelligence': ['AI & Data AnalyticsAI & Market Research'],
     'Cloud & Infrastructure': ['Cloud PlatformEdge Computing & IoT'],
     'Climate Technology': ['Climate Technology']
-  },
+  };
 
 // Service categories
 export const serviceCategories = [

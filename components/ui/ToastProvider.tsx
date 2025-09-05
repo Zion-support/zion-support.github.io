@@ -14,34 +14,34 @@ export type Toast = {
 }
 
 export type ToastContextValue = {
-  toasts: Toast[]
-  addToast: (toast: Omit<Toast 'id'>) => string
-  removeToast: (id: string) => void
-  clearToasts: () => void
+  toasts: Toast[];
+  addToast: (toast: Omit<Toast, 'id'>) => string;
+  removeToast: (id: string) => void;
+  clearToasts: () => void;
 }
 
-const ToastContext = createContext<ToastContextValue | undefined>(undefined)
+const ToastContext = createContext<ToastContextValue | undefined>(undefined);
 
 export function ToastProvider({ children }: { children: React.ReactNode }) {
-  const [toasts, setToasts] = useState<Toast[]>([])
+  const [toasts, setToasts] = useState<Toast[]>([]);
 
   const removeToast = useCallback((id: string) => {
-    setToasts(prev => prev.filter(t => t.id !== id))
-  }, [])
+    setToasts(prev => prev.filter(t => t.id !== id));
+  }, []);
 
-  const addToast = useCallback((toast: Omit<Toast 'id'>) => {
-    const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`
-    const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
-    setToasts(prev => [...prev, item])
+  const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
+    const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
+    const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast };
+    setToasts(prev => [...prev, item]);
     if (item.durationMs && item.durationMs > 0) {
-      setTimeout(() => removeToast(id), item.durationMs)
+      setTimeout(() => removeToast(id), item.durationMs);
     }
-    return id
-  }, [removeToast])
+    return id;
+  }, [removeToast]);
 
-  const clearToasts = useCallback(() => setToasts([]), [])
+  const clearToasts = useCallback(() => setToasts([]), []);
 
-  const value = useMemo(() => ({ toasts, addToast, removeToast, clearToasts }), [toasts, addToast, removeToast, clearToasts])
+  const value = useMemo(() => ({ toasts, addToast, removeToast, clearToasts }), [toasts, addToast, removeToast, clearToasts]);
 
   return (
     <ToastContext.Provider value={value}>
@@ -79,11 +79,11 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
         </AnimatePresence>
       </div>
     </ToastContext.Provider>
-  )
+  );
 }
 
 export function useToast() {
-  const ctx = useContext(ToastContext)
-  if (!ctx) throw new Error('useToast must be used within ToastProvider')
-  return ctx
+  const ctx = useContext(ToastContext);
+  if (!ctx) throw new Error('useToast must be used within ToastProvider');
+  return ctx;
 }
