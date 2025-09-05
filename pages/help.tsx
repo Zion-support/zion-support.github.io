@@ -125,9 +125,37 @@ const faqs = [{
     question: "Can I cancel my subscription anytime?",
     answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period."
   }]
+
+const supportMethods = [
+  {
+    title: "Email Support",
+    description: "Send us an email at support@ziontechgroup.com and we'll get back to you within 24 hours."
+  },
+  {
+    title: "Live Chat",
+    description: "Chat with our support team in real-time during business hours (9 AM - 6 PM EST)."
+  },
+  {
+    title: "Phone Support",
+    description: "Call us at +1 (555) 123-4567 for immediate assistance with urgent issues."
+  },
+  {
+    title: "Community Forum",
+    description: "Join our community forum to get help from other users and our team members."
+  }
+]
+
 export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('')
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({})
+
+  const toggleCategory = (categoryTitle: string) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [categoryTitle]: !prev[categoryTitle]
+    }))
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
