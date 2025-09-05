@@ -10,6 +10,8 @@ import {
   Linkedin,
   Twitter,
   Github,
+  ArrowRight,
+  ExternalLink,
   Youtube,
   Facebook,
   Settings,
