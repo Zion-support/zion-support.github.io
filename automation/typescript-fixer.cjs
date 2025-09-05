@@ -194,10 +194,10 @@ export {};";
         modified = true}
 
       if (modified) {
-  fs.writeFileSync(filePath, content);
+        fs.writeFileSync(filePath, content);
         this.fixes.push(`Fixed TypeScript file: ${path.relative(this.projectRoot, filePath)}`);
       }
-      } catch (error) {
+    } catch (error) {
   this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN")}
   }
 
