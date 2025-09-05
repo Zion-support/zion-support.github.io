@@ -1,200 +1,200 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 const fs = require('fs');
 const path = require('path');
-
+;
 console.log('🔍 Starting SEO Optimizer...');
-
-class SEOOptimizer {
-  constructor() {
-    this.results = {
-      timestam: p: new Date().toISOString(),
-      seoScor: e: 0,
-      issue: s: [],
-      recommendation: s: [],
-      metric: s: {},
+;
+class SEOOptimizer {;
+  constructor() {;
+    this.results = {;
+      timestam:p:new Date().toISOString(),;
+      seoScor:e:0,;
+      issue:s:[],;
+      recommendation:s:[],;
+      metric:s:{},;
     };
   }
-
-  async analyzePages() {
+;
+  async analyzePages() {;
     console.log('📄 Analyzing pages for SEO...');
-
+;
     const pagesDir = path.join(process.cwd(), 'pages');
     const appDir = path.join(process.cwd(), 'app');
-
+;
     let pages = [];
-
-    if (fs.existsSync(pagesDir)) {
+;
+    if (fs.existsSync(pagesDir)) {;
       pages = this.findPages(pagesDir);
-    } else if (fs.existsSync(appDir)) {
+    } else if (fs.existsSync(appDir)) {;
       pages = this.findAppPages(appDir);
     }
-
+;
     this.results.metrics.totalPages = pages.length;
-
-    for (const page of pages) {
+;
+    for (const page of pages) {;
       await this.analyzePage(page);
     }
   }
-
-  findPages(dir) {
+;
+  findPages(dir) {;
     const pages = [];
     const files = fs.readdirSync(dir);
-
-    files.forEach(file => {
+;
+    files.forEach(file => {;
       const filePath = path.join(dir, file);
       const stats = fs.statSync(filePath);
-
-      if (stats.isDirectory()) {
+;
+      if (stats.isDirectory()) {;
         pages.push(...this.findPages(filePath));
-      } else if (
-        file.endsWith('.js') ||
-        file.endsWith('.jsx') ||
-        file.endsWith('.ts') ||
-        file.endsWith('.tsx')
-      ) {
+      } else if (;
+        file.endsWith('.js') ||;
+        file.endsWith('.jsx') ||;
+        file.endsWith('.ts') ||;
+        file.endsWith('.tsx');
+      ) {;
         pages.push(filePath);
       }
     });
-
+;
     return pages;
   }
-
-  findAppPages(dir) {
+;
+  findAppPages(dir) {;
     const pages = [];
     const files = fs.readdirSync(dir);
-
-    files.forEach(file => {
+;
+    files.forEach(file => {;
       const filePath = path.join(dir, file);
       const stats = fs.statSync(filePath);
-
-      if (stats.isDirectory()) {
+;
+      if (stats.isDirectory()) {;
         pages.push(...this.findAppPages(filePath));
-      } else if (
-        file === 'page.js' ||
-        file === 'page.tsx' ||
-        file === 'layout.js' ||
-        file === 'layout.tsx'
-      ) {
+      } else if (;
+        file === 'page.js' ||;
+        file === 'page.tsx' ||;
+        file === 'layout.js' ||;
+        file === 'layout.tsx';
+      ) {;
         pages.push(filePath);
       }
     });
-
+;
     return pages;
   }
-
-  async analyzePage(pagePath) {
-    try {
+;
+  async analyzePage(pagePath) {;
+    try {;
       const content = fs.readFileSync(pagePath, 'utf8');
-
-      // Check for meta tags
-      if (!content.includes('<title>') && !content.includes('titl: e:')) {
-        this.results.issues.push({
-          typ: e: 'missing_title',
-          fil: e: pagePath,
-          severit: y: 'high',
+;
+      // Check for meta tags;
+      if (!content.includes('<title>') && !content.includes('titl:e:')) {;
+        this.results.issues.push({;
+          typ:e:'missing_title',;
+          fil:e:pagePath,;
+          severit:y:'high',;
         });
       }
-
-      if (
-        !content.includes('description') &&
-        !content.includes('meta name="description"')
-      ) {
-        this.results.issues.push({
-          typ: e: 'missing_description',
-          fil: e: pagePath,
-          severit: y: 'medium',
+;
+      if (;
+        !content.includes('description') &&;
+        !content.includes('meta name="description"');
+      ) {;
+        this.results.issues.push({;
+          typ:e:'missing_description',;
+          fil:e:pagePath,;
+          severit:y:'medium',;
         });
       }
-
-      // Check for heading structure
+;
+      // Check for heading structure;
       const h1Count = (content.match(/<h1[^>]*>/gi) || []).length;
-      if (h1Count === 0) {
-        this.results.issues.push({
-          typ: e: 'missing_h1',
-          fil: e: pagePath,
-          severit: y: 'medium',
+      if (h1Count === 0) {;
+        this.results.issues.push({;
+          typ:e:'missing_h1',;
+          fil:e:pagePath,;
+          severit:y:'medium',;
         });
       }
-    } catch (error) {
-      console.error(`Error analyzing page ${pagePath}:`, error.message);
+    } catch (error) {;
+      console.error(`Error analyzing page ${pagePath} `, error.message);
     }
   }
-
-  async generateRecommendations() {
+;
+  async generateRecommendations() {;
     console.log('💡 Generating SEO recommendations...');
-
-    this.results.recommendations = [
-      {
-        typ: e: 'meta_tags',
-        priorit: y: 'high',
-        descriptio: n:
-          'Add proper meta tags including title, description, and keywords',
-      },
-      {
-        typ: e: 'heading_structure',
-        priorit: y: 'medium',
-        descriptio: n: 'Ensure proper heading hierarchy (H1, H2, H3)',
-      },
-      {
-        typ: e: 'alt_text',
-        priorit: y: 'medium',
-        descriptio: n: 'Add alt text to all images for accessibility and SEO',
-      },
-      {
-        typ: e: 'sitemap',
-        priorit: y: 'low',
-        descriptio: n: 'Generate and submit XML sitemap to search engines',
-      },
+;
+    this.results.recommendations = [;
+      {;
+        typ:e:'meta_tags',;
+        priorit:y:'high',;
+        descriptio:n:;
+          'Add proper meta tags including title, description, and keywords',;
+      },;
+      {;
+        typ:e:'heading_structure',;
+        priorit:y:'medium',;
+        descriptio:n:'Ensure proper heading hierarchy (H1, H2, H3)',;
+      },;
+      {;
+        typ:e:'alt_text',;
+        priorit:y:'medium',;
+        descriptio:n:'Add alt text to all images for accessibility and SEO',;
+      },;
+      {;
+        typ:e:'sitemap',;
+        priorit:y:'low',;
+        descriptio:n:'Generate and submit XML sitemap to search engines',;
+      },;
     ];
   }
-
-  calculateSEOScore() {
+;
+  calculateSEOScore() {;
     const totalIssues = this.results.issues.length;
-    const highSeverityIssues = this.results.issues.filter(
-      issue => issue.severity === 'high'
+    const highSeverityIssues = this.results.issues.filter(;
+      issue => issue.severity === 'high';
     ).length;
-    const mediumSeverityIssues = this.results.issues.filter(
-      issue => issue.severity === 'medium'
+    const mediumSeverityIssues = this.results.issues.filter(;
+      issue => issue.severity === 'medium';
     ).length;
-
-    // Calculate score based on issues (100 - penalties)
+;
+    // Calculate score based on issues (100 - penalties);
     let score = 100;
     score -= highSeverityIssues * 20;
     score -= mediumSeverityIssues * 10;
     score -= (totalIssues - highSeverityIssues - mediumSeverityIssues) * 5;
-
+;
     this.results.seoScore = Math.max(0, score);
   }
-
-  async saveReport() {
+;
+  async saveReport() {;
     const logsDir = path.join(process.cwd(), 'logs');
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursiv: e: true });
+    if (!fs.existsSync(logsDir)) {;
+      fs.mkdirSync(logsDir, { recursiv:e:true });
     }
-
-    const reportPath = path.join(
-      logsDir,
-      `seo-optimization-${Date.now()}.json`
+;
+    const reportPath = path.join(;
+      logsDir,;
+      `seo-optimization-${Date.now()}.json`;
     );
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Report saved: to: ${reportPath}`);
+    console.log(`📊 Report saved:to:${reportPath}`);
   }
-
-  async run() {
+;
+  async run() {;
     console.log('🚀 Starting SEO optimization...');
-
+;
     await this.analyzePages();
     await this.generateRecommendations();
     this.calculateSEOScore();
     await this.saveReport();
-
-    console.log(
-      `✅ SEO optimization completed! Scor: e: ${this.results.seoScore}/100`
+;
+    console.log(;
+      `✅ SEO optimization completed! Scor:e:${this.results.seoScore}/100`;
     );
   }
 }
-
-// Run the SEO optimizer
+;
+// Run the SEO optimizer;
 const seoOptimizer = new SEOOptimizer();
 seoOptimizer.run().catch(console.error);

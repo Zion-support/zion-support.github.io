@@ -1,19 +1,19 @@
 const fs = require('fs');
 const path = require('path');
-
-function ensureDir(dirPath) {
-  if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
+;
+function ensureDir(dirPath) {;
+  if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive:true });
 }
-
-function listFilesRecursively(startDir, exts) {
+;
+function listFilesRecursively(startDir, exts) {;
   const results = [];
-  function walk(dir) {
-    const entries = fs.readdirSync(dir, { withFileTypes: true });
-    for (const entry of entries) {
+  function walk(dir) {;
+    const entries = fs.readdirSync(dir, { withFileTypes:true });
+    for (const entry of entries) {;
       const abs = path.join(dir, entry.name);
-      if (entry.isDirectory()) {
+      if (entry.isDirectory()) {;
         walk(abs);
-      } else {
+      } else {;
         const ext = path.extname(entry.name).toLowerCase();
         if (exts.includes(ext)) results.push(abs);
       }
@@ -22,11 +22,11 @@ function listFilesRecursively(startDir, exts) {
   if (fs.existsSync(startDir)) walk(startDir);
   return results.sort();
 }
-
-function extractExports(source) {
+;
+function extractExports(source) {;
   const names = new Set();
   const defaultMatch = source.match(/export\s+default\s+(function\s+([A-Za-z0-9_]+))?/);
-  if (defaultMatch) {
+  if (defaultMatch) {;
     if (defaultMatch[2]) names.add(defaultMatch[2]);
     else names.add('default');
   }
@@ -34,28 +34,28 @@ function extractExports(source) {
   for (const m of named) names.add(m[1]);
   return Array.from(names);
 }
-
-function catalogFor(files) {
-  return files.map(fp => {
+;
+function catalogFor(files) {;
+  return files.map(fp => {;
     const rel = path.relative(process.cwd(), fp).replace(/\\/g, '/');
     const src = fs.readFileSync(fp, 'utf8');
     const exports = extractExports(src);
-    return { file: rel, exports };
+    return { file:rel, exports };
   });
 }
-
-(function main() {
+;
+(function main() {;
   const outDir = path.resolve(process.cwd(), 'data', 'reports', 'components-catalog');
   ensureDir(outDir);
   const componentsDir = path.resolve(process.cwd(), 'components');
   const pagesDir = path.resolve(process.cwd(), 'pages');
-  const files = [
-    ...listFilesRecursively(componentsDir, ['.tsx', '.ts', '.jsx', '.js']),
-    ...listFilesRecursively(pagesDir, ['.tsx', '.ts', '.jsx', '.js'])
+  const files = [;
+    ...listFilesRecursively(componentsDir, ['.tsx', '.ts', '.jsx', '.js']),;
+    ...listFilesRecursively(pagesDir, ['.tsx', '.ts', '.jsx', '.js']);
   ];
   const items = catalogFor(files);
-  const report = { generatedAt: new Date().toISOString(), total: items.length, items };
-  const ts = new Date().toISOString().replace(/[:.]/g, '-');
+  const report = { generatedAt:new Date().toISOString(), total:items.length, items };
+  const ts = new Date().toISOString().replace(/[.]/g, '-');
   fs.writeFileSync(path.join(outDir, 'latest.json'), JSON.stringify(report, null, 2));
   fs.writeFileSync(path.join(outDir, `components-catalog-${ts}.json`), JSON.stringify(report, null, 2));
   console.log(`Components catalog generated with ${items.length} entries.`);

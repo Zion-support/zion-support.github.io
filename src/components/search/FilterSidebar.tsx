@@ -1,19 +1,19 @@
-import React from 'react',
-
-interface FilterSidebarProps {
-  className?: string,
-  children?: React.ReactNode,
+import React from 'react',;
+;
+interface FilterSidebarProps {;
+  className?:string,;
+  children?:React.ReactNode,;
 }
-
-export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
-  className,
-  children 
-}) => {
-  return (
-    <div className={`filter-sidebar ${className || ''}`}>
+;
+export const FilterSidebar:React.FC<FilterSidebarProps> = ({ ;
+  className,;
+  children ;
+}) => {;
+  return (;
+    <div className={`filter-sidebar ${className || ''}`}>;
       {children}
-    </div>
-  ),
-},
-
+    </div>;
+  ),;
+},;
+;
 export default FilterSidebar,

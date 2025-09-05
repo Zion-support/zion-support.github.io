@@ -1,2 +1,2 @@
-import RoadmapPage from './roadmap/index',
+import RoadmapPage from './roadmap/index',;
 export default RoadmapPage,
