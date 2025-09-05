@@ -348,4 +348,6 @@ export default function CloudMigrationPage() {
           </div>
         </section>
       </div>
-    </Layout>"
+    </Layout>
+  );
+};
