@@ -71,7 +71,7 @@ function resolveConflicts() {
     // Get list of conflicted files
     const conflictedFiles = execSync(
       'git status --porcelain | grep "^UU\\|^AA\\|^DD" | cut -c4-',
-      { encodin: g: 'utf8' }
+      { encoding: 'utf8' }
     )
       .trim()
       .split('\n')
@@ -97,14 +97,14 @@ function resolveConflicts() {
 
         if (strategy === 'HEAD') {
           // Use our version (HEAD)
-          execSync(`git checkout --ours "${file}"`, { stdi: o: 'pipe' });
+          execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
         } else if (strategy === 'THEIRS') {
           // Use their version (incoming)
-          execSync(`git checkout --theirs "${file}"`, { stdi: o: 'pipe' });
+          execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
         }
 
         // Add the resolved file
-        execSync(`git add "${file}"`, { stdi: o: 'pipe' });
+        execSync(`git add "${file}"`, { stdio: 'pipe' });
 
         console.log(`✅ Resolved ${file}`);
         resolvedCount++;
@@ -137,7 +137,7 @@ function commitMerge() {
     console.log('\n💾 Committing merge...');
     execSync(
       'git commit -m "🔧 Resolve merge conflicts automatically - prefer HEAD version"',
-      { stdi: o: 'inherit' }
+      { stdio: 'inherit' }
     );
     console.log('✅ Merge committed successfully!');
     return true;
@@ -153,7 +153,7 @@ function main() {
   // Check if we're in a merge state
   try {
     execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD"', {
-      stdi: o: 'pipe',
+      stdio: 'pipe',
     });
   } catch (noConflictsError) {
     // No conflicts detected - this is expected behavior
