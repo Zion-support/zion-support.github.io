@@ -1,54 +1,83 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-const publicRoutes = [
+const protectedRoutes = [
   "/",
   "/about",
   "/contact",
-<<<<<<< HEAD
   "/blog",
   "/services",
   "/solutions",
+  "/ai-services",
+  "/it-services",
+  "/micro-saas",
+  "/cloud-solutions",
+  "/cybersecurity",
+  "/database-solutions",
+  "/enterprise-solutions",
+  "/startup-solutions",
   "/industries",
-  "/resources",
-  "/talent",
+  "/custom-development",
+  "/digital-transformation",
+  "/consulting",
   "/team",
-  "/partners",
-  "/news",
   "/careers",
+  "/case-studies",
+  "/news",
+  "/partners",
+  "/pricing",
   "/privacy",
   "/terms",
   "/cookies",
+  "/accessibility",
+  "/compliance",
+  "/security",
+  "/help",
+  "/support",
+  "/faq",
+  "/talent",
+  "/quote",
+  "/white-papers",
+  "/webinars",
+  "/tutorials",
+  "/training",
+  "/docs",
+  "/api-docs",
   "/sitemap",
+  "/status",
   "/auth/login",
   "/auth/register",
   "/auth/forgot-password",
   "/auth/reset-password",
-  "/auth/verify",
-=======
-  "/services",
-  "/ai-services",
-  "/blog",
-  "/docs",
-  "/careers",
-  "/privacy",
-  "/terms"
->>>>>>> fff1a961f4ef4a979058d66e8db4fd365994ab84
+  "/auth/verify"
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-  if (publicRoutes.includes(pathname)) {
-    return NextResponse.next();
-  }
+  // Add security headers
+  const response = NextResponse.next();
   
-  const authCookie = request.cookies.get("auth-token");
-  if (!authCookie) {
-    return NextResponse.redirect(new URL("/auth/login", request.url));
-  }
+  // Security headers
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   
-  return NextResponse.next();
+  // Content Security Policy
+  const csp = [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: https:",
+    "font-src 'self' data:",
+    "connect-src 'self'",
+    "frame-ancestors 'none'"
+  ].join('; ');
+  
+  response.headers.set('Content-Security-Policy', csp);
+  
+  return response;
 }
 
 export const config = {
