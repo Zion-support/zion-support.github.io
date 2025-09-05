@@ -1,1 +1,1 @@
-ursor/automate-test-fix-improve-and-merge-code-"99d1": 'src/routes/AuthRoutes.tsx; );' } :src.disabled/routes/AuthRoutes.tsx{ Route,"Routes": ''} from; "react-router-dom"; "react"{ "ProtectedRoute"
+ursor/automate-test-fix-improve-and-merge-code-"99d1": 'src/routes/AuthRoutes.tsx; );' } :src.disabled/routes/AuthRoutes.tsx{ Route,"Routes": ''} from; "react-router-dom"; "react"{ "ProtectedRoute"""

@@ -1,1 +1,1 @@
-export class ContentOptimizer {; export default ContentOptimizer; '
+export class ContentOptimizer {; export default ContentOptimizer; '''

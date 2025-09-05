@@ -1,3 +1,5 @@
 interface ForumCategoryInfo {
-  "id"
-cursor/fix-lint-push-and-merge-to-main-f3c1
+  // TODO: Implement
+}
+  "id""
+cursor/fix-lint-push-and-merge-to-main-f3c1;"

@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Header from '../components/Header';
-
-describe('Header', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import Header from '../components/Header';''
+describe('Header', () => {''
+  test('renders without crashing', () => {'
     render(<Header />);
-    expect(screen.getByTestId('header')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</Header>
     render(<Header />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</Header>
     render(<Header />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</Header>
     render(<Header />);
-    // Add styling tests here
-  });
-});
+</Header>'

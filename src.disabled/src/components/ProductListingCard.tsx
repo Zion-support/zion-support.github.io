@@ -1,1 +1,1 @@
-import { DollarSign } from 'lucide-react'; export default ProductListingCard; '
+import { DollarSign } from 'lucide-react'; export default ProductListingCard; '''

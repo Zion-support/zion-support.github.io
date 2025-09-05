@@ -1,2 +1,2 @@
-const partners = [{"name": 'Partner A', "logo"
-    {"name": 'Partner B', "logo"
+const partners = [{"name": 'Partner A', "logo"""
+    {"name": 'Partner B', "logo""]"

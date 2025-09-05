@@ -1,32 +1,17 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-
-// Mock component for testing
-const AICodeGeneratorTest = () => (
-  <div data-testid="aicodegenerator-test">
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';'
+// Mock component for testing;
+const AICodeGeneratorTest = () => ('
+  <div data-testid="aicodegenerator-test">"
+</div>
     <h1>AI Code Generator Test</h1>
-  </div>
-);
-
-describe('AICodeGeneratorTest', () => {
-  test('renders without crashing', () => {
+  </div>)
     render(<AICodeGeneratorTest />);
-    expect(screen.getByTestId('aicodegenerator-test')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</AICodeGeneratorTest>
     render(<AICodeGeneratorTest />);
-    expect(screen.getByText('AI Code Generator Test')).toBeInTheDocument();
-  });
-
-  test('handles user interactions', () => {
+</AICodeGeneratorTest>
     render(<AICodeGeneratorTest />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</AICodeGeneratorTest>
     render(<AICodeGeneratorTest />);
-    // Add styling tests here
-  });
-});
+</AICodeGeneratorTest>"

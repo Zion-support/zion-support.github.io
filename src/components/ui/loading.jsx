@@ -1,5 +1,5 @@
-import {cn} from '@/lib/utils'
-  "sm"
-        "md"
-        "lg"
-  "xl"
+import {cn} from '@/lib/utils'''
+  "sm"""
+        "md"""
+        "lg"""
+  "xl"""
