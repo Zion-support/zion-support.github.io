@@ -1,11 +1,12 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import { createMocks, createRequest, createResponse } from 'node-mocks-http'
-import productHandler from '@/pages/api/products/index'
-import { PrismaClient } from '@prisma/client'
-import { jest, beforeEach } from '@jest/globals'
-// Mock Prisma Client
-jest.mock('@prisma/client', () => {
+import { NextApiRequest, NextApiResponse } from 'next'''
+import { createMocks, createRequest, createResponse } from 'node-mocks-http'''
+import productHandler from '@/pages/api/products/index'''
+import { PrismaClient } from '@prisma/client'''
+import { jest, beforeEach } from '@jest/globals''
+// Mock Prisma Client;'
+jest.mock('@prisma/client', () => {'
   const mPrismaClient = {
+<<<<<<< HEAD
     "product": {
       findMany: jest.fn(),
       "aggregate": jest.fn()
@@ -15,18 +16,24 @@ jest.mock('@prisma/client', () => {
     },
     $"queryRawUnsafe": jest.fn(),
     $"disconnect": jest.fn()
+=======
+    product: {,
+  findMany: jest.fn(),
+      aggregate: jest.fn()
+    },
+    productReview: {,
+  aggregate: jest.fn()
+    },
+    $queryRawUnsafe: jest.fn(),
+    $disconnect: jest.fn()
+>>>>>>> cursor/automate-test-improve-and-merge-code-10c5
   };
   return { "PrismaClient": jest.fn(() => mPrismaClient) }});
 let "prisma": PrismaClient
 interface ProductLike {
-  id: string
-  name: string
-  description?: string
-  images?: unknown[]
-  price?: number | null
-  currency?: string
-  tags?: string[]
+  // TODO: Implement
 }
+<<<<<<< HEAD
 describe('/api/products API Endpoint', () => {
   let "req": ReturnType<typeof createRequest>
   let res: ReturnType<typeof createResponse>
@@ -167,3 +174,18 @@ import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,creat
 cursor/website-audit-and-update-with-deployment-76dc
 cursor/fix-lint-push-and-merge-to-main-f3c1
 >>>>>>> 9cdb1ba2fcd2f1643402e1f0bd1771f058239fee
+=======
+  id: string;,
+  name: string;
+  description?: string;
+  images?: unknown[]
+  price?: number | null;
+  currency?: string;
+  tags?: string[]
+}'
+describe('/api/products API Endpoint', () => {'
+  let req: ReturnType<typeof createRequest>;
+</typeof>
+  let res: ReturnType<typeof createResponse>;
+</typeof>'
+>>>>>>> cursor/automate-test-improve-and-merge-code-10c5

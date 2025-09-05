@@ -1,26 +1,13 @@
 module.exports = {
-  "testEnvironment": 'jsdom',
-  "setupFilesAfterEnv": ['<rootDir>/tests/setup.t,s'],
-  "testMatch": [;
-    '<rootDir>/tests/unit/**/*.test.{ts,tsx}',
-    '<rootDir>/tests/integration/**/*.test.{ts,tsx}'],
-  "collectCoverageFrom": [;
-    'components/**/*.{ts,tsx}',
-    'lib/**/*.{ts,tsx}',
-    'pages/**/*.{ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**'],
-  "coverageThreshold": {
-    global: {
-      branche,"s": 80;
-      functions: 80;
-      lines: 80;
-      statements: 80}
-  },
-  "moduleNameMapping": {
-    '^@/(.*)$': '<rootDi,r>/$1'}
-}</div></div></div></div>
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
-origin/cursor/automate-test-improve-and-merge-code-eafe
-cursor/website-audit-and-update-with-deployment-76dc
-cursor/fix-lint-push-and-merge-to-main-f3c1
+  "testEnvironment": 'jsdom',''
+  "setupFilesAfterEnv": ['<rootDir>/tests/setup.t,s'],'
+</rootDir>'
+    '<rootDir>/tests/unit/**/*.test.{ts,tsx}','
+</rootDir>'
+    '<rootDir>/tests/integration/**/*.test.{ts,tsx}'],'
+</rootDir>'
+    '^@/(.*)$': '<rootDi,r>/$1'}'
+</rootDi>
+}</div></div></div></div>'
+module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>'
+</rootDir>'

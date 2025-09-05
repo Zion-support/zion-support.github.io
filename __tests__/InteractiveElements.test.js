@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import InteractiveElements from '../components/InteractiveElements';
-
-describe('InteractiveElements', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import InteractiveElements from '../components/InteractiveElements';''
+describe('InteractiveElements', () => {''
+  test('renders without crashing', () => {'
     render(<InteractiveElements />);
-    expect(screen.getByTestId('interactiveelements')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</InteractiveElements>
     render(<InteractiveElements />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</InteractiveElements>
     render(<InteractiveElements />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</InteractiveElements>
     render(<InteractiveElements />);
-    // Add styling tests here
-  });
-});
+</InteractiveElements>'

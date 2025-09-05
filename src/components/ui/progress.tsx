@@ -1,21 +1,20 @@
-import React from 'react';
+import React from 'react';'
 interface ProgressProps {
-  "value": number;
+  // TODO: Implement
+}'
+  "value": number;"
   max?: number;
   className?: string;
 }
 export function Progress($1) {
   const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300"
-        style="{{{ "width": `${percentage}}"%` }}
+  return ("
+    <div className="min-h-screen bg-white">"
+</div>"
+      <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300"""
+        style="{{{ "width": `${percentage}}"%` }}"
        />
-    </div>
-  );
-}
-</div>;';';
-import React from 'react'; interface ProgressProps { value: number; max?: number; className?: string} export function Progress($1) { const percentage = Math.min(Math.max((value / max) * 100,0),100); return ( <div className="min-h-screen bg-white"> <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300" style="{{{ width: `${percentage}}"%` }} /> </div> )} </div>;';';
-origin/cursor/automate-test-improve-and-merge-code-eafe
-cursor/website-audit-and-update-with-deployment-76dc
-cursor/fix-lint-push-and-merge-to-main-f3c1
+</div>
+    </div>"
+</div>;';';')'
+import React from 'react'; interface ProgressProps { value: number; max?: number; className?: string} export function Progress($1) { const percentage = Math.min(Math.max((value / max) * 100,0),100); return ( <div className="min-h-screen bg-white"> <div className="h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300" style="{{{ width: `${percentage}}"%` }} /> </div> )} </div>;';';''

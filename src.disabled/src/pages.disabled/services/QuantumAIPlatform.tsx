@@ -1,1 +1,1 @@
-import React from 'react.ts'; import { Link } from 'react-router-dom.ts'; import {}} from 'lucide-react'; import { SEO } from '@/components/SEO'
+import React from 'react.ts'; import { Link } from 'react-router-dom.ts'; import {}} from 'lucide-react'; import { SEO } from '@/components/SEO'''

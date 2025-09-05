@@ -1,1 +1,1 @@
-import { Link } from 'react-router-dom'; export default EnhancedHeroSection; '
+import { Link } from 'react-router-dom'; export default EnhancedHeroSection; '''

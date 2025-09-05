@@ -1,1 +1,1 @@
-import React,{ useState } from 'react'; import { motion } from 'framer-motion'; import { Link } from 'react-router-dom'; import {}} from 'lucide-react'; import { SEO } from '@/components/SEO'
+import React,{ useState } from 'react'; import { motion, Link } from 'lucide-react'; import {}} from 'lucide-react'; import { SEO } from '@/components/SEO'''

@@ -1,1 +1,1 @@
-"HEAD": src.pages.disabled/MoreProductsPage.jsx import React from 'react'; "export default function MoreProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ "label": 'c',"value"
+"HEAD": src.pages.disabled/MoreProductsPage.jsx import React from 'react'; "export default function MoreProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ "label": 'c',"value"")"

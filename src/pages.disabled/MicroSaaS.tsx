@@ -1,6 +1,6 @@
-import React from 'react'
-import { Zap, Rocket, DollarSign, Users, CheckCircle, ArrowRight, Star, Shield, Globe, TrendingUp } from 'lucide-react'
-import dynamic from 'next/dynamic'
-              We understand the unique challenges of building and scaling SaaS products in today'
-            Let'
-cursor/fix-lint-push-and-merge-to-main-f3c1
+import React from 'react'''
+import { Zap, Rocket, DollarSign, Users, CheckCircle, ArrowRight, Star, Shield, Globe, TrendingUp } from 'lucide-react'''
+import dynamic from 'next/dynamic'''
+              We understand the unique challenges of building and scaling SaaS products in today'''
+            Let''
+cursor/fix-lint-push-and-merge-to-main-f3c1;'
