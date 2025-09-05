@@ -45,7 +45,8 @@ import {
   Wrench,
   PieChart,
   ClipboardList,
-  Layers
+  Layers,
+  Database
 } from 'lucide-react';
 
 const footerSections = [
@@ -57,18 +58,22 @@ const footerSections = [
       { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
       { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
       { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
-      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 }
+      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
+      { title: 'Process Automation', href: '/process-automation', icon: Zap },
+      { title: 'Digital Transformation', href: '/digital-transformation', icon: Settings }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { title: 'Automation', href: '/automation', icon: Zap },
-      { title: 'AI Development', href: '/ai-development', icon: Brain },
       { title: 'Digital Transformation', href: '/digital-transformation', icon: Settings },
+      { title: 'AI Integration', href: '/ai-integration', icon: Brain },
+      { title: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
+      { title: 'Process Automation', href: '/process-automation', icon: Zap },
+      { title: 'Data Management', href: '/data-management', icon: Database },
+      { title: 'Security Assessment', href: '/security-assessment', icon: Shield },
       { title: 'IoT Solutions', href: '/iot-solutions', icon: Globe },
-      { title: 'Blockchain', href: '/blockchain', icon: Lock },
-      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code }
+      { title: 'Blockchain', href: '/blockchain', icon: Lock }
     ]
   },
   {
@@ -79,7 +84,9 @@ const footerSections = [
       { title: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
       { title: 'Retail', href: '/industries/retail', icon: ShoppingCart },
       { title: 'Education', href: '/industries/education', icon: BookOpen },
-      { title: 'Real Estate', href: '/industries/real-estate', icon: Home }
+      { title: 'Real Estate', href: '/industries/real-estate', icon: Home },
+      { title: 'Government', href: '/industries/government', icon: Building },
+      { title: 'Energy', href: '/industries/energy', icon: Zap }
     ]
   },
   {
@@ -90,7 +97,9 @@ const footerSections = [
       { title: 'White Papers', href: '/white-papers', icon: FileText },
       { title: 'Webinars', href: '/webinars', icon: Calendar },
       { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
-      { title: 'Documentation', href: '/docs', icon: FileText }
+      { title: 'API Documentation', href: '/api-docs', icon: Code },
+      { title: 'Pricing Calculator', href: '/pricing-calculator', icon: Calculator },
+      { title: 'ROI Calculator', href: '/roi-calculator', icon: TrendingUp }
     ]
   },
   {
@@ -101,6 +110,7 @@ const footerSections = [
       { title: 'Careers', href: '/careers', icon: Users },
       { title: 'Partners', href: '/partners', icon: Globe },
       { title: 'News', href: '/news', icon: FileText },
+      { title: 'Awards', href: '/awards', icon: Award },
       { title: 'Contact', href: '/contact', icon: MessageSquare }
     ]
   },
@@ -108,11 +118,12 @@ const footerSections = [
     title: 'Support',
     links: [
       { title: 'Help Center', href: '/help', icon: MessageSquare },
-      { title: 'Documentation', href: '/docs', icon: FileText },
-      { title: 'API Reference', href: '/api', icon: Code },
+      { title: 'Contact Us', href: '/contact', icon: Phone },
       { title: 'Status Page', href: '/status', icon: BarChart3 },
+      { title: 'Documentation', href: '/docs', icon: FileText },
       { title: 'Community', href: '/community', icon: Users },
-      { title: 'Training', href: '/training', icon: BookOpen }
+      { title: 'Training', href: '/training', icon: BookOpen },
+      { title: 'Free Consultation', href: '/consultation', icon: Calendar }
     ]
   }
 ];

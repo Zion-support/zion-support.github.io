@@ -70,7 +70,9 @@ import {
   Target as Goal,
   TrendingUp as Growth,
   Clock as Time,
-  DollarSign as Money
+  DollarSign as Money,
+  Database,
+  Car
 } from 'lucide-react';
 
 const navigationItems = [
@@ -99,6 +101,24 @@ const navigationItems = [
         icon: Cloud,
         description: '85+ innovative micro SaaS solutions',
         popular: true
+      },
+      {
+        title: 'Cybersecurity',
+        href: '/cybersecurity',
+        icon: Shield,
+        description: 'Advanced security solutions'
+      },
+      {
+        title: 'Cloud Solutions',
+        href: '/cloud-solutions',
+        icon: Cloud,
+        description: 'Scalable cloud infrastructure'
+      },
+      {
+        title: 'Data Analytics',
+        href: '/data-analytics',
+        icon: BarChart3,
+        description: 'Business intelligence platform'
       }
     ]
   },
@@ -108,28 +128,41 @@ const navigationItems = [
     icon: Target,
     submenu: [
       {
-        title: 'Cloud Solutions',
-        href: '/cloud-solutions',
+        title: 'Digital Transformation',
+        href: '/digital-transformation',
+        icon: Settings,
+        description: 'Complete digital overhaul',
+        popular: true
+      },
+      {
+        title: 'AI Integration',
+        href: '/ai-integration',
+        icon: Brain,
+        description: 'Seamless AI implementation'
+      },
+      {
+        title: 'Cloud Migration',
+        href: '/cloud-migration',
         icon: Cloud,
-        description: 'Scalable cloud infrastructure'
+        description: 'Secure cloud transition'
       },
       {
-        title: 'Cybersecurity',
-        href: '/cybersecurity',
-        icon: Shield,
-        description: 'Enterprise security solutions'
-      },
-      {
-        title: 'Data Analytics',
-        href: '/data-analytics',
-        icon: BarChart3,
-        description: 'Advanced analytics platform'
-      },
-      {
-        title: 'Automation',
-        href: '/automation',
+        title: 'Process Automation',
+        href: '/process-automation',
         icon: Zap,
-        description: 'Intelligent process automation'
+        description: 'Intelligent automation'
+      },
+      {
+        title: 'Data Management',
+        href: '/data-management',
+        icon: Database,
+        description: 'Comprehensive data solutions'
+      },
+      {
+        title: 'Security Assessment',
+        href: '/security-assessment',
+        icon: Shield,
+        description: 'Complete security audit'
       }
     ]
   },
@@ -142,13 +175,15 @@ const navigationItems = [
         title: 'Healthcare',
         href: '/industries/healthcare',
         icon: Heart,
-        description: 'Medical AI and health tech'
+        description: 'Medical AI and health tech',
+        popular: true
       },
       {
         title: 'Finance',
         href: '/industries/finance',
         icon: DollarSign,
-        description: 'Fintech and financial services'
+        description: 'Fintech and financial services',
+        popular: true
       },
       {
         title: 'Manufacturing',
@@ -173,6 +208,24 @@ const navigationItems = [
         href: '/industries/real-estate',
         icon: Home,
         description: 'PropTech innovations'
+      },
+      {
+        title: 'Government',
+        href: '/industries/government',
+        icon: Building,
+        description: 'Public sector solutions'
+      },
+      {
+        title: 'Energy',
+        href: '/industries/energy',
+        icon: Zap,
+        description: 'Energy and utilities tech'
+      },
+      {
+        title: 'Transportation',
+        href: '/industries/transportation',
+        icon: Car,
+        description: 'Logistics and mobility'
       }
     ]
   },
@@ -185,7 +238,8 @@ const navigationItems = [
         title: 'Blog',
         href: '/blog',
         icon: FileText,
-        description: 'Latest insights and trends'
+        description: 'Latest insights and trends',
+        popular: true
       },
       {
         title: 'Case Studies',
@@ -210,6 +264,24 @@ const navigationItems = [
         href: '/tutorials',
         icon: BookOpen,
         description: 'Step-by-step guides'
+      },
+      {
+        title: 'API Documentation',
+        href: '/api-docs',
+        icon: Code,
+        description: 'Developer resources'
+      },
+      {
+        title: 'Pricing Calculator',
+        href: '/pricing-calculator',
+        icon: Calculator,
+        description: 'Estimate your costs'
+      },
+      {
+        title: 'ROI Calculator',
+        href: '/roi-calculator',
+        icon: TrendingUp,
+        description: 'Calculate your returns'
       }
     ]
   },
@@ -222,7 +294,8 @@ const navigationItems = [
         title: 'About Us',
         href: '/about',
         icon: Building,
-        description: 'Our story and mission'
+        description: 'Our story and mission',
+        popular: true
       },
       {
         title: 'Team',
@@ -247,6 +320,56 @@ const navigationItems = [
         href: '/news',
         icon: FileText,
         description: 'Company updates'
+      },
+      {
+        title: 'Awards',
+        href: '/awards',
+        icon: Award,
+        description: 'Recognition and achievements'
+      }
+    ]
+  },
+  {
+    title: 'Support',
+    href: '/support',
+    icon: MessageSquare,
+    submenu: [
+      {
+        title: 'Help Center',
+        href: '/help',
+        icon: MessageSquare,
+        description: 'Get help and support',
+        popular: true
+      },
+      {
+        title: 'Contact Us',
+        href: '/contact',
+        icon: Phone,
+        description: 'Get in touch with us'
+      },
+      {
+        title: 'Status Page',
+        href: '/status',
+        icon: BarChart3,
+        description: 'Service status and uptime'
+      },
+      {
+        title: 'Documentation',
+        href: '/docs',
+        icon: FileText,
+        description: 'Technical documentation'
+      },
+      {
+        title: 'Community',
+        href: '/community',
+        icon: Users,
+        description: 'Join our community'
+      },
+      {
+        title: 'Training',
+        href: '/training',
+        icon: BookOpen,
+        description: 'Learn and get certified'
       }
     ]
   }
@@ -256,7 +379,8 @@ const quickLinks = [
   { title: 'Pricing', href: '/pricing', icon: DollarSign },
   { title: 'Contact', href: '/contact', icon: Phone },
   { title: 'Support', href: '/support', icon: MessageSquare },
-  { title: 'Status', href: '/status', icon: BarChart3 }
+  { title: 'Status', href: '/status', icon: BarChart3 },
+  { title: 'Free Consultation', href: '/consultation', icon: Calendar }
 ];
 
 export default function Navigation() {
