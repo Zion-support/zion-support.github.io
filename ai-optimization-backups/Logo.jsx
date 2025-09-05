@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 export function Logo({ customLogo, customColor }) {
   const logoColor = customColor || '#22D3EE';
-  
   return (
     <Link href="/" className="flex items-center space-x-3 group">
       <div
