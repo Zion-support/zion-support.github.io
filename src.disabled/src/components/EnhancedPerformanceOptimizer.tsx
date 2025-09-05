@@ -1,1 +1,9 @@
-import React,{ useEffect,useState,useCallback,useMemo } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { ; Zap,; Gauge,; HardDrive,; Network,; Cpu,; HardDriveIcon,; Battery,; Wifi,; WifiOff,; RefreshCw,; TrendingUp,; TrendingDown,; AlertTriangle,; CheckCircle,; Info} from 'lucide-react'; ; interface PerformanceMetrics {}; fcp: 'number;'}
+<<<<<<< HEAD
+import React,{ useEffect,useState,useCallback,useMemo } from \'react\'; import { motion,AnimatePresence } from \'framer-motion\'; import { ; Zap,; Gauge,; HardDrive,; Network,; Cpu,; HardDriveIcon,; Battery,; Wifi,; WifiOff,; RefreshCw,; TrendingUp,; TrendingDown,; AlertTriangle,; CheckCircle,; Info} from \'lucide-react\'; interface PerformanceMetrics {}; \"fcp\": \'number;\'}
+=======
+<<<<<<< HEAD
+const React,{ useEffect,useState,useCallback,useMemo } from "react"; import { motion,AnimatePresence } from "framer-motion"; import { ; Zap,; Gauge,; HardDrive,; Network,; Cpu,; HardDriveIcon,; Battery,; Wifi,; WifiOff,; RefreshCw,; TrendingUp,; TrendingDown,; AlertTriangle,; CheckCircle,; Info} from "lucide-react"; interface PerformanceMetrics {}; fcp: "number;"}'"'"
+=======
+import _React,{ useEffect,useState,useCallback,useMemo } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { ; Zap,; Gauge,; HardDrive,; Network,; Cpu,; HardDriveIcon,; Battery,; Wifi,; WifiOff,; RefreshCw,; TrendingUp,; TrendingDown,; AlertTriangle,; CheckCircle,; Info} from 'lucide-react'; interface PerformanceMetrics {}; "fcp": 'number;'}
+>>>>>>> main
+>>>>>>> main

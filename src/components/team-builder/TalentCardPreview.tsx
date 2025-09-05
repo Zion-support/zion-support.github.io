@@ -1,1 +1,0 @@
-interface TalentCardPreviewProps extends React.PropsWithChildren<{}> { talent: 'TalentProfile; onInvite: talentId: string',role: 'string void; roleTitle: string} export ></div> )}; '"`

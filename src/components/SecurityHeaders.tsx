@@ -22,7 +22,8 @@ const SecurityHeaders = (props: any) => {';';
       metaTag.httpEquiv = header.httpEquiv;
       metaTag.content = header.content;
       document.head.appendChild(metaTag);';
-    });';';
+    }
+    );';';
     return () => {';';';
       // Cleanup on unmount',';';
     ';';';
@@ -38,7 +39,8 @@ const SecurityHeaders = (props: any) => {';';
             tag.getAttribute('http-equiv') === 'Permissions-Policy') {
           tag.remove();
         }
-      });
+      }
+    );
     };';
   }, []);';';
   return null};';';';

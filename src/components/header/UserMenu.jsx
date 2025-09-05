@@ -182,7 +182,7 @@ export function UserMenu(props: any) {const [isOpen, setIsOpen] = useState(false
       <button onClick={() => setIsOpen(!isOpen)
       )}
     </div>
-  );
+    );
 }
         className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
       >
@@ -240,7 +240,7 @@ export function UserMenu(props: any) {const [isOpen, setIsOpen] = useState(false
                 onClick={() => setIsOpen(false)
       )}
     </div>
-  );
+    );
 }
                 <item .icon className="h-4 w-4 mr-3 text-zion-cyan"  />"
                 <div className="flex-1">"
@@ -248,7 +248,7 @@ export function UserMenu(props: any) {const [isOpen, setIsOpen] = useState(false
               <Link key={item.name} to={item.href} className="flex items-center px-4 py-3 text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors" onClick={() => setIsOpen(false)
       )}
     </div>
-  );
+    );
 }
                 <item .icon className="h-4 w-4 mr-3 text-zion-cyan"  />
                 <div className="flex-1">
@@ -265,7 +265,7 @@ export function UserMenu(props: any) {const [isOpen, setIsOpen] = useState(false
             ))
       )}
     </div>
-  );
+    );
 }
           {/* Logout */}"
           <div className="p-4 border-t border-zion-purple/20">
@@ -285,7 +285,7 @@ export function UserMenu(props: any) {const [isOpen, setIsOpen] = useState(false
       )
       )}
     </div>
-  );';
+    );';
 }';';
 "';';';
 "';';';';

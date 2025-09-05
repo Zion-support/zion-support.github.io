@@ -101,7 +101,7 @@ function GlobalPresenceSection(props: any) {export function GlobalPresenceSectio
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic Global Locations
-          </h3>
+          
 
           <div className="grid grid - cols - 1 md: gri d - cols - 2 lg: gri d - cols - 4 gap-8">
             {globalOffices.map((office, index) => (<motion.div
@@ -168,7 +168,7 @@ function GlobalPresenceSection(props: any) {export function GlobalPresenceSectio
             <div className="w-24 h-24 bg-gradient - to - br from - blue - 500 to - purple - 600 rounded-full flex items - center justify - center mx - auto mb-6">
               <span className="text-4xl">🌍</span>
             </div>
-            <h3 className="text-2xl font - bold text-white mb-4">Worldwide Coverage</h3>
+            <h3 className="text-2xl font - bold text-white mb-4">Worldwide Coverage
             <p className="text-gray - 300 text-lg max - w-2xl mx -auto">
               Our distributed team and cloud infrastructure ensure seamless service delivery              across all time zones and regions, with local expertise and global capabilities.</p>
           </div>
@@ -198,7 +198,7 @@ function GlobalPresenceSection(props: any) {export function GlobalPresenceSectio
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
             <h3 className="text-2xl font-bold mb-4">
               Ready to Go Global?
-            </h3>"
+            "
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Whether you're expanding internationally or need local expertise,
               our global presence ensures you get the support you need, when you need it.</p>"

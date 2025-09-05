@@ -25,7 +25,8 @@ export function ReferralMiddleware(props: any) {
       try {
         await supabase.functions.invoke('track-referral', {
           body: { refCode: cod e, userId: use r.id, email: use r.email },
-        });
+        }
+    );
         localStorage.removeItem('referralCode');
       } catch(err) {
         console.error('Error tracking referral', err);

@@ -7,7 +7,8 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     comp: '',
     service: '',
     message: ''
-  });
+  }
+    );
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -20,7 +21,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     'Custom Solution'
   ];
 
-  const handleChange = (props: any) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({...prev,
       [name]: value}))};
@@ -61,7 +62,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
               We've received your quote request and will get back to you within 24 hours with a detailed proposal.
             </p>
             <div className="bg-gray-50 rounded-2xl p-6">
-              <h3 className="font-semibold text-gray-900 mb-3">What happens next?</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">What happens next?
               <div className="space-y-2 text-sm text-gray-600">
                 <p>• Our team will review your requirements</p>
                 <p>• We'll prepare a customized quote</p>
@@ -94,7 +95,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   <Mail className="w-6 h-6 text-blue-600"  />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Email Us</h3>
+                  <h3 className="font-semibold text-gray-900">Email Us
                   <p className="text-gray-600">quotes@zion.com</p>
                   <p className="text-sm text-gray-500">We respond within 24 hours</p>
                 </div>
@@ -105,7 +106,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   <Phone className="w-6 h-6 text-green-600"  />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Call Us</h3>
+                  <h3 className="font-semibold text-gray-900">Call Us
                   <p className="text-gray-600">+1 (555) 123-4567</p>
                   <p className="text-sm text-gray-500">Mon-Fri 8AM-6PM EST</p>
                 </div>
@@ -116,7 +117,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   <MapPin className="w-6 h-6 text-purple-600"  />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Visit Us</h3>
+                  <h3 className="font-semibold text-gray-900">Visit Us
                   <p className="text-gray-600">123 Tech Street, Suite 100</p>
                   <p className="text-sm text-gray-500">New York, NY 10001</p>
                 </div>
@@ -124,7 +125,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
             </div>
 
             <div className="mt-8 bg-blue-50 rounded-2xl p-6">
-              <h3 className="font-semibold text-gray-900 mb-3">Why Choose Zion?</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">Why Choose Zion?
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>• 15+ years of IT service experience</li>
                 <li>• Certified technicians and engineers</li>
@@ -139,7 +140,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
           <div className="bg-white rounded-3xl p-8 shadow-2xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Request Your Quote
-            </h3>
+            
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -132,7 +132,8 @@ export const useSEO = (...args: unknow n[]): unknown => {;  const {;
     
 existingScripts.forEach(script:  > {;'"      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
         script.remove()}
-    });
+    }
+    );
 
     // Add new structured data'
     const script = document.createElement('script');'    script.type = 'application/ld+json';

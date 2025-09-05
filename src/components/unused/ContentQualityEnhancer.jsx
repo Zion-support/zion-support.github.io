@@ -16,7 +16,8 @@ export default function Page(props: any) {
                     fixable: true,
                     suggestion: 'Expand content to provide more value to users',
                     impact: 'engagement'
-                });
+                }
+    );
                 engagementScore -= 5;
                 seoScore -= 3}
             // Check for very long paragraphs(hard to read)
@@ -33,7 +34,8 @@ export default function Page(props: any) {
                     fixable: true,
                     suggestion: 'Break into smaller paragraphs for better readability',
                     impact: 'readability'
-                });
+                }
+    );
                 readabilityScore -= 5;
                 engagementScore -= 3}
             // Check for proper heading structure
@@ -57,14 +59,16 @@ export default function Page(props: any) {
                             fixable: true,
                             suggestion: 'Ensure heading levels follow logical sequence',
                             impact: 'accessibility'
-                        });
+                        }
+    );
                         seoScore -= 3}
                 }
             }
             // Check for keyword stuffing
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
             const wordFrequency = {/* empty */};
-            commonWords.forEach(word => {wordFrequency[word] = (wordFrequency[word] || 0) + 1});
+            commonWords.forEach(word => {wordFrequency[word] = (wordFrequency[word] || 0) + 1}
+    );
             Object.entries(wordFrequency).forEach(([word, count]) => {
 
                 if(count > 5 && word.length > 3) {
@@ -83,10 +87,12 @@ export default function Page(props: any) {
                             fixable: true,
                             suggestion: 'Reduce keyword density for more natural content',
                             impact: 'seo'
-                        });
+                        }
+    );
                         seoScore -= 5}
                 }
-            });
+            }
+    );
             // Check for proper meta descriptions'
             if(element.tagName === 'META' && element.getAttribute('name') === 'description') {
 
@@ -104,7 +110,8 @@ export default function Page(props: any) {
                         fixable: true,
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
                         impact: 'seo'
-                    });
+                    }
+    );
                     seoScore -= 5}
                 else if(content.length > 160) {
 
@@ -119,7 +126,8 @@ export default function Page(props: any) {
                         fixable: true,
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
                         impact: 'seo'
-                    });
+                    }
+    );
                     seoScore -= 2}
             }
             // Check for broken links'
@@ -139,7 +147,8 @@ export default function Page(props: any) {
                         fixable: true,
                         suggestion: 'Ensure link points to valid URL or page section',
                         impact: 'engagement'
-                    });
+                    }
+    );
                     engagementScore -= 3}
             }
             // Check for images without alt text'
@@ -159,11 +168,13 @@ export default function Page(props: any) {
                         fixable: true,
                         suggestion: 'Add descriptive alt text for better accessibility and SEO',
                         impact: 'accessibility'
-                    });
+                    }
+    );
                     seoScore -= 8;
                     engagementScore -= 5}
             }
-        });
+        }
+    );
         // Generate suggestions based on analysis
         if(wordCount < 300) {
 
@@ -260,7 +271,8 @@ export default function Page(props: any) {
                         // These would require more complex logic to fix
                         break}
             }
-        });
+        }
+    );
         if(fixedCount > 0) {// Re-analyze content after fixes
             setTimeout(analyzeContent, 500)}
         return fixedCount}, [analysis, analyzeContent]);
@@ -270,12 +282,14 @@ export default function Page(props: any) {
         // Remove previous highlights'
         document.querySelectorAll('.content-highlight').forEach(el => {
 
-            el.classList.remove('content-highlight')});
+            el.classList.remove('content-highlight')}
+    );
         // Add highlight to selected element'
         element.classList.add('content-highlight');
         setSelectedElement(element);
         // Scroll to element'
-        element.scrollIntoView({behavior: 'smooth', block: 'center'});
+        element.scrollIntoView({behavior: 'smooth', block: 'center'}
+    );
         // Remove highlight after 3 seconds
         setTimeout(() => {element.classList.remove('content-highlight');
             setSelectedElement(null)}, 3000)}, []);
@@ -547,7 +561,8 @@ export default function Page(props: any) {
                         const blob = new Blob([report],
   { type: 'application/json'
 
-});
+}
+    );
                         const url = URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;

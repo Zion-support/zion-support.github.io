@@ -3,7 +3,8 @@ import {motion} from 'framer-motion';
 
 export default function Page(props: any) {]}) => {
 
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }
+    );
     const [isHovered, setIsHovered] = useState(false);
     const [activeStat, setActiveStat] = useState(0);
     useEffect(() => {

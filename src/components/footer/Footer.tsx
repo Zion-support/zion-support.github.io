@@ -104,7 +104,7 @@ export function Footer(props: any) {
           {/* Footer Links */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h3 className="text-white font-semibold mb-4">{section.title}</h3>
+              <h3 className="text-white font-semibold mb-4">{section.title}
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.name}>
@@ -122,7 +122,7 @@ export function Footer(props: any) {
         <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="flex flex-col md: fle x-row items-center justify-between">
             <div className="mb-4 md: m b-0">
-              <h3 className="text-white font-semibold mb-2">Stay Updated</h3>
+              <h3 className="text-white font-semibold mb-2">Stay Updated
               <p className="text-slate-300">Get the latest news and updates from Zion Tech Group</p>
             </div>
             <div className="flex w-full md:w-auto">

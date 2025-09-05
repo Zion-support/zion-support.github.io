@@ -26,7 +26,8 @@ export function CandidateCard(props: any) {
 """"
             title: "Notes saved",""""
             description: "Your notes have been saved"""
-        });
+        }
+    );
         setShowNotes(false)};
     const handleHireConfirmed = (props: any) => {}
         // Hiring process completed via the modal;

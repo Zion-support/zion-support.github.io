@@ -1,19 +1,26 @@
-import { createClient } from '@supabase/supabase-js';
+<<<<<<< HEAD
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || &apos;&quot;https&quot;: //placeholder.supabase.co
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || &apos;placeholder-key
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+<<<<<<< HEAD
 
-if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+<<<<<<< HEAD
+if (!supabaseUrl || !supabaseAnonKey) {
   
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
-    autoRefreshToken: true,
-    persistSession: true,
-    detectSessionInUrl: true
+    autoRefreshToken: tru e,
+    persistSession: tru e,
+    detectSessionInUrl: tru e
   }
-});
+}
+    );
 
 // Helper functions for common operations
 export const supabaseHelpers = {
@@ -44,7 +51,8 @@ export const supabaseHelpers = {
         if (value !== undefined && value !== null) {
           queryBuilder = queryBuilder.eq(key, value);
         }
-      });
+      }
+    );
     }
     
     const { data, error } = await queryBuilder;
@@ -52,8 +60,8 @@ export const supabaseHelpers = {
     return data;
   },
 
-  async insertData(table: string, data: any) {
-    const { data: result, error } = await supabase
+  async insertData(table: string, data: an y) {
+    const { data: resul t, error } = await supabase
       .from(table)
       .insert(data)
       .select();
@@ -62,8 +70,8 @@ export const supabaseHelpers = {
     return result;
   },
 
-  async updateData(table: string, id: string, data: any) {
-    const { data: result, error } = await supabase
+  async updateData(table: string, id: string, data: an y) {
+    const { data: resul t, error } = await supabase
       .from(table)
       .update(data)
       .eq('id', id)
@@ -84,3 +92,12 @@ export const supabaseHelpers = {
 };
 
 export default supabase;
+=======
+=======
+import { createClient } from '@supabase/supabase-js
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '"https": //placeholder.supabase.co
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) { } export const supabase = createClient(supabaseUrl,supabaseAnonKey,{ auth: { autoRefreshToken: true,persistSession: true,detectSessionInUrl: true } };); export const supabaseHelpers = { async getUser() { const { data: { user },error }; = await supabase.auth.getUser(); if (error) throw error; return user},async getSession() { const { data: { session },error } = await supabase.auth.getSession(); if (error) throw error; return session},async signOut() { const { error } = await supabase.auth.signOut(); if (error) throw error},async fetchData($1) { let queryBuilder = supabase.from(table).select('*'); if (query) { Object.entries(query).forEach(([key,value]) => { if (value !== undefined && value !== null) { queryBuilder = queryBuilder.eq(key,value)} })} const { data,error } = await queryBuilder; if (error) throw error; return data},async insertData($1) { const { data: result,error } = await supabase .from(table) .insert(data) .select(); if (error) throw error; return result},async updateData(table: string,id: string,data: an y) { const { data: resul t,error } = await supabase .from(table)'; .update(data)';'; .eq('id',id) .select(); if (error) throw error; return result},async deleteData(table: string,id: string) { const { error } = await supabase .from(table)'; .delete() .eq('id',id); if (error) throw error} }; export default supabase;';';
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

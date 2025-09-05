@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import React from 'react';
 
-export default function Page(props: any) {
-,
-    {
+interface TechSolutionsSection.jsProps {
+  // Add props here as needed
+}
 
+<<<<<<< HEAD
         id: 'iot-solutions',
         title: 'IoT Solutions',
         description: 'Connected devices and smart systems for the modern world',"
@@ -161,7 +161,7 @@ const industries = ['"
                   </div>
 
                   <h3 className="text-2xl font - bold text-white mb-3 group - hover:text-zion - cyan transition -colors">                    {solution.title}
-                  </h3>"
+                  "
                   <p className="text-zion-slate-light leading-relaxed mb-4">
                     {solution.description}
                   </p>
@@ -281,7 +281,7 @@ const industries = ['"
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">"
               <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
-              </h3>"
+              "
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Let our technology experts help you implement the right solutions for your business needs.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -306,3 +306,13 @@ const industries = ['"
 </motion>
 </motion>
 </motion>
+=======
+export default function TechSolutionsSection.js({ }: TechSolutionsSection.jsProps) {
+  return (
+    <div>
+      <h1>TechSolutionsSection.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main

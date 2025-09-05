@@ -150,7 +150,8 @@ export function UltimateServicesShowcase(...args[]):  {
                   : 'bg-zion-slate-light text-zion-gray-light hover: b g-zion-slate hover: tex t-white'`
               }`}
 
-              {category.name} ({category.services.length}) ;
+              {category.name} ({category.services.length}
+    );
             </button>;) ) }
         </motion.div>
 
@@ -179,7 +180,7 @@ export function UltimateServicesShowcase(...args[]):  {
                   </div>"
                   <h3 className="text-xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300">
                     {service.name}
-                  </h3>"
+                  "
                   <p className="text-zion-gray-light text-sm leading-relaxed">
                     {service.tagline}
                   </p>
@@ -325,12 +326,12 @@ export function UltimateServicesShowcase(...args[]):  {
 "
               <div className="grid grid-cols-1 lg: gri d-cols-2 gap-6">
                 <div>"
-                  <h3 className="text-xl font-bold text-white mb-3">Description</h3>"
+                  <h3 className="text-xl font-bold text-white mb-3">Description"
                   <p className="text-zion-gray-light leading-relaxed mb-4">
                     {selectedService.description}
                   </p>
 "
-                  <h3 className="text-xl font-bold text-white mb-3">Features</h3>"
+                  <h3 className="text-xl font-bold text-white mb-3">Features"
                   <ul className="space-y-2 mb-4">
                     {selectedService.features.map((feature, index) => ("
                       <li key={index} className="flex items-center gap-2 text-zion-gray-light">"
@@ -338,7 +339,7 @@ export function UltimateServicesShowcase(...args[]):  {
                       </li>) ) }
                   </ul>
 "
-                  <h3 className="text-xl font-bold text-white mb-3">AI Capabilities</h3>"
+                  <h3 className="text-xl font-bold text-white mb-3">AI Capabilities"
                   <div className="flex flex-wrap gap-2 mb-4">
                     {selectedService.aiCapabilities.map((capability, index) => ("
                       <span key={index} className="bg-zion-cyan text-white text-sm px-3 py-1 rounded-full">
@@ -348,7 +349,7 @@ export function UltimateServicesShowcase(...args[]):  {
                 </div>
 
                 <div>"
-                  <h3 className="text-xl font-bold text-white mb-3">Market Information</h3>"
+                  <h3 className="text-xl font-bold text-white mb-3">Market Information"
                   <div className="space-y-3 mb-4">
                     <div>"
                       <span className="text-zion-cyan font-semibold">Market Position:</span>"
@@ -368,7 +369,7 @@ export function UltimateServicesShowcase(...args[]):  {
                     </div>
                   </div>
 "
-                  <h3 className="text-xl font-bold text-white mb-3">Technology & Integrations</h3>"
+                  <h3 className="text-xl font-bold text-white mb-3">Technology & Integrations"
                   <div className="space-y-3 mb-4">
                     <div>"
                       <span className="text-zion-cyan font-semibold">Technology:</span>"

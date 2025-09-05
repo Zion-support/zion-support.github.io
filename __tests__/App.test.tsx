@@ -1,7 +1,16 @@
-import { describe, it, expect } from 'vitest';
-
+<<<<<<< HEAD
+=======
+import { render, screen } from '@testing-library/react';
+import App from '../src/App';
 describe('App', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
+  it('renders without crashing', () => {
+    render(<App />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+  it('has proper heading structure', () => {
+    render(<App />);
+    const heading = screen.getByRole('heading', { level: 1 });
+    expect(heading).toBeInTheDocument();
   });
 });
+>>>>>>> main

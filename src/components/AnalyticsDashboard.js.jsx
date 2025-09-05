@@ -5,7 +5,8 @@ export const AnalyticsDashboard = (props: any) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({enableTracking: true,
         enablePerformanceTracking: true,
         enableUserBehaviorTracking: true,
-        enableHeatmapTracking: false});
+        enableHeatmapTracking: false}
+    );
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
     const [analyticsSummary, setAnalyticsSummary] = useState(null);
@@ -69,7 +70,8 @@ export const AnalyticsDashboard = (props: any) => {
         if (num >= 1000)
             return `${(num / 1000).toFixed(1)}K`;
         return num.toString()};
-    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
+    return (
+        <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
 // comment
 useEffect(() => {updateAnalyticsSummary()}, [events, currentSession])
 }
@@ -133,7 +135,7 @@ const formatNumber = (props: any) => {
           <h3 className="text-lg font-semibold flex items-center gap-2">""""
             <BarChart3 className="w-5 h-5" /" >"
             Analytics Dashboard"""""
-          </h3>""""
+          """"
           <div className="flex items-center gap-2">""""
             {/* comment */}""""""
             <div """"""""
