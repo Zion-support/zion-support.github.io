@@ -4,7 +4,7 @@ import Head from 'next/head';
 ;
 interface SimpleLayoutProps {;
   title: string;
-  description?: string,
+  description?: string;
   children: React.ReactNode
 };
 export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {,

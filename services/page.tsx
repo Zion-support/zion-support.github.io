@@ -7,7 +7,7 @@ import Layout from '../pages/components/Layout';
 import {;
   Brain;
   Cloud;
-  Shield,
+  Shield;
   BarChart3,
   CheckCircle,
   ArrowRight,

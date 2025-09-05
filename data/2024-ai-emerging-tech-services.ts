@@ -2,7 +2,7 @@ import React from 'react';
 import { ServiceVariant } from "../types/service-variants";
 ;
 export interface AIEmergingTechService {;
-  id: string,
+  id: string;
   name: string,
   tagline: string,
   price: string,

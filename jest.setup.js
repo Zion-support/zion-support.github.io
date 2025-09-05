@@ -18,11 +18,11 @@ jest.mock('next/router', () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-        emit: jest.fn(),
+        emit: jest.fn()
       },
-      isFallback: false,
+      isFallback: false
     };
-  },
+  }
 }));
 
 // Mock Next.js Image component
@@ -31,7 +31,7 @@ jest.mock('next/image', () => ({
   default: (props) => {
     // eslint-disable-next-line @next/next/no-img-element
     return <img {...props} />;
-  },
+  }
 }));
 
 // Mock Next.js Link component
@@ -39,7 +39,7 @@ jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
     return <a href={href} {...props}>{children}</a>;
-  },
+  }
 }));
 
 // Mock window.matchMedia
@@ -53,8 +53,8 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+    dispatchEvent: jest.fn()
+  }))
 });
 
 // Mock IntersectionObserver

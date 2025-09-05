@@ -6,7 +6,7 @@ import {;
   X;
   ChevronDown;
   ChevronRight;
-  Home,
+  Home;
   Briefcase,
   Users,
   FileText,

@@ -1,7 +1,7 @@
 import React from 'react';
 export interface ServiceTier {;
   name: string;
-  price: string,
+  price: string;
   includes: string[],
   features: string[]
 };

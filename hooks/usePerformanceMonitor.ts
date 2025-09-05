@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 ;
 export const usePerformanceMonitor = () => {;
-  useEffect(() => {,
+  useEffect(() => {;
     // Monitor Core Web Vitals,
     if (typeof window !== 'undefined' && 'web-vitals' in window) {,
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {,
