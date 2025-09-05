@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-05T00:20:16.317Z",
   "memory": {
     "rss": 48967680,
@@ -8,6 +9,17 @@
     "arrayBuffers": 10515
   },
   "uptime": 0.016888379,
+=======
+  "timestamp": "2025-09-04T23:24:14.834Z",
+  "memory": {
+    "rss": 48963584,
+    "heapTotal": 5570560,
+    "heapUsed": 4385808,
+    "external": 1472832,
+    "arrayBuffers": 10515
+  },
+  "uptime": 0.028368744,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
   "platform": "linux",
   "nodeVersion": "v22.16.0"
 }

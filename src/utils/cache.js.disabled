@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/utils/cache.js.disabled
 // cache utility,
 export const cache = {
   // Placeholder utility functions,
@@ -6,3 +7,6 @@ export const cache = {
   }
 };
 export default cache;
+=======
+export const cache = { init: function() { } }; export default cache;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/utils/cache.js

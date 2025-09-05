@@ -4,20 +4,20 @@ import {
   Phone, 
   Mail, 
   MapPin, 
-  Clock,
-  ArrowRight,
-  Brain,
-  Network,
-  Cloud,
-  Shield,
-  Users,
-  Globe,
-  Settings,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Github,
-  Youtube
+  Clock, 
+  ArrowRight, 
+  Brain, 
+  Network, 
+  Cloud, 
+  Shield, 
+  Users, 
+  Globe, 
+  Settings, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Github, 
+  Youtube 
 } from 'lucide-react';
 
 const services = {
@@ -104,7 +104,6 @@ const contactInfo = {
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
-      {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
@@ -119,8 +118,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Leading technology solutions provider specializing in AI, cloud services, 
-              and digital transformation. Empowering businesses with innovative technology.
+              Leading technology solutions provider specializing in AI, cloud services, and digital transformation. Empowering businesses with innovative technology.
             </p>
             
             {/* Contact Info */}
@@ -158,7 +156,7 @@ export default function Footer() {
                     {links.slice(0, 3).map((link) => (
                       <li key={link.name}>
                         <Link 
-                          href={link.href}
+                          href={link.href} 
                           className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                         >
                           <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -182,7 +180,7 @@ export default function Footer() {
               {company.map((link) => (
                 <li key={link.name}>
                   <Link 
-                    href={link.href}
+                    href={link.href} 
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -203,7 +201,7 @@ export default function Footer() {
               {resources.map((link) => (
                 <li key={link.name}>
                   <Link 
-                    href={link.href}
+                    href={link.href} 
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -224,7 +222,7 @@ export default function Footer() {
               {legal.map((link) => (
                 <li key={link.name}>
                   <Link 
-                    href={link.href}
+                    href={link.href} 
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -233,7 +231,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-
+            
             {/* Social Links */}
             <div>
               <h4 className="text-sm font-medium text-gray-300 mb-4">Follow Us</h4>
@@ -259,7 +257,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Newsletter Signup */}
+      {/* Newsletter */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -283,7 +281,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      {/* Copyright */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between">

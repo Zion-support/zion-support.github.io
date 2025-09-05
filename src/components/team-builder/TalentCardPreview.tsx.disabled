@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/team-builder/TalentCardPreview.tsx.disabled
 
 interface TalentCardPreviewProps extends React.PropsWithChildren<{}> {
 
@@ -11,3 +12,6 @@ export
     </Card>;
   )};
 "`
+=======
+interface TalentCardPreviewProps extends React.PropsWithChildren<{}> { talent: TalentProfile; onInvite: talentId: string,role: string void; roleTitle: string} export </Card>; )}; "`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/components/team-builder/TalentCardPreview.tsx

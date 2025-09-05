@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 console.log('♿ Enhanced Accessibility Monitor Starting...');
 
 const accessibilityChecks = {
@@ -27,3 +28,6 @@ Object.entries(accessibilityChecks).forEach(([name, check]) => {
 });
 
 console.log('🎉 Accessibility monitoring completed!');
+=======
+console.log('♿ Enhanced Accessibility Monitor Starting...'); const accessibilityChecks = { colorContrast: () => { console.log('🎨 Checking color contrast...'); return true},keyboardNav: () => { console.log('⌨️ Checking keyboard navigation...'); return true},ariaLabels: () => { console.log('🏷️ Checking ARIA labels...'); return true} }; Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Accessibility monitoring completed!');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

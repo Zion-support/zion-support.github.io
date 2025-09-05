@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ProductListing } from '@/types/listings'; export const "INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027": ProductListin g[] = [;","}),"})';';';';
 import { ProductListing } from '@/types/listings'  export const "INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027": ProductListin g[] = [";
 import { ProductListing } from '@/types/listings'  export const "INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027": ProductListin g[] = [;";';';';
@@ -5,3 +6,6 @@ import {ProductListing } from '@/types/listings'  export const "INNOVATIVE_IT_IN
 import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export const "INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027": ProductListin g[] = [;';
 import { ProductListing }  from '@/types/listings';export const "INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027": ProductListin g[] = [;";';';
 ";';';';
+=======
+import { ProductListing } from '@/types/listings'; ; export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListin g[] = [;","}),"})';';';'; import { ProductListing } from '@/types/listings' export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListin g[] = ["; import { ProductListing } from '@/types/listings' export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListin g[] = [;";';';'; import {ProductListing } from '@/types/listings' export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListin g[] = [;";';';'; import { ProductListing } from &apos;@/types/listings&apos;&apos;' export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListin g[] = [;'; import { ProductListing } from '@/types/listings';export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListin g[] = [;";';'; ";';';';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

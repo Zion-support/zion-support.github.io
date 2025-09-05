@@ -1,1 +1,5 @@
+<<<<<<< HEAD:src/components/ResourceManagementSystem.tsx.disabled
 import {  import { motion, AnimatePresence  } from 'framer-motion';';';
+=======
+import { import { motion,AnimatePresence } from 'framer-motion'; ;';';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/components/ResourceManagementSystem.tsx
