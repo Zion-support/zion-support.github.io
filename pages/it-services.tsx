@@ -33,7 +33,10 @@ import {
   BookOpen,
   Brain,
   DollarSign,
-  Rocket
+  Rocket,
+  Sprout,
+  Eye,
+  Bot
 } from 'lucide-react';
 const itServices = [{
     title: 'Cloud Infrastructure Management',

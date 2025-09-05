@@ -1,82 +1,59 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
-const blogPosts = [{
+import MainLayout from '../components/layout/MainLayout';
+
+const blogPosts = [
+  {
     id: 1,
-    title: "The Future of AI in Business: Trends and Predictions for 2024",
-    excerpt: "Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.",
-    author: "Sarah Johnson",
-    date: "2024-01-15",
-    "readTime": "5 min read",
-    tags: ["AI", "Business", "Technology"],
-    image: "/api/placeholder/400/250"
+    title: 'The Future of AI in Business: Trends and Predictions for 2025',
+    excerpt: 'Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.',
+    author: 'Sarah Johnson',
+    date: '2025-01-15',
+    category: 'AI & Technology',
+    readTime: '5 min read',
+    image: '/api/placeholder/600/400'
   },
   {
     id: 2,
-    title: "Micro SaaS: Building Scalable Solutions for Modern Businesses",
-    excerpt: "Learn how micro SaaS applications are revolutionizing software delivery and what it takes to build successful solutions.",
-    author: "Michael Chen",
-    date: "2024-01-10",
-    "readTime": "7 min read",
-    tags: ["SaaS", "Development", "Scalability"],
-    image: "/api/placeholder/400/250"
+    title: 'Micro SaaS: Building Scalable Solutions for Modern Businesses',
+    excerpt: 'Learn how micro SaaS solutions are revolutionizing business operations and creating new opportunities.',
+    author: 'Michael Chen',
+    date: '2025-01-12',
+    category: 'Business',
+    readTime: '7 min read',
+    image: '/api/placeholder/600/400'
   },
   {
     id: 3,
-    title: "Cybersecurity Best Practices for Small and Medium Businesses",
-    excerpt: "Essential security measures every SMB should implement to protect their digital assets and customer data.",
-    author: "Emily Rodriguez",
-    date: "2024-01-05",
-    "readTime": "6 min read",
-    tags: ["Security", "SMB", "Best Practices"],
-    image: "/api/placeholder/400/250"
+    title: 'Cybersecurity Best Practices for Remote Work Environments',
+    excerpt: 'Essential security measures to protect your business data in distributed work environments.',
+    author: 'Emily Rodriguez',
+    date: '2025-01-10',
+    category: 'Security',
+    readTime: '6 min read',
+    image: '/api/placeholder/600/400'
   },
   {
     id: 4,
-    title: "Cloud Migration Strategies: A Complete Guide",
-    excerpt: "Step-by-step guide to successfully migrating your infrastructure to the cloud while minimizing risks and downtime.",
-    author: "David Kim",
-    date: "2023-12-28",
-    "readTime": "8 min read",
-    tags: ["Cloud", "Migration", "Infrastructure"],
-    image: "/api/placeholder/400/250"
-  },
-  {
-    id: 5,
-    title: "The Role of Data Analytics in Digital Transformation",
-    excerpt: "How data analytics is driving digital transformation and helping businesses make data-driven decisions.",
-    author: "Sarah Johnson",
-    date: "2023-12-20",
-    "readTime": "6 min read",
-    tags: ["Analytics", "Digital Transformation", "Data"],
-    image: "/api/placeholder/400/250"
-  },
-  {
-    id: 6,
-    title: "Building Resilient IT Infrastructure for Remote Work",
-    excerpt: "Key considerations for creating IT infrastructure that supports remote and hybrid work environments.",
-    author: "Michael Chen",
-    date: "2023-12-15",
-    "readTime": "5 min read",
-    tags: ["IT Infrastructure", "Remote Work", "Resilience"],
-    image: "/api/placeholder/400/250"
+    title: 'Cloud Infrastructure: Choosing the Right Solution for Your Business',
+    excerpt: 'A comprehensive guide to selecting and implementing cloud infrastructure that scales with your business.',
+    author: 'David Kim',
+    date: '2025-01-08',
+    category: 'Infrastructure',
+    readTime: '8 min read',
+    image: '/api/placeholder/600/400'
   }
 ];
-const categories = [{ name: "AI & Machine Learning", count: 12 },
-  { name: "Cloud Computing", count: 8 },
-  { name: "Cybersecurity", count: 6 },
-  { name: "SaaS Development", count: 10 },
-  { name: "Digital Transformation", count: 7 },
-  { name: "IT Infrastructure", count: 5 }
-];
+
+const categories = ['All', 'AI & Technology', 'Business', 'Security', 'Infrastructure', 'Development'];
+
 export default function BlogPage() {
   return (
-<MainLayout
+    <MainLayout
       title="Blog - Zion Tech Group"
-      description="Insights, trends, and best practices in AI, cloud computing, cybersecurity, and technology solutions."
-      keywords="technology blog, AI insights, cloud computing, cybersecurity, SaaS development, digital transformation"
+      description="Stay updated with the latest insights, trends, and best practices in technology, AI, and business solutions."
+      keywords="blog, technology, AI, business, cybersecurity, cloud, micro SaaS"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -89,16 +66,18 @@ export default function BlogPage() {
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Technology Insights & Trends
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Tech Insights
+                </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Stay updated with the latest insights, trends, and best practices in technology
               </p>
             </motion.div>
           </div>
-        </div>
-      </section>
-{/* Blog Posts Section */}
+        </section>
+
+        {/* Blog Posts Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -108,23 +87,22 @@ export default function BlogPage() {
                   {blogPosts.map((post, index) => (
                     <motion.article
                       key={post.id}
-                      className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
                       initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
                     >
-                      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
+                      <div className="aspect-w-16 aspect-h-9">
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-48 object-cover"
+                        />
+                      </div>
                       <div className="p-6">
-                        <div className="flex flex-wrap gap-2 mb-3">
-                          {post.tags.map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full"
-                            >
-                              {tag}
-                            </span>
-                          ))}
+                        <div className="flex items-center space-x-2 mb-3">
+                          <Tag className="w-4 h-4 text-blue-600" />
+                          <span className="text-sm text-blue-600 font-medium">{post.category}</span>
                         </div>
                         <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                           {post.title}
@@ -133,110 +111,65 @@ export default function BlogPage() {
                           {post.excerpt}
                         </p>
                         <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                          <div className="flex items-center">
-                            <User className="w-4 h-4 mr-1" />
-                            {post.author}
+                          <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-1">
+                              <User className="w-4 h-4" />
+                              <span>{post.author}</span>
+                            </div>
+                            <div className="flex items-center space-x-1">
+                              <Calendar className="w-4 h-4" />
+                              <span>{post.date}</span>
+                            </div>
                           </div>
-                          <div className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-1" />
-                            {new Date(post.date).toLocaleDateString()}
-                          </div>
+                          <span>{post.readTime}</span>
                         </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm text-gray-500">{post.readTime}</span>
-                          <Link
-                            href={`/blog/${post.id}`}
-                            className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center"
-                          >
-                            Read More
-                            <ArrowRight className="w-4 h-4 ml-1" />
-                          </Link>
-                        </div>
+                        <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors">
+                          <span>Read More</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </button>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>{post.date}</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">{post.readTime}</span>
-                      <Link
-                        href={`/blog/${post.id}`}
-                        className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
-                      >
-                        Read More
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-{/* Pagination */}
-                <div className="mt-12 flex justify-center">
-                  <nav className="flex space-x-2">
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
-                      Previous
-                    </button>
-                    <button className="px-3 py-2 bg-blue-600 text-white rounded-md">
-                      1
-                    </button>
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
-                      2
-                    </button>
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
-                      3
-                    </button>
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
-                      Next
-                    </button>
-                  </nav>
+                    </motion.article>
+                  ))}
                 </div>
               </div>
+
               {/* Sidebar */}
               <div className="lg:col-span-1">
-                <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Categories</h3>
-                  <ul className="space-y-2">
-                    {categories.map((category, index) => (
-                      <li key={index}>
-                        <Link
-                          href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
-                          className="flex items-center justify-between text-gray-600 hover:text-blue-600 transition-colors"
-                        >
-                          <span>{category.name}</span>
-                          <span className="text-sm bg-gray-100 px-2 py-1 rounded-full">
-                            {category.count}
-                          </span>
-                        </Link>
-                      </li>
+                <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Categories</h3>
+                  <div className="space-y-2">
+                    {categories.map((category) => (
+                      <button
+                        key={category}
+                        className="block w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+                      >
+                        {category}
+                      </button>
                     ))}
-                  </ul>
+                  </div>
                 </div>
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Newsletter</h3>
+
+                <div className="bg-white rounded-xl shadow-lg p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Newsletter</h3>
                   <p className="text-gray-600 mb-4">
-                    Subscribe to get the latest technology insights delivered to your inbox.
+                    Subscribe to get the latest tech insights delivered to your inbox.
                   </p>
-                  <form className="space-y-3">
+                  <div className="space-y-3">
                     <input
                       type="email"
                       placeholder="Enter your email"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
-                    <button
-                      type="submit"
-                      className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
-                    >
+                    <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
                       Subscribe
                     </button>
-                  </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </MainLayout>
   );
 }

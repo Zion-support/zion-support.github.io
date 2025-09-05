@@ -1,6 +1,6 @@
 import React, { useState, ReactNode } from 'react';
 import Head from 'next/head';
-import { Header } from './Header';
+import Header from './Header';
 import { Sidebar } from './Sidebar';
 import Footer from './Footer';
 interface LayoutProps {
@@ -27,13 +27,13 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
-        <link rel="canonical" href={canonical || 'https: //ziontechgroup.com'} />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
         {/* Open Graph */}
-        <meta property="og: title" content={title} />
-        <meta property="og: description" content={description} />
-        <meta property="og: type" content="website" />
-        <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og: site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         {/* Twitter Card */}

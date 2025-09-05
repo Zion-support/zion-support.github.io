@@ -46,7 +46,8 @@ import {
   Home,
   Trash2,
   Camera,
-  HardDrive
+  HardDrive,
+  Database
 } from 'lucide-react';
 const microSaaSProducts = [{
     title: 'Cloud Cost Guard (FinOps Assistant)',
