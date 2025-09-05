@@ -59,7 +59,6 @@ class ComprehensiveAppImprover {
     for (const file of files) {
       try {
         let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
 
         // Remove unused imports
         content = this.removeUnusedImports(content);
