@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 ;
-<<<<<<< HEAD
-class AutoCommitFixes {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log'); this.startTime = Date.now(); this.commitsMade = 0; this.filesChanged = 0};
-; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
-; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)};
-;
-=======
 class AutoCommitFixes {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -31,7 +21,6 @@ class AutoCommitFixes {;
     } catch (error) {;
       console.error('Error writing to log file:', error.message);
 };
-=======
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
@@ -55,5 +44,3 @@ class AutoCommitFixes {,
     } catch (error) {,
       console.error('Error writing to log file:', error.message),
     };
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
