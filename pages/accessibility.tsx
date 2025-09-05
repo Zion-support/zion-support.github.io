@@ -13,56 +13,6 @@ import {
   FileText,
   Settings
 } from 'lucide-react';
-const accessibilityFeatures = [
-  {
-    title: "Visual Accessibility",
-    description: "Features to support users with visual impairments",
-    icon: Eye,
-    features: [
-      "High contrast color schemes",
-      "Scalable text and interface elements",
-      "Screen reader compatibility",
-      "Alternative text for images",
-      "Keyboard navigation support"
-    ]
-  },
-  {
-    title: "Auditory Accessibility",
-    description: "Support for users with hearing impairments",
-    icon: Ear,
-    features: [
-      "Video captions and transcripts",
-      "Visual indicators for audio cues",
-      "Text-based communication options",
-      "Volume controls and audio descriptions",
-      "Sign language support where applicable"
-    ]
-  },
-  {
-    title: "Motor Accessibility",
-    description: "Features for users with motor impairments",
-    icon: Hand,
-    features: [
-      "Keyboard-only navigation",
-      "Voice control compatibility",
-      "Large click targets",
-      "Customizable interaction timing",
-      "Switch control support"
-    ]
-  },
-  {
-    title: "Cognitive Accessibility",
-    description: "Support for users with cognitive differences",
-    icon: Brain,
-    features: [
-      "Clear and simple language",
-      "Consistent navigation patterns",
-      "Error prevention and recovery",
-      "Progress indicators",
-      "Customizable interface complexity"
-    ]
-  }
-];
 
 const standardsCompliance = [
   {
@@ -278,6 +228,7 @@ export default function AccessibilityPage() {
         {/* Commitment Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
+            <div className="text-center">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
