@@ -33,17 +33,14 @@ import {
   Star,
   CheckCircle,
   ArrowRight,
-  TrendingUp,
   Lightbulb,
   Target,
   Award,
-  Clock,
   DollarSign,
   Trash2,
   Camera,
   HardDrive,
-  Droplets,
-  Calendar
+  Droplets
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -191,14 +188,18 @@ const microSaasServices = [
     marketPrice: '$25-150/month',
     link: '/contact',
     popular: true
-  }
-];
-        'Automated rightsizing recommendations',
-        'Budget forecasting and alerting',
-        'Resource utilization optimization',
-        'Multi-cloud cost comparison',
-        'Executive dashboards and reporting'
-      ],
+  },
+  {
+    icon: BarChart3,
+    name: 'Cloud Cost Optimizer',
+    description: 'AI-powered cloud cost optimization and resource management for businesses.',
+    features: [
+      'Automated rightsizing recommendations',
+      'Budget forecasting and alerting',
+      'Resource utilization optimization',
+      'Multi-cloud cost comparison',
+      'Executive dashboards and reporting'
+    ],
       pricing: '$299 – $1,499/month',
       timeline: '1–2 weeks',
       benefits: [

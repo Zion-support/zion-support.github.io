@@ -476,16 +476,28 @@ const aiServices = [
     marketPrice: '$3,000-6,000/month',
     setupTime: '4-8 weeks',
     targetUsers: 'Schools, Universities, Online education, Corporate training'
-  }
-];
-      timeline: '4–8 weeks',
-      benefits: [
-        '80% reduction in response time',
-        '60% decrease in support costs',
-        '24/7 customer availability',
-        'Improved customer satisfaction scores'
-      ]
-    },
+  },
+  {
+    title: 'AI Customer Support',
+    description: 'Intelligent customer service automation',
+    icon: MessageSquare,
+    features: [
+      'Natural language processing',
+      'Automated ticket routing',
+      'Sentiment analysis',
+      'Multi-language support'
+    ],
+    marketPrice: '$2,000-5,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'E-commerce, SaaS, Customer service teams',
+    timeline: '4–8 weeks',
+    benefits: [
+      '80% reduction in response time',
+      '60% decrease in support costs',
+      '24/7 customer availability',
+      'Improved customer satisfaction scores'
+    ]
+  },
     {
       icon: TrendingUp,
       name: 'Predictive Analytics & Forecasting',

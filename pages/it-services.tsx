@@ -245,19 +245,31 @@ const itServices = [
     marketPrice: '$6,000 - $20,000/month',
     link: 'https://ziontechgroup.com/itsm',
     popular: false
-  }
-];
-      pricing: '$120 – $220/hour',
-      projectPricing: '$6,000 – $30,000/project',
-      timeline: '2–8 weeks',
-      benefits: [
-        '99.9% uptime guarantee',
-        'Automated deployment processes',
-        'Reduced infrastructure costs',
-        'Improved system reliability'
-      ],
-      category: 'Cloud & Infrastructure'
-    },
+  },
+  {
+    title: 'DevOps & CI/CD',
+    description: 'Streamlined development and deployment processes',
+    icon: Settings,
+    features: [
+      'Automated testing and deployment',
+      'Infrastructure as code',
+      'Monitoring and logging',
+      'Container orchestration'
+    ],
+    marketPrice: '$8,000 - $25,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Development teams, IT operations, Software companies',
+    pricing: '$120 – $220/hour',
+    projectPricing: '$6,000 – $30,000/project',
+    timeline: '2–8 weeks',
+    benefits: [
+      '99.9% uptime guarantee',
+      'Automated deployment processes',
+      'Reduced infrastructure costs',
+      'Improved system reliability'
+    ],
+    category: 'Cloud & Infrastructure'
+  },
     {
       icon: Shield,
       name: 'Cybersecurity Hardening & SOC',
