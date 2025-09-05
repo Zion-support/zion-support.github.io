@@ -35,6 +35,7 @@ export const useApi = ("props": "any) => {;
   const execute = async () => {;
     setLoading(true);
     setError(null);
+<<<<<<< HEAD
     ;
     try {;
       const response = await fetch(url, {;
@@ -45,6 +46,19 @@ export const useApi = ("props": "any) => {;
       ;
       if (!response.ok) {;
         throw new Error(\`HTTP error! "status": "\${response.status"}\`);
+=======
+    
+    try {
+      const response = await fetch(url, {
+        method: options.method || 'GET',
+        headers: options.headers,
+        body: options.body ? JSON.stringify(options.body) : undefined,
+      }
+    );
+      
+      if (!response.ok) {
+        throw new Error(\`HTTP error! status: \${response.status}\`);
+>>>>>>> main
       }
       const result = await response.json();
       setData(result);
@@ -175,6 +189,7 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
     const matchesLanguage = selectedLanguage === 'all' || snippet.language === selectedLanguage;
     const matchesComplexity = selectedComplexity === 'all' || snippet.complexity === selectedComplexity;
     return matchesSearch && matchesLanguage && matchesComplexity;
+<<<<<<< HEAD
   });
 ;
   const copyToClipboard = ("props": "any) => {navigator.clipboard.writeText(code);"};
@@ -182,6 +197,16 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">;
       <div className="container mx-auto px-4">;
+=======
+  }
+    );
+
+  const copyToClipboard = (props: any) => {navigator.clipboard.writeText(code);};
+
+  return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+      <div className="container mx-auto px-4">
+>>>>>>> main
         {/* Header */}
         <div className="text-center mb-12">;
           <h1 className="text-4xl "md": "text-5xl font-bold text-white mb-6">;
@@ -230,6 +255,7 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
         </div>;
 
         {/* Code Snippets Grid */}
+<<<<<<< HEAD
         <div className="grid grid-cols-1 "lg": "grid-cols-2 gap-6">;
           {filteredSnippets.map((snippet) => (;
             <div;
@@ -249,6 +275,27 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
                       snippet.complexity === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :;
                       'bg-red-500/20 text-red-400';
                     "}`}>;
+=======
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {filteredSnippets.map((snippet) => (
+            <div
+              key={snippet.id}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-300 cursor-pointer"
+              onClick={() => setSelectedSnippet(snippet)}
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-purple-500/20 rounded-lg">
+                    <Code className="w-6 h-6 text-purple-400"  />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{snippet.title}
+                    <span className={`px-2 py-1 text-xs rounded-full ${
+                      snippet.complexity === 'low' ? 'bg-green-500/20 text-green-400' :
+                      snippet.complexity === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                      'bg-red-500/20 text-red-400'
+                    }`}>
+>>>>>>> main
                       {snippet.complexity}
                     </span>;
                   </div>;
@@ -298,6 +345,7 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
         </div>;
 
         {/* AI Features Section */}
+<<<<<<< HEAD
         <div className="mt-12">;
           <h2 className="text-3xl font-bold text-white mb-6 text-center">;
             AI-Powered Code Generation Features;
@@ -392,6 +440,102 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
   );
 "};
 ;
+=======
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold text-white mb-6 text-center">
+            AI-Powered Code Generation Features
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Brain className="w-6 h-6 text-purple-400"  />
+                <h3 className="text-xl font-semibold text-white">Smart Code Generation
+              </div>
+              <p className="text-gray-300 mb-4">
+                Generate context-aware code snippets based on your requirements and coding patterns.
+              </p>
+              <div className="space-y-2">
+                <div className="text-sm text-gray-300">
+                  • Context-aware suggestions
+                </div>
+                <div className="text-sm text-gray-300">
+                  • Pattern recognition
+                </div>
+                <div className="text-sm text-gray-300">
+                  • Best practices integration
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Sparkles className="w-6 h-6 text-yellow-400"  />
+                <h3 className="text-xl font-semibold text-white">Code Optimization
+              </div>
+              <p className="text-gray-300 mb-4">
+                Automatically optimize your code for performance, readability, and maintainability.
+              </p>
+              <div className="space-y-2">
+                <div className="text-sm text-gray-300">
+                  • Performance optimization
+                </div>
+                <div className="text-sm text-gray-300">
+                  • Code refactoring
+                </div>
+                <div className="text-sm text-gray-300">
+                  • Security improvements
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Zap className="w-6 h-6 text-blue-400"  />
+                <h3 className="text-xl font-semibold text-white">Instant Generation
+              </div>
+              <p className="text-gray-300 mb-4">
+                Get production-ready code snippets instantly with comprehensive documentation.
+              </p>
+              <div className="space-y-2">
+                <div className="text-sm text-gray-300">
+                  • Real-time generation
+                </div>
+                <div className="text-sm text-gray-300">
+                  • Documentation included
+                </div>
+                <div className="text-sm text-gray-300">
+                  • Multiple formats
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Generate Amazing Code?
+            </h2>
+            <p className="text-xl text-purple-100 mb-6">
+              Start generating intelligent code snippets today and boost your development productivity.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Start Generating
+              </button>
+              <button className="px-8 py-3 border border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                View Examples
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    );
+};
+
+>>>>>>> main
 export default AdvancedAICodeGenerator;
 ;
 </string>

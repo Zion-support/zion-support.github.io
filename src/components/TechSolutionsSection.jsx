@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 ;
@@ -38,6 +39,48 @@ export default function Page("props": "any) {;
         "rating": "4.8",;
         "projects": "250",;
         "category": 'Mobile'}
+=======
+import React from 'react';
+
+interface TechSolutionsSection.jsProps {
+  // Add props here as needed
+}
+
+<<<<<<< HEAD
+        id: 'iot-solutions',
+        title: 'IoT Solutions',
+        description: 'Connected devices and smart systems for the modern world',"
+        icon: <Cpu className="w-8 h-8" />,
+        color: 'from-zion-cyan to-zion-purple',
+        bgColor: 'from-zion-cyan/20 to-zion-purple/20',
+        features = ['
+            'Device connectivity management',Real-time monitoring',Data collection & analysis',Remote control systems',Predictive maintenance'
+        ],
+        benefits = ['
+            'Monitor assets in real-time',Reduce maintenance costs by 30%',Improve operational efficiency'
+        ],
+        useCases['Manufacturing',Smart Cities',Agriculture',Healthcare'],
+        rating: 4.6,
+        projects: 90,
+        category: 'Connected Devices'
+    },
+    {id: 'mobile-apps',
+        title: 'Mobile Applications',
+        description: 'Native and cross-platform mobile solutions for all devices',"
+        icon: <Smartphone className="w-8 h-8" />,
+        color: 'from-zion-purple to-zion-cyan',
+        bgColor: 'from-zion-purple/20 to-zion-cyan/20',
+        features = ['
+            'iOS & Android development',Cross-platform solutions',UI/UX design',Performance optimization',App store deployment'
+        ],
+        benefits = ['
+            'Reach customers on all devices',Improve user engagement',Increase brand visibility'
+        ],
+        useCases['Retail',Entertainment',Education',Healthcare'],
+        rating: 4.8,
+        projects: 250,
+        category: 'Mobile'}
+>>>>>>> main
 ];
 const industries = ['";
     {"name": 'Healthcare', "icon": "<Shield className="w-5 h-5" />", "projects": "80"},";
@@ -160,9 +203,15 @@ const industries = ['";
                     </div>;
                   </div>;
 
+<<<<<<< HEAD
                   <h3 className="text-2xl font - bold text-white mb-3 group - "hover": "text-zion - cyan transition -colors">                    {solution.title"}
                   </h3>";
                   <p className="text-zion-slate-light leading-relaxed mb-4">;
+=======
+                  <h3 className="text-2xl font - bold text-white mb-3 group - hover:text-zion - cyan transition -colors">                    {solution.title}
+                  "
+                  <p className="text-zion-slate-light leading-relaxed mb-4">
+>>>>>>> main
                     {solution.description}
                   </p>;
 
@@ -276,6 +325,7 @@ const industries = ['";
   { "duration": "0.6",;
   "delay": "0.5;
 
+<<<<<<< HEAD
 "}}>";
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">";
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">";
@@ -306,3 +356,45 @@ const industries = ['";
 </motion>;
 </motion>;
 </motion>
+=======
+}}>"
+          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">"
+            <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">"
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Ready to Transform Your Business?
+              "
+              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+                Let our technology experts help you implement the right solutions for your business needs.</p>"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                  Schedule Consultation
+                </button>"
+                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+                  View Case Studies
+                </button>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>)}
+'"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+=======
+export default function TechSolutionsSection.js({ }: TechSolutionsSection.jsProps) {
+  return (
+    <div>
+      <h1>TechSolutionsSection.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main
+>>>>>>> main

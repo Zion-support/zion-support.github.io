@@ -79,6 +79,7 @@ export function ServiceTypeStep("props": "any) {;
                 return false}
         if (searchQuery.trim() === "");
             return true;
+<<<<<<< HEAD
         return item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
             item.category.toLowerCase().includes(searchQuery.toLowerCase())});
     return (<div className="space-y-6">;
@@ -91,6 +92,22 @@ export function ServiceTypeStep("props": "any) {;
             <h4 className="font-medium text-white">Services</h4>;
             <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>;
           </Card>;
+=======
+        return item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.category.toLowerCase().includes(searchQuery.toLowerCase())}
+    );
+    return (
+        <div className="space-y-6">
+      <div>
+        <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Card className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "service"
+            ? "bg-zion-purple/20 border-zion-purple"
+            : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"}`} onClick={() => handleTypeSelect("service")}>
+            <h4 className="font-medium text-white">Services</h4>
+            <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>
+          </Card>
+>>>>>>> main
 
           <Card className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "talent";
             ? "bg-zion-purple/20 border-zion-purple";
@@ -108,8 +125,13 @@ export function ServiceTypeStep("props": "any) {;
         </div>;
       </div>;
 
+<<<<<<< HEAD
       {formData.serviceType && (<div className="space-y-4">;
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>;
+=======
+      {formData.serviceType && (<div className="space-y-4">
+          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}
+>>>>>>> main
 
           <div className="relative">;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;

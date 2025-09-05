@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import * as SeparatorPrimitive from "@radix-ui/react-separator";
 import { cn  } from "../../utils/cn";
@@ -37,3 +38,18 @@ export { Separator };
 </SeparatorPrimitive>;
 </typeof>;
 </typeof>
+=======
+<<<<<<< HEAD
+export { Separator }
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+<<<<<<< HEAD
+
+=======
+export { Separator }
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

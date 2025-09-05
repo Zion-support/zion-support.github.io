@@ -61,6 +61,7 @@ export default function Page("props": "any) {;
       "status": 'coming-soon';
     }
   ];
+<<<<<<< HEAD
 ;
     return matchesCategory && matchesSearch});
 ;
@@ -72,6 +73,21 @@ export default function Page("props": "any) {;
   });
 ;
       case 'beta': ";
+=======
+
+    return matchesCategory && matchesSearch}
+    );
+
+      case 'price':
+        return a.pricing.starter - b.pricing.starter;
+      case 'popularity':
+        return 0; // Default sorting
+      default: return 0}
+  }
+    );
+
+      case 'beta':
+>>>>>>> main
         return 'bg-yellow-100 text-yellow-800';
       case 'coming-soon':;
         return 'bg-gray-100 text-gray-800';
@@ -93,10 +109,21 @@ export default function Page("props": "any) {;
   { "opacity": "0",;
   "y": "2 0;
 
+<<<<<<< HEAD
 "}}
           animate = {;
   { "opacity": "1",;
   "y": "0;
+=======
+  return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+        {/* Header */}
+        <motion.div
+          initial = {
+  { opacity: 0,
+  y: 2 0
+>>>>>>> main
 
 "}}
           className="text-center mb-16";

@@ -41,6 +41,7 @@ export default function ApiKeysManager("props": "any) {"}
   -H ""Authorization": Bearer ${apiKey"}" \\"`"`;
   -H "Content-"Type": "application/json"`"};
     if(loading) {}
+<<<<<<< HEAD
 """;
 """";
         return (<div className="flex items-center justify-center p-8">"""";
@@ -53,6 +54,22 @@ export default function ApiKeysManager("props": "any) {"}
           <p className="text-zinc-400">Manage your API keys for accessing Zion Tech Group APIs</p>""";
         </div>"""";
         <Button onClick={() => setShowCreateDialog(true)} className="bg-zion-cyan "hover": "bg-zion-cyan-light text-zinc-900">;
+=======
+"""
+""""
+        return (
+        <div className="flex items-center justify-center p-8">""""
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zion-cyan"></div>"""
+      </div>)}""""
+    return (
+        <div className="space-y-6">""""
+      <div className="flex items-center justify-between">"""
+        <div>""""
+          <h2 className="text-2xl font-bold text-white">API Keys</h2>""""
+          <p className="text-zinc-400">Manage your API keys for accessing Zion Tech Group APIs</p>"""
+        </div>""""
+        <Button onClick={() => setShowCreateDialog(true)} className="bg-zion-cyan hover:bg-zion-cyan-light text-zinc-900">
+>>>>>>> main
           Create New API Key;
         </Button>;
       </div>;
@@ -89,6 +106,7 @@ export default function ApiKeysManager("props": "any) {"}
             </Button>"""";
             <Button onClick={handleCreateKey"} className="bg-zion-cyan "hover": "bg-zion-cyan-light text-zinc-900">;
               Create Key;
+<<<<<<< HEAD
             </Button>;
           </DialogFooter>;
         </DialogContent>;
@@ -120,6 +138,39 @@ export default function ApiKeysManager("props": "any) {"}
                   <span className={`px-2 py-1 text-xs rounded-full ${apiKey.isActive''`;
                 ? 'bg-green-900/30 text-green-400 border border-green-500/30''`'`;
                 : 'bg-red-900/30 text-red-400 border border-red-500/30'}`}>';
+=======
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+"""
+      {/* New API Key Display */}""""
+      {newApiKey && (<div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">""""
+          <h3 className="text-green-400 font-semibold mb-2">New API Key Created!""""
+          <p className="text-green-300 text-sm mb-3">'
+            Copy this key now. You won't be able to see it again."""
+          </p>""""
+          <CodeBlock code={newApiKey} className="mb-3" />""""
+          <div className="space-y-2">""""
+            <p className="text-green-300 text-sm font-medium">Example Usage:</p>""""
+            <CodeBlock code={getExampleCode(newApiKey)} language="bash" />"""
+          </div>""""
+          <Button onClick={clearNewApiKey} className="mt-3 bg-green-600 hover:bg-green-700">'
+            I've Copied the Key;
+          </Button>
+        </div>)}
+"""
+      {/* API Keys List */}""""
+      <div className="space-y-4">""""
+        {apiKeys.map((apiKey) => (<div key={apiKey.id} className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">""""
+            <div className="flex items-center justify-between">""""
+              <div className="flex-1">""""
+                <div className="flex items-center gap-3 mb-2">""`
+                  <h3 className="text-white font-semibold">{apiKey.name}`'`
+                  <span className={`px-2 py-1 text-xs rounded-full ${apiKey.isActive''`
+                ? 'bg-green-900/30 text-green-400 border border-green-500/30''`'`
+                : 'bg-red-900/30 text-red-400 border border-red-500/30'}`}>'
+>>>>>>> main
                     {apiKey.isActive ? 'Active' : 'Inactive'}
                   </span>;
                 </div>""";

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import {motion} from 'framer-motion';
 ;
 export default function Page("props": "any) {;
@@ -35,8 +36,24 @@ export default function Page("props": "any) {;
       <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>'";
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style="{{{ "animationDelay": '1s'}}"}></div>;
 ";
+=======
 
+interface HomepagePromotion.jsProps {
+  // Add props here as needed
+}
+>>>>>>> main
+
+export default function HomepagePromotion.js({ }: HomepagePromotion.jsProps) {
+  return (
+    <div>
+      <h1>HomepagePromotion.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
+<<<<<<< HEAD
 export default Component;
 
 </section>
+=======
+}
+>>>>>>> main

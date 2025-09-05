@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 export type ContractFormValues = z.infer<typeof formSchema>; interface ContractFormProps {;
  "talent": "TalentProfil e; "clientName": string; initialValues?: ContractFormValues; onFormValuesChange?: ("values": ContractFormValue s) => void; "onContractGenerated": ("contractContent": string) => void; deployOptions?: DeploymentOptions; onDeployOptionsChange?: ("options": DeploymentOption s) => void  ;
 "} export function ContractForm("props": "any) {;
 
 </typeof>"
+=======
+<<<<<<< HEAD
+module.exports = type ContractFormValues = z.infer<typeof formSchema>; interface ContractFormProps { talent: TalentProfil e; clientName: string; initialValues?: ContractFormValues; onFormValuesChange?: (values: ContractFormValue s) => void; onContractGenerated: (contractContent: string) => void; deployOptions?: DeploymentOptions; onDeployOptionsChange?: (options: DeploymentOption s) => void } export function ContractForm($1) { </typeof>
+=======
+export type ContractFormValues = z.infer<typeof formSchema>; interface ContractFormProps { talent: TalentProfil e; clientName: string; initialValues?: ContractFormValues; onFormValuesChange?: (values: ContractFormValue, s) => void; onContractGenerated: (contractContent: string) => void; deployOptions?: DeploymentOptions; onDeployOptionsChange?: (options: DeploymentOption, s) => void } export function ContractForm(_) { </typeof>
+>>>>>>> main
+>>>>>>> main

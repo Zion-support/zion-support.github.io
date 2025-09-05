@@ -65,6 +65,7 @@ export function CaseStudiesSection("props": any) {;
                 <div>";
                   <h3 className="text-xl font-bold text-gray-900">;
                     {study.comp}
+<<<<<<< HEAD
                   </h3>";
                   <p className="text-gray-600 text-sm">{study.industry}</p>;
                 </div>;
@@ -83,6 +84,26 @@ export function CaseStudiesSection("props": any) {;
                 <ul className="space-y-2">;
                   {study.results.map((result", resultIndex) => (";
                     <li key={resultIndex} className="flex items-center text-sm text-gray-700">";
+=======
+                  "
+                  <p className="text-gray-600 text-sm">{study.industry}</p>
+                </div>
+              </div>
+"
+              <div className="mb-6">"
+                <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>"
+                <p className="text-gray-600 text-sm mb-4">{study.challenge}</p>
+"
+                <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>"
+                <p className="text-gray-600 text-sm">{study.solution}</p>
+              </div>
+"
+              <div className="mb-6">"
+                <h4 className="font-semibold text-gray-900 mb-3">Results:</h4>"
+                <ul className="space-y-2">
+                  {study.results.map((result, resultIndex) => ("
+                    <li key={resultIndex} className="flex items-center text-sm text-gray-700">"
+>>>>>>> main
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"   />                      {result}
                     </li>) ) }
                 </ul>;
@@ -117,6 +138,7 @@ export function CaseStudiesSection("props": any) {;
   { "duration": "0.6",;
   "delay": "0.4;
 
+<<<<<<< HEAD
 "}}
         >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">";
@@ -130,6 +152,21 @@ export function CaseStudiesSection("props": any) {;
               <Link ";
                 to="/contact";
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 "hover": b g-gray-100 rounded-lg font-medium transition-colors duration-200";
+=======
+}}
+        >"
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Write Your Success Story?
+            "
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Join hundreds of satisfied clients who have transformed their
+              businesses with our innovative technology solutions.</p>"
+            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <Link "
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200"
+>>>>>>> main
 
                 Start Your Project";
                 <TrendingUp className="ml-2 h-5 w-5"    />;

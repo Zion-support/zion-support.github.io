@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-09-05T01:58:30.248Z",
+  "results": [
+    {
+      "name": "Unit Tests",
+      "status": "failed",
+      "error": "Command failed: npm run test:unit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"test:unit\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-05T01_58_20_100Z-debug-0.log\n"
+    },
+    {
+      "name": "Integration Tests",
+      "status": "failed",
+      "error": "Command failed: npm run test:integration\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"test:integration\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-05T01_58_20_199Z-debug-0.log\n"
+    },
+    {
+      "name": "E2E Tests",
+      "status": "failed",
+      "error": "Command failed: npm run test:e2e\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"test:e2e\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-05T01_58_20_279Z-debug-0.log\n"
+    },
+    {
+      "name": "Smoke Tests",
+      "status": "passed",
+      "output": "\n> ziontechgroup-site@1.0.0 test:smoke\n> jest --config jest.config.smoke.cjs\n\n"
+    },
+    {
+      "name": "Lint Tests",
+      "status": "failed",
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:7121) ESLintEmptyConfigWarning: Running ESLint with an empty config (from /workspace/eslint.config.js). Please double-check that this is what you want. If you want to run ESLint with an empty config, export [{}] to remove this warning.\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.34.0\n\nError: ENOENT: no such file or directory, open '/workspace/scripts/pm2/git-workflow.js'\n    at async open (node:internal/fs/promises:633:25)\n    at async Object.readFile (node:internal/fs/promises:1237:14)\n    at async readAndVerifyFile (/workspace/node_modules/eslint/lib/eslint/eslint-helpers.js:1305:16)\n"
+    },
+    {
+      "name": "Type Check",
+      "status": "failed",
+      "error": "spawnSync /bin/sh ENOBUFS"
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 1,
+    "failed": 5
+  }
+}

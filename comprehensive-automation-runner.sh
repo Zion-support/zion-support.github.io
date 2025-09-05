@@ -35,7 +35,7 @@ info() {
 }
 
 print_header "🚀 Comprehensive Automation Runner for Zion Tech Group"
-echo "=============================================================="
+echo "======"
 echo
 
 # Create logs directory
@@ -79,7 +79,7 @@ run_optional() {
 
 echo ""
 echo "🔧 Phase 1: System Health & Dependencies"
-echo "========================================"
+echo "====="
 
 # Install dependencies
 run_with_log "Dependency Installation" "npm install"
@@ -89,7 +89,7 @@ run_with_log "Git Status Check" "git status"
 
 echo ""
 echo "🔧 Phase 2: Fix Syntax Errors"
-echo "============================="
+echo "="
 
 # Fix syntax errors in components
 info "Fixing syntax errors in components..."
@@ -99,7 +99,7 @@ run_optional "Build Test" "npm run build"
 
 echo ""
 echo "🔧 Phase 3: Run Automation Scripts"
-echo "=================================="
+echo "======"
 
 # Run existing automation scripts
 run_optional "Master Automation Orchestrator" "node scripts/master-automation-orchestrator.cjs"
@@ -109,7 +109,7 @@ run_optional "Code Quality Monitor" "node scripts/code-quality-monitor.cjs"
 
 echo ""
 echo "🔧 Phase 4: Create Additional Automation Scripts"
-echo "==============================================="
+echo "====="
 
 # Create enhanced automation scripts
 info "Creating additional automation scripts..."
@@ -252,7 +252,7 @@ success "Additional automation scripts created"
 
 echo ""
 echo "🔧 Phase 5: Test All Automations"
-echo "==============================="
+echo "==="
 
 # Test the new scripts
 run_optional "Comprehensive Health Check" "node scripts/comprehensive-health-check.cjs"
@@ -261,7 +261,7 @@ run_optional "Deployment Automator" "node scripts/deployment-automator.cjs"
 
 echo ""
 echo "🔧 Phase 6: Git Operations"
-echo "========================="
+echo "===="
 
 # Check for merge conflicts and resolve them
 info "Checking for merge conflicts..."
@@ -290,7 +290,7 @@ fi
 
 echo ""
 echo "🔧 Phase 7: Commit and Push Changes"
-echo "=================================="
+echo "======"
 
 # Add all changes
 run_with_log "Add Changes" "git add ."
@@ -303,7 +303,7 @@ run_with_log "Push Changes" "git push origin $CURRENT_BRANCH"
 
 echo ""
 echo "🔧 Phase 8: Create Pull Request"
-echo "=============================="
+echo "=="
 
 # Create a pull request (if using GitHub CLI)
 if command -v gh &> /dev/null; then
@@ -315,7 +315,7 @@ fi
 
 echo ""
 echo "🎉 Comprehensive Automation Complete!"
-echo "===================================="
+echo "="
 echo
 echo "📊 Summary:"
 echo "- ✅ Dependencies installed"

@@ -30,10 +30,18 @@ export function CollaborationPlatform("props": "any) {;
   const [participants, setParticipants] = useState(mockParticipants);
   const [localUser, setLocalUser] = useState({;
 
+<<<<<<< HEAD
     "isVideoOn": "true",;
     "isAudioOn": "true",;
     "isScreenSharing": "false",;
     "isMuted": "false"});
+=======
+    isVideoOn: true,
+    isAudioOn: true,
+    isScreenSharing: false,
+    isMuted: false}
+    );
+>>>>>>> main
   const [activeChat, setActiveChat] = useState(false);
   const [chatMessages, setChatMessages] = useState([{"id": '1',;
       "user": 'John Smith',;

@@ -10,6 +10,7 @@ import {useToast} from '@/hooks/use-toast';
 const WIZARD_STEPS = [1, 2, 3];
 function StepIndicator("props": "any) {;
     const progress = (step / WIZARD_STEPS.length) * 100;
+<<<<<<< HEAD
     return (<div className="space-y-1">;
       <div data-testid="step-indicator" className="text-sm text-muted-foreground">;
         {step"}/{WIZARD_STEPS.length}
@@ -17,6 +18,16 @@ function StepIndicator("props": "any) {;
       <div className="h-1 bg-zion-blue-light rounded">;
         <div className="h-1 bg-zion-purple rounded" style="{{{ "width": "`${progress"}}"%` }} />;
       </div>;
+=======
+    return (
+        <div className="space-y-1">
+      <div data-testid="step-indicator" className="text-sm text-muted-foreground">
+        {step}/{WIZARD_STEPS.length}
+      </div>
+      <div className="h-1 bg-zion-blue-light rounded">
+        <div className="h-1 bg-zion-purple rounded" style="{{{ width: `${progress}}"%` }} />
+      </div>
+>>>>>>> main
     </div>)}
 export function QuoteWizard("props": "any) {;
     const [step", setStep] = useState(1);
@@ -54,8 +65,14 @@ export function QuoteWizard("props": "any) {;
         if (!selectedItemId);
             return;
         let endpoint = '/api/quotes';
+<<<<<<< HEAD
         const payload = { "user_message": "message "};
         switch (category) {case 'services': ";
+=======
+        const payload = { user_message: message };
+        switch (filterType) {
+            case 'services':
+>>>>>>> main
                 endpoint = '/api/services/quotes';
                 payload.service_id = selectedItemId;
                 break;
@@ -69,6 +86,7 @@ export function QuoteWizard("props": "any) {;
                 break;
             "default":;
                 payload.item_id = selectedItemId;
+<<<<<<< HEAD
                 payload.category = category"}
         await fetch(endpoint, {;
             "method": 'POST',;
@@ -81,6 +99,22 @@ export function QuoteWizard("props": "any) {;
         <StepIndicator step={step} />;
         {loading && !delayedError && (<div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-4" data-testid="loading-indicator">;
             {Array.from({ "length": 6 "}).map((_, i) => (<Skeleton key={i} className="h-[120px] w-full" />))}
+=======
+                payload.category = category}
+        await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        }
+    );
+        setStep(3)};
+    if (step === 1) {
+        return (
+        <div className="space-y-6">
+        <StepIndicator step={step} />
+        {loading && !delayedError && (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-testid="loading-indicator">
+            {Array.from({ length: 6 }).map((_, i) => (<Skeleton key={i} className="h-[120px] w-full" />))}
+>>>>>>> main
           </div>)}
 ;
         {delayedError && (<div className="space-y-2" data-testid="fetch-error-alert">;
@@ -124,11 +158,20 @@ export function QuoteWizard("props": "any) {;
           Continue;
         </Button>;
       </div>)}
+<<<<<<< HEAD
     if (step === 2) {;
         return (<div data-testid="details-step" className="space-y-4">;
         <StepIndicator step={step} />;
         {selectedItem && (<div data-testid="selected-item-name" className="text-lg font-semibold text-zion-slate-dark">;
             Selected {category === 'services' ? 'Service' : "category === 'talent' ? 'Talent' : 'Item'"}: "{selectedItem.name"}
+=======
+    if (step === 2) {
+        return (
+        <div data-testid="details-step" className="space-y-4">
+        <StepIndicator step={step} />
+        {selectedItem && (<div data-testid="selected-item-name" className="text-lg font-semibold text-zion-slate-dark">
+            Selected {category === 'services' ? 'Service' : category === 'talent' ? 'Talent' : 'Item'}: {selectedItem.name}
+>>>>>>> main
           </div>)}
         {selectedItem && selectedItem.price !== null && (<div className="text-md text-muted-foreground">;
              "Price": "${selectedItem.price.toFixed(2)"}
@@ -139,6 +182,7 @@ export function QuoteWizard("props": "any) {;
           <Button onClick={handleSubmit} disabled={!selectedItemId}>Submit Quote</Button>;
         </div>;
       </div>)}
+<<<<<<< HEAD
     if (step === 3) {;
         return (<div data-testid="success-step" className="space-y-4 text-center py-12">;
         <StepIndicator step={step} />;
@@ -147,6 +191,17 @@ export function QuoteWizard("props": "any) {;
           Thank you for your request regarding {selectedItem?.name || 'the selected item'}. We will get back to you shortly.;
         </p>;
         <Button onClick={() => {;
+=======
+    if (step === 3) {
+        return (
+        <div data-testid="success-step" className="space-y-4 text-center py-12">
+        <StepIndicator step={step} />
+        <div className="text-2xl font-semibold text-green-600">Quote Submitted Successfully!</div>
+        <p className="text-muted-foreground">
+          Thank you for your request regarding {selectedItem?.name || 'the selected item'}. We will get back to you shortly.
+        </p>
+        <Button onClick={() => {
+>>>>>>> main
                 setStep(1);
                 setSelectedItemId(null);
                 setMessage('')}}>;

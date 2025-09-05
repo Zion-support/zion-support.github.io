@@ -19,12 +19,22 @@ export default function Page("props": "any) {;
       links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
     setReport({;
 
+<<<<<<< HEAD
       totalLinks,;
       healthyLinks,;
       brokenLinks,;
       externalLinks,;
       "averageResponseTime": "avgResponseTime",;
       "lastUpdated": "new Date()"});
+=======
+      totalLinks,
+      healthyLinks,
+      brokenLinks,
+      externalLinks,
+      averageResponseTime: avgResponseTime,
+      lastUpdated: new Date()}
+    );
+>>>>>>> main
   };
   const startMonitoring = async () => {setIsMonitoring(true);
     // Simulate link checking;
@@ -59,9 +69,16 @@ export default function Page("props": "any) {;
     }
   };
   const filteredLinks = linkStatuses.filter(link => {if (selectedFilter === 'all') return true;
+<<<<<<< HEAD
     return link.status === selectedFilter;});
   return ();
     <>;
+=======
+    return link.status === selectedFilter;}
+    );
+  return ()
+    <>
+>>>>>>> main
       {/* Floating Action Button */}
       <motion.button;
         onClick={() => setIsOpen(true)}";
@@ -272,6 +289,7 @@ export default function Page("props": "any) {;
                 </div>;
               </div>;
 
+<<<<<<< HEAD
               {/* Recommendations */}";
               <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">";
                 <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">";
@@ -287,6 +305,23 @@ export default function Page("props": "any) {;
               </div>;
             </div>;
           </motion.div>;
+=======
+              {/* Recommendations */}"
+              <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">"
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">"
+                  <AlertTriangle className="w-5 h-5 mr-2"  />
+                  Recommendations
+                "
+                <ul className="text-yellow-200 text-sm space-y-1">
+                  <li>• Fix broken LinkedIn and social media links</li>
+                  <li>• Implement proper redirects for moved pages</li>
+                  <li>• Set up automated link monitoring</li>
+                  <li>• Review external link validity regularly</li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+>>>>>>> main
 </motion.div>)}
     </>)};
 export default LinkHealthMonitor;

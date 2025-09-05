@@ -2,12 +2,22 @@ import React, {useState, useCallback, useEffect, useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles} from 'lucide-react';
 ;
+<<<<<<< HEAD
 export const AIChatbot = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});
     const [isOpen, setIsOpen] = useState(false);';
     const [isMinimized, setIsMinimized] = useState(false);'';
     const [messages, setMessages] = useState([]);''';
+=======
+export const AIChatbot = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true,
+        enableUserBehaviorTracking: true;}
+    );
+    const [isOpen, setIsOpen] = useState(false);'
+    const [isMinimized, setIsMinimized] = useState(false);''
+    const [messages, setMessages] = useState([]);'''
+>>>>>>> main
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
@@ -197,6 +207,7 @@ await new Promise(resolve => setTimeout(resolve, responseDelay));
         // comment;
         return "I understand you&apos;re asking about " + userInput + ". Let me help you better. Could you provide more details about what you&apos;re looking for?"}, [responseDelay]);
 }
+<<<<<<< HEAD
         // comment;
 if (input.includes(&apos;service&apos) || input.includes(&apos;offer&apos)) {";
             return &quot;We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?"}";
@@ -210,6 +221,81 @@ if (input.includes(&apos;service&apos) || input.includes(&apos;offer&apos)) {";
         if (input.includes("experience") || input.includes("portfolio") || input.includes("work")) {return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?";
         if (input.includes(&apos;quote&apos) || input.includes(&apos;price&apos) || input.includes(&apos;cost&apos)) {";
             return &quot;I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";
+=======
+        return message}, [addMessage, trackChatbotInteraction])
+}
+    // comment
+        const message = addMessage({"
+            type: "bot", content,
+            metadata}
+    );"
+        // comment
+        trackChatbotInteraction("bot_response", {messageId: message.id,
+            intent: metadata?.intent, confidence: metadata?.confidence})
+}
+        return message}, [addMessage, trackChatbotInteraction])
+}
+        return message}, [addMessage, trackChatbotInteraction])
+}
+    // comment
+const simulateAIProcessing = useCallback(async (userInput) => {// comment
+const simulateAIProcessing = useCallback(async (userInput) => {
+        // comment
+await new Promise(resolve => setTimeout(resolve, responseDelay))
+}
+        // comment
+
+        const input = userInput.toLowerCase()
+}
+        // comment
+        if (input.includes("service") || input.includes("offer")) {"
+            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";"}"
+        if (input.includes("quote") || input.includes("price") || input.includes("cost")) {"
+            return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate."}"
+        if (input.includes("contact") || input.includes("phone") || input.includes("email")) {"
+            return "You can reach us at: "
+📧 kleber@ziontechgroup.com\
+📞 +1 (302) 464-0950\
+🌐 http,"
+    s: // comment
+        if (input.includes("technology") || input.includes("tech") || input.includes("stack")) {"
+            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";"
+        }"
+        if (input.includes("experience") || input.includes("portfolio") || input.includes("work")) {"
+            return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?"}"
+        // comment
+        return "I understand you&apos;re asking about "" + userInput + ". Let me help you better. Could you provide more details about what you&apos;re looking for?";"
+        // comment
+        if (input.includes("service") || input.includes("offer")) {"""
+            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?"}"""
+        if (input.includes("quote") || input.includes("price") || input.includes("cost")) {"""
+            return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";", ";"}"""
+        if (input.includes("contact") || input.includes("phone") || input.includes("email")) {"""
+            return "You can reach us at: "
+📧 kleber@ziontechgroup.com\
+📞 +1 (302) 464-0950\
+🌐 https: // comment
+        if (input.includes("technology") || input.includes("tech") || input.includes("stack")) {"""
+            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?"}"""
+        if (input.includes("experience") || input.includes("portfolio") || input.includes("work")) {"""
+            return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?"}"
+        // comment
+        return "I understand you&apos;re asking about " + userInput + ". Let me help you better. Could you provide more details about what you&apos;re looking for?"}, [responseDelay])
+}
+        // comment
+if (input.includes(&apos;service&apos) || input.includes(&apos;offer&apos)) {"
+            return &quot;We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?"}"
+        if (input.includes("quote") || input.includes("price") || input.includes("cost")) {return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate."}"
+        if (input.includes("contact") || input.includes("phone") || input.includes("email")) {return "You can reach us at: "
+📧 kleber@ziontechgroup.com\
+📞 +1 (302) 464-0950\
+🌐 https: // comment
+        if (input.includes("technology") || input.includes("tech") || input.includes("stack")) {return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?"
+        }"
+        if (input.includes("experience") || input.includes("portfolio") || input.includes("work")) {return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?"
+        if (input.includes(&apos;quote&apos) || input.includes(&apos;price&apos) || input.includes(&apos;cost&apos)) {"
+            return &quot;I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate."
+>>>>>>> main
         }
 ;
         if (input.includes(&apos;contact&apos) || input.includes(&apos;phone&apos) || input.includes(&apos;email&apos)) {";
@@ -244,10 +330,18 @@ return &quot;I understand you&apos;re asking about &apos;&quot; + userInput + "&
         const userMessage = addMessage({"type": "&apos",user&apos,;
             "content": "input.trim()"});
 }
+<<<<<<< HEAD
         // comment;
 trackChatbotInteraction(&apos;user_input&apos, {"messageId": "userMessage.id",;
 "inputLength": "input.length;"});';
         // Clear input'';
+=======
+        // comment
+trackChatbotInteraction(&apos;user_input&apos, {messageId: userMessage.id,
+inputLength: input.length;}
+    );'
+        // Clear input''
+>>>>>>> main
         setInputValue('');
         setIsTyping(true);
         try {}
@@ -255,6 +349,7 @@ trackChatbotInteraction(&apos;user_input&apos, {"messageId": "userMessage.id",;
             const response = await simulateAIProcessing(input) ;
             // Add bot response;
             addBotMessage(response, {}
+<<<<<<< HEAD
 ';
                 "intent": 'response',;
                 "confidence": "0.9",;
@@ -265,6 +360,19 @@ trackChatbotInteraction(&apos;user_input&apos, {"messageId": "userMessage.id",;
                     "Contact sales"                ];
             });';
             // Track successful interaction'';
+=======
+'
+                intent: 'response',
+                confidence: 0.9,
+                suggestions: [
+                    "Tell me more",
+                    "Get a quote",
+                    "View services",
+                    "Contact sales"                ]
+            }
+    );'
+            // Track successful interaction''
+>>>>>>> main
             trackChatbotInteraction('conversation_success', {}
 "userInput": "input",;
             // comment;

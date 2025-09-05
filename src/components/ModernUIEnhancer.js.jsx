@@ -19,8 +19,14 @@ export default function Page("props": "any) {;
 
                 const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
                 const yPos = -(scrolled * speed);
+<<<<<<< HEAD
                 element.style.transform = `translateY(${yPos"}px)`});
             // Fade in elements on scroll';
+=======
+                element.style.transform = `translateY(${yPos}px)`}
+    );
+            // Fade in elements on scroll'
+>>>>>>> main
             const fadeElements = document.querySelectorAll('[data-fade-in]');
             fadeElements.forEach((element) => {;
 
@@ -168,9 +174,16 @@ export default function Page("props": "any) {;
                 }
             })}, observerOptions);
         const animatedElements = document.querySelectorAll('[data-animation]');
+<<<<<<< HEAD
         animatedElements.forEach((element) => {observer.observe(element)});
         return () => {;
             animatedElements.forEach((element) => {;
+=======
+        animatedElements.forEach((element) => {observer.observe(element)}
+    );
+        return () => {
+            animatedElements.forEach((element) => {
+>>>>>>> main
 
                 observer.unobserve(element)})}}, [enableScrollEffects]);
     return (<>;
@@ -318,6 +331,7 @@ export default function Page("props": "any) {;
   { "opacity": "0", "y": "100",;
   "scale": "0.8 ;
 
+<<<<<<< HEAD
 "}} transition = {;
 ";
   { "type": "spring", "damping": "25",;
@@ -336,6 +350,26 @@ export default function Page("props": "any) {;
                 </button>;
               </div>;
             </div>;
+=======
+}} transition = {
+"
+  { type: "spring", damping: 25,
+  stiffness: 300 
+"
+}} className="fixed bottom-24 right-6 z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+            {/* Header */}"
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">"
+              <div className="flex items-center justify-between">"
+                <div className="flex items-center space-x-2">"
+                  <Sparkles className="w-5 h-5" />"
+                  <h3 className="font-semibold">UI Enhancements
+                </div>"
+                <button onClick={() => setIsVisible(false)} className="text-white hover:text-gray-200 transition-colors">
+                  ×
+                </button>
+              </div>
+            </div>
+>>>>>>> main
 
             {/* Content */"}";
             <div className="p-4 space-y-4">;

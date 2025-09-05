@@ -63,8 +63,14 @@ const { user "} = useAuth();
         safeStorage.removeItem(getCartKey());
       }
     }
+<<<<<<< HEAD
 ;
     dispatch({"type": 'SET_ITEMS', "payload": "items"});
+=======
+
+    dispatch({type: 'SET_ITEMS', payload: items}
+    );
+>>>>>>> main
   }, [cartKey]);
 ;
   // Save cart to storage whenever it changes;
@@ -74,12 +80,26 @@ const { user "} = useAuth();
 ;
   const addItem = item => {;
 
+<<<<<<< HEAD
     dispatch({ "type": 'ADD_ITEM', "payload": "item "});
+=======
+  const addItem = item => {
+
+    dispatch({ type: 'ADD_ITEM', payload: item }
+    );
+>>>>>>> main
   };
 ;
   const removeItem = id => {;
 
+<<<<<<< HEAD
     dispatch({ "type": 'REMOVE_ITEM', "payload": "id "});
+=======
+  const removeItem = id => {
+
+    dispatch({ type: 'REMOVE_ITEM', payload: id }
+    );
+>>>>>>> main
   };
 ;
   const updateQuantity = ("props": "any) => {;
@@ -89,13 +109,25 @@ const { user "} = useAuth();
       removeItem(id);
     "} else {;
 
+<<<<<<< HEAD
       dispatch({ "type": 'UPDATE_QUANTITY', "payload": "{ id", quantity } });
+=======
+      dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } }
+    );
+>>>>>>> main
     }
   };
 ;
   const clearCart = ("props": "any) => {;
 
+<<<<<<< HEAD
     dispatch({ "type": 'CLEAR_CART' "});
+=======
+  const clearCart = (props: any) => {
+
+    dispatch({ type: 'CLEAR_CART' }
+    );
+>>>>>>> main
   };
 ;
   const getTotalItems = ("props": "any) => {return state.items.reduce((total", item) => total + item.quantity, 0);};

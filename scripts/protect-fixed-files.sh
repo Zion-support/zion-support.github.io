@@ -6,7 +6,7 @@
 set -e
 
 echo "🛡️  Protecting Fixed Files from Automation Overwrites"
-echo "=================================================="
+echo "="
 
 # Create backup directory
 BACKUP_DIR="backups/fixed-files"

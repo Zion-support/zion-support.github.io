@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 ;
@@ -191,10 +192,17 @@ const stats = [";
   { "duration": "0.6",;
   "delay": "0.2;
 
+<<<<<<< HEAD
 "}}>";
           <h3 className="text-3xl font-bold text-white text-center mb-12">";
             Areas of <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Expertise</span>;
           </h3>;
+=======
+}}>"
+          <h3 className="text-3xl font-bold text-white text-center mb-12">"
+            Areas of <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Expertise</span>
+          
+>>>>>>> main
 
           <div className="grid grid - cols - 1 "md": "grid - cols - 2 "lg":grid - cols - 3 gap-6">;
             {expertiseAreas.map((area", index) => (<motion.div key={index} initial = {  { "opacity": "0",;
@@ -253,10 +261,17 @@ const stats = [";
   { "duration": "0.6",;
   "delay": "0.3;
 
+<<<<<<< HEAD
 "}}>";
           <h3 className="text-3xl font-bold text-white text-center mb-12">";
             Leadership <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Team</span>;
           </h3>;
+=======
+}}>"
+          <h3 className="text-3xl font-bold text-white text-center mb-12">"
+            Leadership <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Team</span>
+          
+>>>>>>> main
 
           <div className="grid grid - cols - 1 "md": "grid - cols - 2 "lg":grid - cols - 3 gap-8">;
             {teamMembers.map((member", index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ "y": "-8 "}} transition = {;
@@ -392,6 +407,7 @@ const stats = [";
   { "duration": "0.6",;
   "delay": "0.5;
 
+<<<<<<< HEAD
 "}}>";
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">";
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">";
@@ -424,3 +440,53 @@ const stats = [";
 </motion>;
 </motion>;
 </motion>
+=======
+}}>"
+          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">"
+            <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">"
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Ready to Work with Our Experts?
+              "
+              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+                Our team is ready to bring your vision to life.Let's discuss how we can help you achieve your technology goals.</p>"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                  Schedule Consultation
+                </button>"
+                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+                  View All Team Members
+                </button>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>)}
+'"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+=======
+import React from 'react';
+
+interface TeamExpertiseSection.jsProps {
+  // Add props here as needed
+}
+
+export default function TeamExpertiseSection.js({ }: TeamExpertiseSection.jsProps) {
+  return (
+    <div>
+      <h1>TeamExpertiseSection.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main
+>>>>>>> main

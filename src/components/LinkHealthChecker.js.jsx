@@ -96,6 +96,7 @@ export default function Page("props": "any) {;"}
   return ();
     <div;
       className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}
+<<<<<<< HEAD
     >;
       {/* Header */}";
       <div className="flex items-center justify-between mb-6">;
@@ -108,6 +109,20 @@ export default function Page("props": "any) {;"}
           </p>;
         </div>;
         <button;
+=======
+    >
+      {/* Header */}"
+      <div className="flex items-center justify-between mb-6">
+        <div>"
+          <h3 className="text-lg font-semibold text-white">
+            Link Health Status
+          "
+          <p className="text-sm text-gray-400">
+            Monitoring the health of our website links
+          </p>
+        </div>
+        <button
+>>>>>>> main
           onClick={checkAllLinks}
           disabled={isChecking}";
           className="px-4 py-2 bg-blue-600 "hover": "bg-blue-700 "disabled":bg-gray-600 text-white rounded-lg transition-colors duration-300 flex items-center gap-2";
@@ -180,9 +195,15 @@ export default function Page("props": "any) {;"}
                     {status.responseTime}ms;
                   </div>;
                 )}
+<<<<<<< HEAD
               </div>;
             </div>;
           );
+=======
+              </div>
+            </div>
+    );
+>>>>>>> main
         })}
       </div>;
 

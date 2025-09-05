@@ -77,6 +77,7 @@ export function SiteFooter("props": "any) {';
             </div>;
           </div>;
           {/* Navigation Sections */}
+<<<<<<< HEAD
           { navSections.map((section) => (;
             <div key={section.title}>;
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>;
@@ -84,6 +85,15 @@ export function SiteFooter("props": "any) {';
                 {section.links.map((link) => (;
                   <li key={link.label}>;
                     <Link;
+=======
+          { navSections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-lg font-semibold mb-4">{section.title}
+              <ul className="space-y-3">
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+>>>>>>> main
                       href={link.href}
                       className="text-gray-300 "hover": "tex t-white transition-colors";
                     >;
@@ -92,15 +102,25 @@ export function SiteFooter("props": "any) {';
                   </li>;
                 ));
       )}
+<<<<<<< HEAD
     </div>;
   );
+=======
+    </div>
+    );
+>>>>>>> main
 }
               </ul>;
             </div>;
           ));
       )}
+<<<<<<< HEAD
     </div>;
   );
+=======
+    </div>
+    );
+>>>>>>> main
 }
         </div>;
         {/* Bottom Section */}
@@ -122,8 +142,13 @@ export function SiteFooter("props": "any) {';
                 </a>;
               ));
       )}
+<<<<<<< HEAD
     </div>;
   );
+=======
+    </div>
+    );
+>>>>>>> main
 }
             </div>;
           </div>;

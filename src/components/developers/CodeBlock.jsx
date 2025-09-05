@@ -9,6 +9,7 @@ export default function CodeBlock("props": "any) {;
       navigator.clipboard.writeText(text);
     "} catch (_) {}
   };
+<<<<<<< HEAD
 ;
   return (;
     <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>;
@@ -24,3 +25,20 @@ export default function CodeBlock("props": "any) {;
     </div>;
   );
 }
+=======
+
+  return (
+    <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-xs text-gray-400 uppercase tracking-wide">{language}</span>
+        <button onClick={handleCopy} className="text-xs text-gray-400 hover:text-white transition-colors">
+          Copy
+        </button>
+      </div>
+      <pre className="text-sm text-gray-100">
+        <code>{text}</code>
+      </pre>
+    </div>
+    );
+}
+>>>>>>> main

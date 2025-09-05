@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect, useCallback} from 'react';';
 import {motion, AnimatePresence} from 'framer-motion';';
 import {ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon} from '@heroicons/react/24/outline';';
@@ -12,10 +13,29 @@ const WebsiteImprovementDashboard = ("props": "any) => {"}
         "firstInputDelay": "0",;
         "timeToInteractive": "0;
     "});
+=======
+<<<<<<< HEAD
+import React, {useState, useEffect, useCallback} from 'react';'
+import {motion, AnimatePresence} from 'framer-motion';'
+import {ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon} from '@heroicons/react/24/outline';'
+const WebsiteImprovementDashboard = (props: any) => {}
+    const [isOpen, setIsOpen] = useState(showOnLoad);'
+    const [activeTab, setActiveTab] = useState('overview');
+    const [metrics, setMetrics] = useState({}
+        loadTime: 0,
+        firstContentfulPaint: 0,
+        largestContentfulPaint: 0,
+        cumulativeLayoutShift: 0,
+        firstInputDelay: 0,
+        timeToInteractive: 0;
+    }
+    );
+>>>>>>> main
     const [seoAnalysis, setSeoAnalysis] = useState({}
         "score": "0",;
         issues[],;
         suggestions[],;
+<<<<<<< HEAD
         "metaTags": "{"}
             "title": "false",;
             "description": "false",;
@@ -31,6 +51,25 @@ const WebsiteImprovementDashboard = ("props": "any) => {"}
         "criticalIssues": "0",;
         "warnings": "0;
     "});
+=======
+        metaTags: {}
+            title: false,
+            description: false,
+            keywords: false,
+            canonical: false,
+            ogTags: false,
+            twitterTags: false;
+    }
+    );
+    const [accessibilityReport, setAccessibilityReport] = useState({}
+        score: 0,
+        issues[],;'
+        wcagCompliance: 'Non-Compliant',
+        criticalIssues: 0,
+        warnings: 0;
+    }
+    );
+>>>>>>> main
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     // Analyze website performance;
     const analyzePerformance = useCallback(async () => {}
@@ -65,3 +104,9 @@ export {WebsiteImprovementDashboard};
 export {WebsiteImprovementDashboard};
 ;
 export {WebsiteImprovementDashboard};
+=======
+import React,{useState,useEffect,useCallback} from 'react'; import { motion, AnimatePresence, ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from 'lucide-react'; const WebsiteImprovementDashboard = (props) => {; const [isOpen,setIsOpen] = useState(showOnLoad); const [activeTab,setActiveTab] = useState('overview'); const [metrics,setMetrics] = useState({; loadTime: 0,; firstContentfulPaint: 0,; largestContentfulPaint: 0,; cumulativeLayoutShift: 0,; firstInputDelay: 0,; timeToInteractive: 0}
+}); const [seoAnalysis,setSeoAnalysis] = useState({; score: 0,; issues[],; suggestions[],; metaTags: {; title: false,; description: false,; keywords: false,; canonical: false,; ogTags: false,; twitterTags: false}}
+}); const [accessibilityReport,setAccessibilityReport] = useState({; score: 0,; issues[],; wcagCompliance: 'Non-Compliant',criticalIssues: 0,; warnings: 0}
+}); const [isAnalyzing,setIsAnalyzing] = useState(false); ;';';''
+>>>>>>> main

@@ -178,6 +178,7 @@ export function NewsletterSection("props": "any) {;
             </div>;
           </motion.div>;
 
+<<<<<<< HEAD
           {/* Right content - Newsletter Form */}";
           <motion.div variants={itemVariants} className="relative">";
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">";
@@ -204,6 +205,34 @@ export function NewsletterSection("props": "any) {;
                   <input";
                     type="email";
                     id="email";
+=======
+          {/* Right content - Newsletter Form */}"
+          <motion.div variants={itemVariants} className="relative">"
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">"
+              <div className="text-center mb-6">"
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">"
+                  <Mail className="w-8 h-8 text-white"  />
+                </div>"
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Join Our Newsletter
+                "
+                <p className="text-zion-slate-light">
+                  Get exclusive tech insights and updates
+                </p>
+              </div>
+"
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label"
+                    htmlFor="email"
+                    className="block text-sm font-medium text-zion-slate-light mb-2"
+                  >
+                    Email Address
+                  </label>
+                  <input"
+                    type="email"
+                    id="email"
+>>>>>>> main
                     value={email}
                     onChange={e => setEmail(e.target.value)}";
                     placeholder="Enter your email address";

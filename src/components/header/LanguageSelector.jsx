@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import React {useState} from 'react' import {ChevronDown, Globe} from 'lucide-react' export const LanguageSelector = ("props": "any) => { const [isOpen", setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState('EN') const languages = [ { "code": 'EN,', "name": 'English,', "flag": '🇺🇸'} {"code": 'ES,', "name": 'Español,', "flag": '🇪🇸'} {"code": 'FR,', "name": 'Français,', "flag": '🇫🇷'} {"code": 'DE,', "name": 'Deutsch,', "flag": '🇩🇪'} {"code": 'IT,', "name": 'Italiano,', "flag": '🇮🇹'} {"code": 'PT,', "name": 'Português,', "flag": '🇵🇹'} {"code": 'RU,', "name": 'Русский,', "flag": '🇷🇺'} {"code": 'ZH,', "name": '中文,', "flag": '🇨🇳'} {"code": 'JA,', "name": '日本語,', "flag": '🇯🇵'} {"code": 'KO,', "name": '한국어,', "flag": '🇰🇷'} ] const handleLanguageChange = ("props": "any) => { setCurrentLanguage(languageCode) setIsOpen(false)'",;',';';
     ;';
 import React { useState } from 'react' import {ChevronDown, Globe} from 'lucide-react' export const LanguageSelector = ("props": "any) => { const [isOpen", setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState('EN') const languages = [ { "code": 'EN', "name": 'English', "flag": '🇺🇸' } {"code": 'ES', "name": 'Español', "flag": '🇪🇸'} {"code": 'FR', "name": 'Français', "flag": '🇫🇷'} {"code": 'DE', "name": 'Deutsch', "flag": '🇩🇪'} {"code": 'IT', "name": 'Italiano', "flag": '🇮🇹'} {"code": 'PT', "name": 'Português', "flag": '🇵🇹'} {"code": 'RU', "name": 'Русский', "flag": '🇷🇺'} {"code": 'ZH', "name": '中文', "flag": '🇨🇳'} {"code": 'JA', "name": '日本語', "flag": '🇯🇵'} {"code": 'KO', "name": '한국어', "flag": '🇰🇷'} ] const handleLanguageChange = ("props": "any) => { setCurrentLanguage(languageCode) setIsOpen(false)''",;',';';
     ;
+=======
+<<<<<<< HEAD
+import React {useState} from 'react' import {ChevronDown, Globe} from 'lucide-react' export const LanguageSelector = (props: any) => { const [isOpen, setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState('EN') const languages = [ { code: 'EN,', name: 'English,', flag: '🇺🇸'} {code: 'ES,', name: 'Español,', flag: '🇪🇸'} {code: 'FR,', name: 'Français,', flag: '🇫🇷'} {code: 'DE,', name: 'Deutsch,', flag: '🇩🇪'} {code: 'IT,', name: 'Italiano,', flag: '🇮🇹'} {code: 'PT,', name: 'Português,', flag: '🇵🇹'} {code: 'RU,', name: 'Русский,', flag: '🇷🇺'} {code: 'ZH,', name: '中文,', flag: '🇨🇳'} {code: 'JA,', name: '日本語,', flag: '🇯🇵'} {code: 'KO,', name: '한국어,', flag: '🇰🇷'} ] const handleLanguageChange = (props: any) => { setCurrentLanguage(languageCode) setIsOpen(false)',;',';';
+    ';';';';';
+import React { useState } from 'react' import {ChevronDown, Globe} from 'lucide-react' export const LanguageSelector = (props: any) => { const [isOpen, setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState('EN') const languages = [ { code: 'EN', name: 'English', flag: '🇺🇸' } {code: 'ES', name: 'Español', flag: '🇪🇸'} {code: 'FR', name: 'Français', flag: '🇫🇷'} {code: 'DE', name: 'Deutsch', flag: '🇩🇪'} {code: 'IT', name: 'Italiano', flag: '🇮🇹'} {code: 'PT', name: 'Português', flag: '🇵🇹'} {code: 'RU', name: 'Русский', flag: '🇷🇺'} {code: 'ZH', name: '中文', flag: '🇨🇳'} {code: 'JA', name: '日本語', flag: '🇯🇵'} {code: 'KO', name: '한국어', flag: '🇰🇷'} ] const handleLanguageChange = (props: any) => { setCurrentLanguage(languageCode) setIsOpen(false)'',;',';';
+    ';';';';
+>>>>>>> main
 import React {useState, useRef, useEffect } from 'react',;';';
     ;
 import {Globe, Check} from 'lucide-react',;';';
@@ -23,6 +31,7 @@ export function LanguageSelector("props": "any) {';';';
     ';';';
   const [selectedLanguage, setSelectedLanguage] = useState('en');
   const menuRef = useRef(null);
+<<<<<<< HEAD
   useEffect(() => {;
     const handleClickOutside = ("props": "any) => {;
       if (menuRef.current && !menuRef.current.contains(event.target)) {;
@@ -30,6 +39,15 @@ export function LanguageSelector("props": "any) {';';';
       )"}
     </div>;
   );';
+=======
+  useEffect(() => {
+    const handleClickOutside = (props: any) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false)
+      )}
+    </div>
+    );';
+>>>>>>> main
 }';';
       if (menuRef.current &&, !menuRef.current.contains(event.target)) {;';';';};',',';';
     '';';';
@@ -97,6 +115,7 @@ export function LanguageSelector("props": "any) {';';';
     ';';';
     };',';';
     ';';';
+<<<<<<< HEAD
   return (';
     <div className="relative" ref={menuRef}>;
       <button;
@@ -112,10 +131,28 @@ export function LanguageSelector("props": "any) {';';';
       )"}
     </div>;
   );
+=======
+  return ('
+    <div className="relative" ref={menuRef}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}"
+        className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover: text-white hove
+    r:bg-zion-purple/10 transition-colors""
+        aria-label="Select language"
+      >"
+        <Globe className="h-4 w-4"  />"
+        <span className="text-sm font-medium hidden s
+    m:block">
+      <button onClick={() => setIsOpen(!isOpen)
+      )}
+    </div>
+    );
+>>>>>>> main
 }
         className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light "hover": "text-white "hover":bg-zion-purple/10 transition-colors";
   const handleLanguageChange = ("props": any) => {;
     setSelectedLanguage(languageCode);
+<<<<<<< HEAD
     // Implement language change logic here"";
   return ("";
     <div className="relative" ref={menuRef"}" >";
@@ -132,6 +169,24 @@ export function LanguageSelector("props": "any) {';';';
       )"}
     </div>;
   );
+=======
+    // Implement language change logic here""
+  return (""
+    <div className="relative" ref={menuRef}" >"
+      <button onClick={() =" > setIsOpen(!isOpen)}"
+      >""
+        <Globe className="h-4 w-4" /" >"
+  return ("
+    <div className="relative" ref={menuRef}" >
+      <button, onClick={() =" > setIsOpen(!isOpen)}"
+        className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
+        <Globe className="h-4 w-4" /" ></Globe>"
+        <span className="text-sm font-medium hidden sm:block">
+          {currentLanguage?.code.toUpperCase()
+      )}
+    </div>
+    );
+>>>>>>> main
 }
         </span>;
       </button>;
@@ -159,8 +214,13 @@ export function LanguageSelector("props": "any) {';';';
         <div className="absolute right-0 mt-2 w-48 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">"";
               <button key={language.code} onClick={() => handleLanguageChange(language.code);
       )}
+<<<<<<< HEAD
     </div>;
   );
+=======
+    </div>
+    );
+>>>>>>> main
 }
               <button key={language.code}
                 onClick={() =" > handleLanguageChange(language.code)}";
@@ -186,17 +246,28 @@ export function LanguageSelector("props": "any) {';';';
                   <Check className="h-4 w-4 text-zion-cyan" /" ></Check>;
                 );
       )}
+<<<<<<< HEAD
     </div>;
   );
+=======
+    </div>
+    );
+>>>>>>> main
 }
             ));
       )}
+<<<<<<< HEAD
     </div>;
   );
+=======
+    </div>
+    );
+>>>>>>> main
 }
   )}"';
   )}"`";';';
 }"`';';';
+<<<<<<< HEAD
 ";
 </Check>;
 </button>;
@@ -210,3 +281,21 @@ export function LanguageSelector("props": "any) {';';';
 </button>;
 </span>;
 </button>
+=======
+"';';';';
+</Check>
+</button>
+</button>
+</button>
+</div>
+</div>
+</Globe>
+</button>
+</div>
+</button>
+</span>
+</button>
+=======
+import React,{useState} from 'react'; import {ChevronDown,Globe} from 'lucide-react'; export const LanguageSelector = (props) => {; const [isOpen,setIsOpen] = useState(false); const [currentLanguage,setCurrentLanguage] = useState('EN'); const languages = [; { code: 'EN',name: 'English',flag: '��' },; {code: 'ES',name: 'Español',flag: '��'},; {code: 'FR',name: 'Français',flag: '��'},; {code: 'DE',name: 'Deutsch',flag: '��'},; {code: 'IT',name: 'Italiano',flag: '��'},; {code: 'PT',name: 'Português',flag: '��'},; {code: 'RU',name: 'Русский',flag: '��'},; {code: 'ZH',name: '中文',flag: '��'},; {code: 'JA',name: '日本語',flag: '��'},; {code: 'KO',name: '한국어',flag: '��'}; ]; const handleLanguageChange = (props) => {; setCurrentLanguage(languageCode); setIsOpen(false);';';'''}
+>>>>>>> main
+>>>>>>> main

@@ -78,8 +78,13 @@ return ();
                 </div>";
                 <h3 className="text-lg font-semibold text-white mb-1">;
                   {testimonials[currentIndex].name}
+<<<<<<< HEAD
                 </h3>";
                 <p className="text-zion-cyan font-medium mb-1">;
+=======
+                "
+                <p className="text-zion-cyan font-medium mb-1">
+>>>>>>> main
                   {testimonials[currentIndex].role}
                 </p>";
                 <p className="text-zion-slate-light text-sm mb-2">;

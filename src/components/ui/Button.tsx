@@ -1,20 +1,36 @@
 import React from 'react';';';
+<<<<<<< HEAD
 interface ButtonProps {;
   ';';';: "any;
   "children": React.ReactNode;'",';';
   ';';';: "any;
   variant?: 'default' | 'outline' | 'ghost' | 'link'",',';';
   ;: "any;
+=======
+interface ButtonProps {
+  ';';';: any;
+  children: React.ReactNode;',';';
+  ';';';: any;
+  variant?: 'default' | 'outline' | 'ghost' | 'link',',';';
+  ';';';';: any;
+>>>>>>> main
   size?: 'sm' | 'md' | 'lg' | 'icon';';
   asChild?: boolean;';';
   className?: string;';';';
   onClick?: () => void;'",';';
   ';';';: "any;
   type?: 'button' | 'submit' | 'reset';';
+<<<<<<< HEAD
   disabled?: boolean;
 "}';';
 export const "Button": "React.FC<ButtonProps> = ({';';';
   children",',';';
+=======
+  disabled?: boolean
+}';';
+export const Button: React.FC<ButtonProps> = ({';';';
+  children,',';';
+>>>>>>> main
     ';';';
   variant = 'default',',';';
     ';';';
@@ -47,19 +63,24 @@ export const "Button": "React.FC<ButtonProps> = ({';';';
     ';';';
     "icon": 'w-10 h-10 p-0'};
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-  if (asChild) {;
+  if (asChild) {
     return <span className={classes}>{children}</span>;
   }
-  return (;
-    <button;
+  return (
+    <button
       type={type}
       className={classes}
       onClick={onClick}
       disabled={disabled}
-    >;
+    >
       {children}
     </button>';
   );';';
 };';';';
+<<<<<<< HEAD
 export default Button;";
 </ButtonProps>;
+=======
+export default Button;"';';';';
+</ButtonProps>
+>>>>>>> main

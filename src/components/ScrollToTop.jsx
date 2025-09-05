@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 ;
@@ -25,8 +26,17 @@ export default function Page("props": "any) {;
   const scrollToTop = ("props": "any) => {;
     window.scrollTo({;
 
+<<<<<<< HEAD
       "top": 0",;
       "behavior": 'smooth'});
+=======
+  const scrollToTop = (props: any) => {
+    window.scrollTo({
+
+      top: 0,
+      behavior: 'smooth'}
+    );
+>>>>>>> main
   };
 ;
   return ();
@@ -89,5 +99,22 @@ export default ScrollToTop;
 export default ScrollToTop;
 '";
 
+<<<<<<< HEAD
 </motion>;
 </AnimatePresence>
+=======
+export default ScrollToTop;
+export default ScrollToTop;
+export default ScrollToTop;
+export default ScrollToTop;
+export default ScrollToTop;
+export default ScrollToTop;
+export default ScrollToTop;
+'"
+
+</motion>
+</AnimatePresence>
+=======
+import React from 'react'; export default ScrollToTop',','; ';';';';';'; ";';';'; ";';';';'; """
+>>>>>>> main
+>>>>>>> main

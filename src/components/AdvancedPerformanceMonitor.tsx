@@ -52,6 +52,7 @@ export default function Page("props": "any) {;
 
         rating = 'poor';
         color = 'text-red-500'}
+<<<<<<< HEAD
     });
 ;
   TrendingUp,';
@@ -60,6 +61,17 @@ export default function Page("props": "any) {;
     let "color": "string;
 ;
     if(averageScore >= 90) {;
+=======
+    }
+    );
+
+  TrendingUp,'
+  AlertTriangle} from 'lucide-react';    
+    let grade: 'A' | 'B' | 'C' | 'D' | 'F';
+    let color: string;
+
+    if(averageScore >= 90) {
+>>>>>>> main
       grade = 'A';
       color = 'text-green-500'"} else if(averageScore >= 80) {;
       grade = 'B';
@@ -86,42 +98,83 @@ export default function Page("props": "any) {;
 
         if(fcpEntry) {;
 
+<<<<<<< HEAD
           setMetrics(prev => ({ ...prev, "fcp": "fcpEntr y.startTime "}))}
       });
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
       // Largest Contentful Paint;
+=======
+        if(fcpEntry) {
+
+          setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
+      }
+    );
+      fcpObserver.observe({ entryTypes: ['paint'] }
+    );
+>>>>>>> main
 
         if(lastEntry) {;
 
+<<<<<<< HEAD
           setMetrics(prev => ({ ...prev, "lcp": "lastEntr y.startTime "}))}
       });
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
 ;
       // First Input Delay;
       const fidObserver = new PerformanceObserver(list => {;
+=======
+        if(lastEntry) {
+
+          setMetrics(prev => ({ ...prev, lcp: lastEntr y.startTime }))}
+      }
+    );
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
+    );
+>>>>>>> main
 
         const entries = list.getEntries();        entries.forEach(entry => {;
 
           if (entry.processingStart && entry.startTime) {;
 
             setMetrics(prev => ({ ...prev, fid }) ) }
+<<<<<<< HEAD
         })});
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
       // Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
+=======
+        })}
+    );
+      fidObserver.observe({ entryTypes: ['first-input'] }
+    );
+>>>>>>> main
 
         let clsValue = 0;        list.getEntries().forEach(("entry": "an y) => {;
 
           if(!entry.hadRecentInput) {;
 
+<<<<<<< HEAD
             clsValue += entry.value"}
         });
         setMetrics(prev => ({ ...prev, "cls": "clsValu e "}));
       });
       clsObserver.observe({ "entryTypes": "['layout-shift'] "});
       return () => {;
+=======
+          if(!entry.hadRecentInput) {
+
+            clsValue += entry.value}
+        }
+    );
+        setMetrics(prev => ({ ...prev, cls: clsValu e }));
+      }
+    );
+      clsObserver.observe({ entryTypes: ['layout-shift'] }
+    );
+      return () => {
+>>>>>>> main
         lcpObserver.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect()}}
@@ -180,6 +233,7 @@ export default function Page("props": "any) {;
     return ();
       <button;
         onClick={() => setIsVisible(true)}
+<<<<<<< HEAD
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg "hover": "b g-zion-cyan/90 transition-all duration-300 z-50";
         ;
       >";
@@ -199,5 +253,26 @@ export default function Page("props": "any) {;
           ×;
         </button>      </div>;
   );""}";
+=======
+        className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover: b g-zion-cyan/90 transition-all duration-300 z-50"
+        
+      >"
+        <Activity className="w-6 h-6"   />      </button>
+    )}
+
+  return ("
+    <div className="fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm">"
+      <div className="flex items-center justify-between mb-4">"
+        <h3 className="text-lg font-bold text-white flex items-center">"
+          <Zap className="w-5 h-5 mr-2 text-zion-cyan"   />          Performance Monitor
+        
+        <button
+          onClick={() => setIsVisible(false)}"
+          className="text-zion-slate-light hover: tex t-white transition-colors"
+        >
+          ×
+        </button>      </div>
+    );"}"
+>>>>>>> main
 
 </div>

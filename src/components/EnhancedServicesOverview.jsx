@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import {ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES} from '@/data/enhancedServices';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
@@ -31,3 +32,18 @@ export {ServiceCategory};
 ;
 export {ServiceCategory};
 export default Component;
+=======
+
+interface EnhancedServicesOverview.jsProps {
+  // Add props here as needed
+}
+
+export default function EnhancedServicesOverview.js({ }: EnhancedServicesOverview.jsProps) {
+  return (
+    <div>
+      <h1>EnhancedServicesOverview.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main

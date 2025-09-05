@@ -8,6 +8,7 @@ const Progress = React.forwardRef(({className, value, max = 100, ...props}, ref)
       ref={ref}
       className={cn('relative w-full overflow-hidden bg-gray-200 rounded-full h-2', className)}
       {...props}
+<<<<<<< HEAD
     >;
       <div className="h-full w-full flex-1 bg-blue-600 transition-all duration-300 ease-in-out";
         style="{{{ "width": "`${percentage"}}"%` }}
@@ -16,6 +17,17 @@ const Progress = React.forwardRef(({className, value, max = 100, ...props}, ref)
   );
 });
 ;
+=======
+    >
+      <div className="h-full w-full flex-1 bg-blue-600 transition-all duration-300 ease-in-out"
+        style="{{{ width: `${percentage}}"%` }}
+       />
+    </div>
+    );
+}
+    );
+
+>>>>>>> main
 Progress.displayName = 'Progress';
 ;
 export {Progress};

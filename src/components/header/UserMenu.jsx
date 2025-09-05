@@ -176,6 +176,7 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
             {user?.name?.charAt(0) || user?.email?.charAt(0) || 'U'}';';';
           </span>',';';
     ';';';
+<<<<<<< HEAD
         </div>';
         <span className="hidden "sm": "block text-sm font-medium">";
   return (;
@@ -183,6 +184,15 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
       )"}
     </div>;
   );
+=======
+        </div>'
+        <span className="hidden sm:block text-sm font-medium">"
+  return (
+      <button onClick={() => setIsOpen(!isOpen)
+      )}
+    </div>
+    );
+>>>>>>> main
 }
         className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light "hover": "text-white "hover":bg-zion-purple/10 transition-colors";
       >;
@@ -235,6 +245,7 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
             { menuItems.map((item) => (;
               <Link;
                 key={item.name}
+<<<<<<< HEAD
                 to={item.href}";
                 className="flex items-center px-4 py-3 text-zion-slate-light "hover": "text-white hove;
                 onClick={() => setIsOpen(false);
@@ -249,6 +260,22 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
       )"}
     </div>;
   );
+=======
+                to={item.href}"
+                className="flex items-center px-4 py-3 text-zion-slate-light hover:text-white hove,
+                onClick={() => setIsOpen(false)
+      )}
+    </div>
+    );
+}
+                <item .icon className="h-4 w-4 mr-3 text-zion-cyan"  />"
+                <div className="flex-1">"
+                  <span className="font-medium">{item.name}</span>"
+              <Link key={item.name} to={item.href} className="flex items-center px-4 py-3 text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors" onClick={() => setIsOpen(false)
+      )}
+    </div>
+    );
+>>>>>>> main
 }
                 <item .icon className="h-4 w-4 mr-3 text-zion-cyan"  />;
                 <div className="flex-1">;
@@ -264,6 +291,7 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
               </Link>;
             ));
       )}
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -286,6 +314,30 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
       )"}
     </div>;
   );';
+=======
+    </div>
+    );
+}
+          {/* Logout */}"
+          <div className="p-4 border-t border-zion-purple/20">
+              onClick={handleLogout}"
+              className="flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 hove
+    r:bg-red-500/10 rounded-lg transition-colors"
+          {/* Logout */}""
+            <button onClick={handleLogout} className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors" >
+              <LogOut className="h-4 w-4 mr-3"  />
+            <button onClick={handleLogout}""
+              className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors"" >"
+              <LogOut className="h-4 w-4 mr-3" /" >"
+            <button onClick={handleLogout}"
+              className="flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-lg transition-colors  >"
+              <LogOut className="h-4 w-4 mr-3" /" >
+              <span>Sign Out</span>
+      )
+      )}
+    </div>
+    );';
+>>>>>>> main
 }';';
 "';';';
 ";

@@ -16,8 +16,14 @@ export function ChatAssistantTrigger("props": "any) {;
                 "body": "JSON.stringify({;
                     messages[{ "role": "user"", "content": "message "}];
                 }),;
+<<<<<<< HEAD
             });
             if (!response.ok) {// // // // // // // console.error("Error in AI "chat":", error);
+=======
+            }
+    );
+            if (!response.ok) {// // // // // // // console.error("Error in AI chat:", error);
+>>>>>>> main
             return Promise.resolve();
 ;
                 throw new Error("Failed to get response from AI assistant")}

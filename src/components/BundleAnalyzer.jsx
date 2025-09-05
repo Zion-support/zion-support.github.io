@@ -178,6 +178,7 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
               </p>;
             </div>;
 
+<<<<<<< HEAD
             {/* Tab Navigation */"}
             <div className="flex border-b border-gray-200 "dark": "border-gray-700">;
               {[;
@@ -188,6 +189,49 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                     ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50 "dark": "bg-purple-900/20';
                     : 'text-gray-600 "dark":text-gray-400 "hover":text-gray-800 "dark":"hover":text-gray-200'"}`} aria-selected={activeTab === id} role="tab">;
                   <Icon className="w-4 h-4" />;
+=======
+
+
+
+
+
+}} transition = {
+  { type: "spring", damping: 25,
+  stiffness: 300 
+
+
+
+
+
+
+}} className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden" role="dialog" aria-label="Bundle Analysis">
+            {/* Header */}
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg font-semibold flex items-center gap-2">
+                  <BarChart3 className="w-5 h-5" />
+                  Bundle Analyzer
+                
+                <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors p-1 rounded-full hover:bg-white/20" aria-label="Close bundle analyzer">
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <p className="text-purple-100 text-sm mt-1">
+                Performance optimization insights
+              </p>
+            </div>
+
+            {/* Tab Navigation */}
+            <div className="flex border-b border-gray-200 dark:border-gray-700">
+              {[
+                { id: 'overview', label: 'Overview', icon: BarChart3 },
+                {id: 'chunks', label: 'Chunks', icon: HardDrive},
+                {id: 'recommendations', label: 'Tips', icon: Target}
+            ].map(({id, label, icon: Icon}) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 text-sm font-medium transition-colors ${activeTab === id
+                    ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50 dark:bg-purple-900/20'
+                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`} aria-selected={activeTab === id} role="tab">
+                  <Icon className="w-4 h-4" />
+>>>>>>> main
                   {label}
                 </button>))}
             </div>;

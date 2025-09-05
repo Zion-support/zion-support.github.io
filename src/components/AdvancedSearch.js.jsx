@@ -60,7 +60,12 @@ export function AdvancedSearch("props": "any) {;
             case 'recent': return 'bg-zion-gold/10 border-zion-gold/20';
             "default": return 'bg-zion-slate/10 border-zion-slate/20'"}
     };
+<<<<<<< HEAD
     return (<div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>;
+=======
+    return (
+        <div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>
+>>>>>>> main
       {/* Search Input */}
       <div className="relative">;
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
@@ -76,6 +81,7 @@ export function AdvancedSearch("props": "any) {;
         </div>;
       </div>;
 
+<<<<<<< HEAD
       {/* Advanced Filters */"}
       {isExpanded && (<div className="mt-4 p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg">;
           <div className="flex items-center justify-between mb-3">;
@@ -89,6 +95,21 @@ export function AdvancedSearch("props": "any) {;
             {categories.map(category => (<button key={category} onClick={() => toggleFilter(category)} className={`px-3 py-1 text-xs rounded-full border transition-all duration-200 ${selectedFilters.includes(category);
                     ? 'bg-zion-cyan text-white border-zion-cyan';
                     : 'bg-transparent text-zion-slate border-zion-slate-light "hover": "border-zion-cyan "hover":text-zion-cyan'"}`}>;
+=======
+      {/* Advanced Filters */}
+      {isExpanded && (<div className="mt-4 p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-sm font-medium text-zion-slate">Filter by Category
+            {selectedFilters.length > 0 && (<button onClick={clearFilters} className="text-xs text-zion-cyan hover:text-zion-cyan-light transition-colors">
+                Clear All
+              </button>)}
+          </div>
+          
+          <div className="flex flex-wrap gap-2">
+            {categories.map(category => (<button key={category} onClick={() => toggleFilter(category)} className={`px-3 py-1 text-xs rounded-full border transition-all duration-200 ${selectedFilters.includes(category)
+                    ? 'bg-zion-cyan text-white border-zion-cyan'
+                    : 'bg-transparent text-zion-slate border-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan'}`}>
+>>>>>>> main
                 {category}
               </button>))}
           </div>;

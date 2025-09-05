@@ -45,9 +45,16 @@ export function CheckoutShippingOptions("props": "any) {;
     if(rate && onSelect) onSelect(rate)};
 ;
   if(!toAddress) return null;
+<<<<<<< HEAD
 ;
   return (<div className="my-4">;
       <h2 className="font-semibold mb-2">Shipping Options</h2>;
+=======
+
+  return (
+        <div className="my-4">
+      <h2 className="font-semibold mb-2">Shipping Options</h2>
+>>>>>>> main
       {loading && <p>Loading...</p>}
       {!loading && (;
         <RadioGroup value={selected} onValueChange={handleChange} className="space-y-2">;
