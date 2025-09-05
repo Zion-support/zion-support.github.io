@@ -1,337 +1,206 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  ArrowRight,
-  Brain,
-  Network,
-  Cloud,
-  Shield,
-  BarChart3,
-  Users,
-  Settings,
-  FileText,
-  MessageSquare,
-  Calendar,
-  ShoppingCart,
-  BookOpen,
-  Building,
-  Heart,
-  DollarSign,
-  Target,
+import {
   Zap,
-  Award,
-  Star,
-  CheckCircle,
-  Clock,
-  TrendingUp,
-  Eye,
-  Lock,
-  Code,
-  Home,
-  Camera,
-  Music,
-  Gamepad2,
-  Truck,
-  Calculator,
-  CreditCard,
-  Paintbrush,
-  HardDrive,
-  Activity,
-  Lightbulb,
-  Wrench,
-  PieChart,
-  ClipboardList,
-  Layers
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,
+  ArrowRight,
+  ExternalLink
 } from 'lucide-react';
-
-const footerSections = [
-  {
-    title: 'Services',
-    links: [
-      { title: 'AI Services', href: '/ai-services', icon: Brain },
-      { title: 'IT Services', href: '/it-services', icon: Network },
-      { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-      { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-      { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
-      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 }
-    ]
-  },
-  {
-    title: 'Solutions',
-    links: [
-      { title: 'Automation', href: '/automation', icon: Zap },
-      { title: 'AI Development', href: '/ai-development', icon: Brain },
-      { title: 'Digital Transformation', href: '/digital-transformation', icon: Settings },
-      { title: 'IoT Solutions', href: '/iot-solutions', icon: Globe },
-      { title: 'Blockchain', href: '/blockchain', icon: Lock },
-      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code }
-    ]
-  },
-  {
-    title: 'Industries',
-    links: [
-      { title: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-      { title: 'Finance', href: '/industries/finance', icon: DollarSign },
-      { title: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
-      { title: 'Retail', href: '/industries/retail', icon: ShoppingCart },
-      { title: 'Education', href: '/industries/education', icon: BookOpen },
-      { title: 'Real Estate', href: '/industries/real-estate', icon: Home }
-    ]
-  },
-  {
-    title: 'Resources',
-    links: [
-      { title: 'Blog', href: '/blog', icon: FileText },
-      { title: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-      { title: 'White Papers', href: '/white-papers', icon: FileText },
-      { title: 'Webinars', href: '/webinars', icon: Calendar },
-      { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
-      { title: 'Documentation', href: '/docs', icon: FileText }
-    ]
-  },
-  {
-    title: 'Company',
-    links: [
-      { title: 'About Us', href: '/about', icon: Building },
-      { title: 'Team', href: '/team', icon: Users },
-      { title: 'Careers', href: '/careers', icon: Users },
-      { title: 'Partners', href: '/partners', icon: Globe },
-      { title: 'News', href: '/news', icon: FileText },
-      { title: 'Contact', href: '/contact', icon: MessageSquare }
-    ]
-  },
-  {
-    title: 'Support',
-    links: [
-      { title: 'Help Center', href: '/help', icon: MessageSquare },
-      { title: 'Documentation', href: '/docs', icon: FileText },
-      { title: 'API Reference', href: '/api', icon: Code },
-      { title: 'Status Page', href: '/status', icon: BarChart3 },
-      { title: 'Community', href: '/community', icon: Users },
-      { title: 'Training', href: '/training', icon: BookOpen }
-    ]
-  }
+const services = {
+  'AI Solutions': [
+    { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
+    { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
+    { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
+    { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
+    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
+    { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
+    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' },
+    { name: 'AI Financial Trading', href: '/ai-services#ai-financial-trading' }
+  ],
+  'IT Services': [
+    { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
+    { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
+    { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
+    { name: 'Database Management', href: '/it-services#database-management' },
+    { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
+    { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
+    { name: 'AI-Powered IT Management', href: '/it-services#ai-powered-it-management' },
+    { name: 'Zero Trust Security', href: '/it-services#zero-trust-security' }
+  ],
+  'Micro SaaS': [
+    { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
+    { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
+    { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
+    { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
+    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
+    { name: 'Email Sequencer', href: '/micro-saas#email-sequencer' },
+    { name: 'AI Cybersecurity Threat Hunter', href: '/micro-saas#ai-cybersecurity-threat-hunter' },
+    { name: 'AI Smart City Platform', href: '/micro-saas#ai-smart-city-platform' }
+  ]
+};
+const companyLinks = [
+  { name: 'About Us', href: '/about' },
+  { name: 'Our Team', href: '/team' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'News', href: '/news' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'White Papers', href: '/white-papers' }
 ];
-
-const microSaasCategories = [
-  { title: 'Marketing Tools', icon: Target, count: 15 },
-  { title: 'Productivity', icon: Settings, count: 12 },
-  { title: 'Analytics', icon: BarChart3, count: 18 },
-  { title: 'Automation', icon: Zap, count: 22 },
-  { title: 'Security', icon: Shield, count: 8 },
-  { title: 'Finance', icon: DollarSign, count: 10 },
-  { title: 'Design', icon: Paintbrush, count: 6 },
-  { title: 'Development', icon: Code, count: 14 }
+const supportLinks = [
+  { name: 'Help Center', href: '/help' },
+  { name: 'FAQ', href: '/faq' },
+  { name: 'Documentation', href: '/docs' },
+  { name: 'API Reference', href: '/api-docs' },
+  { name: 'Community', href: '/community' },
+  { name: 'Contact Support', href: '/contact' },
+  { name: 'Status Page', href: '/status' }
 ];
-
-const aiServiceCategories = [
-  { title: 'Machine Learning', icon: Brain, count: 25 },
-  { title: 'Computer Vision', icon: Eye, count: 18 },
-  { title: 'Natural Language', icon: MessageSquare, count: 20 },
-  { title: 'Predictive Analytics', icon: TrendingUp, count: 15 },
-  { title: 'Robotics', icon: Settings, count: 8 },
-  { title: 'Quantum AI', icon: Code, count: 5 }
+const legalLinks = [
+  { name: 'Privacy Policy', href: '/privacy' },
+  { name: 'Terms of Service', href: '/terms' },
+  { name: 'Cookie Policy', href: '/cookies' },
+  { name: 'GDPR Compliance', href: '/compliance' }
 ];
-
-const itServiceCategories = [
-  { title: 'Cloud Computing', icon: Cloud, count: 30 },
-  { title: 'Cybersecurity', icon: Shield, count: 25 },
-  { title: 'DevOps', icon: Settings, count: 20 },
-  { title: 'Data Management', icon: HardDrive, count: 15 },
-  { title: 'Network Security', icon: Lock, count: 18 },
-  { title: 'Infrastructure', icon: Building, count: 22 }
+const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
 ];
-
+const contactInfo = {
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008, Middletown, DE 19709',
+  hours: '24/7 Support Available'
+};
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-gray-900 text-white">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <div>
-                <div className="text-xl font-bold">Zion Tech Group</div>
-                <div className="text-sm text-gray-400">AI & Technology Solutions</div>
-              </div>
-            </div>
-            
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              Leading provider of AI services, IT solutions, and innovative micro SaaS platforms. 
-              We help businesses scale, automate, and innovate with cutting-edge technology.
-            </p>
-            
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-            </div>
-          </div>
-
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
             <div className="space-y-4">
-              {footerSections[0].links.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group"
-                >
-                  <link.icon className="w-4 h-4 group-hover:text-blue-400" />
-                  <span>{link.title}</span>
-                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
+              {Object.entries(services).map(([category, links]) => (
+                <div key={category}>
+                  <h4 className="text-sm font-medium text-gray-300 mb-2">{category}</h4>
+                  <ul className="space-y-1">
+                    {links.map((link, index) => (
+                      <li key={index}>
+                        <Link
+                          href={link.href}
+                          className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
           </div>
-
-          {/* Solutions */}
+          {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Solutions</h3>
-            <div className="space-y-4">
-              {footerSections[1].links.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group"
-                >
-                  <link.icon className="w-4 h-4 group-hover:text-blue-400" />
-                  <span>{link.title}</span>
-                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-
-          {/* Resources */}
+          {/* Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Resources</h3>
-            <div className="space-y-4">
-              {footerSections[3].links.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group"
-                >
-                  <link.icon className="w-4 h-4 group-hover:text-blue-400" />
-                  <span>{link.title}</span>
-                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
+            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <ul className="space-y-2">
+              {supportLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-        </div>
-
-        {/* Service Categories */}
-        <div className="mt-16 pt-8 border-t border-gray-800">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Micro SaaS Categories */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-blue-400">Micro SaaS Solutions</h4>
-              <div className="grid grid-cols-2 gap-2">
-                {microSaasCategories.map((category) => (
-                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">
-                    <category.icon className="w-4 h-4" />
-                    <span>{category.title}</span>
-                    <span className="text-blue-400">({category.count})</span>
-                  </div>
-                ))}
+          {/* Contact */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-blue-400" />
+                <span className="text-gray-400 text-sm">{contactInfo.phone}</span>
               </div>
-            </div>
-
-            {/* AI Service Categories */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-green-400">AI Services</h4>
-              <div className="grid grid-cols-2 gap-2">
-                {aiServiceCategories.map((category) => (
-                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">
-                    <category.icon className="w-4 h-4" />
-                    <span>{category.title}</span>
-                    <span className="text-green-400">({category.count})</span>
-                  </div>
-                ))}
+              <div className="flex items-center space-x-3">
+                <Mail className="w-4 h-4 text-blue-400" />
+                <span className="text-gray-400 text-sm">{contactInfo.email}</span>
               </div>
-            </div>
-
-            {/* IT Service Categories */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-purple-400">IT Services</h4>
-              <div className="grid grid-cols-2 gap-2">
-                {itServiceCategories.map((category) => (
-                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">
-                    <category.icon className="w-4 h-4" />
-                    <span>{category.title}</span>
-                    <span className="text-purple-400">({category.count})</span>
-                  </div>
-                ))}
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-4 h-4 text-blue-400 mt-1" />
+                <span className="text-gray-400 text-sm">{contactInfo.address}</span>
+              </div>
+              <div className="text-gray-400 text-sm">
+                <Zap className="w-4 h-4 inline mr-2" />
+                {contactInfo.hours}
               </div>
             </div>
           </div>
         </div>
-
-        {/* Stats Section */}
-        <div className="mt-16 pt-8 border-t border-gray-800">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-400 mb-2">235+</div>
-              <div className="text-gray-400">Services & Solutions</div>
+        {/* Social Links */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex space-x-6 mb-4 md:mb-0">
+              {socialLinks.map((social, index) => {
+                const IconComponent = social.icon;
+                return (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-blue-400 transition-colors"
+                  >
+                    <IconComponent className="w-5 h-5" />
+                  </a>
+                );
+              })}
             </div>
-            <div>
-              <div className="text-3xl font-bold text-green-400 mb-2">1,200+</div>
-              <div className="text-gray-400">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-purple-400 mb-2">95+</div>
-              <div className="text-gray-400">Expert Team Members</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">15+</div>
-              <div className="text-gray-400">Years Experience</div>
+            <div className="text-sm text-gray-400">
+              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="bg-gray-800 border-t border-gray-700">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
-              © 2025 Zion Tech Group. All rights reserved. | 
-              <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
-              <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
-            </div>
-            
-            <div className="flex items-center space-x-6">
-              <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Sitemap
+        {/* Legal Links */}
+        <div className="border-t border-gray-800 mt-4 pt-4">
+          <div className="flex flex-wrap items-center justify-center space-x-6">
+            {legalLinks.map((link, index) => (
+              <Link
+                key={index}
+                href={link.href}
+                className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+              >
+                {link.label}
               </Link>
-              <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Accessibility
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Cookie Policy
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
       </div>
