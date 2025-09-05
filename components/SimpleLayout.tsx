@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import * as React from 'react';
-import Head from 'next/head';
-;
-interface SimpleLayoutProps {;
-  title: string;
-  description?: string,
-  children: React.ReactNode
-};
-export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {,
-  return (,
-    <>,
-      <Head>,
-        <title>{title}</title>,
-=======
-import React from 'react',;
-import * as React from 'react',;
-import Head from 'next/head',;
-interface SimpleLayoutProps {,;
-  title: string,;
-  description?: string,;
-  children: React.ReactNode,;
-,};
-export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {,;
-  return (,;
-    <>,;
-      <Head>,;
-        <title>{title}</title>,;
->>>>>>> cursor/automate-test-improve-and-merge-code-ceec
         {description && <meta name="description" content={description} />};
       </Head>,;
       {children};

@@ -46,35 +46,6 @@ export const useStableCallback = <T extends (...args: any[]) => any>(,;
 ): T => {,;
   return useCallback(callback, deps),;
 };
-<<<<<<< HEAD
-
-// Performance monitoring hook
-export const usePerformanceMonitor = (componentName: string) => {
-  const startTime = useMemo(() => window.window.performance.now(), []);
-  
-  React.useEffect(() => {
-    const endTime = window.window.performance.now();
-    const renderTime = endTime - startTime;
-    
-    if (renderTime > 16) { // More than one frame (16ms at 60fps)
-      console.warn(`${componentName} took ${renderTime.toFixed(2)}ms to render`);
-    }
-  }, [componentName, startTime]);
-=======
-,;
-// Performance monitoring hook,;
-export const usePerformanceMonitor = (componentName: string) => {,;
-  const startTime = useMemo(() => performance.now(), []),;
-,;
-  React.useEffect(() => {,;
-    const endTime = performance.now(),;
-    const renderTime = endTime - startTime,;
-,;
-    if (renderTime > 16) { // More than one frame (16ms at 60fps),;
-      console.warn(`${componentName} took ${renderTime.toFixed(2)}ms to render`),;
-    };
-  }, [componentName, startTime]),;
->>>>>>> cursor/automate-test-improve-and-merge-code-ceec
 };
 ,;
 // Lazy loading wrapper with intersection observer,;
@@ -162,75 +133,6 @@ export const OptimizedImage: React.FC<{,;
     </div>,;
   ),;
 };
-<<<<<<< HEAD
-
-// Virtual scrolling hook for large lists
-export const useVirtualScroll = <T>(
-  items: T[];
-  itemHeight: number;
-  containerHeight: number
-) => {
-  const [scrollTop, setScrollTop] = React.useState(0);
-  
-  const visibleItems = useMemo(() => {
-    const startIndex = Math.floor(scrollTop / itemHeight);
-    const endIndex = Math.min(
-      startIndex + Math.ceil(containerHeight / itemHeight) + 1,
-      items.length
-    );
-    
-    return items.slice(startIndex, endIndex).map((item, index) => ({
-      item,
-      index: startIndex + index,
-      top: (startIndex + index) * itemHeight
-    }));
-  }, [items, itemHeight, containerHeight, scrollTop]);
-  
-  const totalHeight = items.length * itemHeight;
-  
-  const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
-    setScrollTop(e.currentTarget.scrollTop);
-  }, []);
-  
-  return {
-    visibleItems,
-    totalHeight,
-    handleScroll
-=======
-,;
-// Virtual scrolling hook for large lists,;
-export const useVirtualScroll = <T>(,;
-  items: T[],;
-  itemHeight: number,;
-  containerHeight: number,;
-) => {,;
-  const [scrollTop, setScrollTop] = React.useState(0),;
-,;
-  const visibleItems = useMemo(() => {,;
-    const startIndex = Math.floor(scrollTop / itemHeight),;
-    const endIndex = Math.min(,;
-      startIndex + Math.ceil(containerHeight / itemHeight) + 1,;
-      items.length,;
-    ),;
-,;
-    return items.slice(startIndex, endIndex).map((item, index) => ({,;
-      item,;
-      index: startIndex + index,;
-      top: (startIndex + index) * itemHeight,;
-    ,})),;
-  }, [items, itemHeight, containerHeight, scrollTop]),;
-,;
-  const totalHeight = items.length * itemHeight,;
-,;
-  const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {,;
-    setScrollTop(e.currentTarget.scrollTop),;
-  ,}, []),;
-,;
-  return {,;
-    visibleItems,;
-    totalHeight,;
-    handleScroll,;
->>>>>>> cursor/automate-test-improve-and-merge-code-ceec
   };
 };
 ,;

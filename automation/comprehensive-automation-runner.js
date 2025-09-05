@@ -21,62 +21,6 @@ class ComprehensiveAutomationRunner {,;
       security: {,},;
       overall: { status: "unknown", score: 0 ,};
     };
-<<<<<<< HEAD
-  }
-
-  ensureDirectories() {
-    const dirs = [
-      path.dirname(this.logFile),
-      path.dirname(this.resultsFile),
-      path.join(__dirname, "logs"),
-      path.join(__dirname, "reports")
-    ];
-    dirs.forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
-  }
-
-  log(message, level = "INFO") {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    // // console.log(`[${level}] ${message}`);
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-
-  async runCommand(command, description) {
-    try {
-      this.log(`Running: ${description}`);
-      const startTime = Date.now();
-      const output = execSync(command, { 
-        stdio: 'pipe', 
-        cwd: process.cwd(),
-        timeout: 300000 // 5 minutes
-      });
-      const duration = Date.now() - startTime;
-      this.log(`✓ ${description} completed in ${duration}ms`);
-      return { success: true, output: output.toString(), duration };
-    } catch (error) {
-      this.log(`✗ ${description} failed: ${error.message}`, "ERROR");
-      return { 
-        success: false, 
-        error: error.message, 
-        output: error.stdout?.toString() || error.stderr?.toString() || ""
-=======
-  };
-,;
-  ensureDirectories() {,;
-    const dirs = [,;
-      path.dirname(this.logFile),;
-      path.dirname(this.resultsFile),;
-      path.join(__dirname, "logs"),;
-      path.join(__dirname, "reports"),;
-    ],;
-    dirs.forEach(dir => {,;
-      if (!fs.existsSync(dir)) {,;
-        fs.mkdirSync(dir, { recursive: true ,}),;
->>>>>>> cursor/automate-test-improve-and-merge-code-ceec
       };
     }),;
   };

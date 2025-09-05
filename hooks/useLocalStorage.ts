@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-const { useState } from "react", export const useLocalStorage = <T>(key: string,initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key), return item ? JSON.parse(item) : initialValue} catch (error) { return initialValue} }), const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value, setStoredValue(valueToStore), window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) {} }; return [storedValue,setValue] as const}; export default useLocalStorage,''",
-interface UseLocalStorageProps {,
-  // Add props here as needed
-};
-interface UseLocalStorageProps {,
-  // Add props here as needed
-};
-interface UseLocalStorageProps {,
-  // Add props here as needed
-=======
-const { useState } from "react", export const useLocalStorage = <T>(key: string,initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key), return item ? JSON.parse(item) : initialValue} catch (error) { return initialValue} }), const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value, setStoredValue(valueToStore), window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) {} }; return [storedValue,setValue] as const}; export default useLocalStorage,''",;
-interface UseLocalStorageProps {,;
-  // Add props here as needed,;
-};
-interface UseLocalStorageProps {,;
-  // Add props here as needed,;
-};
-interface UseLocalStorageProps {,;
-  // Add props here as needed,;
->>>>>>> cursor/automate-test-improve-and-merge-code-ceec
 };
 export const useLocalStorage = <T>(key: string, initialValue: T) => {,;
   const [storedValue, setStoredValue] = useState<T>(() => {,;
@@ -36,26 +15,6 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {,;
       console.error(`Error setting localStorage key "${key}":`, error)};
   };
   return [storedValue, setValue] as const};
-<<<<<<< HEAD
-export default useLocalStorage,
-import { useState,useEffect } from 'react', export const useLocalStorage = <T>(key: 'string',initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key), return item ? JSON.parse(item) : initialValue} catch (error) { console.error(`Error reading localStorage key "${key}":`,error), return initialValue} }), const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value, setStoredValue(valueToStore), window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) { console.error(`Error setting localStorage key "${key}":`,error)} }; return [storedValue,setValue] as const}; export default useLocalStorage,
-export default function UseLocalStorage({ }: UseLocalStorageProps) {,
-  return (,
-    <div>,
-      <h1>UseLocalStorage</h1>,
-      <p>This component is currently under development.</p>,
-    </div>)
-=======
-export default useLocalStorage,;
-import { useState,useEffect } from 'react', export const useLocalStorage = <T>(key: 'string',initialValue: T) => { const [storedValue,setStoredValue] = useState<T>(() => { try { const item = window.localStorage.getItem(key), return item ? JSON.parse(item) : initialValue} catch (error) { console.error(`Error reading localStorage key "${key}":`,error), return initialValue} }), const setValue = (value: T | ((val: T) => T)) => { try { const valueToStore = value instanceof Function ? value(storedValue) : value, setStoredValue(valueToStore), window.localStorage.setItem(key,JSON.stringify(valueToStore))} catch (error) { console.error(`Error setting localStorage key "${key}":`,error)} }; return [storedValue,setValue] as const}; export default useLocalStorage,;
-export default function UseLocalStorage({ }: UseLocalStorageProps) {,;
-  return (,;
-    <div>,;
-      <h1>UseLocalStorage</h1>,;
-      <p>This component is currently under development.</p>,;
-    </div>,;
-  ),;
->>>>>>> cursor/automate-test-improve-and-merge-code-ceec
 };
 };
 };
