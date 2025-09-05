@@ -1,4 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react',
+
+interface PerformanceData {
+  domContentLoaded: number,
+  loadComplete: number,
+  totalLoadTime: number,
+  firstPaint: number,
+  firstContentfulPaint: number,
+  resourceCount: number,
+  memory?: {
+    used: number,
+    total: number,
+    limit: number,
+  } | null,
+}
 
 interface PerformanceData {
   loadTime: number;
@@ -14,8 +28,8 @@ interface PerformanceMonitorProps {
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+      const paint = performance.getEntriesByType('paint'),
       
       const performanceData: PerformanceData = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
@@ -25,23 +39,23 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       };
       
       if (onPerformanceData) {
-        onPerformanceData(performanceData);
+        onPerformanceData(performanceData),
       }
     };
 
     // Measure performance after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
+      measurePerformance(),
     } else {
-      window.addEventListener('load', measurePerformance);
+      window.addEventListener('load', measurePerformance),
     }
 
     return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, [onPerformanceData]);
+      window.removeEventListener('load', measurePerformance),
+    },
+  }, [onPerformanceData]),
 
-  return null;
-};
+  return null,
+},
 
-export default PerformanceMonitor;
+export default PerformanceMonitor,

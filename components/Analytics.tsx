@@ -88,10 +88,10 @@ const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =
 
   // Expose tracking functions globally for use in other components
   if (typeof window !== 'undefined') {
-    (window as any).trackEvent = trackEvent;
-    (window as any).trackButtonClick = trackButtonClick;
-    (window as any).trackFormSubmission = trackFormSubmission;
-    (window as any).trackExternalLink = trackExternalLink;
+    (window as unknown as { [key: string]: unknown }).trackEvent = trackEvent;
+    (window as unknown as { [key: string]: unknown }).trackButtonClick = trackButtonClick;
+    (window as unknown as { [key: string]: unknown }).trackFormSubmission = trackFormSubmission;
+    (window as unknown as { [key: string]: unknown }).trackExternalLink = trackExternalLink;
   }
 
   return (
