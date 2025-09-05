@@ -3,16 +3,6 @@ import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight, Copy, Check, ExternalLink, Search, Filter, BookOpen, Globe, Terminal, Database, Server, Cpu, Lock, Clock, Users, BarChart3, Settings, Play, Pause, RotateCcw } from 'lucide-react';
 
----
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-
-
-
----
-import React from "react";
-import Head from 'next/head';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-
 
 export default function APIPage() {
   const apiFeatures = [
@@ -235,9 +225,6 @@ export default function APIPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {apiFeaturesDetailed.map((feature, index) => {
-
----
               {apiFeatures.map((feature, index) => {
 
                 const IconComponent = feature.icon;

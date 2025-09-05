@@ -244,6 +244,226 @@ const itServices = [
       "Better data flow",
       "Reduced manual work"
     ]
+  },
+  {
+    title: "Advanced Cloud Security & Compliance",
+    description: "Comprehensive cloud security solutions with compliance management and monitoring",
+    icon: Shield,
+    features: [
+      "Cloud Security Architecture",
+      "Compliance Auditing (SOC2, HIPAA, GDPR)",
+      "Identity & Access Management",
+      "Data Encryption & Key Management",
+      "Security Monitoring & Alerting",
+      "Incident Response Planning"
+    ],
+    color: "from-red-500 to-pink-500",
+    benefits: [
+      "Enhanced security posture",
+      "Regulatory compliance",
+      "Reduced security risks",
+      "Peace of mind"
+    ]
+  },
+  {
+    title: "Enterprise Data Analytics & Business Intelligence",
+    description: "Advanced data analytics and business intelligence solutions for data-driven decisions",
+    icon: BarChart3,
+    features: [
+      "Data Warehouse Design",
+      "ETL/ELT Pipeline Development",
+      "Real-time Analytics Dashboards",
+      "Predictive Analytics",
+      "Data Visualization",
+      "Self-Service BI Tools"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    benefits: [
+      "Data-driven insights",
+      "Improved decision making",
+      "Competitive advantage",
+      "Operational efficiency"
+    ]
+  },
+  {
+    title: "Advanced Network Security & Firewall Management",
+    description: "Next-generation firewall solutions and network security management",
+    icon: Lock,
+    features: [
+      "Next-Gen Firewall Implementation",
+      "Intrusion Detection & Prevention",
+      "Network Segmentation",
+      "VPN & Remote Access",
+      "Threat Intelligence Integration",
+      "Security Policy Management"
+    ],
+    color: "from-orange-500 to-red-500",
+    benefits: [
+      "Enhanced network security",
+      "Threat prevention",
+      "Compliance assurance",
+      "Reduced security incidents"
+    ]
+  },
+  {
+    title: "AI-Powered IT Operations & Monitoring",
+    description: "Intelligent IT operations with AI-driven monitoring and automation",
+    icon: Cpu,
+    features: [
+      "AI-Powered Monitoring",
+      "Predictive Maintenance",
+      "Automated Incident Response",
+      "Performance Optimization",
+      "Capacity Planning",
+      "Root Cause Analysis"
+    ],
+    color: "from-purple-500 to-indigo-500",
+    benefits: [
+      "Proactive issue resolution",
+      "Reduced downtime",
+      "Improved performance",
+      "Cost optimization"
+    ]
+  },
+  {
+    title: "Enterprise Backup & Disaster Recovery",
+    description: "Comprehensive backup and disaster recovery solutions for business continuity",
+    icon: HardDrive,
+    features: [
+      "Automated Backup Solutions",
+      "Disaster Recovery Planning",
+      "Data Replication",
+      "Recovery Testing",
+      "Cloud Backup Integration",
+      "Business Continuity Planning"
+    ],
+    color: "from-slate-500 to-gray-500",
+    benefits: [
+      "Data protection",
+      "Business continuity",
+      "Minimal data loss",
+      "Rapid recovery"
+    ]
+  },
+  {
+    title: "Advanced Endpoint Security & Management",
+    description: "Comprehensive endpoint protection and device management solutions",
+    icon: Smartphone,
+    features: [
+      "Endpoint Detection & Response (EDR)",
+      "Mobile Device Management (MDM)",
+      "Patch Management",
+      "Application Control",
+      "Device Compliance",
+      "Remote Wipe & Lock"
+    ],
+    color: "from-emerald-500 to-teal-500",
+    benefits: [
+      "Enhanced device security",
+      "Centralized management",
+      "Compliance assurance",
+      "Reduced security risks"
+    ]
+  },
+  {
+    title: "Hybrid Cloud & Multi-Cloud Management",
+    description: "Seamless management of hybrid and multi-cloud environments",
+    icon: Cloud,
+    features: [
+      "Multi-Cloud Strategy",
+      "Cloud Cost Optimization",
+      "Workload Migration",
+      "Cloud Governance",
+      "Performance Monitoring",
+      "Security Management"
+    ],
+    color: "from-blue-500 to-cyan-500",
+    benefits: [
+      "Flexible cloud strategy",
+      "Cost optimization",
+      "Vendor independence",
+      "Improved performance"
+    ]
+  },
+  {
+    title: "Advanced Database Administration & Optimization",
+    description: "Expert database management, optimization, and performance tuning",
+    icon: Database,
+    features: [
+      "Database Design & Architecture",
+      "Performance Tuning",
+      "Backup & Recovery",
+      "Security Hardening",
+      "Capacity Planning",
+      "Migration Services"
+    ],
+    color: "from-green-500 to-emerald-500",
+    benefits: [
+      "Optimized performance",
+      "Enhanced security",
+      "Reduced costs",
+      "Improved reliability"
+    ]
+  },
+  {
+    title: "IT Infrastructure Automation & Orchestration",
+    description: "Automated infrastructure management and orchestration solutions",
+    icon: Zap,
+    features: [
+      "Infrastructure as Code (IaC)",
+      "Automated Provisioning",
+      "Configuration Management",
+      "Orchestration Workflows",
+      "Self-Healing Systems",
+      "Resource Optimization"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    benefits: [
+      "Reduced manual work",
+      "Faster deployments",
+      "Consistent configurations",
+      "Improved efficiency"
+    ]
+  },
+  {
+    title: "Advanced Threat Intelligence & Security Operations",
+    description: "Proactive threat hunting and security operations center (SOC) services",
+    icon: Shield,
+    features: [
+      "Threat Hunting",
+      "Security Incident Response",
+      "Vulnerability Management",
+      "Security Awareness Training",
+      "Penetration Testing",
+      "Compliance Monitoring"
+    ],
+    color: "from-rose-500 to-pink-500",
+    benefits: [
+      "Proactive security",
+      "Faster incident response",
+      "Reduced security risks",
+      "Compliance assurance"
+    ]
+  },
+  {
+    title: "Enterprise Application Integration & API Management",
+    description: "Comprehensive application integration and API management solutions",
+    icon: Network,
+    features: [
+      "API Gateway Management",
+      "Microservices Architecture",
+      "Legacy System Integration",
+      "Real-time Data Sync",
+      "API Security",
+      "Developer Portal"
+    ],
+    color: "from-violet-500 to-purple-500",
+    benefits: [
+      "Seamless integration",
+      "Improved efficiency",
+      "Better data flow",
+      "Enhanced security"
+    ]
   }
 ];
 

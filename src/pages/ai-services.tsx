@@ -223,6 +223,206 @@ const aiServices = [
       "Regulatory compliance",
       "Transparent AI systems"
     ]
+  },
+  {
+    title: "Advanced Computer Vision & Image Recognition",
+    description: "State-of-the-art visual AI for complex image analysis and recognition tasks",
+    icon: Eye,
+    features: [
+      "Multi-object Detection",
+      "Facial Recognition & Analysis",
+      "Medical Image Diagnosis",
+      "Quality Control Automation",
+      "Augmented Reality Integration",
+      "Real-time Video Analysis"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    useCases: [
+      "Medical diagnosis support",
+      "Manufacturing quality control",
+      "Security surveillance",
+      "Retail customer analytics"
+    ]
+  },
+  {
+    title: "Intelligent Document Processing & OCR",
+    description: "Advanced document understanding and data extraction using AI",
+    icon: Database,
+    features: [
+      "Multi-format Document Processing",
+      "Handwriting Recognition",
+      "Intelligent Data Extraction",
+      "Document Classification",
+      "Language Translation",
+      "Compliance Verification"
+    ],
+    color: "from-amber-500 to-orange-500",
+    useCases: [
+      "Invoice processing automation",
+      "Legal document analysis",
+      "Insurance claim processing",
+      "Academic paper analysis"
+    ]
+  },
+  {
+    title: "AI-Powered Voice & Speech Technology",
+    description: "Advanced voice recognition, synthesis, and conversational AI solutions",
+    icon: MessageSquare,
+    features: [
+      "Multi-language Speech Recognition",
+      "Voice Cloning & Synthesis",
+      "Emotion Detection in Speech",
+      "Real-time Translation",
+      "Voice Command Processing",
+      "Audio Content Analysis"
+    ],
+    color: "from-violet-500 to-purple-500",
+    useCases: [
+      "Voice assistants",
+      "Call center automation",
+      "Accessibility solutions",
+      "Content creation"
+    ]
+  },
+  {
+    title: "Predictive Maintenance & IoT Analytics",
+    description: "AI-driven predictive analytics for equipment maintenance and IoT optimization",
+    icon: Settings,
+    features: [
+      "Equipment Failure Prediction",
+      "Sensor Data Analysis",
+      "Maintenance Scheduling",
+      "Performance Optimization",
+      "Anomaly Detection",
+      "Cost Optimization"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    useCases: [
+      "Manufacturing equipment",
+      "Fleet management",
+      "Building systems",
+      "Energy infrastructure"
+    ]
+  },
+  {
+    title: "AI-Powered Financial Analysis & Trading",
+    description: "Advanced financial AI for market analysis, risk assessment, and trading optimization",
+    icon: TrendingUp,
+    features: [
+      "Market Trend Analysis",
+      "Risk Assessment Models",
+      "Algorithmic Trading",
+      "Fraud Detection",
+      "Credit Scoring",
+      "Portfolio Optimization"
+    ],
+    color: "from-green-500 to-emerald-500",
+    useCases: [
+      "Investment decision support",
+      "Risk management",
+      "Fraud prevention",
+      "Trading automation"
+    ]
+  },
+  {
+    title: "Intelligent Supply Chain Optimization",
+    description: "AI-driven supply chain management and optimization solutions",
+    icon: Network,
+    features: [
+      "Demand Forecasting",
+      "Inventory Optimization",
+      "Route Planning",
+      "Supplier Risk Assessment",
+      "Cost Optimization",
+      "Sustainability Tracking"
+    ],
+    color: "from-indigo-500 to-blue-500",
+    useCases: [
+      "Retail inventory management",
+      "Manufacturing supply chains",
+      "Logistics optimization",
+      "Procurement automation"
+    ]
+  },
+  {
+    title: "AI-Powered Content Generation & Marketing",
+    description: "Advanced content creation and marketing automation using AI",
+    icon: Lightbulb,
+    features: [
+      "Automated Content Creation",
+      "Personalized Marketing Campaigns",
+      "SEO Optimization",
+      "Social Media Management",
+      "A/B Testing Automation",
+      "Performance Analytics"
+    ],
+    color: "from-rose-500 to-pink-500",
+    useCases: [
+      "Content marketing automation",
+      "Social media management",
+      "Email campaign optimization",
+      "Website content generation"
+    ]
+  },
+  {
+    title: "Intelligent Cybersecurity & Threat Detection",
+    description: "AI-powered cybersecurity solutions for advanced threat detection and prevention",
+    icon: Shield,
+    features: [
+      "Real-time Threat Detection",
+      "Behavioral Analysis",
+      "Automated Incident Response",
+      "Vulnerability Assessment",
+      "Security Orchestration",
+      "Compliance Monitoring"
+    ],
+    color: "from-red-500 to-pink-500",
+    useCases: [
+      "Network security monitoring",
+      "Endpoint protection",
+      "Cloud security",
+      "Compliance management"
+    ]
+  },
+  {
+    title: "AI-Powered Healthcare & Medical Solutions",
+    description: "Advanced AI solutions for healthcare, medical diagnosis, and treatment optimization",
+    icon: Users,
+    features: [
+      "Medical Image Analysis",
+      "Drug Discovery Support",
+      "Patient Risk Assessment",
+      "Treatment Recommendation",
+      "Clinical Trial Optimization",
+      "Health Monitoring"
+    ],
+    color: "from-emerald-500 to-teal-500",
+    useCases: [
+      "Medical diagnosis assistance",
+      "Drug development",
+      "Patient monitoring",
+      "Clinical decision support"
+    ]
+  },
+  {
+    title: "Intelligent Energy Management & Sustainability",
+    description: "AI-driven energy optimization and sustainability solutions for businesses",
+    icon: Zap,
+    features: [
+      "Energy Consumption Optimization",
+      "Renewable Energy Integration",
+      "Carbon Footprint Tracking",
+      "Smart Grid Management",
+      "Predictive Energy Analytics",
+      "Sustainability Reporting"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    useCases: [
+      "Building energy management",
+      "Renewable energy optimization",
+      "Carbon footprint reduction",
+      "Smart city solutions"
+    ]
   }
 ];
 

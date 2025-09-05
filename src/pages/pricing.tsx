@@ -14,7 +14,15 @@ import {
   Lock,
   Settings,
   Rocket,
-  Layers
+  Layers,
+  BarChart3,
+  Database,
+  Users,
+  Target,
+  Mail,
+  MessageSquare,
+  Globe,
+  Code
 } from 'lucide-react';
 
 const pricingPlans = [
@@ -24,46 +32,50 @@ const pricingPlans = [
     color: "from-purple-500 to-pink-500",
     plans: [
       {
-        name: "Starter AI",
-        price: "$2,500",
+        name: "AI Starter",
+        price: "$1,200",
         period: "per month",
-        description: "Perfect for small businesses",
+        description: "Perfect for small businesses getting started with AI",
         features: [
-          "Basic AI Chatbot",
-          "Document Processing",
+          "Basic AI Chatbot (up to 1,000 conversations/month)",
+          "Document Processing (up to 500 documents/month)",
           "Email Support",
-          "Basic Analytics",
-          "Monthly Reports"
+          "Basic Analytics Dashboard",
+          "Monthly Performance Reports",
+          "API Access (1,000 calls/month)"
         ],
         popular: false
       },
       {
-        name: "Professional AI",
-        price: "$7,500",
+        name: "AI Professional",
+        price: "$3,500",
         period: "per month",
-        description: "Ideal for growing companies",
+        description: "Ideal for growing companies with advanced AI needs",
         features: [
-          "Advanced AI Models",
-          "Custom ML Solutions",
+          "Advanced AI Models & Custom Training",
+          "Unlimited Document Processing",
           "24/7 Priority Support",
-          "Real-time Analytics",
-          "API Integration",
-          "Dedicated Account Manager"
+          "Real-time Analytics & Insights",
+          "API Integration (10,000 calls/month)",
+          "Dedicated Account Manager",
+          "Custom AI Model Development"
         ],
         popular: true
       },
       {
-        name: "Enterprise AI",
-        price: "Custom",
-        period: "pricing",
-        description: "For large organizations",
+        name: "AI Enterprise",
+        price: "$8,500",
+        period: "per month",
+        description: "For large organizations requiring enterprise-grade AI",
         features: [
           "Quantum AI Solutions",
-          "Custom AI Development",
-          "White-label Solutions",
-          "On-premise Deployment",
-          "Dedicated AI Team",
-          "SLA Guarantee"
+          "Custom AI Development & Training",
+          "White-label AI Solutions",
+          "On-premise Deployment Options",
+          "Dedicated AI Team (5+ specialists)",
+          "99.9% SLA Guarantee",
+          "Unlimited API Access",
+          "Advanced Security & Compliance"
         ],
         popular: false
       }
@@ -75,97 +87,109 @@ const pricingPlans = [
     color: "from-blue-500 to-cyan-500",
     plans: [
       {
-        name: "Basic IT",
-        price: "$1,500",
+        name: "IT Essentials",
+        price: "$800",
         period: "per month",
-        description: "Essential IT support",
+        description: "Essential IT support for small businesses",
         features: [
-          "Basic IT Support",
-          "Network Monitoring",
+          "Basic IT Support (8am-6pm EST)",
+          "Network Monitoring & Management",
           "Email Support",
-          "Basic Security",
-          "Monthly Reports"
+          "Basic Security (Firewall, Antivirus)",
+          "Monthly Health Reports",
+          "Remote Support (up to 10 devices)"
         ],
         popular: false
       },
       {
-        name: "Professional IT",
-        price: "$4,500",
+        name: "IT Professional",
+        price: "$2,200",
         period: "per month",
-        description: "Comprehensive IT solutions",
+        description: "Comprehensive IT solutions for growing businesses",
         features: [
-          "24/7 IT Support",
-          "Cloud Migration",
-          "Advanced Security",
-          "DevOps Services",
-          "Priority Support",
-          "Dedicated Manager"
+          "24/7 IT Support & Monitoring",
+          "Cloud Migration & Management",
+          "Advanced Security Suite",
+          "DevOps & CI/CD Services",
+          "Priority Support Response",
+          "Dedicated IT Manager",
+          "Up to 50 devices",
+          "Backup & Disaster Recovery"
         ],
         popular: true
       },
       {
-        name: "Enterprise IT",
-        price: "Custom",
-        period: "pricing",
-        description: "Full-scale IT transformation",
+        name: "IT Enterprise",
+        price: "$5,500",
+        period: "per month",
+        description: "Full-scale IT transformation for large organizations",
         features: [
-          "Quantum Computing",
-          "Blockchain Solutions",
-          "IoT Implementation",
+          "Dedicated IT Team (3+ specialists)",
+          "Advanced Cloud & Hybrid Solutions",
+          "Enterprise Security & Compliance",
+          "Custom Infrastructure Design",
           "Data Center Solutions",
-          "Dedicated Team",
-          "SLA Guarantee"
+          "99.9% SLA Guarantee",
+          "Unlimited devices",
+          "24/7 On-site Support Available"
         ],
         popular: false
       }
     ]
   },
   {
-    category: "Micro SaaS",
+    category: "Micro SaaS Development",
     icon: Cloud,
     color: "from-green-500 to-emerald-500",
     plans: [
       {
-        name: "MVP Development",
-        price: "$15,000",
-        period: "starting price",
-        description: "Minimum viable product",
+        name: "SaaS MVP",
+        price: "$12,000",
+        period: "one-time",
+        description: "Minimum viable product to test your idea",
         features: [
-          "Basic Web Application",
-          "User Authentication",
-          "Database Setup",
-          "Basic API",
-          "3 Months Support"
+          "Basic Web Application (React/Next.js)",
+          "User Authentication & Authorization",
+          "Database Design & Setup",
+          "Basic API Development",
+          "Responsive Design",
+          "3 Months Post-Launch Support",
+          "Basic Analytics Integration"
         ],
         popular: false
       },
       {
-        name: "Full SaaS Platform",
-        price: "$45,000",
-        period: "starting price",
-        description: "Complete software solution",
+        name: "SaaS Complete",
+        price: "$35,000",
+        period: "one-time",
+        description: "Full-featured software solution ready for market",
         features: [
-          "Advanced Web App",
-          "Mobile Application",
-          "AI Integration",
-          "Payment Processing",
-          "Analytics Dashboard",
-          "6 Months Support"
+          "Advanced Web Application",
+          "Mobile App (iOS & Android)",
+          "AI/ML Integration",
+          "Payment Processing (Stripe/PayPal)",
+          "Advanced Analytics Dashboard",
+          "6 Months Post-Launch Support",
+          "Admin Panel & User Management",
+          "API Documentation"
         ],
         popular: true
       },
       {
-        name: "Enterprise SaaS",
-        price: "Custom",
-        period: "pricing",
-        description: "Advanced enterprise solution",
+        name: "SaaS Enterprise",
+        price: "$75,000",
+        period: "one-time",
+        description: "Advanced enterprise solution with cutting-edge features",
         features: [
-          "Quantum Computing SaaS",
-          "Blockchain Integration",
-          "AR/VR Applications",
-          "IoT Platform",
+          "Multi-tenant Architecture",
+          "Advanced AI Integration",
+          "Blockchain/Web3 Features",
+          "AR/VR Capabilities",
+          "IoT Platform Integration",
           "White-label Solution",
-          "12 Months Support"
+          "12 Months Post-Launch Support",
+          "Custom Integrations",
+          "Enterprise Security & Compliance"
         ],
         popular: false
       }
@@ -175,27 +199,105 @@ const pricingPlans = [
 
 const additionalServices = [
   {
+    name: "AI-Powered Customer Analytics Platform",
+    icon: BarChart3,
+    price: "$2,500/month",
+    description: "Advanced customer behavior analysis and predictive insights"
+  },
+  {
+    name: "Smart Document Processing Suite",
+    icon: Database,
+    price: "$1,800/month",
+    description: "Intelligent document automation and processing"
+  },
+  {
+    name: "Real-time Collaboration Workspace",
+    icon: Users,
+    price: "$3,200/month",
+    description: "AI-powered team collaboration platform"
+  },
+  {
+    name: "Intelligent Inventory Management",
+    icon: Target,
+    price: "$2,000/month",
+    description: "AI-driven inventory optimization and supply chain management"
+  },
+  {
+    name: "Advanced Email Marketing Automation",
+    icon: Mail,
+    price: "$1,500/month",
+    description: "AI-powered email marketing with personalization"
+  },
+  {
+    name: "Smart Financial Planning & Analytics",
+    icon: BarChart3,
+    price: "$2,200/month",
+    description: "Comprehensive financial management and forecasting"
+  },
+  {
+    name: "AI-Powered HR Management Suite",
+    icon: Users,
+    price: "$2,800/month",
+    description: "Complete HR management with intelligent automation"
+  },
+  {
+    name: "Intelligent Customer Support System",
+    icon: MessageSquare,
+    price: "$2,000/month",
+    description: "Advanced customer service with AI chatbots"
+  },
+  {
+    name: "Smart Social Media Management",
+    icon: Globe,
+    price: "$1,200/month",
+    description: "AI-powered social media scheduling and analytics"
+  },
+  {
+    name: "Advanced Lead Generation & CRM",
+    icon: Target,
+    price: "$2,500/month",
+    description: "Intelligent lead generation and customer relationship management"
+  },
+  {
+    name: "Smart Content Management System",
+    icon: Code,
+    price: "$1,800/month",
+    description: "AI-powered content creation and optimization"
+  },
+  {
+    name: "Intelligent Business Intelligence Dashboard",
+    icon: BarChart3,
+    price: "$3,000/month",
+    description: "Comprehensive business analytics with AI insights"
+  },
+  {
+    name: "Smart Compliance & Risk Management",
+    icon: Shield,
+    price: "$2,500/month",
+    description: "Automated compliance monitoring and risk assessment"
+  },
+  {
     name: "Quantum Computing Solutions",
     icon: Rocket,
-    price: "Starting at $50,000",
+    price: "Starting at $15,000/month",
     description: "Next-generation quantum computing solutions and research"
   },
   {
     name: "Blockchain & Web3 Development",
     icon: Lock,
-    price: "Starting at $25,000",
+    price: "Starting at $8,000/month",
     description: "Decentralized applications and Web3 solutions"
   },
   {
     name: "IoT & Edge Computing",
     icon: Settings,
-    price: "Starting at $20,000",
+    price: "Starting at $5,000/month",
     description: "Internet of Things solutions and edge computing platforms"
   },
   {
     name: "AR/VR & Metaverse",
     icon: Layers,
-    price: "Starting at $30,000",
+    price: "Starting at $10,000/month",
     description: "Augmented and virtual reality applications"
   }
 ];

@@ -21,7 +21,9 @@ import {
   Lightbulb,
   Rocket,
   Code,
-  Layers
+  Layers,
+  Mail,
+  MessageSquare
 } from 'lucide-react';
 
 const microSaasServices = [
@@ -243,6 +245,286 @@ const microSaasServices = [
       "Revenue generation",
       "Customer management",
       "Business growth"
+    ]
+  },
+  {
+    title: "AI-Powered Customer Analytics Platform",
+    description: "Advanced customer behavior analysis and predictive insights for e-commerce and SaaS businesses",
+    icon: BarChart3,
+    features: [
+      "Real-time Customer Segmentation",
+      "Predictive Churn Analysis",
+      "Lifetime Value Prediction",
+      "Personalized Recommendations",
+      "A/B Testing Automation",
+      "Revenue Optimization"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    benefits: [
+      "Increased customer retention",
+      "Higher conversion rates",
+      "Data-driven decisions",
+      "Automated optimization"
+    ]
+  },
+  {
+    title: "Smart Document Processing Suite",
+    description: "Intelligent document automation and processing for businesses of all sizes",
+    icon: Database,
+    features: [
+      "OCR & Text Extraction",
+      "Intelligent Data Classification",
+      "Automated Form Processing",
+      "Document Workflow Automation",
+      "Compliance Monitoring",
+      "Multi-language Support"
+    ],
+    color: "from-amber-500 to-orange-500",
+    benefits: [
+      "Reduced manual work",
+      "Faster processing",
+      "Improved accuracy",
+      "Cost savings"
+    ]
+  },
+  {
+    title: "Real-time Collaboration Workspace",
+    description: "Next-generation team collaboration platform with AI-powered productivity features",
+    icon: Users,
+    features: [
+      "Real-time Document Editing",
+      "AI Meeting Assistant",
+      "Smart Task Management",
+      "Knowledge Base Integration",
+      "Video Conferencing",
+      "Project Analytics"
+    ],
+    color: "from-violet-500 to-purple-500",
+    benefits: [
+      "Enhanced productivity",
+      "Better team coordination",
+      "Reduced meeting time",
+      "Improved outcomes"
+    ]
+  },
+  {
+    title: "Intelligent Inventory Management System",
+    description: "AI-driven inventory optimization and supply chain management platform",
+    icon: Target,
+    features: [
+      "Demand Forecasting",
+      "Automated Reordering",
+      "Supplier Management",
+      "Quality Control Tracking",
+      "Cost Optimization",
+      "Multi-location Support"
+    ],
+    color: "from-emerald-500 to-teal-500",
+    benefits: [
+      "Reduced stockouts",
+      "Lower inventory costs",
+      "Improved cash flow",
+      "Better supplier relationships"
+    ]
+  },
+  {
+    title: "Advanced Email Marketing Automation",
+    description: "Sophisticated email marketing platform with AI-powered personalization and optimization",
+    icon: Mail,
+    features: [
+      "AI Content Generation",
+      "Behavioral Trigger Campaigns",
+      "Advanced Segmentation",
+      "A/B Testing Automation",
+      "Deliverability Optimization",
+      "ROI Analytics"
+    ],
+    color: "from-rose-500 to-pink-500",
+    benefits: [
+      "Higher open rates",
+      "Increased conversions",
+      "Reduced manual work",
+      "Better customer engagement"
+    ]
+  },
+  {
+    title: "Smart Financial Planning & Analytics",
+    description: "Comprehensive financial management and forecasting platform for small to medium businesses",
+    icon: BarChart3,
+    features: [
+      "Automated Bookkeeping",
+      "Cash Flow Forecasting",
+      "Expense Categorization",
+      "Tax Preparation",
+      "Financial Reporting",
+      "Investment Tracking"
+    ],
+    color: "from-green-500 to-emerald-500",
+    benefits: [
+      "Better financial control",
+      "Reduced accounting costs",
+      "Improved decision making",
+      "Tax compliance"
+    ]
+  },
+  {
+    title: "AI-Powered HR Management Suite",
+    description: "Complete human resources management with intelligent automation and analytics",
+    icon: Users,
+    features: [
+      "Resume Screening AI",
+      "Employee Onboarding Automation",
+      "Performance Analytics",
+      "Payroll Management",
+      "Benefits Administration",
+      "Compliance Monitoring"
+    ],
+    color: "from-indigo-500 to-blue-500",
+    benefits: [
+      "Reduced HR workload",
+      "Better hiring decisions",
+      "Improved employee experience",
+      "Compliance assurance"
+    ]
+  },
+  {
+    title: "Smart Project Management Platform",
+    description: "Intelligent project management with AI-powered resource allocation and timeline optimization",
+    icon: Settings,
+    features: [
+      "AI Resource Allocation",
+      "Timeline Optimization",
+      "Risk Assessment",
+      "Progress Tracking",
+      "Team Collaboration",
+      "Budget Management"
+    ],
+    color: "from-orange-500 to-red-500",
+    benefits: [
+      "Improved project success",
+      "Better resource utilization",
+      "Reduced delays",
+      "Cost optimization"
+    ]
+  },
+  {
+    title: "Intelligent Customer Support System",
+    description: "Advanced customer service platform with AI chatbots and human agent optimization",
+    icon: MessageSquare,
+    features: [
+      "Multi-channel Support",
+      "AI Ticket Routing",
+      "Sentiment Analysis",
+      "Knowledge Base Integration",
+      "Performance Analytics",
+      "Escalation Management"
+    ],
+    color: "from-purple-500 to-indigo-500",
+    benefits: [
+      "Faster response times",
+      "Improved customer satisfaction",
+      "Reduced support costs",
+      "Better issue resolution"
+    ]
+  },
+  {
+    title: "Smart Social Media Management",
+    description: "AI-powered social media scheduling, content creation, and analytics platform",
+    icon: Globe,
+    features: [
+      "AI Content Generation",
+      "Optimal Posting Times",
+      "Hashtag Optimization",
+      "Engagement Analytics",
+      "Competitor Analysis",
+      "Multi-platform Management"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    benefits: [
+      "Increased engagement",
+      "Time savings",
+      "Better content strategy",
+      "Improved reach"
+    ]
+  },
+  {
+    title: "Advanced Lead Generation & CRM",
+    description: "Intelligent lead generation and customer relationship management platform",
+    icon: Target,
+    features: [
+      "AI Lead Scoring",
+      "Automated Follow-ups",
+      "Pipeline Management",
+      "Email Sequences",
+      "Sales Analytics",
+      "Integration Hub"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    benefits: [
+      "Higher conversion rates",
+      "Better lead quality",
+      "Automated nurturing",
+      "Improved sales performance"
+    ]
+  },
+  {
+    title: "Smart Content Management System",
+    description: "AI-powered content creation, optimization, and management platform",
+    icon: Code,
+    features: [
+      "AI Content Writing",
+      "SEO Optimization",
+      "Content Scheduling",
+      "Performance Analytics",
+      "Multi-language Support",
+      "Content Collaboration"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    benefits: [
+      "Faster content creation",
+      "Better SEO performance",
+      "Consistent quality",
+      "Reduced content costs"
+    ]
+  },
+  {
+    title: "Intelligent Business Intelligence Dashboard",
+    description: "Comprehensive business analytics and reporting platform with AI insights",
+    icon: BarChart3,
+    features: [
+      "Real-time Dashboards",
+      "Predictive Analytics",
+      "Custom Reports",
+      "Data Visualization",
+      "Automated Insights",
+      "Mobile Access"
+    ],
+    color: "from-slate-500 to-gray-500",
+    benefits: [
+      "Data-driven decisions",
+      "Real-time insights",
+      "Improved performance",
+      "Competitive advantage"
+    ]
+  },
+  {
+    title: "Smart Compliance & Risk Management",
+    description: "Automated compliance monitoring and risk assessment platform for regulated industries",
+    icon: Shield,
+    features: [
+      "Regulatory Compliance Tracking",
+      "Risk Assessment Automation",
+      "Audit Trail Management",
+      "Policy Enforcement",
+      "Incident Reporting",
+      "Training Management"
+    ],
+    color: "from-red-500 to-pink-500",
+    benefits: [
+      "Reduced compliance risks",
+      "Automated monitoring",
+      "Cost savings",
+      "Peace of mind"
     ]
   }
 ];

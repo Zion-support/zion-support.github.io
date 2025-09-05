@@ -43,16 +43,6 @@ const aiServices = [
       "Risk assessment",
       "Quality control automation"
     ]
-
----
-    title: 'AI-Powered Email Responder',
-    description: 'Automated email responses using advanced NLP and machine learning algorithms.',
-    icon: Mail,
-    features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-categorization', 'Smart Routing'],
-    pricing: '$2,000 - $8,000 setup',
-    category: 'Automation',
-    popular: true
-
   },
   {
     title: "Natural Language Processing",
@@ -77,15 +67,22 @@ const aiServices = [
   {
     title: "Computer Vision",
     description: "Image and video analysis powered by advanced AI algorithms",
-
----
-    title: 'Predictive Analytics Platform',
-    description: 'Advanced forecasting and predictive modeling for business intelligence.',
-    icon: BarChart3,
-    features: ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
-    pricing: '$4,000 - $20,000 project',
-    category: 'Analytics',
-    popular: true
+    icon: Eye,
+    features: [
+      "Object Detection",
+      "Image Classification",
+      "Facial Recognition",
+      "Medical Imaging",
+      "Quality Inspection",
+      "Augmented Reality"
+    ],
+    color: "from-green-500 to-emerald-500",
+    useCases: [
+      "Automated quality control",
+      "Security monitoring",
+      "Medical diagnosis support",
+      "Retail analytics"
+    ]
   },
   {
     title: 'Intelligent Chatbot System',
@@ -120,17 +117,22 @@ const aiServices = [
   {
     title: "AI Chatbots & Virtual Assistants",
     description: "Intelligent conversational agents for customer engagement",
-
----
-
----
-
-    title: 'AI Content Generation',
-    description: 'Automated content creation using advanced language models.',
-    icon: FileText,
-    features: ['Text Generation', 'Content Optimization', 'SEO Integration', 'Multi-format Output'],
-    pricing: '$1,500 - $8,000/month',
-    category: 'Content'
+    icon: Bot,
+    features: [
+      "24/7 Customer Support",
+      "Multi-language Support",
+      "Context Awareness",
+      "Integration with CRM",
+      "Voice & Text Interface",
+      "Learning from Interactions"
+    ],
+    color: "from-orange-500 to-red-500",
+    useCases: [
+      "Customer service automation",
+      "Lead qualification",
+      "Internal helpdesk",
+      "E-commerce assistance"
+    ]
   },
   {
     title: 'Voice AI Assistant',
@@ -667,12 +669,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     icon: Heart,
     features: ['Molecular Design', 'Drug Optimization', 'Toxicity Prediction', 'Clinical Trial Design'],
     pricing: '$50,000 - $500,000/project',
-    category: 'Pharmaceuticals',
-
----
-    features: ['Molecular Modeling', 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Optimization'],
-    pricing: '$50,000 - $200,000 project',
-    category: 'Healthcare'
+    category: 'Pharmaceuticals'
   },
   {
     title: 'AI Financial Modeling',
@@ -778,17 +775,6 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$100,000 - $500,000/project',
     category: 'Autonomous Systems',
 
-    popular: true
-  },
-  {
-
----
-    popular: true
-  },
-  {
-
-
----
     popular: true
   },
   {
@@ -1877,13 +1863,10 @@ const benefits = [
     icon: Target,
     title: "Increased Efficiency",
     description: "Automate repetitive tasks and processes to boost productivity by up to 40%"
-  },
-  {
+  }
+];
 
----
-
----
-
+const industries = [
   { name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
   { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
   { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
