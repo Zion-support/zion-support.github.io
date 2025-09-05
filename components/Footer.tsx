@@ -56,6 +56,7 @@ const services = {
 const company = [{ "name": 'About Us', "href": '/about' },
   { "name": 'Our Team', "href": '/about#team' },
   { "name": 'Careers', "href": '/careers' },
+  { "name": 'Partners', "href": '/partners' },
   { "name": 'Case Studies', "href": '/case-studies' },
   { "name": 'Blog', "href": '/blog' },
   { "name": 'News', "href": '/news' }
@@ -63,8 +64,9 @@ const company = [{ "name": 'About Us', "href": '/about' },
 
 const resources = [{ "name": 'Documentation', "href": '/docs' },
   { "name": 'API Reference', "href": '/api-docs' },
-  { "name": 'Tutorials', "href": '/tutorials' },
-  { "name": 'Guides', "href": '/guides' },
+  { "name": 'Case Studies', "href": '/case-studies' },
+  { "name": 'White Papers', "href": '/white-papers' },
+  { "name": 'Webinars', "href": '/webinars' },
   { "name": 'FAQ', "href": '/faq' },
   { "name": 'Support', "href": '/support' }
 ];
@@ -173,7 +175,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -194,7 +196,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -215,7 +217,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
