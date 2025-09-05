@@ -6,6 +6,7 @@ export default function TestPage() {
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>Test Page - Zion Tech Group</title>
       </Head>
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
@@ -25,3 +26,13 @@ const Test: NextPage = () => {;
 };
 export default Test;
 >>>>>>> origin/automation-fixes
+=======
+        <title>Test Page | Zion Tech Group</title>
+      </Head>
+      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+        <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/automation/changelog

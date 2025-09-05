@@ -117,6 +117,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     setupTime: "2 months",
     category: "Agriculture & Food Technology",
     realService: true,
+<<<<<<< HEAD
     technology["Quantum computing, Agriculture optimization, Resource allocation, Planning algorithms, Python"],
     integrations["Agricultural databases, Weather systems, Soil analysis tools, Analytics platforms"],
     useCases["Crop planning, Resource allocation, Efficiency optimization, Cost reduction"],
@@ -125,6 +126,16 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     marketSize: "$9.8B+ quantum agriculture market",
     growthRate: "380% YoY",
     variant: "quantum",
+=======
+    technology: ['Quantum computing, Agriculture optimization, Resource allocation, Planning algorithms, Python'],
+    integrations: ['Agricultural databases, Weather systems, Soil analysis tools, Analytics platforms'],
+    useCases: ['Crop planning, Resource allocation, Efficiency optimization, Cost reduction'],
+    roi: 'Improve agricultural efficiency by 40% and reduce resource waste by 50%',
+    competitors: ['D-Wave, Rigetti, IBM Quantum, Google Quantum'],
+    marketSize: '$9.8B+ quantum agriculture market',
+    growthRate: '380% YoY',
+    variant: 'ai-futuristic',
+>>>>>>> origin/automation/changelog
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: "Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.",
@@ -203,6 +214,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     setupTime: "2 weeks",
     category: "Agriculture & Food Technology",
     realService: true,
+<<<<<<< HEAD
     technology["Blockchain, Supply chain tracking, Product authentication, IoT, Web3"],
     integrations["Supply chain systems, IoT devices, QR codes, Payment platforms"],
     useCases["Food tracking, Supply chain transparency, Product authentication, Compliance management"],
@@ -211,6 +223,16 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     marketSize: "$18.4B+ food traceability market",
     growthRate: "320% YoY",
     variant: "default",
+=======
+    technology: ['Blockchain, Supply chain tracking, Product authentication, IoT, Web3'],
+    integrations: ['Supply chain systems, IoT devices, QR codes, Payment platforms'],
+    useCases: ['Food tracking, Supply chain transparency, Product authentication, Compliance management'],
+    roi: 'Improve supply chain transparency by 100% and reduce food fraud by 70%',
+    competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
+    marketSize: '$18.4B+ food traceability market',
+    growthRate: '320% YoY',
+    variant: 'ai-futuristic',
+>>>>>>> origin/automation/changelog
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: "Blockchain food traceability platform with supply chain tracking and product authentication capabilities.",

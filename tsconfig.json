@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
     "target": "es5",
+<<<<<<< HEAD
     "lib": [
       "dom",
       "dom.iterable",
       "es6"
     ],
+=======
+    "lib": ["dom", "dom.iterable", "es6"],
+>>>>>>> origin/automation/changelog
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,16 +22,20 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+<<<<<<< HEAD
     "plugins": [
       {
         "name": "next"
       }
     ],
+=======
+>>>>>>> origin/automation/changelog
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     }
   },
+<<<<<<< HEAD
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -38,3 +46,8 @@
     "node_modules"
   ]
 }
+=======
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
+>>>>>>> origin/automation/changelog

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
@@ -168,3 +169,10 @@
     "commit-and-push.js"
   ]
 }
+=======
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "react/no-unescaped-entities": "off"
+  }
+}
+>>>>>>> origin/automation/changelog

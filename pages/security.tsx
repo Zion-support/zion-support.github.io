@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 export default function Security() {;
   return (;
     <>;
@@ -47,6 +48,12 @@ export default function Security() {;
                 </div>;
               </div>;
             </section>;
+=======
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+>>>>>>> origin/automation/changelog
 
             {/* Security Features */}
             <section className="mb-16">;
@@ -106,6 +113,7 @@ export default function Security() {;
                   </ul>;
                 </div>;
 
+<<<<<<< HEAD
                 {/* Network Security */}
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10">;
                   <h3 className="text-xl font-semibold mb-4 text-white">Network Security</h3>;
@@ -251,6 +259,19 @@ export default function Security() {;
                     <li>• Data processing agreements</li>;
                   </ul>;
                 </div>;
+=======
+  return (
+    <>
+      <Head>
+        <title>Security | Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's comprehensive security measures, certifications, and commitment to protecting your data and privacy." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <EnhancedNavigation />
+>>>>>>> origin/automation/changelog
 
                 {/* Business Continuity */}
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10">;

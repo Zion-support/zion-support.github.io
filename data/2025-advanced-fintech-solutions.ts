@@ -68,6 +68,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     setupTime: "15-20 days",
     category: "Fintech",
     realService: true,
+<<<<<<< HEAD
     technology["Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI/ML"],
     integrations["Core banking systems, Credit bureaus, Payment processors, CRM systems, Compliance tools"],
     useCases["Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance"],
@@ -82,6 +83,22 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup.com";,
 },
+=======
+    technology: ['Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI/ML'],
+    integrations: ['Core banking systems, Credit bureaus, Payment processors, CRM systems, Compliance tools'],
+    useCases: ['Credit scoring, Risk assessment, Fraud detection, Lending decisions, Compliance'],
+    roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.',
+    competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],
+    marketSize: '$35B credit scoring market',
+    growthRate: '25% annual growth',
+    variant: 'ai-finance-enterprise',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+>>>>>>> origin/automation/changelog
     realImplementation: true,
     implementationDetails: "Production-ready AI credit risk platform with advanced ML models and comprehensive compliance features.",
     launchDate: "2025-01-22",
@@ -215,6 +232,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     setupTime: "10-15 days",
     category: "Fintech",
     realService: true,
+<<<<<<< HEAD
     technology["Machine Learning, Predictive Analytics, Risk Modeling, Insurance Technology, AI/ML"],
     integrations["Policy management systems, Claims systems, CRM platforms, Data providers, Compliance tools"],
     useCases["Risk assessment, Policy pricing, Claims prediction, Fraud detection, Customer segmentation"],
@@ -229,6 +247,22 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup.com";,
 },
+=======
+    technology: ['Machine Learning, Predictive Analytics, Risk Modeling, Insurance Technology, AI/ML'],
+    integrations: ['Policy management systems, Claims systems, CRM platforms, Data providers, Compliance tools'],
+    useCases: ['Risk assessment, Policy pricing, Claims prediction, Fraud detection, Customer segmentation'],
+    roi: 'Improve underwriting accuracy by 35%. Reduce processing time by 70%. Cut fraud losses by 40%.',
+    competitors: ['Lemonade, Root Insurance, Tractable, Shift Technology, Cape Analytics'],
+    marketSize: '$20B insurtech market',
+    growthRate: '30% annual growth',
+    variant: 'ai-finance-enterprise',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+>>>>>>> origin/automation/changelog
     realImplementation: true,
     implementationDetails: "Production-ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.",
     launchDate: "2025-02-08",

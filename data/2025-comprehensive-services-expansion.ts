@@ -246,6 +246,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     setupTime: "2-3 days",
     category: "AI & Edge Computing",
     realService: true,
+<<<<<<< HEAD
     technology["Edge Computing, AI/ML, IoT, 5G"],
     integrations["TensorFlow, PyTorch, AWS IoT, Azure IoT"],
     useCases["Real-time AI applications, IoT intelligence, Edge computing"],
@@ -254,6 +255,16 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     marketSize: "$12B edge AI",
     growthRate: "38% YoY",
     variant: "edge-futuristic",
+=======
+    technology: ['Edge Computing, AI/ML, IoT, 5G'],
+    integrations: ['TensorFlow, PyTorch, AWS IoT, Azure IoT'],
+    useCases: ['Real-time AI applications, IoT intelligence, Edge computing'],
+    roi: 'Reduce latency by 80-90% and enable real-time AI applications.',
+    competitors: ['AWS IoT Greengrass, Azure IoT Edge, Google Edge TPU'],
+    marketSize: '$12B edge AI',
+    growthRate: '38% YoY',
+    variant: 'edge-computing-enterprise',
+>>>>>>> origin/automation/changelog
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: "Edge deployment framework with model optimization and device management capabilities.",
@@ -375,6 +386,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     setupTime: "2-3 weeks",
     category: "Quantum Computing & AI",
     realService: true,
+<<<<<<< HEAD
     technology["Quantum Computing, Machine Learning, Optimization"],
     integrations["IBM Quantum, Google Quantum, AWS Braket"],
     useCases["Drug discovery, Financial modeling, Scientific research"],
@@ -383,6 +395,16 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     marketSize: "$3B quantum computing",
     growthRate: "55% YoY",
     variant: "quantum",
+=======
+    technology: ['Quantum Computing, Machine Learning, Optimization'],
+    integrations: ['IBM Quantum, Google Quantum, AWS Braket'],
+    useCases: ['Drug discovery, Financial modeling, Scientific research'],
+    roi: 'Solve previously intractable problems; accelerate research and development.',
+    competitors: ['IBM Quantum, Google Quantum, Rigetti'],
+    marketSize: '$3B quantum computing',
+    growthRate: '55% YoY',
+    variant: 'quantum-ai-enterprise',
+>>>>>>> origin/automation/changelog
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: "Quantum algorithm library with hybrid classical-quantum optimization capabilities.",

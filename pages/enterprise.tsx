@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -261,3 +262,17 @@ export default function EnterprisePage() {
     </MainLayout>
   );
 }
+=======
+import type { GetServerSideProps } from 'next';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/plans/enterprise',
+      permanent: false,
+    },
+  };
+};
+
+export default function EnterpriseRedirect() { return null; }
+>>>>>>> origin/automation/changelog

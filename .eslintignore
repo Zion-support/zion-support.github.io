@@ -43,6 +43,7 @@ node_modules/
 
 # Ignore logs
 *.log
+<<<<<<< HEAD
 logs/
 automation/logs/
 
@@ -52,3 +53,10 @@ automation/logs/
 *.disabled.*
 *.corrupted.*
 *.broken.*
+=======
+**/*.generated.*
+zion.app/recovered-content/**
+
+# Netlify functions (serverless functions with different linting rules)
+netlify/functions/
+>>>>>>> origin/automation/changelog

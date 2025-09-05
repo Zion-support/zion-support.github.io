@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 /* eslint-env node */
 module.exports = {
+<<<<<<< HEAD
   extends: [
     'next/core-web-vitals',
     '@typescript-eslint/recommended'
@@ -14,6 +15,9 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint'],
+=======
+  extends: ['next/core-web-vitals'],
+>>>>>>> origin/automation/changelog
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -30,6 +34,7 @@ module.exports = {
     es2021: true
   },
   ignorePatterns: [
+<<<<<<< HEAD
     'pages._archive_corrupted/**',
     'pages.disabled.full/**',
     'pages.disabled_auto/**',
@@ -52,6 +57,20 @@ module.exports = {
     'out/**',
     'dist/**',
     'build/**'
+=======
+    'node_modules/',
+    '.next/',
+    'out/',
+    'build/',
+    'dist/',
+    '*.config.js',
+    '*.config.ts',
+    'scripts/',
+    'automation/',
+    'netlify/',
+    'src/',
+    'apps/'
+>>>>>>> origin/automation/changelog
   ]
 };
 =======

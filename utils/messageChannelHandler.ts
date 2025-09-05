@@ -3,6 +3,7 @@
 export const messageChannelHandler = {
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
+<<<<<<< HEAD
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
 type MessageHandler = {
@@ -13,6 +14,8 @@ export const messageChannelHandler = {;
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},,
 >>>>>>> origin/automation-fixes
+=======
+>>>>>>> origin/automation/changelog
 };
 export const messageChannelHandler: MessageHandler = {
   sendMessage: (_message) => {
