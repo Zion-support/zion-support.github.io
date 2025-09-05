@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/ui/form.tsx
+=======
+<<<<<<< HEAD
+=======
 import React from 'react';
 ;
 interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {;
@@ -9,6 +13,8 @@ interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
   children: React.ReactNode;
 interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {;
   "children": React.ReactNode;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/form.tsx
 }
 ;
 export function Form($1) {;
@@ -18,6 +24,10 @@ export function Form($1) {;
     </form>;
   );
 }
+<<<<<<< HEAD:src/components/ui/form.tsx
+=======
+<<<<<<< HEAD
+
 interface FormItemProps {
   children: React.ReactNode;
 ;
@@ -31,6 +41,8 @@ export function FormItem("props": "any) {;
   return (;
     <div className={`space-y-2 ${className"}`}>;
   "children": React.ReactNode;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/form.tsx
   className?: string;
 }
 export function FormItem(props: any) {
@@ -44,6 +56,9 @@ export function FormItem($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
+<<<<<<< HEAD:src/components/ui/form.tsx
+=======
+<<<<<<< HEAD
     </div>
     );
 }
@@ -62,6 +77,8 @@ interface FormLabelProps {;
 ;
 export function FormLabel("props": "any) {;
   "children": React.ReactNode;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/form.tsx
   className?: string;
   htmlFor?: string;
 }
@@ -76,6 +93,10 @@ export function FormLabel($1) {;
     </label>;
   );
 }
+<<<<<<< HEAD:src/components/ui/form.tsx
+=======
+<<<<<<< HEAD
+
 interface FormFieldProps {
   children: React.ReactNode;
 ;
@@ -89,6 +110,8 @@ export function FormField("props": "any) {;
   return (;
     <div className={`space-y-1 ${className"}`}>;
   "children": React.ReactNode;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/form.tsx
   className?: string;
 }
 export function FormField(props: any) {

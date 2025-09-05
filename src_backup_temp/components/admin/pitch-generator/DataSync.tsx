@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/admin/pitch-generator/DataSync.tsx
+=======
+<<<<<<< HEAD
+=======
 import React from 'react';
 interface DataSyncProps {;
   "syncedData": "an y;
@@ -154,6 +158,8 @@ const "DataSync": "React.FC<DataSyncProps> = ({ syncedData", onNext, onBack }) =
 }
 const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
 const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) => {
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
   return (
     <div className="min-h-screen bg-white">
       <h2 className="text-2xl font-bold mb-6">Data Synchronization</h2>
@@ -286,6 +292,9 @@ const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) =
           onClick={onNext"}
           className="px-6 py-3 bg-blue-600 text-white rounded-lg "hover": "b g-blue-700 transition-colors";
           onClick={onNext}
+<<<<<<< HEAD:src/components/admin/pitch-generator/DataSync.tsx
+=======
+<<<<<<< HEAD
           className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors"
         >
           Continue to Slide Editor
@@ -310,6 +319,9 @@ export default DataSync;
 ;
 export default DataSync;
 </DataSyncProps>;
+=======
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
 };
 export default DataSync;';
 </DataSyncProps>;';';

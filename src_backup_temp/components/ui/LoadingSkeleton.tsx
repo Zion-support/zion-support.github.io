@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/ui/LoadingSkeleton.tsx
+=======
+<<<<<<< HEAD
+=======
 import React from 'react';
   if (animated) {;
     return ();
@@ -125,6 +129,8 @@ export const ServiceCardSkeleton: React.FC = (): JSX.Element => (";
 interface TableSkeletonProps extends React.PropsWithChildren<{"}> {;
   rows?: "number;
 interface TableSkeletonProps extends React.PropsWithChildren<{}> {;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/LoadingSkeleton.tsx
   rows?: number;
   columns?: number;
   className?: string"}

@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/EnhancedSEOAccessibility.tsx
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { ; Search,; Eye,; Ear,; MousePointer,; Keyboard,; Smartphone,; Globe,; Target,; CheckCircle,; AlertTriangle,; Info,; Settings,; X,; RefreshCw,; Download,; Share2;  } from 'lucide-react'; ; interface SEOAnalysis { title: string; description: string; keywords: string[]; headings: { level: number; text: string; id: string   }[]; images: { src: string; alt: string; hasAlt: boolean   }[]; links: { href: string; text: string; isInternal: boolean   }[]; metaTags: { name: string; content: string   }[]; }; interface AccessibilityAnalysis { contrastRatio: number; hasSkipLinks: boolean; hasProperHeadings: boolean; hasAltText: boolean; hasFocusIndicators: boolean; hasKeyboardNavigation: boolean; hasScreenReaderSupport: boolean; issues: string[];   }; export const EnhancedSEOAccessibility: Reac t.FC = () => {; const [isVisible, setIsVisible] = useState<any>(false); const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis | null>(null); const [accessibilityAnalysis, setAccessibilityAnalysis] = useState<AccessibilityAnalysis | null>(null); const [isAnalyzing, setIsAnalyzing] = useState<any>(false); const [currentTab, setCurrentTab] = useState<'seo' | 'accessibility'>('seo'); ;
 </any>
 </AccessibilityAnalysis>
@@ -20,3 +24,9 @@ const React,{ useState,useEffect,useCallback } from "react"; import { motion,Ani
 import { useEffect } from 'react';,
 import { useState } from 'react';,
 import _React,{ useState,useEffect,useCallback } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { ; Search,; Eye,; Ear,; MousePointer,; Keyboard,; Smartphone,; Globe,; Target,; CheckCircle,; AlertTriangle,; Info,; Settings,; X,; RefreshCw,; Download,; Share2} from 'lucide-react'; ; interface SEOAnalysis { title: string; description: string; keywords: string[]; headings: { level: number; text: string; id: string }[]; images: { src: string; alt: string; hasAlt: boolean }[]; links: { href: string; text: string; isInternal: boolean }[]; metaTags: { name: string; content: string }[]}; interface AccessibilityAnalysis { contrastRatio: number; hasSkipLinks: boolean; hasProperHeadings: boolean; hasAltText: boolean; hasFocusIndicators: boolean; hasKeyboardNavigation: boolean; hasScreenReaderSupport: boolean; issues: string[]}; export const EnhancedSEOAccessibility: Reac t.FC = () => {; const [isVisible,setIsVisible] = useState<any>(false); const [seoAnalysis,setSeoAnalysis] = useState<SEOAnalysis | null>(null); const [accessibilityAnalysis,setAccessibilityAnalysis] = useState<AccessibilityAnalysis | null>(null); const [isAnalyzing,setIsAnalyzing] = useState<any>(false); const [currentTab,setCurrentTab] = useState<'seo' | 'accessibility'>('seo'); ; </any> </AccessibilityAnalysis> </SEOAnalysis> </any>;';';
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/EnhancedSEOAccessibility.tsx
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

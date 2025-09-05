@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/PageTransition.tsx
+=======
+<<<<<<< HEAD
+=======
 import React from 'react';
 ;
 interface PageTransitionProps {;
@@ -30,6 +34,8 @@ const "PageTransition": Reac t.FC<PageTransitionProps> = ({ children }) => {
       {children};
     </div>;
   );
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/PageTransition.tsx
 };
 "export default PageTransition;';
 </PageTransitionProps>;';;';

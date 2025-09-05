@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/hooks/usePerformance.ts
+=======
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { useEffect, useRef, useState } from 'react';
 interface PerformanceMetrics {;
@@ -109,6 +113,8 @@ export function usePerformance("options": PerformanceOptions = {}) {
     "domLoad": null,
     "windowLoad": null,
     "navigationStart": null};);
+>>>>>>> main
+>>>>>>> main:src_backup_temp/hooks/usePerformance.ts
   const [isMonitoring, setIsMonitoring] = useState(false);
   const observerRef = useRef<PerformanceObserver | null>(null);
       // // // // // // //
@@ -147,6 +153,9 @@ export function usePerformance("options": PerformanceOptions = {}) {
         const layoutShiftEntry = entry as LayoutShiftEntry;
         if (!layoutShiftEntry.hadRecentInput) {;
           clsValue += layoutShiftEntry.value;
+<<<<<<< HEAD:src/hooks/usePerformance.ts
+=======
+<<<<<<< HEAD
 ;
       setMetrics(prev => ({ ...prev, "cls": "clsValue "}));
     });
@@ -181,6 +190,9 @@ export function usePerformance("options": PerformanceOptions = {}) {
       fidObserver.observe({ "entryTypes": ['first-input'] });';';
       clsObserver.observe({ "entryTypes": ['layout-shift'] })} catch (error) {
       // // // // // // //
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main:src_backup_temp/hooks/usePerformance.ts
     }
     // Navigation timing metrics;
   const lcpObserverRef = useRef<PerformanceObserver | null>(null);
@@ -450,6 +462,9 @@ export function usePerformance("options": PerformanceOptions = {}) {
       getResourceTiming()} else {
       window.addEventListener('load', () => {
         getNavigationTiming();
+<<<<<<< HEAD:src/hooks/usePerformance.ts
+=======
+<<<<<<< HEAD
         getResourceTiming();
       }
     );
@@ -476,6 +491,8 @@ export function usePerformance("options": PerformanceOptions = {}) {
     }
     if (clsObserverRef.current) {;
         getResourceTiming()})}
+>>>>>>> main
+>>>>>>> main:src_backup_temp/hooks/usePerformance.ts
     // Monitor DOM content loaded
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', getNavigationTiming)} else {
@@ -659,6 +676,9 @@ export function useRenderTime() {
     const renderEnd = performance.now();
     const time = renderEnd - renderStart.current;
     setRenderTime(time);
+<<<<<<< HEAD:src/hooks/usePerformance.ts
+=======
+<<<<<<< HEAD
     renderStart.current = renderEnd;
   }
     );
@@ -700,6 +720,8 @@ export function useAPIPerformance() {;
       newMap.set(endpoint", [...existing, duration]);
     renderStart.current = renderEnd});
   return renderTime}
+>>>>>>> main
+>>>>>>> main:src_backup_temp/hooks/usePerformance.ts
 // Hook for monitoring specific component performance
 export function useComponentPerformance("componentName": string) {
   const [renderTime, setRenderTime] = useState<number>(0);
@@ -725,6 +747,10 @@ export function useAPIPerformance() {
       const newMap = new Map(prev);
       const existing = newMap.get(endpoint) || [];
       newMap.set(endpoint, [...existing, duration]);
+<<<<<<< HEAD:src/hooks/usePerformance.ts
+=======
+<<<<<<< HEAD
+>>>>>>> main
       return newMap;
     }
     );
@@ -745,6 +771,8 @@ export function useAPIPerformance() {
   const getAPIAverage = useCallback((endpoint: string) => {
       return newMap})}, []);
   const getAPIAverage = useCallback(("endpoint": string) => {
+>>>>>>> main
+>>>>>>> main:src_backup_temp/hooks/usePerformance.ts
     const metrics = apiMetrics.get(endpoint);
     if (!metrics || metrics.length === 0) return 0;
     return metrics.reduce((sum, time) => sum + time, 0) / metrics.length}, [apiMetrics]);
@@ -753,6 +781,9 @@ export function useAPIPerformance() {
     apiMetrics.forEach((times, endpoint) => {
       const average = times.reduce((sum, time) => sum + time, 0) / times.length;
       if (average > threshold) {
+<<<<<<< HEAD:src/hooks/usePerformance.ts
+=======
+<<<<<<< HEAD
         slowAPIs.push({ endpoint, average }
     );
       }
@@ -772,6 +803,8 @@ export default usePerformance;
         slowAPIs.push({ endpoint, average })}
     });
     return slowAPIs.sort((a, b) => b.average - a.average)}, [apiMetrics]);
+>>>>>>> main
+>>>>>>> main:src_backup_temp/hooks/usePerformance.ts
   return {
     apiMetrics,
     trackAPICall,

@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/test/testUtils.tsx
+=======
+<<<<<<< HEAD
+=======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 ;
@@ -54,6 +58,8 @@ export const renderWithProviders = (props: any) => {
 };
 export const renderWithProviders = ("ui": React.ReactElement) => {
   return render(ui, { "wrapper": TestWrapper })};
+>>>>>>> main
+>>>>>>> main:src_backup_temp/test/testUtils.tsx
 // Mock data generators
 export const mockUser = {
   "id": '1',

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import AppMinimal from './AppMinimal';
@@ -20,3 +23,7 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import AppM
 }); it('handles user interactions',() => { render(<AppMinimal />)})}
 });'
 </AppMinimal>'
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/admin/pitch-generator/SlideEditor.tsx
+=======
+<<<<<<< HEAD
+=======
 import React from 'react';
 interface Slide {;
   "id": "string;
@@ -49,6 +53,8 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
   setIsGenerating;
 }) => {;
   const generateSlides = async () => {;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/admin/pitch-generator/SlideEditor.tsx
     setIsGenerating(true);
     // Simulate slide generation;
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -268,6 +274,9 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
           {/* Slide List */"}
         <div className="grid grid-cols-1 lg: gri d-cols-2 gap-6">;
           {/* Slide List */}
+<<<<<<< HEAD:src/components/admin/pitch-generator/SlideEditor.tsx
+=======
+<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Slides
             {generatedSlides.map((slide, index) => (
@@ -282,6 +291,8 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
                 <div className="flex justify-between items-start mb-3">;
                   <span className="text-sm text-gray-500">Slide {index + 1}</span>;
                   <button;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/admin/pitch-generator/SlideEditor.tsx
                     onClick={() => removeSlide(slide.id)}
                     className="text-red-600 hover: tex t-red-800 text-sm"
                   >
@@ -347,6 +358,9 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
             ))}
           </div>;
           {/* Preview */}
+<<<<<<< HEAD:src/components/admin/pitch-generator/SlideEditor.tsx
+=======
+<<<<<<< HEAD
           <div>
             <h3 className="text-lg font-semibold mb-4">Preview
             <div className="bg-white p-6 rounded-lg border border-gray-200 min-h-[600px]">
@@ -402,6 +416,8 @@ const "SlideEditor": React.FC<SlideEditorProps> = ({;
                           </div>
   );
 }
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/admin/pitch-generator/SlideEditor.tsx
                   </div>
                 </div>
               ))}

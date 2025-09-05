@@ -284,6 +284,9 @@ import {
   Twitter, 
   Linkedin, 
   Instagram, 
+<<<<<<< HEAD:src/components/Footer.tsx
+=======
+<<<<<<< HEAD
   Github, 
   Mail, 
   Phone, 
@@ -740,6 +743,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}
   Facebook,
   Facebook, 
   Instagram,
+>>>>>>> origin/merge-pr-11190
+=======
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/Footer.tsx
   Youtube,
   ArrowRight,
   Shield,
@@ -1193,6 +1200,9 @@ const Footer = () => {
             </ul>
           </div>
           {/* Company */}
+<<<<<<< HEAD:src/components/Footer.tsx
+=======
+<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Company
             <ul className="space-y-2">
@@ -1563,12 +1573,16 @@ const Footer = () => {
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
+>>>>>>> main:src_backup_temp/components/Footer.tsx
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
                   >
               ))}
             </ul>
           </div>
+<<<<<<< HEAD:src/components/Footer.tsx
+=======
+
           {/* Resources */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Resources</h4>
@@ -2412,6 +2426,9 @@ export default Footer;
               </ul>
             </div>
           ))}
+=======
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/Footer.tsx
         </div>
         {/* Stats Section */}
         <div className="border-t border-gray-800 mt-12 pt-12">
@@ -2434,6 +2451,10 @@ export default Footer;
             ))}
           </div>
         </div>
+<<<<<<< HEAD:src/components/Footer.tsx
+=======
+<<<<<<< HEAD
+
         {/* Newsletter Signup */}
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="max-w-md">
@@ -2508,6 +2529,9 @@ Cookie Policy
             </div>
           </div>
         </div>
+=======
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/Footer.tsx
       </div>
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">

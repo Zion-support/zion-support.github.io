@@ -1,3 +1,6 @@
+<<<<<<< HEAD:src/reportWebVitals.ts
+=======
+<<<<<<< HEAD
 type Reporter = ("metric": "any) => void;
 ;
 function defaultReporter("metric": any): void {;
@@ -24,6 +27,8 @@ function defaultReporter($1): void {
 export function reportWebVitals(reporter: Reporter = defaultReporter): void {
   .rating})}
 export function reportWebVitals("reporter": Reporter = defaultReporter): void {
+>>>>>>> main
+>>>>>>> main:src_backup_temp/reportWebVitals.ts
   // Dynamically import to support different versions/exports
   // and avoid breaking the bundle on missing named exports
   // no-floating-promises

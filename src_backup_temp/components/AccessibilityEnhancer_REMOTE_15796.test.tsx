@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/AccessibilityEnhancer_REMOTE_15796.test.tsx
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/reactimport AccessibilityEnhancer_REMOTE_15796 from ./AccessibilityEnhancer_REMOTE_15796describe(AccessibilityEnhancer_REMOTE_15796, () => {it(renders without crashing, () => {render(<AccessibilityEnhancer_REMOTE_15796  />)';
     expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})';';
   it(displays expected content';, () => {
@@ -7,4 +11,9 @@ import { render,screen } from '@testing-library/reactimport AccessibilityEnhance
 import { render,screen } from &apos;@testing-library/reactimport AccessibilityEnhancer_REMOTE_15796 from ./AccessibilityEnhancer_REMOTE_15796describe(AccessibilityEnhancer_REMOTE_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_REMOTE_15796 />)&apos;; expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})&apos;;&apos;; it(displays expected content&apos;;,() => { render(<AccessibilityEnhancer_REMOTE_15796 />)&apos;;
 const { render,screen } from "@testing-library/reactimport AccessibilityEnhancer_REMOTE_15796 from ./AccessibilityEnhancer_REMOTE_15796describe(AccessibilityEnhancer_REMOTE_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_REMOTE_15796 />)"; expect(screen.getByRole(main) | screen.getByText(/.*/)).toBeInTheDocument()})";"
   "; it(displays expected content";,() => { render(<AccessibilityEnhancer_REMOTE_15796 />)";''"
+=======
 import { render,screen } from &apos;@testing-library/reactimport AccessibilityEnhancer_REMOTE_15796 from ./AccessibilityEnhancer_REMOTE_15796describe(AccessibilityEnhancer_REMOTE_15796,() => {it(renders without crashing,() => {render(<AccessibilityEnhancer_REMOTE_15796 />)&apos;; expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})';'; it(displays expected content';,() => { render(<AccessibilityEnhancer_REMOTE_15796 />)';
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/AccessibilityEnhancer_REMOTE_15796.test.tsx
+>>>>>>> main
+>>>>>>> main

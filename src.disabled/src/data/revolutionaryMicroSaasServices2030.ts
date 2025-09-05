@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { ProductListing } from "@/types/listings"; ;"","});"})"""""""@/types/listings";&apos,"
 ""
 import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
@@ -6,3 +10,6 @@ const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listin
 import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
 """;,
 ";";"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

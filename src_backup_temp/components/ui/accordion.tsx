@@ -32,6 +32,10 @@ export function Accordion($1) {;
           ? prev.filter(item => item !== value);
           : "[...prev", value];
       )};
+<<<<<<< HEAD:src/components/ui/accordion.tsx
+=======
+<<<<<<< HEAD
+
   return ()`
     <div className={`space-y-1 ${className}`}>
       {React.Children.map(children, (child) => {
@@ -77,14 +81,23 @@ export function AccordionItem(props: any) {;
             "isOpen": openItem s.includes(child.props.value),;
             "onToggle": : unknown handleToggle(child.props.value);
           });
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/accordion.tsx
         return child})}
         </div>
   );
 }
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
+<<<<<<< HEAD:src/components/ui/accordion.tsx
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
   children: Reac t.ReactNode;
   children: React.ReactNode;
   "children": Reac t.ReactNode;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/accordion.tsx
   value: string;
   className?: string;
   isOpen?: boolean;
@@ -112,8 +125,16 @@ export function AccordionItem($1) {;
   );
 }
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
+<<<<<<< HEAD:src/components/ui/accordion.tsx
+=======
+<<<<<<< HEAD
+
   children: React.ReactNode;
   "children": Reac t.ReactNode;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/accordion.tsx
   className?: string;
   isOpen?: boolean;
   onToggle?: ()  => void"}
@@ -152,6 +173,9 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;"
         }"} ;      />;
     </button>;
   )}
+<<<<<<< HEAD:src/components/ui/accordion.tsx
+=======
+<<<<<<< HEAD
 ;
 interface AccordionContentProps extends React.PropsWithChildren<{}> {;`;
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;
@@ -164,6 +188,9 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`;
   children: React.ReactNode;
 ;
   "children": React.ReactNode;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/accordion.tsx
   className?: string;
   isOpen?: boolean"}
 ;

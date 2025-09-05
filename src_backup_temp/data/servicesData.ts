@@ -1,3 +1,6 @@
+<<<<<<< HEAD:src/data/servicesData.ts
+=======
+<<<<<<< HEAD
 export interface InnovativeMicroSaasService {;
   "id": "string;
   "title": string;
@@ -2086,6 +2089,8 @@ import { NEW_MICRO_SAAS_SERVICES_2025 } from './newMicroSaasServices2025';
 export { NEW_INNOVATIVE_SERVICES_2025 } from './newInnovativeServices2025
 export { NEW_IT_SERVICES_2025 } from './newITServices2025';
 export { NEW_MICRO_SAAS_SERVICES_2025 } from './newMicroSaasServices2025';
+>>>>>>> main
+>>>>>>> main:src_backup_temp/data/servicesData.ts
 // Export combined services
 export const ALL_SERVICES = [
   ...INNOVATIVE_SERVICES,

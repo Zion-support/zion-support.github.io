@@ -1,25 +1,4 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  BookOpen, 
-  ArrowRight,
-  Search,
-  FileText,
-  Code,
-  Settings,
-  Users,
-  Globe,
-  Download,
-  ExternalLink,
-  ChevronRight,
-  Filter,
-  CheckCircle,
-  Clock
-} from 'lucide-react';
-import Layout from '../components/Layout';
-import SimpleLayout from '../components/SimpleLayout';
-
+>>>>>>> main
 const categories = [
   {
     title: 'Getting Started',
@@ -133,6 +112,7 @@ ursor/website-audit-and-update-with-deployment-9cae
 
 ursor/website-audit-and-update-with-deployment-9cae
         {/* Popular Docs */}
+>>>>>>> main
                   key={doc.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -144,6 +124,7 @@ ursor/website-audit-and-update-with-deployment-9cae
 
 ursor/website-audit-and-update-with-deployment-9cae
         {/* Categories Section */}
+>>>>>>> main
                   key={category.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -204,6 +185,7 @@ ursor/website-audit-and-update-with-deployment-9cae
         </section>
       </div>
     </SimpleLayout>
+>>>>>>> main
   );
 }
 

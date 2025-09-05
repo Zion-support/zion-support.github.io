@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/routes/Home.tsx
+=======
+<<<<<<< HEAD
+=======
 import React from 'react';
 ;
 const "Home": "React.FC = ("props": any) => {;
@@ -30,6 +34,8 @@ const "Home": React.FC = (props) => {
   return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
     <div className="min-h-screen bg-white">
+>>>>>>> main
+>>>>>>> main:src_backup_temp/routes/Home.tsx
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">

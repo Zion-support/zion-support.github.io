@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/ConnectWalletButton.tsx
+=======
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 interface ConnectWalletButtonProps {;
   onConnect?: "("walletType": string) => void;
@@ -27,6 +31,8 @@ const "ConnectWalletButton": "React.FC<ConnectWalletButtonProps> = ({;
 }
 const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({
 const "ConnectWalletButton": Reac t.FC<ConnectWalletButtonProps> = ({
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ConnectWalletButton.tsx
   onConnect,
   onDisconnect,
   isConnected = false,

@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/PerformanceEnhancer.tsx
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react',;',';';';';
     ';';';';';';
 import { Helmet } from 'react-helmet-async'; interface PerformanceEnhancerProps {';
@@ -19,3 +23,9 @@ import React,{ useEffect } from &apos;react&apos;,;&apos;,&apos;; &apos;;&apos;;
 const React,{ useEffect } from "react",;","; ";";";";";"; import { Helmet } from "react-helmet-async"; interface PerformanceEnhancerProps { title?: string; description?: string; keywords?: string; canonicalUrl?: string; ogImage?: string; structuredData? object";"} const PerformanceEnhancer: Reac t.FC<PerformanceEnhancerProps> = ({ title = "Zion Tech Group - Advanced Technology Solutions,description = Leading provider of AI services,IT solutions,cybersecurity and digital transformation. Expert consulting and cutting-edge technology services.",keywords = "AI services,IT consulting,cybersecurity,digital transformation,technology solutions,cloud services software development",canonicalUrl = "https:";"; </PerformanceEnhancerProps>;";";"""
 import { useEffect } from 'react';,
 import _React,{ useEffect } from 'react',;'; ';';';';';'; import { Helmet } from 'react-helmet-async'; interface PerformanceEnhancerProps { title?: string; description?: string; keywords?: string; canonicalUrl?: string; ogImage?: string; structuredData? object';'} const PerformanceEnhancer: Reac t.FC<PerformanceEnhancerProps> = ({ title = "Zion Tech Group - Advanced Technology Solutions,description = Leading provider of AI services,IT solutions,cybersecurity and digital transformation. Expert consulting and cutting-edge technology services.",keywords = "AI services,IT consulting,cybersecurity,digital transformation,technology solutions,cloud services software development",canonicalUrl = "https:";'; </PerformanceEnhancerProps>;';';
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/PerformanceEnhancer.tsx
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

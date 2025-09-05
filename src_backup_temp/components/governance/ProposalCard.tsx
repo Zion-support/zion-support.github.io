@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/governance/ProposalCard.tsx
+=======
+<<<<<<< HEAD
+=======
 import React from 'react';
 interface Proposal {;
   "id": "string;
@@ -81,6 +85,8 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
   canVote = false
 };) => {
   const getStatusColor = (props) => {
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/governance/ProposalCard.tsx
     switch (status) {
       case 'active':';
         return 'bg-green-100 text-green-800';
@@ -132,9 +138,15 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
         <div className="flex-1">;
           <h3 className="text-lg font-semibold text-gray-900 mb-2">;
             {proposal.title}
+<<<<<<< HEAD:src/components/governance/ProposalCard.tsx
+=======
+<<<<<<< HEAD
+          
           <p className="text-sm text-gray-600 mb-3">
 ;
           <p className="text-sm text-gray-600 mb-3">;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/governance/ProposalCard.tsx
             {proposal.description}
           </p>;
         </div>;

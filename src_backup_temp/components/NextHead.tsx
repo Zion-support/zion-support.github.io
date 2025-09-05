@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/NextHead.tsx
+=======
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Head from 'next/head';
 interface NextHeadProps {;
@@ -43,6 +47,8 @@ const "NextHead": "React.FC<NextHeadProps> = ({;
 }
 const NextHead: React.FC<NextHeadProps> = ({
 const "NextHead": Reac t.FC<NextHeadProps> = ({
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/NextHead.tsx
   title = 'Zion Tech Group - Leading Technology Solutions',
   description = 'Zion Tech Group provides cutting-edge technology solutions, AI-powered platforms, and enterprise consulting services with global reach.',
   keywords = 'technology, AI, software, consulting, enterprise, solutions, innovation',

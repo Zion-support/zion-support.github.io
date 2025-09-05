@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/api/auth.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 const API_URL = import.meta.env.VITE_API_URL || '';
 export async function requestPasswordReset(email) {}';
   const res = await fetch(`${API_URL}/auth/forgot`, {}';';
@@ -27,6 +31,9 @@ export async function requestPasswordReset(email) {}
     "headers": { 'Content-Type': 'application/json' },'
     "body": JSON.stringify({ email })"
   };);"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main:src_backup_temp/api/auth.js
   if (!res.ok) throw new Error('Failed to send reset code');
   return res.json().catch(() => ({}))}
 export async function verifyResetCode(email, code) {}

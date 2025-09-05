@@ -1,3 +1,8 @@
+<<<<<<< HEAD:src/setupTests.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ "writable": 'true',"value": "global.global.global.jest.fn().mockImplementation(query => ({ "matches": false","media": 'query',"onchange": 'null',"addListener": "global.global.global.jest.fn()","removeListener": "global.global.global.jest.fn()","addEventListener": "global.global.global.jest.fn()","removeEventListener": "global.global.global.jest.fn()","dispatchEvent": "global.global.global.jest.fn()"}))}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };
 import &apos;@testing-library/jest-dom Object.defineProperty(window,&apos;matchMedia&apos;,{ writable: true,value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };&apos;;&apos;;
 // jest-dom adds custom jest matchers for asserting on DOM nodes.
@@ -26,6 +31,8 @@ Object.defineProperty(window, 'matchMedia', {
     "addEventListener": global.global.global.jest.fn(),
     "removeEventListener": global.global.global.jest.fn(),
     "dispatchEvent": global.global.global.jest.fn()}))});
+>>>>>>> main
+>>>>>>> main:src_backup_temp/setupTests.js
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() { /* empty */ }

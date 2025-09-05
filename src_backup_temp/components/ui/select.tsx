@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/ui/select.tsx
+=======
+<<<<<<< HEAD
+=======
 import React from 'react';
 ;
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {;
@@ -12,6 +16,8 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   children: React.ReactNode;
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {;
   "children": React.ReactNode;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/select.tsx
   className?: string;
 }
 ';
@@ -31,6 +37,10 @@ export function Select($1) {
     </select>;
   );
 }
+<<<<<<< HEAD:src/components/ui/select.tsx
+=======
+<<<<<<< HEAD
+
 interface SelectTriggerProps {
   children: React.ReactNode;
 ;
@@ -44,6 +54,8 @@ export function SelectTrigger("props": "any) {;
   return (;
     <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "focus": outlin e-none "focus": rin g-2 "focus": rin g-ring "focus": rin g-offset-2 "disabled": curso r-not-allowed "disabled": opacit y-50 ${className"}`}>;
   "children": React.ReactNode;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/select.tsx
   className?: string;
 }
 export function SelectTrigger(props: any) {
@@ -57,6 +69,9 @@ export function SelectTrigger($1) {
   return (
     <div className="min-h-screen bg-white">
       {children}
+<<<<<<< HEAD:src/components/ui/select.tsx
+=======
+<<<<<<< HEAD
     </div>
     );
 }
@@ -76,6 +91,8 @@ export function SelectContent("props": "any) {;
   return (;
     <div className={`relative ${className"}`}>;
   "children": React.ReactNode;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/select.tsx
   className?: string;
 }
 export function SelectContent(props: any) {
@@ -111,6 +128,10 @@ export function SelectValue($1) {;
     </span>;
   );
 }
+<<<<<<< HEAD:src/components/ui/select.tsx
+=======
+<<<<<<< HEAD
+
 interface SelectItemProps {
   children: React.ReactNode;
 ;
@@ -123,6 +144,8 @@ interface SelectItemProps {;
 ;
 export function SelectItem("props": "any) {;
   "children": React.ReactNode;
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/select.tsx
   value: string;
   className?: string;
 }

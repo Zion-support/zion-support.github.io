@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/accessibility/AccessibilityEnhancer.tsx
+=======
+<<<<<<< HEAD
+=======
 import React { useEffect, useState } from 'react',;',';
     ';
 interface AccessibilityMetrics {;
@@ -253,6 +257,8 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
     ';';';';';
         const images = document.querySelectorAll('img');"
         // Count headings"
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/accessibility/AccessibilityEnhancer.tsx
         // Count alt texts
         const images = document.querySelectorAll(&apos;img&apos);&apos;';';
         const altTexts = Array.from(images).filter(img => img.alt && img.alt.trim() !== &apos;&apos).length;';';';
@@ -263,6 +269,9 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
         const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length;
         // Check font size&apos;
         const fontSize = parseFloat(bodyStyles.fontSize);
+<<<<<<< HEAD:src/components/accessibility/AccessibilityEnhancer.tsx
+=======
+<<<<<<< HEAD
         setMetrics({ "contrastRatio": "4.5", // Simplified - would need actual contrast calculation;
         setMetrics({;
           "contrastRatio": "4.",5, // "Simplified": "- would need actual contrast calculation;
@@ -294,6 +303,8 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
           "contrastRatio": 4.5, // Simplified - would need actual contrast calculation;
           "focusVisible": tru e, altTexts,;
           headings});
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/accessibility/AccessibilityEnhancer.tsx
         const isGoodAccessibility = altTexts >= images.length * 0.8 && headings >= 3;
         setIsAccessible(isGoodAccessibility);
       )}
@@ -305,6 +316,10 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
           headings}
     );
 };
+<<<<<<< HEAD:src/components/accessibility/AccessibilityEnhancer.tsx
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
     checkAccessibility();';
     // Re-check: on DOM changes';';
     const observer = new MutationObserver(checkAccessibility);';';';
@@ -675,6 +690,8 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
 }';
     "return": () => observer.disconnect()}, []);';';';';';
   const enhanceAccessibility = (props) => {',
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/accessibility/AccessibilityEnhancer.tsx
     ';';';';';
     "if": (typeof document !== 'undefined') {',',';
     ';';';';';';
@@ -741,6 +758,9 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
           modal.setAttribute(&apos;aria-modal&apos, &apos;true&apos);
       )}
     </div>
+<<<<<<< HEAD:src/components/accessibility/AccessibilityEnhancer.tsx
+=======
+<<<<<<< HEAD
     );
   );';
 }';';
@@ -772,6 +792,10 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
       document.documentElement.classList.toggle('high-contrast', !highContrast)
     </div>;
   );
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/accessibility/AccessibilityEnhancer.tsx
 }
 ;';
 };&apos};';';
@@ -798,6 +822,9 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
     ';';';';';
       document.documentElement.classList.toggle('large-text', !largeText);'}};';';
   return (';
+<<<<<<< HEAD:src/components/accessibility/AccessibilityEnhancer.tsx
+=======
+<<<<<<< HEAD
     <div: classNam e="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";';';
       <div: classNam e="flex items-center justify-between mb-2">";";";';';';
         <h3: classNam e="text-sm font-semibold text-gray-900">Accessibility";";`;',';';
@@ -835,6 +862,8 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
       )}
     </div>;
   );
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/accessibility/AccessibilityEnhancer.tsx
 }
       document.documentElement.classList.toggle(&apos;high-contrast&apos, !highContrast)';
       )}';';
@@ -897,6 +926,9 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
       document.documentElement.classList.toggle('large-text', !largeText)
       )}
     </div>
+<<<<<<< HEAD:src/components/accessibility/AccessibilityEnhancer.tsx
+=======
+<<<<<<< HEAD
     );
 }
   return (""';
@@ -1172,6 +1204,8 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
             </span>';';';';
             <"span": classNam e="text-gray-600">Headings: </span>",";";';';';';';';
             <"span": classNam e={metrics.headings >= 3 ? 'text-green-600' : 'text-red-600'}>',',';
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/accessibility/AccessibilityEnhancer.tsx
     ' {metrics && ("
         <div className="space-y-2 text-xs mb-3">";
           <div className="flex justify-between">";';
@@ -1201,6 +1235,9 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
       )
       )}
     </div>
+<<<<<<< HEAD:src/components/accessibility/AccessibilityEnhancer.tsx
+=======
+<<<<<<< HEAD
     );
 }';
       <div className="space-y-2">`';';
@@ -1333,6 +1370,8 @@ export default AccessibilityEnhancer;';';';
     ';';';';';
             largeText ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 "hover": b g-gray-300',""',';
     ';';' {largeText ? 'Disable' : 'Enable'} Large Text',';
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/accessibility/AccessibilityEnhancer.tsx
     ';';' {!isAccessible && ('
           <button onClick={enhanceAccessibility}";';';
             className="w-full bg-green-600 text-white text-xs py-1 px-2 rounded "hover": b g-green-700 transition-colors" >';';';

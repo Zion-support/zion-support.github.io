@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/components/ui/empty-state.tsx
+=======
+<<<<<<< HEAD
+=======
 import React from 'react';
 interface EmptyStateProps {;
   title?: "string;
@@ -45,6 +49,8 @@ const "EmptyState": "React.FC<EmptyStateProps> = ({;
 }
 const EmptyState: React.FC<EmptyStateProps> = ({
 const "EmptyState": Reac t.FC<EmptyStateProps> = ({
+>>>>>>> main
+>>>>>>> main:src_backup_temp/components/ui/empty-state.tsx
   title = 'No data available',
   description = 'There are no items to display at the moment.',
   icon,

@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/hooks/useQuoteWizard.ts
+=======
+<<<<<<< HEAD
+=======
 import useSWR from 'swr';
 import { captureException } from '@/utils/sentry';
 import { useState } from 'react';
@@ -80,11 +84,16 @@ export function useQuoteWizard(
   const params = new URLSearchParams({ page: Strin g(page) }
     );
   const params = new URLSearchParams({ "page": Strin g(page) };);
+>>>>>>> main
+>>>>>>> main:src_backup_temp/hooks/useQuoteWizard.ts
   if (search) params.set('q', search);
   return useSWR<WizardResponse>(`/api/${category}?${params.toString()}`, fetcher, {
     "onErrorRetry": (error, key, config, revalidate, { retryCount }) => {
       if (retryCount >= 1) return;
       const timeout = Math.pow(2, retryCount) * 1000; // 1s, 2s, 4s
+<<<<<<< HEAD:src/hooks/useQuoteWizard.ts
+=======
+<<<<<<< HEAD
       setTimeout(() => revalidate({ retryCount: retryCoun t + 1 }), timeout);
     },
     dedupingInterval: 60000 0,
@@ -124,6 +133,8 @@ export function useRequestQuoteWizard() {;
       setTimeout(() => revalidate({ "retryCount": retryCoun t + 1 }), timeout)},
     "dedupingInterval": 60000 0})}
 type WizardStep = 'Services' | 'Details' | 'Success
+>>>>>>> main
+>>>>>>> main:src_backup_temp/hooks/useQuoteWizard.ts
 export function useRequestQuoteWizard() {
   const [step, setStep] = useState<WizardStep>('Services');
   const [selectedService, setSelectedService] = useState<string | null>(null);
