@@ -275,7 +275,7 @@ const navigationItems = [
       {
         title: 'White Papers',
         href: '/white-papers',
-        icon: Document,
+        icon: FileText,
         description: 'In-depth research reports',
         popular: false
       },

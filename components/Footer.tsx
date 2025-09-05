@@ -10,7 +10,8 @@ import {
   Linkedin, 
   Instagram, 
   Github,
-  ExternalLink
+  ExternalLink,
+  Network
 } from 'lucide-react';
 
 const services = {

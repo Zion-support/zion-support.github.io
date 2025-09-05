@@ -13,7 +13,31 @@ import {
   Camera,
   CheckCircle,
   ClipboardList,
-  Layers
+  Layers,
+  Network,
+  Cloud,
+  Code,
+  Lock,
+  Globe,
+  Eye,
+  Settings,
+  Shield,
+  Zap,
+  TrendingUp,
+  Heart,
+  DollarSign,
+  ShoppingCart,
+  Target,
+  Home,
+  FileText,
+  MessageSquare,
+  Users,
+  HardDrive,
+  Paintbrush,
+  Phone,
+  Mail,
+  MapPin,
+  Clock
 } from 'lucide-react';
 
 const footerSections = [

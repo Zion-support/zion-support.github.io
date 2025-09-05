@@ -170,22 +170,24 @@ export default function FAQPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              {faqs.map((section, categoryIndex) => (
-                <motion.div
-                  key={categoryIndex}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
-                  className="mb-12"
-                >
-                  <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                    {section.category}
-                  </h2>
-                  
-                  <div className="space-y-4">
-                    {section.questions.map((faq, questionIndex) => {
+              {categories.map((category, categoryIndex) => {
+                const categoryFaqs = faqs.filter(faq => faq.category === category.id);
+                return (
+                  <motion.div
+                    key={categoryIndex}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+                    className="mb-12"
+                  >
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+                      {category.name}
+                    </h2>
+                    
+                    <div className="space-y-4">
+                      {categoryFaqs.map((faq, questionIndex) => {
                       const key = `${categoryIndex}-${questionIndex}`;
-                      const isOpen = openItems[key];
+                      const isOpen = expandedItems.has(key);
                       
                       return (
                         <div
@@ -224,7 +226,8 @@ export default function FAQPage() {
                     })}
                   </div>
                 </motion.div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
