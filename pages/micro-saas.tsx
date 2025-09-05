@@ -2,15 +2,10 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Clock, Star, DollarSign, Award, Globe, Lock, Cpu, Bot, FileText, Video, Mic, Code, Settings, Monitor, Smartphone, Server, Network, Car, Rocket, Heart, Building, Sprout, Mail, MessageSquare, Search, Eye, Target, TrendingUp, Package, Calendar, BookOpen, ShoppingCart, Home, Trash2, Camera, HardDrive } from 'lucide-react';
 
-=======
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   Cloud, 
   Zap, 
   Shield, 
@@ -40,7 +35,6 @@ import {
   Rocket, 
   Heart, 
   Building, 
-=======
 >>>>>>> main
   Cloud,
   Zap,
@@ -57,10 +51,8 @@ import {
   Lock,
   Cpu,
   Bot,
-<<<<<<< HEAD
   Database,
   Sprout,
-=======
 >>>>>>> main
   FileText,
   Image,
@@ -76,8 +68,6 @@ import {
   Rocket,
   Heart,
   Building,
-<<<<<<< HEAD
-=======
 >>>>>>> main
   Sprout,
 >>>>>>> main
@@ -95,21 +85,21 @@ import {
   Home,
   Trash2,
   Camera,
-<<<<<<< HEAD
   HardDrive
-=======
   HardDrive,
-<<<<<<< HEAD
   Database,
   Droplets
-=======
   Database
 >>>>>>> main
 >>>>>>> main
+  DollarSign,
+  Award,
+  Phone,
+  MapPin,
+  Package
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-<<<<<<< HEAD
 const microSaasProducts = [
   {
     title: 'Cloud Cost Guard (FinOps Assistant)',
@@ -118,19 +108,12 @@ const microSaasProducts = [
     features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support'],
     pricing: '$299 - $1,499/month',
     category: 'FinOps',
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 >>>>>>> main
 const microSaaSProducts = [
-=======
 const microSaasProducts = [
 >>>>>>> main
   {
-<<<<<<< HEAD
-=======
     title: 'AI Content Marketing Suite',
     description: 'Automated content creation, SEO optimization, and social media management platform.',
     icon: FileText,
@@ -546,7 +529,6 @@ const microSaasProducts = [
     title: 'Smart Resource Scheduler',
     description: 'AI-powered resource scheduling and optimization for teams and facilities.',
     icon: Calendar,
-<<<<<<< HEAD
     features: ['Smart Scheduling', 'Calendar Integration', 'Conflict Resolution', 'Time Zone Handling'],
     pricing: '$19 - $99/month',
     category: 'Scheduling',
@@ -912,7 +894,6 @@ const microSaasProducts = [
 const benefits = [
   {
     icon: Rocket,
-=======
     features: ['Resource Optimization', 'Conflict Resolution', 'Availability Tracking', 'Analytics'],
     pricing: '$149 - $899/month',
     category: 'Scheduling'
@@ -2519,23 +2500,17 @@ const microSaaSProducts = [{
   },
   {
     title: 'AI-Powered Code Review Assistant',
-<<<<<<< HEAD
     description: 'Automated code review and quality assurance using advanced AI analysis.',
     icon: Code,
     features: ['Automated Code Review', 'Security Vulnerability Detection', 'Performance Analysis', 'Best Practice Suggestions'],
     pricing: '$199 - $999/month',
     category: 'Development Tools',
-=======
-<<<<<<< HEAD
 description: 'Automated code review with security scanning, performance optimization, and best practices enforcement.',
     icon: Code,
     features: ['Automated Reviews', 'Security Scanning', 'Performance Analysis', 'Best Practices Check'],
     pricing: '$299 - $1,999/month',
-=======
-<<<<<<< HEAD
 
     description: 'Automated code review and quality assurance using advanced AI analysis.',
-=======
 description: 'Automated code review with security scanning, performance optimization, and best practices enforcement.',
 >>>>>>> main
     icon: Code,
@@ -2572,13 +2547,11 @@ description: 'Automated code review with security scanning, performance optimiza
     popular: true
   },
   {
-<<<<<<< HEAD
     title: 'AI Video Content Generator',
     description: 'Automated video creation from text prompts with AI-generated visuals and voiceovers.',
     icon: Video,
     features: ['Text-to-Video', 'AI Voice Synthesis', 'Template Library', 'Brand Customization'],
     pricing: '$199 - $999/month',
-=======
     title: 'AI-Powered Video Content Generator',
     description: 'Automated video creation from text, images, and audio with professional editing capabilities.',
     icon: Video,
@@ -2589,7 +2562,6 @@ description: 'Automated code review with security scanning, performance optimiza
     popular: true
   },
   {
-<<<<<<< HEAD
     title: 'Smart Contract Generator',
     description: 'AI-powered smart contract creation and deployment for blockchain applications.',
     icon: Code,
@@ -2677,7 +2649,6 @@ description: 'Automated code review with security scanning, performance optimiza
     features: ['OCR Technology', 'Data Extraction', 'Form Processing', 'API Integration'],
     pricing: '$49 - $299/month',
     category: 'Document Processing'
-=======
     title: 'Intelligent Supply Chain Optimizer',
     description: 'AI-driven supply chain optimization with demand forecasting and inventory management.',
     icon: Package,
@@ -2825,7 +2796,6 @@ description: 'Automated code review with security scanning, performance optimiza
   },
   {
     title: 'AI-Powered Voice Cloning Platform',
-<<<<<<< HEAD
     description: 'High-quality voice cloning and synthesis for content creators and businesses.',
     icon: Mic,
     features: ['Voice Cloning', 'Emotion Control', 'Multi-language Support', 'API Integration'],
@@ -3184,7 +3154,6 @@ description: 'Automated code review with security scanning, performance optimiza
     features: ['Storage Optimization', 'Load Balancing', 'Cost Optimization', 'Grid Integration'],
     pricing: '$399 - $1,999/month',
     category: 'Energy Storage'
-=======
     description: 'High-quality voice cloning and synthesis for personalized audio content.',
     icon: Mic,
     features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
@@ -3598,13 +3567,9 @@ description: 'Automated code review with security scanning, performance optimiza
 >>>>>>> main
   }
 ];
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 const features = [
   {
-=======
-=======
 >>>>>>> main
 const features = [{
 >>>>>>> main
@@ -3638,19 +3603,13 @@ const features = [{
     description: 'GDPR and SOC 2 compliant by default'
   }
 ];
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 const benefits = [
   {
-=======
-<<<<<<< HEAD
 const benefits = [{
-=======
 
 const benefits = [
   {
-=======
 const benefits = [{
 >>>>>>> main
 >>>>>>> main
@@ -3680,23 +3639,15 @@ const benefits = [{
     stat: '10x'
   }
 ];
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 const pricingPlans = [
   {
-=======
-<<<<<<< HEAD
 const pricingTiers = [
   {
-=======
-<<<<<<< HEAD
 const pricingTiers = [{
-=======
 
 const pricingTiers = [
   {
-=======
 const pricingTiers = [{
 >>>>>>> main
 >>>>>>> main
@@ -3719,22 +3670,14 @@ const pricingTiers = [{
     description: 'Ideal for growing businesses',
     price: '$799',
     period: '/month',
-<<<<<<< HEAD
     features: [
-=======
-<<<<<<< HEAD
     features: [
       'Up to 10,000 users',
-=======
-<<<<<<< HEAD
 features: ['Up to 10,000 users',
-=======
-<<<<<<< HEAD
 
     features: [
       'Up to 10,000 users',
 
-=======
 features: ['Up to 10,000 users',
 >>>>>>> main
 >>>>>>> main
@@ -3753,22 +3696,14 @@ features: ['Up to 10,000 users',
     description: 'For large organizations',
     price: 'Custom',
     period: '',
-<<<<<<< HEAD
     features: [
-=======
-<<<<<<< HEAD
     features: [
       'Unlimited users',
-=======
-<<<<<<< HEAD
 features: ['Unlimited users',
-=======
-<<<<<<< HEAD
 
     features: [
       'Unlimited users',
 
-=======
 features: ['Unlimited users',
 >>>>>>> main
 >>>>>>> main
@@ -3786,7 +3721,6 @@ features: ['Unlimited users',
 
 export default function MicroSaaSPage() {
   return (
-<<<<<<< HEAD
     <Layout
       title="Micro SaaS Solutions - Zion Tech Group"
       description="Innovative micro SaaS solutions for specialized business needs. Rapid deployment, enterprise security, and built-in analytics."
@@ -3963,21 +3897,15 @@ export default function MicroSaaSPage() {
                   key={index}
                   className={`bg-white rounded-lg shadow-lg p-8 ${
                     plan.popular ? 'ring-2 ring-purple-500 relative' : ''
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
                   <Head>
                   <title>Micro SaaS Solutions - Zion Tech Group</title>
                   <meta name="description" content="Scalable Micro SaaS solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics." />
                   <meta name="keywords" content="Micro SaaS, SaaS solutions, cloud applications, scalable software, business automation" />
                   </Head>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> main
         <div className="absolute inset-0">
@@ -3986,12 +3914,9 @@ export default function MicroSaaSPage() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-<<<<<<< HEAD
           <motion.div
-=======
           <motion.div,
     initial={{ opacity: 0, y: 30 }}
-=======
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
 >>>>>>> main
@@ -4010,11 +3935,6 @@ export default function MicroSaaSPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 >>>>>>> main
             <div className="flex items-center justify-center mb-6">
@@ -4022,7 +3942,6 @@ export default function MicroSaaSPage() {
               <h1 className="text-4xl md:text-6xl font-bold">
                 Micro{' '}
                 <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
                   SaaS
                 </span>
               </h1>
@@ -4032,15 +3951,11 @@ export default function MicroSaaSPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-=======
-=======
 >>>>>>> main
 <div className="flex items-center justify-center mb-6">
                   <Cloud className="h-16 w-16 text-purple-400 mr-4" />
                   <h1 className="text-4xl md:text-6xl font-bold">
                 Micro{' '} <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> main
                   SaaS
@@ -4049,13 +3964,9 @@ export default function MicroSaaSPage() {
                   </div>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
                   <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-=======
-<<<<<<< HEAD
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
 
-=======
                   <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
 >>>>>>> main
 >>>>>>> main
@@ -4069,14 +3980,12 @@ export default function MicroSaaSPage() {
                   </motion.div>
                   </div>
                   </section>
-<<<<<<< HEAD
 
       {/* Products Grid */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
                   <motion.div,
     className="text-center mb-16"
-=======
       {/* Products Grid */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -4088,21 +3997,15 @@ export default function MicroSaaSPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our Micro SaaS Products
             </h2>
-=======
-<<<<<<< HEAD
 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Micro SaaS Products</h2>
-=======
-<<<<<<< HEAD
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our Micro SaaS Products
             </h2>
 
-=======
 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Micro SaaS Products</h2>
 >>>>>>> main
 >>>>>>> main
@@ -4115,19 +4018,13 @@ export default function MicroSaaSPage() {
             {microSaaSProducts.map((product, index) => {
               const IconComponent = product.icon;
               return (
-<<<<<<< HEAD
                 <motion.div,
     key={index}
                   className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
-=======
                 <motion.div
                   key={index}
-<<<<<<< HEAD
                   className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
-=======
 className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -4138,12 +4035,10 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-<<<<<<< HEAD
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
-=======
                   {product.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
@@ -4152,7 +4047,6 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
                       </span>
                   </div>
                   )}
-<<<<<<< HEAD
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                     <p className="text-gray-600 mb-4">{plan.description}</p>
@@ -4179,30 +4073,19 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
         </section>
       </div>
     </Layout>
-=======
                   <div className="flex items-center justify-between mb-4">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 >>>>>>> main
                     <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
-<<<<<<< HEAD
-=======
 
-=======
 >>>>>>> main
 <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
                   <IconComponent className="w-10 h-10" />
                   </div>
                   <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -4216,20 +4099,14 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
                     {product.description}
                   </p>
                   <div className="mb-4">
-<<<<<<< HEAD
                     <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
                     <ul className="space-y-1">
-=======
-<<<<<<< HEAD
 <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
                   <ul className="space-y-1">
-=======
-<<<<<<< HEAD
 
                     <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
                     <ul className="space-y-1">
 
-=======
 <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
                   <ul className="space-y-1">
 >>>>>>> main
@@ -4246,10 +4123,8 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
                   <div className="mb-4">
                   <span className="text-sm font-semibold text-purple-600">{product.pricing}</span>
                   </div>
-<<<<<<< HEAD
                   <Link,
     href="/contact"
-=======
                   <Link
                     href="/contact"
 >>>>>>> main
@@ -4264,14 +4139,12 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
           </div>
                   </div>
                   </section>
-<<<<<<< HEAD
 
       {/* Features Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
                   <motion.div,
     className="text-center mb-16"
-=======
       {/* Features Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -4283,15 +4156,10 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Micro SaaS?</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Built for modern businesses that need fast, reliable, and scalable solutions.
             </p>
-=======
-<<<<<<< HEAD
 
 >>>>>>> main
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -4304,15 +4172,12 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-<<<<<<< HEAD
-=======
               const IconComponent = feature.icon;
               return (
                 <motion.div,
     key={index}
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
 
-=======
 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Micro SaaS?</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Built for modern businesses that need fast, reliable, and scalable solutions.
@@ -4326,12 +4191,8 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
               return (
                 <motion.div
                   key={index}
-<<<<<<< HEAD
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-=======
 className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -4355,14 +4216,12 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
           </div>
                   </div>
                   </section>
-<<<<<<< HEAD
 
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
                   <motion.div,
     className="text-center mb-16"
-=======
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -4374,21 +4233,15 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Proven Results
             </h2>
-=======
-<<<<<<< HEAD
 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>
-=======
-<<<<<<< HEAD
 
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Proven Results
             </h2>
 
-=======
 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>
 >>>>>>> main
 >>>>>>> main
@@ -4427,14 +4280,12 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
           </div>
                   </div>
                   </section>
-<<<<<<< HEAD
 
       {/* Pricing Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
                   <motion.div,
     className="text-center mb-16"
-=======
       {/* Pricing Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -4446,15 +4297,10 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Choose the plan that fits your business needs. No hidden fees, no surprises.
             </p>
-=======
-<<<<<<< HEAD
 
 >>>>>>> main
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -4467,12 +4313,9 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
-<<<<<<< HEAD
-=======
 
               <motion.div,
     key={index}
-=======
 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Choose the plan that fits your business needs. No hidden fees, no surprises.
@@ -4518,25 +4361,19 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
                   <Link,
     href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
-<<<<<<< HEAD
 ? 'bg-purple-600 hover: bg-purple-700 text-white'
-=======
 
                       ? 'bg-purple-600 hover:bg-purple-700 text-white'
 
-=======
                   <Link
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
-<<<<<<< HEAD
                       ? 'bg-purple-600 hover:bg-purple-700 text-white'
-=======
 ? 'bg-purple-600 hover: bg-purple-700 text-white'
 >>>>>>> main
 >>>>>>> main
@@ -4552,14 +4389,12 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
           </div>
                   </div>
                   </section>
-<<<<<<< HEAD
 
       {/* Contact Information Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div,
     className="text-center mb-16"
-=======
       {/* Contact Information Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -4573,7 +4408,6 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Get Started Today
-<<<<<<< HEAD
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
               Ready to transform your business with cutting-edge micro SaaS solutions? Our expert team is here to help you build, deploy, and scale your next-generation software products. Contact us for a free consultation and discover how we can accelerate your digital transformation.
@@ -4668,16 +4502,12 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-<<<<<<< HEAD
         <div className="container mx-auto px-4 text-center">
           <motion.div
-=======
-<<<<<<< HEAD
 <div className="container mx-auto px-4 text-center">
                   <motion.div
 >>>>>>> main
             initial={{ opacity: 0, y: 30 }}
-=======
 
         <div className="container mx-auto px-4 text-center">
           <motion.div,
@@ -4687,21 +4517,17 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Launch Your Micro SaaS?
             </h2>
-=======
 <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>
 >>>>>>> main
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Join 500+ successful businesses that trust Zion Tech Group for their micro SaaS development needs. Let's build the perfect solution for your business.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Building Today
-=======
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Building
@@ -4710,17 +4536,12 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> main
             </div>
             <div className="mt-8 text-sm opacity-90">
               <p>📞 Call: +1 302 464 0950 | ✉️ Email: kleber@ziontechgroup.com</p>
               <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
-=======
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
               Ready to transform your business with cutting-edge micro SaaS solutions? Our expert team is here to help you build, deploy, and scale your next-generation software products. Contact us for a free consultation and discover how we can accelerate your digital transformation.
@@ -4809,12 +4630,8 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-=======
 
-=======
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
 <div className="container mx-auto px-4 text-center">
@@ -4841,8 +4658,6 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                   </div>
                   </section>
                   </div>
-<<<<<<< HEAD
-=======
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main

@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Head from 'next/head';
 
 export default function ITServices() {
   const itServices = [
@@ -627,15 +627,12 @@ export default function ITServices() {
     }
   ];
 
-=======
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
-<<<<<<< HEAD
 import { useState } from 'react';
-=======
 import { 
   Server, 
   Shield, 
@@ -1129,6 +1126,15 @@ export default function ITServices() {
                     className="px-4 py-2 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-semibold"
                   >
                     Start Free Trial
+                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
+                  >
+                    Get Started
+                  </Link>
+                  <Link
+                    href="/request-quote"
+                    className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-6 py-2 rounded-lg font-semibold transition-colors flex-1 text-center"
+                  >
+                    Request Quote
                   </Link>
                 </div>
               </motion.div>
@@ -1179,6 +1185,42 @@ export default function ITServices() {
                 )}
               </motion.div>
             ))}
+      {/* Contact Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+            Ready to Modernize Your IT Infrastructure?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Contact us today to discuss your IT needs and get a customized solution
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 text-gray-300 mb-8">
+            <div>
+              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Phone</h3>
+              <p>+1 302 464 0950</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Email</h3>
+              <p>kleber@ziontechgroup.com</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Address</h3>
+              <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Contact Us Now
+            </Link>
+            <Link
+              href="/request-quote"
+              className="bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Get Free IT Assessment
+            </Link>
           </div>
         </div>
       </section>

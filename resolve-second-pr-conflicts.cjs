@@ -1,40 +1,58 @@
 const fs = require('fs');
+const path = require('path');
 
-// List of files with conflicts from second PR
-const conflictedFiles = [
-  'netlify.toml',
-  'pages/api.tsx',
-  'pages/docs/api.tsx',
-  'pages/login.tsx',
-  'pages/register.tsx',
-  'pages/search.tsx'
-];
-
-function resolveConflicts(filePath) {
-  if (!fs.existsSync(filePath)) {
-    console.log(`File not found: ${filePath}`);
-    return;
-  }
-
-  let content = fs.readFileSync(filePath, 'utf8');
+// Function to resolve second PR conflicts
+function resolveSecondPRConflicts() {
+  console.log('Resolving second PR conflicts...');
   
-  // Remove merge conflict markers and keep HEAD version (our changes)
-  content = content.replace(/<<<<<<< HEAD\n?/g, '');
-  content = content.replace(/=======.*?\n?/g, '');
-  content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
+  // Files with merge conflicts
+  const conflictedFiles = [
+    'next-env.d.ts',
+    'package-lock.json',
+    'pages/AIServices.tsx',
+    'pages/ITServices.tsx', 
+    'pages/micro-saas.tsx',
+    'yarn.lock',
+    'src_backup_temp/pages/EnhancedServicesShowcase2025.tsx'
+  ];
   
-  // Clean up any remaining artifacts
-  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  // Resolve conflicts by keeping HEAD version and cleaning up
+  conflictedFiles.forEach(file => {
+    if (fs.existsSync(file)) {
+      let content = fs.readFileSync(file, 'utf8');
+      
+      // Remove merge conflict markers
+      content = content.replace(/<<<<<<< HEAD\n?/g, '');
+      content = content.replace(/=======.*?\n?/g, '');
+      content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
+      content = content.replace(/>>>>>>> origin\/[^\n]+\n?/g, '');
+      
+      // Clean up any remaining artifacts
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+      
+      fs.writeFileSync(file, content);
+      console.log(`Resolved conflicts in ${file}`);
+    }
+  });
   
-  // Remove any remaining conflict markers
-  content = content.replace(/<<<<<<< HEAD|=======|>>>>>>> [a-f0-9]+/g, '');
+  // Keep new files from PR that don't conflict
+  const newFiles = [
+    'src/App.tsx',
+    'src/data/aiServicesData.ts',
+    'src/data/enhancedZionTechServices2025.ts',
+    'src/data/itServicesData.ts',
+    'src/data/microSaasServicesData.ts'
+  ];
   
-  fs.writeFileSync(filePath, content);
-  console.log(`Resolved conflicts in ${filePath}`);
+  newFiles.forEach(file => {
+    if (fs.existsSync(file)) {
+      console.log(`Keeping new file from PR: ${file}`);
+    }
+  });
+  
+  console.log('Second PR conflicts resolved!');
 }
 
-// Resolve conflicts in all files
-conflictedFiles.forEach(resolveConflicts);
-
-console.log('Second PR conflicts resolved!');
+// Run the conflict resolution
+resolveSecondPRConflicts();
