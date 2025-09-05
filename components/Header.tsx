@@ -50,6 +50,7 @@ const navigation = [
         icon: Brain,
         description: 'Advanced AI solutions and machine learning platforms',
         children: [
+          { name: 'All AI Services', href: '/ai-services' },
           { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
           { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
           { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
@@ -57,7 +58,10 @@ const navigation = [
           { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
           { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
           { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
-          { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
+          { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' },
+          { name: 'Quantum Computing Simulator', href: '/ai-services#quantum-computing-simulator' },
+          { name: 'AI Medical Diagnosis Assistant', href: '/ai-services#ai-medical-diagnosis' },
+          { name: 'AI Cybersecurity Shield', href: '/ai-services#ai-cybersecurity-shield' }
         ]
       },
       {
@@ -66,14 +70,16 @@ const navigation = [
         icon: CpuIcon,
         description: 'Comprehensive IT infrastructure and support',
         children: [
-          { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
-          { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
-          { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
-          { name: 'Database Management', href: '/it-services#database-management' },
-          { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
-          { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
-          { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
-          { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
+          { name: 'All IT Services', href: '/it-services' },
+          { name: 'Innovative IT Solutions', href: '/innovative-it-services' },
+          { name: 'AI-Powered IT Operations', href: '/innovative-it-services#ai-it-operations' },
+          { name: 'Quantum-Safe Cybersecurity', href: '/innovative-it-services#quantum-safe-cybersecurity' },
+          { name: 'Edge Computing Infrastructure', href: '/innovative-it-services#edge-computing' },
+          { name: 'AI Cloud Migration Platform', href: '/innovative-it-services#ai-cloud-migration' },
+          { name: 'Blockchain Infrastructure', href: '/innovative-it-services#blockchain-infrastructure' },
+          { name: 'AI Data Center Automation', href: '/innovative-it-services#ai-data-center' },
+          { name: 'Zero Trust Architecture', href: '/innovative-it-services#zero-trust-architecture' },
+          { name: 'Quantum Computing Integration', href: '/innovative-it-services#quantum-computing' }
         ]
       },
       {
@@ -82,14 +88,16 @@ const navigation = [
         icon: Cloud,
         description: 'Innovative micro software-as-a-service solutions',
         children: [
-          { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
-          { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
-          { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
-          { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-          { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
-          { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
-          { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
-          { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
+          { name: 'All Micro SaaS', href: '/micro-saas' },
+          { name: 'Innovative Solutions', href: '/innovative-micro-saas' },
+          { name: 'AI Code Quality Analyzer', href: '/innovative-micro-saas#ai-code-quality' },
+          { name: 'Smart API Rate Limiting', href: '/innovative-micro-saas#smart-api-rate-limiting' },
+          { name: 'AI Content Moderation', href: '/innovative-micro-saas#ai-content-moderation' },
+          { name: 'Cloud Cost Optimizer', href: '/innovative-micro-saas#cloud-cost-optimizer' },
+          { name: 'AI Lead Scoring Engine', href: '/innovative-micro-saas#ai-lead-scoring' },
+          { name: 'Smart Social Media Manager', href: '/innovative-micro-saas#smart-social-media' },
+          { name: 'AI Document Processing', href: '/innovative-micro-saas#ai-document-processing' },
+          { name: 'Intelligent Workflow Automation', href: '/innovative-micro-saas#intelligent-workflow' }
         ]
       },
       {

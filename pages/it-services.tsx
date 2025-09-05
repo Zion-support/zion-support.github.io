@@ -1028,10 +1028,8 @@ export default function ITServicesPage() {
           </motion.div>
         </div>
       </section>
-      </div>
-    </Layout>
 
-    {/* IT Services Grid */}
+      {/* IT Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -1332,5 +1330,6 @@ export default function ITServicesPage() {
           </motion.div>
         </div>
       </section>
+    </Layout>
   );
 }

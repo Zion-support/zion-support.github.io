@@ -26,6 +26,8 @@ const services = [
   { name: 'AI Services', href: '/ai-services' },
   { name: 'IT Services', href: '/it-services' },
   { name: 'Micro SaaS', href: '/micro-saas' },
+  { name: 'Innovative Micro SaaS', href: '/innovative-micro-saas' },
+  { name: 'Innovative IT Services', href: '/innovative-it-services' },
   { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
   { name: 'Cybersecurity', href: '/services/cybersecurity' },
   { name: 'Data Analytics', href: '/services/data-analytics' },
@@ -83,7 +85,8 @@ const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
-  hours: '24/7 Support Available'
+  hours: '24/7 Support Available',
+  website: 'https://ziontechgroup.com'
 };
 export default function Footer() {
   const currentYear = new Date().getFullYear()

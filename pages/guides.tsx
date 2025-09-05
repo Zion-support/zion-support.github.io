@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   BookOpen, 
   ArrowRight,
@@ -25,196 +24,121 @@ import MainLayout from '../components/layout/MainLayout';
 const guideCategories = [
   {
     title: "Getting Started",
-    description: "Essential guides to help you get up and running quickly",
+    description: "Quick start guides and basic setup instructions",
     icon: BookOpen,
     color: "blue",
     guides: [
-      {
-        title: "Platform Setup Guide",
-        description: "Complete setup instructions for new users",
-        duration: "15 min",
-        difficulty: "Beginner",
-        type: "Guide",
-        rating: 4.8,
-        downloads: 1250
-      },
-      {
-        title: "First Project Walkthrough",
-        description: "Step-by-step guide to creating your first project",
-        duration: "20 min",
-        difficulty: "Beginner",
-        type: "Tutorial",
-        rating: 4.9,
-        downloads: 980
-      },
-      {
-        title: "Account Configuration",
-        description: "Setting up your account and preferences",
-        duration: "10 min",
-        difficulty: "Beginner",
-        type: "Guide",
-        rating: 4.7,
-        downloads: 750
-      }
+      { title: "Quick Start Guide", description: "Get up and running in 5 minutes", duration: "5 min", difficulty: "Beginner", rating: 4.8 },
+      { title: "Installation Guide", description: "Step-by-step installation instructions", duration: "15 min", difficulty: "Beginner", rating: 4.6 },
+      { title: "Configuration", description: "Basic configuration and setup", duration: "10 min", difficulty: "Intermediate", rating: 4.7 }
     ]
   },
   {
-    title: "API & Integration",
-    description: "Comprehensive guides for API usage and integrations",
+    title: "API Integration",
+    description: "Step-by-step integration tutorials",
     icon: Settings,
     color: "green",
     guides: [
-      {
-        title: "API Authentication Guide",
-        description: "Complete guide to API authentication methods",
-        duration: "25 min",
-        difficulty: "Intermediate",
-        type: "Guide",
-        rating: 4.6,
-        downloads: 850
-      },
-      {
-        title: "Webhook Implementation",
-        description: "Setting up and managing webhooks",
-        duration: "30 min",
-        difficulty: "Intermediate",
-        type: "Tutorial",
-        rating: 4.8,
-        downloads: 650
-      },
-      {
-        title: "SDK Integration Guide",
-        description: "Using our official SDKs in your applications",
-        duration: "35 min",
-        difficulty: "Advanced",
-        type: "Guide",
-        rating: 4.7,
-        downloads: 420
-      }
+      { title: "REST API Integration", description: "Integrate using our REST API", duration: "30 min", difficulty: "Intermediate", rating: 4.9 },
+      { title: "SDK Integration", description: "Use our official SDKs", duration: "20 min", difficulty: "Beginner", rating: 4.8 },
+      { title: "Webhook Setup", description: "Configure webhooks for real-time updates", duration: "25 min", difficulty: "Advanced", rating: 4.7 }
     ]
   },
   {
-    title: "Security & Compliance",
-    description: "Security best practices and compliance guidelines",
+    title: "User Management",
+    description: "User guides and management tutorials",
+    icon: User,
+    color: "purple",
+    guides: [
+      { title: "User Dashboard", description: "Navigate and use the main dashboard", duration: "10 min", difficulty: "Beginner", rating: 4.5 },
+      { title: "User Permissions", description: "Manage users and permissions", duration: "15 min", difficulty: "Intermediate", rating: 4.6 },
+      { title: "Team Collaboration", description: "Set up team collaboration features", duration: "20 min", difficulty: "Intermediate", rating: 4.8 }
+    ]
+  },
+  {
+    title: "Security",
+    description: "Security best practices and implementation",
     icon: Shield,
     color: "red",
     guides: [
-      {
-        title: "Security Best Practices",
-        description: "Essential security measures for your applications",
-        duration: "40 min",
-        difficulty: "Advanced",
-        type: "Guide",
-        rating: 4.9,
-        downloads: 680
-      },
-      {
-        title: "Data Privacy Compliance",
-        description: "GDPR, CCPA, and other privacy regulations",
-        duration: "45 min",
-        difficulty: "Advanced",
-        type: "Guide",
-        rating: 4.8,
-        downloads: 520
-      },
-      {
-        title: "Access Control Setup",
-        description: "Implementing proper access controls",
-        duration: "30 min",
-        difficulty: "Intermediate",
-        type: "Tutorial",
-        rating: 4.7,
-        downloads: 380
-      }
+      { title: "Security Setup", description: "Configure security settings", duration: "25 min", difficulty: "Advanced", rating: 4.9 },
+      { title: "Authentication", description: "Set up authentication methods", duration: "20 min", difficulty: "Intermediate", rating: 4.7 },
+      { title: "Data Protection", description: "Protect sensitive data", duration: "30 min", difficulty: "Advanced", rating: 4.8 }
     ]
   },
   {
-    title: "Deployment & Operations",
-    description: "Deployment guides and operational best practices",
+    title: "Deployment",
+    description: "Deployment guides and best practices",
     icon: Globe,
-    color: "purple",
+    color: "indigo",
     guides: [
-      {
-        title: "Production Deployment",
-        description: "Deploying applications to production environments",
-        duration: "50 min",
-        difficulty: "Advanced",
-        type: "Guide",
-        rating: 4.8,
-        downloads: 720
-      },
-      {
-        title: "Monitoring & Alerting",
-        description: "Setting up comprehensive monitoring",
-        duration: "35 min",
-        difficulty: "Intermediate",
-        type: "Tutorial",
-        rating: 4.6,
-        downloads: 450
-      },
-      {
-        title: "Scaling Applications",
-        description: "Best practices for scaling your applications",
-        duration: "40 min",
-        difficulty: "Advanced",
-        type: "Guide",
-        rating: 4.7,
-        downloads: 380
-      }
+      { title: "Cloud Deployment", description: "Deploy to AWS, Azure, or GCP", duration: "45 min", difficulty: "Advanced", rating: 4.6 },
+      { title: "Docker Deployment", description: "Container-based deployment", duration: "30 min", difficulty: "Intermediate", rating: 4.7 },
+      { title: "Production Setup", description: "Production environment configuration", duration: "60 min", difficulty: "Advanced", rating: 4.8 }
+    ]
+  },
+  {
+    title: "Troubleshooting",
+    description: "Common issues and solutions",
+    icon: Zap,
+    color: "orange",
+    guides: [
+      { title: "Common Issues", description: "Frequently encountered problems", duration: "15 min", difficulty: "Beginner", rating: 4.5 },
+      { title: "Performance Issues", description: "Troubleshoot performance problems", duration: "25 min", difficulty: "Intermediate", rating: 4.6 },
+      { title: "Error Resolution", description: "Resolve common errors", duration: "20 min", difficulty: "Intermediate", rating: 4.7 }
     ]
   }
 ];
 
-const featuredGuides = [
+const popularGuides = [
   {
-    title: "Complete Platform Guide",
-    description: "The definitive guide to using all platform features",
-    duration: "120 min",
-    difficulty: "All Levels",
-    type: "Comprehensive Guide",
-    rating: 4.9,
-    downloads: 2500,
-    featured: true
-  },
-  {
-    title: "Enterprise Implementation",
-    description: "Best practices for enterprise deployments",
-    duration: "90 min",
-    difficulty: "Advanced",
-    type: "Guide",
+    title: "Quick Start Guide",
+    description: "Get up and running in 5 minutes",
+    category: "Getting Started",
+    duration: "5 min",
+    difficulty: "Beginner",
     rating: 4.8,
-    downloads: 1200,
-    featured: true
+    views: 1250
   },
   {
-    title: "Troubleshooting Handbook",
-    description: "Common issues and their solutions",
-    duration: "60 min",
-    difficulty: "All Levels",
-    type: "Reference Guide",
-    rating: 4.7,
-    downloads: 1800,
-    featured: true
+    title: "REST API Integration",
+    description: "Step-by-step integration tutorial",
+    category: "API Integration",
+    duration: "30 min",
+    difficulty: "Intermediate",
+    rating: 4.9,
+    views: 980
+  },
+  {
+    title: "Cloud Deployment",
+    description: "Deploy to major cloud providers",
+    category: "Deployment",
+    duration: "45 min",
+    difficulty: "Advanced",
+    rating: 4.6,
+    views: 720
+  },
+  {
+    title: "Security Setup",
+    description: "Configure security settings",
+    category: "Security",
+    duration: "25 min",
+    difficulty: "Advanced",
+    rating: 4.9,
+    views: 650
   }
 ];
 
-const searchFilters = [
-  "All Guides",
-  "Getting Started",
-  "API & Integration",
-  "Security & Compliance",
-  "Deployment & Operations"
-];
+const difficultyColors = {
+  Beginner: "bg-green-100 text-green-800",
+  Intermediate: "bg-yellow-100 text-yellow-800",
+  Advanced: "bg-red-100 text-red-800"
+};
 
-export default function GuidesPage() {
+export default function Guides() {
   return (
-    <MainLayout 
-      title="Guides - Zion Tech Group"
-      description="Comprehensive guides and documentation to help you master Zion Tech Group's platform and services."
-      keywords="guides, documentation, how-to, tutorials, best practices, implementation guides"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        
+    <MainLayout>
+      <div className="min-h-screen">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -225,17 +149,17 @@ export default function GuidesPage() {
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                User <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Guides</span>
+                Comprehensive <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Guides</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Comprehensive guides and documentation to help you master our platform. 
-                From basic setup to advanced implementation strategies.
+                Step-by-step guides to help you master our products and services. 
+                From quick start tutorials to advanced deployment strategies.
               </p>
               
               {/* Search Bar */}
@@ -252,24 +176,24 @@ export default function GuidesPage() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="#guides"
+                  href="#getting-started"
                   className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
                 >
                   Browse Guides
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
-                  href="/docs"
+                  href="/contact"
                   className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center justify-center"
                 >
-                  View Documentation
+                  Get Help
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Featured Guides */}
+        {/* Popular Guides */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -279,15 +203,15 @@ export default function GuidesPage() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Featured Guides
+                Popular Guides
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our most popular and comprehensive guides to get you started.
+                Most viewed and highly rated guides to help you get started quickly.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {featuredGuides.map((guide, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {popularGuides.map((guide, index) => (
                 <motion.div
                   key={guide.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -295,84 +219,48 @@ export default function GuidesPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-yellow-100 text-yellow-600 rounded text-sm font-medium">
-                      Featured
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-sm font-medium text-blue-600">
+                      {guide.category}
                     </span>
                     <div className="flex items-center text-sm text-gray-500">
                       <Star className="w-4 h-4 text-yellow-400 mr-1" />
                       {guide.rating}
                     </div>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
                     {guide.title}
                   </h3>
-                  
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 text-sm mb-4">
                     {guide.description}
                   </p>
-                  
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center">
                       <Clock className="w-4 h-4 mr-1" />
-                      <span>{guide.duration}</span>
+                      {guide.duration}
                     </div>
-                    <div className="flex items-center">
-                      <Download className="w-4 h-4 mr-1" />
-                      <span>{guide.downloads} downloads</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <span className={`px-2 py-1 rounded text-xs font-medium ${
-                      guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :
-                      guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :
-                      guide.difficulty === 'All Levels' ? 'bg-blue-100 text-blue-600' :
-                      'bg-red-100 text-red-600'
-                    }`}>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${difficultyColors[guide.difficulty]}`}>
                       {guide.difficulty}
                     </span>
-                    <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded text-xs font-medium">
-                      {guide.type}
-                    </span>
                   </div>
-                  
-                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">
-                    <Download className="w-4 h-4 mr-2" />
-                    Download Guide
-                  </button>
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <span>{guide.views} views</span>
+                    <Link
+                      href="#"
+                      className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
+                    >
+                      Read Guide
+                      <ChevronRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Filter Bar */}
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-4">
-              {searchFilters.map((filter, index) => (
-                <motion.button
-                  key={filter}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-                    filter === 'All Guides'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-600 hover:bg-blue-50'
-                  }`}
-                >
-                  {filter}
-                </motion.button>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Guide Categories */}
-        <section id="guides" className="py-20 bg-white">
+        <section id="getting-started" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -384,80 +272,69 @@ export default function GuidesPage() {
                 Browse by Category
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Find guides organized by topic and complexity level.
+                Find the guides you need organized by category and topic.
               </p>
             </motion.div>
 
-            <div className="space-y-12">
-              {guideCategories.map((category, categoryIndex) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {guideCategories.map((category, index) => (
                 <motion.div
                   key={category.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-                  className="bg-gray-50 rounded-xl shadow-lg p-8"
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                 >
-                  <div className="flex items-center mb-6">
-                    <div className={`w-12 h-12 bg-${category.color}-100 rounded-lg flex items-center justify-center mr-4`}>
-                      <category.icon className={`w-6 h-6 text-${category.color}-600`} />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">
-                        {category.title}
-                      </h3>
-                      <p className="text-gray-600">
-                        {category.description}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {category.guides.map((guide, guideIndex) => (
-                      <div key={guideIndex} className="bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${
-                            guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :
-                            guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :
-                            'bg-red-100 text-red-600'
-                          }`}>
-                            {guide.difficulty}
-                          </span>
-                          <div className="flex items-center text-sm text-gray-500">
-                            <Star className="w-3 h-3 text-yellow-400 mr-1" />
-                            {guide.rating}
-                          </div>
-                        </div>
-                        
-                        <h4 className="font-semibold text-gray-900 mb-2">
-                          {guide.title}
-                        </h4>
-                        
-                        <p className="text-gray-600 text-sm mb-3">
-                          {guide.description}
-                        </p>
-                        
-                        <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
-                          <div className="flex items-center">
-                            <Clock className="w-3 h-3 mr-1" />
-                            <span>{guide.duration}</span>
-                          </div>
-                          <div className="flex items-center">
-                            <Download className="w-3 h-3 mr-1" />
-                            <span>{guide.downloads}</span>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center justify-between">
-                          <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded text-xs">
-                            {guide.type}
-                          </span>
-                          <button className="text-blue-600 hover:text-blue-700 font-medium text-sm inline-flex items-center">
-                            Download
-                            <ExternalLink className="w-3 h-3 ml-1" />
-                          </button>
-                        </div>
+                  <div className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className={`w-12 h-12 bg-${category.color}-100 rounded-lg flex items-center justify-center mr-4`}>
+                        <category.icon className={`w-6 h-6 text-${category.color}-600`} />
                       </div>
-                    ))}
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900">
+                          {category.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm">
+                          {category.description}
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      {category.guides.map((guide, guideIndex) => (
+                        <div key={guideIndex} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                          <div>
+                            <h4 className="font-medium text-gray-900 text-sm">
+                              {guide.title}
+                            </h4>
+                            <p className="text-xs text-gray-600">
+                              {guide.description}
+                            </p>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${difficultyColors[guide.difficulty]}`}>
+                              {guide.difficulty}
+                            </span>
+                            <Link
+                              href="#"
+                              className="text-blue-600 hover:text-blue-700"
+                            >
+                              <ExternalLink className="w-4 h-4" />
+                            </Link>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="mt-4 pt-4 border-t border-gray-200">
+                      <Link
+                        href="#"
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                      >
+                        View All {category.title}
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -477,21 +354,21 @@ export default function GuidesPage() {
                 Need More Help?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Can't find what you're looking for? Our support team is here to help you with any questions or custom guidance.
+                Can't find what you're looking for? Our support team is here to help you succeed.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/support"
+                  href="/contact"
                   className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
                 >
                   Contact Support
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/support"
                   className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
                 >
-                  Request Custom Guide
+                  Visit Support Center
                 </Link>
               </div>
             </motion.div>
@@ -499,72 +376,5 @@ export default function GuidesPage() {
         </section>
       </div>
     </MainLayout>
-=======
-
-export default function Guides() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Guides - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
-        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
-      </Head>
-      
-      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8 }} 
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Guides
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              This page is currently under development. Please check back soon for updates.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-              >
-                Get Started Today
-              </Link>
-              <Link 
-                href="/services" 
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
-              >
-                Explore Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16" 
-            initial={{ opacity: 0, y: 30 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8 }} 
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Coming Soon
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              This page is currently under development. Please check back soon for updates.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-    </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-cac2
   );
 }

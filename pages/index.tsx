@@ -17,9 +17,9 @@ const services = [
     description: "Cutting-edge artificial intelligence solutions for modern businesses",
     icon: Brain,
     href: "/ai-services",
-    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "Quantum Computing", "Medical AI"],
     pricing: "Starting at $2,000/month",
-    count: "25+ AI Solutions",
+    count: "35+ AI Solutions",
     popular: true
   },
   {
@@ -27,9 +27,9 @@ const services = [
     description: "Comprehensive IT solutions to power your digital transformation",
     icon: Network,
     href: "/it-services",
-    features: ["Cloud Migration", "Cybersecurity", "Infrastructure Management", "Digital Transformation"],
+    features: ["Cloud Migration", "Cybersecurity", "Infrastructure Management", "Digital Transformation", "Edge Computing", "Quantum-Safe Security"],
     pricing: "Starting at $1,500/month",
-    count: "18+ IT Solutions",
+    count: "28+ IT Solutions",
     popular: true
   },
   {
@@ -37,9 +37,9 @@ const services = [
     description: "Innovative software as a service solutions for specialized business needs",
     icon: Cloud,
     href: "/micro-saas",
-    features: ["AI Content Marketing", "Smart Lead Management", "Analytics Dashboard", "Workflow Automation", "Customer Support Bot", "Inventory Management", "Email Marketing", "Project Management"],
+    features: ["AI Code Quality", "Smart API Management", "Content Moderation", "Cloud Cost Optimization", "Lead Scoring", "Document Processing"],
     pricing: "Starting at $19/month",
-    count: "20+ Products",
+    count: "30+ Products",
     popular: true
   }
 ];
@@ -228,6 +228,103 @@ export default function HomePage() {
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Innovative Services Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Innovative Solutions
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Discover our cutting-edge solutions powered by AI, quantum computing, and advanced technology
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-center mb-4">
+                  <Brain className="h-12 w-12 text-blue-600 mr-4" />
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">Advanced AI Services</h3>
+                    <p className="text-sm text-blue-600 font-semibold">35+ Solutions</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">Quantum computing, medical AI, autonomous systems, and neural interfaces</p>
+                <Link
+                  href="/ai-services"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200"
+                >
+                  Explore AI Services
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-center mb-4">
+                  <Network className="h-12 w-12 text-blue-600 mr-4" />
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">Innovative IT Services</h3>
+                    <p className="text-sm text-blue-600 font-semibold">28+ Solutions</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">AI operations, quantum-safe security, edge computing, and blockchain infrastructure</p>
+                <Link
+                  href="/innovative-it-services"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200"
+                >
+                  Explore IT Services
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-center mb-4">
+                  <Cloud className="h-12 w-12 text-blue-600 mr-4" />
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">Smart Micro SaaS</h3>
+                    <p className="text-sm text-blue-600 font-semibold">30+ Products</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">AI-powered tools for code quality, API management, content moderation, and workflow automation</p>
+                <Link
+                  href="/innovative-micro-saas"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200"
+                >
+                  Explore Micro SaaS
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </motion.div>
             </div>
           </div>
         </section>

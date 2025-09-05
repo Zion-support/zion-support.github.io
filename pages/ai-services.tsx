@@ -198,6 +198,81 @@ const aiServices = [
     category: 'Real Estate'
   },
   {
+    title: 'AI-Powered Quantum Computing Simulator',
+    description: 'Advanced quantum computing simulation and optimization platform for complex problem solving.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Design', 'Optimization Problems', 'Quantum Machine Learning', 'Simulation Environment'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI Autonomous Vehicle Navigation',
+    description: 'Self-driving vehicle navigation system with real-time decision making and safety protocols.',
+    icon: Car,
+    features: ['Real-time Navigation', 'Obstacle Detection', 'Path Planning', 'Safety Protocols'],
+    pricing: '$25,000 - $100,000/project',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis using machine learning.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Impact', 'Carbon Footprint Analysis', 'Sustainability Planning'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI Medical Diagnosis Assistant',
+    description: 'AI-powered medical diagnosis support with image analysis and symptom correlation.',
+    icon: Heart,
+    features: ['Medical Image Analysis', 'Symptom Correlation', 'Diagnosis Support', 'Treatment Recommendations'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Exploration',
+    description: 'Autonomous space mission planning and satellite data analysis using advanced AI.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Data Analysis', 'Orbital Mechanics', 'Resource Optimization'],
+    pricing: '$50,000 - $200,000/project',
+    category: 'Space Technology'
+  },
+  {
+    title: 'AI Blockchain Analytics',
+    description: 'Advanced blockchain transaction analysis and cryptocurrency market prediction.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Market Prediction', 'Risk Assessment', 'Compliance Monitoring'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Blockchain AI'
+  },
+  {
+    title: 'AI-Powered Robotics Control',
+    description: 'Intelligent robotics control system with adaptive learning and human-robot interaction.',
+    icon: Bot,
+    features: ['Adaptive Learning', 'Human-Robot Interaction', 'Task Planning', 'Safety Systems'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Robotics AI'
+  },
+  {
+    title: 'AI Neural Interface Technology',
+    description: 'Brain-computer interface system for medical applications and assistive technology.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Brain Pattern Recognition', 'Assistive Technology', 'Medical Applications'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Neurotechnology'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Shield',
+    description: 'Advanced AI cybersecurity system with real-time threat detection and automated response.',
+    icon: Shield,
+    features: ['Real-time Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Zero-day Protection'],
+    pricing: '$8,000 - $40,000/month',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
     title: 'AI-Powered HR Recruitment',
     description: 'Intelligent candidate screening, resume analysis, and interview scheduling.',
     icon: Users,
@@ -839,90 +914,90 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Light Curve Analysis', 'Transit Detection', 'Atmospheric Modeling', 'Habitability Assessment'],
     pricing: '$45,000 - $450,000/project',
     category: 'Astrobiology AI',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Protein Folding Prediction',
     description: 'Advanced AI for predicting protein structures and folding patterns.',
     icon: Heart,
     features: ['Structure Prediction', 'Folding Simulation', 'Function Analysis', 'Drug Design'],
     pricing: '$35,000 - $350,000/setup',
     category: 'Structural Biology AI',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Cryptocurrency Mining Optimization',
     description: 'AI-optimized cryptocurrency mining with energy efficiency and profit maximization.',
     icon: TrendingUp,
     features: ['Hash Rate Optimization', 'Energy Efficiency', 'Profit Maximization', 'Market Analysis'],
     pricing: '$20,000 - $200,000/setup',
     category: 'Crypto AI',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Virtual Reality Content Generation',
     description: 'AI-generated immersive VR content with realistic physics and interactions.',
     icon: Monitor,
     features: ['3D Content Generation', 'Physics Simulation', 'Interactive Design', 'Realistic Rendering'],
     pricing: '$25,000 - $250,000/project',
     category: 'VR AI',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Augmented Reality Intelligence',
     description: 'Advanced AR systems with AI-powered object recognition and spatial understanding.',
     icon: Eye,
     features: ['Object Recognition', 'Spatial Mapping', 'Real-time Processing', 'Context Awareness'],
     pricing: '$30,000 - $300,000/setup',
     category: 'AR AI',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Holographic Display Technology',
     description: 'AI-optimized holographic displays with real-time content generation and interaction.',
     icon: Monitor,
     features: ['Hologram Generation', 'Real-time Rendering', 'Interactive Controls', '3D Projection'],
     pricing: '$40,000 - $400,000/project',
     category: 'Holographic AI',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Teleportation Simulation',
     description: 'AI systems for simulating quantum teleportation and quantum communication protocols.',
     icon: Network,
     features: ['Quantum Simulation', 'Entanglement Modeling', 'Protocol Optimization', 'Error Correction'],
     pricing: '$55,000 - $550,000/project',
     category: 'Quantum Communication',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Time Travel Simulation',
     description: 'AI systems for simulating time travel scenarios and temporal paradoxes.',
     icon: Clock,
     features: ['Temporal Modeling', 'Paradox Analysis', 'Causality Simulation', 'Timeline Optimization'],
     pricing: '$90,000 - $900,000/project',
     category: 'Temporal AI',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Multiverse Exploration',
     description: 'AI systems for exploring and simulating multiple universe scenarios and theories.',
     icon: Globe,
     features: ['Multiverse Modeling', 'Theory Testing', 'Scenario Simulation', 'Physics Exploration'],
     pricing: '$100,000 - $1,000,000/project',
     category: 'Theoretical Physics AI',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Quantum Machine Learning',
     description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
     icon: Cpu,
     features: ['Quantum Algorithms', 'Optimization Problems', 'Quantum Neural Networks', 'Hybrid Classical-Quantum'],
     pricing: '$25,000 - $100,000/project',
     category: 'Quantum AI',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI-Powered Autonomous Vehicle Systems',
     description: 'Complete autonomous vehicle AI systems with perception, planning, and control.',
     icon: Car,
@@ -930,7 +1005,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$100,000 - $500,000/project',
     category: 'Autonomous Systems'
   },
-  {}
+  {
     title: 'AI-Powered Space Exploration Analytics',
     description: 'AI systems for space mission planning, satellite data analysis, and space weather prediction.',
     icon: Rocket,
@@ -938,7 +1013,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$50,000 - $200,000/project',
     category: 'Space Tech'
   },
-  {}
+  {
     title: 'AI-Powered Climate Change Modeling',
     description: 'Advanced AI models for climate prediction, carbon footprint analysis, and environmental monitoring.',
     icon: Globe,
@@ -946,7 +1021,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$30,000 - $150,000/project',
     category: 'Climate AI'
   },
-  {}
+  {
     title: 'AI-Powered Brain-Computer Interface',
     description: 'AI-powered brain-computer interface systems for medical and assistive applications.',
     icon: Brain,
