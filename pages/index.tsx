@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Globe, Award, Phone, Mail, MapPin, Star, TrendingUp, Clock, DollarSign } from 'lucide-react';
-import Layout from './components/Layout';
+import Layout from '../../components/Layout';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -284,9 +284,9 @@ export default function HomePage() {
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
-            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Market Position & Pricing Section */}
         <section className="py-20 bg-gray-100">

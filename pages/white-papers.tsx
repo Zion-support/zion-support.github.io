@@ -34,7 +34,7 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-import Layout from './components/Layout';
+import Layout from '../../components/Layout';
 
 const whitePaperCategories = [
   { name: 'AI & Machine Learning', count: 8, color: 'bg-blue-100 text-blue-800' },
