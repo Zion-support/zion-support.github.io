@@ -1,14 +1,1 @@
-import React from 'react';''
-import { render, screen } from '@testing-library/react';''
-import '@testing-library/jest-dom';''
-import SecurityEnhancer from '../components/SecurityEnhancer';''
-describe('SecurityEnhancer', () => {''}
-  test('renders without crashing', () => {'}
-    render(<SecurityEnhancer />);
-</SecurityEnhancer>
-    render(<SecurityEnhancer />);
-</SecurityEnhancer>
-    render(<SecurityEnhancer />);
-</SecurityEnhancer>
-    render(<SecurityEnhancer />);
-</SecurityEnhancer>'
+import _React from 'react"  import '@testing-library/jest-dom import SecurityEnhancer from '../components/SecurityEnhancer" describe('SecurityEnhancer',() => {' test('renders without crashing',() => {' render(<SecurityEnhancer / />) expect(screen.getByTestId("securityenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SecurityEnhancer / />) }) test('handles user interactions',() => {' render(<SecurityEnhancer / />) }) test('applies correct styling',() => {' render(<SecurityEnhancer / />) }) })

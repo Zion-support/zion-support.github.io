@@ -79,12 +79,6 @@ const FuturisticFooter: React.FC = () => {}
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'];
   ];
 
-  const stats = [']
-    { value: '500+', label: 'Projects Completed', icon: CheckCircle },''
-    { value: '99.9%', label: 'Uptime Guarantee', icon: Shield },''
-    { value: '24/7', label: 'Support Available', icon: Award },''
-    { value: '50+', label: 'Expert Team', icon: Zap }'];
-  ];
 
   return (')
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">"
@@ -125,12 +119,6 @@ const FuturisticFooter: React.FC = () => {}
                     <stat.icon className="w-6 h-6 text-cyan-400" />"
 </stat>
                   </div>
-                </div>"
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>""
-                <div className="text-slate-400 text-sm">{stat.label}</div>"
-              </motion.div>);
-            ))};
-          </motion.div>
 
           {/* Main Footer Content */}"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">"

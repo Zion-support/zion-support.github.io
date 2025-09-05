@@ -1,14 +1,2 @@
-import React from 'react';
-
-interface AIAutonomousAPISecurityProps {
-  // Add props here as needed
-}
-
-export default function AIAutonomousAPISecurity({ }: AIAutonomousAPISecurityProps) {
-  return (
-    <div>
-      <h1>AIAutonomousAPISecurity</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< \"HEAD\": src.pages.disabled/AIAutonomousAPISecurity.jsx import React from \'react\'; export default AIAutonomousAPISecurity; const AIAutonomousAPISecurity = () => { return (<> <Helmet> <title > AI Autonomous API Security Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous API security platform that continuously secures APIs,detects threats,and protects API infrastructure with advanced AI capabilities and autonomous operation.\" / / /> <meta name=\"keywords\" content=\"AI API security,autonomous API security,API protection,threat detection,autonomous operations,AI API security platform\" / / /> <link rel=\"canonical\" href=\""https\": import React from \'react\'; export default AIAutonomousAPISecurity; const AIAutonomousAPISecurity = () => { return (<> <Helmet> <title > AI Autonomous API Security Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous API security platform that continuously secures APIs,detects threats,and protects API infrastructure with advanced AI capabilities and autonomous operation.\" / / / /> <meta name=\"keywords\" content=\"AI API security,autonomous API security,API protection,threat detection,autonomous operations,AI API security platform\" / / / /> <link rel=\"canonical\" href=\""https\": \"";
+<<<<<<< "HEAD": src.pages.disabled/AIAutonomousAPISecurity.jsx import _React from 'react'; export default AIAutonomousAPISecurity; const AIAutonomousAPISecurity = () => { return (<> <Helmet> <title > AI Autonomous API Security Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous API security platform that continuously secures APIs,detects threats,and protects API infrastructure with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI API security,autonomous API security,API protection,threat detection,autonomous operations,AI API security platform" / / /> <link rel="canonical" href=""https": import _React from 'react'; export default AIAutonomousAPISecurity; const AIAutonomousAPISecurity = () => { return (<> <Helmet> <title > AI Autonomous API Security Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous API security platform that continuously secures APIs,detects threats,and protects API infrastructure with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI API security,autonomous API security,API protection,threat detection,autonomous operations,AI API security platform" / / / /> <link rel="canonical" href=""https": "";

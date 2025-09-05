@@ -1,107 +1,61 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Map, 
-  ArrowRight,
-  ExternalLink,
-  Home,
-  Settings,
-  Users,
-  FileText,
-  Globe,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import { Home, Users, Settings, Shield, Brain, Cloud, ArrowRight, CheckCircle } from 'lucide-react';
+import Layout from '../components/Layout';
 
-const siteStructure = [
+const sitemapSections = [
   {
-    title: "Main Pages",
+    title: 'Main Pages',
     pages: [
-      { name: "Home", url: "/", description: "Main landing page" },
-      { name: "About Us", url: "/about", description: "Company information and team" },
-      { name: "Contact", url: "/contact", description: "Contact information and form" },
-      { name: "News", url: "/news", description: "Latest news and updates" },
-      { name: "Careers", url: "/careers", description: "Job opportunities" },
-      { name: "Partners", url: "/partners", description: "Partnership information" }
+      { name: 'Home', url: '/', icon: Home },
+      { name: 'About Us', url: '/about', icon: Users },
+      { name: 'Contact', url: '/contact', icon: Settings },
+      { name: 'Privacy Policy', url: '/privacy', icon: Shield },
+      { name: 'Terms of Service', url: '/terms', icon: Shield }
     ]
   },
   {
-    title: "Services",
+    title: 'Services',
     pages: [
-      { name: "All Services", url: "/services", description: "Overview of all services" },
-      { name: "AI Services", url: "/ai-services", description: "Artificial intelligence solutions" },
-      { name: "IT Services", url: "/it-services", description: "Information technology services" },
-      { name: "Micro SaaS", url: "/micro-saas", description: "Software as a service solutions" },
-      { name: "Talent", url: "/talent", description: "Talent acquisition services" }
+      { name: 'AI Services', url: '/ai-services', icon: Brain },
+      { name: 'IT Services', url: '/it-services', icon: Settings },
+      { name: 'Micro SAAS', url: '/micro-saas', icon: Cloud },
+      { name: 'Security', url: '/security', icon: Shield },
+      { name: 'Services Overview', url: '/services-overview', icon: Settings }
     ]
   },
   {
-    title: "Solutions",
+    title: 'Resources',
     pages: [
-      { name: "All Solutions", url: "/solutions", description: "Overview of all solutions" },
-      { name: "Enterprise Solutions", url: "/solutions/enterprise", description: "Enterprise-grade solutions" },
-      { name: "Startup Solutions", url: "/solutions/startup", description: "Solutions for startups" },
-      { name: "Industry Solutions", url: "/solutions/industry", description: "Industry-specific solutions" },
-      { name: "Custom Development", url: "/solutions/custom", description: "Custom software development" },
-      { name: "Digital Transformation", url: "/solutions/digital-transformation", description: "Digital transformation services" },
-      { name: "Cloud Migration", url: "/solutions/cloud-migration", description: "Cloud migration services" }
+      { name: 'Case Studies', url: '/case-studies', icon: CheckCircle },
+      { name: 'News & Updates', url: '/news', icon: ArrowRight },
+      { name: 'Guides & Tutorials', url: '/guides', icon: ArrowRight },
+      { name: 'FAQ', url: '/faq', icon: CheckCircle },
+      { name: 'Help & Support', url: '/help', icon: Settings }
     ]
   },
   {
-    title: "Industries",
+    title: 'Company',
     pages: [
-      { name: "Healthcare", url: "/industries/healthcare", description: "Healthcare industry solutions" },
-      { name: "Finance", url: "/industries/finance", description: "Financial services solutions" },
-      { name: "Manufacturing", url: "/industries/manufacturing", description: "Manufacturing solutions" },
-      { name: "Retail", url: "/industries/retail", description: "Retail industry solutions" },
-      { name: "Education", url: "/industries/education", description: "Education sector solutions" },
-      { name: "Government", url: "/industries/government", description: "Government solutions" }
-    ]
-  },
-  {
-    title: "Resources",
-    pages: [
-      { name: "Documentation", url: "/docs", description: "Technical documentation" },
-      { name: "API Reference", url: "/api-docs", description: "API documentation" },
-      { name: "Case Studies", url: "/case-studies", description: "Success stories and case studies" },
-      { name: "Blog", url: "/blog", description: "Company blog and insights" },
-      { name: "Tutorials", url: "/tutorials", description: "Step-by-step tutorials" },
-      { name: "Guides", url: "/guides", description: "User guides and documentation" },
-      { name: "FAQ", url: "/faq", description: "Frequently asked questions" },
-      { name: "Support", url: "/support", description: "Customer support center" }
-    ]
-  },
-  {
-    title: "Legal",
-    pages: [
-      { name: "Privacy Policy", url: "/privacy", description: "Privacy policy and data protection" },
-      { name: "Terms of Service", url: "/terms", description: "Terms and conditions" },
-      { name: "Cookie Policy", url: "/cookies", description: "Cookie usage policy" },
-      { name: "Security", url: "/security", description: "Security information" },
-      { name: "Compliance", url: "/compliance", description: "Compliance and certifications" }
+      { name: 'Our Team', url: '/team', icon: Users },
+      { name: 'Careers', url: '/careers', icon: Users },
+      { name: 'Partners', url: '/partners', icon: Users },
+      { name: 'Industries', url: '/industries', icon: Settings },
+      { name: 'Compliance', url: '/compliance', icon: Shield }
     ]
   }
 ];
 
-const contactInfo = {
-  phone: "+1 302 464 0950",
-  email: "info@ziontechgroup.com",
-  address: "364 E Main St STE 1008, Middletown, DE 19709",
-  website: "https://ziontechgroup.com"
-};
-
 export default function SitemapPage() {
   return (
-    <MainLayout 
+    <Layout
       title="Sitemap - Zion Tech Group"
-      description="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources organized by category."
-      keywords="sitemap, website map, navigation, pages, services, resources"
+      description="Navigate our website easily with our comprehensive sitemap. Find all pages and resources in one place."
+      keywords="sitemap, navigation, pages, website structure"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -109,280 +63,94 @@ export default function SitemapPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-
+          
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              className="text-center"
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Website <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Sitemap</span>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Site <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Map</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Navigate our website easily with our comprehensive sitemap. 
-                Find all pages, services, and resources organized by category.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Navigate our website easily with our comprehensive sitemap. Find all pages and resources in one place.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#site-structure"
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
-                  Browse Sitemap
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center justify-center"
-                >
-                  Contact Us
-                </Link>
-              </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Site Structure */}
-        <section id="site-structure" className="py-20 bg-white">
+        {/* Sitemap Sections */}
+        <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Site Structure
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                All pages on our website organized by category for easy navigation.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {siteStructure.map((category, categoryIndex) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {sitemapSections.map((section, index) => (
                 <motion.div
-                  key={category.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-                  className="bg-gray-50 rounded-xl p-6"
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6"
                 >
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <Map className="w-6 h-6 text-blue-600 mr-3" />
-                    {category.title}
-                  </h3>
-                  <div className="space-y-3">
-                    {category.pages.map((page, pageIndex) => (
-                      <div key={pageIndex} className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
-                        <div className="flex-1">
-                          <Link
-                            href={page.url}
-                            className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
-                          >
+                  <h2 className="text-xl font-bold text-gray-900 mb-6">{section.title}</h2>
+                  
+                  <ul className="space-y-3">
+                    {section.pages.map((page, idx) => (
+                      <li key={idx}>
+                        <Link
+                          href={page.url}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors duration-200 group"
+                        >
+                          <page.icon className="w-4 h-4 mr-3 text-gray-400 group-hover:text-blue-600" />
+                          <span className="group-hover:translate-x-1 transition-transform">
                             {page.name}
-                            <ExternalLink className="w-4 h-4 ml-2" />
-                          </Link>
-                          <p className="text-sm text-gray-600 mt-1">
-                            {page.description}
-                          </p>
-                        </div>
-                      </div>
+                          </span>
+                        </Link>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Quick Links */}
-        <section className="py-20 bg-gray-50">
+        {/* Additional Information */}
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              className="text-center"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Quick Links
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Need Help Finding Something?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Most popular pages and resources for quick access.
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                If you can't find what you're looking for, our team is here to help you navigate our website.
               </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link
-                href="/"
-                className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 group"
-              >
-                <div className="text-center">
-                  <Home className="w-12 h-12 text-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    Home
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Main landing page
-                  </p>
-                </div>
-              </Link>
-
-              <Link
-                href="/services"
-                className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 group"
-              >
-                <div className="text-center">
-                  <Settings className="w-12 h-12 text-green-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                    Services
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Our technology services
-                  </p>
-                </div>
-              </Link>
-
-              <Link
-                href="/about"
-                className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 group"
-              >
-                <div className="text-center">
-                  <Users className="w-12 h-12 text-purple-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                    About Us
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Company information
-                  </p>
-                </div>
-              </Link>
-
-              <Link
-                href="/contact"
-                className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 group"
-              >
-                <div className="text-center">
-                  <Phone className="w-12 h-12 text-orange-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
-                    Contact
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Get in touch
-                  </p>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Contact Information
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Get in touch with us through any of these channels.
-              </p>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-gray-50 rounded-xl p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-6">
-                    <div className="flex items-center">
-                      <Phone className="w-6 h-6 text-blue-600 mr-4" />
-                      <div>
-                        <div className="font-semibold text-gray-900">Phone</div>
-                        <div className="text-gray-600">{contactInfo.phone}</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center">
-                      <Mail className="w-6 h-6 text-blue-600 mr-4" />
-                      <div>
-                        <div className="font-semibold text-gray-900">Email</div>
-                        <div className="text-gray-600">{contactInfo.email}</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center">
-                      <MapPin className="w-6 h-6 text-blue-600 mr-4" />
-                      <div>
-                        <div className="font-semibold text-gray-900">Address</div>
-                        <div className="text-gray-600">{contactInfo.address}</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center">
-                      <Globe className="w-6 h-6 text-blue-600 mr-4" />
-                      <div>
-                        <div className="font-semibold text-gray-900">Website</div>
-                        <div className="text-gray-600">{contactInfo.website}</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white rounded-lg p-6">
-                    <h3 className="text-lg font-bold text-gray-900 mb-4">
-                      Need Help Finding Something?
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Can't find what you're looking for? Our team is here to help you navigate our website and find the information you need.
-                    </p>
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                    >
-                      Contact Support
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Now that you've explored our website, let's discuss how we can help you achieve your technology goals.
-              </p>
+              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+                  className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center justify-center"
                 >
-                  Start Your Project
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="w-5 h-5 mr-2" />
+                  Contact Us
                 </Link>
                 <Link
-                  href="/about"
-                  className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
+                  href="/help"
+                  className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-colors font-semibold"
                 >
-                  Learn More About Us
+                  Get Help
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

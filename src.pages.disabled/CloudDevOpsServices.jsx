@@ -1,14 +1,2 @@
-import React from 'react';
-
-interface CloudDevOpsServicesProps {
-  // Add props here as needed
-}
-
-export default function CloudDevOpsServices({ }: CloudDevOpsServicesProps) {
-  return (
-    <div>
-      <h1>CloudDevOpsServices</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< \"HEAD\": src.pages.disabled/CloudDevOpsServices.jsx import React from \'react\'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm,setSearchTerm] = useState (\") ; const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [selectedPricing,setSelectedPricing] = useState (\"all\") ; import React from \'react\'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm,setSearchTerm] = useState (\") ; const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [selectedPricing,setSelectedPricing] = useState (\"all\") ;\"";
+<<<<<<< "HEAD": src.pages.disabled/CloudDevOpsServices.jsx import _React from 'react'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [selectedPricing,setSelectedPricing] = useState ("all") ; import _React from 'react'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [selectedPricing,setSelectedPricing] = useState ("all") ;"";
