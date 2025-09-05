@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import { useRouter } from 'next/router',
 import Link from 'next/link',
@@ -12,6 +13,16 @@ export default function MockCheckoutPage() {
     router.push('/checkout'),
     return <div>Redirecting...</div>
   }
+=======
+import React from 'react';
+import Link from 'next/link';
+
+export default function MockCheckoutPage() {_const _router = useRouter();
+  const { mock} = router.query;
+
+  if (!mock) {_router.push('/checkout');
+    return <div>Redirecting...</div>;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <div className=&quot;min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4&quot;>
@@ -34,7 +45,7 @@ export default function MockCheckoutPage() {
             <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>What happened:</h3>
             <ul className=&quot;text-zion-slate-light space-y-1 text-sm&quot;>
               <li>• Checkout request received successfully</li>
-              <li>• Mock session ID generated: cs_test_mock_session_id_{Date.now()}</li>
+              <li>• Mock session ID generated: cs_test_mock_session_id_{_Date.now()}</li>
               <li>• Cart items would be processed</li>
               <li>• Payment would be handled by Stripe</li>
               <li>• Order confirmation would be sent</li>

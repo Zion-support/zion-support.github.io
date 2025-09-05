@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -80,16 +81,45 @@ const benefits = [
     color: 'text-purple-400'
   }
 ],
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {_Shield, _Lock, _Eye, _AlertTriangle, _Cpu, _Globe, _Cloud, _CheckCircle, _ArrowRight, _Star, _Clock, _Target, _Zap, _Users, _BarChart3, _Settings, _Database} from 'lucide-react';
+import Layout from '../components/layout/Layout';
 
-export default function CybersecurityServices() {
-  return (
-    <Layout>
+const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
+
+const _serviceHighlights = [
+  {_title: 'Zero Trust Security', _description: 'Never trust, _always verify - Advanced zero trust implementation', _icon: Shield, _color: 'from-red-500 to-pink-600', _features: ['Continuous verification', _'Micro-segmentation', _'Adaptive controls', _'Real-time monitoring']},
+  {_title: 'AI Threat Intelligence', _description: 'Predict and prevent cyber threats with AI intelligence', _icon: Eye, _color: 'from-indigo-500 to-purple-600', _features: ['Real-time detection', _'Predictive analytics', _'Automated response', _'Global intelligence']},
+  {_title: 'Cloud Security Posture', _description: 'Secure your cloud infrastructure with comprehensive posture management', _icon: Cloud, _color: 'from-blue-500 to-cyan-600', _features: ['Multi-cloud monitoring', _'Compliance automation', _'Risk management', _'Security analytics']},
+  {_title: 'DevSecOps Security', _description: 'Integrate security into your DevOps pipeline seamlessly', _icon: Cpu, _color: 'from-green-500 to-emerald-600', _features: ['Automated testing', _'Vulnerability scanning', _'Compliance automation', _'Security metrics']},
+  {_title: 'IoT Security Platform', _description: 'Secure your IoT ecosystem with comprehensive protection', _icon: Globe, _color: 'from-purple-500 to-violet-600', _features: ['Device authentication', _'Network monitoring', _'Threat detection', _'Automated response']}
+];
+
+const _benefits = [
+  {_title: '99.99% Threat Detection', _description: 'Advanced AI algorithms detect threats before they become incidents', _icon: Shield, _color: 'text-red-400'},
+  {_title: 'Zero False Positives', _description: 'AI-powered analysis eliminates false alarms and alert fatigue', _icon: CheckCircle, _color: 'text-green-400'},
+  {_title: '24/7 Security Monitoring', _description: 'Round-the-clock protection with automated incident response', _icon: Clock, _color: 'text-blue-400'},
+  {_title: 'Compliance Automation', _description: 'Automated compliance reporting and audit preparation', _icon: BarChart3, _color: 'text-purple-400'}
+];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export default function CybersecurityServices() {_return (_<Layout>
       <Head>
         <title>Cybersecurity Services - Zion Tech Group | Next-Generation Security Solutions</title>
+<<<<<<< HEAD
         <meta name=&quot;description&quot; content=&quot;Protect your business with our advanced cybersecurity services. Zero trust security, AI threat intelligence, cloud security posture, and comprehensive protection solutions.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;cybersecurity, zero trust security, AI threat intelligence, cloud security, DevSecOps, IoT security, Zion Tech Group&quot; />
         <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
         <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
+=======
+        <meta name="description" content="Protect your business with our advanced cybersecurity services. Zero trust security, _AI threat intelligence, _cloud security posture, _and comprehensive protection solutions." />
+        <meta name="keywords" content="cybersecurity, _zero trust security, _AI threat intelligence, _cloud security, _DevSecOps, _IoT security, _Zion Tech Group" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, _follow" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         
         {/* Open Graph */}
         <meta property=&quot;og:title&quot; content=&quot;Cybersecurity Services - Zion Tech Group&quot; />
@@ -98,6 +128,7 @@ export default function CybersecurityServices() {
         <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/cybersecurity-services&quot; />
         <meta property=&quot;og:image&quot; content=&quot;https://ziontechgroup.com/og-image.jpg&quot; />
         
+<<<<<<< HEAD
         {/* Twitter */}
         <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
         <meta name=&quot;twitter:title&quot; content=&quot;Cybersecurity Services - Zion Tech Group&quot; />
@@ -114,13 +145,38 @@ export default function CybersecurityServices() {
       {/* Hero Section */}
       <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg&quot;>
         <div className=&quot;absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent&quot;></div>
+=======
+        {_/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cybersecurity Services - Zion Tech Group" />
+        <meta name="twitter:description" content="Next-generation cybersecurity solutions for modern enterprises." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+        
+        {_/* Contact Information */}
+        <meta name="contact:mobile" content="+1 302 464 0950" />
+        <meta name="contact:email" content="kleber@ziontechgroup.com" />
+        <meta name="contact:address" content="364 E Main St STE 1008 Middletown DE 19709" />
+        <meta name="contact:website" content="https://ziontechgroup.com" />
+      </Head>
+
+      {_/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg">
+        <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent"></div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         
         <div className=&quot;relative z-10 container mx-auto px-4 text-center&quot;>
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className=&quot;max-w-4xl mx-auto&quot;
+=======
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            className="max-w-4xl mx-auto"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <div className=&quot;inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8&quot;>
               <Shield className=&quot;w-5 h-5 text-red-400&quot; />
@@ -135,9 +191,14 @@ export default function CybersecurityServices() {
               <span className=&quot;text-white&quot;>Cybersecurity</span>
             </h1>
             
+<<<<<<< HEAD
             <p className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Protect your business with cutting-edge cybersecurity solutions. From zero trust security to AI threat intelligence, 
               we provide comprehensive protection that adapts to evolving threats.
+=======
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Protect your business with cutting-edge cybersecurity solutions. From zero trust security to AI threat intelligence, _we provide comprehensive protection that adapts to evolving threats.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </p>
             
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
@@ -158,6 +219,7 @@ export default function CybersecurityServices() {
           </motion.div>
         </div>
         
+<<<<<<< HEAD
         {/* Floating Elements */}
         <div className=&quot;absolute top-20 left-10 opacity-20 animate-float&quot;>
           <div className=&quot;w-4 h-4 bg-red-400 rounded-full&quot;></div>
@@ -179,6 +241,29 @@ export default function CybersecurityServices() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className=&quot;text-center mb-16&quot;
+=======
+        {_/* Floating Elements */}
+        <div className="absolute top-20 left-10 opacity-20 animate-float">
+          <div className="w-4 h-4 bg-red-400 rounded-full"></div>
+        </div>
+        <div className="absolute top-40 right-20 opacity-30 animate-float" style={_{ animationDelay: '1s'}}>
+          <div className="w-6 h-6 bg-pink-400 rounded-full"></div>
+        </div>
+        <div className="absolute bottom-40 left-20 opacity-25 animate-float" style={_{ animationDelay: '2s'}}>
+          <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+        </div>
+      </section>
+
+      {_/* Service Highlights */}
+      <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
+            className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Cybersecurity <span className=&quot;bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent&quot;>Services</span>
@@ -188,6 +273,7 @@ export default function CybersecurityServices() {
             </p>
           </motion.div>
           
+<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {serviceHighlights.map((service, index) => (
               <motion.div
@@ -210,6 +296,29 @@ export default function CybersecurityServices() {
                     <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                       <CheckCircle className=&quot;w-5 h-5 text-red-400 mr-3 flex-shrink-0&quot; />
                       <span>{feature}</span>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_serviceHighlights.map((service, _index) => (_<motion.div
+                key={service.title}
+                initial={_{ opacity: 0, _y: 30}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
+                className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"
+              >
+                <div className={_`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="w-full h-full text-white" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-4">{_service.title}</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">{_service.description}</p>
+                
+                <ul className="space-y-2">
+                  {_service.features.map((feature, _featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
+                      <span>{_feature}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </li>
                   ))}
                 </ul>
@@ -219,6 +328,7 @@ export default function CybersecurityServices() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Detailed Services */}
       <section className=&quot;py-20 bg-black&quot;>
         <div className=&quot;container mx-auto px-4&quot;>
@@ -228,6 +338,17 @@ export default function CybersecurityServices() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className=&quot;text-center mb-16&quot;
+=======
+      {_/* Detailed Services */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
+            className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Our <span className=&quot;bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent&quot;>Security</span> Portfolio
@@ -237,6 +358,7 @@ export default function CybersecurityServices() {
             </p>
           </motion.div>
           
+<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
             {advancedCybersecurityServices2025.map((service, index) => (
               <motion.div
@@ -258,11 +380,35 @@ export default function CybersecurityServices() {
                     </div>
                     {service.popular && (
                       <span className=&quot;bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium&quot;>
+=======
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {_advancedCybersecurityServices2025.map(_(service, _index) => (
+              <motion.div
+                key={service.id}
+                initial={_{ opacity: 0, _x: index % 2 === 0 ? -30 : 30}}
+                whileInView={_{ opacity: 1, _x: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
+                className="animated-border"
+              >
+                <div className="h-full">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <span className="text-3xl">{_service.icon}</span>
+                      <div>
+                        <h3 className="text-xl font-bold text-white">{_service.name}</h3>
+                        <p className="text-red-400 font-medium">{_service.tagline}</p>
+                      </div>
+                    </div>
+                    {_service.popular && (
+                      <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         Popular
                       </span>
                     )}
                   </div>
                   
+<<<<<<< HEAD
                   <p className=&quot;text-gray-300 mb-4 leading-relaxed&quot;>{service.description}</p>
                   
                   <div className=&quot;flex items-center justify-between mb-4&quot;>
@@ -292,12 +438,48 @@ export default function CybersecurityServices() {
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <span key={featureIndex} className=&quot;bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm&quot;>
                         {feature}
+=======
+                  <p className="text-gray-300 mb-4 leading-relaxed">{_service.description}</p>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-2xl font-bold text-red-400">
+                      {_service.price}<span className="text-gray-400 text-lg">{_service.period}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      {_[...Array(5)].map(_(_, _i) => (
+                        <Star key={i} className={_`w-4 h-4 ${i < service.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} />
+                      ))}
+                      <span className="text-gray-400 text-sm ml-2">({_service.reviews})</span>
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+                      <div className="text-red-400 font-bold">{_service.customers}+</div>
+                      <div className="text-gray-400 text-sm">Customers</div>
+                    </div>
+                    <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+                      <div className="text-red-400 font-bold">{_service.trialDays}</div>
+                      <div className="text-gray-400 text-sm">Trial Days</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {_service.features.slice(0, _4).map(_(feature, _featureIndex) => (
+                      <span key={featureIndex} className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm">
+                        {_feature}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </span>
                     ))}
                   </div>
                   
+<<<<<<< HEAD
                   <div className=&quot;flex items-center justify-between&quot;>
                     <Link href={service.link} className=&quot;text-red-400 hover:text-red-300 font-medium flex items-center space-x-2 group&quot;>
+=======
+                  <div className="flex items-center justify-between">
+                    <Link href={_service.link} className="text-red-400 hover:text-red-300 font-medium flex items-center space-x-2 group">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       <span>Learn More</span>
                       <ArrowRight className=&quot;w-4 h-4 group-hover:translate-x-1 transition-transform&quot; />
                     </Link>
@@ -313,6 +495,7 @@ export default function CybersecurityServices() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className=&quot;py-20 bg-gradient-to-b from-gray-900 to-black&quot;>
         <div className=&quot;container mx-auto px-4&quot;>
@@ -322,6 +505,17 @@ export default function CybersecurityServices() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className=&quot;text-center mb-16&quot;
+=======
+      {_/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
+            className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Why Choose <span className=&quot;bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent&quot;>Our Security</span>
@@ -331,6 +525,7 @@ export default function CybersecurityServices() {
             </p>
           </motion.div>
           
+<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
             {benefits.map((benefit, index) => (
               <motion.div
@@ -340,19 +535,36 @@ export default function CybersecurityServices() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className=&quot;text-center group&quot;
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {_benefits.map(_(benefit, _index) => (
+              <motion.div
+                key={benefit.title}
+                initial={_{ opacity: 0, _y: 30}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
+                className="text-center group"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <benefit.icon className={`w-full h-full ${benefit.color}`} />
+                <div className={_`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <benefit.icon className={_`w-full h-full ${benefit.color}`} />
                 </div>
                 
+<<<<<<< HEAD
                 <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{benefit.title}</h3>
                 <p className=&quot;text-gray-300 leading-relaxed&quot;>{benefit.description}</p>
+=======
+                <h3 className="text-xl font-bold text-white mb-4">{_benefit.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{_benefit.description}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className=&quot;py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20&quot;>
         <div className=&quot;container mx-auto px-4 text-center&quot;>
@@ -362,6 +574,17 @@ export default function CybersecurityServices() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className=&quot;max-w-4xl mx-auto&quot;
+=======
+      {_/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
+            className="max-w-4xl mx-auto"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
 <<<<<<< HEAD
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">

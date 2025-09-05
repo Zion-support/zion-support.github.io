@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -7,6 +8,17 @@ const AutoIndex: NextPage = () => {
       <Head>
         <title>Autonomous Cloud Agents - Zion</title>
         <meta name=&quot;description&quot; content=&quot;Autonomous agents that run in the cloud, no human needed.&quot; />
+=======
+import type {_NextPage} from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const AutoIndex: NextPage = () => {_return (
+    <div>
+      <Head>
+        <title>Autonomous Cloud Agents - Zion</title>
+        <meta name="description" content="Autonomous agents that run in the cloud, _no human needed." />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </Head>
 <<<<<<< HEAD
       <main className="space-y-6">
@@ -37,7 +49,11 @@ const AutoIndex: NextPage = () => {
         </ul>
       </main>
     </div>
+<<<<<<< HEAD
   )
 },
+=======
+  );};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export default AutoIndex,

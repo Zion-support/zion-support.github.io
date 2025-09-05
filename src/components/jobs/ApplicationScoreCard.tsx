@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -29,14 +30,24 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number',
+=======
+
+interface ApplicationScoreCardProps {_application: JobApplication;
+  onScoreUpdated?: (_updatedApplication: JobApplication) => void;}
+
+export function ApplicationScoreCard(_{_application, _onScoreUpdated}: ApplicationScoreCardProps) {_const [isScoring, _setIsScoring] = useState(false);
+
+  // Determine if application has been scored
+  const _hasScore = typeof application.match_score === 'number';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   // Format the date when the application was scored
-  const scoredDate = application.scored_at 
+  const _scoredDate = application.scored_at 
     ? new Date(application.scored_at).toLocaleDateString() 
     : null,
 
   // Get suggestion color
-  const getSuggestionColor = (suggestion: string | undefined) => {
+  const _getSuggestionColor = (_suggestion: string | undefined) => {
     switch (suggestion) {
 <<<<<<< HEAD
       case "Strongly Recommended": return "bg-green-100 text-green-800",
@@ -45,6 +56,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       case "Low Match":
         return "bg-orange-100 text-orange-800",
       default:
+<<<<<<< HEAD
         return "bg-gray-100 text-gray-800"
 =======
       case &quot;Strongly Recommended&quot;:
@@ -69,6 +81,17 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         'trigger_resume_scoring',
         { application_id: application.id }
       ),
+=======
+        return "bg-gray-100 text-gray-800";}
+  };
+
+  // Trigger the scoring process
+  const _handleScore = async () => {_try {
+      setIsScoring(true);
+      
+      // Call the trigger_resume_scoring function
+      const { error} = await supabase.rpc(_'trigger_resume_scoring', _{_application_id: application.id});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (error) throw error,
       
@@ -79,6 +102,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       // Poll for results every 3 seconds for up to 30 seconds
+<<<<<<< HEAD
       let attempts = 0,
       const maxAttempts = 10,
       
@@ -87,6 +111,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         
         const { data, error } = await supabase
 <<<<<<< HEAD
+=======
+      let _attempts = 0;
+      const _maxAttempts = 10;
+      
+      const _checkScore = async () => {_attempts++;
+        
+        const { data, _error} = await supabase
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
@@ -109,6 +141,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .eq(&quot;id&quot;, application.id)
           .single();
           
+<<<<<<< HEAD
         if (error) {
           setIsScoring(false);
           toast.error(&quot;Failed to check scoring status&quot;);
@@ -135,12 +168,31 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
       },
+=======
+        if (error) {_setIsScoring(false);
+          toast.error("Failed to check scoring status");
+          return;}
+        
+        if (data.scored_at) {_setIsScoring(false);
+          toast.success("Resume scoring completed");
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication);
+          return;}
+        
+        if (attempts < maxAttempts) {_setTimeout(checkScore, _3000);} else {_setIsScoring(false);
+          toast.info("Scoring is taking longer than expected. Check back later.");}
+      };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       setTimeout(checkScore, 3000)
       
+<<<<<<< HEAD
     } catch (error: any) {
       setIsScoring(false),
       toast.error(`Failed to score resume: ${error.message}`)
+=======
+    } catch (error: unknown) {_setIsScoring(false);
+      toast.error(`Failed to score resume: ${error.message}`);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
@@ -150,14 +202,19 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       <CardHeader className=&quot;pb-3&quot;>
         <CardTitle className=&quot;text-lg font-medium flex items-center justify-between&quot;>
           Resume Match Score
+<<<<<<< HEAD
           <Badge variant={hasScore ? &quot;default&quot; : &quot;outline&quot;} className=&quot;ml-2&quot;>
             {hasScore ? &quot;SCORED&quot; : &quot;NOT SCORED&quot;}
+=======
+          <Badge variant={_hasScore ? "default" : "outline"} className="ml-2">
+            {_hasScore ? "SCORED" : "NOT SCORED"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </Badge>
         </CardTitle>
       </CardHeader>
       
       <CardContent>
-        {hasScore ? (
+        {_hasScore ? (
           <div>
             {/* Score */}
             <div className=&quot;flex items-center mb-4&quot;>
@@ -165,6 +222,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                 <Star className=&quot;h-5 w-5 text-primary&quot; />
               </div>
               <div>
+<<<<<<< HEAD
                 <div className=&quot;text-sm text-muted-foreground&quot;>Match Score</div>
                 <div className=&quot;font-semibold text-xl&quot;>{application.match_score}/100</div>
               </div>
@@ -193,55 +251,121 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                 </Badge>
                 {scoredDate && (
                   <div className=&quot;text-xs text-muted-foreground mt-1&quot;>
+=======
+                <div className="text-sm text-muted-foreground">Match Score</div>
+                <div className="font-semibold text-xl">{_application.match_score}/100</div>
+              </div>
+            </div>
+            
+            {_/* Summary */}
+            <div className="flex items-start mb-4">
+              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
+                <BarChart2 className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <div className="text-sm text-muted-foreground">Summary</div>
+                <div className="font-medium">{_application.match_summary}</div>
+              </div>
+            </div>
+            
+            {_/* Suggestion */}
+            <div className="flex items-start">
+              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
+                <Lightbulb className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <div className="text-sm text-muted-foreground">Suggestion</div>
+                <Badge className={_getSuggestionColor(application.match_suggestion)}>
+                  {_application.match_suggestion}
+                </Badge>
+                {_scoredDate && (
+                  <div className="text-xs text-muted-foreground mt-1">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     Scored on {scoredDate}
                   </div>
                 )}
               </div>
             </div>
             
+<<<<<<< HEAD
             {/* Breakdown (Collapsible) */}
             {application.match_breakdown && (
               <div className=&quot;mt-4 pt-4 border-t&quot;>
                 <details className=&quot;text-sm&quot;>
                   <summary className=&quot;font-medium cursor-pointer&quot;>
+=======
+            {_/* Breakdown (Collapsible) */}
+            {_application.match_breakdown && (
+              <div className="mt-4 pt-4 border-t">
+                <details className="text-sm">
+                  <summary className="font-medium cursor-pointer">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     View detailed breakdown
                   </summary>
                   <div className=&quot;mt-2 space-y-2 text-muted-foreground&quot;>
                     {application.match_breakdown.skills_match && (
                       <div>
+<<<<<<< HEAD
                         <p className=&quot;font-medium&quot;>Skills Match: {application.match_breakdown.skills_match.score}/100</p>
                         {application.match_breakdown.skills_match.matching && (
                           <p>Matching skills: {application.match_breakdown.skills_match.matching.join(&quot;, &quot;)}</p>
                         )}
                         {application.match_breakdown.skills_match.missing && (
                           <p>Missing skills: {application.match_breakdown.skills_match.missing.join(&quot;, &quot;)}</p>
+=======
+                        <p className="font-medium">Skills Match: {application.match_breakdown.skills_match.score}/100</p>
+                        {_application.match_breakdown.skills_match.matching && (
+                          <p>Matching skills: {application.match_breakdown.skills_match.matching.join(", _")}</p>
+                        )}
+                        {_application.match_breakdown.skills_match.missing && (
+                          <p>Missing skills: {application.match_breakdown.skills_match.missing.join(", _")}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         )}
                       </div>
                     )}
                     
-                    {application.match_breakdown.experience_match && (
+                    {_application.match_breakdown.experience_match && (
                       <div>
+<<<<<<< HEAD
                         <p className=&quot;font-medium&quot;>Experience Match: {application.match_breakdown.experience_match.score}/100</p>
                         <p>{application.match_breakdown.experience_match.analysis}</p>
+=======
+                        <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
+                        <p>{_application.match_breakdown.experience_match.analysis}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </div>
                     )}
 
-                    {application.match_breakdown.certifications_match && (
+                    {_application.match_breakdown.certifications_match && (
                       <div>
+<<<<<<< HEAD
                         <p className=&quot;font-medium&quot;>Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>
                         {application.match_breakdown.certifications_match.matching && (
                           <p>Matching certs: {application.match_breakdown.certifications_match.matching.join(&quot;, &quot;)}</p>
                         )}
                         {application.match_breakdown.certifications_match.missing && (
                           <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(&quot;, &quot;)}</p>
+=======
+                        <p className="font-medium">Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>
+                        {_application.match_breakdown.certifications_match.matching && (
+                          <p>Matching certs: {application.match_breakdown.certifications_match.matching.join(", _")}</p>
+                        )}
+                        {_application.match_breakdown.certifications_match.missing && (
+                          <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", _")}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         )}
                       </div>
                     )}
                     
-                    {application.match_breakdown.education_match && (
+                    {_application.match_breakdown.education_match && (
                       <div>
+<<<<<<< HEAD
                         <p className=&quot;font-medium&quot;>Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
+=======
+                        <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
+                        <p>{_application.match_breakdown.education_match.analysis}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </div>
                     )}
                   </div>
@@ -255,11 +379,17 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
               Analyze how well this resume matches your job requirements.
             </p>
             <Button 
+<<<<<<< HEAD
               onClick={handleScore} 
               disabled={isScoring}
               className=&quot;w-full&quot;
+=======
+              onClick={_handleScore} 
+              disabled={_isScoring}
+              className="w-full"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
-              {isScoring ? (
+              {_isScoring ? (
                 <>
                   <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
                   Scoring Resume...

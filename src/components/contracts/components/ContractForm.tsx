@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -41,6 +42,12 @@ const formSchema = z.object({
   scopeSummary: z.string().min(10, &quot;Scope summary should be at least 10 characters&quot;),
   startDate: z.date({
     required_error: &quot;Start date is required&quot;}),
+=======
+
+
+const _formSchema = z.object({_projectName: z.string().min(1, _"Project name is required"), _scopeSummary: z.string().min(10, _"Scope summary should be at least 10 characters"), _startDate: z.date({
+    required_error: "Start date is required"}),
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   endDate: z.date().optional(),
 <<<<<<< HEAD
   paymentTerms: z.enum(["hourly", "fixed", "milestone"]),
@@ -54,6 +61,7 @@ const formSchema = z.object({
 
 export type ContractFormValues = z.infer<typeof formSchema>,
 
+<<<<<<< HEAD
 interface ContractFormProps {
   talent: TalentProfile,
   clientName: string,
@@ -95,21 +103,49 @@ export function ContractForm({
         const typedKey = key as keyof ContractFormValues,
         form.setValue(typedKey, initialValues[typedKey])
       })
+=======
+interface ContractFormProps {_talent: TalentProfile;
+  clientName: string;
+  initialValues?: ContractFormValues;
+  onFormValuesChange?: (_values: ContractFormValues) => void;
+  onContractGenerated: (_contractContent: string) => void;}
+
+export function ContractForm(_{_talent, _clientName, _initialValues, _onFormValuesChange, _onContractGenerated}: ContractFormProps) {_const [isGenerating, _setIsGenerating] = useState(false);
+  const [generatedMilestones, _setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+  const { toast} = useToast();
+
+  const _form = useForm<ContractFormValues>({_resolver: zodResolver(formSchema), _defaultValues: initialValues || {
+      projectName: "", _scopeSummary: "", _startDate: new Date(), _paymentTerms: talent.hourly_rate ? "hourly" : "fixed", _paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
+      additionalClauses: ["nda", "ip"]}});
+  
+  // Update form when initialValues change
+  useEffect__(() => {_if (initialValues) {
+      Object.keys(initialValues).forEach(_(key) => {
+        const _typedKey = key as keyof ContractFormValues;
+        form.setValue(typedKey, _initialValues[typedKey]);});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   }, [initialValues, form]),
   
   // Track form values for template saving
+<<<<<<< HEAD
   useEffect(() => {
     if (onFormValuesChange) {
       const subscription = form.watch((value) => {
         onFormValuesChange(value as ContractFormValues)
       }),
+=======
+  useEffect__(() => {_if (onFormValuesChange) {
+      const _subscription = form.watch(_(value) => {
+        onFormValuesChange(value as ContractFormValues);});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       return () => subscription.unsubscribe()
     }
     return undefined
   }, [form, onFormValuesChange]),
   
+<<<<<<< HEAD
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones),
     
@@ -131,9 +167,19 @@ export function ContractForm({
     toast({
       title: &quot;Milestones Generated&quot;,
       description: `${milestones.length} milestones have been generated and will be included in the contract.`});
+=======
+  const _handleMilestonesGenerated = (_milestones: GeneratedMilestone[]) => {_setGeneratedMilestones(milestones);
+    
+    // If payment terms isn't already set to milestone, _update it
+    if (form.getValues("paymentTerms") !== "milestone") {
+      form.setValue("paymentTerms", _"milestone");}
+    
+    toast({_title: "Milestones Generated", _description: `${milestones.length} milestones have been generated and will be included in the contract.`});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
+<<<<<<< HEAD
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true),
     try {
@@ -161,37 +207,54 @@ export function ContractForm({
       setIsGenerating(false)
     }
   },
+=======
+  const _onSubmit = async (_values: ContractFormValues) => {_setIsGenerating(true);
+    try {
+      const _contract = await generateContract(
+        values, _talent, _clientName, _generatedMilestones
+      );
+      
+      onContractGenerated(contract);} catch (error) {_logErrorToProduction('Error generating contract:', _{ data: error});
+      toast({_title: "Contract Generation Failed", _description: error instanceof Error ? error.message : "Something went wrong. Please try again.", _variant: "destructive"});
+    } finally {_setIsGenerating(false);}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <>
       <DialogHeader>
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>
         <DialogDescription>
-          Create a professional contract for your project with {talent.full_name}
+          Create a professional contract for your project with {_talent.full_name}
         </DialogDescription>
       </DialogHeader>
     
+<<<<<<< HEAD
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6&quot;>
+=======
+      <Form {_...form}>
+        <form onSubmit={_form.handleSubmit(onSubmit)} className="space-y-6">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <ProjectDetailsFields 
-            form={form} 
+            form={_form} 
           />
           
           <PaymentTermsFields 
-            form={form}
-            handleMilestonesGenerated={handleMilestonesGenerated}
+            form={_form}
+            handleMilestonesGenerated={_handleMilestonesGenerated}
           />
           
           <AdditionalClausesFields 
-            form={form}
+            form={_form}
           />
           
           <Button 
             type=&quot;submit" 
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
-            disabled={isGenerating}
+            disabled={_isGenerating}
           >
-            {isGenerating ? (
+            {_isGenerating ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin&quot; />
                 Generating Contract...
@@ -205,9 +268,15 @@ export function ContractForm({
       
       <DialogFooter className="gap-2 flex-wrap mt-4&quot;>
         <Button 
+<<<<<<< HEAD
           variant=&quot;outline" 
           onClick={() => form.reset()}
           disabled={isGenerating}
+=======
+          variant="outline" 
+          onClick={_() => form.reset()}
+          disabled={_isGenerating}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         >
           Reset Form
         </Button>

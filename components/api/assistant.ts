@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
+=======
+import type {_NextApiRequest, _NextApiResponse} from 'next';
+import OpenAI from 'openai';
 
-const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:
+const _openai = new OpenAI({_apiKey: process.env.OPENAI_API_KEY});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+const _SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:
 - Greet users warmly and concisely
 - Answer FAQs accurately
 - Guide users through discovering features and how to get started
@@ -26,6 +33,7 @@ Style: - Use bullets and short paragraphs
 - Provide 2-3 next steps when guiding
 `,
 
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
@@ -34,12 +42,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const { messages } = req.body as { messages?: Array<{ role: 'user' | 'assistant' | 'system', content: string }> },
+=======
+export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== 'POST') {
+    res.setHeader('Allow', _'POST');
+    return res.status(405).json({ error: 'Method Not Allowed'});
+  }
 
-    const preparedMessages = [
-      { role: 'system' as const, content: SYSTEM_PROMPT },
+  try {_const { messages} = req.body as {_messages?: Array<{ role: 'user' | 'assistant' | 'system'; content: string}> };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+    const _preparedMessages = [
+      {_role: 'system' as const, _content: SYSTEM_PROMPT},
       ...(messages || []).slice(-20)
     ],
 
+<<<<<<< HEAD
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o',
       temperature: 0.3,
@@ -51,5 +68,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error: any) {
     console.error('Assistant API error:', error?.message || error),
     return res.status(500).json({ error: 'Assistant request failed' })
+=======
+    const _completion = await openai.chat.completions.create({_model: 'gpt-4o', _temperature: 0.3, _messages: preparedMessages});
+
+    const _message = completion.choices?.[0]?.message || {_role: 'assistant', _content: 'Sorry, _I could not respond.'};
+    return res.status(200).json({_message});
+  } catch (error: unknown) {_return res.status(500).json({ error: 'Assistant request failed'});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }

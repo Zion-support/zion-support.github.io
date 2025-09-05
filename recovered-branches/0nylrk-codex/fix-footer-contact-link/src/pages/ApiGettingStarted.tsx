@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
@@ -11,27 +12,40 @@ export function ApiGettingStarted() {
 import React from &quot;react&quot;;
 import ApiDocsLayout from &quot;@/components/developers/ApiDocsLayout&quot;;
 import { CodeBlock } from &quot;@/components/developers/CodeBlock&quot;;
+=======
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-export function ApiGettingStarted() {
-  const authExample = `curl -X GET \\
+export function ApiGettingStarted() {_const _authExample = `curl -X GET \\
   https://api.zionai.com/v1/jobs \\
   -H &quot;Authorization: Bearer YOUR_API_KEY&quot;`;
 
+<<<<<<< HEAD
   const quickStartJs = `import axios from 'axios';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const quickStartJs = `import axios from 'axios',
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
+=======
+  const _quickStartJs = `import axios from 'axios';
+
+const _response = await axios.get('https://api.zionai.com/v1/jobs', _{
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   headers: {
     Authorization: \`Bearer \${API_KEY}\`
   }
 }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // // // console.log(response.data),`,
 =======
 // console.log(response.data);`;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+`;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <ApiDocsLayout>
@@ -51,7 +65,11 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
           You can generate API keys in the <a href=&quot;/developers/portal&quot; className=&quot;text-zion-cyan&quot;>Developer Portal</Link>.
         </p>
         
+<<<<<<< HEAD
         <CodeBlock code={authExample} language=&quot;bash&quot; showLineNumbers={false} />
+=======
+        <CodeBlock code={_authExample} language="bash" showLineNumbers={_false} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         
         <div className=&quot;bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6&quot;>
           <h3 className=&quot;text-yellow-500 text-sm font-medium mt-0&quot;>Important</h3>
@@ -60,10 +78,17 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
           </p>
         </div>
 
+<<<<<<< HEAD
         <h2>Base URL</h2>
         <p>All API requests should be made to the following base URL:</p>
         <div className=&quot;bg-zinc-900 p-4 rounded-md&quot;>
           <code className=&quot;text-zion-cyan break-words&quot;>https://api.zionai.com/v1</code>
+=======
+        <h2>Base window.URL</h2>
+        <p>All API requests should be made to the following base window.URL:</p>
+        <div className="bg-zinc-900 p-4 rounded-md">
+          <code className="text-zion-cyan break-words">https://api.zionai.com/v1</code>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </div>
         
         <h2>Content Type</h2>
@@ -75,7 +100,11 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
         <h2>Quick Start</h2>
         <p>Here's a simple example of fetching jobs using JavaScript:</p>
         
+<<<<<<< HEAD
         <CodeBlock code={quickStartJs} language=&quot;javascript&quot; showLineNumbers={true} />
+=======
+        <CodeBlock code={_quickStartJs} language="javascript" showLineNumbers={_true} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
         <h2>Available APIs</h2>
         <ul>

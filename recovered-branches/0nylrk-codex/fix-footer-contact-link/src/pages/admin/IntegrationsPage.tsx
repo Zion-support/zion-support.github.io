@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -17,6 +18,11 @@ import { ProtectedRoute } from &quot;@/components/ProtectedRoute&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export default function IntegrationsPage() {
   return (
+=======
+import React, {_useState} from "react";
+
+export default function IntegrationsPage() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <ProtectedRoute adminOnly={true}>
       <SEO
         title=&quot;Integrations - Zion AI Marketplace&quot;

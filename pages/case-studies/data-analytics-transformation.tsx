@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -8,6 +9,17 @@ export default function CaseStudyPage() {
         <title>Data Analytics Transformation - Case Study | Zion Tech Group</title>
         <meta name=&quot;description&quot; content=&quot;Discover how a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform. Read our detailed case study.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;data analytics, healthcare analytics, predictive modeling, big data, machine learning&quot; />
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+export default function CaseStudyPage() {_return (_<>
+      <Head>
+        <title>Data Analytics Transformation - Case Study | Zion Tech Group</title>
+        <meta name="description" content="Discover how a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform. Read our detailed case study." />
+        <meta name="keywords" content="data analytics, _healthcare analytics, _predictive modeling, _big data, _machine learning" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </Head>
       
       <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900&quot;>
@@ -25,9 +37,15 @@ export default function CaseStudyPage() {
             <span className=&quot;text-white&quot;>Data Analytics Transformation</span>
           </nav>
 
+<<<<<<< HEAD
           {/* Header */}
           <header className=&quot;text-center mb-16&quot;>
             <div className=&quot;inline-block px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30 mb-6&quot;>
+=======
+          {_/* Header */}
+          <header className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30 mb-6">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               Healthcare Industry
             </div>
             <h1 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
@@ -38,6 +56,7 @@ export default function CaseStudyPage() {
             </p>
           </header>
 
+<<<<<<< HEAD
           {/* Case Study Content */}
           <div className=&quot;max-w-4xl mx-auto&quot;>
             {/* Company Overview */}
@@ -48,6 +67,17 @@ export default function CaseStudyPage() {
                 <p className=&quot;text-white/90 text-lg mb-4&quot;>
                   A large healthcare network serving multiple communities with hospitals, 
                   clinics, and specialized medical services. The organization struggled to leverage data for patient care improvements.
+=======
+          {_/* Case Study Content */}
+          <div className="max-w-4xl mx-auto">
+            {_/* Company Overview */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-semibold text-purple-400 mb-4">Healthcare Provider</h3>
+                <p className="text-white/90 text-lg mb-4">
+                  A large healthcare network serving multiple communities with hospitals, _clinics, _and specialized medical services. The organization struggled to leverage data for patient care improvements.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </p>
                 <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mt-6&quot;>
                   <div className=&quot;text-center&quot;>
@@ -66,6 +96,7 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
+<<<<<<< HEAD
             {/* Challenge */}
             <section className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>The Challenge</h2>
@@ -74,6 +105,16 @@ export default function CaseStudyPage() {
                 <ul className=&quot;space-y-3 text-white/90 text-lg&quot;>
                   <li className=&quot;flex items-start gap-3&quot;>
                     <div className=&quot;w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0&quot;></div>
+=======
+            {_/* Challenge */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-semibold text-red-400 mb-4">Critical Issues</h3>
+                <ul className="space-y-3 text-white/90 text-lg">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     <span>Inability to leverage data for patient care improvements</span>
                   </li>
                   <li className=&quot;flex items-start gap-3&quot;>
@@ -92,6 +133,7 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
+<<<<<<< HEAD
             {/* Solution */}
             <section className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Our Solution</h2>
@@ -115,10 +157,34 @@ export default function CaseStudyPage() {
                     <h4 className=&quot;text-xl font-semibold text-purple-400 mb-3&quot;>Machine Learning</h4>
                     <p className=&quot;text-white/80&quot;>
                       ML algorithms identify patterns, predict outcomes, and provide 
+=======
+            {_/* Solution */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-semibold text-green-400 mb-4">Comprehensive Data Analytics Platform</h3>
+                <p className="text-white/90 text-lg mb-6">
+                  We built a comprehensive data analytics platform that provides real-time insights, _predictive modeling, _and automated reporting for improved patient care and operational efficiency.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                    <h4 className="text-xl font-semibold text-purple-400 mb-3">Big Data Processing</h4>
+                    <p className="text-white/80">
+                      Advanced big data infrastructure processes millions of patient records, _lab results, _and operational data points in real-time.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                    <h4 className="text-xl font-semibold text-purple-400 mb-3">Machine Learning</h4>
+                    <p className="text-white/80">
+                      ML algorithms identify patterns, _predict outcomes, _and provide 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       personalized treatment recommendations.
                     </p>
                   </div>
                   
+<<<<<<< HEAD
                   <div className=&quot;bg-white/5 rounded-lg p-6 border border-white/10&quot;>
                     <h4 className=&quot;text-xl font-semibold text-purple-400 mb-3&quot;>Real-time Analytics</h4>
                     <p className=&quot;text-white/80&quot;>
@@ -132,17 +198,38 @@ export default function CaseStudyPage() {
                     <p className=&quot;text-white/80&quot;>
                       Advanced predictive models forecast patient outcomes, readmission risks, 
                       and resource requirements.
+=======
+                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                    <h4 className="text-xl font-semibold text-purple-400 mb-3">Real-time Analytics</h4>
+                    <p className="text-white/80">
+                      Live dashboards provide instant insights into patient conditions, _resource utilization, _and operational metrics.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                    <h4 className="text-xl font-semibold text-purple-400 mb-3">Predictive Modeling</h4>
+                    <p className="text-white/80">
+                      Advanced predictive models forecast patient outcomes, _readmission risks, _and resource requirements.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </p>
                   </div>
                 </div>
               </div>
             </section>
 
+<<<<<<< HEAD
             {/* Results */}
             <section className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Results & Impact</h2>
               <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20&quot;>
                 <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
+=======
+            {_/* Results */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   <div>
                     <h3 className=&quot;text-2xl font-semibold text-green-400 mb-6&quot;>Quantifiable Results</h3>
                     <div className=&quot;space-y-4&quot;>
@@ -190,12 +277,17 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
+<<<<<<< HEAD
             {/* Technologies */}
 <<<<<<< HEAD
+=======
+            {_/* Technologies */}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+<<<<<<< HEAD
                   {['Big DataMachine LearningReal-time AnalyticsPredictive Modeling'].map((tech) => (
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                       <span className="text-purple-400 font-semibold">{tech}</span>
@@ -208,12 +300,18 @@ export default function CaseStudyPage() {
                     <div key={tech} className=&quot;bg-white/5 rounded-lg p-4 text-center border border-white/10&quot;>
                       <span className=&quot;text-purple-400 font-semibold&quot;>{tech}</span>
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+                  {_['Big Data', _'Machine Learning', _'Real-time Analytics', _'Predictive Modeling'].map((tech) => (
+                    <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+                      <span className="text-purple-400 font-semibold">{_tech}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </div>
                   ))}
                 </div>
               </div>
             </section>
 
+<<<<<<< HEAD
             {/* Implementation */}
             <section className=&quot;mb-16&quot;>
               <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Implementation Timeline</h2>
@@ -221,6 +319,15 @@ export default function CaseStudyPage() {
                 <div className=&quot;space-y-6&quot;>
                   <div className=&quot;flex items-center gap-4&quot;>
                     <div className=&quot;w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold&quot;>1</div>
+=======
+            {_/* Implementation */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold">1</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     <div>
                       <h4 className=&quot;text-lg font-semibold text-white&quot;>Data Assessment & Planning (Months 1-2)</h4>
                       <p className=&quot;text-white/70&quot;>Comprehensive data audit and system architecture design</p>
@@ -254,11 +361,19 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
+<<<<<<< HEAD
             {/* Call to Action */}
             <section className=&quot;text-center&quot;>
               <div className=&quot;bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20&quot;>
                 <h2 className=&quot;text-2xl font-bold mb-4 text-white&quot;>Ready to Transform Your Data Analytics?</h2>
                 <p className=&quot;text-white/80 mb-6 max-w-2xl mx-auto&quot;>
+=======
+            {_/* Call to Action */}
+            <section className="text-center">
+              <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
+                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Data Analytics?</h2>
+                <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   This case study demonstrates the real impact of data analytics transformation. 
                   Let's discuss how we can help you achieve similar results.
                 </p>

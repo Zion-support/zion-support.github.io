@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { SORT_OPTIONS } from "@/data/sortOptions",
@@ -24,9 +25,15 @@ interface SortDropdownProps {
   sortOption: string,
   setSortOption: (option: string) => void
 }
+=======
+import React from "react";
+import {_DropdownMenu, _DropdownMenuContent, _DropdownMenuItem, _DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 
-export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
-  return (
+interface SortDropdownProps {_sortOption: string;
+  setSortOption: (_option: string) => void;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export function SortDropdown(_{_sortOption, _setSortOption}: SortDropdownProps) {_return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button 
@@ -44,15 +51,20 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
         align=&quot;start&quot; 
         className=&quot;w-[200px] bg-zion-blue-dark border-zion-blue-light&quot;
       >
-        {SORT_OPTIONS.map((option) => (
-          <DropdownMenuItem
+        {_SORT_OPTIONS.map(_(option) => (_<DropdownMenuItem
             key={option.value}
+<<<<<<< HEAD
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
               sortOption === option.value ? &quot;bg-zion-purple/20 text-zion-purple&quot; : ""
             }`}
+=======
+            onClick={_() => setSortOption(option.value)}
+            className={_`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""}`}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
-            {option.label}
+            {_option.label}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

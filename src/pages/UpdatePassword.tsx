@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -38,13 +39,17 @@ import { logErrorToProduction } from '@/utils/productionLogger',
 import { toast } from &quot;@/hooks/use-toast&quot;;
 import { cleanupAuthState } from &quot;@/utils/authUtils&quot;;
 import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+
+import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from "@/components/ui/form";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // Form validation schema
-const updatePasswordSchema = z
-  .object({
-    password: z
+const _updatePasswordSchema = z
+  .object({_password: z
       .string()
+<<<<<<< HEAD
       .min(8, &quot;Password must be at least 8 characters&quot;)
       .max(64, &quot;Password must be less than 64 characters&quot;),
     confirmPassword: z.string()})
@@ -56,9 +61,15 @@ const updatePasswordSchema = z
     message: &quot;Passwords do not match&quot;,
     path: [&quot;confirmPassword&quot;]});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+      .min(8, _"Password must be at least 8 characters")
+      .max(64, _"Password must be less than 64 characters"), _confirmPassword: z.string()})
+  .refine(_(data) => data.password === data.confirmPassword, {_message: "Passwords do not match", _path: ["confirmPassword"]});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
+<<<<<<< HEAD
 export default function UpdatePassword() {
   const [isLoading, setIsLoading] = useState(false),
   const [accessToken, setAccessToken] = useState<string | null>(null),
@@ -99,12 +110,33 @@ export default function UpdatePassword() {
       setError(&quot;No access token found. Please request a new password reset link.&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
+=======
+export default function UpdatePassword() {_const [isLoading, _setIsLoading] = useState(false);
+  const [accessToken, _setAccessToken] = useState<string | null>(null);
+  const [error, _setError] = useState<string | null>(null);
+  const [success, _setSuccess] = useState(false);
+  const _router = useRouter();
+
+  // Initialize react-hook-form
+  const _form = useForm<UpdatePasswordFormValues>({
+    resolver: zodResolver(updatePasswordSchema), _defaultValues: {
+      password: "", _confirmPassword: ""}});
+
+  useEffect__(() => {_// Extract access token from window.URL hash on the client
+    const _hash = typeof window !== 'undefined' ? window.location.hash : "";
+    const _hashParams = new URLSearchParams(hash.substring(1));
+    const _token = hashParams.get("access_token");
+    
+    if (token) {
+      setAccessToken(token);} else {_setError("No access token found. Please request a new password reset link.");}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     // Clean up auth state to prevent issues
     cleanupAuthState()
   }, []),
 
   // Form submission handler
+<<<<<<< HEAD
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
 <<<<<<< HEAD
@@ -137,12 +169,29 @@ export default function UpdatePassword() {
         return
 =======
           variant: &quot;destructive&quot;});
+=======
+  const _onSubmit = async (_data: UpdatePasswordFormValues) => {_if (!accessToken) {
+      setError("No access token found. Please request a new password reset link.");
+      return;}
+
+    setIsLoading(true);
+    try {_// Set the session with the access token
+      await supabase.auth.setSession({
+        access_token: accessToken, _refresh_token: ''});
+
+      // Update the password
+      const {_error} = await supabase.auth.updateUser({_password: data.password});
+
+      if (error) {_toast({
+          title: "Password update failed", _description: error.message, _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         setError(error.message);
         return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       // Show success message and clean up auth state
+<<<<<<< HEAD
       setSuccess(true),
       toast({
 <<<<<<< HEAD
@@ -188,9 +237,26 @@ export default function UpdatePassword() {
       form.setFocus(firstError)
     }
   },
+=======
+      setSuccess(true);
+      toast({_title: "Password updated successfully", _description: "You can now log in with your new password."});
 
-  return (
-    <>
+      // Clean auth state and redirect after a delay
+      cleanupAuthState();
+      setTimeout__(() => {_router.push("/login");}, 3000);
+    } catch (error: unknown) {_logErrorToProduction(error instanceof Error ? error.message : String(error), _error instanceof Error ? error : undefined, _{ message: 'Password update error'});
+      toast({_title: "Password update failed", _description: error.message || "An unexpected error occurred", _variant: "destructive"});
+      setError(error.message || "An unexpected error occurred");
+    } finally {_setIsLoading(false);}
+  };
+
+  const _onInvalid = (_errors: unknown) => {_const _firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues;
+    if (firstError) {
+      form.setFocus(firstError);}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  return (_<>
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
@@ -204,20 +270,26 @@ export default function UpdatePassword() {
             </div>
 
             <div className="bg-zion-blue-dark rounded-lg p-6">
-              {error && (
+              {_error && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
                   <Button 
+<<<<<<< HEAD
                     className="mt-3 text-xs&quot;
                     variant=&quot;outline"
                     onClick={() => router.push('/forgot-password')}
+=======
+                    className="mt-3 text-xs"
+                    variant="outline"
+                    onClick={_() => router.push('/forgot-password')}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   >
                     Request new reset link
                   </Button>
                 </div>
               )}
 
-              {success ? (
+              {_success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
                     <LockKeyhole className="h-6 w-6 text-zion-purple" />
@@ -232,6 +304,7 @@ export default function UpdatePassword() {
                 </div>
               ) : (
                 <Form {...form}>
+<<<<<<< HEAD
                   <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6&quot;>
                     <FormField
                       control={form.control}
@@ -242,17 +315,31 @@ export default function UpdatePassword() {
                       name=&quot;password&quot;
                       render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, &quot;password"> }) => (
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+                  <form onSubmit={_form.handleSubmit(onSubmit, _onInvalid)} className="space-y-6">
+                    <FormField
+                      control={_form.control}
+                      name="password"
+                      render={_(_{ field}: {_field: ControllerRenderProps<UpdatePasswordFormValues, _"password">}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         <FormItem>
                           <FormLabel className="text-zion-slate-light&quot;>New Password</FormLabel>
                           <FormControl>
                             <Input
+<<<<<<< HEAD
                               type=&quot;password&quot;
                               placeholder=&quot;Enter password&quot;
                               aria-label=&quot;New password"
                               aria-invalid={!!form.formState.errors.password}
+=======
+                              type="password"
+                              placeholder="Enter password"
+                              aria-label="New password"
+                              aria-invalid={_!!form.formState.errors.password}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              disabled={isLoading}
-                              {...field}
+                              disabled={_isLoading}
+                              {_...field}
                             />
                           </FormControl>
                           <FormMessage className="text-red-400&quot; />
@@ -261,6 +348,7 @@ export default function UpdatePassword() {
                     />
 
                     <FormField
+<<<<<<< HEAD
                       control={form.control}
 <<<<<<< HEAD
                       name="confirmPassword"
@@ -269,17 +357,29 @@ export default function UpdatePassword() {
                       name=&quot;confirmPassword&quot;
                       render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, &quot;password"> }) => (
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+                      control={_form.control}
+                      name="confirmPassword"
+                      render={_(_{ field}: {_field: ControllerRenderProps<UpdatePasswordFormValues, _"password">}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         <FormItem>
                           <FormLabel className="text-zion-slate-light&quot;>Confirm Password</FormLabel>
                           <FormControl>
                             <Input
+<<<<<<< HEAD
                               type=&quot;password&quot;
                               placeholder=&quot;Enter password&quot;
                               aria-label=&quot;Confirm password"
                               aria-invalid={!!form.formState.errors.confirmPassword}
+=======
+                              type="password"
+                              placeholder="Enter password"
+                              aria-label="Confirm password"
+                              aria-invalid={_!!form.formState.errors.confirmPassword}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              disabled={isLoading}
-                              {...field}
+                              disabled={_isLoading}
+                              {_...field}
                             />
                           </FormControl>
                           <FormMessage className="text-red-400&quot; />
@@ -288,19 +388,34 @@ export default function UpdatePassword() {
                     />
 
                     <Button
+<<<<<<< HEAD
                       type=&quot;submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;
                       disabled={isLoading || !accessToken}
                     >
                       {isLoading ? &quot;Updating...&quot; : &quot;Update Password"}
+=======
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                      disabled={_isLoading || !accessToken}
+                    >
+                      {_isLoading ? "Updating..." : "Update Password"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </Button>
 
                     <div className="text-center&quot;>
                       <Button
+<<<<<<< HEAD
                         variant=&quot;link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0&quot;
                         onClick={() => router.push(&quot;/login&quot;)}
                         type=&quot;button"
+=======
+                        variant="link"
+                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
+                        onClick={_() => router.push("/login")}
+                        type="button"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       >
                         Back to login
                       </Button>

@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO',
 export default function AccessibilityScannerPage() {
 	return (
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+
+export default function AccessibilityScannerPage() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		<>
 <<<<<<< HEAD
 			<SEO title="Accessibility Scanner" description="Automated WCAG scanning and remediation guidance." canonical="/accessibility-scanner" />
@@ -26,5 +33,9 @@ export default function AccessibilityScannerPage() {
 				</div>
 			</section>
 		</>
+<<<<<<< HEAD
 	)
 }
+=======
+	);}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

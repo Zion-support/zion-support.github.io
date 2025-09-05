@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { format } from "date-fns",
 import { CalendarIcon } from 'lucide-react'
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form",
@@ -36,14 +37,18 @@ import { ContractFormValues } from &quot;./ContractForm&quot;;
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>
 }
+=======
+import {_FormField, _FormItem, _FormLabel, _FormControl, _FormDescription, _FormMessage} from "@/components/ui/form";
 
-export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
-  return (
-    <>
+interface ProjectDetailsFieldsProps {_form: UseFormReturn<ContractFormValues>;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export function ProjectDetailsFields(_{_form}: ProjectDetailsFieldsProps) {_return (_<>
       <FormField
         control={form.control}
 <<<<<<< HEAD
         name="projectName"
+<<<<<<< HEAD
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => (
 =======
         name=&quot;projectName&quot;
@@ -53,6 +58,13 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             <FormLabel>Project Name</FormLabel>
             <FormControl>
               <Input placeholder=&quot;AI Website Development&quot; {...field} />
+=======
+        render={_({ field}: {_field: ControllerRenderProps<ContractFormValues, _"projectName">}) => (
+          <FormItem>
+            <FormLabel>Project Name</FormLabel>
+            <FormControl>
+              <Input placeholder="AI Website Development" {_...field} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -60,6 +72,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       />
       
       <FormField
+<<<<<<< HEAD
         control={form.control}
 <<<<<<< HEAD
         name="scopeSummary"
@@ -68,13 +81,24 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
         name=&quot;scopeSummary&quot;
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, &quot;scopeSummary&quot;> }) => (
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+        control={_form.control}
+        name="scopeSummary"
+        render={_(_{ field}: {_field: ControllerRenderProps<ContractFormValues, _"scopeSummary">}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
+<<<<<<< HEAD
                 placeholder=&quot;Describe the project scope, deliverables, and expectations...&quot;
                 className=&quot;min-h-[120px]&quot;
                 {...field}
+=======
+                placeholder="Describe the project scope, deliverables, and expectations..."
+                className="min-h-[120px]"
+                {_...field}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               />
             </FormControl>
             <FormDescription>
@@ -87,10 +111,16 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       
       <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
         <FormField
+<<<<<<< HEAD
           control={form.control}
 <<<<<<< HEAD
           name="startDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (
+=======
+          control={_form.control}
+          name="startDate"
+          render={_(_{ field}: {_field: ControllerRenderProps<ContractFormValues, _"startDate">}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <FormItem className="flex flex-col">
 =======
           name=&quot;startDate&quot;
@@ -102,11 +132,19 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
+<<<<<<< HEAD
                       variant={&quot;outline&quot;}
                       className={`w-full pl-3 text-left font-normal ${!field.value && &quot;text-muted-foreground&quot;}`}
                     >
                       {field.value ? (
                         format(field.value, &quot;PPP&quot;)
+=======
+                      variant={_"outline"}
+                      className={_`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                    >
+                      {_field.value ? (
+                        format(field.value, _"PPP")
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       ) : (
                         <span>Pick a date</span>
                       )}
@@ -116,10 +154,17 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 </PopoverTrigger>
                 <PopoverContent className=&quot;w-auto p-0&quot; align=&quot;start&quot;>
                   <Calendar
+<<<<<<< HEAD
                     mode=&quot;single&quot;
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={(date) => date < new Date()}
+=======
+                    mode="single"
+                    selected={_field.value}
+                    onSelect={_field.onChange}
+                    disabled={_(_date) => date < new Date()}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     initialFocus
                   />
                 </PopoverContent>
@@ -130,10 +175,16 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
         />
         
         <FormField
+<<<<<<< HEAD
           control={form.control}
 <<<<<<< HEAD
           name="endDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (
+=======
+          control={_form.control}
+          name="endDate"
+          render={_(_{ field}: {_field: ControllerRenderProps<ContractFormValues, _"endDate">}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <FormItem className="flex flex-col">
 =======
           name=&quot;endDate&quot;
@@ -145,11 +196,19 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
+<<<<<<< HEAD
                       variant={&quot;outline&quot;}
                       className={`w-full pl-3 text-left font-normal ${!field.value && &quot;text-muted-foreground&quot;}`}
                     >
                       {field.value ? (
                         format(field.value, &quot;PPP&quot;)
+=======
+                      variant={_"outline"}
+                      className={_`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                    >
+                      {_field.value ? (
+                        format(field.value, _"PPP")
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       ) : (
                         <span>Pick a date</span>
                       )}
@@ -159,10 +218,17 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 </PopoverTrigger>
                 <PopoverContent className=&quot;w-auto p-0&quot; align=&quot;start&quot;>
                   <Calendar
+<<<<<<< HEAD
                     mode=&quot;single&quot;
                     selected={field.value || undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues(&quot;startDate&quot;)}
+=======
+                    mode="single"
+                    selected={_field.value || undefined}
+                    onSelect={_field.onChange}
+                    disabled={_(_date) => date < form.getValues("startDate")}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     initialFocus
                   />
                 </PopoverContent>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 export default function UltraFuturisticBackground2035() {
@@ -11,10 +12,25 @@ export default function UltraFuturisticBackground2035() {
 
     const ctx = canvas.getContext('2d'),
     if (!ctx) return,
+=======
+import React, {_useEffect, _useRef} from 'react';
+
+export default function UltraFuturisticBackground2035() {_const _canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect__(() => {
+    const _canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const _prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const _ctx = canvas.getContext('2d');
+    if (!ctx) return;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
     canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
     if (ctx) {
+<<<<<<< HEAD
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
     }
 
@@ -44,16 +60,44 @@ export default function UltraFuturisticBackground2035() {
           opacity: Math.random() * 0.35 + 0.08,
           color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)]
         })
+=======
+      ctx.scale(window.devicePixelRatio || 1, _window.devicePixelRatio || 1);}
+
+    let animationFrameId: number;
+    let particles: Array<{_x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;}> = [];
+
+    // Initialize particles
+    const _initParticles = () => {_particles = [];
+      const _isSmallScreen = window.innerWidth < 768;
+      const _particleCount = prefersReducedMotion ? 12 : (isSmallScreen ? 40 : 100);
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width / (window.devicePixelRatio || 1), _y: Math.random() * canvas.height / (window.devicePixelRatio || 1), _vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4, _vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4, _size: Math.random() * (isSmallScreen ? 1.5 : 2) + 0.8, _opacity: Math.random() * 0.35 + 0.08, _color: ['#8b5cf6', _'#06b6d4', _'#ec4899', _'#10b981'][Math.floor(Math.random() * 4)]});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
     },
 
     // Update and draw particles
+<<<<<<< HEAD
     const updateParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
 
       particles.forEach((particle, index) => {
         particle.x += particle.vx,
         particle.y += particle.vy,
+=======
+    const _updateParticles = () => {_ctx.clearRect(0, _0, _canvas.width, _canvas.height);
+
+      particles.forEach(_(particle, _index) => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1),
@@ -62,6 +106,7 @@ export default function UltraFuturisticBackground2035() {
         if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0,
 
         // Draw particle
+<<<<<<< HEAD
         ctx.beginPath(),
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
         ctx.fillStyle = particle.color,
@@ -70,9 +115,20 @@ export default function UltraFuturisticBackground2035() {
 
         // Draw connections
         const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140),
+=======
+        ctx.beginPath();
+        ctx.arc(particle.x, _particle.y, _particle.size, _0, _Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.globalAlpha = particle.opacity;
+        ctx.fill();
+
+        // Draw connections
+        const _maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         if (maxDistance > 0) {
-          particles.forEach((otherParticle, otherIndex) => {
+          particles.forEach(_(otherParticle, _otherIndex) => {
             if (index !== otherIndex) {
+<<<<<<< HEAD
               const dx = particle.x - otherParticle.x,
               const dy = particle.y - otherParticle.y,
               const distance = Math.sqrt(dx * dx + dy * dy),
@@ -86,19 +142,39 @@ export default function UltraFuturisticBackground2035() {
                 ctx.lineWidth = 1,
                 ctx.stroke()
               }
+=======
+              const _dx = particle.x - otherParticle.x;
+              const _dy = particle.y - otherParticle.y;
+              const _distance = Math.sqrt(dx * dx + dy * dy);
+
+              if (distance < maxDistance) {
+                ctx.beginPath();
+                ctx.moveTo(particle.x, _particle.y);
+                ctx.lineTo(otherParticle.x, _otherParticle.y);
+                ctx.strokeStyle = particle.color;
+                ctx.globalAlpha = (maxDistance - distance) / maxDistance * 0.08;
+                ctx.lineWidth = 1;
+                ctx.stroke();}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             }
           })
         }
       }),
 
+<<<<<<< HEAD
       if (!prefersReducedMotion) {
         animationFrameId = requestAnimationFrame(updateParticles)
       }
     },
+=======
+      if (!prefersReducedMotion) {_animationFrameId = requestAnimationFrame(updateParticles);}
+    };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     initParticles(),
     updateParticles(),
 
+<<<<<<< HEAD
     const handleResize = () => {
       canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
       canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
@@ -108,9 +184,19 @@ export default function UltraFuturisticBackground2035() {
       }
       initParticles()
     },
+=======
+    const _handleResize = () => {_canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
+      canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+      if (ctx) {
+        ctx.setTransform(1, _0, _0, _1, _0, _0);
+        ctx.scale(window.devicePixelRatio || 1, _window.devicePixelRatio || 1);}
+      initParticles();
+    };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     window.addEventListener('resize', handleResize),
 
+<<<<<<< HEAD
     return () => {
       window.removeEventListener('resize', handleResize),
       if (animationFrameId) {
@@ -118,11 +204,19 @@ export default function UltraFuturisticBackground2035() {
       }
     }
   }, []),
+=======
+    return () => {_window.removeEventListener('resize', _handleResize);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);}
+    };
+  }, []);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
-      {/* Fixed Background Canvas */}
+      {_/* Fixed Background Canvas */}
       <canvas
+<<<<<<< HEAD
         ref={canvasRef}
         className=&quot;fixed inset-0 w-full h-full pointer-events-none z-0&quot;
         style={{ background: 'radial-gradient(ellipse at center, rgba(139,92,246,0.04) 0%, rgba(0,0,0,0) 70%)' }}
@@ -181,18 +275,58 @@ export default function UltraFuturisticBackground2035() {
         {/* Animated Grid Lines */}
         <div className=&quot;absolute inset-0 opacity-10&quot;>
           <div className=&quot;absolute inset-0&quot; style={{
+=======
+        ref={_canvasRef}
+        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        style={_{ background: 'radial-gradient(ellipse at center, _rgba(139, _92, _246, _0.04) 0%, _rgba(0, _0, _0, _0) 70%)'}}
+      />
+
+      {_/* Animated Background Elements */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        {_/* Floating Geometric Shapes */}
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full"
+          animate={_{
+            scale: [1, _1.15, _1], _rotate: [0, _180, _360], _opacity: [0.22, _0.45, _0.22]}}
+          transition={_{
+            duration: 8, _repeat: Infinity, _ease: "easeInOut"}}
+        />
+        
+        <motion.div
+          className="absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45"
+          animate={_{
+            scale: [1, _1.3, _1], _rotate: [45, _225, _405], _opacity: [0.2, _0.5, _0.2]}}
+          transition={_{
+            duration: 10, _repeat: Infinity, _ease: "easeInOut"}}
+        />
+
+        <motion.div
+          className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full"
+          animate={_{
+            scale: [1, _1.4, _1], _y: [0, _-20, _0], _opacity: [0.4, _0.7, _0.4]}}
+          transition={_{
+            duration: 12, _repeat: Infinity, _ease: "easeInOut"}}
+        />
+
+        {_/* Neon Glow Effects */}
+        <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000" />
+
+        {_/* Animated Grid Lines */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={_{
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             backgroundImage: `
-              linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }} />
+              linear-gradient(rgba(139, _92, _246, _0.3) 1px, _transparent 1px), _linear-gradient(90deg, _rgba(139, _92, _246, _0.3) 1px, _transparent 1px)
+            `, _backgroundSize: '50px 50px'}} />
         </div>
 
-        {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
+        {_/* Floating Particles */}
+        {_[...Array(20)].map(_(_, _i) => (
           <motion.div
             key={i}
+<<<<<<< HEAD
             className=&quot;absolute w-1 h-1 bg-purple-400 rounded-full&quot;
             style={{
               left: `${Math.random() * 100}%`,
@@ -208,12 +342,23 @@ export default function UltraFuturisticBackground2035() {
               repeat: Infinity,
               delay: Math.random() * 2,
               ease: &quot;easeInOut&quot;
+=======
+            className="absolute w-1 h-1 bg-purple-400 rounded-full"
+            style={_{
+              left: `${Math.random() * 100}%`,
+              top: `${_Math.random() * 100}%`
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             }}
+            animate={_{
+              y: [0, _-30, _0], _opacity: [0, _1, _0], _scale: [0, _1, _0]}}
+            transition={_{
+              duration: 3 + Math.random() * 2, _repeat: Infinity, _delay: Math.random() * 2, _ease: "easeInOut"}}
           />
         ))}
 
-        {/* Energy Waves */}
+        {_/* Energy Waves */}
         <motion.div
+<<<<<<< HEAD
           className=&quot;absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent&quot;
           animate={{
             scaleX: [0, 1, 0],
@@ -238,12 +383,28 @@ export default function UltraFuturisticBackground2035() {
             delay: 2,
             ease: &quot;easeInOut&quot;
           }}
+=======
+          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"
+          animate={_{
+            scaleX: [0, _1, _0], _opacity: [0, _1, _0]}}
+          transition={_{
+            duration: 4, _repeat: Infinity, _ease: "easeInOut"}}
         />
 
-        {/* Quantum Dots */}
-        {[...Array(15)].map((_, i) => (
+        <motion.div
+          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"
+          animate={_{
+            scaleX: [0, _1, _0], _opacity: [0, _1, _0]}}
+          transition={_{
+            duration: 4, _repeat: Infinity, _delay: 2, _ease: "easeInOut"}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+        />
+
+        {_/* Quantum Dots */}
+        {_[...Array(15)].map(_(_, _i) => (
           <motion.div
             key={`quantum-${i}`}
+<<<<<<< HEAD
             className=&quot;absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full&quot;
             style={{
               left: `${Math.random() * 100}%`,
@@ -259,12 +420,27 @@ export default function UltraFuturisticBackground2035() {
               repeat: Infinity,
               delay: Math.random() * 5,
               ease: &quot;easeInOut&quot;
+=======
+            className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"
+            style={_{
+              left: `${Math.random() * 100}%`,
+              top: `${_Math.random() * 100}%`
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             }}
+            animate={_{
+              scale: [0, _1, _0], _opacity: [0, _0.8, _0], _rotate: [0, _360]}}
+            transition={_{
+              duration: 5 + Math.random() * 3, _repeat: Infinity, _delay: Math.random() * 5, _ease: "easeInOut"}}
           />
         ))}
 
+<<<<<<< HEAD
         {/* Neural Network Connections */}
         <svg className=&quot;absolute inset-0 w-full h-full opacity-20&quot;>
+=======
+        {_/* Neural Network Connections */}
+        <svg className="absolute inset-0 w-full h-full opacity-20">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <defs>
             <linearGradient id=&quot;neuralGradient&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;100%&quot;>
               <stop offset=&quot;0%&quot; stopColor=&quot;#8b5cf6&quot; stopOpacity=&quot;0.5&quot; />
@@ -273,9 +449,10 @@ export default function UltraFuturisticBackground2035() {
             </linearGradient>
           </defs>
           
-          {[...Array(8)].map((_, i) => (
+          {_[...Array(8)].map(_(_, _i) => (
             <motion.circle
               key={`neural-${i}`}
+<<<<<<< HEAD
               cx={`${20 + (i * 10)}%`}
               cy={`${30 + (i * 5)}%`}
               r=&quot;3&quot;
@@ -290,10 +467,21 @@ export default function UltraFuturisticBackground2035() {
                 delay: i * 0.5,
                 ease: &quot;easeInOut&quot;
               }}
+=======
+              cx={_`${20 + (i * 10)}%`}
+              cy={_`${30 + (i * 5)}%`}
+              r="3"
+              fill="url(#neuralGradient)"
+              animate={_{
+                r: [3, _6, _3], _opacity: [0.3, _0.8, _0.3]}}
+              transition={_{
+                duration: 4, _repeat: Infinity, _delay: i * 0.5, _ease: "easeInOut"}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             />
           ))}
         </svg>
 
+<<<<<<< HEAD
         {/* Holographic Effects */}
         <div className=&quot;absolute inset-0&quot;>
           <motion.div
@@ -344,7 +532,41 @@ export default function UltraFuturisticBackground2035() {
                 repeat: Infinity,
                 delay: Math.random() * 2,
                 ease: &quot;easeInOut&quot;
+=======
+        {_/* Holographic Effects */}
+        <div className="absolute inset-0">
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full"
+            animate={_{
+              scale: [1, _1.1, _1], _rotate: [0, _90, _180, _270, _360], _opacity: [0.1, _0.3, _0.1]}}
+            transition={_{
+              duration: 20, _repeat: Infinity, _ease: "linear"}}
+          />
+          
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full"
+            animate={_{
+              scale: [1, _1.2, _1], _rotate: [360, _270, _180, _90, _0], _opacity: [0.1, _0.4, _0.1]}}
+            transition={_{
+              duration: 15, _repeat: Infinity, _ease: "linear"}}
+          />
+        </div>
+
+        {_/* Data Streams */}
+        <div className="absolute right-0 top-0 w-32 h-full opacity-30">
+          {_[...Array(20)].map(_(_, _i) => (
+            <motion.div
+              key={`stream-${i}`}
+              className="absolute w-1 h-8 bg-gradient-to-b from-purple-400 to-transparent"
+              style={_{
+                right: `${Math.random() * 32}px`,
+                top: `${_i * 5}%`
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               }}
+              animate={_{
+                height: [8, _32, _8], _opacity: [0.3, _1, _0.3]}}
+              transition={_{
+                duration: 2 + Math.random() * 2, _repeat: Infinity, _delay: Math.random() * 2, _ease: "easeInOut"}}
             />
           ))}
         </div>

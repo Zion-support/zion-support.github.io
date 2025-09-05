@@ -5,10 +5,15 @@
  * Creates or updates the main README.md file
  */
 
+<<<<<<< HEAD
 const fs = require('fs'),
 const path = require('path'),
+=======
+const _fs = require('fs');
+const _path = require('path');
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub
+const _README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub
 
 Leading-edge technology solutions and autonomous innovation systems.
 
@@ -90,6 +95,7 @@ This project is proprietary software. All rights reserved.
 
 ---
 
+<<<<<<< HEAD
 *Generated on ${new Date().toISOString()}*
 `,
 
@@ -124,3 +130,25 @@ if (require.main === module) {
 }
 
 module.exports = { generateReadme },
+=======
+*Generated on ${_new Date().toISOString()}*
+`;
+
+function generateReadme() {_const _outputPath = path.join(__dirname, _'..', _'README.md');
+  
+  // Check if README already exists and is substantial
+  if (fs.existsSync(outputPath)) {
+    const _existingContent = fs.readFileSync(outputPath, _'utf8');
+    if (existingContent.length > 1000) {
+      
+      return;}
+  }
+
+  fs.writeFileSync(outputPath, README_TEMPLATE);
+  
+}
+
+if (require.main === module) {_generateReadme();}
+
+module.exports = {_generateReadme};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

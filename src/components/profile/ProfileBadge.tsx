@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -8,18 +9,26 @@ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 import React from &quot;react&quot;;
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
 import { cn } from &quot;@/lib/utils&quot;;
+=======
+import React from "react";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
 interface ProfileBadgeProps {
   type: BadgeType,
   className?: string
 }
+=======
+interface ProfileBadgeProps {_type: BadgeType;
+  className?: string;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-export function ProfileBadge({ type, className }: ProfileBadgeProps) {
-  const badgeConfig = {
+export function ProfileBadge(_{_type, _className}: ProfileBadgeProps) {_const _badgeConfig = {
     verified: {
+<<<<<<< HEAD
       icon: BadgeCheck,
       text: &quot;Verified&quot;,
       colors: &quot;bg-blue-500/20 text-blue-400&quot;},
@@ -51,6 +60,21 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     )}>
       <Icon className=&quot;w-3 h-3&quot; />
       <span>{text}</span>
+=======
+      icon: BadgeCheck, _text: "Verified", _colors: "bg-blue-500/20 text-blue-400"},
+    featured: {_icon: Star, _text: "Featured", _colors: "bg-yellow-500/20 text-yellow-400"},
+    new: {_icon: Clock, _text: "New", _colors: "bg-green-500/20 text-green-400"},
+    "top-rated": {_icon: Award, _text: "Top Rated", _colors: "bg-purple-500/20 text-purple-400"}};
+
+  const {_icon: Icon, _text, _colors} = badgeConfig[type];
+
+  return (
+    <div className={_cn(
+      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium", _colors, _className
+    )}>
+      <Icon className="w-3 h-3" />
+      <span>{_text}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     </div>
   )
 }

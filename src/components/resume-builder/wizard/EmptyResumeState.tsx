@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { FilePlus } from 'lucide-react'
@@ -18,6 +19,15 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
         <div className=&quot;text-center&quot;>
           <h2 className=&quot;text-2xl font-bold mb-2&quot;>Create Your Resume</h2>
           <p className=&quot;text-muted-foreground mb-6&quot;>Create a professional resume to showcase your skills and experience</p>
+=======
+
+export const _EmptyResumeState = (_{_onCreateClick}: EmptyResumeProps) => {_return (
+    <Card className="w-full max-w-2xl mx-auto">
+      <CardContent className="py-8">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-2">Create Your Resume</h2>
+          <p className="text-muted-foreground mb-6">Create a professional resume to showcase your skills and experience</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <Button 
             onClick={onCreateClick}
             className=&quot;gap-2&quot;

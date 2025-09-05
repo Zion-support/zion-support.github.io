@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import React from 'react',
 import CookieConsent from 'react-cookie-consent',
 import { Link } from 'react-router-dom',
 import { useConsent } from '@/context/ConsentContext',
 export function CookieBanner() {
   const { acceptAll, rejectNonEssential } = useConsent(),
+=======
+import React from 'react';
+import CookieConsent from 'react-cookie-consent';
+
+export function CookieBanner() {_const { acceptAll, _rejectNonEssential} = useConsent();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <CookieConsent
@@ -13,11 +20,19 @@ export function CookieBanner() {
       buttonText=&quot;Accept All&quot;
       enableDeclineButton
       disableStyles
+<<<<<<< HEAD
       containerClasses=&quot;fixed bottom-0 left-0 right-0 bg-zinc-900 text-white p-4 flex flex-col md:flex-row items-center justify-between space-y-2 md:space-y-0 z-50&quot;
       buttonClasses=&quot;bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded&quot;
       declineButtonClasses=&quot;bg-gray-600 hover:bg-gray-700 text-white px-3 py-1 rounded&quot;
       onAccept={acceptAll}
       onDecline={rejectNonEssential}
+=======
+      containerClasses="fixed bottom-0 left-0 right-0 bg-zinc-900 text-white p-4 flex flex-col md:flex-row items-center justify-between space-y-2 md:space-y-0 z-50"
+      buttonClasses="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded"
+      declineButtonClasses="bg-gray-600 hover:bg-gray-700 text-white px-3 py-1 rounded"
+      onAccept={_acceptAll}
+      onDecline={_rejectNonEssential}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     >
       <span className=&quot;mr-2&quot;>We use cookies to personalize content and ads.</span>
       <Link to=&quot;/privacy-settings&quot; className=&quot;underline text-white&quot;>Settings</Link>

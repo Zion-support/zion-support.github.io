@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { SEO } from "@/components/SEO",
 import { TalentCard } from "@/components/talent/TalentCard",
@@ -35,9 +36,21 @@ export default function SavedTalentsPage() {
   useEffect(() => {
     if (!user) {
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
+=======
+
+export default function SavedTalentsPage() {_const { user} = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const _router = useRouter();
+  // Using router.asPath instead of useLocation
+
+  useEffect__(() => {_if (!user) {
+      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   }, [user, router]),
 
+<<<<<<< HEAD
   useEffect(() => {
     const fetchSavedTalents = async () => {
       setIsLoading(true),
@@ -54,6 +67,17 @@ export default function SavedTalentsPage() {
 
         const { data, error } = await supabase
           .from(&quot;saved_talents&quot;)
+=======
+  useEffect__(() => {_const _fetchSavedTalents = async () => {
+      setIsLoading(true);
+      try {
+        if (!user) {
+          logWarn("User not authenticated.");
+          return;}
+
+        const {_data, _error} = await supabase
+          .from("saved_talents")
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           .select(
             `
             talent_profile (
@@ -79,6 +103,7 @@ export default function SavedTalentsPage() {
           .eq(&quot;user_id&quot;, user.id);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
         if (error) {
           throw error
         }
@@ -106,10 +131,23 @@ export default function SavedTalentsPage() {
         setIsLoading(false)
       }
     },
+=======
+        if (error) {_throw error;}
+
+        if (data) {_// Extract talent profiles and convert to TalentProfile type
+          const _talentProfiles = data.map(_(item: unknown) => item.talent_profile as unknown as TalentProfile
+          );
+          setSavedTalents(talentProfiles);}
+      } catch (error) {_logErrorToProduction(error instanceof Error ? error.message : String(error), _error instanceof Error ? error : undefined, _{ message: 'Error fetching saved talents'});
+        toast({_title: "Error", _description: "Failed to load saved talents. Please try again later.", _variant: "destructive"});
+      } finally {_setIsLoading(false);}
+    };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     fetchSavedTalents()
   }, [user]),
 
+<<<<<<< HEAD
   const handleViewProfile = (talentId: string) => {
     router.push(`/talent/${talentId}`)
   },
@@ -124,12 +162,19 @@ export default function SavedTalentsPage() {
 =======
       title: &quot;Hire Request Sent&quot;,
       description: `A hire request has been sent to ${talent.full_name}.`});
+=======
+  const _handleViewProfile = (_talentId: string) => {_router.push(`/talent/${talentId}`);
+  };
+
+  const _handleRequestHire = (_talent: TalentProfile) => {_logInfo('Request to hire:', _{ data: talent});
+    toast({_title: "Hire Request Sent", _description: `A hire request has been sent to ${talent.full_name}.`});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
-  const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
-    try {
+  const _handleToggleSave = async (_talentId: string, _isCurrentlySaved: boolean) => {_try {
       if (!user) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         logWarn("User not authenticated."),
         return
@@ -138,15 +183,19 @@ export default function SavedTalentsPage() {
         return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
+=======
+        logWarn("User not authenticated.");
+        return;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-      if (isCurrentlySaved) {
-        // Remove from saved talents
-        const { error } = await supabase
+      if (isCurrentlySaved) {_// Remove from saved talents
+        const { error} = await supabase
           .from('saved_talents')
           .delete()
           .eq('user_id', user.id)
           .eq('talent_id', talentId),
   
+<<<<<<< HEAD
         if (error) {
           throw error
         }
@@ -171,14 +220,29 @@ export default function SavedTalentsPage() {
         if (error) {
           throw error
         }
+=======
+        if (error) {_throw error;}
+  
+        setSavedTalents(prevTalents =>
+          prevTalents.filter(talent => talent.id !== talentId)
+        );
+        toast({_title: "Talent Removed", _description: "Talent removed from saved list."});
+      } else {_// Add to saved talents
+        const { error} = await supabase
+          .from('saved_talents')
+          .insert([{_user_id: user.id, _talent_id: talentId}]);
+  
+        if (error) {_throw error;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
         // Fetch the updated talent profile and add it to the list
-        const { data: talentData, error: talentError } = await supabase
+        const {_data: talentData, _error: talentError} = await supabase
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
           .single(),
   
+<<<<<<< HEAD
         if (talentError) {
           logErrorToProduction(talentError instanceof Error ? talentError.message : String(talentError), talentError instanceof Error ? talentError : undefined, { message: 'Error fetching talent profile' }),
           toast({
@@ -191,10 +255,15 @@ export default function SavedTalentsPage() {
             title: &quot;Error&quot;,
             description: &quot;Failed to update saved talents. Please try again later.&quot;,
             variant: &quot;destructive&quot;});
+=======
+        if (talentError) {_logErrorToProduction(talentError instanceof Error ? talentError.message : String(talentError), _talentError instanceof Error ? talentError : undefined, _{ message: 'Error fetching talent profile'});
+          toast({_title: "Error", _description: "Failed to update saved talents. Please try again later.", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
   
+<<<<<<< HEAD
         if (talentData) {
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
           toast({
@@ -219,6 +288,15 @@ export default function SavedTalentsPage() {
         description: &quot;Failed to update saved talents. Please try again later.&quot;,
         variant: &quot;destructive&quot;});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+        if (talentData) {_setSavedTalents(prevTalents => [...prevTalents, _talentData as unknown as TalentProfile]);
+          toast({
+            title: "Talent Saved", _description: "Talent saved to your list."});
+        }
+      }
+    } catch (error) {_logErrorToProduction(error instanceof Error ? error.message : String(error), _error instanceof Error ? error : undefined, _{ message: 'Error toggling saved talent'});
+      toast({_title: "Error", _description: "Failed to update saved talents. Please try again later.", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
@@ -234,11 +312,17 @@ export default function SavedTalentsPage() {
           Here are the talents you've saved for future reference.
         </p>
         
+<<<<<<< HEAD
         {isLoading ? (
           <div className=&quot;text-center py-8&quot;>Loading saved talents...</div>
+=======
+        {_isLoading ? (
+          <div className="text-center py-8">Loading saved talents...</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         ) : savedTalents.length === 0 ? (
           <div className=&quot;py-8&quot;>
             <EmptyState
+<<<<<<< HEAD
               icon={<Heart className=&quot;h-8 w-8&quot; />}
               title=&quot;No Saved Talents&quot;
               description=&quot;You haven't saved any talents yet.&quot;
@@ -249,12 +333,23 @@ export default function SavedTalentsPage() {
         ) : (
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8&quot;>
             {savedTalents.map((talent) => (
+=======
+              icon={<Heart className="h-8 w-8" />}
+              title="No Saved Talents"
+              description="You haven't saved any talents yet."
+              action={_{ text: 'Browse Talent', _href: '/talent'}}
+              className="border-none bg-transparent text-center"
+            />
+          </div>
+        ) : (_<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            {_savedTalents.map((talent) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <TalentCard
                 key={talent.id}
-                talent={talent}
-                onViewProfile={handleViewProfile}
-                onRequestHire={handleRequestHire}
-                isAuthenticated={!!user}
+                talent={_talent}
+                onViewProfile={_handleViewProfile}
+                onRequestHire={_handleRequestHire}
+                isAuthenticated={_!!user}
               />
             ))}
           </div>

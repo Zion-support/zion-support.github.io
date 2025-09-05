@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Link, Navigate } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -38,9 +39,14 @@ import { Footer } from "@/components/Footer",
   FormMessage} from &quot;@/components/ui/form&quot;;
 import { Header } from &quot;@/components/Header&quot;;
 import { Footer } from &quot;@/components/Footer&quot;;
+=======
+
+import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from "@/components/ui/form";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // Form validation schema
+<<<<<<< HEAD
 const signupSchema = z
   .object({
     displayName: z.string().min(2, &quot;Name must be at least 2 characters&quot;),
@@ -61,9 +67,20 @@ const signupSchema = z
     message: &quot;Passwords do not match&quot;,
     path: [&quot;confirmPassword&quot;]});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+const _signupSchema = z
+  .object({_displayName: z.string().min(2, _"Name must be at least 2 characters"), _email: z.string().email("Please enter a valid email"), _password: z.string()
+      .min(8, _"Password must be at least 8 characters")
+      .regex(/[A-Z]/, _"Password must contain at least one uppercase letter")
+      .regex(/[a-z]/, _"Password must contain at least one lowercase letter")
+      .regex(/[0-9]/, _"Password must contain at least one number"), _confirmPassword: z.string(), _termsAccepted: z.boolean().refine(val => val === true, _{
+      message: "You must accept the terms and conditions"})})
+  .refine(data => data.password === data.confirmPassword, {_message: "Passwords do not match", _path: ["confirmPassword"]});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 type SignupFormValues = z.infer<typeof signupSchema>,
 
+<<<<<<< HEAD
 export default function Signup() {
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),
   const [showPassword, setShowPassword] = useState(false),
@@ -91,9 +108,23 @@ export default function Signup() {
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions
+=======
+export default function Signup() {_const { signup, _loginWithGoogle, _loginWithFacebook, _loginWithTwitter, _isLoading, _isAuthenticated, _user} = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Initialize react-hook-form
+  const _form = useForm({_resolver: zodResolver(signupSchema), _defaultValues: {
+      displayName: "", _email: "", _password: "", _confirmPassword: "", _termsAccepted: false}}) as UseFormReturn<SignupFormValues>;
+
+  // Form submission handler
+  const _onSubmit = async (_data: SignupFormValues) => {_if (isSubmitting) return; // Prevent multiple submissions
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setIsSubmitting(true),
     try {
+<<<<<<< HEAD
       await signup(data.email, data.password, data.displayName)
     } finally {
       setIsSubmitting(false)
@@ -117,6 +148,16 @@ export default function Signup() {
     return <Navigate to=&quot;/onboarding&quot; />;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
+=======
+      await signup(data.email, _data.password, _data.displayName);} finally {_setIsSubmitting(false);}
+  };
+
+  // Redirect if user is already logged in and has completed profile
+  if (isAuthenticated && user?.profileComplete) {_return <Navigate to="/" />;}
+  
+  // Redirect to onboarding if user is authenticated but hasn't completed profile
+  if (isAuthenticated && !user?.profileComplete) {_return <Navigate to="/onboarding" />;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -128,14 +169,21 @@ export default function Signup() {
               <h2 className=&quot;text-3xl font-bold tracking-tight text-white&quot;>
                 Create your account
               </h2>
+<<<<<<< HEAD
               <p className=&quot;mt-2 text-sm text-zion-slate-light&quot;>
                 Already have an account?{&quot; &quot;}
                 <Link to=&quot;/login&quot; className=&quot;font-medium text-zion-cyan hover:text-zion-cyan-light&quot;>
+=======
+              <p className="mt-2 text-sm text-zion-slate-light">
+                Already have an account?{_" "}
+                <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   Sign in
                 </Link>
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className=&quot;bg-zion-blue-dark rounded-lg p-6&quot;>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className=&quot;space-y-6&quot; noValidate>
@@ -143,16 +191,33 @@ export default function Signup() {
                     control={form.control}
                     name=&quot;displayName&quot;
                     render={({ field }) => (
+=======
+            <div className="bg-zion-blue-dark rounded-lg p-6">
+              <Form {_...form}>
+                <form onSubmit={_form.handleSubmit(onSubmit)} className="space-y-6" noValidate>
+                  <FormField
+                    control={_form.control}
+                    name="displayName"
+                    render={_(_{ field}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       <FormItem>
                         <FormLabel className=&quot;text-zion-slate-light&quot;>Full Name</FormLabel>
                         <FormControl>
                           <div className=&quot;relative&quot;>
                             <Input
+<<<<<<< HEAD
                               placeholder=&quot;John Doe&quot;
                               className=&quot;bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple&quot;
                               {...field}
                               aria-autocomplete=&quot;none&quot;
                               autoComplete=&quot;off&quot;
+=======
+                              placeholder="John Doe"
+                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              {_...field}
+                              aria-autocomplete="none"
+                              autoComplete="off"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                             />
                             <User className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4&quot; />
                           </div>
@@ -163,20 +228,35 @@ export default function Signup() {
                   />
 
                   <FormField
+<<<<<<< HEAD
                     control={form.control}
                     name=&quot;email&quot;
                     render={({ field }) => (
+=======
+                    control={_form.control}
+                    name="email"
+                    render={_(_{ field}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       <FormItem>
                         <FormLabel className=&quot;text-zion-slate-light&quot;>Email address</FormLabel>
                         <FormControl>
                           <div className=&quot;relative&quot;>
                             <Input
+<<<<<<< HEAD
                               placeholder=&quot;you@example.com&quot;
                               className=&quot;bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple&quot;
                               {...field}
                               autoComplete=&quot;off&quot;
                               aria-autocomplete=&quot;none&quot;
                               type=&quot;email&quot;
+=======
+                              placeholder="you@example.com"
+                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              {_...field}
+                              autoComplete="off"
+                              aria-autocomplete="none"
+                              type="email"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                             />
                             <Mail className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4&quot; />
                           </div>
@@ -187,22 +267,38 @@ export default function Signup() {
                   />
 
                   <FormField
+<<<<<<< HEAD
                     control={form.control}
                     name=&quot;password&quot;
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className=&quot;text-zion-slate-light&quot;>Password</FormLabel>
+=======
+                    control={_form.control}
+                    name="password"
+                    render={_(_{ field}) => (_<FormItem>
+                        <FormLabel className="text-zion-slate-light">Password</FormLabel>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         <FormControl>
                           <div className=&quot;relative&quot;>
                             <Input
+<<<<<<< HEAD
                               type={showPassword ? &quot;text&quot; : &quot;password&quot;}
                               placeholder=&quot;••••••••&quot;
                               className=&quot;bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple&quot;
                               {...field}
                               autoComplete=&quot;new-password&quot;
+=======
+                              type={_showPassword ? "text" : "password"}
+                              placeholder="••••••••"
+                              className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple"
+                              {_...field}
+                              autoComplete="new-password"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                             />
                             <Lock className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4&quot; />
                             <Button
+<<<<<<< HEAD
                               type=&quot;button&quot;
                               variant=&quot;ghost&quot;
                               size=&quot;sm&quot;
@@ -211,11 +307,26 @@ export default function Signup() {
                             >
                               {showPassword ? (
                                 <EyeOff className=&quot;h-4 w-4&quot; />
+=======
+                              type="button"
+                              variant="ghost"
+                              size="sm"
+                              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+                              onClick={_() => setShowPassword(!showPassword)}
+                            >
+                              {_showPassword ? (
+                                <EyeOff className="h-4 w-4" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                               ) : (
                                 <Eye className=&quot;h-4 w-4&quot; />
                               )}
+<<<<<<< HEAD
                               <span className=&quot;sr-only&quot;>
                                 {showPassword ? &quot;Hide password&quot; : &quot;Show password&quot;}
+=======
+                              <span className="sr-only">
+                                {_showPassword ? "Hide password" : "Show password"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                               </span>
                             </Button>
                           </div>
@@ -226,22 +337,38 @@ export default function Signup() {
                   />
 
                   <FormField
+<<<<<<< HEAD
                     control={form.control}
                     name=&quot;confirmPassword&quot;
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className=&quot;text-zion-slate-light&quot;>Confirm Password</FormLabel>
+=======
+                    control={_form.control}
+                    name="confirmPassword"
+                    render={_(_{ field}) => (_<FormItem>
+                        <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         <FormControl>
                           <div className=&quot;relative&quot;>
                             <Input
+<<<<<<< HEAD
                               type={showConfirmPassword ? &quot;text&quot; : &quot;password&quot;}
                               placeholder=&quot;••••••••&quot;
                               className=&quot;bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple&quot;
                               {...field}
                               autoComplete=&quot;new-password&quot;
+=======
+                              type={_showConfirmPassword ? "text" : "password"}
+                              placeholder="••••••••"
+                              className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple"
+                              {_...field}
+                              autoComplete="new-password"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                             />
                             <Lock className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4&quot; />
                             <Button
+<<<<<<< HEAD
                               type=&quot;button&quot;
                               variant=&quot;ghost&quot;
                               size=&quot;sm&quot;
@@ -250,11 +377,26 @@ export default function Signup() {
                             >
                               {showConfirmPassword ? (
                                 <EyeOff className=&quot;h-4 w-4&quot; />
+=======
+                              type="button"
+                              variant="ghost"
+                              size="sm"
+                              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+                              onClick={_() => setShowConfirmPassword(!showConfirmPassword)}
+                            >
+                              {_showConfirmPassword ? (
+                                <EyeOff className="h-4 w-4" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                               ) : (
                                 <Eye className=&quot;h-4 w-4&quot; />
                               )}
+<<<<<<< HEAD
                               <span className=&quot;sr-only&quot;>
                                 {showConfirmPassword ? &quot;Hide password&quot; : &quot;Show password&quot;}
+=======
+                              <span className="sr-only">
+                                {_showConfirmPassword ? "Hide password" : "Show password"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                               </span>
                             </Button>
                           </div>
@@ -265,6 +407,7 @@ export default function Signup() {
                   />
 
                   <FormField
+<<<<<<< HEAD
                     control={form.control}
                     name=&quot;termsAccepted&quot;
                     render={({ field }) => (
@@ -284,6 +427,27 @@ export default function Signup() {
                             </Link>{&quot; &quot;}
                             and{&quot; &quot;}
                             <a href=&quot;/privacy&quot; className=&quot;text-zion-cyan hover:text-zion-cyan-light&quot;>
+=======
+                    control={_form.control}
+                    name="termsAccepted"
+                    render={_(_{ field}) => (
+                      <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                        <FormControl>
+                          <Checkbox
+                            checked={_field.value}
+                            onCheckedChange={_field.onChange}
+                            className="data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+                          />
+                        </FormControl>
+                        <div className="space-y-1 leading-none">
+                          <FormLabel className="text-sm text-zion-slate-light">
+                            I agree to the{_" "}
+                            <a href="/terms" className="text-zion-cyan hover:text-zion-cyan-light">
+                              Terms of Service
+                            </a>{_" "}
+                            and{_" "}
+                            <a href="/privacy" className="text-zion-cyan hover:text-zion-cyan-light">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                               Privacy Policy
                             </Link>
                           </FormLabel>
@@ -294,11 +458,19 @@ export default function Signup() {
                   />
 
                   <Button
+<<<<<<< HEAD
                     type=&quot;submit&quot;
                     className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;
                     disabled={isLoading || isSubmitting}
                   >
                     {isLoading ? &quot;Creating Account...&quot; : &quot;Create Account&quot;}
+=======
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                    disabled={_isLoading || isSubmitting}
+                  >
+                    {_isLoading ? "Creating Account..." : "Create Account"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </Button>
                 </form>
               </Form>
@@ -315,11 +487,19 @@ export default function Signup() {
 
                 <div className=&quot;mt-6 grid grid-cols-3 gap-3&quot;>
                   <Button
+<<<<<<< HEAD
                     type=&quot;button&quot;
                     variant=&quot;outline&quot;
                     className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
                     onClick={() => loginWithGoogle()}
                     disabled={isLoading || isSubmitting}
+=======
+                    type="button"
+                    variant="outline"
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+                    onClick={_() => loginWithGoogle()}
+                    disabled={_isLoading || isSubmitting}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   >
                     <span className=&quot;sr-only&quot;>Sign in with Google</span>
                     <svg className=&quot;h-5 w-5&quot; aria-hidden=&quot;true&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
@@ -330,21 +510,37 @@ export default function Signup() {
                     </svg>
                   </Button>
                   <Button
+<<<<<<< HEAD
                     type=&quot;button&quot;
                     variant=&quot;outline&quot;
                     className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
                     onClick={() => loginWithFacebook()}
                     disabled={isLoading || isSubmitting}
+=======
+                    type="button"
+                    variant="outline"
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+                    onClick={_() => loginWithFacebook()}
+                    disabled={_isLoading || isSubmitting}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   >
                     <span className=&quot;sr-only&quot;>Sign in with Facebook</span>
                     <Facebook className=&quot;h-5 w-5&quot; />
                   </Button>
                   <Button
+<<<<<<< HEAD
                     type=&quot;button&quot;
                     variant=&quot;outline&quot;
                     className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
                     onClick={() => loginWithTwitter()}
                     disabled={isLoading || isSubmitting}
+=======
+                    type="button"
+                    variant="outline"
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+                    onClick={_() => loginWithTwitter()}
+                    disabled={_isLoading || isSubmitting}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   >
                     <span className=&quot;sr-only&quot;>Sign in with Twitter</span>
                     <Twitter className=&quot;h-5 w-5&quot; />

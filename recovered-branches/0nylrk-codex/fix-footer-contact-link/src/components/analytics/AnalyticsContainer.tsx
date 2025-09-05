@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -51,6 +52,30 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
     return <Navigate to=&quot;/unauthorized&quot; replace />;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
+=======
+import React from "react";
+
+interface AnalyticsContainerProps {_children: React.ReactNode;}
+
+export function AnalyticsContainer(_{_children}: AnalyticsContainerProps) {_const { isAuthenticated, _isLoading, _user} = useAuth();
+  
+  // Check if user is admin (using either role or userType)
+  const _isAdmin = user?.role === 'admin' || user?.userType === 'admin';
+  
+  // If still loading auth status, show loading
+  if (isLoading) {_return (
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">
+        <div className="animate-pulse text-zion-purple text-lg">Loading...</div>
+      </div>
+    );}
+  
+  // If not authenticated, redirect
+  if (!isAuthenticated) {_return <Navigate to="/login" state={{ from: '/analytics'}} replace />;
+  }
+  
+  // If not admin, redirect
+  if (!isAdmin) {_return <Navigate to="/unauthorized" replace />;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <div className=&quot;min-h-screen flex flex-col bg-zion-blue&quot;>
@@ -67,7 +92,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
             Track user behavior, page views, and conversion rates
           </p>
         </div>
-        {children}
+        {_children}
       </main>
       <Footer />
     </div>

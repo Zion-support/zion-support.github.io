@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Project } from '@/types/projects',
 import { useState } from "react",
 import { Star } from 'lucide-react'
@@ -47,6 +48,26 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const revieweeId = isClient ? project.talent_id : project.client_id,
   const revieweeName = isClient 
 <<<<<<< HEAD
+=======
+
+
+interface ProjectReviewSectionProps {_project: Project;}
+
+export function ProjectReviewSection(_{_project}: ProjectReviewSectionProps) {_const { user} = useAuth();
+  const {_reviews, _userReview, _isLoading, _reportReview} = useReviews(project.id);
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+  
+  const _isCompleted = project.status === "completed";
+  const _isClient = user?.id === project.client_id;
+  const _isTalent = user?.id === project.talent_id;
+  
+  const _clientProfile = project?.talent_profile;
+  const _talentProfile = project.talent_profile;
+
+  // Determine who the current user needs to review
+  const _revieweeId = isClient ? project.talent_id : project.client_id;
+  const _revieweeName = isClient 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     ? talentProfile?.full_name || "Talent" 
     : clientProfile?.full_name || "Client",
 =======
@@ -54,8 +75,13 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     : clientProfile?.full_name || &quot;Client&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
+=======
+  const _canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
+  const _hasLeftReview = userReview != null;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <Card className=&quot;mt-6&quot;>
@@ -70,10 +96,16 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       </CardHeader>
       
       <CardContent>
+<<<<<<< HEAD
         {isCompleted ? (
           <div className=&quot;space-y-6&quot;>
             {(isClient || isTalent) && (
               <div className=&quot;border-b pb-4 mb-4&quot;>
+=======
+        {_isCompleted ? (
+          <div className="space-y-6">
+            {(isClient || isTalent) && (_<div className="border-b pb-4 mb-4">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 {canLeaveReview ? (
                   <div className=&quot;bg-muted/20 rounded-lg p-4 text-center&quot;>
                     <h3 className=&quot;font-medium mb-2&quot;>Share your experience</h3>
@@ -84,6 +116,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                       Leave Review
                     </Button>
                   </div>
+<<<<<<< HEAD
                 ) : hasLeftReview ? (
                   <div className=&quot;bg-muted/20 rounded-lg p-4 text-center&quot;>
                     <h3 className=&quot;font-medium mb-2&quot;>Thank you for your review!</h3>
@@ -92,6 +125,15 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     </p>
                     {userReview.status === &quot;pending&quot; && (
                       <Button variant=&quot;outline&quot; onClick={() => setIsReviewModalOpen(true)}>
+=======
+                ) : hasLeftReview ? (_<div className="bg-muted/20 rounded-lg p-4 text-center">
+                    <h3 className="font-medium mb-2">Thank you for your review!</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Your review is {_userReview.status === "approved" ? "published" : "pending approval"}
+                    </p>
+                    {_userReview.status === "pending" && (
+                      <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         Edit Review
                       </Button>
                     )}
@@ -101,9 +143,9 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
             )}
             
             <ReviewsList
-              reviews={reviews}
-              isLoading={isLoading}
-              onReportReview={reportReview}
+              reviews={_reviews}
+              isLoading={_isLoading}
+              onReportReview={_reportReview}
             />
           </div>
         ) : (
@@ -116,14 +158,13 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
         )}
       </CardContent>
       
-      {/* Review Modal */}
-      {(isClient || isTalent) && (
-        <LeaveReviewModal
+      {_/* Review Modal */}
+      {_(isClient || isTalent) && (_<LeaveReviewModal
           projectId={project.id}
-          revieweeId={revieweeId}
-          revieweeName={revieweeName}
-          isOpen={isReviewModalOpen}
-          onClose={() => setIsReviewModalOpen(false)}
+          revieweeId={_revieweeId}
+          revieweeName={_revieweeName}
+          isOpen={_isReviewModalOpen}
+          onClose={_() => setIsReviewModalOpen(false)}
         />
       )}
     </Card>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -18,6 +19,24 @@ function useFavorites() {
 export default function FavoritesPage() {
   const { favorites, remove } = useFavorites(),
   const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]),
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+
+function useFavorites() {_const _storageKey = 'zion_favorites';
+  const [favorites, _setFavorites] = useState<string[]>([]);
+  useEffect__(() => {
+    try {
+      const _raw = localStorage.getItem(storageKey);
+      if (raw) setFavorites(JSON.parse(raw));} catch {}
+  }, []);
+  const _remove = (_slug: string) => setFavorites(_(prev) => prev.filter(_(s) => s !== slug));
+  return {_favorites, _remove};
+}
+
+export default function FavoritesPage() {_const { favorites, _remove} = useFavorites();
+  const _profiles = useMemo__(() => TALENT_PROFILES.filter(_(t) => favorites.includes(t.slug)), [favorites]);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <div>
@@ -37,6 +56,7 @@ export default function FavoritesPage() {
 
       <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Saved Talent</h1>
 
+<<<<<<< HEAD
       {profiles.length === 0 ? (
         <div className=&quot;rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center&quot;>
           <div className=&quot;text-gray-600 dark:text-gray-300&quot;>You haven't saved any talent yet.</div>
@@ -66,6 +86,35 @@ export default function FavoritesPage() {
                 <div className=&quot;flex items-center gap-3&quot;>
                   <Link href={`/talent/${t.slug}`}><a className=&quot;px-3 py-1.5 rounded-md bg-indigo-600 text-white&quot;>View Profile</a></a>
                   <Link href={`/talent/${t.slug}?hire=1`}><a className=&quot;px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600&quot;>Request to Hire</a></a>
+=======
+      {_profiles.length === 0 ? (
+        <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center">
+          <div className="text-gray-600 dark:text-gray-300">You haven't saved any talent yet.</div>
+          <div className="mt-4">
+            <Link href="/talent"><a className="px-4 py-2 rounded-md bg-indigo-600 text-white">Browse Talent</a></Link>
+          </div>
+        </div>
+      ) : (_<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {profiles.map((t) => (_<div key={t.slug} className="rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40">
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="font-medium">{_t.name}</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">{_t.title}</div>
+                </div>
+                <button onClick={_() => remove(t.slug)} className="text-xs text-pink-600 border border-pink-600 rounded px-2 py-1">Remove</button>
+              </div>
+              <div className="mt-3 text-xs text-gray-500">{_t.location}</div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {_t.skills.slice(0, _4).map(_(s) => (
+                  <span key={s} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">{_s}</span>
+                ))}
+              </div>
+              <div className="mt-4 flex items-center justify-between text-sm">
+                <div className="font-medium">${_t.hourlyRateUsd}/hr</div>
+                <div className="flex items-center gap-3">
+                  <Link href={_`/talent/${t.slug}`}><a className="px-3 py-1.5 rounded-md bg-indigo-600 text-white">View Profile</a></Link>
+                  <Link href={_`/talent/${t.slug}?hire=1`}><a className="px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600">Request to Hire</a></Link>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </div>
               </div>
             </div>

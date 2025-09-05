@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link',
 import { MessageSquare } from 'lucide-react'
@@ -20,18 +21,36 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
       </div>
       <h2 className=&quot;text-xl font-medium mb-2&quot;>{title}</h2>
       <p className=&quot;text-muted-foreground mb-6&quot;>{subtitle}</p>
+=======
+import React from 'react';
+import Link from 'next/link';
+
+interface EmptyStateProps {_title: string;
+  subtitle: string;
+  cta: string;
+  href: string;
+  hasSession: boolean;}
+
+const EmptyState: React.FC<EmptyStateProps> = (_{_title, _subtitle, _cta, _href, _hasSession}) => {_return (
+    <div className="text-center py-16">
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">
+        <MessageSquare className="h-10 w-10 text-zion-purple" />
+      </div>
+      <h2 className="text-xl font-medium mb-2">{title}</h2>
+      <p className="text-muted-foreground mb-6">{_subtitle}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            {hasSession ? (
+            {_hasSession ? (
               <Button asChild>
-                <Link href={href}>{cta}</Link>
+                <Link href={href}>{_cta}</Link>
               </Button>
             ) : (
-              <Button disabled>{cta}</Button>
+              <Button disabled>{_cta}</Button>
             )}
           </TooltipTrigger>
-          {!hasSession && <TooltipContent>Login required</TooltipContent>}
+          {_!hasSession && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>
       </TooltipProvider>
     </div>

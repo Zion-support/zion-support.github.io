@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import { SEO } from '@/components/SEO',
 import { AppHeader } from '@/layout/AppHeader',
@@ -7,6 +8,11 @@ import { DisputeDetail } from '@/components/disputes',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 function DisputeDetailPage() {
   return (
+=======
+import React from 'react';
+
+function DisputeDetailPage() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <ProtectedRoute>
       <>
         <SEO 
@@ -18,7 +24,11 @@ function DisputeDetailPage() {
         <Footer />
       </>
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export default DisputeDetailPage,

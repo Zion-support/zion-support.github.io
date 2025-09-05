@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -37,10 +38,22 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const { t } = useTranslation(),
   const { translateContent, isTranslating } = useTranslationService(),
   const { supportedLanguages, currentLanguage } = useLanguage(),
+=======
+import React, {_useState} from "react";
+
+
+interface TranslatableJobFormProps {_onSubmit: (_formData: unknown) => void;
+  isSubmitting?: boolean;}
+
+export function TranslatableJobForm(_{_onSubmit, _isSubmitting = false}: TranslatableJobFormProps) {_const { t} = useTranslation();
+  const {_translateContent, _isTranslating} = useTranslationService();
+  const {_supportedLanguages, _currentLanguage} = useLanguage();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
   
   // Form fields with translations
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [title, setTitle] = useState<Record<SupportedLanguage string>>({
     en: "",
@@ -86,12 +99,20 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     fr: "&quot;,
     pt: "&quot;,
     ar: "&quot;});
+=======
+  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({_en: "", _es: "", _fr: "", _pt: "", _ar: ""});
+  
+  const [description, setDescription] = useState<Record<SupportedLanguage, string>>({_en: "", _es: "", _fr: "", _pt: "", _ar: ""});
+  
+  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({_en: "", _es: "", _fr: "", _pt: "", _ar: ""});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   const [budget, setBudget] = useState("&quot;);
   const [deadline, setDeadline] = useState("&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Handle text changes
+<<<<<<< HEAD
   const handleTitleChange = (value: string) => {
     setTitle({ ...title, [activeTab]: value })
   },
@@ -107,11 +128,25 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
+=======
+  const _handleTitleChange = (_value: string) => {_setTitle({ ...title, _[activeTab]: value});
+  };
+  
+  const _handleDescriptionChange = (_value: string) => {_setDescription({ ...description, _[activeTab]: value});
+  };
+  
+  const _handleRequirementsChange = (_value: string) => {_setRequirements({ ...requirements, _[activeTab]: value});
+  };
+  
+  // Handle form submission
+  const _handleSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // Complete any missing translations with auto-translation
     await ensureAllTranslations(),
     
     onSubmit({
+<<<<<<< HEAD
       title,
       description,
       requirements,
@@ -131,10 +166,25 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {
     let sourceLanguage: SupportedLanguage = 'en',
     let content = '',
+=======
+      title, _description, _requirements, _budget, _deadline});
+  };
+  
+  // Auto translate content when language tab changes
+  const _handleTabChange = async (_tab: string) => {_const _selectedLanguage = tab as SupportedLanguage;
+    if (selectedLanguage !== activeTab) {
+      setActiveTab(selectedLanguage);}
+  };
+  
+  // Auto translate function
+  const _autoTranslate = async (_field: 'title' | 'description' | 'requirements') => {_let sourceLanguage: SupportedLanguage = 'en';
+    let _content = '';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // Find first non-empty content to translate
     for (const lang of supportedLanguages.map(l => l.code)) {
       if (field === 'title' && title[lang]) {
+<<<<<<< HEAD
         content = title[lang],
         sourceLanguage = lang,
         break
@@ -158,10 +208,24 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       return
 =======
         variant: &quot;destructive&quot;});
+=======
+        content = title[lang];
+        sourceLanguage = lang;
+        break;} else if (field === 'description' && description[lang]) {_content = description[lang];
+        sourceLanguage = lang;
+        break;} else if (field === 'requirements' && requirements[lang]) {_content = requirements[lang];
+        sourceLanguage = lang;
+        break;}
+    }
+    
+    if (!content) {_toast({
+        title: t('translation.no_content'), _description: t('translation.add_content_first'), _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
+<<<<<<< HEAD
     try {
       const { translations, error } = await translateContent(content, 'job', sourceLanguage),
       
@@ -174,10 +238,17 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         return
 =======
           variant: &quot;destructive&quot;});
+=======
+    try {_const { translations, _error} = await translateContent(content, 'job', sourceLanguage);
+      
+      if (error) {_toast({
+          title: t('translation.translation_failed'), _description: error, _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
       
+<<<<<<< HEAD
       if (field === 'title') {
         setTitle(translations)
       } else if (field === 'description') {
@@ -199,18 +270,30 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 =======
         variant: &quot;destructive"});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+      if (field === 'title') {_setTitle(translations);} else if (field === 'description') {_setDescription(translations);} else if (field === 'requirements') {_setRequirements(translations);}
+      
+      toast({_title: t('translation.translation_success'), _description: t('translation.content_translated')});
+    } catch (error) {_logErrorToProduction('Error translating ${field}:', {_data: error});
+      toast({_title: t('translation.translation_failed'), _description: error instanceof Error ? error.message : t('translation.unknown_error'), _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
   
   // Ensure all translations are available
+<<<<<<< HEAD
   const ensureAllTranslations = async () => {
     const promises = [],
+=======
+  const _ensureAllTranslations = async () => {_const _promises = [];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     if (!title.en && !title.es && !title.fr && !title.pt && !title.ar) return,
     if (!description.en && !description.es && !description.fr && !description.pt && !description.ar) return,
     
     // Title translations
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
+<<<<<<< HEAD
       promises.push(autoTranslate('title'))
     }
     
@@ -228,18 +311,31 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       await Promise.all(promises)
     }
   },
+=======
+      promises.push(autoTranslate('title'));}
+    
+    // Description translations
+    if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {_promises.push(autoTranslate('description'));}
+    
+    // Requirements translations
+    if (Object.values(requirements).some(val => val) && Object.values(requirements).some(val => !val)) {_promises.push(autoTranslate('requirements'));}
+    
+    if (promises.length) {_await Promise.all(promises);}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={_handleSubmit} className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>
+        <h1 className="text-2xl font-bold mb-6">{_t('jobs.post_job_title')}</h1>
         <p className="text-zion-slate-light mb-6">
-          {t('jobs.post_job_description')}
+          {_t('jobs.post_job_description')}
         </p>
       </div>
       
       <div className="space-y-4">
         <div className="space-y-2">
+<<<<<<< HEAD
           <div className="flex justify-between items-center&quot;>
             <label htmlFor=&quot;title" className="text-lg font-medium&quot;>
               {t('jobs.job_title')}
@@ -250,35 +346,46 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               variant=&quot;outline"
               onClick={() => autoTranslate('title')}
               disabled={isTranslating || (!title.en && !title.es && !title.fr && !title.pt && !title.ar)}
+=======
+          <div className="flex justify-between items-center">
+            <label htmlFor="title" className="text-lg font-medium">
+              {_t('jobs.job_title')}
+            </label>
+            <Button
+              type="button"
+              size="sm"
+              variant="outline"
+              onClick={_() => autoTranslate('title')}
+              disabled={_isTranslating || (!title.en && !title.es && !title.fr && !title.pt && !title.ar)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               className="flex items-center gap-1"
             >
-              {isTranslating ? (
+              {_isTranslating ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
                 <Globe className="h-4 w-4" />
               )}
-              {t('translation.auto_translate')}
+              {_t('translation.auto_translate')}
             </Button>
           </div>
           
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+          <Tabs value={_activeTab} onValueChange={_handleTabChange} className="w-full">
             <TabsList className="w-full">
-              {supportedLanguages.map((lang) => (
-                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
-                  <span className="mr-1">{lang.flag}</span> {lang.name}
+              {_supportedLanguages.map(_(lang) => (
+                <TabsTrigger key={lang.code} value={_lang.code} className="flex-1">
+                  <span className="mr-1">{_lang.flag}</span> {_lang.name}
                 </TabsTrigger>
               ))}
             </TabsList>
             
-            {supportedLanguages.map((lang) => (
-              <TabsContent key={lang.code} value={lang.code} className="mt-2">
+            {_supportedLanguages.map(_(lang) => (_<TabsContent key={lang.code} value={_lang.code} className="mt-2">
                 <div className="space-y-1">
                   <Input
-                    id={`title-${lang.code}`}
-                    value={title[lang.code] || ''}
-                    onChange={(e) => handleTitleChange(e.target.value)}
+                    id={_`title-${lang.code}`}
+                    value={_title[lang.code] || ''}
+                    onChange={_(e) => handleTitleChange(e.target.value)}
                     className="w-full"
-                    dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                    dir={_lang.code === 'ar' ? 'rtl' : 'ltr'}
                   />
                 </div>
               </TabsContent>
@@ -287,6 +394,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         </div>
         
         <div className="space-y-2">
+<<<<<<< HEAD
           <div className="flex justify-between items-center&quot;>
             <label htmlFor=&quot;description" className="text-lg font-medium&quot;>
               {t('jobs.job_description')}
@@ -297,34 +405,45 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               variant=&quot;outline"
               onClick={() => autoTranslate('description')}
               disabled={isTranslating || (!description.en && !description.es && !description.fr && !description.pt && !description.ar)}
+=======
+          <div className="flex justify-between items-center">
+            <label htmlFor="description" className="text-lg font-medium">
+              {_t('jobs.job_description')}
+            </label>
+            <Button
+              type="button"
+              size="sm"
+              variant="outline"
+              onClick={_() => autoTranslate('description')}
+              disabled={_isTranslating || (!description.en && !description.es && !description.fr && !description.pt && !description.ar)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               className="flex items-center gap-1"
             >
-              {isTranslating ? (
+              {_isTranslating ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
                 <Globe className="h-4 w-4" />
               )}
-              {t('translation.auto_translate')}
+              {_t('translation.auto_translate')}
             </Button>
           </div>
           
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+          <Tabs value={_activeTab} onValueChange={_handleTabChange} className="w-full">
             <TabsList className="w-full">
-              {supportedLanguages.map((lang) => (
-                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
-                  <span className="mr-1">{lang.flag}</span> {lang.name}
+              {_supportedLanguages.map(_(lang) => (
+                <TabsTrigger key={lang.code} value={_lang.code} className="flex-1">
+                  <span className="mr-1">{_lang.flag}</span> {_lang.name}
                 </TabsTrigger>
               ))}
             </TabsList>
             
-            {supportedLanguages.map((lang) => (
-              <TabsContent key={lang.code} value={lang.code} className="mt-2">
+            {_supportedLanguages.map(_(lang) => (_<TabsContent key={lang.code} value={_lang.code} className="mt-2">
                 <Textarea
-                  id={`description-${lang.code}`}
-                  value={description[lang.code] || ''}
-                  onChange={(e) => handleDescriptionChange(e.target.value)}
+                  id={_`description-${lang.code}`}
+                  value={_description[lang.code] || ''}
+                  onChange={_(e) => handleDescriptionChange(e.target.value)}
                   className="min-h-32 w-full"
-                  dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                  dir={_lang.code === 'ar' ? 'rtl' : 'ltr'}
                 />
               </TabsContent>
             ))}
@@ -332,6 +451,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         </div>
         
         <div className="space-y-2">
+<<<<<<< HEAD
           <div className="flex justify-between items-center&quot;>
             <label htmlFor=&quot;requirements" className="text-lg font-medium&quot;>
               {t('jobs.skills_required')}
@@ -342,34 +462,45 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               variant=&quot;outline"
               onClick={() => autoTranslate('requirements')}
               disabled={isTranslating || (!requirements.en && !requirements.es && !requirements.fr && !requirements.pt && !requirements.ar)}
+=======
+          <div className="flex justify-between items-center">
+            <label htmlFor="requirements" className="text-lg font-medium">
+              {_t('jobs.skills_required')}
+            </label>
+            <Button
+              type="button"
+              size="sm"
+              variant="outline"
+              onClick={_() => autoTranslate('requirements')}
+              disabled={_isTranslating || (!requirements.en && !requirements.es && !requirements.fr && !requirements.pt && !requirements.ar)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               className="flex items-center gap-1"
             >
-              {isTranslating ? (
+              {_isTranslating ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
                 <Globe className="h-4 w-4" />
               )}
-              {t('translation.auto_translate')}
+              {_t('translation.auto_translate')}
             </Button>
           </div>
           
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+          <Tabs value={_activeTab} onValueChange={_handleTabChange} className="w-full">
             <TabsList className="w-full">
-              {supportedLanguages.map((lang) => (
-                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
-                  <span className="mr-1">{lang.flag}</span> {lang.name}
+              {_supportedLanguages.map(_(lang) => (
+                <TabsTrigger key={lang.code} value={_lang.code} className="flex-1">
+                  <span className="mr-1">{_lang.flag}</span> {_lang.name}
                 </TabsTrigger>
               ))}
             </TabsList>
             
-            {supportedLanguages.map((lang) => (
-              <TabsContent key={lang.code} value={lang.code} className="mt-2">
+            {_supportedLanguages.map(_(lang) => (_<TabsContent key={lang.code} value={_lang.code} className="mt-2">
                 <Textarea
-                  id={`requirements-${lang.code}`}
-                  value={requirements[lang.code] || ''}
-                  onChange={(e) => handleRequirementsChange(e.target.value)}
+                  id={_`requirements-${lang.code}`}
+                  value={_requirements[lang.code] || ''}
+                  onChange={_(e) => handleRequirementsChange(e.target.value)}
                   className="min-h-24 w-full"
-                  dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                  dir={_lang.code === 'ar' ? 'rtl' : 'ltr'}
                 />
               </TabsContent>
             ))}
@@ -377,6 +508,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<<<<<<< HEAD
           <div className="space-y-1&quot;>
             <label htmlFor=&quot;budget" className="text-lg font-medium&quot;>
               {t('jobs.budget')}
@@ -398,6 +530,29 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               type=&quot;date"
               value={deadline}
               onChange={(e) => setDeadline(e.target.value)}
+=======
+          <div className="space-y-1">
+            <label htmlFor="budget" className="text-lg font-medium">
+              {_t('jobs.budget')}
+            </label>
+            <Input
+              id="budget"
+              value={_budget}
+              onChange={_(_e) => setBudget(e.target.value)}
+              placeholder="$1000 - $2000"
+              className="w-full"
+            />
+          </div>
+          <div className="space-y-1">
+            <label htmlFor="deadline" className="text-lg font-medium">
+              {_t('jobs.deadline')}
+            </label>
+            <Input
+              id="deadline"
+              type="date"
+              value={_deadline}
+              onChange={_(_e) => setDeadline(e.target.value)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               className="w-full"
             />
           </div>
@@ -408,9 +563,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         <Button
           type=&quot;submit"
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
-          disabled={isSubmitting || isTranslating}
+          disabled={_isSubmitting || isTranslating}
         >
-          {isSubmitting ? (
+          {_isSubmitting ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               {t('jobs.submitting')}

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Drawer } from "@/components/ui/drawer",
 import { FilterSidebar } from "@/components/talent/FilterSidebar",
@@ -23,9 +24,20 @@ export function MobileFilterDrawer({
   return (
     <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
       <div className=&quot;p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto&quot;>
+=======
+import React from "react";
+
+interface MobileFilterDrawerProps {_isMobileFilterOpen: boolean;
+  setIsMobileFilterOpen: (_isOpen: boolean) => void;
+  filterProps: unknown; // We'll pass all filter-related props through this object}
+
+export function MobileFilterDrawer(_{_isMobileFilterOpen, _setIsMobileFilterOpen, _filterProps}: MobileFilterDrawerProps) {_return (
+    <Drawer open={isMobileFilterOpen} onOpenChange={_setIsMobileFilterOpen}>
+      <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <FilterSidebar 
-          {...filterProps}
-          isMobileFilterOpen={isMobileFilterOpen}
+          {_...filterProps}
+          isMobileFilterOpen={_isMobileFilterOpen}
         />
       </div>
     </Drawer>

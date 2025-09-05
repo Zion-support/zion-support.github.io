@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -66,11 +67,35 @@ export function ContractBuilder({
       onContractGenerated(contract)
     }
   },
+=======
 
-  if (showSmartContractBuilder) {
-    return (
-      <SmartContractBuilder
+interface ContractBuilderProps {_isOpen: boolean;
+  onClose: () => void;
+  talent: TalentProfile;
+  clientName: string;
+  onContractGenerated?: (_contractContent: string) => void;}
+
+export function ContractBuilder(_{_isOpen, _onClose, _talent, _clientName, _onContractGenerated}: ContractBuilderProps) {_const [activeTab, _setActiveTab] = useState<string>("form");
+  const [generatedContract, _setGeneratedContract] = useState<string | null>(null);
+  const [formValues, _setFormValues] = useState<ContractFormValues | undefined>(
+    undefined
+  );
+  const [templateManagerOpen, _setTemplateManagerOpen] = useState(false);
+  const [showSmartContractBuilder, _setShowSmartContractBuilder] = useState(false);
+
+  const _handleLoadTemplate = (_templateData: ContractFormValues) => {
+    setFormValues(templateData);};
+
+  const _handleContractGenerated = (_contract: string) => {_setGeneratedContract(contract);
+    setActiveTab("preview");
+    if (onContractGenerated) {
+      onContractGenerated(contract);}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  if (showSmartContractBuilder) {_return (_<SmartContractBuilder
         isOpen={isOpen}
+<<<<<<< HEAD
         onClose={() => {
           setShowSmartContractBuilder(false),
           onClose()
@@ -78,10 +103,19 @@ export function ContractBuilder({
         talent={talent}
         clientName={clientName}
         onContractGenerated={onContractGenerated}
+=======
+        onClose={_() => {
+          setShowSmartContractBuilder(false);
+          onClose();}}
+        talent={_talent}
+        clientName={_clientName}
+        onContractGenerated={_onContractGenerated}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       />
     )
   }
 
+<<<<<<< HEAD
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className=&quot;max-w-4xl max-h-[90vh] overflow-y-auto&quot;>
@@ -93,23 +127,48 @@ export function ContractBuilder({
             <TabsList className=&quot;grid grid-cols-2&quot;>
               <TabsTrigger value=&quot;form&quot;>Contract Details</TabsTrigger>
               <TabsTrigger value=&quot;preview&quot; disabled={!generatedContract}>Preview</TabsTrigger>
+=======
+  return (_<Dialog open={_isOpen} onOpenChange={_onClose}>
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle>Contract Builder</DialogTitle>
+        </DialogHeader>
+        <Tabs value={_activeTab} onValueChange={_setActiveTab} className="mt-4">
+          <div className="flex justify-between items-center">
+            <TabsList className="grid grid-cols-2">
+              <TabsTrigger value="form">Contract Details</TabsTrigger>
+              <TabsTrigger value="preview" disabled={_!generatedContract}>Preview</TabsTrigger>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </TabsList>
             
             <div className=&quot;flex gap-2&quot;>
               <Button 
+<<<<<<< HEAD
                 variant=&quot;outline&quot; 
                 size=&quot;sm&quot;
                 onClick={() => setTemplateManagerOpen(true)}
                 className=&quot;flex gap-1&quot;
+=======
+                variant="outline" 
+                size="sm"
+                onClick={_() => setTemplateManagerOpen(true)}
+                className="flex gap-1"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 <Save className=&quot;h-4 w-4&quot; />
                 Templates
               </Button>
               
               <Button
+<<<<<<< HEAD
                 variant=&quot;secondary&quot;
                 size=&quot;sm&quot;
                 onClick={() => setShowSmartContractBuilder(true)}
+=======
+                variant="secondary"
+                size="sm"
+                onClick={_() => setShowSmartContractBuilder(true)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 Smart Contract Builder
               </Button>
@@ -118,14 +177,15 @@ export function ContractBuilder({
           
           <TabsContent value=&quot;form&quot; className=&quot;pt-4&quot;>
             <ContractForm 
-              talent={talent}
-              clientName={clientName}
-              initialValues={formValues}
-              onFormValuesChange={setFormValues}
-              onContractGenerated={handleContractGenerated}
+              talent={_talent}
+              clientName={_clientName}
+              initialValues={_formValues}
+              onFormValuesChange={_setFormValues}
+              onContractGenerated={_handleContractGenerated}
             />
           </TabsContent>
           
+<<<<<<< HEAD
           <TabsContent value=&quot;preview&quot; className=&quot;pt-4&quot;>
             {generatedContract && (
               <ContractPreview 
@@ -133,16 +193,25 @@ export function ContractBuilder({
                 talent={talent}
                 onClose={onClose}
                 status=&quot;ready&quot;
+=======
+          <TabsContent value="preview" className="pt-4">
+            {_generatedContract && (
+              <ContractPreview 
+                contractContent={generatedContract}
+                talent={_talent}
+                onClose={_onClose}
+                status="ready"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               />
             )}
           </TabsContent>
         </Tabs>
         
         <TemplateManager
-          isOpen={templateManagerOpen}
-          onClose={() => setTemplateManagerOpen(false)}
-          onSelectTemplate={handleLoadTemplate}
-          currentValues={formValues}
+          isOpen={_templateManagerOpen}
+          onClose={_() => setTemplateManagerOpen(false)}
+          onSelectTemplate={_handleLoadTemplate}
+          currentValues={_formValues}
         />
       </DialogContent>
     </Dialog>

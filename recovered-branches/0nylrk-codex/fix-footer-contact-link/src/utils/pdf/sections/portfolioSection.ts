@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { jsPDF } from 'jspdf',
 import { PortfolioProject } from '@/types/resume',
 import { PdfThemeColors } from '../themeConfig',
@@ -18,6 +19,17 @@ export function addPortfolioSection(
     doc.addPage(),
     yPos = 20
   }
+=======
+
+export function addPortfolioSection(_doc: jsPDF, _projects: PortfolioProject[], _colors: PdfThemeColors, _startY: number, _maxProjects: number = 2): number {_if (projects.length === 0) return startY;
+  
+  let _yPos = startY;
+  
+  // Check if we need to add a new page
+  if (yPos > 250) {
+    doc.addPage();
+    yPos = 20;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   doc.setFontSize(16),
   doc.setTextColor(colors.heading),
@@ -29,20 +41,29 @@ export function addPortfolioSection(
   yPos += 8,
   
   // Limit the number of projects shown based on maxProjects parameter
+<<<<<<< HEAD
   const displayProjects = projects.slice(0, maxProjects),
+=======
+  const _displayProjects = projects.slice(0, maxProjects);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  for (const project of displayProjects) {
-    // Check if we need to add a new page
+  for (const project of displayProjects) {_// Check if we need to add a new page
     if (yPos > 260) {
+<<<<<<< HEAD
       doc.addPage(),
       yPos = 20
     }
+=======
+      doc.addPage();
+      yPos = 20;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     doc.setFontSize(14),
     doc.setTextColor(colors.subheading),
     doc.text(project.title, 20, yPos),
     yPos += 6,
     
+<<<<<<< HEAD
     if (project.technologies && project.technologies.length > 0) {
       doc.setFontSize(10),
       doc.setTextColor(colors.text),
@@ -62,15 +83,37 @@ export function addPortfolioSection(
       yPos += 5,
       doc.setFontSize(9),
       doc.setTextColor(colors.accent),
+=======
+    if (project.technologies && project.technologies.length > 0) {_doc.setFontSize(10);
+      doc.setTextColor(colors.text);
+      doc.text(`Technologies: ${project.technologies.join(', _')}`, 20, yPos);
+      yPos += 5;
+    }
+    
+    if (project.description) {_doc.setFontSize(10);
+      const _descriptionLines = doc.splitTextToSize(project.description, _170);
+      doc.text(descriptionLines, _20, _yPos);
+      yPos += (descriptionLines.length * 5);}
+    
+    // Add links if available
+    if (project.github_url || project.demo_url) {_yPos += 5;
+      doc.setFontSize(9);
+      doc.setTextColor(colors.accent);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (project.github_url) {
         doc.text(`GitHub: ${project.github_url}`, 20, yPos),
         yPos += 4
       }
       
+<<<<<<< HEAD
       if (project.demo_url) {
         doc.text(`Demo: ${project.demo_url}`, 20, yPos),
         yPos += 4
+=======
+      if (project.demo_url) {_doc.text(`Demo: ${project.demo_url}`, 20, yPos);
+        yPos += 4;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
     }
     
@@ -78,11 +121,18 @@ export function addPortfolioSection(
   }
   
   // If there are more projects than we're displaying
+<<<<<<< HEAD
   if (projects.length > maxProjects) {
     doc.setFontSize(10),
     doc.setTextColor(colors.text),
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos),
     yPos += 6
+=======
+  if (projects.length > maxProjects) {_doc.setFontSize(10);
+    doc.setTextColor(colors.text);
+    doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
+    yPos += 6;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
   
   return yPos + 5

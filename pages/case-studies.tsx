@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
@@ -8,6 +9,18 @@ export default function CaseStudiesPage() {
 				<title>Case Studies | Zion Tech Group</title>
 				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/case-studies&quot; />
 				<meta name=&quot;description&quot; content=&quot;Proven outcomes across AI, IT, and micro SaaS deployments.&quot; />
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function CaseStudiesPage() {_return (
+		<Layout>
+			<Head>
+				<title>Case Studies | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/case-studies" />
+				<meta name="description" content="Proven outcomes across AI, _IT, _and micro SaaS deployments." />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 			</Head>
 <<<<<<< HEAD
 			<section className="container mx-auto px-4 py-24">
@@ -20,5 +33,9 @@ export default function CaseStudiesPage() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 			</section>
 		</Layout>
+<<<<<<< HEAD
 	)
 }
+=======
+	);}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

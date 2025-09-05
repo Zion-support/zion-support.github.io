@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 =======
@@ -18,6 +19,16 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
     <Card className=&quot;p-6 text-center border-dashed border-2 bg-muted/30&quot;>
       <div className=&quot;mb-4 flex justify-center&quot;>
         <Sparkles className=&quot;h-12 w-12 text-muted-foreground&quot; />
+=======
+
+export interface EmptyMatchesCardProps {_onRefresh: () => void;
+  isProcessing: boolean;}
+
+export function EmptyMatchesCard(_{_onRefresh, _isProcessing}: EmptyMatchesCardProps) {_return (
+    <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
+      <div className="mb-4 flex justify-center">
+        <Sparkles className="h-12 w-12 text-muted-foreground" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </div>
 <<<<<<< HEAD
       <h3 className="text-lg font-medium mb-2">No talent matches yet</h3>
@@ -30,10 +41,15 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
       </p>
       <Button 
         onClick={onRefresh} 
+<<<<<<< HEAD
         disabled={isProcessing}
         className=&quot;mx-auto&quot;
+=======
+        disabled={_isProcessing}
+        className="mx-auto"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       >
-        {isProcessing ? (
+        {_isProcessing ? (
           <>
             <RefreshCcw className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
             Processing...

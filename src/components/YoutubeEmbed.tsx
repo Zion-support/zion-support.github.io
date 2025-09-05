@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Image from 'next/image',
 import { Loader2 } from 'lucide-react'
 import { useState } from 'react',
@@ -18,10 +19,29 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
           <Image src={poster} alt={`${title} poster`} fill className=&quot;object-cover rounded&quot; />
           <div className=&quot;absolute inset-0 flex items-center justify-center bg-black/30&quot;>
             <Loader2 className=&quot;h-8 w-8 animate-spin text-white&quot; />
+=======
+import Image from 'next/image';
+
+interface YoutubeEmbedProps {_videoId: string;
+  title: string;
+  poster: string;}
+
+export default function YoutubeEmbed(_{_videoId, _title, _poster}: YoutubeEmbedProps) {_const [loaded, _setLoaded] = useState(false);
+  const _src = `https://www.youtube.com/embed/${videoId}?mute=1&controls=1`;
+
+  return (
+    <div className="relative aspect-video max-w-3xl mx-auto">
+      {_!loaded && (
+        <>
+          <Image src={poster} alt={_`${title} poster`} fill className="object-cover rounded" />
+          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+            <Loader2 className="h-8 w-8 animate-spin text-white" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </div>
         </>
       )}
       <iframe
+<<<<<<< HEAD
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
         src={src}
         title={title}
@@ -32,6 +52,14 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
 =======
         allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+        className={_`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
+        src={_src}
+        title={_title}
+        loading="lazy"
+        onLoad={_() => setLoaded(true)}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         allowFullScreen
       />
     </div>

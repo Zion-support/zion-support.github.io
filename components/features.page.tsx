@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import EnhancedLayout from '../components/layout/EnhancedLayout',
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react',
+=======
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-export default function FeaturesPage() {
-  return (
+export default function FeaturesPage() {_return (
     <EnhancedLayout>
 <<<<<<< HEAD
       <h1 className="text-2xl font-semibold">Features</h1>
@@ -32,5 +35,9 @@ export default function FeaturesPage() {
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

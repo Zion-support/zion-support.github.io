@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import Link from 'next/link',
@@ -21,6 +22,19 @@ export function ProjectActions({
 }: ProjectActionsProps) {
   return (
     <div className=&quot;flex gap-2&quot;>
+=======
+import React from 'react';
+import Link from 'next/link';
+
+interface ProjectActionsProps {_projectId: string;
+  isUnderDispute: boolean;
+  disputeId?: string;
+  isTalent: boolean;
+  onAddMilestone: () => void;}
+
+export function ProjectActions(_{_projectId, _isUnderDispute, _disputeId, _isTalent, _onAddMilestone}: ProjectActionsProps) {_return (
+    <div className="flex gap-2">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       {isUnderDispute && disputeId ? (
         <Button variant=&quot;outline&quot; asChild>
           <Link href={`/dashboard/disputes/${disputeId}`}>
@@ -30,11 +44,16 @@ export function ProjectActions({
         </Button>
       ) : (
         <RaiseDisputeButton 
+<<<<<<< HEAD
           projectId={projectId}
           variant=&quot;outline&quot;
+=======
+          projectId={_projectId}
+          variant="outline"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         />
       )}
-      {isTalent && !isUnderDispute && (
+      {_isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>
           Add Milestone
         </Button>

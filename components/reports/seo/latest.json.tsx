@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 export default function Placeholder() {
   return (
     <main className=&quot;min-h-screen p-8&quot;>
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+
+export default function Placeholder() {_return (
+    <main className="min-h-screen p-8">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <Head>
         <title>Reports • Seo • Latest.json - Placeholder</title>
         <meta name=&quot;robots&quot; content=&quot;noindex&quot; />
@@ -13,5 +21,9 @@ export default function Placeholder() {
         <Link href=&quot;/&quot;><a className=&quot;text-blue-600 hover:underline&quot;>Back to Home</a></a>
       </div>
     </main>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

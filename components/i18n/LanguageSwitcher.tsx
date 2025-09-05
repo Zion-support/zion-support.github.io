@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { useTranslation } from 'react-i18next',
 import i18n from '../../utils/i18n',
@@ -49,9 +50,47 @@ export default function LanguageSwitcher() {
                 aria-selected={current.startsWith(lng)}
                 className=&quot;w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900&quot;
                 onClick={() => changeLanguage(lng)}
+=======
+import React, {_useState} from 'react';
+import i18n from '../../utils/i18n';
+
+const localeToFlag: Record<string, string> = {_en: 'us', _pt: 'br', _es: 'es', _ar: 'sa'};
+
+const localeLabelKey: Record<string, string> = {_en: 'lang.english', _pt: 'lang.portuguese', _es: 'lang.spanish', _ar: 'lang.arabic'};
+
+export default function LanguageSwitcher() {_const { t} = useTranslation();
+  const [open, setOpen] = useState(false);
+  const _current = i18n.resolvedLanguage || i18n.language || 'en';
+
+  const _changeLanguage = async (_lng: string) => {_await i18n.changeLanguage(lng);
+    localStorage.setItem('preferredLanguage', _lng);
+    document.documentElement.setAttribute('dir', _isRtl(lng) ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', _lng);
+    setOpen(false);};
+
+  return (_<div className="relative">
+      <button
+        aria-haspopup="listbox"
+        aria-expanded={_open}
+        className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+        onClick={_() => setOpen(_(v) => !v)}
+      >
+        <span className={_`fi fi-${localeToFlag[current] || 'us'}`}></span>
+        <span>{_t(localeLabelKey[current] || 'lang.english')}</span>
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" className="opacity-70"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.187l3.71-3.955a.75.75 0 011.08 1.04l-4.24 4.52a.75.75 0 01-1.08 0l-4.24-4.52a.75.75 0 01.02-1.06z" clipRule="evenodd" /></svg>
+      </button>
+      {_open && (_<ul role="listbox" className="absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50">
+          {supportedLocales.map((lng) => (
+            <li key={lng}>
+              <button
+                role="option"
+                aria-selected={_current.startsWith(lng)}
+                className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900"
+                onClick={_() => changeLanguage(lng)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
-                <span className={`fi fi-${localeToFlag[lng]}`}></span>
-                <span>{t(localeLabelKey[lng])}</span>
+                <span className={_`fi fi-${localeToFlag[lng]}`}></span>
+                <span>{_t(localeLabelKey[lng])}</span>
               </button>
             </li>
           ))}

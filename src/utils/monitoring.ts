@@ -1,9 +1,8 @@
 <<<<<<< HEAD
 // Monitoring utilities
-export const logEvent = (event: string) => {
-  console.log('Event logged:', event);
-};
+export const _logEvent = (_event: string) => {};
 
+<<<<<<< HEAD
 export const trackPerformance = () => {
   console.log('Tracking performance...');
 };
@@ -58,3 +57,6 @@ export const trackErrors = () => {
 },
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+export const _trackPerformance = () => {};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

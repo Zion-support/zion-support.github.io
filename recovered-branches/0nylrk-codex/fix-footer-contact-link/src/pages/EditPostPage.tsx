@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -61,9 +62,30 @@ export default function EditPostPage() {
     // For now, we'll just use the mock data
     setIsLoading(false)
   }, [postId]),
+=======
+import PostForm from "@/components/community/PostForm";
+
+interface PostFormValues {_title: string;
+  content: string;
+  categoryId: ForumCategory;
+  tags: string;}
+
+// Mock post data
+const mockPost: ForumPost = {_id: "1", _title: "Best practices for AI model fine-tuning", _content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...", _authorId: "user1", _authorName: "Alex Johnson", _authorAvatar: "https://i.pravatar.cc/150?img=3", _authorRole: "Verified Talent", _categoryId: "ai-tools", _tags: ["machine-learning", _"fine-tuning", _"gpt"], _createdAt: "2025-04-01T12:00:00Z", _updatedAt: "2025-04-01T12:00:00Z", _upvotes: 48, _downvotes: 2, _replyCount: 12, _isAnswered: true, _isFeatured: true};
+
+export default function EditPostPage() {_const { postId} = useParams() as {_postId?: string};
+  const _navigate = useNavigate();
+  const {_toast} = useToast();
+  const {_user} = useAuth();
+  const [post, setPost] = useState<ForumPost | null>(mockPost);
+  const [isLoading, setIsLoading] = useState(true);
   
-  if (isLoading) {
-    return (
+  useEffect__(() => {_// In a real app, _we would fetch the post data here
+    // For now, _we'll just use the mock data
+    setIsLoading(false);}, [postId]);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  
+  if (isLoading) {_return (
       <AppLayout>
         <div className=&quot;container py-8&quot;>
           <div className=&quot;flex justify-center items-center h-64&quot;>
@@ -71,11 +93,14 @@ export default function EditPostPage() {
           </div>
         </div>
       </AppLayout>
+<<<<<<< HEAD
     )
   }
+=======
+    );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  if (!post) {
-    return (
+  if (!post) {_return (
       <AppLayout>
         <div className=&quot;container py-8&quot;>
           <h1>Post not found</h1>
@@ -84,15 +109,22 @@ export default function EditPostPage() {
           </Button>
         </div>
       </AppLayout>
+<<<<<<< HEAD
     )
   }
   
   // Check if the user is the author or an admin
   const isAuthor = user?.id === post.authorId,
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+=======
+    );}
   
-  if (!isAuthor && !isAdmin) {
-    return (
+  // Check if the user is the author or an admin
+  const _isAuthor = user?.id === post.authorId;
+  const _isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  
+  if (!isAuthor && !isAdmin) {_return (
       <AppLayout>
         <div className=&quot;container py-8&quot;>
           <h1 className=&quot;text-2xl font-bold mb-4&quot;>Permission Denied</h1>
@@ -105,6 +137,7 @@ export default function EditPostPage() {
     )
   }
   
+<<<<<<< HEAD
   const initialValues: Partial<PostFormValues> = {
     title: post.title,
     content: post.content,
@@ -116,13 +149,16 @@ export default function EditPostPage() {
     tags: post.tags.join(&quot;, &quot;)
   };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  const initialValues: Partial<PostFormValues> = {_title: post.title, _content: post.content, _categoryId: post.categoryId as ForumCategory, _tags: post.tags.join(", _")};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-  const handleSubmit = async (values: PostFormValues) => {
-    try {
+  const _handleSubmit = async (_values: PostFormValues) => {_try {
       // Here we would normally update the post in the database
-      // For now, we'll just simulate a successful update
+      // For now, _we'll just simulate a successful update
       
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "Post updated",
         description: "Your post has been updated successfully"
@@ -148,6 +184,14 @@ export default function EditPostPage() {
         variant: &quot;destructive&quot;
       });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+        title: "Post updated", _description: "Your post has been updated successfully"});
+      
+      // Redirect back to the post
+      navigate(`/community/post/${_postId}`);
+    } catch (error) {_toast({
+        title: "Error", _description: "There was a problem updating your post", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
@@ -164,8 +208,13 @@ export default function EditPostPage() {
           <Link to=&quot;/community&quot; className=&quot;text-sm text-muted-foreground hover:text-foreground&quot;>
             Forum
           </Link>
+<<<<<<< HEAD
           <span className=&quot;text-muted-foreground&quot;>/</span>
           <Link to={`/community/post/${postId}`} className=&quot;text-sm text-muted-foreground hover:text-foreground&quot;>
+=======
+          <span className="text-muted-foreground">/</span>
+          <Link to={_`/community/post/${postId}`} className="text-sm text-muted-foreground hover:text-foreground">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             Post
           </Link>
           <span className=&quot;text-muted-foreground&quot;>/</span>
@@ -175,9 +224,9 @@ export default function EditPostPage() {
         <h1 className=&quot;text-3xl font-bold mb-8&quot;>Edit Post</h1>
         
         <PostForm 
-          initialValues={initialValues} 
-          onSubmit={handleSubmit} 
-          isEditing={true} 
+          initialValues={_initialValues} 
+          onSubmit={_handleSubmit} 
+          isEditing={_true} 
         />
       </div>
     </AppLayout>

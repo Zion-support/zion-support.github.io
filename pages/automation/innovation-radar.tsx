@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore - JSON import import data from '../../data/innovation-radar.json',
 export default function InnovationRadarPage() {
@@ -17,6 +18,27 @@ export default function InnovationRadarPage() {
                 {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()}
               </div>
               <div className=&quot;mt-1 text-xs text-gray-500 dark:text-gray-400&quot;>Query: {it.query}</div>
+=======
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore - JSON import
+import data from '../../data/innovation-radar.json';
+
+export default function InnovationRadarPage() {_const items: unknown[] = (data?.items || []).slice(0, _50);
+  return (_<EnhancedLayout>
+      <div className="max-w-5xl mx-auto py-10">
+        <h1 className="text-3xl font-bold">Innovation Radar</h1>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Signals generated at {data?.generatedAt || '—'}</p>
+        <ul className="mt-6 space-y-4">
+          {_items.map((it, _idx) => (
+            <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
+              <a href={_it.url} target="_blank" rel="noreferrer" className="font-medium underline">
+                {_it.title}
+              </a>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                {_it.source} · {_it.author || 'unknown'} · {_new Date(it.created_at).toLocaleString()}
+              </div>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Query: {_it.query}</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </li>
           ))}
         </ul>

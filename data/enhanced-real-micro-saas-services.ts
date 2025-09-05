@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 export interface MicroSaasService {
 <<<<<<< HEAD
   id: string;
+=======
+export interface MicroSaasService {_id: string;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   name: string;
   tagline: string;
   price: string;
@@ -10,6 +14,7 @@ export interface MicroSaasService {
   popular: boolean;
   icon: string;
   category: string;
+<<<<<<< HEAD
   color: string;
 =======
   id: string,
@@ -2038,6 +2043,15 @@ export const microSaasServices: MicroSaasService[] = [
 
 <<<<<<< HEAD
 export const serviceCategories = [
+=======
+  color: string;}
+
+export const microSaasServices: MicroSaasService[] = [
+  {_id: 'ai-content-generator', _name: 'AI Content Generator', _tagline: 'Generate high-quality content with AI', _price: '$29', _period: '/month', _description: 'AI-powered content generation for blogs, _social media, _and marketing materials.', _features: ['AI writing assistant', _'Multiple content types', _'SEO optimization', _'Team collaboration'], _popular: true, _icon: '🤖', _category: 'AI & Machine Learning', _color: 'blue'}
+];
+
+export const _serviceCategories = [
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   'All',
   'AI & Machine Learning',
   'Cybersecurity',

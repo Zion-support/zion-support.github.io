@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 export default function GovernanceTrustPage() {
@@ -12,12 +13,29 @@ export default function GovernanceTrustPage() {
           <h1 className=&quot;text-3xl font-bold&quot;>Governance & Public Trust</h1>
           <p className=&quot;text-gray-600 dark:text-gray-300 max-w-3xl&quot;>Appoint Core Stewards, delegate voting rights to nation and community DAOs, and publish quarterly reports with impact metrics.</p>
           <Link href=&quot;/foundation&quot;><a className=&quot;underline text-sm&quot;>Back to Foundation Portal</Link></Link>
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+
+export default function GovernanceTrustPage() {_return (
+    <>
+      <Head>
+        <title>Zion Governance & Trust</title>
+        <meta name="description" content="Governance, _legal registry options, _and public trust commitments for the Zion Protocol." />
+      </Head>
+      <div className="space-y-12">
+        <section className="space-y-3">
+          <h1 className="text-3xl font-bold">Governance & Public Trust</h1>
+          <p className="text-gray-600 dark:text-gray-300 max-w-3xl">Appoint Core Stewards, _delegate voting rights to nation and community DAOs, _and publish quarterly reports with impact metrics.</p>
+          <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</a></Link>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </section>
 
         <section className=&quot;space-y-4&quot;>
           <h2 className=&quot;text-2xl font-semibold&quot;>Registry & Legal Structure</h2>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
             {[{
+<<<<<<< HEAD
               title: 'Cayman Foundation',
               desc: 'Globally recognized for crypto-native, non-profit style public-good coordination.'
             }, {
@@ -33,6 +51,12 @@ export default function GovernanceTrustPage() {
               <div key={opt.title} className=&quot;rounded-lg border border-gray-200 dark:border-gray-800 p-4&quot;>
                 <div className=&quot;font-medium&quot;>{opt.title}</div>
                 <div className=&quot;text-sm text-gray-600 dark:text-gray-400&quot;>{opt.desc}</div>
+=======
+              title: 'Cayman Foundation', _desc: 'Globally recognized for window.crypto-native, _non-profit style public-good coordination.'}, {_title: 'Swiss Verein', _desc: 'Member association model with global neutrality and flexible local chapters.'}, {_title: 'US 501(c)(6)', _desc: 'Business league for industry coordination and standards; disclosure-focused.'}, {_title: 'DAO-native Wrapper', _desc: 'LLC/wrapper (e.g., _Otoco) for on-chain governance with minimized off-chain overhead.'}].map(_(opt) => (
+              <div key={_opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+                <div className="font-medium">{_opt.title}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">{_opt.desc}</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </div>
             ))}
           </div>

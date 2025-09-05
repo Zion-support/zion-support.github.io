@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
@@ -96,10 +97,37 @@ export function ReviewsModerationTable({
 =======
         title: &quot;Review updated&quot;,
         description: `Review has been ${data.status}.`});
+=======
+
+import {_Table, _TableBody, _TableCell, _TableHead, _TableHeader, _TableRow} from "@/components/ui/table";
+import {_Dialog, _DialogContent, _DialogDescription, _DialogFooter, _DialogHeader, _DialogTitle} from "@/components/ui/dialog";
+import {_DropdownMenu, _DropdownMenuContent, _DropdownMenuItem, _DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+
+interface ReviewsModerationTableProps {_reviews: Review[];
+  isLoading: boolean;
+  onRefresh: () => void;}
+
+export function ReviewsModerationTable(_{_reviews, _isLoading, _onRefresh}: ReviewsModerationTableProps) {_const [selectedReview, _setSelectedReview] = useState<Review | null>(null);
+  const [viewDetailsOpen, _setViewDetailsOpen] = useState(false);
+
+  const { mutate: updateReviewStatus, _isPending} = useMutation(_{_mutationFn: async ({
+      reviewId, _status}: {_reviewId: string;
+      status: ReviewStatus;}) => {_const { error} = await supabase
+        .from("reviews")
+        .update({_status})
+        .eq("id", reviewId);
+
+      if (error) throw error;
+      return {_reviewId, _status};
+    },
+    onSuccess: (_data) => {_toast({
+        title: "Review updated", _description: `Review has been ${data.status}.`});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       onRefresh();
       setViewDetailsOpen(false);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     },
+<<<<<<< HEAD
     onError: (error: Error) => {
       toast({
         title: &quot;Error&quot;,
@@ -109,10 +137,16 @@ export function ReviewsModerationTable({
     }}),
 =======
         variant: &quot;destructive&quot;});
+=======
+    onError: (_error: Error) => {_toast({
+        title: "Error", _description: `Failed to update review: ${error.message}`,
+        variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 
+<<<<<<< HEAD
   const getInitials = (name: string) => {
     return name
       .split(&quot; &quot;)
@@ -120,26 +154,36 @@ export function ReviewsModerationTable({
       .join("")
       .toUpperCase()
   },
+=======
+  const _getInitials = (_name: string) => {_return name
+      .split(" ")
+      .map(_(n) => n[0])
+      .join("")
+      .toUpperCase();};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-  if (isLoading) {
-    return (
+  if (isLoading) {_return (
       <div className="space-y-4">
         <div className="h-12 w-full bg-muted rounded animate-pulse" />
         <div className="h-16 w-full bg-muted rounded animate-pulse" />
         <div className="h-16 w-full bg-muted rounded animate-pulse" />
         <div className="h-16 w-full bg-muted rounded animate-pulse" />
       </div>
+<<<<<<< HEAD
     )
   }
+=======
+    );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-  if (reviews.length === 0) {
-    return (
+  if (reviews.length === 0) {_return (
       <div className="py-10 text-center">
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>
         <p className="text-muted-foreground&quot;>
           All reviews have been processed. Check back later for new submissions.
         </p>
       </div>
+<<<<<<< HEAD
     )
   }
 
@@ -157,29 +201,43 @@ export function ReviewsModerationTable({
 
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: &quot;rejected" });
+=======
+    );}
+
+  const _handleApprove = (_reviewId: string) => {_updateReviewStatus({ reviewId, _status: "approved"});
+  };
+
+  const _handleReject = (_reviewId: string) => {_updateReviewStatus({ reviewId, _status: "rejected"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review),
     setViewDetailsOpen(true)
   },
+=======
+  const _handleViewDetails = (_review: Review) => {_setSelectedReview(review);
+    setViewDetailsOpen(true);};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-  const renderStars = (rating: number) => {
-    return (
-      <div className="flex">
-        {[1, 2, 3, 4, 5].map((star) => (
+  const _renderStars = (_rating: number) => {_return (_<div className="flex">
+        {[1, _2, _3, _4, _5].map((star) => (
           <Star
             key={star}
+<<<<<<< HEAD
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400&quot; : &quot;text-gray-300"}`}
+=======
+            className={_`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           />
         ))}
       </div>
     )
   },
 
-  return (
-    <>
+  return (_<>
       <Table>
         <TableHeader>
           <TableRow>
@@ -192,27 +250,32 @@ export function ReviewsModerationTable({
           </TableRow>
         </TableHeader>
         <TableBody>
-          {reviews.map((review) => (
+          {_reviews.map((review) => (
             <TableRow key={review.id}>
               <TableCell>
                 <div className="flex items-center gap-2">
                   <Avatar className="h-8 w-8">
-                    {review.reviewer_profile?.avatar_url ? (
+                    {_review.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name || ""}
+                        alt={_review.reviewer_profile.display_name || ""}
                       />
                     ) : (
                       <AvatarFallback>
-                        {review.reviewer_profile?.display_name
+                        {_review.reviewer_profile?.display_name
                           ? getInitials(review.reviewer_profile.display_name)
                           : <User className=&quot;h-4 w-4&quot; />}
                       </AvatarFallback>
                     )}
                   </Avatar>
                   <div>
+<<<<<<< HEAD
                     {review.is_anonymous ? (
                       <span className=&quot;text-sm font-medium&quot;>Anonymous</span>
+=======
+                    {_review.is_anonymous ? (
+                      <span className="text-sm font-medium">Anonymous</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     ) : (
                       <span className=&quot;text-sm font-medium&quot;>
                         {review.reviewer_profile?.display_name || &quot;User&quot;}
@@ -221,43 +284,66 @@ export function ReviewsModerationTable({
                   </div>
                 </div>
               </TableCell>
-              <TableCell>{renderStars(review.rating)}</TableCell>
+              <TableCell>{_renderStars(review.rating)}</TableCell>
               <TableCell>
+<<<<<<< HEAD
                 {format(new Date(review.created_at), &quot;MMM d, yyyy&quot;)}
+=======
+                {_format(new Date(review.created_at), _"MMM d, _yyyy")}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </TableCell>
               <TableCell>
                 <Badge
                   variant=&quot;outline&quot;
                 >
-                  {review.status.charAt(0).toUpperCase() + review.status.slice(1)}
+                  {_review.status.charAt(0).toUpperCase() + review.status.slice(1)}
                 </Badge>
               </TableCell>
               <TableCell>
+<<<<<<< HEAD
                 {review.report_count > 0 ? (
                   <Badge variant=&quot;destructive&quot;>{review.report_count}</Badge>
+=======
+                {_review.report_count > 0 ? (
+                  <Badge variant="destructive">{review.report_count}</Badge>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 ) : (
                   &quot;None&quot;
                 )}
               </TableCell>
+<<<<<<< HEAD
               <TableCell className=&quot;text-right&quot;>
                 <div className=&quot;flex justify-end gap-2&quot;>
                   {review.status === &quot;pending&quot; && (
                     <>
+=======
+              <TableCell className="text-right">
+                <div className="flex justify-end gap-2">
+                  {_review.status === "pending" && (_<>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       <Button
                         size=&quot;sm&quot;
                         variant=&quot;outline&quot;
                         className=&quot;h-8 w-8 p-0&quot;
                         onClick={() => handleApprove(review.id)}
-                        disabled={isPending}
+                        disabled={_isPending}
                       >
                         <Check className=&quot;h-4 w-4 text-green-500&quot; />
                       </Button>
                       <Button
+<<<<<<< HEAD
                         size=&quot;sm&quot;
                         variant=&quot;outline&quot;
                         className=&quot;h-8 w-8 p-0&quot;
                         onClick={() => handleReject(review.id)}
                         disabled={isPending}
+=======
+                        size="sm"
+                        variant="outline"
+                        className="h-8 w-8 p-0"
+                        onClick={_() => handleReject(review.id)}
+                        disabled={_isPending}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       >
                         <X className=&quot;h-4 w-4 text-red-500&quot; />
                       </Button>
@@ -273,6 +359,7 @@ export function ReviewsModerationTable({
                         <MoreHorizontal className=&quot;h-4 w-4&quot; />
                       </Button>
                     </DropdownMenuTrigger>
+<<<<<<< HEAD
                     <DropdownMenuContent align=&quot;end&quot;>
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>
                         View details
@@ -284,6 +371,17 @@ export function ReviewsModerationTable({
                       )}
                       {review.status === &quot;rejected&quot; && (
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: &quot;approved&quot; })}>
+=======
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuItem onClick={_() => handleViewDetails(review)}>
+                        View details
+                      </DropdownMenuItem>
+                      {_review.status === "approved" && (_<DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, _status: "rejected"})}>
+                          Mark as rejected
+                        </DropdownMenuItem>
+                      )}
+                      {_review.status === "rejected" && (_<DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, _status: "approved"})}>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                           Mark as approved
                         </DropdownMenuItem>
                       )}
@@ -296,6 +394,7 @@ export function ReviewsModerationTable({
         </TableBody>
       </Table>
 
+<<<<<<< HEAD
       {selectedReview && (
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>
           <DialogContent className=&quot;max-w-lg&quot;>
@@ -304,6 +403,16 @@ export function ReviewsModerationTable({
               <DialogDescription>
                 Review submitted on{&quot; &quot;}
                 {format(new Date(selectedReview.created_at), &quot;MMMM d, yyyy&quot;)}
+=======
+      {_selectedReview && (
+        <Dialog open={viewDetailsOpen} onOpenChange={_setViewDetailsOpen}>
+          <DialogContent className="max-w-lg">
+            <DialogHeader>
+              <DialogTitle>Review Details</DialogTitle>
+              <DialogDescription>
+                Review submitted on{_" "}
+                {_format(new Date(selectedReview.created_at), _"MMMM d, _yyyy")}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </DialogDescription>
             </DialogHeader>
 
@@ -311,20 +420,21 @@ export function ReviewsModerationTable({
               <div className=&quot;flex items-center justify-between&quot;>
                 <div className=&quot;flex items-center gap-2&quot;>
                   <Avatar>
-                    {selectedReview.reviewer_profile?.avatar_url ? (
+                    {_selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
-                        alt={selectedReview.reviewer_profile.display_name || ""}
+                        alt={_selectedReview.reviewer_profile.display_name || ""}
                       />
                     ) : (
                       <AvatarFallback>
-                        {selectedReview.reviewer_profile?.display_name
+                        {_selectedReview.reviewer_profile?.display_name
                           ? getInitials(selectedReview.reviewer_profile.display_name)
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>
                     )}
                   </Avatar>
                   <div>
+<<<<<<< HEAD
                     <div className="font-medium&quot;>
                       {selectedReview.is_anonymous
                         ? &quot;Anonymous&quot;
@@ -332,18 +442,28 @@ export function ReviewsModerationTable({
                     </div>
                     <Badge variant=&quot;outline">
                       {selectedReview.status}
+=======
+                    <div className="font-medium">
+                      {_selectedReview.is_anonymous
+                        ? "Anonymous"
+                        : selectedReview.reviewer_profile?.display_name || "User"}
+                    </div>
+                    <Badge variant="outline">
+                      {_selectedReview.status}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </Badge>
                   </div>
                 </div>
-                <div>{renderStars(selectedReview.rating)}</div>
+                <div>{_renderStars(selectedReview.rating)}</div>
               </div>
 
               <div className="border rounded-md p-3 bg-muted/20">
-                <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>
+                <p className="whitespace-pre-wrap">{_selectedReview.review_text}</p>
               </div>
 
               <div className="space-y-2">
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
+<<<<<<< HEAD
                 <div className="flex flex-wrap gap-2&quot;>
                   {selectedReview.communication_rating && (
                     <Badge variant=&quot;outline&quot;>
@@ -357,20 +477,39 @@ export function ReviewsModerationTable({
                   )}
                   {selectedReview.timeliness_rating && (
                     <Badge variant=&quot;outline&quot;>
+=======
+                <div className="flex flex-wrap gap-2">
+                  {_selectedReview.communication_rating && (
+                    <Badge variant="outline">
+                      Communication: {selectedReview.communication_rating}/5
+                    </Badge>
+                  )}
+                  {_selectedReview.quality_rating && (
+                    <Badge variant="outline">
+                      Quality: {selectedReview.quality_rating}/5
+                    </Badge>
+                  )}
+                  {_selectedReview.timeliness_rating && (
+                    <Badge variant="outline">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       Timeliness: {selectedReview.timeliness_rating}/5
                     </Badge>
                   )}
-                  {selectedReview.would_work_again !== undefined && (
+                  {_selectedReview.would_work_again !== undefined && (
                     <Badge
                       variant={selectedReview.would_work_again ? &quot;default&quot; : &quot;secondary&quot;}
                     >
+<<<<<<< HEAD
                       {selectedReview.would_work_again ? &quot;Would work again&quot; : &quot;Would not work again"}
+=======
+                      {_selectedReview.would_work_again ? "Would work again" : "Would not work again"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </Badge>
                   )}
                 </div>
               </div>
 
-              {selectedReview.report_count > 0 && (
+              {_selectedReview.report_count > 0 && (
                 <div className="bg-red-50 border border-red-200 rounded-md p-3">
                   <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview.report_count}</h4>
                   <p className="text-sm text-red-700&quot;>
@@ -381,36 +520,53 @@ export function ReviewsModerationTable({
             </div>
 
             <DialogFooter>
+<<<<<<< HEAD
               {selectedReview.status === &quot;pending&quot; && (
                 <>
+=======
+              {_selectedReview.status === "pending" && (_<>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   <Button
                     variant=&quot;destructive&quot;
                     onClick={() => handleReject(selectedReview.id)}
-                    disabled={isPending}
+                    disabled={_isPending}
                   >
                     Reject
                   </Button>
                   <Button
-                    onClick={() => handleApprove(selectedReview.id)}
-                    disabled={isPending}
+                    onClick={_() => handleApprove(selectedReview.id)}
+                    disabled={_isPending}
                   >
                     Approve
                   </Button>
                 </>
               )}
+<<<<<<< HEAD
               {selectedReview.status === &quot;approved&quot; && (
                 <Button
                   variant=&quot;destructive&quot;
                   onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: &quot;rejected&quot; })}
                   disabled={isPending}
+=======
+              {_selectedReview.status === "approved" && (_<Button
+                  variant="destructive"
+                  onClick={() => updateReviewStatus({ reviewId: selectedReview.id, _status: "rejected"})}
+                  disabled={_isPending}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 >
                   Mark as Rejected
                 </Button>
               )}
+<<<<<<< HEAD
               {selectedReview.status === &quot;rejected&quot; && (
                 <Button
                   onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: &quot;approved" })}
                   disabled={isPending}
+=======
+              {_selectedReview.status === "rejected" && (_<Button
+                  onClick={() => updateReviewStatus({ reviewId: selectedReview.id, _status: "approved"})}
+                  disabled={_isPending}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 >
                   Mark as Approved
                 </Button>

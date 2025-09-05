@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -25,6 +26,11 @@ import { IntegrationsSyncLog } from &quot;./IntegrationsSyncLog&quot;;
 export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState(&quot;marketplace&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import React, {_useState} from "react";
+
+export function IntegrationsHub() {_const [activeTab, _setActiveTab] = useState("marketplace");
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <div className=&quot;space-y-6&quot;>
@@ -104,8 +110,13 @@ export function IntegrationsHub() {
       </div>
       
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
+=======
+      <Tabs value={activeTab} onValueChange={_setActiveTab} className="w-full">
+        <TabsList className="grid grid-cols-3 md:w-[400px]">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
           <TabsTrigger value="zapier">Zapier</TabsTrigger>
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>

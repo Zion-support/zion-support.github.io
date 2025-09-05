@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Moon, Sun } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -22,6 +23,21 @@ export default function ThemeToggle(): JSX.Element {
     >
       {mode === &quot;dark&quot; ? (
         <Sun className=&quot;h-5 w-5&quot; />
+=======
+import React from "react";
+
+export default function ThemeToggle(): JSX.Element {_const { mode, _toggleTheme} = useTheme();
+
+  return (
+    <Button
+      aria-label="Toggle theme"
+      onClick={_toggleTheme}
+      variant="ghost"
+      size="icon"
+    >
+      {_mode === "dark" ? (
+        <Sun className="h-5 w-5" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       ) : (
         <Moon className=&quot;h-5 w-5&quot; />
       )}

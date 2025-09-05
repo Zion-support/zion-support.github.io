@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import { ScrollArea } from '@/components/ui/scroll-area',
 import Skeleton from '@/components/ui/skeleton',
@@ -27,14 +28,35 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 }) => {
   return (
     <ScrollArea className=&quot;flex-1 overflow-y-auto max-h-[350px]&quot;>
+=======
+import React from 'react';
+import Skeleton from '@/components/ui/skeleton';
+
+interface NotificationListProps {_loading: boolean;
+  error: string | null;
+  notifications: Notification[];
+  onMarkAsRead: (_id: string) => Promise<void>;
+  onDismiss: (_id: string) => Promise<void>;
+  onRetry: () => void;}
+
+export const NotificationList: React.FC<NotificationListProps> = (_{_loading, _error, _notifications, _onMarkAsRead, _onDismiss, _onRetry}) => {_return (
+    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       {error ? (
         <div className=&quot;p-8 text-center text-amber-500&quot;>
           <p>{error}</p>
           <Button 
+<<<<<<< HEAD
             variant=&quot;outline&quot; 
             size=&quot;sm&quot; 
             className=&quot;mt-2&quot;
             onClick={onRetry}
+=======
+            variant="outline" 
+            size="sm" 
+            className="mt-2"
+            onClick={_onRetry}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             Try Again
           </Button>
@@ -48,20 +70,27 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       ) : notifications.length === 0 ? (
         <div className=&quot;p-8&quot;>
           <EmptyState
+<<<<<<< HEAD
             icon={<Bell className=&quot;h-8 w-8&quot; />}
             title=&quot;No Notifications&quot;
             description=&quot;You're all caught up.&quot;
             action={{ text: 'Refresh', onClick: onRetry }}
             className=&quot;border-none bg-transparent&quot;
+=======
+            icon={_<Bell className="h-8 w-8" />}
+            title="No Notifications"
+            description="You're all caught up."
+            action={_{ text: 'Refresh', _onClick: onRetry}}
+            className="border-none bg-transparent"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           />
         </div>
-      ) : (
-        notifications.map((notification) => (
+      ) : (_notifications.map((notification) => (
           <NotificationItem
-            key={notification.id}
-            notification={notification}
-            onMarkAsRead={onMarkAsRead}
-            onDismiss={onDismiss}
+            key={_notification.id}
+            notification={_notification}
+            onMarkAsRead={_onMarkAsRead}
+            onDismiss={_onDismiss}
           />
         ))
       )}

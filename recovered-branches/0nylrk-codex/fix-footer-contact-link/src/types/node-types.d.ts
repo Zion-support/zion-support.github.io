@@ -1,5 +1,6 @@
 
 // Add basic type definitions for Node.js globals used in the project
+<<<<<<< HEAD
 interface Process {
   env: {
     [key: string]: string | undefined,
@@ -9,6 +10,15 @@ interface Process {
     SLACK_BOT_TOKEN?: string,
     OPENAI_API_KEY?: string
   }
+=======
+interface Process {_env: {
+    [key: string]: string | undefined;
+    NODE_ENV: 'development' | 'production' | 'test';
+    PORT?: string;
+    SLACK_SIGNING_SECRET?: string;
+    SLACK_BOT_TOKEN?: string;
+    OPENAI_API_KEY?: string;};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }
 
 <<<<<<< HEAD

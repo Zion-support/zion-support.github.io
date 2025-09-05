@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from 'lucide-react'
@@ -48,6 +49,19 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
 =======
     `Hi, I'm interested in your job &quot;${job.title}&quot; and would like to apply. I believe my skills and experience are a great match for this role.`
+=======
+import React, {_useState} from 'react';
+
+
+interface ApplyFormProps {_job: Job;
+  onClose: () => void;
+  onApplySuccess?: (_jobId: string) => Promise<void>;}
+
+export function ApplyForm(_{_job, _onClose, _onApplySuccess}: ApplyFormProps) {_const { createConversation} = useMessaging();
+  const {_applyToJob} = useJobApplications();
+  const [message, setMessage] = useState(
+    `Hi, I'm interested in your job "${_job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   );
   const [proposalLink, setProposalLink] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -56,14 +70,19 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
+<<<<<<< HEAD
   const handleResumeSelected = (resume: ResumeOption) => {
     setSelectedResume(resume),
     setSelectedResumeId(resume.id)
   },
+=======
+  const _handleResumeSelected = (_resume: ResumeOption) => {_setSelectedResume(resume);
+    setSelectedResumeId(resume.id);};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const handleApply = async () => {
-    if (!message.trim()) {
+  const _handleApply = async () => {_if (!message.trim()) {
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "Message required",
         description: "Please enter a message before applying.",
@@ -75,26 +94,31 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         description: &quot;Please enter a message before applying.&quot;,
         variant: &quot;destructive&quot;
       });
+=======
+        title: "Message required", _description: "Please enter a message before applying.", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
+<<<<<<< HEAD
     try {
       setIsSubmitting(true),
+=======
+    try {_setIsSubmitting(true);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       // First submit the application to the job applications table
-      const applicationSuccess = await applyToJob(
-        job.id,
-        message,
-        selectedResume && selectedResume.type === 'ai_resume'
+      const _applicationSuccess = await applyToJob(
+        job.id, _message, _selectedResume && selectedResume.type === 'ai_resume'
           ? selectedResumeId || undefined
-          : undefined,
-        selectedResume && selectedResume.type === 'custom_upload'
+          : undefined, _selectedResume && selectedResume.type === 'custom_upload'
           ? selectedResume.file
           : undefined
       ),
       
       if (!applicationSuccess) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         throw new Error("Failed to submit application")
 =======
@@ -124,6 +148,24 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           type: selectedResume.type
         } : null
       },
+=======
+        throw new Error("Failed to submit application");}
+      
+      // Format message with proposal link if provided
+      let _fullMessage = message;
+      
+      if (proposalLink) {_fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
+      }
+      
+      // Add info about attached resume if available
+      if (selectedResume) {_fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`;
+      }
+      
+      // Create context data for the conversation
+      const _contextData = {_title: job.title, _description: job.description, _attachedResume: selectedResume ? {
+          id: selectedResume.id, _title: selectedResume.title, _type: selectedResume.type} : null
+      };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       // Create conversation with the job client
       await createConversation(
@@ -135,6 +177,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       ),
       
       // Call onApplySuccess to update job status in the UI
+<<<<<<< HEAD
       if (onApplySuccess) {
         await onApplySuccess(job.id)
       }
@@ -173,6 +216,23 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       <Tabs value={activeTab} onValueChange={setActiveTab} className=&quot;w-full&quot;>
         <TabsList className=&quot;w-full mb-4 bg-zion-blue-dark/30&quot;>
           <TabsTrigger value=&quot;message&quot; className=&quot;flex-1&quot;>
+=======
+      if (onApplySuccess) {_await onApplySuccess(job.id);}
+      
+      toast({_title: "Application sent", _description: `Your application for "${job.title}" has been sent.`});
+      
+      onClose();
+    } catch (error) {_logErrorToProduction('Failed to send application:', _{ data: error});
+      toast({_title: "Application failed", _description: "There was an error sending your application. Please try again.", _variant: "destructive"});
+    } finally {_setIsSubmitting(false);}
+  };
+
+  return (
+    <>
+      <Tabs value={_activeTab} onValueChange={_setActiveTab} className="w-full">
+        <TabsList className="w-full mb-4 bg-zion-blue-dark/30">
+          <TabsTrigger value="message" className="flex-1">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             Message
           </TabsTrigger>
           <TabsTrigger value=&quot;resume&quot; className=&quot;flex-1&quot;>
@@ -182,37 +242,51 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         
         <TabsContent value=&quot;message&quot;>
           <MessageTab 
-            message={message}
-            setMessage={setMessage}
-            proposalLink={proposalLink}
-            setProposalLink={setProposalLink}
+            message={_message}
+            setMessage={_setMessage}
+            proposalLink={_proposalLink}
+            setProposalLink={_setProposalLink}
           />
         </TabsContent>
         
         <TabsContent value=&quot;resume&quot;>
           <ResumeTab 
-            onResumeSelected={handleResumeSelected}
-            selectedResumeId={selectedResumeId} 
+            onResumeSelected={_handleResumeSelected}
+            selectedResumeId={_selectedResumeId} 
           />
         </TabsContent>
       </Tabs>
       
       <div className=&quot;flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4&quot;>
         <Button
+<<<<<<< HEAD
           type=&quot;button&quot;
           variant=&quot;outline&quot;
           onClick={onClose}
           className=&quot;border-zion-purple/30 text-white&quot;
+=======
+          type="button"
+          variant="outline"
+          onClick={_onClose}
+          className="border-zion-purple/30 text-white"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         >
           Cancel
         </Button>
         <Button
+<<<<<<< HEAD
           type=&quot;button&quot; 
           onClick={handleApply}
           disabled={isSubmitting}
           className=&quot;bg-zion-purple hover:bg-zion-purple-dark text-white&quot;
+=======
+          type="button" 
+          onClick={_handleApply}
+          disabled={_isSubmitting}
+          className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         >
-          {isSubmitting ? (
+          {_isSubmitting ? (
             <>
               <Loader2 className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
               Submitting...

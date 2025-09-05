@@ -1,5 +1,4 @@
-export default function PrivacyPage() {
-  return (
+export default function PrivacyPage() {_return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-600 to-gray-800 text-white py-20">
@@ -13,7 +12,7 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      {/* Privacy Content */}
+      {_/* Privacy Content */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
@@ -199,7 +198,7 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">

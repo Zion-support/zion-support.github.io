@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Input } from '@/components/ui/input',
@@ -17,10 +18,23 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
+=======
+
+interface AddSkillFormProps {_resumeId: string;
+  onAddSkill: (_skill: Skill) => Promise<boolean>;}
+
+export const _AddSkillForm = (_{_resumeId, _onAddSkill}: AddSkillFormProps) => {_const [skillName, _setSkillName] = useState('');
+  const [skillCategory, _setSkillCategory] = useState('');
+  const [proficiency, _setProficiency] = useState<number>(3);
+  
+  const _handleSubmit = async (_e: React.FormEvent) => {
+    e.preventDefault();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     if (!skillName.trim()) return,
     
     const newSkill: Skill = {
+<<<<<<< HEAD
       name: skillName.trim(),
       category: skillCategory || 'Other',
       proficiency: proficiency},
@@ -59,12 +73,45 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
                 onEnhanced={handleEnhanceSkill}
                 buttonText=&quot;Suggest&quot;
                 className=&quot;h-4&quot;
+=======
+      name: skillName.trim(), _category: skillCategory || 'Other', _proficiency: proficiency};
+    
+    const _success = await onAddSkill(newSkill);
+    if (success) {_setSkillName('');
+      setProficiency(3);}
+  };
+  
+  const _handleEnhanceSkill = (_enhancedCategory: string) => {_setSkillCategory(enhancedCategory);};
+  
+  return (_<form onSubmit={_handleSubmit} className="space-y-4">
+      <div className="flex flex-col gap-4 md:flex-row">
+        <div className="flex-1">
+          <Label htmlFor="skill-name">Skill Name</Label>
+          <Input
+            id="skill-name"
+            value={_skillName}
+            onChange={_(e) => setSkillName(e.target.value)}
+            placeholder="Enter a skill (e.g., React)"
+          />
+        </div>
+        
+        <div className="w-full md:w-44">
+          <div className="flex justify-between items-center">
+            <Label htmlFor="skill-category">Category</Label>
+            {_skillName && (
+              <AIEnhancementButton 
+                currentContent={skillName}
+                enhancementType="general"
+                onEnhanced={_handleEnhanceSkill}
+                buttonText="Suggest"
+                className="h-4"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               />
             )}
           </div>
           <Select 
-            value={skillCategory} 
-            onValueChange={setSkillCategory}
+            value={_skillCategory} 
+            onValueChange={_setSkillCategory}
           >
             <SelectTrigger id=&quot;skill-category&quot;>
               <SelectValue placeholder=&quot;Select category&quot; />
@@ -86,6 +133,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
           <Label htmlFor=&quot;skill-proficiency&quot;>Proficiency (1-5)</Label>
           <div className=&quot;flex gap-4&quot;>
             <Input
+<<<<<<< HEAD
               id=&quot;skill-proficiency&quot;
               type=&quot;number&quot;
               min={1}
@@ -93,6 +141,15 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
               value={proficiency}
               onChange={(e) => setProficiency(Number(e.target.value))}
               className=&quot;w-20&quot;
+=======
+              id="skill-proficiency"
+              type="number"
+              min={_1}
+              max={_5}
+              value={_proficiency}
+              onChange={_(_e) => setProficiency(Number(e.target.value))}
+              className="w-20"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             />
             <Button type=&quot;submit&quot;>Add</Button>
           </div>

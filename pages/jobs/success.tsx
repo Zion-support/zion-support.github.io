@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import Link from 'next/link',
 export default function JobSuccessPage() {
   return (
 <<<<<<< HEAD
+=======
+import Link from 'next/link';
+
+export default function JobSuccessPage() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <div className="max-w-xl text-center mx-auto py-16">
       <div className="mx-auto mb-6 h-20 w-20 rounded-full bg-green-100 dark: bg-green-900/30 flex items-center justify-center">
         <span className="text-3xl">✅</span>
@@ -18,5 +24,9 @@ export default function JobSuccessPage() {
         <Link href=&quot;/talent&quot;><a className=&quot;px-4 py-2 rounded-md border&quot;>Browse Talent</Link></Link>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

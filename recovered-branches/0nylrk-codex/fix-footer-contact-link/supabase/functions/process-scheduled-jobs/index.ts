@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 const corsHeaders = {
@@ -27,10 +28,23 @@ serve(async (req) => {
     Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) ?? "&quot;,
     { auth: { persistSession: false } }
   ),
+=======
 
-  try {
-    // Get pending jobs
-    const { data: jobs, error: fetchError } = await supabaseAdmin
+const _corsHeaders = {_"Access-Control-Allow-Origin": "*", _"Access-Control-Allow-Headers": "authorization, _x-client-info, _apikey, _content-type"};
+
+serve(_async (req) => {_if (req.method === "OPTIONS") {
+    return new Response(null, _{ headers: corsHeaders});
+  }
+
+  const _supabaseAdmin = createClient(
+    Deno.env.get("SUPABASE_URL") ?? "",
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
+    {_auth: { persistSession: false} }
+  );
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  try {_// Get pending jobs
+    const { data: jobs, _error: fetchError} = await supabaseAdmin
       .from('scheduled_jobs')
       .select('*')
       .eq('statuspending')
@@ -38,13 +52,13 @@ serve(async (req) => {
 
     if (fetchError) throw fetchError,
 
-    for (const job of jobs || []) {
-      // Process job based on type
+    for (const job of jobs || []) {_// Process job based on type
       switch (job.job_type) {
         case 'onboarding_reminder':
           // Process onboarding reminder
           if (job.payload && job.payload.user_id && job.payload.missing_milestone) {
             await processOnboardingReminder(
+<<<<<<< HEAD
               supabaseAdmin,
               job.payload.user_id,
               job.payload.missing_milestone,
@@ -52,6 +66,11 @@ serve(async (req) => {
             )
           }
           break,
+=======
+              supabaseAdmin, _job.payload.user_id, _job.payload.missing_milestone, _job.payload.role
+            );}
+          break;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         case 'email_reminder':
           // Process email reminder
           break,
@@ -60,10 +79,15 @@ serve(async (req) => {
           break,
         case 'resume_scoring':
           // Process resume scoring request
+<<<<<<< HEAD
           if (job.payload && job.payload.application_id) {
             await processResumeScoring(supabaseAdmin, job.payload.application_id)
           }
           break,
+=======
+          if (job.payload && job.payload.application_id) {_await processResumeScoring(supabaseAdmin, _job.payload.application_id);}
+          break;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         case 'blog_generation':
           await processContentGeneration(supabaseAdmin, 'blog'),
           break,
@@ -76,6 +100,7 @@ serve(async (req) => {
       // Update job status
       await supabaseAdmin
         .from('scheduled_jobs')
+<<<<<<< HEAD
         .update({
           status: 'completed',
           completed_at: new Date().toISOString()
@@ -97,14 +122,23 @@ serve(async (req) => {
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
+=======
+        .update({_status: 'completed', _completed_at: new Date().toISOString()})
+        .eq('id', job.id);
+    }
+
+    return new Response(JSON.stringify({_processed: jobs?.length || 0}), {_headers: { ...corsHeaders, _"Content-Type": "application/json"},
+      status: 200});
+  } catch (error) {_return new Response(JSON.stringify({ error: error.message}), {_headers: { ...corsHeaders, _"Content-Type": "application/json"},
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       status: 500});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }),
 
-async function processOnboardingReminder(supabase, userId, milestone, role) {
-  try {
+async function processOnboardingReminder(_supabase, _userId, _milestone, _role) {_try {
     // Create notification for user
+<<<<<<< HEAD
     const milestoneMessages = {
 <<<<<<< HEAD
       profile_completed: "Complete your profile to get noticed by clients",
@@ -138,10 +172,21 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       type: 'onboarding_reminder',
       read: false
     }),
+=======
+    const _milestoneMessages = {
+      profile_completed: "Complete your profile to get noticed by clients", _skills_added: "Add your skills to get better job matches", _availability_set: "Set your availability to receive project offers", _job_posted: "Post your first job to start finding talent", _match_viewed: "Check out your AI matched talent recommendations", _talent_invited: "Invite talent to your job posting to get responses"};
+    
+    const _message = milestoneMessages[milestone] || "Continue your onboarding process";
+    const _title = `Action needed: ${_message}`;
+    
+    // Insert notification
+    await supabase.from('notifications').insert({_user_id: userId, _title, _message, _type: 'onboarding_reminder', _read: false});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // Here you could also add logic to send an email
     // For example, call another edge function to send email
     
+<<<<<<< HEAD
   } catch (error) {
 <<<<<<< HEAD
     console.error("Error processing onboarding reminder:", error)
@@ -149,11 +194,14 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
     console.error(&quot;Error processing onboarding reminder:&quot;, error);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
+=======
+  } catch (_error) {}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }
 
-async function processResumeScoring(supabase, applicationId) {
-  try {
+async function processResumeScoring(_supabase, _applicationId) {_try {
     // Call the resume-scorer function to process the application
+<<<<<<< HEAD
     const response = await fetch(
       `${Deno.env.get(&quot;SUPABASE_URL&quot;)}/functions/v1/resume-scorer`,
       {
@@ -171,16 +219,28 @@ async function processResumeScoring(supabase, applicationId) {
 
 <<<<<<< HEAD
     // // // console.log(`Successfully scored application ${applicationId}`),
+=======
+    const _response = await fetch(_`${Deno.env.get("SUPABASE_URL")}/functions/v1/resume-scorer`,
+      {_method: "POST", _headers: {
+          "Content-Type": "application/json", _"Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
+        body: JSON.stringify({_applicationId})}
+    );
+
+    if (!response.ok) {_const _errorData = await response.json();
+      throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`);
+    }
+
+    
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // Notify the client that their application has been scored
-    const { data: application } = await supabase
+    const {_data: application} = await supabase
       .from("job_applications")
       .select("job_id")
       .eq("id", applicationId)
       .single(),
       
-    if (application) {
-      const { data: job } = await supabase
+    if (application) {_const { data: job} = await supabase
         .from("jobs")
         .select("client_id, title")
         .eq("id", application.job_id)
@@ -203,6 +263,7 @@ async function processResumeScoring(supabase, applicationId) {
         .single();
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         
+<<<<<<< HEAD
       if (job) {
         // Create notification for the client
         await supabase.from(&quot;notifications&quot;).insert({
@@ -210,11 +271,18 @@ async function processResumeScoring(supabase, applicationId) {
           title: &quot;Application Scored&quot;,
           message: `An application for &quot;${job.title}&quot; has been scored and is ready for review.`,
           type: &quot;application_scored&quot;,
+=======
+      if (job) {_// Create notification for the client
+        await supabase.from("notifications").insert({
+          user_id: job.client_id, _title: "Application Scored", _message: `An application for "${job.title}" has been scored and is ready for review.`,
+          type: "application_scored",
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           related_id: applicationId,
           read: false
         })
       }
     }
+<<<<<<< HEAD
   } catch (error) {
 <<<<<<< HEAD
     console.error("Error processing resume scoring:", error)
@@ -259,16 +327,37 @@ async function processContentGeneration(supabase, contentType) {
     const contentData = await response.json();
     // console.log(`Successfully generated ${contentType} content`);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  } catch (error) {}
+}
+
+async function processContentGeneration(_supabase, _contentType) {_try {
+    
+    
+    // Call the content generation function
+    const _response = await fetch(_`${Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`,
+      {_method: "POST", _headers: {
+          "Content-Type": "application/json", _"Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
+        body: JSON.stringify({_contentType, _autoPublish: contentType === 'blog' ? true : false, _includeImage: contentType === 'blog' ? true : false})}
+    );
+
+    if (!response.ok) {_const _errorData = await response.json();
+      throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
+    }
+
+    const _contentData = await response.json();
+    
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // If it's a newsletter, send a test email to the admin
-    if (contentType === 'newsletter') {
-      // Get admin email from profiles
-      const { data: adminProfiles } = await supabase
+    if (contentType === 'newsletter') {_// Get admin email from profiles
+      const { data: adminProfiles} = await supabase
         .from('profiles')
         .select('email')
         .eq('roleadmin')
         .limit(1),
       
+<<<<<<< HEAD
       if (adminProfiles && adminProfiles.length > 0) {
         const adminEmail = adminProfiles[0].email,
         
@@ -304,4 +393,24 @@ async function processContentGeneration(supabase, contentType) {
   } catch (error) {
     console.error(`Error processing ${contentType} generation:`, error)
   }
+=======
+      if (adminProfiles && adminProfiles.length > 0) {_const _adminEmail = adminProfiles[0].email;
+        
+        // Send test newsletter to admin
+        await fetch(
+          `${Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`,
+          {_method: "POST", _headers: {
+              "Content-Type": "application/json", _"Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
+            body: JSON.stringify({_subject: contentData.subject, _previewText: contentData.previewText, _body: contentData.body, _testMode: true, _testEmail: adminEmail})}
+        );
+        
+        // Create notification for admin
+        await supabase.from('notifications').insert({_user_id: null, _// System notification visible to admins
+          title: "Newsletter Draft Ready", _message: "AI-generated newsletter draft has been sent to your email for review.", _type: "system", _read: false});
+      }
+    }
+    
+    return contentData;
+  } catch (error) {}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

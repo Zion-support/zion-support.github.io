@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 // Accessibility checker utilities
+<<<<<<< HEAD
 export const checkAccessibility = () => {
   console.log('Checking accessibility...');
 =======
@@ -48,3 +49,8 @@ export const validateAriaLabels = () => {
 =======
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+export const _checkAccessibility = () => {};
+
+export const _validateAriaLabels = () => {};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 }};
-export const rateLimiter = new RateLimiter();
-export { RateLimiter };
+export const _rateLimiter = new RateLimiter();
+export {_RateLimiter};
 ;
 };
-export const rateLimiter = new RateLimiter();
-export { RateLimiter };
+export const _rateLimiter = new RateLimiter();
+export {_RateLimiter};
 ;
 =======
 

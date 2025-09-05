@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 export default function QuantumBioComputingPlatformPage() {
 	return (
+=======
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+
+export default function QuantumBioComputingPlatformPage() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		<UltraFuturisticBackground>
 			<Head>
 				<title>Quantum Bio-Computing Platform | Zion Tech Group</title>
@@ -25,5 +33,9 @@ export default function QuantumBioComputingPlatformPage() {
 				</ul>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
 	)
 }
+=======
+	);}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

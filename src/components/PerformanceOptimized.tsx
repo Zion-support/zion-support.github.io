@@ -1,6 +1,7 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function PerformanceOptimized() {
   return (
     <div className="performance-optimized">
@@ -189,3 +190,10 @@ export const usePerformanceMetrics = () => {,
 },
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+export default function PerformanceOptimized() {_return (
+    <div className="performance-optimized">
+      <p>Performance Optimized Component</p>
+    </div>
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

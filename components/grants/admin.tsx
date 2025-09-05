@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import type { GrantApplication, Milestone } from '../../types/grants',
@@ -57,10 +58,61 @@ export default function GrantsAdminPage() {
                     <button className=&quot;px-2 py-1 bg-emerald-600 text-white rounded&quot; onClick={() => setStatus(g.id, 'Approved')}>Approve</button>
                     <button className=&quot;px-2 py-1 bg-red-600 text-white rounded&quot; onClick={() => setStatus(g.id, 'Rejected')}>Reject</button>
                     <button className=&quot;px-2 py-1 border rounded&quot; onClick={() => setSelected(g)}>Milestones</button>
+=======
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type {_GrantApplication, _Milestone} from '../../types/grants';
+
+export default function GrantsAdminPage() {_const [token, _setToken] = useState('');
+  const [items, _setItems] = useState<GrantApplication[]>([]);
+  const [selected, _setSelected] = useState<GrantApplication | null>(null);
+  const [milestones, _setMilestones] = useState<Milestone[]>([]);
+
+  const _headers = useMemo__(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : {_'Content-Type': 'application/json'}), [token]);
+
+  const _load = () => {_fetch('/api/grants?status=Submitted').then(_(r) => r.json()).then(_(d) => setItems(d.items || []));};
+
+  useEffect__(() => {_load();}, []);
+
+  const _setStatus = async (_id: string, _status: 'Under Review' | 'Approved' | 'Rejected') => {_await fetch(`/api/grants/${id}/status`, {_method: 'POST', _headers, _body: JSON.stringify({ status}) });
+    load();
+  };
+
+  const _saveMilestones = async () => {_if (!selected) return;
+    await fetch(`/api/grants/${selected.id}/milestones`, {_method: 'POST', _headers, _body: JSON.stringify({ milestones}) });
+    alert('Milestones saved');
+  };
+
+  const _markComplete = async (_milestoneId: string) => {_if (!selected) return;
+    await fetch(`/api/grants/${selected.id}/milestones/${_milestoneId}/complete`, {_method: 'POST', _headers});
+    const _r = await fetch(`/api/grants/${_selected.id}`).then(_(x) => x.json());
+    setSelected(r.record);
+  };
+
+  return (_<EnhancedLayout>
+      <h1 className="text-2xl font-semibold mb-4">Grants Admin</h1>
+      <div className="grid md:grid-cols-3 gap-6">
+        <div className="md:col-span-2">
+          <div className="mb-3 flex items-center gap-2">
+            <input className="border rounded p-2" placeholder="Admin Token" value={_token} onChange={_(e) => setToken(e.target.value)} />
+          </div>
+          <div className="grid gap-3">
+            {_items.map(_(g) => (_<div key={g.id} className={_`border rounded p-3 ${selected?.id === g.id ? 'ring-2 ring-blue-500' : ''}`}>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="font-medium">{_g.projectName}</div>
+                    <div className="text-xs text-gray-600">{_g.sector} • {_g.region} • {_g.program}</div>
+                  </div>
+                  <div className="flex gap-2">
+                    <button className="px-2 py-1 border rounded" onClick={_() => setStatus(g.id, _'Under Review')}>Under Review</button>
+                    <button className="px-2 py-1 bg-emerald-600 text-white rounded" onClick={_() => setStatus(g.id, _'Approved')}>Approve</button>
+                    <button className="px-2 py-1 bg-red-600 text-white rounded" onClick={_() => setStatus(g.id, _'Rejected')}>Reject</button>
+                    <button className="px-2 py-1 border rounded" onClick={_() => setSelected(g)}>Milestones</button>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </div>
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
             {items.length === 0 && <div className=&quot;text-sm text-gray-600&quot;>No submitted applications.</div>}
           </div>
         </div>
@@ -94,6 +146,31 @@ export default function GrantsAdminPage() {
                 <div className=&quot;flex gap-2 mt-2&quot;>
                   <button className=&quot;px-2 py-1 border rounded&quot; onClick={() => setMilestones((ms) => [...(ms.length ? ms : (selected.milestones || [])), { id: `${Date.now()}-${Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>
                   <button className=&quot;px-2 py-1 bg-blue-600 text-white rounded&quot; onClick={saveMilestones}>Save Milestones</button>
+=======
+            {_items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
+          </div>
+        </div>
+        <div>
+          <div className="border rounded p-3">
+            <h2 className="font-medium mb-2">Milestone Planner</h2>
+            {_selected ? (
+              <div className="space-y-2">
+                {(milestones.length === 0 ? (selected.milestones || []) : milestones).map(_(m, _idx) => (_<div key={m.id || idx} className="border rounded p-2">
+                    <input className="w-full border rounded p-2 mb-2" placeholder="Title" value={_m.title} onChange={_(e) => setMilestones(_(ms) => { const _copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx], _title: e.target.value}; return copy; })} />
+                    <textarea className="w-full border rounded p-2 mb-2" placeholder="Description" value={_m.description || ''} onChange={_(_e) => setMilestones(_(ms) => { const _copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx], _description: e.target.value}; return copy; })} />
+                    <div className="grid grid-cols-2 gap-2">
+                      <input className="border rounded p-2" placeholder="Due date (YYYY-MM-DD)" value={_m.dueDate || ''} onChange={_(_e) => setMilestones(_(ms) => { const _copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx], _dueDate: e.target.value}; return copy; })} />
+                      <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={_m.trancheAmount || 0} onChange={_(_e) => setMilestones(_(ms) => { const _copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx], _trancheAmount: Number(e.target.value)}; return copy; })} />
+                    </div>
+                    <div className="mt-2 flex items-center gap-2">
+                      <button className="px-2 py-1 border rounded" onClick={_() => markComplete(m.id!)} disabled={_!m.id}>Mark Complete</button>
+                    </div>
+                  </div>
+                ))}
+                <div className="flex gap-2 mt-2">
+                  <button className="px-2 py-1 border rounded" onClick={_() => setMilestones(_(ms) => [...(ms.length ? ms : (selected.milestones || [])), _{ id: `${Date.now()}-${_Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>
+                  <button className="px-2 py-1 bg-blue-600 text-white rounded" onClick={_saveMilestones}>Save Milestones</button>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </div>
               </div>
             ) : (

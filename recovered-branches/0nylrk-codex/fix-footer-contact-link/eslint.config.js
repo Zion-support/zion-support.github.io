@@ -13,6 +13,7 @@ import tseslint from &quot;typescript-eslint&quot;;
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export default tseslint.config(
+<<<<<<< HEAD
   { ignores: [&quot;dist&quot;] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
@@ -29,6 +30,14 @@ export default tseslint.config(
         &quot;warn&quot;,
         { allowConstantExport: true }],
 <<<<<<< HEAD
+=======
+  {_ignores: ["dist"]},
+  {_extends: [js.configs.recommended, _...tseslint.configs.recommended], _files: ["**/*.{ts, _tsx}"],
+    languageOptions: {_ecmaVersion: 2020, _globals: globals.browser},
+    plugins: {_"react-hooks": reactHooks, _"react-refresh": reactRefresh},
+    rules: {_...reactHooks.configs.recommended.rules, _"react-refresh/only-export-components": [
+        "warn", _{ allowConstantExport: true}],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       "@typescript-eslint/no-unused-vars": "off"}}
 ),
 =======

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
 =======
@@ -11,14 +12,19 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
   className?: string,
   children?: React.ReactNode
 }
+=======
+import React from "react";
 
-export function SidebarMenuItem({ className, children, ...props }: SidebarMenuItemProps) {
-  return (
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {_className?: string;
+  children?: React.ReactNode;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export function SidebarMenuItem(_{_className, _children, _...props}: SidebarMenuItemProps) {_return (
     <li 
-      className={cn("", className)} 
-      {...props}
+      className={cn("", _className)} 
+      {_...props}
     >
-      {children}
+      {_children}
     </li>
   )
 }

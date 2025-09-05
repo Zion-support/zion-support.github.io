@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth',
@@ -77,6 +78,48 @@ export default function PointsPage() {
             <Gift className=&quot;h-16 w-16 text-primary mx-auto mb-4&quot; />
             <h1 className=&quot;text-4xl font-bold mb-4&quot;>Zion Rewards Program</h1>
             <p className=&quot;text-xl text-muted-foreground mb-6&quot;>
+=======
+import React, {_useState} from 'react';
+import Link from 'next/link';
+
+export default function PointsPage() {_const { isAuthenticated, _user} = useAuth();
+  const {_ledger, _balance, _loading, _fetchLedger} = usePoints();
+  const [loginOpen, setLoginOpen] = useState(false);
+  const [redeeming, setRedeeming] = useState(false);
+
+  async function handleRedeem(_reward: {_id: string; cost: number; title: string}) {_if (!user?.id) return;
+    setRedeeming(true);
+    try {
+      await fetch('/api/points/redeem', _{
+        method: 'POST', _headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({_userId: user.id, _cost: reward.cost, _reward: reward.title})
+      });
+      await fetchLedger();
+    } finally {_setRedeeming(false);}
+  }
+
+  const _earningOpportunities = [
+    {_icon: <Users className="h-5 w-5" />, _title: "Sign Up & Profile Setup", _description: "Complete your profile and verify your email", _points: "50 pts", _action: isAuthenticated ? "✓ Completed" : "Get Started"},
+    {_icon: <ShoppingBag className="h-5 w-5" />, _title: "First Purchase", _description: "Make your first purchase on the marketplace", _points: "100 pts", _action: "Browse Marketplace"},
+    {_icon: <MessageSquare className="h-5 w-5" />, _title: "Community Engagement", _description: "Post in the community or comment on discussions", _points: "25 pts per post", _action: "Join Community"},
+    {_icon: <Users className="h-5 w-5" />, _title: "Refer Friends", _description: "Invite friends to join Zion marketplace", _points: "200 pts per referral", _action: "Share Referral Link"}
+  ];
+
+  const _upcomingRewards = [
+    {_id: 'coupon5', _title: '$5 Off Coupon', _cost: 500, _category: 'Discount'},
+    {_id: 'premium1', _title: 'Premium Features (1 month)', _cost: 1000, _category: 'Subscription'},
+    {_id: 'swag', _title: 'Zion Swag Pack', _cost: 1500, _category: 'Merchandise'},
+    {_id: 'coupon25', _title: '$25 Off Coupon', _cost: 2000, _category: 'Discount'},
+    {_id: 'vip', _title: 'VIP Support Access', _cost: 3000, _category: 'Service'}
+  ];
+
+  if (!isAuthenticated) {_return (_<>
+        <div className="container py-10 max-w-4xl">
+          <div className="text-center mb-8">
+            <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
+            <h1 className="text-4xl font-bold mb-4">Zion Rewards Program</h1>
+            <p className="text-xl text-muted-foreground mb-6">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               Earn points for every action you take and redeem them for exclusive rewards!
             </p>
             <Button onClick={() => setLoginOpen(true)} size=&quot;lg&quot;>
@@ -95,6 +138,7 @@ export default function PointsPage() {
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
+<<<<<<< HEAD
               <CardContent className=&quot;space-y-4&quot;>
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className=&quot;flex items-start gap-3 p-3 rounded-lg border&quot;>
@@ -104,6 +148,17 @@ export default function PointsPage() {
                       <p className=&quot;text-sm text-muted-foreground&quot;>{opportunity.description}</p>
                     </div>
                     <Badge variant=&quot;secondary&quot;>{opportunity.points}</Badge>
+=======
+              <CardContent className="space-y-4">
+                {_earningOpportunities.map(_(opportunity, _index) => (
+                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+                    <div className="text-primary mt-1">{_opportunity.icon}</div>
+                    <div className="flex-1">
+                      <h4 className="font-medium">{_opportunity.title}</h4>
+                      <p className="text-sm text-muted-foreground">{_opportunity.description}</p>
+                    </div>
+                    <Badge variant="secondary">{_opportunity.points}</Badge>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </div>
                 ))}
               </CardContent>
@@ -119,6 +174,7 @@ export default function PointsPage() {
                   What you can redeem your points for
                 </CardDescription>
               </CardHeader>
+<<<<<<< HEAD
               <CardContent className=&quot;space-y-4&quot;>
                 {upcomingRewards.map((reward, index) => (
                   <div key={index} className=&quot;flex items-center justify-between p-3 rounded-lg border&quot;>
@@ -127,6 +183,16 @@ export default function PointsPage() {
                       <p className=&quot;text-sm text-muted-foreground&quot;>{reward.category}</p>
                     </div>
                     <Badge variant=&quot;outline&quot;>{reward.cost}</Badge>
+=======
+              <CardContent className="space-y-4">
+                {_upcomingRewards.map(_(reward, _index) => (
+                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
+                    <div>
+                      <h4 className="font-medium">{_reward.title}</h4>
+                      <p className="text-sm text-muted-foreground">{_reward.category}</p>
+                    </div>
+                    <Badge variant="outline">{_reward.cost}</Badge>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </div>
                 ))}
               </CardContent>
@@ -140,18 +206,19 @@ export default function PointsPage() {
               <p className=&quot;text-muted-foreground mb-4&quot;>
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.
               </p>
-              <Button onClick={() => setLoginOpen(true)}>
+              <Button onClick={_() => setLoginOpen(true)}>
                 Create Account
               </Button>
             </CardContent>
           </Card>
         </div>
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+        <LoginModal isOpen={_loginOpen} onOpenChange={_setLoginOpen} />
       </>
     )
   }
 
   return (
+<<<<<<< HEAD
     <div className=&quot;container py-10 max-w-4xl&quot;>
       <div className=&quot;text-center mb-8&quot;>
         <Gift className=&quot;h-16 w-16 text-primary mx-auto mb-4&quot; />
@@ -162,6 +229,18 @@ export default function PointsPage() {
         <p className=&quot;text-xl text-muted-foreground&quot;>Points Available</p>
         {!loading && balance === 0 && (
           <p className=&quot;text-sm text-muted-foreground mt-2&quot;>
+=======
+    <div className="container py-10 max-w-4xl">
+      <div className="text-center mb-8">
+        <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
+        <h1 className="text-4xl font-bold mb-4">Your Rewards</h1>
+        <div className="text-6xl font-bold text-primary mb-2">
+          {_loading ? "..." : balance}
+        </div>
+        <p className="text-xl text-muted-foreground">Points Available</p>
+        {_!loading && balance === 0 && (
+          <p className="text-sm text-muted-foreground mt-2">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.
           </p>
@@ -179,6 +258,7 @@ export default function PointsPage() {
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
+<<<<<<< HEAD
           <CardContent className=&quot;space-y-4&quot;>
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className=&quot;flex items-start gap-3 p-3 rounded-lg border&quot;>
@@ -190,6 +270,19 @@ export default function PointsPage() {
                 <div className=&quot;text-right&quot;>
                   <Badge variant=&quot;secondary&quot; className=&quot;mb-1&quot;>{opportunity.points}</Badge>
                   <p className=&quot;text-xs text-muted-foreground&quot;>{opportunity.action}</p>
+=======
+          <CardContent className="space-y-4">
+            {_earningOpportunities.map(_(opportunity, _index) => (
+              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+                <div className="text-primary mt-1">{_opportunity.icon}</div>
+                <div className="flex-1">
+                  <h4 className="font-medium">{_opportunity.title}</h4>
+                  <p className="text-sm text-muted-foreground">{_opportunity.description}</p>
+                </div>
+                <div className="text-right">
+                  <Badge variant="secondary" className="mb-1">{_opportunity.points}</Badge>
+                  <p className="text-xs text-muted-foreground">{_opportunity.action}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </div>
               </div>
             ))}
@@ -206,6 +299,7 @@ export default function PointsPage() {
               Redeem your points for these rewards
             </CardDescription>
           </CardHeader>
+<<<<<<< HEAD
           <CardContent className=&quot;space-y-4&quot;>
             {upcomingRewards.map((reward) => (
               <div key={reward.id} className=&quot;flex items-center justify-between p-3 rounded-lg border&quot;>
@@ -218,6 +312,19 @@ export default function PointsPage() {
                   {balance >= reward.cost ? (
                     <Button size=&quot;sm&quot; onClick={() => handleRedeem(reward)} disabled={redeeming}>
                       {redeeming ? 'Processing...' : 'Redeem'}
+=======
+          <CardContent className="space-y-4">
+            {_upcomingRewards.map(_(reward) => (_<div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
+                <div>
+                  <h4 className="font-medium">{_reward.title}</h4>
+                  <p className="text-sm text-muted-foreground">{_reward.category}</p>
+                </div>
+                <div className="text-right space-y-1">
+                  <Badge variant="outline" className="mb-1">{_reward.cost} pts</Badge>
+                  {_balance >= reward.cost ? (
+                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={_redeeming}>
+                      {_redeeming ? 'Processing...' : 'Redeem'}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </Button>
                   ) : (
                     <p className=&quot;text-xs text-muted-foreground&quot;>Need more points</p>
@@ -238,14 +345,20 @@ export default function PointsPage() {
           <CardDescription>Your recent points activity</CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           {ledger.length === 0 ? (
             <p className=&quot;text-center py-8 text-muted-foreground&quot;>No points activity yet.</p>
+=======
+          {_ledger.length === 0 ? (
+            <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           ) : (
             <ScrollArea className=&quot;h-64&quot;>
               <div className=&quot;space-y-2 mt-2&quot;>
                 {ledger.map(entry => (
                   <div key={entry.id} className=&quot;flex items-center justify-between py-2 border-b&quot;>
                     <div>
+<<<<<<< HEAD
                       <p className=&quot;font-medium capitalize&quot;>{entry.reason || 'adjustment'}</p>
                       <p className=&quot;text-xs text-muted-foreground&quot;>
                         {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
@@ -254,9 +367,19 @@ export default function PointsPage() {
                     <Badge
                       variant=&quot;outline&quot;
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
+=======
+                      <p className="font-medium capitalize">{_entry.reason || 'adjustment'}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {_formatDistanceToNow(new Date(entry.created_at), _{ addSuffix: true})}
+                      </p>
+                    </div>
+                    <Badge
+                      variant="outline"
+                      className={_entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     >
-                      {entry.delta >= 0 ? '+' : ''}
-                      {entry.delta} pts
+                      {_entry.delta >= 0 ? '+' : ''}
+                      {_entry.delta} pts
                     </Badge>
                   </div>
                 ))}

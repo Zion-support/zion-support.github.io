@@ -1,11 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { AlertTriangle } from 'lucide-react'
 import Link from 'next/link'
 import Head from 'next/head'
 
-export default function ErrorPage() {
-  return (
+export default function ErrorPage() {_return (
     <>
       <Head>
         <title>Authentication Error - Zion Tech Marketplace</title>
@@ -56,5 +52,4 @@ export default function ErrorPage() {
         </Card>
       </div>
     </>
-  )
-} 
+  )} 

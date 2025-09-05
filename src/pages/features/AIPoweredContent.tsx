@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -42,6 +43,18 @@ export default function AIPoweredContent() {
   useEffect(() => {
     markAiExplored()
   }, [markAiExplored]),
+=======
+import React, {_useEffect} from "react";
+import Link from 'next/link';
+
+export default function AIPoweredContent() {_useFeatureUsage('ZionGPT');
+  const _schema = {
+    "@context": "https://schema.org", _"@type": "WebPage", _"name": "AI Content Generation", _"description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.", _"url": "https://app.ziontechgroup.com/features/ai-content-generation"};
+
+  const {_markAiExplored} = useAdvancedOnboardingStatus();
+
+  useEffect__(() => {_markAiExplored();}, [markAiExplored]);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -51,10 +64,15 @@ export default function AIPoweredContent() {
         keywords=&quot;AI content generation, ZionGPT, SEO tools&quot;
         canonical=&quot;https://app.ziontechgroup.com/features/ai-content-generation&quot;
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
+<<<<<<< HEAD
         type=&quot;application/ld+json&quot;
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+=======
+        type="application/ld+json"
+        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       ></script>
       <Header />
       <main className=&quot;bg-background text-white py-12&quot;>

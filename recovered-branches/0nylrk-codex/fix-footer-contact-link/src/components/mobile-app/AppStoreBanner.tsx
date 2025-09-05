@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { X } from "lucide-react",
 import { useIsMobile } from "@/hooks/use-mobile",
@@ -12,19 +13,31 @@ import { useIsMobile } from &quot;@/hooks/use-mobile&quot;;
 export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),
+=======
+import React, {_useState, _useEffect} from "react";
+
+export const AppStoreBanner: React.FC = () => {_const [isVisible, _setIsVisible] = useState(false);
+  const _isMobile = useIsMobile();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  useEffect(() => {
+  useEffect__(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed before
     if (isMobile && !localStorage.getItem(&quot;appBannerDismissed&quot;)) {
       // Delay showing the banner by 2 seconds
+<<<<<<< HEAD
       const timer = setTimeout(() => {
         setIsVisible(true)
       }, 2000),
+=======
+      const _timer = setTimeout__(() => {
+        setIsVisible(true);}, 2000);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       return () => clearTimeout(timer)
     }
   }, [isMobile]),
   
+<<<<<<< HEAD
   const dismissBanner = () => {
 <<<<<<< HEAD
     setIsVisible(false),
@@ -35,6 +48,10 @@ export const AppStoreBanner: React.FC = () => {
     localStorage.setItem(&quot;appBannerDismissed&quot;, &quot;true&quot;);
   };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  const _dismissBanner = () => {_setIsVisible(false);
+    localStorage.setItem("appBannerDismissed", _"true");};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   // Only render on mobile devices
   if (!isMobile || !isVisible) return null,
@@ -53,9 +70,15 @@ export const AppStoreBanner: React.FC = () => {
             className=&quot;px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium&quot;
           >
             View
+<<<<<<< HEAD
           </Link>
           <button onClick={dismissBanner} className=&quot;text-gray-400&quot;>
             <X className=&quot;h-5 w-5&quot; />
+=======
+          </a>
+          <button onClick={_dismissBanner} className="text-gray-400">
+            <X className="h-5 w-5" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </button>
         </div>
       </div>

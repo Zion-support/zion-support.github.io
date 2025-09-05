@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
@@ -28,10 +29,12 @@ import { ProfileSetup } from &quot;@/components/onboarding/ProfileSetup&quot;;
 import { Steps, Step } from &quot;@/components/ui/steps&quot;;
 import { supabase } from &quot;@/integrations/supabase/client&quot;;
 import { toast } from &quot;@/hooks/use-toast&quot;;
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-export default function Onboarding() {
-  const { user, updateProfile, isLoading } = useAuth();
+export default function Onboarding() {_const { user, _updateProfile, _isLoading} = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
+<<<<<<< HEAD
   const [userType, setUserType] = useState<&quot;serviceProvider&quot; | &quot;talent&quot; | &quot;client&quot; | null>(null);
   const navigate = useNavigate();
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
@@ -41,11 +44,21 @@ export default function Onboarding() {
     switch (type) {
 <<<<<<< HEAD
       case "serviceProvider": return "creator",
+=======
+  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
+  const _navigate = useNavigate();
+
+  // Convert our user types to match what's expected in the database
+  const _mapUserTypeToDatabase = (_type: "serviceProvider" | "talent" | "client") => {_switch (type) {
+      case "serviceProvider":
+        return "creator";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       case "talent":
         return "jobSeeker",
       case "client":
         return "employer",
       default:
+<<<<<<< HEAD
         return "buyer"
 =======
       case &quot;serviceProvider&quot;:
@@ -63,6 +76,12 @@ export default function Onboarding() {
 <<<<<<< HEAD
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type),
+=======
+        return "buyer";}
+  };
+
+  const _handleUserTypeSelect = (_type: "serviceProvider" | "talent" | "client") => {_setUserType(type);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
@@ -78,20 +97,25 @@ export default function Onboarding() {
     // Direct to specific registration page based on user type
     if (type === &quot;serviceProvider&quot;) {
       navigate('/service-onboarding');
+<<<<<<< HEAD
       return;
     } else if (type === &quot;talent&quot;) {
       navigate('/talent-onboarding');
       return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
+=======
+      return;} else if (type === "talent") {_navigate('/talent-onboarding');
+      return;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // Continue with the onboarding flow for clients
     setCurrentStep(1)
   },
 
-  const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
-    if (!user || !userType) {
+  const _handleProfileComplete = async (_data: {_displayName: string, _bio: string, _headline: string}) => {_if (!user || !userType) {
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "Authentication Error",
         description: "Your session may have expired. Please log in again.",
@@ -102,11 +126,15 @@ export default function Onboarding() {
         title: &quot;Authentication Error&quot;,
         description: &quot;Your session may have expired. Please log in again.&quot;,
         variant: &quot;destructive&quot;});
+=======
+        title: "Authentication Error", _description: "Your session may have expired. Please log in again.", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       navigate('/login');
       return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
+<<<<<<< HEAD
     const dbUserType = mapUserTypeToDatabase(userType),
     
     try {
@@ -133,6 +161,21 @@ export default function Onboarding() {
       // Get the appropriate dashboard route based on user type
 <<<<<<< HEAD
       const dashboardRoute = userType === "client" 
+=======
+    const _dbUserType = mapUserTypeToDatabase(userType);
+    
+    try {_await updateProfile({ 
+        id: user.id, _displayName: data.displayName, _bio: data.bio, _// This is now valid since we added bio to UserDetails
+        userType: dbUserType, _headline: data.headline, _profileComplete: true});
+      
+      // Update onboarding milestone
+      await supabase.rpc('update_onboarding_milestone', {_user_id: user.id, _milestone: 'profile_completed', _status: true});
+      
+      toast({_title: 'Profile completed!', _description: 'Your profile has been set up successfully.'});
+      
+      // Get the appropriate dashboard route based on user type
+      const _dashboardRoute = userType === "client" 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         ? "/client-dashboard" 
         : "/talent-dashboard",
 =======
@@ -144,15 +187,21 @@ export default function Onboarding() {
       // Redirect to dashboard
       navigate(dashboardRoute)
       
+<<<<<<< HEAD
     } catch (error) {
       console.error('Error updating profile:', error),
       toast({
         title: 'Error',
         description: 'There was a problem updating your profile. Please try again.',
         variant: 'destructive'})
+=======
+    } catch (error) {_toast({
+        title: 'Error', _description: 'There was a problem updating your profile. Please try again.', _variant: 'destructive'});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
+<<<<<<< HEAD
   const steps = [
 <<<<<<< HEAD
     { label: "Select Role", description: "Choose how you'll use the platform" },
@@ -166,9 +215,16 @@ export default function Onboarding() {
     navigate('/login'),
     return null
   }
+=======
+  const _steps = [
+    {_label: "Select Role", _description: "Choose how you'll use the platform"},
+    {_label: "Create Profile", _description: "Tell us about yourself"}];
 
-  return (
-    <>
+  if (!user) {_navigate('/login');
+    return null;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  return (_<>
       <Header />
       <div className=&quot;min-h-screen bg-zion-blue py-12 px-4&quot;>
         <div className=&quot;max-w-4xl mx-auto&quot;>
@@ -181,6 +237,7 @@ export default function Onboarding() {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className=&quot;mb-12&quot;>
             <Steps currentStep={currentStep} className=&quot;max-w-xl mx-auto&quot;>
               {steps.map((step, index) => (
@@ -195,20 +252,44 @@ export default function Onboarding() {
                   }
                   label={step.label}
                   description={step.description}
+=======
+          <div className="mb-12">
+            <Steps currentStep={_currentStep} className="max-w-xl mx-auto">
+              {_steps.map((step, _index) => (
+                <Step
+                  key={index}
+                  status={_currentStep > index
+                      ? "complete"
+                      : currentStep === index
+                      ? "current"
+                      : "incomplete"}
+                  label={_step.label}
+                  description={_step.description}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 />
               ))}
             </Steps>
           </div>
 
+<<<<<<< HEAD
           <div className=&quot;bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light&quot;>
             {currentStep === 0 ? (
               <UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType} />
+=======
+          <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">
+            {_currentStep === 0 ? (
+              <UserTypeSelection onSelect={handleUserTypeSelect} selectedType={_userType} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             ) : (
-              <ProfileSetup onComplete={handleProfileComplete} userType={userType!} />
+              <ProfileSetup onComplete={_handleProfileComplete} userType={_userType!} />
             )}
 
+<<<<<<< HEAD
             {currentStep === 1 && (
               <div className=&quot;mt-6&quot;>
+=======
+            {_currentStep === 1 && (_<div className="mt-6">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 <Button
                   variant=&quot;outline&quot;
                   className=&quot;w-full border-zion-blue-light text-white hover:bg-zion-blue-light&quot;

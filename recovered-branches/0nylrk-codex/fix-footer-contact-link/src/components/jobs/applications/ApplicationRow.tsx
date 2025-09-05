@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { Calendar, User, FileText, BarChart } from "lucide-react",
@@ -30,49 +31,71 @@ interface ApplicationRowProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
   onViewScore: (application: JobApplication) => void
 }
+=======
 
-export function ApplicationRow({
-  application,
-  processingId,
-  onViewApplication,
-  onStatusChange,
-  onViewScore
-}: ApplicationRowProps) {
-  return (
+interface ApplicationRowProps {_application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (_applicationId: string) => Promise<void>;
+  onStatusChange: (_applicationId: string, _newStatus: ApplicationStatus) => Promise<void>;
+  onViewScore: (_application: JobApplication) => void;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export function ApplicationRow(_{_application, _processingId, _onViewApplication, _onStatusChange, _onViewScore}: ApplicationRowProps) {_return (
     <TableRow key={application.id}>
       <TableCell>
+<<<<<<< HEAD
         <div className=&quot;flex items-center gap-3&quot;>
           <Avatar className=&quot;h-9 w-9&quot;>
             {application.talent_profile?.profile_picture_url ? (
+=======
+        <div className="flex items-center gap-3">
+          <Avatar className="h-9 w-9">
+            {_application.talent_profile?.profile_picture_url ? (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <img 
                 src={application.talent_profile.profile_picture_url} 
-                alt={application.talent_profile.full_name} 
+                alt={_application.talent_profile.full_name} 
               />
             ) : (
               <User className=&quot;h-5 w-5 text-gray-400&quot; />
             )}
           </Avatar>
           <div>
+<<<<<<< HEAD
             <div className=&quot;font-medium&quot;>
               {application.talent_profile?.full_name || &quot;Unknown&quot;}
             </div>
             <div className=&quot;text-xs text-muted-foreground&quot;>
               {application.talent_profile?.professional_title || &quot;Talent&quot;}
+=======
+            <div className="font-medium">
+              {_application.talent_profile?.full_name || "Unknown"}
+            </div>
+            <div className="text-xs text-muted-foreground">
+              {_application.talent_profile?.professional_title || "Talent"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
           </div>
         </div>
       </TableCell>
       <TableCell>
+<<<<<<< HEAD
         <div className=&quot;flex items-center gap-1&quot;>
           <Calendar className=&quot;h-4 w-4 text-muted-foreground&quot; />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
+=======
+        <div className="flex items-center gap-1">
+          <Calendar className="h-4 w-4 text-muted-foreground" />
+          <span>{_formatDistanceToNow(new Date(application.created_at), _{ addSuffix: true})}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </div>
       </TableCell>
       <TableCell>
-        <StatusBadge status={application.status} />
+        <StatusBadge status={_application.status} />
       </TableCell>
       <TableCell>
         <Button 
+<<<<<<< HEAD
           variant=&quot;ghost&quot; 
           size=&quot;sm&quot; 
           onClick={() => onViewScore(application)}
@@ -88,6 +111,23 @@ export function ApplicationRow({
             <a href={application.resume.file_url || &quot;#&quot;} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>
               <FileText className=&quot;h-4 w-4 mr-1&quot; /> View
             </Link>
+=======
+          variant="ghost" 
+          size="sm" 
+          onClick={_() => onViewScore(application)}
+          className="flex items-center gap-1"
+        >
+          <BarChart className="h-4 w-4 mr-1" />
+          <ScoreBadge application={_application} />
+        </Button>
+      </TableCell>
+      <TableCell>
+        {_application.resume ? (
+          <Button variant="ghost" size="sm" asChild>
+            <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">
+              <FileText className="h-4 w-4 mr-1" /> View
+            </a>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </Button>
         ) : (
           <span className=&quot;text-muted-foreground text-sm&quot;>No resume</span>
@@ -95,10 +135,10 @@ export function ApplicationRow({
       </TableCell>
       <TableCell className=&quot;text-right&quot;>
         <ApplicationActions
-          application={application}
-          processingId={processingId}
-          onViewApplication={onViewApplication}
-          onStatusChange={onStatusChange}
+          application={_application}
+          processingId={_processingId}
+          onViewApplication={_onViewApplication}
+          onStatusChange={_onStatusChange}
         />
       </TableCell>
     </TableRow>

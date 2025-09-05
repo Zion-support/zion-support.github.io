@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
 import TalentDirectory from "../pages/TalentDirectory",
@@ -29,19 +30,44 @@ const TalentRoutes = () => {
         path=&quot;/saved-talents&quot; 
         element={
           <ProtectedRoute>
+=======
+import TalentDirectory from "../pages/TalentDirectory";
+import TalentsPage from "../pages/TalentsPage";
+import TalentProfilePage from "../pages/TalentProfilePage";
+import SavedTalentsPage from "../pages/SavedTalentsPage";
+import CreateTalentProfile from "../pages/CreateTalentProfile";
+import ProfilePage from "../pages/ProfilePage";
+
+const _TalentRoutes = () => {_return (
+    <Routes>
+      {/* Talent Routes */}
+      <Route path="/talent" element={_<TalentDirectory />} />
+      <Route path="/talents" element={_<TalentsPage />} />
+      <Route path="/talent/:id" element={_<TalentProfilePage />} />
+      <Route 
+        path="/saved-talents" 
+        element={_<ProtectedRoute>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <SavedTalentsPage />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
+<<<<<<< HEAD
         path=&quot;/create-talent-profile&quot; 
         element={
           <ProtectedRoute>
+=======
+        path="/create-talent-profile" 
+        element={_<ProtectedRoute>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <CreateTalentProfile />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
+<<<<<<< HEAD
       <Route path=&quot;/profile/:id&quot; element={<ProfilePage />} />
+=======
+      <Route path="/profile/:id" element={_<ProfilePage />} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     </Routes>
   )
 },

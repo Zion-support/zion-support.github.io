@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -75,11 +76,31 @@ const getNotificationIcon = (type: NotificationType, className: string = &quot;h
     default:
       return <Bell className={cn(className, &quot;text-gray-500&quot;)} />;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import React, {_useState} from 'react';
+import {_NotificationType, _NotificationContextType} from "@/context/notifications";
+import {_Bell, _Check, _Trash2, _ChevronRight, _CheckCircle, _AlertCircle, _MessageCircle, _Briefcase, _UserCheck, _Settings} from "lucide-react";
+
+const _getNotificationIcon = (_type: NotificationType, _className: string = "h-5 w-5") => {_switch (type) {
+    case 'message':
+      return <MessageCircle className={cn(className, _"text-blue-500")} />;
+    case 'quote_request':
+      return <Briefcase className={_cn(className, _"text-purple-500")} />;
+    case 'booking_confirmation':
+      return <CheckCircle className={_cn(className, _"text-green-500")} />;
+    case 'hire_request':
+      return <UserCheck className={_cn(className, _"text-zion-purple")} />;
+    case 'onboarding':
+      return <Settings className={_cn(className, _"text-zion-cyan")} />;
+    case 'system':
+      return <AlertCircle className={_cn(className, _"text-yellow-500")} />;
+    default:
+      return <Bell className={_cn(className, _"text-gray-500")} />;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 },
 
-const getNotificationTypeBadge = (type: NotificationType) => {
-  switch (type) {
+const _getNotificationTypeBadge = (_type: NotificationType) => {_switch (type) {
     case 'message':
 <<<<<<< HEAD
       return <Badge className="bg-blue-500">Message</Badge>,
@@ -94,6 +115,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {
     case 'system':
       return <Badge className="bg-yellow-500">System</Badge>,
     default:
+<<<<<<< HEAD
       return <Badge variant="outline">Notification</Badge>
 =======
       return <Badge className=&quot;bg-blue-500&quot;>Message</Badge>;
@@ -128,9 +150,27 @@ const NotificationCard: React.FC<{
   onDismiss: (id: string) => Promise<void>
 }> = ({ notification, onMarkAsRead, onDismiss }) => {
   const navigate = useNavigate(),
+=======
+      return <Badge variant="outline">Notification</Badge>;}
+};
+
+const NotificationCard: React.FC<{_notification: {
+    id: string;
+    title: string;
+    message: string;
+    type: NotificationType;
+    read: boolean;
+    created_at: string;
+    action_url?: string;
+    action_text?: string;};
+  onMarkAsRead: (_id: string) => Promise<void>;
+  onDismiss: (_id: string) => Promise<void>;
+}> = (_{_notification, _onMarkAsRead, _onDismiss}) => {_const _navigate = useNavigate();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const handleAction = () => {
+  const _handleAction = () => {
     if (!notification.read) {
+<<<<<<< HEAD
       onMarkAsRead(notification.id)
     }
     
@@ -159,16 +199,50 @@ const NotificationCard: React.FC<{
                 </span>
                 {!notification.read && (
                   <Badge variant=&quot;outline&quot; className=&quot;bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs&quot;>New</Badge>
+=======
+      onMarkAsRead(notification.id);}
+    
+    if (notification.action_url) {_navigate(notification.action_url);}
+  };
+  
+  return (
+    <div className={_cn(
+      "border rounded-lg shadow-sm p-4 mb-3 group transition-colors", _notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30"
+    )}>
+      <div className="flex items-start gap-4">
+        <div className="mt-1">
+          {_getNotificationIcon(notification.type, _"h-6 w-6")}
+        </div>
+        <div className="flex-1">
+          <div className="flex justify-between">
+            <div className="flex flex-col">
+              <h3 className="font-medium text-white">{_notification.title}</h3>
+              <div className="flex items-center gap-2 mb-2">
+                {_getNotificationTypeBadge(notification.type)}
+                <span className="text-xs text-zion-slate-light">
+                  {_formatDistanceToNow(new Date(notification.created_at), _{ addSuffix: true})}
+                </span>
+                {_!notification.read && (
+                  <Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 )}
               </div>
             </div>
             
+<<<<<<< HEAD
             <div className=&quot;flex items-center gap-2&quot;>
               {!notification.read && (
                 <Button
                   variant=&quot;ghost&quot;
                   size=&quot;sm&quot;
                   className=&quot;h-8 w-8 p-0&quot;
+=======
+            <div className="flex items-center gap-2">
+              {_!notification.read && (_<Button
+                  variant="ghost"
+                  size="sm"
+                  className="h-8 w-8 p-0"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   onClick={() => onMarkAsRead(notification.id)}
                 >
                   <Check className=&quot;h-4 w-4 text-green-400&quot; />
@@ -176,10 +250,17 @@ const NotificationCard: React.FC<{
                 </Button>
               )}
               <Button
+<<<<<<< HEAD
                 variant=&quot;ghost&quot;
                 size=&quot;sm&quot;
                 className=&quot;h-8 w-8 p-0&quot;
                 onClick={() => onDismiss(notification.id)}
+=======
+                variant="ghost"
+                size="sm"
+                className="h-8 w-8 p-0"
+                onClick={_() => onDismiss(notification.id)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 <Trash2 className=&quot;h-4 w-4 text-red-400&quot; />
                 <span className=&quot;sr-only&quot;>Dismiss</span>
@@ -187,17 +268,26 @@ const NotificationCard: React.FC<{
             </div>
           </div>
           
+<<<<<<< HEAD
           <p className=&quot;text-zion-slate-light mb-3&quot;>{notification.message}</p>
+=======
+          <p className="text-zion-slate-light mb-3">{_notification.message}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           
-          {notification.action_url && notification.action_text && (
+          {_notification.action_url && notification.action_text && (
             <Button
               variant=&quot;outline&quot;
               size=&quot;sm&quot;
               className=&quot;mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black&quot;
               onClick={handleAction}
             >
+<<<<<<< HEAD
               {notification.action_text}
               <ChevronRight className=&quot;ml-1 h-4 w-4&quot; />
+=======
+              {_notification.action_text}
+              <ChevronRight className="ml-1 h-4 w-4" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </Button>
           )}
         </div>
@@ -206,6 +296,7 @@ const NotificationCard: React.FC<{
   )
 },
 
+<<<<<<< HEAD
 export default function NotificationsPage() {
   const {
     filteredNotifications,
@@ -217,6 +308,10 @@ export default function NotificationsPage() {
     filter,
     setFilter
   } = useNotifications() as NotificationContextType,
+=======
+export default function NotificationsPage() {_const {
+    filteredNotifications, _unreadCount, _markAsRead, _markAllAsRead, _dismissNotification, _loading, _filter, _setFilter} = useNotifications() as NotificationContextType;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <>
@@ -228,18 +323,30 @@ export default function NotificationsPage() {
       <main className=&quot;container mx-auto px-4 py-8 min-h-screen&quot;>
         <div className=&quot;flex justify-between items-center mb-6&quot;>
           <div>
+<<<<<<< HEAD
             <h1 className=&quot;text-3xl font-bold flex items-center&quot;>
               <Bell className=&quot;mr-3 h-7 w-7&quot; /> Notifications
               {unreadCount > 0 && (
                 <Badge className=&quot;ml-3 bg-zion-cyan&quot;>{unreadCount} unread</Badge>
+=======
+            <h1 className="text-3xl font-bold flex items-center">
+              <Bell className="mr-3 h-7 w-7" /> Notifications
+              {_unreadCount > 0 && (
+                <Badge className="ml-3 bg-zion-cyan">{unreadCount} unread</Badge>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               )}
             </h1>
             <p className=&quot;text-muted-foreground&quot;>Stay updated with the latest activities and reminders</p>
           </div>
           
+<<<<<<< HEAD
           {unreadCount > 0 && (
             <Button
               variant=&quot;outline&quot;
+=======
+          {_unreadCount > 0 && (_<Button
+              variant="outline"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               onClick={() => markAllAsRead()}
             >
               <Check className=&quot;mr-2 h-4 w-4&quot; />
@@ -248,6 +355,7 @@ export default function NotificationsPage() {
           )}
         </div>
         
+<<<<<<< HEAD
         <div className=&quot;mb-8&quot;>
           <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value as any)}>
             <TabsList className=&quot;grid w-full max-w-md grid-cols-5&quot;>
@@ -263,6 +371,23 @@ export default function NotificationsPage() {
                   <Skeleton className=&quot;h-24 w-full rounded-lg&quot; />
                   <Skeleton className=&quot;h-24 w-full rounded-lg&quot; />
                   <Skeleton className=&quot;h-24 w-full rounded-lg&quot; />
+=======
+        <div className="mb-8">
+          <Tabs defaultValue={_filter} onValueChange={_(_value) => setFilter(value as any)}>
+            <TabsList className="grid w-full max-w-md grid-cols-5">
+              <TabsTrigger value="all">All</TabsTrigger>
+              <TabsTrigger value="unread">Unread</TabsTrigger>
+              <TabsTrigger value="onboarding">Onboarding</TabsTrigger>
+              <TabsTrigger value="messages">Messages</TabsTrigger>
+              <TabsTrigger value="system">System</TabsTrigger>
+            </TabsList>
+            <TabsContent value={_filter} className="mt-6">
+              {_loading ? (
+                <div className="space-y-4">
+                  <Skeleton className="h-24 w-full rounded-lg" />
+                  <Skeleton className="h-24 w-full rounded-lg" />
+                  <Skeleton className="h-24 w-full rounded-lg" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </div>
               ) : filteredNotifications.length === 0 ? (
                 <div className=&quot;text-center py-12 bg-muted rounded-lg&quot;>
@@ -274,12 +399,12 @@ export default function NotificationsPage() {
                 </div>
               ) : (
                 <div>
-                  {filteredNotifications.map(notification => (
+                  {_filteredNotifications.map(notification => (
                     <NotificationCard
                       key={notification.id}
-                      notification={notification}
-                      onMarkAsRead={markAsRead}
-                      onDismiss={dismissNotification}
+                      notification={_notification}
+                      onMarkAsRead={_markAsRead}
+                      onDismiss={_dismissNotification}
                     />
                   ))}
                 </div>

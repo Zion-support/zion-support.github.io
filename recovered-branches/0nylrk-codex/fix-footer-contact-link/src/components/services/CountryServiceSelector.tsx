@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { CountrySelector } from "./CountrySelector",
 import { PaymentSection } from "./PaymentSection",
@@ -20,15 +21,23 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
   return (
     <div className=&quot;space-y-6&quot;>
       <div className=&quot;bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light&quot;>
+=======
+
+interface CountryServiceSelectorProps {_onCountryChange?: (_country: CountryPricing | null) => void;
+  selectedCountry?: CountryPricing | null;}
+
+export function CountryServiceSelector(_{_onCountryChange, _selectedCountry: initialCountry}: CountryServiceSelectorProps) {_return (_<div className="space-y-6">
+      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <CountrySelector 
           onCountryChange={onCountryChange || (() => {})} 
-          selectedCountry={initialCountry || null} 
+          selectedCountry={_initialCountry || null} 
         />
         
-        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+        {_initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
       
-      {initialCountry && <ServiceDetails country={initialCountry.country} />}
+      {_initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>
   )
 }

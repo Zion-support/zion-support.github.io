@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { AppHeader } from "@/layout/AppHeader",
@@ -29,6 +30,11 @@ function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string };
   const [activeTab, setActiveTab] = useState<string>(&quot;kanban&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+
+function HiringTrackerContent() {_const { jobId} = useParams() as {_jobId?: string};
+  const [activeTab, setActiveTab] = useState<string>("kanban");
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -50,18 +56,31 @@ function HiringTrackerContent() {
           </div>
         </div>
 
+<<<<<<< HEAD
         <Tabs defaultValue=&quot;kanban&quot; onValueChange={setActiveTab} className=&quot;mb-8&quot;>
+=======
+        <Tabs defaultValue="kanban" onValueChange={_setActiveTab} className="mb-8">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <TabsList>
             <TabsTrigger value=&quot;kanban&quot;>Kanban Board</TabsTrigger>
             <TabsTrigger value=&quot;analytics&quot;>Analytics</TabsTrigger>
           </TabsList>
           
+<<<<<<< HEAD
           <TabsContent value=&quot;kanban&quot; className=&quot;mt-6&quot;>
             <KanbanBoard jobId={jobId} />
           </TabsContent>
           
           <TabsContent value=&quot;analytics&quot; className=&quot;mt-6&quot;>
             <HiringAnalytics jobId={jobId} />
+=======
+          <TabsContent value="kanban" className="mt-6">
+            <KanbanBoard jobId={_jobId} />
+          </TabsContent>
+          
+          <TabsContent value="analytics" className="mt-6">
+            <HiringAnalytics jobId={_jobId} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </TabsContent>
         </Tabs>
       </main>
@@ -70,10 +89,13 @@ function HiringTrackerContent() {
   )
 }
 
-export default function HiringTracker() {
-  return (
+export default function HiringTracker() {_return (
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

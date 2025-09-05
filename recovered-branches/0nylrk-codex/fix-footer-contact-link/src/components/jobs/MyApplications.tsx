@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -28,6 +29,14 @@ export function MyApplications() {
     switch (status) {
 <<<<<<< HEAD
       case "new": return <Badge variant="secondary">New</Badge>,
+=======
+
+export function MyApplications() {_const { applications, _isLoading, _error} = useJobApplications();
+  
+  const _getStatusBadge = (_status: ApplicationStatus) => {_switch (status) {
+      case "new":
+        return <Badge variant="secondary">New</Badge>;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       case "viewed":
         return <Badge variant="outline">Viewed</Badge>,
       case "shortlisted":
@@ -59,6 +68,7 @@ export function MyApplications() {
     }
   },
   
+<<<<<<< HEAD
   if (isLoading) {
     return (
       <div className=&quot;flex justify-center items-center p-8&quot;>
@@ -70,16 +80,33 @@ export function MyApplications() {
   if (error) {
     return (
       <div className=&quot;text-center p-6 border rounded-md bg-red-50 text-red-800&quot;>
+=======
+  if (isLoading) {_return (
+      <div className="flex justify-center items-center p-8">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );}
+  
+  if (error) {_return (
+      <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <p>{error}</p>
       </div>
     )
   }
   
+<<<<<<< HEAD
   if (applications.length === 0) {
     return (
       <Card className=&quot;bg-muted/30&quot;>
         <CardContent className=&quot;pt-6 text-center&quot;>
           <p className=&quot;text-muted-foreground&quot;>
+=======
+  if (applications.length === 0) {_return (
+      <Card className="bg-muted/30">
+        <CardContent className="pt-6 text-center">
+          <p className="text-muted-foreground">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             You haven't submitted any applications yet.
           </p>
           <Button className=&quot;mt-4&quot; asChild>
@@ -87,6 +114,7 @@ export function MyApplications() {
           </Button>
         </CardContent>
       </Card>
+<<<<<<< HEAD
     )
   }
   
@@ -98,9 +126,21 @@ export function MyApplications() {
             <div className=&quot;flex justify-between items-start&quot;>
               <CardTitle className=&quot;text-lg&quot;>
                 {application.job?.title || &quot;Unknown Job&quot;}
+=======
+    );}
+  
+  return (_<div className="grid gap-4 md:grid-cols-2">
+      {_applications.map((application) => (
+        <Card key={application.id}>
+          <CardHeader className="pb-2">
+            <div className="flex justify-between items-start">
+              <CardTitle className="text-lg">
+                {_application.job?.title || "Unknown Job"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </CardTitle>
-              {getStatusBadge(application.status)}
+              {_getStatusBadge(application.status)}
             </div>
+<<<<<<< HEAD
             <p className=&quot;text-sm text-muted-foreground&quot;>
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </p>
@@ -109,6 +149,16 @@ export function MyApplications() {
             <div className=&quot;space-y-3&quot;>
               {application.cover_letter && (
                 <p className=&quot;text-sm text-muted-foreground line-clamp-2 mb-2&quot;>
+=======
+            <p className="text-sm text-muted-foreground">
+              Applied {_formatDistanceToNow(new Date(application.created_at), _{ addSuffix: true})}
+            </p>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {_application.cover_letter && (
+                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   {application.cover_letter}
                 </p>
               )}
@@ -120,8 +170,13 @@ export function MyApplications() {
                   className=&quot;text-xs&quot;
                   asChild
                 >
+<<<<<<< HEAD
                   <Link to={`/jobs/${application.job_id}`}>
                     <ExternalLink className=&quot;h-3 w-3 mr-1&quot; /> View Job
+=======
+                  <Link to={_`/jobs/${application.job_id}`}>
+                    <ExternalLink className="h-3 w-3 mr-1" /> View Job
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </Link>
                 </Button>
                 
@@ -131,8 +186,13 @@ export function MyApplications() {
                   className=&quot;text-xs&quot;
                   asChild
                 >
+<<<<<<< HEAD
                   <Link to={`/messages?jobId=${application.job_id}`}>
                     <MessageSquare className=&quot;h-3 w-3 mr-1&quot; /> Contact Client
+=======
+                  <Link to={_`/messages?jobId=${application.job_id}`}>
+                    <MessageSquare className="h-3 w-3 mr-1" /> Contact Client
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </Link>
                 </Button>
               </div>

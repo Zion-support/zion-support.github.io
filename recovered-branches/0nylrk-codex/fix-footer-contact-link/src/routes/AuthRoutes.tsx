@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import Login from "@/pages/Login",
@@ -31,31 +32,60 @@ const AuthRoutes = () => {
       <Route path=&quot;/signup&quot; element={<Signup />} />
       <Route path=&quot;/forgot-password&quot; element={<ForgotPassword />} />
       <Route path=&quot;/update-password&quot; element={<UpdatePassword />} />
+=======
+import Login from "@/pages/Login";
+import Signup from "@/pages/Signup";
+import ForgotPassword from "@/pages/ForgotPassword";
+import UpdatePassword from "@/pages/UpdatePassword";
+import Onboarding from "@/pages/Onboarding";
+import TalentOnboarding from "@/pages/TalentOnboarding";
+import ServiceOnboarding from "@/pages/ServiceOnboarding";
+
+const _AuthRoutes = () => {_return (
+    <Routes>
+      {/* Auth Routes */}
+      <Route path="/login" element={_<Login />} />
+      <Route path="/signup" element={_<Signup />} />
+      <Route path="/forgot-password" element={_<ForgotPassword />} />
+      <Route path="/update-password" element={_<UpdatePassword />} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
-      {/* Onboarding Routes */}
+      {_/* Onboarding Routes */}
       <Route 
+<<<<<<< HEAD
         path=&quot;/onboarding&quot; 
         element={
           <ProtectedRoute>
+=======
+        path="/onboarding" 
+        element={_<ProtectedRoute>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <Onboarding />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
+<<<<<<< HEAD
         path=&quot;/talent-onboarding&quot; 
         element={
           <ProtectedRoute>
+=======
+        path="/talent-onboarding" 
+        element={_<ProtectedRoute>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <TalentOnboarding />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
+<<<<<<< HEAD
         path=&quot;/service-onboarding&quot; 
         element={
           <ProtectedRoute>
+=======
+        path="/service-onboarding" 
+        element={_<ProtectedRoute>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <ServiceOnboarding />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
     </Routes>
   )

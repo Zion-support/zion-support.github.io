@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router',
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling',
 import ProductCard from '@/components/ProductCard',
@@ -20,16 +21,19 @@ import { useAuth } from '@/context/auth/AuthProvider',
 import { MARKETPLACE_LISTINGS } from '@/data/listingData',
 import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+=======
+import ProductCard from '@/components/ProductCard';
+import Spinner from '@/components/ui/spinner';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 
 /**
  * Marketplace component props
  */
-export interface MarketplaceProps {
-  // All props removed - component now fetches data independently
-}
+export interface MarketplaceProps {_// All props removed - component now fetches data independently}
 
 // Market insights component
+<<<<<<< HEAD
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className=&quot;bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6&quot;>
     <CardContent className=&quot;p-6&quot;>
@@ -53,6 +57,31 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         <div className=&quot;text-center&quot;>
           <div className=&quot;text-2xl font-bold text-yellow-400&quot;>{stats.categoriesCount}</div>
           <div className=&quot;text-sm text-muted-foreground&quot;>Categories</div>
+=======
+const MarketInsights: React.FC<{_stats: unknown}> = (_{_stats}) => (
+  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
+    <CardContent className="p-6">
+      <div className="flex items-center gap-2 mb-4">
+        <TrendingUp className="h-5 w-5 text-blue-400" />
+        <h3 className="text-lg font-semibold">Market Insights</h3>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="text-center">
+          <div className="text-2xl font-bold text-blue-400">${_Math.round(stats.averagePrice)}</div>
+          <div className="text-sm text-muted-foreground">Avg Price</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-green-400">{_stats.averageRating.toFixed(1)}</div>
+          <div className="text-sm text-muted-foreground">Avg Rating</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-purple-400">{_stats.totalProducts}</div>
+          <div className="text-sm text-muted-foreground">Products</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-yellow-400">{_stats.categoriesCount}</div>
+          <div className="text-sm text-muted-foreground">Categories</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </div>
       </div>
     </CardContent>
@@ -60,6 +89,7 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 ),
 
 // Filter and sort controls
+<<<<<<< HEAD
 const FilterControls: React.FC<{
   sortBy: string,
   setSortBy: (sort: string) => void,
@@ -111,10 +141,39 @@ const FilterControls: React.FC<{
         value={filterCategory}
         onChange={(e) => setFilterCategory(e.target.value)}
         className=&quot;bg-background border border-border px-3 py-2 rounded&quot;
+=======
+const FilterControls: React.FC<{_sortBy: string;
+  setSortBy: (_sort: string) => void;
+  filterCategory: string;
+  setFilterCategory: (_category: string) => void;
+  categories: string[];
+  priceRange: [number, _number];
+  setPriceRange: (_range: [number, _number]) => void;
+  minAiScore: number;
+  setMinAiScore: (_score: number) => void;
+  minRating: number;
+  setMinRating: (_rating: number) => void;
+  filterAvailability: string;
+  setFilterAvailability: (_value: string) => void;
+  availabilityOptions: string[];
+  filterLocation: string;
+  setFilterLocation: (_value: string) => void;
+  locations: string[];
+  showRecommended: boolean;
+  setShowRecommended: (_show: boolean) => void;
+  loading: boolean;}> = (_{_sortBy, _setSortBy, _filterCategory, _setFilterCategory, _categories, _priceRange, _setPriceRange, _minAiScore, _setMinAiScore, _minRating, _setMinRating, _filterAvailability, _setFilterAvailability, _availabilityOptions, _filterLocation, _setFilterLocation, _locations, _showRecommended, _setShowRecommended, _loading}) => (_<div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
+    {_loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
+    <div className="flex items-center gap-2">
+      <Filter className="h-4 w-4 text-muted-foreground" />
+      <select
+        value={_filterCategory}
+        onChange={_(e) => setFilterCategory(e.target.value)}
+        className="bg-background border border-border px-3 py-2 rounded"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       >
         <option value="">All Categories</option>
-        {categories.map(category => (
-          <option key={category} value={category}>{category}</option>
+        {_categories.map(category => (
+          <option key={category} value={_category}>{_category}</option>
         ))}
       </select>
     </div>
@@ -122,9 +181,15 @@ const FilterControls: React.FC<{
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
       <select
+<<<<<<< HEAD
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
         className="bg-background border border-border px-3 py-2 rounded&quot;
+=======
+        value={_sortBy}
+        onChange={_(_e) => setSortBy(e.target.value)}
+        className="bg-background border border-border px-3 py-2 rounded"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       >
         <option value=&quot;newest&quot;>Newest First</option>
         <option value=&quot;price-low&quot;>Price: Low to High</option>
@@ -138,6 +203,7 @@ const FilterControls: React.FC<{
     <div className="flex items-center gap-2">
       <span className="text-sm&quot;>$</span>
       <input
+<<<<<<< HEAD
         type=&quot;number"
         value={priceRange[0]}
         min={MIN_PRICE}
@@ -152,6 +218,22 @@ const FilterControls: React.FC<{
         min={priceRange[0]}
         max={MAX_PRICE}
         onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])}
+=======
+        type="number"
+        value={_priceRange[0]}
+        min={_MIN_PRICE}
+        max={_priceRange[1]}
+        onChange={_(_e) => setPriceRange([Number(e.target.value), _priceRange[1]])}
+        className="w-20 bg-background border border-border px-2 py-1 rounded"
+      />
+      <span>-</span>
+      <input
+        type="number"
+        value={_priceRange[1]}
+        min={_priceRange[0]}
+        max={_MAX_PRICE}
+        onChange={_(_e) => setPriceRange([priceRange[0], _Number(e.target.value)])}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         className="w-20 bg-background border border-border px-2 py-1 rounded"
       />
     </div>
@@ -159,11 +241,19 @@ const FilterControls: React.FC<{
     <div className="flex items-center gap-2">
       <span className="text-sm&quot;>AI ≥</span>
       <input
+<<<<<<< HEAD
         type=&quot;number"
         value={minAiScore}
         min={0}
         max={100}
         onChange={(e) => setMinAiScore(Number(e.target.value))}
+=======
+        type="number"
+        value={_minAiScore}
+        min={_0}
+        max={_100}
+        onChange={_(_e) => setMinAiScore(Number(e.target.value))}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         className="w-16 bg-background border border-border px-2 py-1 rounded"
       />
     </div>
@@ -171,21 +261,22 @@ const FilterControls: React.FC<{
     <div className="flex items-center gap-2">
       <span className="text-sm">Rating ≥</span>
       <select
-        value={minRating}
-        onChange={(e) => setMinRating(Number(e.target.value))}
+        value={_minRating}
+        onChange={_(_e) => setMinRating(Number(e.target.value))}
         className="bg-background border border-border px-2 py-1 rounded"
       >
-        <option value={0}>Any</option>
-        <option value={5}>5</option>
-        <option value={4}>4</option>
-        <option value={3}>3</option>
-        <option value={2}>2</option>
-        <option value={1}>1</option>
+        <option value={_0}>Any</option>
+        <option value={_5}>5</option>
+        <option value={_4}>4</option>
+        <option value={_3}>3</option>
+        <option value={_2}>2</option>
+        <option value={_1}>1</option>
       </select>
     </div>
 
     <div className="flex items-center gap-2">
       <select
+<<<<<<< HEAD
         value={filterAvailability}
         onChange={(e) => setFilterAvailability(e.target.value)}
         className="bg-background border border-border px-3 py-2 rounded&quot;
@@ -193,12 +284,22 @@ const FilterControls: React.FC<{
         <option value="&quot;>Any Availability</option>
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>{opt}</option>
+=======
+        value={_filterAvailability}
+        onChange={_(_e) => setFilterAvailability(e.target.value)}
+        className="bg-background border border-border px-3 py-2 rounded"
+      >
+        <option value="">Any Availability</option>
+        {_availabilityOptions.map(opt => (
+          <option key={opt} value={_opt as string}>{_opt}</option>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         ))}
       </select>
     </div>
 
     <div className=&quot;flex items-center gap-2&quot;>
       <select
+<<<<<<< HEAD
         value={filterLocation}
         onChange={(e) => setFilterLocation(e.target.value)}
         className=&quot;bg-background border border-border px-3 py-2 rounded&quot;
@@ -206,11 +307,21 @@ const FilterControls: React.FC<{
         <option value="&quot;>All Locations</option>
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
+=======
+        value={_filterLocation}
+        onChange={_(_e) => setFilterLocation(e.target.value)}
+        className="bg-background border border-border px-3 py-2 rounded"
+      >
+        <option value="">All Locations</option>
+        {_locations.map(loc => (
+          <option key={loc} value={_loc}>{_loc}</option>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         ))}
       </select>
     </div>
 
     <Button
+<<<<<<< HEAD
       variant={showRecommended ? &quot;default&quot; : &quot;outline&quot;}
       size=&quot;sm"
       onClick={() => setShowRecommended(!showRecommended)}
@@ -218,6 +329,15 @@ const FilterControls: React.FC<{
     >
       <Sparkles className="h-4 w-4&quot; />
       {showRecommended ? &quot;All Products&quot; : &quot;Recommended&quot;}
+=======
+      variant={_showRecommended ? "default" : "outline"}
+      size="sm"
+      onClick={_() => setShowRecommended(!showRecommended)}
+      className="flex items-center gap-2"
+    >
+      <Sparkles className="h-4 w-4" />
+      {_showRecommended ? "All Products" : "Recommended"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     </Button>
   </div>
 ),
@@ -227,6 +347,7 @@ const FilterControls: React.FC<{
  * Uses the auto-feed algorithm to continuously generate IT and AI products
  * Includes intelligent filtering, sorting, and recommendation features
  */
+<<<<<<< HEAD
 export default function Marketplace() {
   const router = useRouter(),
   const { t } = useTranslation(),
@@ -265,6 +386,34 @@ export default function Marketplace() {
         title: &quot;Admin Access Required&quot;,
         description: &quot;Only administrators can add products to the marketplace. Please contact an administrator.&quot;,
         variant: &quot;destructive&quot;});
+=======
+export default function Marketplace() {_const _router = useRouter();
+  const { t} = useTranslation();
+  const {_toast} = useToast();
+  const {_isAuthenticated, _user} = useAuth();
+  const _firstRenderRef = useRef(true);
+  const _isRefreshingAfterFilterChange = useRef(false); // New ref to track refresh state
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+
+  const [sortBy, setSortBy] = useState('newest');
+  const [filterCategory, setFilterCategory] = useState('');
+  const [showRecommended, setShowRecommended] = useState(false);
+  const [priceRange, setPriceRange] = useState<[number, number]>([MIN_PRICE, MAX_PRICE]);
+  const [minAiScore, setMinAiScore] = useState(0);
+  const [minRating, setMinRating] = useState(0);
+  const [filterAvailability, setFilterAvailability] = useState('');
+  const [filterLocation, setFilterLocation] = useState('');
+  const {_handleApiError, _retryQuery} = useApiErrorHandling();
+
+  // Handle Add Product button with authentication check
+  const _handleAddProduct = useCallback__(() => {_if (!isAuthenticated) {
+      setIsAuthModalOpen(true); // Use the new auth modal
+      return;}
+
+    // Check if user has permission to add products (simplified to admin check)
+    if (user && user.userType !== 'admin') {_toast({
+        title: "Admin Access Required", _description: "Only administrators can add products to the marketplace. Please contact an administrator.", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
@@ -274,24 +423,31 @@ export default function Marketplace() {
   }, [isAuthenticated, user, router, toast]),
 
   // Fetch function for infinite scroll with AI product generation
+<<<<<<< HEAD
   const fetchProducts = useCallback(async (page: number, limit: number) => {
     await new Promise((resolve) => setTimeout(resolve, 200)),
+=======
+  const _fetchProducts = useCallback(_async (page: number, _limit: number) => {_await new Promise(_(resolve) => setTimeout(resolve, _200));
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     try {
       // Use static marketplace listings data for now (compatible with ProductListing type)
-      const params = {
-        page,
-        limit,
-        ...(filterCategory && { category: filterCategory }),
+      const _params = {
+        page, _limit, _...(filterCategory && { category: filterCategory}),
         sort: sortBy
       },
 
+<<<<<<< HEAD
       logInfo('Marketplace.tsx: Fetching products using static data with params:', { data: params }),
+=======
+      logInfo('Marketplace.tsx: Fetching products using static data with params:', {_data: params});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       // Use static data that's already of type ProductListing[]
       let items: ProductListing[] = [...MARKETPLACE_LISTINGS],
       
       // Apply category filter from params
+<<<<<<< HEAD
       if (filterCategory) {
         items = items.filter((p) => p.category.toLowerCase() === filterCategory.toLowerCase())
       }
@@ -308,6 +464,19 @@ export default function Marketplace() {
         const rating = p.rating || 0,
         const location = (p.location || '').toLowerCase(),
         const availability = (p.availability || '').toLowerCase(),
+=======
+      if (filterCategory) {_items = items.filter(_(p) => p.category.toLowerCase() === filterCategory.toLowerCase());}
+      
+      logInfo('Marketplace.tsx: Raw items from static data before filtering/sorting:', {_data: JSON.stringify(items.slice(0, _5), _null, _2)});
+
+      if (showRecommended) {_items = items.filter(_(p) => p.rating != null && p.rating >= 4.3);}
+
+      items = items.filter(_(p) => {_const _price = p.price || 0;
+        const _ai = p.aiScore || 0;
+        const _rating = p.rating || 0;
+        const _location = (p.location || '').toLowerCase();
+        const _availability = (p.availability || '').toLowerCase();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         return (
           price >= priceRange[0] &&
           price <= priceRange[1] &&
@@ -315,11 +484,14 @@ export default function Marketplace() {
           rating >= minRating &&
           (!filterLocation || location.includes(filterLocation.toLowerCase())) &&
           (!filterAvailability || availability === filterAvailability.toLowerCase())
+<<<<<<< HEAD
         )
       }),
+=======
+        );});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-      items.sort((a, b) => {
-        switch (sortBy) {
+      items.sort(_(a, _b) => {_switch (sortBy) {
           case 'price-low':
             return (a.price || 0) - (b.price || 0),
           case 'price-high':
@@ -331,6 +503,7 @@ export default function Marketplace() {
           case 'ai-score':
             return (b.aiScore || 0) - (a.aiScore || 0),
           case 'newest':
+<<<<<<< HEAD
           default: // Ensure createdAt exists and is a valid date string before parsing
             const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0,
             const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0,
@@ -382,12 +555,43 @@ export default function Marketplace() {
       } else {
         handleApiError(err), // This might show a toast or log to Sentry
       }
+=======
+          default:
+            // Ensure createdAt exists and is a valid date string before parsing
+            const _timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+            const _timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+
+            // Handle NaN cases that might arise from invalid date strings
+            if (isNaN(timeB) && isNaN(timeA)) return 0; // Both invalid, _treat as equal
+            if (isNaN(timeB)) return -1; // b is invalid, _a comes first (appears newer)
+            if (isNaN(timeA)) return 1;  // a is invalid, _b comes first
+
+            return timeB - timeA; // Both valid, _sort by time}
+      });
+
+      // Apply pagination
+      const _startIndex = (page - 1) * limit;
+      const _endIndex = startIndex + limit;
+      const _paginatedItems = items.slice(startIndex, endIndex);
+      
+      return {_items: paginatedItems, _hasMore: endIndex < items.length, _total: items.length};
+    } catch (err: unknown) {_// Log the error and allow useInfiniteScrollPagination to handle it
+      logErrorToProduction('Error in Marketplace fetchProducts:', _{ data: err});
+      
+      // Show more specific error messages based on the error type
+      if (err.response?.status === 403) {_logErrorToProduction("403 Forbidden error - authentication issue");
+        // Don't show toast here, _let the AuthModal handle it or rely on ProductCard's tooltip} else if (err.response?.status === 500) {_logErrorToProduction("500 Server error");
+        toast({
+          title: "Server Error", _description: "The marketplace is temporarily unavailable. Please try again later.", _variant: "destructive"});
+      } else {_handleApiError(err); // This might show a toast or log to Sentry}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       throw err, // Re-throw to let useInfiniteScrollPagination know about the failure
     }
   }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]),
 
   // useInfiniteScrollPagination hook
+<<<<<<< HEAD
   const {
     items: products, // These are the products to render
     loading,          // True when initially loading or when fetchProducts is running
@@ -432,10 +636,50 @@ export default function Marketplace() {
       isRefreshingAfterFilterChange.current = false, // Reset flag
       // Optionally, provide user feedback about the filter change
       // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' })
+=======
+  const {_items: products, _// These are the products to render
+    loading, _// True when initially loading or when fetchProducts is running
+    error, _// Contains the error object if fetchProducts throws
+    hasMore, _// True if the API indicates more items are available
+    isFetching, _// True if fetching more items (for infinite scroll)
+    lastElementRef, _// Ref for the last element to trigger loading more
+    refresh, _// Function to reload data from page 1
+    scrollToTop       // Function to scroll to the top of the page} = useInfiniteScrollPagination(fetchProducts, 16); // 16 items per page
+
+  // Effect to refresh data when filters change
+  useEffect__(() => {_if (firstRenderRef.current) {
+      firstRenderRef.current = false;
+      // On initial mount, _useInfiniteScrollPagination handles the first load.
+      // We don't want to call refresh() here immediately if it's the very first render
+      // unless specifically needed. The new effect below handles re-mounts.
+      return;}
+    logInfo('Filters changed, initiating refresh. Filters:', {_filterCategory, _sortBy, _showRecommended, _priceRange, _minAiScore, _minRating, _filterAvailability, _filterLocation});
+    isRefreshingAfterFilterChange.current = true; // Set flag before refresh
+    refresh();
+    // scrollToTop(); // Removed from here
+  }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, refresh, toast]); // Added all filter dependencies
+
+  // Effect to explicitly refresh data when the component mounts or re-mounts
+  useEffect__(() => {_logInfo('Marketplace.tsx: Component mounted/re-mounted, _calling refresh to ensure fresh data.');
+    // We call refresh directly to ensure data is re-fetched.
+    // The useInfiniteScrollPagination hook's internal logic will manage its state.
+    refresh();
+    // Reset firstRenderRef for the new instance of the component, _so filter changes behave as expected.
+    firstRenderRef.current = true;}, [refresh]); // `refresh` is a dependency. Ensure it's stable.
+
+  // New effect to scroll to top AFTER products have been updated and refresh flag is set
+  useEffect__(() => {_if (isRefreshingAfterFilterChange.current && !loading) { // Check flag and ensure loading is false
+      logInfo('Refresh complete and products updated, _scrolling to top.');
+      scrollToTop();
+      isRefreshingAfterFilterChange.current = false; // Reset flag
+      // Optionally, _provide user feedback about the filter change
+      // toast({ title: 'Filters updated', _description: 'Displaying products based on new criteria.'});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   }, [products, loading, scrollToTop, toast]), // Depends on products and loading state
 
   // Calculate market stats
+<<<<<<< HEAD
   const marketStats = useMemo(() => {
     if (products.length === 0) return null,
     return {
@@ -471,21 +715,44 @@ export default function Marketplace() {
   if (loading && products.length === 0) {
     return (
       <div className="container py-8&quot; data-testid=&quot;marketplace-loading">
+=======
+  const _marketStats = useMemo__(() => {_if (products.length === 0) return null;
+    return {
+      averagePrice: products.reduce(_(sum, _p) => sum + (p.price || 0), _0) / products.length, _averageRating: products.reduce(_(sum, _p) => sum + (p.rating || 0), _0) / products.length, _totalProducts: products.length, _categoriesCount: Array.from(new Set(products.map(p => p.category))).length};
+  }, [products]);
+
+  // Get unique categories and other filter values
+  const _categories = useMemo__(() => {_return Array.from(_new Set(MARKETPLACE_LISTINGS.map((p) => p.category)));}, []);
+  const _locations = useMemo__(() => {_return Array.from(_new Set(MARKETPLACE_LISTINGS.map((p) => p.location).filter(Boolean)));}, []).filter(Boolean) as string[];
+  const _availabilityOptions = useMemo__(() => {_return Array.from(_new Set(MARKETPLACE_LISTINGS.map((p) => p.availability).filter(Boolean)));}, []).filter(Boolean) as string[];
+
+  // Show scroll to top button
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  useEffect__(() => {_const _handleScroll = () => {
+      setShowScrollTop(window.scrollY > 800);};
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Loading state with skeleton
+  if (loading && products.length === 0) {_return (
+      <div className="container py-8" data-testid="marketplace-loading">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, _y: 20}}
+          animate={_{ opacity: 1, _y: 0}}
           className="text-center mb-8"
         >
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            {t('marketplace.hero_title')}
+            {_t('marketplace.hero_title')}
           </h1>
           <p className="text-muted-foreground text-lg">
-            {t('marketplace.hero_subtitle')}
+            {_t('marketplace.hero_subtitle')}
           </p>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {Array.from({ length: 12 }).map((_, i) => (
-            <SkeletonCard key={i} />
+          {_Array.from({ length: 12}).map(_(_, _i) => (
+            <SkeletonCard key={_i} />
           ))}
         </div>
       </div>
@@ -493,12 +760,11 @@ export default function Marketplace() {
   }
 
   // Error state with retry
-  if (error && products.length === 0) {
-    return (
+  if (error && products.length === 0) {_return (
       <div className="container py-8">
         <div className="text-center space-y-4">
           <ErrorState error={error} />
-          <Button onClick={refresh}>
+          <Button onClick={_refresh}>
             Try Again
           </Button>
         </div>
@@ -507,19 +773,18 @@ export default function Marketplace() {
   }
 
   // Empty state (only show when not loading and no products)
-  if (!loading && products.length === 0 && !error) {
-    return (
+  if (!loading && products.length === 0 && !error) {_return (
       <div className="container py-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, _y: 20}}
+          animate={_{ opacity: 1, _y: 0}}
           className="text-center mb-8"
         >
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            {t('marketplace.hero_title')}
+            {_t('marketplace.hero_title')}
           </h1>
           <p className="text-muted-foreground text-lg">
-            {t('marketplace.hero_subtitle')}
+            {_t('marketplace.hero_subtitle')}
           </p>
         </motion.div>
         
@@ -529,70 +794,70 @@ export default function Marketplace() {
   }
 
   // Main marketplace render
-  return (
-    <div className="container py-8">
+  return (_<div className="container py-8">
       <AuthModal
-        isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
-        returnUrl={router.asPath} // Pass current path for better UX on return
+        isOpen={_isAuthModalOpen}
+        onClose={_() => setIsAuthModalOpen(false)}
+        returnUrl={_router.asPath} // Pass current path for better UX on return
       />
-      {/* Header */}
+      {_/* Header */}
       <motion.div 
         className="text-center mb-8"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={_{ opacity: 0, _y: -20}}
+        animate={_{ opacity: 1, _y: 0}}
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          {t('marketplace.hero_title')}
+          {_t('marketplace.hero_title')}
         </h1>
         <p className="text-muted-foreground text-lg">
-          {t('marketplace.hero_subtitle')}
+          {_t('marketplace.hero_subtitle')}
         </p>
       </motion.div>
 
-      {/* Market Insights */}
-      {marketStats && (
+      {_/* Market Insights */}
+      {_marketStats && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          initial={{ opacity: 0, _y: 20}}
+          animate={_{ opacity: 1, _y: 0}}
+          transition={_{ delay: 0.2}}
         >
-          <MarketInsights stats={marketStats} />
+          <MarketInsights stats={_marketStats} />
         </motion.div>
       )}
 
-      {/* Filter Controls */}
+      {_/* Filter Controls */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
+        initial={_{ opacity: 0, _y: 20}}
+        animate={_{ opacity: 1, _y: 0}}
+        transition={_{ delay: 0.3}}
       >
         <FilterControls
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          filterCategory={filterCategory}
-          setFilterCategory={setFilterCategory}
-          categories={categories}
-          priceRange={priceRange}
-          setPriceRange={setPriceRange}
-          minAiScore={minAiScore}
-          setMinAiScore={setMinAiScore}
-          minRating={minRating}
-          setMinRating={setMinRating}
-          filterAvailability={filterAvailability}
-          setFilterAvailability={setFilterAvailability}
-          availabilityOptions={availabilityOptions.filter(Boolean) as string[]}
-          filterLocation={filterLocation}
-          setFilterLocation={setFilterLocation}
-          locations={locations}
-          showRecommended={showRecommended}
-          setShowRecommended={setShowRecommended}
-          loading={isFetching}
+          sortBy={_sortBy}
+          setSortBy={_setSortBy}
+          filterCategory={_filterCategory}
+          setFilterCategory={_setFilterCategory}
+          categories={_categories}
+          priceRange={_priceRange}
+          setPriceRange={_setPriceRange}
+          minAiScore={_minAiScore}
+          setMinAiScore={_setMinAiScore}
+          minRating={_minRating}
+          setMinRating={_setMinRating}
+          filterAvailability={_filterAvailability}
+          setFilterAvailability={_setFilterAvailability}
+          availabilityOptions={_availabilityOptions.filter(Boolean) as string[]}
+          filterLocation={_filterLocation}
+          setFilterLocation={_setFilterLocation}
+          locations={_locations}
+          showRecommended={_showRecommended}
+          setShowRecommended={_setShowRecommended}
+          loading={_isFetching}
         />
       </motion.div>
 
-      {/* Product Grid */}
+      {_/* Product Grid */}
       <motion.div
+<<<<<<< HEAD
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6&quot;
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -609,27 +874,32 @@ export default function Marketplace() {
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
               className="relative group&quot;
+=======
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        initial={_{ opacity: 0}}
+        animate={_{ opacity: 1}}
+        transition={_{ delay: 0.4}}
+      >
+        <AnimatePresence mode="popLayout">
+          {_products.map(_(product, _index) => (
+            <motion.div
+              key={product.id}
+              ref={_index === products.length - 1 ? lastElementRef : null}
+              initial={_{ opacity: 0, _scale: 0.9}}
+              animate={_{ opacity: 1, _scale: 1}}
+              exit={_{ opacity: 0, _scale: 0.9}}
+              transition={_{ delay: Math.min(index * 0.03, _0.5)}}
+              whileHover={_{ scale: 1.02}}
+              className="relative group"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <ProductCard
-                product={{
-                  id: product.id,
-                  name: product.title,
-                  title: product.title,
-                  description: product.description || '',
-                  price: product.price || 0,
-                  currency: product.currency,
-                  category: product.category,
-                  tags: product.tags,
-                  images: product.images,
-                  rating: product.rating || 0,
-                  reviewCount: product.reviewCount || 0,
-                  created_at: product.createdAt,
-                  updated_at: product.createdAt, // Use createdAt for both
-                  stock: product.stock,
-                  in_stock: (product.stock || 0) > 0
-                }}
-                onBuy={async () => {
+                product={_{
+                  id: product.id, _name: product.title, _title: product.title, _description: product.description || '', _price: product.price || 0, _currency: product.currency, _category: product.category, _tags: product.tags, _images: product.images, _rating: product.rating || 0, _reviewCount: product.reviewCount || 0, _created_at: product.createdAt, _updated_at: product.createdAt, _// Use createdAt for both
+                  stock: product.stock, _in_stock: (product.stock || 0) > 0}}
+                onBuy={_async () => {
                   if (!isAuthenticated) {
+<<<<<<< HEAD
                     setIsAuthModalOpen(true),
                     return, // Stop further execution
                   }
@@ -647,24 +917,31 @@ export default function Marketplace() {
                       description: &quot;Could not navigate to checkout. Please try again.&quot;,
                       variant: &quot;destructive"});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+                    setIsAuthModalOpen(true);
+                    return; // Stop further execution}
+                  try {_await router.push(`/checkout/${product.id}`);
+                  } catch (error) {_logErrorToProduction('Failed to navigate to checkout:', _{ data: error});
+                    toast({_title: "Navigation Error", _description: "Could not navigate to checkout. Please try again.", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     // Re-throw to allow ProductCard's catch to also run if needed,
                     // though ProductCard will reset its state in .finally() regardless.
                     throw error
                   }
                 }}
-                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
+                buyDisabled={_false} // Still false, ProductCard handles its own disabled state based on auth
               />
               
-              {/* AI Score Badge */}
-              {product.aiScore && product.aiScore > 90 && (
+              {_/* AI Score Badge */}
+              {_product.aiScore && product.aiScore > 90 && (
                 <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black">
                   <Sparkles className="h-3 w-3 mr-1" />
                   AI {product.aiScore}
                 </Badge>
               )}
               
-              {/* Featured Badge */}
-              {product.featured && (
+              {_/* Featured Badge */}
+              {_product.featured && (
                 <Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10">
                   <Star className="h-3 w-3 mr-1" />
                   Featured
@@ -675,48 +952,48 @@ export default function Marketplace() {
         </AnimatePresence>
       </motion.div>
 
-      {/* Loading More Indicator */}
-      {(isFetching || loading) && (
+      {_/* Loading More Indicator */}
+      {_(isFetching || loading) && (
         <motion.div
           className="mt-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0}}
+          animate={_{ opacity: 1}}
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <SkeletonCard key={`loading-${i}`} />
+            {_Array.from({ length: 4}).map(_(_, _i) => (
+              <SkeletonCard key={_`loading-${i}`} />
             ))}
           </div>
         </motion.div>
       )}
 
-      {/* End of Results */}
-      {!hasMore && products.length > 0 && (
+      {_/* End of Results */}
+      {_!hasMore && products.length > 0 && (
         <motion.div
           className="text-center mt-12 py-8 border-t"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0}}
+          animate={_{ opacity: 1}}
         >
           <div className="text-muted-foreground text-lg mb-2">
             🎉 You've explored all available products!
           </div>
           <div className="text-sm text-muted-foreground">
-            Showing {products.length} AI-powered solutions
+            Showing {_products.length} AI-powered solutions
           </div>
         </motion.div>
       )}
 
-      {/* Scroll to Top Button */}
+      {_/* Scroll to Top Button */}
       <AnimatePresence>
-        {showScrollTop && (
+        {_showScrollTop && (
           <motion.button
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            initial={_{ opacity: 0, _scale: 0}}
+            animate={_{ opacity: 1, _scale: 1}}
+            exit={_{ opacity: 0, _scale: 0}}
+            whileHover={_{ scale: 1.1}}
+            whileTap={_{ scale: 0.9}}
           >
             <ArrowUp className="h-5 w-5 text-primary-foreground" />
           </motion.button>

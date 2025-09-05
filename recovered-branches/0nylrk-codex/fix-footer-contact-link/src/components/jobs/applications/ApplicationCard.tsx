@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { JobApplication } from "@/types/jobs",
@@ -29,9 +30,16 @@ interface ApplicationCardProps {
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
+=======
 
-  const handleDownloadResume = () => {
+interface ApplicationCardProps {_application: JobApplication;}
+
+export function ApplicationCard(_{_application}: ApplicationCardProps) {_const [expanded, _setExpanded] = useState(false);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  const _handleDownloadResume = () => {
     // This would typically download the resume file
+<<<<<<< HEAD
 <<<<<<< HEAD
     toast.info("Resume download functionality will be implemented soon")
   },
@@ -51,6 +59,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   const renderActionButtons = () => {
     switch (application.status) {
       case &quot;shortlisted&quot;:
+=======
+    toast.info("Resume download functionality will be implemented soon");};
+
+  const _renderActionButtons = () => {_switch (application.status) {
+      case "shortlisted":
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         return (
           <Button variant=&quot;default&quot; size=&quot;sm&quot;>
             <Calendar className=&quot;h-4 w-4 mr-1&quot; /> Prepare for Interview
@@ -87,29 +101,48 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           </Button>
         ),
       default:
+<<<<<<< HEAD
         return null
     }
   },
+=======
+        return null;}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <Card className=&quot;overflow-hidden&quot;>
       <CardHeader className=&quot;pb-3&quot;>
         <div className=&quot;flex justify-between items-start&quot;>
           <div>
+<<<<<<< HEAD
             <CardTitle>{application.job?.title || &quot;Unknown Job&quot;}</CardTitle>
             <div className=&quot;text-sm text-muted-foreground mt-1&quot;>
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+=======
+            <CardTitle>{_application.job?.title || "Unknown Job"}</CardTitle>
+            <div className="text-sm text-muted-foreground mt-1">
+              Applied {_formatDistanceToNow(new Date(application.created_at), _{ addSuffix: true})}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
           </div>
-          <StatusBadge status={application.status} />
+          <StatusBadge status={_application.status} />
         </div>
       </CardHeader>
       
+<<<<<<< HEAD
       <CardContent className=&quot;pb-3&quot;>
         <ApplicationProgress status={application.status} className=&quot;my-4&quot; />
         
         {expanded && (
           <div className=&quot;mt-4 space-y-3&quot;>
+=======
+      <CardContent className="pb-3">
+        <ApplicationProgress status={_application.status} className="my-4" />
+        
+        {_expanded && (
+          <div className="mt-4 space-y-3">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             {application.cover_letter && (
               <div>
                 <h4 className=&quot;text-sm font-medium mb-1&quot;>Your Cover Letter</h4>
@@ -117,6 +150,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
               </div>
             )}
             
+<<<<<<< HEAD
             {application.resume && (
               <div className=&quot;border rounded-md p-3 bg-muted/20&quot;>
                 <div className=&quot;flex justify-between items-center&quot;>
@@ -126,12 +160,23 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
                   </div>
                   <Button variant=&quot;ghost&quot; size=&quot;sm&quot; onClick={handleDownloadResume}>
                     <Download className=&quot;h-3 w-3 mr-1&quot; /> Download
+=======
+            {_application.resume && (
+              <div className="border rounded-md p-3 bg-muted/20">
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center">
+                    <FileText className="h-4 w-4 mr-2 text-blue-500" />
+                    <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>
+                  </div>
+                  <Button variant="ghost" size="sm" onClick={_handleDownloadResume}>
+                    <Download className="h-3 w-3 mr-1" /> Download
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </Button>
                 </div>
               </div>
             )}
             
-            {application.match_score && (
+            {_application.match_score && (
               <div>
                 <h4 className=&quot;text-sm font-medium mb-1&quot;>Match Score</h4>
                 <div className=&quot;flex items-center&quot;>
@@ -146,6 +191,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         )}
       </CardContent>
       
+<<<<<<< HEAD
       <CardFooter className=&quot;flex flex-col gap-3 pt-0&quot;>
         <div className=&quot;flex justify-between items-center w-full&quot;>
           <Button variant=&quot;ghost&quot; size=&quot;sm&quot; onClick={() => setExpanded(!expanded)}>
@@ -153,13 +199,27 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           </Button>
           <div className=&quot;flex gap-2&quot;>
             {renderActionButtons()}
+=======
+      <CardFooter className="flex flex-col gap-3 pt-0">
+        <div className="flex justify-between items-center w-full">
+          <Button variant="ghost" size="sm" onClick={_() => setExpanded(!expanded)}>
+            {_expanded ? "Show Less" : "Show More"}
+          </Button>
+          <div className="flex gap-2">
+            {_renderActionButtons()}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <Button 
               variant=&quot;outline&quot; 
               size=&quot;sm&quot;
               asChild
             >
+<<<<<<< HEAD
               <Link to={`/jobs/${application.job_id}`}>
                 <ExternalLink className=&quot;h-4 w-4 mr-1&quot; /> View Job
+=======
+              <Link to={_`/jobs/${application.job_id}`}>
+                <ExternalLink className="h-4 w-4 mr-1" /> View Job
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </Link>
             </Button>
           </div>
@@ -171,8 +231,13 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           className=&quot;w-full&quot;
           asChild
         >
+<<<<<<< HEAD
           <Link to={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className=&quot;h-4 w-4 mr-1&quot; /> Message Client
+=======
+          <Link to={_`/messages?jobId=${application.job_id}`}>
+            <MessageSquare className="h-4 w-4 mr-1" /> Message Client
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </Link>
         </Button>
       </CardFooter>

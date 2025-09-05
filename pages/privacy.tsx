@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEOOptimizer from '../components/SEOOptimizer',
@@ -11,9 +12,20 @@ import {
 
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025',
+=======
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import SEOOptimizer from '../components/SEOOptimizer';
+import AnalyticsTracker from '../components/AnalyticsTracker';
+import ErrorBoundary from '../components/ErrorBoundary';
+import {_Shield, _Lock, _Eye, _Database, _Globe, _User, _Settings, _AlertTriangle, _CheckCircle, _Mail} from 'lucide-react';
 
-  const privacySections = [
+const PrivacyPage: React.FC = () => {_const _lastUpdated = 'January 17, _2025';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  const _privacySections = [
     {
+<<<<<<< HEAD
       title: 'Information We Collect',
       icon: <Database className=&quot;w-8 h-8&quot; />,
       color: 'from-cyan-500 to-blue-500',
@@ -79,20 +91,50 @@ const PrivacyPage: React.FC = () => {
       icon: <Settings className=&quot;w-6 h-6&quot; />
     }
   ],
+=======
+      title: 'Information We Collect', _icon: <Database className="w-8 h-8" />, _color: 'from-cyan-500 to-blue-500', _content: [
+        'Personal information (name, _email, _phone number, _company)', _'Business information (company size, _industry, _project requirements)', _'Technical information (IP address, _browser type, _device information)', _'Usage data (website interactions, _service usage patterns)', _'Communication records (emails, _phone calls, _support tickets)'
+      ]},
+    {_title: 'How We Use Your Information', _icon: <Settings className="w-8 h-8" />, _color: 'from-purple-500 to-pink-500', _content: [
+        'Provide and improve our services', _'Communicate with you about our services', _'Process payments and manage accounts', _'Send marketing communications (with consent)', _'Analyze usage patterns and improve user experience', _'Comply with legal obligations'
+      ]},
+    {_title: 'Information Sharing', _icon: <Globe className="w-8 h-8" />, _color: 'from-green-500 to-emerald-500', _content: [
+        'We do not sell, _trade, _or rent your personal information', _'Share with trusted service providers under strict confidentiality', _'Comply with legal requirements and court orders', _'Protect our rights, _property, _and safety', _'Business transfers (with notice and choice)'
+      ]},
+    {_title: 'Data Security', _icon: <Lock className="w-8 h-8" />, _color: 'from-orange-500 to-red-500', _content: [
+        'Industry-standard encryption for data in transit and at rest', _'Regular security audits and vulnerability assessments', _'Access controls and authentication measures', _'Employee training on data protection', _'Incident response and breach notification procedures'
+      ]}
+  ];
 
-  return (
-    <ErrorBoundary>
+  const _rights = [
+    {_title: 'Access', _description: 'Request access to your personal information', _icon: <Eye className="w-6 h-6" />},
+    {_title: 'Correction', _description: 'Request correction of inaccurate information', _icon: <CheckCircle className="w-6 h-6" />},
+    {_title: 'Deletion', _description: 'Request deletion of your personal information', _icon: <AlertTriangle className="w-6 h-6" />},
+    {_title: 'Portability', _description: 'Request transfer of your data to another service', _icon: <Database className="w-6 h-6" />},
+    {_title: 'Objection', _description: 'Object to processing of your personal information', _icon: <User className="w-6 h-6" />},
+    {_title: 'Restriction', _description: 'Request restriction of processing activities', _icon: <Settings className="w-6 h-6" />}
+  ];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  return (_<ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
       <Layout>
+<<<<<<< HEAD
         <main className=&quot;relative z-10 pt-8&quot;>
           {/* Hero Section */}
           <section className=&quot;py-20 px-4&quot;>
             <div className=&quot;max-w-6xl mx-auto text-center&quot;>
+=======
+        <main className="relative z-10 pt-8">
+          {_/* Hero Section */}
+          <section className="py-20 px-4">
+            <div className="max-w-6xl mx-auto text-center">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                animate={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
               >
                 <h1 className=&quot;text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
                   Privacy Policy
@@ -100,34 +142,53 @@ const PrivacyPage: React.FC = () => {
                 <p className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
                   Your privacy is our priority. Learn how we protect and handle your personal information.
                 </p>
+<<<<<<< HEAD
                 <div className=&quot;flex items-center justify-center gap-4 text-gray-400&quot;>
                   <Shield className=&quot;w-6 h-6&quot; />
                   <span>Last updated: {lastUpdated}</span>
+=======
+                <div className="flex items-center justify-center gap-4 text-gray-400">
+                  <Shield className="w-6 h-6" />
+                  <span>Last updated: {_lastUpdated}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </div>
               </motion.div>
             </div>
           </section>
 
+<<<<<<< HEAD
           {/* Overview */}
           <section className=&quot;py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50&quot;>
             <div className=&quot;max-w-6xl mx-auto&quot;>
               <div className=&quot;grid lg:grid-cols-2 gap-12 items-center&quot;>
+=======
+          {_/* Overview */}
+          <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial={_{ opacity: 0, _x: -20}}
+                  whileInView={_{ opacity: 1, _x: 0}}
+                  transition={_{ duration: 0.6}}
                 >
                   <h2 className=&quot;text-4xl font-bold mb-6 text-white&quot;>
                     Our Commitment to Privacy
                   </h2>
+<<<<<<< HEAD
                   <p className=&quot;text-lg text-gray-300 mb-6 leading-relaxed&quot;>
                     At Zion Tech Group, we are committed to protecting your privacy and ensuring the security 
                     of your personal information. This Privacy Policy explains how we collect, use, disclose, 
                     and safeguard your information when you use our services.
+=======
+                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                    At Zion Tech Group, _we are committed to protecting your privacy and ensuring the security 
+                    of your personal information. This Privacy Policy explains how we collect, _use, _disclose, _and safeguard your information when you use our services.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </p>
                   <p className=&quot;text-lg text-gray-300 mb-6 leading-relaxed&quot;>
                     We believe in transparency and want you to understand how your information is handled. 
-                    This policy applies to all users of our website, services, and applications.
+                    This policy applies to all users of our website, _services, _and applications.
                   </p>
                   <div className=&quot;flex items-center gap-4 text-cyan-400&quot;>
                     <Lock className=&quot;w-6 h-6&quot; />
@@ -136,10 +197,17 @@ const PrivacyPage: React.FC = () => {
                 </motion.div>
                 
                 <motion.div
+<<<<<<< HEAD
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className=&quot;relative&quot;
+=======
+                  initial={_{ opacity: 0, _x: 20}}
+                  whileInView={_{ opacity: 1, _x: 0}}
+                  transition={_{ duration: 0.6, _delay: 0.2}}
+                  className="relative"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 >
                   <div className=&quot;bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30&quot;>
                     <div className=&quot;text-center space-y-6&quot;>
@@ -166,6 +234,7 @@ const PrivacyPage: React.FC = () => {
             </div>
           </section>
 
+<<<<<<< HEAD
           {/* Privacy Principles */}
           <section className=&quot;py-20 px-4&quot;>
             <div className=&quot;max-w-6xl mx-auto&quot;>
@@ -174,11 +243,22 @@ const PrivacyPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className=&quot;text-center mb-16&quot;
+=======
+          {_/* Privacy Principles */}
+          <section className="py-20 px-4">
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
+                className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 <h2 className=&quot;text-4xl font-bold mb-4 text-white&quot;>Our Privacy Principles</h2>
                 <p className=&quot;text-xl text-gray-300&quot;>The foundation of how we handle your data</p>
               </motion.div>
               
+<<<<<<< HEAD
               <div className=&quot;grid md:grid-cols-2 gap-8&quot;>
                 {privacySections.map((section, index) => (
                   <motion.div
@@ -199,6 +279,27 @@ const PrivacyPage: React.FC = () => {
                         <li key={itemIndex} className=&quot;flex items-start gap-3&quot;>
                           <div className=&quot;w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0&quot;></div>
                           <span className=&quot;text-gray-300&quot;>{item}</span>
+=======
+              <div className="grid md:grid-cols-2 gap-8">
+                {_privacySections.map((section, _index) => (_<motion.div
+                    key={section.title}
+                    initial={_{ opacity: 0, _y: 20}}
+                    whileInView={_{ opacity: 1, _y: 0}}
+                    transition={_{ duration: 0.6, _delay: index * 0.1}}
+                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
+                  >
+                    <div className={_`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
+                      <div className="text-white">
+                        {_section.icon}
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{_section.title}</h3>
+                    <ul className="space-y-3">
+                      {_section.content.map((item, _itemIndex) => (
+                        <li key={itemIndex} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-300">{_item}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         </li>
                       ))}
                     </ul>
@@ -208,6 +309,7 @@ const PrivacyPage: React.FC = () => {
             </div>
           </section>
 
+<<<<<<< HEAD
           {/* Your Rights */}
           <section className=&quot;py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50&quot;>
             <div className=&quot;max-w-6xl mx-auto&quot;>
@@ -216,11 +318,22 @@ const PrivacyPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className=&quot;text-center mb-16&quot;
+=======
+          {_/* Your Rights */}
+          <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
+                className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 <h2 className=&quot;text-4xl font-bold mb-4 text-white&quot;>Your Privacy Rights</h2>
                 <p className=&quot;text-xl text-gray-300&quot;>You have control over your personal information</p>
               </motion.div>
               
+<<<<<<< HEAD
               <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
                 {rights.map((right, index) => (
                   <motion.div
@@ -237,12 +350,31 @@ const PrivacyPage: React.FC = () => {
                     </div>
                     <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{right.title}</h3>
                     <p className=&quot;text-gray-300 text-sm&quot;>{right.description}</p>
+=======
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {_rights.map(_(right, _index) => (
+                  <motion.div
+                    key={right.title}
+                    initial={_{ opacity: 0, _y: 20}}
+                    whileInView={_{ opacity: 1, _y: 0}}
+                    transition={_{ duration: 0.6, _delay: index * 0.1}}
+                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <div className="text-white">
+                        {_right.icon}
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">{_right.title}</h3>
+                    <p className="text-gray-300 text-sm">{_right.description}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </motion.div>
                 ))}
               </div>
             </div>
           </section>
 
+<<<<<<< HEAD
           {/* Detailed Policy */}
           <section className=&quot;py-20 px-4&quot;>
             <div className=&quot;max-w-4xl mx-auto&quot;>
@@ -251,6 +383,16 @@ const PrivacyPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className=&quot;space-y-12&quot;
+=======
+          {_/* Detailed Policy */}
+          <section className="py-20 px-4">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
+                className="space-y-12"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 <div>
                   <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Detailed Privacy Information</h2>
@@ -376,13 +518,19 @@ const PrivacyPage: React.FC = () => {
             </div>
           </section>
 
+<<<<<<< HEAD
           {/* Contact Information */}
           <section className=&quot;py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50&quot;>
             <div className=&quot;max-w-4xl mx-auto text-center&quot;>
+=======
+          {_/* Contact Information */}
+          <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+            <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
               >
                 <h2 className=&quot;text-4xl font-bold mb-6 text-white&quot;>
                   Questions About Privacy?

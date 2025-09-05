@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 =======
@@ -6,10 +7,13 @@ import React from &quot;react&quot;;
 import { ServiceLandingTemplate } from &quot;@/components/services/ServiceLandingTemplate&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
+=======
+import React from "react";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-export default function ITSupportPage() {
-  const benefits = [
+export default function ITSupportPage() {_const _benefits = [
     {
+<<<<<<< HEAD
       title: &quot;24/7 Assistance&quot;,
       description: &quot;Our experts are available around the clock to keep your systems running.&quot;,
       icon: <Clock className=&quot;h-8 w-8&quot; />},
@@ -57,6 +61,26 @@ export default function ITSupportPage() {
       testimonials={testimonials}
       ctaText=&quot;Get IT Support&quot;
       ctaLink=&quot;/request-quote&quot;
+=======
+      title: "24/7 Assistance", _description: "Our experts are available around the clock to keep your systems running.", _icon: <Clock className="h-8 w-8" />},
+    {_title: "Certified Professionals", _description: "Work with seasoned technicians experienced in modern IT infrastructures.", _icon: <ShieldCheck className="h-8 w-8" />},
+    {_title: "Multi-Channel Support", _description: "Get help via phone, _chat, _or onsite visits tailored to your needs.", _icon: <Phone className="h-8 w-8" />}];
+
+  const _testimonials = [
+    {_name: "Lisa Wong", _role: "Operations Manager", _text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.", _avatar: "/placeholder.svg"},
+    {_name: "Carlos Diaz", _role: "IT Lead", _text: "Professional and responsive. Their technicians feel like an extension of our own team.", _avatar: "/placeholder.svg"}];
+
+  return (
+    <ServiceLandingTemplate
+      title="IT Support Services"
+      subtitle="Reliable assistance to keep your business technology operating smoothly."
+      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
+      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
+      benefits={_benefits}
+      testimonials={_testimonials}
+      ctaText="Get IT Support"
+      ctaLink="/request-quote"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     />
   )
 }

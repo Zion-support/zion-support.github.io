@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import { createWriteStream } from 'fs',
 import { join } from 'path',
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+=======
+
+const _generateSitemap = () => {_const _sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
@@ -11,24 +16,25 @@ const generateSitemap = () => {
   </url>
   <url>
     <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
+    <lastmod>${_new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/services</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
+    <lastmod>${_new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/contact</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
+    <lastmod>${_new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 </urlset>`,
 
+<<<<<<< HEAD
   const sitemapPath = join(process.cwd(), 'publicsitemap.xml'),
   const writeStream = createWriteStream(sitemapPath),
   writeStream.write(sitemap),
@@ -228,3 +234,14 @@ if (require.main === module) {
 
 module.exports = { generateSitemapXML, generateSitemapTXT, pages };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  const _sitemapPath = join(process.cwd(), 'public', 'sitemap.xml');
+  const _writeStream = createWriteStream(sitemapPath);
+  writeStream.write(sitemap);
+  writeStream.end();
+
+  
+};
+generateSitemap();
+generateSitemap();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

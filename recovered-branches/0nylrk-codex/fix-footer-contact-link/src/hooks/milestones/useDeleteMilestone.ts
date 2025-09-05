@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -9,11 +10,18 @@ export const useDeleteMilestone = () => {
   
   const deleteMilestone = async (milestoneId: string) => {
     if (!user) return false,
+=======
+
+export const _useDeleteMilestone = () => {_const { user} = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const _deleteMilestone = async (_milestoneId: string) => {_if (!user) return false;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     try {
       setIsSubmitting(true),
       
-      const { error } = await supabase
+      const { error} = await supabase
         .from('project_milestones')
         .delete()
         .eq('id', milestoneId),
@@ -26,6 +34,7 @@ export const useDeleteMilestone = () => {
       toast.success(&quot;Milestone deleted successfully&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
+<<<<<<< HEAD
       return true
     } catch (err: any) {
 <<<<<<< HEAD
@@ -47,3 +56,12 @@ export const useDeleteMilestone = () => {
     isSubmitting
   }
 },
+=======
+      return true;
+    } catch (err: unknown) {_toast.error("Failed to delete milestone: " + err.message);
+      return false;} finally {_setIsSubmitting(false);}
+  };
+  
+  return {_deleteMilestone, _isSubmitting};
+};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

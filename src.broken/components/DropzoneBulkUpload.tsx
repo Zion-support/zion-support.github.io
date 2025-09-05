@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useCallback, useState } from 'react',
 import { useDropzone } from 'react-dropzone',
 import { Button } from './ui/button',
@@ -17,9 +18,23 @@ export function DropzoneBulkUpload() {
   const [progress, setProgress] = useState(0),
   const [report, setReport] = useState<UploadReport | null>(null),
   const [errorUrl, setErrorUrl] = useState<string | null>(null),
+=======
 
-  const onDrop = useCallback((accepted: File[]) => {
+interface UploadError {_row: number;
+  error: string;}
+
+interface UploadReport {_created: number;
+  errors: UploadError[];}
+
+export function DropzoneBulkUpload() {_const [file, _setFile] = useState<File | null>(null);
+  const [progress, _setProgress] = useState(0);
+  const [report, _setReport] = useState<UploadReport | null>(null);
+  const [errorUrl, _setErrorUrl] = useState<string | null>(null);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  const _onDrop = useCallback(_(accepted: File[]) => {
     if (accepted.length) {
+<<<<<<< HEAD
       setFile(accepted[0]),
       setReport(null),
       setErrorUrl(null)
@@ -59,21 +74,47 @@ export function DropzoneBulkUpload() {
       setProgress(100)
     }
   },
+=======
+      setFile(accepted[0]);
+      setReport(null);
+      setErrorUrl(null);}
+  }, []);
+
+  const {_getRootProps, _getInputProps, _isDragActive} = useDropzone({_onDrop, _accept: { 'text/csv': ['.csv']}});
+
+  const _handleUpload = async () => {_if (!file) return;
+    setProgress(10);
+    const _formData = new FormData();
+    formData.append('file', _file);
+    try {
+      const _res = await fetch('/products/bulk-upload', _{
+        method: 'POST', _body: formData});
+      setProgress(70);
+      const _data = await res.json();
+      setReport(data);
+      if (data.errors && data.errors.length) {_const _csv = ['row, _error', _...data.errors.map(_(e: UploadError) => `${e.row},"${_e.error}"`)].join('\n');
+        const _blob = new Blob([csv], {_type: 'text/csv'});
+        setErrorUrl(window.URL.createObjectURL(blob));
+      }
+    } catch (err) {} finally {_setProgress(100);}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <div className=&quot;space-y-4&quot;>
       <div
-        {...getRootProps({
+        {_...getRootProps({
           className:
             'border-2 border-dashed border-muted rounded-md p-8 text-center cursor-pointer'})}
       >
-        <input {...getInputProps()} />
-        {isDragActive ? (
+        <input {_...getInputProps()} />
+        {_isDragActive ? (
           <p>Drop the CSV here...</p>
         ) : (
-          <p>Drag and drop CSV file here, or click to select file</p>
+          <p>Drag and drop CSV file here, _or click to select file</p>
         )}
       </div>
+<<<<<<< HEAD
       {file && <p className=&quot;text-sm&quot;>Selected: {file.name}</p>}
       <Button onClick={handleUpload} disabled={!file}>Upload</Button>
       {progress > 0 && progress < 100 && <Progress value={progress} />}
@@ -85,6 +126,19 @@ export function DropzoneBulkUpload() {
               <p className=&quot;text-red-500&quot;>Errors: {report.errors.length}</p>
               {errorUrl && (
                 <a href={errorUrl} download=&quot;errors.csv&quot; className=&quot;underline&quot;>
+=======
+      {_file && <p className="text-sm">Selected: {file.name}</p>}
+      <Button onClick={_handleUpload} disabled={_!file}>Upload</Button>
+      {_progress > 0 && progress < 100 && <Progress value={progress} />}
+      {_report && (
+        <div className="text-sm">
+          <p>Created: {report.created}</p>
+          {_report.errors.length > 0 && (
+            <div className="mt-2">
+              <p className="text-red-500">Errors: {report.errors.length}</p>
+              {_errorUrl && (
+                <a href={errorUrl} download="errors.csv" className="underline">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   Download error CSV
                 </Link>
               )}

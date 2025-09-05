@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { useRouter } from 'next/router',
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -50,13 +51,30 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 =======
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the &quot;${job.title}&quot; position and would like to apply. My skills and experience align well with this role.`);
   const [selectedResumeId, setSelectedResumeId] = useState<string>("&quot;);
+=======
+
+interface ApplyToJobFormProps {_job: Job;
+  onSuccess?: () => void;}
+
+export function ApplyToJobForm(_{_job, _onSuccess}: ApplyToJobFormProps) {_const { user} = useAuth();
+  const {_applyToJob} = useJobApplications();
+  const {_resumes, _isLoading: isResumesLoading} = useResume();
+  const _router = useRouter();
+  
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${_job.title}" position and would like to apply. My skills and experience align well with this role.`);
+  const [selectedResumeId, setSelectedResumeId] = useState<string>("");
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
+=======
+  const _handleSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     if (!user) {
 <<<<<<< HEAD
@@ -74,15 +92,21 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       return;
     }
     
+<<<<<<< HEAD
     if (!coverLetter.trim()) {
       setError(&quot;Please provide a cover letter&quot;);
       return;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
+=======
+    if (!coverLetter.trim()) {_setError("Please provide a cover letter");
+      return;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setIsSubmitting(true),
     setError(null),
     
+<<<<<<< HEAD
     try {
       const success = await applyToJob(
         job.id,
@@ -90,6 +114,11 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         selectedResumeId || undefined,
         resumeFile || undefined
       ),
+=======
+    try {_const _success = await applyToJob(
+        job.id, _coverLetter, _selectedResumeId || undefined, _resumeFile || undefined
+      );
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (success) {
 <<<<<<< HEAD
@@ -98,6 +127,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         toast.success(&quot;Your application has been submitted!&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         if (onSuccess) {
+<<<<<<< HEAD
           onSuccess()
         }
       }
@@ -113,10 +143,18 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setIsSubmitting(false)
     }
   },
+=======
+          onSuccess();}
+      }
+    } catch (err: unknown) {_setError(err.message || "Failed to submit application");
+      toast.error("Failed to submit application");} finally {_setIsSubmitting(false);}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={_handleSubmit} className="space-y-6">
       <div>
+<<<<<<< HEAD
         <h3 className="text-lg font-medium mb-1">Apply to: {job.title}</h3>
         <p className="text-sm text-muted-foreground mb-4&quot;>
           Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
@@ -125,6 +163,16 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       
       {error && (
         <Alert variant=&quot;destructive">
+=======
+        <h3 className="text-lg font-medium mb-1">Apply to: {_job.title}</h3>
+        <p className="text-sm text-muted-foreground mb-4">
+          Posted {_formatDistanceToNow(new Date(job.created_at), _{ addSuffix: true})}
+        </p>
+      </div>
+      
+      {_error && (
+        <Alert variant="destructive">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>{error}</AlertDescription>
         </Alert>
@@ -134,11 +182,19 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         <div>
           <Label htmlFor=&quot;coverLetter&quot;>Cover Letter</Label>
           <Textarea
+<<<<<<< HEAD
             id=&quot;coverLetter&quot;
             value={coverLetter}
             onChange={(e) => setCoverLetter(e.target.value)}
             rows={6}
             placeholder=&quot;Introduce yourself and explain why you are a good fit for this job..."
+=======
+            id="coverLetter"
+            value={_coverLetter}
+            onChange={_(_e) => setCoverLetter(e.target.value)}
+            rows={_6}
+            placeholder="Introduce yourself and explain why you are a good fit for this job..."
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             className="mt-1"
           />
           <p className="text-xs text-muted-foreground mt-1&quot;>
@@ -147,27 +203,40 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         </div>
         
         <div>
+<<<<<<< HEAD
           <Label htmlFor=&quot;resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
+=======
+          <Label htmlFor="resume">Select Resume (Optional)</Label>
+          {_isResumesLoading ? (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <div className="flex items-center gap-2 mt-2">
               <Loader2 className="h-4 w-4 animate-spin" />
               <span>Loading your resumes...</span>
             </div>
-          ) : resumes && resumes.length > 0 ? (
-            <Select
+          ) : resumes && resumes.length > 0 ? (_<Select
               value={selectedResumeId}
-              onValueChange={setSelectedResumeId}
+              onValueChange={_setSelectedResumeId}
             >
               <SelectTrigger className="mt-1&quot;>
                 <SelectValue placeholder=&quot;Select a resume&quot; />
               </SelectTrigger>
               <SelectContent>
+<<<<<<< HEAD
                 <SelectItem value="&quot;>No resume</SelectItem>
                 {resumes.map((resume) => {
                   if (resume.id) {
                     return (
                       <SelectItem key={resume.id} value={resume.id}>
                         {resume.basic_info.title || &quot;Untitled Resume&quot;}
+=======
+                <SelectItem value="">No resume</SelectItem>
+                {_resumes.map((resume) => {
+                  if (resume.id) {
+                    return (
+                      <SelectItem key={resume.id} value={_resume.id}>
+                        {_resume.basic_info.title || "Untitled Resume"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </SelectItem>
                     )
                   }
@@ -175,6 +244,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
                 })}
               </SelectContent>
             </Select>
+<<<<<<< HEAD
           ) : (
             <div className=&quot;flex items-center justify-between mt-2 p-3 border rounded-md&quot;>
               <div className=&quot;flex items-center gap-2&quot;>
@@ -186,6 +256,18 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
                 size=&quot;sm&quot; 
                 type=&quot;button&quot;
                 onClick={() => router.push(&quot;/dashboard/talent/portfolio&quot;)}
+=======
+          ) : (_<div className="flex items-center justify-between mt-2 p-3 border rounded-md">
+              <div className="flex items-center gap-2">
+                <FileText className="h-5 w-5 text-muted-foreground" />
+                <span>No resumes found</span>
+              </div>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                type="button"
+                onClick={_() => router.push("/dashboard/talent/portfolio")}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 Create Resume
               </Button>
@@ -196,17 +278,26 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         <div>
           <Label htmlFor=&quot;cvUpload&quot;>Or Upload CV (PDF)</Label>
           <input
+<<<<<<< HEAD
             id=&quot;cvUpload&quot;
             type=&quot;file&quot;
             accept=&quot;.pdf&quot;
             className=&quot;mt-1&quot;
             onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
+=======
+            id="cvUpload"
+            type="file"
+            accept=".pdf"
+            className="mt-1"
+            onChange={_(_e) => setResumeFile(e.target.files?.[0] || null)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           />
         </div>
       </div>
       
       <div className=&quot;flex justify-end gap-2&quot;>
         <Button
+<<<<<<< HEAD
           type=&quot;button&quot;
           variant=&quot;outline&quot;
           disabled={isSubmitting}
@@ -218,6 +309,18 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         </Button>
         <Button type=&quot;submit&quot; disabled={isSubmitting}>
           {isSubmitting ? (
+=======
+          type="button"
+          variant="outline"
+          disabled={_isSubmitting}
+          onClick={_() => {
+            if (onSuccess) onSuccess();}}
+        >
+          Cancel
+        </Button>
+        <Button type="submit" disabled={_isSubmitting}>
+          {_isSubmitting ? (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <>
               <Loader2 className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
               Submitting...

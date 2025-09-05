@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card } from "@/components/ui/card",
 import { Skeleton } from "@/components/ui/skeleton",
 import { Button } from "@/components/ui/button",
@@ -14,6 +15,13 @@ export function TalentPlaceholder() {
     <div className=&quot;p-8 text-center&quot;>
       <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Talent Directory Coming Soon</h3>
       <p className=&quot;text-zion-slate-light mb-6 max-w-md mx-auto&quot;>
+=======
+
+export function TalentPlaceholder() {_return (
+    <div className="p-8 text-center">
+      <h3 className="text-2xl font-bold text-white mb-4">Talent Directory Coming Soon</h3>
+      <p className="text-zion-slate-light mb-6 max-w-md mx-auto">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         Our talent directory is being populated with AI and tech experts. Check back soon to connect with top professionals.
       </p>
 <<<<<<< HEAD
@@ -24,5 +32,9 @@ export function TalentPlaceholder() {
         Join as Talent
       </Button>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

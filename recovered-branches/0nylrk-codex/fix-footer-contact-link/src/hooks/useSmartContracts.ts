@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
@@ -21,11 +22,18 @@ export function useSmartContracts() {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),
+=======
+
+export function useSmartContracts() {_const { user} = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+  const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const generateSolidityContract = async (
+  const _generateSolidityContract = async (
     values: ContractFormValues, 
     talent: TalentProfile, 
     clientName: string
+<<<<<<< HEAD
   ): Promise<string> => {
     try {
       setIsLoading(true),
@@ -42,9 +50,18 @@ export function useSmartContracts() {
           paymentAmount: values.paymentAmount,
           additionalClauses: values.additionalClauses || []}
       }),
+=======
+  ): Promise<string> => {_try {
+      setIsLoading(true);
+      
+      const { data, _error} = await supabase.functions.invoke("generate-smart-contract", {_body: {
+          talentName: talent.full_name, _clientName: clientName, _projectName: values.projectName, _scopeSummary: values.scopeSummary, _startDate: values.startDate.toISOString(), _endDate: values.endDate?.toISOString(), _paymentTerms: values.paymentTerms, _paymentAmount: values.paymentAmount, _additionalClauses: values.additionalClauses || []}
+      });
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (error) throw error,
       
+<<<<<<< HEAD
       if (data && data.solidityCode) {
         return data.solidityCode
       } else {
@@ -67,10 +84,17 @@ export function useSmartContracts() {
       setIsLoading(false)
     }
   },
+=======
+      if (data && data.solidityCode) {_return data.solidityCode;} else {_throw new Error("Failed to generate Solidity contract");}
+    } catch (err: unknown) {_toast.error("Failed to generate smart contract");
+      throw err;} finally {_setIsLoading(false);}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const deploySmartContract = async (
+  const _deploySmartContract = async (
     contractCode: string,
     options: DeploymentOptions
+<<<<<<< HEAD
   ): Promise<SmartContractInfo | null> => {
     if (!user?.id) {
 <<<<<<< HEAD
@@ -89,13 +113,20 @@ export function useSmartContracts() {
       // For now, we'll just simulate success
       const mockTransactionHash = `0x${Array.from({length: 64}, () => 
         Math.floor(Math.random() * 16).toString(16)).join('')}`,
+=======
+  ): Promise<SmartContractInfo | null> => {_if (!user?.id) {
+      toast.error("You must be logged in to deploy a contract");
+      return null;}
+    
+    try {_setDeploymentStatus('deploying');
       
-      const mockSmartContractInfo: SmartContractInfo = {
-        id: crypto.randomUUID(),
-        transactionHash: mockTransactionHash,
-        networkName: options.network,
-        blockNumber: Math.floor(Math.random() * 1000000),
-        deployedAddress: `0x${Array.from({length: 40}, () => 
+      // This would normally connect to MetaMask or other Web3 provider
+      // For now, _we'll just simulate success
+      const _mockTransactionHash = `0x${Array.from(_{length: 64}, _() => 
+        Math.floor(Math.random() * 16).toString(16)).join('')}`;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+      
+      const mockSmartContractInfo: SmartContractInfo = {_id: window.crypto.randomUUID(), _transactionHash: mockTransactionHash, _networkName: options.network, _blockNumber: Math.floor(Math.random() * 1000000), _deployedAddress: `0x${Array.from(_{length: 40}, _() => 
           Math.floor(Math.random() * 16).toString(16)).join('')}`,
         contractType: 'escrow',
         createdAt: new Date().toISOString(),
@@ -114,6 +145,7 @@ export function useSmartContracts() {
       toast.success(&quot;Smart contract deployed successfully!&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
+<<<<<<< HEAD
       return mockSmartContractInfo
     } catch (err: any) {
 <<<<<<< HEAD
@@ -136,4 +168,13 @@ export function useSmartContracts() {
     isLoading,
     deploymentStatus
   }
+=======
+      return mockSmartContractInfo;
+    } catch (err: unknown) {_toast.error("Failed to deploy smart contract");
+      setDeploymentStatus('error');
+      return null;}
+  };
+  
+  return {_generateSolidityContract, _deploySmartContract, _isLoading, _deploymentStatus};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

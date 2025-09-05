@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { 
@@ -51,10 +52,42 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       element.scrollIntoView({ behavior: 'smooth' }),
       setActiveSection(sectionId),
       setIsMobileMenuOpen(false)
+=======
+import React, {_useState, _useEffect} from 'react';
+import {_innovative2035MicroSaasServices} from '../data/innovative-2035-micro-saas-services';
+import {_innovative2035AIServices} from '../data/innovative-2035-ai-services';
+import {_innovative2035ITServices} from '../data/innovative-2035-it-services';
+import {_innovativeRealMicroSaasServices2025} from '../data/2025-innovative-real-micro-saas-services';
+import {_innovativeAIServicesEnhanced2025} from '../data/2025-innovative-ai-services-enhanced';
+import {_innovativeITServicesEnhanced2025} from '../data/2025-innovative-it-services-enhanced';
+import {_emergingTechServicesEnhanced2025} from '../data/2025-emerging-tech-services-enhanced';
+import UltraFuturisticBackground2035 from './backgrounds/UltraFuturisticBackground2035';
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
+
+interface Homepage2025Props {_showInternalNav?: boolean}
+
+const Homepage2025: React.FC<Homepage2025Props> = (_{_showInternalNav = true}) => {_const [activeSection, _setActiveSection] = useState('hero');
+  const [currentServiceIndex, _setCurrentServiceIndex] = useState(0);
+  const [isVisible, _setIsVisible] = useState(false);
+  const [isMobileMenuOpen, _setIsMobileMenuOpen] = useState(false);
+
+  useEffect__(() => {
+    setIsVisible(true);
+    const _interval = setInterval__(() => {
+      setCurrentServiceIndex(_(prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length);}, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const _scrollToSection = (_sectionId: string) => {_const _element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth'});
+      setActiveSection(sectionId);
+      setIsMobileMenuOpen(false);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
-  const allServices = [
+  const _allServices = [
     // New 2035 services (featured first)
     ...innovative2035MicroSaasServices,
     ...innovative2035AIServices,
@@ -69,6 +102,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...quantumCybersecurityServices
   ],
 
+<<<<<<< HEAD
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12),
 
   const navigationSections = [
@@ -85,31 +119,68 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   return (
     <UltraFuturisticBackground2026 intensity=&quot;medium&quot; theme=&quot;quantum&quot;>
       {showInternalNav && (
+=======
+  const _featuredServices = allServices.filter(service => service.popular).slice(0, 12);
+
+  const _navigationSections = [
+    {_id: 'hero', _label: 'Home', _icon: '🏠'},
+    {_id: 'services', _label: 'Micro SAAS', _icon: '🚀'},
+    {_id: 'ai', _label: 'AI Services', _icon: '🧠'},
+    {_id: 'automation', _label: 'AI Automation', _icon: '⚡'},
+    {_id: 'quantum', _label: 'Quantum Security', _icon: '🔐'},
+    {_id: 'it', _label: 'IT Solutions', _icon: '💻'},
+    {_id: 'emerging', _label: 'Emerging Tech', _icon: '🌟'},
+    {_id: 'contact', _label: 'Contact', _icon: '📞'}
+  ];
+
+  return (_<UltraFuturisticBackground2026 intensity="medium" theme="quantum">
+      {_showInternalNav && (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <>
         {/* Navigation */}
         <nav className=&quot;fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;flex justify-between items-center h-16&quot;>
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className=&quot;flex items-center space-x-2&quot;
+=======
+              initial={_{ opacity: 0, _x: -20}}
+              animate={_{ opacity: 1, _x: 0}}
+              className="flex items-center space-x-2"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               Zion Tech Group
             </motion.h1>
             <motion.p 
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className=&quot;text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed&quot;
+=======
+              initial={_{ opacity: 0, _y: 30}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.2}}
+              className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
-              Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting-edge IT solutions that drive business transformation
+              Pioneering the future of technology with revolutionary AI, _Quantum Computing, _Space Technology, _and cutting-edge IT solutions that drive business transformation
             </motion.p>
             <motion.div 
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className=&quot;flex flex-col sm:flex-row gap-6 justify-center mb-12&quot;
+=======
+              initial={_{ opacity: 0, _y: 30}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.4}}
+              className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <button className=&quot;px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25&quot;>
                 Get Started Today
@@ -119,12 +190,19 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </button>
             </motion.div>
             
-            {/* Contact Information */}
+            {_/* Contact Information */}
             <motion.div 
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className=&quot;flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400&quot;
+=======
+              initial={_{ opacity: 0, _y: 30}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.6}}
+              className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <div className=&quot;flex items-center gap-2&quot;>
                 <span className=&quot;w-2 h-2 bg-green-400 rounded-full animate-pulse&quot;></span>
@@ -142,6 +220,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Services Preview */}
         <section className=&quot;py-24 px-4&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -150,10 +229,21 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className=&quot;text-center mb-20&quot;
+=======
+        {_/* Services Preview */}
+        <section className="py-24 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div 
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              className="text-center mb-20"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <h2 className=&quot;text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
                 Revolutionary Services Portfolio
               </h2>
+<<<<<<< HEAD
               <p className=&quot;text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed&quot;>
                 Experience the future with our comprehensive portfolio of {real2036InnovativeServices.length + real2036ITServices.length + real2036AIServices.length}+ innovative services spanning AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
               </p>
@@ -162,13 +252,24 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             {/* Featured Services Grid */}
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>
               {featuredServices.map((service, index) => (
+=======
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Experience the future with our comprehensive portfolio of {_real2036InnovativeServices.length + real2036ITServices.length + real2036AIServices.length}+ innovative services spanning AI, _Quantum Computing, _Space Technology, _and cutting-edge IT solutions
+              </p>
+            </motion.div>
+
+            {_/* Featured Services Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {_featuredServices.map((service, _index) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={_{ opacity: 0, _y: 30}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.8, _delay: index * 0.1}}
                 >
                   <UltraFuturisticServiceCard2026
+<<<<<<< HEAD
                     service={{
                       id: service.id,
                       name: service.name,
@@ -182,17 +283,29 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                       icon: service.icon
                     }}
                     variant=&quot;ai&quot;
+=======
+                    service={_{
+                      id: service.id, _name: service.name, _tagline: service.tagline, _description: service.description, _price: service.price, _period: service.period, _features: service.features, _popular: service.popular, _category: service.category, _icon: service.icon}}
+                    variant="ai"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   />
                 </motion.div>
               ))}
             </div>
 
-            {/* Call to Action */}
+            {_/* Call to Action */}
             <motion.div 
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className=&quot;text-center&quot;
+=======
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              className="text-center"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <a 
                 href=&quot;/comprehensive-services-showcase-2036&quot;
@@ -204,6 +317,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Technology Domains */}
         <section className=&quot;py-24 px-4 bg-gradient-to-r from-gray-900/50 to-black/50&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -215,12 +329,26 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             >
               <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
                 <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16&quot; />
+=======
+        {_/* Technology Domains */}
+        <section className="py-24 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+          <div className="max-w-7xl mx-auto">
+            <motion.div 
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              className="text-center mb-20"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M4 6h16M4 12h16M4 18h16" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </svg>
             </button>
           </div>
 
-          {/* Mobile Navigation Menu */}
+          {_/* Mobile Navigation Menu */}
           <AnimatePresence>
+<<<<<<< HEAD
             {isMobileMenuOpen && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
@@ -232,16 +360,26 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <div className=&quot;py-4 space-y-2&quot;>
                   {navigationSections.map((section) => (
                     <button
+=======
+            {_isMobileMenuOpen && (_<motion.div
+                initial={{ opacity: 0, _height: 0}}
+                animate={_{ opacity: 1, _height: 'auto'}}
+                exit={_{ opacity: 0, _height: 0}}
+                className="lg:hidden border-t border-white/10"
+                id="mobile-navigation"
+              >
+                <div className="py-4 space-y-2">
+                  {_navigationSections.map((section) => (_<button
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       key={section.id}
-                      onClick={() => scrollToSection(section.id)}
-                      className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
+                      onClick={_() => scrollToSection(section.id)}
+                      className={_`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
                         activeSection === section.id
                           ? 'bg-cyan-400/20 text-cyan-400'
-                          : 'text-gray-300 hover:bg-white/10'
-                      }`}
+                          : 'text-gray-300 hover:bg-white/10'}`}
                     >
-                      <span>{section.icon}</span>
-                      <span>{section.label}</span>
+                      <span>{_section.icon}</span>
+                      <span>{_section.label}</span>
                     </button>
                   ))}
                   <div className=&quot;pt-4 border-t border-white/10&quot;>
@@ -269,6 +407,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </>
       )}
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section id=&quot;hero&quot; className=&quot;relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16&quot;>
         <div className=&quot;text-center z-10 max-w-6xl mx-auto&quot;>
@@ -277,6 +416,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className=&quot;text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6&quot;
+=======
+      {_/* Hero Section */}
+      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
+        <div className="text-center z-10 max-w-6xl mx-auto">
+          <motion.h1
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <span className=&quot;bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
               Future of Technology
@@ -284,15 +433,23 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.h1>
           
           <motion.p
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className=&quot;text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed&quot;
+=======
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8, _delay: 0.2}}
+            className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             Revolutionary micro SAAS services, cutting-edge AI solutions, quantum cybersecurity, and emerging technologies that transform businesses and industries.
           </motion.p>
 
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -301,6 +458,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <button
               onClick={() => scrollToSection('services')}
               className=&quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25&quot;
+=======
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8, _delay: 0.4}}
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          >
+            <button
+              onClick={_() => scrollToSection('services')}
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               Explore Services
             </button>
@@ -312,16 +479,24 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             </a>
           </motion.div>
 
-          {/* Floating Service Cards */}
+          {_/* Floating Service Cards */}
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
             className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto&quot;
+=======
+            initial={_{ opacity: 0, _y: 50}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 1, _delay: 0.6}}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
-            {featuredServices.slice(0, 3).map((service, index) => (
+            {_featuredServices.slice(0, _3).map(_(service, _index) => (
               <motion.div
                 key={service.id}
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
@@ -331,12 +506,24 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>{service.name}</h3>
                 <p className=&quot;text-gray-400 text-sm&quot;>{service.tagline}</p>
                 <div className=&quot;mt-4 text-cyan-400 font-bold&quot;>{service.price}{service.period}</div>
+=======
+                initial={_{ opacity: 0, _y: 50}}
+                animate={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8, _delay: 0.8 + index * 0.2}}
+                className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className="text-4xl mb-4">{_service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{_service.name}</h3>
+                <p className="text-gray-400 text-sm">{_service.tagline}</p>
+                <div className="mt-4 text-cyan-400 font-bold">{_service.price}{_service.period}</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Services Section */}
       <section id=&quot;services&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -345,6 +532,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className=&quot;text-center mb-16&quot;
+=======
+      {_/* Services Section */}
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
@@ -356,19 +553,30 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {innovativeRealMicroSaasServices2025.slice(0, 9).map((service, index) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_innovativeRealMicroSaasServices2025.slice(0, _9).map(_(service, _index) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 50}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8, _delay: index * 0.1}}
+                viewport={_{ once: true}}
               >
                 <UltraFuturisticServiceCard2026 
+<<<<<<< HEAD
                   service={service} 
                   variant=&quot;default&quot;
                   theme=&quot;quantum&quot;
+=======
+                  service={_service} 
+                  variant="default"
+                  theme="quantum"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 />
               </motion.div>
             ))}
@@ -376,6 +584,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* AI Services Section */}
       <section id=&quot;ai&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -384,6 +593,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className=&quot;text-center mb-16&quot;
+=======
+      {_/* AI Services Section */}
+      <section id="ai" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent&quot;>
@@ -395,19 +614,30 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {innovativeAIServicesEnhanced2025.slice(0, 9).map((service, index) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_innovativeAIServicesEnhanced2025.slice(0, _9).map(_(service, _index) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 50}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8, _delay: index * 0.1}}
+                viewport={_{ once: true}}
               >
                 <UltraFuturisticServiceCard2026 
+<<<<<<< HEAD
                   service={service} 
                   variant=&quot;premium&quot;
                   theme=&quot;neon&quot;
+=======
+                  service={_service} 
+                  variant="premium"
+                  theme="neon"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 />
               </motion.div>
             ))}
@@ -415,6 +645,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* AI Automation Services Section */}
       <section id=&quot;automation&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -423,6 +654,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className=&quot;text-center mb-16&quot;
+=======
+      {_/* AI Automation Services Section */}
+      <section id="automation" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent&quot;>
@@ -434,19 +675,30 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {advancedAIAutomationServices.map((service, index) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_advancedAIAutomationServices.map(_(service, _index) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 50}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8, _delay: index * 0.1}}
+                viewport={_{ once: true}}
               >
                 <UltraFuturisticServiceCard2026 
+<<<<<<< HEAD
                   service={service} 
                   variant=&quot;enterprise&quot;
                   theme=&quot;holographic&quot;
+=======
+                  service={_service} 
+                  variant="enterprise"
+                  theme="holographic"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 />
               </motion.div>
             ))}
@@ -454,6 +706,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Quantum Cybersecurity Section */}
       <section id=&quot;quantum&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -462,6 +715,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className=&quot;text-center mb-16&quot;
+=======
+      {_/* Quantum Cybersecurity Section */}
+      <section id="quantum" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent&quot;>
@@ -473,19 +736,30 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {quantumCybersecurityServices.map((service, index) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_quantumCybersecurityServices.map(_(service, _index) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 50}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8, _delay: index * 0.1}}
+                viewport={_{ once: true}}
               >
                 <UltraFuturisticServiceCard2026 
+<<<<<<< HEAD
                   service={service} 
                   variant=&quot;premium&quot;
                   theme=&quot;cyberpunk&quot;
+=======
+                  service={_service} 
+                  variant="premium"
+                  theme="cyberpunk"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 />
               </motion.div>
             ))}
@@ -493,6 +767,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* IT Solutions Section */}
       <section id=&quot;it&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -501,6 +776,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className=&quot;text-center mb-16&quot;
+=======
+      {_/* IT Solutions Section */}
+      <section id="it" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent&quot;>
@@ -512,19 +797,30 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {innovativeITServicesEnhanced2025.slice(0, 9).map((service, index) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_innovativeITServicesEnhanced2025.slice(0, _9).map(_(service, _index) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 50}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8, _delay: index * 0.1}}
+                viewport={_{ once: true}}
               >
                 <UltraFuturisticServiceCard2026 
+<<<<<<< HEAD
                   service={service} 
                   variant=&quot;default&quot;
                   theme=&quot;quantum&quot;
+=======
+                  service={_service} 
+                  variant="default"
+                  theme="quantum"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 />
               </motion.div>
             ))}
@@ -532,6 +828,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Emerging Technologies Section */}
       <section id=&quot;emerging&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -540,6 +837,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className=&quot;text-center mb-16&quot;
+=======
+      {_/* Emerging Technologies Section */}
+      <section id="emerging" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            className="text-center mb-16"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent&quot;>
@@ -551,19 +858,30 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {emergingTechServicesEnhanced2025.slice(0, 9).map((service, index) => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_emergingTechServicesEnhanced2025.slice(0, _9).map(_(service, _index) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 50}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8, _delay: index * 0.1}}
+                viewport={_{ once: true}}
               >
                 <UltraFuturisticServiceCard2026 
+<<<<<<< HEAD
                   service={service} 
                   variant=&quot;enterprise&quot;
                   theme=&quot;holographic&quot;
+=======
+                  service={_service} 
+                  variant="enterprise"
+                  theme="holographic"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 />
               </motion.div>
             ))}
@@ -571,14 +889,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Contact Section */}
       <section id=&quot;contact&quot; className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;>
+=======
+      {_/* Contact Section */}
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
           >
             <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6&quot;>
               <span className=&quot;bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
@@ -632,10 +956,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Enhanced Footer */}
       <footer className=&quot;bg-black/60 border-t border-white/10 py-16 px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12&quot;>
+=======
+      {_/* Enhanced Footer */}
+      <footer className="bg-black/60 border-t border-white/10 py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <div>
               <h3 className=&quot;text-white font-bold text-lg mb-4&quot;>ZionTech Group</h3>
               <p className=&quot;text-gray-400 text-sm leading-relaxed&quot;>
@@ -676,6 +1007,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Why Choose Us */}
         <section className=&quot;py-24 px-4&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -684,6 +1016,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className=&quot;text-center mb-20&quot;
+=======
+        {_/* Why Choose Us */}
+        <section className="py-24 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div 
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              className="text-center mb-20"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <h2 className=&quot;text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
                 Why Choose Zion Tech Group?
@@ -693,40 +1035,23 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {[
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {_[
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 {
-                  title: 'Innovation First',
-                  description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.',
-                  icon: '🚀'
-                },
-                {
-                  title: 'Proven Results',
-                  description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.',
-                  icon: '📈'
-                },
-                {
-                  title: 'Future-Proof Technology',
-                  description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.',
-                  icon: '🔮'
-                },
-                {
-                  title: 'Expert Team',
-                  description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.',
-                  icon: '👥'
-                },
-                {
-                  title: '24/7 Support',
-                  description: 'Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.',
-                  icon: '🛡️'
-                },
-                {
-                  title: 'Scalable Solutions',
-                  description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.',
-                  icon: '📊'
-                }
-              ].map((feature, index) => (
+                  title: 'Innovation First', _description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.', _icon: '🚀'},
+                {_title: 'Proven Results', _description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, _cost savings, _and competitive advantage.', _icon: '📈'},
+                {_title: 'Future-Proof Technology', _description: 'Built with quantum computing, _AI consciousness, _and space technology - ensuring your business stays ahead of the curve.', _icon: '🔮'},
+                {_title: 'Expert Team', _description: 'World-class engineers, _scientists, _and business strategists with decades of experience in emerging technologies.', _icon: '👥'},
+                {_title: '24/7 Support', _description: 'Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.', _icon: '🛡️'},
+                {_title: 'Scalable Solutions', _description: 'From startups to enterprises, _our solutions scale with your business and grow with your ambitions.', _icon: '📊'}
+              ].map(_(feature, _index) => (
                 <motion.div
+<<<<<<< HEAD
                   key={feature.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -741,6 +1066,22 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </h3>
                   <p className=&quot;text-gray-300 leading-relaxed&quot;>
                     {feature.description}
+=======
+                  key={_feature.title}
+                  initial={_{ opacity: 0, _y: 30}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.8, _delay: index * 0.1}}
+                  className="text-center p-8"
+                >
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto">
+                    {_feature.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-white">
+                    {_feature.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {_feature.description}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </p>
                 </motion.div>
               ))}

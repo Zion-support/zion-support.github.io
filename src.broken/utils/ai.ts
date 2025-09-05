@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import OpenAI from 'openai',
 function getClient(): OpenAI | null {
   const apiKey = process.env.OPENAI_API_KEY,
@@ -17,4 +18,22 @@ export async function generateText(prompt: string, system?: string): Promise<str
       { role: 'user', content: prompt }],
     temperature: 0.4}),
   return resp.choices?.[0]?.message?.content || ''
+=======
+import OpenAI from 'openai';
+
+function getClient(): OpenAI | null {_const _apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) return null;
+  return new OpenAI({ apiKey});
+}
+
+export async function generateText(_prompt: string, _system?: string): Promise<string> {_const _client = getClient();
+  if (!client) {
+    return `AI disabled. Mock response for prompt: ${prompt.slice(0, _120)}...`;
+  }
+  const _resp = await client.chat.completions.create({_model: process.env.OPENAI_MODEL || 'gpt-4o-mini', _messages: [
+      ...(system ? [{ role: 'system' as const, _content: system}] : []),
+      {_role: 'user', _content: prompt}],
+    temperature: 0.4});
+  return resp.choices?.[0]?.message?.content || '';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 import React from 'react',
 export default function FutureOfWork() {
   return (
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
+
+export default function FutureOfWork() {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <>
       <Head>
         <title>
@@ -41,7 +49,7 @@ export default function FutureOfWork() {
                   <span className='px-3 py-1 bg-orange-400/20 text-orange-400 text-sm rounded-full border border-orange-400/30'>
                     Future of Work
                   </span>
-                  <span className='text-white/60 text-sm'>January 5, 2025</span>
+                  <span className='text-white/60 text-sm'>January 5, _2025</span>
                   <span className='text-white/60 text-sm'>•</span>
                   <span className='text-white/60 text-sm'>5 min read</span>
                 </div>
@@ -62,15 +70,18 @@ export default function FutureOfWork() {
                 <p className='text-white/90 mb-4'>
                   The workplace is undergoing a fundamental transformation. Gone
                   are the days when AI was seen as a threat to human employment.
+<<<<<<< HEAD
                   Today, we're witnessing the emergence of a new paradigm:
+=======
+                  Today, _we&apos;re witnessing the emergence of a new paradigm:
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   human-AI collaboration that amplifies human capabilities
                   rather than replacing them.
                 </p>
                 <p className='text-white/90 mb-4'>
-                  At Zion Tech Group, we believe the future of work lies in
-                  creating intelligent systems that work alongside humans,
-                  handling routine tasks while humans focus on creative
-                  problem-solving, strategic thinking, and innovation.
+                  At Zion Tech Group, _we believe the future of work lies in
+                  creating intelligent systems that work alongside humans, _handling routine tasks while humans focus on creative
+                  problem-solving, _strategic thinking, _and innovation.
                 </p>
               </section>
 
@@ -89,15 +100,15 @@ export default function FutureOfWork() {
                   </li>
                   <li>
                     • <strong>Decision Support:</strong> AI provides
-                    recommendations, humans make final decisions
+                    recommendations, _humans make final decisions
                   </li>
                   <li>
                     • <strong>Process Automation:</strong> AI handles repetitive
-                    tasks, humans focus on exceptions
+                    tasks, _humans focus on exceptions
                   </li>
                   <li>
                     • <strong>Creative Collaboration:</strong> AI generates
-                    options, humans refine and select
+                    options, _humans refine and select
                   </li>
                 </ul>
                 <p className='text-white/90 mb-4'>
@@ -144,8 +155,14 @@ export default function FutureOfWork() {
                   Skills for the Future
                 </h2>
                 <p className='text-white/90 mb-4'>
+<<<<<<< HEAD
                   As the nature of work evolves, so do the skills required for
                   success. The most valuable employees will be those who can: </p>
+=======
+                  As the nature of work evolves, _so do the skills required for
+                  success. The most valuable employees will be those who can:
+                </p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
                     • <strong>Collaborate with AI:</strong> Understand AI
@@ -264,5 +281,9 @@ export default function FutureOfWork() {
         </main>
       </div>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

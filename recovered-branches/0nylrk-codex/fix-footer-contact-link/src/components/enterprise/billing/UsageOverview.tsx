@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress",
@@ -10,11 +11,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;
 import { Progress } from &quot;@/components/ui/progress&quot;;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import React from "react";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-export function UsageOverview() {
-  // Mock usage data
-  const usage = {
+export function UsageOverview() {_// Mock usage data
+  const _usage = {
     jobPosts: {
+<<<<<<< HEAD
       used: 32,
       total: 100,
       percentage: 32
@@ -35,6 +39,13 @@ export function UsageOverview() {
       percentage: 24
     }
   },
+=======
+      used: 32, _total: 100, _percentage: 32},
+    interviews: {_used: 45, _total: 150, _percentage: 30},
+    messaging: {_used: 1250, _total: 5000, _percentage: 25},
+    storage: {_used: 2.4, _total: 10, _percentage: 24}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <Card>
@@ -49,6 +60,7 @@ export function UsageOverview() {
             <TabsTrigger value=&quot;historical&quot;>Historical</TabsTrigger>
           </TabsList>
           
+<<<<<<< HEAD
           <TabsContent value=&quot;current&quot; className=&quot;space-y-6&quot;>
             <div className=&quot;space-y-4&quot;>
               <div className=&quot;space-y-2&quot;>
@@ -89,6 +101,48 @@ export function UsageOverview() {
                   </p>
                 </div>
                 <Progress value={usage.storage.percentage} className=&quot;h-2&quot; />
+=======
+          <TabsContent value="current" className="space-y-6">
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <p className="text-sm font-medium">Job Posts</p>
+                  <p className="text-sm text-muted-foreground">
+                    {_usage.jobPosts.used} / {_usage.jobPosts.total}
+                  </p>
+                </div>
+                <Progress value={_usage.jobPosts.percentage} className="h-2" />
+              </div>
+              
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <p className="text-sm font-medium">Interviews Conducted</p>
+                  <p className="text-sm text-muted-foreground">
+                    {_usage.interviews.used} / {_usage.interviews.total}
+                  </p>
+                </div>
+                <Progress value={_usage.interviews.percentage} className="h-2" />
+              </div>
+              
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <p className="text-sm font-medium">Messages Sent</p>
+                  <p className="text-sm text-muted-foreground">
+                    {_usage.messaging.used} / {_usage.messaging.total}
+                  </p>
+                </div>
+                <Progress value={_usage.messaging.percentage} className="h-2" />
+              </div>
+              
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <p className="text-sm font-medium">Storage (GB)</p>
+                  <p className="text-sm text-muted-foreground">
+                    {_usage.storage.used} / {_usage.storage.total} GB
+                  </p>
+                </div>
+                <Progress value={_usage.storage.percentage} className="h-2" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </div>
             </div>
             

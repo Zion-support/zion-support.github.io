@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
@@ -57,19 +58,49 @@ serve(async (req: Request) => {
       )
 =======
           headers: { &quot;Content-Type&quot;: &quot;application/json&quot;, ...corsHeaders }}
+=======
+
+const _supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+const _supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+
+const _corsHeaders = {_"Access-Control-Allow-Origin": "*", _"Access-Control-Allow-Headers":
+    "authorization, _x-client-info, _apikey, _content-type"};
+
+serve(_async (req: Request) => {_// Handle CORS
+  if (req.method === "OPTIONS") {
+    return new Response(null, _{
+      status: 204, _headers: corsHeaders});
+  }
+  
+  try {_const _supabase = createClient(
+      supabaseUrl, _supabaseServiceKey
+    );
+    
+    // Run the database function to create scheduled reminders
+    const { data, _error} = await supabase.rpc(_"create_scheduled_reminders");
+    
+    if (error) {_return new Response(
+        JSON.stringify({ error: "Failed to create scheduled reminders", _details: error}),
+        {_status: 500, _headers: { "Content-Type": "application/json", _...corsHeaders}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       );
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     // Process pending reminder jobs
+<<<<<<< HEAD
     const { data: pendingJobs, error: jobsError } = await supabase
 <<<<<<< HEAD
+=======
+    const {_data: pendingJobs, _error: jobsError} = await supabase
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       .from("scheduled_jobs")
       .select("id, payload")
       .eq("job_type", "onboarding_reminder")
       .eq("status", "pending")
       .lt("scheduled_for", new Date().toISOString()),
     
+<<<<<<< HEAD
     if (jobsError) {
       console.error("Failed to fetch pending jobs:", jobsError),
 =======
@@ -91,15 +122,24 @@ serve(async (req: Request) => {
       )
 =======
           headers: { &quot;Content-Type&quot;: &quot;application/json&quot;, ...corsHeaders }}
+=======
+    if (jobsError) {_return new Response(
+        JSON.stringify({ error: "Failed to fetch pending jobs", _details: jobsError}),
+        {_status: 500, _headers: { "Content-Type": "application/json", _...corsHeaders}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       );
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
+<<<<<<< HEAD
     const processedJobs = [],
+=======
+    const _processedJobs = [];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
-    if (pendingJobs && pendingJobs.length > 0) {
-      for (const job of pendingJobs) {
+    if (pendingJobs && pendingJobs.length > 0) {_for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
+<<<<<<< HEAD
         const reminderResponse = await fetch(
           `${supabaseUrl}/functions/v1/send-onboarding-reminder`,
           {
@@ -138,6 +178,20 @@ serve(async (req: Request) => {
           console.error(&quot;Failed to send reminder for job:&quot;, job.id);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           // Update job status to failed
+=======
+        const _reminderResponse = await fetch(_`${supabaseUrl}/functions/v1/send-onboarding-reminder`, _{_method: "POST", _headers: {
+              "Content-Type": "application/json", _"Authorization": `Bearer ${supabaseServiceKey}`}, _body: JSON.stringify(job.payload)}
+        );
+        
+        if (reminderResponse.ok) {_// Update job status to completed
+          const { error: updateError} = await supabase
+            .from("scheduled_jobs")
+            .update({_status: "completed", _completed_at: new Date().toISOString()})
+            .eq("id", job.id);
+          
+          if (updateError) {} else {_processedJobs.push(job.id);}
+        } else {_// Update job status to failed
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           await supabase
             .from(&quot;scheduled_jobs&quot;)
             .update({
@@ -153,6 +207,7 @@ serve(async (req: Request) => {
     }
     
     return new Response(
+<<<<<<< HEAD
       JSON.stringify({
         message: &quot;Reminders processed successfully&quot;,
         processed_jobs: processedJobs.length,
@@ -177,6 +232,14 @@ serve(async (req: Request) => {
     )
 =======
         headers: { &quot;Content-Type&quot;: &quot;application/json&quot;, ...corsHeaders }}
+=======
+      JSON.stringify({_message: "Reminders processed successfully", _processed_jobs: processedJobs.length, _job_ids: processedJobs}),
+      {_status: 200, _headers: { "Content-Type": "application/json", _...corsHeaders}}
+    );
+  } catch (error) {_return new Response(
+      JSON.stringify({ error: "Internal server error", _details: error.message}),
+      {_status: 500, _headers: { "Content-Type": "application/json", _...corsHeaders}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     );
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }

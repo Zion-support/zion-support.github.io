@@ -1,5 +1,6 @@
 
 // This is a simple script wrapper to execute our icon update script
+<<<<<<< HEAD
 import { exec } from 'child_process',
 import path from 'path',
 const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
@@ -31,5 +32,20 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
 }),
 =======
   // console.log('Icon imports updated successfully!');
+=======
+import path from 'path';
+
+const _scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js');
+
+
+exec(_`node ${_scriptPath}`, _(error, _stdout, _stderr) => {_if (error) {
+    
+    return;}
+  
+  
+  if (stderr) {}
+  
+  
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7

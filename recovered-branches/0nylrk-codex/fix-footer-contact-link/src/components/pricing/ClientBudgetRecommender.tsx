@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 =======
@@ -53,11 +54,34 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       const params: ClientBudgetParams = {
         jobTitle,
         category},
+=======
+import React, {_useState} from "react";
+import {_getClientBudgetSuggestion, _PricingSuggestion, _ClientBudgetParams, _trackPricingSuggestion} from "@/services/pricingSuggestionService";
+
+interface ClientBudgetRecommenderProps {_jobTitle: string;
+  category: string;
+  timeline?: string;
+  scope?: string;
+  experienceLevel?: string;
+  onSuggestionApplied: (_minValue: number, _maxValue: number) => void;}
+
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (_{_jobTitle, _category, _timeline, _scope, _experienceLevel, _onSuggestionApplied}) => {_const [isLoading, _setIsLoading] = useState(false);
+  const [suggestion, _setSuggestion] = useState<PricingSuggestion | null>(null);
+  const { user} = useAuth();
+
+  const _generateSuggestion = async () => {_if (!jobTitle || !category) {
+      return;}
+
+    setIsLoading(true);
+    try {_const params: ClientBudgetParams = {
+        jobTitle, _category};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
       if (timeline) params.timeline = timeline,
       if (scope) params.scope = scope,
       if (experienceLevel) params.experienceLevel = experienceLevel,
 
+<<<<<<< HEAD
       const result = await getClientBudgetSuggestion(params),
       setSuggestion(result)
     } catch (error) {
@@ -74,16 +98,29 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   const handleApplySuggestion = () => {
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate),
+=======
+      const _result = await getClientBudgetSuggestion(params);
+      setSuggestion(result);
+    } catch (error) {} finally {_setIsLoading(false);}
+  };
+
+  const _handleApplySuggestion = () => {_if (suggestion) {
+      onSuggestionApplied(suggestion.minRate, _suggestion.maxRate);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       // Track this suggestion application
       if (user) {
         trackPricingSuggestion({
+<<<<<<< HEAD
           userId: user.id,
           suggestionType: 'client',
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
           accepted: true
         })
+=======
+          userId: user.id, _suggestionType: 'client', _suggestedMin: suggestion.minRate, _suggestedMax: suggestion.maxRate, _accepted: true});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
     }
   },
@@ -91,22 +128,34 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   return (
     <div className=&quot;space-y-4&quot;>
       <div>
-        {!suggestion && !isLoading ? (
+        {_!suggestion && !isLoading ? (
           <Button
             type=&quot;button&quot;
             variant=&quot;outline&quot;
             onClick={generateSuggestion}
+<<<<<<< HEAD
             disabled={!jobTitle || !category}
             className=&quot;w-full&quot;
+=======
+            disabled={_!jobTitle || !category}
+            className="w-full"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <Sparkles className=&quot;h-4 w-4 mr-2&quot; /> Get Budget Recommendation
           </Button>
         ) : (
           <PricingSuggestionBox
+<<<<<<< HEAD
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType=&quot;hourly&quot;
+=======
+            suggestion={_suggestion}
+            isLoading={_isLoading}
+            onApplySuggestion={_handleApplySuggestion}
+            rateType="hourly"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           />
         )}
       </div>

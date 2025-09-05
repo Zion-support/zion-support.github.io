@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -29,6 +30,15 @@ export default function EnterprisePlans() {
       <SEO 
         title=&quot;Enterprise Plans - Zion AI Marketplace&quot;
         description=&quot;Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.&quot;
+=======
+import React from "react";
+
+export default function EnterprisePlans() {_return (
+    <>
+      <SEO 
+        title="Enterprise Plans - Zion AI Marketplace"
+        description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, _dedicated talent pools, _and powerful admin tools."
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       />
       <Header />
       <main className=&quot;min-h-screen bg-background&quot;>
@@ -41,5 +51,9 @@ export default function EnterprisePlans() {
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

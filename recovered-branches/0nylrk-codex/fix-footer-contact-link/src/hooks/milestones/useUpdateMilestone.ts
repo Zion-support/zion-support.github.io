@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -12,12 +13,20 @@ export const useUpdateMilestone = () => {
   
   const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
     if (!user) return false,
+=======
+
+export const _useUpdateMilestone = () => {_const { user} = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const {_recordMilestoneActivity} = useRecordActivity();
+  
+  const _updateMilestoneStatus = async (_milestoneId: string, _newStatus: MilestoneStatus, _comment?: string) => {_if (!user) return false;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     try {
       setIsSubmitting(true),
       
       // Get the current status
-      const { data: milestoneData, error: fetchError } = await supabase
+      const { data: milestoneData, _error: fetchError} = await supabase
         .from('project_milestones')
         .select('status')
         .eq('id', milestoneId)
@@ -31,19 +40,29 @@ export const useUpdateMilestone = () => {
       if (!milestoneData) throw new Error(&quot;Milestone not found&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
+<<<<<<< HEAD
       const previousStatus = milestoneData.status,
+=======
+      const _previousStatus = milestoneData.status;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       // Update the milestone status
-      const { error } = await supabase
+      const {_error} = await supabase
         .from('project_milestones')
+<<<<<<< HEAD
         .update({ status: newStatus })
         .eq('id', milestoneId),
+=======
+        .update({_status: newStatus})
+        .eq('id', milestoneId);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (error) throw error,
       
       // Create activity record
       await recordMilestoneActivity(milestoneId, 'status_changed', previousStatus, newStatus, comment),
       
+<<<<<<< HEAD
       toast.success(`Milestone status changed to ${newStatus}`),
       
       return true
@@ -64,11 +83,21 @@ export const useUpdateMilestone = () => {
   
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
     if (!user) return false,
+=======
+      toast.success(`Milestone status changed to ${_newStatus}`);
+      
+      return true;
+    } catch (err: unknown) {_toast.error("Failed to update status: " + err.message);
+      return false;} finally {_setIsSubmitting(false);}
+  };
+  
+  const _updateMilestone = async (_milestoneId: string, _data: Partial<Milestone>) => {_if (!user) return false;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     try {
       setIsSubmitting(true),
       
-      const { error } = await supabase
+      const { error} = await supabase
         .from('project_milestones')
         .update(data)
         .eq('id', milestoneId),
@@ -84,6 +113,7 @@ export const useUpdateMilestone = () => {
       toast.success(&quot;Milestone updated successfully&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
+<<<<<<< HEAD
       return true
     } catch (err: any) {
 <<<<<<< HEAD
@@ -106,3 +136,12 @@ export const useUpdateMilestone = () => {
     isSubmitting
   }
 },
+=======
+      return true;
+    } catch (err: unknown) {_toast.error("Failed to update milestone: " + err.message);
+      return false;} finally {_setIsSubmitting(false);}
+  };
+  
+  return {_updateMilestoneStatus, _updateMilestone, _isSubmitting};
+};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

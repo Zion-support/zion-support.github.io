@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { UseFormReturn } from "react-hook-form",
 =======
 import { UseFormReturn } from &quot;react-hook-form&quot;;
@@ -56,9 +57,24 @@ export function PaymentTermsFields({
           control={form.control}
           name=&quot;paymentTerms&quot;
           render={({ field }) => (
+=======
+import {_FormField, _FormItem, _FormLabel, _FormControl, _FormDescription, _FormMessage} from "@/components/ui/form";
+import {_Select, _SelectContent, _SelectItem, _SelectTrigger, _SelectValue} from "@/components/ui/select";
+
+interface PaymentTermsFieldsProps {_form: UseFormReturn<ContractFormValues>;
+  talent: TalentProfile;
+  handleMilestonesGenerated: (_milestones: GeneratedMilestone[]) => void;}
+
+export function PaymentTermsFields(_{_form, _talent, _handleMilestonesGenerated}: PaymentTermsFieldsProps) {_return (_<>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <FormField
+          control={form.control}
+          name="paymentTerms"
+          render={_({ field}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <FormItem>
               <FormLabel>Payment Terms</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <Select onValueChange={_field.onChange} defaultValue={_field.value}>
                 <FormControl>
                   <SelectTrigger>
                     <SelectValue placeholder=&quot;Select payment terms&quot; />
@@ -76,13 +92,20 @@ export function PaymentTermsFields({
         />
         
         <FormField
+<<<<<<< HEAD
           control={form.control}
           name=&quot;paymentAmount&quot;
           render={({ field }) => (
+=======
+          control={_form.control}
+          name="paymentAmount"
+          render={_(_{ field}) => (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <FormItem>
               <FormLabel>Payment Amount</FormLabel>
               <FormControl>
                 <Input 
+<<<<<<< HEAD
                   placeholder={form.getValues(&quot;paymentTerms&quot;) === &quot;hourly&quot; ? &quot;$X per hour&quot; : &quot;Total $X&quot;} 
                   {...field} 
                 />
@@ -90,6 +113,15 @@ export function PaymentTermsFields({
               <FormDescription>
                 {form.getValues(&quot;paymentTerms&quot;) === &quot;milestone&quot; && 
                   &quot;You can define specific milestone amounts in the contract text or use AI to suggest milestones&quot;}
+=======
+                  placeholder={_form.getValues("paymentTerms") === "hourly" ? "$X per hour" : "Total $X"} 
+                  {_...field} 
+                />
+              </FormControl>
+              <FormDescription>
+                {_form.getValues("paymentTerms") === "milestone" && 
+                  "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -97,6 +129,7 @@ export function PaymentTermsFields({
         />
       </div>
 
+<<<<<<< HEAD
       {/* Project Milestones */}
       {form.watch(&quot;paymentTerms&quot;) === &quot;milestone&quot; && (
         <div className=&quot;pt-2&quot;>
@@ -108,6 +141,19 @@ export function PaymentTermsFields({
             projectType={form.getValues(&quot;projectName&quot;).includes(&quot;AI&quot;) ? &quot;AI/ML&quot; : 
                         form.getValues(&quot;projectName&quot;).includes(&quot;Web&quot;) ? &quot;Web Development&quot; : &quot;Other"}
             onMilestonesGenerated={handleMilestonesGenerated}
+=======
+      {_/* Project Milestones */}
+      {_form.watch("paymentTerms") === "milestone" && (
+        <div className="pt-2">
+          <MilestoneSuggestions
+            projectName={form.getValues("projectName") || "Project"}
+            scopeSummary={_form.getValues("scopeSummary") || ""}
+            startDate={_form.getValues("startDate") || new Date()}
+            endDate={_form.getValues("endDate")}
+            projectType={_form.getValues("projectName").includes("AI") ? "AI/ML" : 
+                        form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
+            onMilestonesGenerated={_handleMilestonesGenerated}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           />
         </div>
       )}

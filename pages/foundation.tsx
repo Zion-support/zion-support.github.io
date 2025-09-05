@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 import CharterGenerator from '../components/foundation/CharterGenerator',
@@ -34,6 +35,43 @@ export default function FoundationPage() {
               <div key={q} className=&quot;rounded-lg border border-gray-200 dark:border-gray-800 p-4&quot;>
                 <div className=&quot;font-medium&quot;>Report Q{q} 2025</div>
                 <div className=&quot;text-sm text-gray-600 dark:text-gray-400&quot;>Status: Draft</div>
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import CharterGenerator from '../components/foundation/CharterGenerator';
+
+export default function FoundationPage() {_return (_<>
+      <Head>
+        <title>Zion Foundation</title>
+        <meta name="description" content="Public-facing Zion Foundation: neutrality, _transparency, _grants, _and governance." />
+      </Head>
+      <div className="space-y-12">
+        <section className="space-y-3">
+          <h1 className="text-3xl font-bold">Zion Foundation</h1>
+          <p className="text-gray-600 dark:text-gray-300 max-w-3xl">Stewarding the protocol’s vision, _maintaining global neutrality, _and operating outside of any one jurisdiction. This portal provides the charter, _transparency reports, _grants, _and partnership MOUs.</p>
+          <div className="flex flex-wrap gap-3 text-sm">
+            <Link href="/governance/trust"><a className="underline">Governance & Trust</a></Link>
+            <a className="underline" href="#reports">Transparency Reports</a>
+            <a className="underline" href="#grants">Grants</a>
+            <a className="underline" href="#mou">Partnership MOUs</a>
+          </div>
+        </section>
+
+        <section className="space-y-4" id="charter">
+          <h2 className="text-2xl font-semibold">Foundation Charter</h2>
+          <p className="text-gray-600 dark:text-gray-300">Legal-neutral charter for a decentralized AI protocol committed to sovereignty, _open knowledge, _and trust.</p>
+          <CharterGenerator />
+        </section>
+
+        <section className="space-y-4" id="reports">
+          <h2 className="text-2xl font-semibold">Transparency Reports</h2>
+          <p className="text-gray-600 dark:text-gray-300">Quarterly financials, _grants, _and impact metrics. Initial placeholders shown until reports are published.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[1, _2, _3].map((q) => (
+              <div key={q} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+                <div className="font-medium">Report Q{_q} 2025</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Status: Draft</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </div>
             ))}
           </div>

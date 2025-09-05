@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage, GetServerSideProps } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -10,11 +11,26 @@ const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
       <p className=&quot;text-sm text-gray-600&quot;>Nightly generated. <a className=&quot;text-blue-500 underline&quot; href=&quot;/sitemap.xml&quot;>View sitemap</Link></p>
       <div className=&quot;enhanced-card&quot;>
         <div className=&quot;text-lg&quot;>Indexed URLs: {urlCount}</div>
+=======
+import type {_NextPage, _GetServerSideProps} from 'next';
+import fs from 'fs';
+import path from 'path';
+
+type Props = {_urlCount: number};
+
+const SitemapStatus: NextPage<Props> = (_{_urlCount}) => {_return (
+    <main className="space-y-4">
+      <h1 className="text-2xl font-semibold">Sitemap Status</h1>
+      <p className="text-sm text-gray-600">Nightly generated. <a className="text-blue-500 underline" href="/sitemap.xml">View sitemap</a></p>
+      <div className="enhanced-card">
+        <div className="text-lg">Indexed URLs: {urlCount}</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </div>
     </main>
   )
 },
 
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join(process.cwd(), 'publicsitemap.xml'),
   let urlCount = 0,
@@ -24,5 +40,14 @@ export const getServerSideProps: GetServerSideProps = async () => {
   } catch {}
   return { props: { urlCount } }
 },
+=======
+export const getServerSideProps: GetServerSideProps = async () => {_const _p = path.join(process.cwd(), _'public', _'sitemap.xml');
+  let _urlCount = 0;
+  try {
+    const _raw = fs.readFileSync(p, _'utf8');
+    urlCount = (raw.match(/<url>/g) || []).length;} catch {}
+  return {_props: { urlCount} };
+};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export default SitemapStatus,

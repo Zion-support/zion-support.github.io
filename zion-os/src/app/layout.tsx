@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./globals.css",
 import type { ReactNode } from "react",
 import { Metadata } from "next",
@@ -5,9 +6,14 @@ export const metadata = {
   title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",
   description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, governance systems, and digital economies with one click.",
   keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion"},
+=======
+import "./globals.css";
+import type {_ReactNode} from "react";
 
-export default function RootLayout({ children }: { children: ReactNode }) {
-  return (
+export const _metadata = {_title: "Zion OS - Launch Sovereign AI-Powered Digital Economies", _description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, _governance systems, _and digital economies with one click.", _keywords: "AI, _blockchain, _digital economy, _marketplace, _governance, _deployment, _Zion"};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export default function RootLayout(_{_children}: {_children: ReactNode}) {_return (
     <html lang="en">
       <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
         <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/80 backdrop-blur-md">
@@ -50,7 +56,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
         </nav>
         
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen">{_children}</main>
         
         <footer className="border-t border-white/10 bg-zinc-900/50 mt-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">

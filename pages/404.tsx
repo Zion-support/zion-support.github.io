@@ -2,8 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Custom404() {
-  return (
+export default function Custom404() {_return (
     <>
       <Head>
 <<<<<<< HEAD
@@ -52,6 +51,7 @@ export default function Custom404() {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 }
@@ -81,3 +81,6 @@ const NotFoundPage: NextPage = () => {
 
 export default NotFoundPage;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

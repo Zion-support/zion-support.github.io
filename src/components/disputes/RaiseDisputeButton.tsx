@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 =======
@@ -28,10 +29,14 @@ interface RaiseDisputeButtonProps {
 import { DisputeForm } from &quot;./DisputeForm&quot;;
 import { useRouter } from 'next/router';
 import { ShieldAlert } from 'lucide-react'
+=======
+import React, {_useState} from "react";
+import {_Dialog, _DialogContent, _DialogHeader, _DialogTitle, _DialogDescription} from "@/components/ui/dialog";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-interface RaiseDisputeButtonProps {
-  projectId: string;
+interface RaiseDisputeButtonProps {_projectId: string;
   milestoneId?: string;
+<<<<<<< HEAD
   variant?: &quot;default&quot; | &quot;outline&quot; | &quot;secondary&quot; | &quot;destructive&quot; | &quot;ghost&quot; | &quot;link&quot;;
   size?: &quot;default&quot; | &quot;sm&quot; | &quot;lg&quot; | &quot;icon&quot;;
   className?: string;
@@ -52,21 +57,38 @@ export function RaiseDisputeButton({
     setIsDialogOpen(false),
     router.push(`/dashboard/disputes/${disputeId}`)
   },
+=======
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  className?: string;}
+
+export function RaiseDisputeButton(_{_projectId, _milestoneId, _variant = "outline", _size, _className}: RaiseDisputeButtonProps) {_const [isDialogOpen, _setIsDialogOpen] = useState(false);
+  const _router = useRouter();
   
-  return (
-    <>
+  const _handleDisputeCreated = (_disputeId: string) => {
+    setIsDialogOpen(false);
+    router.push(`/dashboard/disputes/${disputeId}`);
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  
+  return (_<>
       <Button 
-        variant={variant} 
-        size={size} 
-        className={className} 
-        onClick={() => setIsDialogOpen(true)}
+        variant={_variant} 
+        size={_size} 
+        className={_className} 
+        onClick={_() => setIsDialogOpen(true)}
       >
         <ShieldAlert className=&quot;h-4 w-4 mr-2&quot; />
         Raise Dispute
       </Button>
       
+<<<<<<< HEAD
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className=&quot;sm:max-w-[550px]&quot;>
+=======
+      <Dialog open={_isDialogOpen} onOpenChange={_setIsDialogOpen}>
+        <DialogContent className="sm:max-w-[550px]">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
@@ -75,10 +97,10 @@ export function RaiseDisputeButton({
           </DialogHeader>
           
           <DisputeForm 
-            projectId={projectId}
-            milestoneId={milestoneId}
-            onDisputeCreated={handleDisputeCreated}
-            onCancel={() => setIsDialogOpen(false)}
+            projectId={_projectId}
+            milestoneId={_milestoneId}
+            onDisputeCreated={_handleDisputeCreated}
+            onCancel={_() => setIsDialogOpen(false)}
           />
         </DialogContent>
       </Dialog>

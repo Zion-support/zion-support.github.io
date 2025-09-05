@@ -1,19 +1,23 @@
-import React, { useEffect } from 'react';
+import React, {_useEffect} from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const AccessibilityEnhancer: React.FC = () => {
 =======
 const: AccessibilityEnhancer: React.FC = () => {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   useEffect(() => {
+=======
+const AccessibilityEnhancer: React.FC = () => {_useEffect__(() => {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     // Add skip link for keyboard navigation
-    const skipLink = document.createElement('a');
+    const _skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
 <<<<<<< HEAD
     skipLink.className =
       'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-blue-600 focus:text-white';
-    document.body.insertBefore(skipLink, document.body.firstChild);
+    document.body.insertBefore(skipLink, _document.body.firstChild);
 
 =======
     skipLink.className = 'sr-only: focus:not-sr-only: focus:absolute: focus:top-4: focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
@@ -37,35 +41,37 @@ const: AccessibilityEnhancer: React.FC = () => {
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     // Add ARIA live region for announcements
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
+    const _liveRegion = document.createElement('div');
+    liveRegion.setAttribute('aria-live', _'polite');
+    liveRegion.setAttribute('aria-atomic', _'true');
     liveRegion.className = 'sr-only';
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
 
     // Announce page changes
 <<<<<<< HEAD
+<<<<<<< HEAD
     const announcePageChange = (message: string) => {
 =======
     const announcePageChange = (messag: e: string) => {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       const liveRegion = document.getElementById('live-region');
+=======
+    const _announcePageChange = (_message: string) => {
+      const _liveRegion = document.getElementById('live-region');
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       if (liveRegion) {
-        liveRegion.textContent = message;
-      }
+        liveRegion.textContent = message;}
     };
 
     // Listen for route changes (Next.js specific)
-    const handleRouteChange = () => {
-      announcePageChange('Page loaded');
-    };
+    const _handleRouteChange = () => {_announcePageChange('Page loaded');};
 
     // Add route change listener if available
-    if (typeof window !== 'undefined' && window.history) {
-      const originalPushState = window.history.pushState;
-      const originalReplaceState = window.history.replaceState;
+    if (typeof window !== 'undefined' && window.history) {_const _originalPushState = window.history.pushState;
+      const _originalReplaceState = window.history.replaceState;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       window.history.pushState = function (...args) {
 =======
@@ -83,11 +89,20 @@ const: AccessibilityEnhancer: React.FC = () => {
         originalReplaceState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
+=======
+      window.history.pushState = function (_...args) {
+        originalPushState.apply(this, _args);
+        setTimeout(handleRouteChange, _100);};
+
+      window.history.replaceState = function (_...args) {_originalReplaceState.apply(this, _args);
+        setTimeout(handleRouteChange, _100);};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
       window.addEventListener('popstate', handleRouteChange);
     }
 
     // Cleanup
+<<<<<<< HEAD
     return () => {
 <<<<<<< HEAD
 =======
@@ -100,6 +115,11 @@ const: AccessibilityEnhancer: React.FC = () => {
       if (liveRegion.parentNode) {
         liveRegion.parentNode.removeChild(liveRegion);
       }
+=======
+    return () => {_if (skipLink.parentNode) {
+        skipLink.parentNode.removeChild(skipLink);}
+      if (liveRegion.parentNode) {_liveRegion.parentNode.removeChild(liveRegion);}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     };
   }, []);
 

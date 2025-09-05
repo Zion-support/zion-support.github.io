@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Routes, Route, Navigate } from "react-router-dom",
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",
@@ -27,10 +28,16 @@ import { useAuth } from &quot;@/hooks/useAuth&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function MobileApp() {
   const { isAuthenticated } = useAuth(),
+=======
+import React from "react";
+
+export function MobileApp() {_const { isAuthenticated} = useAuth();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <MobileThemeProvider>
       <Routes>
+<<<<<<< HEAD
         <Route path=&quot;/onboarding&quot; element={<MobileOnboarding />} />
         <Route 
           path=&quot;/&quot; 
@@ -45,6 +52,20 @@ export function MobileApp() {
         <Route path=&quot;/post-job&quot; element={<MobileJobPost />} />
         <Route path=&quot;/profile&quot; element={<div>Profile page</div>} />
         <Route path=&quot;*&quot; element={<Navigate to=&quot;/&quot; replace />} />
+=======
+        <Route path="/onboarding" element={_<MobileOnboarding />} />
+        <Route 
+          path="/" 
+          element={_isAuthenticated ? <MobileHome /> : <Navigate to="/onboarding" />} 
+        />
+        <Route path="/browse" element={_<MobileBrowse />} />
+        <Route path="/projects" element={_<MobileProjects />} />
+        <Route path="/inbox" element={_<MobileMessages />} />
+        <Route path="/resume" element={_<MobileResumeBuilder />} />
+        <Route path="/post-job" element={_<MobileJobPost />} />
+        <Route path="/profile" element={_<div>Profile page</div>} />
+        <Route path="*" element={_<Navigate to="/" replace />} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       </Routes>
     </MobileThemeProvider>
   )

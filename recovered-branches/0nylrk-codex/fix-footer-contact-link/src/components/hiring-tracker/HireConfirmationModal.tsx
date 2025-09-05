@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -54,10 +55,30 @@ export function HireConfirmationModal({
 
   // Get talent information from either candidateData or application
   const talentData = candidateData || (application?.talent_profile as TalentProfile),
+=======
+import React, {_useState} from 'react';
+import {_Dialog, _DialogContent, _DialogDescription, _DialogHeader, _DialogTitle} from "@/components/ui/dialog";
 
-  const handleHireCandidate = async () => {
-    if (!projectName || !projectDescription) {
+export interface HireConfirmationModalProps {_isOpen: boolean;
+  onClose: () => void;
+  candidateData?: TalentProfile;
+  application?: JobApplication;
+  onConfirm: () => void;
+  isSubmitting?: boolean;}
+
+export function HireConfirmationModal(_{_isOpen, _onClose, _candidateData, _application, _onConfirm, _isSubmitting = false}: HireConfirmationModalProps) {_const [projectName, _setProjectName] = useState('');
+  const [projectDescription, _setProjectDescription] = useState('');
+  const [updateAvailability, _setUpdateAvailability] = useState(true);
+  const [isLoading, _setIsLoading] = useState(false);
+  const { user} = useAuth();
+
+  // Get talent information from either candidateData or application
+  const _talentData = candidateData || (application?.talent_profile as TalentProfile);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  const _handleHireCandidate = async () => {_if (!projectName || !projectDescription) {
       toast({
+<<<<<<< HEAD
         title: 'Required fields missing',
         description: 'Please fill in both project name and description.',
         variant: 'destructive'}),
@@ -78,26 +99,33 @@ export function HireConfirmationModal({
         description: 'Talent information is missing.',
         variant: 'destructive'}),
       return
+=======
+        title: 'Required fields missing', _description: 'Please fill in both project name and description.', _variant: 'destructive'});
+      return;
+    }
+
+    if (!user) {_toast({
+        title: 'Not authenticated', _description: 'You must be logged in to hire a candidate.', _variant: 'destructive'});
+      return;
+    }
+
+    if (!talentData) {_toast({
+        title: 'Missing talent data', _description: 'Talent information is missing.', _variant: 'destructive'});
+      return;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
 
     setIsLoading(true),
 
     // Create a new project
-    try {
-      const { data: projectData, error: projectError } = await supabase
+    try {_const { data: projectData, _error: projectError} = await supabase
         .from('projects')
         .insert([
-          {
-            client_id: user.id,
-            talent_id: talentData.user_id,
-            job_id: application?.job_id || null,
-            title: projectName,
-            description: projectDescription,
-            status: 'active',
-            payment_terms: 'hourly'}])
+          {_client_id: user.id, _talent_id: talentData.user_id, _job_id: application?.job_id || null, _title: projectName, _description: projectDescription, _status: 'active', _payment_terms: 'hourly'}])
         .select()
         .single(),
 
+<<<<<<< HEAD
       if (projectError) {
         toast({
           title: 'Error creating project',
@@ -105,12 +133,19 @@ export function HireConfirmationModal({
           variant: 'destructive'}),
         setIsLoading(false),
         return
+=======
+      if (projectError) {_toast({
+          title: 'Error creating project', _description: projectError.message, _variant: 'destructive'});
+        setIsLoading(false);
+        return;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
 
       // Create a new hiring record
-      const { error: hiringError } = await supabase
+      const {_error: hiringError} = await supabase
         .from('hiring_records')
         .insert([
+<<<<<<< HEAD
           {
             client_id: user.id,
             talent_id: talentData.user_id,
@@ -125,13 +160,21 @@ export function HireConfirmationModal({
           variant: 'destructive'}),
         setIsLoading(false),
         return
+=======
+          {_client_id: user.id, _talent_id: talentData.user_id, _project_id: projectData.id, _hire_date: new Date().toISOString(), _status: 'active'}]);
+
+      if (hiringError) {_toast({
+          title: 'Error creating hiring record', _description: hiringError.message, _variant: 'destructive'});
+        setIsLoading(false);
+        return;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
 
       // Update the availability status
-      if (updateAvailability) {
-        try {
-          const { error: availabilityError } = await supabase
+      if (updateAvailability) {_try {
+          const { error: availabilityError} = await supabase
             .from('talent_profiles')
+<<<<<<< HEAD
             .update({ availability_type: 'unavailable' })
             .eq('id', talentData.id),
 
@@ -177,6 +220,37 @@ export function HireConfirmationModal({
           <DialogTitle>Confirm Hire</DialogTitle>
           <DialogDescription>
             Confirm that you want to hire {talentData?.full_name || &quot;this candidate&quot;} for a new project.
+=======
+            .update({_availability_type: 'unavailable'})
+            .eq('id', talentData.id);
+
+          if (availabilityError) {_toast({
+              title: 'Error updating availability', _description: availabilityError.message, _variant: 'destructive'});
+            setIsLoading(false);
+            return;
+          }
+        } catch (error) {_toast({
+            title: 'Error updating availability', _description: 'Failed to update candidate availability status.', _variant: 'destructive'});
+          setIsLoading(false);
+          return;
+        }
+      }
+
+      toast({_title: 'Candidate hired successfully', _description: `${talentData.full_name} has been hired for the project.`});
+      onConfirm();
+      onClose();
+    } catch (error) {_toast({
+        title: 'Error hiring candidate', _description: 'Failed to hire candidate. Please try again.', _variant: 'destructive'});
+    } finally {_setIsLoading(false);}
+  };
+
+  return (_<Dialog open={_isOpen} onOpenChange={_onClose}>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>Confirm Hire</DialogTitle>
+          <DialogDescription>
+            Confirm that you want to hire {_talentData?.full_name || "this candidate"} for a new project.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </DialogDescription>
         </DialogHeader>
         <div className=&quot;grid gap-4 py-4&quot;>
@@ -185,10 +259,17 @@ export function HireConfirmationModal({
               Project Name
             </Label>
             <Input
+<<<<<<< HEAD
               id=&quot;projectName&quot;
               value={projectName}
               onChange={(e) => setProjectName(e.target.value)}
               className=&quot;col-span-3&quot;
+=======
+              id="projectName"
+              value={_projectName}
+              onChange={_(e) => setProjectName(e.target.value)}
+              className="col-span-3"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             />
           </div>
           <div className=&quot;grid grid-cols-4 items-start gap-4&quot;>
@@ -196,19 +277,34 @@ export function HireConfirmationModal({
               Project Description
             </Label>
             <Textarea
+<<<<<<< HEAD
               id=&quot;projectDescription&quot;
               value={projectDescription}
               onChange={(e) => setProjectDescription(e.target.value)}
               className=&quot;col-span-3&quot;
+=======
+              id="projectDescription"
+              value={_projectDescription}
+              onChange={_(_e) => setProjectDescription(e.target.value)}
+              className="col-span-3"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             />
           </div>
           <div className=&quot;flex items-center space-x-2&quot;>
             <input
+<<<<<<< HEAD
               type=&quot;checkbox&quot;
               id=&quot;updateAvailability&quot;
               className=&quot;h-4 w-4&quot;
               checked={updateAvailability}
               onChange={(e) => setUpdateAvailability(e.target.checked)}
+=======
+              type="checkbox"
+              id="updateAvailability"
+              className="h-4 w-4"
+              checked={_updateAvailability}
+              onChange={_(_e) => setUpdateAvailability(e.target.checked)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             />
             <label
               htmlFor=&quot;updateAvailability&quot;
@@ -218,12 +314,21 @@ export function HireConfirmationModal({
             </label>
           </div>
         </div>
+<<<<<<< HEAD
         <div className=&quot;flex justify-end gap-2&quot;>
           <Button type=&quot;button&quot; variant=&quot;secondary&quot; onClick={onClose}>
             Cancel
           </Button>
           <Button type=&quot;button&quot; onClick={handleHireCandidate} disabled={isSubmitting || isLoading}>
             {isLoading ? &quot;Hiring...&quot; : &quot;Confirm Hire&quot;}
+=======
+        <div className="flex justify-end gap-2">
+          <Button type="button" variant="secondary" onClick={_onClose}>
+            Cancel
+          </Button>
+          <Button type="button" onClick={_handleHireCandidate} disabled={_isSubmitting || isLoading}>
+            {_isLoading ? "Hiring..." : "Confirm Hire"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </Button>
         </div>
       </DialogContent>

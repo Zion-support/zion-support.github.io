@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -37,6 +38,17 @@ export default function EnterpriseBilling() {
     return <Navigate to=&quot;/unauthorized&quot; />;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
+=======
+import React from "react";
+
+export default function EnterpriseBilling() {_const { user} = useAuth();
+  
+  // Check if user has billing permissions
+  const _hasBillingAccess = user?.role === "enterprise_admin" || 
+                          (user?.permissions && user.permissions.includes('billing_access'));
+  
+  if (!hasBillingAccess) {_return <Navigate to="/unauthorized" />;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <ProtectedRoute>

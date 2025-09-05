@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { Resume } from '@/types/resume',
@@ -14,36 +15,49 @@ export function useResumeList() {
       setError('You must be logged in to access resumes'),
       return []
     }
+=======
+
+export function useResumeList() {_const { user} = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [resumes, setResumes] = useState<Resume[]>([]);
+  
+  const _fetchResumes = async () => {_if (!user) {
+      setError('You must be logged in to access resumes');
+      return [];}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setIsLoading(true),
     setError(null),
     
-    try {
-      // Fetch resume list with basic info for the current user
-      const { data: resumeData, error: resumeError } = await supabase
+    try {_// Fetch resume list with basic info for the current user
+      const { data: resumeData, _error: resumeError} = await supabase
         .from('talent_resumes')
         .select('*')
         .eq('user_id', user.id)
+<<<<<<< HEAD
         .order('is_active', { ascending: false })
         .order('created_at', { ascending: false }),
+=======
+        .order('is_active', {_ascending: false})
+        .order('created_at', {_ascending: false});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (resumeError) throw resumeError,
       
+<<<<<<< HEAD
       if (!resumeData || resumeData.length === 0) {
         setResumes([]),
         return []
       }
+=======
+      if (!resumeData || resumeData.length === 0) {_setResumes([]);
+        return [];}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       // Transform data to match Resume type
-      const transformedResumes: Resume[] = resumeData.map(resume => ({
-        id: resume.id,
-        user_id: resume.user_id,
-        basic_info: {
-          id: resume.id,
-          title: resume.title,
-          headline: resume.headline,
-          summary: resume.summary
-        },
+      const transformedResumes: Resume[] = resumeData.map(resume => ({_id: resume.id, _user_id: resume.user_id, _basic_info: {
+          id: resume.id, _title: resume.title, _headline: resume.headline, _summary: resume.summary},
         work_experience: [],
         education: [],
         skills: [],
@@ -51,6 +65,7 @@ export function useResumeList() {
         is_active: resume.is_active
       })),
       
+<<<<<<< HEAD
       setResumes(transformedResumes),
       return transformedResumes
     } catch (e: any) {
@@ -75,4 +90,18 @@ export function useResumeList() {
     resumes,
     fetchResumes
   }
+=======
+      setResumes(transformedResumes);
+      return transformedResumes;
+    } catch (e: unknown) {_setError(e.message);
+      return [];} finally {_setIsLoading(false);}
+  };
+  
+  // Fetch resumes when the component mounts
+  useEffect__(() => {_if (user) {
+      fetchResumes();}
+  }, [user]);
+  
+  return {_isLoading, _error, _resumes, _fetchResumes};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

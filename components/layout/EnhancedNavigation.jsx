@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Link from 'next/link',
 const EnhancedNavigation = () => {
@@ -7,6 +8,16 @@ const EnhancedNavigation = () => {
     <nav className=&quot;bg-white shadow-lg sticky top-0 z-50&quot;>
       <div className=&quot;container mx-auto px-4&quot;>
         <div className=&quot;flex justify-between items-center py-4&quot;>
+=======
+import React, {_useState} from 'react';
+import Link from 'next/link';
+
+const _EnhancedNavigation = () => {_const [isMobileMenuOpen, _setIsMobileMenuOpen] = useState(false);
+
+  return (_<nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           {/* Logo */}
           <Link href=&quot;/&quot; className=&quot;flex items-center space-x-2&quot;>
             <div className=&quot;w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center&quot;>
@@ -15,9 +26,15 @@ const EnhancedNavigation = () => {
             <span className=&quot;text-xl font-bold text-gray-800&quot;>Zion Tech Group</span>
           </Link>
 
+<<<<<<< HEAD
           {/* Desktop Navigation */}
           <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
             <Link href=&quot;/&quot; className=&quot;text-gray-600 hover:text-blue-600 font-medium transition-colors&quot;>
+=======
+          {_/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               Home
             </Link>
             <Link href=&quot;/services&quot; className=&quot;text-gray-600 hover:text-blue-600 font-medium transition-colors&quot;>
@@ -40,22 +57,38 @@ const EnhancedNavigation = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {_/* Mobile menu button */}
           <button
+<<<<<<< HEAD
             className=&quot;lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100&quot;
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
               <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16&quot; />
+=======
+            className="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+            onClick={_() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M4 6h16M4 12h16M4 18h16" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </svg>
           </button>
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className=&quot;lg:hidden border-t border-gray-200 py-4&quot;>
             <div className=&quot;space-y-2&quot;>
               <Link href=&quot;/&quot; className=&quot;block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md&quot;>
+=======
+        {_/* Mobile Navigation */}
+        {_isMobileMenuOpen && (
+          <div className="lg:hidden border-t border-gray-200 py-4">
+            <div className="space-y-2">
+              <Link href="/" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 Home
               </Link>
               <Link href=&quot;/services&quot; className=&quot;block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md&quot;>

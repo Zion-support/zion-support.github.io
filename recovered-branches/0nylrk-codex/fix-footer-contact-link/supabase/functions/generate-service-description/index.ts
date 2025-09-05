@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
@@ -26,28 +27,53 @@ serve(async (req) => {
 
   try {
     const { title, keyFeatures, targetAudience } = await req.json(),
+=======
 
-    if (!title) {
-      return new Response(
+const _corsHeaders = {_"Access-Control-Allow-Origin": "*", _"Access-Control-Allow-Headers": "authorization, _x-client-info, _apikey, _content-type"};
+
+serve(_async (req) => {_if (req.method === "OPTIONS") {
+    return new Response(null, _{ headers: corsHeaders});
+  }
+
+  try {_const { title, _keyFeatures, _targetAudience} = await req.json();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+    if (!title) {_return new Response(
         JSON.stringify({ 
+<<<<<<< HEAD
           error: &quot;Missing required field: title&quot; 
         }),
         { 
           status: 400, 
           headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; } 
+=======
+          error: "Missing required field: title"}),
+        {_status: 400, _headers: { ...corsHeaders, _"Content-Type": "application/json"} 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         }
       )
     }
 
+<<<<<<< HEAD
     const configuration = new Configuration({
       apiKey: Deno.env.get('OPENAI_API_KEY')}),
     const openai = new OpenAIApi(configuration),
+=======
+    const _configuration = new Configuration({_apiKey: Deno.env.get('OPENAI_API_KEY')});
+    const _openai = new OpenAIApi(configuration);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-    const prompt = `Create a professional and detailed service description for the following service:
+    const _prompt = `Create a professional and detailed service description for the following service:
     
+<<<<<<< HEAD
 Title: ${title}
 Key Features: ${keyFeatures || &quot;Not specified&quot;}
 Target Audience: ${targetAudience || &quot;General users&quot;}
+=======
+Title: ${_title}
+Key Features: ${_keyFeatures || "Not specified"}
+Target Audience: ${_targetAudience || "General users"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 The description should: 1. Be approximately 200-300 words
 2. Highlight the key benefits and unique selling points
@@ -55,6 +81,7 @@ The description should: 1. Be approximately 200-300 words
 4. Speak directly to the target audience
 5. Include a compelling opening and closing statement`,
 
+<<<<<<< HEAD
     const completion = await openai.chat.completions.create({
 <<<<<<< HEAD
       model: "gpt-4o-mini",
@@ -63,9 +90,13 @@ The description should: 1. Be approximately 200-300 words
 =======
       model: &quot;gpt-4o-mini&quot;,
       messages: [{ role: &quot;user&quot;, content: prompt }],
+=======
+    const _completion = await openai.chat.completions.create({_model: "gpt-4o-mini", _messages: [{ role: "user", _content: prompt}],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       temperature: 0.7});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
     const generatedDescription = completion.choices[0].message.content,
     
     return new Response(
@@ -89,6 +120,19 @@ The description should: 1. Be approximately 200-300 words
       { 
         status: 500, 
         headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; } 
+=======
+    const _generatedDescription = completion.choices[0].message.content;
+    
+    return new Response(
+      JSON.stringify({_description: generatedDescription}),
+      {_headers: { ...corsHeaders, _"Content-Type": "application/json"} 
+      }
+    );
+  } catch (error) {_return new Response(
+      JSON.stringify({ 
+        error: "Failed to generate service description", _details: error.message}),
+      {_status: 500, _headers: { ...corsHeaders, _"Content-Type": "application/json"} 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
     )
   }

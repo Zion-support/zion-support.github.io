@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",
@@ -12,10 +13,19 @@ const corsHeaders = {
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
 const supabase = createClient(supabaseUrl, supabaseAnonKey),
+=======
 
-serve(async (req) => {
-  // Handle CORS preflight requests
+const _corsHeaders = {_"Access-Control-Allow-Origin": "*", _"Access-Control-Allow-Headers": "authorization, _x-client-info, _apikey, _content-type"};
+
+// Initialize the Supabase client
+const _supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
+const _supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
+const _supabase = createClient(supabaseUrl, supabaseAnonKey);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+serve(_async (req) => {_// Handle CORS preflight requests
   if (req.method === "OPTIONS") {
+<<<<<<< HEAD
     return new Response(null, { headers: corsHeaders })
 =======
 import { serve } from &quot;https://deno.land/std@0.190.0/http/server.ts&quot;;
@@ -52,6 +62,17 @@ serve(async (req) => {
     // 1. Retrieve job details
     const { data: job, error: jobError } = await supabase
 <<<<<<< HEAD
+=======
+    return new Response(null, _{ headers: corsHeaders});
+  }
+
+  try {_const { jobId} = await req.json();
+    
+    if (!jobId) {_throw new Error("Job ID is required");}
+
+    // 1. Retrieve job details
+    const {_data: job, _error: jobError} = await supabase
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       .from("jobs")
       .select("*")
       .eq("id", jobId)
@@ -63,6 +84,7 @@ serve(async (req) => {
       .single();
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
     if (jobError) {
       throw new Error(`Failed to fetch job: ${jobError.message}`)
     }
@@ -70,6 +92,13 @@ serve(async (req) => {
     // 2. Retrieve all talent profiles
     const { data: talents, error: talentsError } = await supabase
 <<<<<<< HEAD
+=======
+    if (jobError) {_throw new Error(`Failed to fetch job: ${jobError.message}`);
+    }
+
+    // 2. Retrieve all talent profiles
+    const {_data: talents, _error: talentsError} = await supabase
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       .from("talent_profiles")
       .select("*")
       .eq("is_published", true),
@@ -79,6 +108,7 @@ serve(async (req) => {
       .eq(&quot;is_published&quot;, true);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
     if (talentsError) {
       throw new Error(`Failed to fetch talent profiles: ${talentsError.message}`)
     }
@@ -92,17 +122,30 @@ serve(async (req) => {
 =======
         JSON.stringify({ message: &quot;No talent profiles found&quot; }),
         { headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; } }
+=======
+    if (talentsError) {_throw new Error(`Failed to fetch talent profiles: ${talentsError.message}`);
+    }
+
+    if (!talents || talents.length === 0) {_return new Response(
+        JSON.stringify({ message: "No talent profiles found"}),
+        {_headers: { ...corsHeaders, _"Content-Type": "application/json"} }
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       );
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 
     // 3. Use AI to normalize skills and find matches
+<<<<<<< HEAD
     const matchedTalents = await processJobMatching(job, talents),
+=======
+    const _matchedTalents = await processJobMatching(job, talents);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // 4. Store matches in database and create notifications
     await storeMatchResults(jobId, matchedTalents, job.title),
 
     return new Response(
+<<<<<<< HEAD
       JSON.stringify({ 
         message: &quot;Job matching completed&quot;, 
         matches: matchedTalents.length 
@@ -126,6 +169,15 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; } 
+=======
+      JSON.stringify({_message: "Job matching completed", _matches: matchedTalents.length}),
+      {_headers: { ...corsHeaders, _"Content-Type": "application/json"} }
+    );
+    
+  } catch (error) {_return new Response(
+      JSON.stringify({ error: error.message}),
+      {_status: 500, _headers: { ...corsHeaders, _"Content-Type": "application/json"} 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
     )
   }

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { LoginForm } from "./LoginForm",
 import { SocialLogin } from "./SocialLogin",
@@ -14,6 +15,13 @@ export function LoginCard() {
     <div className=&quot;mx-auto w-full max-w-sm lg:w-96&quot;>
       <div className=&quot;text-center mb-10&quot;>
         <h2 className=&quot;text-3xl font-bold tracking-tight text-white&quot;>
+=======
+
+export function LoginCard() {_return (
+    <div className="mx-auto w-full max-w-sm lg:w-96">
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-bold tracking-tight text-white">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           Welcome back
         </h2>
 <<<<<<< HEAD

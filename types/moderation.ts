@@ -1,6 +1,7 @@
 export type ContentType = 'listing' | 'message' | 'cv' | 'job',
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned',
 
+<<<<<<< HEAD
 export type AiScores = {
   toxicity: number, // 0-1
   nsfw: number, // 0-1
@@ -22,3 +23,22 @@ export type FlaggedContent = {
   updatedAt: string,
   adminNotes?: string
 },
+=======
+export type AiScores = {_toxicity: number; // 0-1
+  nsfw: number; // 0-1
+  scam: number; // 0-1};
+
+export type FlaggedContent = {_id: string;
+  contentType: ContentType;
+  contentId: string;
+  userId: string;
+  userEmail: string;
+  reason: string;
+  status: ModerationStatus;
+  snippet: string; // small preview of content
+  metadata?: Record<string, _any>;
+  aiScores: AiScores;
+  createdAt: string;
+  updatedAt: string;
+  adminNotes?: string;};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

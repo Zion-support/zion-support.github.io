@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { CountryServiceSelector } from "../CountryServiceSelector",
 =======
@@ -15,10 +16,18 @@ interface ServiceDetailsSectionProps {
 export function ServiceDetailsSection({ selectedCountry, setSelectedCountry }: ServiceDetailsSectionProps) {
   return (
     <div id=&quot;service-details&quot; className=&quot;mt-12&quot;>
+=======
+
+interface ServiceDetailsSectionProps {_selectedCountry: CountryPricing | null;
+  setSelectedCountry: (_country: CountryPricing | null) => void;}
+
+export function ServiceDetailsSection(_{_selectedCountry, _setSelectedCountry}: ServiceDetailsSectionProps) {_return (
+    <div id="service-details" className="mt-12">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       {selectedCountry ? (
         <CountryServiceSelector 
           selectedCountry={selectedCountry}
-          onCountryChange={setSelectedCountry}
+          onCountryChange={_setSelectedCountry}
         />
       ) : (
         <div className=&quot;text-center&quot;>

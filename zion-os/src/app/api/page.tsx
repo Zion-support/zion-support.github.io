@@ -1,5 +1,4 @@
-export default function APIPage() {
-  return (
+export default function APIPage() {_return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -12,7 +11,7 @@ export default function APIPage() {
           </p>
         </div>
 
-        {/* Quick Start */}
+        {_/* Quick Start */}
         <div className="card mb-12">
           <h2 className="text-2xl font-bold mb-4">Quick Start</h2>
           <div className="space-y-4">
@@ -34,12 +33,12 @@ export default function APIPage() {
           </div>
         </div>
 
-        {/* API Endpoints */}
+        {_/* API Endpoints */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-8 text-center">API Endpoints</h2>
           
           <div className="space-y-6">
-            {/* Authentication */}
+            {_/* Authentication */}
             <div className="card">
               <h3 className="text-xl font-semibold mb-4 text-green-400">🔐 Authentication</h3>
               <div className="space-y-4">
@@ -60,7 +59,7 @@ export default function APIPage() {
               </div>
             </div>
 
-            {/* Economies */}
+            {_/* Economies */}
             <div className="card">
               <h3 className="text-xl font-semibold mb-4 text-blue-400">🌍 Digital Economies</h3>
               <div className="space-y-4">
@@ -74,28 +73,28 @@ export default function APIPage() {
                     <div className="text-gray-400">Create new economy</div>
                   </div>
                   <div>
-                    <div className="font-semibold text-white">GET /api/v1/economies/{'{id}'}</div>
+                    <div className="font-semibold text-white">GET /api/v1/economies/{_'{id}'}</div>
                     <div className="text-gray-400">Get economy details</div>
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div>
-                    <div className="font-semibold text-white">PUT /api/v1/economies/{'{id}'}</div>
+                    <div className="font-semibold text-white">PUT /api/v1/economies/{_'{id}'}</div>
                     <div className="text-gray-400">Update economy</div>
                   </div>
                   <div>
-                    <div className="font-semibold text-white">DELETE /api/v1/economies/{'{id}'}</div>
+                    <div className="font-semibold text-white">DELETE /api/v1/economies/{_'{id}'}</div>
                     <div className="text-gray-400">Delete economy</div>
                   </div>
                   <div>
-                    <div className="font-semibold text-white">POST /api/v1/economies/{'{id}'}/deploy</div>
+                    <div className="font-semibold text-white">POST /api/v1/economies/{_'{id}'}/deploy</div>
                     <div className="text-gray-400">Deploy economy</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Governance */}
+            {_/* Governance */}
             <div className="card">
               <h3 className="text-xl font-semibold mb-4 text-purple-400">🏛️ AI Governance</h3>
               <div className="space-y-4">
@@ -116,7 +115,7 @@ export default function APIPage() {
               </div>
             </div>
 
-            {/* Marketplace */}
+            {_/* Marketplace */}
             <div className="card">
               <h3 className="text-xl font-semibold mb-4 text-yellow-400">🛒 Marketplace</h3>
               <div className="space-y-4">
@@ -137,7 +136,7 @@ export default function APIPage() {
               </div>
             </div>
 
-            {/* Identity & KYC */}
+            {_/* Identity & KYC */}
             <div className="card">
               <h3 className="text-xl font-semibold mb-4 text-red-400">🆔 Identity & KYC</h3>
               <div className="space-y-4">
@@ -160,7 +159,7 @@ export default function APIPage() {
           </div>
         </div>
 
-        {/* SDKs and Libraries */}
+        {_/* SDKs and Libraries */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-8 text-center">SDKs & Libraries</h2>
           
@@ -209,7 +208,7 @@ export default function APIPage() {
           </div>
         </div>
 
-        {/* Code Examples */}
+        {_/* Code Examples */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-8 text-center">Code Examples</h2>
           
@@ -219,6 +218,7 @@ export default function APIPage() {
               <div className="bg-gray-900/50 rounded-lg p-4">
                 <div className="text-sm text-gray-400 mb-2">Node.js</div>
                 <pre className="text-sm text-gray-300 overflow-x-auto">
+<<<<<<< HEAD
 {`const { ZionOS } = require('@zion-os/sdk'),
 
 const client = new ZionOS('YOUR_API_KEY'),
@@ -231,6 +231,15 @@ const economy = await client.economies.create({
 }),
 
 // // // console.log('Economy created:', economy.id),`}
+=======
+{_`const { ZionOS} = require('@zion-os/sdk');
+
+const _client = new ZionOS('YOUR_API_KEY');
+
+const _economy = await client.economies.create({_name: 'My Digital Economy', _description: 'A sovereign digital economy', _features: ['marketplace', _'governance', _'tokens'], _blockchain: 'ethereum'});
+
+`}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </pre>
               </div>
             </div>
@@ -240,7 +249,7 @@ const economy = await client.economies.create({
               <div className="bg-gray-900/50 rounded-lg p-4">
                 <div className="text-sm text-gray-400 mb-2">Python</div>
                 <pre className="text-sm text-gray-300 overflow-x-auto">
-{`from zion_os import ZionOS
+{_`from zion_os import ZionOS
 
 client = ZionOS('YOUR_API_KEY')
 
@@ -257,7 +266,7 @@ print(f"Economy deployed at: {deployment.url}")`}
           </div>
         </div>
 
-        {/* Rate Limits & Authentication */}
+        {_/* Rate Limits & Authentication */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-8 text-center">Rate Limits & Authentication</h2>
           
@@ -284,7 +293,7 @@ print(f"Economy deployed at: {deployment.url}")`}
           </div>
         </div>
 
-        {/* Support & Resources */}
+        {_/* Support & Resources */}
         <div className="text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
             <h2 className="text-3xl font-bold mb-4">Need Help?</h2>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Navigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
 import { Header } from "@/components/Header",
@@ -32,6 +33,16 @@ export default function Login() {
     return <Navigate to=&quot;/onboarding&quot; />;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
+=======
+
+export default function Login() {_const { isAuthenticated, _user} = useAuth();
+  
+  // Redirect if user is already logged in and has completed profile
+  if (isAuthenticated && user?.profileComplete) {_return <Navigate to="/" />;}
+  
+  // Redirect to onboarding if user is authenticated but hasn't completed profile
+  if (isAuthenticated && !user?.profileComplete) {_return <Navigate to="/onboarding" />;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>

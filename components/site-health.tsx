@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head',
 export default function SiteHealth() {
   return (
@@ -14,6 +15,24 @@ export default function SiteHealth() {
         <div className=&quot;absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid&quot; />
         <div className=&quot;absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]&quot;>
           <div className=&quot;twinkle-field absolute inset-0&quot; />
+=======
+import Head from 'next/head';
+
+export default function SiteHealth() {_return (
+    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+      <Head>
+        <title>Site Health — A11y, _Performance, _Links</title>
+        <meta name="description" content="Dashboards and audits for accessibility, _performance, _and link integrity." />
+      </Head>
+
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
+        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
+        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />
+        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center, _rgba(255, _255, _255, _0.35)_0, _rgba(255, _255, _255, _0)_60%), _linear-gradient(90deg, _rgba(255, _255, _255, _0.12)_1px, _transparent_1px), _linear-gradient(0deg, _rgba(255, _255, _255, _0.12)_1px, _transparent_1px)] bg-[size:100%_100%, _3rem_3rem, _3rem_3rem] animate-grid" />
+        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center, _white, _transparent_70%)]">
+          <div className="twinkle-field absolute inset-0" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </div>
         <div className=&quot;absolute inset-0 beams opacity-[0.06]&quot; />
       </div>
@@ -32,21 +51,38 @@ export default function SiteHealth() {
         </nav>
       </header>
 
+<<<<<<< HEAD
       <main className=&quot;relative z-10&quot;>
         <section className=&quot;mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center&quot;>
           <div className=&quot;mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md&quot;>
             <span className=&quot;h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]&quot; />
             Real‑time health signals: A11y, Performance, Links
+=======
+      <main className="relative z-10">
+        <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center">
+          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52, _211, _153, _0.9)]" />
+            Real‑time health signals: A11y, _Performance, _Links
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </div>
           <h1 className=&quot;mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl&quot;>
             <span className=&quot;gradient-text&quot;>Site Health</span>
           </h1>
+<<<<<<< HEAD
           <p className=&quot;mx-auto mt-5 max-w-3xl text-lg text-white/80&quot;>
             Dashboards, audits, and guardrails that keep your experience fast, accessible, and reliable.
           </p>
           <div className=&quot;mt-8 flex flex-wrap justify-center gap-3&quot;>
             <a href=&quot;/site-health&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; className=&quot;rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10&quot;>Live Pipelines</a>
             <Link href=&quot;/automation&quot;><a className=&quot;rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow&quot;>Open Automation Hub</a></a>
+=======
+          <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">
+            Dashboards, _audits, _and guardrails that keep your experience fast, _accessible, _and reliable.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <a href="/site-health" target="_blank" rel="noopener" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Live Pipelines</a>
+            <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34, _211, _238, _0.35)] hover:shadow-[0_0_40px_rgba(34, _211, _238, _0.6)] transition-shadow">Open Automation Hub</a></Link>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </div>
         </section>
 
@@ -54,6 +90,7 @@ export default function SiteHealth() {
           <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Dashboards</h2>
           <div className=&quot;mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3&quot;>
             {[
+<<<<<<< HEAD
               { title: 'Accessibility', desc: 'WCAG checks with actionable fixes and reports.', href: '/reports/seo' },
               { title: 'Performance', desc: 'Core Web Vitals and performance budgets.', href: '/reports/seo' },
               { title: 'Link Integrity', desc: 'Broken links identified and prevented.', href: '/reports/links' }].map((card) => (
@@ -63,6 +100,17 @@ export default function SiteHealth() {
                   <h3 className=&quot;text-lg font-semibold&quot;>{card.title}</h3>
                   <p className=&quot;mt-1 text-sm text-white/75&quot;>{card.desc}</p>
                   <div className=&quot;mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90&quot;>Open →</div>
+=======
+              { title: 'Accessibility', _desc: 'WCAG checks with actionable fixes and reports.', _href: '/reports/seo'},
+              {_title: 'Performance', _desc: 'Core Web Vitals and performance budgets.', _href: '/reports/seo'},
+              {_title: 'Link Integrity', _desc: 'Broken links identified and prevented.', _href: '/reports/links'}].map(_(card) => (
+              <Link key={_card.title} href={_card.href}>
+                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <h3 className="text-lg font-semibold">{_card.title}</h3>
+                  <p className="mt-1 text-sm text-white/75">{_card.desc}</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open →</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </a>
               </a>
             ))}

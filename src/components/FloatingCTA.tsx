@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
 import { useState, useEffect } from "react",
@@ -37,13 +38,36 @@ export function FloatingCTA() {
     return () => {
       window.removeEventListener(&quot;scroll&quot;, handleScroll);
     };
+=======
+import Link from "next/link";
+
+export function FloatingCTA() {_const [isVisible, _setIsVisible] = useState(false);
+  const [isClosed, _setIsClosed] = useState(false);
+
+  useEffect__(() => {
+    const _handleScroll = () => {
+      const _scrollPosition = window.scrollY;
+      const _threshold = 600; // Show CTA after scrolling 600px
+
+      if (scrollPosition > threshold && !isClosed) {
+        setIsVisible(true);} else {_setIsVisible(false);}
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {_window.removeEventListener("scroll", _handleScroll);};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }, [isClosed]);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
   const handleClose = () => {
     setIsClosed(true),
     setIsVisible(false)
   },
+=======
+  const _handleClose = () => {_setIsClosed(true);
+    setIsVisible(false);};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   if (!isVisible) return null,
 
@@ -64,9 +88,14 @@ export function FloatingCTA() {
             <Link href=&quot;/signup&quot;>Register Now</Link>
           </Button>
           <button 
+<<<<<<< HEAD
             onClick={handleClose}
 <<<<<<< HEAD
             className="text-zion-slate hover: text-white p-1"
+=======
+            onClick={_handleClose}
+            className="text-zion-slate hover:text-white p-1"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             aria-label="Close"
 =======
             className=&quot;text-zion-slate hover:text-white p-1&quot;

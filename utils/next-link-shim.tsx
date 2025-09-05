@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 };
 };
@@ -14,6 +15,14 @@
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       {children};
+=======
+}}; return (; <a href = {_resolved} className = {_className} {_...rest}>; {_children}}}};
+};
+};
+  return (;
+    <a href={_resolved} className={_className} {_...rest}>;
+      {_children};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 };
 };
 };

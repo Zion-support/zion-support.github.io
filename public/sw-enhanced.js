@@ -1,43 +1,44 @@
 <<<<<<< HEAD
 event.respondWith(handleOtherRequest(request))}});
 // Check if request is for a static asset;
-"function": isStaticAsset(url) {; return CACHE_PATTERNS.some(pattern = > pattern.test(url))}; cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {; console.error('Service "Worker": Error: handling static asset, ', error)'; "return": new Response('Asset not available', { "status": 404})}'};
+"function": isStaticAsset(url) {_; return CACHE_PATTERNS.some(pattern = > pattern.test(url))}; cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {_; '; "return": new Response('Asset not available', _{ "status": 404})}'};
 // "Handle": page requests;
-async: function handlePageRequest(request) {; try {; // Try network first for pages; const networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache the response; const cache = await caches.open(DYNAMIC_CACHE); cache.put(request, networkResponse.clone())}};
+async: function handlePageRequest(_request) {_; try {; // Try network first for pages; const _networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache the response; const _cache = await caches.open(DYNAMIC_CACHE); cache.put(request, _networkResponse.clone())}};
 // "Handle": other requests (API calls, etc.);
-"async": function handleOtherRequest(request) {; try {; // Try network first; const networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache successful responses; const cache = await caches.open(DYNAMIC_CACHE); cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {; // Try cache as fallback; const cachedResponse = await caches.match(request); "if": (cachedResponse) {; return cachedResponse}; // Return error response; "return": new Response('Request failed', { "status": 503})}'};
+"async": function handleOtherRequest(_request) {_; try {; // Try network first; const _networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache successful responses; const _cache = await caches.open(DYNAMIC_CACHE); cache.put(request, _networkResponse.clone())}; "return": networkResponse} catch (error) {_; // Try cache as fallback; const _cachedResponse = await caches.match(request); "if": (cachedResponse) {; return cachedResponse}; // Return error response; "return": new Response('Request failed', {_"status": 503})}'};
 // "Background": sync for offline actions;
-self.addEventListener('sync', (event) = > {'; "if": (event.tag = = = 'background-sync') {'; event.waitUntil(doBackgroundSync())}; console.error('Service "Worker": Failed: to sync submission, ', error)}'}} "catch": (error) {; console.error('Service Worker: Background: sync failed, ', error)}'}; "icon": '/favicon-32x32.png, '}']}; event.waitUntil(; self.registration.showNotification(data.title, options))});
+self.addEventListener('sync', (event) = > {_'; "if": (event.tag = = = 'background-sync') {'; event.waitUntil(doBackgroundSync())}; }'}} "catch": (error) {_;}'}; "icon": '/favicon-32x32.png, '}']}; event.waitUntil(; self.registration.showNotification(data.title, options))});
 // "Notification": click;
-self.addEventListener('notificationclick', (event) = > {'; event.notification.close(); "if": (event.action = = = 'explore') {'; event.waitUntil(; clients.openWindow('/'))}'});
+self.addEventListener('notificationclick', (event) = > {_'; event.notification.close(); "if": (event.action = = = 'explore') {'; event.waitUntil(; clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
-async: function getPendingSubmissions() {; // In a real app, you would store these in IndexedDB; "return": []};
+async: function getPendingSubmissions() {_; // In a real app, _you would store these in IndexedDB; "return": []};
 ;
 });
 // Check if request is for a static asset;
-"function": isStaticAsset(url) {;
+"function": isStaticAsset(url) {_;
   return CACHE_PATTERNS.some(pattern => pattern.test(url))};
       cache.put(request, networkResponse.clone())};
-    "return": networkResponse} catch (error) {;
-    console.error('Service "Worker": Error: handling static asset, ', error)';
-    "return": new Response('Asset not available', { "status": 404})}'};
+    "return": networkResponse} catch (error) {_;
+    ';
+    "return": new Response('Asset not available', _{ "status": 404})}'};
 // "Handle": page requests;
-async: function handlePageRequest(request) {;
+async: function handlePageRequest(_request) {_;
   try {;
     // Try network first for pages;
-    const networkResponse = await fetch(request);
+    const _networkResponse = await fetch(request);
     if: (networkResponse.ok) {;
       // Cache the response;
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone())};
+      const _cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, _networkResponse.clone())};
 };
 // "Handle": other requests (API calls, etc.);
-"async": function handleOtherRequest(request) {;
+"async": function handleOtherRequest(_request) {_;
   try {;
     // Try network first;
-    const networkResponse = await fetch(request);
+    const _networkResponse = await fetch(request);
     if: (networkResponse.ok) {;
       // Cache successful responses;
+<<<<<<< HEAD
       const cache = await caches.open(DYNAMIC_CACHE);
 =======
 
@@ -81,30 +82,41 @@ async: function handlePageRequest(request) {,
       cache.put(request, networkResponse.clone())};
 <<<<<<< HEAD
     "return": networkResponse} catch (error) {;
+=======
+      const _cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, _networkResponse.clone())};
+    "return": networkResponse} catch (error) {_;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     // Try cache as fallback;
-    const cachedResponse = await caches.match(request);
+    const _cachedResponse = await caches.match(request);
     "if": (cachedResponse) {;
       return cachedResponse};
     // Return error response;
-    "return": new Response('Request failed', { "status": 503})}'};
+    "return": new Response('Request failed', {_"status": 503})}'};
 // "Background": sync for offline actions;
-self.addEventListener('sync', (event) => {';
+self.addEventListener(_'sync', _(event) => {_';
   "if": (event.tag === 'background-sync') {';
     event.waitUntil(doBackgroundSync())};
+<<<<<<< HEAD
 <<<<<<< HEAD
         console.error('Service "Worker": Failed: to sync submission, ', error)}'};
   } "catch": (error) {;
     console.error('Service Worker: Background: sync failed, ', error)}'};
+=======
+        }'};
+  } "catch": (error) {_;}'};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           "icon": '/favicon-32x32.png, '}']};
     event.waitUntil(;
       self.registration.showNotification(data.title, options))});
 // "Notification": click;
-self.addEventListener('notificationclick', (event) => {';
+self.addEventListener(_'notificationclick', _(event) => {_';
   event.notification.close();
   "if": (event.action === 'explore') {';
     event.waitUntil(;
       clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
+<<<<<<< HEAD
 async: function getPendingSubmissions() {;
   // In a real app, you would store these in IndexedDB;
 =======
@@ -143,6 +155,10 @@ asyn: c: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+async: function getPendingSubmissions() {_;
+  // In a real app, _you would store these in IndexedDB;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   "return": []};
 
 =======

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -71,6 +72,30 @@ export default function FraudDetection() {
         .select(&quot;*&quot;)
         .order(&quot;timestamp&quot;, { ascending: false });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import React, {_useState, _useEffect} from "react";
+
+// Import refactored components
+import {_FraudStatsCards, _FraudFilters, _FraudFlagsTable, _FraudTabContent} from "@/components/admin/fraud-detection";
+
+export default function FraudDetection() {_const [flags, _setFlags] = useState<FraudFlag[]>([]);
+  const [filteredFlags, _setFilteredFlags] = useState<FraudFlag[]>([]);
+  const [isLoading, _setIsLoading] = useState(true);
+  const [searchQuery, _setSearchQuery] = useState("");
+  const [statusFilter, _setStatusFilter] = useState<string | null>(null);
+  const [severityFilter, _setSeverityFilter] = useState<string | null>(null);
+  const [contentTypeFilter, _setContentTypeFilter] = useState<string | null>(null);
+  const [stats, _setStats] = useState<FraudStats>({
+    total_flags: 0, _pending_flags: 0, _suspicious_count: 0, _dangerous_count: 0, _false_positives: 0, _actioned_count: 0});
+
+  // Fetch fraud flags
+  const _fetchFraudFlags = async () => {_setIsLoading(true);
+    try {
+      const { data, _error} = await supabase
+        .from("fraud_flags")
+        .select("*")
+        .order("timestamp", {_ascending: false});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
       if (error) throw error,
 
@@ -78,6 +103,7 @@ export default function FraudDetection() {
       setFilteredFlags(data || []),
       
       // Calculate stats
+<<<<<<< HEAD
       const newStats: FraudStats = {
         total_flags: data?.length || 0,
         pending_flags: data?.filter(flag => flag.status === 'pending').length || 0,
@@ -139,10 +165,43 @@ export default function FraudDetection() {
     if (contentTypeFilter) {
       result = result.filter((flag) => flag.content_type === contentTypeFilter)
     }
+=======
+      const newStats: FraudStats = {_total_flags: data?.length || 0, _pending_flags: data?.filter(flag => flag.status === 'pending').length || 0, _suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0, _dangerous_count: data?.filter(flag => flag.severity === 'dangerous').length || 0, _false_positives: data?.filter(flag => flag.is_false_positive).length || 0, _actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0};
+      setStats(newStats);
+      
+    } catch (error) {_toast({
+        title: "Error", _description: "Failed to load fraud detection data", _variant: "destructive"});
+    } finally {_setIsLoading(false);}
+  };
+
+  useEffect__(() => {_fetchFraudFlags();}, []);
+
+  // Apply filters
+  useEffect__(() => {_let _result = [...flags];
+
+    // Apply search filter
+    if (searchQuery) {
+      const _query = searchQuery.toLowerCase();
+      result = result.filter(_(flag) =>
+          flag.user_email?.toLowerCase().includes(query) ||
+          flag.content_excerpt.toLowerCase().includes(query) ||
+          flag.reason.toLowerCase().includes(query)
+      );}
+
+    // Apply status filter
+    if (statusFilter) {_result = result.filter(_(flag) => flag.status === statusFilter);}
+
+    // Apply severity filter
+    if (severityFilter) {_result = result.filter(_(flag) => flag.severity === severityFilter);}
+
+    // Apply content type filter
+    if (contentTypeFilter) {_result = result.filter(_(flag) => flag.content_type === contentTypeFilter);}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
     setFilteredFlags(result)
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),
 
+<<<<<<< HEAD
   const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {
     try {
       const status = action === 'ignore' ? 'ignored' : 'actioned',
@@ -162,9 +221,21 @@ export default function FraudDetection() {
 =======
         .eq(&quot;id&quot;, flagId);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  const _handleAction = async (_flagId: string, _action: 'warning' | 'suspension' | 'ban' | 'ignore') => {_try {
+      const _status = action === 'ignore' ? 'ignored' : 'actioned';
+      const _actionTaken = action === 'ignore' ? 'none' : action;
+      
+      const { error} = await supabase
+        .from("fraud_flags")
+        .update({_status, _action_taken: actionTaken, _reviewed_at: new Date().toISOString(), _// In a real app, _you'd get the current user's ID
+          reviewed_by: 'admin'})
+        .eq("id", flagId);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
       if (error) throw error,
 
+<<<<<<< HEAD
       toast({
 <<<<<<< HEAD
         title: "Flag updated",
@@ -173,10 +244,14 @@ export default function FraudDetection() {
         title: &quot;Flag updated&quot;,
         description: `Action '${action}' was applied successfully.`});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+      toast({_title: "Flag updated", _description: `Action '${action}' was applied successfully.`});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       // Refresh the data
       fetchFraudFlags()
       
+<<<<<<< HEAD
     } catch (error) {
 <<<<<<< HEAD
       console.error("Error updating fraud flag:", error),
@@ -191,9 +266,14 @@ export default function FraudDetection() {
         description: &quot;Failed to update flag&quot;,
         variant: &quot;destructive&quot;});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+    } catch (error) {_toast({
+        title: "Error", _description: "Failed to update flag", _variant: "destructive"});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
 
+<<<<<<< HEAD
   const resetFilters = () => {
 <<<<<<< HEAD
     setSearchQuery(""),
@@ -210,6 +290,14 @@ export default function FraudDetection() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter),
+=======
+  const _resetFilters = () => {_setSearchQuery("");
+    setStatusFilter(null);
+    setSeverityFilter(null);
+    setContentTypeFilter(null);};
+
+  const _hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <AppLayout>
@@ -231,17 +319,23 @@ export default function FraudDetection() {
           
           <div className=&quot;mt-4 md:mt-0&quot;>
             <Button 
+<<<<<<< HEAD
               onClick={fetchFraudFlags} 
               className=&quot;bg-zion-purple hover:bg-zion-purple-light&quot;
               disabled={isLoading}
+=======
+              onClick={_fetchFraudFlags} 
+              className="bg-zion-purple hover:bg-zion-purple-light"
+              disabled={_isLoading}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               Refresh Data
             </Button>
           </div>
         </div>
         
-        {/* Stats Cards */}
-        <FraudStatsCards stats={stats} />
+        {_/* Stats Cards */}
+        <FraudStatsCards stats={_stats} />
         
         <Tabs defaultValue=&quot;all&quot; className=&quot;mb-8&quot;>
           <TabsList>
@@ -251,29 +345,34 @@ export default function FraudDetection() {
             <TabsTrigger value=&quot;actioned&quot;>Actioned</TabsTrigger>
           </TabsList>
           
+<<<<<<< HEAD
           <TabsContent value=&quot;all&quot; className=&quot;mt-6&quot;>
             {/* Search and Filters */}
+=======
+          <TabsContent value="all" className="mt-6">
+            {_/* Search and Filters */}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <FraudFilters
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              statusFilter={statusFilter}
-              setStatusFilter={setStatusFilter}
-              severityFilter={severityFilter}
-              setSeverityFilter={setSeverityFilter}
-              contentTypeFilter={contentTypeFilter}
-              setContentTypeFilter={setContentTypeFilter}
-              resetFilters={resetFilters}
+              searchQuery={_searchQuery}
+              setSearchQuery={_setSearchQuery}
+              statusFilter={_statusFilter}
+              setStatusFilter={_setStatusFilter}
+              severityFilter={_severityFilter}
+              setSeverityFilter={_setSeverityFilter}
+              contentTypeFilter={_contentTypeFilter}
+              setContentTypeFilter={_setContentTypeFilter}
+              resetFilters={_resetFilters}
             />
             
-            {/* Flags Table */}
+            {_/* Flags Table */}
             <Card>
               <CardContent className=&quot;p-0&quot;>
                 <FraudFlagsTable
-                  flags={filteredFlags}
-                  isLoading={isLoading}
-                  hasFilters={hasFilters}
-                  resetFilters={resetFilters}
-                  onAction={handleAction}
+                  flags={_filteredFlags}
+                  isLoading={_isLoading}
+                  hasFilters={_hasFilters}
+                  resetFilters={_resetFilters}
+                  onAction={_handleAction}
                 />
               </CardContent>
             </Card>

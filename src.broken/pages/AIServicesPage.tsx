@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import { 
   Brain,
@@ -19,10 +20,14 @@ import {
   Twitter,
   Github
 } from 'lucide-react',
+=======
+import React from 'react';
+import {_Brain, _MessageSquare, _BarChart3, _FileText, _Search, _Shield, _Users, _Zap, _CheckCircle, _Star, _ExternalLink, _ArrowRight, _Phone, _Mail, _MapPin, _Linkedin, _Twitter, _Github} from 'lucide-react';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-export default function AIServicesPage() {
-  const aiServices = [
+export default function AIServicesPage() {_const _aiServices = [
     {
+<<<<<<< HEAD
       name: &quot;AI Content Generation Suite&quot;,
       description: &quot;Revolutionary AI-powered content creation platform that generates high-quality, SEO-optimized content for blogs, marketing materials, and social media.&quot;,
       icon: <FileText className=&quot;w-12 h-12 text-blue-500&quot; />,
@@ -43,6 +48,14 @@ export default function AIServicesPage() {
       },
       marketPrice: &quot;$500-800/month&quot;,
       useCases: [&quot;Marketing agencies&quot;, &quot;Content creators&quot;, &quot;E-commerce businesses&quot;, &quot;Bloggers&quot;, &quot;Social media managers&quot;],
+=======
+      name: "AI Content Generation Suite", _description: "Revolutionary AI-powered content creation platform that generates high-quality, _SEO-optimized content for blogs, _marketing materials, _and social media.", _icon: <FileText className="w-12 h-12 text-blue-500" />, _features: [
+        "Multi-language content generation", _"SEO optimization with keyword research", _"Brand voice training and customization", _"Plagiarism detection and originality scoring", _"Content performance analytics", _"Automated content scheduling", _"Team collaboration tools", _"API integration capabilities"
+      ], _pricing: {
+        starter: "$299/month", _professional: "$599/month", _enterprise: "$1, _299/month"},
+      marketPrice: "$500-800/month",
+      useCases: ["Marketing agencies", "Content creators", "E-commerce businesses", "Bloggers", "Social media managers"],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       benefits: [
         &quot;10x faster content creation&quot;,
         &quot;Improved SEO rankings&quot;,
@@ -52,6 +65,7 @@ export default function AIServicesPage() {
       ],
       website: &quot;https://ziontechgroup.com/ai-content-generation&quot;
     },
+<<<<<<< HEAD
     {
       name: &quot;AI Customer Service Platform&quot;,
       description: &quot;Intelligent chatbot solution with advanced natural language processing, sentiment analysis, and seamless human handoff capabilities.&quot;,
@@ -73,6 +87,14 @@ export default function AIServicesPage() {
       },
       marketPrice: &quot;$300-600/month&quot;,
       useCases: [&quot;E-commerce platforms&quot;, &quot;SaaS companies&quot;, &quot;Customer support teams&quot;, &quot;Healthcare providers&quot;, &quot;Financial services&quot;],
+=======
+    {_name: "AI Customer Service Platform", _description: "Intelligent chatbot solution with advanced natural language processing, _sentiment analysis, _and seamless human handoff capabilities.", _icon: <MessageSquare className="w-12 h-12 text-green-500" />, _features: [
+        "Natural language understanding", _"Multi-language support (50+ languages)", _"Sentiment analysis and mood detection", _"Seamless human agent handoff", _"Integration with major CRM platforms", _"Real-time analytics and reporting", _"Custom knowledge base training", _"Voice and text support"
+      ], _pricing: {
+        starter: "$199/month", _professional: "$399/month", _enterprise: "$799/month"},
+      marketPrice: "$300-600/month",
+      useCases: ["E-commerce platforms", "SaaS companies", "Customer support teams", "Healthcare providers", "Financial services"],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       benefits: [
         &quot;24/7 customer support&quot;,
         &quot;Reduced response times&quot;,
@@ -82,6 +104,7 @@ export default function AIServicesPage() {
       ],
       website: &quot;https://ziontechgroup.com/ai-customer-service&quot;
     },
+<<<<<<< HEAD
     {
       name: &quot;AI Sales Intelligence Platform&quot;,
       description: &quot;Predictive analytics and lead scoring platform powered by machine learning algorithms for sales optimization and revenue growth.&quot;,
@@ -103,6 +126,14 @@ export default function AIServicesPage() {
       },
       marketPrice: &quot;$600-1000/month&quot;,
       useCases: [&quot;Sales teams&quot;, &quot;B2B companies&quot;, &quot;Growth teams&quot;, &quot;Sales managers&quot;, &quot;Revenue operations&quot;],
+=======
+    {_name: "AI Sales Intelligence Platform", _description: "Predictive analytics and lead scoring platform powered by machine learning algorithms for sales optimization and revenue growth.", _icon: <BarChart3 className="w-12 h-12 text-purple-500" />, _features: [
+        "Advanced lead scoring algorithms", _"Sales forecasting and predictions", _"Pipeline analytics and insights", _"CRM and marketing automation integration", _"Real-time performance tracking", _"Custom sales playbooks", _"Competitive intelligence", _"Revenue optimization recommendations"
+      ], _pricing: {
+        starter: "$399/month", _professional: "$799/month", _enterprise: "$1, _599/month"},
+      marketPrice: "$600-1000/month",
+      useCases: ["Sales teams", "B2B companies", "Growth teams", "Sales managers", "Revenue operations"],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       benefits: [
         &quot;Increased conversion rates&quot;,
         &quot;Better lead prioritization&quot;,
@@ -112,6 +143,7 @@ export default function AIServicesPage() {
       ],
       website: &quot;https://ziontechgroup.com/ai-sales-intelligence&quot;
     },
+<<<<<<< HEAD
     {
       name: &quot;AI-Powered Search & RAG System&quot;,
       description: &quot;Advanced retrieval-augmented generation system for intelligent document search, knowledge management, and contextual information retrieval.&quot;,
@@ -133,6 +165,14 @@ export default function AIServicesPage() {
       },
       marketPrice: &quot;$800-1500/month&quot;,
       useCases: [&quot;Research institutions&quot;, &quot;Legal firms&quot;, &quot;Healthcare organizations&quot;, &quot;Educational institutions&quot;, &quot;Enterprise knowledge management&quot;],
+=======
+    {_name: "AI-Powered Search & RAG System", _description: "Advanced retrieval-augmented generation system for intelligent document search, _knowledge management, _and contextual information retrieval.", _icon: <Search className="w-12 h-12 text-orange-500" />, _features: [
+        "Vector-based semantic search", _"Document processing and indexing", _"Contextual question answering", _"Multi-format document support", _"Real-time knowledge updates", _"Custom knowledge base creation", _"API access and integrations", _"Advanced analytics and insights"
+      ], _pricing: {
+        starter: "$499/month", _professional: "$999/month", _enterprise: "$1, _999/month"},
+      marketPrice: "$800-1500/month",
+      useCases: ["Research institutions", "Legal firms", "Healthcare organizations", "Educational institutions", "Enterprise knowledge management"],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       benefits: [
         &quot;Instant information retrieval&quot;,
         &quot;Improved research efficiency&quot;,
@@ -142,6 +182,7 @@ export default function AIServicesPage() {
       ],
       website: &quot;https://ziontechgroup.com/ai-search-rag&quot;
     },
+<<<<<<< HEAD
     {
       name: &quot;AI Security & Guardrails&quot;,
       description: &quot;Comprehensive AI safety and security platform with content filtering, bias detection, and ethical AI governance tools.&quot;,
@@ -163,6 +204,14 @@ export default function AIServicesPage() {
       },
       marketPrice: &quot;$1000-2000/month&quot;,
       useCases: [&quot;AI development teams&quot;, &quot;Enterprises&quot;, &quot;Government agencies&quot;, &quot;Healthcare providers&quot;, &quot;Financial institutions&quot;],
+=======
+    {_name: "AI Security & Guardrails", _description: "Comprehensive AI safety and security platform with content filtering, _bias detection, _and ethical AI governance tools.", _icon: <Shield className="w-12 h-12 text-red-500" />, _features: [
+        "Content safety filtering", _"Bias detection and mitigation", _"Ethical AI guidelines enforcement", _"Real-time threat detection", _"Compliance monitoring", _"Audit trails and reporting", _"Custom policy creation", _"Integration with AI platforms"
+      ], _pricing: {
+        starter: "$599/month", _professional: "$1, _199/month", _enterprise: "$2, _499/month"},
+      marketPrice: "$1000-2000/month",
+      useCases: ["AI development teams", "Enterprises", "Government agencies", "Healthcare providers", "Financial institutions"],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       benefits: [
         &quot;Reduced AI risks&quot;,
         &quot;Compliance assurance&quot;,
@@ -172,6 +221,7 @@ export default function AIServicesPage() {
       ],
       website: &quot;https://ziontechgroup.com/ai-security-guardrails&quot;
     },
+<<<<<<< HEAD
     {
       name: &quot;AI Evaluation & Testing Lab&quot;,
       description: &quot;Comprehensive AI model evaluation platform with automated testing, performance benchmarking, and quality assurance tools.&quot;,
@@ -193,6 +243,14 @@ export default function AIServicesPage() {
       },
       marketPrice: &quot;$1200-2500/month&quot;,
       useCases: [&quot;AI research teams&quot;, &quot;ML engineers&quot;, &quot;Data scientists&quot;, &quot;AI product teams&quot;, &quot;Quality assurance teams&quot;],
+=======
+    {_name: "AI Evaluation & Testing Lab", _description: "Comprehensive AI model evaluation platform with automated testing, _performance benchmarking, _and quality assurance tools.", _icon: <Brain className="w-12 h-12 text-indigo-500" />, _features: [
+        "Automated model testing", _"Performance benchmarking", _"Quality assurance tools", _"Bias and fairness testing", _"Robustness evaluation", _"Custom evaluation metrics", _"Continuous monitoring", _"Comprehensive reporting"
+      ], _pricing: {
+        starter: "$799/month", _professional: "$1, _599/month", _enterprise: "$3, _199/month"},
+      marketPrice: "$1200-2500/month",
+      useCases: ["AI research teams", "ML engineers", "Data scientists", "AI product teams", "Quality assurance teams"],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       benefits: [
         &quot;Improved AI model quality&quot;,
         &quot;Faster model deployment&quot;,
@@ -204,6 +262,7 @@ export default function AIServicesPage() {
     }
   ],
 
+<<<<<<< HEAD
   const stats = [
 <<<<<<< HEAD
     { label: "AI Models Deployed", value: "500+" },
@@ -216,9 +275,17 @@ export default function AIServicesPage() {
     { label: &quot;Client Satisfaction&quot;, value: &quot;98%&quot; },
     { label: &quot;Cost Savings&quot;, value: &quot;40-60%&quot; },
     { label: &quot;Implementation Time&quot;, value: &quot;2-4 weeks&quot; }
+=======
+  const _stats = [
+    {_label: "AI Models Deployed", _value: "500+"},
+    {_label: "Client Satisfaction", _value: "98%"},
+    {_label: "Cost Savings", _value: "40-60%"},
+    {_label: "Implementation Time", _value: "2-4 weeks"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   ];
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
   return (
     <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white&quot;>
       {/* Hero Section */}
@@ -228,12 +295,27 @@ export default function AIServicesPage() {
           <div className=&quot;text-center&quot;>
             <div className=&quot;flex justify-center mb-6&quot;>
               <Brain className=&quot;w-20 h-20 text-purple-400&quot; />
+=======
+  return (_<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      {_/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <Brain className="w-20 h-20 text-purple-400" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
             <h1 className=&quot;text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent&quot;>
               AI Services & Solutions
             </h1>
+<<<<<<< HEAD
             <p className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
               Revolutionary AI-powered solutions that transform businesses through intelligent automation, predictive analytics, and cutting-edge machine learning technologies.
+=======
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Revolutionary AI-powered solutions that transform businesses through intelligent automation, _predictive analytics, _and cutting-edge machine learning technologies.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
               <a 
@@ -255,6 +337,7 @@ export default function AIServicesPage() {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Stats Section */}
       <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16&quot;>
         <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;>
@@ -262,15 +345,31 @@ export default function AIServicesPage() {
             <div key={index} className=&quot;text-center&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold text-blue-400 mb-2&quot;>{stat.value}</div>
               <div className=&quot;text-gray-300 text-sm&quot;>{stat.label}</div>
+=======
+      {_/* Stats Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {_stats.map((stat, _index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{_stat.value}</div>
+              <div className="text-gray-300 text-sm">{_stat.label}</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
           ))}
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* AI Services Grid */}
       <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16&quot;>
         <div className=&quot;text-center mb-16&quot;>
           <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
+=======
+      {_/* AI Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             Our AI Service Portfolio
           </h2>
           <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
@@ -278,6 +377,7 @@ export default function AIServicesPage() {
           </p>
         </div>
 
+<<<<<<< HEAD
         <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot;>
           {aiServices.map((service, index) => (
             <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105&quot;>
@@ -288,15 +388,35 @@ export default function AIServicesPage() {
                 </div>
                 
                 <p className=&quot;text-gray-300 leading-relaxed&quot;>{service.description}</p>
+=======
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {_aiServices.map(_(service, _index) => (_<div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  {_service.icon}
+                  <h3 className="text-2xl font-bold text-white">{_service.name}</h3>
+                </div>
+                
+                <p className="text-gray-300 leading-relaxed">{_service.description}</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 
                 <div className=&quot;space-y-4&quot;>
                   <div>
+<<<<<<< HEAD
                     <h4 className=&quot;text-lg font-semibold text-blue-400 mb-3&quot;>Key Features:</h4>
                     <ul className=&quot;grid grid-cols-1 md:grid-cols-2 gap-2&quot;>
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className=&quot;flex items-center gap-2 text-sm text-gray-300&quot;>
                           <CheckCircle className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
                           {feature}
+=======
+                    <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features:</h4>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                      {_service.features.map((feature, _featureIndex) => (
+                        <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          {_feature}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         </li>
                       ))}
                     </ul>
@@ -304,6 +424,7 @@ export default function AIServicesPage() {
 
                   <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
                     <div>
+<<<<<<< HEAD
                       <h4 className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>Pricing Plans:</h4>
                       <div className=&quot;space-y-1&quot;>
                         <div className=&quot;flex justify-between text-sm&quot;>
@@ -321,24 +442,57 @@ export default function AIServicesPage() {
                       </div>
                       <div className=&quot;mt-2 text-xs text-gray-400&quot;>
                         Market price: <span className=&quot;line-through&quot;>{service.marketPrice}</span>
+=======
+                      <h4 className="text-sm font-semibold text-blue-400 mb-2">Pricing Plans:</h4>
+                      <div className="space-y-1">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Starter:</span>
+                          <span className="text-green-400 font-semibold">{_service.pricing.starter}</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Professional:</span>
+                          <span className="text-blue-400 font-semibold">{_service.pricing.professional}</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Enterprise:</span>
+                          <span className="text-purple-400 font-semibold">{_service.pricing.enterprise}</span>
+                        </div>
+                      </div>
+                      <div className="mt-2 text-xs text-gray-400">
+                        Market price: <span className="line-through">{_service.marketPrice}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </div>
                     </div>
 
                     <div>
+<<<<<<< HEAD
                       <h4 className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>Best For:</h4>
                       <ul className=&quot;space-y-1&quot;>
                         {service.useCases.map((useCase, useCaseIndex) => (
                           <li key={useCaseIndex} className=&quot;text-xs text-gray-300&quot;>• {useCase}</li>
+=======
+                      <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
+                      <ul className="space-y-1">
+                        {_service.useCases.map(_(useCase, _useCaseIndex) => (
+                          <li key={useCaseIndex} className="text-xs text-gray-300">• {_useCase}</li>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         ))}
                       </ul>
                     </div>
                   </div>
 
                   <div>
+<<<<<<< HEAD
                     <h4 className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>Key Benefits:</h4>
                     <ul className=&quot;grid grid-cols-1 md:grid-cols-2 gap-1&quot;>
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className=&quot;text-xs text-gray-300&quot;>• {benefit}</li>
+=======
+                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Benefits:</h4>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">
+                      {_service.benefits.map(_(benefit, _benefitIndex) => (
+                        <li key={benefitIndex} className="text-xs text-gray-300">• {_benefit}</li>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       ))}
                     </ul>
                   </div>
@@ -346,15 +500,25 @@ export default function AIServicesPage() {
                   <div className=&quot;pt-4 border-t border-white/20&quot;>
                     <div className=&quot;flex gap-3&quot;>
                       <a 
+<<<<<<< HEAD
                         href={service.website}
                         className=&quot;flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-sm font-medium transition-colors&quot;
+=======
+                        href={_service.website}
+                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-sm font-medium transition-colors"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       >
                         <span>Learn More</span>
                         <ExternalLink className=&quot;w-4 h-4&quot; />
                       </Link>
                       <a 
+<<<<<<< HEAD
                         href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                         className=&quot;inline-flex items-center justify-center px-4 py-2 border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white rounded-lg text-sm font-medium transition-colors&quot;
+=======
+                        href={_`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
+                        className="inline-flex items-center justify-center px-4 py-2 border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white rounded-lg text-sm font-medium transition-colors"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       >
                         <span>Get Quote</span>
                       </Link>
@@ -367,11 +531,19 @@ export default function AIServicesPage() {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Why Choose Zion Tech Group */}
       <div className=&quot;bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-t border-white/20&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16&quot;>
           <div className=&quot;text-center space-y-12&quot;>
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white&quot;>
+=======
+      {_/* Why Choose Zion Tech Group */}
+      <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-t border-white/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center space-y-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               Why Choose Zion Tech Group for AI Solutions?
             </h2>
             
@@ -410,11 +582,19 @@ export default function AIServicesPage() {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Contact & CTA Section */}
       <div className=&quot;bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-white/20&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16&quot;>
           <div className=&quot;text-center space-y-8&quot;>
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white&quot;>
+=======
+      {_/* Contact & CTA Section */}
+      <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-white/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center space-y-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               Ready to Harness the Power of AI?
             </h2>
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
@@ -463,8 +643,12 @@ export default function AIServicesPage() {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Footer */}
 <<<<<<< HEAD
+=======
+      {_/* Footer */}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <footer className="bg-gray-900 border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

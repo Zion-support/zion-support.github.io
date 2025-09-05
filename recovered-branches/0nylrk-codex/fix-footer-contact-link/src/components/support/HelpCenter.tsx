@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -45,9 +46,26 @@ export default function HelpCenter() {
   const handleBackToArticles = () => {
     setSelectedArticle(null)
   },
+=======
+import React, {_useState} from "react";
+
+export default function HelpCenter() {_const [selectedCategory, _setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, _setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, _setSearchQuery] = useState("");
   
-  return (
-    <AppLayout>
+  const _handleCategorySelect = (_categoryId: string) => {
+    setSelectedCategory(categoryId);
+    setSelectedArticle(null);};
+  
+  const _handleArticleSelect = (_articleId: string) => {_setSelectedArticle(articleId);};
+  
+  const _handleBackToCategories = () => {_setSelectedCategory(null);
+    setSelectedArticle(null);};
+  
+  const _handleBackToArticles = () => {_setSelectedArticle(null);};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  
+  return (_<AppLayout>
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -59,9 +77,15 @@ export default function HelpCenter() {
           
           <div className="relative mb-8&quot;>
             <Input
+<<<<<<< HEAD
               placeholder=&quot;Search for help articles..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+=======
+              placeholder="Search for help articles..."
+              value={_searchQuery}
+              onChange={_(e) => setSearchQuery(e.target.value)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               className="pl-10"
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400&quot; />
@@ -74,16 +98,21 @@ export default function HelpCenter() {
               <TabsTrigger value=&quot;contact&quot;>Contact Us</TabsTrigger>
             </TabsList>
             
+<<<<<<< HEAD
             <TabsContent value=&quot;articles&quot;>
               {!selectedCategory && !selectedArticle && (
+=======
+            <TabsContent value="articles">
+              {_!selectedCategory && !selectedArticle && (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 <HelpCategoryList 
                   categories={HELP_CATEGORIES} 
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
+                  onCategorySelect={_handleCategorySelect}
+                  searchQuery={_searchQuery}
                 />
               )}
               
-              {selectedCategory && !selectedArticle && (
+              {_selectedCategory && !selectedArticle && (
                 <>
                   <Button
                     variant=&quot;ghost"
@@ -93,14 +122,14 @@ export default function HelpCenter() {
                     ← All Categories
                   </Button>
                   <HelpArticleList 
-                    categoryId={selectedCategory}
-                    onArticleSelect={handleArticleSelect}
-                    searchQuery={searchQuery}
+                    categoryId={_selectedCategory}
+                    onArticleSelect={_handleArticleSelect}
+                    searchQuery={_searchQuery}
                   />
                 </>
               )}
               
-              {selectedArticle && (
+              {_selectedArticle && (
                 <>
                   <Button
                     variant=&quot;ghost"
@@ -109,7 +138,7 @@ export default function HelpCenter() {
                   >
                     ← Back to Articles
                   </Button>
-                  <HelpArticleView articleId={selectedArticle} />
+                  <HelpArticleView articleId={_selectedArticle} />
                 </>
               )}
             </TabsContent>

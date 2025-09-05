@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 }});
-console.log(`Fixed ${fixedCount} files`);
+
 ;
 };
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log(`Fixed ${fixedCount} files`);
+=======
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 ;
 =======
 

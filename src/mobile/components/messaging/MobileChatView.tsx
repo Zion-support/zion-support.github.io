@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
@@ -45,8 +46,32 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 <<<<<<< HEAD
   const [newMessage, setNewMessage] = useState(""),
   const router = useRouter(),
+=======
+import React, {_useState} from "react";
+
+interface Message {_id: string;
+  content: string;
+  timestamp: string;
+  isMe: boolean;
+  sender?: string;
+  avatar?: string;
+  status?: 'sent' | 'delivered' | 'read';}
+
+interface MobileChatViewProps {_contact: {
+    id: string;
+    name: string;
+    avatar?: string;
+    status?: string;};
+  messages: Message[];
+  onBack: () => void;
+  onSendMessage: (_content: string) => void;
+}
+
+export function MobileChatView(_{_contact, _messages, _onBack, _onSendMessage}: MobileChatViewProps) {_const [newMessage, _setNewMessage] = useState("");
+  const _router = useRouter();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const handleSend = () => {
+  const _handleSend = () => {
     if (newMessage.trim() !== "") {
       onSendMessage(newMessage),
       setNewMessage("")
@@ -57,6 +82,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   const handleSend = () => {
     if (newMessage.trim() !== "&quot;) {
       onSendMessage(newMessage);
+<<<<<<< HEAD
       setNewMessage("&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
@@ -98,48 +124,100 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     // Navigate to video call page with audio-only flag
     router.push(`/call/${roomId}?audioOnly=true`)
   },
+=======
+      setNewMessage("");}
+  };
+  
+  const _handleKeyDown = (_e: React.KeyboardEvent<HTMLInputElement>) => {_if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();}
+  };
+  
+  const _startVideoCall = () => {_const _roomId = `mobile-${contact.id}`;
+    toast.success("Starting video call", {_description: `Connecting with ${contact.name}...`
+    });
+    
+    // Navigate to video call page
+    router.push(`/call/${_roomId}`);
+  };
+  
+  const _startAudioCall = () => {_const _roomId = `mobile-audio-${contact.id}`;
+    toast.success("Starting audio call", {_description: `Connecting with ${contact.name}...`
+    });
+    
+    // Navigate to video call page with audio-only flag
+    router.push(`/call/${_roomId}?audioOnly=true`);
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
         <div className="flex items-center h-14 px-4&quot;>
           <Button
+<<<<<<< HEAD
             variant=&quot;ghost&quot;
             size=&quot;icon&quot;
             onClick={onBack}
             aria-label=&quot;Go back"
+=======
+            variant="ghost"
+            size="icon"
+            onClick={_onBack}
+            aria-label="Go back"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <ChevronLeft className="h-5 w-5" />
           </Button>
           
           <div className="flex items-center flex-1 gap-3 mx-2">
             <Avatar>
-              <AvatarImage src={contact.avatar} alt={contact.name} />
-              <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
+              <AvatarImage src={_contact.avatar} alt={_contact.name} />
+              <AvatarFallback>{_contact.name.charAt(0).toUpperCase()}</AvatarFallback>
             </Avatar>
             <div>
+<<<<<<< HEAD
               <h3 className="font-medium">{contact.name}</h3>
               <p className="text-xs text-muted-foreground&quot;>
                 {contact.status || &quot;Online"}
+=======
+              <h3 className="font-medium">{_contact.name}</h3>
+              <p className="text-xs text-muted-foreground">
+                {_contact.status || "Online"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </p>
             </div>
           </div>
           
           <div className="flex&quot;>
             <Button
+<<<<<<< HEAD
               variant=&quot;ghost&quot;
               size=&quot;icon&quot;
               onClick={startAudioCall}
               aria-label=&quot;Start audio call"
+=======
+              variant="ghost"
+              size="icon"
+              onClick={_startAudioCall}
+              aria-label="Start audio call"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <Phone className="h-5 w-5&quot; />
             </Button>
             
             <Button
+<<<<<<< HEAD
               variant=&quot;ghost&quot;
               size=&quot;icon&quot;
               onClick={startVideoCall}
               aria-label=&quot;Start video call"
+=======
+              variant="ghost"
+              size="icon"
+              onClick={_startVideoCall}
+              aria-label="Start video call"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             >
               <Video className="h-5 w-5&quot; />
             </Button>
@@ -152,9 +230,10 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       </header>
       
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages.map((message) => (
+        {_messages.map(_(message) => (
           <div 
             key={message.id} 
+<<<<<<< HEAD
             className={cn(
               "flex&quot;,
               message.isMe ? &quot;justify-end&quot; : &quot;justify-start"
@@ -172,9 +251,25 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               <div className={cn(
                 "text-xs mt-1 flex justify-end&quot;,
                 message.isMe ? &quot;text-primary-foreground/80&quot; : &quot;text-muted-foreground"
+=======
+            className={_cn(
+              "flex", _message.isMe ? "justify-end" : "justify-start"
+            )}
+          >
+            <div 
+              className={_cn(
+                "max-w-[80%] rounded-2xl px-4 py-2", _message.isMe 
+                  ? "bg-primary text-primary-foreground rounded-tr-none" 
+                  : "bg-muted rounded-tl-none"
+              )}
+            >
+              <p>{_message.content}</p>
+              <div className={_cn(
+                "text-xs mt-1 flex justify-end", _message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               )}>
-                {message.timestamp}
-                {message.isMe && message.status && (
+                {_message.timestamp}
+                {_message.isMe && message.status && (
                   <span className="ml-1">
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>
@@ -192,6 +287,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </Button>
           
           <Input
+<<<<<<< HEAD
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -205,6 +301,21 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             disabled={!newMessage.trim()}
             className={!newMessage.trim() ? "opacity-50&quot; : "&quot;}
             aria-label=&quot;Send message&quot;
+=======
+            value={_newMessage}
+            onChange={_(_e) => setNewMessage(e.target.value)}
+            onKeyDown={_handleKeyDown}
+            placeholder="Type a message..."
+            className="flex-1"
+          />
+          
+          <Button
+            size="icon"
+            onClick={_handleSend}
+            disabled={_!newMessage.trim()}
+            className={_!newMessage.trim() ? "opacity-50" : ""}
+            aria-label="Send message"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             <Send className=&quot;h-5 w-5&quot; />
           </Button>

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
@@ -28,10 +29,12 @@ import { AppLayout } from &quot;@/layout/AppLayout&quot;;
 import { ProfileContact } from &quot;@/components/profile/ProfileContact&quot;;
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from &quot;@/components/ui/dialog&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a
+export default function ListingDetail() {_// useParams may be untyped in this environment, _so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
+<<<<<<< HEAD
   const { id } = useParams() as { id?: string },
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),
   const [isLoading, setIsLoading] = useState(false),
@@ -39,9 +42,17 @@ export default function ListingDetail() {
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
+=======
+  const { id} = useParams() as {_id?: string};
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
-  if (!listing) {
-    return (
+  // Find the listing from our shared data source - now also checking equipment listings
+  const _listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  if (!listing) {_return (
       <AppLayout>
         <div className=&quot;min-h-screen bg-zion-blue py-12 px-4&quot;>
           <div className=&quot;container mx-auto&quot;>
@@ -55,6 +66,7 @@ export default function ListingDetail() {
           </div>
         </div>
       </AppLayout>
+<<<<<<< HEAD
     )
   }
 
@@ -85,6 +97,28 @@ export default function ListingDetail() {
                         target.src = &quot;/placeholder.svg&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                       }}
+=======
+    );}
+
+  const _handleContact = () => {_setIsContactDialogOpen(true);};
+
+  return (_<AppLayout>
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {_/* Left Column - Images */}
+            <div className="lg:col-span-2">
+              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
+                <div className="aspect-[16/9] w-full relative">
+                  {_listing.images && listing.images.length > 0 ? (
+                    <img 
+                      src={listing.images[selectedImageIndex]} 
+                      alt={_listing.title} 
+                      className="w-full h-full object-cover"
+                      onError={_(e) => {
+                        const _target = e.target as HTMLImageElement;
+                        target.src = "/placeholder.svg";}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     />
                   ) : (
                     <div className=&quot;w-full h-full flex items-center justify-center bg-zion-blue-light/20&quot;>
@@ -93,6 +127,7 @@ export default function ListingDetail() {
                   )}
                 </div>
                 
+<<<<<<< HEAD
                 {listing.images && listing.images.length > 1 && (
                   <div className=&quot;flex p-4 gap-2 overflow-x-auto&quot;>
                     {listing.images.map((image, index) => (
@@ -117,6 +152,23 @@ export default function ListingDetail() {
                             target.src = &quot;/placeholder.svg&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                           }}
+=======
+                {_listing.images && listing.images.length > 1 && (_<div className="flex p-4 gap-2 overflow-x-auto">
+                    {listing.images.map((image, _index) => (_<div 
+                        key={index}
+                        onClick={_() => setSelectedImageIndex(index)}
+                        className={_cn(
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2", _index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                        )}
+                      >
+                        <img 
+                          src={_image} 
+                          alt={_`${listing.title} - image ${_index + 1}`} 
+                          className="w-full h-full object-cover"
+                          onError={_(_e) => {
+                            const _target = e.target as HTMLImageElement;
+                            target.src = "/placeholder.svg";}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                         />
                       </div>
                     ))}
@@ -124,6 +176,7 @@ export default function ListingDetail() {
                 )}
               </div>
 
+<<<<<<< HEAD
               {/* Description Section */}
               <div className=&quot;mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light&quot;>
                 <h2 className=&quot;text-2xl font-bold text-white mb-4&quot;>Description</h2>
@@ -136,6 +189,20 @@ export default function ListingDetail() {
                     <div className=&quot;flex items-start gap-3&quot;>
                       <div className=&quot;p-2 rounded-full bg-zion-purple/20&quot;>
                         <Brain className=&quot;h-5 w-5 text-zion-purple&quot; />
+=======
+              {_/* Description Section */}
+              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
+                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
+                <p className="text-zion-slate-light whitespace-pre-line">{_listing.description}</p>
+                
+                {_/* Features */}
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-full bg-zion-purple/20">
+                        <Brain className="h-5 w-5 text-zion-purple" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </div>
                       <div>
                         <h4 className=&quot;font-medium text-white&quot;>Advanced AI</h4>
@@ -154,6 +221,7 @@ export default function ListingDetail() {
                   </div>
                 </div>
                 
+<<<<<<< HEAD
                 {/* Tags */}
                 <div className=&quot;mt-8&quot;>
                   <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Tags</h3>
@@ -161,6 +229,15 @@ export default function ListingDetail() {
                     {listing.tags.map((tag, i) => (
                       <Badge key={i} variant=&quot;outline&quot; className=&quot;border-zion-slate-dark text-zion-slate-light py-1 px-3&quot;>
                         {tag}
+=======
+                {_/* Tags */}
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {_listing.tags.map(_(tag, _i) => (
+                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
+                        {_tag}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </Badge>
                     ))}
                   </div>
@@ -168,6 +245,7 @@ export default function ListingDetail() {
               </div>
             </div>
             
+<<<<<<< HEAD
             {/* Right Column - Details */}
             <div className=&quot;lg:col-span-1&quot;>
               <div className=&quot;bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6&quot;>
@@ -177,11 +255,23 @@ export default function ListingDetail() {
                   </Badge>
                   {listing.featured && (
                     <Badge className=&quot;ml-2 bg-zion-cyan/20 text-zion-cyan&quot;>
+=======
+            {_/* Right Column - Details */}
+            <div className="lg:col-span-1">
+              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
+                <div className="mb-2">
+                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
+                    {_listing.category}
+                  </Badge>
+                  {_listing.featured && (
+                    <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       Featured
                     </Badge>
                   )}
                 </div>
                 
+<<<<<<< HEAD
                 <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>{listing.title}</h1>
                 
                 {listing.rating && (
@@ -193,21 +283,46 @@ export default function ListingDetail() {
                           className={cn(
                             &quot;h-5 w-5&quot;,
                             i < Math.floor(listing.rating!) ? &quot;text-zion-cyan fill-zion-cyan&quot; : &quot;text-zion-slate-light&quot;
+=======
+                <h1 className="text-2xl font-bold text-white mb-4">{_listing.title}</h1>
+                
+                {_listing.rating && (
+                  <div className="flex items-center gap-2 mb-6">
+                    <div className="flex items-center">
+                      {[...Array(5)].map(_(_, _i) => (
+                        <Star
+                          key={i}
+                          className={_cn(
+                            "h-5 w-5", _i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                           )}
                         />
                       ))}
                     </div>
+<<<<<<< HEAD
                     <span className=&quot;text-sm text-zion-slate-light&quot;>
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
+=======
+                    <span className="text-sm text-zion-slate-light">
+                      {_listing.rating.toFixed(1)} ({_listing.reviewCount} reviews)
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </span>
                   </div>
                 )}
                 
+<<<<<<< HEAD
                 {/* Price */}
                 <div className=&quot;mb-6&quot;>
                   {listing.price !== null ? (
                     <div className=&quot;text-3xl font-bold text-white&quot;>
                       {listing.currency}{listing.price.toLocaleString()}
+=======
+                {_/* Price */}
+                <div className="mb-6">
+                  {_listing.price !== null ? (
+                    <div className="text-3xl font-bold text-white">
+                      {listing.currency}{_listing.price.toLocaleString()}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </div>
                   ) : (
                     <div className=&quot;text-2xl font-bold text-white&quot;>
@@ -216,6 +331,7 @@ export default function ListingDetail() {
                   )}
                 </div>
                 
+<<<<<<< HEAD
                 {/* Action Buttons */}
                 <div className=&quot;space-y-3 mb-8&quot;>
                   {listing.price !== null ? (
@@ -236,29 +352,58 @@ export default function ListingDetail() {
                           description: &quot;Redirecting to secure checkout...&quot;
                         });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+                {_/* Action Buttons */}
+                <div className="space-y-3 mb-8">
+                  {_listing.price !== null ? (_<PaymentButton
+                      amount={listing.price}
+                      serviceId={_listing.id}
+                      providerId={_listing.author.id}
+                      buttonText="Buy Now"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      onPaymentInitiated={_() => {
+                        toast({
+                          title: "Payment Processing", _description: "Redirecting to secure checkout..."});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       }}
                     />
                   ) : (
                     <Button 
+<<<<<<< HEAD
                       onClick={handleContact}
                       disabled={isLoading}
                       className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6&quot;
                     >
                       {isLoading ? &quot;Processing...&quot; : &quot;Request Quote&quot;}
+=======
+                      onClick={_handleContact}
+                      disabled={_isLoading}
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                    >
+                      {_isLoading ? "Processing..." : "Request Quote"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </Button>
                   )}
                   
                   <Button 
+<<<<<<< HEAD
                     variant=&quot;outline&quot; 
                     onClick={handleContact}
                     disabled={isLoading}
                     className=&quot;w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10&quot;
+=======
+                    variant="outline" 
+                    onClick={_handleContact}
+                    disabled={_isLoading}
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   >
                     <MessageSquare className=&quot;h-4 w-4 mr-2&quot; />
                     Contact Publisher
                   </Button>
                 </div>
                 
+<<<<<<< HEAD
                 {/* Publisher Info */}
                 <div className=&quot;border-t border-zion-blue-light pt-6&quot;>
                   <h3 className=&quot;text-lg font-bold text-white mb-3&quot;>Publisher</h3>
@@ -286,10 +431,33 @@ export default function ListingDetail() {
                     <div>
                       <p className=&quot;font-medium text-white&quot;>{listing.author.name}</p>
                       <p className=&quot;text-xs text-zion-slate-light&quot;>Member since 2022</p>
+=======
+                {_/* Publisher Info */}
+                <div className="border-t border-zion-blue-light pt-6">
+                  <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
+                  <div className="flex items-center gap-3">
+                    {_listing.author.avatarUrl ? (_<img 
+                        src={listing.author.avatarUrl} 
+                        alt={_listing.author.name} 
+                        className="h-12 w-12 rounded-full"
+                        onError={_(e) => {
+                          const _target = e.target as HTMLImageElement;
+                          target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);}}
+                      />
+                    ) : (
+                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
+                        <span className="text-lg font-medium text-zion-purple">{_listing.author.name.charAt(0)}</span>
+                      </div>
+                    )}
+                    <div>
+                      <p className="font-medium text-white">{_listing.author.name}</p>
+                      <p className="text-xs text-zion-slate-light">Member since 2022</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </div>
                   </div>
                 </div>
                 
+<<<<<<< HEAD
                 {/* Additional Info */}
                 <div className=&quot;border-t border-zion-blue-light mt-6 pt-6&quot;>
                   <div className=&quot;flex justify-between mb-2&quot;>
@@ -299,6 +467,17 @@ export default function ListingDetail() {
                   <div className=&quot;flex justify-between mb-2&quot;>
                     <span className=&quot;text-zion-slate-light&quot;>ID</span>
                     <span className=&quot;text-white&quot;>{listing.id}</span>
+=======
+                {_/* Additional Info */}
+                <div className="border-t border-zion-blue-light mt-6 pt-6">
+                  <div className="flex justify-between mb-2">
+                    <span className="text-zion-slate-light">Listed on</span>
+                    <span className="text-white">{_new Date(listing.createdAt).toLocaleDateString()}</span>
+                  </div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-zion-slate-light">ID</span>
+                    <span className="text-white">{_listing.id}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   </div>
                 </div>
               </div>
@@ -307,16 +486,28 @@ export default function ListingDetail() {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className=&quot;bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md&quot;>
+=======
+      {_/* Contact Dialog */}
+      <Dialog open={_isContactDialogOpen} onOpenChange={_setIsContactDialogOpen}>
+        <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <DialogHeader>
             <DialogTitle className=&quot;text-xl font-bold text-white&quot;>Contact Publisher</DialogTitle>
           </DialogHeader>
           <ProfileContact 
+<<<<<<< HEAD
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
             profileType=&quot;service&quot;
+=======
+            email={_listing.author.email} // TypeScript now knows this might be undefined
+            profileName={_listing.author.name}
+            profileType="service"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           />
         </DialogContent>
       </Dialog>

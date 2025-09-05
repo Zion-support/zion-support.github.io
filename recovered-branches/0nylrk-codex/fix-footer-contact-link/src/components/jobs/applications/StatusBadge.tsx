@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ApplicationStatus } from "@/types/jobs",
 import { Badge } from "@/components/ui/badge",
 =======
@@ -15,6 +16,14 @@ export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
 <<<<<<< HEAD
     case "new": return <Badge variant="secondary">Submitted</Badge>,
+=======
+
+interface StatusBadgeProps {_status: ApplicationStatus;}
+
+export function StatusBadge(_{_status}: StatusBadgeProps) {_switch (status) {
+    case "new":
+      return <Badge variant="secondary">Submitted</Badge>;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     case "viewed":
       return <Badge variant="outline">Viewed</Badge>,
     case "shortlisted":

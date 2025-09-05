@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react',
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts',
 
@@ -114,10 +115,100 @@ export default function SalaryInsightsPage() {
         <div className=&quot;relative z-10&quot;>
           <h1 className=&quot;text-2xl font-semibold&quot;>Salary Insights</h1>
           <p className=&quot;opacity-90&quot;>Benchmark rates and set competitive offers in real-time.</p>
+=======
+import React, {_useEffect, _useMemo, _useState} from 'react';
+
+type InsightResponse = {_recommendedHourlyUsd: number;
+  recommendedMonthlyUsd: number;
+  medianHourlyUsd: number;
+  minHourlyUsd: number;
+  maxHourlyUsd: number;
+  confidence: number;
+  trendMonthly: { label: string; value: number}[];
+  regionalComparison: {_region: string; medianHourlyUsd: number}[];
+  tags: string[];
+  gptRecommendation?: string;
+};
+
+export default function SalaryInsightsPage() {_const [roleTitle, _setRoleTitle] = useState('Senior AI Engineer');
+  const [skills, _setSkills] = useState('OpenAI, _RAG, _TypeScript');
+  const [region, _setRegion] = useState('Remote, _Global');
+  const [experienceLevel, _setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
+  const [remote, _setRemote] = useState(true);
+  const [employmentType, _setEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
+  const [loading, _setLoading] = useState(false);
+  const [data, _setData] = useState<InsightResponse | null>(null);
+  const [error, _setError] = useState<string | null>(null);
+  const [isLoggedIn, _setIsLoggedIn] = useState(false);
+
+  useEffect__(() => {
+    // Lightweight login check via Supabase client if available; otherwise public mode
+    (_async () => {
+      try {
+        const { supabase} = await import('../utils/supabase/client');
+        const _user = await supabase.auth.getUser();
+        setIsLoggedIn(!!user.data.user);
+      } catch {_setIsLoggedIn(false);}
+    })();
+  }, []);
+
+  async function fetchInsights() {_setLoading(true);
+    setError(null);
+    try {
+      const _res = await fetch('/api/salary-insights', _{
+        method: 'POST', _headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({_roleTitle, _skills: skills.split(', _').map(_(s) => s.trim()).filter(Boolean), _region, _experienceLevel, _remote, _employmentType})});
+      if (!res.ok) throw new Error('Failed to fetch insights');
+      const _json = (await res.json()) as InsightResponse;
+      setData(json);
+    } catch (e: unknown) {_setError(e.message || 'Unexpected error');} finally {_setLoading(false);}
+  }
+
+  useEffect__(() => {_fetchInsights();
+    // eslint-disable-next-line react-hooks/exhaustive-deps}, []);
+
+  function saveInsight() {_const _payload = { createdAt: new Date().toISOString(), _input: { roleTitle, _skills, _region, _experienceLevel, _remote, _employmentType}, output: data };
+    (_async () => {_try {
+        const { supabase} = await import('../utils/supabase/client');
+        const _user = await supabase.auth.getUser();
+        if (user.data.user) {_// Attempt to save to Supabase if table exists
+          await supabase.from('salary_insights').insert({
+            user_id: user.data.user.id, _payload});
+          alert('Insight saved to your profile');
+          return;
+        }
+      } catch {_// fall back}
+      try {_const _key = 'zion.salary-insights.history';
+        const _history = JSON.parse(localStorage.getItem(key) || '[]');
+        history.unshift(payload);
+        localStorage.setItem(key, _JSON.stringify(history.slice(0, _50)));
+        alert('Insight saved locally');} catch {}
+    })();
+  }
+
+  const _donutData = useMemo__(() => {_if (!data) return [] as { label: string; value: number}[];
+    const _min = data.minHourlyUsd;
+    const _median = data.medianHourlyUsd;
+    const _max = data.maxHourlyUsd;
+    const _lower = Math.max(0, median - min);
+    const _upper = Math.max(0, max - median);
+    return [
+      {_label: 'Below Median', _value: lower || 1},
+      {_label: 'Median', _value: median || 1},
+      {_label: 'Above Median', _value: upper || 1}];
+  }, [data]);
+
+  return (_<div>
+      <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow">
+        <div className="relative z-10">
+          <h1 className="text-2xl font-semibold">Salary Insights</h1>
+          <p className="opacity-90">Benchmark rates and set competitive offers in real-time.</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </div>
         <div className=&quot;absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl&quot; />
       </div>
 
+<<<<<<< HEAD
       <div className=&quot;mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6&quot;>
         <div className=&quot;lg:col-span-1 space-y-4&quot;>
           <div className=&quot;rounded-lg border border-gray-200 dark:border-gray-800 p-4&quot;>
@@ -130,11 +221,30 @@ export default function SalaryInsightsPage() {
 
             <label className=&quot;block text-sm mt-3 mb-2&quot;>Region</label>
             <input value={region} onChange={(e) => setRegion(e.target.value)} className=&quot;w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm&quot; placeholder=&quot;City, Country&quot; />
+=======
+      <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-1 space-y-4">
+          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+            <h2 className="font-medium mb-3">Filters</h2>
+            <label className="block text-sm mb-2">Role title</label>
+            <input value={_roleTitle} onChange={_(e) => setRoleTitle(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e.g., Senior AI Engineer" />
+
+            <label className="block text-sm mt-3 mb-2">Skills</label>
+            <input value={_skills} onChange={_(_e) => setSkills(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="Comma-separated" />
+
+            <label className="block text-sm mt-3 mb-2">Region</label>
+            <input value={_region} onChange={_(_e) => setRegion(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="City, Country" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
             <div className=&quot;grid grid-cols-2 gap-3 mt-3&quot;>
               <div>
+<<<<<<< HEAD
                 <label className=&quot;block text-sm mb-2&quot;>Experience</label>
                 <select value={experienceLevel} onChange={(e) => setExperienceLevel(e.target.value as any)} className=&quot;w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm&quot;>
+=======
+                <label className="block text-sm mb-2">Experience</label>
+                <select value={_experienceLevel} onChange={_(_e) => setExperienceLevel(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   <option>Junior</option>
                   <option>Mid</option>
                   <option>Senior</option>
@@ -142,15 +252,24 @@ export default function SalaryInsightsPage() {
                 </select>
               </div>
               <div>
+<<<<<<< HEAD
                 <label className=&quot;block text-sm mb-2&quot;>Employment</label>
                 <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className=&quot;w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm&quot;>
                   <option value=&quot;contract&quot;>Contract</option>
                   <option value=&quot;freelance&quot;>Freelance</option>
                   <option value=&quot;full-time&quot;>Full-time</option>
+=======
+                <label className="block text-sm mb-2">Employment</label>
+                <select value={_employmentType} onChange={_(_e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
+                  <option value="contract">Contract</option>
+                  <option value="freelance">Freelance</option>
+                  <option value="full-time">Full-time</option>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 </select>
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className=&quot;flex items-center gap-2 mt-3&quot;>
               <input id=&quot;remote&quot; type=&quot;checkbox&quot; checked={remote} onChange={(e) => setRemote(e.target.checked)} />
               <label htmlFor=&quot;remote&quot; className=&quot;text-sm&quot;>Remote role</label>
@@ -158,10 +277,20 @@ export default function SalaryInsightsPage() {
 
             {!isLoggedIn && (
               <div className=&quot;mt-3 text-xs text-gray-500&quot;>
+=======
+            <div className="flex items-center gap-2 mt-3">
+              <input id="remote" type="checkbox" checked={_remote} onChange={_(_e) => setRemote(e.target.checked)} />
+              <label htmlFor="remote" className="text-sm">Remote role</label>
+            </div>
+
+            {_!isLoggedIn && (
+              <div className="mt-3 text-xs text-gray-500">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 Advanced filters are available when you sign in.
               </div>
             )}
 
+<<<<<<< HEAD
             <button onClick={fetchInsights} disabled={loading} className=&quot;mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50&quot;>
               {loading ? 'Calculating…' : 'Update Insights'}
             </button>
@@ -173,10 +302,24 @@ export default function SalaryInsightsPage() {
               <button onClick={saveInsight} className=&quot;rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900&quot;>Save insight</button>
               <button onClick={() => alert('This would prefill a job posting flow.')} className=&quot;rounded bg-emerald-600 text-white py-2 text-sm hover:bg-emerald-700&quot;>Use in Job Post</button>
               <button onClick={() => alert('This would suggest a resume rate optimization.')} className=&quot;rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700&quot;>Optimize Resume Rate</button>
+=======
+            <button onClick={_fetchInsights} disabled={_loading} className="mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50">
+              {_loading ? 'Calculating…' : 'Update Insights'}
+            </button>
+          </div>
+
+          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+            <h3 className="font-medium mb-2">Actions</h3>
+            <div className="flex flex-col gap-2">
+              <button onClick={_saveInsight} className="rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900">Save insight</button>
+              <button onClick={_() => alert('This would prefill a job posting flow.')} className="rounded bg-emerald-600 text-white py-2 text-sm hover:bg-emerald-700">Use in Job Post</button>
+              <button onClick={_() => alert('This would suggest a resume rate optimization.')} className="rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700">Optimize Resume Rate</button>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className=&quot;lg:col-span-2 space-y-6&quot;>
           {error && (
             <div className=&quot;rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm&quot;>{error}</div>
@@ -211,11 +354,51 @@ export default function SalaryInsightsPage() {
               <h3 className=&quot;font-medium mb-3&quot;>Regional comparison</h3>
               {data ? (
                 <BarChart data={data.regionalComparison.map((r) => ({ label: r.region, value: r.medianHourlyUsd }))} />
+=======
+        <div className="lg:col-span-2 space-y-6">
+          {_error && (
+            <div className="rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm">{error}</div>
+          )}
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <div className="text-xs text-gray-500">Recommended Hourly</div>
+              <div className="text-xl font-semibold">{_data ? `$${data.recommendedHourlyUsd}` : '—'}</div>
+            </div>
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <div className="text-xs text-gray-500">Recommended Monthly</div>
+              <div className="text-xl font-semibold">{_data ? `$${data.recommendedMonthlyUsd}` : '—'}</div>
+            </div>
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <div className="text-xs text-gray-500">Median</div>
+              <div className="text-xl font-semibold">{_data ? `$${data.medianHourlyUsd}` : '—'}</div>
+            </div>
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <div className="text-xs text-gray-500">Confidence</div>
+              <div className="text-xl font-semibold">{_data ? `${Math.round(data.confidence * 100)}%` : '—'}</div>
+            </div>
+          </div>
+
+          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+            <h3 className="font-medium mb-3">Trend: Last 12 months</h3>
+            {_data ? <LineChart points={data.trendMonthly} /> : <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <h3 className="font-medium mb-3">Regional comparison</h3>
+              {_data ? (_<BarChart data={data.regionalComparison.map((r) => ({ label: r.region, _value: r.medianHourlyUsd}))} />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               ) : (
                 <div className=&quot;h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded&quot; />
               )}
+<<<<<<< HEAD
               {data && (
                 <table className=&quot;w-full mt-3 text-sm&quot;>
+=======
+              {_data && (
+                <table className="w-full mt-3 text-sm">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   <thead>
                     <tr className=&quot;text-left text-xs text-gray-500&quot;>
                       <th className=&quot;py-1&quot;>Region</th>
@@ -223,10 +406,17 @@ export default function SalaryInsightsPage() {
                     </tr>
                   </thead>
                   <tbody>
+<<<<<<< HEAD
                     {data.regionalComparison.map((r) => (
                       <tr key={r.region} className=&quot;border-t border-gray-100 dark:border-gray-900&quot;>
                         <td className=&quot;py-1&quot;>{r.region}</td>
                         <td className=&quot;py-1&quot;>${r.medianHourlyUsd}</td>
+=======
+                    {data.regionalComparison.map(_(r) => (
+                      <tr key={r.region} className="border-t border-gray-100 dark:border-gray-900">
+                        <td className="py-1">{_r.region}</td>
+                        <td className="py-1">${_r.medianHourlyUsd}</td>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                       </tr>
                     ))}
                   </tbody>
@@ -234,6 +424,7 @@ export default function SalaryInsightsPage() {
               )}
             </div>
 
+<<<<<<< HEAD
             <div className=&quot;rounded-lg border border-gray-200 dark:border-gray-800 p-4&quot;>
               <h3 className=&quot;font-medium mb-3&quot;>Distribution</h3>
               {data ? (
@@ -242,6 +433,15 @@ export default function SalaryInsightsPage() {
                   <div className=&quot;flex gap-2 flex-wrap justify-center text-xs&quot;>
                     {donutData.map((d) => (
                       <span key={d.label} className=&quot;rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5&quot;>{d.label}</span>
+=======
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <h3 className="font-medium mb-3">Distribution</h3>
+              {_data ? (_<div className="flex flex-col items-center gap-3">
+                  <DonutChart slices={donutData.map((d, _i) => ({ label: d.label, _value: d.value})) as any} />
+                  <div className="flex gap-2 flex-wrap justify-center text-xs">
+                    {_donutData.map(_(d) => (
+                      <span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{_d.label}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     ))}
                   </div>
                 </div>
@@ -251,6 +451,7 @@ export default function SalaryInsightsPage() {
             </div>
           </div>
 
+<<<<<<< HEAD
           {data?.gptRecommendation && (
             <div className=&quot;rounded-lg border border-gray-200 dark:border-gray-800 p-4&quot;>
               <h3 className=&quot;font-medium mb-2&quot;>GPT Recommendation</h3>
@@ -265,6 +466,21 @@ export default function SalaryInsightsPage() {
                 <span className=&quot;rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs&quot;>Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>
                 {data.tags.map((t) => (
                   <span key={t} className=&quot;rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs&quot;>{t}</span>
+=======
+          {_data?.gptRecommendation && (
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <h3 className="font-medium mb-2">GPT Recommendation</h3>
+              <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
+            </div>
+          )}
+
+          {_data && (_<div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <h3 className="font-medium mb-3">Signals</h3>
+              <div className="flex gap-2 flex-wrap">
+                <span className="rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data.minHourlyUsd} - ${_data.maxHourlyUsd} / hr</span>
+                {_data.tags.map((t) => (
+                  <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{_t}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 ))}
               </div>
             </div>

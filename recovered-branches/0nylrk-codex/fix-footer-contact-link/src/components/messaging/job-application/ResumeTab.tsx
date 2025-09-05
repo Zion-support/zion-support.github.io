@@ -5,6 +5,7 @@ import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { Button } from "@/components/ui/button",
 =======
 import React from 'react';
+<<<<<<< HEAD
 import { ResumeSelector, ResumeOption } from &quot;../resume-selector&quot;;
 import { Button } from &quot;@/components/ui/button&quot;;
 
@@ -16,10 +17,18 @@ export interface ResumeTabProps {
   onApply?: () => Promise<void>,
   isSubmitting?: boolean
 }
+=======
 
-export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false }: ResumeTabProps) {
-  const handleResumeSelected = (resume: ResumeOption) => {
+export interface ResumeTabProps {_selectedResumeId?: string | null;
+  onSelectResume?: (_resumeId: string) => void;
+  onResumeSelected?: (_resume: ResumeOption) => void;
+  onApply?: () => Promise<void>;
+  isSubmitting?: boolean;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export function ResumeTab(_{_selectedResumeId, _onSelectResume, _onResumeSelected, _onApply, _isSubmitting = false}: ResumeTabProps) {_const _handleResumeSelected = (_resume: ResumeOption) => {
     if (onResumeSelected) {
+<<<<<<< HEAD
       onResumeSelected(resume)
     }
     
@@ -38,12 +47,34 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
             onClick={onApply} 
             disabled={!selectedResumeId || isSubmitting}
             className=&quot;w-full&quot;
+=======
+      onResumeSelected(resume);}
+    
+    if (onSelectResume) {_onSelectResume(resume.id);}
+  };
+  
+  return (
+    <div className="space-y-4">
+      <ResumeSelector onResumeSelected={_handleResumeSelected} />
+      
+      {_onApply && (
+        <div className="mt-6">
+          <Button 
+            onClick={onApply} 
+            disabled={_!selectedResumeId || isSubmitting}
+            className="w-full"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
-            {isSubmitting ? 'Submitting...' : 'Submit Application'}
+            {_isSubmitting ? 'Submitting...' : 'Submit Application'}
           </Button>
           
+<<<<<<< HEAD
           {!selectedResumeId && (
             <p className=&quot;text-sm text-muted-foreground mt-2&quot;>
+=======
+          {_!selectedResumeId && (
+            <p className="text-sm text-muted-foreground mt-2">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               Please select a resume to continue
             </p>
           )}

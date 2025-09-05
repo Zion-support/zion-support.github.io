@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -14,6 +15,12 @@ import { MobileResumeBuilder as ResumeBuilderComponent } from &quot;../component
 export function MobileResumeBuilder() {
   return (
     <div className=&quot;min-h-screen&quot;>
+=======
+import React from "react";
+
+export function MobileResumeBuilder() {_return (
+    <div className="min-h-screen">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <MobileHeader
         title=&quot;Resume Builder&quot;
         showBack
@@ -25,5 +32,9 @@ export function MobileResumeBuilder() {
       
       <BottomNavigation />
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

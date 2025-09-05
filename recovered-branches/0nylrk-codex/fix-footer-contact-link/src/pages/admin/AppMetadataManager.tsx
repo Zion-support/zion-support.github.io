@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -13,6 +14,11 @@ import { MetadataManager } from &quot;@/components/mobile-app/admin/MetadataMana
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 const AppMetadataManager: React.FC = () => {
   return (
+=======
+import React from "react";
+
+const AppMetadataManager: React.FC = () => {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <AppLayout>
       <SEO 
         title=&quot;App Metadata Manager&quot;

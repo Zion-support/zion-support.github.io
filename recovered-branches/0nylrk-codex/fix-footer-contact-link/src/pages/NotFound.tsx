@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
 =======
@@ -15,6 +16,12 @@ const NotFound = () => {
       location.pathname
     )
   }, [location.pathname]),
+=======
+
+const _NotFound = () => {_const _location = useLocation();
+
+  useEffect__(() => {}, [location.pathname]);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
 <<<<<<< HEAD

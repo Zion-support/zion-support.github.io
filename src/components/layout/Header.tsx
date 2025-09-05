@@ -1,6 +1,7 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function LayoutHeader() {
   return (
     <header className="layout-header">
@@ -266,3 +267,10 @@ export default function LayoutHeader() {
 };
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+export default function LayoutHeader() {_return (
+    <header className="layout-header">
+      <h1>Layout Header</h1>
+    </header>
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -1,18 +1,22 @@
 
+<<<<<<< HEAD
 import { UserProfile, UserDetails } from '@/types/auth',
 import { Message, Conversation, ConversationContextData } from '@/types/messaging',
 import { useConversationState } from './useConversationState',
 import { useConversations } from './useConversations',
 import { useMessages } from './useMessages',
+=======
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 // Allow either UserProfile or UserDetails
 type UserWithProfile = UserProfile | UserDetails | null,
 
 /**
  * Hook that combines all messaging operations
  */
-export function useMessagingOperations(user: UserWithProfile) {
-  // State management
+export function useMessagingOperations(_user: UserWithProfile) {_// State management
   const {
+<<<<<<< HEAD
     messages,
     setMessages,
     activeMessages,
@@ -26,12 +30,12 @@ export function useMessagingOperations(user: UserWithProfile) {
     isLoading,
     setIsLoading
   } = useConversationState(),
+=======
+    messages, _setMessages, _activeMessages, _setActiveMessages, _conversations, _setConversations, _unreadCount, _setUnreadCount, _activeConversation, _setActiveConversation, _isLoading, _setIsLoading} = useConversationState();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   // Conversations management
-  const {
-    fetchConversations,
-    createConversation
-  } = useConversations(
+  const {_fetchConversations, _createConversation} = useConversations(
     user,
     setConversations,
     setUnreadCount,
@@ -39,11 +43,7 @@ export function useMessagingOperations(user: UserWithProfile) {
   ),
 
   // Messages management
-  const {
-    loadMessages,
-    sendMessage,
-    markAsRead
-  } = useMessages(
+  const {_loadMessages, _sendMessage, _markAsRead} = useMessages(
     user,
     activeConversation,
     activeMessages,
@@ -55,6 +55,7 @@ export function useMessagingOperations(user: UserWithProfile) {
     fetchConversations
   ),
 
+<<<<<<< HEAD
   return {
     // State
     messages,
@@ -75,4 +76,9 @@ export function useMessagingOperations(user: UserWithProfile) {
     fetchConversations,
     loadMessages
   }
+=======
+  return {_// State
+    messages, _activeMessages, _setActiveMessages, _conversations, _setConversations, _unreadCount, _setUnreadCount, _activeConversation, _setActiveConversation, _isLoading, _// Operations
+    sendMessage, _createConversation, _markAsRead, _fetchConversations, _loadMessages};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

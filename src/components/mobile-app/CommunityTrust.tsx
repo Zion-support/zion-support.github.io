@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 =======
 import React from &quot;react&quot;;
@@ -20,9 +21,20 @@ export const CommunityTrust: React.FC = () => {
     { value: &quot;50K+&quot;, label: &quot;Downloads&quot; },
     { value: &quot;96%&quot;, label: &quot;User Satisfaction&quot; },
     { value: &quot;12M+&quot;, label: &quot;Matches Made&quot; }
+=======
+import React from "react";
+
+export const CommunityTrust: React.FC = () => {_// Stats display with social proof
+  const _stats = [
+    { value: "4.8", _label: "App Store Rating"},
+    {_value: "50K+", _label: "Downloads"},
+    {_value: "96%", _label: "User Satisfaction"},
+    {_value: "12M+", _label: "Matches Made"}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   ];
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
+<<<<<<< HEAD
   return (
     <section className=&quot;py-16 bg-zion-blue&quot;>
       <div className=&quot;container mx-auto px-4&quot;>
@@ -41,15 +53,42 @@ export const CommunityTrust: React.FC = () => {
             <div key={index} className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center&quot;>
               <div className=&quot;text-3xl md:text-4xl font-bold text-zion-cyan mb-2&quot;>{stat.value}</div>
               <div className=&quot;text-zion-slate-light&quot;>{stat.label}</div>
+=======
+  return (_<section className="py-16 bg-zion-blue">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
+            Trusted by the <span className="text-zion-cyan">Tech Community</span>
+          </h2>
+          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+            Join thousands of professionals who are already using the Zion mobile app to connect, _hire, _and work
+          </p>
+        </div>
+        
+        {_/* Stats Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
+          {_stats.map((stat, _index) => (
+            <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center">
+              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{_stat.value}</div>
+              <div className="text-zion-slate-light">{_stat.label}</div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </div>
           ))}
         </div>
         
+<<<<<<< HEAD
         {/* Rating display */}
         <div className=&quot;max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6&quot;>
           <div className=&quot;flex justify-center mb-4&quot;>
             {[1, 2, 3, 4, 5].map((star) => (
               <Star key={star} className=&quot;w-6 h-6 text-zion-cyan&quot; fill=&quot;currentColor&quot; />
+=======
+        {_/* Rating display */}
+        <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
+          <div className="flex justify-center mb-4">
+            {_[1, _2, _3, _4, _5].map(_(star) => (
+              <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             ))}
           </div>
           <blockquote className=&quot;text-center text-lg text-white italic mb-4&quot;>

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -14,12 +15,25 @@ export function EnterpriseHero() {
     <section className=&quot;py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80&quot;>
       <div className=&quot;container mx-auto max-w-6xl&quot;>
         <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12 items-center&quot;>
+=======
+import React from "react";
+
+export function EnterpriseHero() {_return (
+    <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <div>
             <h1 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6&quot;>
               Enterprise <GradientHeading className=&quot;inline&quot;>Talent Solutions</GradientHeading>
             </h1>
+<<<<<<< HEAD
             <p className=&quot;text-xl text-muted-foreground mb-8&quot;>
               Scale your talent acquisition with a custom-branded hiring portal, dedicated talent pool, and powerful admin controls.
+=======
+            <p className="text-xl text-muted-foreground mb-8">
+              Scale your talent acquisition with a custom-branded hiring portal, _dedicated talent pool, _and powerful admin controls.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </p>
 <<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4">
@@ -60,5 +74,9 @@ export function EnterpriseHero() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

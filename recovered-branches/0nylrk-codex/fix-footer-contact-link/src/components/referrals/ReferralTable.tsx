@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Referral, ReferralStatus } from "@/types/referrals",
 import { Badge } from "@/components/ui/badge",
@@ -14,10 +15,14 @@ interface ReferralTableProps {
   referrals: Referral[],
   isLoading: boolean
 }
+=======
 
-export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
-  // Helper function to render status badges
-  const renderStatusBadge = (status: ReferralStatus) => {
+interface ReferralTableProps {_referrals: Referral[];
+  isLoading: boolean;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+export function ReferralTable(_{_referrals, _isLoading}: ReferralTableProps) {_// Helper function to render status badges
+  const _renderStatusBadge = (_status: ReferralStatus) => {
     switch (status) {
 <<<<<<< HEAD
       case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>,
@@ -34,6 +39,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         return <Badge variant=&quot;outline&quot; className=&quot;bg-gray-50 text-gray-800 border-gray-200&quot;>Expired</Badge>;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       default:
+<<<<<<< HEAD
         return null
     }
   },
@@ -56,9 +62,27 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
       </div>
     )
   }
+=======
+        return null;}
+  };
 
-  return (
-    <Table>
+  if (isLoading) {_return (
+      <div className="flex items-center justify-center p-8">
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+      </div>
+    );}
+
+  if (referrals.length === 0) {_return (
+      <div className="flex flex-col items-center justify-center p-8 text-center">
+        <p className="text-muted-foreground mb-2">No referrals yet</p>
+        <p className="text-sm text-muted-foreground">
+          Share your referral link with friends and colleagues to start earning rewards
+        </p>
+      </div>
+    );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  return (_<Table>
       <TableHeader>
         <TableRow>
           <TableHead>Date</TableHead>
@@ -70,20 +94,25 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {referrals.map((referral) => (
+        {_referrals.map((referral) => (
           <TableRow key={referral.id}>
-            <TableCell>{formatDate(referral.created_at)}</TableCell>
-            <TableCell>{referral.email || '-'}</TableCell>
-            <TableCell>{renderStatusBadge(referral.status)}</TableCell>
+            <TableCell>{_formatDate(referral.created_at)}</TableCell>
+            <TableCell>{_referral.email || '-'}</TableCell>
+            <TableCell>{_renderStatusBadge(referral.status)}</TableCell>
             <TableCell>
-              {referral.referred_user_type 
+              {_referral.referred_user_type 
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
                 : '-'}
             </TableCell>
-            <TableCell>{referral.completed_at ? formatDate(referral.completed_at) : '-'}</TableCell>
+            <TableCell>{_referral.completed_at ? formatDate(referral.completed_at) : '-'}</TableCell>
             <TableCell>
+<<<<<<< HEAD
               {referral.reward_issued ? (
                 <Badge className=&quot;bg-green-50 text-green-800 border-green-200&quot;>
+=======
+              {_referral.reward_issued ? (
+                <Badge className="bg-green-50 text-green-800 border-green-200">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                   Issued
                 </Badge>
               ) : referral.status === 'completed' ? (

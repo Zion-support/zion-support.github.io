@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',
@@ -15,13 +16,36 @@ export default function AIGuardrailsPage() {
 	const features = [
 		'Prompt/output policy engine with allow/deny listsJailbreak and prompt injection detectionPII/PHI detection and redactionToxicity, bias and safety classifiersHuman handoff flows and escalation policiesAudit logs, alerting and exportable evidence'
 	],
+=======
+import React from 'react';
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 
-	return (
-		<UltraAdvancedFuturisticBackground>
+export default function AIGuardrailsPage() {_const _contactInfo = {
+		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
+
+	const _features = [
+		'Prompt/output policy engine with allow/deny lists',
+		'Jailbreak and prompt injection detection',
+		'PII/PHI detection and redaction',
+		'Toxicity, bias and safety classifiers',
+		'Human handoff flows and escalation policies',
+		'Audit logs, alerting and exportable evidence'
+	];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+	return (_<UltraAdvancedFuturisticBackground>
 			<Head>
 				<title>AI Guardrails Suite | Zion Tech Group</title>
+<<<<<<< HEAD
 				<meta name=&quot;description&quot; content=&quot;Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies.&quot; />
 				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-guardrails&quot; />
+=======
+				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement, _jailbreak detection, _PII/PHI controls and audit logs with SDKs and proxies." />
+				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 			</Head>
 
 			<section className=&quot;min-h-screen pt-28 pb-20 px-4&quot;>
@@ -31,6 +55,7 @@ export default function AIGuardrailsPage() {
 						<p className=&quot;mt-4 text-xl text-gray-300&quot;>Safety and governance for LLM apps with minimal integration and strong guarantees.</p>
 					</div>
 
+<<<<<<< HEAD
 					<div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10&quot;>
 						<Card className=&quot;lg:col-span-2 bg-black/30 border border-rose-500/30&quot;>
 							<div className=&quot;p-6&quot;>
@@ -38,6 +63,15 @@ export default function AIGuardrailsPage() {
 								<ul className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
 									{features.map((f) => (
 										<li key={f} className=&quot;flex items-start gap-2 text-gray-200&quot;><Check className=&quot;w-5 h-5 text-emerald-400 mt-0.5&quot; /> <span>{f}</span></li>
+=======
+					<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+						<Card className="lg:col-span-2 bg-black/30 border border-rose-500/30">
+							<div className="p-6">
+								<h2 className="text-2xl font-semibold text-white mb-4">Capabilities</h2>
+								<ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+									{_features.map((f) => (
+										<li key={f} className="flex items-start gap-2 text-gray-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /> <span>{_f}</span></li>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 									))}
 								</ul>
 							</div>
@@ -68,12 +102,21 @@ export default function AIGuardrailsPage() {
 						</Card>
 					</div>
 
+<<<<<<< HEAD
 					<div className=&quot;bg-black/20 border border-rose-500/30 rounded-2xl p-6&quot;>
 						<h3 className=&quot;text-xl font-semibold text-white mb-4 text-center&quot;>Contact</h3>
 						<div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 text-sm&quot;>
 							<div className=&quot;flex items-center justify-center gap-2 text-cyan-400&quot;><Phone className=&quot;w-4 h-4&quot; /> <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`}>{contactInfo.mobile}</a></div>
 							<div className=&quot;flex items-center justify-center gap-2 text-purple-400&quot;><Mail className=&quot;w-4 h-4&quot; /> <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></div>
 							<div className=&quot;flex items-center justify-center gap-2 text-emerald-400&quot;><MapPin className=&quot;w-4 h-4&quot; /> <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;text-xs&quot;>{contactInfo.address}</a></div>
+=======
+					<div className="bg-black/20 border border-rose-500/30 rounded-2xl p-6">
+						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={_`tel:${contactInfo.mobile.replace(/[^+\d]/g, _'')}`}>{_contactInfo.mobile}</a></div>
+							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={_`mailto:${contactInfo.email}`}>{_contactInfo.email}</a></div>
+							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={_`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs">{_contactInfo.address}</a></div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 						</div>
 						<div className=&quot;text-center mt-6&quot;>
 							<Button href=&quot;/services&quot; variant=&quot;outline&quot; className=&quot;border-rose-500 text-rose-400&quot;>Explore Services <ExternalLink className=&quot;w-4 h-4 ml-2&quot; /></Button>

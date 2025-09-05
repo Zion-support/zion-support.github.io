@@ -2,8 +2,12 @@
 // Common constants used across fraud detection modules
 
 // Phrases that might indicate fraud
+<<<<<<< HEAD
 export const suspiciousPhrases = [
 <<<<<<< HEAD
+=======
+export const _suspiciousPhrases = [
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   "whatsapp me",
   "contact me outside",
   "cashapp only",
@@ -19,7 +23,7 @@ export const suspiciousPhrases = [
 ],
 
 // Email domains often used for throwaway accounts
-export const suspiciousEmailDomains = [
+export const _suspiciousEmailDomains = [
   "tempmail",
   "throwaway",
   "fakeemail",

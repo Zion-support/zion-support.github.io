@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -59,30 +60,56 @@ export default function ITOnsiteServicesPage() {
         title: &quot;Payment Successful&quot;,
         description: &quot;Your IT onsite service request has been received. Our team will contact you shortly.&quot;});
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+
+export default function ITOnsiteServicesPage() {_const [searchParams] = useSearchParams();
+  const [selectedCountry, _setSelectedCountry] = useState<CountryPricing | null>(null);
+  const [searchQuery, _setSearchQuery] = useState("");
+  
+  // Check for success parameter in window.URL
+  const _success = searchParams.get("success");
+  
+  // Show success toast if redirected from successful payment
+  useEffect__(() => {
+    if (success === "true") {
+      toast({
+        title: "Payment Successful", _description: "Your IT onsite service request has been received. Our team will contact you shortly."});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   }, [success]),
   
   // Popular countries for the featured cards
 <<<<<<< HEAD
+<<<<<<< HEAD
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
 =======
   const popularCountries = [&quot;United States&quot;, &quot;United Kingdom&quot;, &quot;Canada&quot;, &quot;Germany&quot;, &quot;Japan&quot;, &quot;Singapore"];
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  const _popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   // Filter countries based on search query
-  const filteredCountries = onsiteServicePricing
+  const _filteredCountries = onsiteServicePricing
     .filter(country => 
       country.country.toLowerCase().includes(searchQuery.toLowerCase())
     )
+<<<<<<< HEAD
     .sort((a, b) => {
       // First, sort by popular status
       const aIsPopular = popularCountries.includes(a.country),
       const bIsPopular = popularCountries.includes(b.country),
+=======
+    .sort(_(a, _b) => {_// First, _sort by popular status
+      const _aIsPopular = popularCountries.includes(a.country);
+      const _bIsPopular = popularCountries.includes(b.country);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       if (aIsPopular && !bIsPopular) return -1,
       if (!aIsPopular && bIsPopular) return 1,
       
       // Then sort alphabetically
+<<<<<<< HEAD
       return a.country.localeCompare(b.country)
     }),
   
@@ -94,39 +121,60 @@ export default function ITOnsiteServicesPage() {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
     }, 100)
   },
+=======
+      return a.country.localeCompare(b.country);});
+  
+  const _handleCountrySelect = (_country: CountryPricing) => {_setSelectedCountry(country);
+    
+    // Scroll to the service details section
+    setTimeout__(() => {
+      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth'});
+    }, 100);
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <AppLayout>
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section with Features */}
+          {_/* Hero Section with Features */}
           <PageHero />
           
+<<<<<<< HEAD
           {/* Country Selection Tabs */}
           <div className="mb-12&quot;>
+=======
+          {_/* Country Selection Tabs */}
+          <div className="mb-12">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <CountryTabs 
-              popularCountries={popularCountries}
-              filteredCountries={filteredCountries}
-              handleCountrySelect={handleCountrySelect}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
+              popularCountries={_popularCountries}
+              filteredCountries={_filteredCountries}
+              handleCountrySelect={_handleCountrySelect}
+              searchQuery={_searchQuery}
+              setSearchQuery={_setSearchQuery}
             />
           </div>
           
-          {/* Service Details Section */}
+          {_/* Service Details Section */}
           <ServiceDetailsSection 
-            selectedCountry={selectedCountry}
-            setSelectedCountry={setSelectedCountry}
+            selectedCountry={_selectedCountry}
+            setSelectedCountry={_setSelectedCountry}
           />
           
-          {/* How It Works Section */}
+          {_/* How It Works Section */}
           <ServiceProcessSteps />
           
-          {/* What's Included Section */}
+          {_/* What's Included Section */}
           <ServiceIncludes />
           
+<<<<<<< HEAD
           {/* Complete Pricing Table */}
           <div id=&quot;pricing-table" className="my-16">
+=======
+          {_/* Complete Pricing Table */}
+          <div id="pricing-table" className="my-16">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4">Full IT Onsite Services Pricing</h2>
               <p className="text-zion-slate-light mb-6">

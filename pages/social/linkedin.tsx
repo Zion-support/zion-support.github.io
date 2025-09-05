@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react',
 import Head from 'next/head',
 export default function LinkedInRedirect() {
@@ -6,6 +7,15 @@ export default function LinkedInRedirect() {
 			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
 		}
 	}, []),
+=======
+import React, {_useEffect} from 'react';
+import Head from 'next/head';
+
+export default function LinkedInRedirect() {_useEffect__(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https://www.linkedin.com/company/zion-tech-group');}
+	}, []);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 	return (
 		<>

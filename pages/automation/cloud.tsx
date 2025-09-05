@@ -1,14 +1,25 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react',
 
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
+=======
 
-  useEffect(() => {
+export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  useEffect__(() => {
     fetch('/api/automation/cloud-logs')
+<<<<<<< HEAD
       .then((r) => r.json())
       .then((d) => setLogs(d.logs || []))
       .catch(() => setLogs([]))
   }, []),
+=======
+      .then(_(r) => r.json())
+      .then(_(d) => setLogs(d.logs || []))
+      .catch__(() => setLogs([]));}, []);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <div className=&quot;space-y-6&quot;>
@@ -32,6 +43,7 @@ export default function CloudAutomationHub() {
         </Link>
       </div>
 
+<<<<<<< HEAD
       <div className=&quot;rounded-lg border border-gray-200 dark:border-gray-800 p-4&quot;>
         <h2 className=&quot;font-semibold mb-3&quot;>Recent Automation Logs</h2>
         <ul className=&quot;space-y-2 text-sm&quot;>
@@ -40,6 +52,16 @@ export default function CloudAutomationHub() {
             <li key={log.id} className=&quot;flex items-center justify-between&quot;>
               <span>{log.generatedAt || log.file}</span>
               <span className=&quot;text-gray-600&quot;>{log.insights?.theme}</span>
+=======
+      <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+        <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
+        <ul className="space-y-2 text-sm">
+          {_logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>}
+          {_logs.map(_(log) => (
+            <li key={log.id} className="flex items-center justify-between">
+              <span>{_log.generatedAt || log.file}</span>
+              <span className="text-gray-600">{_log.insights?.theme}</span>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </li>
           ))}
         </ul>

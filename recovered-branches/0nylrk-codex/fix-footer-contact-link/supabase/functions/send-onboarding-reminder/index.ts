@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
@@ -59,13 +60,47 @@ serve(async (req: Request) => {
       )
 =======
           headers: { &quot;Content-Type&quot;: &quot;application/json&quot;, ...corsHeaders }}
+=======
+
+const _resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const _supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+const _supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+
+const _corsHeaders = {_"Access-Control-Allow-Origin": "*", _"Access-Control-Allow-Headers":
+    "authorization, _x-client-info, _apikey, _content-type"};
+
+interface ReminderPayload {_user_id: string;
+  missing_milestone: string;
+  role: string;}
+
+serve(_async (req: Request) => {_// Handle CORS
+  if (req.method === "OPTIONS") {
+    return new Response(null, _{
+      status: 204, _headers: corsHeaders});
+  }
+  
+  try {_const _supabase = createClient(
+      supabaseUrl, _supabaseServiceKey
+    );
+    
+    const _payload = await req.json() as ReminderPayload;
+    const { user_id, _missing_milestone, _role} = payload;
+    
+    if (!user_id || !missing_milestone || !role) {_return new Response(
+        JSON.stringify({ error: "Missing required fields"}),
+        {_status: 400, _headers: { "Content-Type": "application/json", _...corsHeaders}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       );
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     // Get user data
+<<<<<<< HEAD
     const { data: userData, error: userError } = await supabase
 <<<<<<< HEAD
+=======
+    const {_data: userData, _error: userError} = await supabase
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
@@ -77,6 +112,7 @@ serve(async (req: Request) => {
       .single();
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
+<<<<<<< HEAD
     if (userError || !userData) {
       return new Response(
         JSON.stringify({ error: &quot;User not found&quot;, details: userError }),
@@ -87,11 +123,17 @@ serve(async (req: Request) => {
       )
 =======
           headers: { &quot;Content-Type&quot;: &quot;application/json&quot;, ...corsHeaders }}
+=======
+    if (userError || !userData) {_return new Response(
+        JSON.stringify({ error: "User not found", _details: userError}),
+        {_status: 404, _headers: { "Content-Type": "application/json", _...corsHeaders}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       );
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     // Create message based on role and missing milestone
+<<<<<<< HEAD
     const milestoneMessages = {
       talent: {
         profile_completed: &quot;complete your profile to get discovered by clients&quot;,
@@ -105,6 +147,14 @@ serve(async (req: Request) => {
     
     const name = userData.display_name || "there",
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
+=======
+    const _milestoneMessages = {_talent: {
+        profile_completed: "complete your profile to get discovered by clients", _skills_added: "add your skills to get better job matches", _availability_set: "set your availability to help clients know when you can work"},
+      client: {_job_posted: "post your first job to start finding talent", _match_viewed: "check out your AI-matched talent suggestions", _talent_invited: "invite talent to speed up your hiring process"}};
+    
+    const _name = userData.display_name || "there";
+    const _action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
     ] || "complete your next step",
 =======
@@ -119,6 +169,7 @@ serve(async (req: Request) => {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     // Send email
+<<<<<<< HEAD
     const { data: emailData, error: emailError } = await resend.emails.send({
       from: &quot;Zion AI Marketplace <notifications@zion.ai>&quot;,
       to: userData.email,
@@ -129,9 +180,13 @@ serve(async (req: Request) => {
 =======
         <div style=&quot;font-family: sans-serif; max-width: 600px; margin: 0 auto;&quot;>
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+    const {_data: emailData, _error: emailError} = await resend.emails.send({_from: "Zion AI Marketplace <notifications@zion.ai>", _to: userData.email, _subject: "Complete your next step on Zion AI Marketplace", _html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <h2>Hi ${name},</h2>
-          <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>
-          <p>Your next step is to <strong>${action}</strong>.</p>
+          <p>You're making great progress in setting up your ${_role} profile on Zion AI Marketplace!</p>
+          <p>Your next step is to <strong>${_action}</strong>.</p>
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
 <<<<<<< HEAD
           <div style="margin: 30px 0,">
@@ -147,6 +202,7 @@ serve(async (req: Request) => {
         </div>
       `}),
     
+<<<<<<< HEAD
     if (emailError) {
       return new Response(
         JSON.stringify({ error: &quot;Failed to send email&quot;, details: emailError }),
@@ -157,11 +213,17 @@ serve(async (req: Request) => {
       )
 =======
           headers: { &quot;Content-Type&quot;: &quot;application/json&quot;, ...corsHeaders }}
+=======
+    if (emailError) {_return new Response(
+        JSON.stringify({ error: "Failed to send email", _details: emailError}),
+        {_status: 500, _headers: { "Content-Type": "application/json", _...corsHeaders}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       );
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     // Create notification in database
+<<<<<<< HEAD
     const { data: notification, error: notificationError } = await supabase.rpc(
       &quot;create_notification&quot;,
       {
@@ -169,6 +231,11 @@ serve(async (req: Request) => {
         _title: &quot;Complete your next step&quot;,
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
 <<<<<<< HEAD
+=======
+    const {_data: notification, _error: notificationError} = await supabase.rpc(
+      "create_notification",
+      {_user_id: user_id, _title: "Complete your next step", _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         _type: "onboarding"}
     ),
     
@@ -178,6 +245,7 @@ serve(async (req: Request) => {
         _type: &quot;onboarding&quot;}
     );
     
+<<<<<<< HEAD
     if (notificationError) {
       console.error(&quot;Failed to create notification:&quot;, notificationError);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
@@ -207,6 +275,17 @@ serve(async (req: Request) => {
     )
 =======
         headers: { &quot;Content-Type&quot;: &quot;application/json&quot;, ...corsHeaders }}
+=======
+    if (notificationError) {}
+    
+    return new Response(
+      JSON.stringify({_message: "Reminder sent successfully", _notification_id: notification}),
+      {_status: 200, _headers: { "Content-Type": "application/json", _...corsHeaders}}
+    );
+  } catch (error) {_return new Response(
+      JSON.stringify({ error: "Internal server error", _details: error.message}),
+      {_status: 500, _headers: { "Content-Type": "application/json", _...corsHeaders}}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     );
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }

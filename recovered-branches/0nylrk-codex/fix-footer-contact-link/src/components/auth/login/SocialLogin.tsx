@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Facebook, Twitter } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
@@ -19,6 +20,15 @@ export function SocialLogin() {
       <div className=&quot;relative&quot;>
         <div className=&quot;absolute inset-0 flex items-center&quot;>
           <div className=&quot;w-full border-t border-zion-blue-light&quot; />
+=======
+
+export function SocialLogin() {_const { loginWithGoogle, _loginWithFacebook, _loginWithTwitter, _isLoading} = useAuth();
+
+  return (_<div className="mt-6">
+      <div className="relative">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-zion-blue-light" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </div>
         <div className=&quot;relative flex justify-center text-sm&quot;>
           <span className=&quot;px-2 bg-zion-blue-dark text-zion-slate-light&quot;>Or continue with</span>
@@ -27,11 +37,19 @@ export function SocialLogin() {
 
       <div className=&quot;mt-6 grid grid-cols-4 gap-3&quot;>
         <Button
+<<<<<<< HEAD
           type=&quot;button&quot;
           variant=&quot;outline&quot;
           className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
           onClick={() => loginWithGoogle()}
           disabled={isLoading}
+=======
+          type="button"
+          variant="outline"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          onClick={_() => loginWithGoogle()}
+          disabled={_isLoading}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         >
           <span className=&quot;sr-only&quot;>Sign in with Google</span>
           <svg className=&quot;h-5 w-5&quot; aria-hidden=&quot;true&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
@@ -42,21 +60,37 @@ export function SocialLogin() {
           </svg>
         </Button>
         <Button
+<<<<<<< HEAD
           type=&quot;button&quot;
           variant=&quot;outline&quot;
           className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
           onClick={() => loginWithFacebook()}
           disabled={isLoading}
+=======
+          type="button"
+          variant="outline"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          onClick={_() => loginWithFacebook()}
+          disabled={_isLoading}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         >
           <span className=&quot;sr-only&quot;>Sign in with Facebook</span>
           <Facebook className=&quot;h-5 w-5&quot; />
         </Button>
         <Button
+<<<<<<< HEAD
           type=&quot;button&quot;
           variant=&quot;outline&quot;
           className=&quot;w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan&quot;
           onClick={() => loginWithTwitter()}
           disabled={isLoading}
+=======
+          type="button"
+          variant="outline"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          onClick={_() => loginWithTwitter()}
+          disabled={_isLoading}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         >
           <span className=&quot;sr-only&quot;>Sign in with Twitter</span>
           <Twitter className=&quot;h-5 w-5&quot; />

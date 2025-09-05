@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield } from 'lucide-react',
@@ -7,11 +8,21 @@ import { extraServices } from '../data/extra-services',
 export default function BackupDROrchestratorPage() {
   const service = extraServices.find(s => s.link.endsWith('/backup-dr-orchestrator')),
   if (!service) return null,
+=======
+import React from 'react';
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+
+export default function BackupDROrchestratorPage() {_const _service = extraServices.find(s => s.link.endsWith('/backup-dr-orchestrator'));
+  if (!service) return null;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name=&quot;description&quot; content={service.description} />
         <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/backup-dr-orchestrator&quot; />
       </Head>
@@ -28,12 +39,31 @@ export default function BackupDROrchestratorPage() {
               <ul className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className=&quot;flex items-start space-x-3 text-slate-200&quot;><Check className=&quot;w-5 h-5 text-amber-400 mt-0.5&quot; /><span>{feat}</span></li>
+=======
+        <meta name="description" content={_service.description} />
+        <link rel="canonical" href="https://ziontechgroup.com/backup-dr-orchestrator" />
+      </Head>
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent flex items-center justify-center gap-3"><Shield className="w-10 h-10" />{_service.name}</h1>
+            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{_service.tagline}</p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-amber-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
+              <p className="text-slate-300 mb-6">{_service.description}</p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {_service.features.slice(0, _12).map(_(feat, _i) => (
+                  <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-amber-400 mt-0.5" /><span>{_feat}</span></li>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 ))}
               </ul>
             </div>
             <div className=&quot;bg-black/30 rounded-2xl border border-amber-500/30 p-6 h-fit&quot;>
               <div className=&quot;flex items-end justify-between mb-3&quot;>
                 <div>
+<<<<<<< HEAD
                   <div className=&quot;text-3xl font-bold text-white&quot;>{service.price}<span className=&quot;text-slate-400 text-base&quot;>{service.period}</span></div>
                   <div className=&quot;text-slate-400&quot;>{service.trialDays ? `${service.trialDays}-day free trial • ` : ''}Setup: {service.setupTime}</div>
                 </div>
@@ -43,6 +73,17 @@ export default function BackupDROrchestratorPage() {
                 <div className=&quot;flex items-center space-x-2&quot;><Phone className=&quot;w-4 h-4 text-cyan-400&quot; /><span>{service.contactInfo.mobile}</span></div>
                 <div className=&quot;flex items-center space-x-2&quot;><Mail className=&quot;w-4 h-4 text-purple-400&quot; /><span>{service.contactInfo.email}</span></div>
                 <div className=&quot;flex items-center space-x-2&quot;><MapPin className=&quot;w-4 h-4 text-green-400&quot; /><span className=&quot;text-xs&quot;>{service.contactInfo.address}</span></div>
+=======
+                  <div className="text-3xl font-bold text-white">{_service.price}<span className="text-slate-400 text-base">{_service.period}</span></div>
+                  <div className="text-slate-400">{_service.trialDays ? `${service.trialDays}-day free trial • ` : ''}Setup: {_service.setupTime}</div>
+                </div>
+              </div>
+              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{_service.contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{_service.contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{_service.contactInfo.address}</span></div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </div>
             </div>
           </div>

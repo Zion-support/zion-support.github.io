@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { MobileHeader } from "@/mobile/components/common/MobileHeader",
 import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",
@@ -27,14 +28,23 @@ import {
 import { Zap, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Badge } from "@/components/ui/badge",
 import { Card, CardContent } from "@/components/ui/card",
+=======
+import React, {_useState} from "react";
+import {_Select, _SelectContent, _SelectItem, _SelectTrigger, _SelectValue} from "@/components/ui/select";
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
+<<<<<<< HEAD
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
+=======
+export function MobileJobPost() {_const [currentStep, _setCurrentStep] = useState<JobPostStep>("details");
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const goToNextStep = () => {
+  const _goToNextStep = () => {
     if (currentStep === "details") {
+<<<<<<< HEAD
       setCurrentStep("requirements")
     } else if (currentStep === "requirements") {
       setCurrentStep("budget")
@@ -85,11 +95,24 @@ export function MobileJobPost() {
     switch (currentStep) {
 <<<<<<< HEAD
       case "details": return <DetailsStep />,
+=======
+      setCurrentStep("requirements");} else if (currentStep === "requirements") {_setCurrentStep("budget");} else if (currentStep === "budget") {_setCurrentStep("preview");}
+  };
+  
+  const _goToPrevStep = () => {_if (currentStep === "requirements") {
+      setCurrentStep("details");} else if (currentStep === "budget") {_setCurrentStep("requirements");} else if (currentStep === "preview") {_setCurrentStep("budget");}
+  };
+  
+  const _renderStepContent = () => {_switch (currentStep) {
+      case "details":
+        return <DetailsStep />;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       case "requirements":
         return <RequirementsStep />,
       case "budget":
         return <BudgetStep />,
       case "preview":
+<<<<<<< HEAD
         return <PreviewStep />,
 =======
       case &quot;details&quot;:
@@ -105,10 +128,17 @@ export function MobileJobPost() {
         return <DetailsStep />
     }
   },
+=======
+        return <PreviewStep />;
+      default:
+        return <DetailsStep />;}
+  };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <div className=&quot;min-h-screen flex flex-col&quot;>
       <MobileHeader
+<<<<<<< HEAD
         title={`Post a Job (${currentStep === &quot;preview&quot; ? 4 : currentStep === &quot;budget&quot; ? 3 : currentStep === &quot;requirements&quot; ? 2 : 1}/4)`}
         showBack
       />
@@ -120,6 +150,19 @@ export function MobileJobPost() {
             <Badge variant={currentStep === &quot;requirements&quot; ? &quot;default&quot; : &quot;outline&quot;} className=&quot;rounded-full w-7 h-7 flex items-center justify-center p-0&quot;>2</Badge>
             <Badge variant={currentStep === &quot;budget&quot; ? &quot;default&quot; : &quot;outline&quot;} className=&quot;rounded-full w-7 h-7 flex items-center justify-center p-0&quot;>3</Badge>
             <Badge variant={currentStep === &quot;preview&quot; ? &quot;default&quot; : &quot;outline&quot;} className=&quot;rounded-full w-7 h-7 flex items-center justify-center p-0&quot;>4</Badge>
+=======
+        title={_`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
+        showBack
+      />
+      
+      <main className="flex-1 py-4 pb-24 px-4">
+        <div className="mb-6 flex justify-between">
+          <div className="flex space-x-1">
+            <Badge variant={_currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>
+            <Badge variant={_currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>
+            <Badge variant={_currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>
+            <Badge variant={_currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </div>
           
           <Button variant=&quot;outline&quot; className=&quot;flex gap-1&quot;>
@@ -127,10 +170,15 @@ export function MobileJobPost() {
           </Button>
         </div>
         
-        {renderStepContent()}
+        {_renderStepContent()}
         
+<<<<<<< HEAD
         <div className=&quot;flex gap-2 mt-6&quot;>
           {currentStep !== &quot;details&quot; && (
+=======
+        <div className="flex gap-2 mt-6">
+          {_currentStep !== "details" && (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <Button 
               variant=&quot;outline&quot; 
               className=&quot;flex-1 gap-1&quot; 
@@ -141,11 +189,19 @@ export function MobileJobPost() {
           )}
           
           <Button 
+<<<<<<< HEAD
             className=&quot;flex-1 gap-1&quot;
             onClick={goToNextStep}
           >
             {currentStep === &quot;preview&quot; ? &quot;Publish Job&quot; : &quot;Continue&quot;}
             {currentStep !== &quot;preview&quot; && <ChevronRight className=&quot;h-4 w-4&quot; />}
+=======
+            className="flex-1 gap-1"
+            onClick={_goToNextStep}
+          >
+            {_currentStep === "preview" ? "Publish Job" : "Continue"}
+            {_currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </Button>
         </div>
       </main>
@@ -155,10 +211,16 @@ export function MobileJobPost() {
   )
 }
 
+<<<<<<< HEAD
 function DetailsStep() {
   return (
     <div className=&quot;space-y-4&quot;>
       <h2 className=&quot;text-lg font-medium&quot;>Job Details</h2>
+=======
+function DetailsStep() {_return (
+    <div className="space-y-4">
+      <h2 className="text-lg font-medium">Job Details</h2>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       <div className=&quot;space-y-2&quot;>
         <Label htmlFor=&quot;title&quot;>Job Title</Label>
@@ -211,6 +273,7 @@ function DetailsStep() {
   )
 }
 
+<<<<<<< HEAD
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
 <<<<<<< HEAD
@@ -226,9 +289,16 @@ function RequirementsStep() {
     &quot;React&quot;, &quot;TypeScript&quot;, &quot;Node.js&quot;
   ]);
   const [newSkill, setNewSkill] = useState("&quot;);
+=======
+function RequirementsStep() {_const [skills, _setSkills] = useState<string[]>([
+    "React", _"TypeScript", _"Node.js"
+  ]);
+  const [newSkill, _setNewSkill] = useState("");
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  const addSkill = () => {
+  const _addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
+<<<<<<< HEAD
       setSkills([...skills, newSkill]);
       setNewSkill("&quot;);
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
@@ -242,6 +312,16 @@ function RequirementsStep() {
   return (
     <div className=&quot;space-y-4&quot;>
       <h2 className=&quot;text-lg font-medium&quot;>Job Requirements</h2>
+=======
+      setSkills([...skills, _newSkill]);
+      setNewSkill("");}
+  };
+  
+  const _removeSkill = (_skill: string) => {_setSkills(skills.filter(s => s !== skill));};
+  
+  return (_<div className="space-y-4">
+      <h2 className="text-lg font-medium">Job Requirements</h2>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       <div className=&quot;space-y-2&quot;>
         <Label htmlFor=&quot;experience&quot;>Experience Level</Label>
@@ -277,17 +357,27 @@ function RequirementsStep() {
       
       <div className=&quot;space-y-2&quot;>
         <Label>Required Skills</Label>
+<<<<<<< HEAD
         <div className=&quot;flex flex-wrap gap-2 mb-3&quot;>
           {skills.map((skill) => (
             <Badge 
+=======
+        <div className="flex flex-wrap gap-2 mb-3">
+          {_skills.map((skill) => (_<Badge 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               key={skill} 
               variant=&quot;secondary&quot;
               className=&quot;flex items-center gap-1 px-3 py-1&quot;
             >
-              {skill}
+              {_skill}
               <button 
+<<<<<<< HEAD
                 className=&quot;ml-1 rounded-full hover:bg-background/20 p-1&quot;
                 onClick={() => removeSkill(skill)}
+=======
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+                onClick={_() => removeSkill(skill)}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 ×
               </button>
@@ -296,40 +386,65 @@ function RequirementsStep() {
         </div>
         <div className=&quot;flex gap-2&quot;>
           <Input 
+<<<<<<< HEAD
             value={newSkill}
             onChange={(e) => setNewSkill(e.target.value)}
             placeholder=&quot;Add a skill&quot;
             onKeyDown={(e) => e.key === 'Enter' && addSkill()}
+=======
+            value={_newSkill}
+            onChange={_(_e) => setNewSkill(e.target.value)}
+            placeholder="Add a skill"
+            onKeyDown={_(_e) => e.key === 'Enter' && addSkill()}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           />
-          <Button onClick={addSkill}>Add</Button>
+          <Button onClick={_addSkill}>Add</Button>
         </div>
       </div>
       
       <div className=&quot;space-y-2&quot;>
         <Label htmlFor=&quot;requirements&quot;>Specific Requirements</Label>
         <Textarea 
+<<<<<<< HEAD
           id=&quot;requirements&quot; 
           placeholder=&quot;List any specific requirements or qualifications&quot; 
           rows={4}
+=======
+          id="requirements" 
+          placeholder="List any specific requirements or qualifications" 
+          rows={_4}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         />
       </div>
       
       <div className=&quot;space-y-2&quot;>
         <Label htmlFor=&quot;responsibilities&quot;>Key Responsibilities</Label>
         <Textarea 
+<<<<<<< HEAD
           id=&quot;responsibilities&quot; 
           placeholder=&quot;List the key responsibilities for this role&quot; 
           rows={4}
+=======
+          id="responsibilities" 
+          placeholder="List the key responsibilities for this role" 
+          rows={_4}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         />
       </div>
     </div>
   )
 }
 
+<<<<<<< HEAD
 function BudgetStep() {
   return (
     <div className=&quot;space-y-4&quot;>
       <h2 className=&quot;text-lg font-medium&quot;>Budget & Timeline</h2>
+=======
+function BudgetStep() {_return (
+    <div className="space-y-4">
+      <h2 className="text-lg font-medium">Budget & Timeline</h2>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       <div className=&quot;space-y-2&quot;>
         <Label htmlFor=&quot;paymentType&quot;>Payment Type</Label>
@@ -403,10 +518,16 @@ function BudgetStep() {
   )
 }
 
+<<<<<<< HEAD
 function PreviewStep() {
   return (
     <div className=&quot;space-y-4&quot;>
       <h2 className=&quot;text-lg font-medium mb-2&quot;>Job Preview</h2>
+=======
+function PreviewStep() {_return (
+    <div className="space-y-4">
+      <h2 className="text-lg font-medium mb-2">Job Preview</h2>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       
       <Card>
         <CardContent className=&quot;p-4&quot;>
@@ -419,9 +540,15 @@ function PreviewStep() {
             <Badge variant=&quot;outline&quot;>Node.js</Badge>
           </div>
           
+<<<<<<< HEAD
           <div className=&quot;space-y-1 text-sm mt-4&quot;>
             <p className=&quot;font-medium&quot;>Salary Range:</p>
             <p>$80,000 - $120,000 USD / year</p>
+=======
+          <div className="space-y-1 text-sm mt-4">
+            <p className="font-medium">Salary Range:</p>
+            <p>$80, _000 - $120, _000 USD / year</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </div>
           
           <div className=&quot;space-y-1 text-sm mt-3&quot;>
@@ -429,9 +556,15 @@ function PreviewStep() {
             <p>Senior</p>
           </div>
           
+<<<<<<< HEAD
           <div className=&quot;space-y-1 text-sm mt-3&quot;>
             <p className=&quot;font-medium&quot;>Application Deadline:</p>
             <p>December 15, 2023</p>
+=======
+          <div className="space-y-1 text-sm mt-3">
+            <p className="font-medium">Application Deadline:</p>
+            <p>December 15, _2023</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           </div>
           
           <div className=&quot;mt-4 pt-3 border-t border-border&quot;>
@@ -443,5 +576,9 @@ function PreviewStep() {
       
       <Button variant=&quot;outline&quot; className=&quot;w-full&quot;>Edit Job Post</Button>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

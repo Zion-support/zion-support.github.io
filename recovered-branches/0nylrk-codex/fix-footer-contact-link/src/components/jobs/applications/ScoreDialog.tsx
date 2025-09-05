@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {
   Dialog,
   DialogContent,
@@ -30,13 +31,25 @@ export function ScoreDialog({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className=&quot;sm:max-w-md&quot;>
+=======
+import {_Dialog, _DialogContent, _DialogHeader, _DialogTitle} from "@/components/ui/dialog";
+
+interface ScoreDialogProps {_open: boolean;
+  onOpenChange: (_open: boolean) => void;
+  application: JobApplication | null;
+  onScoreUpdated: (_updatedApplication: JobApplication) => void;}
+
+export function ScoreDialog(_{_open, _onOpenChange, _application, _onScoreUpdated}: ScoreDialogProps) {_return (
+    <Dialog open={open} onOpenChange={_onOpenChange}>
+      <DialogContent className="sm:max-w-md">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <DialogHeader>
           <DialogTitle>Application Match Score</DialogTitle>
         </DialogHeader>
-        {application && (
+        {_application && (
           <ApplicationScoreCard 
             application={application}
-            onScoreUpdated={onScoreUpdated}
+            onScoreUpdated={_onScoreUpdated}
           />
         )}
       </DialogContent>

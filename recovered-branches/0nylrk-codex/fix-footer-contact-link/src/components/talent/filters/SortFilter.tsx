@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {
   Select,
   SelectContent,
@@ -21,6 +22,18 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
       <Select value={sortOption} onValueChange={setSortOption}>
         <SelectTrigger className=&quot;bg-zion-blue border-zion-blue-light text-white&quot;>
           <SelectValue placeholder=&quot;Sort by&quot; />
+=======
+import {_Select, _SelectContent, _SelectItem, _SelectTrigger, _SelectValue} from "@/components/ui/select";
+
+export function SortFilter(_{_sortOption, _setSortOption}: SortFilterProps) {_return (
+    <div className="mb-6">
+      <label className="text-sm font-medium text-zion-slate-light mb-2 block">
+        Sort by
+      </label>
+      <Select value={sortOption} onValueChange={_setSortOption}>
+        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
+          <SelectValue placeholder="Sort by" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </SelectTrigger>
         <SelectContent className=&quot;bg-zion-blue border-zion-blue-light text-white&quot;>
           <SelectItem value=&quot;relevance&quot;>Relevance</SelectItem>
