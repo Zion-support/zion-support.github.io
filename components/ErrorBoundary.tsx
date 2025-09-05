@@ -21,12 +21,9 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
     // Only log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error details:', error);
-      console.error('Error info:', errorInfo);
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
   }
 
@@ -41,7 +38,7 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
               <h1 className="text-2xl font-bold mb-2">Something went wrong</h1>
               <p className="text-slate-300 mb-6">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
+                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
               </p>
             </div>
             <div className="space-y-3">

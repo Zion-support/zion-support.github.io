@@ -1,27 +1,64 @@
-interface EnhancedMarketplaceCardProps {,
-  title: string,
-  description: string,
-  price?: string,
-  image?: string,
-,};
-export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {,
-  return (,
-    <div className="rounded-xl border bg-white shadow-sm hover: shadow-md transition p-4 flex flex-col">,
-      <div className="flex items-center gap-3 mb-3">,
-        {image ? (,
-          <Image src={image,} alt={title} width={48} height={48} className="rounded" />,
-        ) : (,
-          <div className="h-12 w-12 rounded bg-gray-200" />,
-        )};
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>,
-      </div>,
-      <p className="text-sm text-gray-600 mb-4">{description}</p>,
-      <div className="mt-auto flex items-center justify-between">,
-        {price && <span className="text-sm font-medium text-blue-600">{price}</span>};
-        <a href="/contact" className="text-sm text-white bg-blue-600 hover: bg-blue-700 px-3 py-1.5 rounded">,
-          Get started,
-        </a>,
-      </div>,
-    </div>,
-  ),
-,};
+import React from 'react';
+import Image from 'next/image';
+
+interface EnhancedMarketplaceCardProps {
+  title: string;
+  description: string;
+  price?: string;
+  image?: string;
+  category?: string;
+  rating?: number;
+  reviews?: number;
+  onClick?: () => void;
+}
+
+const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
+  title,
+  description,
+  price,
+  image,
+  category,
+  rating,
+  reviews,
+  onClick,
+}) => {
+  return (
+    <div 
+      className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer overflow-hidden"
+      onClick={onClick}
+    >
+      {image && (
+        <div className="relative h-48 w-full">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover"
+          />
+        </div>
+      )}
+      <div className="p-4">
+        {category && (
+          <span className="text-sm text-blue-600 font-medium">{category}</span>
+        )}
+        <h3 className="text-lg font-semibold text-gray-900 mt-1">{title}</h3>
+        <p className="text-gray-600 text-sm mt-2 line-clamp-2">{description}</p>
+        <div className="flex items-center justify-between mt-4">
+          {price && (
+            <span className="text-xl font-bold text-gray-900">{price}</span>
+          )}
+          {rating && (
+            <div className="flex items-center">
+              <span className="text-yellow-400">★</span>
+              <span className="text-sm text-gray-600 ml-1">
+                {rating} ({reviews} reviews)
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default EnhancedMarketplaceCard;

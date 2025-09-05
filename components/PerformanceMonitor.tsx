@@ -1,50 +1,52 @@
 import React, { useEffect } from 'react';
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: any) => void;
+  onPerformanceData?: (data: Record<string, unknown>) => void;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  // Only render on client side
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
   useEffect(() => {
-    if (typeof performance === 'undefined') return;
+    // Only run on client side
+    if (typeof window === 'undefined' || typeof window.performance === 'undefined') {
+      return;
+    }
 
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
-      const performanceData = {
-        // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+      try {
+        const navigation = window.performance.getEntriesByType('navigation')[0] as any;
+        const paint = window.performance.getEntriesByType('paint');
         
-        // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
-        // Resource timing
-        resourceCount: performance.getEntriesByType('resource').length,
-        
-        // Memory usage (if available)
-        memory: (performance as any).memory ? {
-          used: (performance as any).memory.usedJSHeapSize,
-          total: (performance as any).memory.totalJSHeapSize,
-          limit: (performance as any).memory.jsHeapSizeLimit
-        } : null
-      };
+        const performanceData = {
+          // Navigation timing
+          domContentLoaded: navigation?.domContentLoadedEventEnd - navigation?.domContentLoadedEventStart || 0,
+          loadComplete: navigation?.loadEventEnd - navigation?.loadEventStart || 0,
+          totalLoadTime: navigation?.loadEventEnd - navigation?.fetchStart || 0,
+          
+          // Paint timing
+          firstPaint: paint.find((entry: any) => entry.name === 'first-paint')?.startTime || 0,
+          firstContentfulPaint: paint.find((entry: any) => entry.name === 'first-contentful-paint')?.startTime || 0,
+          
+          // Resource timing
+          resourceCount: window.performance.getEntriesByType('resource').length,
+          
+          // Memory usage (if available)
+          memory: (window.performance as any).memory ? {
+            used: (window.performance as any).memory?.usedJSHeapSize,
+            total: (window.performance as any).memory?.totalJSHeapSize,
+            limit: (window.performance as any).memory?.jsHeapSizeLimit
+          } : null
+        };
 
-      if (onPerformanceData) {
-        onPerformanceData(performanceData);
-      }
+        if (onPerformanceData) {
+          onPerformanceData(performanceData);
+        }
 
-      // Log performance data in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', performanceData);
+        // Log performance data in development
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Performance Metrics:', performanceData);
+        }
+      } catch (error) {
+        console.error('Error measuring performance:', error);
       }
     };
 
