@@ -1,7 +1,5 @@
 import React, { Suspense, lazy, useState } from 'react';
-=======
 import React, { Suspense, lazy, useState, useEffect, memo, useCallback } from 'react';
-=======
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
@@ -28,12 +26,10 @@ const createLazyComponent = ("importFn": "() => Promise<any>", fallback?: "React
   );
 };
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025').then(module => ({ default: module.EnhancedServicesShowcase2025 })));
-=======
 const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.default })));
 const ComprehensiveNewServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveNewServicesShowcase2025').then(module => ({ default: module.default })));
 const EnhancedServicesShowcase2025 = lazy(() => import('./components/EnhancedServicesShowcase2025').then(module => ({ default: module.EnhancedServicesShowcase2025 })));
 
-=======
 ;
 // Lazy load pages for better performance;
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ "default": "module.HomePage "})));
@@ -73,7 +69,6 @@ const PageLoader = () => (;
 );
 ;
 // Lazy load pages - only import existing ones;
-=======
 // Enhanced Components
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
@@ -193,8 +188,6 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
         <MobileExperienceEnhancer />
         <ChatAssistant />
       </div>
-=======
-=======
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.default })));
@@ -221,7 +214,6 @@ const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServices
 // New innovative services pages
 
 // Additional service components
-=======
     >;
       <Router>;
         <div className="min-h-screen bg-gray-50 flex">;
@@ -365,10 +357,8 @@ const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServices
 });
 ;
 export default App;
-=======
 
 export default function App(props: any) {
-=======
 const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ default: module.default })));
 const ITServices = lazy(() => import('./pages/ITServices').then(module => ({ default: module.default })));
 // Create placeholder components for missing pages
@@ -529,7 +519,6 @@ export default function App() {
     </EnhancedErrorBoundary>
   );
 }
-=======
     </ErrorBoundary>
   );
 }

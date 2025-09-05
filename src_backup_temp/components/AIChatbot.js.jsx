@@ -2,14 +2,12 @@ import React, {useState, useCallback, useEffect, useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles} from 'lucide-react';
 ;
-<<<<<<< HEAD
 export const AIChatbot = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});
     const [isOpen, setIsOpen] = useState(false);';
     const [isMinimized, setIsMinimized] = useState(false);'';
     const [messages, setMessages] = useState([]);''';
-=======
 export const AIChatbot = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
@@ -17,7 +15,6 @@ export const AIChatbot = (props: any) => {
     const [isOpen, setIsOpen] = useState(false);'
     const [isMinimized, setIsMinimized] = useState(false);''
     const [messages, setMessages] = useState([]);'''
->>>>>>> main
 const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
@@ -68,16 +65,13 @@ const [inputValue, setInputValue] = useState('');
             "timestamp": "new Date();
         "};
         setMessages(prev => {const updated = [...prev, newMessage];
-<<<<<<< HEAD
             // Keep only the last maxMessages;
             return updated.slice(-maxMessages)});
         // Update conversation context;
-=======
             // Keep only the last maxMessages
             return updated.slice(-maxMessages)}
     );
         // Update conversation context
->>>>>>> main
         if(enableContext && message.content.length > 10) {// setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed}
         return newMessage}, [maxMessages, enableContext]);
     // Add bot message with typing effect;
@@ -85,7 +79,6 @@ const [inputValue, setInputValue] = useState('');
 
         const message = addMessage({;
 
-<<<<<<< HEAD
             "type": 'bot',;
             content,;
             metadata;
@@ -94,7 +87,6 @@ const [inputValue, setInputValue] = useState('');
         trackChatbotInteraction('bot_response', {"messageId": "message.id",;
             "intent": "metadata?.intent",;
             "confidence": "metadata?.confidence"});
-=======
             type: 'bot',
             content,
             metadata
@@ -105,7 +97,6 @@ const [inputValue, setInputValue] = useState('');
             intent: metadata?.intent,
             confidence: metadata?.confidence}
     );
->>>>>>> main
         return message}, [addMessage, trackChatbotInteraction]);
     // Simulate AI processing;
     const simulateAIProcessing = useCallback(async (userInput) => {;
@@ -136,7 +127,6 @@ const [inputValue, setInputValue] = useState('');
         // Add user message;
         const userMessage = addMessage({;
 
-<<<<<<< HEAD
             "type": 'user',;
             "content": "input.trim();
         "});
@@ -144,7 +134,6 @@ const [inputValue, setInputValue] = useState('');
         trackChatbotInteraction('user_input', {"messageId": "userMessage.id",;
             "inputLength": "input.length"});
         // Clear input';
-=======
             type: 'user',
             content: input.trim()
         }
@@ -154,7 +143,6 @@ const [inputValue, setInputValue] = useState('');
             inputLength: input.length}
     );
         // Clear input'
->>>>>>> main
         setInputValue('');
         setIsTyping(true);
         try {;
@@ -163,7 +151,6 @@ const [inputValue, setInputValue] = useState('');
             // Add bot response;
             addBotMessage(response, {;
 
-<<<<<<< HEAD
                 "intent": 'response',;
                 "confidence": "0.9",;
                 suggestions[;";
@@ -184,7 +171,6 @@ const [inputValue, setInputValue] = useState('');
                 "confidence": "0.8;
             "});
             trackChatbotInteraction('conversation_error', {"error": "error instanceof Error ? error.message : 'Unknown error'"})}
-=======
                 intent: 'response',
                 confidence: 0.9,
                 suggestions[;"
@@ -207,7 +193,6 @@ const [inputValue, setInputValue] = useState('');
             }
     );
             trackChatbotInteraction('conversation_error', {error: error instanceof Error ? error.message : 'Unknown error'})}
->>>>>>> main
         finally {setIsTyping(false)}
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);
     // Handle form submission;
@@ -372,7 +357,6 @@ const [inputValue, setInputValue] = useState('');
           </motion.div>) }
       </AnimatePresence>;
     </>)};
-<<<<<<< HEAD
 '"`;
 " export const AIChatbot = ("props": "any) => { const { trackEvent "} = useAnalytics({"enableTracking": "true", "enableUserBehaviorTracking": "true"}); const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [messages, setMessages] = useState([]); const [inputValue, setInputValue] = useState("); const [isTyping, setIsTyping] = useState(false); const messagesEndRef = useRef(null); const inputRef = useRef(null);
 ;
@@ -380,7 +364,6 @@ const [inputValue, setInputValue] = useState('');
 </motion>;
 </motion>;
 </motion>;
-=======
 '"`
 " export const AIChatbot = (props: any) => { const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true}
     ); const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [messages, setMessages] = useState([]); const [inputValue, setInputValue] = useState("); const [isTyping, setIsTyping] = useState(false); const messagesEndRef = useRef(null); const inputRef = useRef(null);
@@ -389,5 +372,4 @@ const [inputValue, setInputValue] = useState('');
 </motion>
 </motion>
 </motion>
->>>>>>> main
 </motion>

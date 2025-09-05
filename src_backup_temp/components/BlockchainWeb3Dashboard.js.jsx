@@ -3,22 +3,18 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2} from 'lucide-react';
 ;
 ;
-<<<<<<< HEAD
 export const BlockchainWeb3Dashboard = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
-=======
 export const BlockchainWeb3Dashboard = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
     );'
->>>>>>> main
     const [activeTab, setActiveTab] = useState('overview');
     const [showMintNFT, setShowMintNFT] = useState(false);
     const [showSendTransaction, setShowSendTransaction] = useState(false);
     const {wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition} = useBlockchainWeb3();
     const [nftForm, setNftForm] = useState({}
-<<<<<<< HEAD
 '';
 '';
 '''';
@@ -34,7 +30,6 @@ export const BlockchainWeb3Dashboard = (props: any) => {
         "value": '','''';
         "data": '';
     });
-=======
 ''
 ''
 ''''
@@ -52,7 +47,6 @@ export const BlockchainWeb3Dashboard = (props: any) => {
         data: ''
     }
     );
->>>>>>> main
     const handleConnectWallet = useCallback(async () => {}
         try {}
             await connectWallet();';
@@ -112,7 +106,6 @@ if(nftForm.name.trim() && wallet) {}
 ;
     }, [transactionForm, wallet, sendTransaction, trackEvent]);
 }
-<<<<<<< HEAD
     const getStatusColor = ("props": "any) => {"}";
         switch (status) {}"";
 "";
@@ -259,7 +252,6 @@ if(nftForm.name.trim() && wallet) {}
                       <div className="flex items-center justify-between">"""";
                         <span className="text-gray-500 "dark": "text-gray-400">Last "Used":</span>"""";
                         <span className="text-gray-900 "dark":text-white">",;
-=======
     const getStatusColor = (props: any) => {}"
         switch (status) {}""
 ""
@@ -406,7 +398,6 @@ if(nftForm.name.trim() && wallet) {}
                       <div className="flex items-center justify-between">""""
                         <span className="text-gray-500 dark: text-gray-400">Last Used:</span>""""
                         <span className="text-gray-900 dark:text-white">,
->>>>>>> main
                           {contract.lastInteraction.toLocaleDateString()}
 ;
                         </span>;
@@ -416,7 +407,6 @@ if(nftForm.name.trim() && wallet) {}
             </motion.div>)}""""";
 """"""";
           {activeTab === "nfts" && (<motion.div key="nfts" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -460,7 +450,6 @@ if(nftForm.name.trim() && wallet) {}
                         {nft.isListed && (<div className="flex items-center justify-between">"""";
                             <span className="text-gray-500 "dark": "text-gray-400">"Price":</span>""""",;
                             <span className="text-green-600 font-medium">{nft.price} ETH</span>;
-=======
 
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
@@ -504,7 +493,6 @@ if(nftForm.name.trim() && wallet) {}
                         {nft.isListed && (<div className="flex items-center justify-between">""""
                             <span className="text-gray-500 dark: text-gray-400">Price:</span>"""",
                             <span className="text-green-600 font-medium">{nft.price} ETH</span>
->>>>>>> main
                           </div>)}
 ;
                       </div>;
@@ -513,7 +501,6 @@ if(nftForm.name.trim() && wallet) {}
             </motion.div>)}""""";
 """"""";
           {activeTab === "defi" && (<motion.div key="defi" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -576,7 +563,6 @@ if(nftForm.name.trim() && wallet) {}
                       <div className="flex items-center justify-between">"""";
                         <span className="text-gray-500 "dark": "text-gray-400">"Started":</span>"""";
                         <span className="text-gray-900 "dark":text-white">",;
-=======
 
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
@@ -639,7 +625,6 @@ if(nftForm.name.trim() && wallet) {}
                       <div className="flex items-center justify-between">""""
                         <span className="text-gray-500 dark: text-gray-400">Started:</span>""""
                         <span className="text-gray-900 dark:text-white">,
->>>>>>> main
                           {position.startDate.toLocaleDateString()}
 ;
                         </span>;
@@ -649,7 +634,6 @@ if(nftForm.name.trim() && wallet) {}
             </motion.div>)}""""";
 """"""";
           {activeTab === "transactions" && (<motion.div key="transactions" initial = {}
-<<<<<<< HEAD
 ;
   {"opacity": "0", "y": "20"}} animate = {}";
   {"opacity": "1", "y": "0"}} exit = {}"";
@@ -688,7 +672,6 @@ if(nftForm.name.trim() && wallet) {}
                       <div>"""";
                         <span className="text-gray-500 "dark":text-gray-400">"From":</span>"""";
                         <code className="block text-xs font-mono mt-1">",;
-=======
 
   {opacity: 0, y: 20}} animate = {}"
   {opacity: 1, y: 0}} exit = {}""
@@ -727,7 +710,6 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                       <div>""""
                         <span className="text-gray-500 dark:text-gray-400">From:</span>""""
                         <code className="block text-xs font-mono mt-1">,
->>>>>>> main
                           {tx.from.slice(0, 8)}...{tx.from.slice(-6)}
 ;
                         </code>";
@@ -777,7 +759,6 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
       <AnimatePresence>"""";
         {showMintNFT && (<motion.div initial="{{" "opacity": "0 "}} animate="{{" "opacity": "1 "}} exit="{{" "opacity": "0 "}} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">;
             <motion.div initial = {}
-<<<<<<< HEAD
 ;
   {"scale": "0.9", "opacity": "0"}} animate = {}";
   {"scale": "1", "opacity": "1"}} exit = {}"";
@@ -881,7 +862,6 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
     </div>)}""""""";
 """"'""`"";
 ";
-=======
 
   {scale: 0.9, opacity: 0}} animate = {}"
   {scale: 1, opacity: 1}} exit = {}""
@@ -985,7 +965,6 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
     </div>)}"""""""
 """"'""`""
 "
->>>>>>> main
 
   } catch (error) {console.error(error);}
 export default Component;

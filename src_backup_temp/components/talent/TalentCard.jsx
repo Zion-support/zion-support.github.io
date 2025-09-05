@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -118,7 +117,6 @@ export default function TalentCard({ talent, onBook, onFavorite, isFavorite }) {
     </Card>;
   );
 }
-=======
 import React from 'react';'''
 import {Button} from '@/components/ui/button';'''
 import {Card} from '@/components/ui/card';'''
@@ -287,4 +285,3 @@ export {TalentCardComponent};
 export {Page};
 
 </FavoriteButton>
->>>>>>> main

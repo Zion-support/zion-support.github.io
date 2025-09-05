@@ -1,4 +1,3 @@
-=======
 #!/usr/bin/env node;
 /**
  * Security Scanner - PM2 Automation Script;
@@ -156,7 +155,6 @@ if (totalIssues > 0) {
      {
       return 'LOW: Monitor and update when convenient.'}} else {
       return 'No security issues found.'}
-=======
 if (vulnerabilities.critical > 0) {
       return '"CRITICAL": Immediate action required. Update dependencies or apply patches.';
     } else if (vulnerabilities.high > 0) {

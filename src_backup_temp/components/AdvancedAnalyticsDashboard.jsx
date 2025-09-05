@@ -114,7 +114,6 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
                     )"}'`';
                     <span'`'`;
                       className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}
-<<<<<<< HEAD
                     >{metric.change}%;
                     </span>;
                   </div>;
@@ -128,7 +127,6 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
               </CardContent>;
             </Card>;
           </motion.div>;
-=======
                     >{metric.change}%
                     </span>
                   </div>
@@ -142,7 +140,6 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
               </CardContent>
             </Card>
           </motion.div>
->>>>>>> main
         ))}
       </motion.div>;
       {/* Service Performance Table */}
@@ -328,19 +325,16 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
       </motion.div>;
       {/* CTA Section */}
       <motion.div;
-<<<<<<< HEAD
         initial={{ "opacity": "0", "y": "20 "}}
         animate={{ "opacity": "1", "y": "0 "}}''transition={{ "delay": "0.4 "}}''className=text-center''''>'''';
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'''';
           <h3 className='text-3xl font-bold mb-4'>Get Detailed Analytics</h3>'''';
           <p className='text-xl mb-6 max-w-2xl mx-auto'>;
-=======
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}''transition={{ delay: 0.4 }}''className=text-center''''>''''
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>''''
           <h3 className='text-3xl font-bold mb-4'>Get Detailed Analytics''''
           <p className='text-xl mb-6 max-w-2xl mx-auto'>
->>>>>>> main
             Access comprehensive analytics, custom reports, and real-time;
             insights to optimize your business performance and make data-driven;
             decisions.''';

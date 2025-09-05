@@ -3,7 +3,6 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
 export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
   enabled = true,: any;
   showDashboard = false,: any;
-=======
 export const "EnhancedAnalytics": React.FC<EnhancedAnalyticsProps> = ({;
   enabled = true",: "any;
   showDashboard = false",: "any;
@@ -11,7 +10,6 @@ export const "EnhancedAnalytics": React.FC<EnhancedAnalyticsProps> = ({;
 "}) => {;
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(;
     null;
-=======
 export default function Page(props: any) {
 ;
   performance: {
@@ -61,7 +59,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Initialize Google Analytics(if tracking ID provided);
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {;
       // Google Analytics 4 initialization';
-=======
 
     // Initialize Google Analytics(if tracking ID provided)
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {
@@ -73,7 +70,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
       window.dataLayer = window.dataLayer || [];
       function gtag("props": "any) {;
-=======
       function gtag(props: any) {
 
         window.dataLayer.push(args);
@@ -131,7 +127,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 ;
     return : unknown {;
       if(script) {;
-=======
       timezone: Int l.DateTimeFormat().resolvedOptions().timeZone}
     );
 
@@ -169,7 +164,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           previous_page: currentPag e,;
           time_on_previous_page: timeOnPag e});
 ;
-=======
           time_on_previous_page: timeOnPag e}
     );
 
@@ -179,7 +173,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         setUserInteractions(0) }    };
 ;
     // Listen for route changes(for SPA);
-=======
 
     // Listen for route changes(for SPA)
     window.addEventListener('popstate', handleRouteChange);
@@ -191,13 +184,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function;
   "};
 }, []);, []);
-=======
     if(!enabled) return;
 ;
       trackEvent('user_interaction', {;
       setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {;
 ';
-=======
         "interaction_type": 'click',;
         "page_path": "currentPag e",;
         "timestamp": "Dat e.now()"})};
@@ -231,10 +222,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Cleanup function;
   };
 }, []);, []);
-=======
             "milestone": "9 0",;
             "page_path": "currentPag e"})}
-=======
 
     // Track initial page'
     trackEvent('page_view', {
@@ -325,7 +314,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         "total_interactions": "userInteraction s",;
         "average_time_on_page": "timeOnPag e"})};
 ;
-=======
   // Track performance metrics
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -388,7 +376,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   // Track event function;
       // Google Analytics 4;
       if(window.gtag) {;
-=======
         window.gtag('event', eventName, parameters)}
           "method": 'POST',;
           "headers": "{ 'Content-Type': 'application/json' "},;
@@ -406,7 +393,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             scrollDepth: Mat h.max(prev.userEngagement.scrollDepth, scrollDepth),;
             timeOnPage: Mat h.max(prev.userEngagement.timeOnPage, timeOnPage),;
             interactions: userInteraction s}}});
-=======
 ;
         return {;
           ...prev,;
@@ -454,7 +440,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             "lcp": "150 0",;
             "fid": "5 0",;
             "cls": "0.05"}}})}
-=======
 
       // Custom analytics tracking
       
@@ -553,7 +538,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             fcp: 80 0,;
             lcp: 150 0,;
             fid: 5 0,;
-=======
             cls: 0.05}}})}
   }, [showDashboard, scrollDepth, timeOnPage, userInteractions]) ;
   if(!enabled) return null;
@@ -787,7 +771,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                     >";
                       <div className="flex items-center space-x-2">";
                         <span className="text-xs font-medium text-slate-500">;
-=======
                       }`}
                     >
                       {analyticsData.performance.coreWebVitals.lcp}ms
@@ -847,7 +830,6 @@ export default EnhancedAnalytics;
 </any>;
 </AnalyticsData>;
 </EnhancedAnalyticsProps>;
-=======
 </any>
 </any>
 </any>

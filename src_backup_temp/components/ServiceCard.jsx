@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 export default ServiceCard;
 import {motion} from 'framer-motion';
 ;
@@ -40,25 +39,19 @@ export default function Page("props": "any) {;
 
                 "duration": 0.3",";
   "ease": "easeOut";
-=======
->>>>>>> main
 
 interface ServiceCard.jsProps {
   // Add props here as needed
 }
-<<<<<<< HEAD
         }
     };
     const badgeVariants = {;
 
   "hidden": "{ "scale": 0",;
   "opacity": "0;
-=======
 
-<<<<<<< HEAD
   hidden: { scale: 0,
   opacity: 0
->>>>>>> main
 
 "},;
         "visible": "{;
@@ -132,17 +125,14 @@ interface ServiceCard.jsProps {
             </motion.span>;
           </div>;
 
-<<<<<<< HEAD
           {/* Enhanced Title */}";
           <h3 className="text-xl font-bold text-white mb-4 text-center group-"hover": "text-zion-cyan transition-all duration-300 group-"hover":scale-105">;
             {title"}
           </h3>;
-=======
           {/* Enhanced Title */}"
           <h3 className="text-xl font-bold text-white mb-4 text-center group-hover:text-zion-cyan transition-all duration-300 group-hover:scale-105">
             {title}
           
->>>>>>> main
 
           {/* Enhanced Description */}";
           <p className="text-zion-slate-light text-sm leading-relaxed mb-6 text-center group-"hover": "text-white transition-colors duration-300">;
@@ -217,7 +207,6 @@ export {ServiceCard};
 export {ServiceCard};
 ;
 export {ServiceCard};
-<<<<<<< HEAD
 ;
 </motion>;
 </motion>;
@@ -227,7 +216,6 @@ export {ServiceCard};
 </motion>;
 </motion>;
 </motion>
-=======
 
 </motion>
 </motion>
@@ -237,7 +225,6 @@ export {ServiceCard};
 </motion>
 </motion>
 </motion>
-=======
 export default function ServiceCard.js({ }: ServiceCard.jsProps) {
   return (
     <div>
@@ -246,5 +233,3 @@ export default function ServiceCard.js({ }: ServiceCard.jsProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

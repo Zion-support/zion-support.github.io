@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 </motion>';
 </motion>;';;';
-=======
 export function LoadingSpinner(props) {
-=======
 ;
 export function LoadingSpinner(props) {;
->>>>>>> main
   const { size = 'md', variant = 'default', text, className = '' } = props;
   ;
   const sizeClasses = {;
@@ -49,15 +43,9 @@ export function LoadingSpinner(props) {;
     </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
 import React from 'react'; import {motion} from 'framer-motion'; import {cn} from '@/lib/utils'; export function LoadingSpinner(props: any) { const sizeClasses = { sm: 'w-4 h-4', md: 'w-6 h-6', lg: 'w-8 h-8', xl: 'w-12 h-12' }; const variantClasses = {default: 'text-zion-cyan', primary: 'text-zion-blue', secondary: 'text-zion-purple', white: 'text-white'}; return (
         <div className={cn('flex flex-col items-center gap-3', className)}> <motion.div className={cn('animate-spin rounded-full border-2 border-current border-t-transparent', sizeClasses[size], variantClasses[variant] )} role="status"  > <span className="sr-only">Loading...</span> </motion.div> {text && ( <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-zion-slate-light font-medium text-sm" > {text} </motion.p> )} </div>
     ); }
 
 </motion>
 </motion>
->>>>>>> main
->>>>>>> main

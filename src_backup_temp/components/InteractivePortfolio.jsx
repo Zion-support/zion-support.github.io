@@ -182,15 +182,12 @@ export function InteractivePortfolio("props": "any) {;
                     </div>;
                   </div>;
 
-<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-zion-slate mb-3 group-"hover": "text-zion-cyan transition-colors">;
                     {project.title"}
                   </h3>;
-=======
                   <h3 className="text-xl font-bold text-zion-slate mb-3 group-hover:text-zion-cyan transition-colors">
                     {project.title}
                   
->>>>>>> main
 
                   <p className="text-zion-slate-light text-sm leading-relaxed mb-4 line-clamp-3">;
                     {project.description}
@@ -226,7 +223,6 @@ export function InteractivePortfolio("props": "any) {;
         </div>;
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <div className="text-center mt-16">;
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">;
             <h3 className="text-2xl font-bold text-zion-slate mb-4">;
@@ -241,7 +237,6 @@ export function InteractivePortfolio("props": "any) {;
           </div>;
         </div>;
       </div>;
-=======
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">
             <h3 className="text-2xl font-bold text-zion-slate mb-4">
@@ -256,7 +251,6 @@ export function InteractivePortfolio("props": "any) {;
           </div>
         </div>
       </div>
->>>>>>> main
 
       {/* Project Modal */"}
       {isModalOpen && selectedProject && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={closeModal} onKeyDown={handleKeyPress} tabIndex={0}>;
@@ -285,7 +279,6 @@ export function InteractivePortfolio("props": "any) {;
                 </button>;
               </div>;
 
-<<<<<<< HEAD
               {/* Project Details */"}
               <div className="grid grid-cols-1 "lg": "grid-cols-3 gap-6">;
                 <div className=""lg":col-span-2">;
@@ -297,7 +290,6 @@ export function InteractivePortfolio("props": "any) {;
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Technologies Used</h3>;
                   <div className="flex flex-wrap gap-2 mb-6">;
                     {selectedProject.technologies.map((tech, index) => (<span key={index} className="px-3 py-2 bg-zion-cyan/10 text-zion-cyan rounded-lg text-sm font-medium">;
-=======
               {/* Project Details */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2">
@@ -309,20 +301,16 @@ export function InteractivePortfolio("props": "any) {;
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Technologies Used
                   <div className="flex flex-wrap gap-2 mb-6">
                     {selectedProject.technologies.map((tech, index) => (<span key={index} className="px-3 py-2 bg-zion-cyan/10 text-zion-cyan rounded-lg text-sm font-medium">
->>>>>>> main
                         {tech}
                       </span>))}
                   </div>;
 
-<<<<<<< HEAD
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Tags</h3>;
                   <div className="flex flex-wrap gap-2">;
                     {selectedProject.tags.map((tag, index) => (<span key={index} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm">;
-=======
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Tags
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.tags.map((tag, index) => (<span key={index} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm">
->>>>>>> main
                         #{tag}
                       </span>))}
                   </div>;

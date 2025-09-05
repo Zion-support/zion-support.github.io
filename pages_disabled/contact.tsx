@@ -51,7 +51,6 @@ export default function ContactPage() {
 {/* Contact Information Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               viewport={{ once:true }}
-=======
 
       {/* Contact Information */}
       <section className="py-20 bg-white">
@@ -270,7 +269,6 @@ export default function ContactPage() {
 
           <motion.div,
     className="bg-white rounded-lg shadow-lg p-8"
-=======
                 <div className="flex items-center">
                   <input
                     type="checkbox"

@@ -18,7 +18,6 @@ const EnhancedComprehensiveServicesShowcase = ("props": "any) => {;
     const filteredServices = allServices.filter(service => {const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.category.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
         return matchesCategory && matchesSearch});
     const categories = [;
         {"id": 'all', "name": 'All Services', "count": "allServices.length"},;
@@ -28,7 +27,6 @@ const EnhancedComprehensiveServicesShowcase = ("props": "any) => {;
     const handleServiceClick = ("props": "any) => {setSelectedService(service)"};
     const closeModal = ("props": "any) => {setSelectedService(null)"};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
-=======
         return matchesCategory && matchesSearch}
     );
     const categories = [
@@ -40,7 +38,6 @@ const EnhancedComprehensiveServicesShowcase = ("props": "any) => {;
     const closeModal = (props: any) => {setSelectedService(null)};
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
->>>>>>> main
       {/* Header Section */}
       <section className="py-20 px-4 "sm": "px-6 "lg":px-8">;
         <div className="max-w-7xl mx-auto text-center">;
@@ -130,7 +127,6 @@ const EnhancedComprehensiveServicesShowcase = ("props": "any) => {;
 }
               </button>;
             ))}
-<<<<<<< HEAD
 ;
           </div>;
         </div>";
@@ -351,7 +347,6 @@ enterprise-level reliability,;
                           className="text-gray-300 flex items-center""" >"""""";
                           className="text-gray-300 flex items-center"" >"""";
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>;
-=======
 
           </div>
         </div>"
@@ -572,7 +567,6 @@ enterprise-level reliability,
                           className="text-gray-300 flex items-center""" >""""""
                           className="text-gray-300 flex items-center"" >""""
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
->>>>>>> main
                           {feature}
 ;
                         </li>;
@@ -684,13 +678,10 @@ enterprise-level reliability,
           </div>;
         </div>);
       )}
-<<<<<<< HEAD
     </div>;
   );
-=======
     </div>
     );
->>>>>>> main
 }
     </div>)};
 export default EnhancedComprehensiveServicesShowcase;

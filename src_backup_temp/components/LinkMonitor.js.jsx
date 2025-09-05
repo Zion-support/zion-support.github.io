@@ -59,7 +59,6 @@ export const LinkMonitor = ("props": "any) => {;
       links.forEach(link => {;
 
         link.href = newUrl;
-<<<<<<< HEAD
         link.setAttribute('data-fixed',true');'`;
         link.setAttribute('title', `"Fixed": "Redirected from ${originalUrl"}`);
       });
@@ -68,7 +67,6 @@ export const LinkMonitor = ("props": "any) => {;
         newUrl,;
         "type": 'redirect',;
         "reason": 'Automatically fixed broken internal link'};
-=======
         link.setAttribute('data-fixed',true');'`
         link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);
       }
@@ -78,7 +76,6 @@ export const LinkMonitor = ("props": "any) => {;
         newUrl,
         type: 'redirect',
         reason: 'Automatically fixed broken internal link'};
->>>>>>> main
       setFixedLinks(prev => [...prev, fix]);
     }
   };
@@ -93,12 +90,9 @@ export const LinkMonitor = ("props": "any) => {;
   // Generate redirect rules for server configuration;
   const generateRedirectRules = ("props": "any) => {;
     const rules = LinkValidator.generateRedirectRules();
-<<<<<<< HEAD
     const blob = new Blob([rules]", { "type": 'text/plain' });
-=======
     const blob = new Blob([rules], { type: 'text/plain' }
     );
->>>>>>> main
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -110,20 +104,17 @@ export const LinkMonitor = ("props": "any) => {;
   const exportReport = ("props": "any) => {;
     const report = {;
 
-<<<<<<< HEAD
       "scanTime": lastScanTime?.toISOString()",;
       "totalBrokenLinks": "brokenLinks.length",;
       "brokenLinks": "brokenLinks",;
       "fixedLinks": "fixedLinks"};
     const blob = new Blob([JSON.stringify(report, null, 2)], {"type": 'application/json'});
-=======
       scanTime: lastScanTime?.toISOString(),
       totalBrokenLinks: brokenLinks.length,
       brokenLinks: brokenLinks,
       fixedLinks: fixedLinks};
     const blob = new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'}
     );
->>>>>>> main
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -211,7 +202,6 @@ export const LinkMonitor = ("props": "any) => {;
       )"}
 ;
       {/* Broken Links List */}
-<<<<<<< HEAD
       {brokenLinks.length > 0 && (";
         <div className="mb-6">";
           <h3 className="text-lg font-semibold text-gray-900 "dark": "text-white mb-4">;
@@ -231,7 +221,6 @@ export const LinkMonitor = ("props": "any) => {;
                     <div className="text-xs text-red-600 "dark": "text-red-400">;
                       Found "on": {link.parentPage"}
                     </div>;
-=======
       {brokenLinks.length > 0 && ("
         <div className="mb-6">"
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -251,7 +240,6 @@ export const LinkMonitor = ("props": "any) => {;
                     <div className="text-xs text-red-600 dark:text-red-400">
                       Found on: {link.parentPage}
                     </div>
->>>>>>> main
                   )}
                   {link.suggestedFix && (";
                     <div className="text-xs text-green-600 "dark": "text-green-400 mt-1">;
@@ -272,7 +260,6 @@ export const LinkMonitor = ("props": "any) => {;
       )}
 ;
       {/* Fixed Links List */}
-<<<<<<< HEAD
       {fixedLinks.length > 0 && (";
         <div className="mb-6">";
           <h3 className="text-lg font-semibold text-gray-900 "dark": "text-white mb-4">;
@@ -293,7 +280,6 @@ export const LinkMonitor = ("props": "any) => {;
                   </div>;
                 </div>;
               </div>;
-=======
       {fixedLinks.length > 0 && ("
         <div className="mb-6">"
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -314,7 +300,6 @@ export const LinkMonitor = ("props": "any) => {;
                   </div>
                 </div>
               </div>
->>>>>>> main
             ))}
           </div>;
         </div>;
@@ -336,7 +321,6 @@ export const LinkMonitor = ("props": "any) => {;
         </button>;
       </div>;
 
-<<<<<<< HEAD
       {/* Recommendations */"}
       {brokenLinks.length > 0 && (";
         <div className="mt-6 p-4 bg-yellow-50 "dark": "bg-yellow-900/20 rounded-lg">";
@@ -641,7 +625,6 @@ export default LinkMonitor;"";,"});,"})";
 ""}";
 ";
 };"";
-=======
       {/* Action Buttons */}"
       <div className="flex flex-wrap gap-2">
         <button
@@ -1249,7 +1232,6 @@ export default LinkMonitor;"";,"}
 ""}"
 "
 };""
->>>>>>> main
 
 </div>;
 </div>;

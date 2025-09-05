@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 export function TrustIndicatorsCompact("props": "any) {;
 import { Shield", Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators("props": "any) {;
     const indicators = [{;
@@ -23,18 +22,15 @@ import { Shield", Lock, Award, Users, Globe, CheckCircle, Star, Zap export funct
             "title": "Verified Community",";
             "description": "10,000+ verified professionals and companies",";
             "color": "text-zion-purple";
-=======
 
 interface TrustIndicators.jsProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
             icon: Users,"
             title: "Verified Community","
             description: "10,000+ verified professionals and companies","
             color: "text-zion-purple"
->>>>>>> main
 
     ];
     const certifications = [";
@@ -69,13 +65,10 @@ interface TrustIndicators.jsProps {
               </div>";
               <h3 className="text-lg font-semibold text-white mb-2">;
                 {indicator.title}
-<<<<<<< HEAD
               </h3>";
               <p className="text-zion-slate-light text-sm leading-relaxed">;
-=======
               "
               <p className="text-zion-slate-light text-sm leading-relaxed">
->>>>>>> main
                 {indicator.description}
               </p>;
             </div>) ) }
@@ -97,7 +90,6 @@ interface TrustIndicators.jsProps {
                 </div>) ) }
             </div>;
           </div>) }
-<<<<<<< HEAD
 ;
         {/* Certifications Section */}";
         {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">";
@@ -112,7 +104,6 @@ interface TrustIndicators.jsProps {
                   <h4 className="font-semibold text-white mb-1">{cert.name}</h4>";
                   <div className="text-zion-cyan text-sm font-medium mb-1">{cert.status}</div>";
                   <div className="text-zion-slate-light text-xs">{cert.year}</div>;
-=======
 
         {/* Certifications Section */}"
         {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">"
@@ -127,7 +118,6 @@ interface TrustIndicators.jsProps {
                   <h4 className="font-semibold text-white mb-1">{cert.name}</h4>"
                   <div className="text-zion-cyan text-sm font-medium mb-1">{cert.status}</div>"
                   <div className="text-zion-slate-light text-xs">{cert.year}</div>
->>>>>>> main
                 </div>))}
             </div>;
           </div>) }
@@ -144,7 +134,6 @@ interface TrustIndicators.jsProps {
         </div>;
       </div>;
     </section>) }
-<<<<<<< HEAD
 // Compact version for smaller spaces;
 export function TrustIndicatorsCompact("props": "any) {;
 '`;
@@ -167,7 +156,6 @@ export function TrustIndicatorsCompact("props": "any) {;
       </div>;
     </div>)}
 '"`;
-=======
 // Compact version for smaller spaces
 export function TrustIndicatorsCompact(props: any) {
 '`
@@ -191,7 +179,6 @@ export function TrustIndicatorsCompact(props: any) {
       </div>
     </div>)}
 '"`
-=======
 export default function TrustIndicators.js({ }: TrustIndicators.jsProps) {
   return (
     <div>
@@ -200,5 +187,3 @@ export default function TrustIndicators.js({ }: TrustIndicators.jsProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

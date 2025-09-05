@@ -50,7 +50,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {;
 ;
     // Call custom error handler;
     if (this.props.onError) {;
-=======
 import React from 'react';
 import {  import { motion  } from 'framer-motion';
 
@@ -107,7 +106,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
-=======
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -238,7 +236,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     } catch (e) {
       
     }
-=======
   };
 
   handleReload = () => {
@@ -382,7 +379,6 @@ export const useErrorReporting = () => {;
 };
 ;
 export default EnhancedErrorBoundary;
-=======
         return this.props.fallback}
       return ()
         <motion.div
@@ -688,7 +684,6 @@ export const useErrorReporting = () => {
 };
 
 export default EnhancedErrorBoundary;
-=======
 </motion>
 </motion>
 </motion>

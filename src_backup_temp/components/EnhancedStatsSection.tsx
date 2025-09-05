@@ -124,7 +124,6 @@ const stats: Sta t[] = [{;
     description: 'Rapidly expanding global presence',;
     color: 'zion-blue',;
     gradient: 'from-zion-blue to-zion-cyan';
-=======
 ];
 
 export default function EnhancedStatsSection(...args[]):  {
@@ -143,7 +142,6 @@ export default function EnhancedStatsSection(...args[]):  {
   // TODO: Add dependencies if needed
 }, []);
     if(inView) {;
-=======
     if(inView) {
 
       controls.start('visible')}
@@ -158,13 +156,11 @@ export default function EnhancedStatsSection(...args[]):  {
 
         current = numericValue;
         clearInterval(timer) }
-=======
   { "duration": "0.5",;
   "delay": "inde x * 0.1;
 "}}
                 >";
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
-=======
 setCountedValues(prev:  > ({;
         ...prev,;
         [target]: Math.floor (current) }) ) }, 16) ;
@@ -374,9 +370,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
             </div>;
           </div>;
         </motion.div>;
-=======
       </div>;
-=======
     </section>;) }
 '"`
 
