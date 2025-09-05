@@ -1,179 +1,181 @@
-import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import ContactForm from '../components/ContactForm';
 
-export default function Contact() {
+export default function Contact(): any {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
   return (
-    <div>
+    <>
       <Head>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group. We're here to help with your technology needs." />
+        <title>Contact Zion Tech Group - Get Your Quote Today</title>
+        <meta name="description" content="Contact Zion Tech Group for micro SaaS, AI services, and IT solutions. Call +1 302 464 0950 or email kleber@ziontechgroup.com for expert consultation." />
+        <link rel="canonical" href={`${contact.site}/contact`} />
       </Head>
       
-      <main className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Contact Us
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        {/* Hero Section */}
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+              Contact Zion Tech Group
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to transform your business with technology? Get in touch with our team of experts.
+            <p className="text-xl text-slate-300 mb-8">
+              Ready to transform your business with innovative technology solutions?
+            </p>
+            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
+              Get in touch with our experts to discuss your project requirements, 
+              receive a custom quote, or learn more about our 40+ micro SaaS products, 
+              AI services, and IT solutions.
             </p>
           </div>
+        </section>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
-              
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <span className="text-2xl">📧</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">
-                      kleber@ziontechgroup.com
-                    </a>
-                  </div>
-                </div>
+        {/* Contact Information */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Contact Details */}
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
+                  <div className="space-y-6">
+                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                      <h3 className="text-xl font-semibold mb-2 text-blue-400">Phone</h3>
+                      <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-lg text-slate-300 hover:text-white transition-colors">
+                        {contact.phone}
+                      </a>
+                      <p className="text-slate-400 text-sm mt-1">Available Monday-Friday, 9 AM - 6 PM EST</p>
+                    </div>
 
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <span className="text-2xl">📞</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">
-                      +1 302 464 0950
-                    </a>
-                  </div>
-                </div>
+                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                      <h3 className="text-xl font-semibold mb-2 text-purple-400">Email</h3>
+                      <a href={`mailto:${contact.email}`} className="text-lg text-slate-300 hover:text-white transition-colors">
+                        {contact.email}
+                      </a>
+                      <p className="text-slate-400 text-sm mt-1">We respond within 24 hours</p>
+                    </div>
 
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <span className="text-2xl">📍</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Address</h3>
-                    <p className="text-gray-600">
-                      364 E Main St STE 1008<br />
-                      Middletown, DE 19709
-                    </p>
+                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                      <h3 className="text-xl font-semibold mb-2 text-green-400">Address</h3>
+                      <p className="text-lg text-slate-300">{contact.address}</p>
+                      <p className="text-slate-400 text-sm mt-1">Middletown, Delaware</p>
+                    </div>
+
+                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                      <h3 className="text-xl font-semibold mb-2 text-yellow-400">Website</h3>
+                      <a href={contact.site} className="text-lg text-slate-300 hover:text-white transition-colors">
+                        {contact.site}
+                      </a>
+                      <p className="text-slate-400 text-sm mt-1">Visit our full service catalog</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Business Hours</h3>
-                <div className="space-y-2 text-gray-600">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM EST</p>
-                  <p>Saturday: 10:00 AM - 4:00 PM EST</p>
-                  <p>Sunday: Closed</p>
+              {/* Service Categories */}
+              <div>
+                <h2 className="text-3xl font-bold mb-8">Our Services</h2>
+                <div className="space-y-6">
+                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                    <h3 className="text-xl font-semibold mb-3 text-blue-400">Micro SaaS Products</h3>
+                    <p className="text-slate-300 mb-4">15+ innovative software solutions including:</p>
+                    <ul className="text-slate-400 space-y-1 text-sm">
+                      <li>• Cloud Cost Guard (FinOps Assistant)</li>
+                      <li>• API Rate Limiter & Analytics</li>
+                      <li>• Smart Document Processing</li>
+                      <li>• Customer Churn Predictor</li>
+                      <li>• And 11+ more specialized tools</li>
+                    </ul>
+                    <Link href="/services" className="text-blue-400 hover:text-blue-300 font-semibold text-sm">
+                      View All Micro SaaS →
+                    </Link>
+                  </div>
+
+                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                    <h3 className="text-xl font-semibold mb-3 text-purple-400">AI Services</h3>
+                    <p className="text-slate-300 mb-4">16+ advanced AI solutions including:</p>
+                    <ul className="text-slate-400 space-y-1 text-sm">
+                      <li>• Computer Vision & Image Analysis</li>
+                      <li>• AI-Powered Fraud Detection</li>
+                      <li>• Conversational AI Platform</li>
+                      <li>• Predictive Analytics & Forecasting</li>
+                      <li>• And 12+ more AI services</li>
+                    </ul>
+                    <Link href="/services" className="text-purple-400 hover:text-purple-300 font-semibold text-sm">
+                      View All AI Services →
+                    </Link>
+                  </div>
+
+                  <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                    <h3 className="text-xl font-semibold mb-3 text-green-400">IT & Cloud Services</h3>
+                    <p className="text-slate-300 mb-4">16+ comprehensive IT solutions including:</p>
+                    <ul className="text-slate-400 space-y-1 text-sm">
+                      <li>• Cloud Migration & Modernization</li>
+                      <li>• Kubernetes & Container Orchestration</li>
+                      <li>• Cybersecurity Hardening & SOC</li>
+                      <li>• Data Engineering & Analytics</li>
+                      <li>• And 12+ more IT services</li>
+                    </ul>
+                    <Link href="/services" className="text-green-400 hover:text-green-300 font-semibold text-sm">
+                      View All IT Services →
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
-              
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your first name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your last name"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your company name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="ai-services">AI Services</option>
-                    <option value="it-services">IT Services</option>
-                    <option value="micro-saas">Micro SaaS Development</option>
-                    <option value="cybersecurity">Cybersecurity</option>
-                    <option value="data-analytics">Data Analytics</option>
-                    <option value="digital-transformation">Digital Transformation</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us about your project or how we can help..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Send Message
-                </button>
-              </form>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Contact Form */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Send Us a Message
+              </h2>
+              <p className="text-lg text-slate-300">
+                Fill out the form below and we&apos;ll get back to you within 24 hours
+              </p>
+            </div>
+            <ContactForm />
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-16 px-4 bg-slate-900/40">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              Ready to Get Started?
+            </h2>
+            <p className="text-lg text-slate-300 mb-8">
+              Choose your preferred way to contact us and let&apos;s discuss how we can help 
+              transform your business with cutting-edge technology solutions.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+                Call Now: {contact.phone}
+              </a>
+              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+                Send Email
+              </a>
+              <Link href="/services-catalog" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+                View Services Catalog
+              </Link>
+            </div>
+            
+            <div className="text-slate-400">
+              <p>We offer free consultations and custom quotes for all our services.</p>
+              <p className="mt-2">Typical response time: Within 24 hours</p>
+            </div>
+          </div>
+        </section>
       </main>
-    </div>
+    </>
   );
 }

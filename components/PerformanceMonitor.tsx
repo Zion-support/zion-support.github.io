@@ -1,143 +1,64 @@
-'use client',
-,
-import { useEffect } from 'react',
-,
-export default function PerformanceMonitor() {,
-  useEffect(() => {,
-    // Only run in production,
-    if (process.env.NODE_ENV !== 'production') return,
-,
-    // Track Core Web Vitals,
-    const trackWebVitals = () => {,
-      // Track LCP (Largest Contentful Paint),
-      new PerformanceObserver((list) => {,
-        const entries = list.getEntries(),
-        const lastEntry = entries[entries.length - 1],
-        console.log('LCP:', lastEntry.startTime),
-,
-        // Send to analytics service,
-        if (typeof window !== 'undefined' && window.gtag) {,
-          window.gtag('event', 'web_vitals', {,
-            name: 'LCP',;
-            value: Math.round(lastEntry.startTime),;
-            event_category: 'Web Vitals',;
-          }),
-        };
-      }).observe({ entryTypes: ['largest-contentful-paint'] ,}),
-,
-      // Track FID (First Input Delay),
-      new PerformanceObserver((list) => {,
-        const entries = list.getEntries(),
-        entries.forEach((entry) => {,
-          const fidEntry = entry as any, // Type assertion for FID-specific properties,
-          console.log('FID:', fidEntry.processingStart - fidEntry.startTime),
-,
-          if (typeof window !== 'undefined' && window.gtag) {,
-            window.gtag('event', 'web_vitals', {,
-              name: 'FID',;
-              value: Math.round(fidEntry.processingStart - fidEntry.startTime),;
-              event_category: 'Web Vitals',;
-            }),
-          };
-        }),
-      }).observe({ entryTypes: ['first-input'] ,}),
-,
-      // Track CLS (Cumulative Layout Shift),
-      let clsValue = 0,
-      new PerformanceObserver((list) => {,
-        const entries = list.getEntries(),
-        entries.forEach((entry) => {,
-          const clsEntry = entry as any, // Type assertion for CLS-specific properties,
-          if (!clsEntry.hadRecentInput) {,
-            clsValue += clsEntry.value,
-          };
-        }),
-        console.log('CLS:', clsValue),
-,
-        if (typeof window !== 'undefined' && window.gtag) {,
-          window.gtag('event', 'web_vitals', {,
-            name: 'CLS',;
-            value: Math.round(clsValue * 1000),;
-            event_category: 'Web Vitals',;
-          }),
-        };
-      }).observe({ entryTypes: ['layout-shift'] ,}),
-,
-      // Track FCP (First Contentful Paint),
-      new PerformanceObserver((list) => {,
-        const entries = list.getEntries(),
-        entries.forEach((entry) => {,
-          console.log('FCP:', entry.startTime),
-,
-          if (typeof window !== 'undefined' && window.gtag) {,
-            window.gtag('event', 'web_vitals', {,
-              name: 'FCP',;
-              value: Math.round(entry.startTime),;
-              event_category: 'Web Vitals',;
-            }),
-          };
-        }),
-      }).observe({ entryTypes: ['paint'] ,}),
-    };
-,
-    // Track page load performance,
-    const trackPageLoad = () => {,
-      window.addEventListener('load', () => {,
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-,
-        if (navigation) {,
-          const metrics = {,
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;
-            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,;
-            totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,;
-          };
-,
-          console.log('Page Load Metrics:', metrics),
-,
-          if (typeof window !== 'undefined' && window.gtag) {,
-            window.gtag('event', 'page_load', {,
-              dom_content_loaded: Math.round(metrics.domContentLoaded),;
-              load_complete: Math.round(metrics.loadComplete),;
-              total_load_time: Math.round(metrics.totalLoadTime),;
-              event_category: 'Performance',;
-            }),
-          };
-        };
-      }),
-    };
-,
-    trackWebVitals(),
-    trackPageLoad(),
-,
-    // Track resource loading performance,
-    const trackResourcePerformance = () => {,
-      const observer = new PerformanceObserver((list) => {,
-        const entries = list.getEntries(),
-        entries.forEach((entry) => {,
-          if (entry.entryType === 'resource') {,
-            const resource = entry as PerformanceResourceTiming,
-            if (resource.duration > 1000) { // Log slow resources (>1s),
-              console.warn('Slow resource:', {,
-                name: resource.name,;
-                duration: resource.duration,;
-                size: resource.transferSize,;
-              }),
-            };
-          };
-        }),
-      }),
-,
-      observer.observe({ entryTypes: ['resource'] ,}),
-    };
-,
-    trackResourcePerformance(),
-  }, []),
-,
-  return null, // This component doesn't render anything,
-};
-// Extend Window interface for gtag,
-declare global {,
-  interface Window {,
-    gtag?: (...args: any[]) => void,
-  ,};
-};
+import { useEffect } from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Largest Contentful Paint (LCP)
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
+        }
+      });
+      
+      try {
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch {
+        // Fallback for browsers that don't support LCP
+      }
+
+      // Monitor First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
+      });
+
+      try {
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch {
+        // Fallback for browsers that don't support FID
+      }
+
+      // Monitor Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        console.log('CLS:', clsValue);
+      });
+
+      try {
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch {
+        // Fallback for browsers that don't support CLS
+      }
+
+      return () => {
+        observer.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    }
+  }, []);
+
+  return null; // This component doesn't render anything
+}
+export default PerformanceMonitor;

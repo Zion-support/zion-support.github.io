@@ -1,91 +1,156 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
 export default function About() {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
   return (
-    <div>
+    <>
       <Head>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge technology solutions." />
+        <title>About Zion Tech Group - Leading Technology Solutions Provider</title>
+        <meta name="description" content="Learn about Zion Tech Group, a leading provider of micro SaaS products, AI services, and IT solutions. Discover our mission, values, and commitment to innovation." />
+        <meta name="keywords" content="about zion tech group, technology company, micro SaaS, AI services, IT solutions, company mission" />
+        <link rel="canonical" href={`${contact.site}/about`} />
       </Head>
       
-      <main className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        {/* Hero Section */}
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               About Zion Tech Group
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, IT services, and micro SaaS development.
+            <p className="text-xl text-slate-300 mb-8">
+              Pioneering the Future of Technology Solutions
+            </p>
+            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
+              We are a leading technology company dedicated to delivering innovative micro SaaS products, 
+              advanced AI services, and comprehensive IT solutions that help businesses scale efficiently and securely.
             </p>
           </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-600 mb-4">
-                To empower businesses with cutting-edge technology solutions that drive growth, efficiency, and innovation. We believe in the transformative power of technology and its ability to solve complex business challenges.
-              </p>
-              <p className="text-lg text-gray-600">
-                Our team of expert developers, engineers, and consultants work tirelessly to deliver solutions that not only meet today's needs but anticipate tomorrow's challenges.
-              </p>
+        {/* Mission & Vision */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
+                <h2 className="text-3xl font-bold mb-6 text-blue-400">Our Mission</h2>
+                <p className="text-lg text-slate-300 mb-4">
+                  To empower businesses with cutting-edge technology solutions that drive growth, 
+                  efficiency, and innovation. We believe in making advanced technology accessible 
+                  and practical for organizations of all sizes.
+                </p>
+                <p className="text-slate-400">
+                  Our mission is to bridge the gap between complex technology and practical business needs, 
+                  delivering solutions that are both powerful and easy to use.
+                </p>
+              </div>
+
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
+                <h2 className="text-3xl font-bold mb-6 text-purple-400">Our Vision</h2>
+                <p className="text-lg text-slate-300 mb-4">
+                  To be the world&apos;s leading provider of micro SaaS products and AI-powered solutions, 
+                  transforming how businesses operate and compete in the digital age.
+                </p>
+                <p className="text-slate-400">
+                  We envision a future where every business has access to enterprise-grade technology 
+                  solutions that are affordable, scalable, and tailored to their specific needs.
+                </p>
+              </div>
             </div>
+          </div>
+        </section>
+
+        {/* Company Stats */}
+        <section className="py-16 px-4 bg-slate-900/40">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              Our Impact
+            </h2>
             
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Vision</h2>
-              <p className="text-lg text-gray-600 mb-4">
-                To be the world's most trusted technology partner, known for delivering exceptional results and driving digital transformation across industries.
-              </p>
-              <p className="text-lg text-gray-600">
-                We envision a future where every business has access to the technology tools they need to thrive in an increasingly digital world.
-              </p>
+            <div className="grid md:grid-cols-4 gap-8 text-center">
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-4xl font-bold text-blue-400 mb-2">40+</h3>
+                <p className="text-slate-300">Micro SaaS Products</p>
+              </div>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-4xl font-bold text-purple-400 mb-2">16+</h3>
+                <p className="text-slate-300">AI Services</p>
+              </div>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-4xl font-bold text-green-400 mb-2">16+</h3>
+                <p className="text-slate-300">IT Solutions</p>
+              </div>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-4xl font-bold text-yellow-400 mb-2">500+</h3>
+                <p className="text-slate-300">Happy Clients</p>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div className="bg-gray-50 rounded-lg p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Values</h2>
+        {/* Values */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              Our Core Values
+            </h2>
+            
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🚀</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Innovation</h3>
-                <p className="text-gray-600">We constantly push the boundaries of what's possible with technology.</p>
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 text-center">
+                <h3 className="text-2xl font-bold mb-4 text-blue-400">Innovation</h3>
+                <p className="text-slate-300">
+                  We continuously push the boundaries of technology, developing cutting-edge solutions 
+                  that anticipate and meet the evolving needs of our clients.
+                </p>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🤝</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Partnership</h3>
-                <p className="text-gray-600">We work closely with our clients as trusted technology partners.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⭐</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Excellence</h3>
-                <p className="text-gray-600">We deliver exceptional quality in everything we do.</p>
-              </div>
-            </div>
-          </div>
 
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how we can help transform your business with our technology solutions.
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 text-center">
+                <h3 className="text-2xl font-bold mb-4 text-purple-400">Quality</h3>
+                <p className="text-slate-300">
+                  We maintain the highest standards in everything we do, from product development 
+                  to customer service, ensuring exceptional results for our clients.
+                </p>
+              </div>
+
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 text-center">
+                <h3 className="text-2xl font-bold mb-4 text-green-400">Partnership</h3>
+                <p className="text-slate-300">
+                  We believe in building long-term relationships with our clients, working closely 
+                  with them to understand their needs and deliver tailored solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact CTA */}
+        <section className="py-16 px-4 bg-slate-900/40">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              Ready to Work With Us?
+            </h2>
+            <p className="text-lg text-slate-300 mb-8">
+              Discover how our innovative solutions can transform your business. 
+              Get in touch with our team to discuss your specific needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                Get In Touch
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+                Contact Us
               </Link>
-              <Link href="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
-                View Our Services
+              <Link href="/services" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+                View Services
               </Link>
             </div>
           </div>
-        </div>
+        </section>
       </main>
-    </div>
+    </>
   );
 }
