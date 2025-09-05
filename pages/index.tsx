@@ -34,13 +34,8 @@ const services = [
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <Layout>
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-    <MainLayout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -61,11 +56,11 @@ export default function HomePage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Transform Your Business with{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                AI & Technology
+                Cutting-Edge AI & Technology
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
+              Leading technology solutions provider specializing in AI, quantum computing, cybersecurity, cloud infrastructure, micro SaaS solutions, and digital transformation services. We deliver innovative solutions that drive growth and competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -133,6 +128,72 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Innovation Highlights Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Cutting-Edge Innovation
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We're at the forefront of technology, offering revolutionary solutions that shape the future of business.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: 'Quantum Computing',
+                description: 'Quantum computing infrastructure and simulation platforms',
+                icon: '⚛️',
+                category: 'Next-Gen Computing'
+              },
+              {
+                title: 'AI-Powered Solutions',
+                description: 'Advanced AI services including autonomous systems and brain-computer interfaces',
+                icon: '🤖',
+                category: 'Artificial Intelligence'
+              },
+              {
+                title: 'Edge Computing',
+                description: 'Distributed computing solutions for real-time applications',
+                icon: '🌐',
+                category: 'Distributed Systems'
+              },
+              {
+                title: 'Blockchain & Web3',
+                description: 'Blockchain infrastructure and smart contract development',
+                icon: '⛓️',
+                category: 'Decentralized Tech'
+              }
+            ].map((innovation, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="text-4xl mb-4">{innovation.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{innovation.title}</h3>
+                <p className="text-gray-600 text-sm mb-3">{innovation.description}</p>
+                <span className="text-xs text-blue-600 font-semibold bg-blue-100 px-2 py-1 rounded-full">
+                  {innovation.category}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -155,8 +216,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
       {/* Contact Information Section */}
       <section className="py-20 bg-white">
@@ -226,7 +285,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -254,12 +312,7 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>
-    </Layout>
-=======
       </div>
-    </MainLayout>
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
+    </Layout>
   );
 }

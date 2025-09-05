@@ -19,21 +19,66 @@ const services = {
     { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
     { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
     { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
-    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' }
+    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
+    { name: 'Quantum Machine Learning', href: '/ai-services#quantum-ml' },
+    { name: 'Autonomous Vehicle Systems', href: '/ai-services#autonomous-vehicles' },
+    { name: 'Brain-Computer Interface', href: '/ai-services#brain-computer-interface' },
+    { name: 'AI Cybersecurity Guardian', href: '/ai-services#ai-cybersecurity' },
+    { name: 'AI Smart City Manager', href: '/ai-services#ai-smart-city' }
   ],
   'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
     { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
     { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
     { name: 'Database Management', href: '/it-services#database-management' },
-    { name: 'System Administration', href: '/it-services#system-administration' }
+    { name: 'System Administration', href: '/it-services#system-administration' },
+    { name: 'Quantum Computing Infrastructure', href: '/it-services#quantum-computing' },
+    { name: 'Edge Computing Solutions', href: '/it-services#edge-computing' },
+    { name: '5G Network Implementation', href: '/it-services#5g-networks' },
+    { name: 'Blockchain Infrastructure', href: '/it-services#blockchain' },
+    { name: 'Zero Trust Security', href: '/it-services#zero-trust' }
   ],
   'Micro SaaS': [
     { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
     { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
     { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
     { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' }
+    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
+    { name: 'AI Email Marketing Optimizer', href: '/micro-saas#ai-email-marketing' },
+    { name: 'Smart Contract Analytics', href: '/micro-saas#smart-contract-analytics' },
+    { name: 'AI Video Content Generator', href: '/micro-saas#ai-video-generator' },
+    { name: 'Customer Churn Predictor', href: '/micro-saas#customer-churn-predictor' },
+    { name: 'AI-Powered Voice Cloning', href: '/micro-saas#ai-voice-cloning' }
+  ],
+  'Solutions': [
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+    { name: 'SMB Solutions', href: '/solutions/smb' },
+    { name: 'Startup Solutions', href: '/solutions/startup' },
+    { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
+    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'Custom Solutions', href: '/solutions/custom' },
+    { name: 'AI Integration', href: '/solutions/ai-integration' },
+    { name: 'Security Audits', href: '/solutions/security-audits' }
+  ],
+  'Industries': [
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Finance', href: '/industries/finance' },
+    { name: 'Education', href: '/industries/education' },
+    { name: 'Government', href: '/industries/government' },
+    { name: 'Retail', href: '/industries/retail' },
+    { name: 'Manufacturing', href: '/industries/manufacturing' },
+    { name: 'Real Estate', href: '/industries/real-estate' },
+    { name: 'Transportation', href: '/industries/transportation' }
+  ],
+  'Resources': [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api-docs' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Newsletter', href: '/newsletter' },
+    { name: 'Support', href: '/support' }
   ]
 };
 
@@ -53,7 +98,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
@@ -85,7 +130,7 @@ export default function Footer() {
             <div key={category}>
               <h4 className="text-lg font-semibold mb-4">{category}</h4>
               <ul className="space-y-2">
-                {serviceList.map((service) => (
+                {serviceList.slice(0, 6).map((service) => (
                   <li key={service.name}>
                     <Link 
                       href={service.href}
@@ -95,6 +140,16 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
+                {serviceList.length > 6 && (
+                  <li>
+                    <Link 
+                      href={`/${category.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+                    >
+                      View All {category} →
+                    </Link>
+                  </li>
+                )}
               </ul>
             </div>
           ))}
@@ -121,6 +176,16 @@ export default function Footer() {
               <li>
                 <Link href="/careers" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                   Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Resources
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Pricing
                 </Link>
               </li>
               <li>

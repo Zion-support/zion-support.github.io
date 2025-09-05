@@ -23,11 +23,58 @@ const navigation = [
     children: [
       { name: 'AI Services', href: '/ai-services', description: 'Cutting-edge AI solutions' },
       { name: 'IT Services', href: '/it-services', description: 'Comprehensive IT solutions' },
-      { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' }
+      { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' },
+      { name: 'Cloud Solutions', href: '/solutions/cloud-migration', description: 'Cloud migration & management' },
+      { name: 'Cybersecurity', href: '/solutions/cybersecurity', description: 'Advanced security solutions' },
+      { name: 'Digital Transformation', href: '/solutions/digital-transformation', description: 'Business transformation' },
+      { name: 'Quantum Computing', href: '/solutions/quantum-computing', description: 'Quantum technology solutions' },
+      { name: 'Blockchain Services', href: '/solutions/blockchain', description: 'Blockchain & DeFi solutions' }
+    ]
+  },
+  {
+    name: 'Solutions',
+    href: '/solutions',
+    children: [
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large-scale enterprise solutions' },
+      { name: 'SMB Solutions', href: '/solutions/smb', description: 'Small & medium business solutions' },
+      { name: 'Startup Solutions', href: '/solutions/startup', description: 'Startup technology solutions' },
+      { name: 'Industry Solutions', href: '/solutions/industry', description: 'Industry-specific solutions' },
+      { name: 'Custom Solutions', href: '/solutions/custom', description: 'Tailored technology solutions' },
+      { name: 'AI Integration', href: '/solutions/ai-integration', description: 'AI implementation services' },
+      { name: 'Cloud Migration', href: '/solutions/cloud-migration', description: 'Cloud migration services' },
+      { name: 'Security Audits', href: '/solutions/security-audits', description: 'Comprehensive security audits' }
+    ]
+  },
+  {
+    name: 'Industries',
+    href: '/industries',
+    children: [
+      { name: 'Healthcare', href: '/industries/healthcare', description: 'Healthcare technology solutions' },
+      { name: 'Finance', href: '/industries/finance', description: 'Financial services technology' },
+      { name: 'Education', href: '/industries/education', description: 'Educational technology solutions' },
+      { name: 'Government', href: '/industries/government', description: 'Government technology services' },
+      { name: 'Retail', href: '/industries/retail', description: 'Retail technology solutions' },
+      { name: 'Manufacturing', href: '/industries/manufacturing', description: 'Manufacturing technology solutions' },
+      { name: 'Real Estate', href: '/industries/real-estate', description: 'Real estate technology solutions' },
+      { name: 'Transportation', href: '/industries/transportation', description: 'Transportation technology solutions' }
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    children: [
+      { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
+      { name: 'API Reference', href: '/api-docs', description: 'API documentation' },
+      { name: 'Tutorials', href: '/tutorials', description: 'Step-by-step guides' },
+      { name: 'White Papers', href: '/white-papers', description: 'Industry insights' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+      { name: 'Webinars', href: '/webinars', description: 'Educational webinars' },
+      { name: 'Newsletter', href: '/newsletter', description: 'Stay updated' }
     ]
   },
   { name: 'About', href: '/about' },
   { name: 'Blog', href: '/blog' },
+  { name: 'Pricing', href: '/pricing' },
   { name: 'Contact', href: '/contact' }
 ];
 
