@@ -13,7 +13,8 @@ const BundleAnalyzer: React.FC = () => {
     jsSize: 0,
     cssSize: 0,
     imageSize: 0
-  });
+  }
+    );
 
   useEffect(() => {
     // Simulate bundle analysis
@@ -24,7 +25,8 @@ const BundleAnalyzer: React.FC = () => {
         jsSize: 800 * 1024,      // 800KB
         cssSize: 200 * 1024,     // 200KB
         imageSize: 24 * 1024     // 24KB
-      });
+      }
+    );
     };
 
     analyzeBundle();
@@ -40,7 +42,7 @@ const BundleAnalyzer: React.FC = () => {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg">
-      <h3 className="text-xl font-bold mb-4">Bundle Analysis</h3>
+      <h3 className="text-xl font-bold mb-4">Bundle Analysis
       
       <div className="space-y-4">
         <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
@@ -68,7 +70,7 @@ const BundleAnalyzer: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+    );
 };
 
 export default BundleAnalyzer;

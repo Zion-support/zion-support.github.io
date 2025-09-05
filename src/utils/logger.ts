@@ -1,92 +1,68 @@
+<<<<<<< HEAD
+type LogLevel = &apos;debug&apos; | &apos;info&apos; | &apos;warn&apos; | &apos;error&apos;; interface LoggerConfig { level: LogLevel; enableConsole: boolean; enableRemote: boolean} class Logger { private config: LoggerConfig; private isProduction: boolean; constructor() { this.isProduction = process.env.NODE_ENV === &apos;production&apos;;&apos;; this.config = { level: this.isProduction ? &apos;error&apos; : &apos;debug&apos;,enableConsole: !this.isProduction,enableRemote: false }} private shouldLog(level: LogLevel): boolean { const levels = [&apos;debug&apos;,&apos;info&apos;,&apos;warn&apos;,&apos;error&apos;]; return levels.indexOf(level) >= levels.indexOf(this.config.level)} private formatMessage(level: LogLevel,message: string,...args: any[]): string { const timestamp = new Date().toISOString(); return `[${timestamp}] [${level.toUpperCase()}] ${message}`} debug(message: string,...args: any[]): void { if (this.shouldLog(&apos;debug&apos;) && this.config.enableConsole) { } } info(message: string,...args: any[]): void { if (this.shouldLog(&apos;info&apos;) && this.config.enableConsole) { } } warn(message: string,...args: any[]): void { if (this.shouldLog(&apos;warn&apos;) && this.config.enableConsole) { } } error(message: string,...args: any[]): void { if (this.shouldLog(&apos;error&apos;) && this.config.enableConsole) { ,...args)} } time(label: string): void { if (this.config.enableConsole) { console.time(label)} } timeEnd(label: string): void { if (this.config.enableConsole) { console.timeEnd(label)} } group(label: string): void { if (this.config.enableConsole) { console.group(label)} } groupEnd(): void { if (this.config.enableConsole) { console.groupEnd()} } } export const logger = new Logger();
+=======
 /**
  * Production-safe logging utility
  * Automatically disables logging in production builds
  */
-
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';
-
 interface LoggerConfig {
-  level: LogLevel;
+  "level": LogLevel;
   enableConsole: boolean;
-  enableRemote: boolean;
-}
-
+  enableRemote: boolean}
 class Logger {
-  private config: LoggerConfig;
+  private "config": LoggerConfig;
   private isProduction: boolean;
-
   constructor() {
-    this.isProduction = process.env.NODE_ENV === 'production';
+    this.isProduction = process.env.NODE_ENV === 'production';';
     this.config = {
       level: this.isProduction ? 'error' : 'debug',
-      enableConsole: !this.isProduction,
-      enableRemote: false
-    };
-  }
-
-  private shouldLog(level: LogLevel): boolean {
+      "enableConsole": !this.isProduction,
+      "enableRemote": false
+    }}
+  private shouldLog("level": LogLevel): boolean {
     const levels = ['debug', 'info', 'warn', 'error'];
-    return levels.indexOf(level) >= levels.indexOf(this.config.level);
-  }
-
-  private formatMessage(level: LogLevel, message: string, ...args: any[]): string {
+    return levels.indexOf(level) >= levels.indexOf(this.config.level)}
+  private formatMessage("level": LogLevel, "message": string, ..."args": any[]): string {
     const timestamp = new Date().toISOString();
-    return `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-  }
-
-  debug(message: string, ...args: any[]): void {
+    return `[${timestamp}] [${level.toUpperCase()}] ${message}`}
+  debug("message": string, ..."args": any[]): void {
     if (this.shouldLog('debug') && this.config.enableConsole) {
-      , ...args);
     }
   }
-
-  info(message: string, ...args: any[]): void {
+  info("message": string, ..."args": any[]): void {
     if (this.shouldLog('info') && this.config.enableConsole) {
-      , ...args);
     }
   }
-
-  warn(message: string, ...args: any[]): void {
+  warn("message": string, ..."args": any[]): void {
     if (this.shouldLog('warn') && this.config.enableConsole) {
-      , ...args);
     }
   }
-
-  error(message: string, ...args: any[]): void {
+  error("message": string, ..."args": any[]): void {
     if (this.shouldLog('error') && this.config.enableConsole) {
-      console.error(this.formatMessage('error', message), ...args);
-    }
+      console.error(this.formatMessage('error', message), ...args)}
   }
-
   // Performance logging
-  time(label: string): void {
+  time("label": string): void {
     if (this.config.enableConsole) {
-      console.time(label);
-    }
+      console.time(label)}
   }
-
-  timeEnd(label: string): void {
+  timeEnd("label": string): void {
     if (this.config.enableConsole) {
-      console.timeEnd(label);
-    }
+      console.timeEnd(label)}
   }
-
   // Group logging
-  group(label: string): void {
+  group("label": string): void {
     if (this.config.enableConsole) {
-      console.group(label);
-    }
+      console.group(label)}
   }
-
   groupEnd(): void {
     if (this.config.enableConsole) {
-      console.groupEnd();
-    }
+      console.groupEnd()}
   }
 }
-
 // Export singleton instance
 export const logger = new Logger();
-
-// Export for default import
-export default logger;
+// Export for default import export default logger;';';
+type LogLevel = 'debug' | 'info' | 'warn' | 'error'; interface LoggerConfig { level: LogLevel; enableConsole: boolean; enableRemote: boolean} class Logger { private config: LoggerConfig; private isProduction: boolean; constructor() { this.isProduction = process.env.NODE_ENV === 'production';'; this.config = { level: this.isProduction ? 'error' : 'debug',enableConsole: !this.isProduction,enableRemote: false }} private shouldLog(level: LogLevel): boolean { const levels = ['debug','info','warn','error']; return levels.indexOf(level) >= levels.indexOf(this.config.level)} private formatMessage(level: LogLevel,message: string,...args: any[]): string { const timestamp = new Date().toISOString(); return `[${timestamp}] [${level.toUpperCase()}] ${message}`} debug(message: string,...args: any[]): void { if (this.shouldLog('debug') && this.config.enableConsole) { } } info(message: string,...args: any[]): void { if (this.shouldLog('info') && this.config.enableConsole) { } } warn(message: string,...args: any[]): void { if (this.shouldLog('warn') && this.config.enableConsole) { } } error(message: string,...args: any[]): void { if (this.shouldLog('error') && this.config.enableConsole) { console.error(this.formatMessage('error',message),...args)} } time(label: string): void { if (this.config.enableConsole) { console.time(label)} } timeEnd(label: string): void { if (this.config.enableConsole) { console.timeEnd(label)} } group(label: string): void { if (this.config.enableConsole) { console.group(label)} } groupEnd(): void { if (this.config.enableConsole) { console.groupEnd()} } } export const logger = new Logger();
+>>>>>>> main

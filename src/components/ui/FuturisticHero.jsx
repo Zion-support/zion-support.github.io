@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';'''
 import {motion, useScroll, useTransform} from 'framer-motion';
 import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export { function };
 export default function FuturisticHero(props: any) {}
-    const [mousePosition, setMousePosition] = useState({x: 0, y: 0});
+    const [mousePosition, setMousePosition] = useState({x: 0, y: 0}
+    );
     const {scrollY} = useScroll();
     const y = useTransform(scrollY, [0, 300], [0, 100]);
     const opacity = useTransform(scrollY, [0, 300], [1, 0]);

@@ -9,6 +9,6 @@ export default function ErrorModal(props: any) {return (
           Professional ErrorModal services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

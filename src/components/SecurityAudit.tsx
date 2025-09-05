@@ -86,7 +86,7 @@ const SecurityAudit: React.FC = (props: any) => {
     <div className="bg-gray-100 p-4 rounded-lg">
       <div className="flex items-center mb-4">
         <Shield className="w-5 h-5 mr-2 text-blue-500" />
-        <h3 className="text-lg font-semibold">Security Audit</h3>
+        <h3 className="text-lg font-semibold">Security Audit
       </div>
       
       <div className="space-y-3">
@@ -106,7 +106,7 @@ const SecurityAudit: React.FC = (props: any) => {
         ))}
       </div>
     </div>
-  );
+    );
 };
 
 export default SecurityAudit;

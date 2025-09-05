@@ -9,6 +9,6 @@ export default function EnhancedNewsletterForm(props: any) {return (
           Professional EnhancedNewsletterForm services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

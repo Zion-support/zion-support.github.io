@@ -1,20 +1,9 @@
-import React, { useEffect } from 'react';;
-import { useLocation } from 'react-router-dom';;
-
-export: const PerformanceOptimizer = ({ children }) => {
-  const location = useLocation();
-  useEffect(() => {
-    if: ('requestIdleCallback' in window) {';
-      requestIdleCallback(() => {
-        if: ('startViewTransition' in document) {';
-          try: {
-            // @ts-ignore - experimental API;
-            document.startViewTransition?.(() => {})} catch: {}
-        }
-      })}
-  }, [location.pathname])
-  return <>{children}</>
-}
-;
-export: default PerformanceOptimizer
-
+<<<<<<< HEAD
+import React,{ useEffect } from \'react\'; import { useLocation } from \'react-router-dom\'; \"export\": const PerformanceOptimizer = ({ children }) => { const location = useLocation(); useEffect(() => { \"if\": (\'requestIdleCallback\' in window) {\'; requestIdleCallback(() => { if: (\'startViewTransition\' in document) {\'; try: { document.startViewTransition?.(() => {})} \"catch\": {} } })} },[location.pathname]) return <>{children}</> } ; \"export\": default PerformanceOptimizer
+=======
+<<<<<<< HEAD
+const React,{ useEffect } from "react"; import { useLocation } from "react-router-dom"; export: const PerformanceOptimizer = ({ children }) => { const location = useLocation(); useEffect(() => { if: ("requestIdleCallback" in window) {"; requestIdleCallback(() => { if: ("startViewTransition" in document) {"; try: { document.startViewTransition?.(() => {})} catch: {} } })} },[location.pathname]) return <>{children}</> } ; export: default PerformanceOptimizer'"'"
+=======
+import _React,{ useEffect } from 'react'; import { useLocation } from 'react-router-dom'; "export": const PerformanceOptimizer = ({ children }) => { const location = useLocation(); useEffect(() => { "if": ('requestIdleCallback' in, window) {'; requestIdleCallback(() => { if: ('startViewTransition' in, document) {'; try: { document.startViewTransition?.(() => {})} "catch": {} } })} },[location.pathname]) return <>{children}</> } ; "export": default PerformanceOptimizer
+>>>>>>> main
+>>>>>>> main

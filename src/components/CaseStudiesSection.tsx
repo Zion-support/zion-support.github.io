@@ -65,7 +65,7 @@ export function CaseStudiesSection(props: any) {
                 <div>"
                   <h3 className="text-xl font-bold text-gray-900">
                     {study.comp}
-                  </h3>"
+                  "
                   <p className="text-gray-600 text-sm">{study.industry}</p>
                 </div>
               </div>
@@ -122,7 +122,7 @@ export function CaseStudiesSection(props: any) {
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
             <h3 className="text-2xl font-bold mb-4">
               Ready to Write Your Success Story?
-            </h3>"
+            "
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.</p>"

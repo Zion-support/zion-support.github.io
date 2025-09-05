@@ -126,7 +126,7 @@ return()""
           <div className="text-center mb-8">""""
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">""
               Need Help Choosing?"""""
-            </h3>""""
+            """"
             <p className="text-slate-600 dark:text-slate-300">,
               Our expert team is here to help you select the perfect service for,
 your business needs"
@@ -212,7 +212,7 @@ export default Component
 </div>
 </CardHeader>
 </div>
-</h3>
+
 </div>
 </Phone>
 </Phone>

@@ -216,7 +216,7 @@ const EnhancedServicesOverview = (props: any) => {}
           <div className="text-center mb-8">""""
             <h3 className="text-2xl font-bold text-white mb-4">
               Service Categories"""
-            </h3>""""
+            """"
             <p className="text-zion-slate-light">
               Comprehensive coverage across all major technology domains;
             </p>
@@ -230,7 +230,8 @@ const EnhancedServicesOverview = (props: any) => {}
                   count: ENHANCED_SERVICES.filter()
                     s => s.category === service.category;
                   ).length,
-                  icon: getCategoryIcon(service.category)});
+                  icon: getCategoryIcon(service.category)}
+    );
               }
               return acc;
             }, []).map((cat, index) => (
@@ -257,7 +258,7 @@ const EnhancedServicesOverview = (props: any) => {}
           <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-2xl p-8 border border-zion-purple/30">""""
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?"""
-            </h3>""""
+            """"
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-6">
               Our team of technology experts is ready to help you implement;
               cutting-edge solutions that drive real business results. Contact;

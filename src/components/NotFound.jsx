@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'''
 import {Link} from 'react-router-dom';'''
 import {motion} from 'framer-motion';
@@ -19,7 +20,8 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
         {path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection'},'''
         {path: '/services/infrastructure', label: 'IT Infrastructure', description: 'Enterprise IT solutions'}
     ];
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">""""
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">""""
       <motion.div className="max-w-4xl mx-auto text-center" initial = {}
   {opacity: 0,
   y: 20;}} animate = {}
@@ -59,7 +61,7 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
 """
         {/* Popular Pages */}""""
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>""""
-          <h3 className="text-2xl font-semibold text-white mb-6">Popular Pages</h3>""""
+          <h3 className="text-2xl font-semibold text-white mb-6">Popular Pages""""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {popularPages.map((page, index) => (<motion.div key={page.path} initial = {}
   {opacity: 0,
@@ -84,7 +86,7 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
 """
         {/* Service Pages */}""""
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>""""
-          <h3 className="text-2xl font-semibold text-white mb-6">Our Services</h3>""""
+          <h3 className="text-2xl font-semibold text-white mb-6">Our Services""""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {servicePages.map((service, index) => (<motion.div key={service.path} initial = {}
   {opacity: 0,
@@ -133,24 +135,19 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
       </motion.div>
     </div>)};
 export default NotFound;
+=======
+import React from 'react';
+
+interface NotFound.jsProps {
+  // Add props here as needed
+>>>>>>> main
 }
 
-export {NotFound};
-
-export {NotFound};
-
-export {NotFound};
-
-export {NotFound};
-
-export {NotFound};
-
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+export default function NotFound.js({ }: NotFound.jsProps) {
+  return (
+    <div>
+      <h1>NotFound.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

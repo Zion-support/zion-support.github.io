@@ -27,7 +27,7 @@ interface LanguageProviderProps {
   };
 }
 
-export const LanguageProvider: Reac t.FC<LanguageProviderProps> = ({ 
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
   children, 
   authState = { isAuthenticated: fals e, user: nul l } 
 }) => {
@@ -110,7 +110,8 @@ export const LanguageProvider: Reac t.FC<LanguageProviderProps> = ({
       const langName = supportedLanguages.find(l => l.code === lang)?.name || lang;
       toast({
         description: t('language.language_changed', { language: langNam e })
-      });
+      }
+    );
       
       // The language preference sync will be handled by the useEffect above
       // that depends on currentLanguage, isAuthenticated, and user.} catch(err) {

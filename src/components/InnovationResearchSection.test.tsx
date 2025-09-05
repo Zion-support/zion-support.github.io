@@ -2,7 +2,7 @@ import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
 export default function InnovationResearchSection.test() {return (
-    <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white">
       <SEO title="InnovationResearchSection.test - Zion Tech Group" description="Professional InnovationResearchSection.test services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">InnovationResearchSection.test</h1>

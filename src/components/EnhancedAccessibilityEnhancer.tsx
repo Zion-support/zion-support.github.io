@@ -131,7 +131,8 @@ export default function Page(props: any) {
 
   // Toggle settings
   
-      applySettings({ [key]: newValue });
+      applySettings({ [key]: newValue }
+    );
 
       if(key === 'highContrast') {
 
@@ -150,7 +151,8 @@ export default function Page(props: any) {
 
   // Zoom controls
   
-      applySettings({ zoomLevel: newZoo m });`
+      applySettings({ zoomLevel: newZoo m }
+    );`
       announceToScreenReader(`Zoom level ${newZoom}%`)},
     [settings.zoomLevel, applySettings, announceToScreenReader]
   );
@@ -181,7 +183,7 @@ export default function Page(props: any) {
             {/* Header */}"
             <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
               <div className="flex items-center space-x-2">"
-                <Accessibility className="w-5 h-5"   />"                <h3 className="font-semibold">Accessibility</h3>
+                <Accessibility className="w-5 h-5"   />"                <h3 className="font-semibold">Accessibility
               </div>
               <button
                 onClick={() => setIsVisible(false)}"

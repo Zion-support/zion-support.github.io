@@ -1,80 +1,107 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
+<<<<<<< HEAD
 
 interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
+=======
+interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {;
+  "children": React.ReactNode;
+>>>>>>> main
 }
-
-export function Form(props: any) {
-  return (
-    <form {...props}>
+;
+export function Form($1) {;
+  return (;
+    <form {...props}>;
       {children}
-    </form>
+    </form>;
   );
 }
+<<<<<<< HEAD
 
 interface FormItemProps {
 
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
+=======
+;
+interface FormItemProps {;
+  "children": React.ReactNode;
+>>>>>>> main
   className?: string;
-
 }
-
-export function FormItem(props: any) {
+export function FormItem($1) {
   return (
-    <div className={`space-y-2 ${className}`}>
+    <div className="min-h-screen bg-white">
       {children}
+<<<<<<< HEAD
     </div>
-  );
+    );
 }
 
 interface FormLabelProps {
 
-  children: Reac t.ReactNode;
-  className?: string;
-  htmlFor?: string;
-
-}
-
-export function FormLabel(props: any) {
-  return (
-    <label 
-      htmlFor={htmlFor}
-      className={`block text-sm font-medium ${className}`}
-    >
-      {children}
-    </label>
+  children: React.ReactNode;
+=======
+    </div>;
   );
 }
+;
+interface FormLabelProps {;
+  "children": React.ReactNode;
+>>>>>>> main
+  className?: string;
+  htmlFor?: string;
+}
+;
+export function FormLabel($1) {;
+  return (;
+    <label;
+      htmlFor={htmlFor}
+      className={`block text-sm font-medium ${className}`}
+    >;
+      {children}
+    </label>;
+  );
+}
+<<<<<<< HEAD
 
 interface FormFieldProps {
 
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
+=======
+;
+interface FormFieldProps {;
+  "children": React.ReactNode;
+>>>>>>> main
   className?: string;
-
 }
-
-export function FormField(props: any) {
+export function FormField($1) {
   return (
-    <div className={`space-y-1 ${className}`}>
+    <div className="min-h-screen bg-white">
       {children}
+<<<<<<< HEAD
     </div>
+    );
+=======
+    </div>;
   );
+>>>>>>> main
 }
-
-interface FormMessageProps {
-
+;
+interface FormMessageProps {;
   children?: React.ReactNode;
   className?: string;
-
 }
-
-export function FormMessage(props: any) {
+;
+export function FormMessage($1) {;
   if (!children) return null;
-  
-  return (
-    <p className={`text-sm text-red-600 ${className}`}>
+  return (;
+    <p className={`text-sm text-red-600 ${className}`}>;
       {children}
-    </p>
+    </p>;
   );
 }
-</HTMLFormElement>
+</HTMLFormElement>;';';
+import React from 'react'; ; interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {; children: React.ReactNode} ; export function Form($1) {; return (; <form {...props}>; {children} </form>; )} ; interface FormItemProps {; children: React.ReactNode; className?: string} export function FormItem($1) { return ( <div className="min-h-screen bg-white"> {children} </div>; )} ; interface FormLabelProps {; children: React.ReactNode; className?: string; htmlFor?: string} ; export function FormLabel($1) {; return (; <label; htmlFor={htmlFor} className={`block text-sm font-medium ${className}`} >; {children} </label>; )} ; interface FormFieldProps {; children: React.ReactNode; className?: string} export function FormField($1) { return ( <div className="min-h-screen bg-white"> {children} </div>; )} ; interface FormMessageProps {; children?: React.ReactNode; className?: string} ; export function FormMessage($1) {; if (!children) return null; ; return (; <p className={`text-sm text-red-600 ${className}`}>; {children} </p>; )} </HTMLFormElement>;';';
+>>>>>>> main

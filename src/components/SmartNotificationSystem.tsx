@@ -25,11 +25,12 @@ interface SmartNotificationSystemProps {
 
 };
 
-const SmartNotificationSystem: Reac t.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
+const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
   if(!enabled) return null;
   return <div className="hidden" aria-hidden="true"  />};
 
 export default SmartNotificationSystem;
-;,"});,})";
+;,"}
+    );,})";
 
 </SmartNotificationSystemProps>

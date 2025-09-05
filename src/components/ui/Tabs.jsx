@@ -32,7 +32,7 @@ const Tabs = (props: any) => {}
         {tabs.find(tab => tab.id === activeTab)?.content}
       </motion.div>
     </div>
-  );
+    );
 };
 
 export default Tabs;

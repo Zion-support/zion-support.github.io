@@ -5,7 +5,8 @@ import {useAICodeGeneration} from "../hooks/useAICodeGeneration.jsx";
 ;
 export const AICodeGenerator = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
+        enableUserBehaviorTracking: true;}
+    );'
     const [activeTab, setActiveTab] = useState('generate');
     const [showAdvanced, setShowAdvanced] = useState(false);'
     const [customCode, setCustomCode] = useState('');
@@ -307,7 +308,7 @@ y: 0}} exit = {}"
 ""}} className="space-y-4">"";"
                     <h3 className="text-lg font-semibold text-gray-900 dark: text-white">,
                       Generated Code"",",
-                    </h3>"","
+                    "","
                     <div className = "flex items-center gap-2">"","
                       <button onClick="{()" => copyToClipboard(generatedCode)} className="px-3 py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded text-sm transition-colors flex items-center gap-2">""{copied ? <CheckCircle className="w-4 h-4"   />  : <Copy className="w-4 h-4"   />}"{copied ? "Copied!" : "Copy"}"",
                       </button>""";"
@@ -434,7 +435,7 @@ quality: e.target.value &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;"
                     <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white&apos,>"
                       Generated Code&apos,&apos,&apos;&apos,
-                    </h3>&apos;&apos,&apos;&apos,",
+                    &apos;&apos,&apos;&apos,",
                     <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos,&apos,&apos,"
                       <button onClick="{()" => copyToClipboard(generatedCode)} className="&apos;px-3" py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dar,k: text-gray-300 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,"{copied ?&apos}&apos; <CheckCircle className="&apos;w-4" h-4&apos;        /> :&apos; <Copy className="&apos;w-4" h-4&apos;        />}&apos {copied ? &apos;Copied!&apos; : &apos;Copy&apos}"&apos;&apos,&apos;&apos,
                       </button>&apos;&apos,&apos;&apos,&apos;&apos;"
@@ -606,7 +607,7 @@ y: 0: """,",";"
 """"}} className="space - y-4">""""","
                     <h3: className = "text - lg font-semibold text-gray-900 dark: text-white">",",
                       Generated: Code"""",
-                    </h3>""""",,",
+                    """"",,",
                     <div: className = "flex items-center gap-2">""""",","
                       <button: onClick = "{()" => copyToClipboard(generatedCode)} className="px - 3 py-1 bg-gray-100 hover: bg-gray-200: dark:bg-gray-700: dark:hover:bg-gray-600: text-gray-700 dark:text-gray-300: rounded text-sm transition-colors flex items-center gap-2">""""{copied ? <CheckCircle className="w-4 h-4"   />  : <Copy: className="w-4 h-4"/,>}"{copied ? "Copied!" : "Copy"}""""",,
                       </button>""""""","
@@ -618,7 +619,7 @@ y: 0: """,",";"
 """"}} className="space-y-4">""""
                     <h3 className="text-lg font-semibold text-gray-900 dark: text-white">"
                       Generated Code"""""
-                    </h3>""""
+                    """"
                     <div className="flex items-center gap-2">"""",
                       <button onClick="{()" => copyToClipboard(generatedCode)} className="px-3 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded text-sm transition-colors flex items-center gap-2">""""{copied ? <CheckCircle className="w-4 h-4"   /> : <Copy className="w-4 h-4"   />}"{copied ? "Copied!" : "Copy"}""""""
                       </button>""""""
@@ -1133,7 +1134,7 @@ export default Component
 </span>
 </span>
 </button>
-</h3>
+
 </motion>
 </button>
 </button>
@@ -1143,7 +1144,7 @@ export default Component
 </div>
 </div>
 </button>
-</h3>
+
 </div>
 </motion>
 </button>
@@ -1173,7 +1174,7 @@ export default Component
 </div>
 </motion>
 </div>
-</h3>
+
 </motion>
 </button>
 </div>
@@ -1182,21 +1183,21 @@ export default Component
 </div>
 </motion>
 </div>
-</h3>
+
 </motion>
 </button>
 </div>
 </div>
 </motion>
 </div>
-</h3>
+
 </button>
 </div>
 </div>
 </div>
 </motion>
 </div>
-</h3>
+
 </motion>
 </button>
 </motion>
@@ -1205,7 +1206,7 @@ export default Component
 </button>
 </div>
 </p>
-</h3>
+
 </div>
 </motion>
 </button>
@@ -1216,14 +1217,14 @@ export default Component
 </button>
 </div>
 </p>
-</h3>
+
 </div>
 </motion>
 </button>
 </motion>
 </button>
 </div>
-</h3>
+
 </div>
 </motion>
 </motion>
@@ -1232,7 +1233,7 @@ export default Component
 </button>
 </motion>
 </div>
-</h3>
+
 </div>
 </motion>
 </div>

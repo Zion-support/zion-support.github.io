@@ -129,7 +129,8 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
     const filteredIssues = contentIssues.filter(issue => {}
         const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
             issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesFilter && matchesSearch});
+        return matchesFilter && matchesSearch}
+    );
     const getIssueTypeLabel = (props: any) => {}
         switch (type) {}
 '
@@ -331,7 +332,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                   <h3 className="text-lg font-semibold text-green-400 mb-2 flex items-center">""""
                     <CheckCircle className="w-5 h-5 mr-2" />
                     Quick Fixes"""
-                  </h3>""""
+                  """"
                   <ul className="text-green-200 text-sm space-y-1">
                     <li>• Add missing page titles</li>
                     <li>• Include meta descriptions</li>
@@ -343,7 +344,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                   <h3 className="text-lg font-semibold text-blue-400 mb-2 flex items-center">""""
                     <BarChart3 className="w-5 h-5 mr-2" />
                     Content Metrics"""
-                  </h3>""""
+                  """"
                   <ul className="text-blue-200 text-sm space-y-1">
                     <li>• Target: 300+ words per page</li>
                     <li>• Include 2-3 images per page</li>
@@ -355,7 +356,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                   <h3 className="text-lg font-semibold text-purple-400 mb-2 flex items-center">""""
                     <TrendingUp className="w-5 h-5 mr-2" />
                     SEO Impact"""
-                  </h3>""""
+                  """"
                   <ul className="text-purple-200 text-sm space-y-1">
                     <li>• Better search rankings</li>
                     <li>• Improved user engagement</li>

@@ -211,7 +211,7 @@ const MobileNavigation = (props: any) => {}
 """
               {/* Contact Info */}""""
               <div className="px-4 mt-6 p-4 bg-white/5 rounded-lg border border-zion-cyan/20">""""
-                <h3 className="text-zion-cyan font-semibold mb-3">Contact Us</h3>""""
+                <h3 className="text-zion-cyan font-semibold mb-3">Contact Us""""
                 <div className="space-y-2 text-sm text-zion-slate-light">
                   <p>📱 +1 302 464 0950</p>
                   <p>✉️ kleber@ziontechgroup.com</p>

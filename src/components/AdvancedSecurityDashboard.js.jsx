@@ -113,7 +113,8 @@ export function AdvancedSecurityDashboard(props: any) {
         <Shield className="w-6 h-6" />
       </button>)}
     if (isMinimized) {
-        return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
+        return (
+        <div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
           <Shield className="w-5 h-5 text-zion-red" />
           <span className="text-sm font-medium text-zion-slate">Security</span>
@@ -122,7 +123,8 @@ export function AdvancedSecurityDashboard(props: any) {
           </button>
         </div>
       </div>)}
-    return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
+    return (
+        <div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -205,7 +207,7 @@ export function AdvancedSecurityDashboard(props: any) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {securityMetrics.map(metric => (<div key={metric.id} className="p-4 rounded-xl border border-zion-slate-light bg-white dark:bg-zion-slate hover:shadow-lg transition-all duration-300">
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="font-semibold text-zion-slate">{metric.name}</h3>
+                    <h3 className="font-semibold text-zion-slate">{metric.name}
                     {getTrendIcon(metric.trend)}
                   </div>
                   <div className="text-2xl font-bold text-zion-slate mb-2">
@@ -229,7 +231,7 @@ export function AdvancedSecurityDashboard(props: any) {
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">
                   <AlertTriangle className="w-5 h-5 text-zion-red" />
                   Active Security Events
-                </h3>
+                
                 <div className="space-y-3">
                   {securityEvents.slice(0, 3).map(event => (<div key={event.id} className="flex items-center gap-3 p-3 bg-white dark:bg-zion-slate rounded-lg">
                       {getEventIcon(event.type)}
@@ -248,7 +250,7 @@ export function AdvancedSecurityDashboard(props: any) {
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-zion-blue" />
                   Compliance Status
-                </h3>
+                
                 <div className="space-y-3">
                   {complianceRequirements.slice(0, 3).map(req => (<div key={req.id} className="flex items-center gap-3 p-3 bg-white dark:bg-zion-slate rounded-lg">
                       <div className="w-8 h-8 bg-zion-blue/20 rounded-lg flex items-center justify-center">
@@ -273,7 +275,7 @@ export function AdvancedSecurityDashboard(props: any) {
                   {getEventIcon(event.type)}
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-semibold text-zion-slate">{event.title}</h3>
+                      <h3 className="font-semibold text-zion-slate">{event.title}
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severity)}`}>
                         {event.severity}
                       </span>
@@ -303,7 +305,7 @@ export function AdvancedSecurityDashboard(props: any) {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>
+                      <h3 className="font-semibold text-zion-slate">{req.requirement}
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
                         {req.status.replace('_', ' ')}
                       </span>
@@ -338,7 +340,7 @@ export function AdvancedSecurityDashboard(props: any) {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-semibold text-zion-slate">{threat.threatType}</h3>
+                      <h3 className="font-semibold text-zion-slate">{threat.threatType}
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${threat.riskScore >= 8 ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
                     threat.riskScore >= 6 ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' :
                         'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300'}`}>
@@ -375,7 +377,7 @@ export function AdvancedSecurityDashboard(props: any) {
         {activeTab === 'analytics' && (<div className="space-y-6">
             <div className="text-center text-zion-slate-light">
               <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />
-              <h3 className="text-lg font-semibold mb-2">Security Analytics</h3>
+              <h3 className="text-lg font-semibold mb-2">Security Analytics
               <p>Advanced security analytics and threat intelligence reports coming soon...</p>
             </div>
           </div>)}

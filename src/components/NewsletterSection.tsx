@@ -96,7 +96,7 @@ description: "Get exclusive access to tech trends and analysis";
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>"
-                    <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>"
+                    <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}"
                     <p className="text-gray-400">{benefit.description}</p>
                   </div>
                 </motion.div>;) ) }
@@ -133,7 +133,7 @@ description: "Get exclusive access to tech trends and analysis";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4">"
                   <Mail className="w-8 h-8 text-white"   />
                 </div>"
-                <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>"                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter"                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>
               </div>
 "
               <form onSubmit={handleSubmit} className="space-y-4">

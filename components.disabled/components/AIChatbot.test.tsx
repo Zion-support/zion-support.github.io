@@ -1,13 +1,11 @@
-import { render, screen  } from "@testing-library/react";
-    render(<AIChatbot />);
-    expect(screen.getByRole("main")).toBeInTheDocument();
-});
-  it("displays correct content", () => {;
-
-    render(<AIChatbot />);
-    // Add specific content checks based on component functionality});
-  it("handles user interactions", () => {;
-
-    render(<AIChatbot />);
-    // Add interaction tests based on component functionality});
-})
+<<<<<<< HEAD
+import { render,screen } from \"@testing-library/react\"; render(<AIChatbot />); expect(screen.getByRole(\"main\")).toBeInTheDocument()}); it(\"displays correct content\",() => {; render(<AIChatbot />); it(\"handles user interactions\",() => {; render(<AIChatbot />)})
+=======
+<<<<<<< HEAD
+const { render,screen } from "@testing-library/react"; render(<AIChatbot />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => {; render(<AIChatbot />); it("handles user interactions",() => {; render(<AIChatbot />)})""
+=======
+import { render,screen } from "@testing-library/react"; render(<AIChatbot />); expect(screen.getByRole("main")).toBeInTheDocument()}
+}); it("displays correct content",() => {; render(<AIChatbot />); it("handles user interactions",() => {; render(<AIChatbot />)})"
+</AIChatbot>"
+>>>>>>> main
+>>>>>>> main

@@ -19,7 +19,7 @@ interface NotificationSettings {
   maxNotifications: number;
   defaultDuration: number}
 
-export const NotificationSystem: Reac t.FC<NotificationSystemProps> = ({
+export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   maxNotifications = 5,
   position = 'top-right',
@@ -36,7 +36,8 @@ enableSound: tru e,;
     position,
     maxNotifications,
     defaultDuration
-  }) ;
+  }
+    );
   const [showSettings, setShowSettings] = useState<any>(false);
   const [isOpen, setIsOpen] = useState<any>(false);
   const [unreadCount, setUnreadCount] = useState<any>(0);
@@ -113,7 +114,7 @@ return 'top-4 right-4'}
 }}`
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6 w-80`}
 "
-            <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings</h3>
+            <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings
 "
             <div className="space-y-4">"
               <div className="flex items-center justify-between">"
@@ -192,7 +193,7 @@ return 'top-4 right-4'}
 
             {/* Header */}"
             <div className="flex items-center justify-between mb-4">"
-              <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications</h3>
+              <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications
               <button
                 onClick={() => setIsOpen(false)}"
                 className="p-1 hover: b g-zion-slate/10 rounded-lg transition-colors"
@@ -370,7 +371,8 @@ export
   }
 };
 '"`
-;,"});,})";
+;,"}
+    );,})";
 
 </Notification>
 </Notification>

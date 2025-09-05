@@ -84,20 +84,20 @@ const Navigation = (props: any) => {}
                   <div className="p-4">""""
                     <div className="grid grid-cols-1 gap-4">""""
                       {serviceCategories.map((category) => (<div key={category.name} className="space-y-2">""""
-                          <h3 className="text-sm font-semibold text-zion-cyan">{category.name}</h3>""""
+                          <h3 className="text-sm font-semibold text-zion-cyan">{category.name}""""
                           <div className="space-y-1">""""
                             {category.services.map((service) => (<Link key={service.name} to={service.href} className="block px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-lg transition-colors" onClick={() => setIsServicesOpen(false)}>
                                 {service.name}
                               </Link>) )
       )}
     </div>
-  );
+    );
 }
                           </div>
                         </div>) )
       )}
     </div>
-  );
+    );
 }
                     </div>
                   </div>
@@ -135,7 +135,7 @@ const Navigation = (props: any) => {}
 """
             {/* Mobile Services */}""""
             <div className="px-3 py-2">""""
-              <h3 className="text-sm font-semibold text-zion-cyan mb-2">Service Categories</h3>""""
+              <h3 className="text-sm font-semibold text-zion-cyan mb-2">Service Categories""""
               <div className="space-y-2">""""
                 {serviceCategories.map((category) => (<div key={category.name} className="ml-4">""""
                     <h4 className="text-sm font-medium text-white mb-1">{category.name}</h4>""""
@@ -145,7 +145,7 @@ const Navigation = (props: any) => {}
                         </Link>) )
       )}
     </div>
-  );
+    );
 }
                     </div>
                   </div>) ) }
@@ -163,7 +163,7 @@ const Navigation = (props: any) => {}
         </div>)
       )}
     </div>
-  );
+    );
 }
     </nav>)};
 export default Navigation;

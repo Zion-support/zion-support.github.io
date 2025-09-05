@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 export function StatsSection(props: any) {
   const stats = [{
       number: '500+',
@@ -57,7 +58,7 @@ export function StatsSection(props: any) {
 
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {stat.label}
-                </h3>
+                
 
                 <p className="text-gray-600 leading-relaxed">
                   {stat.description}
@@ -71,7 +72,7 @@ export function StatsSection(props: any) {
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Join Our Success Story
-            </h3>
+            
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Be part of the next 500+ successful projects and experience the
               Zion Tech Group difference
@@ -95,6 +96,17 @@ export function StatsSection(props: any) {
       </div>
     </section>
   );
+=======
+interface StatsSection.jsProps {
+  // Add props here as needed
+>>>>>>> main
 }
 
-export default StatsSection;
+export default function StatsSection.js({ }: StatsSection.jsProps) {
+  return (
+    <div>
+      <h1>StatsSection.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

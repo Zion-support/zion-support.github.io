@@ -260,10 +260,12 @@ export const mergeCarts = (cart1, cart2) => {
         };
       } else {
         // Add new item
-        merged.push({ ...item2, addedAt: new Date().toISOString() });
+        merged.push({ ...item2, addedAt: new Date().toISOString() }
+    );
       }
     }
-  });
+  }
+    );
 
   return merged;
 };

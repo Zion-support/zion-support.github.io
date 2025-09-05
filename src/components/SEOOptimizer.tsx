@@ -22,7 +22,7 @@ interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
   showDetails?: boolean;
   onAnalysisComplete?: (analysis: SEOAnalysi s) => void}
 
-export const SEOOptimizer: Reac t.FC<SEOOptimizerProps> = ({
+export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   url,
 autoAnalyze: tru e,;
@@ -149,7 +149,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
           <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">"
             <Search className="w-6 h-6 text-white"   />          </div>
           <div>"
-            <h3 className="text-xl font-semibold text-zion-slate-dark">SEO Optimizer</h3>"
+            <h3 className="text-xl font-semibold text-zion-slate-dark">SEO Optimizer"
             <p className="text-sm text-zion-slate/60">Performance & optimization insights</p>
           </div>
         </div>
@@ -441,7 +441,8 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
     optimizePage
   }};
 '"`
-;,"});,})";
+;,"}
+    );,})";
 
 </any>
 </motion>

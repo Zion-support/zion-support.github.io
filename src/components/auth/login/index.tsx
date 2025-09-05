@@ -9,6 +9,6 @@ export default function index(props: any) {return (
           Professional index services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

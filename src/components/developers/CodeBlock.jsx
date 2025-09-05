@@ -22,5 +22,5 @@ export default function CodeBlock(props: any) {
         <code>{text}</code>
       </pre>
     </div>
-  );
+    );
 }

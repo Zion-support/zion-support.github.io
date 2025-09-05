@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from "react";"
 import {Button} from '@/components/ui/button';"
 import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';"
@@ -20,13 +21,18 @@ import {useInterviews} from '@/hooks/useInterviews';
     platform: z.string().min(1, "Please select a meeting platform."),
     meetingLink: z.string().optional(),"
     title: z.string().min(3, "Please provide a brief title for the interview."),
-    notes: z.string().optional()});
+    notes: z.string().optional()}
+    );
 export function InterviewRequestForm(props: any) {
+=======
+import React from 'react';
+>>>>>>> main
 
-    const { requestInterview } = useInterviews();
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const form = useForm({
+interface InterviewRequestForm.jsProps {
+  // Add props here as needed
+}
 
+<<<<<<< HEAD
         resolver: zodResolver(formSchema),
         defaultValues: {
 
@@ -34,7 +40,8 @@ export function InterviewRequestForm(props: any) {
             duration: "30","
             platform: "zoom","
             notes: "","
-            meetingLink: ""}});
+            meetingLink: ""}}
+    );
     async function onSubmit(props: any) {
 
         if(!userDetails?.id) {
@@ -43,7 +50,8 @@ export function InterviewRequestForm(props: any) {
 "
                 title: "Authentication required","
                 description: "Please log in to schedule an interview","
-                variant: "destructive"});
+                variant: "destructive"}
+    );
             return}
         setIsSubmitting(true);
         try {
@@ -60,11 +68,13 @@ export function InterviewRequestForm(props: any) {
                 meeting_platform: values.platform,
                 meeting_link: values.meetingLink,"
                 interview_type: "video",
-                title: values.title});
+                title: values.title}
+    );
             toast({
 "
                 title: "Interview requested",`
-                description: `Your interview request with ${talent.full_name} has been sent.`});
+                description: `Your interview request with ${talent.full_name} has been sent.`}
+    );
             onClose()}
         catch(error) {
 "
@@ -89,7 +99,7 @@ export function InterviewRequestForm(props: any) {
             <img loading="lazy" src={talent.profile_picture_url || "/placeholder.svg"} alt={talent.full_name} className="h-full w-full object-cover"  />
           </div>
           <div>"
-            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>"
+            <h3 className="text-lg font-medium text-white">{talent.full_name}"
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
           </div>
         </div>
@@ -217,3 +227,13 @@ export function InterviewRequestForm(props: any) {
 </Calendar>
 </FormField>
 </FormField>
+=======
+export default function InterviewRequestForm.js({ }: InterviewRequestForm.jsProps) {
+  return (
+    <div>
+      <h1>InterviewRequestForm.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main

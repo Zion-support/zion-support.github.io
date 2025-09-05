@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from "react";
 import {Avatar, AvatarFallback} from '@/components / ui / avatar';
 export default function Page(props: any) {
@@ -7,7 +8,8 @@ import {Card, CardContent} from '@/components/ui/card';"
 import {Separator} from '@/components/ui/separator';
 export default function Page(props: any) {
 ;"
-    return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">"
+    return (
+        <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">"
       <div className="flex items-center gap-3 mb-4">"
         <MessageCircle aria-hidden="true" size={28} className="text-zion-cyan" />"
         <span className="font-bold text-2xl text-white tracking-tight">
@@ -55,7 +57,7 @@ export default function Page(props: any) {
                   <span className="font-semibold text-white">{post.author}</span>"
                   <span className="text-xs text-zion-slate-light">{post.time}</span>
                 </div>"
-                <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>"
+                <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}"
                 <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>
               </div>
             </CardContent>
@@ -65,5 +67,19 @@ export default function Page(props: any) {
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.</div>
     </div>)};
 '"
+=======
+import React from 'react';
+>>>>>>> main
 
-</Textarea>
+interface CommunityDiscussion.jsProps {
+  // Add props here as needed
+}
+
+export default function CommunityDiscussion.js({ }: CommunityDiscussion.jsProps) {
+  return (
+    <div>
+      <h1>CommunityDiscussion.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

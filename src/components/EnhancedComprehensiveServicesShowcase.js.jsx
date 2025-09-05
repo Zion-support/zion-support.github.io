@@ -18,7 +18,8 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {
     const filteredServices = allServices.filter(service => {const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.category.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesCategory && matchesSearch});
+        return matchesCategory && matchesSearch}
+    );
     const categories = [
         {id: 'all', name: 'All Services', count: allServices.length},
         {id: 'Advanced AI & Innovation', name: 'Advanced AI & Innovation', count: advancedInnovativeServicesExpansionV3.length},
@@ -26,7 +27,8 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {
     ];
     const handleServiceClick = (props: any) => {setSelectedService(service)};
     const closeModal = (props: any) => {setSelectedService(null)};
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -138,7 +140,7 @@ const EnhancedComprehensiveServicesShowcase = (props: any) => {
                 <div className="text-4xl mb-4">{service.icon}</div>""""
                 <h3 className="text-xl font-semibold text-white mb-3">""
                   {service.name}"""""
-                </h3>""""
+                """"
                 <p className="text-gray-300 mb-4 line-clamp-3">"
                   {service.description}""
                 </p>"""""
@@ -224,7 +226,7 @@ to deliver solutions that drive real results"
               <div className="text-4xl mb-4">🚀</div>""""
               <h3 className="text-xl font-semibold text-white mb-3">""
                 Innovation First"""""
-              </h3>""""
+              """"
               <p className="text-gray-300">,
                 We stay ahead of technology trends, offering the latest AI, quantum computing, and emerging tech solutions"
               </p>""
@@ -234,7 +236,7 @@ to deliver solutions that drive real results"
               <div className="text-4xl mb-4">💼</div>""""
               <h3 className="text-xl font-semibold text-white mb-3">""
                 Business Focused"""""
-              </h3>""""
+              """"
               <p className="text-gray-300">
                 Every solution is designed with ROI in mind, ensuring measurable,
 business impact and value creation"
@@ -245,7 +247,7 @@ business impact and value creation"
               <div className="text-4xl mb-4">🔒</div>""""
               <h3 className="text-xl font-semibold text-white mb-3">""
                 Enterprise Grade"""""
-              </h3>""""
+              """"
               <p className="text-gray-300">
                 Built with security, scalability, and compliance in mind for,
 enterprise-level reliability,
@@ -320,7 +322,7 @@ enterprise-level reliability,
                 <div>""""
                   <h3 className="text-xl font-semibold text-white mb-4">""
                     Service Overview"""""
-                  </h3>""""
+                  """"
                   <p className="text-gray-300 mb-6">",
                     {selectedService.description}""
                   </p>"""""
@@ -448,7 +450,7 @@ enterprise-level reliability,
         </div>)
       )}
     </div>
-  );
+    );
 }
     </div>)};
 export default EnhancedComprehensiveServicesShowcase;

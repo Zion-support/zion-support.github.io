@@ -168,7 +168,7 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                 <h3 className="text-lg font-semibold flex items-center gap-2">
                   <BarChart3 className="w-5 h-5" />
                   Bundle Analyzer
-                </h3>
+                
                 <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors p-1 rounded-full hover:bg-white/20" aria-label="Close bundle analyzer">
                   <X className="w-5 h-5" />
                 </button>

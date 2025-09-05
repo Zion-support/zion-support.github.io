@@ -11,10 +11,11 @@ export default function Page(props: any) {
   }, [activeMessages]);
 
   const scrollToBottom = (props: any) => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }
+    );
   };
   
-  const handleSendMessage = async(e: Reac t.FormEvent) => {
+  const handleSendMessage = async(e: React.FormEvent) => {
     e.preventDefault();
     if(!messageText.trim() || !activeConversation) return;
     
@@ -23,9 +24,10 @@ export default function Page(props: any) {
   };
   
   if(!activeConversation) {
-    return (<div className="flex-1 flex flex-col items-center justify-center p-8">
+    return (
+        <div className="flex-1 flex flex-col items-center justify-center p-8">
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4"  />
-        <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>
+        <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected
         <p className="text-zion-slate text-center max-w-md">
           Select a conversation from the list to view and send messages.</p>
       </div>
@@ -44,14 +46,17 @@ export default function Page(props: any) {
       groupedMessages.push({
         date: messageDat e,
         messages: [message]
-      });
+      }
+    );
     }
-  });
+  }
+    );
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description);
 
-  return (<div className="flex-1 flex flex-col h-full">
+  return (
+        <div className="flex-1 flex flex-col h-full">
       {/* Header */}
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
@@ -148,7 +153,7 @@ export default function Page(props: any) {
         </form>
       </div>
     </div>
-  );
+    );
 }
 
 </textarea>

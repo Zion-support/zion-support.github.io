@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation  } from 'react-router-dom';
  from 'react';
-export const EnhancedMobileNavigation: Reac t.FC = () => {
+export const EnhancedMobileNavigation: React.FC = () => {
 import { motion, AnimatePresence  } from 'framer-motion';
 
  from 'lucide-react';
@@ -12,14 +12,14 @@ interface NavigationItem {
 
   label: string;
   path: string;
-  icon: Reac t.ComponentType<{ size?: number; className?: string
+  icon: React.ComponentType<{ size?: number; className?: string
 }>;
 } from 'lucide - react';
 
 interface NavigationItem {
   label: string;
   path: string;
-  icon: Reac t.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
   children?: NavigationItem[];  description?: string}
 ;
 const navigationItems: NavigationIte m[] = [{
@@ -104,7 +104,7 @@ const navigationItems: NavigationIte m[] = [{
     icon: FileTex t,;
     color: 'bg-zion-blue'};];
 
-export const EnhancedMobileNavigation: Reac t.FC = () => {
+export const EnhancedMobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState<any>(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState<any>('/');
@@ -355,7 +355,7 @@ export default function EnhancedMobileNavigation(props: any) {
                 <div className="p-6 border-b border-zion-slate-light/20">;"
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Quick Actions
-                  </h3>"
+                  "
                   <div className="grid grid-cols-3 gap-3">
                     {quickActions.map(action => (
                       <Link
@@ -375,7 +375,7 @@ export default function EnhancedMobileNavigation(props: any) {
                 <nav className="p-6">;"
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Navigation
-                  </h3>"
+                  "
                   <div className="space-y-1">
                     {navigationItems.map(item => renderNavigationItem(item))}
                   </div>
@@ -386,7 +386,7 @@ export default function EnhancedMobileNavigation(props: any) {
                 <div className="p-6 border-t border-zion-slate-light/20">;"
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Contact Info
-                  </h3>"
+                  "
                   <div className="space-y-3 text-sm">"
                     <div className="flex items-center gap-3 text-zion-slate-light">
                       <Mail size={16}    />

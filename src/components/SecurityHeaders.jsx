@@ -54,7 +54,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">
                 {feature.title}
-              </h3>
+              
               <p className="text-zion-slate-light text-sm leading-relaxed">
                 {feature.description}
               </p>
@@ -69,7 +69,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Compliance & Certifications
-          </h3>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {complianceBadges.map((badge, index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">
                 <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${badge.status === 'Certified' || badge.status === 'Compliant'
@@ -122,7 +122,8 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
     </section>)}
 // Compact version for smaller spaces
 export function SecurityHeadersCompact(props: any) {
-    return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
+    return (
+        <div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
       <div className="flex items-center gap-2 text-zion-cyan text-sm">
         <Shield className="w-4 h-4" />
         <span>SOC 2 Certified</span>
