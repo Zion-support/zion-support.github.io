@@ -1,3 +1,4 @@
+import { 
   Users, 
   Briefcase, 
   Phone, 
@@ -11,18 +12,18 @@
   Mail,
   Phone as PhoneIcon,
   Globe,
-  ArrowRight;
+  ArrowRight,
 } from 'lucide-react';
 
-const sitemapData = {}
-  main: [;
-    { path: "/", label: "Home", description: "Welcome to Zion Tech Group" },"
-    { path: "/about", label: "About Us", description: "Learn about our company and mission" },"
-    { path: "/contact", label: "Contact", description: "Get in touch with our team" },"
-    { path: "/careers", label: "Careers", description: "Join our innovative team" },"
-    { path: "/blog", label: "Blog", description: "Latest insights and technology trends" }"
+const sitemapData = {
+  main: [
+    { path: "/", label: "Home", description: "Welcome to Zion Tech Group" },
+    { path: "/about", label: "About Us", description: "Learn about our company and mission" },
+    { path: "/contact", label: "Contact", description: "Get in touch with our team" },
+    { path: "/careers", label: "Careers", description: "Join our innovative team" },
+    { path: "/blog", label: "Blog", description: "Latest insights and technology trends" }
   ],
-  services: [;
+  services: [
     { path: "/services", label: "All Services", description: "Complete overview of our services" },"
     { path: "/ai-services", label: "AI Solutions", description: "Artificial Intelligence & Machine Learning" },"
     { path: "/it-services", label: "IT Services", description: "Information Technology Solutions" },"

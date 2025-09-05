@@ -1,10 +1,6 @@
 
-export default function ContactPage() {
-  return (
-    <MainLayout 
-      title="Contact Us - Zion Tech Group"
-      description="Get in touch with our expert team for technology solutions and consulting."
-    >
+import Head from 'next/head';
+import Layout from './components/Layout';
 
 export default function ContactPage() {
   return (
@@ -23,8 +19,8 @@ export default function ContactPage() {
           <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div,
-    initial={{ opacity: 0, y: 30 }}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -128,6 +124,8 @@ export default function ContactPage() {
                 Have a project in mind? Fill out the form below and we'll get back to you within 24 hours.
               </p>
             </motion.div>
+            
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -139,6 +137,8 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
               <p className="text-gray-600">kleber@ziontechgroup.com</p>
             </motion.div>
+            
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -155,6 +155,8 @@ export default function ContactPage() {
             </motion.div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -165,6 +167,10 @@ export default function ContactPage() {
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
                       First Name *
                     </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="John"
                       required
@@ -175,6 +181,10 @@ export default function ContactPage() {
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
                       Last Name *
                     </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Doe"
                       required
@@ -200,8 +210,8 @@ export default function ContactPage() {
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company
                   </label>
-                  <input,
-    type="text"
+                  <input
+                    type="text"
                     id="company"
                     name="company"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -213,8 +223,8 @@ export default function ContactPage() {
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                     Service Interest
                   </label>
-                  <select,
-    id="service"
+                  <select
+                    id="service"
                     name="service"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
@@ -231,8 +241,8 @@ export default function ContactPage() {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message *
                   </label>
-                  <textarea,
-    id="message"
+                  <textarea
+                    id="message"
                     name="message"
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -287,5 +297,7 @@ export default function ContactPage() {
             </motion.div>
           </div>
         </div>
+      </div>
+    </Layout>
   );
 }

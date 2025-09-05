@@ -2,13 +2,14 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
+import { 
   Star,
   Globe,
   Lock,
   Cpu,
   Bot,
   FileText,
-  Image,
+  Image as ImageIcon,
   Video,
   Mic,
   Code,
@@ -27,7 +28,7 @@ import Link from 'next/link';
   ShoppingCart,
   BookOpen,
   Home,
-  Gamepad2
+  Gamepad2,
 } from 'lucide-react';
 const aiServices = [
   {
@@ -1064,36 +1065,15 @@ const aiServices = [
     title: 'AI-Powered Legal Research Assistant',
     description: 'Intelligent legal research platform with case law analysis and document review.',
     icon: BookOpen,
-  { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
-  { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
-  { name: 'Manufacturing', icon: Settings, description: 'Predictive maintenance and quality control' },
-  { name: 'Education', icon: BookOpen, description: 'Personalized learning and assessment' },
-  { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' }
-];
-    icon: Zap,
-    title: 'Increased Efficiency',
-    description: 'Automate repetitive tasks and processes',
-    stat: '40%'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Better Insights',
-    description: 'Data-driven decision making',
-    stat: '60%'
-  },
-  {
-    icon: Shield,
-    title: 'Enhanced Security',
-    description: 'AI-powered threat detection',
-    stat: '99.9%'
-  },
-  {
-    icon: Users,
-    title: 'Improved Experience',
-    description: 'Personalized user interactions',
-    stat: '85%'
+    features: ['Case Law Analysis', 'Document Review', 'Legal Research', 'Compliance Checking'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Legal Tech',
+    benefits: ['Faster Research', 'Accurate Analysis', 'Cost Reduction', 'Better Outcomes'],
+    marketPrice: '$2,500 - $12,000/month',
+    link: 'https://ziontechgroup.com/ai-legal-research-assistant'
   }
 ];
+
 export default function AIServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -1114,12 +1094,12 @@ export default function AIServicesPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-                AI{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Services
-                </span>
-              </h1>
-            </div>
+            <h1 className="text-4xl md:text-6xl font-bold">
+              AI{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Services
+              </span>
+            </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business with cutting-edge artificial intelligence solutions. From machine learning to natural language processing, we deliver AI that works.
             </p>
