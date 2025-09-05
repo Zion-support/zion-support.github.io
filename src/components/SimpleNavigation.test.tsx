@@ -1,21 +1,29 @@
-it(displays expected content', () => {';';';
-    render(<SimpleNavigation  />)',';';
-    ';';';
-import { render, screen } from &apos;@testing-library/react',';';';
-    ',';';
-    ';';';
+<<<<<<< HEAD
+<<<<<<< HEAD
+it(displays expected content', () => {';';';';';
+    render(<SimpleNavigation  />)',';';';';
+    ';';';';';
+import { render, screen } from &apos;@testing-library/react',';';';';';
+    ',';';';';
+    ';';';';';
 import SimpleNavigation from &apos;./SimpleNavigation';
 describe(&apos;SimpleNavigation&apos, () => {
   it(&apos;renders without crashing&apos, () => {
-    render(&apos}}&apos;<SimpleNavigation  />)
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
-  it(&apos;displays expected content&apos, () => {';
-    render(&apos}<SimpleNavigation  />)';';
-    // Add specific test assertions based on component content})})';';';
-    render(<SimpleNavigation  />)',';';
-    ';';';
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-})';
-";';';
-}}';';';
-"';';';';
+    render(&apos}}&apos;<SimpleNavigation  />)';
+    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it(&apos;displays expected content&apos, () => {';';';
+    render(&apos}<SimpleNavigation  />)';';';';
+    // Add specific test assertions based on component content})})';';';';';
+    render(<SimpleNavigation  />)',';';';';
+    ';';';';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""';';
+})';';';
+";';';';';
+}}';';';';';
+"';';';';;';;';
+=======
+it(displays expected content',() => {';';'; render(<SimpleNavigation />)',';'; ';';'; import { render,screen } from &apos;@testing-library/react',';';'; ',';'; ';';'; import SimpleNavigation from &apos;./SimpleNavigation'; describe(&apos;SimpleNavigation&apos,() => { it(&apos;renders without crashing&apos,() => { render(&apos}}&apos;<SimpleNavigation />) expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()}) it(&apos;displays expected content&apos,() => {'; render(&apos}<SimpleNavigation />)';'; render(<SimpleNavigation />)',';'; ';';'; expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"" })'; ";';'}}';';'; "';';';';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+it(displays expected content',() => {';';'; render(<SimpleNavigation />)',';'; ';';'; import { render,screen } from &apos;@testing-library/react',';';'; ',';'; ';';'; import SimpleNavigation from &apos;./SimpleNavigation'; describe(&apos;SimpleNavigation&apos,() => { it(&apos;renders without crashing&apos,() => { render(&apos}}&apos;<SimpleNavigation />) expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()}) it(&apos;displays expected content&apos,() => {'; render(&apos}<SimpleNavigation />)';'; render(<SimpleNavigation />)',';'; ';';'; expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"" })'; ";';'}}';';'; ";
+>>>>>>> main

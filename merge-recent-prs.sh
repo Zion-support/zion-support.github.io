@@ -52,10 +52,10 @@ while IFS='|' read -r pr_number pr_title branch_name; do
             git status --porcelain | grep "^UU\|^AA\|^DD" | while read -r status file; do
                 echo "   Resolving conflicts in $file"
                 
-                # Simple strategy: keep the incoming version (after =======)
+                # Simple strategy: keep the incoming version (after )
                 if [[ -f "$file" ]]; then
                     # Remove conflict markers and keep the second version
-                    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+                    sed -i '//,//d' "$file"
                     sed -i '/>>>>>>> /d' "$file"
                 fi
             done
