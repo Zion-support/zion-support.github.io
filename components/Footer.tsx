@@ -20,9 +20,9 @@ import {
 } from 'lucide-react'
 const services = [
   { name: 'All Services', href: '/services' },
-  { name: 'AI Services', href: '/ai-services' },
-  { name: 'IT Services', href: '/it-services' },
-  { name: 'Micro SaaS', href: '/micro-saas' },
+  { name: 'AI Services', href: '/AIServices' },
+  { name: 'IT Services', href: '/ITServices' },
+  { name: 'Micro SaaS', href: '/MicroSAAS' },
   { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
   { name: 'Cybersecurity', href: '/services/cybersecurity' },
   { name: 'Data Analytics', href: '/services/data-analytics' },

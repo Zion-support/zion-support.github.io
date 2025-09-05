@@ -125,9 +125,36 @@ const faqs = [{
     question: "Can I cancel my subscription anytime?",
     answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period."
   }]
+
+const supportMethods = [
+  {
+    title: "Email Support",
+    description: "Get help via email at kleber@ziontechgroup.com. We typically respond within 24 hours."
+  },
+  {
+    title: "Phone Support",
+    description: "Call us at +1 302 464 0950 for immediate assistance during business hours."
+  },
+  {
+    title: "Live Chat",
+    description: "Chat with our support team in real-time through our website chat widget."
+  },
+  {
+    title: "Documentation",
+    description: "Browse our comprehensive documentation and guides for self-service support."
+  }
+]
 export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('')
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({})
+  
+  const toggleCategory = (categoryTitle: string) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [categoryTitle]: !prev[categoryTitle]
+    }))
+  }
+  
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>

@@ -54,9 +54,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       hasSubmenu: true,
       submenu: [
         { label: 'All Services', href: '/services' },
-        { label: 'AI Services', href: '/ai-services', icon: Brain },
-        { label: 'IT Services', href: '/it-services', icon: Shield },
-        { label: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
+        { label: 'AI Services', href: '/AIServices', icon: Brain },
+        { label: 'IT Services', href: '/ITServices', icon: Shield },
+        { label: 'Micro SaaS', href: '/MicroSAAS', icon: Cloud },
         { label: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
         { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { label: 'Data Analytics', href: '/services/data-analytics', icon: Brain },
@@ -148,11 +148,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       )}
       {/* Sidebar */}
       <div className={`
-        fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out;
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'};
-        lg:translate-x-0 lg:static lg:block;
+        fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+        lg:translate-x-0 lg:static lg:block
       `}>
-        {/* Header */};
+        {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-700">
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -168,7 +168,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           </button>
         </div>
 
-        {/* Search */};
+        {/* Search */}
         <div className="p-6 border-b border-gray-700">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -180,7 +180,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           </div>
         </div>
 
-        {/* Navigation */};
+        {/* Navigation */}
         <nav className="flex-1 overflow-y-auto">
           <div className="p-6">
             {navigationItems.map((item, index) => (
@@ -210,7 +210,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         }`}
                       />
                     </button>
-                  )};
+                  )}
                 </div>
 
                 {item.hasSubmenu && expandedSections.includes(item.label) && (
@@ -229,18 +229,18 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         {subItem.icon && <subItem.icon className="w-4 h-4" />}
                         <span>{subItem.label}</span>
                       </Link>
-                    ))};
+                    ))}
                   </div>
-                )};
+                )}
               </div>
-            ))};
+            ))}
           </div>
         </nav>
 
-        {/* Quick Links */};
+        {/* Quick Links */}
         <div className="p-6 border-t border-gray-700">
           <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-            Quick Links;
+            Quick Links
           </h3>
           <div className="space-y-2">
             {quickLinks.map((link, index) => (
@@ -253,11 +253,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <link.icon className="w-4 h-4" />
                 <span>{link.label}</span>
               </Link>
-            ))};
+            ))}
           </div>
         </div>
 
-        {/* Contact Info */};
+        {/* Contact Info */}
         <div className="p-6 border-t border-gray-700">
                   <div className="text-sm text-gray-400">
           <p className="mb-2">Need help?</p>
