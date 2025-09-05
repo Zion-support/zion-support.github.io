@@ -25,17 +25,17 @@ class MasterAutomation {
   async runCommand(command, options = {}) {
     try {
       const { stdout, stderr } = await execAsync(command, {
-        "cwd": process.cwd(),
-        "timeout": 30000,
+        cwd: process.cwd(),
+        timeout: 30000,
         ...options});
 
-      return { "success": true, stdout, stderr };
+      return { success: true, stdout, stderr };
     } catch (error) {
-      this.log(`Command "failed": ${command} - ${error.message}`);
+      this.log(`Command failed: ${command} - ${error.message}`);
       return {
-        "success": false,
-        "stdout": error.stdout || '',
-        "stderr": error.stderr || error.message};
+        success: false,
+        stdout: error.stdout || '',
+        stderr: error.stderr || error.message};
     }
   }
 
@@ -92,7 +92,7 @@ class MasterAutomation {
   }
 
   async getPM2Logs(processName = null, lines = 50) {
-    this.log(`Getting PM2 logs${processName ? ` for ${processName}" : ''}...");
+    this.log(`Getting PM2 logs${processName ? ` for ${processName}` : ''}...`);
 
     const command = processName
       ? `pm2 logs ${processName} --lines ${lines}`
@@ -257,11 +257,11 @@ if (require.main === module) {
       break;
     case 'report':
       automation.generateReport().catch(error => {
-        console.error('Failed to generate "report": ', error);
+        console.error('Failed to generate report: ', error);
         process.exit(1);
       });
       break;
-    "default": console.log(
+    default: console.log(
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
       process.exit(1);
