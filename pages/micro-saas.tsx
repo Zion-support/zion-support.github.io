@@ -508,6 +508,222 @@ const microSaasProducts = [
     features: ['Resource Optimization', 'Conflict Resolution', 'Availability Tracking', 'Analytics'],
     pricing: '$149 - $899/month',
     category: 'Scheduling'
+  },
+  // NEW INNOVATIVE MICRO SAAS SERVICES
+  {
+    title: 'AI-Powered Video Analytics Platform',
+    description: 'Advanced video analysis with object detection, facial recognition, and behavioral analytics for security and marketing.',
+    icon: Video,
+    features: ['Real-time Analysis', 'Object Detection', 'Facial Recognition', 'Behavioral Analytics', 'Custom Alerts', 'API Integration'],
+    pricing: '$199 - $1,999/month',
+    category: 'Video Analytics',
+    popular: true,
+    benefits: ['Enhanced Security', 'Marketing Insights', 'Automated Monitoring', 'Cost Reduction'],
+    marketPrice: '$300 - $2,500/month',
+    link: 'https://ziontechgroup.com/ai-video-analytics'
+  },
+  {
+    title: 'Smart Contract Lifecycle Manager',
+    description: 'End-to-end smart contract management from development to deployment and monitoring.',
+    icon: Code,
+    features: ['Contract Templates', 'Automated Deployment', 'Version Control', 'Performance Monitoring', 'Security Auditing', 'Gas Optimization'],
+    pricing: '$299 - $2,499/month',
+    category: 'Blockchain',
+    popular: true,
+    benefits: ['Faster Development', 'Reduced Errors', 'Better Security', 'Cost Optimization'],
+    marketPrice: '$400 - $3,000/month',
+    link: 'https://ziontechgroup.com/smart-contract-manager'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimizer',
+    description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and risk assessment.',
+    icon: Truck,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Risk Assessment', 'Supplier Analytics', 'Cost Optimization', 'Compliance Tracking'],
+    pricing: '$399 - $2,999/month',
+    category: 'Supply Chain',
+    popular: true,
+    benefits: ['Reduced Costs', 'Better Planning', 'Risk Mitigation', 'Improved Efficiency'],
+    marketPrice: '$500 - $4,000/month',
+    link: 'https://ziontechgroup.com/supply-chain-optimizer'
+  },
+  {
+    title: 'Automated Legal Document Generator',
+    description: 'AI-powered legal document creation, review, and compliance checking for law firms and businesses.',
+    icon: FileText,
+    features: ['Document Generation', 'Legal Review', 'Compliance Checking', 'Template Library', 'Version Control', 'E-signature Integration'],
+    pricing: '$199 - $1,499/month',
+    category: 'Legal Tech',
+    benefits: ['Time Savings', 'Reduced Errors', 'Compliance Assurance', 'Cost Reduction'],
+    marketPrice: '$300 - $2,000/month',
+    link: 'https://ziontechgroup.com/legal-document-generator'
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis Assistant',
+    description: 'Advanced medical AI for symptom analysis, diagnosis suggestions, and treatment recommendations.',
+    icon: Heart,
+    features: ['Symptom Analysis', 'Diagnosis Suggestions', 'Treatment Recommendations', 'Medical Records Integration', 'Drug Interaction Check', 'Patient Monitoring'],
+    pricing: '$999 - $4,999/month',
+    category: 'Healthcare AI',
+    popular: true,
+    benefits: ['Improved Diagnosis', 'Faster Treatment', 'Reduced Errors', 'Better Outcomes'],
+    marketPrice: '$1,500 - $6,000/month',
+    link: 'https://ziontechgroup.com/medical-diagnosis-ai'
+  },
+  {
+    title: 'Smart Building Management System',
+    description: 'IoT-powered building automation with energy optimization, security, and maintenance management.',
+    icon: Building,
+    features: ['Energy Optimization', 'Security Monitoring', 'Predictive Maintenance', 'Occupancy Analytics', 'Climate Control', 'Access Management'],
+    pricing: '$499 - $3,999/month',
+    category: 'Smart Buildings',
+    benefits: ['Energy Savings', 'Enhanced Security', 'Reduced Maintenance', 'Better Comfort'],
+    marketPrice: '$700 - $5,000/month',
+    link: 'https://ziontechgroup.com/smart-building-management'
+  },
+  {
+    title: 'AI-Powered Trading Algorithm Platform',
+    description: 'Automated trading system with machine learning algorithms for cryptocurrency and stock markets.',
+    icon: TrendingUp,
+    features: ['ML Algorithms', 'Real-time Trading', 'Risk Management', 'Backtesting', 'Portfolio Optimization', 'Market Analysis'],
+    pricing: '$299 - $2,999/month',
+    category: 'FinTech',
+    popular: true,
+    benefits: ['Automated Trading', 'Better Returns', 'Risk Reduction', '24/7 Monitoring'],
+    marketPrice: '$400 - $4,000/month',
+    link: 'https://ziontechgroup.com/ai-trading-platform'
+  },
+  {
+    title: 'Smart Agriculture Monitoring System',
+    description: 'IoT and AI-powered farm management with crop monitoring, weather prediction, and yield optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Weather Prediction', 'Soil Analysis', 'Pest Detection', 'Yield Optimization', 'Irrigation Control'],
+    pricing: '$199 - $1,999/month',
+    category: 'AgTech',
+    benefits: ['Increased Yield', 'Resource Optimization', 'Pest Prevention', 'Better Planning'],
+    marketPrice: '$300 - $2,500/month',
+    link: 'https://ziontechgroup.com/smart-agriculture'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat detection and response system with behavioral analysis and automated incident response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Incident Management', 'Forensic Analysis', 'Compliance Reporting'],
+    pricing: '$399 - $2,999/month',
+    category: 'Cybersecurity',
+    popular: true,
+    benefits: ['Proactive Security', 'Faster Response', 'Reduced Breaches', 'Compliance'],
+    marketPrice: '$600 - $4,000/month',
+    link: 'https://ziontechgroup.com/cybersecurity-threat-hunter'
+  },
+  {
+    title: 'Automated Customer Onboarding Platform',
+    description: 'Streamlined customer onboarding with document verification, KYC, and personalized experiences.',
+    icon: Users,
+    features: ['Document Verification', 'KYC Processing', 'Personalized Journeys', 'Progress Tracking', 'Compliance Checks', 'Integration APIs'],
+    pricing: '$149 - $1,299/month',
+    category: 'Customer Experience',
+    benefits: ['Faster Onboarding', 'Better Conversion', 'Reduced Friction', 'Compliance'],
+    marketPrice: '$200 - $1,800/month',
+    link: 'https://ziontechgroup.com/customer-onboarding'
+  },
+  {
+    title: 'AI-Powered Content Personalization Engine',
+    description: 'Dynamic content personalization for websites, apps, and marketing campaigns using machine learning.',
+    icon: Target,
+    features: ['Dynamic Personalization', 'A/B Testing', 'Behavioral Analysis', 'Real-time Adaptation', 'Multi-channel Support', 'Analytics'],
+    pricing: '$199 - $1,999/month',
+    category: 'Personalization',
+    benefits: ['Higher Engagement', 'Better Conversions', 'Improved UX', 'Data Insights'],
+    marketPrice: '$300 - $2,500/month',
+    link: 'https://ziontechgroup.com/content-personalization'
+  },
+  {
+    title: 'Smart Fleet Management System',
+    description: 'Comprehensive fleet tracking and optimization with route planning, fuel monitoring, and driver analytics.',
+    icon: Car,
+    features: ['Real-time Tracking', 'Route Optimization', 'Fuel Monitoring', 'Driver Analytics', 'Maintenance Alerts', 'Compliance Management'],
+    pricing: '$299 - $2,499/month',
+    category: 'Fleet Management',
+    benefits: ['Cost Reduction', 'Better Efficiency', 'Safety Improvement', 'Compliance'],
+    marketPrice: '$400 - $3,000/month',
+    link: 'https://ziontechgroup.com/fleet-management'
+  },
+  {
+    title: 'AI-Powered Voice Assistant Platform',
+    description: 'Custom voice assistant development with natural language processing and multi-language support.',
+    icon: Mic,
+    features: ['Voice Recognition', 'NLP Processing', 'Multi-language Support', 'Custom Commands', 'Integration APIs', 'Analytics'],
+    pricing: '$199 - $1,999/month',
+    category: 'Voice Technology',
+    benefits: ['Hands-free Operation', 'Better Accessibility', 'Improved Efficiency', 'Modern UX'],
+    marketPrice: '$300 - $2,500/month',
+    link: 'https://ziontechgroup.com/voice-assistant-platform'
+  },
+  {
+    title: 'Automated Quality Assurance Platform',
+    description: 'AI-powered software testing with automated test generation, execution, and defect prediction.',
+    icon: CheckCircle,
+    features: ['Automated Testing', 'Test Generation', 'Defect Prediction', 'Performance Testing', 'Cross-browser Testing', 'CI/CD Integration'],
+    pricing: '$299 - $2,999/month',
+    category: 'Quality Assurance',
+    benefits: ['Faster Testing', 'Better Coverage', 'Reduced Bugs', 'Cost Savings'],
+    marketPrice: '$400 - $4,000/month',
+    link: 'https://ziontechgroup.com/automated-qa'
+  },
+  {
+    title: 'Smart Event Management Platform',
+    description: 'AI-powered event planning and management with attendee analytics, logistics optimization, and engagement tracking.',
+    icon: Calendar,
+    features: ['Event Planning', 'Attendee Analytics', 'Logistics Optimization', 'Engagement Tracking', 'Virtual Events', 'Revenue Management'],
+    pricing: '$199 - $1,999/month',
+    category: 'Event Management',
+    benefits: ['Better Planning', 'Higher Engagement', 'Cost Optimization', 'Data Insights'],
+    marketPrice: '$300 - $2,500/month',
+    link: 'https://ziontechgroup.com/smart-event-management'
+  },
+  {
+    title: 'AI-Powered Learning Management System',
+    description: 'Intelligent e-learning platform with personalized learning paths, progress tracking, and skill assessment.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'Progress Tracking', 'Skill Assessment', 'Content Creation', 'Gamification', 'Analytics'],
+    pricing: '$149 - $1,299/month',
+    category: 'EdTech',
+    benefits: ['Better Learning', 'Personalized Experience', 'Progress Tracking', 'Engagement'],
+    marketPrice: '$200 - $1,800/month',
+    link: 'https://ziontechgroup.com/ai-learning-platform'
+  },
+  {
+    title: 'Automated Invoice Processing System',
+    description: 'AI-powered invoice processing with OCR, approval workflows, and financial integration.',
+    icon: FileText,
+    features: ['OCR Processing', 'Approval Workflows', 'Financial Integration', 'Duplicate Detection', 'Compliance Checks', 'Analytics'],
+    pricing: '$99 - $899/month',
+    category: 'Finance',
+    benefits: ['Faster Processing', 'Reduced Errors', 'Cost Savings', 'Better Control'],
+    marketPrice: '$150 - $1,200/month',
+    link: 'https://ziontechgroup.com/invoice-processing'
+  },
+  {
+    title: 'Smart Home Automation Platform',
+    description: 'Comprehensive home automation with AI learning, energy optimization, and security integration.',
+    icon: Home,
+    features: ['Device Control', 'AI Learning', 'Energy Optimization', 'Security Integration', 'Voice Control', 'Mobile App'],
+    pricing: '$49 - $499/month',
+    category: 'Smart Home',
+    benefits: ['Convenience', 'Energy Savings', 'Security', 'Comfort'],
+    marketPrice: '$75 - $700/month',
+    link: 'https://ziontechgroup.com/smart-home-automation'
+  },
+  {
+    title: 'AI-Powered Market Research Platform',
+    description: 'Automated market research with sentiment analysis, competitor tracking, and trend prediction.',
+    icon: Search,
+    features: ['Sentiment Analysis', 'Competitor Tracking', 'Trend Prediction', 'Data Collection', 'Report Generation', 'API Access'],
+    pricing: '$299 - $2,499/month',
+    category: 'Market Research',
+    benefits: ['Better Insights', 'Faster Research', 'Cost Reduction', 'Competitive Advantage'],
+    marketPrice: '$400 - $3,000/month',
+    link: 'https://ziontechgroup.com/ai-market-research'
   }
 ];
 
@@ -1377,467 +1593,7 @@ export default function MicroSaasPage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Micro SaaS Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Micro SaaS Solutions
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Specialized software solutions that address specific business challenges 
-              with modern technology and user-centric design.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {microSaasServices.map((service, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-              >
-                <div className={`h-2 bg-gradient-to-r ${service.color}`}></div>
-                <div className="p-8">
-                  <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4`}>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900">
-                      {service.title}
-                    </h3>
-                  </div>
-                  
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          <span className="text-gray-700 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">
-                          {benefit}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <Link
-                    href="/contact"
-                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
-                  >
-                    Learn More
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Technologies We Use
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              We leverage cutting-edge technologies and modern frameworks to build 
-              robust, scalable, and maintainable software solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {platforms.map((platform, index) => (
-              <motion.div
-                key={index}
-                className="bg-gray-50 p-6 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300 group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <platform.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {platform.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {platform.description}
-                  </p>
-                </div>
-                
-                <div className="flex flex-wrap gap-2">
-                  {platform.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Development Process */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Development Process
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              A proven methodology that ensures successful project delivery and maximum value for your investment.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {developmentProcess.map((step, index) => (
-              <motion.div
-                key={index}
-                className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {step.step}
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose Our Micro SaaS Solutions?
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Our micro SaaS solutions deliver focused value and measurable results for your business.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                className="text-center p-6 bg-gray-50 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Pricing Plans
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Transparent pricing for micro SaaS development. Choose the plan that fits your needs.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
-              <motion.div
-                key={index}
-                className={`bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 ${
-                  tier.popular ? 'ring-2 ring-blue-500 scale-105' : ''
-                }`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                {tier.popular && (
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center py-2 text-sm font-semibold">
-                    Most Popular
-                  </div>
-                )}
-                <div className={`h-2 bg-gradient-to-r ${tier.color}`}></div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {tier.name}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {tier.description}
-                  </p>
-                  <div className="text-4xl font-bold text-gray-900 mb-6">
-                    {tier.price}
-                    {tier.price !== "Custom" && <span className="text-lg text-gray-500">/project</span>}
-                  </div>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      tier.popular
-                        ? 'bg-green-600 text-white hover:bg-green-700'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                    }`}
-                  >
-                    Get Started
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our Micro SaaS Solutions?
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We deliver exceptional value through innovation, affordability, and customer success
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => {
-                const IconComponent = benefit.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="h-8 w-8 text-green-600" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-              {/* Contact Information Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Get Started with Our Micro SaaS Solutions
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Contact our team to discuss your business needs and find the perfect micro SaaS solution.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Phone className="w-8 h-8 text-green-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
-              <p className="text-gray-600">+1 302 464 0950</p>
-            </motion.div>
-
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <Mail className="w-8 h-8 text-green-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
-              <p className="text-gray-600">kleber@ziontechgroup.com</p>
-            </motion.div>
-
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <MapPin className="w-8 h-8 text-green-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
-              <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Start with any of our micro SaaS solutions and see the difference AI-powered tools can make.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="/ai-services"
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
-              >
-                View AI Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
       </div>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Build Your Micro SaaS Solution?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss your project requirements and create a custom solution that drives your business forward.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              >
-                Start Your Project
-              </Link>
-              <Link 
-                href="/services" 
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
-              >
-                Explore All Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </Layout>
   );
 }

@@ -141,6 +141,9 @@ export default function Layout({
                   <Instagram className="w-4 h-4" />
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
 
         {/* Main Navigation */}
         <nav className="container mx-auto px-4">
@@ -253,6 +256,7 @@ export default function Layout({
                             </Link>
                           ))}
                         </div>
+                      </div>
                     ) : (
                       <Link
                         href={item.href}

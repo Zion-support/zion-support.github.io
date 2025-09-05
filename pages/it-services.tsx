@@ -801,6 +801,398 @@ const itServices = [
       "Better data flow",
       "Reduced manual work"
     ]
+  },
+  // NEW COMPREHENSIVE IT SERVICES
+  {
+    title: "AI-Powered IT Operations Center",
+    description: "Intelligent IT operations with AI-driven monitoring, automation, and predictive maintenance",
+    icon: Cpu,
+    features: [
+      "AI Monitoring",
+      "Predictive Analytics",
+      "Automated Remediation",
+      "Intelligent Alerting",
+      "Performance Optimization",
+      "Capacity Planning"
+    ],
+    pricing: "$25,000 - $150,000/setup",
+    category: "AI Operations",
+    popular: true,
+    color: "from-blue-500 to-cyan-500",
+    benefits: [
+      "Proactive Issue Resolution",
+      "Reduced Downtime",
+      "Cost Optimization",
+      "Enhanced Performance"
+    ]
+  },
+  {
+    title: "Zero Trust Security Architecture",
+    description: "Comprehensive zero trust security implementation with continuous verification and micro-segmentation",
+    icon: Shield,
+    features: [
+      "Identity Verification",
+      "Micro-segmentation",
+      "Continuous Monitoring",
+      "Least Privilege Access",
+      "Threat Detection",
+      "Compliance Management"
+    ],
+    pricing: "$50,000 - $300,000/implementation",
+    category: "Security",
+    popular: true,
+    color: "from-red-500 to-pink-500",
+    benefits: [
+      "Enhanced Security",
+      "Reduced Attack Surface",
+      "Compliance Assurance",
+      "Better Visibility"
+    ]
+  },
+  {
+    title: "Edge Computing Infrastructure",
+    description: "Distributed edge computing solutions for low-latency applications and IoT deployments",
+    icon: Network,
+    features: [
+      "Edge Data Centers",
+      "IoT Integration",
+      "Low-latency Processing",
+      "Distributed Storage",
+      "Real-time Analytics",
+      "5G Integration"
+    ],
+    pricing: "$30,000 - $200,000/setup",
+    category: "Edge Computing",
+    popular: true,
+    color: "from-green-500 to-emerald-500",
+    benefits: [
+      "Reduced Latency",
+      "Better Performance",
+      "Cost Efficiency",
+      "Scalable Architecture"
+    ]
+  },
+  {
+    title: "Quantum-Safe Cryptography Implementation",
+    description: "Future-proof cryptographic solutions resistant to quantum computing attacks",
+    icon: Lock,
+    features: [
+      "Post-Quantum Algorithms",
+      "Key Management",
+      "Migration Planning",
+      "Compliance Support",
+      "Performance Optimization",
+      "Risk Assessment"
+    ],
+    pricing: "$40,000 - $250,000/implementation",
+    category: "Quantum Security",
+    popular: true,
+    color: "from-purple-500 to-indigo-500",
+    benefits: [
+      "Future-proof Security",
+      "Quantum Resistance",
+      "Compliance Ready",
+      "Long-term Protection"
+    ]
+  },
+  {
+    title: "Hyperconverged Infrastructure (HCI)",
+    description: "Integrated compute, storage, and networking solutions for simplified data center management",
+    icon: Server,
+    features: [
+      "Unified Management",
+      "Software-defined Storage",
+      "Automated Provisioning",
+      "High Availability",
+      "Scalable Architecture",
+      "Cost Optimization"
+    ],
+    pricing: "$20,000 - $150,000/setup",
+    category: "Infrastructure",
+    popular: true,
+    color: "from-orange-500 to-red-500",
+    benefits: [
+      "Simplified Management",
+      "Reduced Complexity",
+      "Better Performance",
+      "Cost Savings"
+    ]
+  },
+  {
+    title: "DevSecOps Implementation",
+    description: "Integrated development, security, and operations practices for secure software delivery",
+    icon: Code,
+    features: [
+      "Security Integration",
+      "Automated Testing",
+      "Continuous Monitoring",
+      "Compliance Automation",
+      "Threat Modeling",
+      "Vulnerability Management"
+    ],
+    pricing: "$35,000 - $200,000/implementation",
+    category: "DevSecOps",
+    popular: true,
+    color: "from-teal-500 to-blue-500",
+    benefits: [
+      "Faster Delivery",
+      "Enhanced Security",
+      "Reduced Risk",
+      "Better Quality"
+    ]
+  },
+  {
+    title: "Multi-Cloud Management Platform",
+    description: "Unified management and optimization across multiple cloud providers and environments",
+    icon: Cloud,
+    features: [
+      "Multi-cloud Orchestration",
+      "Cost Optimization",
+      "Security Management",
+      "Performance Monitoring",
+      "Disaster Recovery",
+      "Compliance Tracking"
+    ],
+    pricing: "$25,000 - $150,000/setup",
+    category: "Cloud Management",
+    popular: true,
+    color: "from-sky-500 to-blue-500",
+    benefits: [
+      "Vendor Independence",
+      "Cost Optimization",
+      "Better Control",
+      "Risk Mitigation"
+    ]
+  },
+  {
+    title: "5G Network Infrastructure",
+    description: "Next-generation 5G network design, implementation, and optimization for enterprise environments",
+    icon: Wifi,
+    features: [
+      "5G Network Design",
+      "Edge Computing Integration",
+      "IoT Connectivity",
+      "Network Slicing",
+      "Performance Optimization",
+      "Security Implementation"
+    ],
+    pricing: "$50,000 - $500,000/implementation",
+    category: "5G Networks",
+    popular: true,
+    color: "from-violet-500 to-purple-500",
+    benefits: [
+      "Ultra-fast Connectivity",
+      "Low Latency",
+      "IoT Support",
+      "Future-ready"
+    ]
+  },
+  {
+    title: "AI-Powered IT Asset Management",
+    description: "Intelligent IT asset lifecycle management with predictive analytics and automated optimization",
+    icon: Package,
+    features: [
+      "Asset Discovery",
+      "Lifecycle Tracking",
+      "Predictive Maintenance",
+      "Cost Optimization",
+      "Compliance Management",
+      "Automated Reporting"
+    ],
+    pricing: "$15,000 - $100,000/setup",
+    category: "Asset Management",
+    popular: true,
+    color: "from-amber-500 to-orange-500",
+    benefits: [
+      "Cost Reduction",
+      "Better Planning",
+      "Compliance Assurance",
+      "Automated Management"
+    ]
+  },
+  {
+    title: "Blockchain Infrastructure Services",
+    description: "Enterprise blockchain solutions for secure transactions, smart contracts, and decentralized applications",
+    icon: Network,
+    features: [
+      "Blockchain Architecture",
+      "Smart Contract Development",
+      "Consensus Mechanisms",
+      "Security Implementation",
+      "Integration Services",
+      "Maintenance & Support"
+    ],
+    pricing: "$40,000 - $300,000/project",
+    category: "Blockchain",
+    popular: true,
+    color: "from-emerald-500 to-teal-500",
+    benefits: [
+      "Enhanced Security",
+      "Transparency",
+      "Automation",
+      "Trust & Verification"
+    ]
+  },
+  {
+    title: "Green IT & Sustainability Solutions",
+    description: "Environmentally sustainable IT infrastructure and practices for carbon footprint reduction",
+    icon: Sprout,
+    features: [
+      "Energy Optimization",
+      "Carbon Footprint Tracking",
+      "Sustainable Hardware",
+      "Green Data Centers",
+      "Waste Reduction",
+      "Compliance Reporting"
+    ],
+    pricing: "$20,000 - $150,000/implementation",
+    category: "Green IT",
+    popular: true,
+    color: "from-green-500 to-lime-500",
+    benefits: [
+      "Cost Savings",
+      "Environmental Impact",
+      "Compliance",
+      "Brand Reputation"
+    ]
+  },
+  {
+    title: "AI-Powered Network Security",
+    description: "Advanced network security with AI-driven threat detection, response, and prevention",
+    icon: Shield,
+    features: [
+      "AI Threat Detection",
+      "Behavioral Analysis",
+      "Automated Response",
+      "Network Segmentation",
+      "Intrusion Prevention",
+      "Compliance Monitoring"
+    ],
+    pricing: "$30,000 - $200,000/setup",
+    category: "Network Security",
+    popular: true,
+    color: "from-red-500 to-rose-500",
+    benefits: [
+      "Proactive Security",
+      "Faster Response",
+      "Reduced False Positives",
+      "Better Protection"
+    ]
+  },
+  {
+    title: "Digital Workplace Transformation",
+    description: "Complete digital workplace modernization with collaboration tools, automation, and employee experience optimization",
+    icon: Users,
+    features: [
+      "Collaboration Platforms",
+      "Workflow Automation",
+      "Employee Experience",
+      "Mobile Solutions",
+      "Security Integration",
+      "Analytics & Insights"
+    ],
+    pricing: "$25,000 - $150,000/transformation",
+    category: "Digital Workplace",
+    popular: true,
+    color: "from-blue-500 to-indigo-500",
+    benefits: [
+      "Improved Productivity",
+      "Better Collaboration",
+      "Employee Satisfaction",
+      "Cost Efficiency"
+    ]
+  },
+  {
+    title: "IT Governance & Compliance Framework",
+    description: "Comprehensive IT governance framework ensuring compliance, risk management, and strategic alignment",
+    icon: CheckCircle,
+    features: [
+      "Policy Development",
+      "Risk Assessment",
+      "Compliance Monitoring",
+      "Audit Support",
+      "Training Programs",
+      "Performance Metrics"
+    ],
+    pricing: "$20,000 - $125,000/implementation",
+    category: "Governance",
+    popular: true,
+    color: "from-slate-500 to-gray-500",
+    benefits: [
+      "Risk Mitigation",
+      "Compliance Assurance",
+      "Better Control",
+      "Strategic Alignment"
+    ]
+  },
+  {
+    title: "AI-Powered Data Analytics Platform",
+    description: "Advanced data analytics and business intelligence platform with AI-driven insights and predictions",
+    icon: BarChart3,
+    features: [
+      "Data Integration",
+      "AI Analytics",
+      "Predictive Modeling",
+      "Real-time Dashboards",
+      "Automated Reporting",
+      "Machine Learning"
+    ],
+    pricing: "$35,000 - $250,000/setup",
+    category: "Data Analytics",
+    popular: true,
+    color: "from-cyan-500 to-blue-500",
+    benefits: [
+      "Better Insights",
+      "Data-driven Decisions",
+      "Competitive Advantage",
+      "Cost Optimization"
+    ]
+  },
+  {
+    title: "Disaster Recovery as a Service (DRaaS)",
+    description: "Comprehensive disaster recovery solutions with automated failover, testing, and rapid recovery capabilities",
+    icon: HardDrive,
+    features: [
+      "Automated Failover",
+      "Regular Testing",
+      "Rapid Recovery",
+      "Data Replication",
+      "Compliance Support",
+      "24/7 Monitoring"
+    ],
+    pricing: "$10,000 - $100,000/setup",
+    category: "Disaster Recovery",
+    popular: true,
+    color: "from-yellow-500 to-orange-500",
+    benefits: [
+      "Business Continuity",
+      "Risk Mitigation",
+      "Compliance",
+      "Peace of Mind"
+    ]
+  },
+  {
+    title: "IT Service Management (ITSM) Platform",
+    description: "Comprehensive IT service management solution with ticketing, change management, and service catalog",
+    icon: Settings,
+    features: [
+      "Service Desk",
+      "Change Management",
+      "Incident Management",
+      "Service Catalog",
+      "Knowledge Base",
+      "Performance Analytics"
+    ],
+    pricing: "$15,000 - $100,000/setup",
+    category: "Service Management",
+    popular: true,
+    color: "from-indigo-500 to-purple-500",
+    benefits: [
+      "Better Service Delivery",
+      "Improved Efficiency",
+      "Customer Satisfaction",
+      "Process Optimization"
+    ]
   }
 ];
 
@@ -1229,307 +1621,5 @@ export default function ITServicesPage() {
       </section>
       </div>
     </Layout>
-
-    {/* IT Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our IT Solutions
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              End-to-end IT services designed to optimize your technology infrastructure, 
-              enhance security, and support your business objectives.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {itServices.map((service, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-              >
-                <div className={`h-2 bg-gradient-to-r ${service.color}`}></div>
-                <div className="p-8">
-                  <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4`}>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900">
-                      {service.title}
-                    </h3>
-                  </div>
-                  
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          <span className="text-gray-700 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">
-                          {benefit}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <Link
-                    href="/contact"
-                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
-                  >
-                    Learn More
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Industries We Serve
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Our IT solutions are tailored to meet the specific requirements and compliance 
-              standards of various industries.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                className="bg-gray-50 p-6 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300 group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <industry.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {industry.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {industry.description}
-                  </p>
-                </div>
-                
-                <ul className="space-y-2">
-                  {industry.solutions.map((solution, solutionIndex) => (
-                    <li key={solutionIndex} className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      {solution}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Technologies We Work With
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              We leverage cutting-edge technologies and industry-leading tools to deliver 
-              robust and scalable IT solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  {tech.category}
-                </h3>
-                <ul className="space-y-2">
-                  {tech.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose Our IT Services?
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Our IT solutions deliver measurable results and provide a solid foundation for your business growth.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                className="text-center p-6 bg-gray-50 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our IT Service Process
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              A systematic approach to IT service delivery that ensures successful implementation and ongoing support.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {processSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {step.step}
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Modernize Your IT Infrastructure?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss your IT needs and create a comprehensive solution that supports your business growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              >
-                Get IT Consultation
-              </Link>
-              <Link 
-                href="/services" 
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-              >
-                Explore All Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
   );
 }
