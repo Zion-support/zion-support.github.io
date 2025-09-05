@@ -13,4 +13,8 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testPathIgnorePatterns: ['/node_modules/', '/dist/']
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b

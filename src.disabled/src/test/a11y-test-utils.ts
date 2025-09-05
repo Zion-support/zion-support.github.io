@@ -1,3 +1,4 @@
+
 // Accessibility test utilities
 import { injectAxe, checkA11y } from '@axe-core/playwright';
 export const a11yTestUtils = {

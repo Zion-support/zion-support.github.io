@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const PricingPage: React.FC = () => {
   return (
     <>
@@ -185,4 +186,7 @@ const PricingPage: _React.FC = () => {}
 =======
 
 >>>>>>> origin/main
+=======
+
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 export default PricingPage;

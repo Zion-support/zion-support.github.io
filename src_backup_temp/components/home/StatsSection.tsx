@@ -133,10 +133,13 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   { opacity: 1,;
   y: 0;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: tru e }}
@@ -207,10 +210,13 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
                 y: -8,;
   transition: { duration: 0.3;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 }
               }}
 

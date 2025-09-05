@@ -1,8 +1,17 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 import { 
+=======
+import { 
+  TrendingUp,
+  Building,
+  Rocket,
+  Lightbulb,
+  Handshake,
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   Brain, 
   Users, 
   Award, 
@@ -12,10 +21,18 @@ import {
   Shield, 
   Zap, 
   CheckCircle, 
+<<<<<<< HEAD
   ArrowRight,
   Rocket,
   Lightbulb,
   Handshake
+=======
+  ArrowRight, 
+  Star, 
+  DollarSign, 
+  Clock, 
+  BarChart3
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 } from 'lucide-react';
 
 const values = [
@@ -32,7 +49,16 @@ const values = [
   {
     icon: Users,
     title: 'Collaboration',
+<<<<<<< HEAD
     description: 'We work closely with our clients as partners, understanding their unique challenges and co-creating solutions together.'
+=======
+    description: 'We work closely with our clients as partners, ensuring their success is our success.'
+  },
+  {
+    icon: Award,
+    title: 'Excellence',
+    description: 'We maintain the highest standards in everything we do, delivering quality that exceeds expectations.'
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   },
   {
     icon: Target,
@@ -74,9 +100,42 @@ const team = [
 
 const stats = [
   { number: '500+', label: 'Projects Completed' },
+<<<<<<< HEAD
   { number: '99.9%', label: 'Client Satisfaction' },
   { number: '24/7', label: 'Support Available' },
   { number: '50+', label: 'Countries Served' }
+=======
+  { number: '50+', label: 'Happy Clients' },
+  { number: '99%', label: 'Client Satisfaction' },
+  { number: '24/7', label: 'Support Available' }
+];
+
+const team = [
+  {
+    name: 'John Smith',
+    role: 'CEO & Founder',
+    image: '/images/team/john-smith.jpg',
+    bio: 'Visionary leader with 15+ years in tech innovation.'
+  },
+  {
+    name: 'Sarah Johnson',
+    role: 'CTO',
+    image: '/images/team/sarah-johnson.jpg',
+    bio: 'Technical expert specializing in AI and cloud architecture.'
+  },
+  {
+    name: 'Mike Chen',
+    role: 'Head of Engineering',
+    image: '/images/team/mike-chen.jpg',
+    bio: 'Full-stack developer passionate about scalable solutions.'
+  },
+  {
+    name: 'Emily Davis',
+    role: 'Head of Design',
+    image: '/images/team/emily-davis.jpg',
+    bio: 'Creative director focused on user experience excellence.'
+  }
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 ];
 
 export default function About() {
@@ -84,8 +143,12 @@ export default function About() {
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're transforming businesses through innovative AI and technology solutions." />
         <meta name="keywords" content="about us, team, mission, values, AI technology, cloud services" />
+=======
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts dedicated to delivering innovative technology solutions." />
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
       </Head>
       
       <Layout>
@@ -110,14 +173,45 @@ export default function About() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Mission Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
+=======
+        {/* Stats Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600 font-medium">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Values Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
+<<<<<<< HEAD
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Mission</h2>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto">
@@ -155,6 +249,29 @@ export default function About() {
                   >
                     <div className="bg-gradient-to-r from-blue-500 to-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                       <IconComponent className="h-8 w-8 text-white" />
+=======
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Values
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                These core values guide everything we do and shape our company culture.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {values.map((value, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
+                      <value.icon className="h-6 w-6 text-blue-600" />
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
                     </div>
                     <h3 className="text-2xl font-bold mb-4">{value.title}</h3>
                     <p className="text-gray-600">{value.description}</p>
@@ -197,6 +314,7 @@ export default function About() {
                   <p className="text-gray-600">{member.description}</p>
                 </motion.div>
               ))}
+<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -233,18 +351,26 @@ export default function About() {
                   <div className="text-lg text-blue-100">{stat.label}</div>
                 </motion.div>
               ))}
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6 text-center">
+=======
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="container mx-auto px-4 text-center">
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Work With Us?
               </h2>
@@ -266,6 +392,28 @@ export default function About() {
                 >
                   Learn More
                 </motion.button>
+=======
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Let's work together to create innovative solutions that drive your success.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Start Your Project
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  Explore Services
+                </Link>
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
               </div>
             </motion.div>
           </div>

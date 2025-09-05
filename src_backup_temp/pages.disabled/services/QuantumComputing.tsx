@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 const "QuantumComputing": React.FC = () => {
   return (
@@ -17,3 +18,5 @@ export default QuantumComputing;
 import React from 'react'; const QuantumComputing: React.FC = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-center"> Quantum Computing </h1> <p className="text-xl text-gray-600 text-center">Coming soon...</p> </div> </div> )}; export { QuantumComputing }; export default QuantumComputing;
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b

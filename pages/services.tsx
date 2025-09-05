@@ -127,7 +127,11 @@ const processSteps = [
   }
 ];
 
+<<<<<<< HEAD
 export default function ServicesPage() {
+=======
+export default function Services() {
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   return (
     <>
       <Head>
@@ -135,8 +139,13 @@ export default function ServicesPage() {
         <meta name="description" content="Comprehensive technology services including AI, IT, automation, cybersecurity, web development, and mobile development." />
         <meta name="keywords" content="AI services, IT services, automation, cybersecurity, web development, mobile development" />
       </Head>
+<<<<<<< HEAD
       
       <Layout>
+=======
+
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
           <div className="container mx-auto px-6 text-center">
@@ -172,8 +181,13 @@ export default function ServicesPage() {
         </section>
 
         {/* Services Grid */}
+<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
+=======
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -232,9 +246,15 @@ export default function ServicesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Process Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
+=======
+        {/* Benefits Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

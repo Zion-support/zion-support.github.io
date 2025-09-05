@@ -113,8 +113,11 @@ export function usePerformance("props": "any) {;
 
           clsValue += layoutShiftEntry.value;
 ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
       setMetrics(prev => ({ ...prev, cls: clsValu e }))}
     );
     // Start observing

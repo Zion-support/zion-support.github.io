@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -243,6 +244,8 @@ const ServicesIndex: NextPage = () => {
     }
   ];
 =======
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -290,13 +293,17 @@ const services = [
 ];
 
 export default function ServicesIndex() {
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   return (
     <>
       <Head>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive technology services including AI development, cloud services, cybersecurity, and data analytics solutions." />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -521,6 +528,27 @@ export default function ServicesIndex() {
             </motion.div>
           </div>
         </section>
+=======
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Comprehensive technology solutions designed to transform your business 
+                with AI, cloud services, cybersecurity, and data analytics.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -552,7 +580,10 @@ export default function ServicesIndex() {
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
@@ -561,6 +592,7 @@ export default function ServicesIndex() {
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -594,6 +626,7 @@ export default function ServicesIndex() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
       </main>
     </div>
   );
@@ -605,3 +638,9 @@ export default ServicesIndex;
   );
 }
 >>>>>>> origin/main
+=======
+      </div>
+    </>
+  );
+}
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b

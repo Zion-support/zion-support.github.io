@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/utils/productionLogger.ts
+export function logErrorToProduction(message: string, error?: unknown): void {
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 export function logErrorToProduction("message": 'string',error?: "unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message",error)} }
 export function logErrorToProduction("message": string, error?: unknown): void {
   // In production, we might want to send errors to a logging service

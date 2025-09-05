@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 import React from 'react';
-import Layout from '../../components/Layout';';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
 const features = [;
   {}
     icon: Cloud,
@@ -19,10 +25,14 @@ import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
 >>>>>>> origin/main
+=======
+
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
+<<<<<<< HEAD
 <<<<<<< HEAD
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
@@ -163,6 +173,10 @@ export default function CloudDevOpsPage() {
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
 >>>>>>> origin/main
+=======
+    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
+    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   },
   {
     icon: Server,
@@ -196,6 +210,7 @@ export default function CloudDevOpsPage() {
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -220,6 +235,21 @@ const tools = [
 
 export default function CloudDevOpsPage() {
 >>>>>>> origin/main
+=======
+
+const tools = [
+  { name: 'AWS', description: 'Amazon Web Services cloud platform' },
+  { name: 'Azure', description: 'Microsoft Azure cloud services' },
+  { name: 'Google Cloud', description: 'Google Cloud Platform solutions' },
+  { name: 'Docker', description: 'Containerization platform' },
+  { name: 'Kubernetes', description: 'Container orchestration' },
+  { name: 'Terraform', description: 'Infrastructure as code' },
+  { name: 'Jenkins', description: 'CI/CD automation' },
+  { name: 'Prometheus', description: 'Monitoring and alerting' }
+];
+
+export default function CloudDevOpsPage() {
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   return (
     <>
       <Head>
@@ -245,6 +275,7 @@ export default function CloudDevOpsPage() {
             </motion.div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -259,10 +290,14 @@ export default function CloudDevOpsPage() {
                 Comprehensive cloud and DevOps solutions to modernize your infrastructure.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>
 =======
             </motion.div>
 >>>>>>> origin/main
+=======
+            </motion.div>
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -290,6 +325,7 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
@@ -324,6 +360,8 @@ export default function CloudDevOpsPage() {
                 </button>
               </div>
 =======
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
@@ -352,6 +390,7 @@ export default function CloudDevOpsPage() {
                   <p className="text-gray-600 text-sm">{tool.description}</p>
                 </motion.div>
               ))}
+<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -398,6 +437,80 @@ export default function CloudDevOpsPage() {
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
+=======
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Modernize Your Infrastructure?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our cloud and DevOps services can transform your business.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/it-services"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  View IT Services
+                </Link>
+              </div>
+            </motion.div>
+=======
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                We follow a proven methodology to ensure successful cloud and DevOps implementations.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {[
+                { step: '1', title: 'Assessment', description: 'Analyze your current infrastructure and requirements' },
+                { step: '2', title: 'Planning', description: 'Design the optimal cloud and DevOps strategy' },
+                { step: '3', title: 'Implementation', description: 'Execute the migration and setup processes' },
+                { step: '4', title: 'Optimization', description: 'Monitor, optimize, and maintain your systems' }
+              ].map((phase, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                    {phase.step}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{phase.title}</h3>
+                  <p className="text-gray-600">{phase.description}</p>
+                </motion.div>
+              ))}
+            </div>
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -429,9 +542,13 @@ export default function CloudDevOpsPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>
 =======
     </>
 >>>>>>> origin/main
+=======
+    </>
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   );
 }

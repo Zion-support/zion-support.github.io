@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
         fix: (content) => {
           // Remove merge conflict markers
           return content
@@ -190,6 +191,8 @@
           fs.unlinkSync(duplicate);
         }
       }
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 const fs = require('fs');
 const path = require('path');
 const {

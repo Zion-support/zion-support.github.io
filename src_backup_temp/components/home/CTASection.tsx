@@ -378,10 +378,13 @@ const CTASection: React.FC = (): JSX.Element => {
   { duration: 0.6,;
   delay: 0.6 + index * 0.1;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 }}
               viewport={{ once: tru e }}
               whileHover={{ y: -5 }}

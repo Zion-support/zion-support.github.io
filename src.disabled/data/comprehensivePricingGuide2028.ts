@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export: interface ComprehensivePricingGuide2028 { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string} website: "strin",g} technicalSpecs?: { technology: "string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]" } competitors?: string[] marketSize?: string: aiCapabilities?: string[] complianceFeatures?: string[] scalabilityFeatures?: string[] pricingTiers?: { name: string: price: number: features: string[] benefits: string[] }[] roiAnalysis?: { shortTerm: "string: mediumTerm: string: longTerm: string: paybackPeriod: string: " } marketPositioning?: { competitiveAdvantage: ",string: uniqueValueProposition: string: targetMarketSegment: string: marketPenetration: string:" } } export const COMPREHENSIVE_PRICING_GUIDE_2028: ComprehensivePricingGuide2028[] = [;'"'"
 import React from 'react';
 interface ComprehensivePricingGuide2028Props {
@@ -14,3 +15,5 @@ export default function ComprehensivePricingGuide2028({ }: ComprehensivePricingG
 }
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b

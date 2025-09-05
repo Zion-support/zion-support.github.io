@@ -2,8 +2,11 @@ import React, { useState, useEffect, useRef, useCallback } from 'react'; import 
  className?: string; placeholder?: string; onSearch?: (query: string) => void; showFilters?: boolean; showSuggestions?: boolean; 
 }; export function Search(props: any) {; const [query, setQuery] = useState<any>(''); const [isOpen, setIsOpen] = useState<any>(false); const [results, setResults] = useState<SearchResult[]>([]); const [isLoading, setIsLoading] = useState<any>(false); const [selectedFilters, setSelectedFilters] = useState<string[]>([]); const [showFiltersPanel, setShowFiltersPanel] = useState<any>(false); const searchRef = useRef<HTMLDivElement>(null); const inputRef = useRef<HTMLInputElement>(null); ;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 </any>
 </string>
 </any>

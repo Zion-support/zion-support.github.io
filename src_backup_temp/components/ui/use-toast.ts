@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/components/ui/use-toast.ts
+import { toast   } from 'react-hot-toast';
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 import { toast } from 'react-hot-toast'
 
 import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "number"} position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"} export function useToast(...args[]): "{ const showToast = ("message": 'string'",options?: "ToastOptions) => { return toast(message",options) return { showToast }};
+
 import { toast } from 'react-hot-toast'
 interface ToastOptions {
   duration?: number;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/hooks/useQuoteWizard.ts
 import useSWR from 'swr';
 import { captureException } from '@/utils/sentry';
 import { useState } from 'react';
@@ -36,6 +37,46 @@ export function useQuoteWizard(
     "onErrorRetry": (error, key, config, revalidate, { retryCount }) => {
       if (retryCount >= 1) return;
       const timeout = Math.pow(2, retryCount) * 1000; // 1s, 2s, 4s
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/hooks/useQuoteWizard.ts
+      setTimeout(() => revalidate({ retryCount: retryCoun t + 1 }), timeout);
+    },
+    dedupingInterval: 60000 0,
+  }
+    );
+}
+type WizardStep = 'Services' | 'Details' | 'Success';
+;
+export function useRequestQuoteWizard() {;
+  const [step, setStep] = useState<WizardStep>('Services');
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+;
+  const selectService = ("serviceId": "string) => {;
+    setSelectedService(serviceId);
+    setStep('Details');
+  "};
+;
+  const submitQuote = ("message": "string) => {;
+    // In a real app", this would submit to an API;
+    ;
+    setStep('Success');
+  };
+;
+  const resetWizard = () => {;
+    setStep('Services');
+    setSelectedService(null);
+  };
+;
+  return {;
+    step;
+    selectedService;
+    selectService;
+    submitQuote;
+    resetWizard;
+  };
+}
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 
       setTimeout(() => revalidate({ "retryCount": retryCoun t + 1 }), timeout)},
     "dedupingInterval": 60000 0})}

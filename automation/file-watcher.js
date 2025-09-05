@@ -34,6 +34,7 @@ class FileWatcher {
       const issues = [];
       // Basic syntax checks
       if (content.includes('return()') && !content.includes('return ()')) {
+<<<<<<< HEAD
         issues.push('Merge conflict markers found');
       }
 
@@ -90,6 +91,8 @@ class FileWatcher {
           pattern: /return\(\)/g,
           replacement: 'return (',
           description: 'Fixed return statement syntax'
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
         issues.push('Invalid return statement syntax')}
           "replacement": '',
           "description": 'Removed merge conflict markers'

@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -136,6 +137,14 @@ import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucid
 
 const securityServices = [
 >>>>>>> origin/main
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
+
+const securityServices = [
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   {
     title: "Security Assessment",
     description: "Comprehensive security evaluation of your systems",
@@ -166,6 +175,7 @@ const securityServices = [
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 const benefits = [
   'Protection against cyber threats and attacks',
   'Compliance with industry regulations',
@@ -179,6 +189,10 @@ export default function CybersecurityServices() {
 
 export default function CybersecurityPage() {
 >>>>>>> origin/main
+=======
+
+export default function CybersecurityPage() {
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   return (
     <>
       <Head>
@@ -205,6 +219,7 @@ export default function CybersecurityPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -223,6 +238,8 @@ export default function CybersecurityPage() {
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-red-600" />
 =======
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -238,7 +255,10 @@ export default function CybersecurityPage() {
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
@@ -263,6 +283,7 @@ export default function CybersecurityPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
@@ -302,6 +323,9 @@ export default function CybersecurityPage() {
 =======
 
 >>>>>>> origin/main
+=======
+
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -336,9 +360,13 @@ export default function CybersecurityPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>
 =======
     </>
 >>>>>>> origin/main
+=======
+    </>
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   );
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export: interface ComprehensivePricingService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; marketPrice: string; roi: string; estimatedDelivery: string; supportLevel: string; contactInfo: { phone: string; email: string} website: "strin",g} competitors?: string[] marketSize?: string: "demoUrl?: string: documentationUrl?: string:" } export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [;'"'"
 import React from 'react';
 interface ComprehensivePricing2025Props {
@@ -14,3 +15,5 @@ export default function ComprehensivePricing2025({ }: ComprehensivePricing2025Pr
 }
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b

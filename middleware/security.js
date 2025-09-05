@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Security middleware
 import { NextResponse } from 'next/server';
@@ -25,3 +26,5 @@ export function securityMiddleware(request) {
 }
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b

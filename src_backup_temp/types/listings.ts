@@ -1,6 +1,31 @@
+<<<<<<< HEAD
 export interface Listing { "id": "string; "title": string; "description": string; "price": number; "currency": string; "category": string; subcategory?: string; "tags": string[]; "images": string[]; "seller": { "id": string; "name": string; "rating": number; "reviews": number"}; "location": 'string; ;',"});,"}) "title": "string; "description": string; "price": number; "currency": string; "category": string; subcategory?: string; "tags": string[]; "images": string[]; "seller": { "id": string; "name": string; "rating": number; "reviews": number "} "location": "string;"
 export interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: 'string; ;',"});,"}) title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number } location: string;
 
+=======
+<<<<<<< HEAD:src/types/listings.ts
+export interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: string,"}),"})
+export interface Listing { "id": "string; "title": string; "description": string; "price": number; "currency": string; "category": string; subcategory?: string; "tags": string[]; "images": string[]; "seller": { "id": string; "name": string; "rating": number; "reviews": number"}; "location": 'string; ;',"});,"}) "title": "string; "description": string; "price": number; "currency": string; "category": string; subcategory?: string; "tags": string[]; "images": string[]; "seller": { "id": string; "name": string; "rating": number; "reviews": number "} "location": "string;"
+export interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: string; ;,"}
+    );,"})
+
+   title: string;
+   description: string;
+   price: number;
+   currency: string;
+   category: string;
+   subcategory?: string;
+   tags: string[];
+   images: string[];
+   seller: {  id: string;
+   name: string;
+   rating: number;
+   reviews: number  } location: string;
+export interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: 'string; ;',"});,"}) title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number } location: string;
+
+export interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: string,&quot;}),&quot;}) title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number } location: string;
+module.exports = interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: string,"}),"}) title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number } location: string;""
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 import React from 'react';
 
 interface ListingsProps {

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
 const jobOpenings = [{
     "id": 1,
@@ -34,11 +35,14 @@ const jobOpenings = [
       "Experience with cloud platforms (AWS, Azure, GCP)",
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
       "Strong problem-solving and communication skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "id": 2,
     "title": "Full-Stack Developer"
@@ -65,11 +69,14 @@ const jobOpenings = [
       "Experience with databases (PostgreSQL, MongoDB)",
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
       "Knowledge of cloud deployment and DevOps"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "id": 3,
     "title": "Cloud Solutions Architect"
@@ -96,11 +103,14 @@ const jobOpenings = [
       "Experience with containerization (Docker, Kubernetes)",
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
       "Strong understanding of security best practices"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "id": 4,
     "title": "Cybersecurity Specialist"
@@ -127,11 +137,14 @@ const jobOpenings = [
       "Experience with security tools and frameworks",
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "id": 5,
     "title": "DevOps Engineer"
@@ -158,11 +171,14 @@ const jobOpenings = [
       "Experience with infrastructure as code (Terraform, CloudFormation)",
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
       "Knowledge of monitoring and logging tools"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "id": 6,
     "title": "UX/UI Designer"
@@ -189,11 +205,14 @@ const jobOpenings = [
       "Experience with user research and testing",
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
       "Strong portfolio demonstrating design skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 const benefits = [{
     "title": "Competitive Compensation"
@@ -252,10 +271,15 @@ const values = [
 =======
 
 >>>>>>> origin/main
+=======
+
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   "Client success focus"
 ];
+
 export default function TalentPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <MainLayout,
     title="Careers - Zion Tech Group"
@@ -293,6 +317,8 @@ export default function TalentPage() {
       title="Careers - Zion Tech Group"
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
     >
@@ -300,6 +326,7 @@ export default function TalentPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
@@ -311,6 +338,8 @@ export default function TalentPage() {
               transition={{ duration: 0.8 }}
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -330,9 +359,11 @@ export default function TalentPage() {
             </motion.div>
           </div>
         </section>
+
         {/* Benefits Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <motion.div,
     className="text-center mb-16"
@@ -348,6 +379,8 @@ export default function TalentPage() {
               viewport={{ once: true }}
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
@@ -383,9 +416,11 @@ export default function TalentPage() {
             </div>
           </div>
         </section>
+
         {/* Values Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <motion.div,
     className="text-center mb-16"
@@ -401,6 +436,8 @@ export default function TalentPage() {
               viewport={{ once: true }}
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -458,6 +495,7 @@ export default function TalentPage() {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
@@ -470,9 +508,11 @@ export default function TalentPage() {
                 <motion.div
                   key={index}
         </section>
+
         {/* Job Openings Section */}
         <section id="openings" className="py-20 bg-white">
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <motion.div,
     className="text-center mb-16"
@@ -488,6 +528,8 @@ export default function TalentPage() {
               viewport={{ once: true }}
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
@@ -579,6 +621,7 @@ export default function TalentPage() {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4">
@@ -597,9 +640,11 @@ export default function TalentPage() {
       </section>
     </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
@@ -613,6 +658,8 @@ export default function TalentPage() {
               viewport={{ once: true }}
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See the Right Role?

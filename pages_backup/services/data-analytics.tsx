@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -126,6 +127,14 @@ import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 
 
 const analyticsServices = [
 >>>>>>> origin/main
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 'lucide-react';
+
+const analyticsServices = [
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   {
     title: "Business Intelligence",
     description: "Transform data into actionable business insights",
@@ -156,6 +165,7 @@ const analyticsServices = [
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 const benefits = [
   'Data-driven decision making',
   'Improved business performance',
@@ -169,6 +179,10 @@ export default function DataAnalyticsServices() {
 
 export default function DataAnalyticsPage() {
 >>>>>>> origin/main
+=======
+
+export default function DataAnalyticsPage() {
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   return (
     <>
       <Head>
@@ -195,6 +209,7 @@ export default function DataAnalyticsPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -213,6 +228,8 @@ export default function DataAnalyticsPage() {
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
 =======
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -228,7 +245,10 @@ export default function DataAnalyticsPage() {
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
@@ -253,6 +273,7 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
@@ -292,6 +313,9 @@ export default function DataAnalyticsPage() {
 =======
 
 >>>>>>> origin/main
+=======
+
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -326,9 +350,13 @@ export default function DataAnalyticsPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>
 =======
     </>
 >>>>>>> origin/main
+=======
+    </>
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   );
 }

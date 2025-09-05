@@ -1,4 +1,19 @@
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { 
+import {
+=======
+<<<<<<< HEAD
+import Head from 'next/head';
+import Link from 'next/link';
+import { 
+<<<<<<< HEAD
+  Code, ArrowRight, Book, Zap, Shield, CheckCircle, Globe, 
+  Users, Star, Clock, Award, TrendingUp 
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { 
@@ -462,7 +477,15 @@ export default function APIDocsPage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </Layout>
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+=======
+<<<<<<< HEAD
+=======
+    </Layout>
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
+>>>>>>> main
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   );
 }

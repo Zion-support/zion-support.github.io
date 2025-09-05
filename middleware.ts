@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+<<<<<<< HEAD
 const publicPaths = [
   '/',
   '/about',
@@ -12,6 +13,20 @@ const publicPaths = [
   '/auth/forgot-password',
   '/auth/reset-password',
   '/auth/verify'
+=======
+const publicRoutes = [
+  "/",
+  "/about",
+  "/contact",
+  "/services",
+  "/ai-services",
+  "/it-services",
+  "/micro-saas",
+  "/api-docs",
+  "/api",
+  "/careers",
+  "/case-studies"
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 ];
 
 export function middleware(request: NextRequest) {
@@ -33,6 +48,10 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+<<<<<<< HEAD
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
+=======
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   ],
 };

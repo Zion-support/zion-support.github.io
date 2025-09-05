@@ -220,6 +220,10 @@ automation.start().catch(error => {}),
   _console.error('Failed to start linting "automation": ', error);',
   process.exit(1);
 });,
+<<<<<<< HEAD
+=======
+=======;
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 return fileList;
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async start() {

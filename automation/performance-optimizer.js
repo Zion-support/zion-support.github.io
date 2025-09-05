@@ -30,6 +30,10 @@
   }
 
   generateRecommendations() {
+<<<<<<< HEAD
+=======
+=======;
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');

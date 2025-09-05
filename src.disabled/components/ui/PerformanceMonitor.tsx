@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 interface PerformanceMonitorProps {
   // Add props here as needed
@@ -13,3 +14,5 @@ export default function PerformanceMonitor({ }: PerformanceMonitorProps) {
 }
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b

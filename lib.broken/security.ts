@@ -1,3 +1,4 @@
+
 // Security headers configuration;
 export const securityHeaders = [;
   {;

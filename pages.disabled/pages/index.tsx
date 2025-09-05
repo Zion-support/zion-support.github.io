@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const \"Home\": NextPage = () => {
 import React, { memo } from 'react';
 import Link from 'next/link';
@@ -48,6 +49,8 @@ const Home = memo(() => {
   ];
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   const services = [{
       title: \'AI Development\',
       \"description\": \'Custom AI solutions and machine learning models for your business needs.\',
@@ -67,6 +70,7 @@ const Home = memo(() => {
       \"href\": \'/services/web-development\'
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       \"title\": \'Mobile Apps\',
       \"description\": \'Native and cross-platform mobile applications for iOS and Android.\',
@@ -210,6 +214,8 @@ const "Home": NextPage = () => {
       "href": '/services/ai-development'
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
     },
     {
       \"title\": \'Blockchain Solutions\',
@@ -289,10 +295,13 @@ const "Home": NextPage = () => {
             </p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
             {services.map((service) => (
               <div
                 key={service.title}
@@ -317,6 +326,7 @@ const "Home": NextPage = () => {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className=\"py-20 bg-gradient-to-r from-blue-600 to-purple-600\">
           <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center\">
             <h2 className=\"text-3xl font-bold text-white mb-6\">Ready to Transform Your Business?</h2>
@@ -333,6 +343,8 @@ const "Home": NextPage = () => {
               <Link href="/request-quote" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Request Quote</Link>
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
             </div>
           </div>
         </section>
@@ -422,6 +434,9 @@ const "Home": NextPage = () => {
 });
 export default Home;
 <<<<<<< HEAD
+<<<<<<< HEAD
    import React,{ memo } from 'react';  import type { NextPage } from 'next'; import EnhancedLayout from '../components/layout/EnhancedLayout';
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b

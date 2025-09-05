@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/integrations/supabase/client.ts
+import { createClient } from '@supabase/supabase-js';';
+';';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';';';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 import { createClient } from '@supabase/supabase-js';
 ;
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
@@ -18,8 +26,67 @@ export const supabaseHelpers = {;
   // User management;
   async getUser() {;
     const { "data": "{ user "}, error } = await supabase.auth.getUser();
+<<<<<<< HEAD
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || &apos;&quot;https&quot;: //placeholder.supabase.co
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || &apos;placeholder-key
+=======
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || &apos;&quot;https&quot;: //placeholder.supabase.co
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || &apos;placeholder-key
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  
+}
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    autoRefreshToken: tru e,
+    persistSession: tru e,
+    detectSessionInUrl: tru e
+  }
+}
+    );
+
+// Helper functions for common operations
+export const supabaseHelpers = {
+  // User management
+  async getUser() {
+    const { data: { user }, error } = await supabase.auth.getUser();
+    if (error) throw error;
+    return user;
+  }
+  async getSession() {;
+    const { "data": "{ session "}, error } = await supabase.auth.getSession();
+    if (error) throw error;
+    return session;
+  }
+  async signOut() {;
+    const { error } = await supabase.auth.signOut();
+    if (error) throw error;
+  }
+  // Database operations;
+  async fetchData("table": "string", query?: "any) {;
+    let queryBuilder = supabase.from(table).select('*');
+    ;
+    if (query) {;
+      Object.entries(query).forEach(([key", value]) => {;
+        if (value !== undefined && value !== null) {;
+          queryBuilder = queryBuilder.eq(key, value);
+        }
+      }
+    );
+    }
+    const { data, error } = await queryBuilder;
+    if (error) throw error;
+    return data;
+  }
+  async insertData("table": "string", "data": "any) {;
+    const { "data": result", error } = await supabase;
+      .from(table);
+      .insert(data);
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   },
 
   async insertData(table: string, data: an y) {
@@ -32,6 +99,13 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || &apos;place
     return result;
   },
 
+<<<<<<< HEAD
+=======
+  async updateData(table: string, id: string, data: an y) {
+    const { data: resul t, error } = await supabase
+      .from(table)';
+      .update(data)';';
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   async updateData(table: string, id: string, data: any) {
     const { data: result, error } = await supabase
       .from(table)
@@ -66,6 +140,11 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || &apos;place
     if (error) throw error;
   }
 };
+<<<<<<< HEAD
+=======
+;
+export default supabase;
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 
 export default supabase;
 import { createClient } from '@supabase/supabase-js

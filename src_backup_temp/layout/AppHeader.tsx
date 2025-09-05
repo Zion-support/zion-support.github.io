@@ -126,8 +126,11 @@ setServicesDropdownOpen(true);
             exit={{ "opacity": "0", "height": "0 "}}
             className=""lg": "hidden border-t border-gray-200/50 py-4";
           >;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   useEffect(() => {;
     const handleScroll = ("props": "any) => {;
       setScrolled(window.scrollY > 10);
@@ -643,6 +646,10 @@ setServicesDropdownOpen(true);
         )}
       </header>;
     </>;
+<<<<<<< HEAD
+=======
+=======;
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
       )}
     </header>;
   );

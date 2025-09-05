@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+export async function rewardOnboarding(...args: any[]): any {;
+
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 export async function rewardOnboarding(..."args": any[]): any {;
 export async function rewardOnboarding(;
   userId: string,
