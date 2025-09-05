@@ -516,6 +516,367 @@ const aiServices = [
     features: ['Personalized Learning', 'Adaptive Assessment', 'Progress Tracking', 'Skill Development'],
     pricing: '$2,000 - $10,000/month',
     category: 'EdTech'
+  },
+  {
+    title: 'AI-Powered Generative Design',
+    description: 'AI-driven product design optimization and creative problem solving.',
+    icon: Cpu,
+    features: ['Design Optimization', 'Creative Problem Solving', 'Material Selection', 'Performance Analysis'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Generative Design',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Edge Computing',
+    description: 'Intelligent edge computing solutions for real-time AI processing.',
+    icon: Server,
+    features: ['Real-time Processing', 'Low Latency', 'Edge Optimization', 'Distributed AI'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Edge AI'
+  },
+  {
+    title: 'AI-Powered Digital Twin',
+    description: 'Comprehensive digital twin solutions with AI-powered simulation and optimization.',
+    icon: Monitor,
+    features: ['Real-time Simulation', 'Predictive Analytics', 'Virtual Testing', 'Performance Optimization'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Digital Twin'
+  },
+  {
+    title: 'AI-Powered Conversational AI',
+    description: 'Advanced conversational AI with natural language understanding and generation.',
+    icon: MessageSquare,
+    features: ['Natural Language Understanding', 'Context Awareness', 'Multi-turn Conversations', 'Emotion Recognition'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Conversational AI'
+  },
+  {
+    title: 'AI-Powered Recommendation Engine',
+    description: 'Intelligent recommendation systems for personalized user experiences.',
+    icon: Target,
+    features: ['Collaborative Filtering', 'Content-based Filtering', 'Real-time Recommendations', 'A/B Testing'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Recommendation Systems'
+  },
+  {
+    title: 'AI-Powered Anomaly Detection',
+    description: 'Advanced anomaly detection for fraud prevention and system monitoring.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Pattern Recognition', 'Adaptive Learning', 'Alert System'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'Anomaly Detection'
+  },
+  {
+    title: 'AI-Powered Time Series Analysis',
+    description: 'Intelligent time series forecasting and analysis for business intelligence.',
+    icon: BarChart3,
+    features: ['Forecasting', 'Trend Analysis', 'Seasonality Detection', 'Pattern Recognition'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Time Series'
+  },
+  {
+    title: 'AI-Powered Computer Vision',
+    description: 'Advanced computer vision solutions for object detection and image analysis.',
+    icon: Eye,
+    features: ['Object Detection', 'Image Classification', 'Facial Recognition', 'Video Analysis'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Computer Vision'
+  },
+  {
+    title: 'AI-Powered Natural Language Processing',
+    description: 'Comprehensive NLP solutions for text analysis and language understanding.',
+    icon: FileText,
+    features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Named Entity Recognition'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'NLP'
+  },
+  {
+    title: 'AI-Powered Machine Learning Platform',
+    description: 'End-to-end machine learning platform for model development and deployment.',
+    icon: Brain,
+    features: ['Model Development', 'AutoML', 'Model Deployment', 'Performance Monitoring'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'ML Platform'
+  },
+  {
+    title: 'AI-Powered Data Science',
+    description: 'Comprehensive data science solutions with AI-powered insights and automation.',
+    icon: BarChart3,
+    features: ['Data Analysis', 'Insight Generation', 'Automated Reporting', 'Predictive Modeling'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Data Science'
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Intelligent blockchain analysis and cryptocurrency transaction monitoring.',
+    icon: Network,
+    features: ['Transaction Analysis', 'Risk Assessment', 'Compliance Monitoring', 'Pattern Recognition'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'Blockchain AI'
+  },
+  {
+    title: 'AI-Powered IoT Analytics',
+    description: 'Intelligent IoT data analysis and device management solutions.',
+    icon: Settings,
+    features: ['Device Analytics', 'Predictive Maintenance', 'Anomaly Detection', 'Performance Optimization'],
+    pricing: '$12,000 - $60,000/setup',
+    category: 'IoT AI'
+  },
+  {
+    title: 'AI-Powered Augmented Reality',
+    description: 'Intelligent AR solutions with object recognition and spatial understanding.',
+    icon: Monitor,
+    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Rendering', 'Gesture Recognition'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'AR AI'
+  },
+  {
+    title: 'AI-Powered Virtual Assistant',
+    description: 'Advanced virtual assistant with natural language processing and task automation.',
+    icon: Bot,
+    features: ['Task Automation', 'Natural Language Processing', 'Calendar Management', 'Email Handling'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Virtual Assistant'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with predictive analytics and optimization.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Management'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Supply Chain AI'
+  },
+  {
+    title: 'AI-Powered Quality Control',
+    description: 'Automated quality control systems with computer vision and machine learning.',
+    icon: CheckCircle,
+    features: ['Defect Detection', 'Quality Metrics', 'Process Optimization', 'Real-time Monitoring'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Quality Control'
+  },
+  {
+    title: 'AI-Powered Energy Management',
+    description: 'Intelligent energy management and optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Predictive Analytics', 'Cost Reduction', 'Sustainability Metrics'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Energy AI'
+  },
+  {
+    title: 'AI-Powered Healthcare Analytics',
+    description: 'Advanced healthcare data analysis and patient outcome prediction.',
+    icon: Heart,
+    features: ['Patient Analytics', 'Outcome Prediction', 'Treatment Optimization', 'Risk Assessment'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'Healthcare Analytics'
+  },
+  {
+    title: 'AI-Powered Financial Modeling',
+    description: 'Advanced financial modeling and risk assessment using machine learning.',
+    icon: TrendingUp,
+    features: ['Risk Modeling', 'Portfolio Optimization', 'Market Analysis', 'Fraud Detection'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Financial AI'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Advanced content moderation using AI for text, images, and videos.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'API Integration'],
+    pricing: '$0.01 - $0.05 per content item',
+    category: 'Content Moderation'
+  },
+  {
+    title: 'AI-Powered Personalization',
+    description: 'Real-time personalization engine for websites, apps, and marketing campaigns.',
+    icon: Target,
+    features: ['Behavioral Analysis', 'Content Personalization', 'A/B Testing', 'Real-time Adaptation'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Personalization'
+  },
+  {
+    title: 'AI-Powered Voice Analytics',
+    description: 'Advanced voice analysis for emotion detection, sentiment, and speaker identification.',
+    icon: Mic,
+    features: ['Emotion Detection', 'Sentiment Analysis', 'Speaker Identification', 'Voice Biometrics'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Voice Analytics'
+  },
+  {
+    title: 'AI-Powered Medical Imaging',
+    description: 'AI-powered medical image analysis for diagnosis and treatment planning.',
+    icon: Heart,
+    features: ['Image Classification', 'Anomaly Detection', 'Diagnostic Support', 'Treatment Planning'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Medical AI'
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Real-time language translation with context understanding and cultural adaptation.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Understanding', 'Cultural Adaptation', 'Multi-language Support'],
+    pricing: '$0.10 - $0.50 per 1000 characters',
+    category: 'Language Processing'
+  },
+  {
+    title: 'AI-Powered Search Engine',
+    description: 'Intelligent search with semantic understanding and personalized results.',
+    icon: Search,
+    features: ['Semantic Search', 'Personalized Results', 'Natural Language Queries', 'Context Understanding'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Search Technology'
+  },
+  {
+    title: 'AI-Powered Data Visualization',
+    description: 'Intelligent data visualization with automatic chart generation and insights.',
+    icon: BarChart3,
+    features: ['Auto Chart Generation', 'Insight Discovery', 'Interactive Dashboards', 'Natural Language Queries'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Data Visualization'
+  },
+  {
+    title: 'AI-Powered Email Intelligence',
+    description: 'Smart email management with automatic categorization, prioritization, and responses.',
+    icon: Mail,
+    features: ['Auto Categorization', 'Priority Scoring', 'Smart Responses', 'Spam Detection'],
+    pricing: '$5 - $25/user/month',
+    category: 'Email Intelligence'
+  },
+  {
+    title: 'AI-Powered Workflow Automation',
+    description: 'Intelligent workflow automation with decision-making capabilities.',
+    icon: Settings,
+    features: ['Process Automation', 'Decision Making', 'Exception Handling', 'Learning Adaptation'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Workflow Automation'
+  },
+  {
+    title: 'AI-Powered Risk Assessment',
+    description: 'Comprehensive risk assessment using AI for various business domains.',
+    icon: Shield,
+    features: ['Risk Identification', 'Probability Analysis', 'Impact Assessment', 'Mitigation Strategies'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Risk Management'
+  },
+  {
+    title: 'AI-Powered Performance Optimization',
+    description: 'AI-driven performance optimization for applications and systems.',
+    icon: TrendingUp,
+    features: ['Performance Analysis', 'Bottleneck Detection', 'Optimization Recommendations', 'Auto-tuning'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'Performance Optimization'
+  },
+  {
+    title: 'AI-Powered Compliance Monitoring',
+    description: 'Automated compliance monitoring and reporting for regulatory requirements.',
+    icon: CheckCircle,
+    features: ['Regulatory Monitoring', 'Compliance Reporting', 'Risk Assessment', 'Audit Support'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Compliance'
+  },
+  {
+    title: 'AI-Powered Customer Service',
+    description: 'Intelligent customer service with natural language understanding and resolution.',
+    icon: MessageSquare,
+    features: ['Natural Language Understanding', 'Intent Recognition', 'Automated Resolution', 'Escalation Management'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Customer Service'
+  },
+  {
+    title: 'AI-Powered Investment Analysis',
+    description: 'Advanced investment analysis and portfolio optimization using AI.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Portfolio Optimization', 'Risk Assessment', 'Investment Recommendations'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Investment AI'
+  },
+  {
+    title: 'AI-Powered Content Generation',
+    description: 'Automated content generation for marketing, blogs, and social media.',
+    icon: FileText,
+    features: ['Content Creation', 'SEO Optimization', 'Brand Voice Consistency', 'Multi-format Output'],
+    pricing: '$500 - $2,500/month',
+    category: 'Content Generation'
+  },
+  {
+    title: 'AI-Powered Security Monitoring',
+    description: 'Real-time security monitoring with AI-powered threat detection and response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response', 'Incident Investigation'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Security AI'
+  },
+  {
+    title: 'AI-Powered Process Mining',
+    description: 'Intelligent process mining and optimization for business processes.',
+    icon: Network,
+    features: ['Process Discovery', 'Conformance Checking', 'Process Enhancement', 'Performance Analysis'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Process Mining'
+  },
+  {
+    title: 'AI-Powered Knowledge Management',
+    description: 'Intelligent knowledge management with automatic categorization and retrieval.',
+    icon: BookOpen,
+    features: ['Knowledge Extraction', 'Automatic Categorization', 'Smart Search', 'Expertise Mapping'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Knowledge Management'
+  },
+  {
+    title: 'AI-Powered Decision Support',
+    description: 'AI-powered decision support systems for complex business decisions.',
+    icon: Target,
+    features: ['Decision Analysis', 'Scenario Modeling', 'Risk Assessment', 'Recommendation Engine'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Decision Support'
+  },
+  {
+    title: 'AI-Powered Robotics',
+    description: 'Intelligent robotic systems with advanced AI decision making.',
+    icon: Bot,
+    features: ['Autonomous Navigation', 'Object Manipulation', 'Human-Robot Interaction', 'Learning Capabilities'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'Robotics'
+  },
+  {
+    title: 'AI Music Composition',
+    description: 'AI-generated music composition with style adaptation and emotional intelligence.',
+    icon: Mic,
+    features: ['Style Adaptation', 'Emotional Intelligence', 'Instrument Simulation', 'Collaborative Composition'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Creative AI'
+  },
+  {
+    title: 'AI-Powered Gaming',
+    description: 'Intelligent game AI with adaptive difficulty and procedural content generation.',
+    icon: Gamepad2,
+    features: ['Adaptive Difficulty', 'Procedural Content', 'NPC Intelligence', 'Player Behavior Analysis'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Gaming'
+  },
+  {
+    title: 'AI Personal Health Coach',
+    description: 'AI-powered personal health monitoring and wellness recommendations.',
+    icon: Heart,
+    features: ['Health Monitoring', 'Wellness Recommendations', 'Symptom Analysis', 'Preventive Care'],
+    pricing: '$99 - $499/month',
+    category: 'Personal Health'
+  },
+  {
+    title: 'AI-Powered Smart Home',
+    description: 'Intelligent home automation with predictive behavior and energy optimization.',
+    icon: Home,
+    features: ['Predictive Automation', 'Energy Optimization', 'Security Monitoring', 'Voice Control'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'Smart Home'
+  },
+  {
+    title: 'AI Content Creation Studio',
+    description: 'AI-powered content creation for marketing, social media, and advertising.',
+    icon: Image,
+    features: ['Content Generation', 'Brand Consistency', 'Multi-format Output', 'Performance Optimization'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Content Marketing'
   }
 ];
 

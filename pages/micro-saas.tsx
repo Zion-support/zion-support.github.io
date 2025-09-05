@@ -470,6 +470,240 @@ const microSaaSProducts = [
     features: ['Real-time Detection', 'Machine Learning Models', 'Risk Scoring', 'API Integration'],
     pricing: '$0.10 - $0.50 per transaction',
     category: 'Fraud Prevention'
+  },
+  {
+    title: 'AI-Powered Social Media Content Scheduler',
+    description: 'Intelligent social media management with AI-generated content and optimal posting times.',
+    icon: Globe,
+    features: ['AI Content Generation', 'Optimal Timing', 'Multi-platform Posting', 'Engagement Analytics'],
+    pricing: '$29 - $199/month',
+    category: 'Social Media',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Security Auditor',
+    description: 'Automated smart contract security analysis and vulnerability detection for DeFi protocols.',
+    icon: Shield,
+    features: ['Security Analysis', 'Gas Optimization', 'Vulnerability Detection', 'Compliance Checking'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain Security'
+  },
+  {
+    title: 'AI-Powered Lead Scoring Engine',
+    description: 'Intelligent lead scoring and qualification using machine learning and behavioral analysis.',
+    icon: Target,
+    features: ['Behavioral Analysis', 'Lead Scoring', 'CRM Integration', 'Predictive Analytics'],
+    pricing: '$99 - $499/month',
+    category: 'Sales Automation'
+  },
+  {
+    title: 'Intelligent Document Workflow Automation',
+    description: 'AI-powered document processing and workflow automation for business processes.',
+    icon: FileText,
+    features: ['Document Processing', 'Workflow Automation', 'Data Extraction', 'Approval Routing'],
+    pricing: '$149 - $799/month',
+    category: 'Workflow Automation'
+  },
+  {
+    title: 'AI-Powered Customer Churn Predictor',
+    description: 'Predictive analytics to identify customers at risk of churning and retention strategies.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Retention Strategies', 'Customer Segmentation', 'Alert System'],
+    pricing: '$199 - $999/month',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'Smart Inventory Demand Forecasting',
+    description: 'AI-driven demand forecasting and inventory optimization for e-commerce and retail.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Stock Optimization', 'Seasonal Analysis', 'Supplier Integration'],
+    pricing: '$149 - $799/month',
+    category: 'Inventory Management'
+  },
+  {
+    title: 'AI-Powered Code Quality Analyzer',
+    description: 'Automated code quality analysis and improvement recommendations for development teams.',
+    icon: Code,
+    features: ['Code Analysis', 'Quality Metrics', 'Best Practices', 'Security Scanning'],
+    pricing: '$99 - $499/month',
+    category: 'Development Tools'
+  },
+  {
+    title: 'Intelligent Email Marketing Automation',
+    description: 'AI-powered email marketing with personalized content and optimal send times.',
+    icon: Mail,
+    features: ['Personalization', 'Send Time Optimization', 'A/B Testing', 'Behavioral Triggers'],
+    pricing: '$39 - $299/month',
+    category: 'Email Marketing'
+  },
+  {
+    title: 'AI-Powered Video Analytics Platform',
+    description: 'Advanced video analytics for security, marketing, and business intelligence.',
+    icon: Video,
+    features: ['Object Detection', 'Behavior Analysis', 'Crowd Counting', 'Real-time Alerts'],
+    pricing: '$199 - $999/month',
+    category: 'Video Analytics'
+  },
+  {
+    title: 'Smart Energy Consumption Optimizer',
+    description: 'AI-powered energy management and optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Cost Optimization', 'Predictive Analytics', 'Sustainability Reporting'],
+    pricing: '$199 - $999/month',
+    category: 'Energy Management'
+  },
+  {
+    title: 'AI-Powered Legal Document Review',
+    description: 'Automated legal document analysis and contract review using advanced AI.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
+    pricing: '$299 - $1,499/month',
+    category: 'Legal Tech'
+  },
+  {
+    title: 'Intelligent Meeting Transcription & Analysis',
+    description: 'AI-powered meeting transcription with action items and sentiment analysis.',
+    icon: Mic,
+    features: ['Real-time Transcription', 'Action Items', 'Sentiment Analysis', 'Meeting Insights'],
+    pricing: '$19 - $99/month',
+    category: 'Productivity'
+  },
+  {
+    title: 'AI-Powered Personal Finance Manager',
+    description: 'Intelligent personal finance tracking and investment advice using AI.',
+    icon: TrendingUp,
+    features: ['Expense Tracking', 'Investment Analysis', 'Goal Setting', 'Financial Planning'],
+    pricing: '$9 - $49/month',
+    category: 'Personal Finance'
+  },
+  {
+    title: 'Smart Contract Development Assistant',
+    description: 'AI-powered smart contract development and testing platform.',
+    icon: Code,
+    features: ['Code Generation', 'Security Testing', 'Gas Optimization', 'Deployment Automation'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain Development'
+  },
+  {
+    title: 'AI-Powered Content Moderation Suite',
+    description: 'Advanced content moderation for text, images, and videos using AI.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Content Safety'
+  },
+  {
+    title: 'Intelligent Supply Chain Optimizer',
+    description: 'AI-powered supply chain optimization and logistics management.',
+    icon: Network,
+    features: ['Route Optimization', 'Demand Forecasting', 'Risk Analysis', 'Supplier Management'],
+    pricing: '$299 - $1,499/month',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Monitor',
+    description: 'Real-time cybersecurity monitoring and threat detection using AI.',
+    icon: Shield,
+    features: ['Threat Detection', 'Anomaly Analysis', 'Incident Response', 'Compliance Monitoring'],
+    pricing: '$399 - $1,999/month',
+    category: 'Cybersecurity'
+  },
+  {
+    title: 'Smart Waste Management System',
+    description: 'IoT and AI-powered waste management and recycling optimization.',
+    icon: Trash2,
+    features: ['Waste Tracking', 'Route Optimization', 'Recycling Analytics', 'Sustainability Metrics'],
+    pricing: '$149 - $799/month',
+    category: 'Sustainability'
+  },
+  {
+    title: 'AI-Powered Language Translation Service',
+    description: 'Real-time language translation with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Industry Terms', 'API Integration'],
+    pricing: '$0.01 - $0.05 per character',
+    category: 'Language Services'
+  },
+  {
+    title: 'Intelligent Meeting Room Booking System',
+    description: 'AI-powered meeting room management with smart scheduling and resource optimization.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Resource Optimization', 'Conflict Resolution', 'Usage Analytics'],
+    pricing: '$19 - $99/month',
+    category: 'Facility Management'
+  },
+  {
+    title: 'AI-Powered Customer Support Bot',
+    description: 'Intelligent customer support chatbot with natural language understanding.',
+    icon: MessageSquare,
+    features: ['Natural Language Processing', 'Multi-channel Support', 'Knowledge Base', 'Escalation Management'],
+    pricing: '$99 - $499/month',
+    category: 'Customer Support'
+  },
+  {
+    title: 'Smart Contract Analytics Dashboard',
+    description: 'Comprehensive analytics and monitoring for smart contracts and DeFi protocols.',
+    icon: BarChart3,
+    features: ['Transaction Analysis', 'Performance Metrics', 'Risk Assessment', 'Alert System'],
+    pricing: '$149 - $799/month',
+    category: 'DeFi Analytics'
+  },
+  {
+    title: 'AI-Powered Personal Assistant',
+    description: 'Intelligent personal assistant for task management and productivity enhancement.',
+    icon: Bot,
+    features: ['Task Management', 'Email Organization', 'Schedule Optimization', 'Voice Commands'],
+    pricing: '$19 - $99/month',
+    category: 'Personal Productivity'
+  },
+  {
+    title: 'Intelligent Document Collaboration Platform',
+    description: 'AI-powered document collaboration with real-time editing and version control.',
+    icon: FileText,
+    features: ['Real-time Collaboration', 'Version Control', 'AI Suggestions', 'Comment System'],
+    pricing: '$9 - $49/month',
+    category: 'Document Collaboration'
+  },
+  {
+    title: 'AI-Powered Market Research Platform',
+    description: 'Automated market research and competitive analysis using AI and web scraping.',
+    icon: Search,
+    features: ['Competitor Analysis', 'Trend Detection', 'Sentiment Analysis', 'Report Generation'],
+    pricing: '$99 - $499/month',
+    category: 'Market Research'
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation and deployment with AI assistance.',
+    icon: Code,
+    features: ['Visual Builder', 'AI Code Generation', 'Security Auditing', 'Multi-blockchain Support'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain Development'
+  },
+  {
+    title: 'AI-Powered Voice Cloning Platform',
+    description: 'High-quality voice cloning and text-to-speech synthesis for various applications.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Multi-language Support', 'Emotion Control', 'API Integration'],
+    pricing: '$299 - $1,499/month',
+    category: 'Voice Technology'
+  },
+  {
+    title: 'Intelligent Document Processing',
+    description: 'AI-powered document extraction, classification, and data processing automation.',
+    icon: FileText,
+    features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation'],
+    pricing: '$149 - $799/month',
+    category: 'Document Processing'
+  },
+  {
+    title: 'AI-Powered Video Content Generator',
+    description: 'Automated video creation and editing using AI for marketing and social media.',
+    icon: Video,
+    features: ['Auto Video Generation', 'Text-to-Video', 'Voice Synthesis', 'Multi-format Export'],
+    pricing: '$199 - $999/month',
+    category: 'Content Creation',
+    popular: true
   }
 ];
 
