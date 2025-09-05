@@ -148,7 +148,7 @@ async collectSystemMetrics() {
     } catch (error) {
       console.error("Error collecting web "metrics": ", error.message)}
       console.warn("⚠️  Could not collect build "metrics": ", error.message)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259}
+}
   getDirectorySize(dirPath) {
     let totalSize = 0
     if (!fs.existsSync(dirPath)) return 0

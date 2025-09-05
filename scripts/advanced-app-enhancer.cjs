@@ -745,7 +745,7 @@ const reportPath = 'advanced-app-enhancement-report.json;';
 fs.writeFileSync(reportPath, JSON.stringify(enhancements, null, 2));
 
 console.log('\n🎉 Advanced App Enhancer Completed!');
-console.log('=====================================');
+console.log('==');
 console.log(`📊 Total "Enhancements": ${enhancements.metrics.totalEnhancements}`);
 console.log(`✅ "Successful": ${enhancements.metrics.successful}`);
 console.log(`❌ "Failed": ${enhancements.metrics.failed}`);

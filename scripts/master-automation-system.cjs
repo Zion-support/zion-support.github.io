@@ -3,7 +3,7 @@ const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 console.log('🚀 Master Automation System')
-console.log('===========================')
+console.log('======')
 class MasterAutomationSystem {
   constructor() {
     this.results = {"prsProcessed": 0,"conflictsResolved": 0,"improvementsMade": 0;

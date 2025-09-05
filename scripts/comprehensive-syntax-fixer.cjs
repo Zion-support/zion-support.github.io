@@ -98,7 +98,7 @@ class ComprehensiveSyntaxFixer {
     }
 
     this.log('\n📊 Comprehensive Syntax Fixing Report');
-    this.log('=====================================');
+    this.log('==');
     this.log(`Fixes Applied: ${this.fixes.length}`);
     this.log(`Errors Found: ${this.errors.length}`);
 

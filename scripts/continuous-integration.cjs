@@ -73,7 +73,7 @@ class ContinuousIntegration {
 
   async runCIPipeline() {
     this.log('🚀 Starting Continuous Integration Pipeline');
-    this.log('==========================================');
+    this.log('');
 
     const stages = [{
         "name": 'install-dependencies',

@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Fixing All Remaining Files...');
-console.log('=================================');
+console.log('=====');
 
 // List of all remaining problematic files
 const problematicFiles = ['pages/docs/integration-examples.tsx',

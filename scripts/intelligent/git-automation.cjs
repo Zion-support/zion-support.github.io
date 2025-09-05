@@ -169,7 +169,7 @@ class IntelligentGitAutomation {
       
       // Check for conflicts
       const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}`, { "encoding": 'utf8' };);
-      const hasConflicts = conflictCheck.includes('<<<<<<<') || conflictCheck.includes('=======';);
+      const hasConflicts = conflictCheck.includes('<<<<<<<') || conflictCheck.includes('';);
       
       if ( {
         console.log(`✅ Branch ${branchName} is ready for merge`)) {

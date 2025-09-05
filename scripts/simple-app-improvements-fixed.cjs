@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Simple App Improvements System');
-console.log('=================================');
+console.log('=====');
 
 class SimpleAppImprovements {
   constructor() {
@@ -171,7 +171,7 @@ export default function SEO({ title, description, keywords, image }) {
     const duration = Date.now() - this.startTime;
     
     this.log('\\n📊 IMPROVEMENTS SUMMARY');
-    this.log('========================');
+    this.log('===');
     this.log(`Total improvements: ${this.improvements.length}`);
     this.log(`Total errors: ${this.errors.length}`);
     this.log(`Duration: ${duration}ms`);
