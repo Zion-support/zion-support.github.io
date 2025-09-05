@@ -47,17 +47,17 @@ import {
   Package
 } from 'lucide-react';
 
-const aiServices = []
-  {}
+const aiServices = [
+  {
     title: 'AI-Powered Email Responder',
     description: 'Automated email responses using advanced NLP and machine learning algorithms.',
     icon: Mail,
     features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-categorization', 'Smart Routing'],
     pricing: '$2,000 - $8,000 setup',
     category: 'Automation',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'Predictive Analytics Platform',
     description: 'Advanced forecasting and predictive modeling for business intelligence.',
     icon: BarChart3,

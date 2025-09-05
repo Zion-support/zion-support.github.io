@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion;
-import {}
-  // TODO: Implement;
-};
+import { motion } from 'framer-motion';
+import {
   BarChart3, 
   Search, 
   Filter,
@@ -20,19 +18,19 @@ import {}
   Shield,
   Zap,
   Award,
-  ChevronRight;'
-} from 'lucide-react;
-const caseStudyCategories = [']
+  ChevronRight
+} from 'lucide-react';
+const caseStudyCategories = [
   { name: "All", count: 25, active: true },
   { name: "AI Solutions", count: 8, active: false },
   { name: "IT Services", count: 6, active: false },
   { name: "Micro SaaS", count: 5, active: false },
   { name: "Enterprise", count: 4, active: false },
-  { name: "Startup", count: 2, active: false }];
+  { name: "Startup", count: 2, active: false }
 ];
 
-const caseStudies = []
-  {}
+const caseStudies = [
+  {
     id: 1,
     title: "AI-Powered Customer Service Transformation",
     client: "Global E-commerce Retailer",
@@ -42,22 +40,22 @@ const caseStudies = []
     results: "60% reduction in support costs, 40% faster response times",
     category: "AI Solutions",
     duration: "3 months",
-    teamSize: "8 developers",];
-    technologies: [AI/ML", "NLP", "Python", "AWS"],
+    teamSize: "8 developers",
+    technologies: ["AI/ML", "NLP", "Python", "AWS"],
     featured: true,
-    metrics: {,}
+    metrics: {
   costReduction: "60%",
       responseTime: "40%",
       customerSatisfaction: "85%",
       roi: "300%"
     },
-    testimonial: {,}
-  quote: "The AI solution transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
+    testimonial: {
+      quote: "The AI solution transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
       author: "Sarah Johnson",
       role: "VP of Customer Experience"
-    };
+    }
   },
-  {}
+  {
     id: 2,
     title: "Cloud Infrastructure Migration and Optimization",
     client: "Financial Services Company",
@@ -68,19 +66,20 @@ const caseStudies = []
     category: "IT Services",
     duration: "6 months",
     teamSize: "12 developers",
-    technologies: [AWS", "Docker", "Kubernetes", "Terraform"],
+    technologies: ["AWS", "Docker", "Kubernetes", "Terraform"],
     featured: true,
-    metrics: {,}
-  costReduction: "50%",
+    metrics: {
+      costReduction: "50%",
       uptime: "99.9%",
       performance: "300%",
       roi: "250%"
     },
-    testimonial: {,}
-  quote: "The migration was seamless and the results exceeded our expectations. Our infrastructure is now more reliable and cost-effective.",
+    testimonial: {
+      quote: "The migration was seamless and the results exceeded our expectations. Our infrastructure is now more reliable and cost-effective.",
       author: "Michael Chen",
       role: "CTO"
-    };
+    }
+  },
   },
   {}
     id: 3,

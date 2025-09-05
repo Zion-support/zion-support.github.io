@@ -15,163 +15,161 @@ import {
   FileText,
   Settings
 } from 'lucide-react';
-const accessibilityFeatures = []
-  {}
+const accessibilityFeatures = [
+  {
     title: "Visual Accessibility",
     description: "Features to support users with visual impairments",
     icon: Eye,
-    features: []
+    features: [
       "High contrast color schemes",
       "Scalable text and interface elements",
       "Screen reader compatibility",
       "Alternative text for images",
       "Keyboard navigation support"
-    ];
+    ]
   },
-  {}
+  {
     title: "Auditory Accessibility",
     description: "Support for users with hearing impairments",
     icon: Ear,
-    features: []
+    features: [
       "Video captions and transcripts",
       "Visual indicators for audio cues",
       "Text-based communication options",
       "Volume controls and audio descriptions",
-      "Sign language support where applicable"];
-    ];
+      "Sign language support where applicable"
+    ]
   },
-  {}
+  {
     title: "Motor Accessibility",
     description: "Features for users with motor impairments",
     icon: Hand,
-    features: []
+    features: [
       "Keyboard-only navigation",
       "Voice control compatibility",
       "Large click targets",
       "Customizable interaction timing",
-      "Switch control support"];
-    ];
+      "Switch control support"
+    ]
   },
-  {}
+  {
     title: "Cognitive Accessibility",
     description: "Support for users with cognitive differences",
     icon: Brain,
-    features: []
+    features: [
       "Clear and simple language",
       "Consistent navigation patterns",
       "Error prevention and recovery",
       "Progress indicators",
-      "Customizable interface complexity"];
-    ];
-  };
+      "Customizable interface complexity"
+    ]
+  }
 ];
 
-const standardsCompliance = []
-  {}
+const standardsCompliance = [
+  {
     standard: "WCAG 2.1 AA",
     description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",
     status: "Compliant",
     coverage: "95%",
-    icon: Shield;
+    icon: Shield
   },
-  {}
+  {
     standard: "Section 508",
     description: "U.S. federal accessibility requirements",
     status: "Compliant",
     coverage: "100%",
-    icon: FileText;
+    icon: FileText
   },
-  {}
+  {
     standard: "ADA",
     description: "Americans with Disabilities Act compliance",
     status: "Compliant",
     coverage: "100%",
-    icon: Users;
+    icon: Users
   },
-  {}
+  {
     standard: "EN 301 549",
     description: "European accessibility standard for ICT products",
     status: "Compliant",
     coverage: "90%",
-    icon: Globe;
-  }];
+    icon: Globe
+  }
 ];
 
-const accessibilityTools = []
-  {}
+const accessibilityTools = [
+  {
     name: "Screen Reader Testing",
     description: "Regular testing with popular screen readers including NVDA, JAWS, and VoiceOver",
     frequency: "Monthly"
   },
-  {}
+  {
     name: "Keyboard Navigation",
     description: "Comprehensive keyboard navigation testing for all interactive elements",
     frequency: "Weekly"
   },
-  {}
+  {
     name: "Color Contrast Analysis",
     description: "Automated and manual color contrast testing to ensure readability",
     frequency: "With each design update"
   },
-  {}
+  {
     name: "User Testing",
     description: "Regular testing with users who have disabilities to identify barriers",
     frequency: "Quarterly"
-  }];
+  }
 ];
 
-const accessibilityGuidelines = []
-  {}
+const accessibilityGuidelines = [
+  {
     category: "Content",
-    guidelines: []
+    guidelines: [
       "Use clear and simple language",
       "Provide alternative text for images",
       "Use proper heading structure",
       "Ensure sufficient color contrast",
-      "Provide captions for videos"];
-    ];
+      "Provide captions for videos"
+    ]
   },
-  {}
+  {
     category: "Navigation",
-    guidelines: []
+    guidelines: [
       "Logical tab order",
       "Skip links for main content",
       "Consistent navigation patterns",
       "Breadcrumb navigation",
-      "Search functionality"];
-    ];
+      "Search functionality"
+    ]
   },
-  {}
+  {
     category: "Forms",
-    guidelines: []
+    guidelines: [
       "Clear labels and instructions",
       "Error messages and validation",
       "Required field indicators",
       "Logical grouping of related fields",
-      "Multiple input methods"];
-    ];
+      "Multiple input methods"
+    ]
   },
-  {}
+  {
     category: "Interactive Elements",
-    guidelines: []
+    guidelines: [
       "Keyboard accessible",
       "Focus indicators",
       "Adequate target sizes",
       "No seizure-inducing content",
-      "Customizable timing"];
-    ];
-  };
+      "Customizable timing"
+    ]
+  }
 ];
 
-export default function AccessibilityPage() {}
-  return ()
-    <MainLayout;"
+export default function AccessibilityPage() {
+  return (
+    <MainLayout
       title="Accessibility - Zion Tech Group"
-      description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards.'
+      description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards."
     >
-</MainLayout>"
-      <div className="min-h-screen bg-gray-50">"
-</div>"
+      <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">"
 </section>"
           <div className="container mx-auto px-4">"

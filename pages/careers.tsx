@@ -1,10 +1,8 @@
 import React from "react";
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion;
-import {}
-  // TODO: Implement;
-};
+import { motion } from 'framer-motion';
+import {
   Users, 
   MapPin, 
   Clock, 
@@ -17,15 +15,15 @@ import {}
   Coffee,
   Laptop,
   BookOpen,
-  Target;'
-} from 'lucide-react;
-const benefits = []
-  {'}
+  Target
+} from 'lucide-react';
+const benefits = [
+  {
     title: "Competitive Compensation",
     description: "Above-market salaries and performance bonuses",
-    icon: Award;
+    icon: Award
   },
-  {}
+  {
     title: "Health & Wellness",
     description: "Comprehensive health, dental, and vision insurance",
     icon: Heart;
