@@ -746,9 +746,11 @@ whileHover={{ y: -5 }}
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  transition={{ duration: 0.8, delay: index * 0.1 }} 
+                  viewport={{ once: true }}
                 >
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-green-600" />
