@@ -3,8 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  // TODO: Implement
-}
   Search, 
   HelpCircle, 
   BookOpen, 
@@ -16,55 +14,55 @@ import {
   Download,
   ExternalLink,
   ChevronDown,
-  ChevronRight;'
+  ChevronRight
 } from 'lucide-react';
 const helpCategories = [
-  {'
+  {
     title: "Getting Started",
     icon: BookOpen,
     articles: [
-      {"
-        title: "Welcome to Zion Tech Group"
-        description: "Learn the basics of our platform and services"
-        type: "Guide"
-        readTime: "5 min""
+      {
+        title: "Welcome to Zion Tech Group",
+        description: "Learn the basics of our platform and services",
+        type: "Guide",
+        readTime: "5 min"
       },
-      {"
-        title: "Setting Up Your Account"
-        description: "Step-by-step guide to create and configure your account"
-        type: "Tutorial"
-        readTime: "10 min""
+      {
+        title: "Setting Up Your Account",
+        description: "Step-by-step guide to create and configure your account",
+        type: "Tutorial",
+        readTime: "10 min"
       },
-      {"
-        title: "First Steps with AI Services"
-        description: "How to get started with our AI solutions"
-        type: "Tutorial"
-        readTime: "15 min""
-      }]
+      {
+        title: "First Steps with AI Services",
+        description: "How to get started with our AI solutions",
+        type: "Tutorial",
+        readTime: "15 min"
+      }
     ]
   },
-  {"
+  {
     title: "AI Services",
     icon: HelpCircle,
     articles: [
-      {"
-        title: "Understanding AI Models"
-        description: "Learn about different AI models and their applications"
-        type: "Guide"
-        readTime: "8 min""
+      {
+        title: "Understanding AI Models",
+        description: "Learn about different AI models and their applications",
+        type: "Guide",
+        readTime: "8 min"
       },
-      {"
-        title: "Integrating AI APIs"
-        description: "How to integrate our AI services into your applications"
-        type: "Tutorial"
-        readTime: "20 min""
+      {
+        title: "Integrating AI APIs",
+        description: "How to integrate our AI services into your applications",
+        type: "Tutorial",
+        readTime: "20 min"
       },
-      {"
-        title: "AI Best Practices"
-        description: "Tips and best practices for using AI effectively"
-        type: "Guide"
-        readTime: "12 min""
-      }]
+      {
+        title: "AI Best Practices",
+        description: "Tips and best practices for using AI effectively",
+        type: "Guide",
+        readTime: "12 min"
+      }
     ]
   },
   {"

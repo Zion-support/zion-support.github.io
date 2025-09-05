@@ -13,7 +13,7 @@ const codeExamples = [
   }
 })
 const data = await response.json()
-  },
+`},
   {
     language: 'Python',
     title: 'Submit Contact Form',
@@ -31,7 +31,7 @@ data = {
 }
 response = requests.post(url, json=data, headers=headers)
 print(response.json())
-  }
+`}
 ]
 
 export default function APIDocumentationPage() {
