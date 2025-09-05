@@ -26,7 +26,10 @@ const services = [
   { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
   { name: 'Cybersecurity', href: '/services/cybersecurity' },
   { name: 'Data Analytics', href: '/services/data-analytics' },
-  { name: 'Quantum Computing', href: '/services/quantum-computing' }]
+  { name: 'Quantum Computing', href: '/services/quantum-computing' },
+  { name: 'Blockchain & Web3', href: '/services/blockchain' },
+  { name: 'IoT & Edge Computing', href: '/services/iot' },
+  { name: 'AR/VR & Metaverse', href: '/services/ar-vr' }]
 const solutions = [
   { name: 'All Solutions', href: '/solutions' },
   { name: 'Enterprise', href: '/solutions/enterprise' },
@@ -35,7 +38,10 @@ const solutions = [
   { name: 'Retail', href: '/solutions/retail' },
   { name: 'Education', href: '/solutions/education' },
   { name: 'Government', href: '/solutions/government' },
-  { name: 'Startup', href: '/solutions/startup' }]
+  { name: 'Manufacturing', href: '/solutions/manufacturing' },
+  { name: 'Startup', href: '/solutions/startup' },
+  { name: 'SMB', href: '/solutions/smb' },
+  { name: 'Non-Profit', href: '/solutions/nonprofit' }]
 const industries = [
   { name: 'All Industries', href: '/industries' },
   { name: 'Healthcare', href: '/industries/healthcare' },
@@ -43,24 +49,30 @@ const industries = [
   { name: 'Education', href: '/industries/education' },
   { name: 'Government', href: '/industries/government' },
   { name: 'Manufacturing', href: '/industries/manufacturing' },
-  { name: 'Retail', href: '/industries/retail' }]
+  { name: 'Retail', href: '/industries/retail' },
+  { name: 'Technology', href: '/industries/technology' },
+  { name: 'Energy', href: '/industries/energy' },
+  { name: 'Transportation', href: '/industries/transportation' }]
 const company = [
   { name: 'About Us', href: '/about' },
   { name: 'Our Team', href: '/team' },
   { name: 'Careers', href: '/careers' },
   { name: 'News', href: '/news' },
   { name: 'Contact', href: '/contact' },
-  { name: 'Partners', href: '/partners' }]
+  { name: 'Partners', href: '/partners' },
+  { name: 'Investor Relations', href: '/investors' },
+  { name: 'Press Kit', href: '/press' }]
 const resources = [
   { name: 'Blog', href: '/blog' },
   { name: 'White Papers', href: '/white-papers' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Webinars', href: '/webinars' },
+  { name: 'Tutorials', href: '/tutorials' },
+  { name: 'Guides', href: '/guides' },
   { name: 'Help Center', href: '/help' },
   { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api-docs' },
-  { name: 'Tutorials', href: '/tutorials' },
-  { name: 'Guides', href: '/guides' },
+  { name: 'Community', href: '/community' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Support', href: '/support' }]
 const legal = [

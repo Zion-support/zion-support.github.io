@@ -73,6 +73,10 @@ export function Header({ className }: HeaderProps) {
         { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
         { label: 'Cybersecurity', href: '/services/cybersecurity' },
         { label: 'Data Analytics', href: '/services/data-analytics' },
+        { label: 'Quantum Computing', href: '/services/quantum-computing' },
+        { label: 'Blockchain & Web3', href: '/services/blockchain' },
+        { label: 'IoT & Edge Computing', href: '/services/iot' },
+        { label: 'AR/VR & Metaverse', href: '/services/ar-vr' },
       ]
     },
     {
@@ -86,8 +90,10 @@ export function Header({ className }: HeaderProps) {
         { label: 'Retail', href: '/solutions/retail' },
         { label: 'Education', href: '/solutions/education' },
         { label: 'Government', href: '/solutions/government' },
+        { label: 'Manufacturing', href: '/solutions/manufacturing' },
         { label: 'Startups', href: '/solutions/startup' },
         { label: 'SMB', href: '/solutions/smb' },
+        { label: 'Non-Profit', href: '/solutions/nonprofit' },
       ]
     },
     {
@@ -102,6 +108,9 @@ export function Header({ className }: HeaderProps) {
         { label: 'Education', href: '/industries/education' },
         { label: 'Government', href: '/industries/government' },
         { label: 'Manufacturing', href: '/industries/manufacturing' },
+        { label: 'Technology', href: '/industries/technology' },
+        { label: 'Energy', href: '/industries/energy' },
+        { label: 'Transportation', href: '/industries/transportation' },
       ]
     },
     {
@@ -115,6 +124,8 @@ export function Header({ className }: HeaderProps) {
         { label: 'News', href: '/news' },
         { label: 'Partners', href: '/partners' },
         { label: 'Contact', href: '/contact' },
+        { label: 'Investor Relations', href: '/investors' },
+        { label: 'Press Kit', href: '/press' },
       ]
     },
     {
@@ -130,7 +141,13 @@ export function Header({ className }: HeaderProps) {
         { label: 'Help Center', href: '/help' },
         { label: 'FAQ', href: '/faq' },
         { label: 'Documentation', href: '/docs' },
+        { label: 'API Reference', href: '/api-docs' },
+        { label: 'Community', href: '/community' },
       ]
+    },
+    {
+      label: 'Pricing',
+      href: '/pricing',
     },
   ];
   return (

@@ -143,6 +143,86 @@ const aiServices = [
       "Supply chain optimization",
       "Compliance monitoring"
     ]
+  },
+  {
+    title: "Quantum AI Solutions",
+    description: "Next-generation quantum machine learning and optimization algorithms",
+    icon: Cpu,
+    features: [
+      "Quantum Machine Learning",
+      "Quantum Optimization",
+      "Quantum Neural Networks",
+      "Quantum Data Processing",
+      "Hybrid Classical-Quantum AI",
+      "Quantum Error Correction"
+    ],
+    color: "from-violet-500 to-purple-500",
+    useCases: [
+      "Complex optimization problems",
+      "Drug discovery acceleration",
+      "Financial portfolio optimization",
+      "Climate modeling"
+    ]
+  },
+  {
+    title: "Edge AI & IoT Intelligence",
+    description: "Real-time AI processing at the edge for IoT devices and smart systems",
+    icon: Smartphone,
+    features: [
+      "Edge Computing AI",
+      "IoT Data Processing",
+      "Real-time Inference",
+      "Federated Learning",
+      "Edge Model Optimization",
+      "Distributed AI Networks"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    useCases: [
+      "Smart city management",
+      "Industrial IoT monitoring",
+      "Autonomous vehicle systems",
+      "Smart home automation"
+    ]
+  },
+  {
+    title: "Generative AI & Content Creation",
+    description: "Advanced AI for content generation, creative writing, and multimedia production",
+    icon: Lightbulb,
+    features: [
+      "Text Generation",
+      "Image Creation",
+      "Video Production",
+      "Audio Synthesis",
+      "Code Generation",
+      "Creative Writing"
+    ],
+    color: "from-pink-500 to-rose-500",
+    useCases: [
+      "Marketing content creation",
+      "Software development assistance",
+      "Creative design automation",
+      "Educational content generation"
+    ]
+  },
+  {
+    title: "AI Ethics & Governance",
+    description: "Responsible AI implementation with ethical frameworks and compliance",
+    icon: Shield,
+    features: [
+      "AI Ethics Auditing",
+      "Bias Detection & Mitigation",
+      "Explainable AI",
+      "Privacy-Preserving AI",
+      "AI Governance Frameworks",
+      "Compliance Monitoring"
+    ],
+    color: "from-emerald-500 to-green-500",
+    useCases: [
+      "Fair hiring practices",
+      "Ethical decision making",
+      "Regulatory compliance",
+      "Transparent AI systems"
+    ]
   }
 ];
 
@@ -404,6 +484,185 @@ export default function AIServicesPage() {
                 </ul>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              AI Services Pricing
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Transparent, competitive pricing for AI solutions that deliver real business value.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Starter Plan */}
+            <motion.div
+              className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-blue-500 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter AI</h3>
+                <p className="text-gray-600 mb-4">Perfect for small businesses</p>
+                <div className="text-4xl font-bold text-blue-600 mb-2">$2,500</div>
+                <p className="text-gray-500">per month</p>
+              </div>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Basic AI Chatbot</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Document Processing</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Email Support</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Basic Analytics</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Monthly Reports</span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-center block font-semibold"
+              >
+                Get Started
+              </Link>
+            </motion.div>
+
+            {/* Professional Plan */}
+            <motion.div
+              className="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-2xl p-8 relative transform scale-105"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
+                  Most Popular
+                </span>
+              </div>
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold mb-2">Professional AI</h3>
+                <p className="text-blue-100 mb-4">Ideal for growing companies</p>
+                <div className="text-4xl font-bold mb-2">$7,500</div>
+                <p className="text-blue-100">per month</p>
+              </div>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Advanced AI Models</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Custom ML Solutions</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>24/7 Priority Support</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Real-time Analytics</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>API Integration</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                  <span>Dedicated Account Manager</span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="w-full bg-white text-blue-600 py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-center block font-semibold"
+              >
+                Get Started
+              </Link>
+            </motion.div>
+
+            {/* Enterprise Plan */}
+            <motion.div
+              className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-purple-500 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise AI</h3>
+                <p className="text-gray-600 mb-4">For large organizations</p>
+                <div className="text-4xl font-bold text-purple-600 mb-2">Custom</div>
+                <p className="text-gray-500">pricing</p>
+              </div>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Quantum AI Solutions</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Custom AI Development</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">White-label Solutions</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">On-premise Deployment</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Dedicated AI Team</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">SLA Guarantee</span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg hover:bg-purple-700 transition-colors duration-300 text-center block font-semibold"
+              >
+                Contact Sales
+              </Link>
+            </motion.div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">
+              All plans include free consultation and custom implementation
+            </p>
+            <Link
+              href="/contact"
+              className="text-blue-600 hover:text-blue-700 font-semibold underline"
+            >
+              Schedule a free consultation →
+            </Link>
           </div>
         </div>
       </section>

@@ -115,13 +115,13 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Transform Your Business with{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 AI & Technology
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -161,7 +161,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -197,7 +197,7 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -237,7 +237,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -280,7 +280,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -348,17 +348,17 @@ export default function HomePage() {
             <div className="text-center">
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-400" />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
-              <p className="text-gray-300">+1 (555) 123-4567</p>
+              <p className="text-gray-300">+1 302 464 0950</p>
             </div>
             <div className="text-center">
               <Mail className="w-8 h-8 mx-auto mb-4 text-blue-400" />
               <h3 className="text-lg font-semibold mb-2">Email</h3>
-              <p className="text-gray-300">info@ziontechgroup.com</p>
+              <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>
             <div className="text-center">
               <MapPin className="w-8 h-8 mx-auto mb-4 text-blue-400" />
               <h3 className="text-lg font-semibold mb-2">Location</h3>
-              <p className="text-gray-300">San Francisco, CA</p>
+              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
             </div>
           </div>
         </div>
