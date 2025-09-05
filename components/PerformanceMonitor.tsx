@@ -88,6 +88,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         console.log('Performance Metrics:', performanceData);
       }
     };
+<<<<<<< HEAD
 
     // Measure performance after page load
     if (document.readyState === 'complete') {
@@ -105,3 +106,22 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 };
 
 export default PerformanceMonitor;
+=======
+,
+    // Measure performance after page load,
+    if (document.readyState === 'complete') {,
+      measurePerformance(),
+    } else {,
+      window.addEventListener('load', measurePerformance),
+    };
+,
+    return () => {,
+      window.removeEventListener('load', measurePerformance),
+    };
+  }, [onPerformanceData]),
+,
+  return null,
+};
+,
+export default PerformanceMonitor,
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2

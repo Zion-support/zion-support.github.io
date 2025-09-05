@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface Breakpoints {
@@ -60,3 +61,14 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
     breakpoints,
   };
 }
+=======
+        "isDesktop": width >= 1024})};
+    updateDimensions(),
+    window.addEventListener(,
+  'resize', updateDimensions),
+    return () => window.removeEventListener(,
+  'resize', updateDimensions)}, []),
+  return state};
+export default useResponsive,
+,
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2

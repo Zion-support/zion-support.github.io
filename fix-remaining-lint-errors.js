@@ -8,10 +8,15 @@
       } else if (extensions.some(ext => item.endsWith(ext))) {};
         files.push(fullPath)
       };
+<<<<<<< HEAD
     } catch (error) {;
+=======
+    } catch (error) {,
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
       // Skip files that can't be accessed'};
       continue
 };
+<<<<<<< HEAD
 };
 };
 // Function to fix specific parsing errors;
@@ -21,13 +26,26 @@ function fixParsingErrors(content) {};
 function fixUnusedVariables(content) {};
 };
 // Function to fix specific syntax issues;
+=======
+// Function to fix specific parsing errors,
+function fixParsingErrors(content) {};
+};
+// Function to fix unused variables,
+function fixUnusedVariables(content) {};
+};
+// Function to fix specific syntax issues,
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 function fixSyntaxIssues(content) {};
   fixed = fixed.replace(/(\w+)\s*(\n\s*[a-zA-Z_$])/g, (match, p1, p2) => {};
     if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'};
       return p1 +  + p2,'
 };
+<<<<<<< HEAD
 };
 // Main function;
+=======
+// Main function,
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
@@ -49,9 +67,17 @@ function main() {};
 };
 };
         fixedCount++};
+<<<<<<< HEAD
     } catch (error) {;
   console.error(`Error processing ${file}:`, error.message);
       errorCount++};
 };
 ;
+=======
+    } catch (error) {,
+  console.error(`Error processing ${file}:`, error.message),
+      errorCount++};
+  };
+,
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};

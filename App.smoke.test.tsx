@@ -11,4 +11,8 @@ describe('App Smoke Tests', () => {
     const { container } = render(<App />);
     expect(container.firstChild).toBeTruthy();
   });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2

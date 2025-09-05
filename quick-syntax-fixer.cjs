@@ -23,19 +23,19 @@ class QuickSyntaxFixer {
         // Remove merge conflict markers
         .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> .*/g, '')
         .replace(/^>>>>>>>.*$/gm, '')
-        
+
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
-        
+
         // Fix constructor
         .replace(/constructor\s*\(\s*\)\s*{;/g, 'constructor() {')
-        
+
         // Fix empty lines with semicolons
         .replace(/^\s*;\s*$/gm, '')
-        
+
         // Fix multiple semicolons
         .replace(/;+/g, ';')
-        
+
         // Fix semicolons before commas
         .replace(/;\s*,/g, ',');
 
@@ -55,7 +55,7 @@ class QuickSyntaxFixer {
 
   async run() {
     this.log('🚀 Starting Quick Syntax Fixer');
-    
+
     // Fix critical files first
     const criticalFiles = [
       'components/AccessibilityEnhancer.tsx',
@@ -65,7 +65,7 @@ class QuickSyntaxFixer {
       'scripts/fix-syntax-errors.cjs',
       'scripts/performance-monitor.cjs',
       'scripts/security-audit.cjs',
-      'scripts/health-check.cjs'
+      'scripts/health-check.cjs',
     ];
 
     let fixedCount = 0;
