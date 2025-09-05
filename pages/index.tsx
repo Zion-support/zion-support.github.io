@@ -1,5 +1,6 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
+import SEOHead from '../components/SEOHead';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
@@ -108,6 +109,7 @@ const contactInfo = {
 
 export default function HomePage() {
   return (
+<<<<<<< HEAD
     <MainLayout
       title="Zion Tech Group - Leading Technology Solutions"
       description="Transform your business with our comprehensive technology services including AI solutions, cloud services, cybersecurity, and custom development."
@@ -149,6 +151,15 @@ export default function HomePage() {
             </motion.div>
           </div>
         </section>
+=======
+    <MainLayout>
+      <SEOHead 
+        title="Zion Tech Group - Leading AI & Technology Solutions"
+        description="Revolutionary AI solutions, enterprise IT services, and innovative micro SaaS products. Transform your business with cutting-edge technology from quantum computing to metaverse intelligence."
+        keywords="AI solutions, IT services, micro SaaS, quantum computing, blockchain, machine learning, digital transformation, enterprise technology"
+      />
+      <div id="main-content" className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-0e40
 
         {/* Stats Section */}
         <section className="py-16 bg-white">
