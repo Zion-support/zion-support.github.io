@@ -1,5 +1,5 @@
-import React from "react";
-import Link from "next/link";
+import React from "react",
+import Link from "next/link",
 
 export default function AutomationsPage() {
   return (
@@ -17,7 +17,7 @@ export default function AutomationsPage() {
           </p>
           <div className="mt-4 flex gap-3">
             <a
-              href="https://github.com/Zion-Holdings/zion.app/actions"
+              href="https: //github.com/Zion-Holdings/zion.app/actions"
               target="_blank"
               rel="noreferrer"
               className="rounded-md border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
@@ -38,5 +38,5 @@ export default function AutomationsPage() {
         </div>
       </div>
     </main>
-  );
+  )
 }

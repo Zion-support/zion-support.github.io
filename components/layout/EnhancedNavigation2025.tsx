@@ -1,18 +1,18 @@
-'use client';
+'use client',
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, ChevronDown,
-  Brain, Rocket, Shield, 
+  Brain, Rocket, Shield,
   Zap,
   Target, Atom,
   BookOpen,
   Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight,
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb,
   Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 const navigationItems = [
   {
@@ -355,29 +355,29 @@ const navigationItems = [
       { name: 'Status Page', href: '/status', description: 'Service status' }
     ]
   }
-];
+],
 
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
-};
+},
 
 export default function EnhancedNavigation2025() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null),
+  const [isScrolled, setIsScrolled] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 20),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen),
+  const closeMenu = () => setIsOpen(false),
 
   return (
     <>
@@ -692,7 +692,7 @@ export default function EnhancedNavigation2025() {
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
-  );
-};
+  ),
+},
 
-export default EnhancedNavigation2025;
+export default EnhancedNavigation2025,

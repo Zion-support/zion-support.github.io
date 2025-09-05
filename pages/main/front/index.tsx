@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 
 export default function FrontLanding() {
   return (
@@ -79,12 +79,12 @@ export default function FrontLanding() {
             </motion.div>
 
             {/* Quick stats */}
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="mt-8 grid grid-cols-2 gap-3 sm: grid-cols-4">
               {[
-                ['24/7', 'Autonomous'],
-                ['Main', 'Direct Sync'],
-                ['0 Ops', 'Cloud‑Native'],
-                ['Safety', 'Guardrails']].map(([k, v]) => (
+                ['24/7Autonomous'],
+                ['MainDirect Sync'],
+                ['0 OpsCloud‑Native'],
+                ['SafetyGuardrails']].map(([k, v]) => (
                 <motion.div
                   key={k}
                   initial={{ opacity: 0, y: 6 }}
@@ -155,12 +155,10 @@ export default function FrontLanding() {
         {/* Benefits */}
         <section className="mx-auto max-w-7xl px-6 pb-20">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits</h2>
-          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
+          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md: grid-cols-2">
             {[
-              '24/7 progress without human intervention',
-              'Rapid feedback loop with safe, incremental edits',
-              'Continuous delivery directly to main branch',
-              'Fewer regressions via layered checks and reports'].map((b) => (
+              '24/7 progress without human interventionRapid feedback loop with safe, incremental edits',
+              'Continuous delivery directly to main branchFewer regressions via layered checks and reports'].map((b) => (
               <motion.div
                 key={b}
                 initial={{ opacity: 0, y: 6 }}
@@ -197,7 +195,7 @@ export default function FrontLanding() {
         {/* Explore more */}
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <Link href="/services/ai-seo-auditor"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">AI SEO Auditor — automate SEO improvements</span></a></Link>
             <Link href="/services/customer-support-chatbot"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Customer Support Chatbot — reduce response time</span></a></Link>
             <Link href="/services/landing-page-generator"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Landing Page Generator — launch pages instantly</span></a></Link>
@@ -210,5 +208,5 @@ export default function FrontLanding() {
         </section>
       </main>
     </div>
-  );
+  )
 }

@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface InnovativeMicroSaasService2026 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 const contact = {
@@ -45,7 +45,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -57,16 +57,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     period: '/month',
     description: 'Advanced business intelligence platform that uses AI to analyze data, generate insights, and provide predictive analytics. Features include automated reporting, real-time dashboards, and natural language querying.',
     features: [
-      'AI-powered data analysis and visualization',
-      'Predictive analytics and forecasting',
-      'Real-time dashboard and reporting',
-      'Natural language query interface',
-      'Automated insight generation',
-      'Multi-source data integration',
-      'Custom KPI tracking',
-      'Mobile-responsive design',
-      'API for third-party integrations',
-      '24/7 AI monitoring and alerts'
+      'AI-powered data analysis and visualizationPredictive analytics and forecasting',
+      'Real-time dashboard and reportingNatural language query interface',
+      'Automated insight generationMulti-source data integration',
+      'Custom KPI trackingMobile-responsive design',
+      'API for third-party integrations24/7 AI monitoring and alerts'
     ],
     popular: true,
     icon: '📊',
@@ -79,11 +74,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     setupTime: '1-2 hours',
     category: 'Business Intelligence & Analytics',
     realService: true,
-    technology: ['React', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Docker'],
-    integrations: ['Salesforce', 'HubSpot', 'Google Analytics', 'Shopify', 'QuickBooks', 'Excel'],
-    useCases: ['Sales performance analysis', 'Customer behavior insights', 'Financial forecasting', 'Marketing ROI tracking', 'Operational efficiency monitoring'],
+    technology: ['ReactPython', 'TensorFlowPostgreSQL', 'RedisDocker'],
+    integrations: ['SalesforceHubSpot', 'Google AnalyticsShopify', 'QuickBooksExcel'],
+    useCases: ['Sales performance analysisCustomer behavior insights', 'Financial forecastingMarketing ROI tracking', 'Operational efficiency monitoring'],
     roi: 'Businesses report 300% ROI through improved decision-making and operational efficiency.',
-    competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView'],
+    competitors: ['TableauPower BI', 'LookerQlikView'],
     marketSize: '$29.5B BI market',
     growthRate: '15% annual growth',
     contactInfo: contact,
@@ -94,7 +89,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.8,
     reviews: 23
   },
-
   // AI Content Creation & Marketing
   {
     id: 'ai-content-factory-pro',
@@ -104,16 +98,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     period: '/month',
     description: 'Comprehensive content creation platform that uses AI to generate blog posts, social media content, marketing copy, and more. Features include SEO optimization, brand voice consistency, and multi-language support.',
     features: [
-      'AI-powered content generation',
-      'SEO optimization and keyword research',
-      'Brand voice consistency',
-      'Multi-language content creation',
-      'Content calendar and scheduling',
-      'Plagiarism detection',
-      'Performance analytics',
-      'Team collaboration tools',
-      'API integration capabilities',
-      'Mobile app access'
+      'AI-powered content generationSEO optimization and keyword research',
+      'Brand voice consistencyMulti-language content creation',
+      'Content calendar and schedulingPlagiarism detection',
+      'Performance analyticsTeam collaboration tools',
+      'API integration capabilitiesMobile app access'
     ],
     popular: true,
     icon: '✍️',
@@ -126,11 +115,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     setupTime: '30 minutes',
     category: 'Content Creation & Marketing',
     realService: true,
-    technology: ['Next.js', 'OpenAI GPT-4', 'Node.js', 'MongoDB', 'AWS', 'Redis'],
-    integrations: ['WordPress', 'Shopify', 'Mailchimp', 'Hootsuite', 'Buffer', 'Google Docs'],
-    useCases: ['Blog post creation', 'Social media content', 'Email marketing', 'Product descriptions', 'Ad copy generation'],
+    technology: ['Next.jsOpenAI GPT-4', 'Node.jsMongoDB', 'AWSRedis'],
+    integrations: ['WordPressShopify', 'MailchimpHootsuite', 'BufferGoogle Docs'],
+    useCases: ['Blog post creationSocial media content', 'Email marketingProduct descriptions', 'Ad copy generation'],
     roi: 'Marketing teams save 15-20 hours per week and see 40% improvement in content engagement.',
-    competitors: ['Copy.ai', 'Jasper', 'Writesonic', 'ContentBot'],
+    competitors: ['Copy.aiJasper', 'WritesonicContentBot'],
     marketSize: '$12.5B content marketing market',
     growthRate: '18% annual growth',
     contactInfo: contact,
@@ -141,7 +130,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.7,
     reviews: 34
   },
-
   // AI Customer Service & Support
   {
     id: 'ai-customer-service-automation',
@@ -151,16 +139,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     period: '/month',
     description: 'Intelligent customer service platform that automates support tickets, provides instant responses via chatbots, and routes complex issues to human agents. Features include sentiment analysis, multilingual support, and 24/7 availability.',
     features: [
-      'AI-powered chatbot with natural language processing',
-      'Automated ticket routing and prioritization',
-      'Sentiment analysis and customer satisfaction tracking',
-      'Multi-language support (50+ languages)',
-      'Integration with CRM systems',
-      'Performance analytics and reporting',
-      'Customizable response templates',
-      'Escalation management',
-      'Mobile app for agents',
-      'API for custom integrations'
+      'AI-powered chatbot with natural language processingAutomated ticket routing and prioritization',
+      'Sentiment analysis and customer satisfaction trackingMulti-language support (50+ languages)',
+      'Integration with CRM systemsPerformance analytics and reporting',
+      'Customizable response templatesEscalation management',
+      'Mobile app for agentsAPI for custom integrations'
     ],
     popular: true,
     icon: '🤖',
@@ -173,11 +156,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     setupTime: '2-3 hours',
     category: 'Customer Service & Support',
     realService: true,
-    technology: ['React', 'Python', 'TensorFlow', 'NLP', 'PostgreSQL', 'Redis'],
-    integrations: ['Salesforce', 'HubSpot', 'Shopify', 'Zendesk', 'Slack', 'Microsoft Teams'],
-    useCases: ['Customer inquiry handling', 'Ticket automation', 'FAQ management', 'Customer satisfaction tracking', 'Support analytics'],
+    technology: ['ReactPython', 'TensorFlowNLP', 'PostgreSQLRedis'],
+    integrations: ['SalesforceHubSpot', 'ShopifyZendesk', 'SlackMicrosoft Teams'],
+    useCases: ['Customer inquiry handlingTicket automation', 'FAQ managementCustomer satisfaction tracking', 'Support analytics'],
     roi: 'Businesses see 60% reduction in support costs and 85% improvement in response times.',
-    competitors: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout'],
+    competitors: ['ZendeskIntercom', 'FreshdeskHelp Scout'],
     marketSize: '$18.5B customer service software market',
     growthRate: '22% annual growth',
     contactInfo: contact,
@@ -188,7 +171,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.6,
     reviews: 28
   },
-
   // AI-Powered E-commerce Optimization
   {
     id: 'ai-ecommerce-optimizer',
@@ -198,16 +180,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     period: '/month',
     description: 'Intelligent e-commerce optimization platform that uses AI to improve product recommendations, optimize pricing strategies, and enhance customer experience. Features include dynamic pricing, inventory management, and conversion rate optimization.',
     features: [
-      'AI-powered product recommendations',
-      'Dynamic pricing optimization',
-      'Inventory management and forecasting',
-      'Customer behavior analysis',
-      'A/B testing automation',
-      'Conversion rate optimization',
-      'Personalized shopping experiences',
-      'Real-time analytics dashboard',
-      'Multi-platform integration',
-      'Mobile optimization tools'
+      'AI-powered product recommendationsDynamic pricing optimization',
+      'Inventory management and forecastingCustomer behavior analysis',
+      'A/B testing automationConversion rate optimization',
+      'Personalized shopping experiencesReal-time analytics dashboard',
+      'Multi-platform integrationMobile optimization tools'
     ],
     popular: false,
     icon: '🛒',
@@ -220,11 +197,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     setupTime: '3-4 hours',
     category: 'E-commerce & Retail',
     realService: true,
-    technology: ['React', 'Python', 'Scikit-learn', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'Stripe', 'PayPal'],
-    useCases: ['Product recommendation engines', 'Dynamic pricing strategies', 'Inventory optimization', 'Customer segmentation', 'Conversion optimization'],
+    technology: ['ReactPython', 'Scikit-learnPostgreSQL', 'RedisAWS'],
+    integrations: ['ShopifyWooCommerce', 'MagentoBigCommerce', 'StripePayPal'],
+    useCases: ['Product recommendation enginesDynamic pricing strategies', 'Inventory optimizationCustomer segmentation', 'Conversion optimization'],
     roi: 'E-commerce businesses report 25-40% increase in average order value and 30% improvement in conversion rates.',
-    competitors: ['Dynamic Yield', 'Optimizely', 'Klevu', 'Algolia'],
+    competitors: ['Dynamic YieldOptimizely', 'KlevuAlgolia'],
     marketSize: '$22.8B e-commerce optimization market',
     growthRate: '20% annual growth',
     contactInfo: contact,
@@ -235,7 +212,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.5,
     reviews: 19
   },
-
   // AI-Powered HR & Recruitment
   {
     id: 'ai-hr-recruitment-suite',
@@ -245,16 +221,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     period: '/month',
     description: 'Comprehensive HR and recruitment platform that uses AI to automate candidate screening, improve hiring decisions, and manage employee lifecycle. Features include resume parsing, skill matching, and performance analytics.',
     features: [
-      'AI-powered resume parsing and screening',
-      'Skill-based candidate matching',
-      'Automated interview scheduling',
-      'Performance tracking and analytics',
-      'Employee onboarding automation',
-      'Talent pipeline management',
-      'Compliance and legal documentation',
-      'Multi-language support',
-      'Mobile app for candidates',
-      'Integration with job boards'
+      'AI-powered resume parsing and screeningSkill-based candidate matching',
+      'Automated interview schedulingPerformance tracking and analytics',
+      'Employee onboarding automationTalent pipeline management',
+      'Compliance and legal documentationMulti-language support',
+      'Mobile app for candidatesIntegration with job boards'
     ],
     popular: false,
     icon: '👥',
@@ -267,11 +238,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     setupTime: '2-3 hours',
     category: 'HR & Recruitment',
     realService: true,
-    technology: ['React', 'Python', 'NLP', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['LinkedIn', 'Indeed', 'Glassdoor', 'Slack', 'Microsoft Teams', 'Google Workspace'],
-    useCases: ['Candidate screening', 'Resume parsing', 'Interview scheduling', 'Performance management', 'Employee onboarding'],
+    technology: ['ReactPython', 'NLPPostgreSQL', 'RedisAWS'],
+    integrations: ['LinkedInIndeed', 'GlassdoorSlack', 'Microsoft TeamsGoogle Workspace'],
+    useCases: ['Candidate screeningResume parsing', 'Interview schedulingPerformance management', 'Employee onboarding'],
     roi: 'HR teams save 20-30 hours per week and improve hiring quality by 40%.',
-    competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever'],
+    competitors: ['WorkdayBambooHR', 'GreenhouseLever'],
     marketSize: '$15.8B HR software market',
     growthRate: '12% annual growth',
     contactInfo: contact,
@@ -282,7 +253,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.4,
     reviews: 22
   },
-
   // AI-Powered Financial Management
   {
     id: 'ai-financial-management-platform',
@@ -292,16 +262,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     period: '/month',
     description: 'Advanced financial management platform that uses AI to provide financial planning, budgeting, and investment insights. Features include expense tracking, cash flow forecasting, and automated financial reporting.',
     features: [
-      'AI-powered expense categorization',
-      'Cash flow forecasting and analysis',
-      'Automated budget planning',
-      'Investment portfolio tracking',
-      'Financial goal setting and monitoring',
-      'Tax optimization suggestions',
-      'Real-time financial dashboard',
-      'Multi-currency support',
-      'Bank account integration',
-      'Mobile app for on-the-go management'
+      'AI-powered expense categorizationCash flow forecasting and analysis',
+      'Automated budget planningInvestment portfolio tracking',
+      'Financial goal setting and monitoringTax optimization suggestions',
+      'Real-time financial dashboardMulti-currency support',
+      'Bank account integrationMobile app for on-the-go management'
     ],
     popular: false,
     icon: '💰',
@@ -314,11 +279,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     setupTime: '1 hour',
     category: 'Financial Management',
     realService: true,
-    technology: ['React', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Plaid', 'Stripe', 'PayPal', 'Bank APIs', 'QuickBooks', 'Xero'],
-    useCases: ['Personal finance management', 'Business financial planning', 'Investment tracking', 'Budget optimization', 'Financial goal achievement'],
+    technology: ['ReactPython', 'TensorFlowPostgreSQL', 'RedisAWS'],
+    integrations: ['PlaidStripe', 'PayPalBank APIs', 'QuickBooksXero'],
+    useCases: ['Personal finance managementBusiness financial planning', 'Investment trackingBudget optimization', 'Financial goal achievement'],
     roi: 'Users report 25% improvement in savings and 40% better financial decision-making.',
-    competitors: ['Mint', 'YNAB', 'Personal Capital', 'Moneydance'],
+    competitors: ['MintYNAB', 'Personal CapitalMoneydance'],
     marketSize: '$8.9B personal finance software market',
     growthRate: '16% annual growth',
     contactInfo: contact,
@@ -329,7 +294,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.6,
     reviews: 31
   },
-
   // AI-Powered Project Management
   {
     id: 'ai-project-management-suite',
@@ -339,16 +303,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     period: '/month',
     description: 'Intelligent project management platform that uses AI to optimize task allocation, predict project timelines, and improve team productivity. Features include automated scheduling, resource optimization, and real-time collaboration.',
     features: [
-      'AI-powered task prioritization',
-      'Automated project scheduling',
-      'Resource allocation optimization',
-      'Risk assessment and mitigation',
-      'Team performance analytics',
-      'Real-time collaboration tools',
-      'Project timeline forecasting',
-      'Integration with popular tools',
-      'Mobile app for team members',
-      'Advanced reporting and insights'
+      'AI-powered task prioritizationAutomated project scheduling',
+      'Resource allocation optimizationRisk assessment and mitigation',
+      'Team performance analyticsReal-time collaboration tools',
+      'Project timeline forecastingIntegration with popular tools',
+      'Mobile app for team membersAdvanced reporting and insights'
     ],
     popular: false,
     icon: '📋',
@@ -361,11 +320,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     setupTime: '2 hours',
     category: 'Project Management',
     realService: true,
-    technology: ['React', 'Python', 'Machine Learning', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Slack', 'Microsoft Teams', 'Google Workspace', 'GitHub', 'Jira', 'Trello'],
-    useCases: ['Project planning and scheduling', 'Team collaboration', 'Resource management', 'Risk assessment', 'Performance tracking'],
+    technology: ['ReactPython', 'Machine LearningPostgreSQL', 'RedisAWS'],
+    integrations: ['SlackMicrosoft Teams', 'Google WorkspaceGitHub', 'JiraTrello'],
+    useCases: ['Project planning and schedulingTeam collaboration', 'Resource managementRisk assessment', 'Performance tracking'],
     roi: 'Teams report 35% improvement in project delivery time and 25% increase in productivity.',
-    competitors: ['Asana', 'Monday.com', 'ClickUp', 'Basecamp'],
+    competitors: ['AsanaMonday.com', 'ClickUpBasecamp'],
     marketSize: '$6.8B project management software market',
     growthRate: '14% annual growth',
     contactInfo: contact,
@@ -376,7 +335,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.5,
     reviews: 26
   },
-
   // AI-Powered Learning & Training
   {
     id: 'ai-learning-management-system',
@@ -386,16 +344,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     period: '/month',
     description: 'Intelligent learning management system that uses AI to personalize learning paths, adapt content difficulty, and track student progress. Features include automated assessments, content recommendations, and performance analytics.',
     features: [
-      'AI-powered personalized learning paths',
-      'Adaptive content difficulty',
-      'Automated assessment generation',
-      'Progress tracking and analytics',
-      'Content recommendation engine',
-      'Multi-format content support',
-      'Collaborative learning tools',
-      'Mobile learning app',
-      'Integration with LMS platforms',
-      'Advanced reporting and insights'
+      'AI-powered personalized learning pathsAdaptive content difficulty',
+      'Automated assessment generationProgress tracking and analytics',
+      'Content recommendation engineMulti-format content support',
+      'Collaborative learning toolsMobile learning app',
+      'Integration with LMS platformsAdvanced reporting and insights'
     ],
     popular: false,
     icon: '🎓',
@@ -408,11 +361,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     setupTime: '3-4 hours',
     category: 'Education & Training',
     realService: true,
-    technology: ['React', 'Python', 'Machine Learning', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Google Classroom', 'Microsoft Teams', 'Zoom', 'Canvas', 'Moodle', 'Blackboard'],
-    useCases: ['K-12 education', 'Higher education', 'Corporate training', 'Online courses', 'Skill development'],
+    technology: ['ReactPython', 'Machine LearningPostgreSQL', 'RedisAWS'],
+    integrations: ['Google ClassroomMicrosoft Teams', 'ZoomCanvas', 'MoodleBlackboard'],
+    useCases: ['K-12 educationHigher education', 'Corporate trainingOnline courses', 'Skill development'],
     roi: 'Educational institutions see 25% improvement in student performance and 40% reduction in administrative workload.',
-    competitors: ['Canvas', 'Blackboard', 'Moodle', 'Schoology'],
+    competitors: ['CanvasBlackboard', 'MoodleSchoology'],
     marketSize: '$18.6B learning management system market',
     growthRate: '19% annual growth',
     contactInfo: contact,
@@ -423,7 +376,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.4,
     reviews: 21
   },
-
   // AI-Powered Healthcare Solutions
   {
     id: 'ai-healthcare-assistant',
@@ -433,16 +385,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     period: '/month',
     description: 'Comprehensive healthcare management platform that uses AI to improve patient care, automate administrative tasks, and optimize healthcare operations. Features include patient monitoring, appointment scheduling, and medical record management.',
     features: [
-      'AI-powered patient monitoring',
-      'Automated appointment scheduling',
-      'Medical record management',
-      'Prescription tracking and reminders',
-      'Health analytics and insights',
-      'Telemedicine integration',
-      'Insurance claim processing',
-      'Compliance and security features',
-      'Mobile app for patients',
-      'Integration with EHR systems'
+      'AI-powered patient monitoringAutomated appointment scheduling',
+      'Medical record managementPrescription tracking and reminders',
+      'Health analytics and insightsTelemedicine integration',
+      'Insurance claim processingCompliance and security features',
+      'Mobile app for patientsIntegration with EHR systems'
     ],
     popular: false,
     icon: '🏥',
@@ -455,11 +402,11 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     setupTime: '4-6 hours',
     category: 'Healthcare & Medical',
     realService: true,
-    technology: ['React', 'Python', 'Machine Learning', 'PostgreSQL', 'Redis', 'AWS'],
-    integrations: ['Epic', 'Cerner', 'Allscripts', 'Practice Fusion', 'Kareo', 'DrChrono'],
-    useCases: ['Patient care management', 'Appointment scheduling', 'Medical record keeping', 'Telemedicine services', 'Healthcare analytics'],
+    technology: ['ReactPython', 'Machine LearningPostgreSQL', 'RedisAWS'],
+    integrations: ['EpicCerner', 'AllscriptsPractice Fusion', 'KareoDrChrono'],
+    useCases: ['Patient care managementAppointment scheduling', 'Medical record keepingTelemedicine services', 'Healthcare analytics'],
     roi: 'Healthcare practices report 30% reduction in administrative costs and 25% improvement in patient satisfaction.',
-    competitors: ['Epic', 'Cerner', 'Allscripts', 'Practice Fusion'],
+    competitors: ['EpicCerner', 'AllscriptsPractice Fusion'],
     marketSize: '$31.5B healthcare IT market',
     growthRate: '17% annual growth',
     contactInfo: contact,
@@ -470,19 +417,19 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.3,
     reviews: 18
   }
-];
+],
 
 export const getInnovativeMicroSaasServices2026ByCategory = (category: string) => {
-  return innovativeMicroSaasServices2026.filter(service => service.category === category);
-};
+  return innovativeMicroSaasServices2026.filter(service => service.category === category)
+},
 
 export const getPopularInnovativeMicroSaasServices2026 = () => {
-  return innovativeMicroSaasServices2026.filter(service => service.popular);
-};
+  return innovativeMicroSaasServices2026.filter(service => service.popular),
+},
 
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovativeMicroSaasServices2026.filter(service => {
-    const price = parseInt(service.price.replace('$', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
+    const price = parseInt(service.price.replace('$', '')),
+    return price >= minPrice && price <= maxPrice
+  }),
+},

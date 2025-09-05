@@ -1,11 +1,11 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { GradientHeading } from "@/components/GradientHeading",
 
 export function EnterpriseHero() {
   return (
-    <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">
+    <section className="py-20 px-4 md: px-6 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -49,5 +49,5 @@ export function EnterpriseHero() {
         </div>
       </div>
     </section>
-  );
+  )
 }

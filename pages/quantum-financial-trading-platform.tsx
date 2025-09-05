@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 
 
 
@@ -10,7 +10,7 @@ export default function QuantumFinancialTradingPlatformPage() {
       <Head>
         <title>Quantum Financial Trading Platform | Zion Tech Group</title>
         <meta name="description" content="Quantum AI platform for financial trading with advanced analysis and automated strategies." />
-        <link rel="canonical" href="https://ziontechgroup.com/quantum-financial-trading-platform" />
+        <link rel="canonical" href="https: //ziontechgroup.com/quantum-financial-trading-platform" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-8">
@@ -35,6 +35,6 @@ export default function QuantumFinancialTradingPlatformPage() {
         </div>
       </div>
     </Layout>
-  );
+  )
 }
 

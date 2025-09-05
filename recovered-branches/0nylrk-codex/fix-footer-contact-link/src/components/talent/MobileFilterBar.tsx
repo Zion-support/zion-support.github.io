@@ -1,18 +1,18 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Search, Sliders } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Search, Sliders } from "lucide-react",
+import { Input } from "@/components/ui/input",
 
 interface MobileFilterBarProps {
-  searchTerm: string;
-  setSearchTerm: (value: string) => void;
-  setIsMobileFilterOpen: (isOpen: boolean) => void;
+  searchTerm: string,
+  setSearchTerm: (value: string) => void,
+  setIsMobileFilterOpen: (isOpen: boolean) => void
 }
 
 export function MobileFilterBar({ 
-  searchTerm, 
-  setSearchTerm, 
+  searchTerm,
+  setSearchTerm,
   setIsMobileFilterOpen 
 }: MobileFilterBarProps) {
   return (
@@ -32,9 +32,9 @@ export function MobileFilterBar({
           placeholder="Search talents..."
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
-          className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate"
+          className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate"
         />
       </div>
     </div>
-  );
+  )
 }

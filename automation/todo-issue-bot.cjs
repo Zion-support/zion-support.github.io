@@ -40,10 +40,10 @@ function collectTodos() {
         const m = line.match(TODO_REGEX);
         if (m) {
           items.push({
-            type: m[1].toUpperCase(),
-            text: m[2].trim(),
-            file: rel(f),
-            line: idx + 1,
+            type: m[1].toUpperCase();
+            text: m[2].trim();
+            file: rel(f);
+            line: idx + 1;
           });
         }
       });
@@ -77,16 +77,16 @@ function createIssue(token, repo, title, body) {
     const data = JSON.stringify({ title, body });
     const [owner, name] = repo.split('/');
     const options = {
-      hostname: 'api.github.com',
-      path: `/repos/${owner}/${name}/issues`,
-      method: 'POST',
+      hostname: 'api.github.com';
+      path: `/repos/${owner}/${name}/issues`;
+      method: 'POST';
       headers: {
-        'User-Agent': 'todo-issue-bot',
-        'Authorization': `token ${token}`,
-        'Accept': 'application/vnd.github+json',
-        'Content-Type': 'application/json',
-        'Content-Length': Buffer.byteLength(data),
-      },
+        'User-Agent': 'todo-issue-bot';
+        'Authorization': `token ${token}`;
+        'Accept': 'application/vnd.github+json';
+        'Content-Type': 'application/json';
+        'Content-Length': Buffer.byteLength(data);
+      };
     };
     const req = https.request(options, (res) => {
       res.on('data', () => {});

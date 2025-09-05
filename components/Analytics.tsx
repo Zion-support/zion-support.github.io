@@ -1,5 +1,5 @@
 
-};
+},
 ,
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {,
   useEffect(() => {,
@@ -15,7 +15,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       window.dataLayer = window.dataLayer || [],
       function gtag(...args: any[]) {,
         window.dataLayer.push(args)
-      };
+      },
       window.gtag = gtag,
       gtag('js', new Date()),
       gtag('config', trackingId, {,
@@ -30,7 +30,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
           page_location: window.location.href,
           page_path: window.location.pathname
         })
-      };
+      },
 ,
       // Track page view on load,
       trackPageView(),
@@ -38,7 +38,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       // Track page view on route change (for SPA behavior),
       const handleRouteChange = () => {,
         trackPageView()
-      };
+      },
 ,
       // Listen for popstate events (back/forward navigation),
       window.addEventListener('popstate', handleRouteChange),
@@ -46,16 +46,16 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       // Cleanup,
       return () => {,
         window.removeEventListener('popstate', handleRouteChange)
-      };
-    };
+      },
+    },
   }, [trackingId]),
 ,
   // Track custom events,
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {,
     if (typeof window !== 'undefined' && window.gtag) {,
       window.gtag('event', eventName, parameters)
-    };
-  };
+    },
+  },
 ,
   // Track button clicks,
   const trackButtonClick = (buttonName: string, location?: string) => {,
@@ -63,7 +63,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       button_name: buttonName,
       location: location || window.location.pathname
     })
-  };
+  },
 ,
   // Track form submissions,
   const trackFormSubmission = (formName: string) => {,
@@ -71,7 +71,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       form_name: formName,
       page_location: window.location.href
     })
-  };
+  },
 ,
   // Track external link clicks,
   const trackExternalLink = (url: string, linkText: string) => {,
@@ -80,7 +80,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       link_text: linkText,
       page_location: window.location.href
     })
-  };
+  },
 ,
   // Expose tracking functions globally for use in other components,
   if (typeof window !== 'undefined') {,
@@ -88,7 +88,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
     (window as any).trackButtonClick = trackButtonClick,
     (window as any).trackFormSubmission = trackFormSubmission,
     (window as any).trackExternalLink = trackExternalLink
-  };
+  },
 ,
   return (,
     <Head>,
@@ -107,16 +107,16 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
                         name: 'load',
                         value: Math.round(loadTime)
                       })
-                    };
-                  };
+                    },
+                  },
                 }, 0)
               })
-            };
+            },
           `
-        }};
+        }},
       />,
     </Head>,
   )
-};
+},
 ,
 export default Analytics,

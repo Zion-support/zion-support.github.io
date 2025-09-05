@@ -1,41 +1,33 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  Brain, Rocket, Shield, Zap, Target, Atom, Globe, 
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, 
+  Brain, Rocket, Shield, Zap, Target, Atom, Globe,
+  Cpu, Lock, Cloud, Settings, Eye, Award, Clock,
   Star, TrendingUp, Users, Building, Lightbulb,
   ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin
-} from 'lucide-react';
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
+} from 'lucide-react',
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
+import { real2036SpecializedServices } from '../data/real-2036-specialized-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const categories = [
-  'All Services',
-  'AI & Data',
-  'Quantum Technology',
-  'Space Technology',
-  'IT Infrastructure',
-  'Cybersecurity',
-  'Edge Computing',
-  'Blockchain',
-  'Manufacturing',
-  'Healthcare AI',
-  'Emerging Technology',
-  'Biotechnology',
-  'Human-Computer Interaction',
-  'Metaverse',
-  'Autonomous Systems',
-  'Climate Technology'
-];
+  'All ServicesAI & Data',
+  'Quantum TechnologySpace Technology',
+  'IT InfrastructureCybersecurity',
+  'Edge ComputingBlockchain',
+  'ManufacturingHealthcare AI',
+  'Emerging TechnologyBiotechnology',
+  'Human-Computer InteractionMetaverse',
+  'Autonomous SystemsClimate Technology'
+],
 
 const categoryIcons: { [key: string]: React.ReactNode } = {
   'AI & Data': <Brain className="w-5 h-5" />,
@@ -53,36 +45,35 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
   'Metaverse': <Globe className="w-5 h-5" />,
   'Autonomous Systems': <Rocket className="w-5 h-5" />,
   'Climate Technology': <Globe className="w-5 h-5" />
-};
+},
 
 export default function InnovativeServicesShowcase2036() {
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'marketSize'>('name');
+  const [selectedCategory, setSelectedCategory] = useState('All Services'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'marketSize'>('name'),
 
-  const allServices = [...real2036InnovativeServices, ...real2036SpecializedServices];
+  const allServices = [...real2036InnovativeServices, ...real2036SpecializedServices],
 
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'All Services' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All Services' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'rating':
-        return (b.rating || 0) - (a.rating || 0);
+        return (b.rating || 0) - (a.rating || 0),
       case 'marketSize':
-        return parseFloat(b.marketSize?.replace('$', '').replace('B', '') || '0') - parseFloat(a.marketSize?.replace('$', '').replace('B', '') || '0');
-      default:
-        return a.name.localeCompare(b.name);
+        return parseFloat(b.marketSize?.replace('$', '').replace('B', '') || '0') - parseFloat(a.marketSize?.replace('$', '').replace('B', '') || '0'),
+      default: return a.name.localeCompare(b.name)
     }
-  });
+  }),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -92,7 +83,7 @@ export default function InnovativeServicesShowcase2036() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -103,7 +94,7 @@ export default function InnovativeServicesShowcase2036() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <Layout>
@@ -156,7 +147,7 @@ export default function InnovativeServicesShowcase2036() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Experience the future of technology with our cutting-edge micro SAAS services, 
+            Experience the future of technology with our cutting-edge micro SAAS services,
             AI platforms, and quantum solutions. Transform your business with next-generation innovation.
           </motion.p>
           <motion.div 
@@ -215,11 +206,11 @@ export default function InnovativeServicesShowcase2036() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Revolutionary Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive portfolio of innovative micro SAAS services, 
+              Discover our comprehensive portfolio of innovative micro SAAS services,
               AI platforms, and cutting-edge technology solutions designed for the future.
             </p>
           </motion.div>
@@ -441,7 +432,7 @@ export default function InnovativeServicesShowcase2036() {
               </a>
               <a
                 href={`tel:${contactInfo.mobile}`}
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
               >
                 Call Us Now
               </a>
@@ -450,5 +441,5 @@ export default function InnovativeServicesShowcase2036() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

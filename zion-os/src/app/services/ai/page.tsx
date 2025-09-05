@@ -6,7 +6,7 @@ export default function AIServicesPage() {
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold mb-6">🤖 AI Services & Solutions</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence. From automation to predictive analytics, 
+            Transform your business with cutting-edge artificial intelligence. From automation to predictive analytics,
             we deliver enterprise-grade AI solutions that drive real results.
           </p>
           <div className="mt-8">
@@ -39,7 +39,7 @@ export default function AIServicesPage() {
               <div className="text-4xl mb-6">🧠</div>
               <h2 className="text-3xl font-bold mb-4">ZionGPT Core</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Enterprise-grade AI assistant with custom knowledge base integration, workflow automation, 
+                Enterprise-grade AI assistant with custom knowledge base integration, workflow automation,
                 and seamless integration with your existing systems.
               </p>
               
@@ -86,7 +86,7 @@ export default function AIServicesPage() {
               <div className="text-4xl mb-6">✍️</div>
               <h2 className="text-3xl font-bold mb-4">AI Content Generation</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Automate your content creation with AI-powered writing tools that generate high-quality, 
+                Automate your content creation with AI-powered writing tools that generate high-quality,
                 SEO-optimized content for blogs, social media, and marketing materials.
               </p>
               
@@ -133,7 +133,7 @@ export default function AIServicesPage() {
               <div className="text-4xl mb-6">📊</div>
               <h2 className="text-3xl font-bold mb-4">AI-Powered Analytics</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Transform your data into actionable insights with machine learning-powered analytics, 
+                Transform your data into actionable insights with machine learning-powered analytics,
                 predictive modeling, and intelligent business intelligence solutions.
               </p>
               
@@ -180,7 +180,7 @@ export default function AIServicesPage() {
               <div className="text-4xl mb-6">💬</div>
               <h2 className="text-3xl font-bold mb-4">AI Customer Support</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Provide 24/7 intelligent customer support with AI-powered chatbots, virtual assistants, 
+                Provide 24/7 intelligent customer support with AI-powered chatbots, virtual assistants,
                 and automated customer service solutions that never sleep.
               </p>
               
@@ -227,7 +227,7 @@ export default function AIServicesPage() {
               <div className="text-4xl mb-6">⚙️</div>
               <h2 className="text-3xl font-bold mb-4">AI Process Automation</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Streamline your business operations with intelligent workflow automation, 
+                Streamline your business operations with intelligent workflow automation,
                 document processing, and AI-powered business process optimization.
               </p>
               
@@ -274,7 +274,7 @@ export default function AIServicesPage() {
               <div className="text-4xl mb-6">🔒</div>
               <h2 className="text-3xl font-bold mb-4">AI Security & Compliance</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Protect your enterprise with AI-powered threat detection, compliance monitoring, 
+                Protect your enterprise with AI-powered threat detection, compliance monitoring,
                 and automated security solutions that adapt to evolving threats.
               </p>
               
@@ -374,11 +374,11 @@ export default function AIServicesPage() {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Harness the Power of AI?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our AI solutions can transform your business operations, 
+            Let's discuss how our AI solutions can transform your business operations,
             improve efficiency, and drive unprecedented growth.
           </p>
           <div className="space-y-4">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a href="tel:+13024640950" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-lg">
                 📞 Call +1 302 464 0950
               </a>
@@ -393,5 +393,5 @@ export default function AIServicesPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

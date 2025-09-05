@@ -28,9 +28,9 @@ class AppEnhancementSuite {
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
+        encoding: 'utf8';
+        cwd: '/workspace';
+        stdio: 'pipe';
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
@@ -44,15 +44,15 @@ class AppEnhancementSuite {
     this.log('🔧 Enhancing code quality...');
 
     const enhancements = [
-      { command: 'npm run lint:fix', description: 'Fix linting issues' },
-      { command: 'npm run format', description: 'Format code' },
-      { command: 'npm run type-check', description: 'Type checking' },
+      { command: 'npm run lint:fix', description: 'Fix linting issues' };
+      { command: 'npm run format', description: 'Format code' };
+      { command: 'npm run type-check', description: 'Type checking' };
     ];
 
     const results = [];
     for (const enhancement of enhancements) {
       const result = await this.runCommand(
-        enhancement.command,
+        enhancement.command;
         enhancement.description
       );
       results.push({ ...enhancement, result });
@@ -68,17 +68,17 @@ class AppEnhancementSuite {
     this.log('⚡ Enhancing performance...');
 
     const enhancements = [
-      { command: 'npm run build:analyze', description: 'Bundle analysis' },
+      { command: 'npm run build:analyze', description: 'Bundle analysis' };
       {
-        command: 'npm run optimize:performance',
-        description: 'Performance optimization',
-      },
+        command: 'npm run optimize:performance';
+        description: 'Performance optimization';
+      };
     ];
 
     const results = [];
     for (const enhancement of enhancements) {
       const result = await this.runCommand(
-        enhancement.command,
+        enhancement.command;
         enhancement.description
       );
       results.push({ ...enhancement, result });
@@ -94,14 +94,14 @@ class AppEnhancementSuite {
     this.log('🔒 Enhancing security...');
 
     const enhancements = [
-      { command: 'npm audit fix', description: 'Fix security vulnerabilities' },
-      { command: 'npm run security:scan', description: 'Security scan' },
+      { command: 'npm audit fix', description: 'Fix security vulnerabilities' };
+      { command: 'npm run security:scan', description: 'Security scan' };
     ];
 
     const results = [];
     for (const enhancement of enhancements) {
       const result = await this.runCommand(
-        enhancement.command,
+        enhancement.command;
         enhancement.description
       );
       results.push({ ...enhancement, result });
@@ -117,14 +117,14 @@ class AppEnhancementSuite {
     this.log('🧪 Enhancing testing...');
 
     const enhancements = [
-      { command: 'npm run test:smoke', description: 'Smoke tests' },
-      { command: 'npm run test:coverage', description: 'Test coverage' },
+      { command: 'npm run test:smoke', description: 'Smoke tests' };
+      { command: 'npm run test:coverage', description: 'Test coverage' };
     ];
 
     const results = [];
     for (const enhancement of enhancements) {
       const result = await this.runCommand(
-        enhancement.command,
+        enhancement.command;
         enhancement.description
       );
       results.push({ ...enhancement, result });
@@ -140,14 +140,14 @@ class AppEnhancementSuite {
     this.log('📚 Enhancing documentation...');
 
     const enhancements = [
-      { command: 'npm run readme:generate', description: 'Generate README' },
-      { command: 'npm run sitemap:generate', description: 'Generate sitemap' },
+      { command: 'npm run readme:generate', description: 'Generate README' };
+      { command: 'npm run sitemap:generate', description: 'Generate sitemap' };
     ];
 
     const results = [];
     for (const enhancement of enhancements) {
       const result = await this.runCommand(
-        enhancement.command,
+        enhancement.command;
         enhancement.description
       );
       results.push({ ...enhancement, result });
@@ -163,32 +163,32 @@ class AppEnhancementSuite {
     this.log('📊 Generating enhancement report...');
 
     const report = {
-      timestamp: new Date().toISOString(),
-      enhancements: this.enhancements,
+      timestamp: new Date().toISOString();
+      enhancements: this.enhancements;
       summary: {
-        totalEnhancements: this.enhancements.length,
+        totalEnhancements: this.enhancements.length;
         categories: {
           codeQuality: this.enhancements.filter(
             e =>
               e.includes('lint') || e.includes('format') || e.includes('type')
-          ).length,
+          ).length;
           performance: this.enhancements.filter(
             e => e.includes('performance') || e.includes('bundle')
-          ).length,
+          ).length;
           security: this.enhancements.filter(
             e => e.includes('security') || e.includes('audit')
-          ).length,
-          testing: this.enhancements.filter(e => e.includes('test')).length,
+          ).length;
+          testing: this.enhancements.filter(e => e.includes('test')).length;
           documentation: this.enhancements.filter(
             e => e.includes('README') || e.includes('sitemap')
-          ).length,
-        },
-      },
+          ).length;
+        };
+      };
     };
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `app-enhancement-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

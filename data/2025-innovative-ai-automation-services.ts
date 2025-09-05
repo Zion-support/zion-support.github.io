@@ -1,44 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface InnovativeAIAutomationService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 const contact = {
@@ -46,7 +46,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
   {
@@ -57,14 +57,10 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     period: '/month',
     description: 'Advanced AI-powered code review system that automatically analyzes code quality, security vulnerabilities, and performance issues across multiple programming languages.',
     features: [
-      'Multi-language support (Python, JavaScript, Go, Rust, Java)',
-      'AI-powered security vulnerability detection',
-      'Performance optimization recommendations',
-      'Code quality scoring and metrics',
-      'Integration with GitHub, GitLab, Bitbucket',
-      'Custom rule engine and policies',
-      'Real-time feedback and suggestions',
-      'Team collaboration and review workflows',
+      'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detection',
+      'Performance optimization recommendationsCode quality scoring and metrics',
+      'Integration with GitHub, GitLab, BitbucketCustom rule engine and policies',
+      'Real-time feedback and suggestionsTeam collaboration and review workflows',
       'Compliance and best practices enforcement'
     ],
     popular: true,
@@ -72,17 +68,17 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-autonomous-code-review',
-    marketPosition: 'Competes with SonarQube, CodeClimate, and Snyk; offers AI-powered insights and automation.',
+    marketPosition: 'Competes with SonarQube, CodeClimate, and Snyk, offers AI-powered insights and automation.',
     targetAudience: 'Development teams, DevOps engineers, Security teams',
     trialDays: 14,
     setupTime: '2 hours',
     category: 'AI & Development',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'OpenAI GPT-4', 'PostgreSQL', 'Redis'],
-    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Teams'],
-    useCases: ['Code quality assurance', 'Security scanning', 'Performance optimization', 'Team collaboration'],
+    technology: ['PythonTensorFlow', 'OpenAI GPT-4PostgreSQL', 'Redis'],
+    integrations: ['GitHubGitLab', 'BitbucketJira', 'SlackTeams'],
+    useCases: ['Code quality assuranceSecurity scanning', 'Performance optimizationTeam collaboration'],
     roi: 'Reduce code review time by 70% and improve code quality by 40%',
-    competitors: ['SonarQube', 'CodeClimate', 'Snyk', 'DeepCode'],
+    competitors: ['SonarQubeCodeClimate', 'SnykDeepCode'],
     marketSize: '$2.5B+ code review and analysis market',
     growthRate: '85% YoY',
     variant: 'ai-futuristic',
@@ -102,14 +98,10 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     period: '/month',
     description: 'AI-powered testing platform that automatically generates, executes, and maintains test suites while adapting to application changes.',
     features: [
-      'AI-generated test cases and scenarios',
-      'Self-healing test automation',
-      'Cross-browser and cross-platform testing',
-      'Performance and load testing automation',
-      'Visual regression testing with AI',
-      'Test data generation and management',
-      'CI/CD pipeline integration',
-      'Real-time test execution monitoring',
+      'AI-generated test cases and scenariosSelf-healing test automation',
+      'Cross-browser and cross-platform testingPerformance and load testing automation',
+      'Visual regression testing with AITest data generation and management',
+      'CI/CD pipeline integrationReal-time test execution monitoring',
       'Predictive test failure analysis'
     ],
     popular: true,
@@ -147,14 +139,10 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     period: '/month',
     description: 'AI-driven DevOps platform that automatically manages infrastructure, predicts scaling needs, and resolves issues before they impact users.',
     features: [
-      'Predictive infrastructure scaling',
-      'Automated incident response and resolution',
-      'Intelligent resource optimization',
-      'Multi-cloud orchestration',
-      'Security compliance automation',
-      'Performance monitoring and alerting',
-      'Cost optimization recommendations',
-      'Infrastructure as Code automation',
+      'Predictive infrastructure scalingAutomated incident response and resolution',
+      'Intelligent resource optimizationMulti-cloud orchestration',
+      'Security compliance automationPerformance monitoring and alerting',
+      'Cost optimization recommendationsInfrastructure as Code automation',
       'Real-time health monitoring'
     ],
     popular: false,
@@ -162,7 +150,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-devops-orchestrator',
-    marketPosition: 'Competes with Terraform, Ansible, and Pulumi; adds AI-powered automation and prediction.',
+    marketPosition: 'Competes with Terraform, Ansible, and Pulumi, adds AI-powered automation and prediction.',
     targetAudience: 'DevOps engineers, SRE teams, Platform engineers',
     trialDays: 30,
     setupTime: '1 day',
@@ -192,14 +180,10 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     period: '/month',
     description: 'AI-powered data pipeline platform that automatically optimizes data workflows, detects anomalies, and ensures data quality.',
     features: [
-      'Automated data quality monitoring',
-      'Intelligent error handling and recovery',
-      'Real-time data validation',
-      'Performance optimization automation',
-      'Data lineage tracking',
-      'Compliance and governance automation',
-      'Multi-source data integration',
-      'Predictive maintenance alerts',
+      'Automated data quality monitoringIntelligent error handling and recovery',
+      'Real-time data validationPerformance optimization automation',
+      'Data lineage trackingCompliance and governance automation',
+      'Multi-source data integrationPredictive maintenance alerts',
       'Scalable ETL/ELT processing'
     ],
     popular: false,
@@ -237,14 +221,10 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     period: '/month',
     description: 'AI-driven security monitoring platform that automatically detects threats, analyzes patterns, and responds to security incidents.',
     features: [
-      'AI-powered threat detection',
-      'Automated incident response',
-      'Behavioral analysis and anomaly detection',
-      'Real-time security monitoring',
-      'Compliance reporting automation',
-      'Vulnerability assessment and management',
-      'Security orchestration and automation',
-      'Threat intelligence integration',
+      'AI-powered threat detectionAutomated incident response',
+      'Behavioral analysis and anomaly detectionReal-time security monitoring',
+      'Compliance reporting automationVulnerability assessment and management',
+      'Security orchestration and automationThreat intelligence integration',
       'Predictive security analytics'
     ],
     popular: true,
@@ -252,7 +232,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-autonomous-security-monitor',
-    marketPosition: 'Competes with Splunk, ELK Stack, and IBM QRadar; offers AI-powered automation.',
+    marketPosition: 'Competes with Splunk, ELK Stack, and IBM QRadar, offers AI-powered automation.',
     targetAudience: 'Security teams, SOC analysts, IT administrators',
     trialDays: 21,
     setupTime: '8 hours',
@@ -279,7 +259,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     rating: 4.7,
     reviews: 89
   },
-
   // Autonomous Data Analytics Platform
   {
     id: 'autonomous-data-analytics',
@@ -289,16 +268,11 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     period: '/month',
     description: 'Advanced analytics platform that automatically discovers insights, generates reports, and provides actionable recommendations. Democratizes data access while maintaining security and governance.',
     features: [
-      'AI-powered insight discovery',
-      'Natural language queries',
-      'Automated report generation',
-      'Predictive analytics',
-      'Data visualization',
-      'Real-time dashboards',
-      'Data governance',
-      'Security controls',
-      'API access',
-      'Custom model training'
+      'AI-powered insight discoveryNatural language queries',
+      'Automated report generationPredictive analytics',
+      'Data visualizationReal-time dashboards',
+      'Data governanceSecurity controls',
+      'API accessCustom model training'
     ],
     popular: false,
     icon: '📈',
@@ -364,4 +338,4 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     rating: 4.8,
     reviews: 167
   }
-];
+],

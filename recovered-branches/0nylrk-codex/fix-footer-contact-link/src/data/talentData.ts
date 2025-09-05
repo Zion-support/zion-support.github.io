@@ -1,5 +1,5 @@
 
-import { TalentProfile } from "@/types/talent";
+import { TalentProfile } from "@/types/talent",
 
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
@@ -60,7 +60,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-003",
     full_name: "Priya Sharma",
     professional_title: "Data Scientist & Statistical Analyst",
-    profile_picture_url: "https://images.unsplash.com/photo-1580489944761-15a19d654955?auto=format&fit=crop&w=200&h=200", 
+    profile_picture_url: "https://images.unsplash.com/photo-1580489944761-15a19d654955?auto=format&fit=crop&w=200&h=200",
     bio: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions. My work focuses on extracting actionable insights from complex datasets and developing statistical models that drive business decisions.",
     location: "Seattle, WA",
     skills: ["Statistical Analysis", "Python", "R", "Tableau", "SQL", "Machine Learning", "Data Visualization", "Predictive Modeling"],
@@ -160,7 +160,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ]
   },
   {
-    id: "t-007", 
+    id: "t-007",
     user_id: "user-007",
     full_name: "Daniel Kim",
     professional_title: "Computer Vision Engineer & Deep Learning Specialist",
@@ -315,4 +315,4 @@ export const TALENT_PROFILES: TalentProfile[] = [
       }
     ]
   }
-];
+],

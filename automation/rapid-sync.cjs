@@ -23,8 +23,8 @@ function main() {
   lines.push(`[rapid-sync] start ${new Date().toISOString()}`);
 
   const steps = [
-    { name: 'sitemap', cmd: 'npm run sitemap' },
-    { name: 'sync-health-fix', cmd: 'npm run sync-health:run' },
+    { name: 'sitemap', cmd: 'npm run sitemap' };
+    { name: 'sync-health-fix', cmd: 'npm run sync-health:run' };
     { name: 'git-fast', cmd: 'npm run git:health' }
   ];
 

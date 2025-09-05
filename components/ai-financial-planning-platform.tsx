@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
+  DollarSign, TrendingUp, Shield, Zap, Target, BarChart3,
+  CheckCircle, Star, Globe, Lock, Smartphone, Monitor,
   Award, MessageCircle, Calculator
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIFinancialPlanningPlatform() {
   const features = [
@@ -39,18 +39,14 @@ export default function AIFinancialPlanningPlatform() {
       title: 'Real-Time Financial Insights',
       description: 'Live financial data, market analysis, and personalized recommendations updated in real-time.'
     }
-  ];
+  ],
 
   const benefits = [
-    'Increase investment returns by 25%',
-    'Reduce financial planning time by 70%',
-    'Improve risk-adjusted returns by 40%',
-    'Optimize tax efficiency by 30%',
-    'Reduce portfolio volatility by 35%',
-    'Improve financial goal achievement by 50%',
-    'Reduce financial planning costs by 60%',
-    'Gain professional-grade financial insights'
-  ];
+    'Increase investment returns by 25%Reduce financial planning time by 70%',
+    'Improve risk-adjusted returns by 40%Optimize tax efficiency by 30%',
+    'Reduce portfolio volatility by 35%Improve financial goal achievement by 50%',
+    'Reduce financial planning costs by 60%Gain professional-grade financial insights'
+  ],
 
 					<div className="mt-12">
 						<h2 className="text-2xl font-semibold">Pricing</h2>
@@ -71,7 +67,7 @@ export default function AIFinancialPlanningPlatform() {
 								<p className="mt-4 text-3xl font-bold">Custom</p>
 							</div>
 						</div>
-						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://www.workday.com/en-us/products/planning/adaptive-planning.html" target="_blank" rel="noreferrer">Workday Adaptive</a>, <a className="underline hover:text-cyan-300" href="https://www.anaplan.com/pricing/" target="_blank" rel="noreferrer">Anaplan</a>, <a className="underline hover:text-cyan-300" href="https://pigment.com/pricing" target="_blank" rel="noreferrer">Pigment</a>.</p>
+						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://www.workday.com/en-us/products/planning/adaptive-planning.html" target="_blank" rel="noreferrer">Workday Adaptive</a> <a className="underline hover:text-cyan-300" href="https://www.anaplan.com/pricing/" target="_blank" rel="noreferrer">Anaplan</a> <a className="underline hover:text-cyan-300" href="https://pigment.com/pricing" target="_blank" rel="noreferrer">Pigment</a>.</p>
 					</div>
 
   return (
@@ -103,11 +99,11 @@ export default function AIFinancialPlanningPlatform() {
                   <DollarSign className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent mb-6">
+              <h1 className="text-5xl md: text-6xl font-bold bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent mb-6">
                 AI Financial Planning Platform
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Intelligent financial planning and wealth management with AI. Get personalized plans, 
+                Intelligent financial planning and wealth management with AI. Get personalized plans,
                 portfolio optimization, and risk management that drives financial success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -270,7 +266,7 @@ export default function AIFinancialPlanningPlatform() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
+                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover: bg-yellow-500/10 transition-all duration-200"
                 >
                   Contact Sales
                 </motion.button>
@@ -280,5 +276,5 @@ export default function AIFinancialPlanningPlatform() {
         </section>
       </div>
     </>
-  );
+  )
 }

@@ -1,34 +1,30 @@
-import React from 'react';
+import React from 'react',
       ]
     },
     {
       title: 'Quantum Technology Services',
       terms: [
-        'Quantum computing resources are allocated based on service tier',
-        'Users must comply with export control regulations',
-        'Performance metrics are provided for informational purposes only',
-        'Service interruptions may occur during quantum system calibration'
+        'Quantum computing resources are allocated based on service tierUsers must comply with export control regulations',
+        'Performance metrics are provided for informational purposes onlyService interruptions may occur during quantum system calibration'
       ]
     },
     {
       title: 'Cybersecurity Services',
       terms: [
-        'Security assessments are conducted according to industry standards',
-        'Vulnerability reports are confidential and must not be shared',
-        'Penetration testing requires written authorization',
-        'Incident response follows our established protocols'
-import Layout from '../components/layout/Layout';
-import SEOOptimizer from '../components/SEOOptimizer';
-import AnalyticsTracker from '../components/AnalyticsTracker';
-import ErrorBoundary from '../components/ErrorBoundary';
-import { motion } from 'framer-motion';
+        'Security assessments are conducted according to industry standardsVulnerability reports are confidential and must not be shared',
+        'Penetration testing requires written authorizationIncident response follows our established protocols'
+import Layout from '../components/layout/Layout',
+import SEOOptimizer from '../components/SEOOptimizer',
+import AnalyticsTracker from '../components/AnalyticsTracker',
+import ErrorBoundary from '../components/ErrorBoundary',
+import { motion } from 'framer-motion',
 import { 
-  FileText, Shield, AlertTriangle, CheckCircle, 
+  FileText, Shield, AlertTriangle, CheckCircle,
   User, Lock, Globe, Scale, Clock, Mail
-} from 'lucide-react';
+} from 'lucide-react',
 
 const TermsPage: React.FC = () => {
-  const lastUpdated = 'January 17, 2025';
+  const lastUpdated = 'January 17, 2025',
 
   const termsSections = [
     {
@@ -36,10 +32,8 @@ const TermsPage: React.FC = () => {
       icon: <CheckCircle className="w-8 h-8" />,
       color: 'from-cyan-500 to-blue-500',
       content: [
-        'By accessing or using our services, you agree to be bound by these terms',
-        'If you do not agree to these terms, do not use our services',
-        'We may modify these terms at any time with notice',
-        'Continued use after changes constitutes acceptance of new terms'
+        'By accessing or using our services, you agree to be bound by these termsIf you do not agree to these terms, do not use our services',
+        'We may modify these terms at any time with noticeContinued use after changes constitutes acceptance of new terms'
       ]
     },
     {
@@ -47,12 +41,9 @@ const TermsPage: React.FC = () => {
       icon: <Globe className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-500',
       content: [
-        'AI and machine learning solutions',
-        'Quantum computing services',
-        'IT infrastructure and consulting',
-        'Micro SAAS applications',
-        'Business automation services',
-        'Technical support and maintenance'
+        'AI and machine learning solutionsQuantum computing services',
+        'IT infrastructure and consultingMicro SAAS applications',
+        'Business automation servicesTechnical support and maintenance'
       ]
     },
     {
@@ -60,10 +51,8 @@ const TermsPage: React.FC = () => {
       icon: <User className="w-8 h-8" />,
       color: 'from-green-500 to-emerald-500',
       content: [
-        'Provide accurate and complete information',
-        'Maintain security of your account credentials',
-        'Comply with applicable laws and regulations',
-        'Use services for lawful purposes only',
+        'Provide accurate and complete informationMaintain security of your account credentials',
+        'Comply with applicable laws and regulationsUse services for lawful purposes only',
         'Respect intellectual property rights'
       ]
     },
@@ -72,22 +61,20 @@ const TermsPage: React.FC = () => {
       icon: <Lock className="w-8 h-8" />,
       color: 'from-orange-500 to-red-500',
       content: [
-        'Our services and content are protected by copyright',
-        'You retain rights to your own content',
-        'No transfer of intellectual property rights',
-        'License to use our services as intended',
+        'Our services and content are protected by copyrightYou retain rights to your own content',
+        'No transfer of intellectual property rightsLicense to use our services as intended',
         'Prohibition of reverse engineering'
       ]
     }
-  ];
+  ],
 
   const prohibitedActivities = [
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion',
 import { 
-  FileText, Shield, CheckCircle, AlertTriangle, 
+  FileText, Shield, CheckCircle, AlertTriangle,
   Globe, Calendar, Scale, Users, ArrowRight,
   BookOpen, Lock, Zap, Building, Brain, Rocket
-} from 'lucide-react';
+} from 'lucide-react',
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -99,9 +86,9 @@ import {
         </div>
       </section>
 
-import { motion } from 'framer-motion';
-import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion',
+import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 const Terms: React.FC = () => {
   const sections = [
@@ -112,7 +99,7 @@ const Terms: React.FC = () => {
     },
     {
       title: 'Use License',
-      content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials; use the materials for any commercial purpose or for any public display; attempt to reverse engineer any software contained on Zion Tech Group's website; remove any copyright or other proprietary notations from the materials; or transfer the materials to another person or "mirror" the materials on any other server.`,
+      content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials, use the materials for any commercial purpose or for any public display, attempt to reverse engineer any software contained on Zion Tech Group's website, remove any copyright or other proprietary notations from the materials, or transfer the materials to another person or "mirror" the materials on any other server.`,
       icon: <Lock className="w-6 h-6 text-blue-400" />
     },
     {
@@ -135,7 +122,7 @@ const Terms: React.FC = () => {
       content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`,
       icon: <Shield className="w-6 h-6 text-red-400" />
     }
-  ];
+  ],
 
   const importantNotices = [
     {
@@ -153,7 +140,7 @@ const Terms: React.FC = () => {
       content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.',
       type: 'info'
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -161,10 +148,10 @@ const Terms: React.FC = () => {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-import { motion } from 'framer-motion';
-import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
+import { motion } from 'framer-motion',
+import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO',
 
 const termsSections = [
   {
@@ -187,7 +174,7 @@ const termsSections = [
     icon: <Shield className="w-6 h-6 text-purple-400" />,
     content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
   }
-];
+],
 
 export default function Terms() {
   return (
@@ -742,22 +729,16 @@ export default function Terms() {
                           </li>
                         ))}
                       </ul>
-    'Unauthorized access to our systems or networks',
-    'Interference with service operation',
-    'Distribution of malware or harmful code',
-    'Violation of third-party rights',
-    'Attempts to gain unauthorized access',
-    'Use of services for illegal activities'
-  ];
+    'Unauthorized access to our systems or networksInterference with service operation',
+    'Distribution of malware or harmful codeViolation of third-party rights',
+    'Attempts to gain unauthorized accessUse of services for illegal activities'
+  ],
 
   const limitations = [
-    'Services provided "as is" without warranties',
-    'No guarantee of uninterrupted service',
-    'Limitation of liability for damages',
-    'No responsibility for third-party content',
-    'Service availability subject to change',
-    'Technical support during business hours only'
-  ];
+    'Services provided "as is" without warrantiesNo guarantee of uninterrupted service',
+    'Limitation of liability for damagesNo responsibility for third-party content',
+    'Service availability subject to changeTechnical support during business hours only'
+  ],
 
   return (
     <ErrorBoundary>
@@ -1000,7 +981,7 @@ export default function Terms() {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">2. Service Description and Availability</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
-                        Our services include AI and machine learning solutions, quantum computing services, 
+                        Our services include AI and machine learning solutions, quantum computing services,
                         IT infrastructure consulting, micro SAAS applications, business automation, and 
                         technical support.
                       </p>
@@ -1040,7 +1021,7 @@ export default function Terms() {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">5. Intellectual Property Rights</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
-                        Our services, including software, content, and technology, are protected by copyright, 
+                        Our services, including software, content, and technology, are protected by copyright,
                         trademark, and other intellectual property laws. You retain rights to your own content.
                       </p>
                       <p className="text-gray-300 leading-relaxed">
@@ -1212,7 +1193,7 @@ export default function Terms() {
                 <h3 className="text-2xl font-bold text-purple-400 mb-4">2. Acceptance of Terms</h3>
                 <div className="text-gray-300 space-y-4">
                   <p>
-                    By accessing, browsing, or using our services, you acknowledge that you have read, 
+                    By accessing, browsing, or using our services, you acknowledge that you have read,
                     understood, and agree to be bound by these Terms of Service and our Privacy Policy.
                   </p>
                   <p>
@@ -1296,7 +1277,7 @@ export default function Terms() {
                   
                   <h4 className="text-lg font-semibold text-white">Disclaimer of Warranties</h4>
                   <p>
-                    Our services are provided "as is" and "as available" without warranties of any kind, 
+                    Our services are provided "as is" and "as available" without warranties of any kind,
                     either express or implied, including but not limited to warranties of merchantability 
                     or fitness for a particular purpose.
                   </p>
@@ -1385,10 +1366,10 @@ export default function Terms() {
         </section>
       </div>
     </Layout>
-  );
-};
+  ),
+},
 
-export default Terms;
+export default Terms,
             </div>
           </section>
 
@@ -1407,7 +1388,7 @@ export default Terms;
                   If you have any questions about these Terms of Service or need clarification on any 
                   provision, please don't hesitate to reach out to us.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a
                     href="mailto:kleber@ziontechgroup.com"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
@@ -1429,7 +1410,7 @@ export default Terms;
         </main>
       </Layout>
     </ErrorBoundary>
-  );
-};
+  )
+},
 
-export default TermsPage;
+export default TermsPage,

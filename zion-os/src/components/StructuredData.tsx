@@ -1,8 +1,8 @@
-"use client";
+"use client",
 
 export function StructuredData() {
   const structuredData = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "SoftwareApplication",
     "name": "Zion OS",
     "description": "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
@@ -17,7 +17,7 @@ export function StructuredData() {
     "provider": {
       "@type": "Organization",
       "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
+      "url": "https: //ziontechgroup.com",
       "logo": "https://ziontechgroup.com/logo.png",
       "sameAs": [
         "https://twitter.com/ziontechgroup",
@@ -33,7 +33,7 @@ export function StructuredData() {
       "AI-Powered Tools",
       "Modular Architecture"
     ],
-    "screenshot": "https://ziontechgroup.com/screenshot.png",
+    "screenshot": "https: //ziontechgroup.com/screenshot.png",
     "softwareVersion": "1.0.0",
     "releaseNotes": "Initial release with core features for launching digital economies",
     "aggregateRating": {
@@ -48,12 +48,12 @@ export function StructuredData() {
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com"
     }
-  };
+  },
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />
-  );
+  ),
 }

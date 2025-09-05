@@ -1,6 +1,6 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 const MachineLearningApplicationsInEnterpriseSoftwareChat = () => {
   return (
@@ -16,7 +16,7 @@ const MachineLearningApplicationsInEnterpriseSoftwareChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default MachineLearningApplicationsInEnterpriseSoftwareChat;
+export default MachineLearningApplicationsInEnterpriseSoftwareChat,

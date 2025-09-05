@@ -1,26 +1,26 @@
-"use client";
+"use client",
 
-import Link from "next/link";
-import { ReactNode } from "react";
+import Link from "next/link",
+import { ReactNode } from "react",
 
 interface FeatureCardProps {
-  id: number;
-  title: string;
-  description: string;
-  icon: ReactNode;
-  color: string;
-  href: string;
-  isActive: boolean;
-  onClick: () => void;
+  id: number,
+  title: string,
+  description: string,
+  icon: ReactNode,
+  color: string,
+  href: string,
+  isActive: boolean,
+  onClick: () => void
 }
 
 export function FeatureCard({ 
-  title, 
-  description, 
-  icon, 
-  color, 
-  href, 
-  isActive, 
+  title,
+  description,
+  icon,
+  color,
+  href,
+  isActive,
   onClick 
 }: FeatureCardProps) {
   const colorClasses = {
@@ -30,7 +30,7 @@ export function FeatureCard({
     red: "bg-red-500/20 hover:bg-red-500/30 border-red-500/30",
     yellow: "bg-yellow-500/20 hover:bg-yellow-500/30 border-yellow-500/30",
     indigo: "bg-indigo-500/20 hover:bg-indigo-500/30 border-indigo-500/30"
-  };
+  },
 
   return (
     <div 
@@ -40,8 +40,8 @@ export function FeatureCard({
       onClick={onClick}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          onClick();
+          e.preventDefault(),
+          onClick(),
         }
       }}
       tabIndex={0}
@@ -68,5 +68,5 @@ export function FeatureCard({
         </Link>
       </div>
     </div>
-  );
+  ),
 }

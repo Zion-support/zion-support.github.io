@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function Custom404() {
   return (
@@ -19,17 +19,17 @@ export default function Custom404() {
           </p>
           <Link 
             href="/" 
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+            className="px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
           >
             Go Home
           </Link>
         </div>
       </main>
     </>
-  );
+  )
 }
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next',
+import Head from 'next/head',
 
 const NotFoundPage: NextPage = () => {
   return (
@@ -44,7 +44,7 @@ const NotFoundPage: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default NotFoundPage;
+export default NotFoundPage,

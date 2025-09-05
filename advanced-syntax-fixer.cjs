@@ -23,29 +23,29 @@ function fixAdvancedSyntaxIssues(filePath) {
 
     // Fix import statements
     content = content.replace(
-      /import React from 'react',/g,
+      /import React from 'react',/g;
       "import React from 'react';"
     );
     content = content.replace(
-      /import React from "react",/g,
+      /import React from "react",/g;
       'import React from "react";'
     );
     content = content.replace(
-      /import { JSX } from 'react',/g,
+      /import { JSX } from 'react',/g;
       "import { JSX } from 'react';"
     );
 
     // Fix export statements
     content = content.replace(
-      /export default function (\w+)\(\): JSX\.Element \{/g,
+      /export default function (\w+)\(\): JSX\.Element \{/g;
       'export default function $1(): JSX.Element {'
     );
     content = content.replace(
-      /export interface (\w+) \{;/g,
+      /export interface (\w+) \{;/g;
       'export interface $1 {'
     );
     content = content.replace(
-      /export const (\w+): (\w+)\[\] = \[;/g,
+      /export const (\w+): (\w+)\[\] = \[;/g;
       'export const $1: $2[] = [];'
     );
 
@@ -74,7 +74,7 @@ function fixAdvancedSyntaxIssues(filePath) {
 
     // Fix React component syntax
     content = content.replace(
-      /const (\w+) = \(\) => \{/g,
+      /const (\w+) = \(\) => \{/g;
       'const $1 = () => {'
     );
     content = content.replace(/export default (\w+),/g, 'export default $1;');
@@ -100,22 +100,22 @@ function fixAdvancedSyntaxIssues(filePath) {
 
     // Fix specific parsing errors
     content = content.replace(
-      /import React from 'react',/g,
+      /import React from 'react',/g;
       "import React from 'react';"
     );
     content = content.replace(
-      /import { JSX } from 'react',/g,
+      /import { JSX } from 'react',/g;
       "import { JSX } from 'react';"
     );
     content = content.replace(
-      /export default function App\(\): JSX\.Element \{/g,
+      /export default function App\(\): JSX\.Element \{/g;
       'export default function App(): JSX.Element {'
     );
 
     // Fix vite config issues
     if (filePath.includes('vite.config.ts')) {
       content = content.replace(
-        /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'node: path', export default defineConfig\(\{/g,
+        /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'node: path', export default defineConfig\(\{/g;
         `import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
@@ -124,13 +124,13 @@ export default defineConfig({`
       );
 
       content = content.replace(
-        /plugins: \[ react\(\{ include: '\*\*\/\*\.\{jsx,js,ts,tsx\}',fastRefresh: true,jsxRuntime: 'automatic'\}\),splitVendorChunkPlugin\(\) \]/g,
+        /plugins: \[ react\(\{ include: '\*\*\/\*\.\{jsx,js,ts,tsx\}',fastRefresh: true,jsxRuntime: 'automatic'\}\),splitVendorChunkPlugin\(\) \]/g;
         `plugins: [
     react({
-      include: '**/*.{jsx,js,ts,tsx}',
-      fastRefresh: true,
+      include: '**/*.{jsx,js,ts,tsx}';
+      fastRefresh: true;
       jsxRuntime: 'automatic'
-    }),
+    });
     splitVendorChunkPlugin()
   ]`
       );

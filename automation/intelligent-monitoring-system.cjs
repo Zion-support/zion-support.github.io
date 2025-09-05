@@ -7,10 +7,10 @@ class IntelligentMonitoringSystem {
     this.logsDir = path.join(__dirname, '../logs');
     this.ensureLogsDir();
     this.metrics = {
-      performance: [],
-      errors: [],
-      warnings: [],
-      successes: [],
+      performance: [];
+      errors: [];
+      warnings: [];
+      successes: [];
     };
   }
 
@@ -34,17 +34,17 @@ class IntelligentMonitoringSystem {
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
+        encoding: 'utf8';
+        cwd: '/workspace';
+        stdio: 'pipe';
       });
       const duration = Date.now() - startTime;
       this.log(`✅ ${description} completed successfully in ${duration}ms`);
 
       this.metrics.successes.push({
-        command: description,
-        duration,
-        timestamp: new Date().toISOString(),
+        command: description;
+        duration;
+        timestamp: new Date().toISOString();
       });
 
       return { success: true, output, duration };
@@ -53,10 +53,10 @@ class IntelligentMonitoringSystem {
       this.log(`❌ ${description} failed: ${error.message}`, 'error');
 
       this.metrics.errors.push({
-        command: description,
-        error: error.message,
-        duration,
-        timestamp: new Date().toISOString(),
+        command: description;
+        error: error.message;
+        duration;
+        timestamp: new Date().toISOString();
       });
 
       return { success: false, error: error.message, duration };
@@ -67,8 +67,8 @@ class IntelligentMonitoringSystem {
     this.log('⚡ Monitoring performance...');
 
     const performanceChecks = [
-      { command: 'npm run build', description: 'Build performance' },
-      { command: 'npm run test:smoke', description: 'Test performance' },
+      { command: 'npm run build', description: 'Build performance' };
+      { command: 'npm run test:smoke', description: 'Test performance' };
     ];
 
     const results = [];
@@ -78,9 +78,9 @@ class IntelligentMonitoringSystem {
 
       if (result.success) {
         this.metrics.performance.push({
-          check: check.description,
-          duration: result.duration,
-          timestamp: new Date().toISOString(),
+          check: check.description;
+          duration: result.duration;
+          timestamp: new Date().toISOString();
         });
       }
     }
@@ -92,8 +92,8 @@ class IntelligentMonitoringSystem {
     this.log('🏥 Monitoring health...');
 
     const healthChecks = [
-      { command: 'npm run lint', description: 'Code health' },
-      { command: 'npm run type-check', description: 'Type health' },
+      { command: 'npm run lint', description: 'Code health' };
+      { command: 'npm run type-check', description: 'Type health' };
     ];
 
     const results = [];
@@ -103,9 +103,9 @@ class IntelligentMonitoringSystem {
 
       if (!result.success) {
         this.metrics.warnings.push({
-          check: check.description,
-          warning: result.error,
-          timestamp: new Date().toISOString(),
+          check: check.description;
+          warning: result.error;
+          timestamp: new Date().toISOString();
         });
       }
     }
@@ -117,8 +117,8 @@ class IntelligentMonitoringSystem {
     this.log('🔒 Monitoring security...');
 
     const securityChecks = [
-      { command: 'npm audit', description: 'Security audit' },
-      { command: 'npm run security:scan', description: 'Security scan' },
+      { command: 'npm audit', description: 'Security audit' };
+      { command: 'npm run security:scan', description: 'Security scan' };
     ];
 
     const results = [];
@@ -134,28 +134,28 @@ class IntelligentMonitoringSystem {
     this.log('📊 Generating intelligent monitoring report...');
 
     const report = {
-      timestamp: new Date().toISOString(),
-      metrics: this.metrics,
+      timestamp: new Date().toISOString();
+      metrics: this.metrics;
       analysis: {
-        totalChecks: this.metrics.successes.length + this.metrics.errors.length,
+        totalChecks: this.metrics.successes.length + this.metrics.errors.length;
         successRate:
           (this.metrics.successes.length /
             (this.metrics.successes.length + this.metrics.errors.length)) *
-          100,
+          100;
         averagePerformance:
           this.metrics.performance.length > 0
             ? this.metrics.performance.reduce((sum, p) => sum + p.duration, 0) /
               this.metrics.performance.length
-            : 0,
-        errorCount: this.metrics.errors.length,
-        warningCount: this.metrics.warnings.length,
-      },
-      recommendations: this.generateRecommendations(),
+            : 0;
+        errorCount: this.metrics.errors.length;
+        warningCount: this.metrics.warnings.length;
+      };
+      recommendations: this.generateRecommendations();
     };
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `intelligent-monitoring-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -212,7 +212,7 @@ class IntelligentMonitoringSystem {
       return report;
     } catch (error) {
       this.log(
-        `❌ Intelligent Monitoring System failed: ${error.message}`,
+        `❌ Intelligent Monitoring System failed: ${error.message}`;
         'error'
       );
       throw error;

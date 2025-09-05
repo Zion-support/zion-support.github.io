@@ -56,24 +56,24 @@ class HealthChecker {
 
       // Generate health report
       const healthReport = {
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toISOString();
         system: {
-          diskUsage,
-          memoryUsage,
-        },
-        processes: pm2Status,
-        application: buildStatus,
+          diskUsage;
+          memoryUsage;
+        };
+        processes: pm2Status;
+        application: buildStatus;
         overall: this.calculateOverallHealth(
-          diskUsage,
-          memoryUsage,
-          pm2Status,
+          diskUsage;
+          memoryUsage;
+          pm2Status;
           buildStatus
-        ),
+        );
       };
 
       // Save health report
       fs.writeFileSync(
-        this.healthReport,
+        this.healthReport;
         JSON.stringify(healthReport, null, 2)
       );
 
@@ -95,10 +95,10 @@ class HealthChecker {
       const data = lines[1].split(/\s+/);
 
       return {
-        total: data[1],
-        used: data[2],
-        available: data[3],
-        percentage: data[4],
+        total: data[1];
+        used: data[2];
+        available: data[3];
+        percentage: data[4];
       };
     } catch (error) {
       this.log(`Failed to check disk space: ${error.message}`, 'ERROR');
@@ -113,10 +113,10 @@ class HealthChecker {
       const data = lines[1].split(/\s+/);
 
       return {
-        total: data[1],
-        used: data[2],
-        free: data[3],
-        available: data[4],
+        total: data[1];
+        used: data[2];
+        free: data[3];
+        available: data[4];
       };
     } catch (error) {
       this.log(`Failed to check memory usage: ${error.message}`, 'ERROR');
@@ -130,16 +130,16 @@ class HealthChecker {
       const processes = JSON.parse(result);
 
       const status = {
-        total: processes.length,
-        online: processes.filter(p => p.pm2_env.status === 'online').length,
-        errored: processes.filter(p => p.pm2_env.status === 'errored').length,
-        stopped: processes.filter(p => p.pm2_env.status === 'stopped').length,
+        total: processes.length;
+        online: processes.filter(p => p.pm2_env.status === 'online').length;
+        errored: processes.filter(p => p.pm2_env.status === 'errored').length;
+        stopped: processes.filter(p => p.pm2_env.status === 'stopped').length;
         processes: processes.map(p => ({
-          name: p.name,
-          status: p.pm2_env.status,
-          memory: p.monit.memory,
-          cpu: p.monit.cpu,
-        })),
+          name: p.name;
+          status: p.pm2_env.status;
+          memory: p.monit.memory;
+          cpu: p.monit.cpu;
+        }));
       };
 
       return status;
@@ -163,9 +163,9 @@ class HealthChecker {
       const hoursSinceBuild = (now - lastModified) / (1000 * 60 * 60);
 
       return {
-        status: hoursSinceBuild < 24 ? 'fresh' : 'stale',
-        lastBuild: lastModified.toISOString(),
-        hoursSinceBuild: Math.round(hoursSinceBuild),
+        status: hoursSinceBuild < 24 ? 'fresh' : 'stale';
+        lastBuild: lastModified.toISOString();
+        hoursSinceBuild: Math.round(hoursSinceBuild);
       };
     } catch (error) {
       this.log(`Failed to check build status: ${error.message}`, 'ERROR');
@@ -218,9 +218,9 @@ class HealthChecker {
     }
 
     return {
-      score: Math.max(0, score),
-      status,
-      issues,
+      score: Math.max(0, score);
+      status;
+      issues;
     };
   }
 }

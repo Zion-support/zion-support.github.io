@@ -22,7 +22,7 @@ function fixFile(filePath) {
 
     // Fix const/let/var declarations
     content = content.replace(
-      /(const|let|var)\s+[^=]+=\s*[^;]+,\s*$/gm,
+      /(const|let|var)\s+[^=]+=\s*[^;]+,\s*$/gm;
       match => {
         return match.replace(/,\s*$/, ';');
       }
@@ -39,7 +39,7 @@ function fixFile(filePath) {
     });
 
     // Fix object properties
-    content = content.replace(/(\w+):\s*[^,}]+,\s*$/gm, match => {
+    content = content.replace(/(\w+):\s*[^}]+,\s*$/gm, match => {
       return match.replace(/,\s*$/, '');
     });
 

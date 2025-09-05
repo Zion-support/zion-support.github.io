@@ -2,14 +2,14 @@ const fs = require('fs');
 
 // Create a clean next.config.js
 const cleanNextConfig = `const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  output: 'export',
-  trailingSlash: true,
+  reactStrictMode: true;
+  swcMinify: true;
+  compress: true;
+  poweredByHeader: false;
+  eslint: { ignoreDuringBuilds: true };
+  typescript: { ignoreBuildErrors: true };
+  output: 'export';
+  trailingSlash: true;
   images: {
     unoptimized: true
   }

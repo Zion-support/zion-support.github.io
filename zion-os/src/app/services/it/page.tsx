@@ -86,7 +86,7 @@ export default function ITServicesPage() {
               <div className="text-4xl mb-6">🚀</div>
               <h2 className="text-3xl font-bold mb-4">DevOps & CI/CD</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Accelerate your software delivery with automated deployment pipelines, 
+                Accelerate your software delivery with automated deployment pipelines,
                 infrastructure as code, and DevOps culture implementation that drives innovation.
               </p>
               
@@ -133,7 +133,7 @@ export default function ITServicesPage() {
               <div className="text-4xl mb-6">🛡️</div>
               <h2 className="text-3xl font-bold mb-4">Cybersecurity</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Protect your business with comprehensive cybersecurity solutions including security audits, 
+                Protect your business with comprehensive cybersecurity solutions including security audits,
                 penetration testing, compliance frameworks, and incident response planning.
               </p>
               
@@ -274,7 +274,7 @@ export default function ITServicesPage() {
               <div className="text-4xl mb-6">🔄</div>
               <h2 className="text-3xl font-bold mb-4">Digital Transformation</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Guide your organization through end-to-end digital transformation with strategic consulting, 
+                Guide your organization through end-to-end digital transformation with strategic consulting,
                 legacy system modernization, and change management expertise.
               </p>
               
@@ -406,11 +406,11 @@ export default function ITServicesPage() {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Modernize Your IT Infrastructure?</h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our IT services can transform your technology landscape, 
+            Let's discuss how our IT services can transform your technology landscape,
             improve efficiency, and drive business growth through digital innovation.
           </p>
           <div className="space-y-4">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a href="tel:+13024640950" className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors text-lg">
                 📞 Call +1 302 464 0950
               </a>
@@ -425,5 +425,5 @@ export default function ITServicesPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

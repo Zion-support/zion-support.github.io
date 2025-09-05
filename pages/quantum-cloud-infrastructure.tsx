@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 
 
 
@@ -10,7 +10,7 @@ export default function QuantumCloudInfrastructurePage() {
       <Head>
         <title>Quantum Cloud Infrastructure | Zion Tech Group</title>
         <meta name="description" content="Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency." />
-        <link rel="canonical" href="https://ziontechgroup.com/quantum-cloud-infrastructure" />
+        <link rel="canonical" href="https: //ziontechgroup.com/quantum-cloud-infrastructure" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-8">
@@ -35,6 +35,6 @@ export default function QuantumCloudInfrastructurePage() {
         </div>
       </div>
     </Layout>
-  );
+  )
 }
 

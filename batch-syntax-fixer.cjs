@@ -1,11 +1,11 @@
-      "timestamp": new Date().toISOString(),
-      "totalFiles": files.length,
-      "fixedFiles": this.fixedFiles.length,
-      "errors": this.errors,
+      "timestamp": new Date().toISOString();
+      "totalFiles": files.length;
+      "fixedFiles": this.fixedFiles.length;
+      "errors": this.errors;
       "fixedFileList": this.fixedFiles};
 
     fs.writeFileSync(
-      path.join(this.projectRoot, 'batch-syntax-fix-report.json'),
+      path.join(this.projectRoot, 'batch-syntax-fix-report.json');
       JSON.stringify(report, null, 2)
     );
 

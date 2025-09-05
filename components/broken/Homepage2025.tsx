@@ -1,66 +1,65 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   innovative2035MicroSaasServices 
-} from '../data/innovative-2035-micro-saas-services';
+} from '../data/innovative-2035-micro-saas-services',
 import { 
   innovative2035AIServices 
-} from '../data/innovative-2035-ai-services';
+} from '../data/innovative-2035-ai-services',
 import { 
   innovative2035ITServices 
-} from '../data/innovative-2035-it-services';
+} from '../data/innovative-2035-it-services',
 import { 
   innovativeRealMicroSaasServices2025 
-} from '../data/2025-innovative-real-micro-saas-services';
+} from '../data/2025-innovative-real-micro-saas-services',
 import { 
   innovativeAIServicesEnhanced2025 
-} from '../data/2025-innovative-ai-services-enhanced';
+} from '../data/2025-innovative-ai-services-enhanced',
 import { 
   innovativeITServicesEnhanced2025 
-} from '../data/2025-innovative-it-services-enhanced';
+} from '../data/2025-innovative-it-services-enhanced',
 import { 
   emergingTechServicesEnhanced2025 
-} from '../data/2025-emerging-tech-services-enhanced';
-import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
-import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
-import UltraFuturisticBackground2035 from './backgrounds/UltraFuturisticBackground2035';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import { motion } from 'framer-motion';
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036ITServices } from '../data/real-2036-it-services';
-import { real2036AIServices } from '../data/real-2036-ai-services';
+} from '../data/2025-emerging-tech-services-enhanced',
+import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services',
+import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services',
+import UltraFuturisticBackground2035 from './backgrounds/UltraFuturisticBackground2035',
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
+import { motion } from 'framer-motion',
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
+import { real2036ITServices } from '../data/real-2036-it-services',
+import { real2036AIServices } from '../data/real-2036-ai-services',
 
 interface Homepage2025Props { showInternalNav?: boolean }
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
-  const [activeSection, setActiveSection] = useState('hero');
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero'),
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
+  const [isVisible, setIsVisible] = useState(false),
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length),
+    }, 5000),
+    return () => clearInterval(interval),
+  }, []),
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
+    const element = document.getElementById(sectionId),
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(sectionId);
-      setIsMobileMenuOpen(false);
+      element.scrollIntoView({ behavior: 'smooth' }),
+      setActiveSection(sectionId),
+      setIsMobileMenuOpen(false),
     }
-  };
+  },
 
   const allServices = [
     // New 2035 services (featured first)
     ...innovative2035MicroSaasServices,
     ...innovative2035AIServices,
     ...innovative2035ITServices,
-    
     // Existing services
     ...innovativeRealMicroSaasServices2025,
     ...innovativeAIServicesEnhanced2025,
@@ -68,9 +67,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...emergingTechServicesEnhanced2025,
     ...advancedAIAutomationServices,
     ...quantumCybersecurityServices
-  ];
+  ],
 
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 12),
 
   const navigationSections = [
     { id: 'hero', label: 'Home', icon: '🏠' },
@@ -81,7 +80,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     { id: 'it', label: 'IT Solutions', icon: '💻' },
     { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
     { id: 'contact', label: 'Contact', icon: '📞' }
-  ];
+  ],
 
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
@@ -686,7 +685,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
             >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <h2 className="text-5xl md: text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
@@ -750,7 +749,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </footer>
     </UltraFuturisticBackground2035>
-  );
+  ),
 }
 
-export default Homepage2025;
+export default Homepage2025,

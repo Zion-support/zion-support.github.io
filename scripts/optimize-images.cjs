@@ -25,10 +25,10 @@ async function run() {
     const filePath = path.join(base, rel);
     const before = fs.statSync(filePath).size;
     const out = await imagemin([filePath], {
-      destination: path.dirname(filePath),
+      destination: path.dirname(filePath);
       plugins: [
-        mozjpeg({ quality: 78 }),
-        pngquant({ quality: [0.65, 0.8] }),
+        mozjpeg({ quality: 78 });
+        pngquant({ quality: [0.65, 0.8] });
         svgo({ multipass: true })
       ]
     });

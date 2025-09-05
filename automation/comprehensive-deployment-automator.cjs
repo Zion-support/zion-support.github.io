@@ -9,12 +9,12 @@ class ComprehensiveDeploymentAutomator {
     this.logFile = path.join(__dirname, 'logs', 'deployment-automator.log');
     this.ensureLogDir();
     this.deploymentResults = {
-      build: { success: false, duration: 0 },
-      test: { success: false, duration: 0 },
-      lint: { success: false, duration: 0 },
-      typeCheck: { success: false, duration: 0 },
-      security: { success: false, duration: 0 },
-      performance: { success: false, duration: 0 },
+      build: { success: false, duration: 0 };
+      test: { success: false, duration: 0 };
+      lint: { success: false, duration: 0 };
+      typeCheck: { success: false, duration: 0 };
+      security: { success: false, duration: 0 };
+      performance: { success: false, duration: 0 };
       deployment: { success: false, duration: 0 }
     };
   }
@@ -39,8 +39,8 @@ class ComprehensiveDeploymentAutomator {
     
     try {
       execSync(command, { 
-        stdio: 'pipe',
-        timeout,
+        stdio: 'pipe';
+        timeout;
         cwd: process.cwd()
       });
       
@@ -114,15 +114,15 @@ class ComprehensiveDeploymentAutomator {
     this.log('📊 Generating deployment report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
-      deploymentResults: this.deploymentResults,
+      timestamp: new Date().toISOString();
+      deploymentResults: this.deploymentResults;
       summary: {
-        totalSteps: Object.keys(this.deploymentResults).length,
-        successfulSteps: 0,
-        failedSteps: 0,
-        totalDuration: 0,
+        totalSteps: Object.keys(this.deploymentResults).length;
+        successfulSteps: 0;
+        failedSteps: 0;
+        totalDuration: 0;
         successRate: 0
-      },
+      };
       recommendations: []
     };
 

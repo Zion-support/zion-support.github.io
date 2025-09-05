@@ -1,44 +1,44 @@
 
-import { SEO } from "@/components/SEO";
-import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useState, useEffect } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { SEO } from "@/components/SEO",
+import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { useState, useEffect } from "react",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Star, AlertTriangle } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { toast } from "@/components/ui/use-toast",
+import { logErrorToProduction } from '@/utils/productionLogger',
 
 function ReviewsModerationContent() {
-  const [activeTab, setActiveTab] = useState("pending");
-  const [reviews, setReviews] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState("pending"),
+  const [reviews, setReviews] = useState([]),
+  const [isLoading, setIsLoading] = useState(true),
   
   const fetchReviews = async () => {
-    setIsLoading(true);
+    setIsLoading(true),
     try {
       // In a real application, you would fetch reviews from an API
       // For now, let's simulate a delay and return empty data
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setReviews([]);
-      setIsLoading(false);
+      await new Promise(resolve => setTimeout(resolve, 1000)),
+      setReviews([]),
+      setIsLoading(false),
     } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' });
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
       toast({
         title: "Error",
         description: "Failed to load reviews. Please try again later.",
-        variant: "destructive"});
-      setIsLoading(false);
+        variant: "destructive"}),
+      setIsLoading(false),
     }
-  };
+  },
 
   useEffect(() => {
-    fetchReviews();
-  }, [activeTab]);
+    fetchReviews(),
+  }, [activeTab]),
 
   const handleRefresh = () => {
-    fetchReviews();
-  };
+    fetchReviews(),
+  },
   
   return (
     <>
@@ -93,7 +93,7 @@ function ReviewsModerationContent() {
         </Card>
       </main>
     </>
-  );
+  ),
 }
 
 export default function ReviewsModeration() {
@@ -101,5 +101,5 @@ export default function ReviewsModeration() {
     <ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>
-  );
+  ),
 }

@@ -1,9 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
-  Phone, Mail, MapPin, Globe, ArrowRight, 
-  Brain, Rocket, Target, Shield, Cpu, 
+  Phone, Mail, MapPin, Globe, ArrowRight,
+  Brain, Rocket, Target, Shield, Cpu,
   Facebook, Twitter, Linkedin, Instagram, Youtube,
   Github, MessageCircle, Star, Zap, Sparkles,
   Home, Users, Briefcase, BookOpen, TrendingUp,
@@ -12,14 +12,14 @@ import {
   Smartphone, BarChart3, Palette, Camera, Video,
   Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind,
   Droplets, Mountain, Globe2, Bot, Crown, Infinity
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -66,7 +66,7 @@ const serviceCategories = [
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
-];
+],
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -79,7 +79,7 @@ const mainNavigation = [
   { name: 'Innovations', href: '/innovations', icon: Sparkles },
   { name: 'About', href: '/about', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -88,7 +88,7 @@ const quickLinks = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
   { name: 'Support', href: '/support', icon: MessageCircle }
-];
+],
 
 const resources = [
   { name: 'Documentation', href: '/docs', icon: BookOpen },
@@ -99,7 +99,7 @@ const resources = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Events', href: '/events', icon: Calendar },
   { name: 'Webinars', href: '/webinars', icon: Video }
-];
+],
 
 const company = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -110,7 +110,7 @@ const company = [
   { name: 'Press', href: '/press', icon: BookOpen },
   { name: 'Legal', href: '/legal', icon: Shield },
   { name: 'Privacy', href: '/privacy', icon: ShieldCheck }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-500' },
@@ -119,7 +119,7 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
-];
+],
 
 const footerSections = [
   {
@@ -166,7 +166,7 @@ const footerSections = [
       { name: 'Research', href: '/research' }
     ]
   }
-];
+],
 
 export default function UltraFuturisticFooter2029V2() {
   return (
@@ -350,7 +350,7 @@ export default function UltraFuturisticFooter2029V2() {
         viewport={{ once: true }}
         className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Stay Ahead with Future Tech
@@ -372,5 +372,5 @@ export default function UltraFuturisticFooter2029V2() {
         </div>
       </motion.div>
     </footer>
-  );
+  )
 }

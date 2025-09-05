@@ -1,21 +1,21 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
-  Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
+  Zap, Globe, Phone, Mail, MapPin, ArrowRight,
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users,
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb,
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare,
   ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2,
   Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const footerSections = [
   {
@@ -140,7 +140,7 @@ const footerSections = [
       { name: 'Services Advertising', href: '/services-advertising' }
     ]
   }
-];
+],
 
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
@@ -149,12 +149,12 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
-];
+],
 
 const UltraFuturisticFooter2035: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' }),
+  },
 
   return (
     <footer className="relative bg-black text-white overflow-hidden">
@@ -174,7 +174,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
             backgroundSize: '200px 200px'
           }}
           animate={{
-            backgroundPosition: ['0px 0px', '200px 200px']}}
+            backgroundPosition: ['0px 0px200px 200px']}}
           transition={{
             duration: 20,
             repeat: Infinity,
@@ -305,7 +305,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
               <button
                 onClick={scrollToTop}
-                className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
+                className="p-2 bg-gray-800/50 hover: bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
                 aria-label="Scroll to top"
               >
                 <ArrowUp className="w-5 h-5" />
@@ -315,7 +315,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+},
 
-export default UltraFuturisticFooter2035;
+export default UltraFuturisticFooter2035,

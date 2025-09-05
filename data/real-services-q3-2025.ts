@@ -1,35 +1,35 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface Q3Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition?: string;
-  targetAudience?: string;
-  trialDays?: number;
-  setupTime?: string;
-  category: string;
-  realService: boolean;
-  technology?: string[];
-  integrations?: string[];
-  useCases?: string[];
-  roi?: string;
-  competitors?: string[];
-  marketSize?: string;
-  growthRate?: string;
-  variant?: ServiceVariant;
-  customers?: number;
-  rating?: number;
-  reviews?: number;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular?: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition?: string,
+  targetAudience?: string,
+  trialDays?: number,
+  setupTime?: string,
+  category: string,
+  realService: boolean,
+  technology?: string[],
+  integrations?: string[],
+  useCases?: string[],
+  roi?: string,
+  competitors?: string[],
+  marketSize?: string,
+  growthRate?: string,
+  variant?: ServiceVariant,
+  customers?: number,
+  rating?: number,
+  reviews?: number
 }
 
 const contact = {
@@ -37,7 +37,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export const realServicesQ32025: Q3Service[] = [
   {
@@ -48,12 +48,9 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/month',
     description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
     features: [
-      'Churn and retention analysis',
-      'Cohort and funnel dashboards',
-      'Price testing and packaging experiments',
-      'Revenue leakage detection',
-      'Revenue forecasting models',
-      'Weekly executive summaries'
+      'Churn and retention analysisCohort and funnel dashboards',
+      'Price testing and packaging experimentsRevenue leakage detection',
+      'Revenue forecasting modelsWeekly executive summaries'
     ],
     popular: true,
     icon: '📊',
@@ -66,11 +63,11 @@ export const realServicesQ32025: Q3Service[] = [
     setupTime: '1–2 weeks',
     category: 'AI & Data',
     realService: true,
-    technology: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python'],
-    integrations: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy'],
-    useCases: ['Reduce churn', 'Price optimization', 'Board-ready revenue KPIs'],
+    technology: ['dbtSnowflake/BigQuery', 'Segment/GA4Python'],
+    integrations: ['StripePaddle', 'ChargebeeLemon Squeezy'],
+    useCases: ['Reduce churnPrice optimization', 'Board-ready revenue KPIs'],
     roi: '3–10% ARR lift from churn reduction and pricing wins.',
-    competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'],
+    competitors: ['ProfitWell MetricsChartMogul', 'Baremetrics'],
     marketSize: '$30B+ subscription economy tooling',
     growthRate: '30% YoY',
     variant: 'ai-futuristic',
@@ -88,12 +85,9 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/project',
     description: 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.',
     features: [
-      'Payments, taxes, and invoicing',
-      'License keys and subscriptions',
-      'EU/US tax and compliance guidance',
-      'Storefront templates and checkout',
-      'Sales analytics and email hooks',
-      '1-week launch plan'
+      'Payments, taxes, and invoicingLicense keys and subscriptions',
+      'EU/US tax and compliance guidanceStorefront templates and checkout',
+      'Sales analytics and email hooks1-week launch plan'
     ],
     icon: '🛒',
     color: 'from-cyan-600 to-blue-700',
@@ -104,11 +98,11 @@ export const realServicesQ32025: Q3Service[] = [
     setupTime: '5–7 days',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL'],
-    integrations: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier'],
-    useCases: ['Course sales', 'Plugin licenses', 'Templates marketplace'],
-    roi: 'Launch revenue in under 2 weeks; save 40–80 hours of setup.',
-    competitors: ['Lemon Squeezy', 'Gumroad', 'Paddle'],
+    technology: ['Next.jsStripe', 'Lemon Squeezy APIPostgreSQL'],
+    integrations: ['StripeLemon Squeezy', 'GumroadMake/Zapier'],
+    useCases: ['Course salesPlugin licenses', 'Templates marketplace'],
+    roi: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.',
+    competitors: ['Lemon SqueezyGumroad', 'Paddle'],
     customers: 12,
     rating: 4.8,
     reviews: 18,
@@ -123,10 +117,8 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/month',
     description: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.',
     features: [
-      'Automatic link suggestions and anchors',
-      'Orphan page and pillar clustering',
-      'Click-through rate experiments',
-      'Reporting and recommendations',
+      'Automatic link suggestions and anchorsOrphan page and pillar clustering',
+      'Click-through rate experimentsReporting and recommendations',
       'Sitemap and crawl improvements'
     ],
     icon: '🔗',
@@ -139,11 +131,11 @@ export const realServicesQ32025: Q3Service[] = [
     setupTime: '2–4 days',
     category: 'Growth & Marketing',
     realService: true,
-    technology: ['WordPress', 'GA4', 'Looker Studio'],
-    integrations: ['Link Whisper', 'Yoast/RankMath', 'Search Console'],
-    useCases: ['Boost organic traffic', 'Fix site structure', 'Improve crawl and CTR'],
+    technology: ['WordPressGA4', 'Looker Studio'],
+    integrations: ['Link WhisperYoast/RankMath', 'Search Console'],
+    useCases: ['Boost organic trafficFix site structure', 'Improve crawl and CTR'],
     roi: '5–25% organic uplift in 8–12 weeks on content libraries.',
-    competitors: ['Link Whisper', 'Internal Link Juicer'],
+    competitors: ['Link WhisperInternal Link Juicer'],
     customers: 30,
     rating: 4.7,
     reviews: 22,
@@ -158,10 +150,8 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/project',
     description: 'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.',
     features: [
-      'Reviews widget integration',
-      'Email/SMS post-purchase triggers',
-      'Photo/video UGC capture',
-      'Moderation and syndication',
+      'Reviews widget integrationEmail/SMS post-purchase triggers',
+      'Photo/video UGC captureModeration and syndication',
       'Conversion impact reporting'
     ],
     icon: '⭐',
@@ -173,15 +163,15 @@ export const realServicesQ32025: Q3Service[] = [
     setupTime: '3–6 days',
     category: 'Quality & Monitoring',
     realService: true,
-    technology: ['Shopify', 'Klaviyo', 'Next.js'],
-    integrations: ['Yotpo', 'Judge.me', 'Loox', 'Stamped'],
-    useCases: ['Increase trust', 'Lift CVR', 'Collect UGC for ads'],
+    technology: ['ShopifyKlaviyo', 'Next.js'],
+    integrations: ['YotpoJudge.me', 'LooxStamped'],
+    useCases: ['Increase trustLift CVR', 'Collect UGC for ads'],
     roi: '2–10% CVR lift on PDPs post-deployment.',
-    competitors: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io'],
+    competitors: ['YotpoJudge.me', 'LooxStamped.io'],
     customers: 10,
     rating: 4.8,
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
   }
-];
+],

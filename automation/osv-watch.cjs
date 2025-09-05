@@ -16,8 +16,8 @@ async function fetchJson(url, opts = {}) {
 
 async function queryOsv(name, version) {
   const body = {
-    package: { name, ecosystem: 'npm' },
-    version,
+    package: { name, ecosystem: 'npm' };
+    version;
   };
   try {
     const data = await fetchJson('https://api.osv.dev/v1/query', { method: 'POST', body: JSON.stringify(body) });
@@ -43,10 +43,10 @@ async function run() {
   }
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'OSV vulnerability report for npm dependencies',
-    totalAffected: results.length,
-    results,
+    generatedAt: new Date().toISOString();
+    description: 'OSV vulnerability report for npm dependencies';
+    totalAffected: results.length;
+    results;
   };
 
   ensureDir(OUTPUT_PATH);

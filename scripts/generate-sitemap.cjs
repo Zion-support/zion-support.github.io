@@ -41,24 +41,24 @@ class SitemapGenerator {
       console.log(`📊 Total pages: ${this.pages.length}`);
 
       return {
-        success: true,
-        pages: this.pages.length,
-        outputFile: this.outputFile,
+        success: true;
+        pages: this.pages.length;
+        outputFile: this.outputFile;
       };
     } catch (error) {
       console.error('❌ Error generating sitemap:', error.message);
       return {
-        success: false,
-        error: error.message,
+        success: false;
+        error: error.message;
       };
     }
   }
 
   addPage(url, lastmod, priority) {
     this.pages.push({
-      url: `${this.baseUrl}${url}`,
-      lastmod,
-      priority,
+      url: `${this.baseUrl}${url}`;
+      lastmod;
+      priority;
     });
   }
 

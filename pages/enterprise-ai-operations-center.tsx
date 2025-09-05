@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 
 
 
@@ -10,7 +10,7 @@ export default function EnterpriseAIOpsPage() {
       <Head>
         <title>Enterprise AI Operations Center | Zion Tech Group</title>
         <meta name="description" content="Centralized AI operations management for enterprises with monitoring, optimization, cost, and security controls." />
-        <link rel="canonical" href="https://ziontechgroup.com/enterprise-ai-operations-center" />
+        <link rel="canonical" href="https: //ziontechgroup.com/enterprise-ai-operations-center" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-8">
@@ -35,6 +35,6 @@ export default function EnterpriseAIOpsPage() {
         </div>
       </div>
     </Layout>
-  );
+  )
 }
 

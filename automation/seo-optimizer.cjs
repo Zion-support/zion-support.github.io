@@ -8,11 +8,11 @@ console.log('🔍 Starting SEO Optimizer...');
 class SEOOptimizer {
   constructor() {
     this.results = {
-      timestamp: new Date().toISOString(),
-      seoScore: 0,
-      issues: [],
-      recommendations: [],
-      metrics: {},
+      timestamp: new Date().toISOString();
+      seoScore: 0;
+      issues: [];
+      recommendations: [];
+      metrics: {};
     };
   }
 
@@ -90,9 +90,9 @@ class SEOOptimizer {
       // Check for meta tags
       if (!content.includes('<title>') && !content.includes('title:')) {
         this.results.issues.push({
-          type: 'missing_title',
-          file: pagePath,
-          severity: 'high',
+          type: 'missing_title';
+          file: pagePath;
+          severity: 'high';
         });
       }
 
@@ -101,9 +101,9 @@ class SEOOptimizer {
         !content.includes('meta name="description"')
       ) {
         this.results.issues.push({
-          type: 'missing_description',
-          file: pagePath,
-          severity: 'medium',
+          type: 'missing_description';
+          file: pagePath;
+          severity: 'medium';
         });
       }
 
@@ -111,9 +111,9 @@ class SEOOptimizer {
       const h1Count = (content.match(/<h1[^>]*>/gi) || []).length;
       if (h1Count === 0) {
         this.results.issues.push({
-          type: 'missing_h1',
-          file: pagePath,
-          severity: 'medium',
+          type: 'missing_h1';
+          file: pagePath;
+          severity: 'medium';
         });
       }
     } catch (error) {
@@ -126,26 +126,26 @@ class SEOOptimizer {
 
     this.results.recommendations = [
       {
-        type: 'meta_tags',
-        priority: 'high',
+        type: 'meta_tags';
+        priority: 'high';
         description:
-          'Add proper meta tags including title, description, and keywords',
-      },
+          'Add proper meta tags including title, description, and keywords';
+      };
       {
-        type: 'heading_structure',
-        priority: 'medium',
-        description: 'Ensure proper heading hierarchy (H1, H2, H3)',
-      },
+        type: 'heading_structure';
+        priority: 'medium';
+        description: 'Ensure proper heading hierarchy (H1, H2, H3)';
+      };
       {
-        type: 'alt_text',
-        priority: 'medium',
-        description: 'Add alt text to all images for accessibility and SEO',
-      },
+        type: 'alt_text';
+        priority: 'medium';
+        description: 'Add alt text to all images for accessibility and SEO';
+      };
       {
-        type: 'sitemap',
-        priority: 'low',
-        description: 'Generate and submit XML sitemap to search engines',
-      },
+        type: 'sitemap';
+        priority: 'low';
+        description: 'Generate and submit XML sitemap to search engines';
+      };
     ];
   }
 
@@ -174,7 +174,7 @@ class SEOOptimizer {
     }
 
     const reportPath = path.join(
-      logsDir,
+      logsDir;
       `seo-optimization-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));

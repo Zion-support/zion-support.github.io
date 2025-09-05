@@ -23,13 +23,13 @@ async function run() {
       const data = await fetchJson(url);
       for (const d of data || []) {
         items.push({
-          id: d.id,
-          downloads: d.downloads,
-          likes: d.likes,
-          tags: d.tags,
-          author: d.author,
-          lastModified: d.lastModified,
-          query: q,
+          id: d.id;
+          downloads: d.downloads;
+          likes: d.likes;
+          tags: d.tags;
+          author: d.author;
+          lastModified: d.lastModified;
+          query: q;
         });
       }
     } catch (e) {
@@ -41,10 +41,10 @@ async function run() {
   items = items.filter((i) => (seen.has(i.id) ? false : seen.add(i.id))).slice(0, 100);
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'Hugging Face datasets related to agents/governance/DAO',
-    total: items.length,
-    items,
+    generatedAt: new Date().toISOString();
+    description: 'Hugging Face datasets related to agents/governance/DAO';
+    total: items.length;
+    items;
   };
 
   ensureDir(OUTPUT_PATH);

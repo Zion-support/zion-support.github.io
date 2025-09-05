@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Card from '../components/ui/Card';
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Card from '../components/ui/Card',
 
 export default function ITAssetDiscoveryAgentPage() {
 	return (
@@ -9,7 +9,7 @@ export default function ITAssetDiscoveryAgentPage() {
 			<Head>
 				<title>IT Asset Discovery Agent | Zion Tech Group</title>
 				<meta name="description" content="Agentless discovery of cloud and on-prem assets with continuous inventory." />
-				<link rel="canonical" href="https://ziontechgroup.com/it-asset-discovery-agent" />
+				<link rel="canonical" href="https: //ziontechgroup.com/it-asset-discovery-agent" />
 			</Head>
 			<div className="container mx-auto px-4 py-16 text-white">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">IT Asset Discovery Agent</h1>
@@ -36,6 +36,6 @@ export default function ITAssetDiscoveryAgentPage() {
 				<div className="mt-8"><a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a></div>
 			</div>
 		</UltraFuturisticBackground>
-	);
+	)
 }
 

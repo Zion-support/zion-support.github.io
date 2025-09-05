@@ -1,93 +1,81 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
-import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
-import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
+import React, { useState, useEffect } from 'react',
+import { motion } from 'framer-motion',
+import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion',
+import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions',
+import { emergingTechServices2026 } from '../data/2026-emerging-tech-services',
 import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  Clock, Zap, Shield, Cloud, Brain, 
+  Search, Filter, Star, Users, TrendingUp,
+  Clock, Zap, Shield, Cloud, Brain,
   Database, Globe, Robot, Cube, Sparkles
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 const ComprehensiveServicesShowcase2026: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
+  const [sortBy, setSortBy] = useState('popularity'),
 
   const allServices = [
     ...innovativeMicroSaasServices2026,
     ...specializedITSolutions2026,
     ...emergingTechServices2026
-  ];
+  ],
 
   const categories = [
-    'all',
-    'Business Intelligence & Analytics',
-    'Content Creation & Marketing',
-    'Customer Service & Support',
-    'E-commerce & Retail',
-    'HR & Recruitment',
-    'Financial Management',
-    'Project Management',
-    'Education & Training',
-    'Healthcare & Medical',
-    'Cloud Infrastructure & DevOps',
-    'Cybersecurity & Threat Intelligence',
-    'Data Engineering & Analytics',
-    'API Management & Integration',
-    'Network Monitoring & Management',
-    'Database Management & Optimization',
-    'IT Service Management',
-    'Backup & Disaster Recovery',
-    'Quantum Computing & AI',
-    'Blockchain & Web3',
-    'Internet of Things (IoT)',
-    'Edge Computing & 5G',
-    'AR/VR & Immersive Technology',
-    'Robotics & Automation',
+    'allBusiness Intelligence & Analytics',
+    'Content Creation & MarketingCustomer Service & Support',
+    'E-commerce & RetailHR & Recruitment',
+    'Financial ManagementProject Management',
+    'Education & TrainingHealthcare & Medical',
+    'Cloud Infrastructure & DevOpsCybersecurity & Threat Intelligence',
+    'Data Engineering & AnalyticsAPI Management & Integration',
+    'Network Monitoring & ManagementDatabase Management & Optimization',
+    'IT Service ManagementBackup & Disaster Recovery',
+    'Quantum Computing & AIBlockchain & Web3',
+    'Internet of Things (IoT)Edge Computing & 5G',
+    'AR/VR & Immersive TechnologyRobotics & Automation',
     'Digital Twin & Simulation'
-  ];
+  ],
 
   const priceRanges = [
     { value: 'all', label: 'All Prices' },
@@ -96,46 +84,45 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     { value: '200-400', label: '$200 - $400' },
     { value: '400-600', label: '$400 - $600' },
     { value: '600+', label: '$600+' }
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     
     const matchesPrice = selectedPriceRange === 'all' || (() => {
-      const price = parseInt(service.price.replace('$', ''));
+      const price = parseInt(service.price.replace('$', '')),
       switch (selectedPriceRange) {
-        case '0-100': return price <= 100;
-        case '100-200': return price > 100 && price <= 200;
-        case '200-400': return price > 200 && price <= 400;
-        case '400-600': return price > 400 && price <= 600;
-        case '600+': return price > 600;
-        default: return true;
+        case '0-100': return price <= 100,
+        case '100-200': return price > 100 && price <= 200,
+        case '200-400': return price > 200 && price <= 400,
+        case '400-600': return price > 400 && price <= 600,
+        case '600+': return price > 600,
+        default: return true
       }
-    })();
+    })(),
     
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
-        return b.popular ? 1 : -1;
+        return b.popular ? 1 : -1,
       case 'price-low':
-        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
+        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')),
       case 'price-high':
-        return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', ''));
+        return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', '')),
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'customers':
-        return b.customers - a.customers;
-      default:
-        return 0;
+        return b.customers - a.customers,
+      default: return 0
     }
-  });
+  }),
 
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
@@ -163,9 +150,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       'AR/VR & Immersive Technology': <Cube className="w-5 h-5" />,
       'Robotics & Automation': <Robot className="w-5 h-5" />,
       'Digital Twin & Simulation': <Cube className="w-5 h-5" />
-    };
-    return iconMap[category] || <Sparkles className="w-5 h-5" />;
-  };
+    },
+    return iconMap[category] || <Sparkles className="w-5 h-5" />,
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
@@ -381,7 +368,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         </div>
 
         {/* Contact Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
             <div className="text-center">
               <h2 className="text-3xl font-bold text-white mb-4">
@@ -431,7 +418,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
-  );
-};
+  )
+},
 
-export default ComprehensiveServicesShowcase2026;
+export default ComprehensiveServicesShowcase2026,

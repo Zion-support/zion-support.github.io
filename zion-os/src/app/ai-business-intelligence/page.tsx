@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "AI Business Intelligence - Zion Tech Group",
   description: "Transform your business with AI-powered analytics, predictive insights, and intelligent decision-making solutions.",
-  keywords: "AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group"};
+  keywords: "AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group"},
 
 export default function AIBusinessIntelligencePage() {
   return (
@@ -22,11 +22,11 @@ export default function AIBusinessIntelligencePage() {
 
         {/* Overview Section */}
         <section className="mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">Intelligent Data Analytics</h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our AI Business Intelligence platform goes beyond traditional analytics to provide real-time insights, 
+                Our AI Business Intelligence platform goes beyond traditional analytics to provide real-time insights,
                 predictive modeling, and automated decision-making capabilities that drive business growth.
               </p>
               <p className="text-lg text-gray-300 mb-8">
@@ -299,7 +299,7 @@ export default function AIBusinessIntelligencePage() {
             <p className="text-xl text-gray-300 mb-8">
               Discover how AI-powered business intelligence can unlock new insights and drive growth for your organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
                 Get AI Demo
               </Link>
@@ -311,5 +311,5 @@ export default function AIBusinessIntelligencePage() {
         </section>
       </div>
     </div>
-  );
+  )
 }

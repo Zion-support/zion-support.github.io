@@ -9,11 +9,11 @@ class IntelligentTestRunner {
     this.logFile = path.join(__dirname, 'logs', 'intelligent-test-runner.log');
     this.ensureLogDir();
     this.testResults = {
-      unit: { passed: 0, failed: 0, total: 0 },
-      integration: { passed: 0, failed: 0, total: 0 },
-      e2e: { passed: 0, failed: 0, total: 0 },
-      smoke: { passed: 0, failed: 0, total: 0 },
-      accessibility: { passed: 0, failed: 0, total: 0 },
+      unit: { passed: 0, failed: 0, total: 0 };
+      integration: { passed: 0, failed: 0, total: 0 };
+      e2e: { passed: 0, failed: 0, total: 0 };
+      smoke: { passed: 0, failed: 0, total: 0 };
+      accessibility: { passed: 0, failed: 0, total: 0 };
       performance: { passed: 0, failed: 0, total: 0 }
     };
   }
@@ -36,7 +36,7 @@ class IntelligentTestRunner {
     this.log('🔥 Running smoke tests...');
     try {
       const output = execSync('npm run test:smoke', { 
-        encoding: 'utf8',
+        encoding: 'utf8';
         stdio: 'pipe'
       });
       
@@ -71,7 +71,7 @@ class IntelligentTestRunner {
     this.log('🧪 Running unit tests...');
     try {
       const output = execSync('npm run test:unit', { 
-        encoding: 'utf8',
+        encoding: 'utf8';
         stdio: 'pipe'
       });
       
@@ -102,7 +102,7 @@ class IntelligentTestRunner {
     this.log('🔗 Running integration tests...');
     try {
       const output = execSync('npm run test:integration', { 
-        encoding: 'utf8',
+        encoding: 'utf8';
         stdio: 'pipe'
       });
       
@@ -132,7 +132,7 @@ class IntelligentTestRunner {
     this.log('🌐 Running E2E tests...');
     try {
       const output = execSync('npm run test:e2e', { 
-        encoding: 'utf8',
+        encoding: 'utf8';
         stdio: 'pipe'
       });
       
@@ -162,7 +162,7 @@ class IntelligentTestRunner {
     this.log('♿ Running accessibility tests...');
     try {
       const output = execSync('npm run test:accessibility', { 
-        encoding: 'utf8',
+        encoding: 'utf8';
         stdio: 'pipe'
       });
       
@@ -192,7 +192,7 @@ class IntelligentTestRunner {
     this.log('⚡ Running performance tests...');
     try {
       const output = execSync('npm run test:performance', { 
-        encoding: 'utf8',
+        encoding: 'utf8';
         stdio: 'pipe'
       });
       
@@ -222,12 +222,12 @@ class IntelligentTestRunner {
     this.log('📊 Generating test report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
-      testResults: this.testResults,
+      timestamp: new Date().toISOString();
+      testResults: this.testResults;
       summary: {
-        totalTests: 0,
-        totalPassed: 0,
-        totalFailed: 0,
+        totalTests: 0;
+        totalPassed: 0;
+        totalFailed: 0;
         successRate: 0
       }
     };

@@ -1,72 +1,52 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  Brain, Star, Users, TrendingUp, Zap, Shield, 
+  Brain, Star, Users, TrendingUp, Zap, Shield,
   CheckCircle, Clock, Award, Target, Globe, Sparkles,
   Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb,
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const features = [
-  'Emotional intelligence training modules',
-  'Consciousness expansion exercises',
-  'Self-awareness development tools',
-  'Empathy and compassion training',
-  'Mindfulness and meditation guidance',
-  'Cognitive enhancement techniques',
-  'Social intelligence development',
-  'Creative consciousness exploration',
-  'Spiritual growth pathways',
-  'Personal transformation tracking'
-];
+  'Emotional intelligence training modulesConsciousness expansion exercises',
+  'Self-awareness development toolsEmpathy and compassion training',
+  'Mindfulness and meditation guidanceCognitive enhancement techniques',
+  'Social intelligence developmentCreative consciousness exploration',
+  'Spiritual growth pathwaysPersonal transformation tracking'
+],
 
 const useCases = [
-  'Personal development and growth',
-  'Professional leadership training',
-  'Therapeutic and healing practices',
-  'Educational enhancement',
-  'Corporate wellness programs',
-  'Mental health support',
-  'Spiritual development',
-  'Creative arts enhancement',
-  'Relationship improvement',
-  'Stress management and resilience'
-];
+  'Personal development and growthProfessional leadership training',
+  'Therapeutic and healing practicesEducational enhancement',
+  'Corporate wellness programsMental health support',
+  'Spiritual developmentCreative arts enhancement',
+  'Relationship improvementStress management and resilience'
+],
 
 const technology = [
-  'Advanced AI algorithms',
-  'Machine learning models',
-  'Natural language processing',
-  'Emotional recognition systems',
-  'Biometric feedback integration',
-  'Virtual reality experiences',
-  'Augmented reality overlays',
-  'Brain-computer interfaces',
-  'Quantum computing integration',
-  'Blockchain security'
-];
+  'Advanced AI algorithmsMachine learning models',
+  'Natural language processingEmotional recognition systems',
+  'Biometric feedback integrationVirtual reality experiences',
+  'Augmented reality overlaysBrain-computer interfaces',
+  'Quantum computing integrationBlockchain security'
+],
 
 const integrations = [
-  'Wearable devices',
-  'Mobile applications',
-  'Web platforms',
-  'Smart home systems',
-  'Healthcare platforms',
-  'Educational systems',
-  'Corporate wellness platforms',
-  'Social media networks',
-  'Fitness trackers',
-  'Meditation apps'
-];
+  'Wearable devicesMobile applications',
+  'Web platformsSmart home systems',
+  'Healthcare platformsEducational systems',
+  'Corporate wellness platformsSocial media networks',
+  'Fitness trackersMeditation apps'
+],
 
 const testimonials = [
   {
@@ -93,7 +73,7 @@ const testimonials = [
     rating: 5,
     avatar: '👩‍🔬'
   }
-];
+],
 
 export default function AIConsciousnessEvolution2025() {
   return (
@@ -275,7 +255,7 @@ export default function AIConsciousnessEvolution2025() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {[
               {
                 step: '01',
@@ -474,7 +454,7 @@ export default function AIConsciousnessEvolution2025() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {[
               {
                 name: 'Starter',
@@ -482,10 +462,8 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Perfect for individuals beginning their consciousness journey',
                 features: [
-                  'Basic AI assessment',
-                  '10 consciousness exercises',
-                  'Progress tracking',
-                  'Email support',
+                  'Basic AI assessment10 consciousness exercises',
+                  'Progress trackingEmail support',
                   'Mobile app access'
                 ],
                 popular: false
@@ -496,12 +474,9 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Advanced features for serious consciousness development',
                 features: [
-                  'Advanced AI assessment',
-                  'Unlimited exercises',
-                  'Personalized coaching',
-                  'Priority support',
-                  'Advanced analytics',
-                  'Integration with wearables',
+                  'Advanced AI assessmentUnlimited exercises',
+                  'Personalized coachingPriority support',
+                  'Advanced analyticsIntegration with wearables',
                   'Group sessions'
                 ],
                 popular: true
@@ -512,12 +487,9 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Complete solution for organizations and teams',
                 features: [
-                  'Everything in Professional',
-                  'Team management',
-                  'Custom integrations',
-                  'Dedicated support',
-                  'White-label options',
-                  'Advanced reporting',
+                  'Everything in ProfessionalTeam management',
+                  'Custom integrationsDedicated support',
+                  'White-label optionsAdvanced reporting',
                   'API access'
                 ],
                 popular: false
@@ -628,5 +600,5 @@ export default function AIConsciousnessEvolution2025() {
         </div>
       </section>
     </Layout>
-  );
+  ),
 }

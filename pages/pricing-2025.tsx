@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
+  ArrowRight, Check, Star, Users, Zap, Shield, Globe,
   TrendingUp, Award, Clock, CheckCircle, ExternalLink
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
+import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',
 
 export default function Pricing2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },
@@ -20,17 +20,17 @@ export default function Pricing2025() {
     { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' },
     { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' },
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬' }
-  ];
+  ],
 
   const filteredServices = innovative2025MicroSaasExpansionV3.filter(service => 
     selectedCategory === 'all' || service.category.includes(selectedCategory)
-  );
+  ),
 
   const getAnnualPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', ''));
-    const annualPrice = price * 12 * 0.8; // 20% discount for annual
-    return `$${Math.round(annualPrice)}`;
-  };
+    const price = parseFloat(monthlyPrice.replace('$', '')),
+    const annualPrice = price * 12 * 0.8, // 20% discount for annual
+    return `$${Math.round(annualPrice)}`,
+  },
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,7 +40,7 @@ export default function Pricing2025() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -51,7 +51,7 @@ export default function Pricing2025() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -75,11 +75,11 @@ export default function Pricing2025() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+            <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Pricing & Services
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Transparent pricing for our comprehensive collection of innovative micro SAAS services, 
+              Transparent pricing for our comprehensive collection of innovative micro SAAS services,
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
             
@@ -341,7 +341,7 @@ export default function Pricing2025() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Frequently Asked Questions
             </h2>
           </motion.div>
@@ -391,5 +391,5 @@ export default function Pricing2025() {
 
       <EnhancedFooter />
     </div>
-  );
+  ),
 }

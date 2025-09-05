@@ -1,16 +1,16 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 
 interface PortfolioItem {
-  title: string;
-  description: string;
+  title: string,
+  description: string
 }
 
 interface PortfolioListProps {
-  projects: PortfolioItem[];
+  projects: PortfolioItem[]
 }
 
 export function PortfolioList({ projects }: PortfolioListProps) {
-  if (!projects.length) return null;
+  if (!projects.length) return null,
 
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light text-white mb-6">
@@ -27,5 +27,5 @@ export function PortfolioList({ projects }: PortfolioListProps) {
         </ul>
       </CardContent>
     </Card>
-  );
+  ),
 }

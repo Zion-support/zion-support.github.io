@@ -21,17 +21,17 @@ function runGitCommand(command, description) {
 function getOpenPRs() {
   try {
     const result = execSync(
-      'curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"',
+      'curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"';
       { encoding: 'utf8' }
     );
     const prs = JSON.parse(result);
     return prs.map(pr => ({
-      number: pr.number,
-      title: pr.title,
-      head: pr.head.ref,
-      user: pr.user.login,
-      draft: pr.draft,
-      mergeable: pr.mergeable,
+      number: pr.number;
+      title: pr.title;
+      head: pr.head.ref;
+      user: pr.user.login;
+      draft: pr.draft;
+      mergeable: pr.mergeable;
     }));
   } catch (error) {
     console.log(`❌ Failed to fetch PRs: ${error.message}`);
@@ -45,7 +45,7 @@ function mergePR(prNumber, branchName) {
 
   // Checkout the PR branch
   const checkoutResult = runGitCommand(
-    `git checkout ${branchName}`,
+    `git checkout ${branchName}`;
     `Checking out branch ${branchName}`
   );
 
@@ -53,7 +53,7 @@ function mergePR(prNumber, branchName) {
 
   // Merge with main
   const mergeResult = runGitCommand(
-    'git merge main',
+    'git merge main';
     `Merging main into ${branchName}`
   );
 
@@ -63,7 +63,7 @@ function mergePR(prNumber, branchName) {
 
     // Get list of conflicted files
     const conflictedFiles = runGitCommand(
-      'git diff --name-only --diff-filter=U',
+      'git diff --name-only --diff-filter=U';
       'Getting conflicted files'
     );
 
@@ -73,7 +73,7 @@ function mergePR(prNumber, branchName) {
       // Accept main branch changes for all conflicts
       for (const file of files) {
         runGitCommand(
-          `git checkout --theirs "${file}"`,
+          `git checkout --theirs "${file}"`;
           `Resolving conflict in ${file}`
         );
       }
@@ -85,7 +85,7 @@ function mergePR(prNumber, branchName) {
         `git commit -m "resolve merge conflicts for PR #${prNumber}
 - Resolved all merge conflicts by accepting main branch changes
 - PR #${prNumber} merged successfully
-- Ready for deployment"`,
+- Ready for deployment"`;
         `Committing merge resolution for PR #${prNumber}`
       );
     }
@@ -93,7 +93,7 @@ function mergePR(prNumber, branchName) {
 
   // Push the updated branch
   runGitCommand(
-    `git push origin ${branchName}`,
+    `git push origin ${branchName}`;
     `Pushing updated ${branchName}`
   );
 
@@ -102,7 +102,7 @@ function mergePR(prNumber, branchName) {
 
   // Merge the PR into main
   const finalMerge = runGitCommand(
-    `git merge ${branchName}`,
+    `git merge ${branchName}`;
     `Merging ${branchName} into main`
   );
 

@@ -3,9 +3,9 @@ const fetch = global.fetch || ((...args) => import('node-fetch').then(({default:
 
 const SITE_URL = process.env.SITE_URL || 'https://ziontechgroup.netlify.app';
 const REQUIRED = [
-  { path: '/jobs', anyOf: ['JobPosting'] },
-  { path: '/products', anyOf: ['Product'] },
-  { path: '/services/ai-seo-auditor', anyOf: ['FAQPage'] },
+  { path: '/jobs', anyOf: ['JobPosting'] };
+  { path: '/products', anyOf: ['Product'] };
+  { path: '/services/ai-seo-auditor', anyOf: ['FAQPage'] };
   { path: '/talent/ava-chen', anyOf: ['Person','Organization','SocialProfile'] }
 ];
 

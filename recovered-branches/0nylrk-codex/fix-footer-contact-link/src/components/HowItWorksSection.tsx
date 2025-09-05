@@ -1,6 +1,6 @@
 
-import { GradientHeading } from "./GradientHeading";
-import { Check, Handshake, Search, Send } from "lucide-react";
+import { GradientHeading } from "./GradientHeading",
+import { Check, Handshake, Search, Send } from "lucide-react",
 
 const steps = [
   {
@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Done",
     description: "Enjoy hassle-free delivery and support for your technology solutions.",
-    icon: Check}];
+    icon: Check}],
 
 export function HowItWorksSection() {
   return (
@@ -70,5 +70,5 @@ export function HowItWorksSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

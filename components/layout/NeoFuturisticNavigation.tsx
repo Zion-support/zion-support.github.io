@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
 import { 
-	Menu, 
-	X, 
-	ChevronDown, 
+	Menu,
+	X,
+	ChevronDown,
 	ChevronRight,
 	Phone,
 	Mail,
@@ -51,41 +51,41 @@ import {
 	Eye,
 	FlaskConical,
 	Link as LinkIcon
-} from 'lucide-react';
-import Button from '../ui/Button';
+} from 'lucide-react',
+import Button from '../ui/Button',
 
 export default function NeoFuturisticNavigation() {
-	const [isOpen, setIsOpen] = useState(false);
-	const [isScrolled, setIsScrolled] = useState(false);
-	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-	const router = useRouter();
+	const [isOpen, setIsOpen] = useState(false),
+	const [isScrolled, setIsScrolled] = useState(false),
+	const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+	const router = useRouter(),
 
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	};
+	},
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 20);
-		};
+			setIsScrolled(window.scrollY > 20),
+		},
 
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+		window.addEventListener('scroll', handleScroll),
+		return () => window.removeEventListener('scroll', handleScroll),
+	}, []),
 
 	const toggleDropdown = (dropdown: string) => {
-		setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-	};
+		setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+	},
 
 	const closeMobileMenu = () => {
-		setIsOpen(false);
-		setActiveDropdown(null);
-	};
+		setIsOpen(false),
+		setActiveDropdown(null),
+	},
 
-	const isActive = (path: string) => router.pathname === path;
+	const isActive = (path: string) => router.pathname === path,
 
 	const serviceCategories = [
 		{
@@ -198,14 +198,14 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'Genomic AI', description: 'Advanced genetic analysis', price: '$399/month' }
 			]
 		}
-	];
+	],
 
 	const companyInfo = [
 		{ name: 'About Zion Tech Group', description: 'Leading the global micro SaaS revolution', icon: <Rocket className="w-5 h-5" />, link: '/about' },
 		{ name: 'Careers', description: 'Join our revolutionary team', icon: <Star className="w-5 h-5" />, link: '/careers' },
 		{ name: 'News & Updates', description: 'Latest announcements and releases', icon: <TrendingUp className="w-5 h-5" />, link: '/news' },
 		{ name: 'Contact', description: 'Talk to our team 24/7', icon: <Phone className="w-5 h-5" />, link: '/contact' }
-	];
+	],
 
 	const resources = [
 		{ name: 'Documentation', description: 'Comprehensive service guides', icon: <BookOpen className="w-5 h-5" />, link: '/docs' },
@@ -213,7 +213,7 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'Case Studies', description: 'Real-world success stories', icon: <BarChart3 className="w-5 h-5" />, link: '/case-studies' },
 		{ name: 'Pricing', description: 'Transparent and flexible plans', icon: <CreditCard className="w-5 h-5" />, link: '/pricing' },
 		{ name: 'Reports', description: 'Live performance and audits', icon: <Activity className="w-5 h-5" />, link: '/reports' }
-	];
+	],
 
 	// Popular quick links to flagship services
 	const popularServiceLinks = [
@@ -226,7 +226,7 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'AI IoT Platform', href: '/ai-iot-platform' },
 		{ name: 'AI Sales Automation', href: '/ai-sales-automation' },
 		{ name: 'AI Market Research', href: '/ai-market-research' }
-	];
+	],
 
 	// Newly added real services quick links
 	const newServiceLinks = [
@@ -236,7 +236,7 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'GitHub Ops Health Dashboard', href: '/services/github-ops-health-dashboard' },
 		{ name: 'Error Budget Automation', href: '/services/error-budget-automation' },
 		{ name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
-	];
+	],
 
 	return (
 		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -503,5 +503,5 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
-	);
+	),
 }

@@ -10,18 +10,18 @@ class SmartDeploymentMerge {
   constructor() {
     this.projectRoot = process.cwd();
     this.config = {
-      autoDeploy: process.env.AUTO_DEPLOY === 'true',
-      smartMerge: process.env.SMART_MERGE === 'true',
-      rollbackEnabled: process.env.ROLLBACK_ENABLED === 'true',
-      qualityGates: process.env.QUALITY_GATES === 'strict',
+      autoDeploy: process.env.AUTO_DEPLOY === 'true';
+      smartMerge: process.env.SMART_MERGE === 'true';
+      rollbackEnabled: process.env.ROLLBACK_ENABLED === 'true';
+      qualityGates: process.env.QUALITY_GATES === 'strict';
     };
     this.deploymentData = this.loadDeploymentData();
   }
 
   loadDeploymentData() {
     const dataFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'deployment-data.json'
     );
     try {
@@ -32,18 +32,18 @@ class SmartDeploymentMerge {
       console.log('📚 Creating new deployment data file...');
     }
     return {
-      deployments: [],
-      merges: [],
-      rollbacks: [],
-      qualityChecks: [],
-      lastDeployment: null,
+      deployments: [];
+      merges: [];
+      rollbacks: [];
+      qualityChecks: [];
+      lastDeployment: null;
     };
   }
 
   saveDeploymentData() {
     const dataFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'deployment-data.json'
     );
     fs.writeFileSync(dataFile, JSON.stringify(this.deploymentData, null, 2));
@@ -111,7 +111,7 @@ class SmartDeploymentMerge {
     try {
       // Check for new commits
       const lastCommit = execSync('git log -1 --format=%H', {
-        encoding: 'utf8',
+        encoding: 'utf8';
       }).trim();
       const lastDeployment = this.deploymentData.lastDeployment;
 
@@ -122,7 +122,7 @@ class SmartDeploymentMerge {
 
       // Check for critical fixes
       const recentCommits = execSync('git log --since="1 hour ago" --oneline', {
-        encoding: 'utf8',
+        encoding: 'utf8';
       });
       if (recentCommits.includes('fix:') || recentCommits.includes('hotfix:')) {
         console.log('🚨 Critical fixes detected, deployment needed');
@@ -141,9 +141,9 @@ class SmartDeploymentMerge {
     console.log('🛡️ Running quality gates...');
 
     const qualityCheck = {
-      passed: true,
-      checks: [],
-      score: 0,
+      passed: true;
+      checks: [];
+      score: 0;
     };
 
     try {
@@ -155,9 +155,9 @@ class SmartDeploymentMerge {
         qualityCheck.score += 20;
       } catch (error) {
         qualityCheck.checks.push({
-          name: 'Build',
-          status: 'failed',
-          error: error.message,
+          name: 'Build';
+          status: 'failed';
+          error: error.message;
         });
         qualityCheck.passed = false;
       }
@@ -170,9 +170,9 @@ class SmartDeploymentMerge {
         qualityCheck.score += 20;
       } catch (error) {
         qualityCheck.checks.push({
-          name: 'Linting',
-          status: 'failed',
-          error: error.message,
+          name: 'Linting';
+          status: 'failed';
+          error: error.message;
         });
         if (this.config.qualityGates === 'strict') {
           qualityCheck.passed = false;
@@ -187,9 +187,9 @@ class SmartDeploymentMerge {
         qualityCheck.score += 20;
       } catch (error) {
         qualityCheck.checks.push({
-          name: 'Type Checking',
-          status: 'failed',
-          error: error.message,
+          name: 'Type Checking';
+          status: 'failed';
+          error: error.message;
         });
         if (this.config.qualityGates === 'strict') {
           qualityCheck.passed = false;
@@ -204,9 +204,9 @@ class SmartDeploymentMerge {
         qualityCheck.score += 20;
       } catch (error) {
         qualityCheck.checks.push({
-          name: 'Tests',
-          status: 'failed',
-          error: error.message,
+          name: 'Tests';
+          status: 'failed';
+          error: error.message;
         });
         if (this.config.qualityGates === 'strict') {
           qualityCheck.passed = false;
@@ -221,9 +221,9 @@ class SmartDeploymentMerge {
         qualityCheck.score += 20;
       } catch (error) {
         qualityCheck.checks.push({
-          name: 'Security Audit',
-          status: 'failed',
-          error: error.message,
+          name: 'Security Audit';
+          status: 'failed';
+          error: error.message;
         });
         if (this.config.qualityGates === 'strict') {
           qualityCheck.passed = false;
@@ -238,8 +238,8 @@ class SmartDeploymentMerge {
 
     // Save quality check results
     this.deploymentData.qualityChecks.push({
-      timestamp: new Date().toISOString(),
-      ...qualityCheck,
+      timestamp: new Date().toISOString();
+      ...qualityCheck;
     });
 
     return qualityCheck;
@@ -251,7 +251,7 @@ class SmartDeploymentMerge {
     try {
       // Get current branch
       const currentBranch = execSync('git branch --show-current', {
-        encoding: 'utf8',
+        encoding: 'utf8';
       }).trim();
 
       // Get main/master branch
@@ -269,17 +269,17 @@ class SmartDeploymentMerge {
         // Merge feature branch
         try {
           execSync(
-            `git merge ${currentBranch} --no-ff -m "Merge ${currentBranch} [auto-deploy]"`,
+            `git merge ${currentBranch} --no-ff -m "Merge ${currentBranch} [auto-deploy]"`;
             { stdio: 'inherit' }
           );
           console.log(`✅ Successfully merged ${currentBranch}`);
 
           // Update deployment data
           this.deploymentData.merges.push({
-            from: currentBranch,
-            to: mainBranch,
-            timestamp: new Date().toISOString(),
-            success: true,
+            from: currentBranch;
+            to: mainBranch;
+            timestamp: new Date().toISOString();
+            success: true;
           });
         } catch (error) {
           console.log(`⚠️  Merge failed: ${error.message}`);
@@ -337,7 +337,7 @@ class SmartDeploymentMerge {
 
       // Complete the merge
       execSync('git commit -m "Resolve merge conflicts [auto-deploy]"', {
-        stdio: 'inherit',
+        stdio: 'inherit';
       });
       console.log('✅ Merge conflicts resolved');
     } catch (error) {
@@ -387,7 +387,7 @@ class SmartDeploymentMerge {
       execSync(`git add ${filePath}`, { stdio: 'inherit' });
     } catch (error) {
       console.log(
-        `❌ Failed to resolve conflict in ${filePath}:`,
+        `❌ Failed to resolve conflict in ${filePath}:`;
         error.message
       );
     }
@@ -397,9 +397,9 @@ class SmartDeploymentMerge {
     console.log('🚀 Deploying to staging...');
 
     const deployment = {
-      environment: 'staging',
-      timestamp: new Date().toISOString(),
-      success: false,
+      environment: 'staging';
+      timestamp: new Date().toISOString();
+      success: false;
     };
 
     try {
@@ -422,9 +422,9 @@ class SmartDeploymentMerge {
     console.log('🧪 Running integration tests...');
 
     const testResult = {
-      success: false,
-      tests: [],
-      timestamp: new Date().toISOString(),
+      success: false;
+      tests: [];
+      timestamp: new Date().toISOString();
     };
 
     try {
@@ -433,9 +433,9 @@ class SmartDeploymentMerge {
       console.log('✅ Integration tests passed');
       testResult.success = true;
       testResult.tests = [
-        { name: 'API Tests', status: 'passed' },
-        { name: 'UI Tests', status: 'passed' },
-        { name: 'Database Tests', status: 'passed' },
+        { name: 'API Tests', status: 'passed' };
+        { name: 'UI Tests', status: 'passed' };
+        { name: 'Database Tests', status: 'passed' };
       ];
     } catch (error) {
       console.log('❌ Integration tests failed:', error.message);
@@ -449,9 +449,9 @@ class SmartDeploymentMerge {
     console.log('🚀 Deploying to production...');
 
     const deployment = {
-      environment: 'production',
-      timestamp: new Date().toISOString(),
-      success: false,
+      environment: 'production';
+      timestamp: new Date().toISOString();
+      success: false;
     };
 
     try {
@@ -462,9 +462,9 @@ class SmartDeploymentMerge {
 
       // Update last deployment
       this.deploymentData.lastDeployment = {
-        commit: execSync('git log -1 --format=%H', { encoding: 'utf8' }).trim(),
-        timestamp: new Date().toISOString(),
-        environment: 'production',
+        commit: execSync('git log -1 --format=%H', { encoding: 'utf8' }).trim();
+        timestamp: new Date().toISOString();
+        environment: 'production';
       };
     } catch (error) {
       console.log('❌ Production deployment failed:', error.message);
@@ -497,10 +497,10 @@ class SmartDeploymentMerge {
 
         // Update rollback data
         this.deploymentData.rollbacks.push({
-          timestamp: new Date().toISOString(),
-          from: 'current',
-          to: previousCommit,
-          success: true,
+          timestamp: new Date().toISOString();
+          from: 'current';
+          to: previousCommit;
+          success: true;
         });
       } else {
         console.log('⚠️  No previous deployment found for rollback');
@@ -509,9 +509,9 @@ class SmartDeploymentMerge {
       console.log('❌ Rollback failed:', error.message);
 
       this.deploymentData.rollbacks.push({
-        timestamp: new Date().toISOString(),
-        success: false,
-        error: error.message,
+        timestamp: new Date().toISOString();
+        success: false;
+        error: error.message;
       });
     }
   }
@@ -537,10 +537,10 @@ class SmartDeploymentMerge {
 
   updateDeploymentData(result) {
     this.deploymentData.deployments.push({
-      timestamp: new Date().toISOString(),
-      environment: 'production',
-      success: result.success,
-      commit: execSync('git log -1 --format=%H', { encoding: 'utf8' }).trim(),
+      timestamp: new Date().toISOString();
+      environment: 'production';
+      success: result.success;
+      commit: execSync('git log -1 --format=%H', { encoding: 'utf8' }).trim();
     });
   }
 
@@ -549,14 +549,14 @@ class SmartDeploymentMerge {
 
     // Log error
     const errorLog = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
+      timestamp: new Date().toISOString();
+      error: error.message;
+      stack: error.stack;
     };
 
     const errorFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'deployment-errors.json'
     );
     let errors = [];

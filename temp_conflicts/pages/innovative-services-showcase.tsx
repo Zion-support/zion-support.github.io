@@ -1,18 +1,18 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  Brain, Rocket, Dna, Globe, TrendingUp, Shield, 
+  Brain, Rocket, Dna, Globe, TrendingUp, Shield,
   Wifi, Package, Bot, Lock, Car, Building2,
   DollarSign, Monitor, Users, FileText, Search, Phone,
   Star, CheckCircle, ArrowRight, ExternalLink
-} from 'lucide-react';
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
-import { emergingTechServices } from '../data/emerging-tech-services';
-import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
+} from 'lucide-react',
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',
+import { emergingTechServices } from '../data/emerging-tech-services',
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',
 
 export default function InnovativeServicesShowcase() {
-  const allServices = [...innovativeMicroSaasServices, ...emergingTechServices];
+  const allServices = [...innovativeMicroSaasServices, ...emergingTechServices],
 
   const categories = [
     { name: 'Quantum AI & Neuroscience', icon: Brain, color: 'from-purple-600 to-pink-600' },
@@ -31,14 +31,14 @@ export default function InnovativeServicesShowcase() {
     { name: 'AI HR & Legal', icon: Users, color: 'from-blue-600 to-indigo-600' },
     { name: 'AI Research & Analytics', icon: Search, color: 'from-green-600 to-blue-600' },
     { name: 'AI Communication', icon: Phone, color: 'from-blue-600 to-green-600' }
-  ];
+  ],
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -158,7 +158,7 @@ export default function InnovativeServicesShowcase() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Service Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -168,7 +168,7 @@ export default function InnovativeServicesShowcase() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
               {categories.map((category, index) => {
-                const Icon = category.icon;
+                const Icon = category.icon,
                 return (
                   <motion.div
                     key={category.name}
@@ -184,7 +184,7 @@ export default function InnovativeServicesShowcase() {
                       </h3>
                     </div>
                   </motion.div>
-                );
+                ),
               })}
             </div>
           </div>
@@ -409,7 +409,7 @@ export default function InnovativeServicesShowcase() {
                   </a>
                   <a
                     href={`tel:${contactInfo.mobile}`}
-                    className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                    className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
                   >
                     <span>Call Now</span>
                     <Phone className="w-5 h-5" />
@@ -422,5 +422,5 @@ export default function InnovativeServicesShowcase() {
         </div>
       </UltraFuturisticMatrixBackground>
     </div>
-  );
+  )
 }

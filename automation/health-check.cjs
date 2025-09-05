@@ -12,10 +12,10 @@ console.log('🏥 Starting Health Check...');
 class HealthChecker {
   constructor() {
     this.results = {
-      timestamp: new Date().toISOString(),
-      overallHealth: 'unknown',
-      checks: [],
-      metrics: {},
+      timestamp: new Date().toISOString();
+      overallHealth: 'unknown';
+      checks: [];
+      metrics: {};
       recommendations: []
     };
   }
@@ -25,15 +25,15 @@ class HealthChecker {
     try {
       execSync('npm run build', { encoding: 'utf8', stdio: 'pipe' });
       this.results.checks.push({
-        name: 'build',
-        status: 'healthy',
+        name: 'build';
+        status: 'healthy';
         message: 'Build completed successfully'
       });
     } catch (error) {
       this.results.checks.push({
-        name: 'build',
-        status: 'unhealthy',
-        message: 'Build failed',
+        name: 'build';
+        status: 'unhealthy';
+        message: 'Build failed';
         error: error.message
       });
     }
@@ -44,15 +44,15 @@ class HealthChecker {
     try {
       execSync('npm run test:smoke', { encoding: 'utf8', stdio: 'pipe' });
       this.results.checks.push({
-        name: 'tests',
-        status: 'healthy',
+        name: 'tests';
+        status: 'healthy';
         message: 'Tests passed successfully'
       });
     } catch (error) {
       this.results.checks.push({
-        name: 'tests',
-        status: 'unhealthy',
-        message: 'Tests failed',
+        name: 'tests';
+        status: 'unhealthy';
+        message: 'Tests failed';
         error: error.message
       });
     }
@@ -63,15 +63,15 @@ class HealthChecker {
     try {
       execSync('npm list --depth=0', { encoding: 'utf8', stdio: 'pipe' });
       this.results.checks.push({
-        name: 'dependencies',
-        status: 'healthy',
+        name: 'dependencies';
+        status: 'healthy';
         message: 'All dependencies are properly installed'
       });
     } catch (error) {
       this.results.checks.push({
-        name: 'dependencies',
-        status: 'unhealthy',
-        message: 'Dependency issues detected',
+        name: 'dependencies';
+        status: 'unhealthy';
+        message: 'Dependency issues detected';
         error: error.message
       });
     }
@@ -82,15 +82,15 @@ class HealthChecker {
     try {
       execSync('npm run lint', { encoding: 'utf8', stdio: 'pipe' });
       this.results.checks.push({
-        name: 'linting',
-        status: 'healthy',
+        name: 'linting';
+        status: 'healthy';
         message: 'No linting errors found'
       });
     } catch (error) {
       this.results.checks.push({
-        name: 'linting',
-        status: 'warning',
-        message: 'Linting issues detected',
+        name: 'linting';
+        status: 'warning';
+        message: 'Linting issues detected';
         error: error.message
       });
     }
@@ -100,9 +100,9 @@ class HealthChecker {
     console.log('📁 Checking file structure health...');
     
     const criticalFiles = [
-      'package.json',
-      'next.config.js',
-      'tsconfig.json',
+      'package.json';
+      'next.config.js';
+      'tsconfig.json';
       'tailwind.config.js'
     ];
     
@@ -110,14 +110,14 @@ class HealthChecker {
     
     if (missingFiles.length === 0) {
       this.results.checks.push({
-        name: 'file_structure',
-        status: 'healthy',
+        name: 'file_structure';
+        status: 'healthy';
         message: 'All critical files present'
       });
     } else {
       this.results.checks.push({
-        name: 'file_structure',
-        status: 'unhealthy',
+        name: 'file_structure';
+        status: 'unhealthy';
         message: `Missing critical files: ${missingFiles.join(', ')}`
       });
     }
@@ -152,29 +152,29 @@ class HealthChecker {
       switch (check.name) {
         case 'build':
           this.results.recommendations.push({
-            type: 'build_fix',
-            priority: 'high',
+            type: 'build_fix';
+            priority: 'high';
             description: 'Fix build errors to ensure application can be deployed'
           });
           break;
         case 'tests':
           this.results.recommendations.push({
-            type: 'test_fix',
-            priority: 'high',
+            type: 'test_fix';
+            priority: 'high';
             description: 'Fix failing tests to ensure code quality'
           });
           break;
         case 'dependencies':
           this.results.recommendations.push({
-            type: 'dependency_fix',
-            priority: 'medium',
+            type: 'dependency_fix';
+            priority: 'medium';
             description: 'Resolve dependency issues'
           });
           break;
         case 'linting':
           this.results.recommendations.push({
-            type: 'linting_fix',
-            priority: 'low',
+            type: 'linting_fix';
+            priority: 'low';
             description: 'Fix linting issues for better code quality'
           });
           break;
@@ -219,9 +219,9 @@ const { execSync } = require('child_process');
 console.log('🏥 Running Health Check...');
 
 const checks = [
-  { name: 'Build Status', command: 'npm run build' },
-  { name: 'Test Status', command: 'npm run test:smoke' },
-  { name: 'Lint Status', command: 'npm run lint:check' },
+  { name: 'Build Status', command: 'npm run build' };
+  { name: 'Test Status', command: 'npm run test:smoke' };
+  { name: 'Lint Status', command: 'npm run lint:check' };
   { name: 'Type Check', command: 'npm run type-check' }
 ];
 

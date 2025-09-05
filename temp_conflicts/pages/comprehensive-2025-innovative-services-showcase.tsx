@@ -1,13 +1,13 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../components/SEO',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, 
-  Rocket, Lock, Palette, Factory, Database, Cloud, 
+  Star, Brain, Atom, Shield, Zap, TrendingUp, Globe,
+  Rocket, Lock, Palette, Factory, Database, Cloud,
   Cpu, Eye, Target, Users, BarChart3
-} from 'lucide-react';
-import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
+} from 'lucide-react',
+import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch',
 
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [
@@ -20,100 +20,91 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
     { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' },
     { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' },
     { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
-  ];
+  ],
 
 // Import existing services for comprehensive showcase
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',
 
 // Combine all services
 const allServices = [
   ...innovativeMicroSaas2025ExpansionV2,
   ...emergingTechInnovations2025,
   ...realMicroSaasServices2025
-];
+],
 
 // Service categories
 const serviceCategories = [
-  'All Services',
-  'AI & Machine Learning',
-  'Quantum Computing',
-  'Cybersecurity',
-  'Healthcare & Biotech',
-  'Finance & Investment',
-  'Supply Chain & Logistics',
-  'Manufacturing & Industry 4.0',
-  'Space Technology',
-  'Blockchain & Web3',
-  'Education & Learning',
-  'Legal & Compliance',
-  'Energy & Sustainability',
-  'Autonomous Vehicles',
-  'IoT & Edge Computing',
-  'Metaverse & VR',
+  'All ServicesAI & Machine Learning',
+  'Quantum ComputingCybersecurity',
+  'Healthcare & BiotechFinance & Investment',
+  'Supply Chain & LogisticsManufacturing & Industry 4.0',
+  'Space TechnologyBlockchain & Web3',
+  'Education & LearningLegal & Compliance',
+  'Energy & SustainabilityAutonomous Vehicles',
+  'IoT & Edge ComputingMetaverse & VR',
   'Neuroscience & BCI'
-];
+],
 
 // Helper function to get service category
 const getServiceCategory = (service: any) => {
-  if (service.category) return service.category;
-  if (service.type) return service.type;
-  return 'Other';
-};
+  if (service.category) return service.category,
+  if (service.type) return service.type,
+  return 'Other'
+},
 
 // Helper function to get service pricing
 const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  return 'Contact for pricing';
-};
+  if (service.pricing?.starter) return service.pricing.starter,
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
+  if (service.price?.monthly) return `$${service.price.monthly}/month`,
+  return 'Contact for pricing',
+},
 
 // Helper function to get service features
 const getServiceFeatures = (service: any) => {
-  if (service.features) return service.features;
-  if (service.keyFeatures) return service.keyFeatures;
-  return [];
-};
+  if (service.features) return service.features,
+  if (service.keyFeatures) return service.keyFeatures,
+  return []
+},
 
 // Helper function to get service description
 const getServiceDescription = (service: any) => {
-  if (service.description) return service.description;
-  if (service.tagline) return service.tagline;
-  return '';
-};
+  if (service.description) return service.description,
+  if (service.tagline) return service.tagline,
+  return ''
+},
 
 export default function Comprehensive2025InnovativeServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All Services'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),
 
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
-      const serviceName = (service as any).title || (service as any).name || '';
+      const serviceName = (service as any).title || (service as any).name || '',
       const matchesSearch = serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()) || false;
+                           (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()) || false,
       const matchesCategory = selectedCategory === 'All Services' || 
-                             getServiceCategory(service).includes(selectedCategory.split(' ')[0]);
-      return matchesSearch && matchesCategory;
+                             getServiceCategory(service).includes(selectedCategory.split(' ')[0]),
+      return matchesSearch && matchesCategory,
     })
     .sort((a, b) => {
-      const aName = (a as any).title || (a as any).name || '';
-      const bName = (b as any).title || (b as any).name || '';
+      const aName = (a as any).title || (a as any).name || '',
+      const bName = (b as any).title || (b as any).name || '',
       switch (sortBy) {
         case 'name':
-          return aName.localeCompare(bName);
+          return aName.localeCompare(bName),
         case 'price':
-          return ((a as any).price?.monthly || 0) - ((b as any).price?.monthly || 0);
+          return ((a as any).price?.monthly || 0) - ((b as any).price?.monthly || 0),
         case 'rating':
-          return ((b as any).rating || 0) - ((a as any).rating || 0);
+          return ((b as any).rating || 0) - ((a as any).rating || 0),
         case 'popularity':
-        default:
-          return ((b as any).customers || 0) - ((a as any).customers || 0);
+        default: return ((b as any).customers || 0) - ((a as any).customers || 0)
       }
-    });
+    }),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -124,14 +115,14 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       }
     }
   const getCategoryIcon = (category: string) => {
-    const cat = categories.find(c => c.name === category);
-    return cat ? cat.icon : Star;
-  };
+    const cat = categories.find(c => c.name === category),
+    return cat ? cat.icon : Star
+  },
 
   const getCategoryColor = (category: string) => {
-    const cat = categories.find(c => c.name === category);
-    return cat ? cat.color : 'from-gray-500 to-gray-600';
-  };
+    const cat = categories.find(c => c.name === category),
+    return cat ? cat.color : 'from-gray-500 to-gray-600'
+  },
 
   return (
     <Layout>
@@ -139,16 +130,13 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         title="2025 Comprehensive Innovative Services Showcase | Zion Tech Group"
         description="Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, and cutting-edge technology platforms. From quantum computing to healthcare AI, explore the future of business technology."
         keywords={["innovative micro SAAS", "AI services", "quantum computing", "healthcare AI", "cybersecurity", "blockchain", "space technology", "autonomous vehicles", "IoT", "metaverse", "Zion Tech Group"]}
-        ogImage="https://ziontechgroup.com/og-innovative-services-2025.jpg"
+        ogImage="https: //ziontechgroup.com/og-innovative-services-2025.jpg"
         title="2025 Innovative Services Showcase | Zion Tech Group"
         description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems."
         keywords={[
-          'innovative services 2025',
-          'micro SAAS',
-          'quantum computing',
-          'space technology',
-          'AI platforms',
-          'autonomous systems'
+          'innovative services 2025micro SAAS',
+          'quantum computingspace technology',
+          'AI platformsautonomous systems'
         ]}
       />
       
@@ -227,7 +215,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-5xl md: text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Service Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
@@ -237,7 +225,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => {
-              const IconComponent = category.icon;
+              const IconComponent = category.icon,
               return (
                 <motion.div
                   key={category.name}
@@ -259,7 +247,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     </div>
                   </div>
                 </motion.div>
-              );
+              ),
             })}
           </div>
         </div>
@@ -275,7 +263,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            <h2 className="text-5xl md: text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
               Featured Services
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
@@ -285,7 +273,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {
-              const IconComponent = getCategoryIcon(service.category);
+              const IconComponent = getCategoryIcon(service.category),
               return (
                 <motion.div
                   key={service.id}
@@ -367,7 +355,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     </div>
                   </div>
                 </motion.div>
-              );
+              ),
             })}
           </div>
         </div>
@@ -384,7 +372,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
+            <h2 className="text-5xl md: text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
               Complete Service Portfolio
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
@@ -394,7 +382,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {innovative2025MicroSaasBatch.map((service, index) => {
-              const IconComponent = getCategoryIcon(service.category);
+              const IconComponent = getCategoryIcon(service.category),
               return (
                 <motion.div
                   key={service.id}
@@ -422,7 +410,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     </div>
                   </div>
                 </motion.div>
-              );
+              ),
             })}
           </div>
         </div>
@@ -438,7 +426,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl md: text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -469,7 +457,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         </div>
       </section>
     </Layout>
-  );
-};
+  )
+},
 
-export default Comprehensive2025InnovativeServicesShowcase;
+export default Comprehensive2025InnovativeServicesShowcase,

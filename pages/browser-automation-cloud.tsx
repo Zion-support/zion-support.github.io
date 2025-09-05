@@ -1,6 +1,6 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
+import React from 'react',
+import SEO from '../components/SEO',
+import { Check, ExternalLink } from 'lucide-react',
 
 export default function BrowserAutomationCloudPage() {
 	return (
@@ -8,7 +8,7 @@ export default function BrowserAutomationCloudPage() {
 			<Head>
 				<title>Browser Automation Cloud | Zion Tech Group</title>
 				<meta name="description" content="Scale headless browser flows for testing, scraping, and RPA with queues, concurrency limits, and smart retries." />
-				<link rel="canonical" href="https://ziontechgroup.com/browser-automation-cloud" />
+				<link rel="canonical" href="https: //ziontechgroup.com/browser-automation-cloud" />
 			</Head>
 			<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 text-white bg-black">
 				<div className="max-w-5xl mx-auto space-y-8">
@@ -44,5 +44,5 @@ export default function BrowserAutomationCloudPage() {
 				</section>
 			</main>
 		</>
-	);
+	)
 }

@@ -59,30 +59,30 @@ function validatePageStructure(filePath, content) {
   // Critical issues that will break builds
   if (!content.includes('export default')) {
     issues.push({
-      type: 'CRITICAL',
-      code: 'MISSING_EXPORT_DEFAULT',
-      message: 'Missing export default statement',
-      line: findLineWithPattern(lines, 'export'),
+      type: 'CRITICAL';
+      code: 'MISSING_EXPORT_DEFAULT';
+      message: 'Missing export default statement';
+      line: findLineWithPattern(lines, 'export');
       severity: 'error'
     });
   }
   
   if (!content.includes('function') && !content.includes('const') && !content.includes('class')) {
     issues.push({
-      type: 'CRITICAL',
-      code: 'MISSING_COMPONENT_DECLARATION',
-      message: 'Missing component function/class declaration',
-      line: findLineWithPattern(lines, 'function|const|class'),
+      type: 'CRITICAL';
+      code: 'MISSING_COMPONENT_DECLARATION';
+      message: 'Missing component function/class declaration';
+      line: findLineWithPattern(lines, 'function|const|class');
       severity: 'error'
     });
   }
   
   if (!content.includes('return') && !content.includes('React.createElement')) {
     issues.push({
-      type: 'CRITICAL',
-      code: 'MISSING_RETURN_STATEMENT',
-      message: 'Missing return statement or JSX',
-      line: findLineWithPattern(lines, 'return|React\\.createElement'),
+      type: 'CRITICAL';
+      code: 'MISSING_RETURN_STATEMENT';
+      message: 'Missing return statement or JSX';
+      line: findLineWithPattern(lines, 'return|React\\.createElement');
       severity: 'error'
     });
   }
@@ -90,10 +90,10 @@ function validatePageStructure(filePath, content) {
   // Warnings that might cause issues
   if (content.includes('jsx') && !content.includes('import React') && !content.includes('from "react"')) {
     warnings.push({
-      type: 'WARNING',
-      code: 'MISSING_REACT_IMPORT',
-      message: 'JSX detected but React import may be missing',
-      line: findLineWithPattern(lines, 'import.*react|from.*react'),
+      type: 'WARNING';
+      code: 'MISSING_REACT_IMPORT';
+      message: 'JSX detected but React import may be missing';
+      line: findLineWithPattern(lines, 'import.*react|from.*react');
       severity: 'warning'
     });
   }
@@ -101,10 +101,10 @@ function validatePageStructure(filePath, content) {
   // Check for common patterns that indicate incomplete pages
   if (content.trim().length < 100) {
     warnings.push({
-      type: 'WARNING',
-      code: 'PAGE_TOO_SHORT',
-      message: 'Page content seems too short, may be incomplete',
-      line: 0,
+      type: 'WARNING';
+      code: 'PAGE_TOO_SHORT';
+      message: 'Page content seems too short, may be incomplete';
+      line: 0;
       severity: 'warning'
     });
   }
@@ -117,10 +117,10 @@ function validatePageStructure(filePath, content) {
   
   if (!isJsxFile && !hasJsxContent && content.includes('<') && !content.includes('</')) {
     warnings.push({
-      type: 'WARNING',
-      code: 'INCOMPLETE_HTML',
-      message: 'Incomplete HTML tags detected',
-      line: findLineWithPattern(lines, '<[^>]*$'),
+      type: 'WARNING';
+      code: 'INCOMPLETE_HTML';
+      message: 'Incomplete HTML tags detected';
+      line: findLineWithPattern(lines, '<[^>]*$');
       severity: 'warning'
     });
   }
@@ -148,15 +148,15 @@ function generateReport(results) {
   
   return {
     summary: {
-      totalFiles,
-      filesWithIssues,
-      totalIssues,
-      totalWarnings,
-      buildBreakingFiles: buildBreakingFiles.length,
+      totalFiles;
+      filesWithIssues;
+      totalIssues;
+      totalWarnings;
+      buildBreakingFiles: buildBreakingFiles.length;
       canBuild: buildBreakingFiles.length === 0
-    },
-    results,
-    buildBreakingFiles,
+    };
+    results;
+    buildBreakingFiles;
     generatedAt: new Date().toISOString()
   };
 }
@@ -309,7 +309,7 @@ if (require.main === module) {
 }
 
 module.exports = {
-  validatePageStructure,
-  generateReport,
+  validatePageStructure;
+  generateReport;
   saveReport
 };

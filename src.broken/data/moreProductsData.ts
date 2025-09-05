@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from "@/types/listings",
 
 export const MORE_PRODUCTS: ProductListing[] = [
   {
@@ -191,5 +191,5 @@ export const MORE_PRODUCTS: ProductListing[] = [
     availability: "Immediate",
     aiScore: 89
   }
-];
+],
 

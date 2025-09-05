@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",
   description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.",
-  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"};
+  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"},
 
 export default function NewsPage() {
   return (
@@ -269,11 +269,11 @@ export default function NewsPage() {
                 </span>
                 <span className="text-gray-400 text-sm">November 30, 2024</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-xl font-bold mb-3 group-hover: text-blue-400 transition-colors">
                 Research Partnership with Leading Universities
               </h3>
               <p className="text-gray-400 mb-4 leading-relaxed">
-                Zion Tech Group announces strategic research partnerships with MIT, Stanford, 
+                Zion Tech Group announces strategic research partnerships with MIT, Stanford,
                 and Cambridge to advance AI and quantum computing technologies.
               </p>
               <Link href="/news/university-research-partnerships" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
@@ -312,7 +312,7 @@ export default function NewsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -334,5 +334,5 @@ export default function NewsPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

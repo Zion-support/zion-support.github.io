@@ -1,14 +1,14 @@
-"use client";
+"use client",
 
-import { useState, useEffect } from "react";
-import { useAuth } from "@/contexts/AuthContext";
+import { useState, useEffect } from "react",
+import { useAuth } from "@/contexts/AuthContext",
 
 interface WalkthroughStep {
-  id: string;
-  title: string;
-  description: string;
-  target?: string;
-  position: "top" | "bottom" | "left" | "right";
+  id: string,
+  title: string,
+  description: string,
+  target?: string,
+  position: "top" | "bottom" | "left" | "right"
 }
 
 const walkthroughSteps: WalkthroughStep[] = [
@@ -45,54 +45,54 @@ const walkthroughSteps: WalkthroughStep[] = [
     description: "You now know the basics. Start building your digital economy or explore more features.",
     position: "top"
   }
-];
+],
 
 export function OnboardingWalkthrough() {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isCompleted, setIsCompleted] = useState(false);
-  const { user, completeOnboarding } = useAuth();
+  const [currentStep, setCurrentStep] = useState(0),
+  const [isVisible, setIsVisible] = useState(false),
+  const [isCompleted, setIsCompleted] = useState(false),
+  const { user, completeOnboarding } = useAuth(),
 
   useEffect(() => {
     // Show walkthrough for new users who haven't completed onboarding
     if (user && !user.onboardingCompleted) {
-      setIsVisible(true);
+      setIsVisible(true),
     }
-  }, [user]);
+  }, [user]),
 
   const handleNext = () => {
     if (currentStep < walkthroughSteps.length - 1) {
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1),
     } else {
-      handleComplete();
+      handleComplete(),
     }
-  };
+  },
 
   const handlePrevious = () => {
     if (currentStep > 0) {
-      setCurrentStep(currentStep - 1);
+      setCurrentStep(currentStep - 1),
     }
-  };
+  },
 
   const handleSkip = () => {
-    setIsVisible(false);
-    setIsCompleted(true);
-  };
+    setIsVisible(false),
+    setIsCompleted(true),
+  },
 
   const handleComplete = async () => {
     try {
-      await completeOnboarding();
-      setIsVisible(false);
-      setIsCompleted(true);
+      await completeOnboarding(),
+      setIsVisible(false),
+      setIsCompleted(true),
     } catch (error) {
-      console.error("Failed to complete onboarding:", error);
+      console.error("Failed to complete onboarding: ", error)
     }
-  };
+  },
 
-  const currentStepData = walkthroughSteps[currentStep];
+  const currentStepData = walkthroughSteps[currentStep],
 
   if (!isVisible || isCompleted) {
-    return null;
+    return null,
   }
 
   return (
@@ -176,12 +176,12 @@ export function OnboardingWalkthrough() {
         </div>
       )}
     </>
-  );
+  ),
 }
 
 // Hook to add data attributes for walkthrough targeting
 export function useWalkthroughTarget(id: string) {
   return {
     "data-walkthrough-target": id,
-    id};
+    id},
 }

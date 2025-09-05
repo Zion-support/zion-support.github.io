@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import Layout from './layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Layout from './layout/Layout',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 // Import our new innovative services
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
-import { innovative2040ITServices } from '../data/innovative-2040-it-services';
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
-import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
+import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services',
+import { innovative2040ITServices } from '../data/innovative-2040-it-services',
+import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services',
+import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services',
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -31,22 +31,22 @@ const LoadingFallback = () => (
       <p className="text-sm text-gray-500">Preparing your futuristic digital transformation journey</p>
     </motion.div>
   </div>
-);
+),
 
 const Homepage2045: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
+  const [isLoading, setIsLoading] = useState(true),
+  const [isVisible, setIsVisible] = useState(false),
+  const [activeSection, setActiveSection] = useState('hero'),
 
   useEffect(() => {
     // Simulate content loading with better timing
     const timer = setTimeout(() => {
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 800);
+      setIsLoading(false),
+      setIsVisible(true)
+    }, 800),
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer),
+  }, []),
 
   // Intersection Observer for better performance
   useEffect(() => {
@@ -55,25 +55,25 @@ const Homepage2045: React.FC = () => {
         (entries: any[]) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              setActiveSection(entry.target.id);
+              setActiveSection(entry.target.id)
             }
-          });
+          }),
         },
         { threshold: 0.3, rootMargin: '-100px' }
-      );
+      ),
 
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach((section) => observer.observe(section));
+      const sections = document.querySelectorAll('section[id]'),
+      sections.forEach((section) => observer.observe(section)),
 
-      return () => observer.disconnect();
+      return () => observer.disconnect(),
     }
-  }, []);
+  }, []),
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" }
-  };
+  },
 
   const staggerContainer = {
     animate: {
@@ -82,25 +82,22 @@ const Homepage2045: React.FC = () => {
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1 },
     transition: { duration: 1.2, ease: "easeOut" }
-  };
+  },
 
   const getColorClasses = (index: number) => {
     const colors = [
-      'from-cyan-400 to-blue-500',
-      'from-purple-400 to-pink-500',
-      'from-emerald-400 to-teal-500',
-      'from-orange-400 to-red-500',
-      'from-indigo-400 to-purple-500',
-      'from-yellow-400 to-orange-500'
-    ];
-    return colors[index % colors.length];
-  };
+      'from-cyan-400 to-blue-500from-purple-400 to-pink-500',
+      'from-emerald-400 to-teal-500from-orange-400 to-red-500',
+      'from-indigo-400 to-purple-500from-yellow-400 to-orange-500'
+    ],
+    return colors[index % colors.length]
+  },
 
   if (isLoading) {
     return (
@@ -110,7 +107,7 @@ const Homepage2045: React.FC = () => {
           <p className="text-cyan-400 text-xl">Loading Zion Tech Group...</p>
         </div>
       </div>
-    );
+    ),
   }
 
   return (
@@ -251,7 +248,7 @@ const Homepage2045: React.FC = () => {
             </motion.div>
 
             {/* Service Categories Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: <Brain className="w-12 h-12" />,
@@ -409,7 +406,7 @@ const Homepage2045: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Ready to Transform?
                 </span>
@@ -436,7 +433,7 @@ const Homepage2045: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default Homepage2045;
+export default Homepage2045,

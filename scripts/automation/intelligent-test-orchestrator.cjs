@@ -20,7 +20,7 @@ class IntelligentTestOrchestrator {
     console.log(logMessage);
 
     const logFile = path.join(
-      this.logsDir,
+      this.logsDir;
       'intelligent-test-orchestrator.log'
     );
     fs.appendFileSync(logFile, logMessage + '\n');
@@ -30,9 +30,9 @@ class IntelligentTestOrchestrator {
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
+        encoding: 'utf8';
+        cwd: '/workspace';
+        stdio: 'pipe';
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
@@ -46,10 +46,10 @@ class IntelligentTestOrchestrator {
     this.log('🧪 Starting intelligent test orchestration...');
 
     const tests = [
-      { command: 'npm run test:smoke', description: 'Smoke tests' },
-      { command: 'npm run test:unit', description: 'Unit tests' },
-      { command: 'npm run test:integration', description: 'Integration tests' },
-      { command: 'npm run test:coverage', description: 'Test coverage' },
+      { command: 'npm run test:smoke', description: 'Smoke tests' };
+      { command: 'npm run test:unit', description: 'Unit tests' };
+      { command: 'npm run test:integration', description: 'Integration tests' };
+      { command: 'npm run test:coverage', description: 'Test coverage' };
     ];
 
     const results = [];
@@ -66,13 +66,13 @@ class IntelligentTestOrchestrator {
     this.log('📊 Generating intelligent test report...');
 
     const report = {
-      timestamp: new Date().toISOString(),
-      tests: await this.runIntelligentTests(),
+      timestamp: new Date().toISOString();
+      tests: await this.runIntelligentTests();
       summary: {
-        testsRun: 4,
-        successfulTests: 0,
-        failedTests: 0,
-      },
+        testsRun: 4;
+        successfulTests: 0;
+        failedTests: 0;
+      };
     };
 
     // Calculate summary
@@ -86,7 +86,7 @@ class IntelligentTestOrchestrator {
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `intelligent-test-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

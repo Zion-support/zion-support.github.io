@@ -1,7 +1,7 @@
 
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Link } from "react-router-dom",
 
 export function HeroSection() {
   return (
@@ -18,7 +18,7 @@ export function HeroSection() {
       </div>
       
       <div className="container relative z-10 px-4 mx-auto text-center">
-        <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold">
+        <GradientHeading className="mb-6 text-5xl md: text-7xl font-bold">
           The Future of Tech & AI Marketplace
         </GradientHeading>
 
@@ -46,5 +46,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

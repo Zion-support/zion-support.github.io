@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import EmailValidatorDemo from '../components/demos/EmailValidatorDemo';
-import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';
-import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';
-import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
-import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import EmailValidatorDemo from '../components/demos/EmailValidatorDemo',
+import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo',
+import UrlShortenerDemo from '../components/demos/UrlShortenerDemo',
+import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo',
+import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react',
 
 export default function DemosPage() {
-  const [activeDemo, setActiveDemo] = useState<string>('email-validator');
+  const [activeDemo, setActiveDemo] = useState<string>('email-validator'),
 
   const demos = [
     {
@@ -44,9 +44,9 @@ export default function DemosPage() {
       color: 'from-orange-500 to-red-600',
       component: <TextAnalyzerDemo />
     }
-  ];
+  ],
 
-  const activeDemoData = demos.find(demo => demo.id === activeDemo);
+  const activeDemoData = demos.find(demo => demo.id === activeDemo),
 
   return (
     <>
@@ -299,7 +299,7 @@ export default function DemosPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Integrate?
@@ -330,5 +330,5 @@ export default function DemosPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

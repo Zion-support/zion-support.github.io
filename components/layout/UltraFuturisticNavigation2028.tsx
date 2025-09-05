@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
+  Microscope, DollarSign, Home, Users, Briefcase,
   BookOpen, MessageCircle, Star, TrendingUp, Target,
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
   Earth, Factory, Car, Building, GraduationCap, Scale,
   Palette, Camera, Video, Music, Gamepad2, Heart,
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -141,7 +141,7 @@ const serviceCategories = [
       { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home },
@@ -153,7 +153,7 @@ const companyLinks = [
   { name: '🎯 About Us', href: '/about', icon: Users },
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },
   { name: '🔒 Support', href: '/support', icon: ShieldCheck }
-];
+],
 
 const resourceLinks = [
   { name: '📖 Documentation', href: '/docs', icon: BookOpen },
@@ -164,30 +164,30 @@ const resourceLinks = [
   { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },
   { name: '🔐 Security Center', href: '/security', icon: Shield },
   { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
-];
+],
 
 export default function UltraFuturisticNavigation2028() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeCategory, setActiveCategory] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState(''),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen),
+  const closeMenu = () => setIsOpen(false),
 
   const handleCategoryHover = (categoryTitle: string) => {
-    setActiveCategory(categoryTitle);
-  };
+    setActiveCategory(categoryTitle)
+  },
 
   const handleCategoryLeave = () => {
-    setActiveCategory(null);
-  };
+    setActiveCategory(null),
+  },
 
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(service =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  );
+  ),
 
   return (
     <nav className="relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30">
@@ -456,5 +456,5 @@ export default function UltraFuturisticNavigation2028() {
         </div>
       )}
     </nav>
-  );
+  ),
 }

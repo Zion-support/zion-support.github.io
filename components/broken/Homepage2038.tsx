@@ -1,25 +1,25 @@
-import React from 'react';
-import Layout from './layout/Layout';
-import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from './layout/Layout',
+import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
-  ArrowRight, Star, 
+  ArrowRight, Star,
   Brain, Atom, Shield, Zap, TrendingUp, Globe,
   Rocket, Target, Cpu, Cloud, Lock, Users, Award,
   CheckCircle, Sparkles, Infinity, Zap as Lightning
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import new services
-import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
-import { innovative2038ITServices } from '../data/innovative-2038-it-services';
-import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
+import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services',
+import { innovative2038ITServices } from '../data/innovative-2038-it-services',
+import { innovative2038AIServices } from '../data/innovative-2038-ai-services',
 
 const Homepage2038: React.FC = () => {
   // Get featured services from each category
-  const featuredMicroSaas = innovative2038MicroSaasServices.filter(s => s.popular).slice(0, 3);
-  const featuredIT = innovative2038ITServices.filter(s => s.popular).slice(0, 3);
-  const featuredAI = innovative2038AIServices.filter(s => s.popular).slice(0, 3);
+  const featuredMicroSaas = innovative2038MicroSaasServices.filter(s => s.popular).slice(0, 3),
+  const featuredIT = innovative2038ITServices.filter(s => s.popular).slice(0, 3),
+  const featuredAI = innovative2038AIServices.filter(s => s.popular).slice(0, 3),
 
   return (
     <Layout>
@@ -319,7 +319,7 @@ const Homepage2038: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-20"
             >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <h2 className="text-5xl md: text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
@@ -434,7 +434,7 @@ const Homepage2038: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
+  ),
+},
 
-export default Homepage2038;
+export default Homepage2038,

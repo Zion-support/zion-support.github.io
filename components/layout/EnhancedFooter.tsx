@@ -1,18 +1,18 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 import { 
-  Phone, Mail, MapPin, Globe, 
+  Phone, Mail, MapPin, Globe,
   Twitter, Linkedin, Facebook, Instagram,
   ArrowRight, Rocket, Brain, Cpu, Shield,
   Star, Users, TrendingUp, Zap
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -42,7 +42,7 @@ const serviceCategories = [
       { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -51,7 +51,7 @@ const companyLinks = [
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'Resources', href: '/resources' }
-];
+],
 
 const supportLinks = [
   { name: 'Contact Support', href: '/contact' },
@@ -60,15 +60,15 @@ const supportLinks = [
   { name: 'Status Page', href: '/status' },
   { name: 'Security', href: '/security' },
   { name: 'Privacy Policy', href: '/privacy' }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
   { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Globe }];
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Globe }],
 
 export default function EnhancedFooter() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   return (
     <footer className="bg-gray-900/95 backdrop-blur-md border-t border-gray-700/50">
@@ -229,16 +229,16 @@ export default function EnhancedFooter() {
               <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => {
-                  const Icon = social.icon;
+                  const Icon = social.icon,
                   return (
                     <a
                       key={social.name}
                       href={social.href}
-                      className="w-10 h-10 bg-gray-800/50 border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all duration-200"
+                      className="w-10 h-10 bg-gray-800/50 border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover: text-cyan-400 hover:border-cyan-500/50 transition-all duration-200"
                     >
                       <Icon className="w-5 h-5" />
                     </a>
-                  );
+                  )
                 })}
               </div>
             </motion.div>
@@ -285,7 +285,7 @@ export default function EnhancedFooter() {
             </div>
             
             <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <a href="/terms" className="hover:text-cyan-400 transition-colors duration-200">
+              <a href="/terms" className="hover: text-cyan-400 transition-colors duration-200">
                 Terms of Service
               </a>
               <a href="/privacy" className="hover:text-cyan-400 transition-colors duration-200">
@@ -299,5 +299,5 @@ export default function EnhancedFooter() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

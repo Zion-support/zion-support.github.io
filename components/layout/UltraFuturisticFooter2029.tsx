@@ -1,19 +1,19 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
-  Phone, Mail, MapPin, Globe, ArrowRight, Star, 
+  Phone, Mail, MapPin, Globe, ArrowRight, Star,
   Rocket, Brain, Atom, Building, Briefcase, Microscope,
   Twitter, Facebook, Linkedin, Instagram, Youtube,
   Github, Zap, Sparkles, Shield, Cpu, Database
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -53,7 +53,7 @@ const serviceCategories = [
       { name: 'DevOps Automation', href: '/devops-automation' }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -64,14 +64,14 @@ const quickLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Support', href: '/support', icon: MessageCircle },
   { name: 'Privacy', href: '/privacy', icon: Shield }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
-];
+],
 
 const footerSections = [
   {
@@ -118,7 +118,7 @@ const footerSections = [
       { name: 'Compliance', href: '/compliance' }
     ]
   }
-];
+],
 
 const UltraFuturisticFooter2029 = () => {
   return (
@@ -272,7 +272,7 @@ const UltraFuturisticFooter2029 = () => {
 
       {/* Newsletter Signup */}
       <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 border-t border-slate-700/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Stay Updated with Innovation
@@ -296,7 +296,7 @@ const UltraFuturisticFooter2029 = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+},
 
-export default UltraFuturisticFooter2029;
+export default UltraFuturisticFooter2029,

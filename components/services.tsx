@@ -1,63 +1,63 @@
-import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion',
 import { 
-  Search, Filter, Star, Users, TrendingUp, 
+  Search, Filter, Star, Users, TrendingUp,
   DollarSign, Clock, CheckCircle, ArrowRight,
-  Brain, Rocket, Dna, Globe, Shield, Wifi, 
-  Package, Bot, Car, Building2, Monitor, Cpu, 
+  Brain, Rocket, Dna, Globe, Shield, Wifi,
+  Package, Bot, Car, Building2, Monitor, Cpu,
   Zap, Atom, Database, Cloud, Lock, Code
-} from 'lucide-react';
-import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
-import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { newRealServices } from '../data/new-real-services';
-import { industryRealServices } from '../data/industry-real-services';
-import { professionalServices } from '../data/professional-services';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
-import { marketValidatedServices } from '../data/market-validated-services';
-import { emergingTechnologyServices } from '../data/emerging-technology-services';
-import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
-import { curatedMarketServices } from '../data/curated-market-services';
-import { realMarketServices } from '../data/real-market-services';
-import { new2025Services } from '../data/new-2025-services';
-import { newRealInnovations } from '../data/new-real-innovations';
-import { serviceExpansions2025 } from '../data/service-expansions-2025';
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+} from 'lucide-react',
+import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground',
+import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard',
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import { additionalEnhancedServices } from '../data/additional-real-services',
+import { newRealServices } from '../data/new-real-services',
+import { industryRealServices } from '../data/industry-real-services',
+import { professionalServices } from '../data/professional-services',
+import { nextGenerationAIServices } from '../data/next-generation-ai-services',
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',
+import { marketValidatedServices } from '../data/market-validated-services',
+import { emergingTechnologyServices } from '../data/emerging-technology-services',
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions',
+import { curatedMarketServices } from '../data/curated-market-services',
+import { realMarketServices } from '../data/real-market-services',
+import { new2025Services } from '../data/new-2025-services',
+import { newRealInnovations } from '../data/new-real-innovations',
+import { serviceExpansions2025 } from '../data/service-expansions-2025',
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Search, Grid, List,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Users, DollarSign, Settings, TrendingUp, BarChart3, ChevronDown
-} from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+} from 'lucide-react',
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
 
 // Import all the new 2025 service data
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
-import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
-import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
-import { additionalRealServices2025 } from '../data/2025-additional-real-services';
-import { innovativeAIServices2025 as newInnovativeAIServices } from '../data/2025-innovative-ai-it-services';
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',
+import { innovativeITServices2025 } from '../data/2025-innovative-it-services',
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services',
+import { additionalRealServices2025 } from '../data/2025-additional-real-services',
+import { innovativeAIServices2025 as newInnovativeAIServices } from '../data/2025-innovative-ai-it-services',
 
 // Import new innovative services
-import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
-import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services';
-import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services';
-import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services';
-import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services';
+import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services',
+import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services',
+import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services',
+import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services',
+import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services',
 
 // Import existing services for comprehensive coverage
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
-import { quantumSpaceServices } from '../data/quantum-space-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',
+import { quantumSpaceServices } from '../data/quantum-space-services',
+import { enterpriseITServices } from '../data/enterprise-it-services',
 
 const allServices = [
   ...realMicroSaasServices2025,
@@ -66,23 +66,23 @@ const allServices = [
   ...emergingTechServices2025,
   ...additionalRealServices2025,
   ...newInnovativeAIServices
-];
+],
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories: Array<{
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ComponentType<{ className?: string }>;
-  color: string;
-  services: ServiceUnion[];
-  gradient: string;
+  id: string,
+  title: string,
+  description: string,
+  icon: React.ComponentType<{ className?: string }>,
+  color: string,
+  services: ServiceUnion[],
+  gradient: string
 }> = [
   {
     id: 'ai-consciousness',
@@ -238,13 +238,13 @@ const serviceCategories: Array<{
     color: 'from-indigo-500 to-purple-600',
     description: 'Quantum-powered data analytics and insights'
   }
-];
-import { realVerifiedServices } from '../data/real-verified-services';
+],
+import { realVerifiedServices } from '../data/real-verified-services',
 
 export default function ServicesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [sortBy, setSortBy] = useState('name'),
 
   // Combine all services
   const allServices = [
@@ -269,51 +269,50 @@ export default function ServicesPage() {
     ...newRealInnovations,
     ...serviceExpansions2025,
     ...realVerifiedServices
-  ];
+  ],
 
   // Get unique services by ID
   const uniqueServices = allServices.filter((service, index, self) => 
     index === self.findIndex(s => s.id === service.id)
-  );
+  ),
 
   // Get all categories
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
     Array.isArray(s.category) ? s.category[0] : s.category
-  )))];
+  )))],
 
   // Filter and sort services
   const filteredServices = uniqueServices
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
       const matchesCategory = selectedCategory === 'All' || 
                              (Array.isArray(service.category) ? 
                                service.category.includes(selectedCategory) : 
-                               service.category === selectedCategory);
-      return matchesSearch && matchesCategory;
+                               service.category === selectedCategory),
+      return matchesSearch && matchesCategory,
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'name':
-          return a.name.localeCompare(b.name);
+          return a.name.localeCompare(b.name),
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
         case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0);
-        default:
-          return 0;
+          return (b.rating || 0) - (a.rating || 0),
+        default: return 0
       }
-    });
+    }),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <UltraFuturisticBackground2029>
@@ -362,14 +361,14 @@ export default function ServicesPage() {
                 </div>
               </motion.div>
               
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <h1 className="text-5xl md: text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Our Services
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology, 
+                Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology,
                 and micro SAAS services designed to transform your business and drive innovation.
               </p>
               
@@ -526,7 +525,7 @@ export default function ServicesPage() {
               className="mb-20"
             >
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <h2 className="text-4xl md: text-5xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Service Categories
                   </span>
@@ -538,7 +537,7 @@ export default function ServicesPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {categories.map((category, index) => {
-                  const stats = getCategoryStats(category.id);
+                  const stats = getCategoryStats(category.id),
                   return (
                     <motion.div
                       key={category.id}
@@ -635,8 +634,8 @@ export default function ServicesPage() {
                 <p className="text-gray-400">Try adjusting your search criteria or browse all services</p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('All');
+                    setSearchTerm(''),
+                    setSelectedCategory('All'),
                   }}
                   className="mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
                 >
@@ -813,7 +812,7 @@ export default function ServicesPage() {
                       href="/pricing"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm"
+                      className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover: border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm"
                     >
                       💰 View Pricing
                     </motion.a>
@@ -831,5 +830,5 @@ export default function ServicesPage() {
 
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-  );
+  )
 }

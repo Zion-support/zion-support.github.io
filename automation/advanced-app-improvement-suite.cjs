@@ -161,9 +161,9 @@ class AdvancedAppImprover {
 
   addImprovement(description) {
     this.improvements.push({
-      description,
-      timestamp: new Date().toISOString(),
-      category: this.getCurrentCategory(),
+      description;
+      timestamp: new Date().toISOString();
+      category: this.getCurrentCategory();
     });
   }
 
@@ -185,29 +185,29 @@ class AdvancedAppImprover {
     const duration = endTime - this.startTime;
 
     const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      totalImprovements: this.improvements.length,
-      improvements: this.improvements,
+      timestamp: new Date().toISOString();
+      duration: `${duration}ms`;
+      totalImprovements: this.improvements.length;
+      improvements: this.improvements;
       summary: {
         codeQuality: this.improvements.filter(
           i => i.category === 'Code Quality'
-        ).length,
+        ).length;
         performance: this.improvements.filter(i => i.category === 'Performance')
-          .length,
+          .length;
         security: this.improvements.filter(i => i.category === 'Security')
-          .length,
-        seo: this.improvements.filter(i => i.category === 'SEO').length,
+          .length;
+        seo: this.improvements.filter(i => i.category === 'SEO').length;
         accessibility: this.improvements.filter(
           i => i.category === 'Accessibility'
-        ).length,
+        ).length;
         userExperience: this.improvements.filter(
           i => i.category === 'User Experience'
-        ).length,
+        ).length;
         documentation: this.improvements.filter(
           i => i.category === 'Documentation'
-        ).length,
-      },
+        ).length;
+      };
     };
 
     // Ensure logs directory exists
@@ -217,7 +217,7 @@ class AdvancedAppImprover {
     }
 
     const reportPath = path.join(
-      logsDir,
+      logsDir;
       `advanced-app-improvement-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

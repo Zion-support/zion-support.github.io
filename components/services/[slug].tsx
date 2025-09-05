@@ -1,36 +1,36 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../../data/extra-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025';
-import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../../components/layout/Layout',
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react',
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services',
+import { extraServices } from '../../data/extra-services',
+import { additionalEnhancedServices } from '../../data/additional-real-services',
+import { newlyAddedServices } from '../../data/newly-added-services',
+import { curatedMarketServices } from '../../data/curated-market-services',
+import { new2025Services } from '../../data/new-2025-services',
+import { marketValidatedServices } from '../../data/market-validated-services',
+import { moreRealServices2025 } from '../../data/more-real-services-2025',
+import { verified2025Additions } from '../../data/verified-2025-additions',
+import { realServicesQ12025 } from '../../data/real-services-q1-2025',
+import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025',
 
-type Service = typeof enhancedRealMicroSaasServices[number];
+type Service = typeof enhancedRealMicroSaasServices[number],
 
 const contactInfo = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 
 function getPriceValue(price: Service['price']): string {
 	if (price && typeof price === 'object' && 'monthly' in price) {
-		return price.monthly.toString();
+		return price.monthly.toString()
 	}
 	if (typeof price === 'string') {
-		return price;
+		return price,
 	}
-	return '99';
+	return '99',
 }
 
 function getAllServices(): Service[] {
@@ -43,85 +43,83 @@ function getAllServices(): Service[] {
 		.concat(moreRealServices2025 as unknown as Service[])
 		.concat(verified2025Additions as unknown as Service[])
 		.concat(realServicesQ12025 as unknown as Service[])
-		.concat(realServicesQ32025 as unknown as Service[]);
-		.concat(newVerifiedServicesQ22025 as unknown as Service[]);
+		.concat(realServicesQ32025 as unknown as Service[]),
+		.concat(newVerifiedServicesQ22025 as unknown as Service[]),
 }
 
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
-		const url = new URL(link);
-		const path = url.pathname.replace(/^\/+|\/+$/g, '');
+		const url = new URL(link),
+		const path = url.pathname.replace(/^\/+|\/+$/g, ''),
 		if (path.startsWith('services/')) {
-			return path.substring('services/'.length);
+			return path.substring('services/'.length)
 		}
-		return null;
+		return null,
 	} catch {
-		return null;
+		return null,
 	}
 }
 
 export async function getStaticPaths() {
-	const services = getAllServices();
-	const slugs = new Set<string>();
+	const services = getAllServices(),
+	const slugs = new Set<string>(),
 
 	// Define static service slugs that should not be handled by this dynamic route
 	const staticServiceSlugs = [
-		'ai-evaluation-orchestrator',
-		'ai-support-triage-router', 
-		'ai-code-review-assistant-pro',
-		'ai-revenue-forecasting-copilot'
-	];
+		'ai-evaluation-orchestratorai-support-triage-router',
+		'ai-code-review-assistant-proai-revenue-forecasting-copilot'
+	],
 
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available
-		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
+		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null,
 		if (fromLink && !staticServiceSlugs.includes(fromLink)) {
-			slugs.add(fromLink);
-			continue;
+			slugs.add(fromLink),
+			continue,
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
-		const idSlug = s.id ? toSlug(s.id) : '';
-		const nameSlug = s.name ? toSlug(s.name) : '';
+		const idSlug = s.id ? toSlug(s.id) : '',
+		const nameSlug = s.name ? toSlug(s.name) : '',
 		
 		if (idSlug && !staticServiceSlugs.includes(idSlug)) {
-			slugs.add(idSlug);
+			slugs.add(idSlug),
 		}
 		if (nameSlug && !staticServiceSlugs.includes(nameSlug)) {
-			slugs.add(nameSlug);
+			slugs.add(nameSlug),
 		}
 	}
 
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
-	};
+	},
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-	const services = getAllServices();
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+	const services = getAllServices(),
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),
 
 	let service: Service | undefined = services.find((s) => {
-		if (!s.link) return false;
-		const fromLink = extractServiceSlugFromLink(s.link);
-		return fromLink === incomingSlug;
-	});
+		if (!s.link) return false,
+		const fromLink = extractServiceSlugFromLink(s.link),
+		return fromLink === incomingSlug
+	}),
 
 	if (!service) {
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
 	}
 
 	if (!service) {
-		return { notFound: true };
+		return { notFound: true },
 	}
 
 	return {
 		props: { service }
-	};
+	},
 }
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
@@ -215,7 +213,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>
 							<div className="text-3xl font-bold text-white">${getPriceValue(service.price)}<span className="text-base font-medium text-gray-400">{service.period || '/month'}</span></div>
-							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join(', ')}</div>
+							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join()}</div>
 							<div className="mt-6 flex gap-3">
 								<a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">Contact Sales</a>
 								<a href={service.link} className="flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded-lg text-center hover:bg-gray-600 transition-all duration-300"><ExternalLink className="w-4 h-4 mr-2 inline" /> Learn More</a>
@@ -238,28 +236,28 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								{service.marketPosition && <p className="leading-relaxed"><span className="text-gray-400">Position:</span> {service.marketPosition}</p>}
 								{service.roi && <p className="leading-relaxed"><span className="text-gray-400">ROI:</span> {service.roi}</p>}
 								{service.competitors?.length ? (
-									<p className="leading-relaxed"><span className="text-gray-400">Competitors:</span> {service.competitors.slice(0,6).join(', ')}</p>
+									<p className="leading-relaxed"><span className="text-gray-400">Competitors:</span> {service.competitors.slice(0,6).join()}</p>
 								) : null}
-								<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover:text-cyan-200">See average market prices →</a>
+								<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</Layout>
-	);
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import EnhancedLayout from '@/components/layout/EnhancedLayout';
-import services from '@/data/services/services.json';
+	),
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import EnhancedLayout from '@/components/layout/EnhancedLayout',
+import services from '@/data/services/services.json',
 
 const ServiceDetail: NextPage = () => {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
-  const items = services as any[];
-  const service = items.find((s) => s.slug === slug);
+  const router = useRouter(),
+  const { slug } = router.query as { slug?: string },
+  const items = services as any[],
+  const service = items.find((s) => s.slug === slug),
 
   if (!service) {
     return (
@@ -269,13 +267,13 @@ const ServiceDetail: NextPage = () => {
         </Head>
         <div className="space-y-4">
           <h1 className="text-xl font-semibold">Service not found</h1>
-          <Link href="/services"><a className="text-blue-600 hover:underline">Back to Services</a></Link>
+          <Link href="/services"><a className="text-blue-600 hover: underline">Back to Services</a></Link>
         </div>
       </EnhancedLayout>
-    );
+    )
   }
 
-  const priceRange = `$${service.priceRangeUSD[0]} - $${service.priceRangeUSD[1]}`;
+  const priceRange = `$${service.priceRangeUSD[0]} - $${service.priceRangeUSD[1]}`,
 
   return (
     <EnhancedLayout>
@@ -298,14 +296,14 @@ const ServiceDetail: NextPage = () => {
           <div className="text-sm opacity-70">Price Range</div>
           <div className="text-xl font-semibold">{priceRange}</div>
           <Link href={`/contact?subject=${encodeURIComponent('Quote request: ' + service.name)}`}>
-            <a className="inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Request Quote</a>
+            <a className="inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover: bg-blue-700">Request Quote</a>
           </Link>
           <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
         </aside>
       </div>
     </EnhancedLayout>
-  );
-};
+  )
+},
 
-export default ServiceDetail;
+export default ServiceDetail,
 }

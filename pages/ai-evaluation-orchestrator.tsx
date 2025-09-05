@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import Button from '../components/ui/Button',
 
 export default function AIEvaluationOrchestratorPage() {
   return (
@@ -8,7 +8,7 @@ export default function AIEvaluationOrchestratorPage() {
       <Head>
         <title>AI Evaluation Orchestrator | Zion Tech Group</title>
         <meta name="description" content="Define evals, run batch tests, score prompts and models, and prevent regressions." />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-evaluation-orchestrator" />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-evaluation-orchestrator" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto space-y-10">
@@ -18,12 +18,9 @@ export default function AIEvaluationOrchestratorPage() {
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              'Create datasets and scoring functions',
-              'Batch runs across models and versions',
-              'Track regressions and enforce quality gates',
-              'Integrations: OpenAI, Anthropic, Groq, OpenRouter, Langfuse',
-              'Export reports, share baselines, and diff results',
-              'From $199/mo'
+              'Create datasets and scoring functionsBatch runs across models and versions',
+              'Track regressions and enforce quality gatesIntegrations: OpenAI, Anthropic, Groq, OpenRouter, Langfuse',
+              'Export reports, share baselines, and diff resultsFrom $199/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
             ))}
@@ -34,5 +31,5 @@ export default function AIEvaluationOrchestratorPage() {
         </div>
       </div>
     </>
-  );
+  ),
 }

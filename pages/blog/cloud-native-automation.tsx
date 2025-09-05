@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
+import Head from 'next/head',
+import Link from 'next/link',
+import React from 'react',
 
 export default function CloudNativeAutomation() {
   return (
@@ -14,7 +14,7 @@ export default function CloudNativeAutomation() {
           content='A deep dive into our cloud-native approach to building scalable, reliable automation systems.'
         />
         <meta
-          property='og:title'
+          property='og: title'
           content='Building Cloud-Native Automation Infrastructure'
         />
         <meta
@@ -76,7 +76,7 @@ export default function CloudNativeAutomation() {
                 <p className='text-white/90 mb-4'>
                   Each automation service operates independently, communicating
                   through well-defined APIs and message queues. This decoupling
-                  ensures that a failure in one service doesn&apos;t bring down
+                  ensures that a failure in one service doesn&apos,t bring down
                   the entire system.
                 </p>
               </section>
@@ -182,7 +182,7 @@ export default function CloudNativeAutomation() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
-                  infrastructure, we&apos;re exploring emerging technologies
+                  infrastructure, we&apos,re exploring emerging technologies
                   like:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
@@ -226,5 +226,5 @@ export default function CloudNativeAutomation() {
         </main>
       </div>
     </>
-  );
+  )
 }

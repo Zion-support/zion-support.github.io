@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  Shield, ArrowRight, CheckCircle, Zap, Target, Users, 
+  Shield, ArrowRight, CheckCircle, Zap, Target, Users,
   TrendingUp, Lock, Cpu, Database, Globe, Star, Eye
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
 
 export default function CybersecurityPage() {
   const services = [
@@ -46,7 +46,7 @@ export default function CybersecurityPage() {
       price: "$699/month",
       icon: Shield
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -69,7 +69,7 @@ export default function CybersecurityPage() {
       title: "Compliance Ready",
       description: "Meet all industry standards and regulatory requirements"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -239,7 +239,7 @@ export default function CybersecurityPage() {
               href="mailto:kleber@ziontechgroup.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover: from-red-700 hover:to-orange-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span>Get Protected</span>
               <ArrowRight className="w-5 h-5" />
@@ -250,5 +250,5 @@ export default function CybersecurityPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

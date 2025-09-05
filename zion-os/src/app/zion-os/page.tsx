@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",
   description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
-  keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"};
+  keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"},
 
 export default function ZionOSPage() {
   return (
@@ -35,7 +35,7 @@ export default function ZionOSPage() {
       </section>
 
       {/* Platform Overview */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -43,13 +43,13 @@ export default function ZionOSPage() {
                 The Future of Digital Economies
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Zion OS is a revolutionary platform that enables anyone to create, deploy, 
+                Zion OS is a revolutionary platform that enables anyone to create, deploy,
                 and manage sovereign digital economies powered by artificial intelligence. 
                 Our unified deployment protocol makes it possible to launch complex 
                 economic systems in minutes, not months.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                Whether you're building a decentralized marketplace, launching a DAO, 
+                Whether you're building a decentralized marketplace, launching a DAO,
                 or creating a new token ecosystem, Zion OS provides all the tools you need 
                 to succeed in the digital economy revolution.
               </p>
@@ -176,7 +176,7 @@ export default function ZionOSPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -194,7 +194,7 @@ export default function ZionOSPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Configure</h3>
               <p className="text-gray-400">
-                Use our intuitive launch wizard to configure your economy's parameters, 
+                Use our intuitive launch wizard to configure your economy's parameters,
                 including governance rules, token economics, and marketplace settings.
               </p>
             </div>
@@ -205,7 +205,7 @@ export default function ZionOSPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Deploy</h3>
               <p className="text-gray-400">
-                Click deploy and watch as Zion OS automatically creates your infrastructure, 
+                Click deploy and watch as Zion OS automatically creates your infrastructure,
                 smart contracts, and governance systems in minutes.
               </p>
             </div>
@@ -216,7 +216,7 @@ export default function ZionOSPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Launch</h3>
               <p className="text-gray-400">
-                Your economy is ready to go! Start inviting users, launching projects, 
+                Your economy is ready to go! Start inviting users, launching projects,
                 and building your digital community.
               </p>
             </div>
@@ -225,7 +225,7 @@ export default function ZionOSPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -240,7 +240,7 @@ export default function ZionOSPage() {
             <div className="card">
               <h3 className="text-xl font-semibold mb-3">Startups & Entrepreneurs</h3>
               <p className="text-gray-400 mb-4">
-                Launch innovative business models with built-in governance, 
+                Launch innovative business models with built-in governance,
                 token economics, and marketplace infrastructure.
               </p>
             </div>
@@ -256,7 +256,7 @@ export default function ZionOSPage() {
             <div className="card">
               <h3 className="text-xl font-semibold mb-3">Communities & DAOs</h3>
               <p className="text-gray-400 mb-4">
-                Build thriving communities with transparent governance, 
+                Build thriving communities with transparent governance,
                 fair token distribution, and collaborative decision-making.
               </p>
             </div>
@@ -345,7 +345,7 @@ export default function ZionOSPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -367,5 +367,5 @@ export default function ZionOSPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

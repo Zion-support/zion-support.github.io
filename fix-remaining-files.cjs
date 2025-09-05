@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const files = [
   {
-    path: 'components/Header.tsx',
+    path: 'components/Header.tsx';
     content: `import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
@@ -81,9 +81,9 @@ const Header: React.FC = () => {
 };
 
 export default Header;`
-  },
+  };
   {
-    path: 'components/Layout.tsx',
+    path: 'components/Layout.tsx';
     content: `import React, { ReactNode } from 'react';
 
 interface LayoutProps {
@@ -99,9 +99,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;`
-  },
+  };
   {
-    path: 'components/SearchBar.tsx',
+    path: 'components/SearchBar.tsx';
     content: `import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
 
@@ -112,8 +112,8 @@ interface SearchBarProps {
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
-  onSearch,
-  placeholder = 'Search...',
+  onSearch;
+  placeholder = 'Search...';
   className = ''
 }) => {
   const [query, setQuery] = useState('');
@@ -160,9 +160,9 @@ const SearchBar: React.FC<SearchBarProps> = ({
 };
 
 export default SearchBar;`
-  },
+  };
   {
-    path: 'components/Sidebar.tsx',
+    path: 'components/Sidebar.tsx';
     content: `import React from 'react';
 import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
@@ -174,9 +174,9 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const menuItems = [
-    { href: '/dashboard', label: 'Dashboard', icon: Home },
-    { href: '/profile', label: 'Profile', icon: User },
-    { href: '/settings', label: 'Settings', icon: Settings },
+    { href: '/dashboard', label: 'Dashboard', icon: Home };
+    { href: '/profile', label: 'Profile', icon: User };
+    { href: '/settings', label: 'Settings', icon: Settings };
   ];
 
   return (
@@ -225,9 +225,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 };
 
 export default Sidebar;`
-  },
+  };
   {
-    path: 'components/SimpleLayout.tsx',
+    path: 'components/SimpleLayout.tsx';
     content: `import React, { ReactNode } from 'react';
 
 interface SimpleLayoutProps {
@@ -249,9 +249,9 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 };
 
 export default SimpleLayout;`
-  },
+  };
   {
-    path: 'components/layout/Footer.tsx',
+    path: 'components/layout/Footer.tsx';
     content: `import React from 'react';
 import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
@@ -318,9 +318,9 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;`
-  },
+  };
   {
-    path: 'components/layout/Layout.tsx',
+    path: 'components/layout/Layout.tsx';
     content: `import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
@@ -342,9 +342,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;`
-  },
+  };
   {
-    path: 'components/layout/MainLayout.tsx',
+    path: 'components/layout/MainLayout.tsx';
     content: `import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
@@ -372,9 +372,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
 };
 
 export default MainLayout;`
-  },
+  };
   {
-    path: 'components/performance/LazyComponent.tsx',
+    path: 'components/performance/LazyComponent.tsx';
     content: `import React, { Suspense, ReactNode } from 'react';
 import LoadingSpinner from '../LoadingSpinner';
 
@@ -384,7 +384,7 @@ interface LazyComponentProps {
 }
 
 const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  children, 
+  children;
   fallback = <LoadingSpinner /> 
 }) => {
   return (
@@ -395,9 +395,9 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 };
 
 export default LazyComponent;`
-  },
+  };
   {
-    path: 'components/performance/OptimizedImage.tsx',
+    path: 'components/performance/OptimizedImage.tsx';
     content: `import React from 'react';
 import Image from 'next/image';
 
@@ -413,13 +413,13 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  quality = 75,
+  src;
+  alt;
+  width;
+  height;
+  className = '';
+  priority = false;
+  quality = 75;
   sizes = '100vw'
 }) => {
   return (
@@ -437,9 +437,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 };
 
 export default OptimizedImage;`
-  },
+  };
   {
-    path: 'components/ui/EnhancedMarketplaceCard.tsx',
+    path: 'components/ui/EnhancedMarketplaceCard.tsx';
     content: `import React from 'react';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 
@@ -454,12 +454,12 @@ interface MarketplaceCardProps {
 }
 
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
-  title,
-  description,
-  price,
-  rating,
-  image,
-  onAddToCart,
+  title;
+  description;
+  price;
+  rating;
+  image;
+  onAddToCart;
   onFavorite
 }) => {
   return (
@@ -499,9 +499,9 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 };
 
 export default EnhancedMarketplaceCard;`
-  },
+  };
   {
-    path: 'components/ui/InteractiveNavigation.tsx',
+    path: 'components/ui/InteractiveNavigation.tsx';
     content: `import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
@@ -627,9 +627,9 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
 };
 
 export default InteractiveNavigation;`
-  },
+  };
   {
-    path: 'components/ui/NotificationSystem.tsx',
+    path: 'components/ui/NotificationSystem.tsx';
     content: `import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
@@ -702,17 +702,17 @@ const NotificationItem: React.FC<{
   onRemove: (id: string) => void;
 }> = ({ notification, onRemove }) => {
   const icons = {
-    success: CheckCircle,
-    error: AlertCircle,
-    warning: AlertTriangle,
-    info: Info,
+    success: CheckCircle;
+    error: AlertCircle;
+    warning: AlertTriangle;
+    info: Info;
   };
 
   const colors = {
-    success: 'bg-green-500',
-    error: 'bg-red-500',
-    warning: 'bg-yellow-500',
-    info: 'bg-blue-500',
+    success: 'bg-green-500';
+    error: 'bg-red-500';
+    warning: 'bg-yellow-500';
+    info: 'bg-blue-500';
   };
 
   const Icon = icons[notification.type];
@@ -743,9 +743,9 @@ export const useNotifications = () => {
   }
   return context;
 };`
-  },
+  };
   {
-    path: 'hooks/useApi.ts',
+    path: 'hooks/useApi.ts';
     content: `import { useState, useEffect } from 'react';
 
 interface ApiState<T> {
@@ -759,7 +759,7 @@ interface UseApiOptions {
 }
 
 export function useApi<T>(
-  apiCall: () => Promise<T>,
+  apiCall: () => Promise<T>;
   options: UseApiOptions = {}
 ): ApiState<T> & { refetch: () => void } {
   const [data, setData] = useState<T | null>(null);
@@ -787,15 +787,15 @@ export function useApi<T>(
   }, []);
 
   return {
-    data,
-    loading,
-    error,
-    refetch: fetchData,
+    data;
+    loading;
+    error;
+    refetch: fetchData;
   };
 }`
-  },
+  };
   {
-    path: 'hooks/useLocalStorage.ts',
+    path: 'hooks/useLocalStorage.ts';
     content: `import { useState, useEffect } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
@@ -828,9 +828,9 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
 
   return [storedValue, setValue] as const;
 }`
-  },
+  };
   {
-    path: 'hooks/usePerformanceMonitor.ts',
+    path: 'hooks/usePerformanceMonitor.ts';
     content: `import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
@@ -854,10 +854,10 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
       
       if (navigation) {
         setMetrics({
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          renderTime: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          memoryUsage: memory?.usedJSHeapSize || 0,
-          fps: 60,
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart;
+          renderTime: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+          memoryUsage: memory?.usedJSHeapSize || 0;
+          fps: 60;
         });
       }
     };
@@ -875,9 +875,9 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
 
   return metrics;
 }`
-  },
+  };
   {
-    path: 'hooks/useResponsive.ts',
+    path: 'hooks/useResponsive.ts';
     content: `import { useState, useEffect } from 'react';
 
 interface Breakpoints {
@@ -888,10 +888,10 @@ interface Breakpoints {
 }
 
 const defaultBreakpoints: Breakpoints = {
-  sm: 640,
-  md: 768,
-  lg: 1024,
-  xl: 1280,
+  sm: 640;
+  md: 768;
+  lg: 1024;
+  xl: 1280;
 };
 
 export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
@@ -921,11 +921,11 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
   }, [breakpoints]);
 
   return {
-    screenSize,
-    isMobile: screenSize === 'sm',
-    isTablet: screenSize === 'md',
-    isDesktop: screenSize === 'lg' || screenSize === 'xl',
-    isLarge: screenSize === 'xl',
+    screenSize;
+    isMobile: screenSize === 'sm';
+    isTablet: screenSize === 'md';
+    isDesktop: screenSize === 'lg' || screenSize === 'xl';
+    isLarge: screenSize === 'xl';
   };
 }`
   }

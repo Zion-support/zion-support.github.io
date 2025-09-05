@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
 import { 
-  HelpCircle, MessageCircle, Phone, Mail, Clock, 
+  HelpCircle, MessageCircle, Phone, Mail, Clock,
   BookOpen, Video, FileText, Search, Filter,
-  CheckCircle, ArrowRight, Brain, Atom, Rocket, 
+  CheckCircle, ArrowRight, Brain, Atom, Rocket,
   Shield, Zap, Users, Star, TrendingUp, Code
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function Support() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const supportCategories = [
     {
@@ -54,7 +54,7 @@ export default function Support() {
       description: 'Bug reports and technical troubleshooting',
       articles: 42
     }
-  ];
+  ],
 
   const quickActions = [
     {
@@ -89,7 +89,7 @@ export default function Support() {
       color: 'from-orange-500 to-red-600',
       available: true
     }
-  ];
+  ],
 
   const popularArticles = [
     {
@@ -127,7 +127,7 @@ export default function Support() {
       views: '1.5k',
       helpful: '89%'
     }
-  ];
+  ],
 
   const supportHours = [
     {
@@ -145,11 +145,11 @@ export default function Support() {
       hours: '12:00 PM - 6:00 PM EST',
       status: 'Limited'
     }
-  ];
+  ],
 
   const filteredCategories = selectedCategory === 'all' 
     ? supportCategories 
-    : supportCategories.filter(cat => cat.id === selectedCategory);
+    : supportCategories.filter(cat => cat.id === selectedCategory),
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -163,11 +163,11 @@ export default function Support() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               How Can We Help?
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Get the support you need for our AI consciousness, quantum computing, 
+              Get the support you need for our AI consciousness, quantum computing,
               and autonomous systems. Our expert team is here to help 24/7.
             </p>
             
@@ -414,7 +414,7 @@ export default function Support() {
         </section>
 
         {/* FAQ Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {[
               {
                 question: "What is AI Consciousness Evolution?",
@@ -651,7 +651,7 @@ export default function Support() {
               <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-white">Need Immediate Help?</h3>
                 <p className="text-gray-300 mb-6">
-                  For urgent technical issues or critical support needs, 
+                  For urgent technical issues or critical support needs,
                   our team is available around the clock.
                 </p>
                 
@@ -700,7 +700,7 @@ export default function Support() {
               Our support team is dedicated to ensuring your success with our 
               revolutionary technology solutions. Don't hesitate to reach out.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
@@ -719,10 +719,10 @@ export default function Support() {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default Support;
+export default Support,
           </div>
         </section>
 
@@ -740,7 +740,7 @@ export default Support;
               <p className="text-xl text-gray-300 mb-8">
                 Our expert support team is ready to assist you with any questions or technical issues
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
@@ -769,7 +769,7 @@ export default Support;
         </section>
       </main>
     </Layout>
-  );
-};
+  )
+},
 
-export default SupportPage;
+export default SupportPage,

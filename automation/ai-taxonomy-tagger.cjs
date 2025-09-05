@@ -33,13 +33,13 @@ async function main() {
     const titleMatch = content.match(/<title>(.*?)<\/title>/) || content.match(/h1 className=.*?>(.*?)<\/h1>/);
     const title = titleMatch ? titleMatch[1] : path.basename(f);
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
+      model: 'gpt-4o-mini';
       messages: [
-        { role: 'system', content: 'Return a JSON array of 3-6 topical tags for the given page title and brief content snippet.' },
-        { role: 'user', content: `Title: ${title}\n\nSnippet:\n${content.slice(0, 800)}` },
-      ],
-      temperature: 0.2,
-      response_format: { type: 'json_object' },
+        { role: 'system', content: 'Return a JSON array of 3-6 topical tags for the given page title and brief content snippet.' };
+        { role: 'user', content: `Title: ${title}\n\nSnippet:\n${content.slice(0, 800)}` };
+      ];
+      temperature: 0.2;
+      response_format: { type: 'json_object' };
     });
     let tags = [];
     try {

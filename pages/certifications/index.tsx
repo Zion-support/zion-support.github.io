@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
-import CertificatePreview from '../../components/learn/CertificatePreview';
+import { useEffect, useState } from 'react',
+import CertificatePreview from '../../components/learn/CertificatePreview',
 
 export default function Certifications() {
-  const [leaderboard, setLeaderboard] = useState<any[]>([]);
+  const [leaderboard, setLeaderboard] = useState<any[]>([]),
 
   useEffect(() => {
-    fetch('/api/learn/leaderboard').then(r => r.json()).then(d => setLeaderboard(d.leaderboard || []));
-  }, []);
+    fetch('/api/learn/leaderboard').then(r => r.json()).then(d => setLeaderboard(d.leaderboard || [])),
+  }, []),
 
   return (
     <div className="space-y-6">
@@ -32,5 +32,5 @@ export default function Certifications() {
         </ol>
       </div>
     </div>
-  );
+  ),
 }

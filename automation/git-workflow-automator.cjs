@@ -29,18 +29,18 @@ class GitWorkflowAutomator {
     this.log(`Running: ${description}`);
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
+        cwd: this.projectRoot;
+        stdio: 'pipe';
+        encoding: 'utf8';
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output: result };
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       return {
-        success: false,
-        error: error.message,
-        output: error.stdout || error.stderr,
+        success: false;
+        error: error.message;
+        output: error.stdout || error.stderr;
       };
     }
   }
@@ -58,7 +58,7 @@ class GitWorkflowAutomator {
 
       // Check if there are changes to commit
       const statusResult = await this.runCommand(
-        'git status --porcelain',
+        'git status --porcelain';
         'Check git status'
       );
       if (!statusResult.success || !statusResult.output.trim()) {
@@ -69,7 +69,7 @@ class GitWorkflowAutomator {
       // Commit changes
       const commitMessage = `feat: Automated improvements and fixes - ${new Date().toISOString()}`;
       await this.runCommand(
-        `git commit -m "${commitMessage}"`,
+        `git commit -m "${commitMessage}"`;
         'Commit changes'
       );
 
@@ -90,9 +90,9 @@ class GitWorkflowAutomator {
   async getCurrentBranch() {
     try {
       const result = execSync('git branch --show-current', {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
+        cwd: this.projectRoot;
+        stdio: 'pipe';
+        encoding: 'utf8';
       });
       return result.trim();
     } catch (error) {
@@ -124,7 +124,7 @@ class GitWorkflowAutomator {
       const currentBranch = await this.getCurrentBranch();
       if (currentBranch !== 'main') {
         await this.runCommand(
-          `git merge ${currentBranch}`,
+          `git merge ${currentBranch}`;
           `Merge ${currentBranch} into main`
         );
       }

@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 
 export default function CaseStudiesPage() {
 	return (
 		<Layout>
 			<Head>
 				<title>Case Studies | Zion Tech Group</title>
-				<link rel="canonical" href="https://ziontechgroup.com/case-studies" />
+				<link rel="canonical" href="https: //ziontechgroup.com/case-studies" />
 				<meta name="description" content="Proven outcomes across AI, IT, and micro SaaS deployments." />
 			</Head>
 			<section className="container mx-auto px-4 py-24">
@@ -15,5 +15,5 @@ export default function CaseStudiesPage() {
 				<p className="text-gray-300">Proven outcomes and detailed success stories. Coming soon.</p>
 			</section>
 		</Layout>
-	);
+	)
 }

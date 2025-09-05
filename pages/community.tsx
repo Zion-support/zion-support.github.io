@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function CommunityPage() {
 	return (
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
 			<Head>
 				<title>Community | Zion Tech Group</title>
 				<meta name="description" content="Community forum and resources for Zion Tech Group users" />
@@ -30,5 +30,5 @@ export default function CommunityPage() {
 				</div>
 			</div>
 		</div>
-	);
+	)
 }

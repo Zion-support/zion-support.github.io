@@ -1,7 +1,7 @@
 import { 
-  LightBulbIcon, 
-  CpuChipIcon, 
-  AcademicCapIcon, 
+  LightBulbIcon,
+  CpuChipIcon,
+  AcademicCapIcon,
   GlobeAltIcon,
   ChartBarIcon,
   UserGroupIcon,
@@ -15,48 +15,36 @@ const researchAreas = [
     description: 'Advancing the frontiers of AI through novel algorithms, neural architectures, and learning paradigms.',
     icon: LightBulbIcon,
     topics: [
-      'Deep Learning & Neural Networks',
-      'Natural Language Processing',
-      'Computer Vision & Image Recognition',
-      'Reinforcement Learning',
-      'Federated Learning',
-      'Explainable AI'
+      'Deep Learning & Neural NetworksNatural Language Processing',
+      'Computer Vision & Image RecognitionReinforcement Learning',
+      'Federated LearningExplainable AI'
     ]},
   {
     name: 'Quantum Computing & AI',
     description: 'Exploring the intersection of quantum mechanics and artificial intelligence for breakthrough computational capabilities.',
     icon: CpuChipIcon,
     topics: [
-      'Quantum Neural Networks',
-      'Quantum Machine Learning',
-      'Quantum-Classical Hybrid Systems',
-      'Quantum Error Correction',
-      'Quantum Algorithms for AI',
-      'Quantum Supremacy Applications'
+      'Quantum Neural NetworksQuantum Machine Learning',
+      'Quantum-Classical Hybrid SystemsQuantum Error Correction',
+      'Quantum Algorithms for AIQuantum Supremacy Applications'
     ]},
   {
     name: 'Autonomous Systems & Robotics',
     description: 'Developing intelligent systems that can operate independently and adapt to changing environments.',
     icon: RocketLaunchIcon,
     topics: [
-      'Autonomous Decision Making',
-      'Multi-Agent Systems',
-      'Robotic Learning & Adaptation',
-      'Human-Robot Interaction',
-      'Autonomous Navigation',
-      'Swarm Intelligence'
+      'Autonomous Decision MakingMulti-Agent Systems',
+      'Robotic Learning & AdaptationHuman-Robot Interaction',
+      'Autonomous NavigationSwarm Intelligence'
     ]},
   {
     name: 'AI Ethics & Governance',
     description: 'Ensuring responsible AI development through ethical frameworks and governance mechanisms.',
     icon: ShieldCheckIcon,
     topics: [
-      'AI Bias & Fairness',
-      'Privacy-Preserving AI',
-      'AI Safety & Alignment',
-      'Ethical AI Guidelines',
-      'AI Regulation & Policy',
-      'Human-AI Collaboration'
+      'AI Bias & FairnessPrivacy-Preserving AI',
+      'AI Safety & AlignmentEthical AI Guidelines',
+      'AI Regulation & PolicyHuman-AI Collaboration'
     ]}]
 
 const recentPublications = [
@@ -147,7 +135,7 @@ export default function ResearchPage() {
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Pushing the boundaries of artificial intelligence through groundbreaking research, 
+              Pushing the boundaries of artificial intelligence through groundbreaking research,
               innovative discoveries, and academic collaboration.
             </p>
           </div>
@@ -234,14 +222,14 @@ export default function ResearchPage() {
       </div>
 
       {/* Research Impact */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm: mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Research Influence
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research has made significant contributions to the field, 
+            Our research has made significant contributions to the field,
             influencing both academia and industry.
           </p>
         </div>

@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react',
+import Button from '../components/ui/Button',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
+import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services',
+import { motion, AnimatePresence } from 'framer-motion',
 
 export default function RevolutionaryServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('name');
-  const [showFilters, setShowFilters] = useState(false);
-  const [selectedService, setSelectedService] = useState<any>(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [priceRange, setPriceRange] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [sortBy, setSortBy] = useState('name'),
+  const [showFilters, setShowFilters] = useState(false),
+  const [selectedService, setSelectedService] = useState<any>(null),
 
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
@@ -22,7 +22,7 @@ export default function RevolutionaryServicesPage() {
     { value: '1001-2500', label: '$1,001 - $2,500' },
     { value: '2501-5000', label: '$2,501 - $5,000' },
     { value: '5001+', label: '$5,001+' }
-  ];
+  ],
 
   const sortOptions = [
     { value: 'name', label: 'Name A-Z' },
@@ -30,20 +30,20 @@ export default function RevolutionaryServicesPage() {
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
-  ];
+  ],
 
   // Filter and sort services
-  let filteredServices = revolutionaryMicroSaasServices;
+  let filteredServices = revolutionaryMicroSaasServices,
 
   // Category filter
   if (selectedCategory !== 'All') {
-    filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
+    filteredServices = getRevolutionaryServicesByCategory(selectedCategory),
   }
 
   // Price range filter
   if (priceRange !== 'All') {
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max);
+    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max),
   }
 
   // Search filter
@@ -53,35 +53,34 @@ export default function RevolutionaryServicesPage() {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    ),
   }
 
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       case 'category':
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare(b.category),
       case 'roi':
-        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
-        return bRoi - aRoi;
-      default:
-        return a.name.localeCompare(b.name);
+        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0'),
+        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0'),
+        return bRoi - aRoi,
+      default: return a.name.localeCompare(b.name)
     }
-  });
+  }),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
-  const popularServices = getPopularRevolutionaryServices();
+  const popularServices = getPopularRevolutionaryServices(),
 
   // Enhanced service categories with better descriptions
   const enhancedCategories = [
@@ -155,7 +154,7 @@ export default function RevolutionaryServicesPage() {
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length,
       color: 'from-yellow-500 to-orange-600'
     }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -165,7 +164,7 @@ export default function RevolutionaryServicesPage() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -176,7 +175,7 @@ export default function RevolutionaryServicesPage() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
@@ -262,7 +261,7 @@ export default function RevolutionaryServicesPage() {
                 <Button 
                   variant="futuristic" 
                   size="lg"
-                  onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                  onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                 >
                   Get Started
                   <Rocket className="ml-2 w-5 h-5" />
@@ -610,9 +609,9 @@ export default function RevolutionaryServicesPage() {
                                          <Button 
                            variant="primary"
                            onClick={() => {
-                             setSearchQuery('');
-                             setSelectedCategory('All');
-                             setPriceRange('All');
+                             setSearchQuery(''),
+                             setSelectedCategory('All'),
+                             setPriceRange('All'),
                            }}
                          >
                            Clear Filters
@@ -739,7 +738,7 @@ export default function RevolutionaryServicesPage() {
                          </Button>
                          <Button 
                            variant="futuristic"
-                           onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                           onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                          >
                            Contact Sales
                            <Mail className="ml-2 w-4 h-4" />
@@ -774,7 +773,7 @@ export default function RevolutionaryServicesPage() {
                                  <Button 
                    variant="primary" 
                    size="lg"
-                   onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                  >
                    Start Free Trial
                    <Rocket className="ml-2 w-5 h-5" />
@@ -782,7 +781,7 @@ export default function RevolutionaryServicesPage() {
                  <Button 
                    variant="futuristic" 
                    size="lg"
-                   onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
                  >
                    Schedule Demo
                    <Calendar className="ml-2 w-5 h-5" />
@@ -811,5 +810,5 @@ export default function RevolutionaryServicesPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-  );
+  ),
 }

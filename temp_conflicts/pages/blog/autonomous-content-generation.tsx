@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
+import Head from 'next/head',
+import Link from 'next/link',
+import React from 'react',
 
 export default function AutonomousContentGeneration() {
   return (
@@ -8,7 +8,7 @@ export default function AutonomousContentGeneration() {
       <Head>
         <title>Revolutionizing Content Creation with Autonomous AI Systems | Zion Tech Group</title>
         <meta name="description" content="How Zion Tech Group is transforming content generation through intelligent automation and machine learning." />
-        <meta property="og:title" content="Revolutionizing Content Creation with Autonomous AI Systems" />
+        <meta property="og: title" content="Revolutionizing Content Creation with Autonomous AI Systems" />
         <meta property="og:description" content="How Zion Tech Group is transforming content generation through intelligent automation and machine learning." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -37,14 +37,14 @@ export default function AutonomousContentGeneration() {
                 </h1>
                 <p className="text-xl text-white/80 max-w-3xl mx-auto">
                   The content creation landscape is undergoing a fundamental transformation. 
-                  Autonomous AI systems are not just assisting human creators—they&apos;re becoming creators themselves.
+                  Autonomous AI systems are not just assisting human creators—they&apos,re becoming creators themselves.
                 </p>
               </header>
               
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-cyan-400">The Evolution of Content Creation</h2>
                 <p className="text-white/90 mb-4">
-                  Traditional content creation has always been a human-centric process, requiring creativity, 
+                  Traditional content creation has always been a human-centric process, requiring creativity,
                   research, and time-intensive production. However, the digital age has created an insatiable 
                   demand for content that human creators alone cannot satisfy.
                 </p>
@@ -60,10 +60,10 @@ export default function AutonomousContentGeneration() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Zion Tech Group&apos;s Approach</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Zion Tech Group&apos,s Approach</h2>
                 <p className="text-white/90 mb-4">
-                  At Zion Tech Group, we&apos;ve developed a unique approach to autonomous content generation 
-                  that combines the best of human creativity with AI efficiency. Our systems don&apos;t just 
+                  At Zion Tech Group, we&apos,ve developed a unique approach to autonomous content generation 
+                  that combines the best of human creativity with AI efficiency. Our systems don&apos,t just 
                   generate content—they understand context, audience, and purpose.
                 </p>
                 <p className="text-white/90 mb-4">
@@ -142,7 +142,7 @@ export default function AutonomousContentGeneration() {
                 <h2 className="text-2xl font-semibold mb-6 text-purple-400">The Future of Content</h2>
                 <p className="text-white/90 mb-4">
                   As we look to the future, autonomous content generation will become even more sophisticated. 
-                  We&apos;re working on next-generation systems that will:
+                  We&apos,re working on next-generation systems that will:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
                   <li>• Generate multimedia content including images, videos, and interactive elements</li>
@@ -156,11 +156,11 @@ export default function AutonomousContentGeneration() {
                 <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Conclusion</h2>
                 <p className="text-white/90 mb-4">
                   Autonomous content generation represents a paradigm shift in how we create and distribute content. 
-                  It&apos;s not about replacing human creativity—it&apos;s about amplifying it and making it more accessible.
+                  It&apos,s not about replacing human creativity—it&apos,s about amplifying it and making it more accessible.
                 </p>
                 <p className="text-white/90">
-                  At Zion Tech Group, we&apos;re excited to be at the forefront of this revolution, 
-                  helping organizations harness the power of autonomous AI to create better content, 
+                  At Zion Tech Group, we&apos,re excited to be at the forefront of this revolution,
+                  helping organizations harness the power of autonomous AI to create better content,
                   reach more audiences, and achieve their communication goals more effectively than ever before.
                 </p>
               </section>
@@ -184,5 +184,5 @@ export default function AutonomousContentGeneration() {
         </main>
       </div>
     </>
-  );
+  )
 }

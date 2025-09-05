@@ -12,10 +12,10 @@ const { execSync } = require('child_process');
 class BuildGuardian {
   constructor() {
     this.status = {
-      isHealthy: true,
-      lastCheck: null,
-      issues: [],
-      warnings: [],
+      isHealthy: true;
+      lastCheck: null;
+      issues: [];
+      warnings: [];
       recommendations: []
     };
   }
@@ -112,10 +112,10 @@ class BuildGuardian {
     try {
       // Check essential config files
       const requiredFiles = [
-        'package.json',
-        'tsconfig.json',
-        'next.config.js',
-        'postcss.config.js',
+        'package.json';
+        'tsconfig.json';
+        'next.config.js';
+        'postcss.config.js';
         'tailwind.config.js'
       ];
       
@@ -151,9 +151,9 @@ class BuildGuardian {
     try {
       // Check for common problematic files
       const problematicPatterns = [
-        '*.log',
-        '*.tmp',
-        '*.pid',
+        '*.log';
+        '*.tmp';
+        '*.pid';
         '.DS_Store'
       ];
       

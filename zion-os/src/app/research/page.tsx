@@ -326,7 +326,7 @@ export default function ResearchPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-emerald-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Join Our Research Mission
           </h2>
@@ -344,5 +344,5 @@ export default function ResearchPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

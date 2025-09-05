@@ -3,25 +3,25 @@ import React, { ReactNode } from "react",
 ,
 interface LayoutProps {,
   children: ReactNode
-};
+},
 ,
 const Layout: React.FC<LayoutProps> = ({ children }) => {,
   return (,
     <main className="min-h-screen">,
-      {children};
+      {children},
     </main>)
-};
+},
 ,
 export default Layout,
 ,
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
+  children: React.ReactNode,
+  title?: string,
+  description?: string
 }
 
 export default function Layout({ children, title = 'Zion Tech Group', description = 'Autonomous, cloud-native app with self-running automations' }: LayoutProps) {
@@ -67,7 +67,7 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
       </main>
       
       <footer className="bg-slate-900/50 backdrop-blur-xl border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-lg font-semibold text-white mb-4">Zion Tech Group</h3>
@@ -117,5 +117,5 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
         </div>
       </footer>
     </>
-  );
+  )
 }

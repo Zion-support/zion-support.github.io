@@ -87,11 +87,11 @@ function fixPropertyAssignmentErrors(filePath) {
     // Fix object property syntax issues
     const patterns = [
       // Fix colon instead of equals
-      { from: /(\w+):\s*(\w+)\s*=/g, to: '$1: $2' },
+      { from: /(\w+):\s*(\w+)\s*=/g, to: '$1: $2' };
       // Fix missing quotes around object keys
-      { from: /(\w+):\s*(\w+)\s*:/g, to: '$1: $2:' },
+      { from: /(\w+):\s*(\w+)\s*:/g, to: '$1: $2:' };
       // Fix property assignment syntax
-      { from: /(\w+)\s*=\s*(\w+)\s*:/g, to: '$1: $2:' },
+      { from: /(\w+)\s*=\s*(\w+)\s*:/g, to: '$1: $2:' };
     ];
 
     for (const pattern of patterns) {

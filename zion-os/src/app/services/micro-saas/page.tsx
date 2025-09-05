@@ -1,20 +1,20 @@
-"use client";
+"use client",
 
-import { useState } from "react";
+import { useState } from "react",
 
 interface MicroSAASService {
-  id: string;
-  name: string;
-  description: string;
-  targetMarket: string[];
-  features: string[];
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  benefits: string[];
-  integrations: string[];
-  deployment: string;
+  id: string,
+  name: string,
+  description: string,
+  targetMarket: string[],
+  features: string[],
+  pricing: string,
+  startingPrice: number,
+  contactLink: string,
+  icon: string,
+  benefits: string[],
+  integrations: string[],
+  deployment: string
 }
 
 const microSAASServices: MicroSAASService[] = [
@@ -294,7 +294,7 @@ const microSAASServices: MicroSAASService[] = [
     ],
     deployment: "Enterprise cloud with compliance features"
   }
-];
+],
 
 export default function MicroSAASPage() {
   return (
@@ -303,7 +303,7 @@ export default function MicroSAASPage() {
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold">Micro SAAS Solutions</h1>
         <p className="text-xl opacity-80 max-w-3xl mx-auto">
-          Innovative software-as-a-service solutions designed to accelerate your business growth, 
+          Innovative software-as-a-service solutions designed to accelerate your business growth,
           streamline operations, and provide competitive advantages in the digital economy.
         </p>
       </div>
@@ -431,7 +431,7 @@ export default function MicroSAASPage() {
       <div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10">
         <h2 className="text-3xl font-bold">Ready to Accelerate Your Business?</h2>
         <p className="text-xl opacity-80 max-w-2xl mx-auto">
-          Let's discuss how our micro SAAS solutions can transform your business operations, 
+          Let's discuss how our micro SAAS solutions can transform your business operations,
           reduce costs, and provide competitive advantages. Get in touch for a personalized consultation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -454,11 +454,11 @@ export default function MicroSAASPage() {
       <div className="text-center">
         <a
           href="/services"
-          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all font-semibold"
+          className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover: bg-white/10 transition-all font-semibold"
         >
           ← Back to All Services
         </a>
       </div>
     </div>
-  );
+  )
 }

@@ -1,7 +1,7 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import Head from 'next/head',
+import Link from 'next/link',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 
 const Talent = () => {
   const openPositions = [
@@ -65,7 +65,7 @@ const Talent = () => {
       skills: ["Product Strategy", "Agile", "User Research", "Data Analysis", "Stakeholder Management"],
       href: "/talent/product-manager"
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -98,7 +98,7 @@ const Talent = () => {
       description: "Generous parental leave, sabbaticals, and wellness programs",
       icon: "⚖️"
     }
-  ];
+  ],
 
   const values = [
     {
@@ -117,7 +117,7 @@ const Talent = () => {
       title: "Impact Driven",
       description: "We focus on solutions that make a real difference"
     }
-  ];
+  ],
 
   return (
     <EnhancedLayout>
@@ -133,7 +133,7 @@ const Talent = () => {
             Join Our Team
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Help us build the future of technology. We're looking for passionate, 
+            Help us build the future of technology. We're looking for passionate,
             innovative minds to join our mission of transforming businesses through 
             cutting-edge solutions.
           </p>
@@ -221,7 +221,7 @@ const Talent = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Diversity & Inclusion</h3>
               <p className="text-gray-600">
@@ -232,7 +232,7 @@ const Talent = () => {
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Innovation & Experimentation</h3>
               <p className="text-gray-600">
-                We encourage our team to think outside the box, experiment with new ideas, 
+                We encourage our team to think outside the box, experiment with new ideas,
                 and push the boundaries of what's possible in technology.
               </p>
             </div>
@@ -260,7 +260,7 @@ const Talent = () => {
             We're always looking for talented individuals. Send us your resume and let's discuss 
             how you can contribute to our mission.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Send Resume
             </Link>
@@ -271,7 +271,7 @@ const Talent = () => {
         </div>
       </main>
     </EnhancedLayout>
-  );
-};
+  )
+},
 
-export default Talent;
+export default Talent,

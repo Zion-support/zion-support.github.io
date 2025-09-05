@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
-  Bot, Brain, Cpu, Zap, Shield, Globe, 
+  Bot, Brain, Cpu, Zap, Shield, Globe,
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Building2, Gauge, BarChart3, Settings, Workflow
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AutonomousBusinessOperationsPlatform = () => {
   const features = [
@@ -35,7 +35,7 @@ const AutonomousBusinessOperationsPlatform = () => {
       description: "AI-powered security monitoring and threat prevention",
       color: "from-red-500 to-orange-500"
     }
-  ];
+  ],
 
   const capabilities = [
     "24/7 autonomous operation",
@@ -46,7 +46,7 @@ const AutonomousBusinessOperationsPlatform = () => {
     "Performance monitoring",
     "Risk assessment",
     "Compliance automation"
-  ];
+  ],
 
   const industries = [
     {
@@ -65,7 +65,7 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "Retail",
       description: "Inventory management, customer service, and sales optimization"
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -92,7 +92,7 @@ const AutonomousBusinessOperationsPlatform = () => {
       value: "250%",
       description: "Increase in team productivity"
     }
-  ];
+  ],
 
   return (
     <>
@@ -121,14 +121,14 @@ const AutonomousBusinessOperationsPlatform = () => {
                   <Bot className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
                 Autonomous Business
                 <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                   Operations Platform
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with AI-powered autonomous operations that work 24/7, 
+                Transform your business with AI-powered autonomous operations that work 24/7,
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -306,7 +306,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Automate Your Business?
               </h2>
               <p className="text-xl text-gray-400 mb-8">
@@ -326,7 +326,7 @@ const AutonomousBusinessOperationsPlatform = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default AutonomousBusinessOperationsPlatform;
+export default AutonomousBusinessOperationsPlatform,

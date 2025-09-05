@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 
 
 
@@ -10,7 +10,7 @@ export default function BiotechAIResearchPlatformPage() {
       <Head>
         <title>Biotech AI Research Platform | Zion Tech Group</title>
         <meta name="description" content="Advanced AI platform for biotechnology research—drug discovery, genetic analysis, and trial optimization." />
-        <link rel="canonical" href="https://ziontechgroup.com/biotech-ai-research-platform" />
+        <link rel="canonical" href="https: //ziontechgroup.com/biotech-ai-research-platform" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-8">
@@ -35,6 +35,6 @@ export default function BiotechAIResearchPlatformPage() {
         </div>
       </div>
     </Layout>
-  );
+  )
 }
 

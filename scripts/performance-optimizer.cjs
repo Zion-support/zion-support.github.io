@@ -66,9 +66,9 @@ const { execSync } = require('child_process');
 
 
       return {
-        totalImages: imageFiles.length,
-        optimizedImages: optimizedCount,
-        totalSize: this.formatBytes(totalSize),
+        totalImages: imageFiles.length;
+        optimizedImages: optimizedCount;
+        totalSize: this.formatBytes(totalSize);
         recommendations: this.getImageRecommendations(imageFiles)
       };
     } catch (error) {

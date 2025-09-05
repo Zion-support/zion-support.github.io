@@ -1,4 +1,4 @@
-"use client";
+"use client",
 
 export default function BlockchainWeb3Page() {
   return (
@@ -280,7 +280,7 @@ export default function BlockchainWeb3Page() {
         <p className="opacity-90 mb-6 max-w-2xl mx-auto">
           Let our blockchain experts help you create innovative Web3 solutions that will transform your business and industry.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm: flex-row gap-4 justify-center">
           <a
             href="mailto:kleber@ziontechgroup.com?subject=Blockchain Consultation"
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -296,5 +296,5 @@ export default function BlockchainWeb3Page() {
         </div>
       </div>
     </div>
-  );
+  )
 }

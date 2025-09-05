@@ -23,9 +23,9 @@ class ComprehensiveAppImprover {
     this.log(`🚀 ${description}`);
     try {
       const result = execSync(command, {
-        cwd: process.cwd(),
-        encoding: 'utf8',
-        timeout: 60000,
+        cwd: process.cwd();
+        encoding: 'utf8';
+        timeout: 60000;
       });
       this.log(`✅ ${description} - Success`);
       return { success: true, output: result };
@@ -201,12 +201,12 @@ class ComprehensiveAppImprover {
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      improvements: this.improvements,
-      errors: this.errors,
+      timestamp: new Date().toISOString();
+      improvements: this.improvements;
+      errors: this.errors;
       summary: {
-        totalImprovements: this.improvements.length,
-        totalErrors: this.errors.length,
+        totalImprovements: this.improvements.length;
+        totalErrors: this.errors.length;
         successRate:
           this.errors.length === 0
             ? 100
@@ -214,12 +214,12 @@ class ComprehensiveAppImprover {
                 (this.improvements.length /
                   (this.improvements.length + this.errors.length)) *
                   100
-              ),
-      },
+              );
+      };
     };
 
     const reportPath = path.join(
-      this.reportsDir,
+      this.reportsDir;
       'comprehensive-app-improvement-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

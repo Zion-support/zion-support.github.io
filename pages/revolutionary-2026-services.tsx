@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation';
-import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero';
-import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
-import { Phone, Mail } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation',
+import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero',
+import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase',
+import { Phone, Mail } from 'lucide-react',
 
 export default function Revolutionary2026ServicesPage() {
   return (
@@ -84,19 +84,19 @@ export default function Revolutionary2026ServicesPage() {
           <div className="max-w-7xl mx-auto relative z-10">
             {/* Why Choose Zion Tech Group */}
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Why Choose Zion Tech Group?
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're not just another technology company. We're pioneers in the future of AI, quantum computing, 
+                We're not just another technology company. We're pioneers in the future of AI, quantum computing,
                 and emerging technologies, delivering revolutionary solutions that transform industries.
               </p>
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
                 {
                   icon: '🧠',
@@ -150,7 +150,7 @@ export default function Revolutionary2026ServicesPage() {
             {/* Call to Action */}
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
                   Ready to Experience the Future?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -179,5 +179,5 @@ export default function Revolutionary2026ServicesPage() {
         </section>
       </main>
     </>
-  );
+  )
 }

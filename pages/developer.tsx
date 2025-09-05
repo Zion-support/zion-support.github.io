@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Link from 'next/link',
 
 export default function DeveloperPage() {
   return (
@@ -9,7 +9,7 @@ export default function DeveloperPage() {
       <Head>
         <title>Developer Portal | Zion Tech Group</title>
         <meta name="description" content="Developer resources, API keys, examples, and SDKs." />
-        <link rel="canonical" href="https://ziontechgroup.com/developer" />
+        <link rel="canonical" href="https: //ziontechgroup.com/developer" />
       </Head>
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
@@ -21,5 +21,5 @@ export default function DeveloperPage() {
       </div>
       </div>
     </>
-  );
+  )
 }

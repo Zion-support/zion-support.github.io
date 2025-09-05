@@ -1,19 +1,19 @@
-"use client";
+"use client",
 
-import { useAuth } from "@/contexts/AuthContext";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import Link from "next/link";
+import { useAuth } from "@/contexts/AuthContext",
+import { useRouter } from "next/navigation",
+import { useEffect } from "react",
+import Link from "next/link",
 
 export default function DashboardPage() {
-  const { user, isAuthenticated, isLoading } = useAuth();
-  const router = useRouter();
+  const { user, isAuthenticated, isLoading } = useAuth(),
+  const router = useRouter(),
 
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
-      router.push("/auth/signin");
+      router.push("/auth/signin"),
     }
-  }, [isAuthenticated, isLoading, router]);
+  }, [isAuthenticated, isLoading, router]),
 
   if (isLoading) {
     return (
@@ -23,11 +23,11 @@ export default function DashboardPage() {
           <p className="text-zinc-400">Loading...</p>
         </div>
       </div>
-    );
+    ),
   }
 
   if (!isAuthenticated) {
-    return null;
+    return null,
   }
 
   return (
@@ -130,5 +130,5 @@ export default function DashboardPage() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

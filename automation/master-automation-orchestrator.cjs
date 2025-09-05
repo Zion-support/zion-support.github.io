@@ -10,40 +10,40 @@ console.log('🚀 Starting Master Automation Orchestrator');
 async function runAllAutomations() {
   const tasks = [
     {
-      name: 'Code Quality Check',
-      command: 'npm run lint:check',
-      critical: false,
-    },
+      name: 'Code Quality Check';
+      command: 'npm run lint:check';
+      critical: false;
+    };
     {
-      name: 'Type Check',
-      command: 'npm run type-check',
-      critical: false,
-    },
+      name: 'Type Check';
+      command: 'npm run type-check';
+      critical: false;
+    };
     {
-      name: 'Build Test',
-      command: 'npm run build',
-      critical: true,
-    },
+      name: 'Build Test';
+      command: 'npm run build';
+      critical: true;
+    };
     {
-      name: 'Test Suite',
-      command: 'npm run test:smoke',
-      critical: true,
-    },
+      name: 'Test Suite';
+      command: 'npm run test:smoke';
+      critical: true;
+    };
     {
-      name: 'Security Audit',
-      command: 'npm audit',
-      critical: false,
-    },
+      name: 'Security Audit';
+      command: 'npm audit';
+      critical: false;
+    };
     {
-      name: 'Performance Analysis',
-      command: 'node automation/performance-optimizer.js',
-      critical: false,
-    },
+      name: 'Performance Analysis';
+      command: 'node automation/performance-optimizer.js';
+      critical: false;
+    };
     {
-      name: 'Security Scan',
-      command: 'node automation/security-scanner.cjs',
-      critical: false,
-    },
+      name: 'Security Scan';
+      command: 'node automation/security-scanner.cjs';
+      critical: false;
+    };
   ];
 
   const results = [];
@@ -56,27 +56,27 @@ async function runAllAutomations() {
       const startTime = Date.now();
 
       execSync(task.command, {
-        stdio: 'pipe',
-        cwd: '/workspace',
+        stdio: 'pipe';
+        cwd: '/workspace';
       });
 
       const duration = Date.now() - startTime;
       results.push({
-        task: task.name,
-        status: 'success',
-        duration: duration,
-        critical: task.critical,
+        task: task.name;
+        status: 'success';
+        duration: duration;
+        critical: task.critical;
       });
       successCount++;
       console.log(`✅ ${task.name} completed in ${duration}ms`);
     } catch (error) {
       const duration = Date.now() - Date.now();
       results.push({
-        task: task.name,
-        status: 'failed',
-        duration: duration,
-        critical: task.critical,
-        error: error.message,
+        task: task.name;
+        status: 'failed';
+        duration: duration;
+        critical: task.critical;
+        error: error.message;
       });
       failureCount++;
       console.log(`❌ ${task.name} failed: ${error.message}`);
@@ -93,23 +93,23 @@ async function runAllAutomations() {
 // Generate comprehensive report
 function generateReport(results) {
   const report = {
-    timestamp: new Date().toISOString(),
+    timestamp: new Date().toISOString();
     summary: {
-      totalTasks: results.results.length,
-      successful: results.successCount,
-      failed: results.failureCount,
+      totalTasks: results.results.length;
+      successful: results.successCount;
+      failed: results.failureCount;
       successRate:
         ((results.successCount / results.results.length) * 100).toFixed(2) +
-        '%',
-    },
-    tasks: results.results,
+        '%';
+    };
+    tasks: results.results;
     recommendations: [
-      'Continue monitoring build and test status',
-      'Address any critical failures immediately',
-      'Review and fix linting issues',
-      'Optimize performance based on analysis results',
-      'Implement security recommendations',
-    ],
+      'Continue monitoring build and test status';
+      'Address any critical failures immediately';
+      'Review and fix linting issues';
+      'Optimize performance based on analysis results';
+      'Implement security recommendations';
+    ];
   };
 
   // Ensure reports directory exists
@@ -119,7 +119,7 @@ function generateReport(results) {
   }
 
   fs.writeFileSync(
-    '/workspace/automation/reports/master-automation-report.json',
+    '/workspace/automation/reports/master-automation-report.json';
     JSON.stringify(report, null, 2)
   );
 

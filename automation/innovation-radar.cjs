@@ -29,11 +29,11 @@ function uniqueBy(array, keyFn) {
 
 async function run() {
   const queries = [
-    'AI agent',
-    'decentralized AI',
-    'DAO governance',
-    'on-chain agent',
-    'web3 AI',
+    'AI agent';
+    'decentralized AI';
+    'DAO governance';
+    'on-chain agent';
+    'web3 AI';
   ];
 
   const results = [];
@@ -43,14 +43,14 @@ async function run() {
       const data = await fetchJson(url);
       for (const hit of data.hits || []) {
         results.push({
-          id: hit.objectID,
-          title: hit.title,
-          url: hit.url || `https://news.ycombinator.com/item?id=${hit.objectID}`,
-          author: hit.author,
-          points: hit.points,
-          created_at: hit.created_at,
-          source: 'HackerNews',
-          query: q,
+          id: hit.objectID;
+          title: hit.title;
+          url: hit.url || `https://news.ycombinator.com/item?id=${hit.objectID}`;
+          author: hit.author;
+          points: hit.points;
+          created_at: hit.created_at;
+          source: 'HackerNews';
+          query: q;
         });
       }
     } catch (e) {
@@ -61,10 +61,10 @@ async function run() {
   const deduped = uniqueBy(results, (r) => r.url || r.id).sort((a, b) => (new Date(b.created_at)) - (new Date(a.created_at))).slice(0, 60);
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'AI/DAO innovation radar aggregated from HN Algolia',
-    total: deduped.length,
-    items: deduped,
+    generatedAt: new Date().toISOString();
+    description: 'AI/DAO innovation radar aggregated from HN Algolia';
+    total: deduped.length;
+    items: deduped;
   };
 
   ensureDir(OUTPUT_PATH);

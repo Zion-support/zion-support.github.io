@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Menu, X, Home, Brain, Cpu, Rocket, 
+  Menu, X, Home, Brain, Cpu, Rocket,
   Phone, Mail, MapPin, Globe, ChevronDown
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+      setIsScrolled(window.scrollY > 50)
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const navigationItems = [
     {
@@ -52,14 +52,14 @@ const Navigation: React.FC = () => {
       href: '/contact',
       icon: Phone
     }
-  ];
+  ],
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <>
@@ -117,7 +117,7 @@ const Navigation: React.FC = () => {
                           >
                             <div className="grid grid-cols-1 gap-3">
                               {item.dropdown.map((dropdownItem) => {
-                                const Icon = dropdownItem.icon;
+                                const Icon = dropdownItem.icon,
                                 return (
                                   <Link
                                     key={dropdownItem.name}
@@ -136,7 +136,7 @@ const Navigation: React.FC = () => {
                                       </div>
                                     </div>
                                   </Link>
-                                );
+                                ),
                               })}
                             </div>
                           </motion.div>
@@ -229,7 +229,7 @@ const Navigation: React.FC = () => {
                           </div>
                           <div className="pl-4 space-y-2">
                             {item.dropdown.map((dropdownItem) => {
-                              const Icon = dropdownItem.icon;
+                              const Icon = dropdownItem.icon,
                               return (
                                 <Link
                                   key={dropdownItem.name}
@@ -243,7 +243,7 @@ const Navigation: React.FC = () => {
                                     <div className="text-gray-400 text-sm">{dropdownItem.description}</div>
                                   </div>
                                 </Link>
-                              );
+                              ),
                             })}
                           </div>
                         </div>
@@ -297,7 +297,7 @@ const Navigation: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  ),
+},
 
-export default Navigation;
+export default Navigation,

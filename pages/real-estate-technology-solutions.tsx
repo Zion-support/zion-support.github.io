@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function RealEstateTechnologySolutions() {
   return (
@@ -7,7 +7,7 @@ export default function RealEstateTechnologySolutions() {
       <Head>
         <title>Real Estate Technology Solutions | Zion Tech Group</title>
         <meta name="description" content="Data, analytics, and automation for real estate technology including valuation, risk modeling, and operations." />
-        <link rel="canonical" href="https://ziontechgroup.com/real-estate-technology-solutions" />
+        <link rel="canonical" href="https: //ziontechgroup.com/real-estate-technology-solutions" />
       </Head>
       <div className="min-h-screen bg-black text-white">
         <section className="container mx-auto px-4 py-20">
@@ -16,5 +16,5 @@ export default function RealEstateTechnologySolutions() {
         </section>
       </div>
     </>
-  );
+  )
 }

@@ -1,18 +1,18 @@
 
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
-import { Globe } from 'lucide-react';
+import React from 'react',
+import { useTranslation } from 'react-i18next',
+import { Button } from '@/components/ui/button',
+import { Globe } from 'lucide-react',
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
 
 export function LanguageSelector() {
-  const { t } = useTranslation();
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+  const { t } = useTranslation(),
+  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage(),
 
   return (
     <DropdownMenu>
@@ -39,5 +39,5 @@ export function LanguageSelector() {
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  ),
 }

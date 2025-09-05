@@ -10,11 +10,11 @@ class AdvancedPerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.optimizationResults = {
-      timestamp: new Date().toISOString(),
-      bundleAnalysis: {},
-      performanceMetrics: {},
-      optimizations: [],
-      recommendations: [],
+      timestamp: new Date().toISOString();
+      bundleAnalysis: {};
+      performanceMetrics: {};
+      optimizations: [];
+      recommendations: [];
     };
   }
 
@@ -56,10 +56,10 @@ class AdvancedPerformanceOptimizer {
 
       // Analyze bundle size
       const bundleAnalysis = {
-        totalSize: 0,
-        files: [],
-        largestFiles: [],
-        optimizationOpportunities: [],
+        totalSize: 0;
+        files: [];
+        largestFiles: [];
+        optimizationOpportunities: [];
       };
 
       // Check .next directory for build files
@@ -106,9 +106,9 @@ class AdvancedPerformanceOptimizer {
           const size = stat.size;
           analysis.totalSize += size;
           analysis.files.push({
-            name: filePath.replace(this.projectRoot, ''),
-            size: size,
-            type: path.extname(file),
+            name: filePath.replace(this.projectRoot, '');
+            size: size;
+            type: path.extname(file);
           });
         }
       });
@@ -124,30 +124,30 @@ class AdvancedPerformanceOptimizer {
       // Large JavaScript files
       if (file.type === '.js' && file.size > 100000) {
         opportunities.push({
-          type: 'large-js-file',
-          file: file.name,
-          size: file.size,
-          recommendation: 'Consider code splitting or lazy loading',
+          type: 'large-js-file';
+          file: file.name;
+          size: file.size;
+          recommendation: 'Consider code splitting or lazy loading';
         });
       }
 
       // Large CSS files
       if (file.type === '.css' && file.size > 50000) {
         opportunities.push({
-          type: 'large-css-file',
-          file: file.name,
-          size: file.size,
-          recommendation: 'Consider CSS optimization or splitting',
+          type: 'large-css-file';
+          file: file.name;
+          size: file.size;
+          recommendation: 'Consider CSS optimization or splitting';
         });
       }
 
       // Unoptimized images
       if (['.png', '.jpg', '.jpeg'].includes(file.type) && file.size > 100000) {
         opportunities.push({
-          type: 'large-image',
-          file: file.name,
-          size: file.size,
-          recommendation: 'Optimize image or convert to WebP format',
+          type: 'large-image';
+          file: file.name;
+          size: file.size;
+          recommendation: 'Optimize image or convert to WebP format';
         });
       }
     });
@@ -159,11 +159,11 @@ class AdvancedPerformanceOptimizer {
     console.log('📊 Analyzing performance metrics...');
 
     const metrics = {
-      buildTime: 0,
-      bundleSize: 0,
-      fileCount: 0,
-      dependencies: 0,
-      score: 0,
+      buildTime: 0;
+      bundleSize: 0;
+      fileCount: 0;
+      dependencies: 0;
+      score: 0;
     };
 
     try {
@@ -225,9 +225,9 @@ class AdvancedPerformanceOptimizer {
     }
 
     this.optimizationResults.optimizations.push({
-      type: 'image-optimization',
-      optimizations: imageOptimizations,
-      timestamp: new Date().toISOString(),
+      type: 'image-optimization';
+      optimizations: imageOptimizations;
+      timestamp: new Date().toISOString();
     });
 
     console.log(
@@ -253,10 +253,10 @@ class AdvancedPerformanceOptimizer {
             // Suggest optimization for large images
             if (size > 100000) {
               optimizations.push({
-                file: filePath.replace(this.projectRoot, ''),
-                currentSize: size,
-                recommendation: 'Consider compressing or converting to WebP',
-                potentialSavings: Math.round(size * 0.3),
+                file: filePath.replace(this.projectRoot, '');
+                currentSize: size;
+                recommendation: 'Consider compressing or converting to WebP';
+                potentialSavings: Math.round(size * 0.3);
               });
             }
           }
@@ -287,9 +287,9 @@ class AdvancedPerformanceOptimizer {
     }
 
     this.optimizationResults.optimizations.push({
-      type: 'code-optimization',
-      optimizations: codeOptimizations,
-      timestamp: new Date().toISOString(),
+      type: 'code-optimization';
+      optimizations: codeOptimizations;
+      timestamp: new Date().toISOString();
     });
 
     console.log(
@@ -305,44 +305,44 @@ class AdvancedPerformanceOptimizer {
       // Detect inefficient imports
       if (line.includes('import') && line.includes('*')) {
         optimizations.push({
-          type: 'wildcard-import',
-          file: filePath,
-          line: index + 1,
-          description: 'Wildcard import detected - consider specific imports',
-          impact: 'medium',
+          type: 'wildcard-import';
+          file: filePath;
+          line: index + 1;
+          description: 'Wildcard import detected - consider specific imports';
+          impact: 'medium';
         });
       }
 
       // Detect console.log in production
       if (line.includes('console.log') && !filePath.includes('test')) {
         optimizations.push({
-          type: 'console-log',
-          file: filePath,
-          line: index + 1,
-          description: 'Console.log in production code',
-          impact: 'low',
+          type: 'console-log';
+          file: filePath;
+          line: index + 1;
+          description: 'Console.log in production code';
+          impact: 'low';
         });
       }
 
       // Detect large objects
       if (line.includes('const') && line.includes('{') && line.length > 200) {
         optimizations.push({
-          type: 'large-object',
-          file: filePath,
-          line: index + 1,
-          description: 'Large object definition - consider splitting',
-          impact: 'medium',
+          type: 'large-object';
+          file: filePath;
+          line: index + 1;
+          description: 'Large object definition - consider splitting';
+          impact: 'medium';
         });
       }
 
       // Detect inefficient loops
       if (line.includes('for (') && line.includes('length')) {
         optimizations.push({
-          type: 'inefficient-loop',
-          file: filePath,
-          line: index + 1,
-          description: 'Consider caching array length',
-          impact: 'low',
+          type: 'inefficient-loop';
+          file: filePath;
+          line: index + 1;
+          description: 'Consider caching array length';
+          impact: 'low';
         });
       }
     });
@@ -359,12 +359,12 @@ class AdvancedPerformanceOptimizer {
     const bundleAnalysis = this.optimizationResults.bundleAnalysis;
     if (bundleAnalysis.optimizationOpportunities.length > 0) {
       recommendations.push({
-        type: 'bundle-optimization',
-        priority: 'high',
-        description: `Found ${bundleAnalysis.optimizationOpportunities.length} bundle optimization opportunities`,
+        type: 'bundle-optimization';
+        priority: 'high';
+        description: `Found ${bundleAnalysis.optimizationOpportunities.length} bundle optimization opportunities`;
         actions: bundleAnalysis.optimizationOpportunities.map(
           opp => opp.recommendation
-        ),
+        );
       });
     }
 
@@ -372,15 +372,15 @@ class AdvancedPerformanceOptimizer {
     const metrics = this.optimizationResults.performanceMetrics;
     if (metrics.score < 80) {
       recommendations.push({
-        type: 'performance-improvement',
-        priority: 'high',
-        description: `Performance score is ${metrics.score}/100 - needs improvement`,
+        type: 'performance-improvement';
+        priority: 'high';
+        description: `Performance score is ${metrics.score}/100 - needs improvement`;
         actions: [
-          'Optimize build process',
-          'Reduce bundle size',
-          'Implement code splitting',
-          'Optimize images',
-        ],
+          'Optimize build process';
+          'Reduce bundle size';
+          'Implement code splitting';
+          'Optimize images';
+        ];
       });
     }
 
@@ -398,14 +398,14 @@ class AdvancedPerformanceOptimizer {
       ).length;
 
       recommendations.push({
-        type: 'code-optimization',
-        priority: highImpact > 0 ? 'high' : 'medium',
-        description: `Found ${codeOptimizations.length} code optimization opportunities`,
+        type: 'code-optimization';
+        priority: highImpact > 0 ? 'high' : 'medium';
+        description: `Found ${codeOptimizations.length} code optimization opportunities`;
         actions: [
-          `${highImpact} high-impact optimizations`,
-          `${mediumImpact} medium-impact optimizations`,
-          'Review and implement suggested changes',
-        ],
+          `${highImpact} high-impact optimizations`;
+          `${mediumImpact} medium-impact optimizations`;
+          'Review and implement suggested changes';
+        ];
       });
     }
 
@@ -451,12 +451,12 @@ class AdvancedPerformanceOptimizer {
 
   saveResults() {
     const reportFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       `performance-optimization-${Date.now()}.json`
     );
     fs.writeFileSync(
-      reportFile,
+      reportFile;
       JSON.stringify(this.optimizationResults, null, 2)
     );
 

@@ -27,9 +27,9 @@ class AccessibilityChecker {
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
+        encoding: 'utf8';
+        cwd: '/workspace';
+        stdio: 'pipe';
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
@@ -44,10 +44,10 @@ class AccessibilityChecker {
 
     const checks = [
       {
-        command: 'npm run test:accessibility',
-        description: 'Accessibility tests',
-      },
-      { command: 'npm run lint', description: 'Linting for accessibility' },
+        command: 'npm run test:accessibility';
+        description: 'Accessibility tests';
+      };
+      { command: 'npm run lint', description: 'Linting for accessibility' };
     ];
 
     const results = [];
@@ -64,13 +64,13 @@ class AccessibilityChecker {
     this.log('📊 Generating accessibility report...');
 
     const report = {
-      timestamp: new Date().toISOString(),
-      accessibility: await this.checkAccessibility(),
+      timestamp: new Date().toISOString();
+      accessibility: await this.checkAccessibility();
       summary: {
-        checksRun: 2,
-        successfulChecks: 0,
-        failedChecks: 0,
-      },
+        checksRun: 2;
+        successfulChecks: 0;
+        failedChecks: 0;
+      };
     };
 
     // Calculate summary
@@ -84,7 +84,7 @@ class AccessibilityChecker {
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `accessibility-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

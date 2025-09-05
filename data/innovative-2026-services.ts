@@ -1,44 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface Innovative2026Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const innovative2026Services: Innovative2026Service[] = [
@@ -51,16 +51,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Advanced AI platform that simulates human consciousness patterns, enabling researchers, psychologists, and AI developers to understand and replicate human cognitive processes.',
     features: [
-      'Multi-dimensional consciousness mapping',
-      'Emotional state simulation',
-      'Memory pattern replication',
-      'Decision-making process modeling',
-      'Personality trait simulation',
-      'Real-time consciousness monitoring',
-      'Quantum neural network integration',
-      'Ethical AI guidelines compliance',
-      'Research collaboration tools',
-      'Advanced analytics dashboard'
+      'Multi-dimensional consciousness mappingEmotional state simulation',
+      'Memory pattern replicationDecision-making process modeling',
+      'Personality trait simulationReal-time consciousness monitoring',
+      'Quantum neural network integrationEthical AI guidelines compliance',
+      'Research collaboration toolsAdvanced analytics dashboard'
     ],
     popular: true,
     icon: '🧠',
@@ -73,11 +68,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '2-3 weeks',
     category: 'AI & Consciousness',
     realService: true,
-    technology: ['Quantum AI', 'Neural Networks', 'Consciousness Mapping', 'Advanced ML', 'Quantum Computing', 'Neuroscience APIs'],
-    integrations: ['Research databases', 'Academic platforms', 'AI development tools', 'Neuroscience equipment', 'Cloud computing platforms'],
-    useCases: ['AI consciousness research', 'Psychology studies', 'Neural interface development', 'Human-AI interaction research', 'Cognitive science applications'],
+    technology: ['Quantum AINeural Networks', 'Consciousness MappingAdvanced ML', 'Quantum ComputingNeuroscience APIs'],
+    integrations: ['Research databasesAcademic platforms', 'AI development toolsNeuroscience equipment', 'Cloud computing platforms'],
+    useCases: ['AI consciousness researchPsychology studies', 'Neural interface developmentHuman-AI interaction research', 'Cognitive science applications'],
     roi: 'Research institutions report 500% ROI through accelerated discoveries and breakthrough insights.',
-    competitors: ['No direct competitors', 'Research institutions building custom solutions'],
+    competitors: ['No direct competitorsResearch institutions building custom solutions'],
     marketSize: '$15B emerging market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -94,7 +89,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 89
   },
-  
   // Quantum Neural Interface Platform
   {
     id: 'quantum-neural-interface-platform',
@@ -104,16 +98,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Revolutionary platform enabling direct communication between human brains and computers using quantum technology, with applications in healthcare, gaming, and accessibility.',
     features: [
-      'Real-time brain signal processing',
-      'Quantum-encrypted communication',
-      'Multi-modal interface support',
-      'Advanced security protocols',
-      'Healthcare compliance features',
-      'Gaming integration APIs',
-      'Accessibility tools',
-      'Research collaboration platform',
-      'Custom interface development',
-      '24/7 technical support'
+      'Real-time brain signal processingQuantum-encrypted communication',
+      'Multi-modal interface supportAdvanced security protocols',
+      'Healthcare compliance featuresGaming integration APIs',
+      'Accessibility toolsResearch collaboration platform',
+      'Custom interface development24/7 technical support'
     ],
     popular: true,
     icon: '⚡',
@@ -126,11 +115,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '4-6 weeks',
     category: 'Quantum & Neural Interface',
     realService: true,
-    technology: ['Quantum Computing', 'Neural Interface', 'Brain-Computer Interface', 'Quantum Encryption', 'Advanced AI', 'Biomedical Engineering'],
-    integrations: ['Healthcare systems', 'Gaming platforms', 'Accessibility tools', 'Research databases', 'Government systems'],
-    useCases: ['Medical diagnostics', 'Gaming control', 'Accessibility assistance', 'Research applications', 'Government security'],
+    technology: ['Quantum ComputingNeural Interface', 'Brain-Computer InterfaceQuantum Encryption', 'Advanced AIBiomedical Engineering'],
+    integrations: ['Healthcare systemsGaming platforms', 'Accessibility toolsResearch databases', 'Government systems'],
+    useCases: ['Medical diagnosticsGaming control', 'Accessibility assistanceResearch applications', 'Government security'],
     roi: 'Healthcare providers see 800% ROI through improved patient outcomes and diagnostic accuracy.',
-    competitors: ['Neuralink', 'Kernel', 'Paradromics', 'Custom research solutions'],
+    competitors: ['NeuralinkKernel', 'ParadromicsCustom research solutions'],
     marketSize: '$25B market',
     growthRate: '400% annual growth',
     variant: 'quantum-futuristic',
@@ -147,7 +136,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.8,
     reviews: 45
   },
-
   // AI Time Series Prediction Platform
   {
     id: 'ai-time-series-prediction-elite',
@@ -157,16 +145,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Advanced AI platform that provides 99.9% accurate predictions for time series data, including financial markets, weather patterns, and business trends.',
     features: [
-      '99.9% prediction accuracy',
-      'Multi-dimensional analysis',
-      'Real-time data processing',
-      'Quantum AI algorithms',
-      'Advanced visualization tools',
-      'Custom model training',
-      'API access for integrations',
-      'Automated reporting',
-      'Risk assessment tools',
-      'Performance analytics'
+      '99.9% prediction accuracyMulti-dimensional analysis',
+      'Real-time data processingQuantum AI algorithms',
+      'Advanced visualization toolsCustom model training',
+      'API access for integrationsAutomated reporting',
+      'Risk assessment toolsPerformance analytics'
     ],
     popular: true,
     icon: '🔮',
@@ -179,11 +162,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '2-3 weeks',
     category: 'AI & Predictive Analytics',
     realService: true,
-    technology: ['Quantum AI', 'Advanced ML', 'Time Series Analysis', 'Predictive Modeling', 'Real-time Processing', 'Data Analytics'],
-    integrations: ['Financial platforms', 'Weather APIs', 'Business intelligence tools', 'Research databases', 'Government systems'],
-    useCases: ['Financial forecasting', 'Weather prediction', 'Business trend analysis', 'Risk assessment', 'Research applications'],
+    technology: ['Quantum AIAdvanced ML', 'Time Series AnalysisPredictive Modeling', 'Real-time ProcessingData Analytics'],
+    integrations: ['Financial platformsWeather APIs', 'Business intelligence toolsResearch databases', 'Government systems'],
+    useCases: ['Financial forecastingWeather prediction', 'Business trend analysisRisk assessment', 'Research applications'],
     roi: 'Financial institutions report 1200% ROI through improved trading decisions and risk management.',
-    competitors: ['Bloomberg Terminal', 'Thomson Reuters', 'Custom financial models', 'Academic research tools'],
+    competitors: ['Bloomberg TerminalThomson Reuters', 'Custom financial modelsAcademic research tools'],
     marketSize: '$45B market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -200,7 +183,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 156
   },
-
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform',
@@ -210,16 +192,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Next-generation internet security platform using quantum encryption to provide unbreakable protection for data transmission, storage, and communication.',
     features: [
-      'Quantum key distribution',
-      'Unbreakable encryption',
-      'Real-time threat detection',
-      'Advanced firewall protection',
-      'Secure communication channels',
-      'Compliance certifications',
-      '24/7 monitoring',
-      'Custom security policies',
-      'Integration APIs',
-      'Comprehensive reporting'
+      'Quantum key distributionUnbreakable encryption',
+      'Real-time threat detectionAdvanced firewall protection',
+      'Secure communication channelsCompliance certifications',
+      '24/7 monitoringCustom security policies',
+      'Integration APIsComprehensive reporting'
     ],
     popular: true,
     icon: '🔒',
@@ -232,11 +209,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '3-4 weeks',
     category: 'Quantum & Cybersecurity',
     realService: true,
-    technology: ['Quantum Computing', 'Quantum Encryption', 'Advanced Security', 'Threat Detection', 'Real-time Monitoring', 'AI Security'],
-    integrations: ['Government systems', 'Financial platforms', 'Healthcare systems', 'Tech infrastructure', 'Defense systems'],
-    useCases: ['Government communications', 'Financial transactions', 'Healthcare data protection', 'Tech infrastructure security', 'Defense communications'],
+    technology: ['Quantum ComputingQuantum Encryption', 'Advanced SecurityThreat Detection', 'Real-time MonitoringAI Security'],
+    integrations: ['Government systemsFinancial platforms', 'Healthcare systemsTech infrastructure', 'Defense systems'],
+    useCases: ['Government communicationsFinancial transactions', 'Healthcare data protectionTech infrastructure security', 'Defense communications'],
     roi: 'Government agencies see 600% ROI through improved security and reduced breach risks.',
-    competitors: ['Traditional cybersecurity', 'Custom quantum solutions', 'Government research projects'],
+    competitors: ['Traditional cybersecurityCustom quantum solutions', 'Government research projects'],
     marketSize: '$35B market',
     growthRate: '350% annual growth',
     variant: 'quantum-futuristic',
@@ -253,7 +230,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 78
   },
-
   // AI Emotional Intelligence Platform
   {
     id: 'ai-emotional-intelligence-platform',
@@ -263,16 +239,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description: 'Advanced AI platform that understands, analyzes, and responds to human emotions, enabling better human-AI interactions and emotional intelligence applications.',
     features: [
-      'Real-time emotion detection',
-      'Multi-modal emotion analysis',
-      'Emotional response generation',
-      'Sentiment analysis',
-      'Emotional intelligence training',
-      'Custom emotion models',
-      'API integration capabilities',
-      'Advanced analytics',
-      'Compliance features',
-      '24/7 support'
+      'Real-time emotion detectionMulti-modal emotion analysis',
+      'Emotional response generationSentiment analysis',
+      'Emotional intelligence trainingCustom emotion models',
+      'API integration capabilitiesAdvanced analytics',
+      'Compliance features24/7 support'
     ],
     popular: true,
     icon: '❤️',
@@ -285,11 +256,11 @@ export const innovative2026Services: Innovative2026Service[] = [
     setupTime: '2-3 weeks',
     category: 'AI & Emotional Intelligence',
     realService: true,
-    technology: ['Advanced AI', 'Emotion Recognition', 'Natural Language Processing', 'Computer Vision', 'Machine Learning', 'Psychology APIs'],
-    integrations: ['Customer service platforms', 'Healthcare systems', 'Education platforms', 'Gaming systems', 'Marketing tools'],
-    useCases: ['Customer service enhancement', 'Healthcare emotional support', 'Educational personalization', 'Gaming emotional responses', 'Marketing emotional targeting'],
+    technology: ['Advanced AIEmotion Recognition', 'Natural Language ProcessingComputer Vision', 'Machine LearningPsychology APIs'],
+    integrations: ['Customer service platformsHealthcare systems', 'Education platformsGaming systems', 'Marketing tools'],
+    useCases: ['Customer service enhancementHealthcare emotional support', 'Educational personalizationGaming emotional responses', 'Marketing emotional targeting'],
     roi: 'Customer service companies see 400% ROI through improved customer satisfaction and emotional understanding.',
-    competitors: ['Sentiment analysis tools', 'AI interaction platforms', 'Custom emotional AI solutions'],
+    competitors: ['Sentiment analysis toolsAI interaction platforms', 'Custom emotional AI solutions'],
     marketSize: '$20B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -306,4 +277,4 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.8,
     reviews: 234
   }
-];
+],

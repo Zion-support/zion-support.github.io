@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  Building, ArrowRight, CheckCircle, Zap, Target, Users, 
+  Building, ArrowRight, CheckCircle, Zap, Target, Users,
   TrendingUp, Globe, Cpu, Database, Star, Shield, Scale, Clock
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
 
 export default function EnterpriseSolutionsPage() {
   const solutions = [
@@ -46,7 +46,7 @@ export default function EnterpriseSolutionsPage() {
       price: "Custom Pricing",
       icon: Database
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -69,7 +69,7 @@ export default function EnterpriseSolutionsPage() {
       title: "Custom Solutions",
       description: "Tailored solutions designed specifically for your business needs"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -239,7 +239,7 @@ export default function EnterpriseSolutionsPage() {
               href="mailto:kleber@ziontechgroup.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover: from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span>Start Enterprise Journey</span>
               <ArrowRight className="w-5 h-5" />
@@ -250,5 +250,5 @@ export default function EnterpriseSolutionsPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

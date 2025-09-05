@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react',
+import Link from 'next/link',
 
 const EnhancedNavigation = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -82,7 +82,7 @@ const EnhancedNavigation = () => {
         )}
       </div>
     </nav>
-  );
-};
+  ),
+},
 
-export default EnhancedNavigation;
+export default EnhancedNavigation,

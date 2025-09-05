@@ -1,57 +1,57 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react',
 
 interface QuantumHolographicCardProps {
   service: {
-    id: string;
-    name: string;
-    tagline: string;
-    price: string;
-    period: string;
-    description: string;
-    features: string[];
-    popular: boolean;
-    icon: string;
-    color: string;
-    textColor: string;
-    link: string;
-    marketPosition: string;
-    targetAudience: string;
-    trialDays: number;
-    setupTime: string;
-    category: string;
-    realService: boolean;
-    technology: string[];
-    integrations: string[];
-    useCases: string[];
-    roi: string;
-    competitors: string[];
-    marketSize: string;
-    growthRate: string;
-    variant: string;
+    id: string,
+    name: string,
+    tagline: string,
+    price: string,
+    period: string,
+    description: string,
+    features: string[],
+    popular: boolean,
+    icon: string,
+    color: string,
+    textColor: string,
+    link: string,
+    marketPosition: string,
+    targetAudience: string,
+    trialDays: number,
+    setupTime: string,
+    category: string,
+    realService: boolean,
+    technology: string[],
+    integrations: string[],
+    useCases: string[],
+    roi: string,
+    competitors: string[],
+    marketSize: string,
+    growthRate: string,
+    variant: string,
     contactInfo: {
-      mobile: string;
-      email: string;
-      address: string;
-      website: string;
-    };
-    realImplementation: boolean;
-    implementationDetails: string;
-    launchDate: string;
-    customers: number;
-    rating: number;
-    reviews: number;
-  };
-  className?: string;
+      mobile: string,
+      email: string,
+      address: string,
+      website: string
+    },
+    realImplementation: boolean,
+    implementationDetails: string,
+    launchDate: string,
+    customers: number,
+    rating: number,
+    reviews: number
+  },
+  className?: string,
 }
 
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className = '' }) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: { 
-      opacity: 1, 
-      y: 0, 
+      opacity: 1,
+      y: 0,
       scale: 1,
       transition: {
         duration: 0.6,
@@ -66,7 +66,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         ease: "easeInOut" as const
       }
     }
-  };
+  },
 
   const glowVariants = {
     initial: { opacity: 0.5, scale: 1 },
@@ -79,7 +79,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         ease: "easeInOut" as const
       }
     }
-  };
+  },
 
   const featureVariants = {
     hidden: { opacity: 0, x: -20 },
@@ -92,7 +92,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         ease: "easeOut" as const
       }
     })
-  };
+  },
 
   return (
     <motion.div
@@ -279,7 +279,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         </div>
       </div>
     </motion.div>
-  );
-};
+  ),
+},
 
-export default QuantumHolographicCard;
+export default QuantumHolographicCard,

@@ -17,7 +17,7 @@ if (!content.includes('Sitemap:')) content += sitemapLine
 else content = content.replace(/Sitemap:[^\n]*\n?/g, sitemapLine)
 
 if (content !== before) {
-  fs.mkdirSync(path.dirname(robotsPath), { recursive: true })
+  fs.mkdirSync(path.dirname(robotsPath) { recursive: true })
   fs.writeFileSync(robotsPath, content)
   try {
     execSync('git add -A')

@@ -39,7 +39,7 @@ export default function BlockchainServicesPage() {
               <div className="text-4xl mb-6">💰</div>
               <h2 className="text-3xl font-bold mb-4">DeFi Platform Development</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Build next-generation decentralized finance platforms with lending, borrowing, 
+                Build next-generation decentralized finance platforms with lending, borrowing,
                 yield farming, and automated market making capabilities.
               </p>
               
@@ -86,7 +86,7 @@ export default function BlockchainServicesPage() {
               <div className="text-4xl mb-6">🎨</div>
               <h2 className="text-3xl font-bold mb-4">NFT Marketplace Development</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Create cutting-edge NFT marketplaces with advanced features, multi-chain support, 
+                Create cutting-edge NFT marketplaces with advanced features, multi-chain support,
                 and innovative monetization strategies for digital assets.
               </p>
               
@@ -133,7 +133,7 @@ export default function BlockchainServicesPage() {
               <div className="text-4xl mb-6">📜</div>
               <h2 className="text-3xl font-bold mb-4">Smart Contract Development</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Secure, audited smart contracts for any blockchain use case with comprehensive testing, 
+                Secure, audited smart contracts for any blockchain use case with comprehensive testing,
                 security analysis, and deployment support.
               </p>
               
@@ -180,7 +180,7 @@ export default function BlockchainServicesPage() {
               <div className="text-4xl mb-6">🌐</div>
               <h2 className="text-3xl font-bold mb-4">Web3 Infrastructure</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Build robust Web3 infrastructure with node management, API gateways, 
+                Build robust Web3 infrastructure with node management, API gateways,
                 indexing services, and decentralized storage solutions.
               </p>
               
@@ -227,7 +227,7 @@ export default function BlockchainServicesPage() {
               <div className="text-4xl mb-6">🏛️</div>
               <h2 className="text-3xl font-bold mb-4">DAO Development</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Create sophisticated decentralized autonomous organizations with advanced governance, 
+                Create sophisticated decentralized autonomous organizations with advanced governance,
                 treasury management, and community engagement tools.
               </p>
               
@@ -274,7 +274,7 @@ export default function BlockchainServicesPage() {
               <div className="text-4xl mb-6">💡</div>
               <h2 className="text-3xl font-bold mb-4">Blockchain Consulting</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Strategic blockchain consulting services including technology selection, 
+                Strategic blockchain consulting services including technology selection,
                 architecture design, regulatory compliance, and implementation strategy.
               </p>
               
@@ -390,7 +390,7 @@ export default function BlockchainServicesPage() {
             and position you at the forefront of decentralized innovation.
           </p>
           <div className="space-y-4">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a href="tel:+13024640950" className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-50 transition-colors text-lg">
                 📞 Call +1 302 464 0950
               </a>
@@ -405,5 +405,5 @@ export default function BlockchainServicesPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

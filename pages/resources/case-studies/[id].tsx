@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
 
 export default function CaseStudyResourcePage() {
-  const router = useRouter();
-  const { id } = router.query;
+  const router = useRouter(),
+  const { id } = router.query,
 
   // Case studies data - this should match the data in resources.tsx
   const caseStudies = [
@@ -18,7 +18,7 @@ export default function CaseStudyResourcePage() {
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
       fullContent: `
         <h2>Executive Summary</h2>
-        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations, 
+        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations,
         delivering significant improvements in efficiency, quality, and cost reduction.</p>
         
         <h2>Background</h2>
@@ -28,7 +28,7 @@ export default function CaseStudyResourcePage() {
         
         <h2>Challenge</h2>
         <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
-        and reducing operational costs. They required a solution that could adapt to changing production demands, 
+        and reducing operational costs. They required a solution that could adapt to changing production demands,
         minimize human intervention, and provide real-time insights into their operations.</p>
         
         <h2>Solution</h2>
@@ -201,9 +201,9 @@ export default function CaseStudyResourcePage() {
         optimal performance and cost efficiency.</p>
       `
     }
-  ];
+  ],
 
-  const caseStudy = caseStudies.find(study => study.id === id);
+  const caseStudy = caseStudies.find(study => study.id === id),
 
   if (!caseStudy) {
     return (
@@ -220,7 +220,7 @@ export default function CaseStudyResourcePage() {
               </p>
               <Link 
                 href="/resources"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
                 ← Back to Resources
               </Link>
@@ -228,7 +228,7 @@ export default function CaseStudyResourcePage() {
           </main>
         </div>
       </>
-    );
+    )
   }
 
   return (
@@ -275,7 +275,7 @@ export default function CaseStudyResourcePage() {
             <div className="text-center">
               <Link 
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
                 Get Started with Your Project
               </Link>
@@ -284,5 +284,5 @@ export default function CaseStudyResourcePage() {
         </main>
       </div>
     </>
-  );
+  )
 }

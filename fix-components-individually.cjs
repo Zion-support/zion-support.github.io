@@ -3,7 +3,7 @@ const fs = require('fs');
 // Fix each file individually
 const files = [
   {
-    path: 'components/AccessibilityProvider.tsx',
+    path: 'components/AccessibilityProvider.tsx';
     content: `import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AccessibilityContextType {
@@ -46,9 +46,9 @@ export const useAccessibility = () => {
   }
   return context;
 };`
-  },
+  };
   {
-    path: 'components/Analytics.tsx',
+    path: 'components/Analytics.tsx';
     content: `import React, { useEffect } from 'react';
 
 interface AnalyticsProps {
@@ -66,9 +66,9 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
 };
 
 export default Analytics;`
-  },
+  };
   {
-    path: 'components/LoadingSpinner.tsx',
+    path: 'components/LoadingSpinner.tsx';
     content: `import React from 'react';
 
 interface LoadingSpinnerProps {
@@ -78,8 +78,8 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
+    sm: 'w-4 h-4';
+    md: 'w-8 h-8';
     lg: 'w-12 h-12'
   };
 
@@ -91,9 +91,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className 
 };
 
 export default LoadingSpinner;`
-  },
+  };
   {
-    path: 'components/PerformanceMonitor.tsx',
+    path: 'components/PerformanceMonitor.tsx';
     content: `import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -113,8 +113,8 @@ const PerformanceMonitor: React.FC = () => {
         
         if (navigationEntry) {
           setMetrics({
-            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
+            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;
+            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
             memoryUsage: (performance as any).memory?.usedJSHeapSize || 0
           });
         }
@@ -138,9 +138,9 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;`
-  },
+  };
   {
-    path: 'components/SEOHead.tsx',
+    path: 'components/SEOHead.tsx';
     content: `import React from 'react';
 import Head from 'next/head';
 
@@ -153,10 +153,10 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - AI-Powered Technology Solutions',
-  description = 'Leading provider of AI-powered technology solutions, web development, mobile apps, and digital transformation services.',
-  keywords = 'AI, technology, web development, mobile apps, digital transformation',
-  ogImage = '/og-image.jpg',
+  title = 'Zion Tech Group - AI-Powered Technology Solutions';
+  description = 'Leading provider of AI-powered technology solutions, web development, mobile apps, and digital transformation services.';
+  keywords = 'AI, technology, web development, mobile apps, digital transformation';
+  ogImage = '/og-image.jpg';
   url = 'https://ziontechgroup.com'
 }) => {
   return (

@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",
   description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",
-  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"};
+  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},
 
 export default function QuantumServicesPage() {
   return (
@@ -93,7 +93,7 @@ export default function QuantumServicesPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Algorithm Development</h3>
               <p className="text-gray-400 mb-4">
-                Custom quantum algorithms designed for your specific business problems, 
+                Custom quantum algorithms designed for your specific business problems,
                 from optimization challenges to complex simulations.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -162,7 +162,7 @@ export default function QuantumServicesPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Simulation</h3>
               <p className="text-gray-400 mb-4">
-                Accurate simulation of quantum systems for materials science, 
+                Accurate simulation of quantum systems for materials science,
                 chemistry, and physics research applications.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -208,7 +208,7 @@ export default function QuantumServicesPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Strategy Consulting</h3>
               <p className="text-gray-400 mb-4">
-                Strategic guidance on quantum computing adoption, roadmap development, 
+                Strategic guidance on quantum computing adoption, roadmap development,
                 and integration with existing IT infrastructure.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -436,7 +436,7 @@ export default function QuantumServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -458,5 +458,5 @@ export default function QuantumServicesPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

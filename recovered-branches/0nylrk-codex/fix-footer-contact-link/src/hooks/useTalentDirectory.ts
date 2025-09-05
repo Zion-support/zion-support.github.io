@@ -1,23 +1,23 @@
 
-import { useAuthStatus } from "./talent/useAuthStatus";
-import { useTalentData } from "./talent/useTalentData";
-import { useFilterTalents } from "./talent/useFilterTalents";
-import { useUIState } from "./talent/useUIState";
+import { useAuthStatus } from "./talent/useAuthStatus",
+import { useTalentData } from "./talent/useTalentData",
+import { useFilterTalents } from "./talent/useFilterTalents",
+import { useUIState } from "./talent/useUIState",
 
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
   const { 
-    isAuthenticated, 
-    userDetails, 
-    savedTalents, 
+    isAuthenticated,
+    userDetails,
+    savedTalents,
     handleToggleSave 
-  } = useAuthStatus();
+  } = useAuthStatus(),
 
   // Fetch talent data
   const { 
-    talents, 
+    talents,
     isLoading 
-  } = useTalentData();
+  } = useTalentData(),
 
   // Apply filters and sorting
   const {
@@ -37,7 +37,7 @@ export function useTalentDirectory() {
     toggleAvailability,
     toggleRegion,
     clearFilters
-  } = useFilterTalents(talents);
+  } = useFilterTalents(talents),
 
   // Manage UI state
   const {
@@ -49,14 +49,13 @@ export function useTalentDirectory() {
     setSelectedTalent,
     expandedSections,
     toggleSection
-  } = useUIState();
+  } = useUIState(),
 
   return {
     // Talents and loading state
     talents,
     filteredTalents,
     isLoading,
-    
     // Search and filter state
     searchTerm,
     setSearchTerm,
@@ -69,7 +68,6 @@ export function useTalentDirectory() {
     setExperienceRange,
     sortOption,
     setSortOption,
-    
     // UI state
     isMobileFilterOpen,
     setIsMobileFilterOpen,
@@ -78,12 +76,10 @@ export function useTalentDirectory() {
     selectedTalent,
     setSelectedTalent,
     expandedSections,
-    
     // Auth and user state
     isAuthenticated,
     userDetails,
     savedTalents,
-    
     // Actions
     toggleSkill,
     toggleAvailability,
@@ -91,5 +87,5 @@ export function useTalentDirectory() {
     clearFilters,
     toggleSection,
     handleToggleSave
-  };
+  },
 }

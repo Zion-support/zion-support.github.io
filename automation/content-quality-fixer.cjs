@@ -96,10 +96,10 @@ class ContentQualityFixer {
 
   fixMarkdownContent(content) {
     // Fix multiple spaces
-    content = content.replace(/[ ]{2,}/g, ' ');
+    content = content.replace(/[ ]{2}/g, ' ');
     
     // Fix line breaks
-    content = content.replace(/\n{3,}/g, '\n\n');
+    content = content.replace(/\n{3}/g, '\n\n');
     
     // Fix list formatting
     content = content.replace(/^\s*[-*+]\s+/gm, '- ');
@@ -122,10 +122,10 @@ class ContentQualityFixer {
 
   fixTextContent(content) {
     // Fix multiple spaces
-    content = content.replace(/[ ]{2,}/g, ' ');
+    content = content.replace(/[ ]{2}/g, ' ');
     
     // Fix line breaks
-    content = content.replace(/\n{3,}/g, '\n\n');
+    content = content.replace(/\n{3}/g, '\n\n');
     
     return content;
   }

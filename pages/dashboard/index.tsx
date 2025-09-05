@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import EmptyState from '../../components/ui/EmptyState';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import EmptyState from '../../components/ui/EmptyState',
 
 const Dashboard: NextPage = () => {
   return (
@@ -32,7 +32,7 @@ const Dashboard: NextPage = () => {
         />
       </section>
     </div>
-  );
-};
+  ),
+},
 
-export default Dashboard;
+export default Dashboard,

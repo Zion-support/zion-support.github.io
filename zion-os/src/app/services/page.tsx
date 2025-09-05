@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link',
 
 export default function ServicesPage() {
   return (
@@ -598,7 +598,7 @@ export default function ServicesPage() {
             Let's discuss how our AI, IT, blockchain, and SAAS solutions can drive your digital transformation and business growth.
           </p>
           <div className="space-y-4">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a href="tel:+13024640950" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-lg">
                 📞 Call +1 302 464 0950
               </a>
@@ -613,5 +613,5 @@ export default function ServicesPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

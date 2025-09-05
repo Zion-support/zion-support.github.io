@@ -13,32 +13,32 @@ import Layout from '../components/Layout';
 
 const helpCategories = [
   {
-    title: "Getting Started",
-    icon: BookOpen,
-    description: "Learn the basics and get up and running quickly",
+    title: "Getting Started";
+    icon: BookOpen;
+    description: "Learn the basics and get up and running quickly";
     articles: [
-      "Welcome to Zion Tech Group",
-      "Setting up your account",
+      "Welcome to Zion Tech Group";
+      "Setting up your account";
       "First steps with our platform"
     ]
-  },
+  };
   {
-    title: "Account & Billing",
-    icon: MessageCircle,
-    description: "Manage your account, billing, and subscription",
+    title: "Account & Billing";
+    icon: MessageCircle;
+    description: "Manage your account, billing, and subscription";
     articles: [
-      "Managing your subscription",
-      "Billing and payments",
+      "Managing your subscription";
+      "Billing and payments";
       "Account settings"
     ]
-  },
+  };
   {
-    title: "Technical Support",
-    icon: Phone,
-    description: "Get help with technical issues and troubleshooting",
+    title: "Technical Support";
+    icon: Phone;
+    description: "Get help with technical issues and troubleshooting";
     articles: [
-      "Common troubleshooting",
-      "API documentation",
+      "Common troubleshooting";
+      "API documentation";
       "Integration guides"
     ]
   }
@@ -46,18 +46,18 @@ const helpCategories = [
 
 const popularArticles = [
   {
-    title: "How to get started with our AI solutions",
-    category: "Getting Started",
+    title: "How to get started with our AI solutions";
+    category: "Getting Started";
     readTime: "5 min"
-  },
+  };
   {
-    title: "Setting up cloud migration",
-    category: "Technical Support",
+    title: "Setting up cloud migration";
+    category: "Technical Support";
     readTime: "10 min"
-  },
+  };
   {
-    title: "Understanding your billing",
-    category: "Account & Billing",
+    title: "Understanding your billing";
+    category: "Account & Billing";
     readTime: "3 min"
   }
 ];
@@ -213,58 +213,58 @@ console.log('✅ Fixed help.tsx');
 const educationContent = `import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  GraduationCap, 
-  BookOpen, 
-  Users, 
-  Building, 
-  TrendingUp, 
-  CheckCircle,
-  Clock,
+  GraduationCap;
+  BookOpen;
+  Users;
+  Building;
+  TrendingUp;
+  CheckCircle;
+  Clock;
   Shield
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const educationSolutions = [
   {
-    title: 'Student Information System',
-    description: 'Comprehensive platform for managing student data and academic records',
-    icon: Building,
-    features: ['Enrollment Management', 'Grade Management', 'Scheduling', 'Communication Tools'],
+    title: 'Student Information System';
+    description: 'Comprehensive platform for managing student data and academic records';
+    icon: Building;
+    features: ['Enrollment Management', 'Grade Management', 'Scheduling', 'Communication Tools'];
     benefits: ['50% time savings', 'Reduced errors', 'Better organization', 'Improved efficiency']
-  },
+  };
   {
-    title: 'Learning Management System',
-    description: 'Modern LMS with AI-powered personalized learning experiences',
-    icon: BookOpen,
-    features: ['Course Creation', 'Assessment Tools', 'Progress Tracking', 'Collaboration Features'],
+    title: 'Learning Management System';
+    description: 'Modern LMS with AI-powered personalized learning experiences';
+    icon: BookOpen;
+    features: ['Course Creation', 'Assessment Tools', 'Progress Tracking', 'Collaboration Features'];
     benefits: ['40% better engagement', 'Personalized learning', 'Real-time analytics', 'Mobile access']
-  },
+  };
   {
-    title: 'Campus Management',
-    description: 'Integrated solution for managing all campus operations',
-    icon: Building,
-    features: ['Resource Scheduling', 'Facility Management', 'Event Planning', 'Financial Management'],
+    title: 'Campus Management';
+    description: 'Integrated solution for managing all campus operations';
+    icon: Building;
+    features: ['Resource Scheduling', 'Facility Management', 'Event Planning', 'Financial Management'];
     benefits: ['Streamlined operations', 'Cost reduction', 'Better resource utilization', 'Improved planning']
   }
 ];
 
 const educationBenefits = [
   {
-    icon: GraduationCap,
-    title: 'Student Success',
-    description: 'Improve student outcomes with personalized learning and analytics.',
+    icon: GraduationCap;
+    title: 'Student Success';
+    description: 'Improve student outcomes with personalized learning and analytics.';
     metric: '40%'
-  },
+  };
   {
-    icon: TrendingUp,
-    title: 'Efficiency Gains',
-    description: 'Streamline administrative processes and reduce manual work.',
+    icon: TrendingUp;
+    title: 'Efficiency Gains';
+    description: 'Streamline administrative processes and reduce manual work.';
     metric: '60%'
-  },
+  };
   {
-    icon: Shield,
-    title: 'Data Security',
-    description: 'Protect sensitive student and institutional data with enterprise-grade security.',
+    icon: Shield;
+    title: 'Data Security';
+    description: 'Protect sensitive student and institutional data with enterprise-grade security.';
     metric: '99.9%'
   }
 ];

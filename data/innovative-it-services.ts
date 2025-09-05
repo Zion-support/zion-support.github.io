@@ -1,42 +1,42 @@
 export interface InnovativeITService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const innovativeITServices: InnovativeITService[] = [
@@ -48,16 +48,11 @@ export const innovativeITServices: InnovativeITService[] = [
     period: '/month',
     description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.',
     features: [
-      'Continuous identity verification',
-      'Micro-segmentation',
-      'Advanced threat detection',
-      'Behavioral analytics',
-      'API security',
-      'Cloud workload protection',
-      'Network segmentation',
-      'Privileged access management',
-      'Compliance reporting',
-      'Real-time monitoring'
+      'Continuous identity verificationMicro-segmentation',
+      'Advanced threat detectionBehavioral analytics',
+      'API securityCloud workload protection',
+      'Network segmentationPrivileged access management',
+      'Compliance reportingReal-time monitoring'
     ],
     popular: true,
     icon: '🔒',
@@ -70,11 +65,11 @@ export const innovativeITServices: InnovativeITService[] = [
     setupTime: '2 hours',
     category: 'IT & Cybersecurity',
     realService: true,
-    technology: ['Zero Trust Architecture', 'Machine Learning', 'AI', 'Kubernetes', 'Docker', 'React', 'Node.js', 'AWS'],
-    integrations: ['Active Directory', 'Okta', 'Azure AD', 'Slack', 'Teams', 'Jira', 'ServiceNow', 'Splunk'],
-    useCases: ['Enterprise security', 'Cloud security', 'Network protection', 'Identity management', 'Compliance', 'Threat detection'],
+    technology: ['Zero Trust ArchitectureMachine Learning', 'AIKubernetes', 'DockerReact', 'Node.jsAWS'],
+    integrations: ['Active DirectoryOkta', 'Azure ADSlack', 'TeamsJira', 'ServiceNowSplunk'],
+    useCases: ['Enterprise securityCloud security', 'Network protectionIdentity management', 'ComplianceThreat detection'],
     roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.',
-    competitors: ['Palo Alto Networks', 'CrowdStrike', 'Zscaler', 'Okta', 'CyberArk'],
+    competitors: ['Palo Alto NetworksCrowdStrike', 'ZscalerOkta', 'CyberArk'],
     marketSize: '$45B cybersecurity market',
     growthRate: '110% annual growth',
     variant: 'cyberpunk',
@@ -99,16 +94,11 @@ export const innovativeITServices: InnovativeITService[] = [
     period: '/month',
     description: 'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.',
     features: [
-      'Distributed edge nodes',
-      'Real-time data processing',
-      'Low-latency computing',
-      'Edge AI capabilities',
-      'Automatic scaling',
-      'Geographic distribution',
-      'Load balancing',
-      'Edge analytics',
-      'IoT integration',
-      '5G optimization'
+      'Distributed edge nodesReal-time data processing',
+      'Low-latency computingEdge AI capabilities',
+      'Automatic scalingGeographic distribution',
+      'Load balancingEdge analytics',
+      'IoT integration5G optimization'
     ],
     popular: true,
     icon: '🌐',
@@ -121,11 +111,11 @@ export const innovativeITServices: InnovativeITService[] = [
     setupTime: '1 hour',
     category: 'IT & Edge Computing',
     realService: true,
-    technology: ['Edge Computing', 'IoT', '5G', 'Kubernetes', 'Docker', 'React', 'Node.js', 'Python', 'AWS'],
-    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP', 'HTTP/2', 'WebSocket', 'REST API'],
-    useCases: ['IoT applications', 'Real-time analytics', 'Edge AI', '5G services', 'Smart manufacturing', 'Autonomous vehicles'],
+    technology: ['Edge ComputingIoT', '5GKubernetes', 'DockerReact', 'Node.jsPython', 'AWS'],
+    integrations: ['AWS IoTAzure IoT', 'Google Cloud IoTMQTT', 'CoAPHTTP/2', 'WebSocketREST API'],
+    useCases: ['IoT applicationsReal-time analytics', 'Edge AI5G services', 'Smart manufacturingAutonomous vehicles'],
     roi: 'Average customer sees 300% ROI within 8 months through reduced latency and improved performance.',
-    competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'FogHorn', 'ClearBlade'],
+    competitors: ['AWS GreengrassAzure IoT Edge', 'Google Cloud IoT EdgeFogHorn', 'ClearBlade'],
     marketSize: '$15B edge computing market',
     growthRate: '180% annual growth',
     variant: 'quantum',
@@ -150,16 +140,11 @@ export const innovativeITServices: InnovativeITService[] = [
     period: '/month',
     description: 'Cloud-based quantum computing service that provides access to quantum processors for research, optimization, and machine learning applications.',
     features: [
-      'Quantum processor access',
-      'Quantum algorithm library',
-      'Hybrid quantum-classical computing',
-      'Quantum machine learning',
-      'Optimization algorithms',
-      'Quantum simulation',
-      'API access',
-      'Developer tools',
-      'Documentation and tutorials',
-      'Expert support'
+      'Quantum processor accessQuantum algorithm library',
+      'Hybrid quantum-classical computingQuantum machine learning',
+      'Optimization algorithmsQuantum simulation',
+      'API accessDeveloper tools',
+      'Documentation and tutorialsExpert support'
     ],
     popular: true,
     icon: '⚛️',
@@ -172,11 +157,11 @@ export const innovativeITServices: InnovativeITService[] = [
     setupTime: '30 minutes',
     category: 'IT & Quantum Computing',
     realService: true,
-    technology: ['Quantum Computing', 'Quantum Algorithms', 'Python', 'Qiskit', 'Cirq', 'React', 'Node.js', 'AWS'],
-    integrations: ['Jupyter Notebooks', 'Python', 'MATLAB', 'R', 'Julia', 'API', 'Webhooks', 'SDK'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Logistics optimization', 'Machine learning', 'Cryptography', 'Material science'],
+    technology: ['Quantum ComputingQuantum Algorithms', 'PythonQiskit', 'CirqReact', 'Node.jsAWS'],
+    integrations: ['Jupyter NotebooksPython', 'MATLABR', 'JuliaAPI', 'WebhooksSDK'],
+    useCases: ['Drug discoveryFinancial modeling', 'Logistics optimizationMachine learning', 'CryptographyMaterial science'],
     roi: 'Average customer sees 500% ROI within 18 months through breakthrough discoveries and optimizations.',
-    competitors: ['IBM Quantum', 'AWS Braket', 'Google Quantum', 'Rigetti', 'D-Wave'],
+    competitors: ['IBM QuantumAWS Braket', 'Google QuantumRigetti', 'D-Wave'],
     marketSize: '$8B quantum computing market',
     growthRate: '250% annual growth',
     variant: 'quantum-advanced',
@@ -201,16 +186,11 @@ export const innovativeITServices: InnovativeITService[] = [
     period: '/month',
     description: 'Comprehensive blockchain platform for enterprises, providing secure, scalable, and compliant blockchain solutions for various business applications.',
     features: [
-      'Multi-consensus algorithms',
-      'Smart contract development',
-      'Enterprise security',
-      'Scalability solutions',
-      'Interoperability',
-      'Compliance tools',
-      'API management',
-      'Analytics dashboard',
-      'Integration services',
-      '24/7 support'
+      'Multi-consensus algorithmsSmart contract development',
+      'Enterprise securityScalability solutions',
+      'InteroperabilityCompliance tools',
+      'API managementAnalytics dashboard',
+      'Integration services24/7 support'
     ],
     popular: true,
     icon: '🔗',
@@ -223,11 +203,11 @@ export const innovativeITServices: InnovativeITService[] = [
     setupTime: '4 hours',
     category: 'IT & Blockchain',
     realService: true,
-    technology: ['Blockchain', 'Smart Contracts', 'Solidity', 'Go', 'React', 'Node.js', 'Docker', 'Kubernetes', 'AWS'],
-    integrations: ['Ethereum', 'Hyperledger', 'Corda', 'Oracle', 'SAP', 'Salesforce', 'AWS', 'Azure', 'Google Cloud'],
-    useCases: ['Supply chain tracking', 'Digital identity', 'Smart contracts', 'Tokenization', 'Voting systems', 'Asset management'],
+    technology: ['BlockchainSmart Contracts', 'SolidityGo', 'ReactNode.js', 'DockerKubernetes', 'AWS'],
+    integrations: ['EthereumHyperledger', 'CordaOracle', 'SAPSalesforce', 'AWSAzure', 'Google Cloud'],
+    useCases: ['Supply chain trackingDigital identity', 'Smart contractsTokenization', 'Voting systemsAsset management'],
     roi: 'Average customer sees 350% ROI within 12 months through improved efficiency and transparency.',
-    competitors: ['Hyperledger Fabric', 'Ethereum Enterprise', 'Corda', 'Quorum', 'Multichain'],
+    competitors: ['Hyperledger FabricEthereum Enterprise', 'CordaQuorum', 'Multichain'],
     marketSize: '$19B blockchain market',
     growthRate: '160% annual growth',
     variant: 'quantum-blockchain',
@@ -252,16 +232,11 @@ export const innovativeITServices: InnovativeITService[] = [
     period: '/month',
     description: 'Comprehensive DevOps platform that automates the entire software development lifecycle, from code commit to production deployment.',
     features: [
-      'CI/CD pipelines',
-      'Infrastructure as Code',
-      'Container orchestration',
-      'Monitoring and alerting',
-      'Security scanning',
-      'Performance testing',
-      'Deployment automation',
-      'Environment management',
-      'Team collaboration',
-      'Analytics and reporting'
+      'CI/CD pipelinesInfrastructure as Code',
+      'Container orchestrationMonitoring and alerting',
+      'Security scanningPerformance testing',
+      'Deployment automationEnvironment management',
+      'Team collaborationAnalytics and reporting'
     ],
     popular: true,
     icon: '🚀',
@@ -274,11 +249,11 @@ export const innovativeITServices: InnovativeITService[] = [
     setupTime: '1 hour',
     category: 'IT & DevOps',
     realService: true,
-    technology: ['CI/CD', 'Kubernetes', 'Docker', 'Terraform', 'Ansible', 'React', 'Node.js', 'Python', 'AWS'],
-    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'AWS', 'Azure', 'Google Cloud', 'Slack', 'Teams', 'Jira'],
-    useCases: ['Software development', 'Deployment automation', 'Infrastructure management', 'Testing automation', 'Monitoring', 'Security'],
+    technology: ['CI/CDKubernetes', 'DockerTerraform', 'AnsibleReact', 'Node.jsPython', 'AWS'],
+    integrations: ['GitHubGitLab', 'BitbucketAWS', 'AzureGoogle Cloud', 'SlackTeams', 'Jira'],
+    useCases: ['Software developmentDeployment automation', 'Infrastructure managementTesting automation', 'MonitoringSecurity'],
     roi: 'Average customer sees 250% ROI within 6 months through improved development velocity and reduced deployment time.',
-    competitors: ['GitLab', 'Jenkins', 'CircleCI', 'GitHub Actions', 'Azure DevOps'],
+    competitors: ['GitLabJenkins', 'CircleCIGitHub Actions', 'Azure DevOps'],
     marketSize: '$12B DevOps market',
     growthRate: '130% annual growth',
     variant: 'cyberpunk',
@@ -295,4 +270,4 @@ export const innovativeITServices: InnovativeITService[] = [
     rating: 4.7,
     reviews: 1250
   }
-];
+],

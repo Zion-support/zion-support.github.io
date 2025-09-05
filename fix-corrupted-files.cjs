@@ -67,8 +67,7 @@ const AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 
-export default AccessibilityEnhancer;`,
-
+export default AccessibilityEnhancer;`;
   'components/OptimizedImage.tsx': `import React from 'react';
 import Image from 'next/image';
 
@@ -83,12 +82,12 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
+  src;
+  alt;
+  width;
+  height;
+  className = '';
+  priority = false;
   quality = 75
 }) => {
   return (
@@ -104,8 +103,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 
-export default OptimizedImage;`,
-
+export default OptimizedImage;`;
   'components/ContactForm.tsx': `import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -120,12 +118,12 @@ interface FormData {
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
+    name: '';
+    email: '';
+    company: '';
+    phone: '';
+    service: '';
+    message: '';
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -134,8 +132,8 @@ const ContactForm: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
-      [name]: value,
+      ...prev;
+      [name]: value;
     }));
   };
 
@@ -149,12 +147,12 @@ const ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
+        name: '';
+        email: '';
+        company: '';
+        phone: '';
+        service: '';
+        message: '';
       });
     } catch {
       setSubmitStatus('error');

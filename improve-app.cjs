@@ -111,54 +111,50 @@ class AppImprover {
   createOptimizedNextConfig() {
     const optimizedConfig = `/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: false },
-  typescript: { ignoreBuildErrors: false },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
+  reactStrictMode: true;
+  swcMinify: true;
+  compress: true;
+  poweredByHeader: false;
+  eslint: { ignoreDuringBuilds: false };
+  typescript: { ignoreBuildErrors: false };
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'];
   // Performance optimizations
   experimental: {
-    scrollRestoration: true,
-    optimizeCss: true,
+    scrollRestoration: true;
+    optimizeCss: true;
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
-  },
-  
+  };
   // Image optimization
   images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"];
+    formats: ['image/webp', 'image/avif'];
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840];
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384];
+    minimumCacheTTL: 60;
+    dangerouslyAllowSVG: true;
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
-  },
-  
+  };
   // Security headers
   async headers() {
     return [{
-        source: '/(.*)',
+        source: '/(.*)';
         headers: [
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'DENY' },
-          { key: 'X-XSS-Protection', value: '1; mode=block' },
-          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' };
+          { key: 'X-Frame-Options', value: 'DENY' };
+          { key: 'X-XSS-Protection', value: '1; mode=block' };
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' };
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
         ]
       }
     ];
-  },
-  
+  };
   // Bundle analyzer
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
+        ...config.resolve.fallback;
+        fs: false;
+        net: false;
         tls: false
       };
     }
@@ -212,8 +208,8 @@ class PerformanceOptimizer {
 
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      metrics: this.metrics,
+      timestamp: new Date().toISOString();
+      metrics: this.metrics;
       recommendations: this.generateRecommendations()
     };
 
@@ -268,8 +264,8 @@ class SecurityAuditor {
         Object.keys(audit.vulnerabilities).forEach(pkg => {
           const vuln = audit.vulnerabilities[pkg];
           this.issues.push({
-            package: pkg,
-            severity: vuln.severity,
+            package: pkg;
+            severity: vuln.severity;
             description: vuln.description
           });
         });
@@ -296,11 +292,11 @@ class SecurityAuditor {
 
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      issues: this.issues,
-      fixes: this.fixes,
+      timestamp: new Date().toISOString();
+      issues: this.issues;
+      fixes: this.fixes;
       summary: {
-        totalIssues: this.issues.length,
+        totalIssues: this.issues.length;
         fixesApplied: this.fixes.length
       }
     };
@@ -325,17 +321,17 @@ module.exports = SecurityAuditor;`;
 
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      issues: this.issues,
-      improvements: this.improvements,
+      timestamp: new Date().toISOString();
+      issues: this.issues;
+      improvements: this.improvements;
       summary: {
-        totalIssues: this.issues.length,
-        totalImprovements: this.improvements.length,
-      },
+        totalIssues: this.issues.length;
+        totalImprovements: this.improvements.length;
+      };
     };
 
     fs.writeFileSync(
-      'app-analysis-report.json',
+      'app-analysis-report.json';
       JSON.stringify(report, null, 2)
     );
 

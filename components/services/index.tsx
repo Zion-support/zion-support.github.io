@@ -1,21 +1,21 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import React from 'react';
-import SEO from '../../components/SEO';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
-import Card from '../../components/ui/Card';
-import Link from 'next/link';
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { extraServices } from '../../data/extra-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { realMarketServices } from '../../data/real-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { realOperationalServices } from '../../data/real-operational-services';
-import { verified2025Additions } from '../../data/verified-2025-additions';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import React from 'react',
+import SEO from '../../components/SEO',
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
+import Card from '../../components/ui/Card',
+import Link from 'next/link',
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services',
+import { additionalEnhancedServices } from '../../data/additional-real-services',
+import { extraServices } from '../../data/extra-services',
+import { newlyAddedServices } from '../../data/newly-added-services',
+import { curatedMarketServices } from '../../data/curated-market-services',
+import { realMarketServices } from '../../data/real-market-services',
+import { new2025Services } from '../../data/new-2025-services',
+import { marketValidatedServices } from '../../data/market-validated-services',
+import { moreRealServices2025 } from '../../data/more-real-services-2025',
+import { realOperationalServices } from '../../data/real-operational-services',
+import { verified2025Additions } from '../../data/verified-2025-additions',
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 
@@ -26,14 +26,14 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({
   provider: 'Zion Provider',
   priceRangeUSD: item.priceRangeUSD,
   categories: [item.category],
-  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10});
+  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10}),
 
 const ServicesPage: NextPage = () => {
-  const [services, setServices] = React.useState<ServiceItem[]>([]);
-  const [filtered, setFiltered] = React.useState<ServiceItem[]>([]);
-  const [filters, setFilters] = React.useState<Filters>({ categories: [] });
-  const [modalOpen, setModalOpen] = React.useState(false);
-  const [selected, setSelected] = React.useState<ServiceItem | null>(null);
+  const [services, setServices] = React.useState<ServiceItem[]>([]),
+  const [filtered, setFiltered] = React.useState<ServiceItem[]>([]),
+  const [filters, setFilters] = React.useState<Filters>({ categories: [] }),
+  const [modalOpen, setModalOpen] = React.useState(false),
+  const [selected, setSelected] = React.useState<ServiceItem | null>(null),
 
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
@@ -50,59 +50,47 @@ export default function ServicesIndexPage() {
       verified2025Additions as any[],
       realServicesQ12025 as any[],
       newVerifiedServicesQ22025 as any[]
-    );
-  const byCategory: Record<string, unknown[]> = {};
-  for (const c of categories) byCategory[c] = [];
+    ),
+  const byCategory: Record<string, unknown[]> = {},
+  for (const c of categories) byCategory[c] = [],
   // Normalize various category labels into our main buckets
   const categoryAliases: Record<string, string> = {
-    'AI & Data': 'AI & Data',
-    'AI & Machine Learning': 'AI & Data',
-    'GenAI': 'AI & Data',
-    'Cloud & FinOps': 'Cloud & FinOps',
-    'Cloud & Data': 'Cloud & FinOps',
-    'Platform Engineering': 'Cloud & FinOps',
-    'Observability': 'Observability',
-    'Observability & Telemetry': 'Observability',
-    'Quality & Monitoring': 'Quality & Monitoring',
-    'Security & Reliability': 'Quality & Monitoring',
-    'Security & Compliance': 'Quality & Monitoring',
-    'Developer Tools': 'Developer Tools',
-    'Growth & Marketing': 'Developer Tools'
-  };
+    'AI & Data': 'AI & DataAI & Machine Learning': 'AI & DataGenAI': 'AI & DataCloud & FinOps': 'Cloud & FinOpsCloud & Data': 'Cloud & FinOpsPlatform Engineering': 'Cloud & FinOpsObservability': 'ObservabilityObservability & Telemetry': 'ObservabilityQuality & Monitoring': 'Quality & MonitoringSecurity & Reliability': 'Quality & MonitoringSecurity & Compliance': 'Quality & MonitoringDeveloper Tools': 'Developer ToolsGrowth & Marketing': 'Developer Tools'
+  },
   for (const s of all) {
-    const service = s as { category?: string };
-    const rawCat = (service.category || '').trim();
-    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
-    byCategory[mapped].push(s);
+    const service = s as { category?: string },
+    const rawCat = (service.category || '').trim(),
+    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools'),
+    byCategory[mapped].push(s),
   }
 
   React.useEffect(() => {
     const next = services.filter((s) => {
       // Category
-      if (filters.categories.length > 0 && !s.categories.some((c) => filters.categories.includes(c))) return false;
+      if (filters.categories.length > 0 && !s.categories.some((c) => filters.categories.includes(c))) return false,
       // Price
-      const min = s.priceFromUSD ?? s.priceRangeUSD?.[0];
-      const max = s.priceRangeUSD?.[1] ?? s.priceFromUSD;
-      if (filters.priceMin !== undefined && (min === undefined || max === undefined ? true : max < filters.priceMin)) return false;
-      if (filters.priceMax !== undefined && (min === undefined ? true : min > filters.priceMax)) return false;
+      const min = s.priceFromUSD ?? s.priceRangeUSD?.[0],
+      const max = s.priceRangeUSD?.[1] ?? s.priceFromUSD,
+      if (filters.priceMin !== undefined && (min === undefined || max === undefined ? true : max < filters.priceMin)) return false,
+      if (filters.priceMax !== undefined && (min === undefined ? true : min > filters.priceMax)) return false,
       // Rating
-      if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) return false;
-      // Delivery time (not available in data; simulate pass-through)
-      return true;
-    });
-    setFiltered(next);
-  }, [filters, services]);
+      if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) return false,
+      // Delivery time (not available in data, simulate pass-through)
+      return true,
+    }),
+    setFiltered(next),
+  }, [filters, services]),
 
   const availableCategories = React.useMemo(() => {
-    const set = new Set<string>();
-    services.forEach((s) => s.categories.forEach((c) => set.add(c)));
-    return Array.from(set);
-  }, [services]);
+    const set = new Set<string>(),
+    services.forEach((s) => s.categories.forEach((c) => set.add(c))),
+    return Array.from(set),
+  }, [services]),
 
   const handleRequestQuote = (service: ServiceItem) => {
-    setSelected(service);
-    setModalOpen(true);
-  };
+    setSelected(service),
+    setModalOpen(true)
+  },
 
   const handleSubmit = async (values: QuoteFormValues) => {
     const res = await fetch('/api/quote-request', {
@@ -113,12 +101,12 @@ export default function ServicesIndexPage() {
         description: values.projectDescription,
         timeline: { start: values.timelineStart, end: values.timelineEnd },
         budgetRange: values.budgetRange,
-        email: values.email})});
+        email: values.email})}),
     if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err?.message || 'Failed to submit');
+      const err = await res.json().catch(() => ({})),
+      throw new Error(err?.message || 'Failed to submit'),
     }
-  };
+  },
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
@@ -151,7 +139,7 @@ export default function ServicesIndexPage() {
         onSubmit={handleSubmit}
       />
     </div>
-  );
-};
+  ),
+},
 
-export default ServicesPage;
+export default ServicesPage,

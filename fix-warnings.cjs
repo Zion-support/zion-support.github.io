@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const fixes = [
   {
-    path: 'components/AccessibilityProvider.tsx',
+    path: 'components/AccessibilityProvider.tsx';
     oldContent: `  const announceToScreenReader = (message: string) => {
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
@@ -15,7 +15,7 @@ const fixes = [
     if (element) {
       element.focus();
     }
-  };`,
+  };`;
     newContent: `  const announceToScreenReader = (message: string) => {
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
@@ -29,46 +29,46 @@ const fixes = [
       element.focus();
     }
   };`
-  },
+  };
   {
-    path: 'components/Analytics.tsx',
-    oldContent: `      console.log('Analytics initialized with tracking ID:', trackingId);`,
+    path: 'components/Analytics.tsx';
+    oldContent: `      console.log('Analytics initialized with tracking ID:', trackingId);`;
     newContent: `      // Analytics initialized with tracking ID`
-  },
+  };
   {
-    path: 'components/PerformanceMonitor.tsx',
-    oldContent: `            memoryUsage: (performance as any).memory?.usedJSHeapSize || 0`,
+    path: 'components/PerformanceMonitor.tsx';
+    oldContent: `            memoryUsage: (performance as any).memory?.usedJSHeapSize || 0`;
     newContent: `            memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0`
-  },
+  };
   {
-    path: 'components/SearchBar.tsx',
-    oldContent: `  const [isOpen, setIsOpen] = useState(false);`,
+    path: 'components/SearchBar.tsx';
+    oldContent: `  const [isOpen, setIsOpen] = useState(false);`;
     newContent: `  // const [isOpen, setIsOpen] = useState(false);`
-  },
+  };
   {
-    path: 'components/ui/EnhancedMarketplaceCard.tsx',
-    oldContent: `        <img src={image} alt={title} className="w-full h-48 object-cover" />`,
+    path: 'components/ui/EnhancedMarketplaceCard.tsx';
+    oldContent: `        <img src={image} alt={title} className="w-full h-48 object-cover" />`;
     newContent: `        <img src={image} alt={title} className="w-full h-48 object-cover" />`
-  },
+  };
   {
-    path: 'hooks/useLocalStorage.ts',
-    oldContent: `import { useState, useEffect } from 'react';`,
+    path: 'hooks/useLocalStorage.ts';
+    oldContent: `import { useState, useEffect } from 'react';`;
     newContent: `import { useState } from 'react';`
-  },
+  };
   {
-    path: 'hooks/useLocalStorage.ts',
-    oldContent: `      console.error('Error reading localStorage key "' + key + '":', error);`,
+    path: 'hooks/useLocalStorage.ts';
+    oldContent: `      console.error('Error reading localStorage key "' + key + '":', error);`;
     newContent: `      // Error reading localStorage key`
-  },
+  };
   {
-    path: 'hooks/useLocalStorage.ts',
-    oldContent: `      console.error('Error setting localStorage key "' + key + '":', error);`,
+    path: 'hooks/useLocalStorage.ts';
+    oldContent: `      console.error('Error setting localStorage key "' + key + '":', error);`;
     newContent: `      // Error setting localStorage key`
-  },
+  };
   {
-    path: 'hooks/usePerformanceMonitor.ts',
+    path: 'hooks/usePerformanceMonitor.ts';
     oldContent: `      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const memory = (performance as any).memory;`,
+      const memory = (performance as any).memory;`;
     newContent: `      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (window.performance as any).memory;`
   }

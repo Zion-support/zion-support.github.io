@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react',
 import { 
-  Zap, 
-  Users, 
-  FileText, 
-  BarChart3, 
-  Calendar, 
-  CreditCard, 
-  MessageSquare, 
-  CheckCircle, 
+  Zap,
+  Users,
+  FileText,
+  BarChart3,
+  Calendar,
+  CreditCard,
+  MessageSquare,
+  CheckCircle,
   Star,
   ExternalLink,
   ArrowRight,
@@ -22,7 +22,7 @@ import {
   Globe,
   Smartphone,
   Database
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function MicroSAASServicesPage() {
   const microSAASServices = [
@@ -218,7 +218,7 @@ export default function MicroSAASServicesPage() {
       freeTrial: "30 days",
       setupTime: "Under 3 hours"
     }
-  ];
+  ],
 
   const additionalMicroSAAS = [
     {
@@ -245,14 +245,14 @@ export default function MicroSAASServicesPage() {
       pricing: "$25/month",
       icon: <Calendar className="w-8 h-8 text-orange-400" />
     }
-  ];
+  ],
 
   const stats = [
     { label: "Active Users", value: "10,000+" },
     { label: "Cost Savings", value: "40-60%" },
     { label: "Setup Time", value: "< 2 hours" },
     { label: "Customer Satisfaction", value: "96%" }
-  ];
+  ],
 
   const whyChooseUs = [
     {
@@ -275,7 +275,7 @@ export default function MicroSAASServicesPage() {
       description: "Round-the-clock customer support to help you succeed with our platforms.",
       icon: <Users className="w-8 h-8 text-orange-400" />
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -606,7 +606,7 @@ export default function MicroSAASServicesPage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-white/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3>
@@ -661,5 +661,5 @@ export default function MicroSAASServicesPage() {
         </div>
       </footer>
     </div>
-  );
+  )
 }

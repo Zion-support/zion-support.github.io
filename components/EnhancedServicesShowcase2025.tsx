@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useMemo } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  FaRocket, 
-  FaBrain, 
-  FaCloud, 
-  FaShieldAlt, 
-  FaChartLine, 
+  FaRocket,
+  FaBrain,
+  FaCloud,
+  FaShieldAlt,
+  FaChartLine,
   FaCogs,
   FaLightbulb,
   FaGlobe,
@@ -14,11 +14,11 @@ import {
   FaNetworkWired,
   FaRobot,
   FaSearch
-} from 'react-icons/fa';
+} from 'react-icons/fa',
 import { 
-  SiNextdotjs, 
-  SiReact, 
-  SiTypescript, 
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
   SiTailwindcss,
   SiPrisma,
   SiSupabase,
@@ -28,30 +28,30 @@ import {
   SiAws,
   SiGooglecloud,
   SiMicrosoftazure
-} from 'react-icons/si';
+} from 'react-icons/si',
 
 interface Service {
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  category: string;
-  features: string[];
+  id: string,
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  category: string,
+  features: string[],
   pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
-  };
-  technologies: string[];
-  benefits: string[];
+    starter: number,
+    professional: number,
+    enterprise: number
+  },
+  technologies: string[],
+  benefits: string[]
 }
 
 interface ServiceCategory {
-  id: string;
-  name: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string;
+  id: string,
+  name: string,
+  description: string,
+  icon: React.ReactNode,
+  color: string
 }
 
 const serviceCategories: ServiceCategory[] = [
@@ -97,7 +97,7 @@ const serviceCategories: ServiceCategory[] = [
     icon: <FaRobot className="w-8 h-8" />,
     color: 'from-yellow-500 to-orange-500'
   }
-];
+],
 
 const services: Service[] = [
   {
@@ -107,24 +107,19 @@ const services: Service[] = [
     icon: <FaRobot className="w-6 h-6" />,
     category: 'automation',
     features: [
-      'Intelligent workflow automation',
-      'Natural language processing',
-      'Predictive analytics',
-      'Real-time decision making',
-      'Custom AI model training',
-      'Multi-platform integration'
+      'Intelligent workflow automationNatural language processing',
+      'Predictive analyticsReal-time decision making',
+      'Custom AI model trainingMulti-platform integration'
     ],
     pricing: {
       starter: 299,
       professional: 799,
       enterprise: 1999
     },
-    technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'LangChain', 'React', 'Node.js'],
+    technologies: ['TensorFlowPyTorch', 'OpenAILangChain', 'ReactNode.js'],
     benefits: [
-      'Reduce manual tasks by 80%',
-      'Improve accuracy by 95%',
-      '24/7 automated operations',
-      'Scalable AI infrastructure'
+      'Reduce manual tasks by 80%Improve accuracy by 95%',
+      '24/7 automated operationsScalable AI infrastructure'
     ]
   },
   {
@@ -134,24 +129,19 @@ const services: Service[] = [
     icon: <FaBrain className="w-6 h-6" />,
     category: 'ai-ml',
     features: [
-      'Quantum algorithm optimization',
-      'Hybrid classical-quantum computing',
-      'Quantum machine learning',
-      'Cryptographic solutions',
-      'Quantum simulation tools',
-      'API access to quantum hardware'
+      'Quantum algorithm optimizationHybrid classical-quantum computing',
+      'Quantum machine learningCryptographic solutions',
+      'Quantum simulation toolsAPI access to quantum hardware'
     ],
     pricing: {
       starter: 999,
       professional: 2499,
       enterprise: 4999
     },
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
+    technologies: ['QiskitCirq', 'PennyLanePython', 'C++CUDA'],
     benefits: [
-      'Solve previously impossible problems',
-      'Exponential speed improvements',
-      'Future-proof technology',
-      'Research and development support'
+      'Solve previously impossible problemsExponential speed improvements',
+      'Future-proof technologyResearch and development support'
     ]
   },
   {
@@ -161,24 +151,19 @@ const services: Service[] = [
     icon: <FaNetworkWired className="w-6 h-6" />,
     category: 'iot',
     features: [
-      'Edge device optimization',
-      'Real-time AI inference',
-      'Distributed learning',
-      'Low-latency processing',
-      'Offline AI capabilities',
-      'Edge-to-cloud synchronization'
+      'Edge device optimizationReal-time AI inference',
+      'Distributed learningLow-latency processing',
+      'Offline AI capabilitiesEdge-to-cloud synchronization'
     ],
     pricing: {
       starter: 199,
       professional: 599,
       enterprise: 1499
     },
-    technologies: ['TensorFlow Lite', 'ONNX Runtime', 'Edge TPU', 'Raspberry Pi', 'Arduino'],
+    technologies: ['TensorFlow LiteONNX Runtime', 'Edge TPURaspberry Pi', 'Arduino'],
     benefits: [
-      'Reduced latency by 90%',
-      'Lower bandwidth costs',
-      'Enhanced privacy',
-      'Scalable edge deployment'
+      'Reduced latency by 90%Lower bandwidth costs',
+      'Enhanced privacyScalable edge deployment'
     ]
   },
   {
@@ -188,24 +173,19 @@ const services: Service[] = [
     icon: <FaShieldAlt className="w-6 h-6" />,
     category: 'security',
     features: [
-      'Post-quantum cryptography',
-      'Quantum key distribution',
-      'Advanced threat detection',
-      'Zero-trust architecture',
-      'Compliance frameworks',
-      'Real-time monitoring'
+      'Post-quantum cryptographyQuantum key distribution',
+      'Advanced threat detectionZero-trust architecture',
+      'Compliance frameworksReal-time monitoring'
     ],
     pricing: {
       starter: 399,
       professional: 999,
       enterprise: 2499
     },
-    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
+    technologies: ['NIST PQCQKD protocols', 'Zero TrustSIEM', 'SOAR'],
     benefits: [
-      'Future-proof security',
-      'Quantum-resistant encryption',
-      'Comprehensive compliance',
-      'Advanced threat protection'
+      'Future-proof securityQuantum-resistant encryption',
+      'Comprehensive complianceAdvanced threat protection'
     ]
   },
   {
@@ -215,24 +195,19 @@ const services: Service[] = [
     icon: <FaDatabase className="w-6 h-6" />,
     category: 'data',
     features: [
-      'Unified data access',
-      'Real-time analytics',
-      'Data governance',
-      'AI-powered insights',
-      'Multi-cloud support',
-      'Data lineage tracking'
+      'Unified data accessReal-time analytics',
+      'Data governanceAI-powered insights',
+      'Multi-cloud supportData lineage tracking'
     ],
     pricing: {
       starter: 299,
       professional: 799,
       enterprise: 1999
     },
-    technologies: ['Apache Kafka', 'Apache Spark', 'Snowflake', 'Databricks', 'Airflow'],
+    technologies: ['Apache KafkaApache Spark', 'SnowflakeDatabricks', 'Airflow'],
     benefits: [
-      'Unified data view',
-      'Real-time insights',
-      'Improved data quality',
-      'Reduced integration costs'
+      'Unified data viewReal-time insights',
+      'Improved data qualityReduced integration costs'
     ]
   },
   {
@@ -242,39 +217,34 @@ const services: Service[] = [
     icon: <FaCloud className="w-6 h-6" />,
     category: 'cloud',
     features: [
-      'Kubernetes orchestration',
-      'Microservices architecture',
-      'CI/CD pipelines',
-      'Auto-scaling',
-      'Multi-cloud deployment',
-      'DevOps automation'
+      'Kubernetes orchestrationMicroservices architecture',
+      'CI/CD pipelinesAuto-scaling',
+      'Multi-cloud deploymentDevOps automation'
     ],
     pricing: {
       starter: 199,
       professional: 599,
       enterprise: 1499
     },
-    technologies: ['Kubernetes', 'Docker', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana'],
+    technologies: ['KubernetesDocker', 'HelmArgoCD', 'PrometheusGrafana'],
     benefits: [
-      'Faster deployment',
-      'Improved scalability',
-      'Better resource utilization',
-      'Enhanced reliability'
+      'Faster deploymentImproved scalability',
+      'Better resource utilizationEnhanced reliability'
     ]
   }
-];
+],
 
 const EnhancedServicesShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedService, setSelectedService] = useState<Service | null>(null),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name'),
 
   const filteredServices = useMemo(() => {
-    let filtered = services;
+    let filtered = services,
     
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory)
     }
     
     if (searchTerm) {
@@ -282,28 +252,27 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+      ),
     }
     
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return a.pricing.starter - b.pricing.starter;
+          return a.pricing.starter - b.pricing.starter,
         case 'category':
-          return a.category.localeCompare(b.category);
-        default:
-          return a.title.localeCompare(b.title);
+          return a.category.localeCompare(b.category),
+        default: return a.title.localeCompare(b.title)
       }
-    });
-  }, [selectedCategory, searchTerm, sortBy]);
+    }),
+  }, [selectedCategory, searchTerm, sortBy]),
 
   const handleServiceSelect = (service: Service) => {
-    setSelectedService(service);
-  };
+    setSelectedService(service)
+  },
 
   const closeModal = () => {
-    setSelectedService(null);
-  };
+    setSelectedService(null),
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -568,7 +537,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  ),
+},
 
-export default EnhancedServicesShowcase2025;
+export default EnhancedServicesShowcase2025,

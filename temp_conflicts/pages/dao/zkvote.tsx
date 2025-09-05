@@ -3,7 +3,7 @@ import { BrowserProvider } from 'ethers'
 import dynamic from 'next/dynamic'
 
 // Lazy import to avoid SSR issues
-const ReactJson = dynamic(() => import('react-json-view'), { ssr: false }) as any
+const ReactJson = dynamic(() => import('react-json-view') { ssr: false }) as any
 
 export default function ZkVotePage() {
   const [account, setAccount] = useState<string>('')

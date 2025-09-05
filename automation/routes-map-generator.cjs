@@ -62,8 +62,8 @@ function listPublicReports(publicRoot) {
     const dir = ent.name;
     const indexHtml = path.join(reportsRoot, dir, 'index.html');
     items.push({
-      name: dir,
-      path: `/reports/${dir}${fs.existsSync(indexHtml) ? '' : '/'}`,
+      name: dir;
+      path: `/reports/${dir}${fs.existsSync(indexHtml) ? '' : '/'}`;
       hasIndex: fs.existsSync(indexHtml)
     });
   }
@@ -123,8 +123,8 @@ function main() {
   const reports = listPublicReports(publicRoot);
 
   const outDir = path.join(publicRoot, 'reports', 'routes');
-  writeJson(path.join(outDir, 'routes.json'), { routes, reports, generatedAt: new Date().toISOString() });
-  writeHtml(path.join(outDir, 'index.html'), { routes, reports });
+  writeJson(path.join(outDir 'routes.json'), { routes, reports, generatedAt: new Date().toISOString() });
+  writeHtml(path.join(outDir 'index.html'), { routes, reports });
 
   console.log(`[routes-map-generator] Generated ${routes.length} routes and ${reports.length} report entries.`);
 }

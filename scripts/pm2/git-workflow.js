@@ -1,8 +1,8 @@
 
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+#!/usr/bin/env node,
+const fs = require('fs'),
+const path = require('path'),
+const { execSync } = require('child_process'),
 
 #!/usr/bin/env node,
 const fs = require('fs'),
@@ -15,7 +15,7 @@ class GitWorkflow {,
     this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log'),
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json'),
     this.startTime = Date.now()
-  };
+  },
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
@@ -25,8 +25,8 @@ class GitWorkflow {,
       fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
       console.error('Error writing to log file:', error.message)
-    };
-  };
+    },
+  },
 ,
   async checkGitStatus() {,
     try {,
@@ -53,7 +53,7 @@ class GitWorkflow {,
         changes: status.trim().split('\n').filter(line => line.trim()),
         branches: branches.trim().split('\n'),
         currentBranch: currentBranch
-      };
+      },
     } catch (error) {,
       return {,
         success: false,
@@ -62,9 +62,9 @@ class GitWorkflow {,
         changes: [],
         branches: [],
         currentBranch: null
-      };
-    };
-  };
+      },
+    },
+  },
 ,
   async checkBranchHealth() {,
     try {,
@@ -99,27 +99,27 @@ class GitWorkflow {,
             })
           } catch (error) {,
             // Skip if can't access branch
-          };
-        };
+          },
+        },
       },
       return {,
         success: true,
         branches: branchInfo
-      };
+      },
 ,
       return {,
         success: true,
         branches: branchInfo
-      };
+      },
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         branches: []
-      };
+      },
 
-    };
-  };
+    },
+  },
 ,
   async checkMergeConflicts() {,
     try {,
@@ -139,16 +139,16 @@ class GitWorkflow {,
         success: true,
         hasConflicts: conflictFiles.length > 0,
         conflictFiles: conflictFiles
-      };
+      },
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         hasConflicts: false,
         conflictFiles: []
-      };
-    };
-  };
+      },
+    },
+  },
 ,
   async checkStaleBranches() {,
     try {,
@@ -180,30 +180,30 @@ class GitWorkflow {,
                 lastCommit: lastCommit,
                 daysSinceLastCommit: Math.floor(daysSinceLastCommit)
               })
-            };
+            },
           } catch (error) {,
             // Skip if can't access branch
-          };
-        };
+          },
+        },
       },
       return {,
         success: true,
         staleBranches: staleBranches
-      };
+      },
 ursor/automate-test-improve-and-merge-code-8ee2
 ,
       return {,
         success: true,
         staleBranches: staleBranches
-      };
+      },
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         staleBranches: []
-      };
-    };
-  };
+      },
+    },
+  },
 ,
   async generateReport(statusInfo, branchInfo, conflictInfo, staleInfo) {,
     const report = {,
@@ -223,7 +223,7 @@ ursor/automate-test-improve-and-merge-code-8ee2
         stale: staleInfo
       },
       recommendations: []
-    };
+    },
 ,
     // Calculate health score,
     let score = 100,
@@ -241,7 +241,7 @@ ursor/automate-test-improve-and-merge-code-8ee2
         message: 'Uncommitted changes detected',
         action: 'Commit or stash changes before switching branches'
       })
-    };
+    },
 ,
     if (conflictInfo.hasConflicts) {,
       report.recommendations.push({,
@@ -249,7 +249,7 @@ ursor/automate-test-improve-and-merge-code-8ee2
         message: 'Merge conflicts detected',
         action: 'Resolve merge conflicts before continuing'
       })
-    };
+    },
 ,
     if (staleInfo.staleBranches?.length > 0) {,
       report.recommendations.push({,
@@ -257,7 +257,7 @@ ursor/automate-test-improve-and-merge-code-8ee2
         message: `${staleInfo.staleBranches.length} stale branches found`,
         action: 'Consider deleting or updating stale branches'
       })
-    };
+    },
 ,
     if (branchInfo.branches?.length > 10) {,
       report.recommendations.push({,
@@ -265,24 +265,24 @@ ursor/automate-test-improve-and-merge-code-8ee2
         message: 'Many branches detected',
         action: 'Consider cleaning up unused branches'
       })
-    };
+    },
 ,
     return report
-  };
+  },
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
         fs.mkdirSync(reportDir, { recursive: true })
-      };
+      },
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
-    };
-  };
+    },
+  },
 ,
   async run() {,
     this.log('🌿 Starting Git Workflow Monitor...'),
@@ -293,7 +293,7 @@ ursor/automate-test-improve-and-merge-code-8ee2
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
         fs.mkdirSync(logsDir, { recursive: true })
-      };
+      },
 ,
       // Run all git checks,
       const statusInfo = await this.checkGitStatus(),
@@ -328,14 +328,14 @@ ursor/automate-test-improve-and-merge-code-8ee2
         })
       } else {,
         this.log('\n✨ Git workflow is healthy!')
-      };
+      },
 
     } catch (error) {,
       this.log(`❌ Error running git workflow monitor: ${error.message}`),
       process.exit(1)
-    };
-  };
-};
+    },
+  },
+},
 ,
 // Run the git workflow monitor,
 const gitWorkflow = new GitWorkflow(),

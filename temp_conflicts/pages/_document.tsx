@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from 'next/document';
+import { Html, Head, Main, NextScript } from 'next/document',
 
 export default function MyDocument() {
   return (
@@ -8,7 +8,7 @@ export default function MyDocument() {
         <meta name="description" content="Leading-edge AI, quantum computing, and emerging technology solutions that transform businesses. Autonomous DevOps, cybersecurity, and business intelligence platforms." />
         <meta name="keywords" content="AI, artificial intelligence, quantum computing, cybersecurity, DevOps, business intelligence, autonomous systems, emerging technology, blockchain, IoT" />
         <meta name="author" content="Zion Tech Group" />
-        <meta property="og:title" content="Zion Tech Group - Pioneering Autonomous Business Operations" />
+        <meta property="og: title" content="Zion Tech Group - Pioneering Autonomous Business Operations" />
         <meta property="og:description" content="Leading-edge AI, quantum computing, and emerging technology solutions that transform businesses." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
@@ -26,5 +26,5 @@ export default function MyDocument() {
         <NextScript />
       </body>
     </Html>
-  );
+  )
 }

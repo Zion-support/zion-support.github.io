@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react',
 
 export default function Reports() {
-  const [uptime, setUptime] = useState<any[]>([]);
-  const [seo, setSeo] = useState<any>({});
-  const [links, setLinks] = useState<any>({});
-  const [deps, setDeps] = useState<any>({});
-  const [changelog, setChangelog] = useState<any>({});
-  const [pagespeed, setPagespeed] = useState<any>({});
+  const [uptime, setUptime] = useState<any[]>([]),
+  const [seo, setSeo] = useState<any>({}),
+  const [links, setLinks] = useState<any>({}),
+  const [deps, setDeps] = useState<any>({}),
+  const [changelog, setChangelog] = useState<any>({}),
+  const [pagespeed, setPagespeed] = useState<any>({}),
 
   useEffect(() => {
     Promise.all([
@@ -16,10 +16,10 @@ export default function Reports() {
       fetch('/api/reports/deps').then((r) => r.json()).then(setDeps),
       fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog),
       fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
-    ]).catch(() => {});
-  }, []);
+    ]).catch(() => {}),
+  }, []),
 
-  const lastUptime = uptime[uptime.length - 1];
+  const lastUptime = uptime[uptime.length - 1],
 
   return (
     <div className="space-y-6">
@@ -64,5 +64,5 @@ export default function Reports() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

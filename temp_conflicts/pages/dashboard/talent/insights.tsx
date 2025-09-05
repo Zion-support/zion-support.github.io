@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import SimpleBarChart from '../../../components/charts/SimpleBarChart';
-import { KpiBadge } from '../../../components/ui/InteractiveStats';
-import { exportCsv } from '../../../utils/exporters';
-import useRole from '../../../hooks/useRole';
+import React, { useEffect, useState } from 'react',
+import SimpleBarChart from '../../../components/charts/SimpleBarChart',
+import { KpiBadge } from '../../../components/ui/InteractiveStats',
+import { exportCsv } from '../../../utils/exporters',
+import useRole from '../../../hooks/useRole',
 
 export default function TalentInsightsPage() {
-  const [data, setData] = useState<any>(null);
-  const { role, loading } = useRole();
+  const [data, setData] = useState<any>(null),
+  const { role, loading } = useRole(),
 
   useEffect(() => {
-    fetch('/api/analytics/talent').then(r => r.json()).then(setData).catch(() => setData(null));
-  }, []);
+    fetch('/api/analytics/talent').then(r => r.json()).then(setData).catch(() => setData(null)),
+  }, []),
 
-  if (loading) return <div>Loading...</div>;
-  if (role !== 'talent' && role !== 'admin') return <div>Unauthorized</div>;
+  if (loading) return <div>Loading...</div>,
+  if (role !== 'talent' && role !== 'admin') return <div>Unauthorized</div>,
 
   return (
     <div className="space-y-6">
@@ -31,5 +31,5 @@ export default function TalentInsightsPage() {
         <SimpleBarChart data={data?.topTags || []} onExportCsv={(rows) => exportCsv('talent-top-tags.csv', rows)} />
       </div>
     </div>
-  );
+  ),
 }

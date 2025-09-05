@@ -180,9 +180,9 @@ class DeploymentAutomation {
 
   addStep(description) {
     this.deploymentSteps.push({
-      description,
-      timestamp: new Date().toISOString(),
-      status: 'completed',
+      description;
+      timestamp: new Date().toISOString();
+      status: 'completed';
     });
   }
 
@@ -191,32 +191,32 @@ class DeploymentAutomation {
     const duration = endTime - this.startTime;
 
     const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      totalSteps: this.deploymentSteps.length,
-      steps: this.deploymentSteps,
+      timestamp: new Date().toISOString();
+      duration: `${duration}ms`;
+      totalSteps: this.deploymentSteps.length;
+      steps: this.deploymentSteps;
       summary: {
         preDeployment: this.deploymentSteps.filter(s =>
           s.description.includes('pre-deployment')
-        ).length,
+        ).length;
         build: this.deploymentSteps.filter(s => s.description.includes('build'))
-          .length,
+          .length;
         security: this.deploymentSteps.filter(s =>
           s.description.includes('security')
-        ).length,
+        ).length;
         performance: this.deploymentSteps.filter(s =>
           s.description.includes('performance')
-        ).length,
+        ).length;
         deployment: this.deploymentSteps.filter(s =>
           s.description.includes('deploy')
-        ).length,
+        ).length;
         testing: this.deploymentSteps.filter(s =>
           s.description.includes('test')
-        ).length,
+        ).length;
         monitoring: this.deploymentSteps.filter(s =>
           s.description.includes('monitor')
-        ).length,
-      },
+        ).length;
+      };
     };
 
     // Ensure logs directory exists
@@ -226,7 +226,7 @@ class DeploymentAutomation {
     }
 
     const reportPath = path.join(
-      logsDir,
+      logsDir;
       `deployment-automation-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

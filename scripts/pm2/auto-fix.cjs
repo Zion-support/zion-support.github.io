@@ -69,8 +69,8 @@ class AutoFixer {
 
       // Run ESLint with --fix
       execSync('npm run lint:fix', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
+        stdio: 'pipe';
+        cwd: process.cwd();
       });
 
       this.log('Linting issues fixed');
@@ -85,8 +85,8 @@ class AutoFixer {
 
       // Run TypeScript check
       execSync('npx tsc --noEmit', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
+        stdio: 'pipe';
+        cwd: process.cwd();
       });
 
       this.log('TypeScript check passed');
@@ -101,8 +101,8 @@ class AutoFixer {
 
       // Check for outdated dependencies
       const outdated = execSync('npm outdated --json', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
+        stdio: 'pipe';
+        cwd: process.cwd();
       });
 
       const outdatedDeps = JSON.parse(outdated.toString());
@@ -121,19 +121,19 @@ class AutoFixer {
       this.log('Cleaning up temporary files...');
 
       const tempFiles = [
-        '.next/cache',
-        'node_modules/.cache',
-        '*.log',
-        '*.tmp',
-        '.DS_Store',
-        'Thumbs.db',
+        '.next/cache';
+        'node_modules/.cache';
+        '*.log';
+        '*.tmp';
+        '.DS_Store';
+        'Thumbs.db';
       ];
 
       for (const pattern of tempFiles) {
         try {
           execSync(`find . -name "${pattern}" -type f -delete`, {
-            stdio: 'pipe',
-            cwd: process.cwd(),
+            stdio: 'pipe';
+            cwd: process.cwd();
           });
         } catch (err) {
           // Ignore errors for file cleanup

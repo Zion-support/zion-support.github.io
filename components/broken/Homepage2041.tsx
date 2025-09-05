@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import Layout from './layout/Layout';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Layout from './layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  ArrowRight, 
-  Star, 
+  ArrowRight,
+  Star,
   Search,
   Shield,
   Globe,
@@ -22,28 +22,28 @@ import {
   Users,
   Award,
   Clock
-} from 'lucide-react';
-import Link from 'next/link';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-saas-services';
-import { innovative2041ITServices } from '../data/innovative-2041-it-services';
-import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
+} from 'lucide-react',
+import Link from 'next/link',
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
+import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-saas-services',
+import { innovative2041ITServices } from '../data/innovative-2041-it-services',
+import { innovative2041AIServices } from '../data/innovative-2041-ai-services',
 
 const Homepage2041: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(''),
 
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (searchQuery.trim()) {
-      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`;
+      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`,
     }
-  };
+  },
 
   const featuredServices = [
     ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3),
     ...innovative2041ITServices.filter(s => s.popular).slice(0, 2),
     ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
-  ];
+  ],
 
   const testimonials = [
     {
@@ -70,14 +70,14 @@ const Homepage2041: React.FC = () => {
       rating: 5,
       avatar: "👩‍🔬"
     }
-  ];
+  ],
 
   const stats = [
     { number: "500+", label: "Revolutionary Services", icon: Rocket },
     { number: "50+", label: "Quantum Solutions", icon: Atom },
     { number: "1000x", label: "Performance Boost", icon: Zap },
     { number: "24/7", label: "AI Operations", icon: Brain }
-  ];
+  ],
 
   return (
     <Layout>
@@ -343,7 +343,7 @@ const Homepage2041: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+              <h2 className="text-5xl md: text-6xl font-bold text-white mb-8">
                 Ready to Shape the Future?
               </h2>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
@@ -371,7 +371,7 @@ const Homepage2041: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
+  )
+},
 
-export default Homepage2041;
+export default Homepage2041,

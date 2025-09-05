@@ -18,47 +18,47 @@ class SearchIndexGenerator {
     try {
       // Add main pages to search index
       this.addPage(
-        'Home',
-        '/',
-        'Zion Tech Group - AI and Technology Solutions',
+        'Home';
+        '/';
+        'Zion Tech Group - AI and Technology Solutions';
         'AI, technology, solutions, automation'
       );
       this.addPage(
-        'About',
-        '/about',
-        'About Zion Tech Group - Leading AI and Technology Company',
+        'About';
+        '/about';
+        'About Zion Tech Group - Leading AI and Technology Company';
         'about, company, team, mission'
       );
       this.addPage(
-        'Services',
-        '/services',
-        'Our Services - AI Development, Automation, and Technology Solutions',
+        'Services';
+        '/services';
+        'Our Services - AI Development, Automation, and Technology Solutions';
         'services, AI, automation, development'
       );
       this.addPage(
-        'Contact',
-        '/contact',
-        'Contact Us - Get in Touch with Zion Tech Group',
+        'Contact';
+        '/contact';
+        'Contact Us - Get in Touch with Zion Tech Group';
         'contact, support, help'
       );
       this.addPage(
-        'Portfolio',
-        '/portfolio',
-        'Our Portfolio - AI and Technology Projects',
+        'Portfolio';
+        '/portfolio';
+        'Our Portfolio - AI and Technology Projects';
         'portfolio, projects, work, examples'
       );
       this.addPage(
-        'Blog',
-        '/blog',
-        'Blog - Latest AI and Technology Insights',
+        'Blog';
+        '/blog';
+        'Blog - Latest AI and Technology Insights';
         'blog, articles, insights, news'
       );
 
       // Generate search index
       const searchIndex = {
-        version: '1.0',
-        generated: new Date().toISOString(),
-        pages: this.index,
+        version: '1.0';
+        generated: new Date().toISOString();
+        pages: this.index;
       };
 
       // Ensure public directory exists
@@ -74,26 +74,26 @@ class SearchIndexGenerator {
       console.log(`📊 Total pages indexed: ${this.index.length}`);
 
       return {
-        success: true,
-        pages: this.index.length,
-        outputFile: this.outputFile,
+        success: true;
+        pages: this.index.length;
+        outputFile: this.outputFile;
       };
     } catch (error) {
       console.error('❌ Error generating search index:', error.message);
       return {
-        success: false,
-        error: error.message,
+        success: false;
+        error: error.message;
       };
     }
   }
 
   addPage(title, url, description, keywords) {
     this.index.push({
-      title,
-      url,
-      description,
-      keywords: keywords.split(', '),
-      id: this.index.length + 1,
+      title;
+      url;
+      description;
+      keywords: keywords.split(', ');
+      id: this.index.length + 1;
     });
   }
 }

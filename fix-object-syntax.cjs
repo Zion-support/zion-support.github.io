@@ -16,7 +16,7 @@ function fixObjectSyntax(filePath) {
 
     // Fix semicolons in function declarations
     content = content.replace(
-      /function\s+(\w+)\s*\(\s*\)\s*{\s*;/g,
+      /function\s+(\w+)\s*\(\s*\)\s*{\s*;/g;
       'function $1() {'
     );
 

@@ -21,9 +21,9 @@ class BranchMerger {
     this.log(`🚀 Starting: ${description}`);
     try {
       const result = execSync(command, {
-        stdio: 'pipe',
-        encoding: 'utf8',
-        cwd: this.projectRoot,
+        stdio: 'pipe';
+        encoding: 'utf8';
+        cwd: this.projectRoot;
       });
       this.log(`✅ Completed: ${description}`);
       return result;
@@ -36,7 +36,7 @@ class BranchMerger {
   async getRemoteBranches() {
     try {
       const result = await this.runCommand(
-        'git branch -r',
+        'git branch -r';
         'Get remote branches'
       );
       const branches = result
@@ -73,13 +73,13 @@ class BranchMerger {
 
       // Fetch the branch
       await this.runCommand(
-        `git fetch origin ${branchName}`,
+        `git fetch origin ${branchName}`;
         `Fetch branch ${branchName}`
       );
 
       // Try to merge
       await this.runCommand(
-        `git merge origin/${branchName} --no-ff -m "Merge branch ${branchName} into main"`,
+        `git merge origin/${branchName} --no-ff -m "Merge branch ${branchName} into main"`;
         `Merge branch ${branchName}`
       );
 
@@ -95,15 +95,15 @@ class BranchMerger {
 
         // Accept incoming changes for most conflicts
         await this.runCommand(
-          'git checkout --theirs .',
+          'git checkout --theirs .';
           `Accept incoming changes for ${branchName}`
         );
         await this.runCommand(
-          'git add .',
+          'git add .';
           `Stage resolved changes for ${branchName}`
         );
         await this.runCommand(
-          `git commit -m "Resolve merge conflicts for ${branchName}"`,
+          `git commit -m "Resolve merge conflicts for ${branchName}"`;
           `Commit resolved conflicts for ${branchName}`
         );
 
@@ -114,7 +114,7 @@ class BranchMerger {
         return true;
       } catch (resolveError) {
         this.log(
-          `❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`,
+          `❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`;
           'ERROR'
         );
         this.failedBranches.push(branchName);
@@ -122,7 +122,7 @@ class BranchMerger {
         // Reset to clean state
         try {
           await this.runCommand(
-            'git merge --abort',
+            'git merge --abort';
             `Abort merge for ${branchName}`
           );
         } catch (abortError) {
@@ -158,12 +158,12 @@ class BranchMerger {
         if (this.mergedBranches.includes(branch)) {
           try {
             await this.runCommand(
-              'git push origin main',
+              'git push origin main';
               `Push merged changes for ${branch}`
             );
           } catch (pushError) {
             this.log(
-              `Warning: Could not push changes for ${branch}: ${pushError.message}`,
+              `Warning: Could not push changes for ${branch}: ${pushError.message}`;
               'WARN'
             );
           }
@@ -176,15 +176,15 @@ class BranchMerger {
 
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString();
       summary: {
-        totalBranches: this.mergedBranches.length + this.failedBranches.length,
-        successfullyMerged: this.mergedBranches.length,
-        failedToMerge: this.failedBranches.length,
-        successRate: `${((this.mergedBranches.length / (this.mergedBranches.length + this.failedBranches.length)) * 100).toFixed(2)}%`,
-      },
-      mergedBranches: this.mergedBranches,
-      failedBranches: this.failedBranches,
+        totalBranches: this.mergedBranches.length + this.failedBranches.length;
+        successfullyMerged: this.mergedBranches.length;
+        failedToMerge: this.failedBranches.length;
+        successRate: `${((this.mergedBranches.length / (this.mergedBranches.length + this.failedBranches.length)) * 100).toFixed(2)}%`;
+      };
+      mergedBranches: this.mergedBranches;
+      failedBranches: this.failedBranches;
     };
 
     fs.writeFileSync('merge-report.json', JSON.stringify(report, null, 2));

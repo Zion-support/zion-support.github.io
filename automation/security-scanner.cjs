@@ -8,11 +8,11 @@ console.log('🔒 Starting Security Scanner...');
 class SecurityScanner {
   constructor() {
     this.results = {
-      timestamp: new Date().toISOString(),
-      securityScore: 0,
-      vulnerabilities: [],
-      recommendations: [],
-      metrics: {},
+      timestamp: new Date().toISOString();
+      securityScore: 0;
+      vulnerabilities: [];
+      recommendations: [];
+      metrics: {};
     };
   }
 
@@ -74,21 +74,21 @@ class SecurityScanner {
 
   checkForHardcodedSecrets(content, filePath) {
     const secretPatterns = [
-      /password\s*=\s*['"][^'"]+['"]/gi,
-      /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
-      /secret\s*=\s*['"][^'"]+['"]/gi,
-      /token\s*=\s*['"][^'"]+['"]/gi,
+      /password\s*=\s*['"][^'"]+['"]/gi;
+      /api[_-]?key\s*=\s*['"][^'"]+['"]/gi;
+      /secret\s*=\s*['"][^'"]+['"]/gi;
+      /token\s*=\s*['"][^'"]+['"]/gi;
     ];
 
     secretPatterns.forEach(pattern => {
       const matches = content.match(pattern);
       if (matches) {
         this.results.vulnerabilities.push({
-          type: 'hardcoded_secret',
-          severity: 'high',
-          file: filePath,
-          description: 'Potential hardcoded secret detected',
-          matches: matches,
+          type: 'hardcoded_secret';
+          severity: 'high';
+          file: filePath;
+          description: 'Potential hardcoded secret detected';
+          matches: matches;
         });
       }
     });
@@ -96,19 +96,19 @@ class SecurityScanner {
 
   checkForSQLInjection(content, filePath) {
     const sqlPatterns = [
-      /query\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi,
-      /execute\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi,
+      /query\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi;
+      /execute\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi;
     ];
 
     sqlPatterns.forEach(pattern => {
       const matches = content.match(pattern);
       if (matches) {
         this.results.vulnerabilities.push({
-          type: 'sql_injection',
-          severity: 'high',
-          file: filePath,
-          description: 'Potential SQL injection vulnerability',
-          matches: matches,
+          type: 'sql_injection';
+          severity: 'high';
+          file: filePath;
+          description: 'Potential SQL injection vulnerability';
+          matches: matches;
         });
       }
     });
@@ -116,20 +116,20 @@ class SecurityScanner {
 
   checkForXSS(content, filePath) {
     const xssPatterns = [
-      /dangerouslySetInnerHTML/gi,
-      /innerHTML\s*=/gi,
-      /document\.write/gi,
+      /dangerouslySetInnerHTML/gi;
+      /innerHTML\s*=/gi;
+      /document\.write/gi;
     ];
 
     xssPatterns.forEach(pattern => {
       const matches = content.match(pattern);
       if (matches) {
         this.results.vulnerabilities.push({
-          type: 'xss_vulnerability',
-          severity: 'medium',
-          file: filePath,
-          description: 'Potential XSS vulnerability',
-          matches: matches,
+          type: 'xss_vulnerability';
+          severity: 'medium';
+          file: filePath;
+          description: 'Potential XSS vulnerability';
+          matches: matches;
         });
       }
     });
@@ -139,8 +139,8 @@ class SecurityScanner {
     if (filePath.endsWith('package.json')) {
       const packageJson = JSON.parse(content);
       const dependencies = {
-        ...packageJson.dependencies,
-        ...packageJson.devDependencies,
+        ...packageJson.dependencies;
+        ...packageJson.devDependencies;
       };
 
       // Check for known vulnerable packages
@@ -149,11 +149,11 @@ class SecurityScanner {
       vulnerablePackages.forEach(pkg => {
         if (dependencies[pkg]) {
           this.results.vulnerabilities.push({
-            type: 'vulnerable_dependency',
-            severity: 'medium',
-            file: filePath,
-            description: `Potentially vulnerable dependency: ${pkg}`,
-            package: pkg,
+            type: 'vulnerable_dependency';
+            severity: 'medium';
+            file: filePath;
+            description: `Potentially vulnerable dependency: ${pkg}`;
+            package: pkg;
           });
         }
       });
@@ -187,28 +187,28 @@ class SecurityScanner {
 
     if (highSeverityVulns.length > 0) {
       this.results.recommendations.push({
-        type: 'immediate_fix',
-        priority: 'critical',
-        description: 'Fix high severity vulnerabilities immediately',
+        type: 'immediate_fix';
+        priority: 'critical';
+        description: 'Fix high severity vulnerabilities immediately';
       });
     }
 
     this.results.recommendations.push({
-      type: 'security_audit',
-      priority: 'high',
-      description: 'Run regular security audits with npm audit',
+      type: 'security_audit';
+      priority: 'high';
+      description: 'Run regular security audits with npm audit';
     });
 
     this.results.recommendations.push({
-      type: 'dependency_update',
-      priority: 'medium',
-      description: 'Keep dependencies updated to latest secure versions',
+      type: 'dependency_update';
+      priority: 'medium';
+      description: 'Keep dependencies updated to latest secure versions';
     });
 
     this.results.recommendations.push({
-      type: 'code_review',
-      priority: 'medium',
-      description: 'Implement security-focused code review process',
+      type: 'code_review';
+      priority: 'medium';
+      description: 'Implement security-focused code review process';
     });
   }
 

@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import Layout from './layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Layout from './layout/Layout',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
-  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3, 
+  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3,
   Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite,
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 // Import our new innovative services
-import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
-import { innovative2046ITServices } from '../data/innovative-2046-it-services';
-import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
+import { innovative2046AIServices } from '../data/innovative-2046-ai-services',
+import { innovative2046ITServices } from '../data/innovative-2046-it-services',
+import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services',
 
 // Enhanced loading component with quantum effects
 const QuantumLoadingFallback = () => (
@@ -93,23 +93,23 @@ const QuantumLoadingFallback = () => (
       </div>
     </motion.div>
   </div>
-);
+),
 
 const Homepage2046: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [isLoading, setIsLoading] = useState(true),
+  const [isVisible, setIsVisible] = useState(false),
+  const [activeSection, setActiveSection] = useState('hero'),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 2000);
+      setIsLoading(false),
+      setIsVisible(true)
+    }, 2000),
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer),
+  }, []),
 
   // Intersection Observer for better performance
   useEffect(() => {
@@ -118,38 +118,38 @@ const Homepage2046: React.FC = () => {
         (entries: any[]) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              setActiveSection(entry.target.id);
+              setActiveSection(entry.target.id)
             }
-          });
+          }),
         },
         { threshold: 0.3 }
-      );
+      ),
 
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach((section) => observer.observe(section));
+      const sections = document.querySelectorAll('section[id]'),
+      sections.forEach((section) => observer.observe(section)),
 
-      return () => observer.disconnect();
+      return () => observer.disconnect(),
     }
-  }, []);
+  }, []),
 
   if (isLoading) {
-    return <QuantumLoadingFallback />;
+    return <QuantumLoadingFallback />,
   }
 
   const allServices = [
     ...innovative2046AIServices,
     ...innovative2046ITServices,
     ...innovative2046MicroSAASServices
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
-  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
+  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))],
 
   return (
     <Layout>
@@ -205,7 +205,7 @@ const Homepage2046: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
               >
-                Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>, 
+                Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                 <span className="text-purple-400 font-semibold"> Neural Interfaces</span>, and 
                 <span className="text-cyan-400 font-semibold"> Space Technology</span> Solutions
               </motion.p>
@@ -450,7 +450,7 @@ const Homepage2046: React.FC = () => {
                     <motion.button
                       whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0.5)" }}
                       whileTap={{ scale: 0.95 }}
-                      className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
+                      className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover: bg-cyan-400 hover:text-gray-900 transition-all duration-300"
                     >
                       View All Services
                     </motion.button>
@@ -462,7 +462,7 @@ const Homepage2046: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default Homepage2046;
+export default Homepage2046,

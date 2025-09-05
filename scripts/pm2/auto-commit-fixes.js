@@ -9,9 +9,8 @@ class AutoCommitFixes {,
     this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log'),
     this.startTime = Date.now(),
     this.commitsMade = 0,
-
     this.filesChanged = 0
-  };
+  },
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
@@ -21,4 +20,4 @@ class AutoCommitFixes {,
       fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
       console.error('Error writing to log file:', error.message)
-    };
+    },

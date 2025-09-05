@@ -1,64 +1,64 @@
-import React, { useMemo, useState } from "react";
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
+import React, { useMemo, useState } from "react",
+import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",
 
 export interface MilestoneAssistantProps {
-  scopeOfWork: string;
-  startDateIso: string;
-  endDateIso: string;
-  projectType: ProjectType;
-  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
+  scopeOfWork: string,
+  startDateIso: string,
+  endDateIso: string,
+  projectType: ProjectType,
+  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void
 }
 
 export function MilestoneAssistant(props: MilestoneAssistantProps) {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [autoAdd, setAutoAdd] = useState(true);
-  const [items, setItems] = useState<SuggestedMilestoneItem[]>([]);
-  const [expandedIdx, setExpandedIdx] = useState<number | null>(0);
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  const [autoAdd, setAutoAdd] = useState(true),
+  const [items, setItems] = useState<SuggestedMilestoneItem[]>([]),
+  const [expandedIdx, setExpandedIdx] = useState<number | null>(0),
 
   const isDisabled = useMemo(() => {
-    return !props.scopeOfWork || !props.startDateIso || !props.endDateIso || !props.projectType;
-  }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.projectType]);
+    return !props.scopeOfWork || !props.startDateIso || !props.endDateIso || !props.projectType
+  }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.projectType]),
 
   async function generate() {
-    setLoading(true);
-    setError(null);
+    setLoading(true),
+    setError(null),
     try {
       const payload: MilestoneSuggestionInput = {
         scopeOfWork: props.scopeOfWork,
         startDateIso: props.startDateIso,
         endDateIso: props.endDateIso,
         projectType: props.projectType
-      };
+      },
       const res = await fetch("/api/ai/milestones", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
-      });
+      }),
       if (!res.ok) {
-        const t = await res.text();
-        throw new Error(t || "Failed to generate");
+        const t = await res.text(),
+        throw new Error(t || "Failed to generate"),
       }
-      const data = await res.json();
-      setItems(Array.isArray(data?.milestones) ? data.milestones : []);
-      setExpandedIdx(0);
+      const data = await res.json(),
+      setItems(Array.isArray(data?.milestones) ? data.milestones : []),
+      setExpandedIdx(0),
     } catch (e: any) {
-      setError(e?.message || "Unexpected error");
+      setError(e?.message || "Unexpected error")
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
   }
 
   function updateItem(idx: number, patch: Partial<SuggestedMilestoneItem>) {
-    setItems((prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } : m)));
+    setItems((prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } : m))),
   }
 
   function removeItem(idx: number) {
-    setItems((prev) => prev.filter((_, i) => i !== idx));
+    setItems((prev) => prev.filter((_, i) => i !== idx))
   }
 
   function accept() {
-    props.onAccept?.(items, autoAdd);
+    props.onAccept?.(items, autoAdd),
   }
 
   return (
@@ -141,7 +141,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
         ))}
       </div>
     </div>
-  );
+  ),
 }
 
-export default MilestoneAssistant;
+export default MilestoneAssistant,

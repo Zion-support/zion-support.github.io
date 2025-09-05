@@ -1,44 +1,44 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface EnhancedRealMicroSaasService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[] = [
@@ -51,16 +51,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     period: '/month',
     description: 'Enterprise-grade AI content generation platform with multi-language support, SEO optimization, and brand voice consistency across all content types.',
     features: [
-      'AI-powered data analysis and visualization',
-      'Predictive analytics and forecasting',
-      'Real-time dashboard and reporting',
-      'Natural language query interface',
-      'Automated insight generation',
-      'Multi-source data integration',
-      'Custom KPI tracking',
-      'Mobile-responsive design',
-      'API for third-party integrations',
-      '24/7 AI monitoring and alerts'
+      'AI-powered data analysis and visualizationPredictive analytics and forecasting',
+      'Real-time dashboard and reportingNatural language query interface',
+      'Automated insight generationMulti-source data integration',
+      'Custom KPI trackingMobile-responsive design',
+      'API for third-party integrations24/7 AI monitoring and alerts'
     ],
     popular: true,
     icon: '📊',
@@ -94,7 +89,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.8,
     reviews: 23
   },
-
   // AI Content Generation Platform
   {
     id: 'ai-content-generation-platform',
@@ -104,16 +98,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     period: '/month',
     description: 'Revolutionary AI-powered content creation platform that generates engaging, SEO-optimized content for blogs, social media, and marketing campaigns.',
     features: [
-      'AI-powered content generation',
-      'SEO optimization and keyword research',
-      'Multi-format content creation (blog, social, email)',
-      'Brand voice customization',
-      'Plagiarism-free content',
-      'Content calendar management',
-      'Performance analytics',
-      'Team collaboration tools',
-      'API access for automation',
-      '24/7 content generation'
+      'AI-powered content generationSEO optimization and keyword research',
+      'Multi-format content creation (blog, social, email)Brand voice customization',
+      'Plagiarism-free contentContent calendar management',
+      'Performance analyticsTeam collaboration tools',
+      'API access for automation24/7 content generation'
     ],
     popular: true,
     icon: '✍️',
@@ -147,7 +136,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.9,
     reviews: 34
   },
-
   // AI Customer Service Automation
   {
     id: 'ai-customer-service-automation',
@@ -157,16 +145,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     period: '/month',
     description: 'Intelligent AI-powered customer service platform that handles customer inquiries, provides instant responses, and escalates complex issues to human agents.',
     features: [
-      'AI-powered chatbot with natural language processing',
-      'Multi-language support (50+ languages)',
-      '24/7 automated customer support',
-      'Intelligent ticket routing and escalation',
-      'Customer sentiment analysis',
-      'Integration with CRM systems',
-      'Performance analytics and reporting',
-      'Custom knowledge base management',
-      'Voice and text support',
-      'Seamless human handoff'
+      'AI-powered chatbot with natural language processingMulti-language support (50+ languages)',
+      '24/7 automated customer supportIntelligent ticket routing and escalation',
+      'Customer sentiment analysisIntegration with CRM systems',
+      'Performance analytics and reportingCustom knowledge base management',
+      'Voice and text supportSeamless human handoff'
     ],
     popular: true,
     icon: '🤖',
@@ -200,7 +183,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.7,
     reviews: 28
   },
-
   // AI Sales Intelligence Platform
   {
     id: 'ai-sales-intelligence-platform',
@@ -210,16 +192,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     period: '/month',
     description: 'Advanced AI-powered sales intelligence platform that provides lead scoring, sales forecasting, and personalized recommendations to maximize revenue.',
     features: [
-      'AI-powered lead scoring and qualification',
-      'Sales forecasting and pipeline analysis',
-      'Personalized sales recommendations',
-      'Customer behavior prediction',
-      'Sales performance analytics',
-      'Integration with CRM systems',
-      'Real-time sales alerts',
-      'Team performance tracking',
-      'Custom sales workflows',
-      'Mobile sales app'
+      'AI-powered lead scoring and qualificationSales forecasting and pipeline analysis',
+      'Personalized sales recommendationsCustomer behavior prediction',
+      'Sales performance analyticsIntegration with CRM systems',
+      'Real-time sales alertsTeam performance tracking',
+      'Custom sales workflowsMobile sales app'
     ],
     popular: true,
     icon: '💰',
@@ -253,7 +230,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.8,
     reviews: 31
   },
-
   // AI Marketing Automation Suite
   {
     id: 'ai-marketing-automation-suite',
@@ -263,16 +239,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     period: '/month',
     description: 'Comprehensive AI-powered marketing automation platform that optimizes campaigns, personalizes content, and maximizes ROI across all marketing channels.',
     features: [
-      'AI-powered campaign optimization',
-      'Personalized content delivery',
-      'Multi-channel marketing automation',
-      'Customer segmentation and targeting',
-      'A/B testing and optimization',
-      'Marketing analytics and reporting',
-      'Email marketing automation',
-      'Social media management',
-      'Lead nurturing workflows',
-      'ROI tracking and optimization'
+      'AI-powered campaign optimizationPersonalized content delivery',
+      'Multi-channel marketing automationCustomer segmentation and targeting',
+      'A/B testing and optimizationMarketing analytics and reporting',
+      'Email marketing automationSocial media management',
+      'Lead nurturing workflowsROI tracking and optimization'
     ],
     popular: true,
     icon: '📈',
@@ -306,7 +277,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.9,
     reviews: 42
   },
-
   // AI Project Management Platform
   {
     id: 'ai-project-management-platform',
@@ -316,16 +286,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     period: '/month',
     description: 'Intelligent AI-powered project management platform that automates task allocation, predicts project risks, and optimizes team productivity.',
     features: [
-      'AI-powered task allocation and scheduling',
-      'Project risk prediction and mitigation',
-      'Team productivity optimization',
-      'Real-time project tracking',
-      'Resource allocation optimization',
-      'Project timeline forecasting',
-      'Collaboration and communication tools',
-      'Progress reporting and analytics',
-      'Integration with development tools',
-      'Mobile project management app'
+      'AI-powered task allocation and schedulingProject risk prediction and mitigation',
+      'Team productivity optimizationReal-time project tracking',
+      'Resource allocation optimizationProject timeline forecasting',
+      'Collaboration and communication toolsProgress reporting and analytics',
+      'Integration with development toolsMobile project management app'
     ],
     popular: true,
     icon: '📋',
@@ -359,7 +324,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.7,
     reviews: 35
   },
-
   // AI Financial Analytics Platform
   {
     id: 'ai-financial-analytics-platform',
@@ -369,16 +333,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     period: '/month',
     description: 'Advanced AI-powered financial analytics platform that provides real-time financial insights, risk assessment, and investment recommendations.',
     features: [
-      'AI-powered financial analysis and forecasting',
-      'Real-time market data and insights',
-      'Risk assessment and management',
-      'Investment portfolio optimization',
-      'Financial reporting and analytics',
-      'Budget planning and tracking',
-      'Cash flow optimization',
-      'Tax planning and optimization',
-      'Integration with banking systems',
-      'Mobile financial dashboard'
+      'AI-powered financial analysis and forecastingReal-time market data and insights',
+      'Risk assessment and managementInvestment portfolio optimization',
+      'Financial reporting and analyticsBudget planning and tracking',
+      'Cash flow optimizationTax planning and optimization',
+      'Integration with banking systemsMobile financial dashboard'
     ],
     popular: true,
     icon: '💹',
@@ -412,7 +371,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.8,
     reviews: 26
   },
-
   // AI HR Management Platform
   {
     id: 'ai-hr-management-platform',
@@ -422,16 +380,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     period: '/month',
     description: 'Comprehensive AI-powered HR management platform that automates recruitment, employee engagement, and performance management.',
     features: [
-      'AI-powered candidate screening and matching',
-      'Employee engagement and satisfaction tracking',
-      'Performance management and analytics',
-      'Recruitment automation and optimization',
-      'Employee onboarding and training',
-      'HR analytics and reporting',
-      'Compliance and policy management',
-      'Integration with HR systems',
-      'Mobile HR app for employees',
-      'Predictive HR analytics'
+      'AI-powered candidate screening and matchingEmployee engagement and satisfaction tracking',
+      'Performance management and analyticsRecruitment automation and optimization',
+      'Employee onboarding and trainingHR analytics and reporting',
+      'Compliance and policy managementIntegration with HR systems',
+      'Mobile HR app for employeesPredictive HR analytics'
     ],
     popular: true,
     icon: '👥',
@@ -465,7 +418,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.7,
     reviews: 29
   },
-
   // AI Supply Chain Optimization
   {
     id: 'ai-supply-chain-optimization',
@@ -475,16 +427,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     period: '/month',
     description: 'Advanced AI-powered supply chain optimization platform that predicts demand, optimizes inventory, and reduces operational costs.',
     features: [
-      'AI-powered demand forecasting',
-      'Inventory optimization and management',
-      'Supply chain risk assessment',
-      'Route optimization and logistics',
-      'Supplier performance analytics',
-      'Real-time supply chain monitoring',
-      'Cost optimization and analysis',
-      'Integration with ERP systems',
-      'Mobile supply chain app',
-      'Predictive maintenance alerts'
+      'AI-powered demand forecastingInventory optimization and management',
+      'Supply chain risk assessmentRoute optimization and logistics',
+      'Supplier performance analyticsReal-time supply chain monitoring',
+      'Cost optimization and analysisIntegration with ERP systems',
+      'Mobile supply chain appPredictive maintenance alerts'
     ],
     popular: true,
     icon: '🚚',
@@ -518,7 +465,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.8,
     reviews: 18
   },
-
   // AI Legal Document Analysis
   {
     id: 'ai-legal-document-analysis',
@@ -528,16 +474,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     period: '/month',
     description: 'Intelligent AI-powered legal document analysis platform that reviews contracts, identifies risks, and provides legal insights.',
     features: [
-      'AI-powered contract analysis and review',
-      'Legal risk identification and assessment',
-      'Document comparison and analysis',
-      'Legal research and case law analysis',
-      'Compliance checking and monitoring',
-      'Legal document generation',
-      'Integration with legal systems',
-      'Mobile legal app',
-      'Multi-language legal support',
-      'Predictive legal analytics'
+      'AI-powered contract analysis and reviewLegal risk identification and assessment',
+      'Document comparison and analysisLegal research and case law analysis',
+      'Compliance checking and monitoringLegal document generation',
+      'Integration with legal systemsMobile legal app',
+      'Multi-language legal supportPredictive legal analytics'
     ],
     popular: true,
     icon: '⚖️',
@@ -571,4 +512,4 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.7,
     reviews: 20
   }
-];
+],

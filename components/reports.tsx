@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  FileText, 
-  Download, 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
+  FileText,
+  Download,
+  Calendar,
+  User,
+  Tag,
+  ArrowRight,
   TrendingUp,
   BarChart3,
   Brain,
@@ -18,8 +18,8 @@ import {
   Eye,
   Clock,
   Award
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 
 const ReportsPage: React.FC = () => {
   const reports = [
@@ -29,7 +29,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-15',
       author: 'Dr. Sarah Chen & Quantum Research Team',
       category: 'Technology Trends',
-      tags: ['Quantum Computing', 'Enterprise', 'Market Analysis', 'Future Tech'],
+      tags: ['Quantum ComputingEnterprise', 'Market AnalysisFuture Tech'],
       pages: 45,
       downloads: 1247,
       views: 5678,
@@ -43,7 +43,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-10',
       author: 'AI Research Division',
       category: 'Business Intelligence',
-      tags: ['AI', 'ROI', 'Fortune 500', 'Best Practices'],
+      tags: ['AIROI', 'Fortune 500Best Practices'],
       pages: 38,
       downloads: 892,
       views: 3456,
@@ -57,7 +57,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-08',
       author: 'Cybersecurity Research Team',
       category: 'Security',
-      tags: ['Cybersecurity', 'AI Threats', 'Threat Landscape', 'Defense'],
+      tags: ['CybersecurityAI Threats', 'Threat LandscapeDefense'],
       pages: 52,
       downloads: 1567,
       views: 6789,
@@ -71,7 +71,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-05',
       author: 'Market Research Team',
       category: 'Market Analysis',
-      tags: ['Venture Capital', 'Investment', 'Innovation', 'Global Markets'],
+      tags: ['Venture CapitalInvestment', 'InnovationGlobal Markets'],
       pages: 41,
       downloads: 734,
       views: 2890,
@@ -85,7 +85,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-03',
       author: 'IoT Research Division',
       category: 'Emerging Tech',
-      tags: ['Edge Computing', 'IoT', 'Industry 4.0', 'Real-time'],
+      tags: ['Edge ComputingIoT', 'Industry 4.0Real-time'],
       pages: 36,
       downloads: 623,
       views: 2345,
@@ -99,7 +99,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-01',
       author: 'Sustainability Research Team',
       category: 'Sustainability',
-      tags: ['Green Computing', 'Sustainability', 'Environmental Impact', 'Clean Tech'],
+      tags: ['Green ComputingSustainability', 'Environmental ImpactClean Tech'],
       pages: 43,
       downloads: 445,
       views: 1789,
@@ -107,7 +107,7 @@ const ReportsPage: React.FC = () => {
       icon: <Globe className="w-8 h-8" />,
       color: 'from-teal-500 to-green-500'
     }
-  ];
+  ],
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -355,7 +355,7 @@ const ReportsPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2"
@@ -375,7 +375,7 @@ const ReportsPage: React.FC = () => {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
-};
+  )
+},
 
-export default ReportsPage;
+export default ReportsPage,

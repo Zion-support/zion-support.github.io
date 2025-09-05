@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  Users, Rocket, Brain, Atom, Shield, Cloud, 
+  Users, Rocket, Brain, Atom, Shield, Cloud,
   ArrowRight, MapPin, Clock, DollarSign, Star, Zap
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 
 export default function CareersPage() {
   const openPositions = [
@@ -117,7 +117,7 @@ export default function CareersPage() {
       icon: Rocket,
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -144,7 +144,7 @@ export default function CareersPage() {
       icon: Rocket,
       color: "from-orange-500 to-red-500"
     }
-  ];
+  ],
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -338,7 +338,7 @@ export default function CareersPage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our mission.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Send Resume
               </button>
@@ -350,10 +350,10 @@ export default function CareersPage() {
         </motion.div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
-};
+  )
+},
 
       <EnhancedFooter />
     </div>
-  );
+  ),
 }

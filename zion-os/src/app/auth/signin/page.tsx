@@ -1,29 +1,29 @@
-"use client";
+"use client",
 
-import { useState } from "react";
-import Link from "next/link";
-import { useAuth } from "@/contexts/AuthContext";
+import { useState } from "react",
+import Link from "next/link",
+import { useAuth } from "@/contexts/AuthContext",
 
 export default function SignInPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
-  const { login } = useAuth();
+  const [email, setEmail] = useState(""),
+  const [password, setPassword] = useState(""),
+  const [isLoading, setIsLoading] = useState(false),
+  const [error, setError] = useState(""),
+  const { login } = useAuth(),
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setError("");
+    e.preventDefault(),
+    setIsLoading(true),
+    setError(""),
 
     try {
-      await login(email, password);
+      await login(email, password)
     } catch (error) {
-      setError(error instanceof Error ? error.message : "Login failed");
+      setError(error instanceof Error ? error.message : "Login failed"),
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">
@@ -99,12 +99,12 @@ export default function SignInPage() {
               Terms of Service
             </Link>{" "}
             and{" "}
-            <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
+            <Link href="/privacy" className="text-zinc-400 hover: text-zinc-300">
               Privacy Policy
             </Link>
           </p>
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -36,16 +36,16 @@ async function run() {
       const data = await fetchJson(url);
       for (const m of data || []) {
         items.push({
-          id: m.id,
-          modelId: m.id,
-          likes: m.likes,
-          downloads: m.downloads,
-          pipeline_tag: m.pipeline_tag,
-          tags: m.tags,
-          private: m.private,
-          author: m.author,
-          lastModified: m.lastModified,
-          query: q,
+          id: m.id;
+          modelId: m.id;
+          likes: m.likes;
+          downloads: m.downloads;
+          pipeline_tag: m.pipeline_tag;
+          tags: m.tags;
+          private: m.private;
+          author: m.author;
+          lastModified: m.lastModified;
+          query: q;
         });
       }
     } catch (e) {
@@ -56,10 +56,10 @@ async function run() {
   items = uniqueBy(items, (i) => i.modelId).slice(0, 100);
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'Hugging Face models related to agents/assistant/workflows',
-    total: items.length,
-    items,
+    generatedAt: new Date().toISOString();
+    description: 'Hugging Face models related to agents/assistant/workflows';
+    total: items.length;
+    items;
   };
 
   ensureDir(OUTPUT_PATH);

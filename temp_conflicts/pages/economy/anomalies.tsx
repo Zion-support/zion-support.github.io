@@ -1,14 +1,14 @@
-import fs from 'fs';
-import path from 'path';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import fs from 'fs',
+import path from 'path',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 
 export async function getStaticProps() {
-  const dir = path.join(process.cwd(), 'data', 'reports', 'economy', 'anomalies');
-  let files: string[] = [];
+  const dir = path.join(process.cwd(), 'datareports', 'economyanomalies'),
+  let files: string[] = [],
   if (fs.existsSync(dir)) {
-    files = fs.readdirSync(dir).filter((f) => f.endsWith('.md')).sort().reverse();
+    files = fs.readdirSync(dir).filter((f) => f.endsWith('.md')).sort().reverse()
   }
-  return { props: { files } };
+  return { props: { files } },
 }
 
 export default function AnomaliesPage({ files }: { files: string[] }) {
@@ -29,5 +29,5 @@ export default function AnomaliesPage({ files }: { files: string[] }) {
         )}
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

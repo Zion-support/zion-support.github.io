@@ -1,6 +1,6 @@
 
-    };
-  };
+    },
+  },
 ,
   async analyzeBuild() {,
     try {,
@@ -12,7 +12,7 @@
           cwd: this.projectRoot,
           stdio: 'pipe'
         })
-      };
+      },
 ,
       const buildStats = {,
         totalSize: 0,
@@ -21,7 +21,7 @@
         jsFiles: [],
         cssFiles: [],
         assetFiles: []
-      };
+      },
 ,
       const analyzeDirectory = (dir) => {,
         const items = fs.readdirSync(dir),
@@ -36,7 +36,7 @@
               path: fullPath.replace(this.projectRoot + '/dist/', ''),
               size: stat.size,
               sizeKB: Math.round(stat.size / 1024 * 100) / 100
-            };
+            },
 ,
             buildStats.totalSize += stat.size,
             buildStats.fileCount++,
@@ -47,10 +47,10 @@
               buildStats.cssFiles.push(fileInfo)
             } else {,
               buildStats.assetFiles.push(fileInfo)
-            };
-          };
+            },
+          },
         })
-      };
+      },
 ,
       analyzeDirectory('dist'),
 ,
@@ -65,16 +65,15 @@
       return {,
         success: true,
         stats: buildStats
-      };
+      },
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
-
         stats: null
-      };
-    };
-  };
+      },
+    },
+  },
 ,
   async checkBundleAnalyzer() {,
     try {,
@@ -90,14 +89,14 @@
         package: hasAnalyzer ?,
           (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer' : '@next/bundle-analyzer') :,
           null
-      };
+      },
     } catch (error) {,
       return {,
         available: false,
         error: error.message
-      };
-    };
-  };
+      },
+    },
+  },
 ,
   async checkOptimizationSettings() {,
     try {,
@@ -108,18 +107,18 @@
         minification: false,
         codeSplitting: false,
         compression: false
-      };
+      },
 ,
       // Check Next.js config,
       if (fs.existsSync('next.config.js')) {,
         const nextConfig = fs.readFileSync('next.config.jsutf8'),
         settings.minification = nextConfig.includes('swcMinify: true') || nextConfig.includes('swcMinify:true'),
         settings.compression = nextConfig.includes('compress: true') || nextConfig.includes('compress:true')
-      };
+      },
 ,
       // Check package.json for optimization scripts,
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
-      const scripts = packageJson.scripts || {};
+      const scripts = packageJson.scripts || {},
 ,
       settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking'),
       settings.codeSplitting = scripts.build && scripts.build.includes('--experimental-build-mode'),
@@ -127,15 +126,15 @@
       return {,
         success: true,
         settings: settings
-      };
+      },
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         settings: null
-      };
-    };
-  };
+      },
+    },
+  },
 ,
   async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {,
     const report = {,
@@ -152,7 +151,7 @@
         settings: settingsInfo
       },
       optimizations: []
-    };
+    },
 ,
     // Calculate optimization score,
     let score = 0,
@@ -179,7 +178,7 @@
         action: 'Implement code splitting and tree shaking',
         impact: 'high'
       })
-    };
+    },
 ,
     if (!settingsInfo?.settings?.minification) {,
       report.optimizations.push({,
@@ -189,7 +188,7 @@
         action: 'Enable SWC minification in Next.js config',
         impact: 'high'
       })
-    };
+    },
 ,
     if (!settingsInfo?.settings?.compression) {,
       report.optimizations.push({,
@@ -199,7 +198,7 @@
         action: 'Enable gzip compression',
         impact: 'medium'
       })
-    };
+    },
 ,
     if (!analyzerInfo?.available) {,
       report.optimizations.push({,
@@ -209,24 +208,24 @@
         action: 'Install webpack-bundle-analyzer for detailed analysis',
         impact: 'low'
       })
-    };
+    },
 ,
     return report
-  };
+  },
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
         fs.mkdirSync(reportDir, { recursive: true })
-      };
+      },
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
-    };
-  };
+    },
+  },
 ,
   async run() {,
     this.log('🚀 Starting Build Optimizer...'),
@@ -237,7 +236,7 @@
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
         fs.mkdirSync(logsDir, { recursive: true })
-      };
+      },
 ,
       // Run all optimization checks,
       const buildStats = await this.analyzeBuild(),
@@ -269,14 +268,14 @@
         })
       } else {,
         this.log('\n✨ Build is well optimized!')
-      };
+      },
 
     } catch (error) {,
       this.log(`❌ Error running build optimizer: ${error.message}`),
       process.exit(1)
-    };
-  };
-};
+    },
+  },
+},
 ,
 // Run the build optimizer,
 const optimizer = new BuildOptimizer(),

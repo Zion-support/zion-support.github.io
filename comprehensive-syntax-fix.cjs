@@ -30,12 +30,12 @@ function fixAdvancedSyntax(content, filePath) {
   let fixed = content;
   
   // Fix import statements
-  fixed = fixed.replace(/import\s+([^,]+),\s*$/gm, 'import $1;');
-  fixed = fixed.replace(/import\s+([^,]+),\s*import/gm, 'import $1;\nimport');
+  fixed = fixed.replace(/import\s+([^]+),\s*$/gm, 'import $1;');
+  fixed = fixed.replace(/import\s+([^]+),\s*import/gm, 'import $1;\nimport');
   
   // Fix object syntax
-  fixed = fixed.replace(/"([^"]+)":\s*([^,}]+);/g, '"$1": $2,');
-  fixed = fixed.replace(/(\w+):\s*([^,}]+);/g, '$1: $2,');
+  fixed = fixed.replace(/"([^"]+)":\s*([^}]+);/g, '"$1": $2,');
+  fixed = fixed.replace(/(\w+):\s*([^}]+);/g, '$1: $2,');
   
   // Fix array syntax
   fixed = fixed.replace(/\[([^\]]+),\]/g, '[$1]');

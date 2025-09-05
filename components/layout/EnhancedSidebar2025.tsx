@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  X, ChevronRight, Home, Star, Users, 
+  X, ChevronRight, Home, Star, Users,
   Settings, HelpCircle, Mail, Phone, MapPin,
   Brain, Atom, Shield, Rocket, DollarSign,
   Globe, Cpu, Database, Lock, Zap,
@@ -10,17 +10,17 @@ import {
   ArrowRight, Search, Menu, X as CloseIcon,
   Target, BookOpen, Truck, BarChart3,
   Sparkles, Eye, Lightbulb, Palette, Code
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface SidebarItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: SidebarItem[];
-  badge?: string;
-  isNew?: boolean;
-  isHot?: boolean;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: SidebarItem[],
+  badge?: string,
+  isNew?: boolean,
+  isHot?: boolean
 }
 
 const contactInfo = {
@@ -28,7 +28,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const sidebarItems: SidebarItem[] = [
   {
@@ -217,7 +217,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Status Page', href: '/status', description: 'Service status' }
     ]
   }
-];
+],
 
 const resources = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
@@ -226,7 +226,7 @@ const resources = [
   { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> },
   { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
-];
+],
 
 
 const supportLinks = [
@@ -236,24 +236,24 @@ const supportLinks = [
   { name: 'Status Page', href: '/status', description: 'Service status' },
   { name: 'Training', href: '/training', description: 'Learn our platforms' },
   { name: 'Community', href: '/community', description: 'Connect with users' }
-];
+],
 
   const toggleSection = (title: string) => {
-    const newExpanded = new Set(expandedSections);
+    const newExpanded = new Set(expandedSections),
     if (newExpanded.has(title)) {
-      newExpanded.delete(title);
+      newExpanded.delete(title)
     } else {
-      newExpanded.add(title);
+      newExpanded.add(title),
     }
-    setExpandedSections(newExpanded);
-  };
+    setExpandedSections(newExpanded),
+  },
 
   const filteredServices = sidebarItems.flatMap(item =>
     item.children?.filter(child =>
       child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       child.description?.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
-  );
+  ),
 
   return (
     <motion.aside
@@ -589,7 +589,7 @@ const supportLinks = [
       <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
       <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
     </motion.aside>
-  );
-};
+  ),
+},
 
-export default EnhancedSidebar2025;
+export default EnhancedSidebar2025,

@@ -24,14 +24,14 @@ async function resolveMergeConflicts() {
 
     try {
       runCommand(
-        'git merge origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-affd --strategy-option=theirs --no-ff -m "Merge PR #11703: Enhance and expand ziontechgroup.com services and site"',
+        'git merge origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-affd --strategy-option=theirs --no-ff -m "Merge PR #11703: Enhance and expand ziontechgroup.com services and site"';
         'Merge PR #11703 with theirs strategy'
       );
     } catch (error) {
       console.log('Theirs strategy failed, trying ours strategy...');
       runCommand('git merge --abort', 'Abort previous merge');
       runCommand(
-        'git merge origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-affd --strategy-option=ours --no-ff -m "Merge PR #11703: Enhance and expand ziontechgroup.com services and site"',
+        'git merge origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-affd --strategy-option=ours --no-ff -m "Merge PR #11703: Enhance and expand ziontechgroup.com services and site"';
         'Merge PR #11703 with ours strategy'
       );
     }
@@ -43,7 +43,7 @@ async function resolveMergeConflicts() {
 
     try {
       runCommand(
-        'git merge origin/cursor/website-audit-and-update-with-deployment-58b1 --strategy-option=theirs --no-ff -m "Merge PR #11702: Website audit and update with deployment"',
+        'git merge origin/cursor/website-audit-and-update-with-deployment-58b1 --strategy-option=theirs --no-ff -m "Merge PR #11702: Website audit and update with deployment"';
         'Merge PR #11702 with theirs strategy'
       );
     } catch (error) {
@@ -52,7 +52,7 @@ async function resolveMergeConflicts() {
       );
       runCommand('git merge --abort', 'Abort previous merge');
       runCommand(
-        'git merge origin/cursor/website-audit-and-update-with-deployment-58b1 --strategy-option=ours --no-ff -m "Merge PR #11702: Website audit and update with deployment"',
+        'git merge origin/cursor/website-audit-and-update-with-deployment-58b1 --strategy-option=ours --no-ff -m "Merge PR #11702: Website audit and update with deployment"';
         'Merge PR #11702 with ours strategy'
       );
     }

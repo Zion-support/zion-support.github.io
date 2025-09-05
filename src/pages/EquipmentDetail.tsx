@@ -1,46 +1,46 @@
-import { useState, useEffect } from "react";
-import { useRouter } from 'next/router';
-import { NextSeo } from '@/components/NextSeo';
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+import { NextSeo } from '@/components/NextSeo',
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { getStripe } from "@/utils/getStripe";
-import { useCart } from '@/context/CartContext';
-import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
-import { equipmentListings } from '@/data/equipmentData';
-import { ProductListing } from '@/types/listings';
-import { motion } from 'framer-motion';
-import { useCurrency } from '@/hooks/useCurrency';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { toast } from "@/hooks/use-toast",
+import { useAuth } from "@/hooks/useAuth",
+import { getStripe } from "@/utils/getStripe",
+import { useCart } from '@/context/CartContext',
+import { ImageWithRetry } from '@/components/ui/ImageWithRetry',
+import { equipmentListings } from '@/data/equipmentData',
+import { ProductListing } from '@/types/listings',
+import { motion } from 'framer-motion',
+import { useCurrency } from '@/hooks/useCurrency',
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 interface EquipmentSpecification {
-  name: string;
-  value: string;
+  name: string,
+  value: string
 }
 
 interface EquipmentDetails {
-  id: string;
-  name: string;
-  description: string;
-  brand: string;
-  category: string;
-  subcategory?: string;
-  images: string[];
-  price: number;
-  currency: string;
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean;
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[];
-  features: string[];
-  warranty?: string;
-  returnPolicy?: string;
+  id: string,
+  name: string,
+  description: string,
+  brand: string,
+  category: string,
+  subcategory?: string,
+  images: string[],
+  price: number,
+  currency: string,
+  rating?: number,
+  reviewCount?: number,
+  inStock: boolean,
+  expectedShipping?: string,
+  specifications: EquipmentSpecification[],
+  features: string[],
+  warranty?: string,
+  returnPolicy?: string
 }
 
 // Convert ProductListing to EquipmentDetails format
@@ -60,105 +60,105 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     inStock: item.availability === 'In Stock' || !item.availability,
     expectedShipping: item.availability || 'In Stock',
     specifications: (item.specifications || []).map((spec) => ({ 
-      name: spec, 
+      name: spec,
       value: '' 
     })),
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy'
-  };
+  },
 }
 
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce((acc, item) => {
-    acc[item.id] = convertProductListingToEquipmentDetails(item);
-    return acc;
-  }, {} as { [key: string]: EquipmentDetails });
+    acc[item.id] = convertProductListingToEquipmentDetails(item),
+    return acc,
+  }, {} as { [key: string]: EquipmentDetails }),
 
 export default function EquipmentDetail() {
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
-  const { isAuthenticated, user } = useAuth();
-  const { items, dispatch } = useCart();
-  const { formatPrice } = useCurrency();
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdding, setIsAdding] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const router = useRouter(),
+  const { id } = router.query as { id?: string },
+  const { isAuthenticated, user } = useAuth(),
+  const { items, dispatch } = useCart(),
+  const { formatPrice } = useCurrency(),
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
+  const [quantity, setQuantity] = useState(1),
+  const [isAdding, setIsAdding] = useState(false),
+  const [loading, setLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
 
-  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
+  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),
 
   useEffect(() => {
     async function loadEquipment() {
       if (!id) {
-        setLoading(false);
-        setError('No equipment ID provided');
-        return;
+        setLoading(false),
+        setError('No equipment ID provided'),
+        return,
       }
 
       try {
-        setLoading(true);
-        setError(null);
+        setLoading(true),
+        setError(null),
 
         // Try to find in static data first
-        const equipmentFromSample = SAMPLE_EQUIPMENT[id];
+        const equipmentFromSample = SAMPLE_EQUIPMENT[id],
         if (equipmentFromSample) {
-          setEquipment(equipmentFromSample);
-          setLoading(false);
-          return;
+          setEquipment(equipmentFromSample),
+          setLoading(false),
+          return,
         }
 
         // Try to get from sessionStorage (for dynamically generated equipment)
         if (typeof window !== 'undefined') {
           try {
-            const stored = sessionStorage.getItem(`equipment:${id}`);
+            const stored = sessionStorage.getItem(`equipment:${id}`),
             if (stored) {
-              const storedData = JSON.parse(stored);
+              const storedData = JSON.parse(stored),
               
               // Check if it's already in EquipmentDetails format or needs conversion
-              let equipmentData: EquipmentDetails;
+              let equipmentData: EquipmentDetails,
               if (storedData.name) {
                 // Already in EquipmentDetails format
-                equipmentData = storedData;
+                equipmentData = storedData
               } else {
                 // It's a ProductListing, convert it
-                equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing);
+                equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing),
               }
               
-              setEquipment(equipmentData);
-              setLoading(false);
-              return;
+              setEquipment(equipmentData),
+              setLoading(false),
+              return,
             }
           } catch (storageError) {
-            logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
+            logErrorToProduction('Error reading from sessionStorage:', { data: storageError }),
           }
         }
 
         // If not found anywhere, set error
-        setError('Equipment not found');
-        setLoading(false);
+        setError('Equipment not found'),
+        setLoading(false),
       } catch (error) {
-        logErrorToProduction('Error loading equipment:', { data: error });
-        setError('Failed to load equipment details');
-        setLoading(false);
+        logErrorToProduction('Error loading equipment:', { data: error }),
+        setError('Failed to load equipment details'),
+        setLoading(false),
       }
     }
 
-    loadEquipment();
-  }, [id]);
+    loadEquipment(),
+  }, [id]),
 
   const handleAddToCart = async () => {
     if (!equipment || !isAuthenticated) {
       toast({
         title: "Authentication Required",
         description: "Please log in to add items to cart",
-        variant: "destructive"});
-      return;
+        variant: "destructive"}),
+      return,
     }
 
-    setIsAdding(true);
+    setIsAdding(true),
     try {
       dispatch({
         type: 'ADD_ITEM',
@@ -166,22 +166,22 @@ export default function EquipmentDetail() {
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
-          quantity}});
+          quantity}}),
 
       toast({
         title: "Added to Cart",
-        description: `${equipment.name} has been added to your cart.`});
+        description: `${equipment.name} has been added to your cart.`}),
     } catch (error) {
       toast({
         title: "Error",
         description: "Failed to add item to cart. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"}),
     } finally {
-      setIsAdding(false);
+      setIsAdding(false),
     }
-  };
+  },
 
-  const inCart = items.some(item => item.id === equipment?.id);
+  const inCart = items.some(item => item.id === equipment?.id),
 
   // Loading state
   if (loading) {
@@ -197,7 +197,7 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </>
-    );
+    ),
   }
 
   // Error state
@@ -236,7 +236,7 @@ export default function EquipmentDetail() {
                 </Button>
                 <Button 
                   onClick={() => router.push('/equipment')}
-                  className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
+                  className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
                 >
                   Browse Equipment
                 </Button>
@@ -245,7 +245,7 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </>
-    );
+    )
   }
 
   return (
@@ -467,6 +467,6 @@ export default function EquipmentDetail() {
         </div>
       </div>
     </>
-  );
+  ),
 }
 

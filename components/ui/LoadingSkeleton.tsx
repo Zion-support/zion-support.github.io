@@ -1,17 +1,17 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 
 interface SkeletonProps {
-  className?: string;
-  height?: string;
-  width?: string;
-  rounded?: string;
+  className?: string,
+  height?: string,
+  width?: string,
+  rounded?: string,
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = '', 
-  height = 'h-4', 
-  width = 'w-full', 
+  className = '',
+  height = 'h-4',
+  width = 'w-full',
   rounded = 'rounded' 
 }) => {
   return (
@@ -24,11 +24,11 @@ const Skeleton: React.FC<SkeletonProps> = ({
         repeat: Infinity,
         ease: "easeInOut"}}
     />
-  );
-};
+  ),
+},
 
 interface ServiceCardSkeletonProps {
-  className?: string;
+  className?: string,
 }
 
 export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {
@@ -45,11 +45,11 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-5/6 mb-2" />
       <Skeleton className="h-4 w-4/6" />
     </div>
-  );
-};
+  ),
+},
 
 interface HeroSkeletonProps {
-  className?: string;
+  className?: string,
 }
 
 export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) => {
@@ -59,17 +59,17 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
         <Skeleton className="h-20 w-96 mx-auto mb-6" />
         <Skeleton className="h-8 w-2/3 mx-auto mb-8" />
         <Skeleton className="h-6 w-1/2 mx-auto mb-12" />
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm: flex-row gap-4 justify-center">
           <Skeleton className="h-14 w-32" />
           <Skeleton className="h-14 w-32" />
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 interface StatsSkeletonProps {
-  className?: string;
+  className?: string,
 }
 
 export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {
@@ -87,7 +87,7 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
         </div>
       </div>
     </div>
-  );
-};
+  ),
+},
 
-export default Skeleton;
+export default Skeleton,

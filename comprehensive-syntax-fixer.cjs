@@ -15,7 +15,7 @@ function fixSyntaxIssues(filePath) {
     // Fix import statements with trailing commas
     if (content.includes("import React from 'react',")) {
       content = content.replace(
-        /import React from 'react',/g,
+        /import React from 'react',/g;
         "import React from 'react';"
       );
       fixed = true;
@@ -24,7 +24,7 @@ function fixSyntaxIssues(filePath) {
     // Fix export statements with trailing commas
     if (content.includes('export interface')) {
       content = content.replace(
-        /export interface (\w+) \{/g,
+        /export interface (\w+) \{/g;
         'export interface $1 {'
       );
       fixed = true;
@@ -49,7 +49,7 @@ function fixSyntaxIssues(filePath) {
 
     // Fix React component syntax
     content = content.replace(
-      /const (\w+) = \(\) => \{/g,
+      /const (\w+) = \(\) => \{/g;
       'const $1 = () => {'
     );
     content = content.replace(/export default (\w+),/g, 'export default $1;');

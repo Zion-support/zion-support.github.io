@@ -1,18 +1,18 @@
 
-import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { formatDistanceToNow } from "date-fns";
-import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community";
-import PostCard from "@/components/community/PostCard";
-import UserBadges from "@/components/community/UserBadges";
-import ReputationDisplay from "@/components/community/ReputationDisplay";
+import { useState, useEffect } from "react",
+import { useParams, Link } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { formatDistanceToNow } from "date-fns",
+import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community",
+import PostCard from "@/components/community/PostCard",
+import UserBadges from "@/components/community/UserBadges",
+import ReputationDisplay from "@/components/community/ReputationDisplay",
 
 // Mock user data
 const mockUser: CommunityUser = {
@@ -48,7 +48,7 @@ const mockUser: CommunityUser = {
   ],
   isVerified: true,
   isModerator: false
-};
+},
 
 // Mock posts by this user
 const userPosts: ForumPost[] = [
@@ -102,21 +102,21 @@ const userPosts: ForumPost[] = [
     downvotes: 0,
     replyCount: 6
   }
-];
+],
 
 export default function CommunityProfilePage() {
-  const { userId } = useParams();
-  const [user, setUser] = useState<CommunityUser | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [posts, setPosts] = useState<ForumPost[]>([]);
+  const { userId } = useParams(),
+  const [user, setUser] = useState<CommunityUser | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [posts, setPosts] = useState<ForumPost[]>([]),
   
   useEffect(() => {
     // In a real app, we would fetch the user data here
     // For now, we'll just use the mock data
-    setUser(mockUser);
-    setPosts(userPosts);
-    setIsLoading(false);
-  }, [userId]);
+    setUser(mockUser),
+    setPosts(userPosts),
+    setIsLoading(false),
+  }, [userId]),
   
   if (isLoading) {
     return (
@@ -127,7 +127,7 @@ export default function CommunityProfilePage() {
           </div>
         </div>
       </AppLayout>
-    );
+    ),
   }
   
   if (!user) {
@@ -140,7 +140,7 @@ export default function CommunityProfilePage() {
           </Button>
         </div>
       </AppLayout>
-    );
+    ),
   }
 
   return (
@@ -258,7 +258,7 @@ export default function CommunityProfilePage() {
                     <ul className="space-y-4">
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z") { addSuffix: true })}
                         </div>
                         <div>
                           <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline">Looking for feedback on my automated testing approach</Link></p>
@@ -266,7 +266,7 @@ export default function CommunityProfilePage() {
                       </li>
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-08T09:15:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-04-08T09:15:00Z") { addSuffix: true })}
                         </div>
                         <div>
                           <p>Earned badge <span className="font-medium">Top Contributor</span></p>
@@ -274,7 +274,7 @@ export default function CommunityProfilePage() {
                       </li>
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-05T16:40:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-04-05T16:40:00Z") { addSuffix: true })}
                         </div>
                         <div>
                           <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover:underline">Comparing different vector embedding models</Link></p>
@@ -282,7 +282,7 @@ export default function CommunityProfilePage() {
                       </li>
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-01T12:00:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-04-01T12:00:00Z") { addSuffix: true })}
                         </div>
                         <div>
                           <p>Created post <Link to="/community/post/1" className="text-zion-purple hover:underline">Best practices for AI model fine-tuning</Link></p>
@@ -290,10 +290,10 @@ export default function CommunityProfilePage() {
                       </li>
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-03-25T08:20:00Z") { addSuffix: true })}
                         </div>
                         <div>
-                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover:underline">How to optimize RAG systems for better results</Link></p>
+                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>
                         </div>
                       </li>
                     </ul>
@@ -305,5 +305,5 @@ export default function CommunityProfilePage() {
         </div>
       </div>
     </AppLayout>
-  );
+  )
 }

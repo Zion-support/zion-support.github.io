@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  Newspaper, 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
+  Newspaper,
+  Calendar,
+  User,
+  Tag,
+  ArrowRight,
   ExternalLink,
   TrendingUp,
   Award,
@@ -15,8 +15,8 @@ import {
   Brain,
   Atom,
   Zap
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 
 const NewsPage: React.FC = () => {
   const newsArticles = [
@@ -29,7 +29,7 @@ const NewsPage: React.FC = () => {
       readTime: '5 min read',
       featured: true,
       image: '/images/news/ai-consciousness-breakthrough.jpg',
-      tags: ['AI Consciousness', 'Breakthrough', 'Research', 'Innovation']
+      tags: ['AI ConsciousnessBreakthrough', 'ResearchInnovation']
     },
     {
       id: 2,
@@ -41,7 +41,7 @@ const NewsPage: React.FC = () => {
       readTime: '3 min read',
       featured: true,
       image: '/images/news/series-c-funding.jpg',
-      tags: ['Funding', 'Investment', 'Growth', 'Expansion']
+      tags: ['FundingInvestment', 'GrowthExpansion']
     },
     {
       id: 3,
@@ -53,9 +53,9 @@ const NewsPage: React.FC = () => {
       readTime: '4 min read',
       featured: true,
       image: '/images/news/quantum-azure-partnership.jpg',
-      tags: ['Quantum Computing', 'Microsoft Azure', 'Security', 'Partnership']
+      tags: ['Quantum ComputingMicrosoft Azure', 'SecurityPartnership']
     }
-  ];
+  ],
 
   const latestNews = [
     {
@@ -68,7 +68,7 @@ const NewsPage: React.FC = () => {
       readTime: '4 min read',
       featured: false,
       image: '/images/news/ai-customer-success.jpg',
-      tags: ['AI', 'Customer Success', 'Retention', 'Platform']
+      tags: ['AICustomer Success', 'RetentionPlatform']
     },
     {
       id: 5,
@@ -80,7 +80,7 @@ const NewsPage: React.FC = () => {
       readTime: '2 min read',
       featured: false,
       image: '/images/news/forbes-ai-50.jpg',
-      tags: ['Recognition', 'Forbes', 'AI Leadership', 'Innovation']
+      tags: ['RecognitionForbes', 'AI LeadershipInnovation']
     },
     {
       id: 6,
@@ -92,7 +92,7 @@ const NewsPage: React.FC = () => {
       readTime: '8 min read',
       featured: false,
       image: '/images/news/quantum-drug-discovery.jpg',
-      tags: ['Quantum Computing', 'Drug Discovery', 'Research', 'Healthcare']
+      tags: ['Quantum ComputingDrug Discovery', 'ResearchHealthcare']
     },
     {
       id: 7,
@@ -104,7 +104,7 @@ const NewsPage: React.FC = () => {
       readTime: '3 min read',
       featured: false,
       image: '/images/news/deloitte-partnership.jpg',
-      tags: ['Partnership', 'Deloitte', 'Enterprise', 'AI Implementation']
+      tags: ['PartnershipDeloitte', 'EnterpriseAI Implementation']
     },
     {
       id: 8,
@@ -116,7 +116,7 @@ const NewsPage: React.FC = () => {
       readTime: '6 min read',
       featured: false,
       image: '/images/news/ai-autonomous-business.jpg',
-      tags: ['AI', 'Autonomous Operations', 'Business', 'Platform']
+      tags: ['AIAutonomous Operations', 'BusinessPlatform']
     },
     {
       id: 9,
@@ -128,9 +128,9 @@ const NewsPage: React.FC = () => {
       readTime: '3 min read',
       featured: false,
       image: '/images/news/european-expansion.jpg',
-      tags: ['Expansion', 'Europe', 'International', 'Growth']
+      tags: ['ExpansionEurope', 'InternationalGrowth']
     }
-  ];
+  ],
 
   const pressReleases = [
     {
@@ -148,7 +148,7 @@ const NewsPage: React.FC = () => {
       date: '2025-01-05',
       summary: 'World\'s first quantum-secure cloud infrastructure for enterprise customers.'
     }
-  ];
+  ],
 
   const mediaResources = [
     {
@@ -179,27 +179,27 @@ const NewsPage: React.FC = () => {
       size: '25.1 MB',
       download: '/media/product-screenshots.zip'
     }
-  ];
+  ],
 
   const filteredNews = [...featuredNews, ...latestNews].filter(news => {
-    const categoryMatch = selectedCategory === 'all' || news.category === selectedCategory;
+    const categoryMatch = selectedCategory === 'all' || news.category === selectedCategory,
     const searchMatch = searchQuery === '' || 
       news.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       news.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      news.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return categoryMatch && searchMatch;
-  });
+      news.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+    return categoryMatch && searchMatch,
+  }),
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
+      year: 'numeric',
+      month: 'long',
       day: 'numeric' 
-    });
-  };
-import React from 'react';
-import SEO from '../components/SEO';
+    }),
+  },
+import React from 'react',
+import SEO from '../components/SEO',
 
 export default function NewsPage() {
   return (
@@ -248,16 +248,16 @@ export default function NewsPage() {
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-import React, { useState } from 'react';
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  Newspaper, Globe, Award, Users, Rocket, Brain, 
+  Newspaper, Globe, Award, Users, Rocket, Brain,
   ArrowRight, ExternalLink, Calendar, Tag, Star
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function NewsPage() {
   const newsItems = [
@@ -333,16 +333,16 @@ export default function NewsPage() {
       icon: Globe,
       color: "from-indigo-500 to-purple-500"
     }
-  ];
+  ],
 
-  const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"];
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"],
+  const [selectedCategory, setSelectedCategory] = React.useState("All"),
 
   const filteredNews = selectedCategory === "All" 
     ? newsItems 
-    : newsItems.filter(item => item.category === selectedCategory);
+    : newsItems.filter(item => item.category === selectedCategory),
 
-  const featuredNews = newsItems.filter(item => item.featured);
+  const featuredNews = newsItems.filter(item => item.featured),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -779,7 +779,7 @@ export default function NewsPage() {
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                For press inquiries, media interviews, or additional information, 
+                For press inquiries, media interviews, or additional information,
                 please contact our communications team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -810,7 +810,7 @@ export default function NewsPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold mb-6">
               Ready to Stay Informed?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -837,7 +837,7 @@ export default function NewsPage() {
       </section>
     </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  )
 }
       {/* Call to Action */}
       <section className="py-20">
@@ -1073,7 +1073,7 @@ export default function NewsPage() {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Get the latest news, product updates, and industry insights delivered to your inbox. Never miss a breakthrough announcement.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
@@ -1092,7 +1092,7 @@ export default function NewsPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }
     <div className="min-h-[60vh] px-6 py-24">
       <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />
@@ -1103,5 +1103,5 @@ export default function NewsPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  ),
 }

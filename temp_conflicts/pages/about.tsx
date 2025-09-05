@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award, 
+  Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award,
   Globe, Target, Star, CheckCircle, TrendingUp, Lightbulb
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function AboutPage() {
   const values = [
@@ -30,7 +30,7 @@ export default function AboutPage() {
       title: "Global Impact",
       description: "Solutions that address real-world challenges across industries and borders"
     }
-  ];
+  ],
 
   const milestones = [
     {
@@ -53,7 +53,7 @@ export default function AboutPage() {
       title: "Company Foundation",
       description: "Zion Tech Group established with vision for autonomous innovation"
     }
-  ];
+  ],
 
   const team = [
     {
@@ -76,7 +76,7 @@ export default function AboutPage() {
       role: "Chief Innovation Officer",
       expertise: "Emerging Technologies, Strategic Innovation, R&D"
     }
-  ];
+  ],
 
   return (
     <>
@@ -101,11 +101,11 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+              <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
                 About Zion Tech Group
               </h1>
               <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed">
-                Pioneering the future of autonomous technology through revolutionary AI, 
+                Pioneering the future of autonomous technology through revolutionary AI,
                 quantum computing, and consciousness evolution platforms.
               </p>
             </motion.div>
@@ -131,7 +131,7 @@ export default function AboutPage() {
                   across industries and advancing our understanding of consciousness.
                 </p>
                 <p className="text-lg text-white/80 leading-relaxed">
-                  We believe in creating technology that doesn't just assist humans, 
+                  We believe in creating technology that doesn't just assist humans,
                   but collaborates with them as intelligent partners in innovation.
                 </p>
               </motion.div>
@@ -152,7 +152,7 @@ export default function AboutPage() {
                       <h3 className="text-2xl font-bold text-white">Vision 2030</h3>
                     </div>
                     <p className="text-white/90 leading-relaxed">
-                      A world where autonomous AI systems work seamlessly alongside humans, 
+                      A world where autonomous AI systems work seamlessly alongside humans,
                       accelerating scientific discovery, solving global challenges, and 
                       expanding the boundaries of human consciousness and capability.
                     </p>
@@ -316,7 +316,7 @@ export default function AboutPage() {
                 Ready to explore the possibilities of autonomous AI and quantum innovation? 
                 Let's collaborate to build tomorrow's technology today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
@@ -337,5 +337,5 @@ export default function AboutPage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
 }

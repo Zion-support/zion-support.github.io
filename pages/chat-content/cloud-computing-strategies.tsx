@@ -1,5 +1,5 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next',
+import Head from 'next/head',
 
 const CloudComputingStrategies: NextPage = () => {
   return (
@@ -14,7 +14,7 @@ const CloudComputingStrategies: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default CloudComputingStrategies;
+export default CloudComputingStrategies,

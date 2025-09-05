@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
 
 export default function AIGuardrailsPage() {
 	const contactInfo = {
@@ -11,16 +11,13 @@ export default function AIGuardrailsPage() {
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	};
+	},
 
 	const features = [
-		'Prompt/output policy engine with allow/deny lists',
-		'Jailbreak and prompt injection detection',
-		'PII/PHI detection and redaction',
-		'Toxicity, bias and safety classifiers',
-		'Human handoff flows and escalation policies',
-		'Audit logs, alerting and exportable evidence'
-	];
+		'Prompt/output policy engine with allow/deny listsJailbreak and prompt injection detection',
+		'PII/PHI detection and redactionToxicity, bias and safety classifiers',
+		'Human handoff flows and escalation policiesAudit logs, alerting and exportable evidence'
+	],
 
 	return (
 		<UltraAdvancedFuturisticBackground>
@@ -88,5 +85,5 @@ export default function AIGuardrailsPage() {
 				</div>
 			</section>
 		</UltraAdvancedFuturisticBackground>
-	);
+	),
 }

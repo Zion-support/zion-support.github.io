@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Card from '../components/ui/Card';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Card from '../components/ui/Card',
+import Link from 'next/link',
 
 export default function DocsPage() {
 	return (
@@ -10,7 +10,7 @@ export default function DocsPage() {
 			<Head>
 				<title>Documentation | Zion Tech Group</title>
 				<meta name="description" content="Developer documentation, API reference, and implementation guides for Zion Tech Group services." />
-				<link rel="canonical" href="https://ziontechgroup.com/docs" />
+				<link rel="canonical" href="https: //ziontechgroup.com/docs" />
 			</Head>
 			<div className="container mx-auto px-4 py-16 space-y-6">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Documentation</h1>
@@ -34,5 +34,5 @@ export default function DocsPage() {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-	);
+	)
 }

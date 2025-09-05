@@ -1,10 +1,10 @@
 
-import { useFetchResume } from './useFetchResume';
-import { useResumeActions } from './useResumeActions';
+import { useFetchResume } from './useFetchResume',
+import { useResumeActions } from './useResumeActions',
 
 export function useResumeBasic() {
-  const fetchResumeOperations = useFetchResume();
-  const resumeActions = useResumeActions();
+  const fetchResumeOperations = useFetchResume(),
+  const resumeActions = useResumeActions(),
   
   return {
     // From useFetchResume
@@ -12,9 +12,8 @@ export function useResumeBasic() {
     error: fetchResumeOperations.error || resumeActions.error,
     resume: fetchResumeOperations.resume,
     fetchResume: fetchResumeOperations.fetchResume,
-    
     // From useResumeActions
     createResume: resumeActions.createResume,
     updateBasicInfo: resumeActions.updateBasicInfo,
-    setActiveResume: resumeActions.setActiveResume};
+    setActiveResume: resumeActions.setActiveResume},
 }

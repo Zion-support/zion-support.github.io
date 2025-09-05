@@ -1,17 +1,17 @@
 
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { useWhitelabel } from "@/context/WhitelabelContext";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { useWhitelabel } from "@/context/WhitelabelContext",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
 import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth";
-import Link from "next/link";
+import { useAuth } from "@/hooks/useAuth",
+import Link from "next/link",
 
 export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
-  const { isAuthenticated } = useAuth();
+  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
+  const { isAuthenticated } = useAuth(),
   
   return (
     <>
@@ -33,7 +33,7 @@ export default function ZionHireAI() {
                   {isWhitelabel ? `${brandName} Recruiting Assistant` : "Zion Hire AI"}
                 </h1>
                 <p className="text-lg text-zion-slate-light max-w-[600px]">
-                  Empower your team with AI-driven talent acquisition. Streamline your hiring process, 
+                  Empower your team with AI-driven talent acquisition. Streamline your hiring process,
                   improve candidate matches, and enhance the applicant experience.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
@@ -73,7 +73,7 @@ export default function ZionHireAI() {
 
         {/* Features Section */}
         <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="container mx-auto px-4 md: px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight">Powerful AI Hiring Tools</h2>
               <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
@@ -244,10 +244,10 @@ export default function ZionHireAI() {
 
         {/* CTA Section */}
         <section className="bg-zion-blue-dark py-16">
-          <div className="container mx-auto px-4 md:px-6 text-center">
+          <div className="container mx-auto px-4 md: px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-8">
-              Join leading companies using Zion Hire AI to find better talent faster, 
+              Join leading companies using Zion Hire AI to find better talent faster,
               reduce time-to-hire, and improve candidate experience.
             </p>
             <Button 
@@ -263,5 +263,5 @@ export default function ZionHireAI() {
         </section>
       </main>
     </>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-import React, { useMemo, useState } from 'react';
-import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react';
-import { buildPrintableHtml } from '../../utils/export/buildHtml';
-import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
-import { defaultChapters } from '../../utils/book/defaultOutline';
+import React, { useMemo, useState } from 'react',
+import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react',
+import { buildPrintableHtml } from '../../utils/export/buildHtml',
+import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes',
+import { defaultChapters } from '../../utils/book/defaultOutline',
 
 const initialProject: BookProject = {
   meta: {
@@ -17,21 +17,21 @@ const initialProject: BookProject = {
     daoVoteCharts: [],
     uiScreens: [],
     quoteCallouts: [
-      { text: 'The marketplace is the new operating system.', attribution: 'Founder' }]}};
+      { text: 'The marketplace is the new operating system.', attribution: 'Founder' }]}},
 
 function fileToBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result as string);
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
+    const reader = new FileReader(),
+    reader.onload = () => resolve(reader.result as string),
+    reader.onerror = reject,
+    reader.readAsDataURL(file)
+  }),
 }
 
 export default function BookBuilder() {
-  const [project, setProject] = useState<BookProject>(initialProject);
-  const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER');
-  const [busy, setBusy] = useState<boolean>(false);
+  const [project, setProject] = useState<BookProject>(initialProject),
+  const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER'),
+  const [busy, setBusy] = useState<boolean>(false),
 
   const coverPreview = useMemo(() => {
     return (
@@ -52,72 +52,72 @@ export default function BookBuilder() {
           ) : null}
         </div>
       </div>
-    );
-  }, [project]);
+    ),
+  }, [project]),
 
   async function handleGenerateWithAI() {
-    setBusy(true);
+    setBusy(true),
     try {
       const res = await fetch('/api/book/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ meta: project.meta, chapters: project.chapters })});
-      const data = await res.json();
+        body: JSON.stringify({ meta: project.meta, chapters: project.chapters })}),
+      const data = await res.json(),
       if (data?.chapters) {
-        setProject((p) => ({ ...p, chapters: data.chapters }));
+        setProject((p) => ({ ...p, chapters: data.chapters })),
       }
     } finally {
-      setBusy(false);
+      setBusy(false),
     }
   }
 
   async function handleExportPdf() {
-    setBusy(true);
+    setBusy(true),
     try {
-      const html = buildPrintableHtml(project);
+      const html = buildPrintableHtml(project),
       const res = await fetch('/api/book/export/pdf', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ html, pageSize })});
-      const blob = await res.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'zion-os-book.pdf';
-      a.click();
-      URL.revokeObjectURL(url);
+        body: JSON.stringify({ html, pageSize })}),
+      const blob = await res.blob(),
+      const url = URL.createObjectURL(blob),
+      const a = document.createElement('a'),
+      a.href = url,
+      a.download = 'zion-os-book.pdf',
+      a.click(),
+      URL.revokeObjectURL(url),
     } finally {
-      setBusy(false);
+      setBusy(false),
     }
   }
 
   async function handleExportEpub() {
-    setBusy(true);
+    setBusy(true),
     try {
       const res = await fetch('/api/book/export/epub', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ project })});
-      const blob = await res.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'zion-os-book.epub';
-      a.click();
-      URL.revokeObjectURL(url);
+        body: JSON.stringify({ project })}),
+      const blob = await res.blob(),
+      const url = URL.createObjectURL(blob),
+      const a = document.createElement('a'),
+      a.href = url,
+      a.download = 'zion-os-book.epub',
+      a.click(),
+      URL.revokeObjectURL(url),
     } finally {
-      setBusy(false);
+      setBusy(false),
     }
   }
 
   async function onUploadImages(files: FileList | null, target: keyof VisualAsset[]) {
-    if (!files) return;
-    const arr = await Promise.all(Array.from(files).map(fileToBase64));
+    if (!files) return,
+    const arr = await Promise.all(Array.from(files).map(fileToBase64)),
     setProject((p) => ({
       ...p,
       visuals: {
         ...p.visuals,
-        [target as any]: [...(p.visuals[target as any] as string[]), ...arr]}}));
+        [target as any]: [...(p.visuals[target as any] as string[]), ...arr]}})),
   }
 
   return (
@@ -226,9 +226,9 @@ export default function BookBuilder() {
                 className="w-full min-h-[160px] border rounded p-2"
                 value={ch.content}
                 onChange={(e) => {
-                  const chapters: BookChapter[] = [...project.chapters];
-                  chapters[idx] = { ...chapters[idx], content: e.target.value };
-                  setProject({ ...project, chapters });
+                  const chapters: BookChapter[] = [...project.chapters],
+                  chapters[idx] = { ...chapters[idx], content: e.target.value },
+                  setProject({ ...project, chapters }),
                 }}
               />
             </div>
@@ -245,18 +245,18 @@ export default function BookBuilder() {
                 className="border rounded px-2 py-1"
                 value={q.text}
                 onChange={(e) => {
-                  const quoteCallouts = [...project.visuals.quoteCallouts];
-                  quoteCallouts[i] = { ...quoteCallouts[i], text: e.target.value };
-                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } });
+                  const quoteCallouts = [...project.visuals.quoteCallouts],
+                  quoteCallouts[i] = { ...quoteCallouts[i], text: e.target.value },
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } }),
                 }}
               />
               <input
                 className="border rounded px-2 py-1"
                 value={q.attribution ?? ''}
                 onChange={(e) => {
-                  const quoteCallouts = [...project.visuals.quoteCallouts];
-                  quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value };
-                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } });
+                  const quoteCallouts = [...project.visuals.quoteCallouts],
+                  quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value },
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } }),
                 }}
                 placeholder="Attribution"
               />
@@ -266,5 +266,5 @@ export default function BookBuilder() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

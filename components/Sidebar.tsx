@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  X, 
-  Building2, 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Shield, 
+  X,
+  Building2,
+  Code,
+  Smartphone,
+  Cloud,
+  Shield,
   Zap,
   ShoppingCart,
   Heart,
@@ -18,23 +18,23 @@ import {
   Phone,
   Mail,
   ExternalLink
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
+  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]),
 
   const handleDropdownToggle = (title: string) => {
     setOpenDropdowns(prev =>
       prev.includes(title)
         ? prev.filter(item => item !== title)
         : [...prev, title]
-    );
-  };
+    )
+  },
 
   const navigation = {
     'Services': [
@@ -57,7 +57,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
       { name: 'Education', href: '/industries/education', icon: GraduationCap },
     ],
-  };
+  },
 
   const quickLinks = [
     { name: 'About Us', href: '/about' },
@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
-  ];
+  ],
 
   return (
     <AnimatePresence>
@@ -196,7 +196,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </>
       )}
     </AnimatePresence>
-  );
-};
+  ),
+},
 
-export default Sidebar;
+export default Sidebar,

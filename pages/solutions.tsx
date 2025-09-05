@@ -1,19 +1,19 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
-  Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
-  Lightbulb, Search, Grid, List, TrendingUp, 
-  User, ShoppingCart, Bell, HelpCircle, FileText, 
-  Video, Headphones, Code, Database, Network, Server, 
-  Monitor, Smartphone, Camera, Gamepad2, Palette, 
-  Music, Film, BookOpenCheck, Building, MessageCircle, 
+  Target, Brain, Rocket, Shield, Zap, Atom, Cpu,
+  Lock, Cloud, Settings, Eye, Award, Clock, Heart,
+  Lightbulb, Search, Grid, List, TrendingUp,
+  User, ShoppingCart, Bell, HelpCircle, FileText,
+  Video, Headphones, Code, Database, Network, Server,
+  Monitor, Smartphone, Camera, Gamepad2, Palette,
+  Music, Film, BookOpenCheck, Building, MessageCircle,
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',
 
 const Solutions: NextPage = () => {
   const industrySolutions = [
@@ -21,7 +21,7 @@ const Solutions: NextPage = () => {
       id: 'healthcare',
       name: 'Healthcare Solutions',
       description: 'AI-powered healthcare technology solutions',
-      features: ['Patient Care Optimization', 'Diagnostic AI', 'Healthcare Analytics', 'Compliance Management'],
+      features: ['Patient Care OptimizationDiagnostic AI', 'Healthcare AnalyticsCompliance Management'],
       price: '$3,999',
       period: 'month',
       popular: true,
@@ -31,7 +31,7 @@ const Solutions: NextPage = () => {
       id: 'financial',
       name: 'Financial Solutions',
       description: 'Advanced financial technology and services',
-      features: ['Risk Management', 'Fraud Detection', 'Trading Systems', 'Compliance Automation'],
+      features: ['Risk ManagementFraud Detection', 'Trading SystemsCompliance Automation'],
       price: '$2,999',
       period: 'month',
       popular: false,
@@ -41,7 +41,7 @@ const Solutions: NextPage = () => {
       id: 'manufacturing',
       name: 'Manufacturing Solutions',
       description: 'Smart manufacturing and Industry 4.0',
-      features: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization', 'IoT Integration'],
+      features: ['Predictive MaintenanceQuality Control', 'Supply Chain OptimizationIoT Integration'],
       price: '$2,799',
       period: 'month',
       popular: false,
@@ -51,7 +51,7 @@ const Solutions: NextPage = () => {
       id: 'retail',
       name: 'Retail Solutions',
       description: 'Digital transformation for retail businesses',
-      features: ['E-commerce Platforms', 'Customer Analytics', 'Inventory Management', 'Omnichannel Solutions'],
+      features: ['E-commerce PlatformsCustomer Analytics', 'Inventory ManagementOmnichannel Solutions'],
       price: '$2,499',
       period: 'month',
       popular: false,
@@ -61,7 +61,7 @@ const Solutions: NextPage = () => {
       id: 'government',
       name: 'Government Solutions',
       description: 'Technology solutions for public sector',
-      features: ['Digital Services', 'Security & Compliance', 'Data Management', 'Citizen Engagement'],
+      features: ['Digital ServicesSecurity & Compliance', 'Data ManagementCitizen Engagement'],
       price: '$3,499',
       period: 'month',
       popular: false,
@@ -71,13 +71,13 @@ const Solutions: NextPage = () => {
       id: 'education',
       name: 'Education Solutions',
       description: 'Innovative educational technology',
-      features: ['Learning Platforms', 'Student Analytics', 'Administrative Systems', 'Virtual Classrooms'],
+      features: ['Learning PlatformsStudent Analytics', 'Administrative SystemsVirtual Classrooms'],
       price: '$1,999',
       period: 'month',
       popular: false,
       icon: <BookOpenCheck className="w-8 h-8" />
     }
-  ];
+  ],
 
   const solutionCapabilities = [
     {
@@ -110,7 +110,7 @@ const Solutions: NextPage = () => {
       description: 'Data-driven decision making',
       icon: <BarChart3 className="w-6 h-6" />
     }
-  ];
+  ],
 
   const caseStudies = [
     {
@@ -146,7 +146,7 @@ const Solutions: NextPage = () => {
       ],
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
     }
-  ];
+  ],
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -333,7 +333,7 @@ const Solutions: NextPage = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                 Ready for Industry Transformation?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -358,7 +358,7 @@ const Solutions: NextPage = () => {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
-};
+  )
+},
 
-export default Solutions;
+export default Solutions,

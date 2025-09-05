@@ -1,6 +1,6 @@
 import { 
-  EnvelopeIcon, 
-  PhoneIcon, 
+  EnvelopeIcon,
+  PhoneIcon,
   MapPinIcon,
   ClockIcon,
   ChatBubbleLeftRightIcon

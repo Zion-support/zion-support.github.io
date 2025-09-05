@@ -1,11 +1,11 @@
-import { NewsletterForm } from "@/components/NewsletterForm";
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-import { Link } from "react-router-dom";
+import { NewsletterForm } from "@/components/NewsletterForm",
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
+import { Link } from "react-router-dom",
 
 export function Footer() {
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm: px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="mb-4">
@@ -69,9 +69,9 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-zion-blue-light">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-zion-slate text-sm">
-              &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+              &copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex space-x-6 mt-4 md: mt-0">
               <Link to="/privacy" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
             </div>
@@ -79,5 +79,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",
   description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",
-  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"};
+  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},
 
 export default function SpaceTechPage() {
   return (
@@ -93,7 +93,7 @@ export default function SpaceTechPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Satellite Communications</h3>
               <p className="text-gray-400 mb-4">
-                High-speed satellite internet, global connectivity solutions, 
+                High-speed satellite internet, global connectivity solutions,
                 and communication infrastructure for remote regions.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -209,7 +209,7 @@ export default function SpaceTechPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Space Strategy Consulting</h3>
               <p className="text-gray-400 mb-4">
-                Strategic guidance for space initiatives, regulatory compliance, 
+                Strategic guidance for space initiatives, regulatory compliance,
                 and space industry partnerships.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -400,7 +400,7 @@ export default function SpaceTechPage() {
       </section>
 
       {/* Future of Space */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-800/20 to-gray-900/20">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-gray-800/20 to-gray-900/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -431,7 +431,7 @@ export default function SpaceTechPage() {
             <div className="card">
               <h3 className="text-xl font-semibold mb-3">Space Mining</h3>
               <p className="text-gray-400 mb-4">
-                Extraction of valuable resources from asteroids, the Moon, 
+                Extraction of valuable resources from asteroids, the Moon,
                 and other celestial bodies for Earth use.
               </p>
             </div>
@@ -497,7 +497,7 @@ export default function SpaceTechPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-yellow-600/20 to-orange-600/20 border-yellow-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -519,5 +519,5 @@ export default function SpaceTechPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

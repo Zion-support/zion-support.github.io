@@ -7,12 +7,12 @@ const { execSync } = require('child_process');
 class IntelligentErrorDetector {
   constructor() {
     this.errorPatterns = {
-      syntax: /SyntaxError|ParseError|Unexpected token/gi,
-      type: /TypeError|ReferenceError/gi,
-      module: /Cannot find module|Module not found/gi,
-      import: /Cannot resolve module|Import error/gi,
-      build: /Build failed|Compilation error/gi,
-      runtime: /Runtime error|Uncaught exception/gi,
+      syntax: /SyntaxError|ParseError|Unexpected token/gi;
+      type: /TypeError|ReferenceError/gi;
+      module: /Cannot find module|Module not found/gi;
+      import: /Cannot resolve module|Import error/gi;
+      build: /Build failed|Compilation error/gi;
+      runtime: /Runtime error|Uncaught exception/gi;
     };
     this.logFile = path.join(__dirname, 'logs', 'error-detection.log');
     this.ensureLogDirectory();
@@ -36,16 +36,16 @@ class IntelligentErrorDetector {
     this.log('🔍 Starting intelligent error detection...');
 
     const errors = {
-      syntax: await this.detectSyntaxErrors(),
-      type: await this.detectTypeErrors(),
-      module: await this.detectModuleErrors(),
-      import: await this.detectImportErrors(),
-      build: await this.detectBuildErrors(),
-      runtime: await this.detectRuntimeErrors(),
+      syntax: await this.detectSyntaxErrors();
+      type: await this.detectTypeErrors();
+      module: await this.detectModuleErrors();
+      import: await this.detectImportErrors();
+      build: await this.detectBuildErrors();
+      runtime: await this.detectRuntimeErrors();
     };
 
     const totalErrors = Object.values(errors).reduce(
-      (sum, arr) => sum + arr.length,
+      (sum, arr) => sum + arr.length;
       0
     );
     this.log(`Found ${totalErrors} total errors across all categories`);
@@ -61,8 +61,8 @@ class IntelligentErrorDetector {
   async detectSyntaxErrors() {
     try {
       const result = execSync('npx eslint . --format json', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
+        stdio: 'pipe';
+        cwd: process.cwd();
       });
       const eslintOutput = JSON.parse(result);
       return eslintOutput.filter(issue =>
@@ -76,8 +76,8 @@ class IntelligentErrorDetector {
   async detectTypeErrors() {
     try {
       const result = execSync('npx tsc --noEmit --skipLibCheck', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
+        stdio: 'pipe';
+        cwd: process.cwd();
       });
       return [];
     } catch (error) {
@@ -89,8 +89,8 @@ class IntelligentErrorDetector {
   async detectModuleErrors() {
     try {
       const result = execSync('npm run build', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
+        stdio: 'pipe';
+        cwd: process.cwd();
       });
       return [];
     } catch (error) {
@@ -102,10 +102,10 @@ class IntelligentErrorDetector {
   async detectImportErrors() {
     try {
       const result = execSync(
-        'npx eslint . --rule "import/no-unresolved: error"',
+        'npx eslint . --rule "import/no-unresolved: error"';
         {
-          stdio: 'pipe',
-          cwd: process.cwd(),
+          stdio: 'pipe';
+          cwd: process.cwd();
         }
       );
       return [];
@@ -118,8 +118,8 @@ class IntelligentErrorDetector {
   async detectBuildErrors() {
     try {
       const result = execSync('npm run build', {
-        stdio: 'pipe',
-        cwd: process.cwd(),
+        stdio: 'pipe';
+        cwd: process.cwd();
       });
       return [];
     } catch (error) {
@@ -139,11 +139,11 @@ class IntelligentErrorDetector {
         const content = fs.readFileSync(file, 'utf8');
         if (this.errorPatterns.runtime.test(content)) {
           runtimeErrors.push({
-            file,
+            file;
             line:
               content
                 .split('\n')
-                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1,
+                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1;
           });
         }
       } catch (error) {
@@ -189,27 +189,27 @@ class IntelligentErrorDetector {
 
   async generateErrorReport(errors) {
     const report = {
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString();
       totalErrors: Object.values(errors).reduce(
-        (sum, arr) => sum + arr.length,
+        (sum, arr) => sum + arr.length;
         0
-      ),
+      );
       errorsByCategory: Object.entries(errors).reduce(
         (acc, [category, errorList]) => {
           acc[category] = errorList.length;
           return acc;
-        },
+        };
         {}
-      ),
-      details: errors,
+      );
+      details: errors;
     };
 
     const reportFile = path.join(
-      __dirname,
-      'reports',
+      __dirname;
+      'reports';
       'error-detection-report.json'
     );
-    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
+    fs.mkdirSync(path.dirname(reportFile) { recursive: true });
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`Error report generated: ${reportFile}`);

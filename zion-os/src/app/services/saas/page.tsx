@@ -39,7 +39,7 @@ export default function SAASServicesPage() {
               <div className="text-4xl mb-6">🛒</div>
               <h2 className="text-3xl font-bold mb-4">Zion Marketplace</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Complete marketplace solution with job boards, talent matching, project management, 
+                Complete marketplace solution with job boards, talent matching, project management,
                 and integrated payment processing for modern business ecosystems.
               </p>
               
@@ -133,7 +133,7 @@ export default function SAASServicesPage() {
               <div className="text-4xl mb-6">🪙</div>
               <h2 className="text-3xl font-bold mb-4">Token Rewards System</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Blockchain-based loyalty and rewards platform with gamification, community engagement, 
+                Blockchain-based loyalty and rewards platform with gamification, community engagement,
                 and token economics for modern businesses and communities.
               </p>
               
@@ -227,7 +227,7 @@ export default function SAASServicesPage() {
               <div className="text-4xl mb-6">🗳️</div>
               <h2 className="text-3xl font-bold mb-4">DAO Governance Platform</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Decentralized governance tools with proposal creation, voting mechanisms, treasury management, 
+                Decentralized governance tools with proposal creation, voting mechanisms, treasury management,
                 and community governance for modern organizations.
               </p>
               
@@ -274,7 +274,7 @@ export default function SAASServicesPage() {
               <div className="text-4xl mb-6">🎓</div>
               <h2 className="text-3xl font-bold mb-4">Zion Academy</h2>
               <p className="text-zinc-300 mb-6 text-lg">
-                Learning management system with AI-powered course creation, assessments, skill tracking, 
+                Learning management system with AI-powered course creation, assessments, skill tracking,
                 and personalized learning paths for modern education and training.
               </p>
               
@@ -422,7 +422,7 @@ export default function SAASServicesPage() {
             and accelerate your digital transformation journey.
           </p>
           <div className="space-y-4">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors text-lg">
                 📞 Call +1 302 464 0950
               </a>
@@ -437,5 +437,5 @@ export default function SAASServicesPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

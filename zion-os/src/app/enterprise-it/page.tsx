@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
   description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"};
+  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},
 
 export default function EnterpriseITPage() {
   return (
@@ -23,7 +23,7 @@ export default function EnterpriseITPage() {
       </section>
 
       {/* Enterprise Overview */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="card bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border-blue-500/30">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -32,7 +32,7 @@ export default function EnterpriseITPage() {
                   Modernize Your Enterprise Infrastructure
                 </h2>
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                  In today's digital-first world, enterprises need agile, scalable, 
+                  In today's digital-first world, enterprises need agile, scalable,
                   and secure IT infrastructure to compete and thrive. Our comprehensive 
                   solutions help organizations modernize their technology stack while 
                   maintaining operational excellence.
@@ -93,7 +93,7 @@ export default function EnterpriseITPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Cloud Migration & Strategy</h3>
               <p className="text-gray-400 mb-4">
-                Seamless migration to cloud platforms with strategic planning, 
+                Seamless migration to cloud platforms with strategic planning,
                 cost optimization, and performance tuning.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -117,7 +117,7 @@ export default function EnterpriseITPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">DevOps & Automation</h3>
               <p className="text-gray-400 mb-4">
-                Streamline development and operations with automated CI/CD pipelines, 
+                Streamline development and operations with automated CI/CD pipelines,
                 infrastructure as code, and monitoring solutions.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -140,7 +140,7 @@ export default function EnterpriseITPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Infrastructure Management</h3>
               <p className="text-gray-400 mb-4">
-                Comprehensive infrastructure management including server provisioning, 
+                Comprehensive infrastructure management including server provisioning,
                 network configuration, and performance optimization.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -163,7 +163,7 @@ export default function EnterpriseITPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Data Management</h3>
               <p className="text-gray-400 mb-4">
-                Enterprise data solutions including warehousing, analytics, 
+                Enterprise data solutions including warehousing, analytics,
                 and business intelligence platforms.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -209,7 +209,7 @@ export default function EnterpriseITPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Managed Services</h3>
               <p className="text-gray-400 mb-4">
-                24/7 managed IT services including monitoring, maintenance, 
+                24/7 managed IT services including monitoring, maintenance,
                 and support for enterprise infrastructure.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-400">
@@ -283,7 +283,7 @@ export default function EnterpriseITPage() {
       </section>
 
       {/* Digital Transformation Process */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -301,7 +301,7 @@ export default function EnterpriseITPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Assessment</h3>
               <p className="text-gray-400">
-                Comprehensive evaluation of current infrastructure, 
+                Comprehensive evaluation of current infrastructure,
                 identifying opportunities and challenges.
               </p>
             </div>
@@ -312,7 +312,7 @@ export default function EnterpriseITPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Strategy</h3>
               <p className="text-gray-400">
-                Develop transformation roadmap with clear milestones, 
+                Develop transformation roadmap with clear milestones,
                 timelines, and success metrics.
               </p>
             </div>
@@ -323,7 +323,7 @@ export default function EnterpriseITPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Implementation</h3>
               <p className="text-gray-400">
-                Execute transformation plan with agile methodology, 
+                Execute transformation plan with agile methodology,
                 ensuring minimal disruption to operations.
               </p>
             </div>
@@ -376,7 +376,7 @@ export default function EnterpriseITPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border-blue-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -398,5 +398,5 @@ export default function EnterpriseITPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

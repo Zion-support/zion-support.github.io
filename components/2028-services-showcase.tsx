@@ -1,24 +1,24 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2
-} from 'lucide-react';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-import { futuristic2028Services } from '../data/2028-futuristic-innovations';
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+} from 'lucide-react',
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
+import { futuristic2028Services } from '../data/2028-futuristic-innovations',
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -63,7 +63,7 @@ const serviceCategories = [
     color: 'from-red-600 to-pink-600',
     services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
   }
-];
+],
 
 export default function ServicesShowcase2028() {
   return (
@@ -307,7 +307,7 @@ export default function ServicesShowcase2028() {
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>
               <p className="text-purple-300 mb-6">
-                Our services target markets with exponential growth potential, 
+                Our services target markets with exponential growth potential,
                 with some sectors growing at 300-800% annually.
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>
@@ -361,7 +361,7 @@ export default function ServicesShowcase2028() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Transform</span> Your Business?
             </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
@@ -406,5 +406,5 @@ export default function ServicesShowcase2028() {
 
       <UltraFuturisticFooter2028 />
     </>
-  );
+  )
 }

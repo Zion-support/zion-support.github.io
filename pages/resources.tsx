@@ -1,7 +1,7 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../components/SEO',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Link from 'next/link',
 
 export default function ResourcesPage() {
   return (
@@ -31,8 +31,8 @@ export default function ResourcesPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
-  );
-};
+  ),
+},
 
       {/* Whitepapers */}
       <section id="whitepapers" className="py-20 bg-slate-50">
@@ -263,10 +263,10 @@ export default function ResourcesPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>
             <p className="text-xl text-blue-100 mb-8">
-              Can't find what you're looking for? Our team is here to help with custom research, 
+              Can't find what you're looking for? Our team is here to help with custom research,
               personalized consultations, and tailored solutions for your specific needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
@@ -286,5 +286,5 @@ export default function ResourcesPage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
 }

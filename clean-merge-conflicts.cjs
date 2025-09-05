@@ -4,15 +4,15 @@ const { execSync } = require('child_process');
 
 // Find all files with merge conflict markers
 const conflictFiles = [
-  './types/empty.ts',
-  './types/index.ts',
-  './App.tsx',
-  './scripts/pm2/test-automation.js',
-  './scripts/pm2/code-quality-monitor.js',
-  './scripts/pm2/dependency-monitor.js',
-  './scripts/pm2/health-monitor.js',
-  './scripts/pm2/docs-generator.js',
-  './scripts/pm2/build-optimizer.js',
+  './types/empty.ts';
+  './types/index.ts';
+  './App.tsx';
+  './scripts/pm2/test-automation.js';
+  './scripts/pm2/code-quality-monitor.js';
+  './scripts/pm2/dependency-monitor.js';
+  './scripts/pm2/health-monitor.js';
+  './scripts/pm2/docs-generator.js';
+  './scripts/pm2/build-optimizer.js';
   './scripts/pm2/security-scanner.js'
 ];
 

@@ -32,19 +32,19 @@ class AdvancedAutomationImprovements {
     this.log(`Running: ${description}`);
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
-        ...options,
+        cwd: this.projectRoot;
+        stdio: 'pipe';
+        encoding: 'utf8';
+        ...options;
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output: result };
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       return {
-        success: false,
-        error: error.message,
-        output: error.stdout || error.stderr,
+        success: false;
+        error: error.message;
+        output: error.stdout || error.stderr;
       };
     }
   }
@@ -59,11 +59,11 @@ const { execSync } = require('child_process');
 class IntelligentErrorDetector {
   constructor() {
     this.errorPatterns = {
-      syntax: /SyntaxError|ParseError|Unexpected token/gi,
-      type: /TypeError|ReferenceError/gi,
-      module: /Cannot find module|Module not found/gi,
-      import: /Cannot resolve module|Import error/gi,
-      build: /Build failed|Compilation error/gi,
+      syntax: /SyntaxError|ParseError|Unexpected token/gi;
+      type: /TypeError|ReferenceError/gi;
+      module: /Cannot find module|Module not found/gi;
+      import: /Cannot resolve module|Import error/gi;
+      build: /Build failed|Compilation error/gi;
       runtime: /Runtime error|Uncaught exception/gi
     };
     this.logFile = path.join(__dirname, 'logs', 'error-detection.log');
@@ -88,11 +88,11 @@ class IntelligentErrorDetector {
     this.log('🔍 Starting intelligent error detection...');
     
     const errors = {
-      syntax: await this.detectSyntaxErrors(),
-      type: await this.detectTypeErrors(),
-      module: await this.detectModuleErrors(),
-      import: await this.detectImportErrors(),
-      build: await this.detectBuildErrors(),
+      syntax: await this.detectSyntaxErrors();
+      type: await this.detectTypeErrors();
+      module: await this.detectModuleErrors();
+      import: await this.detectImportErrors();
+      build: await this.detectBuildErrors();
       runtime: await this.detectRuntimeErrors()
     };
 
@@ -110,7 +110,7 @@ class IntelligentErrorDetector {
   async detectSyntaxErrors() {
     try {
       const result = execSync('npx eslint . --format json', { 
-        stdio: 'pipe', 
+        stdio: 'pipe';
         cwd: process.cwd() 
       });
       const eslintOutput = JSON.parse(result);
@@ -125,7 +125,7 @@ class IntelligentErrorDetector {
   async detectTypeErrors() {
     try {
       const result = execSync('npx tsc --noEmit --skipLibCheck', { 
-        stdio: 'pipe', 
+        stdio: 'pipe';
         cwd: process.cwd() 
       });
       return [];
@@ -138,7 +138,7 @@ class IntelligentErrorDetector {
   async detectModuleErrors() {
     try {
       const result = execSync('npm run build', { 
-        stdio: 'pipe', 
+        stdio: 'pipe';
         cwd: process.cwd() 
       });
       return [];
@@ -151,7 +151,7 @@ class IntelligentErrorDetector {
   async detectImportErrors() {
     try {
       const result = execSync('npx eslint . --rule "import/no-unresolved: error"', { 
-        stdio: 'pipe', 
+        stdio: 'pipe';
         cwd: process.cwd() 
       });
       return [];
@@ -164,7 +164,7 @@ class IntelligentErrorDetector {
   async detectBuildErrors() {
     try {
       const result = execSync('npm run build', { 
-        stdio: 'pipe', 
+        stdio: 'pipe';
         cwd: process.cwd() 
       });
       return [];
@@ -185,7 +185,7 @@ class IntelligentErrorDetector {
         const content = fs.readFileSync(file, 'utf8');
         if (this.errorPatterns.runtime.test(content)) {
           runtimeErrors.push({
-            file,
+            file;
             line: content.split('\\n').findIndex(line => 
               this.errorPatterns.runtime.test(line)
             ) + 1
@@ -225,17 +225,17 @@ class IntelligentErrorDetector {
 
   async generateErrorReport(errors) {
     const report = {
-      timestamp: new Date().toISOString(),
-      totalErrors: Object.values(errors).reduce((sum, arr) => sum + arr.length, 0),
+      timestamp: new Date().toISOString();
+      totalErrors: Object.values(errors).reduce((sum, arr) => sum + arr.length, 0);
       errorsByCategory: Object.entries(errors).reduce((acc, [category, errorList]) => {
         acc[category] = errorList.length;
         return acc;
-      }, {}),
+      }, {});
       details: errors
     };
 
     const reportFile = path.join(__dirname, 'reports', 'error-detection-report.json');
-    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
+    fs.mkdirSync(path.dirname(reportFile) { recursive: true });
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
     this.log(\`Error report generated: \${reportFile}\`);
@@ -286,8 +286,8 @@ if (require.main === module) {
 module.exports = IntelligentErrorDetector;`;
 
     const scriptPath = path.join(
-      this.projectRoot,
-      'automation',
+      this.projectRoot;
+      'automation';
       'intelligent-error-detector.cjs'
     );
     fs.writeFileSync(scriptPath, script);
@@ -305,10 +305,10 @@ const { execSync } = require('child_process');
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      buildTime: 0,
-      bundleSize: 0,
-      memoryUsage: 0,
-      cpuUsage: 0,
+      buildTime: 0;
+      bundleSize: 0;
+      memoryUsage: 0;
+      cpuUsage: 0;
       lastUpdated: new Date().toISOString()
     };
     this.logFile = path.join(__dirname, 'logs', 'performance-monitor.log');
@@ -405,13 +405,13 @@ class PerformanceMonitor {
 
   async saveMetrics() {
     const metricsFile = path.join(__dirname, 'reports', 'performance-metrics.json');
-    fs.mkdirSync(path.dirname(metricsFile), { recursive: true });
+    fs.mkdirSync(path.dirname(metricsFile) { recursive: true });
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
 
   async generatePerformanceReport() {
     const report = {
-      ...this.metrics,
+      ...this.metrics;
       recommendations: this.generateRecommendations()
     };
 
@@ -449,8 +449,8 @@ if (require.main === module) {
 module.exports = PerformanceMonitor;`;
 
     const scriptPath = path.join(
-      this.projectRoot,
-      'automation',
+      this.projectRoot;
+      'automation';
       'performance-monitor.cjs'
     );
     fs.writeFileSync(scriptPath, script);
@@ -505,7 +505,7 @@ class SecurityScanner {
       
       this.log('Security scan completed');
       return {
-        vulnerabilities: this.vulnerabilities,
+        vulnerabilities: this.vulnerabilities;
         securityIssues: this.securityIssues
       };
     } catch (error) {
@@ -517,7 +517,7 @@ class SecurityScanner {
   async scanVulnerabilities() {
     try {
       const result = execSync('npm audit --json', { 
-        stdio: 'pipe', 
+        stdio: 'pipe';
         cwd: process.cwd() 
       });
       const auditData = JSON.parse(result);
@@ -525,9 +525,9 @@ class SecurityScanner {
       if (auditData.vulnerabilities) {
         Object.entries(auditData.vulnerabilities).forEach(([name, vuln]) => {
           this.vulnerabilities.push({
-            name,
-            severity: vuln.severity,
-            description: vuln.description,
+            name;
+            severity: vuln.severity;
+            description: vuln.description;
             recommendation: vuln.recommendation
           });
         });
@@ -540,9 +540,9 @@ class SecurityScanner {
   async scanCodeSecurity() {
     const files = this.getSourceFiles();
     const securityPatterns = {
-      hardcodedSecrets: /(password|secret|key|token)\\s*[:=]\\s*['"][^'"]+['"]/gi,
-      evalUsage: /eval\\s*\\(/gi,
-      innerHTML: /innerHTML\\s*=/gi,
+      hardcodedSecrets: /(password|secret|key|token)\\s*[:=]\\s*['"][^'"]+['"]/gi;
+      evalUsage: /eval\\s*\\(/gi;
+      innerHTML: /innerHTML\\s*=/gi;
       dangerousFunctions: /(document\\.write|setTimeout|setInterval)\\s*\\(/gi
     };
 
@@ -554,9 +554,9 @@ class SecurityScanner {
           const matches = content.match(pattern);
           if (matches) {
             this.securityIssues.push({
-              file,
-              type: patternName,
-              matches: matches.length,
+              file;
+              type: patternName;
+              matches: matches.length;
               description: \`Potential \${patternName} found\`
             });
           }
@@ -569,8 +569,8 @@ class SecurityScanner {
 
   async scanSensitiveData() {
     const sensitivePatterns = {
-      apiKeys: /(api[_-]?key|apikey)\\s*[:=]\\s*['"][^'"]+['"]/gi,
-      passwords: /(password|pwd)\\s*[:=]\\s*['"][^'"]+['"]/gi,
+      apiKeys: /(api[_-]?key|apikey)\\s*[:=]\\s*['"][^'"]+['"]/gi;
+      passwords: /(password|pwd)\\s*[:=]\\s*['"][^'"]+['"]/gi;
       tokens: /(token|access[_-]?token)\\s*[:=]\\s*['"][^'"]+['"]/gi
     };
 
@@ -584,10 +584,10 @@ class SecurityScanner {
           const matches = content.match(pattern);
           if (matches) {
             this.securityIssues.push({
-              file,
-              type: 'sensitive_data',
-              pattern: patternName,
-              matches: matches.length,
+              file;
+              type: 'sensitive_data';
+              pattern: patternName;
+              matches: matches.length;
               description: \`Potential \${patternName} found - review for sensitive data\`
             });
           }
@@ -624,18 +624,18 @@ class SecurityScanner {
 
   async generateSecurityReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      vulnerabilities: this.vulnerabilities,
-      securityIssues: this.securityIssues,
+      timestamp: new Date().toISOString();
+      vulnerabilities: this.vulnerabilities;
+      securityIssues: this.securityIssues;
       summary: {
-        totalVulnerabilities: this.vulnerabilities.length,
-        totalSecurityIssues: this.securityIssues.length,
+        totalVulnerabilities: this.vulnerabilities.length;
+        totalSecurityIssues: this.securityIssues.length;
         criticalIssues: this.vulnerabilities.filter(v => v.severity === 'critical').length
       }
     };
 
     const reportFile = path.join(__dirname, 'reports', 'security-report.json');
-    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
+    fs.mkdirSync(path.dirname(reportFile) { recursive: true });
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
     this.log(\`Security report generated: \${reportFile}\`);
@@ -651,8 +651,8 @@ if (require.main === module) {
 module.exports = SecurityScanner;`;
 
     const scriptPath = path.join(
-      this.projectRoot,
-      'automation',
+      this.projectRoot;
+      'automation';
       'security-scanner.cjs'
     );
     fs.writeFileSync(scriptPath, script);
@@ -692,8 +692,8 @@ class GitWorkflowAutomator {
     this.log(\`Running: \${description}\`);
     try {
       const result = execSync(command, { 
-        cwd: this.projectRoot, 
-        stdio: 'pipe',
+        cwd: this.projectRoot;
+        stdio: 'pipe';
         encoding: 'utf8'
       });
       this.log(\`✅ \${description} completed successfully\`);
@@ -743,8 +743,8 @@ class GitWorkflowAutomator {
   async getCurrentBranch() {
     try {
       const result = execSync('git branch --show-current', { 
-        cwd: this.projectRoot, 
-        stdio: 'pipe',
+        cwd: this.projectRoot;
+        stdio: 'pipe';
         encoding: 'utf8'
       });
       return result.trim();
@@ -804,8 +804,8 @@ if (require.main === module) {
 module.exports = GitWorkflowAutomator;`;
 
     const scriptPath = path.join(
-      this.projectRoot,
-      'automation',
+      this.projectRoot;
+      'automation';
       'git-workflow-automator.cjs'
     );
     fs.writeFileSync(scriptPath, script);
@@ -826,15 +826,15 @@ module.exports = GitWorkflowAutomator;`;
 
       // Run the new scripts
       await this.runCommand(
-        'node automation/intelligent-error-detector.cjs',
+        'node automation/intelligent-error-detector.cjs';
         'Run error detector'
       );
       await this.runCommand(
-        'node automation/performance-monitor.cjs',
+        'node automation/performance-monitor.cjs';
         'Run performance monitor'
       );
       await this.runCommand(
-        'node automation/security-scanner.cjs',
+        'node automation/security-scanner.cjs';
         'Run security scanner'
       );
 
@@ -846,7 +846,7 @@ module.exports = GitWorkflowAutomator;`;
       });
     } catch (error) {
       this.log(
-        `Advanced automation improvements failed: ${error.message}`,
+        `Advanced automation improvements failed: ${error.message}`;
         'ERROR'
       );
     }

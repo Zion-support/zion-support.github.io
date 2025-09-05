@@ -1,24 +1,24 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import ContactForm from '../components/ContactForm';
+import Link from 'next/link',
+import Head from 'next/head',
+import { useState, useEffect } from 'react',
+import { ContactInfo } from '../types',
+import ErrorBoundary from '../components/ErrorBoundary',
+import ContactForm from '../components/ContactForm',
 
 export default function Contact() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false),
   
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout(() => setIsLoaded(true), 100),
+    return () => clearTimeout(timer),
+  }, []),
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  },
 
   const contactMethods = [
     {
@@ -52,13 +52,13 @@ export default function Contact() {
         </svg>
       )
     }
-  ];
+  ],
 
   const businessHours = [
     { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' },
     { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST' },
     { day: 'Sunday', hours: 'Emergency Support Only' }
-  ];
+  ],
 
   return (
     <>
@@ -102,27 +102,27 @@ export default function Contact() {
               </div>
 
               {/* Contact Form and Additional Info */}
-              <div className="grid lg:grid-cols-2 gap-12">
+              <div className="grid lg: grid-cols-2 gap-12">
                 <div>
                   <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
                   <ContactForm />
-  Mail, Phone, MapPin, Clock, MessageSquare, Send, 
+  Mail, Phone, MapPin, Clock, MessageSquare, Send,
   Globe, Building, Users, Award, Shield, Rocket
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 const ContactPage: React.FC = () => {
   Mail, Phone, MapPin, Clock, Globe, Send, CheckCircle,
   ArrowRight, MessageSquare, Calendar, Building, Users
-} from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Send, User, Building2, MessageCircle, Clock as ClockIcon, Globe as GlobeIcon2, Shield as ShieldIcon2, Zap as ZapIcon4, Users as UsersIcon2, Rocket as RocketIcon2, Award as AwardIcon2, TrendingUp as TrendingUpIcon2, CheckCircle, AlertCircle, Info } from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+} from 'lucide-react',
+import SmartHeader from '../components/SmartHeader',
+import SmartFooter from '../components/SmartFooter',
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Send, User, Building2, MessageCircle, Clock as ClockIcon, Globe as GlobeIcon2, Shield as ShieldIcon2, Zap as ZapIcon4, Users as UsersIcon2, Rocket as RocketIcon2, Award as AwardIcon2, TrendingUp as TrendingUpIcon2, CheckCircle, AlertCircle, Info } from 'lucide-react',
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -134,32 +134,32 @@ export default function ContactPage() {
     message: '',
     budget: '',
     timeline: ''
-  });
+  }),
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    })),
+  },
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault(),
+    setIsSubmitting(true),
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000)),
     
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+    setIsSubmitted(true),
+    setIsSubmitting(false),
     
     // Reset form after 5 seconds
     setTimeout(() => {
-      setIsSubmitted(false);
+      setIsSubmitted(false),
       setFormData({
         name: '',
         email: '',
@@ -169,9 +169,9 @@ export default function ContactPage() {
         message: '',
         budget: '',
         timeline: ''
-      });
-    }, 5000);
-  };
+      }),
+    }, 5000),
+  },
 
   const contactMethods = [
     {
@@ -206,7 +206,7 @@ export default function ContactPage() {
       color: 'from-orange-500 to-red-500',
       action: '#'
     }
-  ];
+  ],
 
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -216,7 +216,7 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -251,42 +251,32 @@ export default function ContactPage() {
               <p>✓ 24/7 AI support and emergency hotline</p>
               <p>✓ Custom implementation and training</p>
   const services = [
-    'AI Business Intelligence',
-    'Quantum Cybersecurity',
-    'Edge Computing Orchestration',
-    'Space Technology Innovation',
-    'Neural Interface Development',
-    'Autonomous DevOps',
-    'AI Customer Experience',
-    'Quantum Neural Networks',
+    'AI Business IntelligenceQuantum Cybersecurity',
+    'Edge Computing OrchestrationSpace Technology Innovation',
+    'Neural Interface DevelopmentAutonomous DevOps',
+    'AI Customer ExperienceQuantum Neural Networks',
     'Other (Please specify)'
-  ];
+  ],
 
   const budgets = [
-    'Under $10,000',
-    '$10,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $500,000',
-    '$500,000+',
-    'To be discussed'
-  ];
+    'Under $10,000$10,000 - $50,000',
+    '$50,000 - $100,000$100,000 - $500,000',
+    '$500,000+To be discussed'
+  ],
 
   const timelines = [
-    'Immediate (1-2 weeks)',
-    'Quick (1-2 months)',
-    'Standard (3-6 months)',
-    'Extended (6+ months)',
-    'Flexible timeline',
-    'To be discussed'
-  ];
+    'Immediate (1-2 weeks)Quick (1-2 months)',
+    'Standard (3-6 months)Extended (6+ months)',
+    'Flexible timelineTo be discussed'
+  ],
 
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 import {
   Mail, Phone, MapPin, ArrowRight, MessageSquare,
   Clock, Globe, Building, Users, Award, Shield, Home, ChevronRight, Brain
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function ContactPage() {
   return (
@@ -359,7 +349,7 @@ export default function ContactPage() {
               <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
                 Join hundreds of satisfied clients who have transformed their businesses with our innovative solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link
                   href="/services"
                   className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
@@ -378,7 +368,7 @@ export default function ContactPage() {
         </main>
       </ErrorBoundary>
     </>
-  );
+  )
 }
         </nav>
 
@@ -746,7 +736,7 @@ export default function ContactPage() {
 
         {/* Footer */}
         <footer className="bg-black/40">
-          <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+          <div className="max-w-7xl mx-auto py-12 px-4 sm: px-6 lg:py-16 lg:px-8">
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">
               <div className="space-y-8 xl:col-span-1">
                 <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
@@ -796,32 +786,32 @@ export default function ContactPage() {
             </div>
             <div className="mt-12 border-t border-gray-700 pt-8">
               <p className="text-base text-gray-400 xl:text-center">
-                &copy; 2025 Zion Tech Group. All rights reserved.
+                &copy, 2025 Zion Tech Group. All rights reserved.
               </p>
             </div>
           </div>
         </footer>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default ContactPage;
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Phone, Mail, MapPin } from 'lucide-react';
+export default ContactPage,
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+import { Phone, Mail, MapPin } from 'lucide-react',
 
 export default function ContactPage() {
 	const contact = {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709'
-	};
+	},
 	return (
 		<Layout>
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import { Phone, Mail, MapPin } from 'lucide-react',
 
 export default function ContactPage() {
 	const contact = {
@@ -829,7 +819,7 @@ export default function ContactPage() {
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	};
+	},
 
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">
@@ -859,5 +849,5 @@ export default function ContactPage() {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-	);
+	),
 }

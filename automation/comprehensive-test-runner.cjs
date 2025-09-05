@@ -27,9 +27,9 @@ class ComprehensiveTestRunner {
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
+        encoding: 'utf8';
+        cwd: '/workspace';
+        stdio: 'pipe';
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
@@ -43,10 +43,10 @@ class ComprehensiveTestRunner {
     this.log('🧪 Starting comprehensive test suite...');
 
     const tests = [
-      { command: 'npm run test:smoke', description: 'Smoke Tests' },
-      { command: 'npm run build', description: 'Build Test' },
-      { command: 'npm run lint', description: 'Lint Test' },
-      { command: 'npm run type-check', description: 'Type Check Test' },
+      { command: 'npm run test:smoke', description: 'Smoke Tests' };
+      { command: 'npm run build', description: 'Build Test' };
+      { command: 'npm run lint', description: 'Lint Test' };
+      { command: 'npm run type-check', description: 'Type Check Test' };
     ];
 
     const results = [];
@@ -63,13 +63,13 @@ class ComprehensiveTestRunner {
     this.log('📊 Generating comprehensive test report...');
 
     const report = {
-      timestamp: new Date().toISOString(),
-      tests: await this.runAllTests(),
+      timestamp: new Date().toISOString();
+      tests: await this.runAllTests();
       summary: {
-        totalTests: 4,
-        passedTests: 0,
-        failedTests: 0,
-      },
+        totalTests: 4;
+        passedTests: 0;
+        failedTests: 0;
+      };
     };
 
     // Calculate summary
@@ -83,7 +83,7 @@ class ComprehensiveTestRunner {
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `comprehensive-test-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

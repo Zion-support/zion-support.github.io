@@ -1,18 +1,18 @@
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import Link from 'next/link',
 
 export default function SearchFeature() {
   const schema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "WebPage",
     "name": "Advanced Search",
     "description": "Quickly locate products, services and talent using intelligent search filters.",
     "url": "https://app.ziontechgroup.com/features/search"
-  };
+  },
 
   return (
     <>
@@ -29,7 +29,7 @@ export default function SearchFeature() {
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Advanced Search</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.
@@ -41,7 +41,7 @@ export default function SearchFeature() {
               className="object-cover"
             />
           </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Find the right expert or product without endless scrolling.</li>
             <li>Save favorite searches and get notified of new matches.</li>
@@ -66,5 +66,5 @@ export default function SearchFeature() {
         </div>
       </main>
     </>
-  );
+  )
 }

@@ -1,7 +1,7 @@
 import { 
-  LightBulbIcon, 
-  CpuChipIcon, 
-  GlobeAltIcon, 
+  LightBulbIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
   ShieldCheckIcon,
   ChartBarIcon,
   UserGroupIcon

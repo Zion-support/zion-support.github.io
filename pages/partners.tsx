@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  Handshake, Globe, Rocket, Brain, Atom, Shield, 
+  Handshake, Globe, Rocket, Brain, Atom, Shield,
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function PartnersPage() {
   const partners = [
@@ -76,7 +76,7 @@ export default function PartnersPage() {
       icon: Brain,
       color: "from-indigo-500 to-purple-500"
     }
-  ];
+  ],
 
   const partnershipTypes = [
     {
@@ -107,14 +107,14 @@ export default function PartnersPage() {
       icon: Users,
       color: "from-orange-500 to-red-500"
     }
-  ];
+  ],
 
   const stats = [
     { number: "50+", label: "Strategic Partners", icon: Handshake },
     { number: "100+", label: "Joint Projects", icon: Rocket },
     { number: "25+", label: "Countries", icon: Globe },
     { number: "300%", label: "Growth Rate", icon: TrendingUp }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -324,7 +324,7 @@ export default function PartnersPage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Partnership Inquiry
               </button>
@@ -338,5 +338,5 @@ export default function PartnersPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

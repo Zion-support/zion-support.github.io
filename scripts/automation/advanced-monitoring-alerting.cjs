@@ -10,18 +10,18 @@ class AdvancedMonitoringAlerting {
   constructor() {
     this.projectRoot = process.cwd();
     this.monitoringData = {
-      timestamp: new Date().toISOString(),
-      systemHealth: {},
-      performanceMetrics: {},
-      alerts: [],
-      trends: {},
+      timestamp: new Date().toISOString();
+      systemHealth: {};
+      performanceMetrics: {};
+      alerts: [];
+      trends: {};
     };
     this.alertThresholds = {
-      cpu: 80,
-      memory: 85,
-      disk: 90,
-      responseTime: 2000,
-      errorRate: 5,
+      cpu: 80;
+      memory: 85;
+      disk: 90;
+      responseTime: 2000;
+      errorRate: 5;
     };
   }
 
@@ -60,12 +60,12 @@ class AdvancedMonitoringAlerting {
     console.log('💻 Monitoring system health...');
 
     const systemHealth = {
-      timestamp: new Date().toISOString(),
-      cpu: 0,
-      memory: 0,
-      disk: 0,
-      uptime: 0,
-      loadAverage: [],
+      timestamp: new Date().toISOString();
+      cpu: 0;
+      memory: 0;
+      disk: 0;
+      uptime: 0;
+      loadAverage: [];
     };
 
     try {
@@ -96,7 +96,7 @@ class AdvancedMonitoringAlerting {
   }
 
   parseUptime(uptimeString) {
-    const match = uptimeString.match(/up\s+([^,]+)/);
+    const match = uptimeString.match(/up\s+([^]+)/);
     return match ? match[1].trim() : 'Unknown';
   }
 
@@ -134,12 +134,12 @@ class AdvancedMonitoringAlerting {
     console.log('⚡ Monitoring application performance...');
 
     const performanceMetrics = {
-      timestamp: new Date().toISOString(),
-      buildTime: 0,
-      testTime: 0,
-      bundleSize: 0,
-      responseTime: 0,
-      errorRate: 0,
+      timestamp: new Date().toISOString();
+      buildTime: 0;
+      testTime: 0;
+      bundleSize: 0;
+      responseTime: 0;
+      errorRate: 0;
     };
 
     try {
@@ -186,7 +186,7 @@ class AdvancedMonitoringAlerting {
       );
     } catch (error) {
       console.log(
-        '⚠️  Application performance monitoring failed:',
+        '⚠️  Application performance monitoring failed:';
         error.message
       );
     }
@@ -230,12 +230,12 @@ class AdvancedMonitoringAlerting {
       const processes = this.parsePM2List(pm2List);
 
       const pm2Health = {
-        timestamp: new Date().toISOString(),
-        totalProcesses: processes.length,
-        onlineProcesses: processes.filter(p => p.status === 'online').length,
-        stoppedProcesses: processes.filter(p => p.status === 'stopped').length,
-        erroredProcesses: processes.filter(p => p.status === 'errored').length,
-        processes: processes,
+        timestamp: new Date().toISOString();
+        totalProcesses: processes.length;
+        onlineProcesses: processes.filter(p => p.status === 'online').length;
+        stoppedProcesses: processes.filter(p => p.status === 'stopped').length;
+        erroredProcesses: processes.filter(p => p.status === 'errored').length;
+        processes: processes;
       };
 
       this.monitoringData.pm2Health = pm2Health;
@@ -264,12 +264,12 @@ class AdvancedMonitoringAlerting {
         const parts = line.split('│').map(part => part.trim());
         if (parts.length >= 6) {
           processes.push({
-            id: parts[0],
-            name: parts[1],
-            mode: parts[2],
-            pid: parts[3],
-            uptime: parts[4],
-            status: parts[5],
+            id: parts[0];
+            name: parts[1];
+            mode: parts[2];
+            pid: parts[3];
+            uptime: parts[4];
+            status: parts[5];
           });
         }
       }
@@ -283,22 +283,22 @@ class AdvancedMonitoringAlerting {
 
     try {
       const gitStatus = execSync('git status --porcelain', {
-        encoding: 'utf8',
+        encoding: 'utf8';
       });
       const gitLog = execSync('git log --oneline -10', { encoding: 'utf8' });
       const gitBranch = execSync('git branch --show-current', {
-        encoding: 'utf8',
+        encoding: 'utf8';
       }).trim();
 
       const gitHealth = {
-        timestamp: new Date().toISOString(),
-        currentBranch: gitBranch,
+        timestamp: new Date().toISOString();
+        currentBranch: gitBranch;
         uncommittedChanges: gitStatus
           .trim()
           .split('\n')
-          .filter(line => line.trim()).length,
-        recentCommits: gitLog.trim().split('\n').length,
-        isClean: gitStatus.trim().length === 0,
+          .filter(line => line.trim()).length;
+        recentCommits: gitLog.trim().split('\n').length;
+        isClean: gitStatus.trim().length === 0;
       };
 
       this.monitoringData.gitHealth = gitHealth;
@@ -320,11 +320,11 @@ class AdvancedMonitoringAlerting {
     const historicalData = this.loadHistoricalData();
 
     const trends = {
-      timestamp: new Date().toISOString(),
-      performanceTrend: 'stable',
-      systemHealthTrend: 'stable',
-      errorTrend: 'stable',
-      recommendations: [],
+      timestamp: new Date().toISOString();
+      performanceTrend: 'stable';
+      systemHealthTrend: 'stable';
+      errorTrend: 'stable';
+      recommendations: [];
     };
 
     // Analyze performance trends
@@ -335,7 +335,7 @@ class AdvancedMonitoringAlerting {
       // Performance trend
       const avgBuildTime =
         recentData.reduce(
-          (sum, data) => sum + (data.performanceMetrics?.buildTime || 0),
+          (sum, data) => sum + (data.performanceMetrics?.buildTime || 0);
           0
         ) / recentData.length;
       if (currentData.performanceMetrics.buildTime > avgBuildTime * 1.2) {
@@ -353,7 +353,7 @@ class AdvancedMonitoringAlerting {
       // System health trend
       const avgMemory =
         recentData.reduce(
-          (sum, data) => sum + (data.systemHealth?.memory || 0),
+          (sum, data) => sum + (data.systemHealth?.memory || 0);
           0
         ) / recentData.length;
       if (currentData.systemHealth.memory > avgMemory * 1.1) {
@@ -374,8 +374,8 @@ class AdvancedMonitoringAlerting {
 
   loadHistoricalData() {
     const dataFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'monitoring-history.json'
     );
     try {
@@ -390,8 +390,8 @@ class AdvancedMonitoringAlerting {
 
   saveHistoricalData() {
     const dataFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'monitoring-history.json'
     );
     let historicalData = this.loadHistoricalData();
@@ -415,29 +415,29 @@ class AdvancedMonitoringAlerting {
     // System health alerts
     if (this.monitoringData.systemHealth.memory > this.alertThresholds.memory) {
       alerts.push({
-        type: 'system-health',
-        severity: 'high',
-        message: `High memory usage: ${this.monitoringData.systemHealth.memory}%`,
-        timestamp: new Date().toISOString(),
+        type: 'system-health';
+        severity: 'high';
+        message: `High memory usage: ${this.monitoringData.systemHealth.memory}%`;
+        timestamp: new Date().toISOString();
       });
     }
 
     if (this.monitoringData.systemHealth.disk > this.alertThresholds.disk) {
       alerts.push({
-        type: 'system-health',
-        severity: 'critical',
-        message: `High disk usage: ${this.monitoringData.systemHealth.disk}%`,
-        timestamp: new Date().toISOString(),
+        type: 'system-health';
+        severity: 'critical';
+        message: `High disk usage: ${this.monitoringData.systemHealth.disk}%`;
+        timestamp: new Date().toISOString();
       });
     }
 
     // Performance alerts
     if (this.monitoringData.performanceMetrics.buildTime > 30000) {
       alerts.push({
-        type: 'performance',
-        severity: 'medium',
-        message: `Slow build time: ${this.monitoringData.performanceMetrics.buildTime}ms`,
-        timestamp: new Date().toISOString(),
+        type: 'performance';
+        severity: 'medium';
+        message: `Slow build time: ${this.monitoringData.performanceMetrics.buildTime}ms`;
+        timestamp: new Date().toISOString();
       });
     }
 
@@ -446,30 +446,30 @@ class AdvancedMonitoringAlerting {
       this.alertThresholds.errorRate
     ) {
       alerts.push({
-        type: 'performance',
-        severity: 'high',
-        message: `High error rate: ${this.monitoringData.performanceMetrics.errorRate}%`,
-        timestamp: new Date().toISOString(),
+        type: 'performance';
+        severity: 'high';
+        message: `High error rate: ${this.monitoringData.performanceMetrics.errorRate}%`;
+        timestamp: new Date().toISOString();
       });
     }
 
     // PM2 alerts
     if (this.monitoringData.pm2Health?.erroredProcesses > 0) {
       alerts.push({
-        type: 'pm2',
-        severity: 'high',
-        message: `${this.monitoringData.pm2Health.erroredProcesses} PM2 processes are errored`,
-        timestamp: new Date().toISOString(),
+        type: 'pm2';
+        severity: 'high';
+        message: `${this.monitoringData.pm2Health.erroredProcesses} PM2 processes are errored`;
+        timestamp: new Date().toISOString();
       });
     }
 
     // Git alerts
     if (this.monitoringData.gitHealth?.uncommittedChanges > 10) {
       alerts.push({
-        type: 'git',
-        severity: 'low',
-        message: `${this.monitoringData.gitHealth.uncommittedChanges} uncommitted changes`,
-        timestamp: new Date().toISOString(),
+        type: 'git';
+        severity: 'low';
+        message: `${this.monitoringData.gitHealth.uncommittedChanges} uncommitted changes`;
+        timestamp: new Date().toISOString();
       });
     }
 
@@ -496,8 +496,8 @@ class AdvancedMonitoringAlerting {
   saveMonitoringData() {
     // Save current monitoring data
     const reportFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       `monitoring-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(this.monitoringData, null, 2));

@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
+import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3',
+import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
 
 export default function ServicesShowcase2026V3() {
   const contactInfo = {
@@ -11,7 +11,7 @@ export default function ServicesShowcase2026V3() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <UltraQuantumHolographicBackground 
@@ -49,12 +49,12 @@ export default function ServicesShowcase2026V3() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
                 Revolutionary 2026 Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
                 Experience the future of technology with our cutting-edge micro SAAS, AI, and emerging technology solutions. 
-                Transform your business with services designed for tomorrow&apos;s challenges.
+                Transform your business with services designed for tomorrow&apos,s challenges.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <motion.a
@@ -142,5 +142,5 @@ export default function ServicesShowcase2026V3() {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-  );
+  ),
 }

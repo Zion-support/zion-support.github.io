@@ -1,5 +1,5 @@
 
-import { z } from "zod";
+import { z } from "zod",
 
 export const jobSchema = z.object({
   title: z.string().min(3, {
@@ -25,6 +25,6 @@ export const jobSchema = z.object({
   category: z.string().optional(),
   status: z.string().optional(),
   external_apply_link: z.string().url({
-    message: "Please enter a valid URL."}).optional()});
+    message: "Please enter a valid URL."}).optional()}),
 
-export type JobSchemaType = z.infer<typeof jobSchema>;
+export type JobSchemaType = z.infer<typeof jobSchema>,

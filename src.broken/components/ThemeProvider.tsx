@@ -62,21 +62,21 @@ export function ThemeProvider({
   }, [theme])
 
   const setCurrentTheme = (newTheme: Theme) => {
-    safeStorage.setItem("theme", newTheme);
-    applyTheme(newTheme);
-    setTheme(newTheme);
-  };
+    safeStorage.setItem("theme", newTheme),
+    applyTheme(newTheme),
+    setTheme(newTheme)
+  },
 
   const toggleTheme = () => {
-    let currentResolvedTheme = theme;
+    let currentResolvedTheme = theme,
     if (currentResolvedTheme === "system") {
       currentResolvedTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
         ? "dark"
-        : "light";
+        : "light"
     }
-    setCurrentTheme(currentResolvedTheme === "dark" ? "light" : "dark");
-  };
+    setCurrentTheme(currentResolvedTheme === "dark" ? "light" : "dark"),
+  },
 
   const value = {
     theme,

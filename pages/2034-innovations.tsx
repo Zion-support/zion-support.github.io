@@ -1,15 +1,15 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
-import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032',
+import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export default function Innovations2034Page() {
   return (
@@ -137,11 +137,11 @@ export default function Innovations2034Page() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Innovation Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our 2034 innovations span across multiple cutting-edge technology domains, 
+                Our 2034 innovations span across multiple cutting-edge technology domains,
                 each designed to revolutionize industries and accelerate human progress.
               </p>
             </motion.div>
@@ -242,11 +242,11 @@ export default function Innovations2034Page() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're not just another technology company. We're pioneers building the future, 
+                We're not just another technology company. We're pioneers building the future,
                 one breakthrough innovation at a time.
               </p>
             </motion.div>
@@ -346,7 +346,7 @@ export default function Innovations2034Page() {
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">
+                whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">
                 Start Your Innovation Journey
               </motion.button>
             </motion.div>
@@ -356,5 +356,5 @@ export default function Innovations2034Page() {
 
       <UltraFuturisticFooter2034 />
     </>
-  );
+  )
 }

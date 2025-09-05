@@ -1,43 +1,43 @@
-import React, { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
-import Link from 'next/link';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { Logo } from '@/components/header/Logo';
-import { useTranslation } from 'react-i18next';
+import React, { useState } from 'react',
+import { useMessaging } from '@/context/MessagingContext',
+import Link from 'next/link',
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',
+import { Logo } from '@/components/header/Logo',
+import { useTranslation } from 'react-i18next',
 import { Menu, X } from 'lucide-react'
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { LoginModal } from '@/components/auth/LoginModal';
-import { useAuth } from '@/hooks/useAuth';
-import { UserMenu } from '@/components/header/UserMenu';
-import { useSelector } from 'react-redux';
-import type { RootState } from '@/store';
-import { cn } from '@/lib/utils'; // Import cn utility
-import { useRouter } from 'next/router';
+import { MobileMenu } from '@/components/header/MobileMenu',
+import { useIsMobile } from '@/hooks/use-mobile',
+import { MobileBottomNav } from '@/components/header/MobileBottomNav',
+import { PointsBadge } from '@/components/loyalty/PointsBadge',
+import { LoginModal } from '@/components/auth/LoginModal',
+import { useAuth } from '@/hooks/useAuth',
+import { UserMenu } from '@/components/header/UserMenu',
+import { useSelector } from 'react-redux',
+import type { RootState } from '@/store',
+import { cn } from '@/lib/utils', // Import cn utility
+import { useRouter } from 'next/router',
 
 export function AppHeader() {
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const { user } = useAuth();
-  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
-  const router = useRouter();
-  const showTagline = router.pathname === '/';
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
+  const [loginOpen, setLoginOpen] = useState(false),
+  const isMobile = useIsMobile(),
+  const { t } = useTranslation(),
+  const { user } = useAuth(),
+  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
+  const router = useRouter(),
+  const showTagline = router.pathname === '/',
 
   // Messaging context (unread message count)
-  const { unreadCount } = useMessaging();
+  const { unreadCount } = useMessaging(),
 
   const openLoginModal = (returnToPath?: string) => {
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
-    // using router.push with shallow:true before this function is called.
+    // using router.push with shallow: true before this function is called.
     // This function's main job is just to open the modal.
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
-    setLoginOpen(true);
-  };
+    setLoginOpen(true)
+  },
   
   return (
     <>
@@ -87,12 +87,12 @@ export function AppHeader() {
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
-                  e.preventDefault();
+                  e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
-                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true });
-                  openLoginModal(router.asPath);
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
+                  openLoginModal(router.asPath),
                 }}
               >
                 {t('auth.login')}
@@ -138,5 +138,5 @@ export function AppHeader() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  );
+  ),
 }

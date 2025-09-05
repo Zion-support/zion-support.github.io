@@ -9,10 +9,10 @@ console.log('🤖 Starting AI Code Quality Analyzer...');
 class AICodeQualityAnalyzer {
   constructor() {
     this.logFile = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
       'ai-code-quality.log'
     );
     this.ensureLogDir();
@@ -36,15 +36,15 @@ class AICodeQualityAnalyzer {
     this.log('🔍 Analyzing code quality...');
 
     const analysis = {
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString();
       metrics: {
-        complexity: this.analyzeComplexity(),
-        maintainability: this.analyzeMaintainability(),
-        testCoverage: this.analyzeTestCoverage(),
-        codeDuplication: this.analyzeCodeDuplication(),
-        securityIssues: this.analyzeSecurityIssues(),
-      },
-      recommendations: this.generateRecommendations(),
+        complexity: this.analyzeComplexity();
+        maintainability: this.analyzeMaintainability();
+        testCoverage: this.analyzeTestCoverage();
+        codeDuplication: this.analyzeCodeDuplication();
+        securityIssues: this.analyzeSecurityIssues();
+      };
+      recommendations: this.generateRecommendations();
     };
 
     return analysis;
@@ -55,15 +55,15 @@ class AICodeQualityAnalyzer {
 
     // Simulate complexity analysis
     return {
-      score: 85,
+      score: 85;
       issues: [
-        'High cyclomatic complexity in Header component',
-        'Nested loops detected in data processing functions',
-      ],
+        'High cyclomatic complexity in Header component';
+        'Nested loops detected in data processing functions';
+      ];
       suggestions: [
-        'Refactor complex functions into smaller ones',
-        'Use early returns to reduce nesting',
-      ],
+        'Refactor complex functions into smaller ones';
+        'Use early returns to reduce nesting';
+      ];
     };
   }
 
@@ -71,17 +71,17 @@ class AICodeQualityAnalyzer {
     this.log('🔧 Analyzing maintainability...');
 
     return {
-      score: 78,
+      score: 78;
       issues: [
-        'Large component files (>500 lines)',
-        'Missing JSDoc comments',
-        'Inconsistent naming conventions',
-      ],
+        'Large component files (>500 lines)';
+        'Missing JSDoc comments';
+        'Inconsistent naming conventions';
+      ];
       suggestions: [
-        'Split large components into smaller ones',
-        'Add comprehensive documentation',
-        'Standardize naming conventions',
-      ],
+        'Split large components into smaller ones';
+        'Add comprehensive documentation';
+        'Standardize naming conventions';
+      ];
     };
   }
 
@@ -89,18 +89,18 @@ class AICodeQualityAnalyzer {
     this.log('🧪 Analyzing test coverage...');
 
     return {
-      score: 65,
+      score: 65;
       coverage: {
-        statements: 65,
-        branches: 58,
-        functions: 72,
-        lines: 68,
-      },
+        statements: 65;
+        branches: 58;
+        functions: 72;
+        lines: 68;
+      };
       suggestions: [
-        'Add unit tests for utility functions',
-        'Increase integration test coverage',
-        'Add E2E tests for critical user flows',
-      ],
+        'Add unit tests for utility functions';
+        'Increase integration test coverage';
+        'Add E2E tests for critical user flows';
+      ];
     };
   }
 
@@ -108,13 +108,13 @@ class AICodeQualityAnalyzer {
     this.log('🔄 Analyzing code duplication...');
 
     return {
-      score: 82,
-      duplicatedLines: 45,
+      score: 82;
+      duplicatedLines: 45;
       suggestions: [
-        'Extract common utility functions',
-        'Create shared components for repeated UI patterns',
-        'Use higher-order components for common logic',
-      ],
+        'Extract common utility functions';
+        'Create shared components for repeated UI patterns';
+        'Use higher-order components for common logic';
+      ];
     };
   }
 
@@ -122,16 +122,16 @@ class AICodeQualityAnalyzer {
     this.log('🔒 Analyzing security issues...');
 
     return {
-      score: 90,
+      score: 90;
       issues: [
-        'Potential XSS vulnerability in user input handling',
-        'Missing CSRF protection',
-      ],
+        'Potential XSS vulnerability in user input handling';
+        'Missing CSRF protection';
+      ];
       suggestions: [
-        'Implement input sanitization',
-        'Add CSRF tokens to forms',
-        'Use Content Security Policy headers',
-      ],
+        'Implement input sanitization';
+        'Add CSRF tokens to forms';
+        'Use Content Security Policy headers';
+      ];
     };
   }
 
@@ -139,13 +139,13 @@ class AICodeQualityAnalyzer {
     this.log('💡 Generating recommendations...');
 
     return [
-      'Implement automated code quality checks in CI/CD',
-      'Set up pre-commit hooks for linting and formatting',
-      'Add code review guidelines and templates',
-      'Create performance monitoring dashboard',
-      'Implement automated security scanning',
-      'Set up code coverage reporting',
-      'Add dependency vulnerability scanning',
+      'Implement automated code quality checks in CI/CD';
+      'Set up pre-commit hooks for linting and formatting';
+      'Add code review guidelines and templates';
+      'Create performance monitoring dashboard';
+      'Implement automated security scanning';
+      'Set up code coverage reporting';
+      'Add dependency vulnerability scanning';
     ];
   }
 
@@ -153,19 +153,19 @@ class AICodeQualityAnalyzer {
     this.log('📊 Generating AI code quality report...');
 
     const report = {
-      ...analysis,
+      ...analysis;
       summary: {
-        overallScore: this.calculateOverallScore(analysis.metrics),
-        status: this.getStatus(analysis.metrics),
-        priority: this.getPriority(analysis.metrics),
-      },
+        overallScore: this.calculateOverallScore(analysis.metrics);
+        status: this.getStatus(analysis.metrics);
+        priority: this.getPriority(analysis.metrics);
+      };
     };
 
     const reportPath = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
       'ai-code-quality-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -176,11 +176,11 @@ class AICodeQualityAnalyzer {
 
   calculateOverallScore(metrics) {
     const weights = {
-      complexity: 0.25,
-      maintainability: 0.25,
-      testCoverage: 0.2,
-      codeDuplication: 0.15,
-      securityIssues: 0.15,
+      complexity: 0.25;
+      maintainability: 0.25;
+      testCoverage: 0.2;
+      codeDuplication: 0.15;
+      securityIssues: 0.15;
     };
 
     return Math.round(

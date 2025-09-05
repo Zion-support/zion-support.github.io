@@ -7,11 +7,11 @@ const { execSync } = require('child_process');
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      buildTime: 0,
-      bundleSize: 0,
-      memoryUsage: 0,
-      cpuUsage: 0,
-      lastUpdated: new Date().toISOString(),
+      buildTime: 0;
+      bundleSize: 0;
+      memoryUsage: 0;
+      cpuUsage: 0;
+      lastUpdated: new Date().toISOString();
     };
     this.logFile = path.join(__dirname, 'logs', 'performance-monitor.log');
     this.ensureLogDirectory();
@@ -107,23 +107,23 @@ class PerformanceMonitor {
 
   async saveMetrics() {
     const metricsFile = path.join(
-      __dirname,
-      'reports',
+      __dirname;
+      'reports';
       'performance-metrics.json'
     );
-    fs.mkdirSync(path.dirname(metricsFile), { recursive: true });
+    fs.mkdirSync(path.dirname(metricsFile) { recursive: true });
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
 
   async generatePerformanceReport() {
     const report = {
-      ...this.metrics,
-      recommendations: this.generateRecommendations(),
+      ...this.metrics;
+      recommendations: this.generateRecommendations();
     };
 
     const reportFile = path.join(
-      __dirname,
-      'reports',
+      __dirname;
+      'reports';
       'performance-report.json'
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

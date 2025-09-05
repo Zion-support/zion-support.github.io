@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import Layout from './layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Layout from './layout/Layout',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database,
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
-} from 'lucide-react';
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
-import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
-import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
-import { innovative2025ITEnterpriseBatch } from '../data/innovative-2025-it-enterprise-batch';
-import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
+} from 'lucide-react',
+import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
+import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035',
+import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch',
+import { innovative2025ITEnterpriseBatch } from '../data/innovative-2025-it-enterprise-batch',
+import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch',
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -29,27 +29,27 @@ const LoadingFallback = () => (
       <p className="text-sm text-gray-500">Preparing your digital transformation journey</p>
     </motion.div>
   </div>
-);
+),
 
 const Homepage2035: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [isLoading, setIsLoading] = useState(true),
+  const [isVisible, setIsVisible] = useState(false),
+  const [activeCategory, setActiveCategory] = useState('all'),
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 800);
+      setIsLoading(false),
+      setIsVisible(true)
+    }, 800),
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer),
+  }, []),
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" }
-  };
+  },
 
   const staggerContainer = {
     animate: {
@@ -58,16 +58,16 @@ const Homepage2035: React.FC = () => {
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { 
-      opacity: 1, 
+      opacity: 1,
       scale: 1,
       transition: { duration: 1.5, ease: "easeOut" as const }
     }
-  };
+  },
 
   const categories = [
     { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" /> },
@@ -78,29 +78,29 @@ const Homepage2035: React.FC = () => {
     { id: 'cyber', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" /> },
     { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
-  ];
+  ],
 
   const allServices = [
     ...innovative2025MicroSaasBatch,
     ...innovative2025ITEnterpriseBatch,
     ...innovative2025AIServicesBatch
-  ];
+  ],
 
   const filteredServices = activeCategory === 'all' 
     ? allServices 
     : allServices.filter(service => {
-        if (activeCategory === 'ai') return service.category.includes('AI') || service.category.includes('Machine Learning');
-        if (activeCategory === 'it') return service.category.includes('IT') || service.category.includes('Enterprise');
-        if (activeCategory === 'quantum') return service.name.includes('Quantum');
-        if (activeCategory === 'space') return service.category.includes('Space');
-        if (activeCategory === 'cyber') return service.category.includes('Security') || service.category.includes('Cybersecurity');
-        if (activeCategory === 'cloud') return service.category.includes('Cloud') || service.category.includes('DevOps');
-        if (activeCategory === 'fintech') return service.category.includes('Financial') || service.category.includes('Trading');
-        return true;
-      });
+        if (activeCategory === 'ai') return service.category.includes('AI') || service.category.includes('Machine Learning'),
+        if (activeCategory === 'it') return service.category.includes('IT') || service.category.includes('Enterprise'),
+        if (activeCategory === 'quantum') return service.name.includes('Quantum'),
+        if (activeCategory === 'space') return service.category.includes('Space'),
+        if (activeCategory === 'cyber') return service.category.includes('Security') || service.category.includes('Cybersecurity'),
+        if (activeCategory === 'cloud') return service.category.includes('Cloud') || service.category.includes('DevOps'),
+        if (activeCategory === 'fintech') return service.category.includes('Financial') || service.category.includes('Trading'),
+        return true,
+      }),
 
   if (isLoading) {
-    return <LoadingFallback />;
+    return <LoadingFallback />,
   }
 
   return (
@@ -265,7 +265,7 @@ const Homepage2035: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl sm: text-5xl font-bold text-white mb-6">
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -352,7 +352,7 @@ const Homepage2035: React.FC = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
+                  className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
                 >
                   Schedule a Demo
                 </motion.button>
@@ -362,7 +362,7 @@ const Homepage2035: React.FC = () => {
         </section>
       </UltraFuturisticBackground2035>
     </Layout>
-  );
-};
+  )
+},
 
-export default Homepage2035;
+export default Homepage2035,

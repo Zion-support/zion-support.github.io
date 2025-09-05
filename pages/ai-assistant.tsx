@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import Button from '../components/ui/Button',
 
 export default function AIAssistantPage() {
   return (
@@ -8,7 +8,7 @@ export default function AIAssistantPage() {
       <Head>
         <title>AI Assistant | Zion Tech Group</title>
         <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-assistant" />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-assistant" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto space-y-10">
@@ -18,12 +18,9 @@ export default function AIAssistantPage() {
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              'Research and summarize documents and web sources',
-              'Draft emails, posts, briefs, and reports',
-              'Auto-schedule meetings and follow-ups',
-              'Integrations: Gmail, Google Drive, Slack, Calendar',
-              'Team approvals and audit trail',
-              'Starting at $99/mo'
+              'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reports',
+              'Auto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, Calendar',
+              'Team approvals and audit trailStarting at $99/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
             ))}
@@ -34,5 +31,5 @@ export default function AIAssistantPage() {
         </div>
       </div>
     </>
-  );
+  ),
 }

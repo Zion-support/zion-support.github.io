@@ -9,10 +9,10 @@ console.log('🔒 Starting AI Security Intelligence...');
 class AISecurityIntelligence {
   constructor() {
     this.logFile = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
       'ai-security.log'
     );
     this.ensureLogDir();
@@ -36,12 +36,12 @@ class AISecurityIntelligence {
     this.log('🔍 Running security scan...');
 
     const securityAnalysis = {
-      timestamp: new Date().toISOString(),
-      vulnerabilities: await this.scanVulnerabilities(),
-      dependencies: await this.scanDependencies(),
-      codeSecurity: await this.scanCodeSecurity(),
-      configuration: await this.scanConfiguration(),
-      recommendations: this.generateSecurityRecommendations(),
+      timestamp: new Date().toISOString();
+      vulnerabilities: await this.scanVulnerabilities();
+      dependencies: await this.scanDependencies();
+      codeSecurity: await this.scanCodeSecurity();
+      configuration: await this.scanConfiguration();
+      recommendations: this.generateSecurityRecommendations();
     };
 
     return securityAnalysis;
@@ -59,24 +59,24 @@ class AISecurityIntelligence {
         score:
           audit.metadata.vulnerabilities.total === 0
             ? 100
-            : Math.max(0, 100 - audit.metadata.vulnerabilities.total * 10),
-        total: audit.metadata.vulnerabilities.total,
-        high: audit.metadata.vulnerabilities.high,
-        moderate: audit.metadata.vulnerabilities.moderate,
-        low: audit.metadata.vulnerabilities.low,
-        info: audit.metadata.vulnerabilities.info,
-        advisories: audit.advisories || {},
+            : Math.max(0, 100 - audit.metadata.vulnerabilities.total * 10);
+        total: audit.metadata.vulnerabilities.total;
+        high: audit.metadata.vulnerabilities.high;
+        moderate: audit.metadata.vulnerabilities.moderate;
+        low: audit.metadata.vulnerabilities.low;
+        info: audit.metadata.vulnerabilities.info;
+        advisories: audit.advisories || {};
       };
     } catch (error) {
       this.log(`⚠️ NPM audit failed: ${error.message}`);
       return {
-        score: 75,
-        total: 0,
-        high: 0,
-        moderate: 0,
-        low: 0,
-        info: 0,
-        advisories: {},
+        score: 75;
+        total: 0;
+        high: 0;
+        moderate: 0;
+        low: 0;
+        info: 0;
+        advisories: {};
       };
     }
   }
@@ -85,14 +85,14 @@ class AISecurityIntelligence {
     this.log('📦 Scanning dependencies...');
 
     const dependencies = {
-      score: 85,
-      outdated: 12,
-      deprecated: 3,
+      score: 85;
+      outdated: 12;
+      deprecated: 3;
       suggestions: [
-        'Update React to latest stable version',
-        'Replace deprecated packages',
-        'Review third-party dependencies for security',
-      ],
+        'Update React to latest stable version';
+        'Replace deprecated packages';
+        'Review third-party dependencies for security';
+      ];
     };
 
     return dependencies;
@@ -102,19 +102,19 @@ class AISecurityIntelligence {
     this.log('🔍 Scanning code for security issues...');
 
     const codeSecurity = {
-      score: 78,
+      score: 78;
       issues: [
-        'Potential XSS vulnerability in user input',
-        'Missing input validation',
-        'Hardcoded secrets in configuration',
-        'Insecure random number generation',
-      ],
+        'Potential XSS vulnerability in user input';
+        'Missing input validation';
+        'Hardcoded secrets in configuration';
+        'Insecure random number generation';
+      ];
       suggestions: [
-        'Implement input sanitization',
-        'Add comprehensive input validation',
-        'Use environment variables for secrets',
-        'Use crypto.randomBytes for secure random generation',
-      ],
+        'Implement input sanitization';
+        'Add comprehensive input validation';
+        'Use environment variables for secrets';
+        'Use crypto.randomBytes for secure random generation';
+      ];
     };
 
     return codeSecurity;
@@ -124,19 +124,19 @@ class AISecurityIntelligence {
     this.log('⚙️ Scanning security configuration...');
 
     const configuration = {
-      score: 82,
+      score: 82;
       issues: [
-        'Missing Content Security Policy',
-        'Insecure CORS configuration',
-        'Missing security headers',
-        'Insecure session configuration',
-      ],
+        'Missing Content Security Policy';
+        'Insecure CORS configuration';
+        'Missing security headers';
+        'Insecure session configuration';
+      ];
       suggestions: [
-        'Implement CSP headers',
-        'Configure CORS properly',
-        'Add security headers middleware',
-        'Use secure session configuration',
-      ],
+        'Implement CSP headers';
+        'Configure CORS properly';
+        'Add security headers middleware';
+        'Use secure session configuration';
+      ];
     };
 
     return configuration;
@@ -146,16 +146,16 @@ class AISecurityIntelligence {
     this.log('💡 Generating security recommendations...');
 
     return [
-      'Implement automated security scanning in CI/CD',
-      'Set up dependency vulnerability monitoring',
-      'Add security headers middleware',
-      'Implement rate limiting',
-      'Add input validation and sanitization',
-      'Use HTTPS everywhere',
-      'Implement proper authentication and authorization',
-      'Add security logging and monitoring',
-      'Regular security audits and penetration testing',
-      'Implement secure coding practices',
+      'Implement automated security scanning in CI/CD';
+      'Set up dependency vulnerability monitoring';
+      'Add security headers middleware';
+      'Implement rate limiting';
+      'Add input validation and sanitization';
+      'Use HTTPS everywhere';
+      'Implement proper authentication and authorization';
+      'Add security logging and monitoring';
+      'Regular security audits and penetration testing';
+      'Implement secure coding practices';
     ];
   }
 
@@ -163,19 +163,19 @@ class AISecurityIntelligence {
     this.log('📊 Generating security intelligence report...');
 
     const report = {
-      ...analysis,
+      ...analysis;
       summary: {
-        overallScore: this.calculateOverallScore(analysis),
-        riskLevel: this.getRiskLevel(analysis),
-        priority: this.getPriority(analysis),
-      },
+        overallScore: this.calculateOverallScore(analysis);
+        riskLevel: this.getRiskLevel(analysis);
+        priority: this.getPriority(analysis);
+      };
     };
 
     const reportPath = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
       'ai-security-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -186,10 +186,10 @@ class AISecurityIntelligence {
 
   calculateOverallScore(analysis) {
     const weights = {
-      vulnerabilities: 0.4,
-      dependencies: 0.2,
-      codeSecurity: 0.25,
-      configuration: 0.15,
+      vulnerabilities: 0.4;
+      dependencies: 0.2;
+      codeSecurity: 0.25;
+      configuration: 0.15;
     };
 
     return Math.round(

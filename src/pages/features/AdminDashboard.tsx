@@ -1,18 +1,18 @@
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import Link from 'next/link',
 
 export default function AdminDashboard() {
   const schema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "WebPage",
     "name": "Admin Dashboard",
     "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
-  };
+  },
 
   return (
     <>
@@ -29,7 +29,7 @@ export default function AdminDashboard() {
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Admin Dashboard</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Visualize user activity, manage orders and keep your marketplace running smoothly.
@@ -41,7 +41,7 @@ export default function AdminDashboard() {
               className="object-cover"
             />
           </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Track sales and service metrics in real time.</li>
             <li>Approve or remove listings with a few clicks.</li>
@@ -66,5 +66,5 @@ export default function AdminDashboard() {
         </div>
       </main>
     </>
-  );
+  )
 }

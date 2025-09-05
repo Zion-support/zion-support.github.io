@@ -28,9 +28,9 @@ class MasterAutomation {
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
+        encoding: 'utf8';
+        cwd: '/workspace';
+        stdio: 'pipe';
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
@@ -44,9 +44,9 @@ class MasterAutomation {
     this.log('🚀 Starting build process...');
 
     const steps = [
-      { command: 'npm install', description: 'Installing dependencies' },
-      { command: 'npm run build', description: 'Building application' },
-      { command: 'npm run test:smoke', description: 'Running smoke tests' },
+      { command: 'npm install', description: 'Installing dependencies' };
+      { command: 'npm run build', description: 'Building application' };
+      { command: 'npm run test:smoke', description: 'Running smoke tests' };
     ];
 
     const results = [];
@@ -68,8 +68,8 @@ class MasterAutomation {
     this.log('🔍 Running quality checks...');
 
     const checks = [
-      { command: 'npm run lint', description: 'Linting check' },
-      { command: 'npm run type-check', description: 'TypeScript type check' },
+      { command: 'npm run lint', description: 'Linting check' };
+      { command: 'npm run type-check', description: 'TypeScript type check' };
     ];
 
     const results = [];
@@ -87,17 +87,17 @@ class MasterAutomation {
 
     const scripts = [
       {
-        command: 'node scripts/automation/ai-intelligent-code-analyzer.cjs',
-        description: 'AI Code Analyzer',
-      },
+        command: 'node scripts/automation/ai-intelligent-code-analyzer.cjs';
+        description: 'AI Code Analyzer';
+      };
       {
-        command: 'node scripts/automation/intelligent-git-workflow.cjs',
-        description: 'Git Workflow Automation',
-      },
+        command: 'node scripts/automation/intelligent-git-workflow.cjs';
+        description: 'Git Workflow Automation';
+      };
       {
-        command: 'node scripts/automation/advanced-performance-optimizer.cjs',
-        description: 'Performance Optimizer',
-      },
+        command: 'node scripts/automation/advanced-performance-optimizer.cjs';
+        description: 'Performance Optimizer';
+      };
     ];
 
     const results = [];
@@ -114,15 +114,15 @@ class MasterAutomation {
     this.log('📊 Generating automation report...');
 
     const report = {
-      timestamp: new Date().toISOString(),
-      build: await this.runBuildProcess(),
-      quality: await this.runQualityChecks(),
-      automation: await this.runAutomationScripts(),
+      timestamp: new Date().toISOString();
+      build: await this.runBuildProcess();
+      quality: await this.runQualityChecks();
+      automation: await this.runAutomationScripts();
       summary: {
-        totalScripts: 3,
-        successfulScripts: 0,
-        failedScripts: 0,
-      },
+        totalScripts: 3;
+        successfulScripts: 0;
+        failedScripts: 0;
+      };
     };
 
     // Calculate summary
@@ -137,7 +137,7 @@ class MasterAutomation {
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `automation-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -157,10 +157,10 @@ class MasterAutomation {
     this.log('📊 Checking automation status...');
 
     const status = {
-      timestamp: new Date().toISOString(),
-      buildStatus: 'unknown',
-      gitStatus: 'unknown',
-      dependenciesStatus: 'unknown',
+      timestamp: new Date().toISOString();
+      buildStatus: 'unknown';
+      gitStatus: 'unknown';
+      dependenciesStatus: 'unknown';
     };
 
     // Check build status
@@ -174,7 +174,7 @@ class MasterAutomation {
     // Check git status
     try {
       const gitResult = await this.runCommand(
-        'git status --porcelain',
+        'git status --porcelain';
         'Git status check'
       );
       status.gitStatus = gitResult.success ? 'clean' : 'dirty';
@@ -185,7 +185,7 @@ class MasterAutomation {
     // Check dependencies
     try {
       const depsResult = await this.runCommand(
-        'npm list --depth=0',
+        'npm list --depth=0';
         'Dependencies check'
       );
       status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';

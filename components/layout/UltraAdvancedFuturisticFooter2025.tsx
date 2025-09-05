@@ -1,24 +1,24 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 import { 
-  Mail, Phone, MapPin, Globe, 
-  Twitter, Linkedin, Github, 
+  Mail, Phone, MapPin, Globe,
+  Twitter, Linkedin, Github,
   ArrowUp, Crown, Zap, Brain, Rocket,
   Shield, Users, BookOpen, Briefcase, Atom
-} from 'lucide-react';
-import Link from 'next/link';
-import { AnimatePresence } from 'framer-motion';
+} from 'lucide-react',
+import Link from 'next/link',
+import { AnimatePresence } from 'framer-motion',
 
 interface FooterLink {
-  label: string;
-  href: string;
-  description?: string;
-  external?: boolean;
+  label: string,
+  href: string,
+  description?: string,
+  external?: boolean
 }
 
 interface FooterSection {
-  title: string;
-  links: FooterLink[];
+  title: string,
+  links: FooterLink[]
 }
 
 const footerSections: FooterSection[] = [
@@ -76,13 +76,13 @@ const footerSections: FooterSection[] = [
       { label: 'Education', href: '/education-technology-solutions', description: 'EdTech solutions' }
     ]
   }
-];
+],
 
 const socialLinks = [
   { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
   { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
   { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
-];
+],
 
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
@@ -91,12 +91,12 @@ const quickLinks = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
   { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },
   { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
-];
+],
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' }),
+  },
 
   const footerSections = [
     {
@@ -139,14 +139,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         { label: 'Support', href: '/support' }
       ]
     }
-  ];
+  ],
 
   const socialLinks = [
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
     { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -156,7 +156,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -167,7 +167,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
@@ -212,7 +212,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12"
           >
             {/* Company Info */}
-            <motion.div variants={itemVariants} className="lg:col-span-2">
+            <motion.div variants={itemVariants} className="lg: col-span-2">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="relative">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center">
@@ -229,7 +229,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
               </div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Pioneering the future with revolutionary AI consciousness, quantum computing, 
+                Pioneering the future with revolutionary AI consciousness, quantum computing,
                 and autonomous systems. Transforming businesses through next-generation technology.
               </p>
               
@@ -394,7 +394,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         <ArrowUp className="w-6 h-6 mx-auto" />
       </motion.button>
     </footer>
-  );
-};
+  ),
+},
 
-export default UltraAdvancedFuturisticFooter2025;
+export default UltraAdvancedFuturisticFooter2025,

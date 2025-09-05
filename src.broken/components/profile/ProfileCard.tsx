@@ -1,8 +1,8 @@
-import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
-import { TalentProfile } from "@/types/talent";
+import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card",
+import { TalentProfile } from "@/types/talent",
 
 interface ProfileCardProps {
-  profile: TalentProfile;
+  profile: TalentProfile
 }
 
 export function ProfileCard({ profile }: ProfileCardProps) {
@@ -28,5 +28,5 @@ export function ProfileCard({ profile }: ProfileCardProps) {
         )}
       </CardContent>
     </Card>
-  );
+  ),
 }

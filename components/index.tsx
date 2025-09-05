@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Head from 'next/head',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
+  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import EnhancedContactForm from '../components/EnhancedContactForm';
-import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
-import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
+import EnhancedContactForm from '../components/EnhancedContactForm',
+import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase',
+import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection',
 
 export default function HomePage() {
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0),
+  const [isVisible, setIsVisible] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     
     // Auto-rotate features
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % 6);
-    }, 5000);
+      setCurrentFeature((prev) => (prev + 1) % 6),
+    }, 5000),
     
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval),
+  }, []),
 
   const features = [
     {
@@ -64,7 +64,7 @@ export default function HomePage() {
       description: "Advanced edge computing optimization platform",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const services = [
     {
@@ -103,14 +103,14 @@ export default function HomePage() {
       icon: Rocket,
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const stats = [
     { number: "500+", label: "Projects Delivered", icon: CheckCircle },
     { number: "50+", label: "Enterprise Clients", icon: Users },
     { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
     { number: "24/7", label: "Support Available", icon: Clock }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -156,7 +156,7 @@ export default function HomePage() {
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              Empowering businesses with cutting-edge AI, quantum computing, cybersecurity, 
+              Empowering businesses with cutting-edge AI, quantum computing, cybersecurity,
               and digital transformation solutions that drive innovation and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -332,7 +332,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -346,5 +346,5 @@ export default function HomePage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-import type { NextPage, GetServerSideProps } from 'next';
-import fs from 'fs';
-import path from 'path';
+import type { NextPage, GetServerSideProps } from 'next',
+import fs from 'fs',
+import path from 'path',
 
-type Props = { urlCount: number };
+type Props = { urlCount: number },
 
 const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
@@ -13,17 +13,17 @@ const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
         <div className="text-lg">Indexed URLs: {urlCount}</div>
       </div>
     </main>
-  );
-};
+  ),
+},
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join(process.cwd(), 'public', 'sitemap.xml');
-  let urlCount = 0;
+  const p = path.join(process.cwd(), 'publicsitemap.xml'),
+  let urlCount = 0,
   try {
-    const raw = fs.readFileSync(p, 'utf8');
-    urlCount = (raw.match(/<url>/g) || []).length;
+    const raw = fs.readFileSync(p, 'utf8'),
+    urlCount = (raw.match(/<url>/g) || []).length
   } catch {}
-  return { props: { urlCount } };
-};
+  return { props: { urlCount } },
+},
 
-export default SitemapStatus;
+export default SitemapStatus,

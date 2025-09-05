@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
+import Head from 'next/head',
+import Link from 'next/link',
+import React from 'react',
 
 export default function PerformanceOptimization() {
   return (
@@ -14,7 +14,7 @@ export default function PerformanceOptimization() {
           content='Best practices for optimizing performance in large-scale autonomous technology deployments.'
         />
         <meta
-          property='og:title'
+          property='og: title'
           content='Performance Optimization in Autonomous Systems'
         />
         <meta
@@ -61,7 +61,7 @@ export default function PerformanceOptimization() {
                   Understanding Performance Metrics
                 </h2>
                 <p className='text-white/90 mb-4'>
-                  Before diving into optimization strategies, it&apos;s crucial
+                  Before diving into optimization strategies, it&apos,s crucial
                   to understand what performance means in the context of
                   autonomous systems. Key metrics include:
                 </p>
@@ -274,5 +274,5 @@ export default function PerformanceOptimization() {
         </main>
       </div>
     </>
-  );
+  )
 }

@@ -117,17 +117,17 @@ class EnhancedAppOptimizer {
   async generateReport() {
     this.log('📊 Generating optimization report...');
     const report = {
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString();
       optimizations: {
-        bundle: await this.optimizeBundle(),
-        performance: await this.optimizePerformance(),
-        seo: await this.optimizeSEO(),
-        accessibility: await this.optimizeAccessibility(),
+        bundle: await this.optimizeBundle();
+        performance: await this.optimizePerformance();
+        seo: await this.optimizeSEO();
+        accessibility: await this.optimizeAccessibility();
         security: await this.optimizeSecurity()
-      },
+      };
       summary: {
-        totalOptimizations: 5,
-        successfulOptimizations: 0,
+        totalOptimizations: 5;
+        successfulOptimizations: 0;
         failedOptimizations: 0
       }
     };

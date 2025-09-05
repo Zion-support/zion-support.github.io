@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
-import { FormData, FormErrors } from '../types';
-import { useToast } from './ui/Toast';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react',
+import { FormData, FormErrors } from '../types',
+import { useToast } from './ui/Toast',
 
 const EnhancedContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -11,64 +11,61 @@ const EnhancedContactForm: React.FC = () => {
     company: '',
     service: '',
     message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { showSuccess, showError } = useToast();
+  }),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
+  const { showSuccess, showError } = useToast(),
 
   const services = [
-    'AI & Machine Learning',
-    'Quantum Computing',
-    'Cybersecurity',
-    'Cloud Infrastructure',
-    'Data Analytics',
-    'Digital Transformation',
+    'AI & Machine LearningQuantum Computing',
+    'CybersecurityCloud Infrastructure',
+    'Data AnalyticsDigital Transformation',
     'Other'
-  ];
+  ],
 
   const validateForm = (): boolean => {
-    const newErrors: FormErrors = {};
+    const newErrors: FormErrors = {},
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = 'Name is required',
     } else if (formData.name.trim().length < 2) {
-      newErrors.name = 'Name must be at least 2 characters long';
+      newErrors.name = 'Name must be at least 2 characters long',
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = 'Email is required',
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = 'Please enter a valid email address',
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors.message = 'Message is required',
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long';
+      newErrors.message = 'Message must be at least 10 characters long',
     } else if (formData.message.trim().length > 1000) {
-      newErrors.message = 'Message must be less than 1000 characters';
+      newErrors.message = 'Message must be less than 1000 characters',
     }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    setErrors(newErrors),
+    return Object.keys(newErrors).length === 0,
+  },
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     
     if (!validateForm()) {
-      showError('Validation Error', 'Please fix the errors in the form');
-      return;
+      showError('Validation ErrorPlease fix the errors in the form'),
+      return
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting(true),
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000)),
       
-      setIsSubmitted(true);
-      showSuccess('Message Sent!', 'Thank you for contacting us. We\'ll get back to you soon.');
+      setIsSubmitted(true),
+      showSuccess('Message Sent!Thank you for contacting us. We\'ll get back to you soon.'),
       
       setFormData({
         name: '',
@@ -76,33 +73,30 @@ const EnhancedContactForm: React.FC = () => {
         company: '',
         service: '',
         message: ''
-      });
-      setErrors({});
+      }),
+      setErrors({}),
     } catch (error) {
-      console.error('Error submitting form:', error);
-      showError('Submission Failed', 'There was an error sending your message. Please try again.');
+      console.error('Error submitting form: ', error),
+      showError('Submission FailedThere was an error sending your message. Please try again.')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   const services = [
-    'AI Business Intelligence',
-    'Quantum Cybersecurity',
-    'Edge Computing Orchestration',
-    'Space Technology Innovation',
-    'Neural Interface Development',
-    'Other'
-  ];
+    'AI Business IntelligenceQuantum Cybersecurity',
+    'Edge Computing OrchestrationSpace Technology Innovation',
+    'Neural Interface DevelopmentOther'
+  ],
 
   const handleInputBlur = (name: keyof FormData) => {
     // Validate individual field on blur
     if (formData[name] && errors[name]) {
-      const newErrors = { ...errors };
-      delete newErrors[name];
-      setErrors(newErrors);
+      const newErrors = { ...errors },
+      delete newErrors[name],
+      setErrors(newErrors),
     }
-  };
+  },
 
   if (isSubmitted) {
     return (
@@ -120,12 +114,12 @@ const EnhancedContactForm: React.FC = () => {
         </p>
         <button
           onClick={() => setIsSubmitted(false)}
-          className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+          className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover: from-blue-700 hover:to-cyan-700 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
         >
           Send Another Message
         </button>
       </div>
-    );
+    )
   }
 
   return (
@@ -330,7 +324,7 @@ const EnhancedContactForm: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  ),
+},
 
-export default EnhancedContactForm;
+export default EnhancedContactForm,

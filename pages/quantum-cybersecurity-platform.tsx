@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import Button from '../components/ui/Button',
 
 export default function QuantumCybersecurityPlatform() {
   return (
@@ -8,7 +8,7 @@ export default function QuantumCybersecurityPlatform() {
       <Head>
         <title>Quantum Cybersecurity Platform | Zion Tech Group</title>
         <meta name="description" content="Next-gen quantum-resistant cybersecurity solutions for enterprise workloads." />
-        <link rel="canonical" href="https://ziontechgroup.com/quantum-cybersecurity-platform" />
+        <link rel="canonical" href="https: //ziontechgroup.com/quantum-cybersecurity-platform" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto space-y-10">
@@ -18,12 +18,9 @@ export default function QuantumCybersecurityPlatform() {
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              'Post-quantum cryptography integration',
-              'Quantum key distribution options',
-              'Advanced anomaly and threat detection',
-              'Security analytics and incident workflows',
-              'Compliance and reporting',
-              'From $4,999/mo'
+              'Post-quantum cryptography integrationQuantum key distribution options',
+              'Advanced anomaly and threat detectionSecurity analytics and incident workflows',
+              'Compliance and reportingFrom $4,999/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
             ))}
@@ -34,5 +31,5 @@ export default function QuantumCybersecurityPlatform() {
         </div>
       </div>
     </>
-  );
+  ),
 }

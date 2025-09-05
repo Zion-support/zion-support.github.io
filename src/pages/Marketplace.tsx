@@ -1,25 +1,25 @@
-import { useRouter } from 'next/router';
-import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
-import ProductCard from '@/components/ProductCard';
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
-import { AuthModal } from '@/components/auth/AuthModal';
+import { useRouter } from 'next/router',
+import { useApiErrorHandling } from '@/hooks/useApiErrorHandling',
+import ProductCard from '@/components/ProductCard',
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react',
+import { useTranslation } from 'react-i18next',
+import { motion, AnimatePresence } from 'framer-motion',
+import { AuthModal } from '@/components/auth/AuthModal',
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react'
-import { SkeletonCard } from '@/components/ui/skeleton';
-import { ErrorState } from '@/components/jobs/applications/ErrorState';
-import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
-import Spinner from '@/components/ui/spinner';
-import { ProductListing } from '@/types/listings';
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
-import { useToast } from '@/hooks/use-toast';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { MARKETPLACE_LISTINGS } from '@/data/listingData';
-import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { SkeletonCard } from '@/components/ui/skeleton',
+import { ErrorState } from '@/components/jobs/applications/ErrorState',
+import { ProductsEmptyState } from '@/components/marketplace/EmptyState',
+import { Button } from '@/components/ui/button',
+import { Badge } from '@/components/ui/badge',
+import { Card, CardContent } from '@/components/ui/card',
+import Spinner from '@/components/ui/spinner',
+import { ProductListing } from '@/types/listings',
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
+import { useToast } from '@/hooks/use-toast',
+import { useAuth } from '@/context/auth/AuthProvider',
+import { MARKETPLACE_LISTINGS } from '@/data/listingData',
+import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData',
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 
 /**
@@ -57,30 +57,30 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       </div>
     </CardContent>
   </Card>
-);
+),
 
 // Filter and sort controls
 const FilterControls: React.FC<{
-  sortBy: string;
-  setSortBy: (sort: string) => void;
-  filterCategory: string;
-  setFilterCategory: (category: string) => void;
-  categories: string[];
-  priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  minAiScore: number;
-  setMinAiScore: (score: number) => void;
-  minRating: number;
-  setMinRating: (rating: number) => void;
-  filterAvailability: string;
-  setFilterAvailability: (value: string) => void;
-  availabilityOptions: string[];
-  filterLocation: string;
-  setFilterLocation: (value: string) => void;
-  locations: string[];
-  showRecommended: boolean;
-  setShowRecommended: (show: boolean) => void;
-  loading: boolean;
+  sortBy: string,
+  setSortBy: (sort: string) => void,
+  filterCategory: string,
+  setFilterCategory: (category: string) => void,
+  categories: string[],
+  priceRange: [number, number],
+  setPriceRange: (range: [number, number]) => void,
+  minAiScore: number,
+  setMinAiScore: (score: number) => void,
+  minRating: number,
+  setMinRating: (rating: number) => void,
+  filterAvailability: string,
+  setFilterAvailability: (value: string) => void,
+  availabilityOptions: string[],
+  filterLocation: string,
+  setFilterLocation: (value: string) => void,
+  locations: string[],
+  showRecommended: boolean,
+  setShowRecommended: (show: boolean) => void,
+  loading: boolean
 }> = ({
   sortBy,
   setSortBy,
@@ -220,7 +220,7 @@ const FilterControls: React.FC<{
       {showRecommended ? "All Products" : "Recommended"}
     </Button>
   </div>
-);
+),
 
 /**
  * Enhanced Marketplace component with infinite scroll and AI product generation
@@ -228,29 +228,29 @@ const FilterControls: React.FC<{
  * Includes intelligent filtering, sorting, and recommendation features
  */
 export default function Marketplace() {
-  const router = useRouter();
-  const { t } = useTranslation();
-  const { toast } = useToast();
-  const { isAuthenticated, user } = useAuth();
-  const firstRenderRef = useRef(true);
-  const isRefreshingAfterFilterChange = useRef(false); // New ref to track refresh state
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const router = useRouter(),
+  const { t } = useTranslation(),
+  const { toast } = useToast(),
+  const { isAuthenticated, user } = useAuth(),
+  const firstRenderRef = useRef(true),
+  const isRefreshingAfterFilterChange = useRef(false), // New ref to track refresh state
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false),
 
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterCategory, setFilterCategory] = useState('');
-  const [showRecommended, setShowRecommended] = useState(false);
-  const [priceRange, setPriceRange] = useState<[number, number]>([MIN_PRICE, MAX_PRICE]);
-  const [minAiScore, setMinAiScore] = useState(0);
-  const [minRating, setMinRating] = useState(0);
-  const [filterAvailability, setFilterAvailability] = useState('');
-  const [filterLocation, setFilterLocation] = useState('');
-  const { handleApiError, retryQuery } = useApiErrorHandling();
+  const [sortBy, setSortBy] = useState('newest'),
+  const [filterCategory, setFilterCategory] = useState(''),
+  const [showRecommended, setShowRecommended] = useState(false),
+  const [priceRange, setPriceRange] = useState<[number, number]>([MIN_PRICE, MAX_PRICE]),
+  const [minAiScore, setMinAiScore] = useState(0),
+  const [minRating, setMinRating] = useState(0),
+  const [filterAvailability, setFilterAvailability] = useState(''),
+  const [filterLocation, setFilterLocation] = useState(''),
+  const { handleApiError, retryQuery } = useApiErrorHandling(),
 
   // Handle Add Product button with authentication check
   const handleAddProduct = useCallback(() => {
     if (!isAuthenticated) {
-      setIsAuthModalOpen(true); // Use the new auth modal
-      return;
+      setIsAuthModalOpen(true), // Use the new auth modal
+      return,
     }
 
     // Check if user has permission to add products (simplified to admin check)
@@ -258,17 +258,17 @@ export default function Marketplace() {
       toast({
         title: "Admin Access Required",
         description: "Only administrators can add products to the marketplace. Please contact an administrator.",
-        variant: "destructive"});
-      return;
+        variant: "destructive"}),
+      return,
     }
 
     // Navigate to admin products page
-    router.push('/admin/products');
-  }, [isAuthenticated, user, router, toast]);
+    router.push('/admin/products'),
+  }, [isAuthenticated, user, router, toast]),
 
   // Fetch function for infinite scroll with AI product generation
   const fetchProducts = useCallback(async (page: number, limit: number) => {
-    await new Promise((resolve) => setTimeout(resolve, 200));
+    await new Promise((resolve) => setTimeout(resolve, 200)),
 
     try {
       // Use static marketplace listings data for now (compatible with ProductListing type)
@@ -277,30 +277,30 @@ export default function Marketplace() {
         limit,
         ...(filterCategory && { category: filterCategory }),
         sort: sortBy
-      };
+      },
 
-      logInfo('Marketplace.tsx: Fetching products using static data with params:', { data: params });
+      logInfo('Marketplace.tsx: Fetching products using static data with params:', { data: params }),
       
       // Use static data that's already of type ProductListing[]
-      let items: ProductListing[] = [...MARKETPLACE_LISTINGS];
+      let items: ProductListing[] = [...MARKETPLACE_LISTINGS],
       
       // Apply category filter from params
       if (filterCategory) {
-        items = items.filter((p) => p.category.toLowerCase() === filterCategory.toLowerCase());
+        items = items.filter((p) => p.category.toLowerCase() === filterCategory.toLowerCase())
       }
       
-      logInfo('Marketplace.tsx: Raw items from static data before filtering/sorting:', { data: JSON.stringify(items.slice(0, 5), null, 2) });
+      logInfo('Marketplace.tsx: Raw items from static data before filtering/sorting:', { data: JSON.stringify(items.slice(0, 5), null, 2) }),
 
       if (showRecommended) {
-        items = items.filter((p) => p.rating != null && p.rating >= 4.3);
+        items = items.filter((p) => p.rating != null && p.rating >= 4.3),
       }
 
       items = items.filter((p) => {
-        const price = p.price || 0;
-        const ai = p.aiScore || 0;
-        const rating = p.rating || 0;
-        const location = (p.location || '').toLowerCase();
-        const availability = (p.availability || '').toLowerCase();
+        const price = p.price || 0,
+        const ai = p.aiScore || 0,
+        const rating = p.rating || 0,
+        const location = (p.location || '').toLowerCase(),
+        const availability = (p.availability || '').toLowerCase(),
         return (
           price >= priceRange[0] &&
           price <= priceRange[1] &&
@@ -308,67 +308,66 @@ export default function Marketplace() {
           rating >= minRating &&
           (!filterLocation || location.includes(filterLocation.toLowerCase())) &&
           (!filterAvailability || availability === filterAvailability.toLowerCase())
-        );
-      });
+        ),
+      }),
 
       items.sort((a, b) => {
         switch (sortBy) {
           case 'price-low':
-            return (a.price || 0) - (b.price || 0);
+            return (a.price || 0) - (b.price || 0),
           case 'price-high':
-            return (b.price || 0) - (a.price || 0);
+            return (b.price || 0) - (a.price || 0),
           case 'rating':
-            return (b.rating || 0) - (a.rating || 0);
+            return (b.rating || 0) - (a.rating || 0),
           case 'popular':
-            return (b.reviewCount || 0) - (a.reviewCount || 0);
+            return (b.reviewCount || 0) - (a.reviewCount || 0),
           case 'ai-score':
-            return (b.aiScore || 0) - (a.aiScore || 0);
+            return (b.aiScore || 0) - (a.aiScore || 0),
           case 'newest':
-          default:
-            // Ensure createdAt exists and is a valid date string before parsing
-            const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
-            const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+          default: // Ensure createdAt exists and is a valid date string before parsing
+            const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0,
+            const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0,
 
             // Handle NaN cases that might arise from invalid date strings
-            if (isNaN(timeB) && isNaN(timeA)) return 0; // Both invalid, treat as equal
-            if (isNaN(timeB)) return -1; // b is invalid, a comes first (appears newer)
-            if (isNaN(timeA)) return 1;  // a is invalid, b comes first
+            if (isNaN(timeB) && isNaN(timeA)) return 0, // Both invalid, treat as equal
+            if (isNaN(timeB)) return -1, // b is invalid, a comes first (appears newer)
+            if (isNaN(timeA)) return 1,  // a is invalid, b comes first
 
-            return timeB - timeA; // Both valid, sort by time
+            return timeB - timeA, // Both valid, sort by time
         }
-      });
+      }),
 
       // Apply pagination
-      const startIndex = (page - 1) * limit;
-      const endIndex = startIndex + limit;
-      const paginatedItems = items.slice(startIndex, endIndex);
+      const startIndex = (page - 1) * limit,
+      const endIndex = startIndex + limit,
+      const paginatedItems = items.slice(startIndex, endIndex),
       
       return {
         items: paginatedItems,
         hasMore: endIndex < items.length,
         total: items.length
-      };
+      },
     } catch (err: any) {
       // Log the error and allow useInfiniteScrollPagination to handle it
-      logErrorToProduction('Error in Marketplace fetchProducts:', { data: err });
+      logErrorToProduction('Error in Marketplace fetchProducts:', { data: err }),
       
       // Show more specific error messages based on the error type
       if (err.response?.status === 403) {
-        logErrorToProduction("403 Forbidden error - authentication issue");
+        logErrorToProduction("403 Forbidden error - authentication issue"),
         // Don't show toast here, let the AuthModal handle it or rely on ProductCard's tooltip
       } else if (err.response?.status === 500) {
-        logErrorToProduction("500 Server error");
+        logErrorToProduction("500 Server error"),
         toast({
-          title: "Server Error", 
+          title: "Server Error",
           description: "The marketplace is temporarily unavailable. Please try again later.",
-          variant: "destructive"});
+          variant: "destructive"}),
       } else {
-        handleApiError(err); // This might show a toast or log to Sentry
+        handleApiError(err), // This might show a toast or log to Sentry
       }
       
-      throw err; // Re-throw to let useInfiniteScrollPagination know about the failure
+      throw err, // Re-throw to let useInfiniteScrollPagination know about the failure
     }
-  }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
+  }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]),
 
   // useInfiniteScrollPagination hook
   const {
@@ -380,75 +379,75 @@ export default function Marketplace() {
     lastElementRef,   // Ref for the last element to trigger loading more
     refresh,          // Function to reload data from page 1
     scrollToTop       // Function to scroll to the top of the page
-  } = useInfiniteScrollPagination(fetchProducts, 16); // 16 items per page
+  } = useInfiniteScrollPagination(fetchProducts, 16), // 16 items per page
 
   // Effect to refresh data when filters change
   useEffect(() => {
     if (firstRenderRef.current) {
-      firstRenderRef.current = false;
+      firstRenderRef.current = false,
       // On initial mount, useInfiniteScrollPagination handles the first load.
       // We don't want to call refresh() here immediately if it's the very first render
       // unless specifically needed. The new effect below handles re-mounts.
-      return;
+      return,
     }
-    logInfo('Filters changed, initiating refresh. Filters:', { filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation });
-    isRefreshingAfterFilterChange.current = true; // Set flag before refresh
-    refresh();
-    // scrollToTop(); // Removed from here
-  }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, refresh, toast]); // Added all filter dependencies
+    logInfo('Filters changed, initiating refresh. Filters:', { filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation }),
+    isRefreshingAfterFilterChange.current = true, // Set flag before refresh
+    refresh(),
+    // scrollToTop(), // Removed from here
+  }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, refresh, toast]), // Added all filter dependencies
 
   // Effect to explicitly refresh data when the component mounts or re-mounts
   useEffect(() => {
-    logInfo('Marketplace.tsx: Component mounted/re-mounted, calling refresh to ensure fresh data.');
+    logInfo('Marketplace.tsx: Component mounted/re-mounted, calling refresh to ensure fresh data.'),
     // We call refresh directly to ensure data is re-fetched.
     // The useInfiniteScrollPagination hook's internal logic will manage its state.
-    refresh();
+    refresh(),
     // Reset firstRenderRef for the new instance of the component, so filter changes behave as expected.
-    firstRenderRef.current = true;
-  }, [refresh]); // `refresh` is a dependency. Ensure it's stable.
+    firstRenderRef.current = true
+  }, [refresh]), // `refresh` is a dependency. Ensure it's stable.
 
   // New effect to scroll to top AFTER products have been updated and refresh flag is set
   useEffect(() => {
     if (isRefreshingAfterFilterChange.current && !loading) { // Check flag and ensure loading is false
-      logInfo('Refresh complete and products updated, scrolling to top.');
-      scrollToTop();
-      isRefreshingAfterFilterChange.current = false; // Reset flag
+      logInfo('Refresh complete and products updated, scrolling to top.'),
+      scrollToTop(),
+      isRefreshingAfterFilterChange.current = false, // Reset flag
       // Optionally, provide user feedback about the filter change
-      // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' });
+      // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' }),
     }
-  }, [products, loading, scrollToTop, toast]); // Depends on products and loading state
+  }, [products, loading, scrollToTop, toast]), // Depends on products and loading state
 
   // Calculate market stats
   const marketStats = useMemo(() => {
-    if (products.length === 0) return null;
+    if (products.length === 0) return null,
     return {
       averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
       averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
       categoriesCount: Array.from(new Set(products.map(p => p.category))).length
-    };
-  }, [products]);
+    },
+  }, [products]),
 
   // Get unique categories and other filter values
   const categories = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.category)));
-  }, []);
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.category))),
+  }, []),
   const locations = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.location).filter(Boolean)));
-  }, []).filter(Boolean) as string[];
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.location).filter(Boolean))),
+  }, []).filter(Boolean) as string[],
   const availabilityOptions = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.availability).filter(Boolean)));
-  }, []).filter(Boolean) as string[];
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.availability).filter(Boolean))),
+  }, []).filter(Boolean) as string[],
 
   // Show scroll to top button
-  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 800);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setShowScrollTop(window.scrollY > 800),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   // Loading state with skeleton
   if (loading && products.length === 0) {
@@ -472,7 +471,7 @@ export default function Marketplace() {
           ))}
         </div>
       </div>
-    );
+    ),
   }
 
   // Error state with retry
@@ -486,7 +485,7 @@ export default function Marketplace() {
           </Button>
         </div>
       </div>
-    );
+    ),
   }
 
   // Empty state (only show when not loading and no products)
@@ -508,7 +507,7 @@ export default function Marketplace() {
         
         <ProductsEmptyState />
       </div>
-    );
+    ),
   }
 
   // Main marketplace render
@@ -613,20 +612,20 @@ export default function Marketplace() {
                 }}
                 onBuy={async () => {
                   if (!isAuthenticated) {
-                    setIsAuthModalOpen(true);
-                    return; // Stop further execution
+                    setIsAuthModalOpen(true),
+                    return, // Stop further execution
                   }
                   try {
-                    await router.push(`/checkout/${product.id}`);
+                    await router.push(`/checkout/${product.id}`),
                   } catch (error) {
-                    logErrorToProduction('Failed to navigate to checkout:', { data: error });
+                    logErrorToProduction('Failed to navigate to checkout:', { data: error }),
                     toast({
                       title: "Navigation Error",
                       description: "Could not navigate to checkout. Please try again.",
-                      variant: "destructive"});
+                      variant: "destructive"}),
                     // Re-throw to allow ProductCard's catch to also run if needed,
                     // though ProductCard will reset its state in .finally() regardless.
-                    throw error;
+                    throw error,
                   }
                 }}
                 buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
@@ -700,5 +699,5 @@ export default function Marketplace() {
         )}
       </AnimatePresence>
     </div>
-  );
+  ),
 }

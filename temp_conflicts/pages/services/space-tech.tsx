@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
-  Rocket, ArrowRight, CheckCircle, Zap, Target, Users, 
+  Rocket, ArrowRight, CheckCircle, Zap, Target, Users,
   TrendingUp, Globe, Cpu, Database, Star, Satellite, Planet
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
 
 export default function SpaceTechnologyPage() {
   const services = [
@@ -46,7 +46,7 @@ export default function SpaceTechnologyPage() {
       price: "$1,999/month",
       icon: Rocket
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -69,7 +69,7 @@ export default function SpaceTechnologyPage() {
       title: "AI-Powered",
       description: "Intelligent systems that optimize space operations"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -239,7 +239,7 @@ export default function SpaceTechnologyPage() {
               href="mailto:kleber@ziontechgroup.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover: from-indigo-700 hover:to-purple-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span>Launch Your Mission</span>
               <ArrowRight className="w-5 h-5" />
@@ -250,5 +250,5 @@ export default function SpaceTechnologyPage() {
 
       <EnhancedFooter />
     </div>
-  );
+  )
 }

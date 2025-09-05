@@ -80,7 +80,7 @@ class ImportFixer {
 } from 'lucide-react';`;
 
         content = content.replace(
-          /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/,
+          /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/;
           importStatement
         );
       } else {
@@ -117,9 +117,9 @@ class ImportFixer {
 
     // Find all React component files
     const filesToCheck = [
-      'pages/components/Footer.tsx',
-      'pages/components/Navigation.tsx',
-      'pages/components/Layout.tsx',
+      'pages/components/Footer.tsx';
+      'pages/components/Navigation.tsx';
+      'pages/components/Layout.tsx';
     ];
 
     for (const file of filesToCheck) {

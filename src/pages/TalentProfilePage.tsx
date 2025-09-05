@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from 'next/router';
-import { TalentProfile } from "@/components/profile/TalentProfile";
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState";
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton";
-import { useTalentProfile } from "@/hooks/useTalentProfile";
-import { HireRequestModal } from "@/components/profile/hire-request";
-import { useAuthStatus } from "@/hooks/talent";
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal";
-import { StickyAction } from "@/components/ui/sticky-action";
+import React, { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+import { TalentProfile } from "@/components/profile/TalentProfile",
+import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
+import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
+import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",
+import { useTalentProfile } from "@/hooks/useTalentProfile",
+import { HireRequestModal } from "@/components/profile/hire-request",
+import { useAuthStatus } from "@/hooks/talent",
+import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",
+import { StickyAction } from "@/components/ui/sticky-action",
 import { Handshake, MessageSquare } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth";
-import { UserProfile } from "@/types/auth";
-import { toast } from "@/hooks/use-toast";
-import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button",
+import { useAuth } from "@/hooks/useAuth",
+import { UserProfile } from "@/types/auth",
+import { toast } from "@/hooks/use-toast",
+import { SEO } from "@/components/SEO",
 
 export default function TalentProfilePage() {
-  const router = useRouter();
+  const router = useRouter(),
   // Get id from Next.js router query params
-  const { id } = router.query as { id?: string };
-  const { profile, isLoading, error } = useTalentProfile(id);
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-  const { isAuthenticated, user } = useAuth();
+  const { id } = router.query as { id?: string },
+  const { profile, isLoading, error } = useTalentProfile(id),
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false),
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
+  const { userDetails } = useAuthStatus(),
+  const { isAuthenticated, user } = useAuth(),
 
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user ? {
@@ -49,7 +49,7 @@ export default function TalentProfilePage() {
     role: '', // Default empty string since userDetails doesn't have this property
     name: '',
     points: 0
-  };
+  },
 
   // Handle loading error gracefully
   useEffect(() => {
@@ -57,16 +57,16 @@ export default function TalentProfilePage() {
       toast({
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
-        variant: "destructive"});
+        variant: "destructive"}),
     }
-  }, [error]);
+  }, [error]),
 
   if (isLoading) {
-    return <ProfileLoadingState />;
+    return <ProfileLoadingState />,
   }
 
   if (error || !profile) {
-    return <ProfileErrorState error={error} />;
+    return <ProfileErrorState error={error} />,
   }
 
   const handleRequestHire = () => {
@@ -74,24 +74,24 @@ export default function TalentProfilePage() {
       toast({
         title: "Authentication required",
         description: "Please sign in to hire this talent.",
-        variant: "default"});
-      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
-      return;
+        variant: "default"}),
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`),
+      return,
     }
-    setIsHireModalOpen(true);
-  };
+    setIsHireModalOpen(true),
+  },
 
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
         description: "Please sign in to message this talent.",
-        variant: "default"});
-      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
-      return;
+        variant: "default"}),
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`),
+      return,
     }
-    setIsMessageModalOpen(true);
-  };
+    setIsMessageModalOpen(true),
+  },
 
   return (
     <>
@@ -147,5 +147,5 @@ export default function TalentProfilePage() {
       />
     </div>
     </>
-  );
+  ),
 }

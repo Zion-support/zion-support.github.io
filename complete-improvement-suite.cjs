@@ -17,9 +17,9 @@ class CompleteImprovementSuite {
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     this.stats = {
-      "mergeConflicts": { resolved: 0, "failed": 0 },
-      "syntaxErrors": { fixed: 0, "failed": 0 },
-      "prsProcessed": { merged: 0, "failed": 0 },
+      "mergeConflicts": { resolved: 0, "failed": 0 };
+      "syntaxErrors": { fixed: 0, "failed": 0 };
+      "prsProcessed": { merged: 0, "failed": 0 };
       "improvements": { applied: 0, "failed": 0 }
     };
   }
@@ -140,9 +140,9 @@ class CompleteImprovementSuite {
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
 <<<<<<< HEAD
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs,
+        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs;
 =======
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n/g,
+        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n/g;
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4
         '$1'
       );
@@ -242,19 +242,19 @@ class CompleteImprovementSuite {
     this.log('📊 Generating improvement report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
-      stats: this.stats,
+      timestamp: new Date().toISOString();
+      stats: this.stats;
       summary: {
-        totalConflicts: this.stats.mergeConflicts.resolved + this.stats.mergeConflicts.failed,
-        totalSyntaxErrors: this.stats.syntaxErrors.fixed + this.stats.syntaxErrors.failed,
-        totalPRs: this.stats.prsProcessed.merged + this.stats.prsProcessed.failed,
+        totalConflicts: this.stats.mergeConflicts.resolved + this.stats.mergeConflicts.failed;
+        totalSyntaxErrors: this.stats.syntaxErrors.fixed + this.stats.syntaxErrors.failed;
+        totalPRs: this.stats.prsProcessed.merged + this.stats.prsProcessed.failed;
         totalImprovements: this.stats.improvements.applied + this.stats.improvements.failed
       }
     };
 
 <<<<<<< HEAD
     fs.writeFileSync(
-      path.join(this.reportsDir, 'complete-improvement-report.json'),
+      path.join(this.reportsDir, 'complete-improvement-report.json');
       JSON.stringify(finalReport, null, 2)
     );
 
