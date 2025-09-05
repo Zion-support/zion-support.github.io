@@ -1,17 +1,164 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Menu,
+  X,
+  Phone,
+  Mail,
+  MapPin,
+  ChevronDown,
+  Building2,
+  Brain,
+  Network,
+  Cloud,
+  Users,
+  FileText,
+  HelpCircle,
+  Settings,
+  Target,
+  ArrowRight,
+  ExternalLink
+} from 'lucide-react';
 
-const navigation = [{
+const navigation = [
+  {
+    name: 'Home',
+    href: '/',
+    type: 'link'
+  },
+  {
     name: 'Services',
     href: '/services',
+    type: 'dropdown',
     children: [
-      { name: 'AI Services', href: '/ai-services', description: 'Cutting-edge AI solutions' },
-      { name: 'IT Services', href: '/it-services', description: 'Comprehensive IT solutions' },
-      { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' }
+      {
+        name: 'All Services',
+        href: '/services',
+        description: 'Comprehensive technology solutions'
+      },
+      {
+        name: 'AI Services',
+        href: '/ai-services',
+        description: 'Artificial Intelligence solutions',
+        icon: Brain
+      },
+      {
+        name: 'IT Services',
+        href: '/it-services',
+        description: 'Information Technology services',
+        icon: Network
+      },
+      {
+        name: 'Micro SaaS',
+        href: '/micro-saas',
+        description: 'Software as a Service solutions',
+        icon: Cloud
+      }
     ]
   },
-  { name: 'About', href: '/about' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' }
+  {
+    name: 'Solutions',
+    href: '/solutions',
+    type: 'dropdown',
+    children: [
+      {
+        name: 'All Solutions',
+        href: '/solutions',
+        description: 'Complete solution portfolio'
+      },
+      {
+        name: 'Enterprise',
+        href: '/solutions/enterprise',
+        description: 'Large-scale business solutions'
+      },
+      {
+        name: 'Healthcare',
+        href: '/solutions/healthcare',
+        description: 'Healthcare technology solutions'
+      },
+      {
+        name: 'Finance',
+        href: '/solutions/finance',
+        description: 'Financial technology solutions'
+      },
+      {
+        name: 'Retail',
+        href: '/solutions/retail',
+        description: 'Retail technology solutions'
+      }
+    ]
+  },
+  {
+    name: 'Company',
+    href: '/about',
+    type: 'dropdown',
+    children: [
+      {
+        name: 'About Us',
+        href: '/about',
+        description: 'Learn about our company'
+      },
+      {
+        name: 'Our Team',
+        href: '/team',
+        description: 'Meet our experts'
+      },
+      {
+        name: 'Careers',
+        href: '/careers',
+        description: 'Join our team'
+      },
+      {
+        name: 'Blog',
+        href: '/blog',
+        description: 'Latest insights and news'
+      },
+      {
+        name: 'Partners',
+        href: '/partners',
+        description: 'Our partner network'
+      }
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    type: 'dropdown',
+    children: [
+      {
+        name: 'Documentation',
+        href: '/docs',
+        description: 'Technical documentation'
+      },
+      {
+        name: 'API Reference',
+        href: '/api',
+        description: 'API documentation'
+      },
+      {
+        name: 'Help Center',
+        href: '/help',
+        description: 'Support and help resources'
+      },
+      {
+        name: 'Community',
+        href: '/community',
+        description: 'Join our community'
+      },
+      {
+        name: 'Case Studies',
+        href: '/case-studies',
+        description: 'Success stories and examples'
+      }
+    ]
+  },
+  {
+    name: 'Contact',
+    href: '/contact',
+    type: 'link'
+  }
 ];
 
 const contactInfo = {
@@ -20,221 +167,224 @@ const contactInfo = {
   address: '364 E Main St STE 1008, Middletown, DE 19709'
 };
 
-interface HeaderProps {
-  // Add props here as needed
-}
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
 
-export default function Header({ }: HeaderProps) {
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleDropdownToggle = (index) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/50' 
-        : 'bg-transparent'
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4 lg:px-6">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
-            </div>
-            <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
-              Zion Tech Group
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
-            {navigationItems.map((item) => (
-              <div key={item.label} className="relative group">
-                <Link
-                  href={item.href}
-                  className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
-                >
-                  <span>{item.label}</span>
-                  {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                </Link>
-                
-                {/* Dropdown Menu */}
-                {item.hasDropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
-                    <div className="py-2">
-                      {item.dropdownItems?.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.label}
-                          href={dropdownItem.href}
-                          className="flex items-center space-x-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
-                        >
-                          <span>{dropdownItem.label}</span>
-                        </Link>
-                      ))}
-                    </div>
-                )}
+      {/* Top Contact Bar */}
+      <div className="bg-blue-600 text-white py-2">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
+            <div className="flex items-center space-x-6 mb-2 sm:mb-0">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4" />
+                <span>{contactInfo.phone}</span>
               </div>
-            ))}
-          </nav>
-
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-2">
-            {/* Search Button */}
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className="p-2 text-gray-500 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-            >
-              <Search className="w-5 h-5" />
-            </button>
-
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 text-gray-500 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-            >
-              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-
-            {/* User Menu */}
-            <div className="relative">
-              <button
-                onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                className="p-2 text-gray-500 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-              >
-                <User className="w-5 h-5" />
-              </button>
-
-              {isUserMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-200 py-2">
-                  <Link
-                    href="/login"
-                    className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
-                  >
-                    <User className="w-4 h-4" />
-                    <span>Sign In</span>
-                  </Link>
-                  <Link
-                    href="/register"
-                    className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
-                  >
-                    <User className="w-4 h-4" />
-                    <span>Sign Up</span>
-                  </Link>
-                </div>
-              )}
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4" />
+                <span>{contactInfo.email}</span>
+              </div>
             </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-500 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-            >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4" />
+              <span className="hidden sm:inline">{contactInfo.address}</span>
+            </div>
           </div>
+        </div>
+      </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 bg-white">
-            <div className="py-4 space-y-2">
-              {navigationItems.map((item) => (
-                <div key={item.label}>
-                  <Link
-                    href={item.href}
-                    className="flex items-center justify-between px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <span>{item.label}</span>
-                    {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                  </Link>
-                  
-                  {item.hasDropdown && (
-                    <div className="ml-4 space-y-1">
-                      {item.dropdownItems?.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.label}
-                          href={dropdownItem.href}
-                          className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-blue-600 rounded-lg"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {dropdownItem.label}
-                        </Link>
-                      ))}
+      {/* Main Navigation */}
+      <nav className="bg-white/95 backdrop-blur-md border-b border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Building2 className="w-6 h-6 text-white" />
+              </div>
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {navigation.map((item, index) => (
+                <div key={item.name} className="relative">
+                  {item.type === 'link' ? (
+                    <Link
+                      href={item.href}
+                      className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <div className="relative">
+                      <button
+                        onClick={() => handleDropdownToggle(index)}
+                        className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown className="w-4 h-4" />
+                      </button>
+                      
+                      <AnimatePresence>
+                        {activeDropdown === index && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                          >
+                            {item.children?.map((child) => {
+                              const IconComponent = child.icon;
+                              return (
+                                <Link
+                                  key={child.name}
+                                  href={child.href}
+                                  onClick={handleLinkClick}
+                                  className="flex items-start space-x-3 px-4 py-3 hover:bg-gray-50 transition-colors"
+                                >
+                                  {IconComponent && (
+                                    <IconComponent className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                                  )}
+                                  <div>
+                                    <div className="font-medium text-gray-900">{child.name}</div>
+                                    <div className="text-sm text-gray-500">{child.description}</div>
+                                  </div>
+                                </Link>
+                              );
+                            })}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   )}
-                        onMouseEnter={() => setActiveDropdown(item.name)}
-                        onMouseLeave={() => setActiveDropdown(null)}
-                      >
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                          >
-                            <div className="flex items-center space-x-3">
-                              <child.icon className="w-4 h-4" />
-                              <span>{child.name}</span>
-                            </div>
-                            {child.count && (
-                              <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
-                                {child.count}
-                              </span>
-                            )}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
                 </div>
               ))}
             </div>
 
-            {/* Search and CTA */}
-            <div className="flex items-center space-x-4">
-              {/* Search Button */}
-              <button
-                onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
-              >
-                <Search className="w-5 h-5" />
-              </button>
-
-              {/* CTA Button */}
+            {/* CTA Button */}
+            <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href="/contact"
-                className="hidden sm:flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300"
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
-                <DollarSign className="w-4 h-4" />
-                <span>Get Quote</span>
+                Get Started
               </Link>
             </div>
-        )}
-      </div>
 
-      {/* Search Overlay */}
-      {isSearchOpen && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-          <div className="flex items-start justify-center pt-20 px-4">
-            <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl">
-              <form onSubmit={handleSearch} className="p-6">
-                <div className="flex items-center space-x-4">
-                  <Search className="w-6 h-6 text-gray-400" />
-                  <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search services, solutions, or resources..."
-                    className="flex-1 text-lg border-none outline-none placeholder-gray-400"
-                    autoFocus
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setIsSearchOpen(false)}
-                    className="p-2 text-gray-400 hover:text-gray-600"
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg-white border-t border-gray-200"
+            >
+              <div className="container mx-auto px-4 py-4">
+                {navigation.map((item, index) => (
+                  <div key={item.name} className="mb-4">
+                    {item.type === 'link' ? (
+                      <Link
+                        href={item.href}
+                        onClick={handleLinkClick}
+                        className="block py-2 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                      >
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <div>
+                        <button
+                          onClick={() => handleDropdownToggle(index)}
+                          className="flex items-center justify-between w-full py-2 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                        >
+                          <span>{item.name}</span>
+                          <ChevronDown className={`w-4 h-4 transition-transform ${
+                            activeDropdown === index ? 'rotate-180' : ''
+                          }`} />
+                        </button>
+                        <AnimatePresence>
+                          {activeDropdown === index && (
+                            <motion.div
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: 'auto' }}
+                              exit={{ opacity: 0, height: 0 }}
+                              className="ml-4 mt-2 space-y-2"
+                            >
+                              {item.children?.map((child) => {
+                                const IconComponent = child.icon;
+                                return (
+                                  <Link
+                                    key={child.name}
+                                    href={child.href}
+                                    onClick={handleLinkClick}
+                                    className="flex items-start space-x-3 py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                                  >
+                                    {IconComponent && (
+                                      <IconComponent className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                                    )}
+                                    <div>
+                                      <div className="font-medium">{child.name}</div>
+                                      <div className="text-sm text-gray-500">{child.description}</div>
+                                    </div>
+                                  </Link>
+                                );
+                              })}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    )}
+                  </div>
+                ))}
+                <div className="pt-4 border-t border-gray-200">
+                  <Link
+                    href="/contact"
+                    onClick={handleLinkClick}
+                    className="block w-full text-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
                   >
-                    <X className="w-6 h-6" />
-                  </button>
+                    Get Started
+                  </Link>
                 </div>
-              </form>
-            </div>
-      )}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
     </header>
   );
 }

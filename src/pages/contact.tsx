@@ -51,19 +51,19 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+      details: ['+1 302 464 0950'],
       description: 'Call us for immediate assistance'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@ziontechgroup.com', 'support@ziontechgroup.com'],
+      details: ['kleber@ziontechgroup.com'],
       description: 'Send us an email anytime'
     },
     {
       icon: MapPin,
       title: 'Office',
-      details: ['123 Tech Street', 'San Francisco, CA 94105'],
+      details: ['364 E Main St STE 1008', 'Middletown, DE 19709'],
       description: 'Visit our headquarters'
     },
     {
