@@ -1,1 +1,14 @@
-import React from 'react';'''; import { EnterpriseHero } from '@/components/enterprise/EnterpriseHero';'''; import { EnterprisePricingTable } from '@/components/enterprise/EnterprisePricingTable';'''; import { EnterpriseFeatures } from '@/components/enterprise/EnterpriseFeatures';'''; import { EnterpriseCTA } from '@/components/enterprise/EnterpriseCTA';'''; import { EnterpriseTrustBadges } from '@/components/enterprise/EnterpriseTrustBadges';'''; import { EnterpriseTestimonials } from '@/components/enterprise/EnterpriseTestimonials';'''; import { SEO } from '@/components/SEO'; export {}; return null} return(); <> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <EnterpriseHero /> <EnterprisePricingTable /> <EnterpriseFeatures /> <EnterpriseTestimonials /> <EnterpriseTrustBadges /> <EnterpriseCTA /> ></div> </>)} ; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans };""
+import React from 'react';
+
+interface EnterprisePlansProps {
+  // Add props here as needed
+}
+
+export default function EnterprisePlans({ }: EnterprisePlansProps) {
+  return (
+    <div>
+      <h1>EnterprisePlans</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

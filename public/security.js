@@ -1,33 +1,27 @@
-cursor/fix-lint-push-and-merge-to-main-f3c1;
 // Security enhancements for Zion Tech Group;
-const securityEnhancements = {}
+const securityEnhancements = {
   // Content Security Policy;
-  "addCSP": () => {""}
-  const meta = document.createElement("meta");""
-    meta.httpEquiv = "Content-Security-Policy";""
-    meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;";"
+  "addCSP": () => {
+  const meta = document.createElement("meta");
+    meta.httpEquiv = "Content-Security-Policy";
+    meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;";
     document.head.appendChild(meta)},
-  // XSS Protection;"
-  "sanitizeInput": (input) => {""}
-  const div = document.createElement("div");"
+  // XSS Protection;
+  "sanitizeInput": (input) => {
+  const div = document.createElement("div");
     div.textContent = input;
     return div.innerHTML},
-  // Add security headers;"
-  "addSecurityHeaders": () => {"}
-  // This would typically be handled by the server;"
-    console.log("Security headers should be configured on the server")},"
-  // Initialize security enhancements;"
-  "init": () => {"}
-  this.addCSP();"
-    console.log("Security enhancements initialized")}"
+  // Add security headers;
+  "addSecurityHeaders": () => {
+  // This would typically be handled by the server;
+    console.log("Security headers should be configured on the server")},
+  // Initialize security enhancements;
+  "init": () => {
+  this.addCSP();
+    console.log("Security enhancements initialized")}
 };
-// Auto-initialize when DOM is ready;"
-if (document.readyState === "loading") {""}
-  document.addEventListener("DOMContentLoaded", securityEnhancements.init)} else {"}
-  // TODO: Implement;
-};
-  securityEnhancements.init()}"
-const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}"
-origin/cursor/automate-test-improve-and-merge-code-eafe;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+// Auto-initialize when DOM is ready;
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", securityEnhancements.init)} else {
+  securityEnhancements.init()}
+const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
