@@ -1463,6 +1463,79 @@ const microSaaSProducts = [{
     category: 'AutoML'
   },
   {
+    title: 'AI Cybersecurity Threat Hunter',
+    description: 'AI-powered threat detection and response system for enterprise security.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Incident Forensics'],
+    pricing: '$399 - $1,999/month',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
+    title: 'AI Personal Finance Optimizer',
+    description: 'Intelligent personal finance management with AI-powered investment recommendations.',
+    icon: DollarSign,
+    features: ['Budget Optimization', 'Investment Analysis', 'Risk Assessment', 'Goal Tracking'],
+    pricing: '$19 - $99/month',
+    category: 'FinTech AI'
+  },
+  {
+    title: 'AI Legal Document Analyzer',
+    description: 'AI-powered legal document review and contract analysis platform.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$199 - $999/month',
+    category: 'LegalTech AI'
+  },
+  {
+    title: 'AI Energy Management System',
+    description: 'Smart energy consumption optimization and renewable energy integration platform.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Renewable Integration', 'Cost Analysis', 'Carbon Tracking'],
+    pricing: '$99 - $499/month',
+    category: 'CleanTech AI'
+  },
+  {
+    title: 'AI Language Translation Hub',
+    description: 'Real-time multilingual translation with context-aware AI understanding.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Voice Translation', 'Document Translation'],
+    pricing: '$29 - $199/month',
+    category: 'Language AI'
+  },
+  {
+    title: 'AI Content Moderation Suite',
+    description: 'Advanced AI content moderation for social platforms and communities.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Context Analysis', 'Bias Detection', 'Automated Actions'],
+    pricing: '$149 - $799/month',
+    category: 'Content AI'
+  },
+  {
+    title: 'AI Predictive Maintenance Platform',
+    description: 'AI-powered equipment maintenance prediction and optimization system.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Monitoring'],
+    pricing: '$199 - $999/month',
+    category: 'Industrial AI'
+  },
+  {
+    title: 'AI Customer Sentiment Analyzer',
+    description: 'Real-time customer sentiment analysis across multiple channels and touchpoints.',
+    icon: MessageSquare,
+    features: ['Sentiment Analysis', 'Emotion Detection', 'Trend Analysis', 'Alert System'],
+    pricing: '$79 - $399/month',
+    category: 'Customer AI'
+  },
+  {
+    title: 'AI Fraud Detection System',
+    description: 'Advanced fraud detection and prevention using machine learning algorithms.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Automated Blocking'],
+    pricing: '$299 - $1,499/month',
+    category: 'Fraud AI'
+  },
+  {
     title: 'AI MLOps Platform',
     description: 'Complete machine learning operations and model lifecycle management platform.',
     icon: Settings,

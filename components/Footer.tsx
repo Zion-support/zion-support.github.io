@@ -11,7 +11,8 @@ import {
   Twitter,
   Github,
   ArrowRight,
-  ExternalLink
+  ExternalLink,
+  Globe
 } from 'lucide-react';
 import { 
   MapPin, 
@@ -145,7 +146,8 @@ ursor/website-audit-and-update-with-deployment-9cae
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
-  hours: '24/7 Support Available'
+  hours: '24/7 Support Available',
+  website: 'https://ziontechgroup.com'
 };
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
   { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }
@@ -285,6 +287,17 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-blue-400" />
                 <span className="text-xs">{companyInfo.hours}</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Globe className="w-4 h-4 text-blue-400" />
+                <a 
+                  href={contactInfo.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
+                  {contactInfo.website}
+                </a>
               </div>
             </div>
           </div>

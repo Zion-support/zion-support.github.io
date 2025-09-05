@@ -36,7 +36,8 @@ import {
   Rocket,
   Sprout,
   Eye,
-  Bot
+  Bot,
+  Car
 } from 'lucide-react';
 const itServices = [{
     title: 'Cloud Infrastructure Management',
@@ -630,6 +631,7 @@ const benefits = [
     popular: true
   },
   {
+<<<<<<< HEAD
     title: 'Advanced Cloud Migration Services',
     description: 'Comprehensive cloud migration strategy and execution for enterprise applications.',
     icon: Cloud,
@@ -749,6 +751,79 @@ const benefits = [
     features: ['Governance Framework', 'Risk Management', 'Compliance Monitoring', 'Policy Development'],
     pricing: '$50,000 - $300,000/project',
     category: 'IT Governance'
+=======
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain solutions and distributed ledger technology implementation.',
+    icon: Network,
+    features: ['Blockchain Development', 'Smart Contracts', 'Consensus Mechanisms', 'Token Economics'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'IoT Security & Management',
+    description: 'Comprehensive IoT security and device management solutions.',
+    icon: Shield,
+    features: ['Device Authentication', 'Encrypted Communication', 'Firmware Updates', 'Threat Monitoring'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'IoT Security'
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Quantum computing infrastructure and hybrid quantum-classical systems.',
+    icon: Cpu,
+    features: ['Quantum Hardware', 'Hybrid Systems', 'Algorithm Development', 'Performance Optimization'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Quantum Computing'
+  },
+  {
+    title: 'Metaverse Infrastructure',
+    description: 'Infrastructure solutions for virtual worlds and metaverse applications.',
+    icon: Globe,
+    features: ['Virtual Worlds', 'Avatar Systems', 'Real-time Rendering', 'Social Features'],
+    pricing: '$75,000 - $400,000/project',
+    category: 'Metaverse'
+  },
+  {
+    title: 'AI Infrastructure & MLOps',
+    description: 'Complete AI infrastructure setup and machine learning operations platform.',
+    icon: Brain,
+    features: ['ML Pipeline', 'Model Deployment', 'Monitoring', 'Auto-scaling'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'AI Infrastructure'
+  },
+  {
+    title: 'Green IT & Sustainability',
+    description: 'Sustainable IT solutions and carbon footprint reduction strategies.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Tracking', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Green IT'
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin creation and management for physical assets and processes.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analysis', 'Virtual Testing'],
+    pricing: '$60,000 - $300,000/project',
+    category: 'Digital Twin'
+  },
+  {
+    title: 'Autonomous Systems Infrastructure',
+    description: 'Infrastructure for autonomous vehicles, drones, and robotic systems.',
+    icon: Car,
+    features: ['Sensor Integration', 'Real-time Processing', 'Safety Systems', 'Fleet Management'],
+    pricing: '$80,000 - $400,000/project',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'Space Technology Infrastructure',
+    description: 'Ground-based infrastructure for space missions and satellite operations.',
+    icon: Rocket,
+    features: ['Ground Stations', 'Mission Control', 'Data Processing', 'Communication Systems'],
+    pricing: '$200,000 - $1,000,000/project',
+    category: 'Space Tech'
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-0572
   }
 ];
 const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
