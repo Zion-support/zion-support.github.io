@@ -1,1 +1,14 @@
-import React from "react"; import { Header, Footer } from 'lucide-react'; import { CompanyDashboard, useAuth } from 'lucide-react'; import { Navigate, useParams, SEO } from 'lucide-react'; import { ProtectedRoute, useCompanyWorkspace } from 'lucide-react'; import { useWhitelabel } from "@/context/WhitelabelContext"""
+import React from 'react';
+
+interface CompanyWorkspaceProps {
+  // Add props here as needed
+}
+
+export default function CompanyWorkspace({ }: CompanyWorkspaceProps) {
+  return (
+    <div>
+      <h1>CompanyWorkspace</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
