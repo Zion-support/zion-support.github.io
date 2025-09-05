@@ -58,9 +58,11 @@ const navigation = [
     children: [
       { name: 'Blog', href: '/blog', description: 'Latest insights' },
       { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-      { name: 'White Papers', href: '/white-papers', description: 'Technical papers' },
+      { name: 'White Papers', href: '/whitepapers', description: 'Technical papers' },
       { name: 'Webinars', href: '/webinars', description: 'Educational content' },
-      { name: 'Help Center', href: '/help', description: 'Support resources' }
+      { name: 'Tutorials', href: '/tutorials', description: 'Learning guides' },
+      { name: 'Help Center', href: '/help', description: 'Support resources' },
+      { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' }
     ]
   },
   { name: 'About', href: '/about' },

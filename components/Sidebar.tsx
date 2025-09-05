@@ -39,15 +39,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     );
   };
 
-<<<<<<< HEAD
-  const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Target },
-    { name: 'Services', href: '/services', icon: Briefcase },
-    { name: 'Contact', href: '/contact', icon: Heart }
-  ];
-
-=======
   const navigationItems = [
     {
       label: 'Home',
@@ -106,14 +97,14 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       hasSubmenu: true,
       submenu: [
         { label: 'Blog', href: '/blog' },
-        { label: 'White Papers', href: '/white-papers' },
         { label: 'Case Studies', href: '/case-studies' },
+        { label: 'White Papers', href: '/whitepapers' },
         { label: 'Webinars', href: '/webinars' },
+        { label: 'Tutorials', href: '/tutorials' },
+        { label: 'Guides', href: '/guides' },
         { label: 'Help Center', href: '/help' },
         { label: 'FAQ', href: '/faq' },
         { label: 'Documentation', href: '/docs' },
-        { label: 'Tutorials', href: '/tutorials' },
-        { label: 'Guides', href: '/guides' },
       ]
     },
     {
@@ -151,6 +142,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     { label: 'Support', href: '/support', icon: HelpCircle },
     { label: 'Documentation', href: '/docs', icon: FileText },
     { label: 'Search', href: '/search', icon: Search },
+    { label: 'Sitemap', href: '/sitemap', icon: Search },
     { label: 'Newsletter', href: '/newsletter', icon: Mail },
   ];
 
@@ -158,7 +150,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     return router.pathname === href;
   };
 
->>>>>>> cursor/expand-services-advertise-and-build-project-dc3f
   return (
     <>
       {/* Overlay */}
@@ -186,66 +177,61 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         </div>
 
         <nav className="p-4">
-          <ul className="space-y-2">
-            {navigation.map((item) => {
+          <div className="space-y-2">
+            {navigationItems.map((item, index) => {
               const Icon = item.icon;
               return (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
-                      router.pathname === item.href
-                        ? 'bg-blue-100 text-blue-700'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                    onClick={onClose}
-                  >
-                    <Icon className="w-5 h-5" />
-                    <span>{item.name}</span>
-                  </Link>
-<<<<<<< HEAD
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-=======
-                  
-                  {item.hasSubmenu && (
-                    <button
-                      onClick={() => toggleSection(item.label)}
-                      className="p-2 hover:bg-gray-800 rounded-lg"
+                <div key={index}>
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={item.href}
+                      className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                        isActive(item.href)
+                          ? 'bg-blue-600 text-white'
+                          : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                      }`}
+                      onClick={onClose}
                     >
-                      <ChevronRight 
-                        className={`w-4 h-4 transition-transform ${
-                          expandedSections.includes(item.label) ? 'rotate-90' : ''
-                        }`} 
-                      />
-                    </button>
+                      <Icon className="w-5 h-5" />
+                      <span>{item.label}</span>
+                    </Link>
+                    
+                    {item.hasSubmenu && (
+                      <button
+                        onClick={() => toggleSection(item.label)}
+                        className="p-2 hover:bg-gray-800 rounded-lg"
+                      >
+                        <ChevronRight 
+                          className={`w-4 h-4 transition-transform ${
+                            expandedSections.includes(item.label) ? 'rotate-90' : ''
+                          }`} 
+                        />
+                      </button>
+                    )}
+                  </div>
+
+                  {item.hasSubmenu && expandedSections.includes(item.label) && (
+                    <div className="ml-8 mt-2 space-y-1">
+                      {item.submenu?.map((subItem, subIndex) => (
+                        <Link
+                          key={subIndex}
+                          href={subItem.href}
+                          className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-colors ${
+                            isActive(subItem.href)
+                              ? 'bg-blue-600 text-white'
+                              : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                          }`}
+                          onClick={onClose}
+                        >
+                          {subItem.icon && <subItem.icon className="w-4 h-4" />}
+                          <span>{subItem.label}</span>
+                        </Link>
+                      ))}
+                    </div>
                   )}
                 </div>
-
-                {item.hasSubmenu && expandedSections.includes(item.label) && (
-                  <div className="ml-8 mt-2 space-y-1">
-                    {item.submenu?.map((subItem, subIndex) => (
-                      <Link
-                        key={subIndex}
-                        href={subItem.href}
-                        className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-colors ${
-                          isActive(subItem.href)
-                            ? 'bg-blue-600 text-white'
-                            : 'text-gray-400 hover:bg-gray-800 hover:text-white'
-                        }`}
-                        onClick={onClose}
-                      >
-                        {subItem.icon && <subItem.icon className="w-4 h-4" />}
-                        <span>{subItem.label}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+              );
+            })}
           </div>
         </nav>
 
@@ -273,11 +259,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         <div className="p-6 border-t border-gray-700">
           <div className="text-sm text-gray-400">
             <p className="mb-2">Need help?</p>
-            <p className="text-blue-400">contact@ziontechgroup.com</p>
-            <p className="text-blue-400">+1 (555) 123-4567</p>
+            <p className="text-blue-400">kleber@ziontechgroup.com</p>
+            <p className="text-blue-400">+1 302 464 0950</p>
           </div>
         </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-dc3f
       </div>
     </>
   );

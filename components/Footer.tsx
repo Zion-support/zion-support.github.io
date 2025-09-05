@@ -146,13 +146,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/white-papers" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                <Link href="/whitepapers" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                   White Papers
                 </Link>
               </li>
               <li>
                 <Link href="/webinars" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                   Webinars
+                </Link>
+              </li>
+              <li>
+                <Link href="/tutorials" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Tutorials
                 </Link>
               </li>
               <li>
@@ -183,13 +188,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/cookies" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                  Cookie Policy
+                <Link href="/compliance" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Compliance
                 </Link>
               </li>
               <li>
-                <Link href="/compliance" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                  Compliance
+                <Link href="/sitemap" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Sitemap
                 </Link>
               </li>
             </ul>
