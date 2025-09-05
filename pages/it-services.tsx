@@ -245,18 +245,191 @@ const itServices = [
     marketPrice: '$6,000 - $20,000/month',
     link: 'https://ziontechgroup.com/itsm',
     popular: false
+  },
+  // New 2025 IT Services
+  {
+    title: 'AI-Powered IT Operations Center',
+    description: 'Intelligent IT operations with AI-driven automation, predictive maintenance, and self-healing systems.',
+    icon: Brain,
+    features: ['AI-driven automation', 'Predictive maintenance', 'Self-healing systems', 'Intelligent monitoring', 'Automated incident response', 'Performance optimization'],
+    pricing: '$4,999 - $19,999/month',
+    category: 'AI Operations',
+    benefits: ['Reduce downtime by 90%', 'Automate 80% of routine tasks', 'Predict issues before they occur', 'Improve system reliability'],
+    marketPrice: '$8,000 - $25,000/month',
+    link: 'https://ziontechgroup.com/ai-it-operations',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Cybersecurity Implementation',
+    description: 'Future-proof security solutions using quantum-resistant encryption and advanced threat protection.',
+    icon: Shield,
+    features: ['Quantum-resistant encryption', 'Advanced threat detection', 'Zero trust architecture', 'Compliance management', 'Security orchestration', 'Threat intelligence'],
+    pricing: '$5,999 - $24,999/month',
+    category: 'Quantum Security',
+    benefits: ['Future-proof security', 'Advanced protection', 'Compliance ready', 'Scalable security'],
+    marketPrice: '$10,000 - $35,000/month',
+    link: 'https://ziontechgroup.com/quantum-security',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed computing infrastructure for low-latency applications and IoT deployments.',
+    icon: Cpu,
+    features: ['Edge nodes deployment', 'Low-latency processing', 'IoT integration', 'Real-time analytics', 'Distributed computing', 'Bandwidth optimization'],
+    pricing: '$3,499 - $14,999/month',
+    category: 'Edge Computing',
+    benefits: ['Ultra-low latency', 'Improved performance', 'Cost efficiency', 'Scalable infrastructure'],
+    marketPrice: '$5,000 - $20,000/month',
+    link: 'https://ziontechgroup.com/edge-computing',
+    popular: true
+  },
+  {
+    title: '5G Network Implementation & Optimization',
+    description: 'Complete 5G network deployment and optimization services for enhanced connectivity.',
+    icon: Wifi,
+    features: ['5G network design', 'Performance optimization', 'Coverage analysis', 'Capacity planning', 'Network slicing', 'Edge integration'],
+    pricing: '$9,999 - $49,999/month',
+    category: '5G Networks',
+    benefits: ['Ultra-fast connectivity', 'Enhanced coverage', 'Future-ready infrastructure', 'Optimized performance'],
+    marketPrice: '$15,000 - $75,000/month',
+    link: 'https://ziontechgroup.com/5g-networks',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure & Integration',
+    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+    icon: Database,
+    features: ['Blockchain development', 'Smart contracts', 'DApp integration', 'Consensus mechanisms', 'Security auditing', 'Performance optimization'],
+    pricing: '$4,999 - $19,999/month',
+    category: 'Blockchain Infrastructure',
+    benefits: ['Decentralized solutions', 'Enhanced security', 'Transparent operations', 'Cost reduction'],
+    marketPrice: '$8,000 - $30,000/month',
+    link: 'https://ziontechgroup.com/blockchain-infrastructure',
+    popular: false
+  },
+  {
+    title: 'IoT Platform Development & Management',
+    description: 'Comprehensive IoT solutions for device management, data collection, and analytics.',
+    icon: Smartphone,
+    features: ['Device management', 'Data collection', 'Real-time analytics', 'Remote monitoring', 'Security management', 'Integration APIs'],
+    pricing: '$3,499 - $14,999/month',
+    category: 'IoT Platforms',
+    benefits: ['Connected devices', 'Real-time insights', 'Operational efficiency', 'Data-driven decisions'],
+    marketPrice: '$5,000 - $20,000/month',
+    link: 'https://ziontechgroup.com/iot-platforms',
+    popular: true
+  },
+  {
+    title: 'AI Infrastructure & ML Pipeline Setup',
+    description: 'Complete AI infrastructure setup with machine learning pipelines and model deployment.',
+    icon: Brain,
+    features: ['ML pipeline setup', 'Model training', 'Model deployment', 'Performance monitoring', 'Data preprocessing', 'Model versioning'],
+    pricing: '$5,999 - $24,999/month',
+    category: 'AI Infrastructure',
+    benefits: ['Advanced AI capabilities', 'Scalable ML operations', 'Automated workflows', 'High performance'],
+    marketPrice: '$10,000 - $35,000/month',
+    link: 'https://ziontechgroup.com/ai-infrastructure',
+    popular: true
+  },
+  {
+    title: 'Green IT & Sustainability Solutions',
+    description: 'Eco-friendly IT solutions for reducing carbon footprint and energy consumption.',
+    icon: Globe,
+    features: ['Energy optimization', 'Carbon footprint reduction', 'Sustainable practices', 'Green monitoring', 'Renewable energy integration', 'ESG reporting'],
+    pricing: '$2,999 - $11,999/month',
+    category: 'Green IT',
+    benefits: ['Environmental impact', 'Cost savings', 'Sustainability goals', 'Efficient operations'],
+    marketPrice: '$5,000 - $18,000/month',
+    link: 'https://ziontechgroup.com/green-it',
+    popular: false
+  },
+  {
+    title: 'Confidential Computing Services',
+    description: 'Hardware-based security solutions for protecting data in use with trusted execution environments.',
+    icon: Lock,
+    features: ['Trusted execution environments', 'Data encryption in use', 'Secure enclaves', 'Hardware security', 'Compliance support', 'Performance optimization'],
+    pricing: '$4,499 - $18,999/month',
+    category: 'Confidential Computing',
+    benefits: ['Enhanced data protection', 'Compliance ready', 'Secure processing', 'Hardware-level security'],
+    marketPrice: '$7,000 - $25,000/month',
+    link: 'https://ziontechgroup.com/confidential-computing',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Quantum computing solutions for complex optimization problems and advanced computations.',
+    icon: Cpu,
+    features: ['Quantum algorithm development', 'Hybrid quantum-classical systems', 'Quantum optimization', 'Quantum simulation', 'Research collaboration', 'Performance analysis'],
+    pricing: '$7,999 - $34,999/month',
+    category: 'Quantum Computing',
+    benefits: ['Exponential speedup', 'Solve complex problems', 'Future-proof technology', 'Research capabilities'],
+    marketPrice: '$12,000 - $50,000/month',
+    link: 'https://ziontechgroup.com/quantum-computing',
+    popular: false
+  },
+  {
+    title: 'Multi-Cloud Orchestration Platform',
+    description: 'Unified management platform for multi-cloud environments with automated orchestration.',
+    icon: Cloud,
+    features: ['Multi-cloud management', 'Automated orchestration', 'Cost optimization', 'Security controls', 'Performance monitoring', 'Compliance management'],
+    pricing: '$3,999 - $16,999/month',
+    category: 'Multi-Cloud',
+    benefits: ['Unified operations', 'Cost optimization', 'Flexible deployment', 'Enhanced security'],
+    marketPrice: '$6,000 - $25,000/month',
+    link: 'https://ziontechgroup.com/multi-cloud-orchestration',
+    popular: true
+  },
+  {
+    title: 'DevSecOps Implementation',
+    description: 'Integrated security in DevOps processes with automated security testing and compliance.',
+    icon: Shield,
+    features: ['Security integration', 'Automated testing', 'Compliance automation', 'Vulnerability scanning', 'Security monitoring', 'Incident response'],
+    pricing: '$4,499 - $18,999/month',
+    category: 'DevSecOps',
+    benefits: ['Enhanced security', 'Automated compliance', 'Faster deployment', 'Reduced risks'],
+    marketPrice: '$7,000 - $25,000/month',
+    link: 'https://ziontechgroup.com/devsecops',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Network Optimization',
+    description: 'Intelligent network optimization using AI for performance, security, and cost efficiency.',
+    icon: Network,
+    features: ['AI-driven optimization', 'Performance monitoring', 'Security analysis', 'Cost optimization', 'Predictive maintenance', 'Automated configuration'],
+    pricing: '$3,499 - $14,999/month',
+    category: 'AI Networking',
+    benefits: ['Optimized performance', 'Reduced costs', 'Enhanced security', 'Automated management'],
+    marketPrice: '$5,000 - $20,000/month',
+    link: 'https://ziontechgroup.com/ai-network-optimization',
+    popular: true
+  },
+  {
+    title: 'Serverless Architecture Implementation',
+    description: 'Serverless computing solutions for scalable, cost-effective application deployment.',
+    icon: Cloud,
+    features: ['Serverless deployment', 'Auto-scaling', 'Cost optimization', 'Performance monitoring', 'Security management', 'Integration services'],
+    pricing: '$2,999 - $11,999/month',
+    category: 'Serverless',
+    benefits: ['Cost efficiency', 'Auto-scaling', 'Reduced maintenance', 'Improved performance'],
+    marketPrice: '$5,000 - $18,000/month',
+    link: 'https://ziontechgroup.com/serverless-architecture',
+    popular: true
+  },
+  {
+    title: 'Data Mesh Architecture Implementation',
+    description: 'Decentralized data architecture for scalable, domain-oriented data management.',
+    icon: Database,
+    features: ['Domain-oriented data', 'Decentralized governance', 'Data product development', 'Self-service analytics', 'Data quality management', 'Integration services'],
+    pricing: '$4,999 - $19,999/month',
+    category: 'Data Mesh',
+    benefits: ['Scalable data architecture', 'Domain ownership', 'Self-service analytics', 'Improved data quality'],
+    marketPrice: '$8,000 - $30,000/month',
+    link: 'https://ziontechgroup.com/data-mesh',
+    popular: false
   }
 ];
-      pricing: '$120 – $220/hour',
-      projectPricing: '$6,000 – $30,000/project',
-      timeline: '2–8 weeks',
-      benefits: [
-        '99.9% uptime guarantee',
-        'Automated deployment processes',
-        'Reduced infrastructure costs',
-        'Improved system reliability'
-      ],
-      category: 'Cloud & Infrastructure'
+
+export default function ITServicesPage() {
     },
     {
       icon: Shield,
