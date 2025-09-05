@@ -15,13 +15,13 @@ class AIPerformancePredictor {
       'automation-reports',
       'ai-performance.log'
     );
-    this.ensureLogDir();
+    this.ensureLogDir(),
   }
 
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -29,7 +29,7 @@ class AIPerformancePredictor {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + '\n'),
   }
 
   async analyzePerformance() {
@@ -45,7 +45,7 @@ class AIPerformancePredictor {
       recommendations: this.generatePerformanceRecommendations(),
     };
 
-    return performanceAnalysis;
+    return performanceAnalysis,
   }
 
   async analyzeBundleSize() {
@@ -71,9 +71,9 @@ class AIPerformancePredictor {
         ],
       };
 
-      return bundleAnalysis;
+      return bundleAnalysis,
     } catch (error) {
-      this.log(`⚠️ Bundle analysis failed: ${error.message}`);
+      this.log(`⚠️ Bundle analysis failed: ${error.message}`),
       return {
         score: 70,
         totalSize: 'Unknown',
@@ -81,7 +81,7 @@ class AIPerformancePredictor {
         chunks: 0,
         largestChunks: [],
         suggestions: ['Run build analysis to get accurate metrics'],
-      };
+      },
     }
   }
 
@@ -102,7 +102,7 @@ class AIPerformancePredictor {
       ],
     };
 
-    return loadTimeAnalysis;
+    return loadTimeAnalysis,
   }
 
   async analyzeRuntimePerformance() {
@@ -124,7 +124,7 @@ class AIPerformancePredictor {
       ],
     };
 
-    return runtimeAnalysis;
+    return runtimeAnalysis,
   }
 
   async analyzeMemoryUsage() {
@@ -143,7 +143,7 @@ class AIPerformancePredictor {
       ],
     };
 
-    return memoryAnalysis;
+    return memoryAnalysis,
   }
 
   generatePredictions() {
@@ -180,7 +180,7 @@ class AIPerformancePredictor {
           'Use spot instances where possible',
         ],
       },
-    };
+    },
   }
 
   generatePerformanceRecommendations() {
@@ -197,7 +197,7 @@ class AIPerformancePredictor {
       'Monitor Core Web Vitals',
       'Use performance optimization techniques',
       'Regular performance audits',
-    ];
+    ],
   }
 
   generateReport(analysis) {
@@ -220,9 +220,9 @@ class AIPerformancePredictor {
       'ai-performance-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath}`);
+    this.log(`📊 Report saved to: ${reportPath}`),
 
-    return report;
+    return report,
   }
 
   calculateOverallScore(analysis) {
@@ -238,7 +238,7 @@ class AIPerformancePredictor {
         analysis.loadTime.score * weights.loadTime +
         analysis.runtime.score * weights.runtime +
         analysis.memory.score * weights.memory
-    );
+    ),
   }
 
   getPerformanceLevel(analysis) {
@@ -246,14 +246,14 @@ class AIPerformancePredictor {
     if (overallScore >= 90) return 'excellent';
     if (overallScore >= 80) return 'good';
     if (overallScore >= 70) return 'fair';
-    return 'needs-improvement';
+    return 'needs-improvement',
   }
 
   getPriority(analysis) {
     if (analysis.bundleSize.score < 60) return 'high';
     if (analysis.loadTime.score < 70) return 'high';
     if (analysis.memory.memoryLeaks > 5) return 'critical';
-    return 'medium';
+    return 'medium',
   }
 
   async run() {
@@ -265,13 +265,13 @@ class AIPerformancePredictor {
 
       this.log(
         `🎉 AI performance prediction completed! Overall Score: ${report.summary.overallScore}/100`
-      );
+      ),
       this.log(
         `📊 Performance Level: ${report.summary.performanceLevel} | Priority: ${report.summary.priority}`
-      );
+      ),
     } catch (error) {
-      this.log(`❌ AI performance prediction failed: ${error.message}`);
-      process.exit(1);
+      this.log(`❌ AI performance prediction failed: ${error.message}`),
+      process.exit(1),
     }
   }
 }

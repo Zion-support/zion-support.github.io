@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = require('path');
+
 
 // List of corrupted files that need to be completely rewritten
 const corruptedFiles = {
@@ -8,10 +8,10 @@ const corruptedFiles = {
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add skip link for keyboard navigation
-    const skipLink = document.createElement('a');
+    const skipLink = document.createElement('a'),
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-blue-600 focus:text-white';
+    skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-blue-600 focus:text-white',
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     // Add ARIA live region for announcements
@@ -24,15 +24,15 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // Announce page changes
     const announcePageChange = (message: string) => {
-      const liveRegion = document.getElementById('live-region');
+      const liveRegion = document.getElementById('live-region'),
       if (liveRegion) {
-        liveRegion.textContent = message;
+        liveRegion.textContent = message,
       }
     };
 
     // Listen for route changes (Next.js specific)
     const handleRouteChange = () => {
-      announcePageChange('Page loaded');
+      announcePageChange('Page loaded'),
     };
 
     // Add route change listener if available
@@ -42,29 +42,29 @@ const AccessibilityEnhancer: React.FC = () => {
 
       window.history.pushState = function(...args) {
         originalPushState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
+        setTimeout(handleRouteChange, 100),
       };
 
       window.history.replaceState = function(...args) {
         originalReplaceState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
+        setTimeout(handleRouteChange, 100),
       };
 
-      window.addEventListener('popstate', handleRouteChange);
+      window.addEventListener('popstate', handleRouteChange),
     }
 
     // Cleanup
     return () => {
       if (skipLink.parentNode) {
-        skipLink.parentNode.removeChild(skipLink);
+        skipLink.parentNode.removeChild(skipLink),
       }
       if (liveRegion.parentNode) {
-        liveRegion.parentNode.removeChild(liveRegion);
+        liveRegion.parentNode.removeChild(liveRegion),
       }
-    };
+    },
   }, []);
 
-  return null;
+  return null,
 };
 
 export default AccessibilityEnhancer;`,
@@ -73,13 +73,13 @@ export default AccessibilityEnhancer;`,
 import Image from 'next/image';
 
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
+  src: string,
+  alt: string,
+  width: number,
+  height: number,
   className?: string;
   priority?: boolean;
-  quality?: number;
+  quality?: number,
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -101,7 +101,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       priority={priority}
       quality={quality}
     />
-  );
+  ),
 };
 
 export default OptimizedImage;`,
@@ -110,12 +110,12 @@ export default OptimizedImage;`,
 import LoadingSpinner from './LoadingSpinner';
 
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
+  name: string,
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
+  message: string,
 }
 
 const ContactForm: React.FC = () => {
@@ -136,11 +136,11 @@ const ContactForm: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value,
-    }));
+    })),
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
@@ -155,11 +155,11 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: '',
-      });
+      }),
     } catch {
-      setSubmitStatus('error');
+      setSubmitStatus('error'),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
   };
 
@@ -280,7 +280,7 @@ const ContactForm: React.FC = () => {
         </div>
       )}
     </form>
-  );
+  ),
 };
 
 export default ContactForm;`
@@ -290,9 +290,9 @@ export default ContactForm;`
 Object.entries(corruptedFiles).forEach(([filePath, content]) => {
   try {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    console.log(`Fixed: ${filePath}`),
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message),
   }
 });
 

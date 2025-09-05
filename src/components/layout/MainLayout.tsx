@@ -1,8 +1,8 @@
-                isOpen={sidebarOpen},
-                onClose={() => setSidebarOpen(false)},
+                isOpen={sidebarOpen};
+                onClose={() => setSidebarOpen(false)};
 
-        </main>,
-        <Footer />,
-      </div>,
-    </>,
+        </main>;
+        <Footer />;
+      </div>;
+    </>;
 

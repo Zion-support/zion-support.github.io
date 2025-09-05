@@ -14,13 +14,13 @@ class HealthChecker {
     this.logFile = './logs/pm2/health.log';
     this.errorFile = './logs/pm2/health-error.log';
     this.healthReport = './logs/health-report.json';
-    this.ensureLogDirectory();
+    this.ensureLogDirectory(),
   }
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -31,10 +31,10 @@ class HealthChecker {
     try {
       fs.appendFileSync(this.logFile, logMessage);
       if (level === 'ERROR') {
-        fs.appendFileSync(this.errorFile, logMessage);
+        fs.appendFileSync(this.errorFile, logMessage),
       }
     } catch (err) {
-      console.error('Failed to write to log file:', err.message);
+      console.error('Failed to write to log file:', err.message),
     }
   }
 
@@ -79,18 +79,18 @@ class HealthChecker {
 
       this.log(
         `Health check completed. Overall health: ${healthReport.overall.status}`
-      );
+      ),
 
-      return healthReport;
+      return healthReport,
     } catch (error) {
       this.log(`Health check failed: ${error.message}`, 'ERROR');
-      throw error;
+      throw error,
     }
   }
 
   checkDiskSpace() {
     try {
-      const result = execSync('df -h /', { encoding: 'utf8' });
+      const result = execSync('df -h /', { encoding: 'utf8' }),
       const lines = result.trim().split('\n');
       const data = lines[1].split(/\s+/);
 
@@ -99,16 +99,16 @@ class HealthChecker {
         used: data[2],
         available: data[3],
         percentage: data[4],
-      };
+      },
     } catch (error) {
       this.log(`Failed to check disk space: ${error.message}`, 'ERROR');
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 
   checkMemoryUsage() {
     try {
-      const result = execSync('free -h', { encoding: 'utf8' });
+      const result = execSync('free -h', { encoding: 'utf8' }),
       const lines = result.trim().split('\n');
       const data = lines[1].split(/\s+/);
 
@@ -117,16 +117,16 @@ class HealthChecker {
         used: data[2],
         free: data[3],
         available: data[4],
-      };
+      },
     } catch (error) {
       this.log(`Failed to check memory usage: ${error.message}`, 'ERROR');
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 
   checkPM2Processes() {
     try {
-      const result = execSync('pm2 jlist', { encoding: 'utf8' });
+      const result = execSync('pm2 jlist', { encoding: 'utf8' }),
       const processes = JSON.parse(result);
 
       const status = {
@@ -142,10 +142,10 @@ class HealthChecker {
         })),
       };
 
-      return status;
+      return status,
     } catch (error) {
       this.log(`Failed to check PM2 processes: ${error.message}`, 'ERROR');
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 
@@ -154,7 +154,7 @@ class HealthChecker {
       // Check if build directory exists and is recent
       const buildDir = './.next';
       if (!fs.existsSync(buildDir)) {
-        return { status: 'not_built', message: 'Build directory not found' };
+        return { status: 'not_built', message: 'Build directory not found' },
       }
 
       const stats = fs.statSync(buildDir);
@@ -166,10 +166,10 @@ class HealthChecker {
         status: hoursSinceBuild < 24 ? 'fresh' : 'stale',
         lastBuild: lastModified.toISOString(),
         hoursSinceBuild: Math.round(hoursSinceBuild),
-      };
+      },
     } catch (error) {
       this.log(`Failed to check build status: ${error.message}`, 'ERROR');
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 
@@ -181,42 +181,42 @@ class HealthChecker {
       const diskPercent = parseInt(diskUsage.percentage);
       if (diskPercent > 90) {
         score -= 30;
-        issues.push('Disk space critically low');
+        issues.push('Disk space critically low'),
       } else if (diskPercent > 80) {
         score -= 15;
-        issues.push('Disk space running low');
+        issues.push('Disk space running low'),
       }
     }
 
     // Check PM2 processes
     if (pm2Status.errored > 0) {
       score -= 20;
-      issues.push(`${pm2Status.errored} PM2 processes errored`);
+      issues.push(`${pm2Status.errored} PM2 processes errored`),
     }
 
     if (pm2Status.online === 0) {
       score -= 50;
-      issues.push('No PM2 processes online');
+      issues.push('No PM2 processes online'),
     }
 
     // Check build status
     if (buildStatus.status === 'stale') {
       score -= 10;
-      issues.push('Build is stale');
+      issues.push('Build is stale'),
     }
 
     let status = 'healthy';
     if (score < 50) {
-      status = 'critical';
+      status = 'critical',
     } else if (score < 80) {
-      status = 'warning';
+      status = 'warning',
     }
 
     return {
       score: Math.max(0, score),
       status,
       issues,
-    };
+    },
   }
 }
 
@@ -226,15 +226,15 @@ async function main() {
 
   try {
     await healthChecker.checkSystemHealth();
-    process.exit(0);
+    process.exit(0),
   } catch (error) {
     healthChecker.log(`Health check failed: ${error.message}`, 'ERROR');
-    process.exit(1);
+    process.exit(1),
   }
 }
 
 if (require.main === module) {
-  main();
+  main(),
 }
 
 module.exports = HealthChecker;

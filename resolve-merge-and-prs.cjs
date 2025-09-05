@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
-const fs = require('fs');
+
 
 class MergeConflictResolver {
   constructor() {
-    this.projectRoot = process.cwd();
+    this.projectRoot = process.cwd(),
   }
 
   log(message, type = 'INFO') {
@@ -16,7 +16,7 @@ class MergeConflictResolver {
       WARNING: '⚠️',
       PROGRESS: '🔄',
     };
-    console.log(`${icons[type] || ''} ${message}`);
+    console.log(`${icons[type] || ''} ${message}`),
   }
 
   async runCommand(command, description) {
@@ -28,10 +28,10 @@ class MergeConflictResolver {
         timeout: 30000,
       });
       this.log(`Completed: ${description}`, 'SUCCESS');
-      return { success: true, output: result };
+      return { success: true, output: result },
     } catch (error) {
       this.log(`Failed: ${description} - ${error.message}`, 'ERROR');
-      return { success: false, error: error.message };
+      return { success: false, error: error.message },
     }
   }
 
@@ -56,10 +56,10 @@ class MergeConflictResolver {
       await this.runCommand(
         'git commit -m "Resolve merge conflicts automatically"',
         'Commit conflict resolution'
-      );
+      ),
     }
 
-    return true;
+    return true,
   }
 
   async handleGitOperations() {
@@ -93,7 +93,7 @@ class MergeConflictResolver {
       await this.runCommand(
         `git push origin ${currentBranch}`,
         'Push to current branch'
-      );
+      ),
     }
   }
 
@@ -102,7 +102,7 @@ class MergeConflictResolver {
 
     // Check if GitHub CLI is available
     try {
-      execSync('gh --version', { stdio: 'ignore' });
+      execSync('gh --version', { stdio: 'ignore' }),
       this.log('GitHub CLI found', 'SUCCESS');
 
       // List open PRs
@@ -127,14 +127,14 @@ class MergeConflictResolver {
             await this.runCommand(
               `gh pr merge ${prNumber} --merge --delete-branch`,
               `Merge PR #${prNumber}`
-            );
+            ),
           }
         }
       } else {
-        this.log('No open PRs found', 'INFO');
+        this.log('No open PRs found', 'INFO'),
       }
     } catch (error) {
-      this.log('GitHub CLI not available, skipping PR operations', 'WARNING');
+      this.log('GitHub CLI not available, skipping PR operations', 'WARNING'),
     }
   }
 
@@ -151,10 +151,10 @@ class MergeConflictResolver {
       // Check and merge PRs
       await this.checkAndMergePRs();
 
-      this.log('✅ All operations completed successfully', 'SUCCESS');
+      this.log('✅ All operations completed successfully', 'SUCCESS'),
     } catch (error) {
       this.log(`❌ Error during operations: ${error.message}`, 'ERROR');
-      process.exit(1);
+      process.exit(1),
     }
   }
 }

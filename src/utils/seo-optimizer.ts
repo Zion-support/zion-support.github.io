@@ -1,14 +1,13 @@
 // SEO optimization utilities
 export const generateMetaTags = pageData => {
   return {
-    title:
-      pageData.title || 'Zion Tech Group - Innovative Technology Solutions',
+    title: pageData.title || 'Zion Tech Group - Innovative Technology Solutions';
     description:
       pageData.description ||
-      'Leading provider of AI, blockchain, and emerging technology services',
+      'Leading provider of AI, blockchain, and emerging technology services';
     keywords:
       pageData.keywords ||
-      'AI, blockchain, technology, innovation, software development',
+      'AI, blockchain, technology, innovation, software development';
     ogTitle: pageData.ogTitle || pageData.title,
     ogDescription: pageData.ogDescription || pageData.description,
     ogImage: pageData.ogImage || '/images/og-image.jpg',
@@ -19,7 +18,7 @@ export const generateMetaTags = pageData => {
 
 export const generateStructuredData = pageData => {
   return {
-    '@context': 'https://schema.org@type': 'Organization',
+    '@context': 'https: //schema.org@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/images/logo.png',
@@ -34,4 +33,4 @@ export const generateStructuredData = pageData => {
       contactType: 'customer service'
     }
   }
-},
+};

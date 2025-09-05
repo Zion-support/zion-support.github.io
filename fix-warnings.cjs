@@ -4,29 +4,29 @@ const fixes = [
   {
     path: 'components/AccessibilityProvider.tsx',
     oldContent: `  const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById('live-region');
+    const liveRegion = document.getElementById('live-region'),
     if (liveRegion) {
-      liveRegion.textContent = message;
+      liveRegion.textContent = message,
     }
   };
 
   const setFocus = (elementId: string) => {
-    const element = document.getElementById(elementId);
+    const element = document.getElementById(elementId),
     if (element) {
-      element.focus();
+      element.focus(),
     }
   };`,
     newContent: `  const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById('live-region');
+    const liveRegion = document.getElementById('live-region'),
     if (liveRegion) {
-      liveRegion.textContent = message;
+      liveRegion.textContent = message,
     }
   };
 
   const setFocus = (elementId: string) => {
-    const element = document.getElementById(elementId);
+    const element = document.getElementById(elementId),
     if (element) {
-      element.focus();
+      element.focus(),
     }
   };`
   },
@@ -53,10 +53,10 @@ const fixes = [
   {
     path: 'hooks/useLocalStorage.ts',
     oldContent: `import { useState, useEffect } from 'react';`,
-    newContent: `import { useState } from 'react';`
+    newContent: `import { useState } from 'react',`
   },
   {
-    path: 'hooks/useLocalStorage.ts',
+    path: 'hooks/useLocalStorage.ts';
     oldContent: `      console.error('Error reading localStorage key "' + key + '":', error);`,
     newContent: `      // Error reading localStorage key`
   },
@@ -67,9 +67,9 @@ const fixes = [
   },
   {
     path: 'hooks/usePerformanceMonitor.ts',
-    oldContent: `      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    oldContent: `      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
       const memory = (performance as any).memory;`,
-    newContent: `      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    newContent: `      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
       const memory = (window.performance as any).memory;`
   }
 ];
@@ -79,9 +79,9 @@ fixes.forEach(fix => {
     let content = fs.readFileSync(fix.path, 'utf8');
     content = content.replace(fix.oldContent, fix.newContent);
     fs.writeFileSync(fix.path, content);
-    console.log('Fixed warnings in:', fix.path);
+    console.log('Fixed warnings in:', fix.path),
   } catch (error) {
-    console.error('Error fixing', fix.path, ':', error.message);
+    console.error('Error fixing', fix.path, ':', error.message),
   }
 });
 

@@ -13,7 +13,7 @@ class SecurityScanner {
       vulnerabilities: [],
       recommendations: [],
       metrics: {},
-    };
+    },
   }
 
   async scanFiles() {
@@ -23,7 +23,7 @@ class SecurityScanner {
     this.results.metrics.totalFilesScanned = filesToScan.length;
 
     for (const file of filesToScan) {
-      await this.scanFile(file);
+      await this.scanFile(file),
     }
   }
 
@@ -44,18 +44,18 @@ class SecurityScanner {
           !item.startsWith('.') &&
           item !== 'node_modules'
         ) {
-          scanDirectory(itemPath);
+          scanDirectory(itemPath),
         } else if (
           stats.isFile() &&
           extensions.some(ext => item.endsWith(ext))
         ) {
-          files.push(itemPath);
+          files.push(itemPath),
         }
-      });
+      }),
     };
 
     scanDirectory(process.cwd());
-    return files;
+    return files,
   }
 
   async scanFile(filePath) {
@@ -66,9 +66,9 @@ class SecurityScanner {
       this.checkForHardcodedSecrets(content, filePath);
       this.checkForSQLInjection(content, filePath);
       this.checkForXSS(content, filePath);
-      this.checkForInsecureDependencies(content, filePath);
+      this.checkForInsecureDependencies(content, filePath),
     } catch (error) {
-      console.error(`Error scanning file ${filePath}:`, error.message);
+      console.error(`Error scanning file ${filePath}:`, error.message),
     }
   }
 
@@ -89,9 +89,9 @@ class SecurityScanner {
           file: filePath,
           description: 'Potential hardcoded secret detected',
           matches: matches,
-        });
+        }),
       }
-    });
+    }),
   }
 
   checkForSQLInjection(content, filePath) {
@@ -109,9 +109,9 @@ class SecurityScanner {
           file: filePath,
           description: 'Potential SQL injection vulnerability',
           matches: matches,
-        });
+        }),
       }
-    });
+    }),
   }
 
   checkForXSS(content, filePath) {
@@ -130,9 +130,9 @@ class SecurityScanner {
           file: filePath,
           description: 'Potential XSS vulnerability',
           matches: matches,
-        });
+        }),
       }
-    });
+    }),
   }
 
   checkForInsecureDependencies(content, filePath) {
@@ -154,9 +154,9 @@ class SecurityScanner {
             file: filePath,
             description: `Potentially vulnerable dependency: ${pkg}`,
             package: pkg,
-          });
+          }),
         }
-      });
+      }),
     }
   }
 
@@ -175,7 +175,7 @@ class SecurityScanner {
     score -=
       (totalVulnerabilities - highSeverityVulns - mediumSeverityVulns) * 5;
 
-    this.results.securityScore = Math.max(0, score);
+    this.results.securityScore = Math.max(0, score),
   }
 
   async generateRecommendations() {
@@ -190,7 +190,7 @@ class SecurityScanner {
         type: 'immediate_fix',
         priority: 'critical',
         description: 'Fix high severity vulnerabilities immediately',
-      });
+      }),
     }
 
     this.results.recommendations.push({
@@ -209,18 +209,18 @@ class SecurityScanner {
       type: 'code_review',
       priority: 'medium',
       description: 'Implement security-focused code review process',
-    });
+    }),
   }
 
   async saveReport() {
     const logsDir = path.join(process.cwd(), 'logs');
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+      fs.mkdirSync(logsDir, { recursive: true }),
     }
 
     const reportPath = path.join(logsDir, `security-scan-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Report saved to: ${reportPath}`);
+    console.log(`📊 Report saved to: ${reportPath}`),
   }
 
   async run() {
@@ -233,7 +233,7 @@ class SecurityScanner {
 
     console.log(
       `✅ Security scan completed! Score: ${this.results.securityScore}/100`
-    );
+    ),
   }
 }
 

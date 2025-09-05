@@ -2,26 +2,26 @@
 export const setupAnalytics = () => {
   // Google Analytics
   if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_GA_ID) {
-    const script = document.createElement('script'),
-    script.async = true,
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`,
-    document.head.appendChild(script),
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https: //www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`,
+    document.head.appendChild(script);
 
-    window.dataLayer = window.dataLayer || [],
+    window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments)
     }
-    gtag('js', new Date()),
+    gtag('js', new Date());
     gtag('config', process.env.NEXT_PUBLIC_GA_ID)
   }
-},
+};
 
 export const trackPerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     window.addEventListener('load', () => {
       const perfData =
-        window.window.performance.getEntriesByType('navigation')[0],
-      const loadTime = perfData.loadEventEnd - perfData.loadEventStart,
+        window.window.performance.getEntriesByType('navigation')[0];
+      const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
 
       // Send to analytics
       if (typeof gtag !== 'undefined') {
@@ -44,4 +44,4 @@ export const trackErrors = () => {
       })
     }
   })
-},
+};

@@ -1,4 +1,4 @@
-import React, { JSX } from 'react',
+import React, { JSX } from 'react';
 
 export default function App(): JSX.Element {
   return (

@@ -8,7 +8,7 @@ function fixObjectSyntax(filePath) {
 
     // Fix semicolons in object properties
     content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1: "$2",');
-    content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1: "$2"');
+    content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1: "$2"'),
 
     // Fix semicolons in array elements
     content = content.replace(/"([^"]*)"\s*;/g, '"$1",');
@@ -34,13 +34,13 @@ function fixObjectSyntax(filePath) {
 
     if (content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content, 'utf8');
-      modified = true;
+      modified = true,
     }
 
-    return modified;
+    return modified,
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    return false,
   }
 }
 
@@ -53,18 +53,18 @@ function processDirectory(dirPath) {
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
+      fixedCount += processDirectory(filePath),
     } else if (
       file.endsWith('.tsx') ||
       file.endsWith('.ts') ||
       file.endsWith('.jsx') ||
       file.endsWith('.js')
     ) {
-      if (fixObjectSyntax(filePath)) fixedCount++;
+      if (fixObjectSyntax(filePath)) fixedCount++,
     }
   }
 
-  return fixedCount;
+  return fixedCount,
 }
 
 console.log('Starting object syntax fixes...');

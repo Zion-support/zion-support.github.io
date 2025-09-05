@@ -19,5 +19,5 @@ export default {
     '*.config.js',
     '*.config.cjs',
     '*.config.mjs',
-  ],
+  ];
 };

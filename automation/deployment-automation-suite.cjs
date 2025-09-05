@@ -9,7 +9,7 @@ console.log('🚀 Starting Deployment Automation Suite...');
 class DeploymentAutomation {
   constructor() {
     this.deploymentSteps = [];
-    this.startTime = Date.now();
+    this.startTime = Date.now(),
   }
 
   async runDeployment() {
@@ -43,10 +43,10 @@ class DeploymentAutomation {
       // 9. Generate deployment report
       await this.generateDeploymentReport();
 
-      console.log('✅ Deployment automation completed successfully!');
+      console.log('✅ Deployment automation completed successfully!'),
     } catch (error) {
       console.error('❌ Error in deployment automation:', error);
-      throw error;
+      throw error,
     }
   }
 
@@ -63,7 +63,7 @@ class DeploymentAutomation {
     this.addStep('Validated all dependencies and security vulnerabilities');
 
     // Lint check
-    this.addStep('Performed code quality and linting checks');
+    this.addStep('Performed code quality and linting checks'),
   }
 
   async optimizeBuild() {
@@ -79,7 +79,7 @@ class DeploymentAutomation {
     this.addStep('Compressed and optimized static assets');
 
     // Generate source maps
-    this.addStep('Generated production source maps');
+    this.addStep('Generated production source maps'),
   }
 
   async validateSecurity() {
@@ -95,7 +95,7 @@ class DeploymentAutomation {
     this.addStep('Validated Content Security Policy configuration');
 
     // Headers validation
-    this.addStep('Verified security headers configuration');
+    this.addStep('Verified security headers configuration'),
   }
 
   async runPerformanceTests() {
@@ -111,7 +111,7 @@ class DeploymentAutomation {
     this.addStep('Performed load testing and stress testing');
 
     // Core Web Vitals
-    this.addStep('Measured Core Web Vitals and performance scores');
+    this.addStep('Measured Core Web Vitals and performance scores'),
   }
 
   async deployToStaging() {
@@ -127,7 +127,7 @@ class DeploymentAutomation {
     this.addStep('Performed staging environment health check');
 
     // Smoke tests
-    this.addStep('Executed smoke tests on staging environment');
+    this.addStep('Executed smoke tests on staging environment'),
   }
 
   async runIntegrationTests() {
@@ -143,7 +143,7 @@ class DeploymentAutomation {
     this.addStep('Tested external service integrations');
 
     // End-to-end tests
-    this.addStep('Ran end-to-end user journey tests');
+    this.addStep('Ran end-to-end user journey tests'),
   }
 
   async deployToProduction() {
@@ -159,7 +159,7 @@ class DeploymentAutomation {
     this.addStep('Updated DNS and CDN configurations');
 
     // SSL certificate
-    this.addStep('Verified SSL certificate and HTTPS configuration');
+    this.addStep('Verified SSL certificate and HTTPS configuration'),
   }
 
   async setupPostDeploymentMonitoring() {
@@ -175,7 +175,7 @@ class DeploymentAutomation {
     this.addStep('Configured log aggregation and analysis');
 
     // Alerting
-    this.addStep('Set up automated alerting and notifications');
+    this.addStep('Set up automated alerting and notifications'),
   }
 
   addStep(description) {
@@ -183,7 +183,7 @@ class DeploymentAutomation {
       description,
       timestamp: new Date().toISOString(),
       status: 'completed',
-    });
+    }),
   }
 
   async generateDeploymentReport() {
@@ -222,7 +222,7 @@ class DeploymentAutomation {
     // Ensure logs directory exists
     const logsDir = path.join(process.cwd(), 'logs');
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+      fs.mkdirSync(logsDir, { recursive: true }),
     }
 
     const reportPath = path.join(
@@ -231,16 +231,16 @@ class DeploymentAutomation {
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    console.log(`📊 Deployment report saved to: ${reportPath}`);
-    console.log(`🎯 Total deployment steps: ${this.deploymentSteps.length}`);
-    console.log(`⏱️  Duration: ${duration}ms`);
+    console.log(`📊 Deployment report saved to: ${reportPath}`),
+    console.log(`🎯 Total deployment steps: ${this.deploymentSteps.length}`),
+    console.log(`⏱️  Duration: ${duration}ms`),
   }
 }
 
 // Run the deployment automation
 if (require.main === module) {
   const deployment = new DeploymentAutomation();
-  deployment.runDeployment().catch(console.error);
+  deployment.runDeployment().catch(console.error),
 }
 
 module.exports = DeploymentAutomation;

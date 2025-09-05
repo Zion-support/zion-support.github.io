@@ -15,19 +15,19 @@ function fixSyntaxIssues(filePath) {
     // Fix import statements with trailing commas
     if (content.includes("import React from 'react',")) {
       content = content.replace(
-        /import React from 'react',/g,
+        /import React from 'react',/g;
         "import React from 'react';"
       );
-      fixed = true;
+      fixed = true,
     }
 
     // Fix export statements with trailing commas
     if (content.includes('export interface')) {
       content = content.replace(
-        /export interface (\w+) \{/g,
+        /export interface (\w+) \{/g;
         'export interface $1 {'
       );
-      fixed = true;
+      fixed = true,
     }
 
     // Fix object syntax issues
@@ -70,7 +70,7 @@ function fixSyntaxIssues(filePath) {
 
     // Fix performance API issues
     if (content.includes('performance.')) {
-      content = content.replace(/performance\./g, 'window.performance.');
+      content = content.replace(/performance\./g, 'window.performance.'),
     }
 
     // Fix React hooks issues
@@ -81,12 +81,12 @@ function fixSyntaxIssues(filePath) {
 
     if (fixed || content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
-      return true;
+      return true,
     }
-    return false;
+    return false,
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    return false,
   }
 }
 
@@ -104,13 +104,13 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       !item.startsWith('.') &&
       item !== 'node_modules'
     ) {
-      files = files.concat(getAllFiles(fullPath, extensions));
+      files = files.concat(getAllFiles(fullPath, extensions)),
     } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
+      files.push(fullPath),
     }
   }
 
-  return files;
+  return files,
 }
 
 // Main execution
@@ -123,7 +123,7 @@ try {
   for (const file of files) {
     if (fixSyntaxIssues(file)) {
       fixedCount++;
-      console.log(`✅ Fixed: ${file}`);
+      console.log(`✅ Fixed: ${file}`),
     }
   }
 
@@ -132,12 +132,12 @@ try {
   // Try to run build after fixes
   console.log('\n🔨 Testing build after fixes...');
   try {
-    execSync('npm run build', { stdio: 'pipe' });
-    console.log('✅ Build successful after fixes');
+    execSync('npm run build', { stdio: 'pipe' }),
+    console.log('✅ Build successful after fixes'),
   } catch (error) {
-    console.log('⚠️ Build still has issues, but syntax fixes applied');
+    console.log('⚠️ Build still has issues, but syntax fixes applied'),
   }
 } catch (error) {
   console.error('Error:', error.message);
-  process.exit(1);
+  process.exit(1),
 }

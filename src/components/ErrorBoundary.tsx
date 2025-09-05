@@ -1,3 +1,3 @@
-    return { hasError: true, error },
+    return { hasError: true, error };
 
-export { ErrorBoundary },
+export { ErrorBoundary };

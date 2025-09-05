@@ -15,13 +15,13 @@ class AISecurityIntelligence {
       'automation-reports',
       'ai-security.log'
     );
-    this.ensureLogDir();
+    this.ensureLogDir(),
   }
 
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -29,7 +29,7 @@ class AISecurityIntelligence {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + '\n'),
   }
 
   async runSecurityScan() {
@@ -44,7 +44,7 @@ class AISecurityIntelligence {
       recommendations: this.generateSecurityRecommendations(),
     };
 
-    return securityAnalysis;
+    return securityAnalysis,
   }
 
   async scanVulnerabilities() {
@@ -52,7 +52,7 @@ class AISecurityIntelligence {
 
     try {
       // Run npm audit
-      const auditResult = execSync('npm audit --json', { encoding: 'utf8' });
+      const auditResult = execSync('npm audit --json', { encoding: 'utf8' }),
       const audit = JSON.parse(auditResult);
 
       return {
@@ -66,9 +66,9 @@ class AISecurityIntelligence {
         low: audit.metadata.vulnerabilities.low,
         info: audit.metadata.vulnerabilities.info,
         advisories: audit.advisories || {},
-      };
+      },
     } catch (error) {
-      this.log(`⚠️ NPM audit failed: ${error.message}`);
+      this.log(`⚠️ NPM audit failed: ${error.message}`),
       return {
         score: 75,
         total: 0,
@@ -77,7 +77,7 @@ class AISecurityIntelligence {
         low: 0,
         info: 0,
         advisories: {},
-      };
+      },
     }
   }
 
@@ -95,7 +95,7 @@ class AISecurityIntelligence {
       ],
     };
 
-    return dependencies;
+    return dependencies,
   }
 
   async scanCodeSecurity() {
@@ -117,7 +117,7 @@ class AISecurityIntelligence {
       ],
     };
 
-    return codeSecurity;
+    return codeSecurity,
   }
 
   async scanConfiguration() {
@@ -139,7 +139,7 @@ class AISecurityIntelligence {
       ],
     };
 
-    return configuration;
+    return configuration,
   }
 
   generateSecurityRecommendations() {
@@ -156,7 +156,7 @@ class AISecurityIntelligence {
       'Add security logging and monitoring',
       'Regular security audits and penetration testing',
       'Implement secure coding practices',
-    ];
+    ],
   }
 
   generateReport(analysis) {
@@ -179,9 +179,9 @@ class AISecurityIntelligence {
       'ai-security-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath}`);
+    this.log(`📊 Report saved to: ${reportPath}`),
 
-    return report;
+    return report,
   }
 
   calculateOverallScore(analysis) {
@@ -197,7 +197,7 @@ class AISecurityIntelligence {
         analysis.dependencies.score * weights.dependencies +
         analysis.codeSecurity.score * weights.codeSecurity +
         analysis.configuration.score * weights.configuration
-    );
+    ),
   }
 
   getRiskLevel(analysis) {
@@ -205,14 +205,14 @@ class AISecurityIntelligence {
     if (overallScore >= 90) return 'low';
     if (overallScore >= 80) return 'medium';
     if (overallScore >= 70) return 'high';
-    return 'critical';
+    return 'critical',
   }
 
   getPriority(analysis) {
     if (analysis.vulnerabilities.high > 0) return 'critical';
     if (analysis.vulnerabilities.moderate > 5) return 'high';
     if (analysis.vulnerabilities.total > 10) return 'high';
-    return 'medium';
+    return 'medium',
   }
 
   async run() {
@@ -224,13 +224,13 @@ class AISecurityIntelligence {
 
       this.log(
         `🎉 AI security intelligence completed! Overall Score: ${report.summary.overallScore}/100`
-      );
+      ),
       this.log(
         `📊 Risk Level: ${report.summary.riskLevel} | Priority: ${report.summary.priority}`
-      );
+      ),
     } catch (error) {
-      this.log(`❌ AI security intelligence failed: ${error.message}`);
-      process.exit(1);
+      this.log(`❌ AI security intelligence failed: ${error.message}`),
+      process.exit(1),
     }
   }
 }

@@ -13,7 +13,7 @@ class SEOOptimizer {
       issues: [],
       recommendations: [],
       metrics: {},
-    };
+    },
   }
 
   async analyzePages() {
@@ -25,15 +25,15 @@ class SEOOptimizer {
     let pages = [];
 
     if (fs.existsSync(pagesDir)) {
-      pages = this.findPages(pagesDir);
+      pages = this.findPages(pagesDir),
     } else if (fs.existsSync(appDir)) {
-      pages = this.findAppPages(appDir);
+      pages = this.findAppPages(appDir),
     }
 
     this.results.metrics.totalPages = pages.length;
 
     for (const page of pages) {
-      await this.analyzePage(page);
+      await this.analyzePage(page),
     }
   }
 
@@ -46,18 +46,18 @@ class SEOOptimizer {
       const stats = fs.statSync(filePath);
 
       if (stats.isDirectory()) {
-        pages.push(...this.findPages(filePath));
+        pages.push(...this.findPages(filePath)),
       } else if (
         file.endsWith('.js') ||
         file.endsWith('.jsx') ||
         file.endsWith('.ts') ||
         file.endsWith('.tsx')
       ) {
-        pages.push(filePath);
+        pages.push(filePath),
       }
     });
 
-    return pages;
+    return pages,
   }
 
   findAppPages(dir) {
@@ -69,18 +69,18 @@ class SEOOptimizer {
       const stats = fs.statSync(filePath);
 
       if (stats.isDirectory()) {
-        pages.push(...this.findAppPages(filePath));
+        pages.push(...this.findAppPages(filePath)),
       } else if (
         file === 'page.js' ||
         file === 'page.tsx' ||
         file === 'layout.js' ||
         file === 'layout.tsx'
       ) {
-        pages.push(filePath);
+        pages.push(filePath),
       }
     });
 
-    return pages;
+    return pages,
   }
 
   async analyzePage(pagePath) {
@@ -93,7 +93,7 @@ class SEOOptimizer {
           type: 'missing_title',
           file: pagePath,
           severity: 'high',
-        });
+        }),
       }
 
       if (
@@ -104,7 +104,7 @@ class SEOOptimizer {
           type: 'missing_description',
           file: pagePath,
           severity: 'medium',
-        });
+        }),
       }
 
       // Check for heading structure
@@ -114,10 +114,10 @@ class SEOOptimizer {
           type: 'missing_h1',
           file: pagePath,
           severity: 'medium',
-        });
+        }),
       }
     } catch (error) {
-      console.error(`Error analyzing page ${pagePath}:`, error.message);
+      console.error(`Error analyzing page ${pagePath}:`, error.message),
     }
   }
 
@@ -146,7 +146,7 @@ class SEOOptimizer {
         priority: 'low',
         description: 'Generate and submit XML sitemap to search engines',
       },
-    ];
+    ],
   }
 
   calculateSEOScore() {
@@ -164,13 +164,13 @@ class SEOOptimizer {
     score -= mediumSeverityIssues * 10;
     score -= (totalIssues - highSeverityIssues - mediumSeverityIssues) * 5;
 
-    this.results.seoScore = Math.max(0, score);
+    this.results.seoScore = Math.max(0, score),
   }
 
   async saveReport() {
     const logsDir = path.join(process.cwd(), 'logs');
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+      fs.mkdirSync(logsDir, { recursive: true }),
     }
 
     const reportPath = path.join(
@@ -178,7 +178,7 @@ class SEOOptimizer {
       `seo-optimization-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Report saved to: ${reportPath}`);
+    console.log(`📊 Report saved to: ${reportPath}`),
   }
 
   async run() {
@@ -191,7 +191,7 @@ class SEOOptimizer {
 
     console.log(
       `✅ SEO optimization completed! Score: ${this.results.seoScore}/100`
-    );
+    ),
   }
 }
 

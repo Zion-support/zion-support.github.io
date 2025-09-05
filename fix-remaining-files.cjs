@@ -11,14 +11,14 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen),
   };
 
   return (
     <header className="bg-white shadow-lg">
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
+          <div className="flex flex-col md: flex-row justify-between items-center text-sm">
             <div className="flex items-center space-x-6 mb-2 md:mb-0">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
         )}
       </nav>
     </header>
-  );
+  ),
 };
 
 export default Header;`
@@ -87,7 +87,7 @@ export default Header;`
     content: `import React, { ReactNode } from 'react';
 
 interface LayoutProps {
-  children: ReactNode;
+  children: ReactNode,
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -95,7 +95,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
-  );
+  ),
 };
 
 export default Layout;`
@@ -106,9 +106,9 @@ export default Layout;`
 import { Search, X } from 'lucide-react';
 
 interface SearchBarProps {
-  onSearch?: (query: string) => void;
+  onSearch?: (query: string) => void,
   placeholder?: string;
-  className?: string;
+  className?: string,
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -120,15 +120,15 @@ const SearchBar: React.FC<SearchBarProps> = ({
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (onSearch && query.trim()) {
-      onSearch(query.trim());
+      onSearch(query.trim()),
     }
   };
 
   const handleClear = () => {
     setQuery('');
-    setIsOpen(false);
+    setIsOpen(false),
   };
 
   return (
@@ -142,7 +142,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setIsOpen(true)}
             placeholder={placeholder}
-            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
           {query && (
             <button
@@ -156,7 +156,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
         </div>
       </form>
     </div>
-  );
+  ),
 };
 
 export default SearchBar;`
@@ -168,8 +168,8 @@ import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void,
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
@@ -183,7 +183,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     <>
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 md: hidden"
           onClick={onClose}
         />
       )}
@@ -204,24 +204,24 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
           <nav className="space-y-2">
             {menuItems.map((item) => {
-              const Icon = item.icon;
+              const Icon = item.icon,
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700 hover: bg-gray-100 hover:text-blue-600"
                   onClick={onClose}
                 >
                   <Icon className="w-5 h-5" />
                   <span>{item.label}</span>
                 </Link>
-              );
+              ),
             })}
           </nav>
         </div>
       </div>
     </>
-  );
+  ),
 };
 
 export default Sidebar;`
@@ -231,21 +231,21 @@ export default Sidebar;`
     content: `import React, { ReactNode } from 'react';
 
 interface SimpleLayoutProps {
-  children: ReactNode;
-  title?: string;
+  children: ReactNode,
+  title?: string,
 }
 
 const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">
         {title && (
           <h1 className="text-3xl font-bold text-gray-900 mb-8">{title}</h1>
         )}
         {children}
       </div>
     </div>
-  );
+  ),
 };
 
 export default SimpleLayout;`
@@ -314,7 +314,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
+  ),
 };
 
 export default Footer;`
@@ -326,7 +326,7 @@ import Header from '../Header';
 import Footer from './Footer';
 
 interface LayoutProps {
-  children: ReactNode;
+  children: ReactNode,
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -338,7 +338,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
       <Footer />
     </div>
-  );
+  ),
 };
 
 export default Layout;`
@@ -351,9 +351,9 @@ import Footer from './Footer';
 import SEOHead from '../SEOHead';
 
 interface MainLayoutProps {
-  children: ReactNode;
+  children: ReactNode,
   title?: string;
-  description?: string;
+  description?: string,
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description }) => {
@@ -368,7 +368,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
         <Footer />
       </div>
     </>
-  );
+  ),
 };
 
 export default MainLayout;`
@@ -379,8 +379,8 @@ export default MainLayout;`
 import LoadingSpinner from '../LoadingSpinner';
 
 interface LazyComponentProps {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode,
+  fallback?: ReactNode,
 }
 
 const LazyComponent: React.FC<LazyComponentProps> = ({ 
@@ -391,7 +391,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
     <Suspense fallback={fallback}>
       {children}
     </Suspense>
-  );
+  ),
 };
 
 export default LazyComponent;`
@@ -402,14 +402,14 @@ export default LazyComponent;`
 import Image from 'next/image';
 
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
+  src: string,
+  alt: string,
+  width: number,
+  height: number,
   className?: string;
   priority?: boolean;
   quality?: number;
-  sizes?: string;
+  sizes?: string,
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -433,7 +433,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       quality={quality}
       sizes={sizes}
     />
-  );
+  ),
 };
 
 export default OptimizedImage;`
@@ -444,13 +444,13 @@ export default OptimizedImage;`
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 
 interface MarketplaceCardProps {
-  title: string;
-  description: string;
-  price: number;
-  rating: number;
-  image: string;
+  title: string,
+  description: string,
+  price: number,
+  rating: number,
+  image: string,
   onAddToCart?: () => void;
-  onFavorite?: () => void;
+  onFavorite?: () => void,
 }
 
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
@@ -463,7 +463,7 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   onFavorite
 }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">
       <div className="relative">
         <img src={image} alt={title} className="w-full h-48 object-cover" />
         <button
@@ -495,7 +495,7 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
         </button>
       </div>
     </div>
-  );
+  ),
 };
 
 export default EnhancedMarketplaceCard;`
@@ -507,14 +507,14 @@ import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 interface NavItem {
-  label: string;
-  href: string;
-  children?: NavItem[];
+  label: string,
+  href: string,
+  children?: NavItem[],
 }
 
 interface InteractiveNavigationProps {
-  items: NavItem[];
-  className?: string;
+  items: NavItem[],
+  className?: string,
 }
 
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {
@@ -523,12 +523,12 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
+    setActiveDropdown(activeDropdown === label ? null : label),
   };
 
   return (
     <nav className={'bg-white shadow-lg ' + className}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-bold text-blue-600">
             Zion Tech Group
@@ -623,7 +623,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
         )}
       </div>
     </nav>
-  );
+  ),
 };
 
 export default InteractiveNavigation;`
@@ -634,23 +634,23 @@ export default InteractiveNavigation;`
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
 interface Notification {
-  id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-  title: string;
-  message: string;
-  duration?: number;
+  id: string,
+  type: 'success' | 'error' | 'warning' | 'info',
+  title: string,
+  message: string,
+  duration?: number,
 }
 
 interface NotificationContextType {
-  notifications: Notification[];
+  notifications: Notification[],
   addNotification: (notification: Omit<Notification, 'id'>) => void;
-  removeNotification: (id: string) => void;
+  removeNotification: (id: string) => void,
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
 interface NotificationProviderProps {
-  children: ReactNode;
+  children: ReactNode,
 }
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
@@ -664,13 +664,13 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
 
     if (notification.duration !== 0) {
       setTimeout(() => {
-        removeNotification(id);
-      }, notification.duration || 5000);
+        removeNotification(id),
+      }, notification.duration || 5000),
     }
   };
 
   const removeNotification = (id: string) => {
-    setNotifications(prev => prev.filter(notification => notification.id !== id));
+    setNotifications(prev => prev.filter(notification => notification.id !== id)),
   };
 
   return (
@@ -678,7 +678,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
       {children}
       <NotificationContainer />
     </NotificationContext.Provider>
-  );
+  ),
 };
 
 const NotificationContainer: React.FC = () => {
@@ -694,12 +694,12 @@ const NotificationContainer: React.FC = () => {
         />
       ))}
     </div>
-  );
+  ),
 };
 
 const NotificationItem: React.FC<{
-  notification: Notification;
-  onRemove: (id: string) => void;
+  notification: Notification,
+  onRemove: (id: string) => void,
 }> = ({ notification, onRemove }) => {
   const icons = {
     success: CheckCircle,
@@ -727,21 +727,21 @@ const NotificationItem: React.FC<{
         </div>
         <button
           onClick={() => onRemove(notification.id)}
-          className="ml-3 flex-shrink-0 hover:opacity-75"
+          className="ml-3 flex-shrink-0 hover: opacity-75"
         >
           <X className="w-4 h-4" />
         </button>
       </div>
     </div>
-  );
+  ),
 };
 
 export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (context === undefined) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
+    throw new Error('useNotifications must be used within a NotificationProvider'),
   }
-  return context;
+  return context,
 };`
   },
   {
@@ -749,17 +749,17 @@ export const useNotifications = () => {
     content: `import { useState, useEffect } from 'react';
 
 interface ApiState<T> {
-  data: T | null;
-  loading: boolean;
-  error: string | null;
+  data: T | null,
+  loading: boolean,
+  error: string | null,
 }
 
 interface UseApiOptions {
-  immediate?: boolean;
+  immediate?: boolean,
 }
 
 export function useApi<T>(
-  apiCall: () => Promise<T>,
+  apiCall: () => Promise<T>;
   options: UseApiOptions = {}
 ): ApiState<T> & { refetch: () => void } {
   const [data, setData] = useState<T | null>(null);
@@ -772,17 +772,17 @@ export function useApi<T>(
     
     try {
       const result = await apiCall();
-      setData(result);
+      setData(result),
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
+      setError(err instanceof Error ? err.message : 'An error occurred'),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
   };
 
   useEffect(() => {
     if (options.immediate !== false) {
-      fetchData();
+      fetchData(),
     }
   }, []);
 
@@ -791,7 +791,7 @@ export function useApi<T>(
     loading,
     error,
     refetch: fetchData,
-  };
+  },
 }`
   },
   {
@@ -806,27 +806,27 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     
     try {
       const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
+      return item ? JSON.parse(item) : initialValue,
     } catch (error) {
       console.error('Error reading localStorage key "' + key + '":', error);
-      return initialValue;
+      return initialValue,
     }
   });
 
   const setValue = (value: T | ((val: T) => T)) => {
     try {
-      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      const valueToStore = value instanceof Function ? value(storedValue) : value,
       setStoredValue(valueToStore);
       
       if (typeof window !== 'undefined') {
-        window.localStorage.setItem(key, JSON.stringify(valueToStore));
+        window.localStorage.setItem(key, JSON.stringify(valueToStore)),
       }
     } catch (error) {
-      console.error('Error setting localStorage key "' + key + '":', error);
+      console.error('Error setting localStorage key "' + key + '":', error),
     }
   };
 
-  return [storedValue, setValue] as const;
+  return [storedValue, setValue] as const,
 }`
   },
   {
@@ -834,10 +834,10 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     content: `import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
+  fps: number,
 }
 
 export function usePerformanceMonitor(): PerformanceMetrics | null {
@@ -845,7 +845,7 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
-      return;
+      return,
     }
 
     const updateMetrics = () => {
@@ -858,22 +858,22 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
           renderTime: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           memoryUsage: memory?.usedJSHeapSize || 0,
           fps: 60,
-        });
+        }),
       }
     };
 
     if (document.readyState === 'complete') {
-      updateMetrics();
+      updateMetrics(),
     } else {
-      window.addEventListener('load', updateMetrics);
+      window.addEventListener('load', updateMetrics),
     }
 
     return () => {
-      window.removeEventListener('load', updateMetrics);
+      window.removeEventListener('load', updateMetrics),
     };
   }, []);
 
-  return metrics;
+  return metrics,
 }`
   },
   {
@@ -881,10 +881,10 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
     content: `import { useState, useEffect } from 'react';
 
 interface Breakpoints {
-  sm: number;
-  md: number;
-  lg: number;
-  xl: number;
+  sm: number,
+  md: number,
+  lg: number,
+  xl: number,
 }
 
 const defaultBreakpoints: Breakpoints = {
@@ -902,13 +902,13 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
       const width = window.innerWidth;
       
       if (width >= breakpoints.xl) {
-        setScreenSize('xl');
+        setScreenSize('xl'),
       } else if (width >= breakpoints.lg) {
-        setScreenSize('lg');
+        setScreenSize('lg'),
       } else if (width >= breakpoints.md) {
-        setScreenSize('md');
+        setScreenSize('md'),
       } else {
-        setScreenSize('sm');
+        setScreenSize('sm'),
       }
     };
 
@@ -916,7 +916,7 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
     window.addEventListener('resize', updateScreenSize);
 
     return () => {
-      window.removeEventListener('resize', updateScreenSize);
+      window.removeEventListener('resize', updateScreenSize),
     };
   }, [breakpoints]);
 
@@ -926,7 +926,7 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
     isTablet: screenSize === 'md',
     isDesktop: screenSize === 'lg' || screenSize === 'xl',
     isLarge: screenSize === 'xl',
-  };
+  },
 }`
   }
 ];
@@ -934,9 +934,9 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
 files.forEach(file => {
   try {
     fs.writeFileSync(file.path, file.content);
-    console.log('Fixed:', file.path);
+    console.log('Fixed:', file.path),
   } catch (error) {
-    console.error('Error fixing', file.path, ':', error.message);
+    console.error('Error fixing', file.path, ':', error.message),
   }
 });
 

@@ -10,7 +10,7 @@ function fixMergeConflicts(filePath) {
       content.includes('=======') ||
       content.includes('>>>>>>>')
     ) {
-      console.log(`Fixing merge conflicts in: ${filePath}`);
+      console.log(`Fixing merge conflicts in: ${filePath}`),
 
       // Remove merge conflict markers and keep the content after =======
       const lines = content.split('\n');
@@ -24,33 +24,33 @@ function fixMergeConflicts(filePath) {
         if (line.includes('<<<<<<< HEAD')) {
           inConflict = true;
           keepContent = false;
-          continue;
+          continue,
         }
 
         if (line.includes('=======')) {
           keepContent = true;
-          continue;
+          continue,
         }
 
         if (line.includes('>>>>>>>')) {
           inConflict = false;
           keepContent = false;
-          continue;
+          continue,
         }
 
         if (!inConflict || keepContent) {
-          fixedLines.push(line);
+          fixedLines.push(line),
         }
       }
 
       fs.writeFileSync(filePath, fixedLines.join('\n'), 'utf8');
-      return true;
+      return true,
     }
 
-    return false;
+    return false,
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    return false,
   }
 }
 
@@ -63,18 +63,18 @@ function processDirectory(dirPath) {
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
+      fixedCount += processDirectory(filePath),
     } else if (
       file.endsWith('.tsx') ||
       file.endsWith('.ts') ||
       file.endsWith('.jsx') ||
       file.endsWith('.js')
     ) {
-      if (fixMergeConflicts(filePath)) fixedCount++;
+      if (fixMergeConflicts(filePath)) fixedCount++,
     }
   }
 
-  return fixedCount;
+  return fixedCount,
 }
 
 console.log('Starting merge conflict fixes...');

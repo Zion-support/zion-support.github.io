@@ -6,13 +6,16 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true
   },
-  pageExtensions: ['tsxtsjsxjs'],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   images: {
     domains: [
-      'localhostziontechgroup.comimages.unsplash.comvia.placeholder.com'
+      'localhost',
+      'ziontechgroup.com',
+      'images.unsplash.com',
+      'via.placeholder.com'
     ],
-    formats: ['image/webpimage/avif'],
+    formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000
@@ -21,7 +24,8 @@ const nextConfig = {
     if (dev) {
       config.watchOptions = {
         ignored: [
-
+          '**/node_modules/**',
+          '**/.next/**'
         ],
         poll: 1000,
         aggregateTimeout: 300
@@ -29,6 +33,6 @@ const nextConfig = {
     }
     return config
   }
-},
+}
 
-export default nextConfig,
+export default nextConfig

@@ -13,13 +13,13 @@ class AutoFixer {
   constructor() {
     this.logFile = './logs/pm2/auto-fix.log';
     this.errorFile = './logs/pm2/auto-fix-error.log';
-    this.ensureLogDirectory();
+    this.ensureLogDirectory(),
   }
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -30,10 +30,10 @@ class AutoFixer {
     try {
       fs.appendFileSync(this.logFile, logMessage);
       if (level === 'ERROR') {
-        fs.appendFileSync(this.errorFile, logMessage);
+        fs.appendFileSync(this.errorFile, logMessage),
       }
     } catch (err) {
-      console.error('Failed to write to log file:', err.message);
+      console.error('Failed to write to log file:', err.message),
     }
   }
 
@@ -56,10 +56,10 @@ class AutoFixer {
       // Optimize imports
       await this.optimizeImports();
 
-      this.log('Auto-fix process completed successfully');
+      this.log('Auto-fix process completed successfully'),
     } catch (error) {
       this.log(`Auto-fix failed: ${error.message}`, 'ERROR');
-      throw error;
+      throw error,
     }
   }
 
@@ -73,9 +73,9 @@ class AutoFixer {
         cwd: process.cwd(),
       });
 
-      this.log('Linting issues fixed');
+      this.log('Linting issues fixed'),
     } catch (error) {
-      this.log(`Failed to fix linting issues: ${error.message}`, 'ERROR');
+      this.log(`Failed to fix linting issues: ${error.message}`, 'ERROR'),
     }
   }
 
@@ -89,9 +89,9 @@ class AutoFixer {
         cwd: process.cwd(),
       });
 
-      this.log('TypeScript check passed');
+      this.log('TypeScript check passed'),
     } catch (error) {
-      this.log(`TypeScript issues found: ${error.message}`, 'WARN');
+      this.log(`TypeScript issues found: ${error.message}`, 'WARN'),
     }
   }
 
@@ -109,10 +109,10 @@ class AutoFixer {
       if (Object.keys(outdatedDeps).length > 0) {
         this.log(
           `Found ${Object.keys(outdatedDeps).length} outdated dependencies`
-        );
+        ),
       }
     } catch (error) {
-      this.log(`Dependency check completed`);
+      this.log(`Dependency check completed`),
     }
   }
 
@@ -134,15 +134,15 @@ class AutoFixer {
           execSync(`find . -name "${pattern}" -type f -delete`, {
             stdio: 'pipe',
             cwd: process.cwd(),
-          });
+          }),
         } catch (err) {
           // Ignore errors for file cleanup
         }
       }
 
-      this.log('Temporary files cleaned up');
+      this.log('Temporary files cleaned up'),
     } catch (error) {
-      this.log(`Failed to cleanup temp files: ${error.message}`, 'ERROR');
+      this.log(`Failed to cleanup temp files: ${error.message}`, 'ERROR'),
     }
   }
 
@@ -152,9 +152,9 @@ class AutoFixer {
 
       // This would typically use a tool like organize-imports-cli
       // For now, we'll just log that we're checking
-      this.log('Import optimization check completed');
+      this.log('Import optimization check completed'),
     } catch (error) {
-      this.log(`Failed to optimize imports: ${error.message}`, 'ERROR');
+      this.log(`Failed to optimize imports: ${error.message}`, 'ERROR'),
     }
   }
 }
@@ -165,15 +165,15 @@ async function main() {
 
   try {
     await autoFixer.runAutoFix();
-    process.exit(0);
+    process.exit(0),
   } catch (error) {
     autoFixer.log(`Auto-fix failed: ${error.message}`, 'ERROR');
-    process.exit(1);
+    process.exit(1),
   }
 }
 
 if (require.main === module) {
-  main();
+  main(),
 }
 
 module.exports = AutoFixer;

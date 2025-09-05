@@ -7,28 +7,28 @@ const files = [
     content: `import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AccessibilityContextType {
-  announceToScreenReader: (message: string) => void;
-  setFocus: (elementId: string) => void;
+  announceToScreenReader: (message: string) => void,
+  setFocus: (elementId: string) => void,
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 interface AccessibilityProviderProps {
-  children: ReactNode;
+  children: ReactNode,
 }
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
   const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById('live-region');
+    const liveRegion = document.getElementById('live-region'),
     if (liveRegion) {
       liveRegion.textContent = message;
     }
   };
 
   const setFocus = (elementId: string) => {
-    const element = document.getElementById(elementId);
+    const element = document.getElementById(elementId),
     if (element) {
-      element.focus();
+      element.focus(),
     }
   };
 
@@ -36,15 +36,15 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
       {children}
     </AccessibilityContext.Provider>
-  );
+  ),
 };
 
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
+    throw new Error('useAccessibility must be used within an AccessibilityProvider'),
   }
-  return context;
+  return context,
 };`
   },
   {
@@ -52,17 +52,17 @@ export const useAccessibility = () => {
     content: `import React, { useEffect } from 'react';
 
 interface AnalyticsProps {
-  trackingId?: string;
+  trackingId?: string,
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
   useEffect(() => {
     if (typeof window !== 'undefined' && trackingId) {
-      console.log('Analytics initialized with tracking ID:', trackingId);
+      console.log('Analytics initialized with tracking ID:', trackingId),
     }
   }, [trackingId]);
 
-  return null;
+  return null,
 };
 
 export default Analytics;`
@@ -70,10 +70,9 @@ export default Analytics;`
   {
     path: 'components/LoadingSpinner.tsx',
     content: `import React from 'react';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
-  className?: string;
+  className?: string,
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {
@@ -81,13 +80,13 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className 
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
-  };
+  },
 
   return (
     <div className={'animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ' + sizeClasses[size] + ' ' + className}>
       <span className="sr-only">Loading...</span>
     </div>
-  );
+  ),
 };
 
 export default LoadingSpinner;`
@@ -97,9 +96,9 @@ export default LoadingSpinner;`
     content: `import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
+  loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -116,13 +115,13 @@ const PerformanceMonitor: React.FC = () => {
             loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
             renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
             memoryUsage: (performance as any).memory?.usedJSHeapSize || 0
-          });
+          }),
         }
       });
 
-      observer.observe({ entryTypes: ['navigation'] });
+      observer.observe({ entryTypes: ['navigation'] }),
 
-      return () => observer.disconnect();
+      return () => observer.disconnect(),
     }
   }, []);
 
@@ -134,7 +133,7 @@ const PerformanceMonitor: React.FC = () => {
       <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
       <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
     </div>
-  );
+  ),
 };
 
 export default PerformanceMonitor;`
@@ -149,7 +148,7 @@ interface SEOHeadProps {
   description?: string;
   keywords?: string;
   ogImage?: string;
-  url?: string;
+  url?: string,
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -157,7 +156,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   description = 'Leading provider of AI-powered technology solutions, web development, mobile apps, and digital transformation services.',
   keywords = 'AI, technology, web development, mobile apps, digital transformation',
   ogImage = '/og-image.jpg',
-  url = 'https://ziontechgroup.com'
+  url = 'https: //ziontechgroup.com'
 }) => {
   return (
     <Head>
@@ -175,7 +174,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:image" content={ogImage} />
       <link rel="canonical" href={url} />
     </Head>
-  );
+  ),
 };
 
 export default SEOHead;`
@@ -185,9 +184,9 @@ export default SEOHead;`
 files.forEach(file => {
   try {
     fs.writeFileSync(file.path, file.content);
-    console.log('Fixed:', file.path);
+    console.log('Fixed:', file.path),
   } catch (error) {
-    console.error('Error fixing', file.path, ':', error.message);
+    console.error('Error fixing', file.path, ':', error.message),
   }
 });
 

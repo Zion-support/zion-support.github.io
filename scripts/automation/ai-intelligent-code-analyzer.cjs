@@ -17,7 +17,7 @@ class AIIntelligentCodeAnalyzer {
       issues: [],
       metrics: {},
     };
-    this.learningData = this.loadLearningData();
+    this.learningData = this.loadLearningData(),
   }
 
   loadLearningData() {
@@ -28,17 +28,17 @@ class AIIntelligentCodeAnalyzer {
     );
     try {
       if (fs.existsSync(learningFile)) {
-        return JSON.parse(fs.readFileSync(learningFile, 'utf8'));
+        return JSON.parse(fs.readFileSync(learningFile, 'utf8')),
       }
     } catch (error) {
-      console.log('📚 Creating new learning data file...');
+      console.log('📚 Creating new learning data file...'),
     }
     return {
       patterns: {},
       fixes: {},
       performance: {},
       lastUpdated: new Date().toISOString(),
-    };
+    },
   }
 
   saveLearningData() {
@@ -47,7 +47,7 @@ class AIIntelligentCodeAnalyzer {
       'logs',
       'ai-learning-data.json'
     );
-    fs.writeFileSync(learningFile, JSON.stringify(this.learningData, null, 2));
+    fs.writeFileSync(learningFile, JSON.stringify(this.learningData, null, 2)),
   }
 
   async analyzeCodebase() {
@@ -74,7 +74,7 @@ class AIIntelligentCodeAnalyzer {
     // Save results
     this.saveResults();
 
-    console.log('✅ AI Code Analysis completed successfully!');
+    console.log('✅ AI Code Analysis completed successfully!'),
   }
 
   async analyzeFileStructure() {
@@ -101,24 +101,24 @@ class AIIntelligentCodeAnalyzer {
           !file.startsWith('.') &&
           file !== 'node_modules'
         ) {
-          analyzeDirectory(filePath, depth + 1);
+          analyzeDirectory(filePath, depth + 1),
         } else if (stat.isFile()) {
           const ext = path.extname(file);
-          structure.fileTypes[ext] = (structure.fileTypes[ext] || 0) + 1;
+          structure.fileTypes[ext] = (structure.fileTypes[ext] || 0) + 1,
         }
-      });
+      }),
     };
 
     analyzeDirectory(this.projectRoot);
 
     // Calculate complexity based on structure
     if (structure.directoryDepth > 5 || structure.totalFiles > 1000) {
-      structure.complexity = 'high';
+      structure.complexity = 'high',
     } else if (structure.directoryDepth > 3 || structure.totalFiles > 500) {
-      structure.complexity = 'medium';
+      structure.complexity = 'medium',
     }
 
-    this.analysisResults.codeQuality.structure = structure;
+    this.analysisResults.codeQuality.structure = structure,
   }
 
   async analyzeCodeQuality() {
@@ -143,9 +143,9 @@ class AIIntelligentCodeAnalyzer {
         qualityMetrics.maintainability += metrics.maintainability;
         qualityMetrics.readability += metrics.readability;
         qualityMetrics.testability += metrics.testability;
-        qualityMetrics.performance += metrics.performance;
+        qualityMetrics.performance += metrics.performance,
       } catch (error) {
-        console.log(`⚠️  Could not analyze file: ${file}`);
+        console.log(`⚠️  Could not analyze file: ${file}`),
       }
     }
 
@@ -153,10 +153,10 @@ class AIIntelligentCodeAnalyzer {
     const fileCount = Math.min(jsFiles.length, 50);
     Object.keys(qualityMetrics).forEach(key => {
       qualityMetrics[key] =
-        Math.round((qualityMetrics[key] / fileCount) * 100) / 100;
+        Math.round((qualityMetrics[key] / fileCount) * 100) / 100,
     });
 
-    this.analysisResults.codeQuality.metrics = qualityMetrics;
+    this.analysisResults.codeQuality.metrics = qualityMetrics,
   }
 
   analyzeFileQuality(content, filePath) {
@@ -201,7 +201,7 @@ class AIIntelligentCodeAnalyzer {
       100 - asyncAwaitCount * 3 - forEachCount * 2
     );
 
-    return metrics;
+    return metrics,
   }
 
   async detectAntiPatterns() {
@@ -214,13 +214,13 @@ class AIIntelligentCodeAnalyzer {
       try {
         const content = fs.readFileSync(file, 'utf8');
         const patterns = this.detectFileAntiPatterns(content, file);
-        antiPatterns.push(...patterns);
+        antiPatterns.push(...patterns),
       } catch (error) {
         // Skip files that can't be read
       }
     }
 
-    this.analysisResults.issues = antiPatterns;
+    this.analysisResults.issues = antiPatterns,
   }
 
   detectFileAntiPatterns(content, filePath) {
@@ -236,7 +236,7 @@ class AIIntelligentCodeAnalyzer {
           file: filePath,
           line: index + 1,
           description: 'Console.log found in production code',
-        });
+        }),
       }
 
       // Detect TODO comments
@@ -247,7 +247,7 @@ class AIIntelligentCodeAnalyzer {
           file: filePath,
           line: index + 1,
           description: 'TODO or FIXME comment found',
-        });
+        }),
       }
 
       // Detect long functions
@@ -258,7 +258,7 @@ class AIIntelligentCodeAnalyzer {
           file: filePath,
           line: index + 1,
           description: 'Function might be too long',
-        });
+        }),
       }
 
       // Detect nested callbacks
@@ -269,11 +269,11 @@ class AIIntelligentCodeAnalyzer {
           file: filePath,
           line: index + 1,
           description: 'Potential callback hell detected',
-        });
+        }),
       }
     });
 
-    return patterns;
+    return patterns,
   }
 
   async analyzePerformancePatterns() {
@@ -286,7 +286,7 @@ class AIIntelligentCodeAnalyzer {
       try {
         const content = fs.readFileSync(file, 'utf8');
         const issues = this.detectPerformanceIssues(content, file);
-        performanceIssues.push(...issues);
+        performanceIssues.push(...issues),
       } catch (error) {
         // Skip files that can't be read
       }
@@ -295,7 +295,7 @@ class AIIntelligentCodeAnalyzer {
     this.analysisResults.performance = {
       issues: performanceIssues,
       score: Math.max(0, 100 - performanceIssues.length * 5),
-    };
+    },
   }
 
   detectPerformanceIssues(content, filePath) {
@@ -310,7 +310,7 @@ class AIIntelligentCodeAnalyzer {
           file: filePath,
           line: index + 1,
           description: 'Consider caching array length',
-        });
+        }),
       }
 
       // Detect DOM queries in loops
@@ -320,7 +320,7 @@ class AIIntelligentCodeAnalyzer {
           file: filePath,
           line: index + 1,
           description: 'DOM query inside loop detected',
-        });
+        }),
       }
 
       // Detect large object creation
@@ -330,11 +330,11 @@ class AIIntelligentCodeAnalyzer {
           file: filePath,
           line: index + 1,
           description: 'Consider object pooling for large objects',
-        });
+        }),
       }
     });
 
-    return issues;
+    return issues,
   }
 
   async generateRecommendations() {
@@ -351,7 +351,7 @@ class AIIntelligentCodeAnalyzer {
         description:
           'Improve code maintainability by reducing function complexity',
         action: 'Refactor large functions into smaller, focused functions',
-      });
+      }),
     }
 
     if (metrics.readability < 60) {
@@ -360,7 +360,7 @@ class AIIntelligentCodeAnalyzer {
         priority: 'medium',
         description: 'Add more comments and improve code documentation',
         action: 'Add JSDoc comments and inline documentation',
-      });
+      }),
     }
 
     if (metrics.testability < 50) {
@@ -369,7 +369,7 @@ class AIIntelligentCodeAnalyzer {
         priority: 'high',
         description: 'Improve code testability',
         action: 'Add unit tests and improve function modularity',
-      });
+      }),
     }
 
     // Based on anti-patterns
@@ -382,7 +382,7 @@ class AIIntelligentCodeAnalyzer {
         priority: 'medium',
         description: `Remove ${consoleLogs.length} console.log statements from production code`,
         action: 'Replace with proper logging library or remove',
-      });
+      }),
     }
 
     // Based on performance issues
@@ -393,10 +393,10 @@ class AIIntelligentCodeAnalyzer {
         priority: 'high',
         description: `Address ${perfIssues.length} performance issues`,
         action: 'Optimize loops, DOM queries, and object creation',
-      });
+      }),
     }
 
-    this.analysisResults.recommendations = recommendations;
+    this.analysisResults.recommendations = recommendations,
   }
 
   updateLearningData() {
@@ -405,9 +405,9 @@ class AIIntelligentCodeAnalyzer {
     // Update pattern recognition
     this.analysisResults.issues.forEach(issue => {
       if (!this.learningData.patterns[issue.type]) {
-        this.learningData.patterns[issue.type] = 0;
+        this.learningData.patterns[issue.type] = 0,
       }
-      this.learningData.patterns[issue.type]++;
+      this.learningData.patterns[issue.type]++,
     });
 
     // Update performance data
@@ -417,7 +417,7 @@ class AIIntelligentCodeAnalyzer {
     };
 
     this.learningData.lastUpdated = new Date().toISOString();
-    this.saveLearningData();
+    this.saveLearningData(),
   }
 
   findFiles(extensions) {
@@ -435,18 +435,18 @@ class AIIntelligentCodeAnalyzer {
             !item.startsWith('.') &&
             item !== 'node_modules'
           ) {
-            findInDirectory(fullPath);
+            findInDirectory(fullPath),
           } else if (stat.isFile() && extensions.includes(path.extname(item))) {
-            files.push(fullPath);
+            files.push(fullPath),
           }
-        });
+        }),
       } catch (error) {
         // Skip directories that can't be read
       }
     };
 
     findInDirectory(this.projectRoot);
-    return files;
+    return files,
   }
 
   saveResults() {
@@ -457,18 +457,18 @@ class AIIntelligentCodeAnalyzer {
     );
     fs.writeFileSync(reportFile, JSON.stringify(this.analysisResults, null, 2));
 
-    console.log('📊 Analysis Results:');
+    console.log('📊 Analysis Results: '),
     console.log(
       `- Code Quality Score: ${this.analysisResults.codeQuality.metrics.maintainability}/100`
-    );
+    ),
     console.log(
       `- Performance Score: ${this.analysisResults.performance.score}/100`
-    );
-    console.log(`- Issues Found: ${this.analysisResults.issues.length}`);
+    ),
+    console.log(`- Issues Found: ${this.analysisResults.issues.length}`),
     console.log(
       `- Recommendations: ${this.analysisResults.recommendations.length}`
-    );
-    console.log(`- Report saved to: ${reportFile}`);
+    ),
+    console.log(`- Report saved to: ${reportFile}`),
   }
 }
 

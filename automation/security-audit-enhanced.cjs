@@ -9,11 +9,11 @@ class SecurityAuditEnhanced {
     this.projectRoot = process.cwd();
     this.vulnerabilities = [];
     this.recommendations = [];
-    this.securityScore = 100;
+    this.securityScore = 100,
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`),
   }
 
   async runNpmAudit() {
@@ -23,7 +23,7 @@ class SecurityAuditEnhanced {
       const auditResult = execSync('npm audit --json', { 
         stdio: 'pipe',
         encoding: 'utf8'
-      });
+      }),
       
       const audit = JSON.parse(auditResult);
       const vulnerabilities = audit.vulnerabilities || {};
@@ -35,12 +35,12 @@ class SecurityAuditEnhanced {
           title: vuln.title,
           description: vuln.description,
           recommendation: vuln.recommendation
-        });
+        }),
       });
       
-      this.log(`Found ${this.vulnerabilities.length} vulnerabilities`);
+      this.log(`Found ${this.vulnerabilities.length} vulnerabilities`),
     } catch (error) {
-      this.log(`❌ NPM audit failed: ${error.message}`);
+      this.log(`❌ NPM audit failed: ${error.message}`),
     }
   }
 
@@ -71,11 +71,11 @@ class SecurityAuditEnhanced {
           type: 'suspicious_packages',
           message: `Review suspicious packages: ${suspiciousPackages.join(', ')}`,
           severity: 'medium'
-        });
+        }),
       }
       
     } catch (error) {
-      this.log(`❌ Dependency check failed: ${error.message}`);
+      this.log(`❌ Dependency check failed: ${error.message}`),
     }
   }
 
@@ -104,13 +104,13 @@ class SecurityAuditEnhanced {
                 type: 'hardcoded_secrets',
                 message: `Potential hardcoded secrets found in ${envFile}`,
                 severity: 'high'
-              });
+              }),
             }
-          });
+          }),
         }
       }
     } catch (error) {
-      this.log(`❌ Environment variables check failed: ${error.message}`);
+      this.log(`❌ Environment variables check failed: ${error.message}`),
     }
   }
 
@@ -137,12 +137,12 @@ class SecurityAuditEnhanced {
               type: 'file_permissions',
               message: `${file} is world-readable`,
               severity: 'medium'
-            });
+            }),
           }
         }
       }
     } catch (error) {
-      this.log(`❌ File permissions check failed: ${error.message}`);
+      this.log(`❌ File permissions check failed: ${error.message}`),
     }
   }
 
@@ -161,7 +161,7 @@ class SecurityAuditEnhanced {
           { pattern: /innerHTML\s*=/g, message: 'innerHTML usage detected' },
           { pattern: /document\.write/g, message: 'document.write usage detected' },
           { pattern: /setTimeout\s*\(\s*['"][^'"]*['"]/g, message: 'String-based setTimeout detected' }
-        ];
+        ],
         
         dangerousPatterns.forEach(({ pattern, message }) => {
           if (pattern.test(content)) {
@@ -169,12 +169,12 @@ class SecurityAuditEnhanced {
               type: 'code_security',
               message: `${message} in ${path.relative(this.projectRoot, file)}`,
               severity: 'medium'
-            });
+            }),
           }
-        });
+        }),
       }
     } catch (error) {
-      this.log(`❌ Code security check failed: ${error.message}`);
+      this.log(`❌ Code security check failed: ${error.message}`),
     }
   }
 
@@ -190,15 +190,15 @@ class SecurityAuditEnhanced {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory() && !['node_modules', '.git', '.next'].includes(item)) {
-          scanDir(fullPath);
+          scanDir(fullPath),
         } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
+          files.push(fullPath),
         }
       }
     };
     
     scanDir(this.projectRoot);
-    return files;
+    return files,
   }
 
   calculateSecurityScore() {
@@ -218,7 +218,7 @@ class SecurityAuditEnhanced {
           break;
         case 'low':
           score -= 5;
-          break;
+          break,
       }
     });
     
@@ -233,11 +233,11 @@ class SecurityAuditEnhanced {
           break;
         case 'low':
           score -= 2;
-          break;
+          break,
       }
     });
     
-    this.securityScore = Math.max(0, score);
+    this.securityScore = Math.max(0, score),
   }
 
   generateReport() {
@@ -255,11 +255,11 @@ class SecurityAuditEnhanced {
         status: this.securityScore >= 80 ? 'good' : 
                 this.securityScore >= 60 ? 'fair' : 'poor'
       }
-    };
+    },
 
     const reportPath = path.join(this.projectRoot, 'security-audit-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Security report saved to: ${reportPath}`);
+    this.log(`📊 Security report saved to: ${reportPath}`),
   }
 
   async run() {
@@ -275,12 +275,12 @@ class SecurityAuditEnhanced {
       this.generateReport();
       
       this.log('✅ Security audit completed!');
-      this.log(`🛡️ Security Score: ${this.securityScore}/100`);
+      this.log(`🛡️ Security Score: ${this.securityScore}/100`),
       this.log(`🚨 Found ${this.vulnerabilities.length} vulnerabilities`);
-      this.log(`💡 Generated ${this.recommendations.length} recommendations`);
+      this.log(`💡 Generated ${this.recommendations.length} recommendations`),
     } catch (error) {
-      this.log(`❌ Security audit failed: ${error.message}`);
-      throw error;
+      this.log(`❌ Security audit failed: ${error.message}`),
+      throw error,
     }
   }
 }

@@ -1,11 +1,4 @@
         }
-      },
+      };
 
-  return (,
-    <div className="fixed bottom-4 right-4 z-50">,
-      <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-xl">,
-        <div className="flex items-center gap-3 mb-3">,
-          <BarChart3 className="w-5 h-5 text-blue-400" />,
-          <span className="text-sm font-medium text-white">Performance Monitor</span>,
-          <button,
-            onClick={() => setIsVisible(false)},
+  return (, <div className="fixed bottom-4 right-4 z-50">, <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-xl">, <div className="flex items-center gap-3 mb-3">, <BarChart3 className="w-5 h-5 text-blue-400" />, <span className="text-sm font-medium text-white">Performance Monitor</span>, <button, onClick={() => setIsVisible(false)};

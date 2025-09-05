@@ -5,12 +5,12 @@ const { execSync } = require('child_process');
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
-    this.ensureLogsDir();
+    this.ensureLogsDir(),
   }
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
+      fs.mkdirSync(this.logsDir, { recursive: true }),
     }
   }
 
@@ -21,22 +21,22 @@ class MasterAutomation {
 
     // Write to log file
     const logFile = path.join(this.logsDir, 'master-automation.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, logMessage + '\n'),
   }
 
   async runCommand(command, description) {
     try {
-      this.log(`Running: ${description}`);
+      this.log(`Running: ${description}`),
       const output = execSync(command, {
         encoding: 'utf8',
         cwd: '/workspace',
         stdio: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
+      return { success: true, output },
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
+      return { success: false, error: error.message },
     }
   }
 
@@ -56,12 +56,12 @@ class MasterAutomation {
 
       if (!result.success) {
         this.log(`❌ Build process failed at: ${step.description}`, 'error');
-        return { success: false, results };
+        return { success: false, results },
       }
     }
 
     this.log('✅ Build process completed successfully');
-    return { success: true, results };
+    return { success: true, results },
   }
 
   async runQualityChecks() {
@@ -75,11 +75,11 @@ class MasterAutomation {
     const results = [];
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
-      results.push({ ...check, result });
+      results.push({ ...check, result }),
     }
 
     this.log('✅ Quality checks completed');
-    return { success: true, results };
+    return { success: true, results },
   }
 
   async runAutomationScripts() {
@@ -103,11 +103,11 @@ class MasterAutomation {
     const results = [];
     for (const script of scripts) {
       const result = await this.runCommand(script.command, script.description);
-      results.push({ ...script, result });
+      results.push({ ...script, result }),
     }
 
     this.log('✅ Automation scripts completed');
-    return { success: true, results };
+    return { success: true, results },
   }
 
   async generateReport() {
@@ -142,15 +142,15 @@ class MasterAutomation {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`📄 Report saved to: ${reportFile}`);
-    return report;
+    this.log(`📄 Report saved to: ${reportFile}`),
+    return report,
   }
 
   async start() {
     this.log('🎯 Starting Master Automation System...');
     const report = await this.generateReport();
     this.log('🏁 Master Automation completed');
-    return report;
+    return report,
   }
 
   async status() {
@@ -166,9 +166,9 @@ class MasterAutomation {
     // Check build status
     try {
       const buildResult = await this.runCommand('npm run build', 'Build check');
-      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
+      status.buildStatus = buildResult.success ? 'healthy' : 'failed',
     } catch (error) {
-      status.buildStatus = 'error';
+      status.buildStatus = 'error',
     }
 
     // Check git status
@@ -177,9 +177,9 @@ class MasterAutomation {
         'git status --porcelain',
         'Git status check'
       );
-      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
+      status.gitStatus = gitResult.success ? 'clean' : 'dirty',
     } catch (error) {
-      status.gitStatus = 'error';
+      status.gitStatus = 'error',
     }
 
     // Check dependencies
@@ -188,13 +188,13 @@ class MasterAutomation {
         'npm list --depth=0',
         'Dependencies check'
       );
-      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
+      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing',
     } catch (error) {
-      status.dependenciesStatus = 'error';
+      status.dependenciesStatus = 'error',
     }
 
     this.log('📊 Status check completed');
-    return status;
+    return status,
   }
 }
 
@@ -209,11 +209,11 @@ if (require.main === module) {
         .start()
         .then(report => {
           console.log('Automation completed:', report.summary);
-          process.exit(0);
+          process.exit(0),
         })
         .catch(error => {
           console.error('Automation failed:', error);
-          process.exit(1);
+          process.exit(1),
         });
       break;
     case 'status':
@@ -221,16 +221,15 @@ if (require.main === module) {
         .status()
         .then(status => {
           console.log('Status:', status);
-          process.exit(0);
+          process.exit(0),
         })
         .catch(error => {
           console.error('Status check failed:', error);
-          process.exit(1);
+          process.exit(1),
         });
       break;
-    default:
-      console.log('Usage: node master-automation.cjs [start|status]');
-      process.exit(1);
+    default: console.log('Usage: node master-automation.cjs [start|status]'),
+      process.exit(1),
   }
 }
 

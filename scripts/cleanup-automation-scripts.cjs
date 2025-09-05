@@ -122,11 +122,11 @@ filesToRemove.forEach(file => {
     if (fs.existsSync(filePath)) {
       fs.unlinkSync(filePath);
       removedCount++;
-      console.log(`✅ Removed: ${file}`);
+      console.log(`✅ Removed: ${file}`),
     }
   } catch (error) {
     errorCount++;
-    console.log(`❌ Error removing ${file}: ${error.message}`);
+    console.log(`❌ Error removing ${file}: ${error.message}`),
   }
 });
 
@@ -149,11 +149,11 @@ dirsToCheck.forEach(dir => {
       const files = fs.readdirSync(dirPath);
       if (files.length === 0) {
         fs.rmdirSync(dirPath);
-        console.log(`✅ Removed empty directory: ${dir}`);
+        console.log(`✅ Removed empty directory: ${dir}`),
       }
     }
   } catch (error) {
-    console.log(`⚠️  Could not check/remove ${dir}: ${error.message}`);
+    console.log(`⚠️  Could not check/remove ${dir}: ${error.message}`),
   }
 });
 

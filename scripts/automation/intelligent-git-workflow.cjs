@@ -15,7 +15,7 @@ class IntelligentGitWorkflow {
       conflictResolution: process.env.CONFLICT_RESOLUTION === 'ai-powered',
       branchStrategy: process.env.BRANCH_STRATEGY || 'smart',
     };
-    this.workflowData = this.loadWorkflowData();
+    this.workflowData = this.loadWorkflowData(),
   }
 
   loadWorkflowData() {
@@ -26,10 +26,10 @@ class IntelligentGitWorkflow {
     );
     try {
       if (fs.existsSync(dataFile)) {
-        return JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+        return JSON.parse(fs.readFileSync(dataFile, 'utf8')),
       }
     } catch (error) {
-      console.log('📚 Creating new workflow data file...');
+      console.log('📚 Creating new workflow data file...'),
     }
     return {
       lastCommit: null,
@@ -37,7 +37,7 @@ class IntelligentGitWorkflow {
       mergeHistory: [],
       conflictHistory: [],
       performance: {},
-    };
+    },
   }
 
   saveWorkflowData() {
@@ -46,7 +46,7 @@ class IntelligentGitWorkflow {
       'logs',
       'git-workflow-data.json'
     );
-    fs.writeFileSync(dataFile, JSON.stringify(this.workflowData, null, 2));
+    fs.writeFileSync(dataFile, JSON.stringify(this.workflowData, null, 2)),
   }
 
   async runWorkflow() {
@@ -64,45 +64,45 @@ class IntelligentGitWorkflow {
 
         // Determine if auto-commit should happen
         if (this.shouldAutoCommit(changes)) {
-          await this.intelligentCommit(changes);
+          await this.intelligentCommit(changes),
         }
       }
 
       // Check for merge opportunities
       if (this.config.autoMerge) {
-        await this.intelligentMerge();
+        await this.intelligentMerge(),
       }
 
       // Update workflow data
       this.updateWorkflowData();
       this.saveWorkflowData();
 
-      console.log('✅ Git workflow completed successfully!');
+      console.log('✅ Git workflow completed successfully!'),
     } catch (error) {
       console.error('❌ Git workflow failed:', error.message);
-      this.handleWorkflowError(error);
+      this.handleWorkflowError(error),
     }
   }
 
   async checkGitStatus() {
     try {
-      const status = execSync('git status --porcelain', { encoding: 'utf8' });
+      const status = execSync('git status --porcelain', { encoding: 'utf8' }),
       const hasChanges = status.trim().length > 0;
 
       return {
         hasChanges,
         status: status.trim(),
         files: status.trim() ? status.trim().split('\n') : [],
-      };
+      },
     } catch (error) {
       console.log('⚠️  Not a Git repository or Git not available');
-      return { hasChanges: false, status: '', files: [] };
+      return { hasChanges: false, status: '', files: [] },
     }
   }
 
   async analyzeChanges() {
     try {
-      const diff = execSync('git diff --cached', { encoding: 'utf8' });
+      const diff = execSync('git diff --cached', { encoding: 'utf8' }),
       const diffStats = execSync('git diff --cached --stat', {
         encoding: 'utf8',
       });
@@ -137,9 +137,9 @@ class IntelligentGitWorkflow {
           const match = stats.match(/(\d+)\s+(\+|\-)/);
           if (match) {
             if (match[2] === '+') {
-              changes.linesAdded += parseInt(match[1]);
+              changes.linesAdded += parseInt(match[1]),
             } else {
-              changes.linesDeleted += parseInt(match[1]);
+              changes.linesDeleted += parseInt(match[1]),
             }
           }
         }
@@ -149,22 +149,22 @@ class IntelligentGitWorkflow {
       changes.files.forEach(file => {
         const fileName = file.name.toLowerCase();
         if (fileName.includes('test') || fileName.includes('spec')) {
-          changes.types.tests++;
+          changes.types.tests++,
         } else if (fileName.includes('readme') || fileName.includes('doc')) {
-          changes.types.documentation++;
+          changes.types.documentation++,
         } else if (fileName.includes('fix') || fileName.includes('bug')) {
-          changes.types.fixes++;
+          changes.types.fixes++,
         } else if (fileName.includes('refactor')) {
-          changes.types.refactoring++;
+          changes.types.refactoring++,
         } else {
-          changes.types.features++;
+          changes.types.features++,
         }
       });
 
-      return changes;
+      return changes,
     } catch (error) {
       console.log('⚠️  Could not analyze changes:', error.message);
-      return { files: [], linesAdded: 0, linesDeleted: 0, types: {} };
+      return { files: [], linesAdded: 0, linesDeleted: 0, types: {} },
     }
   }
 
@@ -174,26 +174,26 @@ class IntelligentGitWorkflow {
     // Don't auto-commit if there are too many changes
     if (changes.linesAdded > 500 || changes.linesDeleted > 200) {
       console.log('⚠️  Too many changes for auto-commit');
-      return false;
+      return false,
     }
 
     // Don't auto-commit if there are test failures
     if (changes.types.tests > 0) {
       console.log('🧪 Test changes detected, skipping auto-commit');
-      return false;
+      return false,
     }
 
     // Auto-commit for small fixes and documentation
     if (changes.types.fixes > 0 || changes.types.documentation > 0) {
-      return true;
+      return true,
     }
 
     // Auto-commit for small feature additions
     if (changes.types.features > 0 && changes.linesAdded < 100) {
-      return true;
+      return true,
     }
 
-    return false;
+    return false,
   }
 
   async intelligentCommit(changes) {
@@ -201,25 +201,25 @@ class IntelligentGitWorkflow {
 
     try {
       // Stage all changes
-      execSync('git add .', { stdio: 'inherit' });
+      execSync('git add .', { stdio: 'inherit' }),
 
       // Generate intelligent commit message
       const commitMessage = this.generateCommitMessage(changes);
 
       // Create commit
-      execSync(`git commit -m "${commitMessage}"`, { stdio: 'inherit' });
+      execSync(`git commit -m "${commitMessage}"`, { stdio: 'inherit' }),
 
-      console.log(`✅ Committed: ${commitMessage}`);
+      console.log(`✅ Committed: ${commitMessage}`),
 
       // Update workflow data
       this.workflowData.lastCommit = {
         message: commitMessage,
         timestamp: new Date().toISOString(),
         changes: changes,
-      };
+      },
     } catch (error) {
       console.error('❌ Commit failed:', error.message);
-      throw error;
+      throw error,
     }
   }
 
@@ -236,24 +236,24 @@ class IntelligentGitWorkflow {
     // Generate description
     let description = '';
     if (changes.types.fixes > 0) {
-      description = 'Fix issues and improve stability';
+      description = 'Fix issues and improve stability',
     } else if (changes.types.features > 0) {
-      description = 'Add new features and enhancements';
+      description = 'Add new features and enhancements',
     } else if (changes.types.refactoring > 0) {
-      description = 'Refactor code for better maintainability';
+      description = 'Refactor code for better maintainability',
     } else if (changes.types.documentation > 0) {
-      description = 'Update documentation and comments';
+      description = 'Update documentation and comments',
     } else {
-      description = 'Update codebase';
+      description = 'Update codebase',
     }
 
     // Add file count
     const fileCount = changes.files.length;
     if (fileCount > 0) {
-      description += ` (${fileCount} files)`;
+      description += ` (${fileCount} files)`,
     }
 
-    return `${type}: ${description} [${timestamp}]`;
+    return `${type}: ${description} [${timestamp}]`,
   }
 
   async intelligentMerge() {
@@ -269,7 +269,7 @@ class IntelligentGitWorkflow {
       const branches = execSync('git branch -r', { encoding: 'utf8' })
         .split('\n')
         .map(branch => branch.trim())
-        .filter(branch => branch && !branch.includes('HEAD'));
+        .filter(branch => branch && !branch.includes('HEAD')),
 
       // Find mergeable branches
       const mergeableBranches = await this.findMergeableBranches(
@@ -281,13 +281,13 @@ class IntelligentGitWorkflow {
         console.log(`🔀 Found ${mergeableBranches.length} mergeable branches`);
 
         for (const branch of mergeableBranches) {
-          await this.performIntelligentMerge(branch);
+          await this.performIntelligentMerge(branch),
         }
       } else {
-        console.log('✅ No merge opportunities found');
+        console.log('✅ No merge opportunities found'),
       }
     } catch (error) {
-      console.log('⚠️  Merge check failed:', error.message);
+      console.log('⚠️  Merge check failed:', error.message),
     }
   }
 
@@ -300,7 +300,7 @@ class IntelligentGitWorkflow {
         const mergeBase = execSync(
           `git merge-base ${currentBranch} ${branch}`,
           { encoding: 'utf8' }
-        ).trim();
+        ).trim(),
         const currentCommit = execSync(`git rev-parse ${currentBranch}`, {
           encoding: 'utf8',
         }).trim();
@@ -310,14 +310,14 @@ class IntelligentGitWorkflow {
 
         // If branch is ahead of current branch
         if (branchCommit !== currentCommit && mergeBase === currentCommit) {
-          mergeable.push(branch);
+          mergeable.push(branch),
         }
       } catch (error) {
         // Skip branches that can't be checked
       }
     }
 
-    return mergeable;
+    return mergeable,
   }
 
   async performIntelligentMerge(branch) {
@@ -341,13 +341,13 @@ class IntelligentGitWorkflow {
         branch: branch,
         timestamp: new Date().toISOString(),
         success: true,
-      });
+      }),
     } catch (error) {
       console.log(`⚠️  Merge failed for ${branch}:`, error.message);
 
       // Handle conflicts if configured
       if (this.config.conflictResolution === 'ai-powered') {
-        await this.handleMergeConflicts(branch);
+        await this.handleMergeConflicts(branch),
       }
 
       // Update workflow data
@@ -356,7 +356,7 @@ class IntelligentGitWorkflow {
         timestamp: new Date().toISOString(),
         success: false,
         error: error.message,
-      });
+      }),
     }
   }
 
@@ -367,7 +367,7 @@ class IntelligentGitWorkflow {
 
     try {
       // Get conflicted files
-      const status = execSync('git status --porcelain', { encoding: 'utf8' });
+      const status = execSync('git status --porcelain', { encoding: 'utf8' }),
       const conflictedFiles = status
         .split('\n')
         .filter(
@@ -377,7 +377,7 @@ class IntelligentGitWorkflow {
         .map(line => line.split(' ').pop());
 
       for (const file of conflictedFiles) {
-        await this.resolveFileConflict(file);
+        await this.resolveFileConflict(file),
       }
 
       // Complete the merge
@@ -385,7 +385,7 @@ class IntelligentGitWorkflow {
         stdio: 'inherit',
       });
 
-      console.log(`✅ AI resolved conflicts for ${branch}`);
+      console.log(`✅ AI resolved conflicts for ${branch}`),
     } catch (error) {
       console.log(
         `❌ AI conflict resolution failed for ${branch}:`,
@@ -393,7 +393,7 @@ class IntelligentGitWorkflow {
       );
 
       // Abort the merge
-      execSync('git merge --abort', { stdio: 'inherit' });
+      execSync('git merge --abort', { stdio: 'inherit' }),
     }
   }
 
@@ -413,17 +413,17 @@ class IntelligentGitWorkflow {
 
         if (line.startsWith('<<<<<<<')) {
           inConflict = true;
-          conflictType = 'ours';
+          conflictType = 'ours',
         } else if (line.startsWith('=======')) {
-          conflictType = 'theirs';
+          conflictType = 'theirs',
         } else if (line.startsWith('>>>>>>>')) {
           inConflict = false;
-          conflictType = '';
+          conflictType = '',
         } else if (!inConflict) {
-          resolvedLines.push(line);
+          resolvedLines.push(line),
         } else if (inConflict && conflictType === 'ours') {
           // Keep our version for now (simple strategy)
-          resolvedLines.push(line);
+          resolvedLines.push(line),
         }
         // Skip their version
       }
@@ -432,14 +432,14 @@ class IntelligentGitWorkflow {
       fs.writeFileSync(filePath, resolvedLines.join('\n'));
 
       // Add resolved file
-      execSync(`git add ${filePath}`, { stdio: 'inherit' });
+      execSync(`git add ${filePath}`, { stdio: 'inherit' }),
 
-      console.log(`✅ Resolved conflict in ${filePath}`);
+      console.log(`✅ Resolved conflict in ${filePath}`),
     } catch (error) {
       console.log(
         `❌ Failed to resolve conflict in ${filePath}:`,
         error.message
-      );
+      ),
     }
   }
 
@@ -452,7 +452,7 @@ class IntelligentGitWorkflow {
       commits: this.workflowData.mergeHistory.filter(m => m.success).length,
       conflicts: this.workflowData.conflictHistory.length,
       merges: this.workflowData.mergeHistory.length,
-    };
+    },
   }
 
   handleWorkflowError(error) {
@@ -474,14 +474,14 @@ class IntelligentGitWorkflow {
 
     try {
       if (fs.existsSync(errorFile)) {
-        errors = JSON.parse(fs.readFileSync(errorFile, 'utf8'));
+        errors = JSON.parse(fs.readFileSync(errorFile, 'utf8')),
       }
     } catch (e) {
       // Start fresh if file is corrupted
     }
 
     errors.push(errorLog);
-    fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
+    fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2)),
   }
 }
 

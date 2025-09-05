@@ -15,13 +15,13 @@ class IntelligentErrorDetector {
       runtime: /Runtime error|Uncaught exception/gi,
     };
     this.logFile = path.join(__dirname, 'logs', 'error-detection.log');
-    this.ensureLogDirectory();
+    this.ensureLogDirectory(),
   }
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -29,7 +29,7 @@ class IntelligentErrorDetector {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(`[${level}] ${message}`);
-    fs.appendFileSync(this.logFile, logMessage);
+    fs.appendFileSync(this.logFile, logMessage),
   }
 
   async detectErrors() {
@@ -52,10 +52,10 @@ class IntelligentErrorDetector {
 
     if (totalErrors > 0) {
       await this.generateErrorReport(errors);
-      await this.suggestFixes(errors);
+      await this.suggestFixes(errors),
     }
 
-    return errors;
+    return errors,
   }
 
   async detectSyntaxErrors() {
@@ -67,9 +67,9 @@ class IntelligentErrorDetector {
       const eslintOutput = JSON.parse(result);
       return eslintOutput.filter(issue =>
         issue.messages.some(msg => this.errorPatterns.syntax.test(msg.message))
-      );
+      ),
     } catch (error) {
-      return [];
+      return [],
     }
   }
 
@@ -79,10 +79,10 @@ class IntelligentErrorDetector {
         stdio: 'pipe',
         cwd: process.cwd(),
       });
-      return [];
+      return [],
     } catch (error) {
       const lines = error.stdout.split('\n');
-      return lines.filter(line => this.errorPatterns.type.test(line));
+      return lines.filter(line => this.errorPatterns.type.test(line)),
     }
   }
 
@@ -92,10 +92,10 @@ class IntelligentErrorDetector {
         stdio: 'pipe',
         cwd: process.cwd(),
       });
-      return [];
+      return [],
     } catch (error) {
       const lines = (error.stdout || error.stderr || '').split('\n');
-      return lines.filter(line => this.errorPatterns.module.test(line));
+      return lines.filter(line => this.errorPatterns.module.test(line)),
     }
   }
 
@@ -108,10 +108,10 @@ class IntelligentErrorDetector {
           cwd: process.cwd(),
         }
       );
-      return [];
+      return [],
     } catch (error) {
       const lines = (error.stdout || error.stderr || '').split('\n');
-      return lines.filter(line => this.errorPatterns.import.test(line));
+      return lines.filter(line => this.errorPatterns.import.test(line)),
     }
   }
 
@@ -121,10 +121,10 @@ class IntelligentErrorDetector {
         stdio: 'pipe',
         cwd: process.cwd(),
       });
-      return [];
+      return [],
     } catch (error) {
       const lines = (error.stdout || error.stderr || '').split('\n');
-      return lines.filter(line => this.errorPatterns.build.test(line));
+      return lines.filter(line => this.errorPatterns.build.test(line)),
     }
   }
 
@@ -144,14 +144,14 @@ class IntelligentErrorDetector {
               content
                 .split('\n')
                 .findIndex(line => this.errorPatterns.runtime.test(line)) + 1,
-          });
+          }),
         }
       } catch (error) {
         // Skip files that can't be read
       }
     });
 
-    return runtimeErrors;
+    return runtimeErrors,
   }
 
   getSourceFiles() {
@@ -168,23 +168,23 @@ class IntelligentErrorDetector {
             !item.startsWith('.') &&
             item !== 'node_modules'
           ) {
-            walkDir(fullPath);
+            walkDir(fullPath),
           } else if (
             item.endsWith('.ts') ||
             item.endsWith('.tsx') ||
             item.endsWith('.js') ||
             item.endsWith('.jsx')
           ) {
-            files.push(fullPath);
+            files.push(fullPath),
           }
-        });
+        }),
       } catch (error) {
         // Skip directories that can't be read
       }
     };
 
     walkDir(process.cwd());
-    return files;
+    return files,
   }
 
   async generateErrorReport(errors) {
@@ -197,7 +197,7 @@ class IntelligentErrorDetector {
       errorsByCategory: Object.entries(errors).reduce(
         (acc, [category, errorList]) => {
           acc[category] = errorList.length;
-          return acc;
+          return acc,
         },
         {}
       ),
@@ -209,10 +209,10 @@ class IntelligentErrorDetector {
       'reports',
       'error-detection-report.json'
     );
-    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
+    fs.mkdirSync(path.dirname(reportFile), { recursive: true }),
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`Error report generated: ${reportFile}`);
+    this.log(`Error report generated: ${reportFile}`),
   }
 
   async suggestFixes(errors) {
@@ -221,33 +221,33 @@ class IntelligentErrorDetector {
     if (errors.syntax.length > 0) {
       suggestions.push(
         'Run ESLint with --fix to automatically fix syntax errors'
-      );
+      ),
     }
 
     if (errors.type.length > 0) {
-      suggestions.push('Review TypeScript configuration and type definitions');
+      suggestions.push('Review TypeScript configuration and type definitions'),
     }
 
     if (errors.module.length > 0) {
-      suggestions.push('Check module imports and dependencies');
+      suggestions.push('Check module imports and dependencies'),
     }
 
     if (errors.import.length > 0) {
-      suggestions.push('Verify import paths and module resolution');
+      suggestions.push('Verify import paths and module resolution'),
     }
 
     if (errors.build.length > 0) {
-      suggestions.push('Review build configuration and dependencies');
+      suggestions.push('Review build configuration and dependencies'),
     }
 
     if (errors.runtime.length > 0) {
-      suggestions.push('Add proper error handling and validation');
+      suggestions.push('Add proper error handling and validation'),
     }
 
     if (suggestions.length > 0) {
-      this.log('💡 Suggested fixes:');
+      this.log('💡 Suggested fixes: '),
       suggestions.forEach((suggestion, index) => {
-        this.log(`   ${index + 1}. ${suggestion}`);
+        this.log(`   ${index + 1}. ${suggestion}`),
       });
     }
   }
@@ -256,7 +256,7 @@ class IntelligentErrorDetector {
 // Run if called directly
 if (require.main === module) {
   const detector = new IntelligentErrorDetector();
-  detector.detectErrors().catch(console.error);
+  detector.detectErrors().catch(console.error),
 }
 
 module.exports = IntelligentErrorDetector;

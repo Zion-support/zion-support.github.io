@@ -12,11 +12,11 @@ class AdvancedPerformanceOptimizer {
       bundleSize: 0,
       loadTime: 0,
       performanceScore: 0
-    };
+    },
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`),
   }
 
   async optimizeBundle() {
@@ -24,19 +24,19 @@ class AdvancedPerformanceOptimizer {
     
     try {
       // Run build with analysis
-      execSync('npm run build:analyze', { stdio: 'pipe' });
+      execSync('npm run build:analyze', { stdio: 'pipe' }),
       
       // Check bundle size
       const buildDir = path.join(this.projectRoot, '.next');
       if (fs.existsSync(buildDir)) {
         const stats = this.getDirectorySize(buildDir);
         this.metrics.bundleSize = stats;
-        this.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
+        this.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`),
       }
       
-      this.optimizations.push('Bundle analysis completed');
+      this.optimizations.push('Bundle analysis completed'),
     } catch (error) {
-      this.log(`❌ Bundle optimization failed: ${error.message}`);
+      this.log(`❌ Bundle optimization failed: ${error.message}`),
     }
   }
 
@@ -51,10 +51,10 @@ class AdvancedPerformanceOptimizer {
         this.log(`Found ${images.length} images to optimize`);
         
         // Add optimization recommendations
-        this.optimizations.push(`Found ${images.length} images for optimization`);
+        this.optimizations.push(`Found ${images.length} images for optimization`),
       }
     } catch (error) {
-      this.log(`❌ Image optimization failed: ${error.message}`);
+      this.log(`❌ Image optimization failed: ${error.message}`),
     }
   }
 
@@ -63,18 +63,18 @@ class AdvancedPerformanceOptimizer {
     
     try {
       // Run linting fixes
-      execSync('npm run lint:fix', { stdio: 'pipe' });
+      execSync('npm run lint:fix', { stdio: 'pipe' }),
       
       // Check for unused imports
       const unusedImports = await this.findUnusedImports();
       if (unusedImports.length > 0) {
         this.log(`Found ${unusedImports.length} unused imports`);
-        this.optimizations.push(`Remove ${unusedImports.length} unused imports`);
+        this.optimizations.push(`Remove ${unusedImports.length} unused imports`),
       }
       
-      this.optimizations.push('Code optimization completed');
+      this.optimizations.push('Code optimization completed'),
     } catch (error) {
-      this.log(`❌ Code optimization failed: ${error.message}`);
+      this.log(`❌ Code optimization failed: ${error.message}`),
     }
   }
 
@@ -86,19 +86,19 @@ class AdvancedPerformanceOptimizer {
       const outdated = execSync('npm outdated --json', { 
         stdio: 'pipe',
         encoding: 'utf8'
-      });
+      }),
       
       const outdatedDeps = JSON.parse(outdated);
       const count = Object.keys(outdatedDeps).length;
       
       if (count > 0) {
         this.log(`Found ${count} outdated dependencies`);
-        this.optimizations.push(`Update ${count} outdated dependencies`);
+        this.optimizations.push(`Update ${count} outdated dependencies`),
       }
       
-      this.optimizations.push('Dependency optimization completed');
+      this.optimizations.push('Dependency optimization completed'),
     } catch (error) {
-      this.log(`❌ Dependency optimization failed: ${error.message}`);
+      this.log(`❌ Dependency optimization failed: ${error.message}`),
     }
   }
 
@@ -107,10 +107,10 @@ class AdvancedPerformanceOptimizer {
     
     try {
       // Run lighthouse audit if available
-      execSync('npm run perf:lighthouse', { stdio: 'pipe' });
-      this.optimizations.push('Lighthouse audit completed');
+      execSync('npm run perf:lighthouse', { stdio: 'pipe' }),
+      this.optimizations.push('Lighthouse audit completed'),
     } catch (error) {
-      this.log(`⚠️ Lighthouse audit not available: ${error.message}`);
+      this.log(`⚠️ Lighthouse audit not available: ${error.message}`),
     }
   }
 
@@ -123,13 +123,13 @@ class AdvancedPerformanceOptimizer {
       const stat = fs.statSync(filePath);
       
       if (stat.isDirectory()) {
-        size += this.getDirectorySize(filePath);
+        size += this.getDirectorySize(filePath),
       } else {
-        size += stat.size;
+        size += stat.size,
       }
     }
     
-    return size;
+    return size,
   }
 
   findImages(dir) {
@@ -141,18 +141,18 @@ class AdvancedPerformanceOptimizer {
       const stat = fs.statSync(filePath);
       
       if (stat.isDirectory()) {
-        images.push(...this.findImages(filePath));
+        images.push(...this.findImages(filePath)),
       } else if (/\.(jpg|jpeg|png|gif|webp|svg)$/i.test(file)) {
-        images.push(filePath);
+        images.push(filePath),
       }
     }
     
-    return images;
+    return images,
   }
 
   async findUnusedImports() {
     // This is a simplified version - in practice, you'd use a tool like ts-unused-exports
-    return [];
+    return [],
   }
 
   generateReport() {
@@ -165,11 +165,11 @@ class AdvancedPerformanceOptimizer {
         bundleSize: this.metrics.bundleSize,
         performanceScore: this.metrics.performanceScore
       }
-    };
+    },
 
     const reportPath = path.join(this.projectRoot, 'performance-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath}`);
+    this.log(`📊 Report saved to: ${reportPath}`),
   }
 
   async run() {
@@ -185,10 +185,10 @@ class AdvancedPerformanceOptimizer {
       this.generateReport();
       
       this.log('✅ Performance optimization completed!');
-      this.log(`📈 Applied ${this.optimizations.length} optimizations`);
+      this.log(`📈 Applied ${this.optimizations.length} optimizations`),
     } catch (error) {
-      this.log(`❌ Performance optimization failed: ${error.message}`);
-      throw error;
+      this.log(`❌ Performance optimization failed: ${error.message}`),
+      throw error,
     }
   }
 }

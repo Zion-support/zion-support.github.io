@@ -14,7 +14,7 @@ function findBadShebangs(dir) {
       !file.startsWith('.') &&
       file !== 'node_modules'
     ) {
-      found = found.concat(findBadShebangs(filePath));
+      found = found.concat(findBadShebangs(filePath)),
     } else if (
       file.endsWith('.js') ||
       file.endsWith('.cjs') ||
@@ -25,8 +25,8 @@ function findBadShebangs(dir) {
         const firstLine = content.split('\n')[0];
         if (firstLine.includes('node;')) {
           found.push(filePath);
-          console.log(`Found bad shebang in: ${filePath}`);
-          console.log(`First line: ${firstLine}`);
+          console.log(`Found bad shebang in: ${filePath}`),
+          console.log(`First line: ${firstLine}`),
         }
       } catch (error) {
         // Skip files that can't be read
@@ -34,7 +34,7 @@ function findBadShebangs(dir) {
     }
   }
 
-  return found;
+  return found,
 }
 
 console.log('Searching for files with bad shebangs...');
@@ -47,8 +47,8 @@ for (const file of badFiles) {
     let content = fs.readFileSync(file, 'utf8');
     content = content.replace(/^#!.*node;.*$/m, '#!/usr/bin/env node');
     fs.writeFileSync(file, content, 'utf8');
-    console.log(`Fixed: ${file}`);
+    console.log(`Fixed: ${file}`),
   } catch (error) {
-    console.error(`Error fixing ${file}:`, error.message);
+    console.error(`Error fixing ${file}:`, error.message),
   }
 }

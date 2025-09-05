@@ -11,12 +11,12 @@ class IntelligentMonitoringSystem {
       errors: [],
       warnings: [],
       successes: [],
-    };
+    },
   }
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
+      fs.mkdirSync(this.logsDir, { recursive: true }),
     }
   }
 
@@ -26,13 +26,13 @@ class IntelligentMonitoringSystem {
     console.log(logMessage);
 
     const logFile = path.join(this.logsDir, 'intelligent-monitoring.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, logMessage + '\n'),
   }
 
   async runCommand(command, description) {
     const startTime = Date.now();
     try {
-      this.log(`Running: ${description}`);
+      this.log(`Running: ${description}`),
       const output = execSync(command, {
         encoding: 'utf8',
         cwd: '/workspace',
@@ -47,7 +47,7 @@ class IntelligentMonitoringSystem {
         timestamp: new Date().toISOString(),
       });
 
-      return { success: true, output, duration };
+      return { success: true, output, duration },
     } catch (error) {
       const duration = Date.now() - startTime;
       this.log(`❌ ${description} failed: ${error.message}`, 'error');
@@ -59,7 +59,7 @@ class IntelligentMonitoringSystem {
         timestamp: new Date().toISOString(),
       });
 
-      return { success: false, error: error.message, duration };
+      return { success: false, error: error.message, duration },
     }
   }
 
@@ -81,11 +81,11 @@ class IntelligentMonitoringSystem {
           check: check.description,
           duration: result.duration,
           timestamp: new Date().toISOString(),
-        });
+        }),
       }
     }
 
-    return { success: true, results };
+    return { success: true, results },
   }
 
   async monitorHealth() {
@@ -106,11 +106,11 @@ class IntelligentMonitoringSystem {
           check: check.description,
           warning: result.error,
           timestamp: new Date().toISOString(),
-        });
+        }),
       }
     }
 
-    return { success: true, results };
+    return { success: true, results },
   }
 
   async monitorSecurity() {
@@ -124,10 +124,10 @@ class IntelligentMonitoringSystem {
     const results = [];
     for (const check of securityChecks) {
       const result = await this.runCommand(check.command, check.description);
-      results.push({ ...check, result });
+      results.push({ ...check, result }),
     }
 
-    return { success: true, results };
+    return { success: true, results },
   }
 
   async generateIntelligentReport() {
@@ -160,19 +160,19 @@ class IntelligentMonitoringSystem {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`📄 Report saved to: ${reportFile}`);
-    return report;
+    this.log(`📄 Report saved to: ${reportFile}`),
+    return report,
   }
 
   generateRecommendations() {
     const recommendations = [];
 
     if (this.metrics.errors.length > 0) {
-      recommendations.push('Fix failing commands to improve system stability');
+      recommendations.push('Fix failing commands to improve system stability'),
     }
 
     if (this.metrics.warnings.length > 0) {
-      recommendations.push('Address warnings to improve code quality');
+      recommendations.push('Address warnings to improve code quality'),
     }
 
     if (this.metrics.performance.length > 0) {
@@ -180,17 +180,17 @@ class IntelligentMonitoringSystem {
         this.metrics.performance.reduce((sum, p) => sum + p.duration, 0) /
         this.metrics.performance.length;
       if (avgPerf > 10000) {
-        recommendations.push('Consider optimizing slow operations');
+        recommendations.push('Consider optimizing slow operations'),
       }
     }
 
     if (this.metrics.successes.length === 0) {
       recommendations.push(
         'No successful operations detected - check system configuration'
-      );
+      ),
     }
 
-    return recommendations;
+    return recommendations,
   }
 
   async start() {
@@ -204,18 +204,18 @@ class IntelligentMonitoringSystem {
       const report = await this.generateIntelligentReport();
 
       this.log('🏁 Intelligent Monitoring System completed');
-      this.log(`📊 Success rate: ${report.analysis.successRate.toFixed(2)}%`);
-      this.log(`📊 Total checks: ${report.analysis.totalChecks}`);
-      this.log(`📊 Errors: ${report.analysis.errorCount}`);
-      this.log(`📊 Warnings: ${report.analysis.warningCount}`);
+      this.log(`📊 Success rate: ${report.analysis.successRate.toFixed(2)}%`),
+      this.log(`📊 Total checks: ${report.analysis.totalChecks}`),
+      this.log(`📊 Errors: ${report.analysis.errorCount}`),
+      this.log(`📊 Warnings: ${report.analysis.warningCount}`),
 
-      return report;
+      return report,
     } catch (error) {
       this.log(
         `❌ Intelligent Monitoring System failed: ${error.message}`,
         'error'
       );
-      throw error;
+      throw error,
     }
   }
 }
@@ -227,12 +227,12 @@ if (require.main === module) {
     .start()
     .then(report => {
       console.log('Intelligent monitoring completed:', report.analysis);
-      process.exit(0);
+      process.exit(0),
     })
     .catch(error => {
       console.error('Intelligent monitoring failed:', error);
-      process.exit(1);
-    });
+      process.exit(1),
+    }),
 }
 
 module.exports = IntelligentMonitoringSystem;

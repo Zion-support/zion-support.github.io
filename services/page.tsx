@@ -1,5 +1,5 @@
 
-            </div>,
-          </div>,
-        </section>,
-        {/* Why Choose Us */},
+            </div>;
+          </div>;
+        </section>;
+        {/* Why Choose Us */};

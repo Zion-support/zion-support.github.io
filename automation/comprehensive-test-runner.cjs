@@ -5,12 +5,12 @@ const { execSync } = require('child_process');
 class ComprehensiveTestRunner {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
-    this.ensureLogsDir();
+    this.ensureLogsDir(),
   }
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
+      fs.mkdirSync(this.logsDir, { recursive: true }),
     }
   }
 
@@ -20,22 +20,22 @@ class ComprehensiveTestRunner {
     console.log(logMessage);
 
     const logFile = path.join(this.logsDir, 'comprehensive-test.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, logMessage + '\n'),
   }
 
   async runCommand(command, description) {
     try {
-      this.log(`Running: ${description}`);
+      this.log(`Running: ${description}`),
       const output = execSync(command, {
         encoding: 'utf8',
         cwd: '/workspace',
         stdio: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
+      return { success: true, output },
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
+      return { success: false, error: error.message },
     }
   }
 
@@ -52,11 +52,11 @@ class ComprehensiveTestRunner {
     const results = [];
     for (const test of tests) {
       const result = await this.runCommand(test.command, test.description);
-      results.push({ ...test, result });
+      results.push({ ...test, result }),
     }
 
     this.log('✅ All tests completed');
-    return results;
+    return results,
   }
 
   async generateTestReport() {
@@ -75,9 +75,9 @@ class ComprehensiveTestRunner {
     // Calculate summary
     report.tests.forEach(test => {
       if (test.result.success) {
-        report.summary.passedTests++;
+        report.summary.passedTests++,
       } else {
-        report.summary.failedTests++;
+        report.summary.failedTests++,
       }
     });
 
@@ -88,15 +88,15 @@ class ComprehensiveTestRunner {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`📄 Test report saved to: ${reportFile}`);
-    return report;
+    this.log(`📄 Test report saved to: ${reportFile}`),
+    return report,
   }
 
   async start() {
     this.log('🎯 Starting Comprehensive Test Runner...');
     const report = await this.generateTestReport();
     this.log('🏁 Comprehensive Test Runner completed');
-    return report;
+    return report,
   }
 }
 
@@ -107,12 +107,12 @@ if (require.main === module) {
     .start()
     .then(report => {
       console.log('Test Results:', report.summary);
-      process.exit(report.summary.failedTests > 0 ? 1 : 0);
+      process.exit(report.summary.failedTests > 0 ? 1 : 0),
     })
     .catch(error => {
       console.error('Test Runner failed:', error);
-      process.exit(1);
-    });
+      process.exit(1),
+    }),
 }
 
 module.exports = ComprehensiveTestRunner;

@@ -4,11 +4,11 @@ const { execSync } = require('child_process');
 class AllAutomationsRunner {
   constructor() {
     this.results = [];
-    this.startTime = Date.now();
+    this.startTime = Date.now(),
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`),
   }
 
   async runCommand(command, description) {
@@ -26,16 +26,16 @@ class AllAutomationsRunner {
         success: true,
         output: result,
       });
-      return { success: true, output: result };
+      return { success: true, output: result },
     } catch (error) {
-      this.log(`❌ ${description} - Failed: ${error.message}`);
+      this.log(`❌ ${description} - Failed: ${error.message}`),
       this.results.push({
         command,
         description,
         success: false,
         error: error.message,
       });
-      return { success: false, error: error.message };
+      return { success: false, error: error.message },
     }
   }
 
@@ -64,10 +64,10 @@ class AllAutomationsRunner {
     ];
 
     for (const automation of automations) {
-      await this.runCommand(automation.cmd, automation.desc);
+      await this.runCommand(automation.cmd, automation.desc),
     }
 
-    await this.generateReport();
+    await this.generateReport(),
   }
 
   async generateReport() {
@@ -92,12 +92,12 @@ class AllAutomationsRunner {
     const reportPath = './automation-reports/all-automations-report.json';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    this.log(`📊 Report saved to: ${reportPath}`);
+    this.log(`📊 Report saved to: ${reportPath}`),
     this.log(
       `🎉 All automations completed! Success: ${successful}/${this.results.length} (${report.summary.successRate}%)`
-    );
+    ),
 
-    return report;
+    return report,
   }
 }
 
@@ -106,8 +106,8 @@ if (require.main === module) {
   const runner = new AllAutomationsRunner();
   runner.runAllAutomations().catch(error => {
     console.error('❌ Error:', error);
-    process.exit(1);
-  });
+    process.exit(1),
+  }),
 }
 
 module.exports = AllAutomationsRunner;

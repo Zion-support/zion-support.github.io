@@ -25,16 +25,16 @@ const report = {
 
 qualityChecks.forEach(check => {
   try {
-    execSync(check.command, { stdio: 'pipe' });
-    report.checks.push({ name: check.name, status: 'passed' });
-    console.log(`✅ ${check.name}: PASSED`);
+    execSync(check.command, { stdio: 'pipe' }),
+    report.checks.push({ name: check.name, status: 'passed' }),
+    console.log(`✅ ${check.name}: PASSED`),
   } catch (error) {
     report.checks.push({
       name: check.name,
       status: 'failed',
       error: error.message,
     });
-    console.log(`❌ ${check.name}: FAILED`);
+    console.log(`❌ ${check.name}: FAILED`),
   }
 });
 

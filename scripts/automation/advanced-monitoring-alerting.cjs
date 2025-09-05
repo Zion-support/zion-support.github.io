@@ -22,7 +22,7 @@ class AdvancedMonitoringAlerting {
       disk: 90,
       responseTime: 2000,
       errorRate: 5,
-    };
+    },
   }
 
   async runMonitoring() {
@@ -50,9 +50,9 @@ class AdvancedMonitoringAlerting {
       // Save monitoring data
       this.saveMonitoringData();
 
-      console.log('✅ Advanced monitoring completed!');
+      console.log('✅ Advanced monitoring completed!'),
     } catch (error) {
-      console.error('❌ Monitoring failed:', error.message);
+      console.error('❌ Monitoring failed:', error.message),
     }
   }
 
@@ -70,15 +70,15 @@ class AdvancedMonitoringAlerting {
 
     try {
       // Get system information
-      const uptime = execSync('uptime', { encoding: 'utf8' });
+      const uptime = execSync('uptime', { encoding: 'utf8' }),
       systemHealth.uptime = this.parseUptime(uptime);
 
       // Get memory usage
-      const memoryInfo = execSync('free -m', { encoding: 'utf8' });
+      const memoryInfo = execSync('free -m', { encoding: 'utf8' }),
       systemHealth.memory = this.parseMemoryUsage(memoryInfo);
 
       // Get disk usage
-      const diskInfo = execSync('df -h', { encoding: 'utf8' });
+      const diskInfo = execSync('df -h', { encoding: 'utf8' }),
       systemHealth.disk = this.parseDiskUsage(diskInfo);
 
       // Get load average
@@ -86,18 +86,18 @@ class AdvancedMonitoringAlerting {
 
       this.monitoringData.systemHealth = systemHealth;
 
-      console.log(`📈 System Health:`);
-      console.log(`  - Memory usage: ${systemHealth.memory}%`);
-      console.log(`  - Disk usage: ${systemHealth.disk}%`);
-      console.log(`  - Uptime: ${systemHealth.uptime}`);
+      console.log(`📈 System Health: `),
+      console.log(`  - Memory usage: ${systemHealth.memory}%`),
+      console.log(`  - Disk usage: ${systemHealth.disk}%`),
+      console.log(`  - Uptime: ${systemHealth.uptime}`),
     } catch (error) {
-      console.log('⚠️  System health monitoring failed:', error.message);
+      console.log('⚠️  System health monitoring failed:', error.message),
     }
   }
 
   parseUptime(uptimeString) {
     const match = uptimeString.match(/up\s+([^,]+)/);
-    return match ? match[1].trim() : 'Unknown';
+    return match ? match[1].trim() : 'Unknown',
   }
 
   parseMemoryUsage(memoryString) {
@@ -106,7 +106,7 @@ class AdvancedMonitoringAlerting {
     const values = memLine.split(/\s+/);
     const total = parseInt(values[1]);
     const used = parseInt(values[2]);
-    return Math.round((used / total) * 100);
+    return Math.round((used / total) * 100),
   }
 
   parseDiskUsage(diskString) {
@@ -115,9 +115,9 @@ class AdvancedMonitoringAlerting {
     if (rootLine) {
       const values = rootLine.split(/\s+/);
       const usage = values[4].replace('%', '');
-      return parseInt(usage);
+      return parseInt(usage),
     }
-    return 0;
+    return 0,
   }
 
   parseLoadAverage(uptimeString) {
@@ -125,9 +125,9 @@ class AdvancedMonitoringAlerting {
       /load average:\s+([0-9.]+),\s+([0-9.]+),\s+([0-9.]+)/
     );
     if (match) {
-      return [parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3])];
+      return [parseFloat(match[1]), parseFloat(match[2]), parseFloat(match[3])],
     }
-    return [0, 0, 0];
+    return [0, 0, 0],
   }
 
   async monitorApplicationPerformance() {
@@ -146,8 +146,8 @@ class AdvancedMonitoringAlerting {
       // Measure build time
       const startTime = Date.now();
       try {
-        execSync('npm run build', { stdio: 'pipe' });
-        performanceMetrics.buildTime = Date.now() - startTime;
+        execSync('npm run build', { stdio: 'pipe' }),
+        performanceMetrics.buildTime = Date.now() - startTime,
       } catch (error) {
         performanceMetrics.buildTime = -1; // Build failed
       }
@@ -155,8 +155,8 @@ class AdvancedMonitoringAlerting {
       // Measure test time
       const testStartTime = Date.now();
       try {
-        execSync('npm test', { stdio: 'pipe' });
-        performanceMetrics.testTime = Date.now() - testStartTime;
+        execSync('npm test', { stdio: 'pipe' }),
+        performanceMetrics.testTime = Date.now() - testStartTime,
       } catch (error) {
         performanceMetrics.testTime = -1; // Tests failed
       }
@@ -172,23 +172,23 @@ class AdvancedMonitoringAlerting {
 
       this.monitoringData.performanceMetrics = performanceMetrics;
 
-      console.log(`📊 Performance Metrics:`);
-      console.log(`  - Build time: ${performanceMetrics.buildTime}ms`);
-      console.log(`  - Test time: ${performanceMetrics.testTime}ms`);
+      console.log(`📊 Performance Metrics: `),
+      console.log(`  - Build time: ${performanceMetrics.buildTime}ms`),
+      console.log(`  - Test time: ${performanceMetrics.testTime}ms`),
       console.log(
         `  - Bundle size: ${this.formatBytes(performanceMetrics.bundleSize)}`
-      );
+      ),
       console.log(
         `  - Response time: ${performanceMetrics.responseTime.toFixed(2)}ms`
-      );
+      ),
       console.log(
         `  - Error rate: ${performanceMetrics.errorRate.toFixed(2)}%`
-      );
+      ),
     } catch (error) {
       console.log(
         '⚠️  Application performance monitoring failed:',
         error.message
-      );
+      ),
     }
   }
 
@@ -197,10 +197,10 @@ class AdvancedMonitoringAlerting {
     const nextDir = path.join(this.projectRoot, '.next');
 
     if (fs.existsSync(nextDir)) {
-      totalSize = this.getDirectorySize(nextDir);
+      totalSize = this.getDirectorySize(nextDir),
     }
 
-    return totalSize;
+    return totalSize,
   }
 
   getDirectorySize(dir) {
@@ -211,22 +211,22 @@ class AdvancedMonitoringAlerting {
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
         if (stat.isDirectory()) {
-          size += this.getDirectorySize(filePath);
+          size += this.getDirectorySize(filePath),
         } else {
-          size += stat.size;
+          size += stat.size,
         }
-      });
+      }),
     } catch (error) {
       // Skip directories that can't be read
     }
-    return size;
+    return size,
   }
 
   async monitorPM2Processes() {
     console.log('🔄 Monitoring PM2 processes...');
 
     try {
-      const pm2List = execSync('pm2 list --no-daemon', { encoding: 'utf8' });
+      const pm2List = execSync('pm2 list --no-daemon', { encoding: 'utf8' }),
       const processes = this.parsePM2List(pm2List);
 
       const pm2Health = {
@@ -240,13 +240,13 @@ class AdvancedMonitoringAlerting {
 
       this.monitoringData.pm2Health = pm2Health;
 
-      console.log(`🔄 PM2 Health:`);
-      console.log(`  - Total processes: ${pm2Health.totalProcesses}`);
-      console.log(`  - Online: ${pm2Health.onlineProcesses}`);
-      console.log(`  - Stopped: ${pm2Health.stoppedProcesses}`);
-      console.log(`  - Errored: ${pm2Health.erroredProcesses}`);
+      console.log(`🔄 PM2 Health: `),
+      console.log(`  - Total processes: ${pm2Health.totalProcesses}`),
+      console.log(`  - Online: ${pm2Health.onlineProcesses}`),
+      console.log(`  - Stopped: ${pm2Health.stoppedProcesses}`),
+      console.log(`  - Errored: ${pm2Health.erroredProcesses}`),
     } catch (error) {
-      console.log('⚠️  PM2 monitoring failed:', error.message);
+      console.log('⚠️  PM2 monitoring failed:', error.message),
     }
   }
 
@@ -270,12 +270,12 @@ class AdvancedMonitoringAlerting {
             pid: parts[3],
             uptime: parts[4],
             status: parts[5],
-          });
+          }),
         }
       }
     });
 
-    return processes;
+    return processes,
   }
 
   async monitorGitRepository() {
@@ -285,7 +285,7 @@ class AdvancedMonitoringAlerting {
       const gitStatus = execSync('git status --porcelain', {
         encoding: 'utf8',
       });
-      const gitLog = execSync('git log --oneline -10', { encoding: 'utf8' });
+      const gitLog = execSync('git log --oneline -10', { encoding: 'utf8' }),
       const gitBranch = execSync('git branch --show-current', {
         encoding: 'utf8',
       }).trim();
@@ -303,13 +303,13 @@ class AdvancedMonitoringAlerting {
 
       this.monitoringData.gitHealth = gitHealth;
 
-      console.log(`📚 Git Health:`);
-      console.log(`  - Current branch: ${gitHealth.currentBranch}`);
-      console.log(`  - Uncommitted changes: ${gitHealth.uncommittedChanges}`);
-      console.log(`  - Recent commits: ${gitHealth.recentCommits}`);
-      console.log(`  - Repository clean: ${gitHealth.isClean}`);
+      console.log(`📚 Git Health: `),
+      console.log(`  - Current branch: ${gitHealth.currentBranch}`),
+      console.log(`  - Uncommitted changes: ${gitHealth.uncommittedChanges}`),
+      console.log(`  - Recent commits: ${gitHealth.recentCommits}`),
+      console.log(`  - Repository clean: ${gitHealth.isClean}`),
     } catch (error) {
-      console.log('⚠️  Git monitoring failed:', error.message);
+      console.log('⚠️  Git monitoring failed:', error.message),
     }
   }
 
@@ -342,12 +342,12 @@ class AdvancedMonitoringAlerting {
         trends.performanceTrend = 'degrading';
         trends.recommendations.push(
           'Build time is increasing - consider optimization'
-        );
+        ),
       } else if (
         currentData.performanceMetrics.buildTime <
         avgBuildTime * 0.8
       ) {
-        trends.performanceTrend = 'improving';
+        trends.performanceTrend = 'improving',
       }
 
       // System health trend
@@ -360,16 +360,16 @@ class AdvancedMonitoringAlerting {
         trends.systemHealthTrend = 'degrading';
         trends.recommendations.push(
           'Memory usage is increasing - monitor for leaks'
-        );
+        ),
       }
     }
 
     this.monitoringData.trends = trends;
 
-    console.log(`📈 Trends Analysis:`);
-    console.log(`  - Performance trend: ${trends.performanceTrend}`);
-    console.log(`  - System health trend: ${trends.systemHealthTrend}`);
-    console.log(`  - Recommendations: ${trends.recommendations.length}`);
+    console.log(`📈 Trends Analysis: `),
+    console.log(`  - Performance trend: ${trends.performanceTrend}`),
+    console.log(`  - System health trend: ${trends.systemHealthTrend}`),
+    console.log(`  - Recommendations: ${trends.recommendations.length}`),
   }
 
   loadHistoricalData() {
@@ -380,12 +380,12 @@ class AdvancedMonitoringAlerting {
     );
     try {
       if (fs.existsSync(dataFile)) {
-        return JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+        return JSON.parse(fs.readFileSync(dataFile, 'utf8')),
       }
     } catch (error) {
       // Start fresh if file is corrupted
     }
-    return [];
+    return [],
   }
 
   saveHistoricalData() {
@@ -401,10 +401,10 @@ class AdvancedMonitoringAlerting {
 
     // Keep only last 100 data points
     if (historicalData.length > 100) {
-      historicalData = historicalData.slice(-100);
+      historicalData = historicalData.slice(-100),
     }
 
-    fs.writeFileSync(dataFile, JSON.stringify(historicalData, null, 2));
+    fs.writeFileSync(dataFile, JSON.stringify(historicalData, null, 2)),
   }
 
   async generateAlerts() {
@@ -419,7 +419,7 @@ class AdvancedMonitoringAlerting {
         severity: 'high',
         message: `High memory usage: ${this.monitoringData.systemHealth.memory}%`,
         timestamp: new Date().toISOString(),
-      });
+      }),
     }
 
     if (this.monitoringData.systemHealth.disk > this.alertThresholds.disk) {
@@ -428,7 +428,7 @@ class AdvancedMonitoringAlerting {
         severity: 'critical',
         message: `High disk usage: ${this.monitoringData.systemHealth.disk}%`,
         timestamp: new Date().toISOString(),
-      });
+      }),
     }
 
     // Performance alerts
@@ -438,7 +438,7 @@ class AdvancedMonitoringAlerting {
         severity: 'medium',
         message: `Slow build time: ${this.monitoringData.performanceMetrics.buildTime}ms`,
         timestamp: new Date().toISOString(),
-      });
+      }),
     }
 
     if (
@@ -450,7 +450,7 @@ class AdvancedMonitoringAlerting {
         severity: 'high',
         message: `High error rate: ${this.monitoringData.performanceMetrics.errorRate}%`,
         timestamp: new Date().toISOString(),
-      });
+      }),
     }
 
     // PM2 alerts
@@ -460,7 +460,7 @@ class AdvancedMonitoringAlerting {
         severity: 'high',
         message: `${this.monitoringData.pm2Health.erroredProcesses} PM2 processes are errored`,
         timestamp: new Date().toISOString(),
-      });
+      }),
     }
 
     // Git alerts
@@ -470,18 +470,18 @@ class AdvancedMonitoringAlerting {
         severity: 'low',
         message: `${this.monitoringData.gitHealth.uncommittedChanges} uncommitted changes`,
         timestamp: new Date().toISOString(),
-      });
+      }),
     }
 
     this.monitoringData.alerts = alerts;
 
     if (alerts.length > 0) {
-      console.log(`🚨 Generated ${alerts.length} alerts:`);
+      console.log(`🚨 Generated ${alerts.length} alerts: `),
       alerts.forEach(alert => {
-        console.log(`  - [${alert.severity.toUpperCase()}] ${alert.message}`);
-      });
+        console.log(`  - [${alert.severity.toUpperCase()}] ${alert.message}`),
+      }),
     } else {
-      console.log('✅ No alerts generated - all systems healthy');
+      console.log('✅ No alerts generated - all systems healthy'),
     }
   }
 
@@ -490,7 +490,7 @@ class AdvancedMonitoringAlerting {
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i],
   }
 
   saveMonitoringData() {
@@ -505,18 +505,18 @@ class AdvancedMonitoringAlerting {
     // Save to historical data
     this.saveHistoricalData();
 
-    console.log('📊 Monitoring Results:');
+    console.log('📊 Monitoring Results: '),
     console.log(
       `- System health: ${this.monitoringData.systemHealth.memory}% memory, ${this.monitoringData.systemHealth.disk}% disk`
     );
     console.log(
       `- Performance: ${this.monitoringData.performanceMetrics.buildTime}ms build time`
-    );
+    ),
     console.log(
       `- PM2 processes: ${this.monitoringData.pm2Health?.onlineProcesses || 0} online`
-    );
-    console.log(`- Alerts: ${this.monitoringData.alerts.length}`);
-    console.log(`- Report saved to: ${reportFile}`);
+    ),
+    console.log(`- Alerts: ${this.monitoringData.alerts.length}`),
+    console.log(`- Report saved to: ${reportFile}`),
   }
 }
 

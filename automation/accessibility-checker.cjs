@@ -5,12 +5,12 @@ const { execSync } = require('child_process');
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
-    this.ensureLogsDir();
+    this.ensureLogsDir(),
   }
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
+      fs.mkdirSync(this.logsDir, { recursive: true }),
     }
   }
 
@@ -20,22 +20,22 @@ class AccessibilityChecker {
     console.log(logMessage);
 
     const logFile = path.join(this.logsDir, 'accessibility-checker.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(logFile, logMessage + '\n'),
   }
 
   async runCommand(command, description) {
     try {
-      this.log(`Running: ${description}`);
+      this.log(`Running: ${description}`),
       const output = execSync(command, {
         encoding: 'utf8',
         cwd: '/workspace',
         stdio: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
+      return { success: true, output },
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
+      return { success: false, error: error.message },
     }
   }
 
@@ -53,11 +53,11 @@ class AccessibilityChecker {
     const results = [];
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
-      results.push({ ...check, result });
+      results.push({ ...check, result }),
     }
 
     this.log('✅ Accessibility check completed');
-    return { success: true, results };
+    return { success: true, results },
   }
 
   async generateReport() {
@@ -76,9 +76,9 @@ class AccessibilityChecker {
     // Calculate summary
     report.accessibility.results.forEach(result => {
       if (result.result.success) {
-        report.summary.successfulChecks++;
+        report.summary.successfulChecks++,
       } else {
-        report.summary.failedChecks++;
+        report.summary.failedChecks++,
       }
     });
 
@@ -89,15 +89,15 @@ class AccessibilityChecker {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`📄 Report saved to: ${reportFile}`);
-    return report;
+    this.log(`📄 Report saved to: ${reportFile}`),
+    return report,
   }
 
   async start() {
     this.log('🎯 Starting Accessibility Checker...');
     const report = await this.generateReport();
     this.log('🏁 Accessibility Checker completed');
-    return report;
+    return report,
   }
 }
 
@@ -108,12 +108,12 @@ if (require.main === module) {
     .start()
     .then(report => {
       console.log('Accessibility check completed:', report.summary);
-      process.exit(0);
+      process.exit(0),
     })
     .catch(error => {
       console.error('Accessibility check failed:', error);
-      process.exit(1);
-    });
+      process.exit(1),
+    }),
 }
 
 module.exports = AccessibilityChecker;

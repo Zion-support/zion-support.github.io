@@ -14,13 +14,13 @@ class MasterAutomationOrchestrator {
       'automation-reports',
       'master-orchestrator.log'
     );
-    this.ensureLogDir();
+    this.ensureLogDir(),
   }
 
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -28,7 +28,7 @@ class MasterAutomationOrchestrator {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + '\n'),
   }
 
   async runCommand(command, description) {
@@ -40,10 +40,10 @@ class MasterAutomationOrchestrator {
         cwd: path.join(__dirname, '..'),
       });
       this.log(`✅ ${description} - Success`);
-      return { success: true, result };
+      return { success: true, result },
     } catch (error) {
-      this.log(`❌ ${description} - Failed: ${error.message}`);
-      return { success: false, error: error.message };
+      this.log(`❌ ${description} - Failed: ${error.message}`),
+      return { success: false, error: error.message },
     }
   }
 
@@ -57,7 +57,7 @@ class MasterAutomationOrchestrator {
     ];
 
     for (const { cmd, desc } of commands) {
-      await this.runCommand(cmd, desc);
+      await this.runCommand(cmd, desc),
     }
   }
 
@@ -73,7 +73,7 @@ class MasterAutomationOrchestrator {
       const result = await this.runCommand(cmd, desc);
       if (!result.success) {
         this.log('⚠️ Build failed, attempting to fix...');
-        await this.fixBuildIssues();
+        await this.fixBuildIssues(),
       }
     }
   }
@@ -87,7 +87,7 @@ class MasterAutomationOrchestrator {
     ];
 
     for (const { cmd, desc } of fixCommands) {
-      await this.runCommand(cmd, desc);
+      await this.runCommand(cmd, desc),
     }
   }
 
@@ -102,9 +102,9 @@ class MasterAutomationOrchestrator {
     for (const script of scripts) {
       const scriptPath = path.join(__dirname, '..', script);
       if (fs.existsSync(scriptPath)) {
-        await this.runCommand(`node ${script}`, `Running ${script}`);
+        await this.runCommand(`node ${script}`, `Running ${script}`),
       } else {
-        this.log(`⚠️ Script not found: ${script}`);
+        this.log(`⚠️ Script not found: ${script}`),
       }
     }
   }
@@ -130,7 +130,7 @@ class MasterAutomationOrchestrator {
       'master-orchestrator-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath}`);
+    this.log(`📊 Report saved to: ${reportPath}`),
   }
 
   async run() {
@@ -142,10 +142,10 @@ class MasterAutomationOrchestrator {
       await this.runAutomationScripts();
       await this.generateReport();
 
-      this.log('🎉 Master automation orchestration completed successfully!');
+      this.log('🎉 Master automation orchestration completed successfully!'),
     } catch (error) {
-      this.log(`❌ Master automation orchestration failed: ${error.message}`);
-      process.exit(1);
+      this.log(`❌ Master automation orchestration failed: ${error.message}`),
+      process.exit(1),
     }
   }
 }

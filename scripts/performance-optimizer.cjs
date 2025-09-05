@@ -15,13 +15,13 @@ const { execSync } = require('child_process');
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        files = files.concat(this.getFilesRecursively(fullPath));
+        files = files.concat(this.getFilesRecursively(fullPath)),
       } else {
-        files.push(fullPath);
+        files.push(fullPath),
       }
     });
     
-    return files;
+    return files,
   }
 
   formatBytes(bytes) {
@@ -35,24 +35,24 @@ const { execSync } = require('child_process');
     const recommendations = [];
     
     if (totalSize > 1024 * 1024) { // > 1MB
-      recommendations.push('Consider code splitting to reduce initial bundle size');
+      recommendations.push('Consider code splitting to reduce initial bundle size'),
     }
     
     if (fileCount > 50) {
-      recommendations.push('Consider consolidating small files');
+      recommendations.push('Consider consolidating small files'),
     }
     
     recommendations.push('Enable gzip compression on your server');
     recommendations.push('Use CDN for static assets');
     
-    return recommendations;
+    return recommendations,
   }
 
   optimizeImages() {
     try {
       const publicPath = path.join(__dirname, '..', 'public');
       if (!fs.existsSync(publicPath)) {
-        return { error: 'Public directory not found' };
+        return { error: 'Public directory not found' },
       }
 
       const imageFiles = this.getImageFiles(publicPath);
@@ -70,9 +70,9 @@ const { execSync } = require('child_process');
         optimizedImages: optimizedCount,
         totalSize: this.formatBytes(totalSize),
         recommendations: this.getImageRecommendations(imageFiles)
-      };
+      },
     } catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 
@@ -85,17 +85,17 @@ optimizer.optimizePerformance().then(report => {
   if (report) {
     console.log('\n📊 Performance Optimization Report');
     console.log('=====================================');
-    console.log(`Bundle Size: ${report.bundleSize.totalSize || 'N/A'}`);
-    console.log(`Gzipped Size: ${report.bundleSize.gzippedSize || 'N/A'}`);
-    console.log(`Total Images: ${report.imageOptimization.totalImages || 0}`);
-    console.log(`Optimized Images: ${report.imageOptimization.optimizedImages || 0}`);
-    console.log(`Total Dependencies: ${report.dependencies.totalDependencies || 0}`);
-    console.log(`\nRecommendations:`);
+    console.log(`Bundle Size: ${report.bundleSize.totalSize || 'N/A'}`),
+    console.log(`Gzipped Size: ${report.bundleSize.gzippedSize || 'N/A'}`),
+    console.log(`Total Images: ${report.imageOptimization.totalImages || 0}`),
+    console.log(`Optimized Images: ${report.imageOptimization.optimizedImages || 0}`),
+    console.log(`Total Dependencies: ${report.dependencies.totalDependencies || 0}`),
+    console.log(`\nRecommendations: `),
     report.recommendations.forEach((rec, index) => {
-      console.log(`${index + 1}. ${rec}`);
-    });
+      console.log(`${index + 1}. ${rec}`),
+    }),
   }
 }).catch(error => {
   console.error('Error running performance optimizer:', error.message);
-  process.exit(1);
+  process.exit(1),
 });

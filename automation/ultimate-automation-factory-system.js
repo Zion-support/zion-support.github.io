@@ -4,5 +4,4 @@ import path from 'path',
 if (import.meta.url === `file: //${process.argv[1]}`) {,
   const factory = new UltimateAutomationFactory(),
   factory.start().then(report => {,
-    console.log('Ultimate Automation Factory completed:', report.summary),
-
+    console.log('Ultimate Automation Factory completed:', report.summary);

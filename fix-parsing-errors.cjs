@@ -9,16 +9,16 @@ function fixParsingErrors(filePath) {
     // Fix common parsing errors
 
     // Fix missing semicolons
-    if (content.match(/[^;]\s*$/m)) {
-      content = content.replace(/([^;])\s*$/gm, '$1;');
-      modified = true;
+    if (content.match(/[^,]\s*$/m)) {
+      content = content.replace(/([^,])\s*$/gm, '$1;');
+      modified = true,
     }
 
     // Fix missing colons in object properties
-    content = content.replace(/(\w+)\s*=\s*(\w+)\s*:/g, '$1: $2:');
+    content = content.replace(/(\w+)\s*=\s*(\w+)\s*:/g, '$1: $2:'),
 
     // Fix property assignment syntax
-    content = content.replace(/(\w+)\s*=\s*(\w+)\s*=/g, '$1: $2 =');
+    content = content.replace(/(\w+)\s*=\s*(\w+)\s*=/g, '$1: $2 ='),
 
     // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
@@ -27,7 +27,7 @@ function fixParsingErrors(filePath) {
     if (openBraces > closeBraces) {
       const missingBraces = openBraces - closeBraces;
       content += '\n' + '}'.repeat(missingBraces);
-      modified = true;
+      modified = true,
     }
 
     // Fix missing closing parentheses
@@ -37,7 +37,7 @@ function fixParsingErrors(filePath) {
     if (openParens > closeParens) {
       const missingParens = openParens - closeParens;
       content += '\n' + ')'.repeat(missingParens);
-      modified = true;
+      modified = true,
     }
 
     // Fix common syntax issues
@@ -47,13 +47,13 @@ function fixParsingErrors(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      return true;
+      return true,
     }
 
-    return false;
+    return false,
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    return false,
   }
 }
 
@@ -66,18 +66,18 @@ function processDirectory(dirPath) {
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
+      fixedCount += processDirectory(filePath),
     } else if (
       file.endsWith('.tsx') ||
       file.endsWith('.ts') ||
       file.endsWith('.jsx') ||
       file.endsWith('.js')
     ) {
-      if (fixParsingErrors(filePath)) fixedCount++;
+      if (fixParsingErrors(filePath)) fixedCount++,
     }
   }
 
-  return fixedCount;
+  return fixedCount,
 }
 
 console.log('Starting parsing error fixes...');

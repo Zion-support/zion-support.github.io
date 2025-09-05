@@ -9,7 +9,7 @@ const path = require('path');
 class SearchIndexGenerator {
   constructor() {
     this.index = [];
-    this.outputFile = path.join(__dirname, '..', 'public', 'search-index.json');
+    this.outputFile = path.join(__dirname, '..', 'public', 'search-index.json'),
   }
 
   async generateSearchIndex() {
@@ -64,26 +64,26 @@ class SearchIndexGenerator {
       // Ensure public directory exists
       const publicDir = path.dirname(this.outputFile);
       if (!fs.existsSync(publicDir)) {
-        fs.mkdirSync(publicDir, { recursive: true });
+        fs.mkdirSync(publicDir, { recursive: true }),
       }
 
       // Write search index
       fs.writeFileSync(this.outputFile, JSON.stringify(searchIndex, null, 2));
 
-      console.log(`✅ Search index generated: ${this.outputFile}`);
-      console.log(`📊 Total pages indexed: ${this.index.length}`);
+      console.log(`✅ Search index generated: ${this.outputFile}`),
+      console.log(`📊 Total pages indexed: ${this.index.length}`),
 
       return {
         success: true,
         pages: this.index.length,
         outputFile: this.outputFile,
-      };
+      },
     } catch (error) {
       console.error('❌ Error generating search index:', error.message);
       return {
         success: false,
         error: error.message,
-      };
+      },
     }
   }
 
@@ -94,14 +94,14 @@ class SearchIndexGenerator {
       description,
       keywords: keywords.split(', '),
       id: this.index.length + 1,
-    });
+    }),
   }
 }
 
 // Run if called directly
 if (require.main === module) {
   const generator = new SearchIndexGenerator();
-  generator.generateSearchIndex().catch(console.error);
+  generator.generateSearchIndex().catch(console.error),
 }
 
 module.exports = SearchIndexGenerator;

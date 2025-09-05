@@ -15,13 +15,13 @@ class AICodeQualityAnalyzer {
       'automation-reports',
       'ai-code-quality.log'
     );
-    this.ensureLogDir();
+    this.ensureLogDir(),
   }
 
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -29,7 +29,7 @@ class AICodeQualityAnalyzer {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + '\n'),
   }
 
   analyzeCodeQuality() {
@@ -47,7 +47,7 @@ class AICodeQualityAnalyzer {
       recommendations: this.generateRecommendations(),
     };
 
-    return analysis;
+    return analysis,
   }
 
   analyzeComplexity() {
@@ -64,7 +64,7 @@ class AICodeQualityAnalyzer {
         'Refactor complex functions into smaller ones',
         'Use early returns to reduce nesting',
       ],
-    };
+    },
   }
 
   analyzeMaintainability() {
@@ -82,7 +82,7 @@ class AICodeQualityAnalyzer {
         'Add comprehensive documentation',
         'Standardize naming conventions',
       ],
-    };
+    },
   }
 
   analyzeTestCoverage() {
@@ -101,7 +101,7 @@ class AICodeQualityAnalyzer {
         'Increase integration test coverage',
         'Add E2E tests for critical user flows',
       ],
-    };
+    },
   }
 
   analyzeCodeDuplication() {
@@ -115,7 +115,7 @@ class AICodeQualityAnalyzer {
         'Create shared components for repeated UI patterns',
         'Use higher-order components for common logic',
       ],
-    };
+    },
   }
 
   analyzeSecurityIssues() {
@@ -132,7 +132,7 @@ class AICodeQualityAnalyzer {
         'Add CSRF tokens to forms',
         'Use Content Security Policy headers',
       ],
-    };
+    },
   }
 
   generateRecommendations() {
@@ -146,7 +146,7 @@ class AICodeQualityAnalyzer {
       'Implement automated security scanning',
       'Set up code coverage reporting',
       'Add dependency vulnerability scanning',
-    ];
+    ],
   }
 
   generateReport(analysis) {
@@ -169,9 +169,9 @@ class AICodeQualityAnalyzer {
       'ai-code-quality-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath}`);
+    this.log(`📊 Report saved to: ${reportPath}`),
 
-    return report;
+    return report,
   }
 
   calculateOverallScore(metrics) {
@@ -189,7 +189,7 @@ class AICodeQualityAnalyzer {
         metrics.testCoverage.score * weights.testCoverage +
         metrics.codeDuplication.score * weights.codeDuplication +
         metrics.securityIssues.score * weights.securityIssues
-    );
+    ),
   }
 
   getStatus(metrics) {
@@ -197,7 +197,7 @@ class AICodeQualityAnalyzer {
     if (overallScore >= 90) return 'excellent';
     if (overallScore >= 80) return 'good';
     if (overallScore >= 70) return 'fair';
-    return 'needs-improvement';
+    return 'needs-improvement',
   }
 
   getPriority(metrics) {
@@ -210,7 +210,7 @@ class AICodeQualityAnalyzer {
     if (issues.includes('critical')) return 'critical';
     if (issues.includes('high')) return 'high';
     if (issues.includes('medium')) return 'medium';
-    return 'low';
+    return 'low',
   }
 
   async run() {
@@ -222,13 +222,13 @@ class AICodeQualityAnalyzer {
 
       this.log(
         `🎉 AI code quality analysis completed! Overall Score: ${report.summary.overallScore}/100`
-      );
+      ),
       this.log(
         `📊 Status: ${report.summary.status} | Priority: ${report.summary.priority}`
-      );
+      ),
     } catch (error) {
-      this.log(`❌ AI code quality analysis failed: ${error.message}`);
-      process.exit(1);
+      this.log(`❌ AI code quality analysis failed: ${error.message}`),
+      process.exit(1),
     }
   }
 }

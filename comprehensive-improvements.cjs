@@ -13,13 +13,13 @@ class ComprehensiveImprovements {
       'automation-reports',
       'comprehensive-improvements.log'
     );
-    this.ensureLogDir();
+    this.ensureLogDir(),
   }
 
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -27,7 +27,7 @@ class ComprehensiveImprovements {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + '\n'),
   }
 
   async runCommand(command, description) {
@@ -39,10 +39,10 @@ class ComprehensiveImprovements {
         cwd: __dirname,
       });
       this.log(`✅ ${description} - Success`);
-      return { success: true, result };
+      return { success: true, result },
     } catch (error) {
-      this.log(`❌ ${description} - Failed: ${error.message}`);
-      return { success: false, error: error.message };
+      this.log(`❌ ${description} - Failed: ${error.message}`),
+      return { success: false, error: error.message },
     }
   }
 
@@ -56,7 +56,7 @@ class ComprehensiveImprovements {
     ];
 
     for (const { cmd, desc } of improvements) {
-      await this.runCommand(cmd, desc);
+      await this.runCommand(cmd, desc),
     }
   }
 
@@ -70,7 +70,7 @@ class ComprehensiveImprovements {
     ];
 
     for (const { cmd, desc } of improvements) {
-      await this.runCommand(cmd, desc);
+      await this.runCommand(cmd, desc),
     }
   }
 
@@ -84,7 +84,7 @@ class ComprehensiveImprovements {
     ];
 
     for (const { cmd, desc } of improvements) {
-      await this.runCommand(cmd, desc);
+      await this.runCommand(cmd, desc),
     }
   }
 
@@ -97,7 +97,7 @@ class ComprehensiveImprovements {
     ];
 
     for (const { cmd, desc } of improvements) {
-      await this.runCommand(cmd, desc);
+      await this.runCommand(cmd, desc),
     }
   }
 
@@ -110,7 +110,7 @@ class ComprehensiveImprovements {
     ];
 
     for (const { cmd, desc } of improvements) {
-      await this.runCommand(cmd, desc);
+      await this.runCommand(cmd, desc),
     }
   }
 
@@ -124,7 +124,7 @@ class ComprehensiveImprovements {
     ];
 
     for (const { cmd, desc } of improvements) {
-      await this.runCommand(cmd, desc);
+      await this.runCommand(cmd, desc),
     }
   }
 
@@ -157,7 +157,7 @@ class ComprehensiveImprovements {
       'comprehensive-improvements-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath}`);
+    this.log(`📊 Report saved to: ${reportPath}`),
   }
 
   async run() {
@@ -173,10 +173,10 @@ class ComprehensiveImprovements {
 
       await this.generateImprovementReport();
 
-      this.log('🎉 Comprehensive improvements completed successfully!');
+      this.log('🎉 Comprehensive improvements completed successfully!'),
     } catch (error) {
-      this.log(`❌ Comprehensive improvements failed: ${error.message}`);
-      process.exit(1);
+      this.log(`❌ Comprehensive improvements failed: ${error.message}`),
+      process.exit(1),
     }
   }
 }

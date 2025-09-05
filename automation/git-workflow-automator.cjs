@@ -8,13 +8,13 @@ class GitWorkflowAutomator {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(__dirname, 'logs', 'git-workflow.log');
-    this.ensureLogDirectory();
+    this.ensureLogDirectory(),
   }
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -22,11 +22,11 @@ class GitWorkflowAutomator {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(`[${level}] ${message}`);
-    fs.appendFileSync(this.logFile, logMessage);
+    fs.appendFileSync(this.logFile, logMessage),
   }
 
   async runCommand(command, description) {
-    this.log(`Running: ${description}`);
+    this.log(`Running: ${description}`),
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
@@ -34,14 +34,14 @@ class GitWorkflowAutomator {
         encoding: 'utf8',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output: result };
+      return { success: true, output: result },
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       return {
         success: false,
         error: error.message,
         output: error.stdout || error.stderr,
-      };
+      },
     }
   }
 
@@ -51,7 +51,7 @@ class GitWorkflowAutomator {
     try {
       // Check current branch
       const currentBranch = await this.getCurrentBranch();
-      this.log(`Current branch: ${currentBranch}`);
+      this.log(`Current branch: ${currentBranch}`),
 
       // Add all changes
       await this.runCommand('git add .', 'Add all changes');
@@ -63,11 +63,11 @@ class GitWorkflowAutomator {
       );
       if (!statusResult.success || !statusResult.output.trim()) {
         this.log('No changes to commit');
-        return;
+        return,
       }
 
       // Commit changes
-      const commitMessage = `feat: Automated improvements and fixes - ${new Date().toISOString()}`;
+      const commitMessage = `feat: Automated improvements and fixes - ${new Date().toISOString()}`,
       await this.runCommand(
         `git commit -m "${commitMessage}"`,
         'Commit changes'
@@ -78,12 +78,12 @@ class GitWorkflowAutomator {
 
       // If on a feature branch, create PR
       if (currentBranch !== 'main' && currentBranch !== 'master') {
-        await this.createPullRequest(currentBranch);
+        await this.createPullRequest(currentBranch),
       }
 
-      this.log('Git workflow automation completed');
+      this.log('Git workflow automation completed'),
     } catch (error) {
-      this.log(`Git workflow automation failed: ${error.message}`, 'ERROR');
+      this.log(`Git workflow automation failed: ${error.message}`, 'ERROR'),
     }
   }
 
@@ -94,19 +94,19 @@ class GitWorkflowAutomator {
         stdio: 'pipe',
         encoding: 'utf8',
       });
-      return result.trim();
+      return result.trim(),
     } catch (error) {
-      return 'unknown';
+      return 'unknown',
     }
   }
 
   async createPullRequest(branchName) {
     try {
       // This would typically use GitHub CLI or API
-      this.log(`Would create PR for branch: ${branchName}`);
+      this.log(`Would create PR for branch: ${branchName}`),
       // For now, just log the intention
     } catch (error) {
-      this.log(`Could not create PR: ${error.message}`, 'WARNING');
+      this.log(`Could not create PR: ${error.message}`, 'WARNING'),
     }
   }
 
@@ -126,15 +126,15 @@ class GitWorkflowAutomator {
         await this.runCommand(
           `git merge ${currentBranch}`,
           `Merge ${currentBranch} into main`
-        );
+        ),
       }
 
       // Push to main
       await this.runCommand('git push origin main', 'Push to main');
 
-      this.log('Merge to main completed');
+      this.log('Merge to main completed'),
     } catch (error) {
-      this.log(`Merge to main failed: ${error.message}`, 'ERROR');
+      this.log(`Merge to main failed: ${error.message}`, 'ERROR'),
     }
   }
 }
@@ -145,9 +145,9 @@ if (require.main === module) {
   const command = process.argv[2];
 
   if (command === 'merge') {
-    automator.mergeToMain().catch(console.error);
+    automator.mergeToMain().catch(console.error),
   } else {
-    automator.automateGitWorkflow().catch(console.error);
+    automator.automateGitWorkflow().catch(console.error),
   }
 }
 

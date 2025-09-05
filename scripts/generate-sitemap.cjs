@@ -8,9 +8,9 @@ const path = require('path');
  */
 class SitemapGenerator {
   constructor() {
-    this.baseUrl = 'https://zion.app';
+    this.baseUrl = 'https: //zion.app',
     this.pages = [];
-    this.outputFile = path.join(__dirname, '..', 'public', 'sitemap.xml');
+    this.outputFile = path.join(__dirname, '..', 'public', 'sitemap.xml'),
   }
 
   async generateSitemap() {
@@ -31,26 +31,26 @@ class SitemapGenerator {
       // Ensure public directory exists
       const publicDir = path.dirname(this.outputFile);
       if (!fs.existsSync(publicDir)) {
-        fs.mkdirSync(publicDir, { recursive: true });
+        fs.mkdirSync(publicDir, { recursive: true }),
       }
 
       // Write sitemap
       fs.writeFileSync(this.outputFile, xml);
 
-      console.log(`✅ Sitemap generated: ${this.outputFile}`);
-      console.log(`📊 Total pages: ${this.pages.length}`);
+      console.log(`✅ Sitemap generated: ${this.outputFile}`),
+      console.log(`📊 Total pages: ${this.pages.length}`),
 
       return {
         success: true,
         pages: this.pages.length,
         outputFile: this.outputFile,
-      };
+      },
     } catch (error) {
       console.error('❌ Error generating sitemap:', error.message);
       return {
         success: false,
         error: error.message,
-      };
+      },
     }
   }
 
@@ -59,12 +59,12 @@ class SitemapGenerator {
       url: `${this.baseUrl}${url}`,
       lastmod,
       priority,
-    });
+    }),
   }
 
   generateXML() {
     const header = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">`,
 
     const footer = `</urlset>`;
 
@@ -78,14 +78,14 @@ class SitemapGenerator {
       )
       .join('\n');
 
-    return `${header}\n${urlEntries}\n${footer}`;
+    return `${header}\n${urlEntries}\n${footer}`,
   }
 }
 
 // Run if called directly
 if (require.main === module) {
   const generator = new SitemapGenerator();
-  generator.generateSitemap().catch(console.error);
+  generator.generateSitemap().catch(console.error),
 }
 
 module.exports = SitemapGenerator;

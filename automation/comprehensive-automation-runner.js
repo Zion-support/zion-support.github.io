@@ -6,5 +6,4 @@ import { fileURLToPath } from "url",
       }),
       const duration = Date.now() - startTime,
       this.log(`✓ ${description} completed in ${duration}ms`),
-      return { success: true, output: output.toString(), duration },
-
+      return { success: true, output: output.toString(), duration };

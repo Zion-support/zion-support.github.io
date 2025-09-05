@@ -9,4 +9,4 @@ const apiDisabledDir = path.join(__dirname, 'api-disabled'),
 if (fs.existsSync(apiDisabledDir)) {,
   fixTypeScriptFiles(apiDisabledDir),
   console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else {,
-  console.log('❌ api-disabled directory not found')},
+  console.log('❌ api-disabled directory not found')};

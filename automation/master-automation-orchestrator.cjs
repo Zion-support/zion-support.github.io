@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
+
 const { execSync } = require('child_process');
 
 console.log('🚀 Starting Master Automation Orchestrator');
@@ -52,7 +52,7 @@ async function runAllAutomations() {
 
   for (const task of tasks) {
     try {
-      console.log(`\n🔧 Running: ${task.name}`);
+      console.log(`\n🔧 Running: ${task.name}`),
       const startTime = Date.now();
 
       execSync(task.command, {
@@ -68,7 +68,7 @@ async function runAllAutomations() {
         critical: task.critical,
       });
       successCount++;
-      console.log(`✅ ${task.name} completed in ${duration}ms`);
+      console.log(`✅ ${task.name} completed in ${duration}ms`),
     } catch (error) {
       const duration = Date.now() - Date.now();
       results.push({
@@ -79,15 +79,15 @@ async function runAllAutomations() {
         error: error.message,
       });
       failureCount++;
-      console.log(`❌ ${task.name} failed: ${error.message}`);
+      console.log(`❌ ${task.name} failed: ${error.message}`),
 
       if (task.critical) {
-        console.log(`⚠️ Critical task failed: ${task.name}`);
+        console.log(`⚠️ Critical task failed: ${task.name}`),
       }
     }
   }
 
-  return { results, successCount, failureCount };
+  return { results, successCount, failureCount },
 }
 
 // Generate comprehensive report
@@ -115,7 +115,7 @@ function generateReport(results) {
   // Ensure reports directory exists
   const reportsDir = '/workspace/automation/reports';
   if (!fs.existsSync(reportsDir)) {
-    fs.mkdirSync(reportsDir, { recursive: true });
+    fs.mkdirSync(reportsDir, { recursive: true }),
   }
 
   fs.writeFileSync(
@@ -123,7 +123,7 @@ function generateReport(results) {
     JSON.stringify(report, null, 2)
   );
 
-  return report;
+  return report,
 }
 
 // Main execution
@@ -136,22 +136,22 @@ async function main() {
 
     console.log('\n📊 AUTOMATION SUMMARY');
     console.log('====================');
-    console.log(`Total Tasks: ${report.summary.totalTasks}`);
-    console.log(`Successful: ${report.summary.successful}`);
-    console.log(`Failed: ${report.summary.failed}`);
-    console.log(`Success Rate: ${report.summary.successRate}`);
+    console.log(`Total Tasks: ${report.summary.totalTasks}`),
+    console.log(`Successful: ${report.summary.successful}`),
+    console.log(`Failed: ${report.summary.failed}`),
+    console.log(`Success Rate: ${report.summary.successRate}`),
 
     if (results.failureCount > 0) {
-      console.log('\n❌ FAILED TASKS:');
+      console.log('\n❌ FAILED TASKS: '),
       results.results
         .filter(r => r.status === 'failed')
-        .forEach(r => console.log(`  - ${r.task}: ${r.error}`));
+        .forEach(r => console.log(`  - ${r.task}: ${r.error}`)),
     }
 
     console.log('\n✅ Master automation orchestration completed');
     console.log(
       '📄 Detailed report saved to: /workspace/automation/reports/master-automation-report.json'
-    );
+    ),
 
     // Return success/failure based on critical tasks
     const criticalFailures = results.results.filter(
@@ -159,14 +159,14 @@ async function main() {
     );
     if (criticalFailures.length > 0) {
       console.log('\n⚠️ Critical tasks failed - manual intervention required');
-      process.exit(1);
+      process.exit(1),
     } else {
       console.log('\n🎉 All critical tasks passed successfully');
-      process.exit(0);
+      process.exit(0),
     }
   } catch (error) {
     console.error('❌ Master automation failed:', error.message);
-    process.exit(1);
+    process.exit(1),
   }
 }
 

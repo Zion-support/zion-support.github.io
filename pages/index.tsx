@@ -1,24 +1,23 @@
-import Link from 'next/link',
-import Head from 'next/head',
-import { useState, useEffect, Suspense } from 'react',
-import { ContactInfo, AnimationState } from '../types',
-import ErrorBoundary from '../components/ErrorBoundary',
-import LoadingSpinner from '../components/LoadingSpinner',
-import PerformanceMonitor from '../components/PerformanceMonitor',
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect, Suspense } from 'react';
+import { ContactInfo, AnimationState } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false
-  }),
+  });
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimationState(prev => ({ ...prev, isLoaded: true }))
-    }, 100),
+    }, 100);
     return () => clearTimeout(timer)
-  }, []),
+  }, []);
   if (animationState.hasError) {
-    return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+    return (<div className="min-h-screen bg-slate-950 flex items-center justify-center">
         <div className="text-center text-white">
           <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
           <button 
@@ -36,7 +35,8 @@ export default function Home() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  },
+  };
+
   return (
     <>
       <Head>
@@ -59,7 +59,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
         <meta name="twitter:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-        <meta name="twitter:site" content="@ziontechgroup" />
+        <meta name="twitter: site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
         <script
           type="application/ld+json"
@@ -78,13 +78,13 @@ export default function Home() {
                 "addressRegion": "DE",
                 "postalCode": "19709",
                 "addressCountry": "US"
-              },
+              };
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": contact.phone,
                 "contactType": "customer service",
                 "email": contact.email
-              },
+              };
               "sameAs": [contact.site]
             })
           }}

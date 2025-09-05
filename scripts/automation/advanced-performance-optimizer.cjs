@@ -15,7 +15,7 @@ class AdvancedPerformanceOptimizer {
       performanceMetrics: {},
       optimizations: [],
       recommendations: [],
-    };
+    },
   }
 
   async runOptimization() {
@@ -40,9 +40,9 @@ class AdvancedPerformanceOptimizer {
       // Save results
       this.saveResults();
 
-      console.log('✅ Advanced performance optimization completed!');
+      console.log('✅ Advanced performance optimization completed!'),
     } catch (error) {
-      console.error('❌ Performance optimization failed:', error.message);
+      console.error('❌ Performance optimization failed:', error.message),
     }
   }
 
@@ -52,7 +52,7 @@ class AdvancedPerformanceOptimizer {
     try {
       // Build the project to analyze bundle
       console.log('🔨 Building project for analysis...');
-      execSync('npm run build', { stdio: 'pipe' });
+      execSync('npm run build', { stdio: 'pipe' }),
 
       // Analyze bundle size
       const bundleAnalysis = {
@@ -65,7 +65,7 @@ class AdvancedPerformanceOptimizer {
       // Check .next directory for build files
       const nextDir = path.join(this.projectRoot, '.next');
       if (fs.existsSync(nextDir)) {
-        this.analyzeDirectory(nextDir, bundleAnalysis);
+        this.analyzeDirectory(nextDir, bundleAnalysis),
       }
 
       // Check for large files
@@ -79,16 +79,16 @@ class AdvancedPerformanceOptimizer {
 
       this.optimizationResults.bundleAnalysis = bundleAnalysis;
 
-      console.log(`📊 Bundle Analysis Complete:`);
-      console.log(`  - Total files: ${bundleAnalysis.files.length}`);
+      console.log(`📊 Bundle Analysis Complete: `),
+      console.log(`  - Total files: ${bundleAnalysis.files.length}`),
       console.log(
         `  - Total size: ${this.formatBytes(bundleAnalysis.totalSize)}`
-      );
+      ),
       console.log(
         `  - Largest file: ${bundleAnalysis.largestFiles[0]?.name || 'N/A'}`
-      );
+      ),
     } catch (error) {
-      console.log('⚠️  Bundle analysis failed:', error.message);
+      console.log('⚠️  Bundle analysis failed:', error.message),
     }
   }
 
@@ -101,7 +101,7 @@ class AdvancedPerformanceOptimizer {
         const stat = fs.statSync(filePath);
 
         if (stat.isDirectory()) {
-          this.analyzeDirectory(filePath, analysis);
+          this.analyzeDirectory(filePath, analysis),
         } else if (stat.isFile()) {
           const size = stat.size;
           analysis.totalSize += size;
@@ -109,9 +109,9 @@ class AdvancedPerformanceOptimizer {
             name: filePath.replace(this.projectRoot, ''),
             size: size,
             type: path.extname(file),
-          });
+          }),
         }
-      });
+      }),
     } catch (error) {
       // Skip directories that can't be read
     }
@@ -128,7 +128,7 @@ class AdvancedPerformanceOptimizer {
           file: file.name,
           size: file.size,
           recommendation: 'Consider code splitting or lazy loading',
-        });
+        }),
       }
 
       // Large CSS files
@@ -138,7 +138,7 @@ class AdvancedPerformanceOptimizer {
           file: file.name,
           size: file.size,
           recommendation: 'Consider CSS optimization or splitting',
-        });
+        }),
       }
 
       // Unoptimized images
@@ -148,11 +148,11 @@ class AdvancedPerformanceOptimizer {
           file: file.name,
           size: file.size,
           recommendation: 'Optimize image or convert to WebP format',
-        });
+        }),
       }
     });
 
-    return opportunities;
+    return opportunities,
   }
 
   async analyzePerformanceMetrics() {
@@ -169,7 +169,7 @@ class AdvancedPerformanceOptimizer {
     try {
       // Measure build time
       const startTime = Date.now();
-      execSync('npm run build', { stdio: 'pipe' });
+      execSync('npm run build', { stdio: 'pipe' }),
       metrics.buildTime = Date.now() - startTime;
 
       // Count dependencies
@@ -181,12 +181,12 @@ class AdvancedPerformanceOptimizer {
 
       this.optimizationResults.performanceMetrics = metrics;
 
-      console.log(`📈 Performance Metrics:`);
-      console.log(`  - Build time: ${metrics.buildTime}ms`);
-      console.log(`  - Dependencies: ${metrics.dependencies}`);
-      console.log(`  - Performance score: ${metrics.score}/100`);
+      console.log(`📈 Performance Metrics: `),
+      console.log(`  - Build time: ${metrics.buildTime}ms`),
+      console.log(`  - Dependencies: ${metrics.dependencies}`),
+      console.log(`  - Performance score: ${metrics.score}/100`),
     } catch (error) {
-      console.log('⚠️  Performance metrics analysis failed:', error.message);
+      console.log('⚠️  Performance metrics analysis failed:', error.message),
     }
   }
 
@@ -205,7 +205,7 @@ class AdvancedPerformanceOptimizer {
     if (metrics.bundleSize > 5000000) score -= 30;
     else if (metrics.bundleSize > 2000000) score -= 15;
 
-    return Math.max(0, score);
+    return Math.max(0, score),
   }
 
   async optimizeImages() {
@@ -215,13 +215,13 @@ class AdvancedPerformanceOptimizer {
     const publicDir = path.join(this.projectRoot, 'public');
 
     if (fs.existsSync(publicDir)) {
-      this.optimizeImagesInDirectory(publicDir, imageOptimizations);
+      this.optimizeImagesInDirectory(publicDir, imageOptimizations),
     }
 
     // Also check src directory for images
     const srcDir = path.join(this.projectRoot, 'src');
     if (fs.existsSync(srcDir)) {
-      this.optimizeImagesInDirectory(srcDir, imageOptimizations);
+      this.optimizeImagesInDirectory(srcDir, imageOptimizations),
     }
 
     this.optimizationResults.optimizations.push({
@@ -232,7 +232,7 @@ class AdvancedPerformanceOptimizer {
 
     console.log(
       `✅ Image optimization completed: ${imageOptimizations.length} optimizations`
-    );
+    ),
   }
 
   optimizeImagesInDirectory(dir, optimizations) {
@@ -244,7 +244,7 @@ class AdvancedPerformanceOptimizer {
         const stat = fs.statSync(filePath);
 
         if (stat.isDirectory()) {
-          this.optimizeImagesInDirectory(filePath, optimizations);
+          this.optimizeImagesInDirectory(filePath, optimizations),
         } else if (stat.isFile()) {
           const ext = path.extname(file).toLowerCase();
           if (['.png', '.jpg', '.jpeg', '.gif'].includes(ext)) {
@@ -257,11 +257,11 @@ class AdvancedPerformanceOptimizer {
                 currentSize: size,
                 recommendation: 'Consider compressing or converting to WebP',
                 potentialSavings: Math.round(size * 0.3),
-              });
+              }),
             }
           }
         }
-      });
+      }),
     } catch (error) {
       // Skip directories that can't be read
     }
@@ -280,7 +280,7 @@ class AdvancedPerformanceOptimizer {
       try {
         const content = fs.readFileSync(file, 'utf8');
         const optimizations = this.analyzeCodeOptimizations(content, file);
-        codeOptimizations.push(...optimizations);
+        codeOptimizations.push(...optimizations),
       } catch (error) {
         // Skip files that can't be read
       }
@@ -294,7 +294,7 @@ class AdvancedPerformanceOptimizer {
 
     console.log(
       `✅ Code optimization analysis completed: ${codeOptimizations.length} opportunities`
-    );
+    ),
   }
 
   analyzeCodeOptimizations(content, filePath) {
@@ -310,7 +310,7 @@ class AdvancedPerformanceOptimizer {
           line: index + 1,
           description: 'Wildcard import detected - consider specific imports',
           impact: 'medium',
-        });
+        }),
       }
 
       // Detect console.log in production
@@ -321,7 +321,7 @@ class AdvancedPerformanceOptimizer {
           line: index + 1,
           description: 'Console.log in production code',
           impact: 'low',
-        });
+        }),
       }
 
       // Detect large objects
@@ -332,7 +332,7 @@ class AdvancedPerformanceOptimizer {
           line: index + 1,
           description: 'Large object definition - consider splitting',
           impact: 'medium',
-        });
+        }),
       }
 
       // Detect inefficient loops
@@ -347,7 +347,7 @@ class AdvancedPerformanceOptimizer {
       }
     });
 
-    return optimizations;
+    return optimizations,
   }
 
   async generateOptimizationRecommendations() {
@@ -365,7 +365,7 @@ class AdvancedPerformanceOptimizer {
         actions: bundleAnalysis.optimizationOpportunities.map(
           opp => opp.recommendation
         ),
-      });
+      }),
     }
 
     // Performance recommendations
@@ -381,7 +381,7 @@ class AdvancedPerformanceOptimizer {
           'Implement code splitting',
           'Optimize images',
         ],
-      });
+      }),
     }
 
     // Code optimization recommendations
@@ -406,10 +406,10 @@ class AdvancedPerformanceOptimizer {
           `${mediumImpact} medium-impact optimizations`,
           'Review and implement suggested changes',
         ],
-      });
+      }),
     }
 
-    this.optimizationResults.recommendations = recommendations;
+    this.optimizationResults.recommendations = recommendations,
   }
 
   findFiles(extensions) {
@@ -427,18 +427,18 @@ class AdvancedPerformanceOptimizer {
             !item.startsWith('.') &&
             item !== 'node_modules'
           ) {
-            findInDirectory(fullPath);
+            findInDirectory(fullPath),
           } else if (stat.isFile() && extensions.includes(path.extname(item))) {
-            files.push(fullPath);
+            files.push(fullPath),
           }
-        });
+        }),
       } catch (error) {
         // Skip directories that can't be read
       }
     };
 
     findInDirectory(this.projectRoot);
-    return files;
+    return files,
   }
 
   formatBytes(bytes) {
@@ -446,7 +446,7 @@ class AdvancedPerformanceOptimizer {
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i],
   }
 
   saveResults() {
@@ -460,20 +460,20 @@ class AdvancedPerformanceOptimizer {
       JSON.stringify(this.optimizationResults, null, 2)
     );
 
-    console.log('📊 Optimization Results:');
+    console.log('📊 Optimization Results: '),
     console.log(
       `- Bundle size: ${this.formatBytes(this.optimizationResults.bundleAnalysis.totalSize)}`
-    );
+    ),
     console.log(
       `- Performance score: ${this.optimizationResults.performanceMetrics.score}/100`
-    );
+    ),
     console.log(
       `- Optimizations found: ${this.optimizationResults.optimizations.length}`
-    );
+    ),
     console.log(
       `- Recommendations: ${this.optimizationResults.recommendations.length}`
-    );
-    console.log(`- Report saved to: ${reportFile}`);
+    ),
+    console.log(`- Report saved to: ${reportFile}`),
   }
 }
 

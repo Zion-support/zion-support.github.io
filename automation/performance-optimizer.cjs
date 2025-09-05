@@ -6,13 +6,13 @@ class PerformanceOptimizer {
   constructor() {
     this.optimizations = [];
     this.logFile = path.join(__dirname, '../logs/performance-optimizer.log');
-    this.ensureLogsDir();
+    this.ensureLogsDir(),
   }
 
   ensureLogsDir() {
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+      fs.mkdirSync(logsDir, { recursive: true }),
     }
   }
 
@@ -20,17 +20,17 @@ class PerformanceOptimizer {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(`[${level}] ${message}`);
-    fs.appendFileSync(this.logFile, logMessage);
+    fs.appendFileSync(this.logFile, logMessage),
   }
 
   async optimizeBundle() {
     try {
       this.log('Optimizing bundle size...');
-      execSync('npm run build:analyze', { stdio: 'pipe' });
+      execSync('npm run build:analyze', { stdio: 'pipe' }),
       this.optimizations.push('Bundle analysis completed');
-      this.log('✓ Bundle analysis completed');
+      this.log('✓ Bundle analysis completed'),
     } catch (error) {
-      this.log(`Bundle optimization failed: ${error.message}`, 'ERROR');
+      this.log(`Bundle optimization failed: ${error.message}`, 'ERROR'),
     }
   }
 
@@ -40,7 +40,7 @@ class PerformanceOptimizer {
       // Check if there are images to optimize
       const publicDir = path.join(process.cwd(), 'public');
       if (fs.existsSync(publicDir)) {
-        const files = fs.readdirSync(publicDir, { recursive: true });
+        const files = fs.readdirSync(publicDir, { recursive: true }),
         const imageFiles = files.filter(
           file =>
             typeof file === 'string' && /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
@@ -48,13 +48,13 @@ class PerformanceOptimizer {
 
         if (imageFiles.length > 0) {
           this.log(`Found ${imageFiles.length} images to optimize`);
-          this.optimizations.push(`Found ${imageFiles.length} images`);
+          this.optimizations.push(`Found ${imageFiles.length} images`),
         } else {
-          this.log('No images found to optimize');
+          this.log('No images found to optimize'),
         }
       }
     } catch (error) {
-      this.log(`Image optimization failed: ${error.message}`, 'ERROR');
+      this.log(`Image optimization failed: ${error.message}`, 'ERROR'),
     }
   }
 
@@ -72,9 +72,9 @@ class PerformanceOptimizer {
 
       this.optimizations.push(
         `Analyzed ${dependencies.length + devDependencies.length} dependencies`
-      );
+      ),
     } catch (error) {
-      this.log(`Dependency check failed: ${error.message}`, 'ERROR');
+      this.log(`Dependency check failed: ${error.message}`, 'ERROR'),
     }
   }
 
@@ -97,7 +97,7 @@ class PerformanceOptimizer {
       'performance-report.json'
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`Performance report saved to: ${reportFile}`);
+    this.log(`Performance report saved to: ${reportFile}`),
   }
 
   async run() {
@@ -112,10 +112,10 @@ class PerformanceOptimizer {
       this.log('='.repeat(50));
       this.log(
         `🎯 Performance Optimizer completed. Optimizations: ${this.optimizations.length}`
-      );
-      this.optimizations.forEach(opt => this.log(`  ✓ ${opt}`));
+      ),
+      this.optimizations.forEach(opt => this.log(`  ✓ ${opt}`)),
     } catch (error) {
-      this.log(`❌ Performance Optimizer failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Performance Optimizer failed: ${error.message}`, 'ERROR'),
     }
   }
 }
@@ -123,7 +123,7 @@ class PerformanceOptimizer {
 // Main execution
 if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
-  optimizer.run().catch(console.error);
+  optimizer.run().catch(console.error),
 }
 
 module.exports = PerformanceOptimizer;

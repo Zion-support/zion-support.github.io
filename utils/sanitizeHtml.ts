@@ -1,2 +1,2 @@
-  return css.replace(/expression\s*(/gi, '')},
+  return css.replace(/expression\s*(/gi, '')};
 

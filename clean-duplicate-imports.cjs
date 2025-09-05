@@ -5,21 +5,21 @@
  */
 
 const fs = require('fs');
-const path = require('path');
+
 
 class ImportCleaner {
   constructor() {
-    this.cleanedFiles = [];
+    this.cleanedFiles = [],
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`),
   }
 
   cleanFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        return false;
+        return false,
       }
 
       let content = fs.readFileSync(filePath, 'utf8');
@@ -47,7 +47,7 @@ class ImportCleaner {
         const baseName = imp.split(' as ')[0].trim();
         if (!seen.has(baseName)) {
           uniqueImports.push(imp);
-          seen.add(baseName);
+          seen.add(baseName),
         }
       }
 
@@ -65,10 +65,10 @@ class ImportCleaner {
       fs.writeFileSync(filePath, content);
       this.cleanedFiles.push(filePath);
       this.log(`✅ Cleaned imports in ${filePath}`);
-      return true;
+      return true,
     } catch (error) {
       this.log(`❌ Failed to clean ${filePath}: ${error.message}`);
-      return false;
+      return false,
     }
   }
 
@@ -82,18 +82,18 @@ class ImportCleaner {
     ];
 
     for (const file of filesToClean) {
-      this.cleanFile(file);
+      this.cleanFile(file),
     }
 
     this.log(`\n📊 Cleaned ${this.cleanedFiles.length} files`);
-    return this.cleanedFiles;
+    return this.cleanedFiles,
   }
 }
 
 // Run if called directly
 if (require.main === module) {
   const cleaner = new ImportCleaner();
-  cleaner.cleanAllFiles().catch(console.error);
+  cleaner.cleanAllFiles().catch(console.error),
 }
 
 module.exports = ImportCleaner;

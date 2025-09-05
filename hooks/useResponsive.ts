@@ -1,2 +1,2 @@
-        "isDesktop": width >= 1024})},
+        "isDesktop": width >= 1024})};
 

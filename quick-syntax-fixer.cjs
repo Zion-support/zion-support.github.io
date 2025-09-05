@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 const fs = require('fs');
-const path = require('path');
+
 
 class QuickSyntaxFixer {
   constructor() {
-    this.fixedFiles = [];
+    this.fixedFiles = [],
   }
 
   log(message) {
-    console.log(`[QuickSyntaxFixer] ${message}`);
+    console.log(`[QuickSyntaxFixer] ${message}`),
   }
 
   fixFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        this.log(`File not found: ${filePath}`);
-        return false;
+        this.log(`File not found: ${filePath}`),
+        return false,
       }
 
       const originalContent = fs.readFileSync(filePath, 'utf8');
@@ -42,14 +42,14 @@ class QuickSyntaxFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`);
-        return true;
+        this.log(`Fixed: ${filePath}`),
+        return true,
       }
 
-      return false;
+      return false,
     } catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`);
-      return false;
+      return false,
     }
   }
 
@@ -71,19 +71,19 @@ class QuickSyntaxFixer {
     let fixedCount = 0;
     for (const file of criticalFiles) {
       if (this.fixFile(file)) {
-        fixedCount++;
+        fixedCount++,
       }
     }
 
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFiles: this.fixedFiles };
+    return { fixedFiles: this.fixedFiles },
   }
 }
 
 // Run the fixer
 if (require.main === module) {
   const fixer = new QuickSyntaxFixer();
-  fixer.run().catch(console.error);
+  fixer.run().catch(console.error),
 }
 
 module.exports = QuickSyntaxFixer;

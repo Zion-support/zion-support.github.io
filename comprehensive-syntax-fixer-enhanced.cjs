@@ -8,11 +8,11 @@ class ComprehensiveSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
-    this.errors = [];
+    this.errors = [],
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`),
   }
 
   fixFile(filePath) {
@@ -25,24 +25,24 @@ class ComprehensiveSyntaxFixer {
       
       // Fix specific file type issues
       if (filePath.endsWith('.tsx') || filePath.endsWith('.ts')) {
-        content = this.fixTypeScriptIssues(content);
+        content = this.fixTypeScriptIssues(content),
       }
       
       if (filePath.endsWith('.js') || filePath.endsWith('.cjs')) {
-        content = this.fixJavaScriptIssues(content);
+        content = this.fixJavaScriptIssues(content),
       }
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.fixedFiles.push(filePath);
         this.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);
-        return true;
+        return true,
       }
-      return false;
+      return false,
     } catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
+      this.errors.push({ file: filePath, error: error.message }),
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;
+      return false,
     }
   }
 
@@ -63,7 +63,7 @@ class ComprehensiveSyntaxFixer {
     // Fix malformed function calls
     content = content.replace(/\(\s*,\s*\)/g, '()');
     
-    return content;
+    return content,
   }
 
   fixTypeScriptIssues(content) {
@@ -79,7 +79,7 @@ class ComprehensiveSyntaxFixer {
     // Fix malformed type definitions
     content = content.replace(/type\s+\w+\s*=\s*;\s*;?/g, '');
     
-    return content;
+    return content,
   }
 
   fixJavaScriptIssues(content) {
@@ -92,7 +92,7 @@ class ComprehensiveSyntaxFixer {
     // Fix malformed function declarations
     content = content.replace(/function\s+\w*\s*\(\s*\)\s*{\s*}\s*;?/g, '');
     
-    return content;
+    return content,
   }
 
   async scanAndFix() {
@@ -104,17 +104,17 @@ class ComprehensiveSyntaxFixer {
     this.log(`Found ${files.length} files to check`);
     
     for (const file of files) {
-      this.fixFile(file);
+      this.fixFile(file),
     }
     
     this.log(`✅ Fixed ${this.fixedFiles.length} files`);
     this.log(`❌ ${this.errors.length} files had errors`);
     
     if (this.errors.length > 0) {
-      this.log('Files with errors:');
+      this.log('Files with errors: '),
       this.errors.forEach(err => {
-        this.log(`  - ${err.file}: ${err.error}`);
-      });
+        this.log(`  - ${err.file}: ${err.error}`),
+      }),
     }
   }
 
@@ -129,14 +129,14 @@ class ComprehensiveSyntaxFixer {
       if (stat.isDirectory()) {
         // Skip node_modules, .next, .git, etc.
         if (!['node_modules', '.next', '.git', 'dist', 'build', 'out'].includes(item)) {
-          files = files.concat(this.getAllFiles(fullPath, extensions));
+          files = files.concat(this.getAllFiles(fullPath, extensions)),
         }
       } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
+        files.push(fullPath),
       }
     }
     
-    return files;
+    return files,
   }
 }
 

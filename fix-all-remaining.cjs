@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
+
 
 console.log('🔧 Fixing all remaining syntax errors...');
 
@@ -60,7 +60,7 @@ const popularArticles = [
     category: "Account & Billing",
     readTime: "3 min"
   }
-];
+],
 
 export default function Help() {
   return (
@@ -125,14 +125,14 @@ export default function Help() {
                       <p className="text-gray-600 mb-6">{category.description}</p>
                       <ul className="space-y-2">
                         {category.articles.map((article, articleIndex) => (
-                          <li key={articleIndex} className="flex items-center text-gray-600 hover:text-blue-600 cursor-pointer">
+                          <li key={articleIndex} className="flex items-center text-gray-600 hover: text-blue-600 cursor-pointer">
                             <ChevronRight className="w-4 h-4 mr-2" />
                             {article}
                           </li>
                         ))}
                       </ul>
                     </motion.div>
-                  );
+                  ),
                 })}
               </div>
             </div>
@@ -203,7 +203,7 @@ export default function Help() {
         </section>
       </main>
     </Layout>
-  );
+  ),
 }`;
 
 fs.writeFileSync('/workspace/pages/help.tsx', helpContent);
@@ -219,7 +219,7 @@ import {
   Building, 
   TrendingUp, 
   CheckCircle,
-  Clock,
+  Clock;
   Shield
 } from 'lucide-react';
 import Layout from '../components/Layout';
@@ -267,7 +267,7 @@ const educationBenefits = [
     description: 'Protect sensitive student and institutional data with enterprise-grade security.',
     metric: '99.9%'
   }
-];
+],
 
 export default function Education() {
   return (
@@ -345,7 +345,7 @@ export default function Education() {
                         </ul>
                       </div>
                     </motion.div>
-                  );
+                  ),
                 })}
               </div>
             </div>
@@ -378,7 +378,7 @@ export default function Education() {
                       <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                       <p className="text-gray-600">{benefit.description}</p>
                     </motion.div>
-                  );
+                  ),
                 })}
               </div>
             </div>
@@ -386,7 +386,7 @@ export default function Education() {
         </section>
       </main>
     </Layout>
-  );
+  ),
 }`;
 
 fs.writeFileSync('/workspace/pages/industries/education.tsx', educationContent);

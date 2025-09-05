@@ -14,13 +14,13 @@ class EnhancedHealthMonitor {
       'automation-reports',
       'health-monitor.log'
     );
-    this.ensureLogDir();
+    this.ensureLogDir(),
   }
 
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -28,7 +28,7 @@ class EnhancedHealthMonitor {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + '\n'),
   }
 
   async checkSystemHealth() {
@@ -43,7 +43,7 @@ class EnhancedHealthMonitor {
       network: await this.checkNetworkHealth(),
     };
 
-    return healthCheck;
+    return healthCheck,
   }
 
   async checkSystemResources() {
@@ -63,13 +63,13 @@ class EnhancedHealthMonitor {
         uptime: Math.round(uptime) + 's',
         nodeVersion: process.version,
         platform: process.platform,
-      };
+      },
     } catch (error) {
-      this.log(`⚠️ System resource check failed: ${error.message}`);
+      this.log(`⚠️ System resource check failed: ${error.message}`),
       return {
         status: 'warning',
         error: error.message,
-      };
+      },
     }
   }
 
@@ -90,13 +90,13 @@ class EnhancedHealthMonitor {
           metrics: '/api/metrics',
           status: '/api/status',
         },
-      };
+      },
     } catch (error) {
-      this.log(`⚠️ Application health check failed: ${error.message}`);
+      this.log(`⚠️ Application health check failed: ${error.message}`),
       return {
         status: 'unhealthy',
         error: error.message,
-      };
+      },
     }
   }
 
@@ -115,13 +115,13 @@ class EnhancedHealthMonitor {
           idle: 12,
           total: 20,
         },
-      };
+      },
     } catch (error) {
-      this.log(`⚠️ Database health check failed: ${error.message}`);
+      this.log(`⚠️ Database health check failed: ${error.message}`),
       return {
         status: 'unhealthy',
         error: error.message,
-      };
+      },
     }
   }
 
@@ -140,7 +140,7 @@ class EnhancedHealthMonitor {
         ? 'healthy'
         : 'degraded',
       services,
-    };
+    },
   }
 
   async checkNetworkHealth() {
@@ -153,13 +153,13 @@ class EnhancedHealthMonitor {
         bandwidth: '100Mbps',
         packetLoss: '0%',
         dns: 'resolved',
-      };
+      },
     } catch (error) {
-      this.log(`⚠️ Network health check failed: ${error.message}`);
+      this.log(`⚠️ Network health check failed: ${error.message}`),
       return {
         status: 'unhealthy',
         error: error.message,
-      };
+      },
     }
   }
 
@@ -182,9 +182,9 @@ class EnhancedHealthMonitor {
       'health-monitor-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath}`);
+    this.log(`📊 Report saved to: ${reportPath}`),
 
-    return report;
+    return report,
   }
 
   calculateOverallStatus(healthCheck) {
@@ -198,7 +198,7 @@ class EnhancedHealthMonitor {
 
     if (statuses.every(s => s === 'healthy')) return 'healthy';
     if (statuses.some(s => s === 'unhealthy')) return 'unhealthy';
-    return 'degraded';
+    return 'degraded',
   }
 
   calculateHealthScore(healthCheck) {
@@ -210,33 +210,33 @@ class EnhancedHealthMonitor {
     if (healthCheck.services.overall !== 'healthy') score -= 15;
     if (healthCheck.network.status !== 'healthy') score -= 10;
 
-    return Math.max(0, score);
+    return Math.max(0, score),
   }
 
   generateHealthRecommendations(healthCheck) {
     const recommendations = [];
 
     if (healthCheck.system.status !== 'healthy') {
-      recommendations.push('Investigate system resource issues');
+      recommendations.push('Investigate system resource issues'),
     }
     if (healthCheck.application.status !== 'healthy') {
-      recommendations.push('Check application logs and restart if necessary');
+      recommendations.push('Check application logs and restart if necessary'),
     }
     if (healthCheck.database.status !== 'healthy') {
-      recommendations.push('Verify database connectivity and configuration');
+      recommendations.push('Verify database connectivity and configuration'),
     }
     if (healthCheck.services.overall !== 'healthy') {
-      recommendations.push('Check external service dependencies');
+      recommendations.push('Check external service dependencies'),
     }
     if (healthCheck.network.status !== 'healthy') {
-      recommendations.push('Investigate network connectivity issues');
+      recommendations.push('Investigate network connectivity issues'),
     }
 
     if (recommendations.length === 0) {
-      recommendations.push('System is healthy - continue monitoring');
+      recommendations.push('System is healthy - continue monitoring'),
     }
 
-    return recommendations;
+    return recommendations,
   }
 
   async run() {
@@ -248,11 +248,11 @@ class EnhancedHealthMonitor {
 
       this.log(
         `🎉 Health monitoring completed! Overall Status: ${report.summary.overallStatus}`
-      );
-      this.log(`📊 Health Score: ${report.summary.score}/100`);
+      ),
+      this.log(`📊 Health Score: ${report.summary.score}/100`),
     } catch (error) {
-      this.log(`❌ Health monitoring failed: ${error.message}`);
-      process.exit(1);
+      this.log(`❌ Health monitoring failed: ${error.message}`),
+      process.exit(1),
     }
   }
 }

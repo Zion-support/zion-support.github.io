@@ -6,16 +6,16 @@ class ComprehensiveAppImprover {
   constructor() {
     this.reportsDir = './automation-reports';
     this.improvements = [];
-    this.errors = [];
+    this.errors = [],
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`),
   }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
+      fs.mkdirSync(this.reportsDir, { recursive: true }),
     }
   }
 
@@ -28,10 +28,10 @@ class ComprehensiveAppImprover {
         timeout: 60000,
       });
       this.log(`✅ ${description} - Success`);
-      return { success: true, output: result };
+      return { success: true, output: result },
     } catch (error) {
-      this.log(`❌ ${description} - Failed: ${error.message}`);
-      return { success: false, error: error.message };
+      this.log(`❌ ${description} - Failed: ${error.message}`),
+      return { success: false, error: error.message },
     }
   }
 
@@ -47,7 +47,7 @@ class ComprehensiveAppImprover {
     // Optimize imports
     await this.optimizeImports();
 
-    this.improvements.push('Code quality improvements applied');
+    this.improvements.push('Code quality improvements applied'),
   }
 
   async optimizeImports() {
@@ -68,14 +68,14 @@ class ComprehensiveAppImprover {
 
         if (content !== originalContent) {
           fs.writeFileSync(file, content, 'utf8');
-          optimizedCount++;
+          optimizedCount++,
         }
       } catch (error) {
-        this.errors.push({ file, error: error.message });
+        this.errors.push({ file, error: error.message }),
       }
     }
 
-    this.log(`✅ Optimized ${optimizedCount} files`);
+    this.log(`✅ Optimized ${optimizedCount} files`),
   }
 
   removeUnusedImports(content) {
@@ -87,7 +87,7 @@ class ComprehensiveAppImprover {
     lines.forEach(line => {
       const matches = line.match(/\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g);
       if (matches) {
-        matches.forEach(match => usedIdentifiers.add(match));
+        matches.forEach(match => usedIdentifiers.add(match)),
       }
     });
 
@@ -104,7 +104,7 @@ class ComprehensiveAppImprover {
             }
           }
         }
-        return true;
+        return true,
       })
       .join('\n');
   }
@@ -118,15 +118,15 @@ class ComprehensiveAppImprover {
     lines.forEach(line => {
       if (line.trim().startsWith('import ')) {
         importLines.push(line);
-        inImports = true;
+        inImports = true,
       } else if (inImports && line.trim() === '') {
-        importLines.push(line);
+        importLines.push(line),
       } else {
         if (inImports) {
           otherLines.push(line);
-          inImports = false;
+          inImports = false,
         } else {
-          otherLines.push(line);
+          otherLines.push(line),
         }
       }
     });
@@ -134,7 +134,7 @@ class ComprehensiveAppImprover {
     // Sort imports
     importLines.sort();
 
-    return [...importLines, ...otherLines].join('\n');
+    return [...importLines, ...otherLines].join('\n'),
   }
 
   getTypeScriptFiles(dir) {
@@ -152,18 +152,18 @@ class ComprehensiveAppImprover {
           !item.startsWith('.') &&
           item !== 'node_modules'
         ) {
-          walkDir(fullPath);
+          walkDir(fullPath),
         } else if (
           stat.isFile() &&
           (item.endsWith('.ts') || item.endsWith('.tsx'))
         ) {
-          files.push(fullPath);
+          files.push(fullPath),
         }
       }
     }
 
     walkDir(dir);
-    return files;
+    return files,
   }
 
   async improvePerformance() {
@@ -175,7 +175,7 @@ class ComprehensiveAppImprover {
     // Bundle analysis
     await this.runCommand('npm run analyze', 'Analyze bundle');
 
-    this.improvements.push('Performance optimizations applied');
+    this.improvements.push('Performance optimizations applied'),
   }
 
   async improveSecurity() {
@@ -187,7 +187,7 @@ class ComprehensiveAppImprover {
     // Fix security issues
     await this.runCommand('npm audit fix', 'Fix security issues');
 
-    this.improvements.push('Security improvements applied');
+    this.improvements.push('Security improvements applied'),
   }
 
   async improveAccessibility() {
@@ -196,7 +196,7 @@ class ComprehensiveAppImprover {
     // Run accessibility tests
     await this.runCommand('npm run test:accessibility', 'Accessibility tests');
 
-    this.improvements.push('Accessibility improvements applied');
+    this.improvements.push('Accessibility improvements applied'),
   }
 
   async generateReport() {
@@ -224,8 +224,8 @@ class ComprehensiveAppImprover {
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    this.log(`📊 Report saved to: ${reportPath}`);
-    return report;
+    this.log(`📊 Report saved to: ${reportPath}`),
+    return report,
   }
 
   async run() {
@@ -246,10 +246,10 @@ class ComprehensiveAppImprover {
         `📊 Summary: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
       );
 
-      return report;
+      return report,
     } catch (error) {
-      this.log(`❌ Error: ${error.message}`);
-      throw error;
+      this.log(`❌ Error: ${error.message}`),
+      throw error,
     }
   }
 }
@@ -259,8 +259,8 @@ if (require.main === module) {
   const improver = new ComprehensiveAppImprover();
   improver.run().catch(error => {
     console.error('❌ Error:', error);
-    process.exit(1);
-  });
+    process.exit(1),
+  }),
 }
 
 module.exports = ComprehensiveAppImprover;

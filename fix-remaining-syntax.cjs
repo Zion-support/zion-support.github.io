@@ -39,9 +39,9 @@ function fixFile(filePath) {
       .replace(/^\s*$\n/gm, '');
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    console.log(`Fixed: ${filePath}`),
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message),
   }
 }
 
@@ -53,11 +53,11 @@ function walkDir(dir) {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      walkDir(filePath);
+      walkDir(filePath),
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      fixFile(filePath);
+      fixFile(filePath),
     }
-  });
+  }),
 }
 
 // Start fixing from components directory

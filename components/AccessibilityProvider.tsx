@@ -1,7 +1,7 @@
 
-    highContrast,
-    largeText,
-    reducedMotion,
-    toggleHighContrast,
-    toggleLargeText,
+    highContrast;
+    largeText;
+    reducedMotion;
+    toggleHighContrast;
+    toggleLargeText;
 

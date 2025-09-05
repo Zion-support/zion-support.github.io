@@ -12,12 +12,12 @@ const steps = [
 
 steps.forEach(step => {
   try {
-    console.log(`Running: ${step.name}`);
-    execSync(step.command, { stdio: 'inherit' });
-    console.log(`✅ ${step.name} completed`);
+    console.log(`Running: ${step.name}`),
+    execSync(step.command, { stdio: 'inherit' }),
+    console.log(`✅ ${step.name} completed`),
   } catch (error) {
-    console.log(`❌ ${step.name} failed: ${error.message}`);
-    process.exit(1);
+    console.log(`❌ ${step.name} failed: ${error.message}`),
+    process.exit(1),
   }
 });
 

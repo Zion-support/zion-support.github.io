@@ -39,7 +39,7 @@ function createAppImprovements() {
     },
   };
 
-  return improvements;
+  return improvements,
 }
 
 // Generate improvement recommendations
@@ -55,11 +55,11 @@ function generateRecommendations() {
         description: improvements[category][item],
         priority: Math.random() > 0.5 ? 'high' : 'medium',
         estimatedTime: Math.floor(Math.random() * 4) + 1,
-      });
+      }),
     }
   }
 
-  return recommendations;
+  return recommendations,
 }
 
 // Create performance optimization script
@@ -70,17 +70,17 @@ export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
   images.forEach(img => {
     if (!img.loading) {
-      img.loading = 'lazy';
+      img.loading = 'lazy',
     }
     if (!img.decoding) {
-      img.decoding = 'async';
+      img.decoding = 'async',
     }
-  });
+  }),
 };
 
 export const preloadCriticalResources = () => {
   const criticalResources = [
-    '/fonts/main.woff2',
+    '/fonts/main.woff2';
     '/css/critical.css'
   ];
   
@@ -89,8 +89,8 @@ export const preloadCriticalResources = () => {
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
-    document.head.appendChild(link);
-  });
+    document.head.appendChild(link),
+  }),
 };
 
 export const optimizeBundleSize = () => {
@@ -99,12 +99,12 @@ export const optimizeBundleSize = () => {
     return import(\`./components/\${componentName}\`);
   };
   
-  return { loadComponent };
+  return { loadComponent },
 };
 `;
 
   fs.writeFileSync('/workspace/src/utils/performance-optimizer.ts', script);
-  console.log('✅ Created performance optimizer');
+  console.log('✅ Created performance optimizer'),
 }
 
 // Create accessibility checker
@@ -123,7 +123,7 @@ export const checkAccessibility = () => {
         element: img,
         message: 'Image missing alt text',
         severity: 'error'
-      });
+      }),
     }
   });
   
@@ -138,25 +138,25 @@ export const checkAccessibility = () => {
         element: heading,
         message: 'Heading level skipped',
         severity: 'warning'
-      });
+      }),
     }
-    lastLevel = level;
+    lastLevel = level,
   });
   
-  return issues;
+  return issues,
 };
 
 export const fixAccessibilityIssues = (issues) => {
   issues.forEach(issue => {
     if (issue.type === 'missing-alt') {
-      issue.element.alt = 'Image description';
+      issue.element.alt = 'Image description',
     }
   });
 };
 `;
 
   fs.writeFileSync('/workspace/src/utils/accessibility-checker.ts', script);
-  console.log('✅ Created accessibility checker');
+  console.log('✅ Created accessibility checker'),
 }
 
 // Create SEO optimizer
@@ -198,7 +198,7 @@ export const generateStructuredData = (pageData) => {
 `;
 
   fs.writeFileSync('/workspace/src/utils/seo-optimizer.ts', script);
-  console.log('✅ Created SEO optimizer');
+  console.log('✅ Created SEO optimizer'),
 }
 
 // Create monitoring setup
@@ -210,13 +210,13 @@ export const setupAnalytics = () => {
   if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_GA_ID) {
     const script = document.createElement('script');
     script.async = true;
-    script.src = \`https://www.googletagmanager.com/gtag/js?id=\${process.env.NEXT_PUBLIC_GA_ID}\`;
+    script.src = \`https: //www.googletagmanager.com/gtag/js?id=\${process.env.NEXT_PUBLIC_GA_ID}\`,
     document.head.appendChild(script);
     
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments),}
     gtag('js', new Date());
-    gtag('config', process.env.NEXT_PUBLIC_GA_ID);
+    gtag('config', process.env.NEXT_PUBLIC_GA_ID),
   }
 };
 
@@ -231,9 +231,9 @@ export const trackPerformance = () => {
         gtag('event', 'page_load_time', {
           value: Math.round(loadTime),
           event_category: 'Performance'
-        });
+        }),
       }
-    });
+    }),
   }
 };
 
@@ -244,14 +244,14 @@ export const trackErrors = () => {
         event_category: 'Error',
         event_label: event.message,
         value: 1
-      });
+      }),
     }
   });
 };
 `;
 
   fs.writeFileSync('/workspace/src/utils/monitoring.ts', script);
-  console.log('✅ Created monitoring setup');
+  console.log('✅ Created monitoring setup'),
 }
 
 // Main execution
@@ -293,8 +293,8 @@ try {
   );
   console.log(
     '📄 Report saved to: /workspace/automation/reports/app-improvements.json'
-  );
+  ),
 } catch (error) {
   console.error('Error:', error.message);
-  process.exit(1);
+  process.exit(1),
 }

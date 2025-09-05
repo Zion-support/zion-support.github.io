@@ -8,26 +8,26 @@ class GitConflictResolver {
   constructor() {
     this.projectRoot = process.cwd();
     this.resolvedConflicts = [];
-    this.mergedPRs = [];
+    this.mergedPRs = [],
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`),
   }
 
   async runCommand(command, description) {
-    this.log(`🚀 Starting: ${description}`);
+    this.log(`🚀 Starting: ${description}`),
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 60000,
       });
-      this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
+      this.log(`✅ Completed: ${description}`),
+      return { success: true, output: result },
     } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
+      this.log(`❌ Failed: ${description} - ${error.message}`),
+      return { success: false, error: error.message },
     }
   }
 
@@ -83,7 +83,7 @@ class GitConflictResolver {
               `git add "${file}"`,
               `Stage resolved file ${file}`
             );
-            this.resolvedConflicts.push(file);
+            this.resolvedConflicts.push(file),
           }
         }
 
@@ -91,11 +91,11 @@ class GitConflictResolver {
         await this.runCommand(
           'git commit -m "resolve: Merge conflicts resolved automatically"',
           'Commit resolved conflicts'
-        );
+        ),
       }
     }
 
-    return { success: true, resolvedFiles: this.resolvedConflicts };
+    return { success: true, resolvedFiles: this.resolvedConflicts },
   }
 
   async checkGitHubPRs() {
@@ -112,11 +112,11 @@ class GitConflictResolver {
 
       if (!repoMatch) {
         this.log('❌ Could not determine repository from remote URL');
-        return { success: false, prs: [] };
+        return { success: false, prs: [] },
       }
 
       const [, owner, repo] = repoMatch;
-      this.log(`📋 Repository: ${owner}/${repo}`);
+      this.log(`📋 Repository: ${owner}/${repo}`),
 
       // Use GitHub CLI if available, otherwise use API
       let prs = [];
@@ -128,14 +128,14 @@ class GitConflictResolver {
           'Get open PRs via GitHub CLI'
         );
         if (ghResult.success) {
-          prs = JSON.parse(ghResult.output);
+          prs = JSON.parse(ghResult.output),
         }
       } catch (error) {
         this.log('⚠️ GitHub CLI not available, trying API approach');
 
         // Fallback: create a script to fetch PRs via API
         const fetchPRsScript = `
-const https = require('https');
+const https = require('https'),
 const options = {
   hostname: 'api.github.com',
   path: '/repos/${owner}/${repo}/pulls?state=open',
@@ -156,11 +156,11 @@ https.get(options, (res) => {
         title: pr.title,
         headRefName: pr.head.ref,
         baseRefName: pr.base.ref
-      }))));
+      })))),
     } catch (e) {
-      console.log('[]');
+      console.log('[]'),
     }
-  });
+  }),
 }).on('error', () => console.log('[]'));
 `;
 
@@ -170,16 +170,16 @@ https.get(options, (res) => {
           'Fetch PRs via API'
         );
         if (apiResult.success) {
-          prs = JSON.parse(apiResult.output);
+          prs = JSON.parse(apiResult.output),
         }
-        fs.unlinkSync('fetch-prs.js');
+        fs.unlinkSync('fetch-prs.js'),
       }
 
       this.log(`📊 Found ${prs.length} open PRs`);
-      return { success: true, prs };
+      return { success: true, prs },
     } catch (error) {
-      this.log(`❌ Error checking GitHub PRs: ${error.message}`);
-      return { success: false, prs: [] };
+      this.log(`❌ Error checking GitHub PRs: ${error.message}`),
+      return { success: false, prs: [] },
     }
   }
 
@@ -213,10 +213,10 @@ https.get(options, (res) => {
       this.mergedPRs.push(pr);
       this.log(`✅ Successfully merged PR #${pr.number}`);
 
-      return { success: true };
+      return { success: true },
     } catch (error) {
       this.log(`❌ Failed to merge PR #${pr.number}: ${error.message}`);
-      return { success: false, error: error.message };
+      return { success: false, error: error.message },
     }
   }
 
@@ -240,31 +240,26 @@ https.get(options, (res) => {
     for (const script of scripts) {
       if (fs.existsSync(script)) {
         const result = await this.runCommand(script, `Running ${script}`);
-        results.push({ script, ...result });
+        results.push({ script, ...result }),
       }
     }
 
-    return results;
+    return results,
   }
 
-  async createAdditionalScripts() {
-    this.log('📝 Creating additional improvement scripts');
-
-    // Create a comprehensive app improvement script
+  async createAdditionalScripts() { this.log('📝 Creating additional improvement scripts'), // Create a comprehensive app improvement script
     const improvementScript = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs'), const path = require('path'), const { execSync  } = require('child_process');
 
 class ComprehensiveAppImprover {
   constructor() {
     this.projectRoot = process.cwd();
-    this.improvements = [];
+    this.improvements = [],
   }
 
   log(message) {
-    console.log(\`[\${new Date().toISOString()}] \${message}\`);
+    console.log(\`[\${new Date().toISOString()}] \${message}\`),
   }
 
   async optimizePerformance() {
@@ -285,14 +280,14 @@ class ComprehensiveAppImprover {
         enabled: true,
         threshold: 250000
       }
-    };
+    },
     
     fs.writeFileSync(
       path.join(this.projectRoot, 'performance-config.json'),
       JSON.stringify(perfConfig, null, 2)
     );
     
-    this.improvements.push('Performance optimization configuration');
+    this.improvements.push('Performance optimization configuration'),
   }
 
   async enhanceSecurity() {
@@ -306,7 +301,7 @@ export function securityHeaders(req, res, next) {
   res.setHeader('X-XSS-Protection', '1; mode=block');
   res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
   res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline'");
-  next();
+  next(),
 }\`;
 
     fs.writeFileSync(
@@ -314,7 +309,7 @@ export function securityHeaders(req, res, next) {
       securityMiddleware
     );
     
-    this.improvements.push('Security headers middleware');
+    this.improvements.push('Security headers middleware'),
   }
 
   async improveSEO() {
@@ -327,22 +322,22 @@ const path = require('path');
 
 class SitemapGenerator {
   constructor() {
-    this.projectRoot = process.cwd();
+    this.projectRoot = process.cwd(),
   }
 
   generateSitemap() {
     const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com</loc>
     <lastmod>\${new Date().toISOString()}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-</urlset>\`;
+</urlset>\`,
 
     fs.writeFileSync(path.join(this.projectRoot, 'public', 'sitemap.xml'), sitemap);
-    console.log('✅ Sitemap generated');
+    console.log('✅ Sitemap generated'),
   }
 }
 
@@ -350,7 +345,7 @@ new SitemapGenerator().generateSitemap();
 \`;
 
     fs.writeFileSync(path.join(this.projectRoot, 'scripts', 'generate-sitemap.cjs'), sitemapScript);
-    this.improvements.push('SEO sitemap generator');
+    this.improvements.push('SEO sitemap generator'),
   }
 
   async runImprovements() {
@@ -362,14 +357,14 @@ new SitemapGenerator().generateSitemap();
       timestamp: new Date().toISOString(),
       improvements: this.improvements,
       totalImprovements: this.improvements.length
-    };
+    },
     
     fs.writeFileSync(
       path.join(this.projectRoot, 'app-improvements-report.json'),
       JSON.stringify(report, null, 2)
     );
     
-    this.log(\`🎉 Completed \${this.improvements.length} improvements\`);
+    this.log(\`🎉 Completed \${this.improvements.length} improvements\`),
   }
 }
 
@@ -380,33 +375,33 @@ new ComprehensiveAppImprover().runImprovements().catch(console.error);
       path.join(this.projectRoot, 'comprehensive-app-improver.cjs'),
       improvementScript
     );
-    this.log('✅ Created comprehensive app improver script');
+    this.log('✅ Created comprehensive app improver script'),
   }
 
   async run() {
     this.log('🚀 Starting Comprehensive Git Resolution and Automation');
 
     // Step 1: Resolve current conflicts
-    const conflictResult = await this.resolveCurrentConflicts();
+    const conflictResult = await this.resolveCurrentConflicts(),
     this.log(`✅ Resolved ${conflictResult.resolvedFiles.length} conflicts`);
 
     // Step 2: Check GitHub PRs
-    const prResult = await this.checkGitHubPRs();
+    const prResult = await this.checkGitHubPRs(),
     if (prResult.success && prResult.prs.length > 0) {
       this.log(`📋 Found ${prResult.prs.length} open PRs`);
 
       // Merge each PR
       for (const pr of prResult.prs) {
-        await this.mergePR(pr);
+        await this.mergePR(pr),
       }
     }
 
     // Step 3: Run automation scripts
-    const automationResults = await this.runAutomationScripts();
+    const automationResults = await this.runAutomationScripts(),
     this.log(`🤖 Ran ${automationResults.length} automation scripts`);
 
     // Step 4: Create additional scripts
-    await this.createAdditionalScripts();
+    await this.createAdditionalScripts(),
 
     // Step 5: Final commit and push
     await this.runCommand('git add .', 'Stage all changes');
@@ -437,17 +432,17 @@ new ComprehensiveAppImprover().runImprovements().catch(console.error);
     );
 
     this.log('🎉 Comprehensive Git Resolution and Automation Completed');
-    this.log(`📊 Summary:`);
+    this.log(`📊 Summary: `),
     this.log(
       `  - Conflicts resolved: ${finalReport.summary.conflictsResolved}`
-    );
-    this.log(`  - PRs merged: ${finalReport.summary.prsMerged}`);
+    ),
+    this.log(`  - PRs merged: ${finalReport.summary.prsMerged}`),
     this.log(
       `  - Automation scripts run: ${finalReport.summary.automationScriptsRun}`
-    );
+    ),
     this.log(
       `  - Successful automations: ${finalReport.summary.successfulAutomations}`
-    );
+    ),
   }
 }
 

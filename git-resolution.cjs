@@ -7,11 +7,11 @@ const path = require('path');
 class GitResolver {
   constructor() {
     this.projectRoot = process.cwd();
-    this.resolvedConflicts = [];
+    this.resolvedConflicts = [],
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`),
   }
 
   async runCommand(command, description) {
@@ -23,10 +23,10 @@ class GitResolver {
         timeout: 60000,
       });
       this.log(`✅ ${description} - Success`);
-      return { success: true, output: result };
+      return { success: true, output: result },
     } catch (error) {
-      this.log(`❌ ${description} - Failed: ${error.message}`);
-      return { success: false, error: error.message };
+      this.log(`❌ ${description} - Failed: ${error.message}`),
+      return { success: false, error: error.message },
     }
   }
 
@@ -82,7 +82,7 @@ class GitResolver {
               `git add "${file}"`,
               `Stage resolved file ${file}`
             );
-            this.resolvedConflicts.push(file);
+            this.resolvedConflicts.push(file),
           }
         }
 
@@ -91,12 +91,12 @@ class GitResolver {
           await this.runCommand(
             'git commit -m "resolve: Merge conflicts resolved automatically"',
             'Commit resolved conflicts'
-          );
+          ),
         }
       }
     }
 
-    return { success: true, resolvedFiles: this.resolvedConflicts };
+    return { success: true, resolvedFiles: this.resolvedConflicts },
   }
 
   async checkAndMergePRs() {
@@ -138,18 +138,18 @@ class GitResolver {
             await this.runCommand(
               'git push origin main',
               `Push merged PR #${pr.number}`
-            );
+            ),
           }
 
-          return { success: true, mergedPRs: prs.length };
+          return { success: true, mergedPRs: prs.length },
         }
       } else {
         this.log('⚠️ GitHub CLI not available, skipping PR merging');
-        return { success: false, error: 'GitHub CLI not available' };
+        return { success: false, error: 'GitHub CLI not available' },
       }
     } catch (error) {
-      this.log(`❌ Error checking PRs: ${error.message}`);
-      return { success: false, error: error.message };
+      this.log(`❌ Error checking PRs: ${error.message}`),
+      return { success: false, error: error.message },
     }
   }
 
@@ -196,24 +196,24 @@ Enhancements: Performance, Security, SEO, Accessibility, Monitoring`;
     // Push to main
     await this.runCommand('git push origin main', 'Push to main branch');
 
-    return { success: true };
+    return { success: true },
   }
 
   async run() {
     this.log('🚀 Starting Git Resolution Process');
 
     // Step 1: Resolve conflicts
-    const conflictResult = await this.resolveConflicts();
+    const conflictResult = await this.resolveConflicts(),
     this.log(`✅ Resolved ${conflictResult.resolvedFiles.length} conflicts`);
 
     // Step 2: Check and merge PRs
-    const prResult = await this.checkAndMergePRs();
+    const prResult = await this.checkAndMergePRs(),
     if (prResult.success) {
-      this.log(`✅ Merged ${prResult.mergedPRs} PRs`);
+      this.log(`✅ Merged ${prResult.mergedPRs} PRs`),
     }
 
     // Step 3: Commit and push
-    const commitResult = await this.commitAndPush();
+    const commitResult = await this.commitAndPush(),
 
     // Generate report
     const report = {
@@ -229,12 +229,12 @@ Enhancements: Performance, Security, SEO, Accessibility, Monitoring`;
     );
 
     this.log('🎉 Git Resolution Process Completed');
-    this.log(`📊 Summary:`);
-    this.log(`  - Conflicts resolved: ${this.resolvedConflicts.length}`);
-    this.log(`  - PRs merged: ${prResult.mergedPRs || 0}`);
-    this.log(`  - Success: ${report.success}`);
+    this.log(`📊 Summary: `),
+    this.log(`  - Conflicts resolved: ${this.resolvedConflicts.length}`),
+    this.log(`  - PRs merged: ${prResult.mergedPRs || 0}`),
+    this.log(`  - Success: ${report.success}`),
 
-    return report;
+    return report,
   }
 }
 

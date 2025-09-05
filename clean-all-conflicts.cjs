@@ -1,22 +1,22 @@
 const fs = require('fs');
-const path = require('path');
+
 const { execSync } = require('child_process');
 
 function findFilesWithConflicts() {
   try {
-    const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | grep -v node_modules | grep -v .git | xargs grep -l "<<<<<<< " 2>/dev/null || true', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(line => line.trim().length > 0);
+    const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | grep -v node_modules | grep -v .git | xargs grep -l "<<<<<<< " 2>/dev/null || true', { encoding: 'utf8' }),
+    return result.trim().split('\n').filter(line => line.trim().length > 0),
   } catch (error) {
     console.log('No files with merge conflicts found');
-    return [];
+    return [],
   }
 }
 
 function cleanMergeConflicts(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
+      console.log(`File not found: ${filePath}`),
+      return,
     }
     
     let content = fs.readFileSync(filePath, 'utf8');
@@ -35,16 +35,16 @@ function cleanMergeConflicts(filePath) {
     // If file becomes empty or just whitespace, create a simple export
     if (content.trim().length === 0) {
       if (filePath.endsWith('.ts') || filePath.endsWith('.tsx')) {
-        content = '// TypeScript file\nexport {};\n';
+        content = '// TypeScript file\nexport {};\n',
       } else if (filePath.endsWith('.js') || filePath.endsWith('.jsx')) {
-        content = '// JavaScript file\nmodule.exports = {};\n';
+        content = '// JavaScript file\nmodule.exports = {};\n',
       }
     }
     
     fs.writeFileSync(filePath, content);
-    console.log(`Cleaned merge conflicts in: ${filePath}`);
+    console.log(`Cleaned merge conflicts in: ${filePath}`),
   } catch (error) {
-    console.error(`Error cleaning ${filePath}:`, error.message);
+    console.error(`Error cleaning ${filePath}:`, error.message),
   }
 }
 

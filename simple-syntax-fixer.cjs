@@ -23,21 +23,21 @@ function fixSimpleSyntaxIssues(filePath) {
 
     // Fix import statements
     content = content.replace(
-      /import React from 'react',/g,
+      /import React from 'react',/g;
       "import React from 'react';"
     );
     content = content.replace(
-      /import React from "react",/g,
+      /import React from "react",/g;
       'import React from "react";'
     );
     content = content.replace(
-      /import { JSX } from 'react',/g,
+      /import { JSX } from 'react',/g;
       "import { JSX } from 'react';"
     );
 
     // Fix export statements
     content = content.replace(
-      /export default function (\w+)\(\): JSX\.Element \{/g,
+      /export default function (\w+)\(\): JSX\.Element \{/g;
       'export default function $1(): JSX.Element {'
     );
     content = content.replace(
@@ -46,7 +46,7 @@ function fixSimpleSyntaxIssues(filePath) {
     );
     content = content.replace(
       /export const (\w+): (\w+)\[\] = \[;/g,
-      'export const $1: $2[] = [];'
+      'export const $1: $2[] = [],'
     );
 
     // Fix JSX syntax
@@ -89,7 +89,7 @@ function fixSimpleSyntaxIssues(filePath) {
 
     // Fix performance API issues
     if (content.includes('performance.')) {
-      content = content.replace(/performance\./g, 'window.performance.');
+      content = content.replace(/performance\./g, 'window.performance.'),
     }
 
     // Fix React hooks issues
@@ -100,15 +100,15 @@ function fixSimpleSyntaxIssues(filePath) {
 
     // Fix specific parsing errors
     content = content.replace(
-      /import React from 'react',/g,
+      /import React from 'react',/g;
       "import React from 'react';"
     );
     content = content.replace(
-      /import { JSX } from 'react',/g,
+      /import { JSX } from 'react',/g;
       "import { JSX } from 'react';"
     );
     content = content.replace(
-      /export default function App\(\): JSX\.Element \{/g,
+      /export default function App\(\): JSX\.Element \{/g;
       'export default function App(): JSX.Element {'
     );
 
@@ -125,7 +125,7 @@ function fixSimpleSyntaxIssues(filePath) {
           lines[i] =
             `import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'node:path';
+import path from 'node: path',
 
 export default defineConfig({`;
         }
@@ -135,12 +135,12 @@ export default defineConfig({`;
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
-      return true;
+      return true,
     }
-    return false;
+    return false,
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    return false,
   }
 }
 
@@ -158,13 +158,13 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       !item.startsWith('.') &&
       item !== 'node_modules'
     ) {
-      files = files.concat(getAllFiles(fullPath, extensions));
+      files = files.concat(getAllFiles(fullPath, extensions)),
     } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
+      files.push(fullPath),
     }
   }
 
-  return files;
+  return files,
 }
 
 // Main execution
@@ -177,12 +177,12 @@ try {
   for (const file of files) {
     if (fixSimpleSyntaxIssues(file)) {
       fixedCount++;
-      console.log(`✅ Fixed: ${file}`);
+      console.log(`✅ Fixed: ${file}`),
     }
   }
 
-  console.log(`\n🎯 Fixed ${fixedCount} files`);
+  console.log(`\n🎯 Fixed ${fixedCount} files`),
 } catch (error) {
   console.error('Error:', error.message);
-  process.exit(1);
+  process.exit(1),
 }

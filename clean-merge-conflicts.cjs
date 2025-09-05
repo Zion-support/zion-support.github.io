@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = require('path');
+
 const { execSync } = require('child_process');
 
 // Find all files with merge conflict markers
@@ -19,8 +19,8 @@ const conflictFiles = [
 function cleanMergeConflicts(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
+      console.log(`File not found: ${filePath}`),
+      return,
     }
     
     let content = fs.readFileSync(filePath, 'utf8');
@@ -37,9 +37,9 @@ function cleanMergeConflicts(filePath) {
     content = content.replace(/>>>>>>> .*?\n/g, '');
     
     fs.writeFileSync(filePath, content);
-    console.log(`Cleaned merge conflicts in: ${filePath}`);
+    console.log(`Cleaned merge conflicts in: ${filePath}`),
   } catch (error) {
-    console.error(`Error cleaning ${filePath}:`, error.message);
+    console.error(`Error cleaning ${filePath}:`, error.message),
   }
 }
 
