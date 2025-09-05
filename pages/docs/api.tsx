@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { }
+import { 
   Code, 
   Copy, 
   Check, 
@@ -12,51 +12,51 @@ import { }
   Zap,
   Shield,
   Globe,
-  ArrowRight;
+  ArrowRight
 } from 'lucide-react';
 import Layout from '../../components/Layout';
 
-const apiEndpoints = []
-  {}
+const apiEndpoints = [
+  {
     method: 'GET',
     path: '/api/v1/services',
     description: 'Retrieve all available services',
-    parameters: []
+    parameters: [
       { name: 'limit', type: 'integer', required: false, description: 'Number of services to return (max 100)' },
       { name: 'offset', type: 'integer', required: false, description: 'Number of services to skip' },
-      { name: 'category', type: 'string', required: false, description: 'Filter by service category' };
+      { name: 'category', type: 'string', required: false, description: 'Filter by service category' }
     ],
-    responses: []
+    responses: [
       { code: 200, description: 'Success', example: '{ "services": [...], "total": 45 }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid parameters" }' };
-    ];
+      { code: 400, description: 'Bad Request', example: '{ "error": "Invalid parameters" }' }
+    ]
   },
-  {}
+  {
     method: 'POST',
     path: '/api/v1/contact',
     description: 'Submit a contact form or inquiry',
-    parameters: []
+    parameters: [
       { name: 'name', type: 'string', required: true, description: 'Contact person name' },
       { name: 'email', type: 'string', required: true, description: 'Contact email address' },
       { name: 'message', type: 'string', required: true, description: 'Message content' },
       { name: 'company', type: 'string', required: false, description: 'Company name' },
-      { name: 'phone', type: 'string', required: false, description: 'Phone number' };
+      { name: 'phone', type: 'string', required: false, description: 'Phone number' }
     ],
-    responses: []
+    responses: [
       { code: 201, description: 'Created', example: '{ "id": "123", "status": "received" }' },
-      { code: 400, description: 'Bad Request', example: '{ "error": "Missing required fields" }' };
-    ];
+      { code: 400, description: 'Bad Request', example: '{ "error": "Missing required fields" }' }
+    ]
   },
-  {}
+  {
     method: 'GET',
     path: '/api/v1/status',
     description: 'Get system status and health information',
     parameters: [],
-    responses: []
-      { code: 200, description: 'Success', example: '{ "status": "operational", "uptime": "99.9%" }' };
-    ];
+    responses: [
+      { code: 200, description: 'Success', example: '{ "status": "operational", "uptime": "99.9%" }' }
+    ]
   },
-  {}
+  {
     method: 'POST',
     path: '/api/v1/quote',
     description: 'Request a project quote',

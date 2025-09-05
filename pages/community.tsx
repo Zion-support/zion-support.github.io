@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { }
+import {
   Users, 
   MessageSquare, 
   Calendar, 
@@ -13,19 +13,19 @@ import { }
   Star,
   Clock,
   MapPin,
-  ExternalLink;
+  ExternalLink
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const communityStats = []
+const communityStats = [
   { number: '2,500+', label: 'Active Members' },
   { number: '150+', label: 'Discussions' },
   { number: '50+', label: 'Events This Month' },
-  { number: '95%', label: 'Member Satisfaction' };
+  { number: '95%', label: 'Member Satisfaction' }
 ];
 
-const featuredEvents = []
-  {}
+const featuredEvents = [
+  {
     id: 1,
     title: 'AI & Machine Learning Workshop',
     date: '2024-02-15',
@@ -36,7 +36,7 @@ const featuredEvents = []
     maxAttendees: 50,
     description: 'Learn the latest AI techniques and best practices from industry experts.'
   },
-  {}
+  {
     id: 2,
     title: 'Cloud Architecture Deep Dive',
     date: '2024-02-20',
@@ -47,7 +47,7 @@ const featuredEvents = []
     maxAttendees: 30,
     description: 'Explore advanced cloud architecture patterns and implementation strategies.'
   },
-  {}
+  {
     id: 3,
     title: 'Cybersecurity Best Practices',
     date: '2024-02-25',

@@ -64,18 +64,18 @@ const aiServices = [
     features: ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
     pricing: '$4,000 - $20,000 project',
     category: 'Analytics',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'Intelligent Chatbot System',
     description: 'AI-powered customer support with natural conversation capabilities.',
     icon: MessageSquare,
     features: ['Natural Language Understanding', 'Context Awareness', 'Multi-language Support', 'Integration APIs'],
     pricing: '$1,000 - $6,000/month',
     category: 'Customer Service',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'Computer Vision Solutions',
     description: 'Image and video analysis using deep learning and computer vision.',
     icon: Eye,
@@ -83,7 +83,7 @@ const aiServices = [
     pricing: '$3,000 - $15,000 project',
     category: 'Computer Vision'
   },
-  {}
+  {
     title: 'AI Content Generation',
     description: 'Automated content creation using advanced language models.',
     icon: FileText,
@@ -91,7 +91,7 @@ const aiServices = [
     pricing: '$1,500 - $8,000/month',
     category: 'Content'
   },
-  {}
+  {
     title: 'Voice AI Assistant',
     description: 'Voice-controlled AI assistant with speech recognition and synthesis.',
     icon: Mic,
@@ -99,7 +99,7 @@ const aiServices = [
     pricing: '$2,500 - $12,000 project',
     category: 'Voice'
   },
-  {}
+  {
     title: 'AI-Powered Fraud Detection',
     description: 'Real-time fraud detection using machine learning and behavioral analytics.',
     icon: Shield,
