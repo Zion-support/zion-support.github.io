@@ -5,52 +5,48 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import {
-  COMPREHENSIVE_NEW_SERVICES_2025,
-  getNewServiceStats,
-  getNewServicesByType,
-  getNewServicesByCategory,
-  searchNewServices,
-  getFeaturedNewServices,
-  getTrendingNewServices,
-  getNewServicesWithFreeTier,
-  getNewBetaAccessServices,
-  NEW_SERVICE_CATEGORIES,
-  NEW_SERVICE_TYPES,
-  NEW_PRICING_TIERS,
-  NEW_INNOVATION_LEVELS,
-  NEW_SUPPORT_LEVELS
+:src/pages/ComprehensiveNewServicesShowcase2025.tsx
+import { ;
+  COMPREHENSIVE_NEW_SERVICES_2025,;
+  getNewServiceStats,;
+  getNewServicesByType,;
+  getNewServicesByCategory,;
+  searchNewServices,;
+  getFeaturedNewServices,;
+  getTrendingNewServices,;
+  getNewServicesWithFreeTier,;
+  getNewBetaAccessServices,;
+  NEW_SERVICE_CATEGORIES,;
+  NEW_SERVICE_TYPES,;
+  NEW_PRICING_TIERS,;
+  NEW_INNOVATION_LEVELS,;
+  NEW_SUPPORT_LEVELS;
 } from '../data/comprehensiveNewServices2025';
-import {
-  Search,
-  Filter,
-  Star,
-  Zap,
-  Shield,
-  TrendingUp,
-  Clock,
-  Users,
-  DollarSign,
-  Phone,
-  Mail,
-  Globe,
-  MapPin,
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Server,
-  Smartphone,
-  Sparkles,
-  Rocket
+import { ;
+  Search, ;
+  Filter, ;
+  Star, ;
+  Zap, ;
+  Shield, ;
+  TrendingUp, ;
+  Clock, ;
+  Users, ;
+  DollarSign,;
+  Phone,;
+  Mail,;
+  Globe,;
+  MapPin,;
+  CheckCircle,;
+  ArrowRight,;
+  Brain,;
+  Server,;
+  Smartphone,;
+  Sparkles,;
+  Rocket;
 } from 'lucide-react';
-const "ComprehensiveNewServicesShowcase2025": React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(");
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
-  const [selectedSupportLevel, setSelectedSupportLevel] = useState('all');
-  const stats = getNewServiceStats();
+;
+const "ComprehensiveNewServicesShowcase2025": "React.FC = () => {;
+  const [searchTerm", setSearchTerm] = useState('');  const stats = getNewServiceStats();
   const filteredServices = useMemo(() => {
     let services = COMPREHENSIVE_NEW_SERVICES_2025;
     if (searchTerm) {
@@ -81,27 +77,25 @@ const "ComprehensiveNewServicesShowcase2025": React.FC = () => {
       const [min, max] = priceRanges[selectedPriceRange] || [0, 999999];
       services = services.filter(service => service.price >= min && service.price <= max);
     }
-    if (selectedInnovationLevel !== 'all') {
-      services = services.filter(service =>
-        service.innovationLevel.toLowerCase() === selectedInnovationLevel
+:src/pages/ComprehensiveNewServicesShowcase2025.tsx
+;
+    if (selectedInnovationLevel !== 'all') {;
+      services = services.filter(service => ;
+        service.innovationLevel.toLowerCase() === selectedInnovationLevel;
       );
     }
-    if (selectedSupportLevel !== 'all') {
-      services = services.filter(service =>
-        service.supportLevel.toLowerCase() === selectedSupportLevel
+;
+    if (selectedSupportLevel !== 'all') {;
+      services = services.filter(service => ;
+        service.supportLevel.toLowerCase() === selectedSupportLevel;
       );
     }
+;
     return services;
   }, [searchTerm, selectedCategory, selectedType, selectedPriceRange, selectedInnovationLevel, selectedSupportLevel]);
-  const getServiceIcon = ("serviceType": string) => {
-    switch (serviceType) {
-      case 'Micro SAAS': return Smartphone;
-      case 'AI Services': return Brain;
-      case 'IT Services': return Server;
-      "default": return Sparkles;
-    "}
-  };
-  const getInnovationLevelColor = ("level": string) => {
+;
+  const getServiceIcon = ("serviceType": "string) => {;
+    switch (serviceType) {;  const getInnovationLevelColor = ("level": string) => {
     switch (level.toLowerCase()) {
       case 'cutting-edge': return 'bg-purple-100 text-purple-800 border-purple-200';
       case 'advanced': return 'bg-blue-100 text-blue-800 border-blue-200';
@@ -109,15 +103,10 @@ const "ComprehensiveNewServicesShowcase2025": React.FC = () => {
       "default": return 'bg-gray-100 text-gray-800 border-gray-200';
     "}
   };
-  const getSupportLevelColor = ("level": string) => {
-    switch (level.toLowerCase()) {
-      case 'enterprise': return 'bg-red-100 text-red-800 border-red-200';
-      case 'premium': return 'bg-orange-100 text-orange-800 border-orange-200';
-      case 'standard': return 'bg-green-100 text-green-800 border-green-200';
-      "default": return 'bg-gray-100 text-gray-800 border-gray-200';
-    "}
-  };
-  return (
+:src/pages/ComprehensiveNewServicesShowcase2025.tsx
+;
+  const getSupportLevelColor = ("level": "string) => {;
+    switch (level.toLowerCase()) {;  return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -182,20 +171,17 @@ const "ComprehensiveNewServicesShowcase2025": React.FC = () => {
                     {type}
                   </SelectItem>;
                 ))}
-              </SelectContent>
-            </Select>
-            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-              <SelectTrigger>
-                <SelectValue placeholder="Category" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Categories</SelectItem>
-                {NEW_SERVICE_CATEGORIES.map(category => (
-                  <SelectItem key={category} value={category}>
-                    {category}
-                  </SelectItem>;
-                ))}
-              </SelectContent>
+:src/pages/ComprehensiveNewServicesShowcase2025.tsx
+              </SelectContent>;
+            </Select>;
+            <Select value={selectedCategory} onValueChange={setSelectedCategory}>;
+              <SelectTrigger>;
+                <SelectValue placeholder="Category" />;
+              </SelectTrigger>;
+              <SelectContent>;
+                <SelectItem value="all">All Categories</SelectItem>;
+                {NEW_SERVICE_CATEGORIES.map(category => (;
+                  <SelectItem key={category} value={category}>;              </SelectContent>
             </Select>
             <Select value={selectedPriceRange} onValueChange={setSelectedPriceRange}>
               <SelectTrigger>
@@ -221,20 +207,17 @@ const "ComprehensiveNewServicesShowcase2025": React.FC = () => {
                     {level}
                   </SelectItem>;
                 ))}
-              </SelectContent>
-            </Select>
-            <Select value={selectedSupportLevel} onValueChange={setSelectedSupportLevel}>
-              <SelectTrigger>
-                <SelectValue placeholder="Support Level" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Support</SelectItem>
-                {NEW_SUPPORT_LEVELS.map(level => (
-                  <SelectItem key={level} value={level.toLowerCase()}>
-                    {level}
-                  </SelectItem>;
-                ))}
-              </SelectContent>
+:src/pages/ComprehensiveNewServicesShowcase2025.tsx
+              </SelectContent>;
+            </Select>;
+            <Select value={selectedSupportLevel} onValueChange={setSelectedSupportLevel}>;
+              <SelectTrigger>;
+                <SelectValue placeholder="Support Level" />;
+              </SelectTrigger>;
+              <SelectContent>;
+                <SelectItem value="all">All Support</SelectItem>;
+                {NEW_SUPPORT_LEVELS.map(level => (;
+                  <SelectItem key={level} value={level.toLowerCase()}>;              </SelectContent>
             </Select>
           </div>
         </div>
@@ -281,26 +264,18 @@ const "ComprehensiveNewServicesShowcase2025": React.FC = () => {
                     </div>;
                     <Badge className={getSupportLevelColor(service.supportLevel)}>;
                       {service.supportLevel}
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Key "Features": </h4>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        {service.features.slice(0, 3).map((feature, index) => (
-                          <li key={index} className="flex items-center">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>;
-                        ))}
-                        {service.features.length > 3 && (;
-                          <li className="text-blue-600 text-sm">;
-                            +{service.features.length - 3} more features;
-                          </li>;
-                        )}
-                      </ul>
+:src/pages/ComprehensiveNewServicesShowcase2025.tsx
+                    </Badge>;
+                  </div>;
+                </CardHeader>;
+                <CardContent>;
+                  <div className="space-y-4">;
+                    <div>;
+                      <h4 className="font-semibold text-gray-900 mb-2">Key "Features": "</h4>;
+                      <ul className="text-sm text-gray-600 space-y-1">;
+                        {service.features.slice(0", 3).map((feature, index) => (;
+                          <li key={index} className="flex items-center">;
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;                      </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">"ROI": </h4>
@@ -314,45 +289,35 @@ const "ComprehensiveNewServicesShowcase2025": React.FC = () => {
                       <div className="flex items-center">;
                         <TrendingUp className="w-4 h-4 mr-1" />;
                         {service.growthRate}
-                      </div>
-                    </div>
-                    <div className="pt-4 border-t border-gray-200">
-                      <div className="flex flex-col "sm": flex-row gap-2">
-                        <Button className="flex-1 bg-blue-600 hover:bg-blue-700">
-                          Learn More
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </Button>
-                        <Button variant="outline" className="flex-1">
-                          Contact Sales
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+:src/pages/ComprehensiveNewServicesShowcase2025.tsx
+                      </div>;
+                    </div>;
+                    <div className="pt-4 border-t border-gray-200">;
+                      <div className="flex flex-col "sm": "flex-row gap-2">;
+                        <Button className="flex-1 bg-blue-600 "hover":bg-blue-700">;
+                          Learn More;
+                          <ArrowRight className="w-4 h-4 ml-2" />;
+                        </Button>;
+                        <Button variant="outline" className="flex-1">;
+                          Contact Sales;
+                        </Button>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </CardContent>;
+              </Card>;
             );
-          })}
-        </div>
-        {filteredServices.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-gray-400 mb-4">
-              <Search className="w-16 h-16 mx-auto" />
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>
-            <p className="text-gray-600 mb-4">Try adjusting your filters or search terms</p>
-            <Button onClick={() => {
-              setSearchTerm(");
-              setSelectedCategory('all');
-              setSelectedType('all');
-              setSelectedPriceRange('all');
-              setSelectedInnovationLevel('all');
-              setSelectedSupportLevel('all');
-            }}>;
-              Clear Filters;
-            </Button>;
-          </div>;
-        )}
-      </div>
+          "})}
+        </div>;
+        {filteredServices.length === 0 && (;
+          <div className="text-center py-12">;
+            <div className="text-gray-400 mb-4">;
+              <Search className="w-16 h-16 mx-auto" />;
+            </div>;
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>;
+            <p className="text-gray-600 mb-4">Try adjusting your filters or search terms</p>;
+            <Button onClick={() => {;
+              setSearchTerm('');      </div>
       {/* Contact Section */}
       <div className="bg-gray-900 text-white py-16">
         <div className="container mx-auto px-4">

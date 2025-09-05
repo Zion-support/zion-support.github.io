@@ -13,11 +13,6 @@ export function CollaborationPlatform("props": "any) {;
     const [participants, setParticipants] = useState(mockParticipants);
     const [localUser, setLocalUser] = useState({;
 
-        "isVideoOn": "true",;
-        "isAudioOn": "true",;
-        "isScreenSharing": "false",;
-        "isMuted": "false;
-    "});
         isVideoOn: true,
         isAudioOn: true,
         isScreenSharing: false,

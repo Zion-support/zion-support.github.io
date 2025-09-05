@@ -118,47 +118,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
 
             return `${value.toFixed(1)}%`}
         return new Intl.NumberFormat('en-US').format(value)};
-    if(!isOpen) {;
-";
-        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl "hover": "shadow-3xl transition-all duration-300 "hover":scale-110 z-40" title="Open Business Intelligence Dashboard">";
-        <Brain className="w-6 h-6" />;
-      </button>)"}
-    if(isMinimized) {;
-";
-        return (<div className="fixed bottom-4 right-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">";
-        <div className="flex items-center gap-2 p-3">";
-          <Brain className="w-5 h-5 text-zion-purple" />";
-          <span className="text-sm font-medium text-zion-slate">BI Dashboard</span>";
-          <button onClick={() => setIsMinimized(false)"} className="ml-auto p-1 "hover": "bg-zion-slate-light rounded">";
-            <Maximize2 className="w-4 h-4" />;
-          </button>;
-        </div>;
-      </div>)"}'`;
-    return (<div className={`fixed bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'"}`} ref={containerRef}>;
-      {/* Header */}";
-      <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 flex items-center justify-between">";
-        <div className="flex items-center gap-3">";
-          <Brain className="w-6 h-6" />;
-          <div>";
-            <h2 className="text-lg font-bold">Advanced Business Intelligence</h2>";
-            <p className="text-sm opacity-90">AI-Powered Insights & Analytics</p>;
-          </div>;
-        </div>";
-        <div className="flex items-center gap-2">'`;
-          <button onClick={() => setAutoRefresh(!autoRefresh)} className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : '"hover": "bg-white/10'"}`} title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}>'`;
-            <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`} />;
-          </button>";
-          <button onClick={() => setIsMinimized(true)} className="p-2 "hover": "bg-white/10 rounded-lg transition-colors">";
-            <Minimize2 className="w-4 h-4" />;
-          </button>";
-          <button onClick={() => setIsFullscreen(!isFullscreen)"} className="p-2 "hover": "bg-white/10 rounded-lg transition-colors">";
-            {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />"}
-          </button>";
-          <button onClick={() => setIsOpen(false)} className="p-2 "hover": "bg-white/10 rounded-lg transition-colors">";
-            <X className="w-4 h-4" />;
-          </button>;
-        </div>;
-      </div>;
     if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Business Intelligence Dashboard">"
@@ -253,14 +212,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
             </button>) }) }
       </div>;
 
-      {/* Content */}";
-      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'";
-        {activeTab === 'overview' && (<div className="space-y-6">;
-            {/* Key Metrics Grid */}";
-            <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 gap-4">`;
-              {filteredMetrics.map(metric => (<div key={metric.id"} className={`p-4 rounded-xl border-2 ${getPriorityColor(metric.priority)} transition-all duration-300 "hover": "shadow-lg`"}>";
-                  <div className="flex items-center justify-between mb-3">";
-                    <h3 className="font-semibold text-zion-slate">{metric.name}</h3>;
       {/* Content */}"
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'"
         {activeTab === 'overview' && (<div className="space-y-6">
@@ -291,19 +242,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                 </div>) ) }
             </div>;
 
-            {/* Quick Actions */}";
-            <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">";
-              <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">";
-                <Zap className="w-5 h-5 text-zion-cyan" />;
-                Quick Actions;
-              </h3>";
-              <div className="grid grid-cols-2 "md": "grid-cols-4 gap-3">;
-                {[';
-                { "label": 'Generate Report'", "icon": "Download", "action": "() => { /* empty */ "} },;
-                { "label": 'Schedule Review', "icon": "Calendar", "action": "() => { /* empty */ "} },;
-                { "label": 'Set Alerts', "icon": "AlertTriangle", "action": "() => { /* empty */ "} },;
-                { "label": 'Export Data', "icon": "Download", "action": "() => { /* empty */ "} }
-            ].map((item, index) => {;
             {/* Quick Actions */}"
             <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">"
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">"
@@ -326,28 +264,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               </div>;
             </div>;
           </div>)}
-'";
-        {activeTab === 'insights' && (<div className="space-y-4">";
-            {insights.map(insight => (<div key={insight.id} className="p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-xl "hover":shadow-lg transition-shadow">";
-                <div className="flex items-start gap-3">;
-                  {getInsightIcon(insight.type)"}";
-                  <div className="flex-1">";
-                    <div className="flex items-center gap-3 mb-2">";
-                      <h3 className="font-semibold text-zion-slate">{insight.title}</h3>'`;
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high' ? 'bg-red-100 text-red-700 "dark": "bg-red-900/30 "dark":text-red-300' :';
-                    insight.impact === 'medium' ? 'bg-yellow-100 text-yellow-700 "dark":bg-yellow-900/30 "dark":text-yellow-300' :'`;
-                        'bg-green-100 text-green-700 "dark":bg-green-900/30 "dark":text-green-300'"}`}>;
-                        {insight.impact} Impact;
-                      </span>";
-                      <span className="text-sm text-zion-slate-light">;
-                        {insight.confidence}% confidence;
-                      </span>;
-                    </div>";
-                    <p className="text-zion-slate-light mb-3">{insight.description}</p>;
-                    {insight.actionable && (<div>";
-                        <h4 className="font-medium text-zion-slate mb-2">Recommended "Actions": "</h4>";
-                        <div className="flex flex-wrap gap-2">";
-                          {insight.actions.map((action", index) => (<span key={index} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm border border-zion-cyan/20">;
 '"
         {activeTab === 'insights' && (<div className="space-y-4">"
             {insights.map(insight => (<div key={insight.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">"
@@ -378,14 +294,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                 </div>;
               </div>))}
           </div>)}
-'";
-        {activeTab === 'models' && (<div className="space-y-4">";
-            {models.map(model => (<div key={model.id} className="p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-xl "hover":shadow-lg transition-shadow">";
-                <div className="flex items-center justify-between mb-3">";
-                  <h3 className="font-semibold text-zion-slate">{model.name"}</h3>'`;
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${model.status === 'active' ? 'bg-green-100 text-green-700 "dark": "bg-green-900/30 "dark":text-green-300' :';
-                    model.status === 'training' ? 'bg-yellow-100 text-yellow-700 "dark":bg-yellow-900/30 "dark":text-yellow-300' :'`;
-                        'bg-red-100 text-red-700 "dark":bg-red-900/30 "dark":text-red-300'"}`}>;
 '"
         {activeTab === 'models' && (<div className="space-y-4">"
             {models.map(model => (<div key={model.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">"
@@ -421,13 +329,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                 </div>;
               </div>))}
           </div>)}
-'";
-        {activeTab === 'analytics' && (<div className="space-y-6">";
-            <div className="text-center text-zion-slate-light">";
-              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />";
-              <h3 className="text-lg font-semibold mb-2">Advanced Analytics</h3>;
-              <p>Detailed analytics and custom reports coming soon...</p>;
-            </div>;
 '"
         {activeTab === 'analytics' && (<div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"

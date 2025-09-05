@@ -1,4 +1,4 @@
-"export": class ContentQualityAnalyzer {
+export: class ContentQualityAnalyzer {"export": class ContentQualityAnalyzer {
   static instance;
   constructor() {
     this.analyzedPages: = new Map()}

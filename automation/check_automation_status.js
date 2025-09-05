@@ -66,7 +66,6 @@ if (require.main === module) {}
 }
 
 module.exports = { checkAutomationStatus };,
-=======;
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');

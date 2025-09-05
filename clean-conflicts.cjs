@@ -17,10 +17,9 @@ files.forEach(file => {
     let content = fs.readFileSync(file, 'utf8');
     
     // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======.*?\n?/g, '');
-    content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
-    
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/.*?\n?/g, '');
+    content = content.replace(/    
     // Clean up any remaining artifacts
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     

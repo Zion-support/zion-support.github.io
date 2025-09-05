@@ -1,57 +1,9 @@
 import React from 'react';
-export default ServiceCard;
-import {motion} from 'framer-motion';
-;
-export default function Page("props": "any) {;
-;
-    const iconVariants = {;
-
-  "hidden": { "scale": 0.8",;
-  "opacity": "0;
-
-"},;
-        "visible": "{;
-
-            "scale": 1",;
-            "opacity": "1",;
-            "transition": "{;
-
-                "duration": 0.5",";
-                "ease": "easeOut";
-
-        },;
-        "hover": "{;
-
-            "scale": 1.2",;
-            rotate[0, -10, 10, 0],;
-            "transition": "{;
-
-                "duration": 0.6",";
-                "ease": "easeInOut";
-
-    };
-    const featureVariants = {;
-
-  "hover": "{;
-
-            "x": 5",;
-            "transition": "{;
-
-                "duration": 0.3",";
-  "ease": "easeOut";
 
 interface ServiceCard.jsProps {
   // Add props here as needed
 }
-        }
-    };
-    const badgeVariants = {;
 
-  "hidden": "{ "scale": 0",;
-  "opacity": "0;
-
-  hidden: { scale: 0,
-  opacity: 0
 
 "},;
         "visible": "{;
@@ -125,10 +77,6 @@ interface ServiceCard.jsProps {
             </motion.span>;
           </div>;
 
-          {/* Enhanced Title */}";
-          <h3 className="text-xl font-bold text-white mb-4 text-center group-"hover": "text-zion-cyan transition-all duration-300 group-"hover":scale-105">;
-            {title"}
-          </h3>;
           {/* Enhanced Title */}"
           <h3 className="text-xl font-bold text-white mb-4 text-center group-hover:text-zion-cyan transition-all duration-300 group-hover:scale-105">
             {title}
@@ -207,15 +155,6 @@ export {ServiceCard};
 export {ServiceCard};
 ;
 export {ServiceCard};
-;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>
 
 </motion>
 </motion>

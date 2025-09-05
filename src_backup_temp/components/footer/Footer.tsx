@@ -100,25 +100,15 @@ export function Footer("props": "any) {;
               </div>;
             </div>;
           </div>;
-
           {/* Footer Links */}
-          {footerSections.map((section) => (
-            <div key={section.title}>
-              <h3 className="text-white font-semibold mb-4">{section.title}
-              <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <Link href={link.href} className="text-slate-300 hover:text-cyan-400 transition-colors duration-200">{link.name}</Link>
-                  </li>
-                ))}
-              </ul>;
-            </div>;
-          ))}
-        </div>;
-      </div>;
-
-      {/* Newsletter Signup */}
-      <div className="border-t border-slate-700 py-8">
+          {footerSections.map((section) => (;
+            <div key={section.title}>;
+              <h3 className="text-white font-semibold mb-4">{section.title}</h3>;
+              <ul className="space-y-3">;
+                {section.links.map((link) => (;
+                  <li key={link.name}>;
+                    <Link href={link.href} className="text-slate-300 "hover": "text-cyan-400 transition-colors duration-200">{link.name"}</Link>;
+                  </li>;      <div className="border-t border-slate-700 py-8">
         <div className="container mx-auto px-4 sm: p x-6 lg: p x-8">
           <div className="flex flex-col md: fle x-row items-center justify-between">
             <div className="mb-4 md: m b-0">
@@ -158,7 +148,6 @@ export function Footer("props": "any) {;
                 Cookie Policy;
               </Link>;
             </div>;
-
             {/* Social Links */"}
             <div className="flex items-center space-x-4">;
               {socialLinks.map((social) => (;

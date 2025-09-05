@@ -63,48 +63,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
   {"opacity": "0",;
   "y": "30"}}
           animate = {}
-  {"opacity": "1",;
-  "y": "0"}}
-          transition={{ "duration": "0.6 "}}''>'''';
-          <h2 className='text-4xl "md": "text-5xl font-bold text-white mb-6'>;
-            Revolutionary 2027 Services''';
-          </h2>'''';
-          <p className='text-xl text-zion-cyan-light max-w-3xl mx-auto'>;
-            Discover cutting-edge micro SAAS solutions", advanced IT infrastructure, and innovative AI services;
-            designed to transform your business and drive exponential growth.;
-          </p>;
-          '''{/* Contact Information */}'''';
-          <div className='mt-8 p-6 bg-zion-slate-dark/50 rounded-2xl border border-zion-cyan/20'>'''';
-            <h3 className='text-2xl font-semibold text-zion-cyan mb-4'>Ready to Transform Your Business?</h3>'''';
-            <div className='grid "md": "grid-cols-3 gap-6 text-sm'>'''';
-              <div className='flex items-center justify-center space-x-2'>'''';
-                <Clock className='w-5 h-5 text-zion-cyan'  />'''';
-                <span className='text-white'>24/7 Support Available</span>''';
-              </div>'''';
-              <div className='flex items-center justify-center space-x-2'>'''';
-                <Target className='w-5 h-5 text-zion-cyan'  />'''';
-                <span className='text-white'>Custom Solutions</span>''';
-              </div>'''';
-              <div className='flex items-center justify-center space-x-2'>'''';
-                <Award className='w-5 h-5 text-zion-cyan'  />'''';
-                <span className='text-white'>Proven Results</span>;
-              </div>''';
-            </div>'''';
-            <div className='mt-4 text-center'>'''';
-              <p className='text-zion-cyan-light'>;
-                <strong>"Contact":</strong> +1 302 464 0950 | kleber@ziontechgroup.com''';
-              </p>'''';
-              <p className='text-zion-cyan-light text-sm'>;
-                364 E Main St STE 1008 Middletown DE 19709;
-              </p>;
-            </div>;
-          </div>;
-        </motion.div>;
-        {/* Category Navigation */"}''';
-        <motion.div '''';
-          className='flex flex-wrap justify-center gap-4 mb-12''initial = {}';
-  {"opacity": "0",;
-  "y": "20"}}
   {opacity: 1,
   y: 0}}
           transition={{ duration: 0.6 }}''>''''
@@ -183,12 +141,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
                     <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium'>;
                       Popular;
                     </div>)}
-                </div>;
-'''{/* Service Info */}'''';
-                <h3 className='text-xl font-bold text-white mb-2 group-"hover": "text-zion-cyan transition-colors'>;
-                  {service.name"}''';
-                </h3>'''';
-                <p className='text-zion-cyan-light text-sm mb-4 line-clamp-2'>;
                 </div>
 '''{/* Service Info */}''''
                 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors'>
@@ -255,13 +207,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
   {"opacity": "1",;
   "y": "0"}}
           transition = {}
-  {"duration": "0.6",;
-  "delay": "0.4"}}''>'''';
-          <div className='bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30'>'''';
-            <h3 className='text-2xl font-bold text-white mb-4'>;
-              Ready to Get Started?''';
-            </h3>'''';
-            <p className='text-zion-cyan-light mb-6 max-w-2xl mx-auto'>;
   {duration: 0.6,
   delay: 0.4}}''>''''
           <div className='bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30'>''''
@@ -300,75 +245,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
   {"scale": "1",;
   "opacity": "1"}}
               exit = {}
-  {"scale": "0.9",;
-  "opacity": "0"}}
-              onClick={(e) => e.stopPropagation()}''>'''';
-              <div className='flex items-start justify-between mb-6'>'''';
-                <div className='text-6xl'>{selectedService.icon}</div>;
-                <button''onClick={() => setSelectedService(null)}''className=text-zion-cyan-light "hover": "text-white transition-colors '>';
-                  ✕;
-                </button>;
-              </div>''''';
-              <h2 className='text-3xl font-bold text-white mb-4'>{selectedService.name"}</h2>'''';
-              <p className='text-zion-cyan-light text-lg mb-6'>{selectedService.description}</p>''''';
-              <div className='grid "md": "grid-cols-2 gap-8'>''';
-                <div>'''';
-                  <h3 className='text-xl font-semibold text-white mb-4'>Features</h3>'''';
-                  <ul className='space-y-2'>'''{selectedService.features.map((feature", index) => ('''';
-                      <li key={index} className='flex items-center space-x-2'>'''';
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0'  />'''';
-                        <span className='text-zion-cyan-light'>{feature}</span>;
-                      </li>;
-                    ))}
-                  </ul>;
-                </div>;
-''';
-                <div>'''';
-                  <h3 className='text-xl font-semibold text-white mb-4'>Service Details</h3>'''';
-                  <div className='space-y-3'>'''';
-                    <div className='flex justify-between'>'''';
-                      <span className='text-zion-cyan-light'>"Price": "</span>'''';
-                      <span className='text-white font-medium'>{selectedService.price"}{selectedService.period}</span>''';
-                    </div>'''';
-                    <div className='flex justify-between'>'''';
-                      <span className='text-zion-cyan-light'>Setup "Time": "</span>'''';
-                      <span className='text-white font-medium'>{selectedService.setupTime"}</span>''';
-                    </div>'''';
-                    <div className='flex justify-between'>'''';
-                      <span className='text-zion-cyan-light'>"Trial": "</span>'''';
-                      <span className='text-white font-medium'>{selectedService.trialDays"} days</span>''';
-                    </div>'''';
-                    <div className='flex justify-between'>'''';
-                      <span className='text-zion-cyan-light'>"Customers": "</span>'''';
-                      <span className='text-white font-medium'>{selectedService.customers.toLocaleString()"}+</span>''';
-                    </div>'''';
-                    <div className='flex justify-between'>'''';
-                      <span className='text-zion-cyan-light'>"Rating": "</span>'''';
-                      <span className='text-white font-medium'>{selectedService.rating"}/5 ({selectedService.reviews} reviews)</span>;
-                    </div>;
-                  </div>''''';
-                  <div className='mt-6'>'''';
-                    <h4 className='text-lg font-semibold text-white mb-2'>ROI</h4>'''';
-                    <p className='text-zion-cyan-light text-sm'>{selectedService.roi}</p>;
-                  </div>;
-                </div>;
-              </div>''''';
-              <div className='mt-8 pt-6 border-t border-zion-cyan/20'>'''';
-                <div className='flex flex-col "sm": "flex-row gap-4 justify-center'>;
-                  <Link''';
-                    to={selectedService.link"}'''className=bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium "hover": "shadow-lg transition-all duration-300 text-center '>;
-                    Get Started Now;
-                  </Link>''';
-                  <a'''';
-                    href='"tel":+13024640950'''className=bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 "hover":bg-zion-slate-dark transition-all duration-300 text-center '>';
-                    Call for Consultation;
-                  </a>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </motion.div>) "}
-      </AnimatePresence>;
-    </section>;
   {scale: 0.9,
   opacity: 0}}
               onClick={(e) => e.stopPropagation()}''>''''

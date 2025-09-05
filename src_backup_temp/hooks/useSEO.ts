@@ -127,14 +127,6 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
   // Add structured data;
   ;
     if (!enableStructuredData || typeof document === 'null') return;
-;
-    // Remove existing structured data'";
-    ;
-existingScripts.forEach("script": "> {;'"      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
-        script.remove()"}
-    });
-;
-    // Add new structured data';
 
     // Remove existing structured data'"
     

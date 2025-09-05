@@ -133,23 +133,7 @@ export default function BlogPage() {
                       Categories
                     </h3>
                     <div className="space-y-2">
-<:pages-disabled/blog.tsx.disabled
-:pages/blog.tsx
-                      {categories.map((category) => (}
-                        <Link}
-                          key={category.name}
-                          href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}}
-                      {categories.map((category) => (
-                        <Link
-                          key={category.name}
-                          href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
- (Add services-extended catalog with real offerings; fix critical utilities; quarantine broken pages for stability; build passes):pages-disabled/blog.tsx.disabled
-=
-                      {categories.map((category) => (
-                        <Link
-                          key={category.name}
-                          href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
->                          className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors"
+                          className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors"
                         >
                           <span className="text-gray-700">{category.name}</span>
                           <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">
@@ -184,10 +168,4 @@ export default function BlogPage() {
         </section>
       </div>
     </Layout>
-<:pages-disabled/blog.tsx.disabled
-:pages/blog.tsx
-  )
- (Add services-extended catalog with real offerings; fix critical utilities; quarantine broken pages for stability; build passes):pages-disabled/blog.tsx.disabled
-=
-  )
->}
+}

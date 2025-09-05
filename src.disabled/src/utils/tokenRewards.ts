@@ -1,6 +1,3 @@
-
-export async function rewardOnboarding(...args: any[]): any {;
-
 export async function rewardOnboarding(..."args": any[]): any {;
 export async function rewardOnboarding(;
   userId: string,

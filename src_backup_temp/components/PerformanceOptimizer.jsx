@@ -1,4 +1,3 @@
-import React, {useEffect, useMemo, useCallback} from 'react';';';
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 ;
@@ -111,8 +110,6 @@ export default function Page(props: any) {
                   newWorker.state === 'installed' &&
                   navigator.serviceWorker.controller
                 ) {
-                  // New service worker available
-                  
 
                   // New service worker available'
                   // // 
@@ -123,9 +120,6 @@ export default function Page(props: any) {
           }
     );
         })
-        .catch(registrationError => {
-          
-        });
         .catch(registrationError => {// // }
     );
     }
@@ -203,8 +197,6 @@ if(typeof window !== 'undefined') {
   }
     );,"})
 }
- export const PerformanceOptimizer = memo(({children}) => { const location = useLocation () """';
-;';;';
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 

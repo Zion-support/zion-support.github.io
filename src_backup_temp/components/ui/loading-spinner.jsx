@@ -1,8 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-
-</motion>';
-</motion>;';;';
 export function LoadingSpinner(props) {
 ;
 export function LoadingSpinner(props) {;

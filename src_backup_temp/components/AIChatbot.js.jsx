@@ -2,12 +2,6 @@ import React, {useState, useCallback, useEffect, useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles} from 'lucide-react';
 ;
-export const AIChatbot = ("props": "any) => {;
-    const { trackEvent "} = useAnalytics({"enableTracking": "true",;
-        "enableUserBehaviorTracking": "true;"});
-    const [isOpen, setIsOpen] = useState(false);';
-    const [isMinimized, setIsMinimized] = useState(false);'';
-    const [messages, setMessages] = useState([]);''';
 export const AIChatbot = (props: any) => {
     const { trackEvent } = useAnalytics({enableTracking: true,
         enableUserBehaviorTracking: true;}
@@ -65,9 +59,6 @@ const [inputValue, setInputValue] = useState('');
             "timestamp": "new Date();
         "};
         setMessages(prev => {const updated = [...prev, newMessage];
-            // Keep only the last maxMessages;
-            return updated.slice(-maxMessages)});
-        // Update conversation context;
             // Keep only the last maxMessages
             return updated.slice(-maxMessages)}
     );
@@ -79,14 +70,6 @@ const [inputValue, setInputValue] = useState('');
 
         const message = addMessage({;
 
-            "type": 'bot',;
-            content,;
-            metadata;
-        });
-        // Track bot response';
-        trackChatbotInteraction('bot_response', {"messageId": "message.id",;
-            "intent": "metadata?.intent",;
-            "confidence": "metadata?.confidence"});
             type: 'bot',
             content,
             metadata
@@ -127,13 +110,6 @@ const [inputValue, setInputValue] = useState('');
         // Add user message;
         const userMessage = addMessage({;
 
-            "type": 'user',;
-            "content": "input.trim();
-        "});
-        // Track user input';
-        trackChatbotInteraction('user_input', {"messageId": "userMessage.id",;
-            "inputLength": "input.length"});
-        // Clear input';
             type: 'user',
             content: input.trim()
         }
@@ -151,26 +127,6 @@ const [inputValue, setInputValue] = useState('');
             // Add bot response;
             addBotMessage(response, {;
 
-                "intent": 'response',;
-                "confidence": "0.9",;
-                suggestions[;";
-                    "Tell me more",";
-                    "Get a quote",";
-                    "View services",";
-                    "Contact sales";
-                ];
-            });
-            // Track successful interaction';
-            trackChatbotInteraction('conversation_success', {"userInput": "input",;
-                "responseLength": "response.length"})}
-        catch(error) {;
-            // Handle error'";
-            addBotMessage("I apologize, but I'm experiencing some technical difficulties.Please try again or contact our team directly.", {;
-
-                "intent": 'error',;
-                "confidence": "0.8;
-            "});
-            trackChatbotInteraction('conversation_error', {"error": "error instanceof Error ? error.message : 'Unknown error'"})}
                 intent: 'response',
                 confidence: 0.9,
                 suggestions[;"
@@ -357,13 +313,6 @@ const [inputValue, setInputValue] = useState('');
           </motion.div>) }
       </AnimatePresence>;
     </>)};
-'"`;
-" export const AIChatbot = ("props": "any) => { const { trackEvent "} = useAnalytics({"enableTracking": "true", "enableUserBehaviorTracking": "true"}); const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [messages, setMessages] = useState([]); const [inputValue, setInputValue] = useState("); const [isTyping, setIsTyping] = useState(false); const messagesEndRef = useRef(null); const inputRef = useRef(null);
-;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
 '"`
 " export const AIChatbot = (props: any) => { const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true}
     ); const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [messages, setMessages] = useState([]); const [inputValue, setInputValue] = useState("); const [isTyping, setIsTyping] = useState(false); const messagesEndRef = useRef(null); const inputRef = useRef(null);

@@ -12,11 +12,6 @@ import {Link} from "react-router-dom";"""";
 import {LoadingOverlay} from "@/components/LoadingOverlay";
 // Form validation schema;
 const loginSchema = z.object({}
-""";
-"""";
-    "email": "z.string().email("Please enter a valid email").min(1", "Email is required"),"""";
-    "password": "z.string().min(6", "Password must be at least 6 characters")});
-function LoginForm("props": "any) {"}
 """
 """"
     email: z.string().email("Please enter a valid email").min(1, "Email is required"),""""
@@ -28,12 +23,6 @@ function LoginForm(props: any) {}
     const [showPassword, setShowPassword] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const form = useForm({}
-        "resolver": "zodResolver(loginSchema)",;
-        "defaultValues": "{"}
-""";
-"""";
-            "email": "","""";
-            "password": ""}});
         resolver: zodResolver(loginSchema),
         defaultValues: {}
 """

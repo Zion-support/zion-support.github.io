@@ -1,4 +1,3 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() { ) .order('created_at',{ "ascending": 'fals e' }); if(resumeError) throw resumeError; if(!resumeData || resumeData.length === 0) { setResumes([]); return []} const "transformedResumes": "Resum e[] = resumeData.map(resume => ({ "id": resum e.id","user_id": 'resum e.user_id',"basic_info": "{ "id": resum e.id","title": 'resum e.title',"headline": 'resum e.headline',"summary": 'resum e.summary' },"work_experience": '[]',"education": '[]',"skills": '[]',"certifications": '[]',"is_active": 'resum e.is_active' })); setResumes(transformedResumes); return transformedResumes} catch("e": "an y) { console.error('Error fetching "resumes":'",e); setError(e.message); setResumes([]); return []} finally { setIsLoading(false)} },[user]); useEffect(() => { },[]); if(user) { fetchResumes()} else { setResumes([]); setError(null)} },[user,fetchResumes]); return { isLoading,error,resumes,fetchResumes }}
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback
 import { supabase } from '@/integrations/supabase/client';
@@ -6,14 +5,11 @@ export default function Page() {
 )
         .order('created_at', { ascending: fals e }
     );
-      
       if(resumeError) throw resumeError;
-      
       if(!resumeData || resumeData.length === 0) {
         setResumes([]);
         return [];
       }
-      
       const transformedResumes: Resum e[] = resumeData.map(resume => ({
         id: resum e.id,
         user_id: resum e.user_id,
@@ -29,7 +25,6 @@ export default function Page() {
         certifications: [],
         is_active: resum e.is_active
       }));
-      
       setResumes(transformedResumes);
       return transformedResumes;
     } catch(e: an y) {
@@ -41,7 +36,6 @@ export default function Page() {
       setIsLoading(false);
     }
   }, [user]); // user is a dependency of fetchResumes
-  
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
@@ -53,14 +47,11 @@ export default function Page() {
       setError(null); // Clear any previous errors
     }
   }, [user, fetchResumes]); // Added fetchResumes
-  
   return {
     isLoading,
     error,
     resumes,
     fetchResumes
-  }}';
-;';;';
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() { ) .order('created_at',{ ascending: 'fals e' }); if(resumeError) throw resumeError; if(!resumeData || resumeData.length === 0) { setResumes([]); return []} const transformedResumes: Resum e[] = resumeData.map(resume => ({ id: resum e.id,user_id: 'resum e.user_id',basic_info: { id: resum e.id,title: 'resum e.title',headline: 'resum e.headline',summary: 'resum e.summary' },work_experience: '[]',education: '[]',skills: '[]',certifications: '[]',is_active: 'resum e.is_active' })); setResumes(transformedResumes); return transformedResumes} catch(e: an y) { console.error('Error fetching resumes:',e); setError(e.message); setResumes([]); return []} finally { setIsLoading(false)} },[user]); useEffect(() => { },[]); if(user) { fetchResumes()} else { setResumes([]); setError(null)} },[user,fetchResumes]); return { isLoading,error,resumes,fetchResumes }}
   };
 }

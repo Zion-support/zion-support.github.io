@@ -83,13 +83,6 @@ export default function Page("props": "any) {;
         // Update stats;
         setStats({;
 
-            "total": "allLinks.length",;
-            "healthy": "0",;
-            "broken": "0",;
-            "checking": "0",;
-            "unknown": "allLinks.length;
-        "});
-        // Check links in batches to avoid overwhelming the system;
             total: allLinks.length,
             healthy: 0,
             broken: 0,
@@ -120,9 +113,6 @@ export default function Page("props": "any) {;
                     else if(checkedLink.status === 'broken');
                         newStats.broken++;
                     newStats.checking--;
-                    newStats.unknown--});
-                return newStats});
-            // Small delay between batches;
                     newStats.unknown--}
     );
                 return newStats}
@@ -165,8 +155,6 @@ export default function Page("props": "any) {;
                     link.element.setAttribute('title', `Redirected from ${link.url} to working page`);
                     fixedCount++}
             }
-        });
-        if(fixedCount > 0) {// Re-check links after fixes;
         }
     );
         if(fixedCount > 0) {// Re-check links after fixes
@@ -180,12 +168,6 @@ export default function Page("props": "any) {;
         // Remove previous highlights';
         document.querySelectorAll('.broken-link-highlight').forEach(el => {;
 
-            el.classList.remove('broken-link-highlight')});
-        // Add highlight to selected element';
-        link.element.classList.add('broken-link-highlight');
-        // Scroll to element';
-        link.element.scrollIntoView({"behavior": 'smooth', "block": 'center'});
-        // Remove highlight after 3 seconds;
             el.classList.remove('broken-link-highlight')}
     );
         // Add highlight to selected element'
@@ -425,7 +407,6 @@ export default function Page("props": "any) {;
 
 "}));
                         };
-                        const blob = new Blob([JSON.stringify(report, null, 2)], {"type": 'application/json'});
                         const blob = new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'}
     );
                         const url = URL.createObjectURL(blob);

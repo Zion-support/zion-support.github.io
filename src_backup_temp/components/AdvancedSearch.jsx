@@ -65,7 +65,6 @@ export function AdvancedSearch("props": "any) {;
             "default": return 'bg-zion-slate/10 border-zion-slate/20';
         "}
     };
-    return (<div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>;
     return (
         <div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>
       {/* Search Input */}
@@ -83,14 +82,6 @@ export function AdvancedSearch("props": "any) {;
         </div>;
       </div>;
 
-      {/* Advanced Filters */"}
-      {isExpanded && (<div className="mt-4 p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg">;
-          <div className="flex items-center justify-between mb-3">;
-            <h3 className="text-sm font-medium text-zion-slate">Filter by Category</h3>;
-            {selectedFilters.length > 0 && (<button onClick={clearFilters"} className="text-xs text-zion-cyan "hover": "text-zion-cyan-light transition-colors">;
-                Clear All;
-              </button>)"}
-          </div>;
       {/* Advanced Filters */}
       {isExpanded && (<div className="mt-4 p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg">
           <div className="flex items-center justify-between mb-3">

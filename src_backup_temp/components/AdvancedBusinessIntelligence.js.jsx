@@ -290,7 +290,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                   <div className="flex items-center justify-between mb-3">";
                     <h3 className="font-semibold text-zion-slate">;
                       {metric.name}
-                    </h3>;
                     
                     {getTrendIcon(metric.trend)}
                   </div>";
@@ -328,14 +327,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
               ))}
             </div>;
 
-            {/* Quick Actions */}";
-            <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">";
-              <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">";
-                <Zap className="w-5 h-5 text-zion-cyan"  />;
-                Quick Actions;
-              </h3>";
-              <div className="grid grid-cols-2 "md": "grid-cols-4 gap-3">;
-                {[{;
             {/* Quick Actions */}"
             <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">"
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">"
@@ -391,22 +382,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">";
                       <h3 className="font-semibold text-zion-slate">;
                         {insight.title}
-                      </h3>;
-                      <span`;
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high'';
-                            ? 'bg-red-100 text-red-700 "dark": "bg-red-900/30 "dark":text-red-300'';
-                            : insight.impact === 'medium'';
-                              ? 'bg-yellow-100 text-yellow-700 "dark":bg-yellow-900/30 "dark":text-yellow-300'';
-                              : 'bg-green-100 text-green-700 "dark":bg-green-900/30 "dark":text-green-300'`;
-                        "}`}
-                      >;
-                        {insight.impact} Impact;
-                      </span>";
-                      <span className="text-sm text-zion-slate-light">;
-                        {insight.confidence}% confidence;
-                      </span>;
-                    </div>";
-                    <p className="text-zion-slate-light mb-3">;
                       
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high''
@@ -448,26 +423,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
             ))}
           </div>;
         )}
-;
-        {activeTab === 'models' && (";
-          <div className="space-y-4">;
-            {models.map(model => (;
-              <div;
-                key={model.id}";
-                className="p-4 bg-white "dark": "bg-zion-slate border border-zion-slate-light rounded-xl "hover":shadow-lg transition-shadow";
-              >";
-                <div className="flex items-center justify-between mb-3">";
-                  <h3 className="font-semibold text-zion-slate">;
-                    {model.name"}
-                  </h3>;
-                  <span`;
-                    className={`px-3 py-1 rounded-full text-sm font-medium ${model.status === 'active'';
-                        ? 'bg-green-100 text-green-700 "dark": "bg-green-900/30 "dark":text-green-300'';
-                        : model.status === 'training'';
-                          ? 'bg-yellow-100 text-yellow-700 "dark":bg-yellow-900/30 "dark":text-yellow-300'';
-                          : 'bg-red-100 text-red-700 "dark":bg-red-900/30 "dark":text-red-300'`;
-                    "}`}
-                  >;
 
         {activeTab === 'models' && ("
           <div className="space-y-4">
@@ -521,20 +476,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
             ))}
           </div>;
         )}
-;
-        {activeTab === 'analytics' && (";
-          <div className="space-y-6">";
-            <div className="text-center text-zion-slate-light">";
-              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50"  />";
-              <h3 className="text-lg font-semibold mb-2">Advanced Analytics</h3>;
-              <p>Detailed analytics and custom reports coming soon...</p>;
-            </div>;
-          </div>;
-        )}
-      </div>;
-    </div>;
-  );}
-"export default ComponentName;";
 
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"

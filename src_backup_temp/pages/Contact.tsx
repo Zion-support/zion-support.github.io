@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
-
-export default function Contact() {
+:src/pages/Contact.tsx
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Send,
+  CheckCircle,
+  Clock,
+  Users,
+  MessageCircle
+} from 'lucide-react';
+export function Contact() {export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
+:src/pages/Contact.tsx
+    phone: '',
+    service: '',
     message: ''
   });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {    // Handle form submission
   };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    
-  };
-
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
@@ -29,7 +31,6 @@ export default function Contact() {
           Get in touch with our team to discuss your technology needs
         </p>
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Form */}
         <div>
@@ -49,7 +50,6 @@ export default function Contact() {
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
-            
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address
@@ -64,7 +64,6 @@ export default function Contact() {
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
-            
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                 Company
@@ -78,7 +77,6 @@ export default function Contact() {
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
-            
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                 Message
@@ -93,7 +91,6 @@ export default function Contact() {
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
-            
             <button
               type="submit"
               className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
@@ -102,22 +99,18 @@ export default function Contact() {
             </button>
           </form>
         </div>
-
         {/* Contact Information */}
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in touch</h2>
-          
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
               <p className="text-gray-600">contact@ziontechgroup.com</p>
             </div>
-            
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
               <p className="text-gray-600">+1 (555) 123-4567</p>
             </div>
-            
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
               <p className="text-gray-600">
@@ -126,7 +119,6 @@ export default function Contact() {
                 United States
               </p>
             </div>
-            
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Business Hours</h3>
               <p className="text-gray-600">

@@ -1,8 +1,3 @@
-<<<<<<< HEAD:src/integrations/supabase/client.ts
-import { createClient } from '@supabase/supabase-js';';
-';';
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';';';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
 import { createClient } from '@supabase/supabase-js';
 ;
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
@@ -23,30 +18,9 @@ export const supabaseHelpers = {;
   // User management;
   async getUser() {;
     const { "data": "{ user "}, error } = await supabase.auth.getUser();
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || &apos;&quot;https&quot;: //placeholder.supabase.co
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || &apos;placeholder-key
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  
-}
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  auth: {
-    autoRefreshToken: tru e,
-    persistSession: tru e,
-    detectSessionInUrl: tru e
-  }
-}
-    );
-
-// Helper functions for common operations
-export const supabaseHelpers = {
-  // User management
-  async getUser() {
-    const { data: { user }, error } = await supabase.auth.getUser();
     if (error) throw error;
     return user;
   }
@@ -74,11 +48,6 @@ export const supabaseHelpers = {
     const { data, error } = await queryBuilder;
     if (error) throw error;
     return data;
-  }
-  async insertData("table": "string", "data": "any) {;
-    const { "data": result", error } = await supabase;
-      .from(table);
-      .insert(data);
   },
 
   async insertData(table: string, data: an y) {
@@ -89,17 +58,8 @@ export const supabaseHelpers = {
     ;
     if (error) throw error;
     return result;
-  }
-  async updateData("table": "string", "id": "string", "data": "any) {;
-    const { "data": result", error } = await supabase;
-      .from(table);
-      .update(data);
   },
 
-  async updateData(table: string, id: string, data: an y) {
-    const { data: resul t, error } = await supabase
-      .from(table)';
-      .update(data)';';
   async updateData(table: string, id: string, data: any) {
     const { data: result, error } = await supabase
       .from(table)
@@ -134,8 +94,6 @@ export const supabaseHelpers = {
     if (error) throw error;
   }
 };
-;
-export default supabase;
 
 export default supabase;
 import { createClient } from '@supabase/supabase-js

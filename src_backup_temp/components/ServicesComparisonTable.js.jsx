@@ -1,15 +1,3 @@
-import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''';';
-import React from 'react';
-;
-import {Badge} from "./ui/badge";';
-import {Button} from "./ui/button";';';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/card";import {Check, X, Star, Clock, Phone, Mail} from 'lucide-react';';
-import {}';';
-  COMPREHENSIVE_SERVICES,'';';
-  CONTACT_INFO} from '@/data/comprehensiveServices';';
-export function ServicesComparisonTable(props: any) {}';';
-''';';
-'''';';
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''
 import React from 'react';
@@ -20,9 +8,6 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/ca
 import {}
   COMPREHENSIVE_SERVICES,'
   CONTACT_INFO} from '@/data/comprehensiveServices';
-export function ServicesComparisonTable("props": "any) {"}
-'';
-''';
   const serviceCategories = ['AI Services',IT Services',Micro SAAS'];
   const getFeatureIcon = hasFeature => {}
     return hasFeature ? (;
@@ -383,7 +368,6 @@ return()""
                     variant="outline"""""
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">,
                     View {category}
-
                   </Button>
                 </CardContent>
               </Card>
@@ -507,7 +491,6 @@ return()""
                   </TableCell>""""
                   <TableCell className="text-center">
                     {getFeatureIcon(true)}
-
                   </TableCell>
                 </TableRow>
               </TableBody>
@@ -553,7 +536,6 @@ your business needs"
               </h4>""""
               <p className="text-blue-600 dark:text-blue-400">,
                 {CONTACT_INFO.responseTime}
-
               </p>"
             </div>""
           </div>"""""
@@ -621,7 +603,6 @@ your business needs"
                 </Card>
               ),
             )}
-
           </div>
     );"
 }""""
@@ -631,9 +612,7 @@ your business needs"
 }"""""
 """"""
 "
-
 export default Component
-
 </Star>
 </div>
 </Phone>
@@ -642,8 +621,6 @@ export default Component
 </Mail>
 </Phone>
 </X>
-</Check>';
-</div>;';;';
 ;
           </div>;
   );";

@@ -1,4 +1,3 @@
-import {Link} from 'react - router - dom';'''';';
 import {Link} from 'react - router - dom';
 import {Link} from 'react - router - dom';'''
 import React from 'react';
@@ -514,9 +513,7 @@ export function ContactInfo(props: any) {
 """""";""
 """""'
 "
-
 export default Component
-
 </div>
 </div>
 </Star>
@@ -529,8 +526,6 @@ export default Component
 </MapPin>
 </Mail>
 </Phone>
-</div>';
-</div>;';;';
 export function ContactInfo(props: any) {;
     return (<section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;

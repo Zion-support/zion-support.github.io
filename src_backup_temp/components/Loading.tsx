@@ -24,21 +24,16 @@ export default function Loading("props": "any) {';';';
         <p className=`text-gray-600 text-sm font-medium`}>{text}</p>;
       );
       )}
-    </div>
-    );
+    </div>;
+  );
 }
-    </div>
-    );
+    </div>;
+  );
 }
-    );
-  if (fullScreen) {
-    return (
-        <div className="min-h-screen bg-white">
-        {content}
-      </div>;
-    );
-  }
-  return (
+  );
+  if (fullScreen) {;
+    return (;
+    <div className="min-h-screen bg-white">;  return (
         <div className="min-h-screen bg-white">
       {content}
     </div>
@@ -67,6 +62,8 @@ export function SkeletonText(props: any) {
         ></di></div>;
       ));
       )}
+    </div>;
+  );
     </div>
     );
 }';

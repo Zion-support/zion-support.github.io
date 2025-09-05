@@ -1,15 +1,3 @@
-import React from 'react';
-;
-export function ErrorBoundaryFallback("props": "any) {;
-	return (;
-		<div style="{{{"padding": 24; "textAlign": 'center'"}}"}>;
-			<h2>Something went wrong</h2>;
-			{error ? (;
-				<pre style="{{{"whiteSpace": 'pre-wrap'; "color": '#b91c1c'}}"}>{String(error)}</pre>;
-			) : "null"}
-			<button onClick={onRetry} style="{{{"marginTop": "12"}}"}>Try again</button>;
-		</div>;
-	);
 import React, { useState, useEffect } from 'react';''
 import { useNavigate } from 'react-router-dom';''
 import { motion } from 'framer-motion';''
@@ -57,16 +45,6 @@ function ErrorFallback({ error, resetError }) {}
 </RefreshCw>
           </button>
 
-export function ErrorBoundaryFallback(props: any) {
-	return (
-		<div style="{{{padding: 24; textAlign: 'center'}}"}>
-			<h2>Something went wrong</h2>
-			{error ? (
-				<pre style="{{{whiteSpace: 'pre-wrap'; color: '#b91c1c'}}"}>{String(error)}</pre>
-			) : null}
-			<button onClick={onRetry} style="{{{marginTop: 12}}"}>Try again</button>
-		</div>
-    );
 }
 export class ErrorBoundary extends React.Component {;
 	constructor(props) {;
@@ -81,8 +59,6 @@ export class ErrorBoundary extends React.Component {;
 			this.props.onError(error, info);
 		}
 	}
-	handleRetry = () => {;
-		this.setState({ "hasError": "false", "error": "null "});
 
 	handleRetry = () => {
 		this.setState({ hasError: false, error: null }

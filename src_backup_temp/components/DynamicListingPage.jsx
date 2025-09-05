@@ -23,7 +23,6 @@ export function DynamicListingPage("props": "any) {;
     const listingsWithPrice = allListings.filter(l => l.price !== null);
     if (listingsWithPrice.length > 0) {;
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
-      setPriceRange({ "min": "0", max });
       setPriceRange({ min: 0, max }
     );
       setCurrentPriceFilter([0, max]);
@@ -38,20 +37,6 @@ export function DynamicListingPage("props": "any) {;
     const matchesPrice = listing.price >= currentPriceFilter[0] && listing.price <= currentPriceFilter[1];
     const matchesRating = selectedRating === null ||;
                          (listing.rating !== null && listing.rating >= selectedRating);
-    ;
-    return matchesSearch && matchesCategory && matchesPrice && matchesRating;});
-;
-  const totalPages = itemsPerPage;
-    ? Math.ceil(filteredListings.length / itemsPerPage);
-    : "1;
-;
-  const paginatedListings = itemsPerPage;
-    ? filteredListings.slice((currentPage - 1) * itemsPerPage", currentPage * itemsPerPage);
-    : "filteredListings;
-;
-  useEffect(() => {setCurrentPage(1);"}, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]);
-;
-  const handleRequestQuote = ("props": "any) => {;
     
     return matchesSearch && matchesCategory && matchesPrice && matchesRating;}
     );
@@ -72,21 +57,6 @@ export function DynamicListingPage("props": "any) {;
     ;
     setTimeout(() => {;
       setIsLoading(false);
-      if (listing) {;
-        toast({;
-          "title": "Quote Requested";
-          "description": `Your quote request for ${listing.title"} has been sent.`;
-        });
-        ;
-        navigate("/request-quote", {;
-          "state": "{;
-            "serviceType": categorySlug;
-            "specificItem": {;
-              "id": listing.id;
-              "title": listing.title;
-              "category": listing.category;
-              "image": listing.images?.[0];
-            "}
       if (listing) {
         toast({
           title: "Quote Requested",
@@ -109,14 +79,6 @@ export function DynamicListingPage("props": "any) {;
       }
     }, 500);
   };
-;
-  return (;
-    <div className="min-h-screen bg-blue-900 py-12 px-4">;
-      <div className="container mx-auto">;
-        <div className="text-center mb-12">;
-          <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>;
-          <p className="text-xl text-blue-200">{description}</p>;
-        </div>;
 
   return (
         <div className="min-h-screen bg-blue-900 py-12 px-4">
@@ -202,20 +164,6 @@ export function DynamicListingPage("props": "any) {;
         </div>;
 
         {/* Listings Grid */}
-        <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-3 "xl":grid-cols-4 gap-6">;
-          {paginatedListings.map((listing) => (;
-            <div key={listing.id"} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 "hover": "border-white/40 transition-all duration-300">;
-              <div className="aspect-square bg-gray-300 rounded-lg mb-4"></div>;
-              <h3 className="text-lg font-semibold text-white mb-2">{listing.title"}</h3>;
-              <p className="text-gray-300 text-sm mb-3 line-clamp-2">{listing.description}</p>;
-              <div className="flex items-center justify-between mb-3">;
-                <span className="text-2xl font-bold text-white">${listing.price}</span>;
-                <div className="flex items-center gap-1">;
-                  <Star className="w-4 h-4 text-yellow-400 fill-current"  />;
-                  <span className="text-white text-sm">{listing.rating || 0}</span>;
-                </div>;
-              </div>;
-              <Button ;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {paginatedListings.map((listing) => (
             <div key={listing.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:border-white/40 transition-all duration-300">
@@ -256,9 +204,6 @@ export function DynamicListingPage("props": "any) {;
             </div>;
           </div>;
         )}
-      </div>;
-    </div>;
-  );
       </div>
     </div>
     );

@@ -4,7 +4,6 @@ import {  import { motion  } from 'framer-motion';
  * @returns {*} Function return value;
  */;
 function AnalyticsManager("props": "any) {;
-
   BarChart3",;
   Users,;
   Eye,;
@@ -18,7 +17,6 @@ function AnalyticsManager("props": "any) {;
   Monitor} from 'lucide-react';
 ;
 interface AnalyticsData {;
-
   "pageViews": "number;
   "uniqueVisitors": number;
   "sessionDuration": number;
@@ -28,14 +26,12 @@ interface AnalyticsData {;
 "}[];
   "userAgents": "{ "device": string; "count": number "}[];
   "performance": "{;
-
     "fcp": number;
     "lcp": number;
     "fid": number;
     "cls": number"};
   "events": "{ "name": string; "count": number; "timestamp": string "}[]}
 interface UserSession {;
-
   "id": "string;
   "startTime": number;
   "lastActivity": number;
@@ -58,7 +54,6 @@ export function AnalyticsManager("props": "any) {;
   // Initialize analytics tracking;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
@@ -72,7 +67,6 @@ export function AnalyticsManager("props": "any) {;
       localStorage.getItem('zion_session_id') || generateSessionId();'    localStorage.setItem('zion_session_id', sessionId);
 ;
     const "session": "UserSessio n = {;
-
       "id": sessionI d",;
       "startTime": "Dat e.now () ",;
       "lastActivity": "Dat e.now () ",;
@@ -91,7 +85,6 @@ export function AnalyticsManager("props": "any) {;
 ;
     // Track referrer;
     if(document.referrer) {;
-
       trackReferrer(document.referrer)}
     // Set up event listeners;
     setupEventListeners();
@@ -111,31 +104,29 @@ export function AnalyticsManager("props": "any) {;
 ;
     // Save session data;
     if(currentSession) {;
-
       saveSessionData(currentSession)}
   }, [currentSession]) };
-
-    // Scroll tracking'
+;
+    // Scroll tracking';
+    document.addEventListener('scroll', handleScroll, { "passive": "tru e "});
+;
+    // Page unload tracking';    // Scroll tracking'
     document.addEventListener('scroll', handleScroll, { passive: tru e }
     );
-
     // Page unload tracking'
     window.addEventListener('beforeunload', handleBeforeUnload)}, []);
 ;
     // Track button clicks';
     if(target.tagName === 'BUTTON' || target.closest('button')) {;
       trackEvent('button_click', {;
-
         "text": "targe t.textContent || target.innerText",;
         "className": "targe t.className",;
         "id": "targe t.id"})}
 ;
     // Track link clicks';
     if(target.tagName === 'A' || target.closest('a')) {;
-
       trackEvent('link_click', {;
           : "(target.closest('a') as HTMLAnchorElement);'      trackEvent('link_click'", {;
-
         "href": "lin k.href",;
         "text": "lin k.textContent || link.innerText"})}
     // Track form interactions;
@@ -144,62 +135,41 @@ export function AnalyticsManager("props": "any) {;
       target.tagName === 'SELECT' ||';
       target.tagName === 'TEXTAREA';
     ) {;
-
       trackEvent('form_interaction', {;
-
         "type": "targe t.tagName.toLowerCase()",;
         "name": "(target as HTMLInputElement).name",;
         "id": "targe t.id"})}
   }, []) ;
 ;
     if(scrollDepth % 25 === 0) {;
-
       // Track at 25%, 50%, 75%, 100%';
       trackEvent('scroll_depth', { "depth": "scrollDept h "})}
   }, []) }
   }, [currentSession]) ;
 ;
         if(fcp) {;
-
           trackPerformance('fcp', fcp.startTime)}
-      }
-    );
-      fcpObserver.observe({ entryTypes: ['paint'] }
-    );
-
-        if(lcp) {;
-
+      });
+      fcpObserver.observe({ "entryTypes": "['paint'] "});
+;
+      // Largest Contentful Paint;        if(lcp) {;
           trackPerformance('lcp', lcp.startTime)}
-      }
-    );
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
-    );
-
-        if(fid) {;
-
+      });
+      lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
+;
+      // First Input Delay;        if(fid) {;
           trackPerformance('fid', fid.processingStart - fid.startTime)}
-      }
-    );
-      fidObserver.observe({ entryTypes: ['first-input'] }
-    );
-
-        let clsValue = 0;        for (const entry of list.getEntries()) {;
-
+      });
+      fidObserver.observe({ "entryTypes": "['first-input'] "});
+;
+      // Cumulative Layout Shift;
+      const clsObserver = new PerformanceObserver(list => {;        let clsValue = 0;        for (const entry of list.getEntries()) {;
           if(!entry.hadRecentInput) {;
-
             clsValue += (entry as any).value}
         }
-        trackPerformance('cls', clsValue)}
+        trackPerformance('cls', clsValue)});
+      clsObserver.observe({ "entryTypes": "['layout-shift'] "})}        trackEvent('page_view', { path }
     );
-      clsObserver.observe({ entryTypes: ['layout-shift'] })}
-  }, []) }
-    }, 30000) ;
-;
-    return () => clearInterval(activityInterval) }, [currentSession]) ;
-
-        trackEvent('page_view', { path }
-    );
-
         // Send to analytics endpoint'
         sendAnalyticsData('page_view', { path, timestamp: Dat e.now() })}
     },
@@ -209,7 +179,6 @@ export function AnalyticsManager("props": "any) {;
         setCurrentSession(prev =>;
           prev;
             ? {;
-
                 ...prev,;
                 "events": "[...prev.events", event],;
                 "lastActivity": "Dat e.now()"}
@@ -224,7 +193,6 @@ export function AnalyticsManager("props": "any) {;
 ;
         // For now, just log to console';
         // } catch(error) {;
-
         // console.error('Failed to send analytics "data":', error)}
     },;
     [currentSession];
@@ -232,7 +200,6 @@ export function AnalyticsManager("props": "any) {;
 ;
         // Send to analytics endpoint';
         await sendAnalyticsData('session_end', session)} catch(error) {;
-
         // console.error('Failed to save session "data":', error)}
     },;
     [sendAnalyticsData];
@@ -241,9 +208,7 @@ export function AnalyticsManager("props": "any) {;
     // Calculate bounce rate(single page view sessions);
     ;
     // Calculate conversion rate(sessions with specific events);
-
     return {;
-
       pageViews,;
       "uniqueVisitors": "1", // Single session;
       "sessionDuration": "Mat h.round(sessionDuration / 1000) ", // in seconds;
@@ -251,7 +216,6 @@ export function AnalyticsManager("props": "any) {;
       "conversionRate": "Mat h.round(conversionRate)",;
       "topPages": "currentSessio n.pageViews.reduce();
         (acc", path) => {;
-
           acc[path] = (acc[path] || 0) + 1;
           return acc},;
         {} as Record<string, number>;
@@ -260,29 +224,23 @@ export function AnalyticsManager("props": "any) {;
       ],;
       "performance": "{ "fcp": 0", "lcp": "0", "fid": "0", "cls": "0 "}, // Would be populated from performance tracking;
       "events": "currentSessio n.events.map(e => ({;
-
         "name": e.name",;
         "count": "1",;
         "timestamp": "new Date(e.timestamp).toISOString()"}))}}, [currentSession])} else if(/Tablet|iPad/.test(userAgent)) {;
-
       return 'Tablet'} else {;
-
       return 'Desktop'}  };
 ;
   // Update analytics data when session changes;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
 }, []);, []);
     if(currentSession) {;
-
       setAnalyticsData(report)}
   }, [currentSession, generateAnalyticsReport]) ;
   if(!showAnalytics) {;
-
     return ();
       <motion.button;
         initial={{ "opacity": "0", "scale": "0.8 "}}
@@ -313,7 +271,6 @@ export function AnalyticsManager("props": "any) {;
           ×;
         </button>;
       </div>;
-
       {analyticsData && (";
         <div className="space-y-3">;
           {/* Session Info */"}";
@@ -321,31 +278,26 @@ export function AnalyticsManager("props": "any) {;
             <Activity className="w-4 h-4 text-green-400"   />;
             <span>"Session": "{currentSession?.id.slice(-8)"}</span>;
           </div>;
-
           {/* Page Views */}";
           <div className="flex items-center space-x-2">";
             <Eye className="w-4 h-4 text-blue-400"   />;
             <span>"Views": "{analyticsData.pageViews"}</span>;
           </div>;
-
           {/* Session Duration */}";
           <div className="flex items-center space-x-2">";
             <Clock className="w-4 h-4 text-yellow-400"   />;
             <span>"Duration": "{analyticsData.sessionDuration"}s</span>;
           </div>;
-
           {/* Bounce Rate */}";
           <div className="flex items-center space-x-2">";
             <Target className="w-4 h-4 text-red-400"   />;
             <span>"Bounce": "{analyticsData.bounceRate"}%</span>;
           </div>;
-
           {/* Conversion Rate */}";
           <div className="flex items-center space-x-2">";
             <TrendingUp className="w-4 h-4 text-green-400"   />;
             <span>"Conversion": "{analyticsData.conversionRate"}%</span>;
           </div>;
-
           {/* Device Type */}";
           <div className="flex items-center space-x-2">;
             {analyticsData.userAgents[0]?.device === 'Mobile' ? (";
@@ -354,7 +306,6 @@ export function AnalyticsManager("props": "any) {;
               <Monitor className="w-4 h-4 text-cyan-400"   />            )"}
             <span>"Device": "{analyticsData.userAgents[0]?.device"}</span>;
           </div>;
-
           {/* Tracking Status */}";
           <div className="flex items-center space-x-2">";
             <Zap className="w-4 h-4 text-orange-400"   />;
@@ -366,7 +317,6 @@ export function AnalyticsManager("props": "any) {;
         <button;
           onClick={() => {;
             if(currentSession) {;
-
               saveSessionData(currentSession)}
           }}"          className="w-full px-3 py-2 bg-cyan-600 "hover": "b g-cyan-700 text-white text-xs rounded transition-colors duration-200";
         >;
@@ -376,7 +326,6 @@ export function AnalyticsManager("props": "any) {;
     </motion.div>;
   )"}
 '"`;
-
 </motion>;
 </motion>;
 </string>;

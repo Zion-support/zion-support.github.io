@@ -1,15 +1,7 @@
 import React from 'react';
-interface ResponsiveGridProps {
-  "children": React.ReactNode;
-  className?: string;
-  cols?: {;
-    sm?: number;
-    md?: number;
-    lg?: number;
-    xl?: number;
-  "};
-}
-export function ResponsiveGrid({
+;
+interface ResponsiveGridProps {;
+  "children": "React.ReactNode;export function ResponsiveGrid({
   children,
   className = ",
   cols = { "sm": 1, "md": 2, "lg": 3, "xl": 4 }
