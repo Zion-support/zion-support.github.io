@@ -6,3 +6,4 @@
   'resize', updateDimensions)}, []);
   return state};
 export default useResponsive;
+;
