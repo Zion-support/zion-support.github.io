@@ -8,11 +8,11 @@ interface MainLayoutProps {
   keywords?: string;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ 
-  children, 
-  title = "Zion Tech Group", 
+const MainLayout: React.FC<MainLayoutProps> = ({
+  children,
+  title = "Zion Tech Group",
   description = "Leading technology solutions provider",
-  keywords = "technology, AI, IT services, micro SaaS"
+  keywords = "technology, AI, cloud, micro SaaS"
 }) => {
   return (
     <>
@@ -26,6 +26,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       {children}
     </>
   );
-};
+}
 
 export default MainLayout;
