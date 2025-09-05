@@ -9,10 +9,10 @@ class CompleteImprovementSuite {
     this.reportsDir = './automation-reports';
     this.projectRoot = process.cwd();
     this.stats = {
-      "mergeConflicts": { resolve: d: 0, "failed": 0 },
-      "syntaxErrors": { fixe: d: 0, "failed": 0 },
-      "prsProcessed": { merge: d: 0, "failed": 0 },
-      "improvements": { applie: d: 0, "failed": 0 }
+      "mergeConflicts": { resolved: 0, "failed": 0 },
+      "syntaxErrors": { fixed: 0, "failed": 0 },
+      "prsProcessed": { merged: 0, "failed": 0 },
+      "improvements": { applied: 0, "failed": 0 }
     };
   }
 
@@ -102,7 +102,7 @@ class CompleteImprovementSuite {
     this.log('🔧 Phase "3": Applying Improvements');
 
     const improvements = [{
-        nam: e: 'Performance Configuration',
+        name: 'Performance Configuration',
         "action": () => this.createPerformanceConfig()},
       {
         "name": 'Security Configuration',
@@ -134,9 +134,9 @@ class CompleteImprovementSuite {
   async commitAndPush() {
     this.log('🔧 Phase "4": Committing and Pushing Changes');
 
-    const commands = [{ cm: d: 'git add .', "desc": 'Adding all changes' },
+    const commands = [{ cmd: 'git add .', "desc": 'Adding all changes' },
       {
-        "cmd": 'git commit -m "fea: t: Complete improvement suite - merge conflicts, syntax fixes, and enhancements"',
+        "cmd": 'git commit -m "feat: Complete improvement suite - merge conflicts, syntax fixes, and enhancements"',
         "desc": 'Committing changes'},
       { "cmd": 'git push origin main', "desc": 'Pushing to main branch' },
     ];
@@ -183,8 +183,9 @@ class CompleteImprovementSuite {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
-        content.includes('') ||
-        content.includes('
+        content.includes('<<<<<<< HEAD') ||
+        content.includes('=======') ||
+        content.includes('>>>>>>> ')
       );
     } catch (error) {
       return false;
@@ -198,11 +199,12 @@ class CompleteImprovementSuite {
 
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-
+        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs,
         '$1'
       );
 
       // Clean up any remaining markers
+      content = content.replace(/>>>>>>> [^\n]+\n/g, '');
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
@@ -250,16 +252,16 @@ class CompleteImprovementSuite {
   createPerformanceConfig() {
     const config = {
       "bundleOptimization": {
-        treeShakin: g: true,
+        treeShaking: true,
         "codeSplitting": true,
         "lazyLoading": true,
         "compression": true},
       "caching": {
-        staticAsset: s: true,
+        staticAssets: true,
         "apiResponses": true,
         "buildCache": true},
       "monitoring": {
-        performanceMetric: s: true,
+        performanceMetrics: true,
         "errorTracking": true,
         "userAnalytics": true}};
 
@@ -279,7 +281,7 @@ class CompleteImprovementSuite {
         'Content-Security-Policy':
           "default-src 'self'; script-src 'self' 'unsafe-inline'"},
       "validation": {
-        inputSanitizatio: n: true,
+        inputSanitization: true,
         "sqlInjectionProtection": true,
         "xssProtection": true}};
 
@@ -292,15 +294,15 @@ class CompleteImprovementSuite {
   createMonitoringConfig() {
     const config = {
       "healthChecks": {
-        enable: d: true,
+        enabled: true,
         "interval": 60000,
         "endpoints": ['/health', '/api/status']},
       "logging": {
-        leve: l: 'info',
+        level: 'info',
         "format": 'json',
         "rotation": true},
       "alerts": {
-        errorThreshol: d: 10,
+        errorThreshold: 10,
         "responseTimeThreshold": 5000}};
 
     fs.writeFileSync(
@@ -312,17 +314,17 @@ class CompleteImprovementSuite {
   createBuildOptimization() {
     const config = {
       "webpack": {
-        optimizatio: n: {
-          splitChunk: s: {
-            chunk: s: 'all',
+        optimization: {
+          splitChunks: {
+            chunks: 'all',
             "cacheGroups": {
-              vendo: r: {
-                tes: t: /[\\/]node_modules[\\/]/,
+              vendor: {
+                test: /[\\/]node_modules[\\/]/,
                 "name": 'vendors',
                 "chunks": 'all'}}}}},
       "nextjs": {
-        experimenta: l: {
-          optimizeCs: s: true,
+        experimental: {
+          optimizeCss: true,
           "optimizeImages": true}}};
 
     fs.writeFileSync(
@@ -337,21 +339,21 @@ class CompleteImprovementSuite {
     // Phase "1": Resolve merge conflicts
     await this.resolveMergeConflicts();
 
-    // Phase: 2: Fix syntax errors
+    // Phase 2: Fix syntax errors
     await this.fixSyntaxErrors();
 
-    // Phase: 3: Apply improvements
+    // Phase 3: Apply improvements
     await this.applyImprovements();
 
-    // Phase: 4: Commit and push
+    // Phase 4: Commit and push
     const pushSuccess = await this.commitAndPush();
 
     // Generate final report
     const finalReport = {
-      timestam: p: new Date().toISOString(),
+      timestamp: new Date().toISOString(),
       "results": this.results,
       "summary": {
-        totalMergeConflictsResolve: d: this.results.mergeConflicts.resolved,
+        totalMergeConflictsResolved: this.results.mergeConflicts.resolved,
         "totalSyntaxErrorsFixed": this.results.syntaxErrors.fixed,
         "totalImprovementsApplied": this.results.improvements.applied,
         "pushSuccessful": pushSuccess}};
@@ -364,7 +366,7 @@ class CompleteImprovementSuite {
     this.log('🎉 Complete Improvement Suite Finished');
     this.log("📊 "Summary": ");
     this.log(
-      `   - Merge conflicts: resolved: ${finalReport.summary.totalMergeConflictsResolved}`
+      `   - Merge conflicts resolved: ${finalReport.summary.totalMergeConflictsResolved}`
     );
     this.log(
       `   - Syntax errors "fixed": ${finalReport.summary.totalSyntaxErrorsFixed}`
@@ -379,7 +381,10 @@ class CompleteImprovementSuite {
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
-
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -393,8 +398,8 @@ const { execSync } = require('child_process')
         "name"
         "name"
     this.log(' Phase "4")
-    const commands = [{ cm: d: 'git add .', "desc"}]
-        "cmd": 'git commit -m "fea: t: Complete improvement suite - merge conflicts, syntax fixes, and enhancements"
+    const commands = [{ cmd: 'git add .', "desc"}]
+        "cmd": 'git commit -m "feat: Complete improvement suite - merge conflicts, syntax fixes, and enhancements"
         "desc"
       { "cmd": 'git push origin main', "desc"}
         /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'')]

@@ -11,6 +11,4 @@ describe('App Smoke Tests', () => {
     const { container } = render(<App />);
     expect(container.firstChild).toBeTruthy();
   });
-
 });
-
