@@ -46,7 +46,7 @@ import {
   Gamepad2
 } from 'lucide-react';
 
-const aiServices = [{ursor/add-new-services-and-deploy-updates-1b90
+const aiServices = [{
     title: 'AI-Powered Email Responder',
     description: 'Automated email responses using advanced NLP and machine learning algorithms.',
     icon: Mail,
@@ -215,7 +215,7 @@ const aiServices = [{ursor/add-new-services-and-deploy-updates-1b90
 description: 'Complete autonomous vehicle systems with advanced perception and decision-making capabilities.',
     icon: Car,
     features: ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Real-time Decision Making'],
-    pricing: '$100,000 - $500,000/project',ursor/add-new-services-and-deploy-updates-1b90
+    pricing: '$100,000 - $500,000/project',
     category: 'Autonomous Systems',
     popular: true
   },
@@ -551,10 +551,181 @@ title: 'Generative AI Content Creation Suite',
     pricing: '$100,000 - $1,000,000/project',
     category: 'Theoretical Physics AI',
     popular: true
+  },
+  {
+    title: 'AI-Powered Drug Repurposing Platform',
+    description: 'Machine learning system for identifying new therapeutic uses for existing drugs.',
+    icon: Heart,
+    features: ['Drug-Disease Mapping', 'Side Effect Analysis', 'Clinical Trial Prediction', 'Regulatory Compliance'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Pharmaceutical AI',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Error Correction',
+    description: 'Advanced AI algorithms for quantum error correction and fault-tolerant quantum computing.',
+    icon: Cpu,
+    features: ['Error Detection', 'Correction Algorithms', 'Fault Tolerance', 'Performance Optimization'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Synthetic Biology Designer',
+    description: 'AI system for designing synthetic biological systems and genetic circuits.',
+    icon: Sprout,
+    features: ['Genetic Circuit Design', 'Protein Engineering', 'Metabolic Pathway Optimization', 'Safety Analysis'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Synthetic Biology',
+    popular: true
+  },
+  {
+    title: 'AI Consciousness Simulation Framework',
+    description: 'Advanced AI framework for simulating consciousness and cognitive processes.',
+    icon: Brain,
+    features: ['Consciousness Modeling', 'Cognitive Simulation', 'Neural Network Analysis', 'Behavioral Prediction'],
+    pricing: '$75,000 - $500,000/project',
+    category: 'Cognitive AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Fusion Energy Optimization',
+    description: 'Machine learning system for optimizing nuclear fusion reactor designs and operations.',
+    icon: Zap,
+    features: ['Reactor Optimization', 'Plasma Control', 'Energy Efficiency', 'Safety Monitoring'],
+    pricing: '$60,000 - $400,000/project',
+    category: 'Fusion Energy',
+    popular: true
+  },
+  {
+    title: 'AI Exoplanet Discovery & Analysis',
+    description: 'Advanced AI system for discovering and analyzing exoplanets using astronomical data.',
+    icon: Rocket,
+    features: ['Planet Detection', 'Atmospheric Analysis', 'Habitability Assessment', 'Life Sign Detection'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Astrobiology AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Time Series Forecasting',
+    description: 'Advanced time series analysis and forecasting for complex multi-variate data.',
+    icon: TrendingUp,
+    features: ['Multi-variate Analysis', 'Long-term Forecasting', 'Anomaly Detection', 'Uncertainty Quantification'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Time Series AI',
+    popular: true
+  },
+  {
+    title: 'AI Molecular Dynamics Simulator',
+    description: 'High-performance AI system for molecular dynamics simulations and drug discovery.',
+    icon: Settings,
+    features: ['Molecular Simulation', 'Drug-Target Interaction', 'Binding Affinity Prediction', 'Conformational Analysis'],
+    pricing: '$35,000 - $250,000/project',
+    category: 'Molecular AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Change Mitigation',
+    description: 'AI system for developing and optimizing climate change mitigation strategies.',
+    icon: Globe,
+    features: ['Carbon Capture Optimization', 'Renewable Energy Planning', 'Emission Reduction', 'Policy Analysis'],
+    pricing: '$45,000 - $300,000/project',
+    category: 'Climate AI',
+    popular: true
+  },
+  {
+    title: 'AI Neural Prosthetics Controller',
+    description: 'Advanced AI system for controlling neural prosthetics and brain-machine interfaces.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Motor Control', 'Sensory Feedback', 'Adaptive Learning'],
+    pricing: '$80,000 - $500,000/project',
+    category: 'Neuroprosthetics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Debris Management',
+    description: 'AI system for tracking, predicting, and managing space debris and satellite collisions.',
+    icon: Rocket,
+    features: ['Debris Tracking', 'Collision Prediction', 'Orbit Optimization', 'Removal Planning'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Space Management',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Machine Learning Platform',
+    description: 'Quantum machine learning algorithms and optimization for quantum computing applications.',
+    icon: Cpu,
+    features: ['Quantum ML Algorithms', 'Optimization Problems', 'Quantum Neural Networks', 'Hybrid Classical-Quantum'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Quantum ML',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Biometric Security System',
+    description: 'Advanced biometric authentication using AI for enhanced security and fraud prevention.',
+    icon: Shield,
+    features: ['Multi-modal Biometrics', 'Liveness Detection', 'Spoofing Prevention', 'Real-time Authentication'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Biometric AI',
+    popular: true
+  },
+  {
+    title: 'AI Autonomous Drone Swarm Controller',
+    description: 'AI system for controlling autonomous drone swarms for various applications.',
+    icon: Rocket,
+    features: ['Swarm Coordination', 'Path Planning', 'Collision Avoidance', 'Mission Optimization'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Materials Discovery',
+    description: 'Machine learning system for discovering new materials with desired properties.',
+    icon: Settings,
+    features: ['Property Prediction', 'Composition Optimization', 'Synthesis Planning', 'Performance Analysis'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Materials Science',
+    popular: true
+  },
+  {
+    title: 'AI Digital Twin for Human Body',
+    description: 'Comprehensive digital twin of human body for medical research and personalized medicine.',
+    icon: Heart,
+    features: ['Organ Modeling', 'Disease Simulation', 'Treatment Testing', 'Personalized Medicine'],
+    pricing: '$100,000 - $750,000/project',
+    category: 'Medical AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Ocean Exploration System',
+    description: 'AI system for autonomous ocean exploration and marine life discovery.',
+    icon: Globe,
+    features: ['Autonomous Navigation', 'Marine Life Detection', 'Data Collection', 'Environmental Monitoring'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Marine AI',
+    popular: true
+  },
+  {
+    title: 'AI Consciousness Transfer Simulation',
+    description: 'Theoretical AI framework for simulating consciousness transfer and digital immortality.',
+    icon: Brain,
+    features: ['Consciousness Mapping', 'Transfer Simulation', 'Identity Preservation', 'Digital Continuity'],
+    pricing: '$200,000 - $1,500,000/project',
+    category: 'Transhumanism AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Asteroid Mining Optimization',
+    description: 'AI system for optimizing asteroid mining operations and resource extraction.',
+    icon: Rocket,
+    features: ['Resource Assessment', 'Mining Planning', 'Extraction Optimization', 'Economic Analysis'],
+    pricing: '$60,000 - $400,000/project',
+    category: 'Space Mining',
+    popular: true
   }
 ];
 
-const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },ursor/add-new-services-and-deploy-updates-1b90
+const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
   { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
   { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
   { name: 'Manufacturing', icon: Settings, description: 'Predictive maintenance and quality control' },
@@ -562,7 +733,7 @@ const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered 
   { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' }
 ];
 
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
+const benefits = [{
     icon: Zap,
     title: 'Increased Efficiency',
     description: 'Automate repetitive tasks and processes',
@@ -606,7 +777,7 @@ export default function AIServicesPage() {
                   </div>
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -796,7 +967,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
 <div className="container mx-auto px-4 text-center">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

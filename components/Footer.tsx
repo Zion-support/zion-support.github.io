@@ -95,7 +95,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   hours: '24/7 Support Available'
-};ursor/add-new-services-and-deploy-updates-1b90
+};
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -191,7 +191,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-16">
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">ursor/add-new-services-and-deploy-updates-1b90
+          <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
@@ -330,7 +330,7 @@ export default function Footer() {
                     </a>
                   );
                 })}
-              </div>ursor/add-new-services-and-deploy-updates-1b90
+              </div>
             </div>
           </div>
 
@@ -342,9 +342,9 @@ export default function Footer() {
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
               <p className="text-gray-400 text-sm">
                 Get the latest technology insights and company updates delivered to your inbox.
-              </p>ursor/add-new-services-and-deploy-updates-1b90
+              </p>
             </div>
-          ))}
+          </div>
         </div>
 
         {/* Newsletter Signup */}
@@ -379,7 +379,7 @@ export default function Footer() {
 <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved. | 
-              <span className="ml-2">Delaware, United States</span>ursor/add-new-services-and-deploy-updates-1b90
+              <span className="ml-2">Delaware, United States</span>
             </div>
             
             <div className="flex flex-wrap items-center space-x-6">
