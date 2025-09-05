@@ -3,7 +3,7 @@ const fs = // // require('fs''')
     this.branch = 'main'''
       // Check if we'''
       if (!fs.existsSync('.git''')
-        console.log(' Not in a git repository''')
+// console.log(' Not in a git repository''')
       console.log(' Git repository found''')
       console.log(' Error checking git "status""")
       "recommendations"""

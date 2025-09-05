@@ -109,7 +109,7 @@ class $1 {}
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};`
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async analyzeCodeQuality() {}
   this.log("🤖 Starting AI-powered code quality analysis...");
@@ -151,7 +151,7 @@ class $1 {}
       // 8. Commit improvements;
       if (appliedFixes.length > 0) {}
   await this.commitImprovements(appliedFixes)};
-    } catch (error) {  this.log(`AI code quality analysis "failed": ${error.message  }`, "ERROR")};`
+    } catch (error) {  this.log(`AI code quality analysis "failed": ${error.message  }`, "ERROR")};
 ;
     return { improvements, patterns };
   };
@@ -186,7 +186,7 @@ class $1 {}
 ;
         if (fileAnalysis.patterns.length > 0) {}
   patterns.push(...fileAnalysis.patterns)};
-      } catch (error) {  this.log(`Error analyzing file ${file  }: ${error.message}`, "WARN")};`
+      } catch (error) {  this.log(`Error analyzing file ${file  }: ${error.message}`, "WARN")};
     };
 ;
     return { improvements, patterns };
@@ -314,14 +314,16 @@ class $1 {}
   const importContent = match.match(/import\s+{([^}]+)}\s+from/);
         return importContent;
           ? importContent[1].split(",").map(i => i.trim());
-          : []});
+          : []}
+});
       .flat();
     // Check if imports are used in the file;
     const unused = imports.filter(imp => {})
   const importName = imp.split(" as ")[0].trim();
       return (;)
-        !content.includes(importName) ||content.indexOf(importName) === content.indexOf(`import {${imp}}`);`
-      )});
+        !content.includes(importName) ||content.indexOf(importName) === content.indexOf(`import {${imp}}`);
+      )}
+});
 
     return unused};
 ;
@@ -379,7 +381,7 @@ class $1 {}
             "matches": 1,
             "lineNumbers": [1],
             "timestamp": new Date().toISOString()})};
-      } catch (error) {  this.log(`Error analyzing component ${file  }: ${error.message}`, "WARN")};`
+      } catch (error) {  this.log(`Error analyzing component ${file  }: ${error.message}`, "WARN")};
     };
 ;
     return { improvements };
@@ -495,7 +497,8 @@ class $1 {}
       if (!acc[imp.category][imp.priority]);
         acc[imp.category][imp.priority] = [];
       acc[imp.category][imp.priority].push(imp);
-      return acc}, {});
+      return acc}, {}
+});
     // Generate recommendations for each category;
     for (const ["category", "priorities"] of Object.entries(grouped)) {}
   const categoryRecommendations = this.generateCategoryRecommendations(;)
@@ -592,7 +595,7 @@ class $1 {}
 ;
   async applyFix(improvement) {}
   try {}
-  const content = fs.readFileSync(improvement.file, `utf8");`
+  const content = fs.readFileSync(improvement.file, `utf8");
       let newContent = content;
 
       switch (improvement.pattern) {}
@@ -628,7 +631,7 @@ class $1 {}
 ;
   removeUnusedImports(content) {}
   // This is a simplified implementation;
-    // In production, you`d use the TypeScript compiler API for accurate analysis;`
+    // In production, you`d use the TypeScript compiler API for accurate analysis;
     return content};
 ;
   async generateQualityReport(;)
@@ -665,19 +668,22 @@ class $1 {}
   if (appliedFixes.length === 0) return;
     try {}
   // Stage all changes;
-      execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe" });
+      execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe" }
+});
       // Commit with descriptive messageconst commitMessage = `🤖 AI Code Quality "Improvements": ${appliedFixes.length} automatic fixes applied`;execSync(`git commit -m ${commitMessage}`, {`})
   "cwd": this.projectRoot,
         "stdio": "pipe",
 
     try {}
   // Stage all changes;
-      execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe" });
+      execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe" }
+});
 
       // Commit with descriptive messageconst commitMessage = `🤖 AI Code Quality "Improvements": ${appliedFixes.length} automatic fixes applied`;execSync(`git commit -m "${commitMessage}"`, {`})
   "cwd": this.projectRoot,
-        "stdio": "pipe'});
-this.log(`Committed ${appliedFixes.length} AI improvements`, "INFO")} catch (error) {  this.log(`Failed to commit "improvements": ${error.message  }`, "ERROR")};`
+        "stdio": "pipe'}
+});
+this.log(`Committed ${appliedFixes.length} AI improvements`, "INFO")} catch (error) {  this.log(`Failed to commit "improvements": ${error.message  }`, "ERROR")};
   };
 ;
   getAllFiles(dir, extensions) {}
@@ -702,7 +708,7 @@ this.log(`Committed ${appliedFixes.length} AI improvements`, "INFO")} catch (err
   async run() {}
   try {}
   await this.analyzeCodeQuality();
-      this.log("🤖 AI Code Quality Enhancement completed successfully")} catch (error) {  this.log(`AI Code Quality Enhancement "failed": ${error.message  }`, "ERROR")};`
+      this.log("🤖 AI Code Quality Enhancement completed successfully")} catch (error) {  this.log(`AI Code Quality Enhancement "failed": ${error.message  }`, "ERROR")};
   };
 };
 ;

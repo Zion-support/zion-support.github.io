@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-console.log(' Fixing Remaining Corrupted Files...')
+// console.log(' Fixing Remaining Corrupted Files...')
 console.log('===')
 const corruptedFiles = ['pages/docs/integration-examples.tsx']
   'pages/docs/sdk.tsx'

@@ -14,6 +14,6 @@ const filesToFix = ['components/ContactForm.tsx']
   'components/PerformanceMonitor.tsx'
   'pages/cloud-devops.tsx'
   'pages/cybersecurity.tsx'
-  console.log('\n All syntax errors have been fixed!')
+// console.log('\n All syntax errors have been fixed!')
   console.log('\n All syntax errors have been fixed!')
   console.log('\n No syntax errors found!')

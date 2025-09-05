@@ -41,7 +41,7 @@ const path = require("path")
       "scripts/performance-monitor.js"
       "scripts/security-audit.js"
       "scripts/code-quality-analyzer.js"
-          `Quality "Check"`
+          `Quality "Check"
     this.log(" Generating CI report...")
       "timestamp"
       "summary"
@@ -72,8 +72,8 @@ const path = require("path")
         "action": "Address security vulnerabilities"
     this.log(" Starting Continuous Integration Pipeline")
       this.log("� Continuous Integration Pipeline Completed")
-        ` "Summary"`
+        ` "Summary"
       this.log(` Fatal error in CI "pipeline"`)
     console.log(" Continuous Integration Pipeline completed successfully!")
-      ` Final "Summary"`
+      ` Final "Summary"
     console.error(" CI pipeline "failed": ")

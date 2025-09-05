@@ -1,12 +1,11 @@
 export interface IoTEdgeService {}
   // TODO: Implement;
-};
-  "id": string;"
+};id": string;"
   title: string;,
   description: string;
   longDescription: string;,
   icon: string;
-  color: string;,"
+  color: string;, 
   category: 'smart-cities' | 'industrial-iot' | 'edge-ai' | 'connected-devices' | 'sensor-networks' | 'edge-computing' | 'iot-security' | 'data-analytics';'
   features: string[];,
   benefits: string[];
@@ -19,14 +18,14 @@ export interface IoTEdgeService {}
   "estimatedTime": string;"
   technologies: string[];
   image?: string;
-  iotScore: number;,"
+  iotScore: number;, 
   marketPrice: string;';''
   contactLink: string;';';','
   status: 'active' | 'beta' | 'coming-soon';'
   scalability: string;,
   deployment: string}'
 export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
-  {"}
+  {}
     id: 'smart-city-platform',''
     "title": 'Smart City IoT Platform',''
     "description": 'Comprehensive IoT platform for smart city infrastructure and management',''
@@ -54,7 +53,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
       'Urban developers',''
       'Smart city initiatives''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$5,999/month',''
       "professional": '$15,999/month',''
       "enterprise": '$39,999/month',''
@@ -62,7 +61,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
     },'
     "estimatedTime": '16-32 weeks',''
     technologies['IoT Sensors', 'Edge Computing', '5G Networks', 'Cloud Computing', 'AI/ML', 'Data Analytics'],''
-    "iotScore": 98,""
+    "iotScore": 98, 
     "marketPrice": '$5,999-$39,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -97,7 +96,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
       'Warehouses',''
       'Processing plants''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$3,999/month',''
       "professional": '$9,999/month',''
       "enterprise": '$24,999/month',''
@@ -105,7 +104,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
     },'
     "estimatedTime": '12-24 weeks',''
     technologies['Industrial Sensors', 'Edge Computing', 'PLC Integration', 'SCADA Systems', 'AI/ML', 'Cloud Computing'],''
-    "iotScore": 97,""
+    "iotScore": 97, 
     "marketPrice": '$3,999-$24,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -140,7 +139,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
       'Industrial robots',''
       'Edge devices''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$2,999/month',''
       "professional": '$7,999/month',''
       "enterprise": '$19,999/month',''
@@ -148,7 +147,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
     },'
     "estimatedTime": '8-16 weeks',''
     technologies['Edge Computing', 'AI/ML', 'TensorFlow Lite', 'Edge GPUs', '5G Networks', 'Edge Analytics'],''
-    "iotScore": 96,""
+    "iotScore": 96, 
     "marketPrice": '$2,999-$19,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -183,7 +182,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
       'Service providers',''
       'Enterprise IoT''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$1,999/month',''
       "professional": '$4,999/month',''
       "enterprise": '$12,999/month',''
@@ -191,7 +190,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
     },'
     "estimatedTime": '6-12 weeks',''
     technologies['Device Management', 'IoT Protocols', 'Cloud Computing', 'Security', 'Analytics', 'APIs'],''
-    "iotScore": 95,""
+    "iotScore": 95, 
     "marketPrice": '$1,999-$12,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -226,7 +225,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
       'Infrastructure monitoring',''
       'Research applications''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$1,499/month',''
       "professional": '$3,999/month',''
       "enterprise": '$9,999/month',''
@@ -234,7 +233,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
     },'
     "estimatedTime": '4-12 weeks',''
     technologies['IoT Sensors', 'Wireless Networks', 'Edge Computing', 'Data Collection', 'Analytics', 'Cloud Computing'],''
-    "iotScore": 94,""
+    "iotScore": 94, 
     "marketPrice": '$1,499-$9,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -269,7 +268,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
       'Content delivery',''
       'Edge computing''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$2,499/month',''
       "professional": '$6,999/month',''
       "enterprise": '$17,999/month',''
@@ -277,7 +276,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
     },'
     "estimatedTime": '8-16 weeks',''
     technologies['Edge Computing', 'Kubernetes', 'Docker', 'Load Balancers', 'Storage', 'Networking'],''
-    "iotScore": 95,""
+    "iotScore": 95, 
     "marketPrice": '$2,499-$17,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -312,7 +311,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
       'Industrial IoT',''
       'Connected devices''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$2,999/month',''
       "professional": '$7,999/month',''
       "enterprise": '$19,999/month',''
@@ -320,7 +319,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
     },'
     "estimatedTime": '6-12 weeks',''
     technologies['IoT Security', 'Encryption', 'Authentication', 'Network Security', 'Threat Detection', 'Compliance'],''
-    "iotScore": 98,""
+    "iotScore": 98, 
     "marketPrice": '$2,999-$19,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -355,7 +354,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
       'Industrial monitoring',''
       'Environmental tracking''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$1,999/month',''
       "professional": '$4,999/month',''
       "enterprise": '$12,999/month',''
@@ -363,7 +362,7 @@ export const "IOT_EDGE_COMPUTING_SERVICES_2025": IoTEdgeService[] = [;"]
     },'
     "estimatedTime": '4-8 weeks',''
     technologies['Big Data', 'AI/ML', 'Real-time Processing', 'Data Visualization', 'Analytics', 'Cloud Computing'],''
-    "iotScore": 95,""
+    "iotScore": 95, 
     "marketPrice": '$1,999-$12,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''

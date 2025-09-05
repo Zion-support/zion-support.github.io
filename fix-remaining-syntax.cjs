@@ -61,7 +61,8 @@ function fixRemainingSyntax(filePath) {}
         return match + ';';
       };
       return match;
-    });
+    }
+});
     
     // Fix missing semicolons after function calls;
     content = content.replace(/setDisplayWeb3\([^)]+\)(?!;)\s*}/g, (match) => {}
@@ -69,17 +70,18 @@ function fixRemainingSyntax(filePath) {}
         return match + ';';
       };
       return match;
-    });
+    }
+});
     
     // Write the fixed content back;
     if (content !== originalContent) {}
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed remaining syntax errors "in": ${filePath}`);`
+      console.log(`Fixed remaining syntax errors "in": ${filePath}`);
       return true;
     };
     return false;
   } catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message);`
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   };
 };
@@ -105,4 +107,4 @@ function fixFilesInDirectory(dirPath) {}
 // Main execution;
 console.log('Starting remaining syntax error fixing...');
 const fixedCount = fixFilesInDirectory('./src');
-console.log(`Fixed ${fixedCount} files with remaining syntax errors.`);`
+console.log(`Fixed ${fixedCount} files with remaining syntax errors.`);

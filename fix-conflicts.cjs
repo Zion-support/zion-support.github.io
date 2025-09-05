@@ -8,7 +8,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   // Remove any remaining  lines;
   content = content.replace(/^\n/gm, '');
   fs.writeFileSync(filePath, content);
-  console.log(`Fixed conflicts in ${filePath}`)};`
+  console.log(`Fixed conflicts in ${filePath}`)};
 // Fix the problematic files;
 const filesToFix = ['pages/ai-services.tsx',]
   'pages/it-services.tsx', 

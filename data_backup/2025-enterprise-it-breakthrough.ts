@@ -16,7 +16,7 @@ export const enterpriseITBreakthroughServices2025 = [{}]
   'Custom infrastructure solutions and development''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 2999,
         period:,"
   month',''
@@ -94,7 +94,7 @@ starter: {,}
   'Enterprise edge solutions and customization''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 1999,
         period:,"
   month',''
@@ -171,7 +171,7 @@ starter: {,}
   'API for security automation and integration''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 1499,
         period:,"
   month',''
@@ -254,7 +254,7 @@ starter: {,}
   'Enterprise-grade reliability and support''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 999,
         period:,"
   month',''
@@ -336,7 +336,7 @@ starter: {,}
   'Enterprise-grade reliability and support''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 3999,
         period:,"
   month',''

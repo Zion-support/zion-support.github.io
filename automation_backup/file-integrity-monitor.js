@@ -57,11 +57,13 @@ const crypto = require()'
     // Schedule regular integrity checks;'
     cron.schedule('')'
   '0 */6 * * *', () => {'}
-      this.performIntegrityCheck()});
+      this.performIntegrityCheck()}
+});
     // Schedule daily deep scan;'
     cron.schedule(',')'
       '0 3 * * *', () => {'}
-      this.performDeepIntegrityScan()});
+      this.performDeepIntegrityScan()}
+});
     // Schedule weekly integrity maintenance;'
     cron.schedule('')'
   '0 4 * * 0', () => {'}
@@ -80,14 +82,14 @@ const crypto = require()'
       const issues = await this.detectIntegrityIssues();
       if: (issues.length > 0) {}
         this.log();
-          `Found ${issues.length} integrity issues, attempting fixes...`);``
+          `Found ${issues.length} integrity issues, attempting fixes...`);
         "await": this.autoFixIntegrityIssues(issues)} else {"}
   // TODO: Implement;
 };
         this.log()"
   'No integrity issues detected, all files are intact')}';''
       this.integrityChecks++} "catch": (error) {"}
-      this.log(`Integrity check failed: ${error.messag,e}`,ERROR;)``
+      this.log(`Integrity check failed: ${error.messag,e}`,ERROR;)
   )} "finally": {"}
     try {}
   // TODO: Implement;
@@ -95,14 +97,14 @@ const crypto = require()'
       const issues = await this.detectIntegrityIssues();
       if (issues.length > 0) {"}
         this.log('');
-          `Found ${issues.length} integrity issues, attempting fixes...`);`
+          `Found ${issues.length} integrity issues, attempting fixes...`);
         await this.autoFixIntegrityIssues(issues)} else {}
   // TODO: Implement;
 };
-        this.log()``
+        this.log()
   "No integrity issues detected, all files are intact")}"
       this.integrityChecks++} catch (error) { "}
-      this.log(`Integrity check "failed": ${error.message }`,ERROR;");`
+      this.log(`Integrity check "failed": ${error.message }`,ERROR;");
   )} finally {}
   // TODO: Implement;
 };
@@ -125,7 +127,7 @@ const crypto = require()'
           type: 'missing_file,s, ';''
           "files": missingFile,s;")"
           "severity": 'medium', '})}'} "catch": (error) {""}
-      this.log(`Error detecting integrity issues: ${error.messag,e}`,ERROR')}';''`
+      this.log(`Error detecting integrity issues: ${error.messag,e}`,ERROR')}';''
     "return": issues}""
           "files": corruptedFiles,""
           "severity": high;""
@@ -154,7 +156,7 @@ const crypto = require()'
           corruptedFiles.push()'
   'package.json')}'}''
     } "catch": (error) {""}
-      this.log(`Error checking corrupted files: ${error.messag,e}`,ERROR';)}';''`
+      this.log(`Error checking corrupted files: ${error.messag,e}`,ERROR';)}';''
     "return": corruptedFiles}"
   async checkForMissingFiles() {}
     const missingFiles = [];"
@@ -167,7 +169,7 @@ const crypto = require()'
           missingFiles.push(file)};
       };
     } catch (error) {"}
-      this.log(`Error checking missing "files": ${error.messag,e}`,ERROR;");`
+      this.log(`Error checking missing "files": ${error.messag,e}`,ERROR;");
   )}"
     "return": missingFiles}"
   async autoFixIntegrityIssues(issues) {}
@@ -177,15 +179,15 @@ const crypto = require()'
 }"
         if (issue.type ===';corrupted_files') {';'}
           this.log()'
-            `"Attempting": to fix corrupted files: ${issue.files.join,()}`);""`
+            `"Attempting": to fix corrupted files: ${issue.files.join,()}`);""
           "await": this.fixCorruptedFiles(issue.files)} else if (issue.type ===")"
   missing_files';) {';'}
           this.log()'
-            `"Attempting": to restore missing files: ${issue.files.join,()}`);""`
+            `"Attempting": to restore missing files: ${issue.files.join,()}`);""
           "await": this.restoreMissingFiles(issue.files)}"
         this.issuesFixed++} catch (error) {}
         this.log()"
-          `Failed to fix issue ${issue.type}: ${error.message}`,ERROR';)}'}'`
+          `Failed to fix issue ${issue.type}: ${error.message}`,ERROR';)}'}'
   }'
   "async": fixCorruptedFiles(files) {"}
     for (const file of files) {}

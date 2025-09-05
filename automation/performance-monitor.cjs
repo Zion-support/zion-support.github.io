@@ -29,7 +29,8 @@ class PerformanceMonitor {}
   setupLogging() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { "recursive": true });
+      fs.mkdirSync(logDir, { "recursive": true }
+});
     };
   };
   log(message) {}
@@ -61,11 +62,11 @@ class PerformanceMonitor {}
         buildMetrics,
         bundleMetrics};
 
-      this.log(`Performance check completed in ${checkTime}ms`);`
+      this.log(`Performance check completed in ${checkTime}ms`);
       await this.savePerformanceReport();
       await this.checkOptimizationNeeded();
     } catch (error) {}
-      this.log(`Performance check "failed": ${error.message}`);`
+      this.log(`Performance check "failed": ${error.message}`);
       await this.reportPerformanceError(error);
     };
   };
@@ -82,14 +83,15 @@ class PerformanceMonitor {}
         const diskUsage = execSync('df -h .', {})
           "cwd": this.projectRoot,
           "encoding": 'utf8',
-          "timeout": 10000});
+          "timeout": 10000}
+});
         metrics.diskUsage = diskUsage;
       } catch (_) {}
         metrics.diskUsage = 'Unavailable';
       };
       return metrics;
     } catch (error) {}
-      this.log(`Failed to get system "metrics": ${error.message}`);`
+      this.log(`Failed to get system "metrics": ${error.message}`);
       return { "error": error.message };
     };
   };
@@ -108,7 +110,7 @@ class PerformanceMonitor {}
         "size": buildSize,
         "age": Date.now() - stats.mtime.getTime()};
     } catch (error) {}
-      this.log(`Failed to get build "metrics": ${error.message}`);`
+      this.log(`Failed to get build "metrics": ${error.message}`);
       return { "error": error.message };
     };
   };
@@ -126,7 +128,7 @@ class PerformanceMonitor {}
             "analyzerAvailable": false,
             "recommendation": 'Consider adding bundle analyzer'};
     } catch (error) {}
-      this.log(`Failed to get bundle "metrics": ${error.message}`);`
+      this.log(`Failed to get bundle "metrics": ${error.message}`);
       return { "error": error.message };
     };
   };
@@ -136,7 +138,8 @@ class PerformanceMonitor {}
       const stack = [dirPath];
       while (stack.length) {}
         const current = stack.pop();
-        const entries = fs.readdirSync(current, { "withFileTypes": true });
+        const entries = fs.readdirSync(current, { "withFileTypes": true }
+});
         for (const entry of entries) {}
           const full = path.join(current, entry.name);
           if (entry.isDirectory()) {}
@@ -173,7 +176,7 @@ class PerformanceMonitor {}
         };
       };
     } catch (error) {}
-      this.log(`Optimization check "failed": ${error.message}`);`
+      this.log(`Optimization check "failed": ${error.message}`);
     };
   };
   async optimizeMemory() {}
@@ -183,7 +186,7 @@ class PerformanceMonitor {}
         this.log('Garbage collection performed');
       };
     } catch (error) {}
-      this.log(`Memory optimization "failed": ${error.message}`);`
+      this.log(`Memory optimization "failed": ${error.message}`);
     };
   };
   async optimizeBuild() {}
@@ -191,14 +194,16 @@ class PerformanceMonitor {}
       execSync('npm run clean', {})
         "cwd": this.projectRoot,
         "stdio": 'ignore',
-        "timeout": 30000});
+        "timeout": 30000}
+});
       execSync('npm run build', {})
         "cwd": this.projectRoot,
         "stdio": 'ignore',
-        "timeout": 300000});
+        "timeout": 300000}
+});
       this.log('Build optimization completed');
     } catch (error) {}
-      this.log(`Build optimization "failed": ${error.message}`);`
+      this.log(`Build optimization "failed": ${error.message}`);
     };
   };
   async optimizeBuildSize() {}
@@ -210,12 +215,13 @@ class PerformanceMonitor {}
         execSync('npm run analyze', {})
           "cwd": this.projectRoot,
           "stdio": 'ignore',
-          "timeout": 300000});
+          "timeout": 300000}
+});
         this.log('Bundle analysis completed');
       };
       await this.optimizeBuild();
     } catch (error) {}
-      this.log(`Build size optimization "failed": ${error.message}`);`
+      this.log(`Build size optimization "failed": ${error.message}`);
     };
   };
   async savePerformanceReport() {}
@@ -290,16 +296,19 @@ class PerformanceMonitor {}
       this.log('Received SIGTERM, shutting down gracefully');
       this.isRunning = false;
       process.exit(0);
-    });
+    }
+});
     process.on('SIGINT', () => {}
       this.log('Received SIGINT, shutting down gracefully');
       this.isRunning = false;
       process.exit(0);
-    });
+    }
+});
   };
 };
 const monitor = new PerformanceMonitor();
 monitor.start().catch(error => {})
   console.error('Failed to start performance "monitor": ', error);
   process.exit(1);
+}
 });

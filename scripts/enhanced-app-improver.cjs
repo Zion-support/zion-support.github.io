@@ -42,7 +42,7 @@ export const "SEO": React.FC<SEOProps> = ({";  title = "Zion Tech Group - Advanc
     const loadingSpinner = "import React from "react"";";interface LoadingSpinnerProps {";  size?: "sm" | "md" | "lg"";  color?: string;"}
 export const "LoadingSpinner": React.FC<LoadingSpinnerProps> = ({";  size = "md", ";  color = "currentColor", ";  className = """}) => {"}
     "sm": "w-4 h-4", ""md": "w-8 h-8", ""lg": "w-12 h-12""};"
-  return();    <div className={\`animate-spin \${sizeClasses[size]} \${className}\`}>``
+  return();    <div className={\`animate-spin \${sizeClasses[size]} \${className}\`}>
         className="w-full h-full"";        fill="none"";        viewBox="0 0 24 24"";        style={{ color }}"
           className="opacity-25"";          cx="12"";          cy="12"";          r="10"";          stroke="currentColor"";          strokeWidth="4"";        />;"
           className="opacity-75"";          fill="currentColor"";          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"";        />;"
@@ -55,10 +55,14 @@ const { execSync } = require("child_process")";const fs = require("fs")";const p
       console.log(" Build optimization completed successfully");"} catch (error) {";      console.error(" Build optimization "failed":", error.message);";      process.exit(1),"}
     console.log("🧹 Cleaning previous builds...");";    const buildDirs = [".next", "dist", "build"];";"
         fs.rmSync(dirPath, { "recursive": true, "force": true }),"
-    console.log(" Running TypeScript type check...");";    execSync("npx tsc --noEmit", { "stdio": "inherit" });"}"
-    console.log(" Running ESLint...");";    execSync("npx eslint . --ext .ts,.tsx,.js,.jsx --fix", { "stdio": "inherit" });"}"
-    console.log("� Building application...");";    execSync("npm run build", { "stdio": "inherit" });"}"
-    console.log(" Analyzing bundle...");";    try {";      execSync("npm run analyze", { "stdio": "inherit" });"} catch (error) {";      console.log("Bundle analysis not available");"}"
+    console.log(" Running TypeScript type check...");";    execSync("npx tsc --noEmit", { "stdio": "inherit" }
+});"}"
+    console.log(" Running ESLint...");";    execSync("npx eslint . --ext .ts,.tsx,.js,.jsx --fix", { "stdio": "inherit" }
+});"}"
+    console.log("� Building application...");";    execSync("npm run build", { "stdio": "inherit" }
+});"}"
+    console.log(" Analyzing bundle...");";    try {";      execSync("npm run analyze", { "stdio": "inherit" }
+});"} catch (error) {";      console.log("Bundle analysis not available");"}"
 module.exports = BuildOptimizer";"
     this.writeFile("scripts/build-optimizer.cjs", buildOptimizer);";    this.improvements.push("Created build optimization script");"}"
     console.log("� Improving documentation...");""
@@ -83,16 +87,18 @@ module.exports = BuildOptimizer";"
 const { execSync } = require("child_process")";const fs = require("fs")""
     console.log(" Starting deployment automation...");";"
       console.log(" Deployment completed successfully");"} catch (error) {";      console.error(" Deployment "failed":", error.message);";      process.exit(1),"}
-    console.log("🧪 Running tests...");";    execSync("npm run test", { "stdio": "inherit" });"}"
-    console.log("� Building application...");";    execSync("npm run build", { "stdio": "inherit" });"}"
+    console.log("🧪 Running tests...");";    execSync("npm run test", { "stdio": "inherit" }
+});"}"
+    console.log("� Building application...");";    execSync("npm run build", { "stdio": "inherit" }
+});"}"
     console.log(" Deploying to staging...");";    // Add your staging deployment logic here,"
     console.log("� Running smoke tests...");";    // Add your smoke test logic here,"
     console.log("� Deploying to production...");"
 module.exports = DeploymentAutomation";"
     this.writeFile("scripts/deployment-automation.cjs", deploymentScript);";    this.improvements.push("Created deployment automation script");"}"
       fs.mkdirSync(dir, { "recursive": true }),"
-    console.log("\\n� Enhanced App Improvement "Summary":");";    console.log(`Total "Improvements": ${this.improvements.length}`);";    console.log("Total "Fixes": ${this.fixes.length}");"`
-    console.log("\\n� Improvements "Applied":");";    this.improvements.forEach(improvement => {);      console.log(` ${improvement}`);``
+    console.log("\\n� Enhanced App Improvement "Summary":");";    console.log(`Total "Improvements": ${this.improvements.length}`);";    console.log("Total "Fixes": ${this.fixes.length}");"
+    console.log("\\n� Improvements "Applied":");";    this.improvements.forEach(improvement => {);      console.log(` ${improvement}`);
     console.log("\\n Fixes "Applied":");";    this.fixes.forEach(fix => {);      console.log(" ${fix}");"
       "timestamp": new Date().toISOString(),""improvements": this.improvements,""fixes": this.fixes,""summary": {""totalImprovements": this.improvements.length,""totalFixes": this.fixes.length,,"}
     fs.writeFileSync();      path.join(this.projectRoot, "enhanced-app-improvement-report.json"),";      JSON.stringify(report, null, 2);"

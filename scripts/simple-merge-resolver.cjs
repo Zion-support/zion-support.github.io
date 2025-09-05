@@ -95,6 +95,7 @@ files.forEach(file => {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
+}
 });
 
 console.log('✅ Syntax fixes completed!');

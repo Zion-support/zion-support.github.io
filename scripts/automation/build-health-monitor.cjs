@@ -18,7 +18,7 @@ class BuildHealthMonitor {}
       parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes default};
 ;
   log(message) {}
-  console.log(`[${new Date().toISOString()}] [BuildHealthMonitor] ${message}";`
+  console.log(`[${new Date().toISOString()}] [BuildHealthMonitor] ${message}";
     )};
 ;
   async run() {}
@@ -28,7 +28,7 @@ class BuildHealthMonitor {}
   await this.monitorBuildHealth();
       this.log("Build health monitoring completed.")} catch (error) {}
   this.log("Build health monitoring completed.");`)} catch (error) {`);`}
-      this.log(Error during build health "monitoring": ${error.message}`)};`
+      this.log(Error during build health "monitoring": ${error.message}`)};
   };
 ;
   async monitorBuildHealth() {}
@@ -45,7 +45,8 @@ class BuildHealthMonitor {}
       const startTime = Date.now();
 
       try {}
-  execSync("npm run build", { "stdio": "pipe" });
+  execSync("npm run build", { "stdio": "pipe" }
+});
         const buildTime = Date.now() - startTime;
 
         report.buildStatus = {}
@@ -69,7 +70,8 @@ class BuildHealthMonitor {}
       try {}
   const bundleAnalysis = execSync("npm run analyze", {})
   "stdio": "pipe",
-          "encoding": "utf8"});
+          "encoding": "utf8"}
+});
         report.bundleSize = {}
   "details": bundleAnalysis};
       } catch (error) {}
@@ -102,7 +104,7 @@ class BuildHealthMonitor {}
       if (!fs.existsSync(dir)) {}
   fs.mkdirSync(dir, { "recursive": true })};
 ;
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`Build health report saved "to": ${reportPath}`)} catch (error) {  this.log(`Error monitoring build "health": ${error.message  }`)};`
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`Build health report saved "to": ${reportPath}`)} catch (error) {  this.log(`Error monitoring build "health": ${error.message  }`)};
   };
 ;
   generateRecommendations(report) {}

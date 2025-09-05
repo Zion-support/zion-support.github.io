@@ -1,12 +1,11 @@
 export interface NextGenAIService {}
   // TODO: Implement;
-};
-  "id": string;"
+};id": string;"
   title: string;,
   description: string;
   longDescription: string;,
   icon: string;
-  color: string;,"
+  color: string;, 
   category: 'ai' | 'machine-learning' | 'deep-learning' | 'nlp' | 'computer-vision' | 'autonomous-systems' | 'ai-ethics' | 'ai-research';'
   features: string[];,
   benefits: string[];
@@ -19,14 +18,14 @@ export interface NextGenAIService {}
   "estimatedTime": string;"
   technologies: string[];
   image?: string;
-  aiScore: number;,"
+  aiScore: number;, 
   marketPrice: string;';''
   contactLink: string;';';','
   status: 'active' | 'beta' | 'coming-soon';';';''
   researchLevel: 'production' | 'research' | 'experimental';',
   ethicalCompliance: string[]}'
 export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
-  {"}
+  {}
     id: 'autonomous-ai-systems',''
     "title": 'Autonomous AI Systems',''
     "description": 'Self-learning and self-optimizing artificial intelligence systems',''
@@ -54,7 +53,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
       'Industrial automation',''
       'Robotic systems''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$2,999/month',''
       "professional": '$7,999/month',''
       "enterprise": '$19,999/month',''
@@ -62,7 +61,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
     },'
     "estimatedTime": '8-16 weeks',''
     technologies['Reinforcement Learning', 'Deep Learning', 'Neural Networks', 'Python', 'PyTorch', 'TensorFlow'],''
-    "aiScore": 98,""
+    "aiScore": 98, 
     "marketPrice": '$2,999-$19,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'beta',''
@@ -96,7 +95,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
       'Content creation',''
       'Language learning''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$799/month',''
       "professional": '$1,999/month',''
       "enterprise": '$4,999/month',''
@@ -104,7 +103,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
     },'
     "estimatedTime": '4-8 weeks',''
     technologies['GPT-4', 'BERT', 'Transformer Models', 'Python', 'Hugging Face', 'FastAPI'],''
-    "aiScore": 96,""
+    "aiScore": 96, 
     "marketPrice": '$799-$4,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -138,7 +137,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
       'Augmented reality',''
       'Security systems''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$1,299/month',''
       "professional": '$3,299/month',''
       "enterprise": '$7,999/month',''
@@ -146,7 +145,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
     },'
     "estimatedTime": '6-12 weeks',''
     technologies['OpenCV', 'PyTorch', 'TensorFlow', 'CUDA', '3D Vision', 'Computer Vision'],''
-    "aiScore": 97,""
+    "aiScore": 97, 
     "marketPrice": '$1,299-$7,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -180,7 +179,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
       'Ethics committees',''
       'Compliance officers''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$599/month',''
       "professional": '$1,499/month',''
       "enterprise": '$3,999/month',''
@@ -188,7 +187,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
     },'
     "estimatedTime": '2-6 weeks',''
     technologies['Python', 'Fairness Metrics', 'Bias Detection', 'Explainable AI', 'Governance Tools'],''
-    "aiScore": 94,""
+    "aiScore": 94, 
     "marketPrice": '$599-$3,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -222,7 +221,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
       'Climate science',''
       'Materials science''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$4,999/month',''
       "professional": '$12,999/month',''
       "enterprise": '$29,999/month',''
@@ -230,7 +229,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
     },'
     "estimatedTime": '12-20 weeks',''
     technologies['Qiskit', 'Cirq', 'PyTorch', 'TensorFlow', 'Quantum Hardware', 'Hybrid Algorithms'],''
-    "aiScore": 99,""
+    "aiScore": 99, 
     "marketPrice": '$4,999-$29,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'beta',''
@@ -264,7 +263,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
       'Cross-organization AI',''
       'Privacy-sensitive domains''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$1,999/month',''
       "professional": '$4,999/month',''
       "enterprise": '$12,999/month',''
@@ -272,7 +271,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
     },'
     "estimatedTime": '8-16 weeks',''
     technologies['Federated Learning', 'Homomorphic Encryption', 'Secure Multi-party Computation', 'Python', 'PyTorch', 'TensorFlow'],''
-    "aiScore": 95,""
+    "aiScore": 95, 
     "marketPrice": '$1,999-$12,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -306,7 +305,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
       'Corporate R&D',''
       'Startup research''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$299/month',''
       "professional": '$799/month',''
       "enterprise": '$1,999/month',''
@@ -314,7 +313,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
     },'
     "estimatedTime": '2-4 weeks',''
     technologies['Research Tools', 'Experiment Tracking', 'Version Control', 'Collaboration Tools', 'Python', 'Jupyter'],''
-    "aiScore": 93,""
+    "aiScore": 93, 
     "marketPrice": '$299-$1,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -348,7 +347,7 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
       'Scheduling problems',''
       'Portfolio optimization''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$899/month',''
       "professional": '$2,299/month',''
       "enterprise": '$5,999/month',''
@@ -356,14 +355,14 @@ export const "NEXT_GEN_AI_SERVICES_2025": NextGenAIService[] = [;"]
     },'
     "estimatedTime": '4-8 weeks',''
     technologies['Genetic Algorithms', 'Neural Networks', 'Optimization Libraries', 'Python', 'SciPy', 'NumPy'],''
-    "aiScore": 94,""
+    "aiScore": 94, 
     "marketPrice": '$899-$5,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
     "researchLevel": 'production',''
     ethicalCompliance['Fairness', 'Transparency', 'Bias Prevention', 'Accountability']}''
 ];';''
-export const getNextGenAIServicesByCategory = ("category": string): NextGenAIService[] => {;""}
+export const getNextGenAIServicesByCategory = ("category": string): NextGenAIService[] => {;"}
   if (category === 'All') {;'}
     return NEXT_GEN_AI_SERVICES_2025;
   return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category)};

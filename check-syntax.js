@@ -23,4 +23,5 @@ testFiles.forEach(file => {
   if (fs.existsSync(file)) {
     checkSyntax(file);
   }
+}
 });
