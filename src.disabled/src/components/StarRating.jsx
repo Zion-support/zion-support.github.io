@@ -1,1 +1,2 @@
-export default function StarRating({ value }) {}"});,"""
+export default function StarRating({ value }) {}"}
+});,"""

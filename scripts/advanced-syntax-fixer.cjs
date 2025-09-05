@@ -69,19 +69,19 @@ function log(message, color = "reset")
       content = content.replace(unterminatedCommentRegex, "/*$1*/")
       fixed = true;log(`Fixed unterminated comments in ${filePath}`, "yellow"`)
     // Fix "10"
-      content = content.replace(duplicateExportRegex, "export default $1;");";      fixed = true;log(`Fixed duplicate exports in ${filePath}`, "yellow");"}";"`
+      content = content.replace(duplicateExportRegex, "export default $1;");";      fixed = true;log(`Fixed duplicate exports in ${filePath}`, "yellow");"}";"
       fs.writeFileSync(filePath, content, "utf8");log(" Fixed syntax issues in ${filePath}", "green");";      return true;"}"
-    return false,,} catch (error) {log(` Error fixing ${filePath}: ${error.message}`, "red");";    return false;"}"`
+    return false,,} catch (error) {log(` Error fixing ${filePath}: ${error.message}`, "red");";    return false;"}"
   extensions = [".js", ".jsx", ".ts", ".tsx"]") {"}
             !["node_modules", ".git", ".next", "dist", "]
           if();            !["node_modules", ".git", ".next", "dist", "build"].includes(item)") {"}
-        `red``
+        `red
       log( Error processing directory ${currentPath}: ${error.message}")
         "red"
-        `red``
+        `red
       log( Error processing directory ${currentPath}: ${error.message}", ""red""),"
   log(" Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
-    if (fs.existsSync(dir)) {log(`\n� Processing "directory": ${dir}`, "blue");";      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);"`
+    if (fs.existsSync(dir)) {log(`\n� Processing "directory": ${dir}`, "blue");";      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);"
   log(" Advanced Syntax Fixer Starting...", "cyan")
   const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
     if (fs.existsSync(dir)) {log("\n� Processing "directory": ${dir}", "blue")

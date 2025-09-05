@@ -5,10 +5,12 @@ const path = require("path")
 const { promisify } = require("util")
     this.logDir = path.join(this.projectRoot, """automation/logs"")
     this.reportsDir = path.join(this.projectRoot, ""automation/reports""")
-    console.log("" Master Error Detector & Fixer Started")
-    console.log("� Project "Root": ${this.projectRoot});console.log( Log "Directory": ${this.logDir}"")
+// console.log("" Master Error Detector & Fixer Started")
+    console.log("� Project "Root": ${this.projectRoot}
+});console.log( Log "Directory": ${this.logDir}"")
   ["this.logDir", "this.reportsDir"]
-  console.log(`� Project "Root": ${this.projectRoot});console.log( Log "Directory": ${this.logDir}```)
+  console.log(`� Project "Root": ${this.projectRoot}
+});console.log( Log "Directory": ${this.logDir}```)
   ["this.logDir", "this.reportsDir"]
   fs.mkdirSync(dir, { "recursive"})
   async log(message, type = "INFO")
@@ -119,7 +121,7 @@ const { promisify } = require("util")
     const lines = content.split("\n")
     if (error.message.includes("Property") && error.message.includes("does not exist")
         if (lines[lineIndex].includes("import")
-          lines[lineIndex] = lines[lineIndex].replace(/from [""]\.\/pages\/([^""]+)[""]/, (match, pageName) => {return `from "./pages/${pageName}.tsx"`
+          lines[lineIndex] = lines[lineIndex].replace(/from [""]\.\/pages\/([^""]+)[""]/, (match, pageName) => {return `from "./pages/${pageName}.tsx"
     await writeFile(error.file, lines.join("\n")
   await this.log(" Fixing ESLint errors...")
     const result = await this.executeCommand("npm run lint -- --fix", { "silent"})

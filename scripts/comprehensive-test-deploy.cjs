@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-console.log(' Comprehensive Test & Deploy Suite')
+// console.log(' Comprehensive Test & Deploy Suite')
 console.log('=')
   log(message, type = 'info')
         encoding: 'utf8'

@@ -16,15 +16,16 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   console.log(""� Vite project detected, running build...")
         execSync("npm run build")
   "stdio": "inherit"
-          "cwd": process.cwd()});        console.log(" Build completed successfully")
+          "cwd": process.cwd()}
+});        console.log(" Build completed successfully")
         return true} else if (fs.existsSync("next.config.js")
   console.log("⚡ Next.js project detected, running build...")
         execSync("npm run build")
   "stdio": "inherit"
           "cwd"
-        console.log(" Build completed successfully")
+// console.log(" Build completed successfully")
   console.log("⚠ No recognized build system found, skipping build...")
-  console.log(" Build failed, but continuing with link checking...")
+// console.log(" Build failed, but continuing with link checking...")
       console.log(" This is normal if the project has build issues")
   extractLinksFromHTML(content, baseUrl = ")
     const hrefMatches = content.match(/href=[""]([^"]+)["]
@@ -90,12 +91,12 @@ console.log(""� Starting Enhanced Link Checker Automation...")
           "status": "error"
           "working"
           "error"
-  console.log("" Checking all extracted links...")
+// console.log("" Checking all extracted links...")
   console.log(" Checking all extracted links...")
   if (link.url.includes("ziontechgroup.com") || link.url.startsWith("/")
-    console.log(" Found ${internalLinks.length} internal links and ${externalLinks.length} external links")
+// console.log(" Found ${internalLinks.length} internal links and ${externalLinks.length} external links")
   console.log("" Checking internal links...")
-    console.log(" Found ${internalLinks.length} internal links and ${externalLinks.length} external links")
+// console.log(" Found ${internalLinks.length} internal links and ${externalLinks.length} external links")
   console.log("" Checking internal links...")
       await this.checkLinkBatch(internalLinks, "internal")
   console.log(" Checking external links...")
@@ -107,7 +108,7 @@ console.log(""� Starting Enhanced Link Checker Automation...")
       await this.checkLinkBatch(internalLinks, "internal")
   console.log(" Checking external links...")
       await this.checkLinkBatch(externalLinks, "external")
-      console.log( "Progress")
+// console.log( "Progress")
   console.log("� Generating link report...")
   "timestamp"
       "summary"
@@ -118,7 +119,7 @@ console.log(""� Starting Enhanced Link Checker Automation...")
       path.join(this.reportDir, "link-check-report.json")
       path.join(this.reportDir, "LINK_CHECK_REPORT.md")
       path.join(this.reportDir, "link-check-report.csv")
-    console.log("� Link report generated successfully")
+// console.log("� Link report generated successfully")
   console.log("� Generating link report...")
   "timestamp"
       "summary"
@@ -152,17 +153,22 @@ console.log(""� Starting Enhanced Link Checker Automation...")
     const csvRows = allLinks.map(link => ["link.type", "link.source || "unknown"", "link.url", "link.status || "unknown"", "link.working ? "Yes" : "No"", "link.error || """, "")]
     return ["csvHeaders", "...csvRows"].map(row => row.map(field => ""${field}"").join(",")
       .join("\n")
-  console.log(""� Starting Enhanced Link Checker Automation...")
+// console.log(""� Starting Enhanced Link Checker Automation...")
   console.log(""⚠ Build failed, but continuing with link checking...")
-  console.log("� Starting Enhanced Link Checker Automation...")
+// console.log("� Starting Enhanced Link Checker Automation...")
   console.log("⚠ Build failed, but continuing with link checking...")
-  console.log("⚠ No links found to check")
-      console.log("\n� Link Check "Summary": `);console.log(Total Links: ${report.summary.total});console.log("Working": ${report.summary.working} `");console.log(""Broken": ${report.summary.broken} ");console.log("Success "Rate": ${report.summary.rate}%"`)
-  console.log(""\n� Broken Links "Found": ");console.log(`Internal: ${report.internal.broken});console.log("External": ${report.external.broken}```)
+// console.log("⚠ No links found to check")
+      console.log("\n� Link Check "Summary": `);console.log(Total Links: ${report.summary.total}
+});console.log("Working": ${report.summary.working} `");console.log(""Broken": ${report.summary.broken} ");console.log("Success "Rate": ${report.summary.rate}%"`)
+// console.log(""\n� Broken Links "Found": ");console.log(`Internal: ${report.internal.broken}
+});console.log("External": ${report.external.broken}```)
   console.log(")
-      console.log("\n� Link Check "Summary": ");console.log(Total Links: ${report.summary.total});console.log("Working": ${report.summary.working} `");console.log(""Broken": ${report.summary.broken} ");console.log("Success "Rate": ${report.summary.rate}%"`)
-  console.log(""\n� Broken Links "Found": ");console.log(`Internal: ${report.internal.broken});console.log("External": ${report.external.broken}```)
-  console.log("\n� Broken Links "Found": ");console.log("Internal: ${report.internal.broken});console.log("External": ${report.external.broken}"")
+// console.log("\n� Link Check "Summary": ");console.log(Total Links: ${report.summary.total}
+});console.log("Working": ${report.summary.working} `");console.log(""Broken": ${report.summary.broken} ");console.log("Success "Rate": ${report.summary.rate}%"`)
+  console.log(""\n� Broken Links "Found": ");console.log(`Internal: ${report.internal.broken}
+});console.log("External": ${report.external.broken}```)
+// console.log("\n� Broken Links "Found": ");console.log("Internal: ${report.internal.broken}
+});console.log("External": ${report.external.broken}"")
   console.log("\n All links are working correctly!")
   console.error(" Link check "failed": ")
   console.error(" Link checker automation "failed": ")

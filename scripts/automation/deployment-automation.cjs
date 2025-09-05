@@ -29,15 +29,16 @@ class DeploymentAutomation {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
   log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString(});
-    const logMessage = `[${timestamp}] [${level}] ${message};`;`
+    const timestamp = new Date().toISOString(}
+});
+    const logMessage = `[${timestamp}] [${level}] ${message};;`
     console.log(logMessage);
     try {}
       fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
       console.error('Failed to write to log "file": ', error.message)};
   };
   async runStep(stepName, stepFunction) {}
-    this.log(`Starting "step": ${stepName}`);`
+    this.log(`Starting "step": ${stepName}`);
     const stepStart = Date.now(;);
     try {}
       const result = await stepFunction;(;);
@@ -47,8 +48,9 @@ class DeploymentAutomation {}
         "status": 'success',
         "duration": duration,
         "result": result;
-      });
-      this.log(`Completed "step": ${stepName} (${duration}ms)`);`
+      }
+});
+      this.log(`Completed "step": ${stepName} (${duration}ms)`);
       return result} catch(error) {}
       const duration = Date.now() - stepSta;r;t;
       this.results.steps.push({})
@@ -56,8 +58,9 @@ class DeploymentAutomation {}
         "status": 'error',
         "duration": duration,
         "error": error.message;
-      });
-      this.log(`Failed "step": ${stepName} - ${error.message}`, 'ERROR');`
+      }
+});
+      this.log(`Failed "step": ${stepName} - ${error.message}`, 'ERROR');
       return null};
   };
   async preDeploymentChecks() {}
@@ -103,7 +106,8 @@ class DeploymentAutomation {}
         "cwd": this.projectRoot, 
         "stdio": 'pipe',
         "timeout": 300000;
-      });
+      }
+});
       checks.push({ "type": 'build', "status": 'passed', "message": 'Build successful' })} catch(error) {}
       checks.push({ "type": 'build', "status": 'failed', "message": 'Build failed' })};
     this.results.deployment.preDeploymentChecks = checks;
@@ -128,7 +132,7 @@ class DeploymentAutomation {}
       this.results.build = buildInfo;
       this.log('Application built successfully');
       return buildInfo} catch(error) {}
-      this.log(`Build "failed": ${error.message}`, 'ERROR');`
+      this.log(`Build "failed": ${error.message}`, 'ERROR');
       throw error};
   };
   async runTests() {}
@@ -149,19 +153,21 @@ class DeploymentAutomation {}
 
       this.log('Test suite passed');
       return testInfo} catch(error) {}
-      this.log(`Test suite "failed": ${error.message}`, 'ERROR');`
+      this.log(`Test suite "failed": ${error.message}`, 'ERROR');
       throw error};
   };
   async commitChanges() {}
     this.log('Committing changes...');
     try {}
       // Add all changes;
-      execSync('git add .', { "cwd": this.projectRoot });
+      execSync('git add .', { "cwd": this.projectRoot }
+});
       this.log('Changes staged');
 
       // Create commit;
-      const commitMessage = `"feat": automated deployment - ${new Date().toISOString()};`;`
-      execSync(`git commit -m "${commitMessage}"`, { "cwd": this.projectRoot });`
+      const commitMessage = `"feat": automated deployment - ${new Date().toISOString()};;`
+      execSync(`git commit -m "${commitMessage}"`, { "cwd": this.projectRoot }
+});
       this.log('Changes committed');
 
       const commitInfo = {}
@@ -171,7 +177,7 @@ class DeploymentAutomation {}
 
       this.results.git.commit = commitInfo;
       return commitInfo} catch(error) {}
-      this.log(`Commit "failed": ${error.message}`, 'ERROR');`
+      this.log(`Commit "failed": ${error.message}`, 'ERROR');
       throw error};
   };
   async pushToRepository() {}
@@ -182,8 +188,9 @@ class DeploymentAutomation {}
         "encoding": 'utf8'
       }).trim(;);
 
-      execSync(`git push origin ${currentBranch}`, { "cwd": this.projectRoot });`
-      this.log(`Pushed to ${currentBranch}`);`
+      execSync(`git push origin ${currentBranch}`, { "cwd": this.projectRoot }
+});
+      this.log(`Pushed to ${currentBranch}`);
 
       const pushInfo = {}
         "branch": currentBranch,
@@ -192,7 +199,7 @@ class DeploymentAutomation {}
 
       this.results.git.push = pushInfo;
       return pushInfo} catch(error) {}
-      this.log(`Push "failed": ${error.message}`, 'ERROR');`
+      this.log(`Push "failed": ${error.message}`, 'ERROR');
       throw error};
   };
   async mergeToMain() {}
@@ -209,19 +216,23 @@ class DeploymentAutomation {}
         this.log('Already on main branch')};
         return { "merged": true, "alreadyOnMain": true }};
       // Switch to main;
-      execSync('git checkout main', { "cwd": this.projectRoot });
+      execSync('git checkout main', { "cwd": this.projectRoot }
+});
       this.log('Switched to main branch');
 
       // Pull latest changes;
-      execSync('git pull origin main', { "cwd": this.projectRoot });
+      execSync('git pull origin main', { "cwd": this.projectRoot }
+});
       this.log('Pulled latest main changes');
 
       // Merge current branch;
-      execSync(`git merge ${currentBranch}`, { "cwd": this.projectRoot });`
-      this.log(`Merged ${currentBranch} into main`);`
+      execSync(`git merge ${currentBranch}`, { "cwd": this.projectRoot }
+});
+      this.log(`Merged ${currentBranch} into main`);
 
       // Push to main;
-      execSync('git push origin main', { "cwd": this.projectRoot });
+      execSync('git push origin main', { "cwd": this.projectRoot }
+});
       this.log('Pushed merged changes to main');
 
       const mergeInfo = {}
@@ -233,17 +244,19 @@ class DeploymentAutomation {}
 
       this.results.git.merge = mergeInfo;
       return mergeInfo} catch(error) {}
-      this.log(`Merge "failed": ${error.message}`, 'ERROR');`
+      this.log(`Merge "failed": ${error.message}`, 'ERROR');
       throw error};
   };
   async createDeploymentTag() {}
     this.log('Creating deployment tag...');
     try {}
-      const tagName = `deployment-${new Date().toISOString().split('T')[0]};`;`
-      execSync(`git tag -a ${tagName} -m "Deployment tag ${tagName}"`, { "cwd": this.projectRoot });`
-      execSync(`git push origin ${tagName}`, { "cwd": this.projectRoot });`
+      const tagName = `deployment-${new Date().toISOString().split('T')[0]};;`
+      execSync(`git tag -a ${tagName} -m "Deployment tag ${tagName}"`, { "cwd": this.projectRoot }
+});
+      execSync(`git push origin ${tagName}`, { "cwd": this.projectRoot }
+});
       
-      this.log(`Created and pushed "tag": ${tagName}`);`
+      this.log(`Created and pushed "tag": ${tagName}`);
       
       const tagInfo = {}
         tagName,
@@ -252,7 +265,7 @@ class DeploymentAutomation {}
 
       this.results.git.tag = tagInfo;
       return tagInfo} catch(error) {}
-      this.log(`Tag creation "failed": ${error.message}`, 'ERROR');`
+      this.log(`Tag creation "failed": ${error.message}`, 'ERROR');
       throw error};
   };
   generateDeploymentSummary() {}
@@ -270,7 +283,7 @@ class DeploymentAutomation {}
       "timestamp": new Date().toISOString();
     };
 
-    this.log(`Deployment "Summary": ${successfulSteps}/${totalSteps} steps successful (${successRate}%)`)};`
+    this.log(`Deployment "Summary": ${successfulSteps}/${totalSteps} steps successful (${successRate}%)`)};
   async run() {}
     this.log('Starting Deployment Automation...');
     try {}
@@ -300,11 +313,11 @@ class DeploymentAutomation {}
       // Save results;
       const reportFile = path.join(this.projectRoot, 'deployment-reports', 'deployment-report.json';);
       fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
-      this.log(`Deployment report saved to ${reportFile}`);`
+      this.log(`Deployment report saved to ${reportFile}`);
 
       this.log('Deployment Automation completed successfully!');
       return this.results} catch(error) {}
-      this.log(`Deployment Automation "failed": ${error.message}`, 'ERROR');`
+      this.log(`Deployment Automation "failed": ${error.message}`, 'ERROR');
       throw error};
   };
 };

@@ -32,12 +32,12 @@ function fixTypeScriptTestFile(filePath) {}
     
     if (modified) {}
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed TypeScript test: ${filePath}`);`
+      console.log(`Fixed TypeScript test: ${filePath}`);
       return true;
     };
     return false;
   } catch (error) {}
-    console.error(`Error fixing TypeScript test ${filePath}:`, error.message);`
+    console.error(`Error fixing TypeScript test ${filePath}:`, error.message);
     return false;
   };
 };
@@ -70,17 +70,19 @@ function fixSpecificFiles() {}
             content = content.replace(from, to);
             modified = true;
           };
-        });
+        }
+});
         
         if (modified) {}
           fs.writeFileSync(file, content);
-          console.log(`Fixed specific file: ${file}`);`
+          console.log(`Fixed specific file: ${file}`);
         };
       };
     } catch (error) {}
-      console.error(`Error fixing specific file ${file}:`, error.message);`
+      console.error(`Error fixing specific file ${file}:`, error.message);
     };
-  });
+  }
+});
 };
 // Process all TypeScript test files;
 function processTypeScriptTests() {}
@@ -98,7 +100,8 @@ function processTypeScriptTests() {}
       } else if (file.endsWith('.test.ts') || file.endsWith('.test.tsx')) {}
         fixTypeScriptTestFile(filePath);
       };
-    });
+    }
+});
   };
   processDirectory(testDir);
 };

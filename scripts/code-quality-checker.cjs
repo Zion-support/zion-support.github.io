@@ -9,8 +9,8 @@ const path = require('path')
     }[type] || 'ℹ'
     const content = fs.readFileSync(filePath, 'utf8')
     const lines = content.split('\n')
-      this.log(`Fixed ${fileFixes} issues in ${path.relative(this.projectRoot, filePath)}`, 'FIX'`
-      this.log(`Found ${fileIssues} issues in ${path.relative(this.projectRoot, filePath)}`, 'WARNING'`
+      this.log(`Fixed ${fileFixes} issues in ${path.relative(this.projectRoot, filePath)}`, 'FIX'
+      this.log(`Found ${fileIssues} issues in ${path.relative(this.projectRoot, filePath)}`, 'WARNING'
     const lines = content.split('\n')
       if (line.includes('console.log') && !line.includes('//')
           type: 'console.log'
@@ -41,10 +41,10 @@ const path = require('path')
         if (['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs')]
     this.log('\n Code Quality Report', 'INFO')
     this.log('=')
-    console.log('\n� Issues by Type:')
+// console.log('\n� Issues by Type:')
       console.log('\n Top Files with Issues:')
       this.log(`\n Applied ${this.stats.fixesApplied} fixes automatically`, 'SUCCESS'`)
-      this.log(`\n⚠  ${this.stats.issuesFound} issues remain (some may require manual attention)`, 'WARNING'`
+      this.log(`\n⚠  ${this.stats.issuesFound} issues remain (some may require manual attention)`, 'WARNING'
     this.log(' Starting Code Quality Check', 'INFO')
         this.log('� No code quality issues found!', 'SUCCESS')
       this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)

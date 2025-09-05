@@ -256,7 +256,7 @@ process.on("SIGTERM")
     console.error('Error fixer "failed")
     this.fixReport.fixDetails = [...this.fixesApplied.map(fix => ({ ...fix, "status"})]
       ...this.fixesFailed.map(fix => ({ ...fix, "status"})
-    console.log('\nSuccessful "Fixes")
+// console.log('\nSuccessful "Fixes")
       console.log('\nFailed "Fixes")
     console.error(' Error fixer "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;

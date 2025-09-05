@@ -200,7 +200,7 @@ const { execSync } = require("child_process")
     if (healthData.build.status === "ERROR")
   recommendations.push("Fix build configuration issues")
   recommendations.push(Fix ${healthData.files.corruptedFiles} corrupted source files")
-        `Clean up ${healthData.files.backupFiles} backup files``
+        `Clean up ${healthData.files.backupFiles} backup files
   recommendations.push(Project appears healthy, no immediate action required")
 <html lang=en"
     <meta charset="
@@ -246,13 +246,13 @@ const { execSync } = require("child_process")
                     <span class=metric-value"
             <div class="
                     <span>"Status"
-                    ? `<div class=metric``
+                    ? `<div class=metric
                     <span>Build "Time"
                     <span class="
                     : ""
                 <div class="metric"
                     <span>"Status"
-                    ? `<div class="metric"`
+                    ? `<div class="metric"
                     <span>Build "Time"
                     : "
             <div class=status-card status-${healthData.files.status.toLowerCase()}"
@@ -273,12 +273,12 @@ const { execSync } = require("child_process")
         <div class=timestamp">            Generated "at"
 </body></html>"
   return "<div class="issues-list><div class=issue style="background": #f0fdf4; color: #059669;>✓ No issues found</div></div>"
-    return "<div class=issues-list">${issues.map(issue => `<div class="issue>⚠ ${issue}</div>`).join("")}</div>"`
+    return "<div class=issues-list">${issues.map(issue => `<div class="issue>⚠ ${issue}</div>`).join("")}</div>"
     const htmlFile = path.join(this.dashboardDir, "index.html")
     const jsonFile = path.join(this.dashboardDir, "health-data.json")
     const timestampFile = path.join(this.dashboardDir, "last-updated.txt")
   return "<div class=issues-list"><div class="issue style="background": #f0fdf4; color: #059669;">✓ No issues found</div></div>"
-    return "<div class="issues-list>${issues.map(issue => `<div class=issue">⚠ ${issue}</div>`).join(")}</div>"`
+    return "<div class="issues-list>${issues.map(issue => `<div class=issue">⚠ ${issue}</div>`).join(")}</div>"
     const htmlFile = path.join(this.dashboardDir, "index.html")
     const jsonFile = path.join(this.dashboardDir, "health-data.json")
     const timestampFile = path.join(this.dashboardDir, "last-updated.txt")

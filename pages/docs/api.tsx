@@ -1,26 +1,63 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Code, Copy, Check, ExternalLink } from 'lucide-react';
+=======
+import React from 'react'
+import Head from 'next/head'
+>>>>>>> main
 
 const codeExamples = [
   {
     language: 'JavaScript',
+<<<<<<< HEAD
     title: 'Submit Contact Form',
     code: 'const response = await fetch(\'https://ziontechgroup.com/api/v1/contact\', {\n  method: \'POST\',\n  headers: {\n    \'Authorization\': \'Bearer YOUR_API_KEY\',\n    \'Content-Type\': \'application/json\'\n  },\n  body: JSON.stringify({\n    name: \'John Doe\',\n    email: \'john@example.com\',\n    message: \'Hello from the API!\'\n  })\n});\n\nconst data = await response.json();\nconsole.log(data);'
+=======
+    title: 'Fetch Services',
+    code: `const response = await fetch('https://ziontechgroup.com/api/v1/services', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  }
+})
+const data = await response.json()
+`
+>>>>>>> main
   },
   {
     language: 'Python',
     title: 'Submit Contact Form',
+<<<<<<< HEAD
     code: 'import requests\n\nurl = \'https://ziontechgroup.com/api/v1/contact\'\nheaders = {\n    \'Authorization\': \'Bearer YOUR_API_KEY\',\n    \'Content-Type\': \'application/json\'\n}\ndata = {\n    \'name\': \'John Doe\',\n    \'email\': \'john@example.com\',\n    \'message\': \'Hello from the API!\'\n}\n\nresponse = requests.post(url, headers=headers, json=data)\nprint(response.json())'
   },
   {
     language: 'cURL',
     title: 'Get System Status',
     code: 'curl -X GET "https://ziontechgroup.com/api/v1/status" \\\n  -H "Authorization: Bearer YOUR_API_KEY" \\\n  -H "Content-Type: application/json"'
-  }
-];
+=======
+    code: `import requests
 
+url = 'https://ziontechgroup.com/api/v1/contact'
+headers = {
+  'Authorization': 'Bearer YOUR_API_KEY',
+  'Content-Type': 'application/json'
+}
+data = {
+  'name': 'John Doe',
+  'email': 'john@example.com',
+  'message': 'Interested in AI services',
+  'company': 'Tech Corp'
+}
+response = requests.post(url, json=data, headers=headers)
+print(response.json())`
+>>>>>>> main
+  }
+]
+
+<<<<<<< HEAD
 export default function APIDocsPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
@@ -191,4 +228,32 @@ export default function APIDocsPage() {
       </div>
     </>
   );
+=======
+export default function APIDocumentationPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Head>
+        <title>API Documentation - Zion Tech Group</title>
+      </Head>
+      <main className="container mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold mb-8">API Documentation</h1>
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {codeExamples.map((ex, i) => (
+            <div key={i} className="border rounded-lg overflow-hidden">
+              <div className="px-4 py-3 bg-gray-100 flex items-center justify-between">
+                <span className="font-medium">{ex.language}</span>
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold mb-2">{ex.title}</h3>
+                <pre className="bg-gray-50 p-3 rounded text-sm overflow-x-auto">
+                  <code>{ex.code}</code>
+                </pre>
+              </div>
+            </div>
+          ))}
+        </section>
+      </main>
+    </div>
+  )
+>>>>>>> main
 }

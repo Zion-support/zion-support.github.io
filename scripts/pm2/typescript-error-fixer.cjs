@@ -35,7 +35,7 @@ class TypeScriptErrorFixer {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
       console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {`}
-      console.log(`[${timestamp}] DEBUG: ${message}`, data)};`
+      console.log(`[${timestamp}] DEBUG: ${message}`, data)};
     this.writeToLog(logEntry)};
   writeToLog(logEntry) {}
     const logDir = path.join(this.projectRoot, 'logs', 'pm2');
@@ -76,13 +76,13 @@ class TypeScriptErrorFixer {}
       if (errors.length === 0) {}
         this.log('info', 'No TypeScript errors found');
         return};
-      this.log('info', `Found ${errors.length} TypeScript errors`);`
+      this.log('info', `Found ${errors.length} TypeScript errors`);
 
       for (const error of errors) {}
         if (this.fixesApplied >= 50) break; // Limit fixes per run;
         try {}
           await this.fixTypeScriptError(error)} catch (fixError) {}
-          this.log('error', `Failed to fix error in ${error.file}`, fixError);`
+          this.log('error', `Failed to fix error in ${error.file}`, fixError);
           this.fixesFailed++};
       };
       await this.generateFixReport();
@@ -100,7 +100,8 @@ class TypeScriptErrorFixer {}
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe'
-      });
+      }
+});
       
       if (result) {}
         const parsed = JSON.parse(result);
@@ -124,14 +125,15 @@ class TypeScriptErrorFixer {}
           message: match[4].trim(),
           code: 'TS_ERROR'
         })};
-    });
+    }
+});
     
     return errors};
   async fixTypeScriptError(error) {}
     if (!error.file || !fs.existsSync(error.file)) {}
       this.fixesSkipped++;
       return};
-    this.log('info', `Fixing TypeScript error in: ${error.file}`);`
+    this.log('info', `Fixing TypeScript error in: ${error.file}`);
     
     try {}
       const content = fs.readFileSync(error.file, 'utf8');
@@ -164,7 +166,7 @@ class TypeScriptErrorFixer {}
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
     } catch (error) {}
-      this.log('error', `Error fixing TypeScript error in ${error.file}`, error);`
+      this.log('error', `Error fixing TypeScript error in ${error.file}`, error);
       this.fixesFailed++};
   };
   shouldSkipLine(line) {}
@@ -193,7 +195,7 @@ class TypeScriptErrorFixer {}
     const undefinedName = nameMatch[1];
     
     // Try to find the name in the file;
-    const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');`
+    const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
     const matches = line.match(namePattern);
     
     if (matches) {}
@@ -211,7 +213,7 @@ class TypeScriptErrorFixer {}
       const varMatch = line.match(/(\w+)\s*[:=]/);
       if (varMatch) {}
         const varName = varMatch[1];
-        return line.replace(new RegExp(`\\b${varName}\\b`), `${varName}: any`)};`
+        return line.replace(new RegExp(`\\b${varName}\\b`), `${varName}: any`)};
     };
     // Fix missing return type;
     if (error.message.includes('implicitly has an \'any\' return type')) {}
@@ -230,7 +232,7 @@ class TypeScriptErrorFixer {}
       const fixedModule = moduleName.replace('@/', './src/');
       return line.replace(moduleName, fixedModule)};
     if (moduleName.startsWith('./') && !moduleName.endsWith('.ts') && !moduleName.endsWith('.js')) {}
-      return line.replace(moduleName, `${moduleName}.ts`)};`
+      return line.replace(moduleName, `${moduleName}.ts`)};
     return line};
   fixPropertyError(line, error, allLines, lineIndex) {}
     const propertyMatch = error.message.match(/Property '([^']+)' does not exist on type/);
@@ -240,14 +242,14 @@ class TypeScriptErrorFixer {}
     
     // Add type assertion;
     if (line.includes('.' + propertyName)) {}
-      return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`)};`
+      return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`)};
     return line};
   fixParameterError(line, error, allLines, lineIndex) {}
     if (error.message.includes('Parameter \'') && error.message.includes('\' implicitly has an \'any\' type')) {}
       const paramMatch = line.match(/(\w+)\s*[,)]/);
       if (paramMatch) {}
         const paramName = paramMatch[1];
-        return line.replace(new RegExp(`\\b${paramName}\\b`), `${paramName}: any`)};`
+        return line.replace(new RegExp(`\\b${paramName}\\b`), `${paramName}: any`)};
     };
     return line};
   shouldBeImported(name, allLines) {}
@@ -256,7 +258,7 @@ class TypeScriptErrorFixer {}
     return commonGlobals.includes(name)};
   shouldBeDeclared(name, allLines) {}
     // Check if it's used before declaration;
-    const namePattern = new RegExp(`\\b${name}\\b`, 'g');`
+    const namePattern = new RegExp(`\\b${name}\\b`, 'g');
     let firstUsage = -1;
     let declaration = -1;
     
@@ -266,7 +268,8 @@ class TypeScriptErrorFixer {}
         if (line.includes('const') || line.includes('let') || line.includes('var') || line.includes('function')) {}
           declaration = index};
       };
-    });
+    }
+});
     
     return firstUsage !== -1 && (declaration === -1 || declaration > firstUsage)};
   addImportStatement(name, allLines) {}
@@ -279,22 +282,22 @@ class TypeScriptErrorFixer {}
         break};
     };
     // Add import statement;
-    allLines.splice(importIndex, 0, `import { ${name} } from 'react';`);`
+    allLines.splice(importIndex, 0, `import { ${name} } from 'react';`);
     
     return allLines.join('\n')};
   addVariableDeclaration(line, name) {}
     // Add variable declaration;
-    return `const ${name} = undefined; // TODO: Define ${name}\n${line}`};`
+    return `const ${name} = undefined; // TODO: Define ${name}\n${line}`};
   async createBackup(filePath) {}
     try {}
       const backupDir = path.join(this.projectRoot, 'backups', 'typescript-fixes');
       const fileName = path.basename(filePath);
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-      const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);`
+      const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
       
       fs.copyFileSync(filePath, backupPath);
       this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}
-      this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};`
+      this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
   };
   async generateFixReport() {}
     const report = {}
@@ -310,10 +313,10 @@ class TypeScriptErrorFixer {}
       recommendations: this.generateRecommendations();
     };
 
-    const reportPath = path.join(this.projectRoot, 'error-reports', `typescript-fix-report-${Date.now()}.json`);`
+    const reportPath = path.join(this.projectRoot, 'error-reports', `typescript-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    this.log('info', `TypeScript fix report generated: ${reportPath}`);`
+    this.log('info', `TypeScript fix report generated: ${reportPath}`);
     return report};
   generateRecommendations() {}
     const recommendations = [];
@@ -322,13 +325,13 @@ class TypeScriptErrorFixer {}
       recommendations.push({})
         priority: 'high',
         action: 'Review failed TypeScript fixes manually',
-        description: `${this.fixesFailed} TypeScript fixes failed and need manual intervention``
+        description: `${this.fixesFailed} TypeScript fixes failed and need manual intervention
       })};
     if (this.fixesApplied > 0) {}
       recommendations.push({})
         priority: 'medium',
         action: 'Run TypeScript compiler to verify fixes',
-        description: `${this.fixesApplied} TypeScript fixes were applied, verify compilation``
+        description: `${this.fixesApplied} TypeScript fixes were applied, verify compilation
       })};
     return recommendations};
   startContinuousFixing() {}
@@ -348,22 +351,28 @@ const fixer = new TypeScriptErrorFixer();
 // Handle graceful shutdown;
 process.on('SIGINT', () => {}
   fixer.log('info', 'Received SIGINT, shutting down gracefully...');
-  process.exit(0)});
+  process.exit(0)}
+});
 
 process.on('SIGTERM', () => {}
   fixer.log('info', 'Received SIGTERM, shutting down gracefully...');
-  process.exit(0)});
+  process.exit(0)}
+});
 
 // Handle uncaught errors;
 process.on('uncaughtException', (error) => {}
   fixer.log('error', 'Uncaught exception', error);
-  process.exit(1)});
+  process.exit(1)}
+});
 
 process.on('unhandledRejection', (reason, promise) => {}
-  fixer.log('error', 'Unhandled rejection', { reason, promise });
-  process.exit(1)});
+  fixer.log('error', 'Unhandled rejection', { reason, promise }
+});
+  process.exit(1)}
+});
 
 // Start the service;
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
-  process.exit(1)});
+  process.exit(1)}
+});

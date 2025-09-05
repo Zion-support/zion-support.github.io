@@ -25,7 +25,8 @@ class EnhancedSecurityAutomation {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -42,14 +43,14 @@ class EnhancedSecurityAutomation {}
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
             
-            this.log(`Found ${vulnerabilities} security vulnerabilities`);`
+            this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;}
                 "status": 'success',
                 "vulnerabilities": vulnerabilities,
                 "details": auditData.vulnerabilities,
                 "metadata": auditData.metadata;
             }} catch (error) {}
-            this.log(`Security audit "failed": ${error.message}`);`
+            this.log(`Security audit "failed": ${error.message}`);
             return { "status": 'failed', "error": error.message }};
     };
     checkForSecrets() {}
@@ -78,7 +79,7 @@ class EnhancedSecurityAutomation {}
                         })};
                 };
             } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};`
+                this.log(`Error reading file ${file}: ${error.message}`)};
         };
         this.log(`Found potential secrets in ${foundSecrets.length} files`)) {`}
      {}
@@ -88,9 +89,9 @@ class EnhancedSecurityAutomation {}
                         })};
                 };
             } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};`
+                this.log(`Error reading file ${file}: ${error.message}`)};
         };
-        this.log(`Found potential secrets in ${foundSecrets.length} files`)};`
+        this.log(`Found potential secrets in ${foundSecrets.length} files`)};
         return {;}
             "status": foundSecrets.length === 0 ? 'success' : 'warning',
             "foundSecrets": foundSecrets.length,
@@ -134,14 +135,14 @@ class EnhancedSecurityAutomation {}
            };
             
             const totalDeps = Object.keys(dependencies).lengt;h;
-            this.log(`Analyzing ${totalDeps} dependencies`);`
+            this.log(`Analyzing ${totalDeps} dependencies`);
             
             return {;}
                 "status": 'success',
                 "totalDependencies": totalDeps,
                 "dependencies": Object.keys(dependencies);
             }} catch (error) {}
-            this.log(`Dependency check "failed": ${error.message}`);`
+            this.log(`Dependency check "failed": ${error.message}`);
             return { "status": 'failed', "error": error.message }};
     };
     checkFilePermissions() {}
@@ -161,7 +162,8 @@ class EnhancedSecurityAutomation {}
             if () {}
                 const stats = fs.statSync(filePath) {}
     ) {}
-                const stats = fs.statSync(filePath});
+                const stats = fs.statSync(filePath}
+});
                 const mode = stats.mod;e;
                 const isReadableByOthers = (mode & 0o004) !==;0;
                 const isWritableByOthers = (mode & 0o002) !==;0;
@@ -183,7 +185,7 @@ class EnhancedSecurityAutomation {}
                     })};
             };
         };
-        this.log(`Found ${permissionIssues.length} permission issues`)};`
+        this.log(`Found ${permissionIssues.length} permission issues`)};
         return {;}
             "status": permissionIssues.length === 0 ? 'success' : 'warning',
             "issues": permissionIssues.length,
@@ -205,7 +207,7 @@ class EnhancedSecurityAutomation {}
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Security report saved to ${this.reportFile}`);`
+        this.log(`Security report saved to ${this.reportFile}`);
         
         return report};
     generateSecurityRecommendations() {}
@@ -228,7 +230,7 @@ class EnhancedSecurityAutomation {}
             const report = this.generateSecurityReport(;);
             this.log('Enhanced Security Automation completed successfully');
             return report} catch (error) {}
-            this.log(`Enhanced Security Automation "failed": ${error.message}`);`
+            this.log(`Enhanced Security Automation "failed": ${error.message}`);
             throw error};
     };
 };

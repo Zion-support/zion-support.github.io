@@ -84,6 +84,7 @@ const codeExamples = []
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   };
+}
 });
 
 const data = await response.json();
@@ -92,7 +93,7 @@ const data = await response.json();
   {}
     language: 'Python',
     title: 'Submit Contact Form',
-    code: `import requests;`
+    code: `import requests;
 url = 'https://ziontechgroup.com/api/v1/contact'
 headers = {}
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -105,7 +106,7 @@ data = {}
     'company': 'Tech Corp'
 };
 response = requests.post(url, json=data, headers=headers);
-print(response.json())``
+print(response.json())
   },
   {}
     language: 'cURL',
@@ -160,7 +161,8 @@ export default function APIDocumentationPage() {}
                          endpoint.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesMethod = selectedMethod === 'all' || endpoint.method.toLowerCase() === selectedMethod.toLowerCase();
     return matchesSearch && matchesMethod;
-  });
+  }
+});
 
   return ()
     <Layout;
@@ -283,7 +285,7 @@ export default function APIDocumentationPage() {}
                         endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
                         endpoint.method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
                         'bg-red-100 text-red-800'
-                      }`}>`
+                      }`}>
                         {endpoint.method};
                       </span>
                       <code className="text-white font-mono text-lg">
@@ -341,7 +343,7 @@ export default function APIDocumentationPage() {}
                               response.code >= 200 && response.code < 300 ? 'bg-green-100 text-green-800' :
                               response.code >= 400 ? 'bg-red-100 text-red-800' :
                               'bg-yellow-100 text-yellow-800'
-                            }`}>`
+                            }`}>
                               {response.code};
                             </span>
                             <span className="text-gray-300 text-sm">{response.description}</span>
@@ -393,7 +395,7 @@ export default function APIDocumentationPage() {}
                       <span className="text-white font-medium">{example.language}</span>
                     </div>
                     <button;
-                      onClick={() => copyToClipboard(example.code, `${example.language}-${index}`)};`
+                      onClick={() => copyToClipboard(example.code, `${example.language}-${index}`)};
                       className="p-2 text-gray-400 hover:text-white transition-colors"
                     >
                       {copiedCode === `${example.language}-${index}` ? (`)
@@ -478,7 +480,7 @@ export default function APIDocumentationPage() {}
                       Documentation;
                     </Link>
                     <button;
-                      onClick={() => copyToClipboard(sdk.install, `install-${index}`)};`
+                      onClick={() => copyToClipboard(sdk.install, `install-${index}`)};
                       className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors"
                     >
                       <Copy className="w-4 h-4" />

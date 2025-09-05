@@ -6,8 +6,10 @@ const fs = require('fs')
   content = content.replace(/>\s*,\s*</g, '><')
   content = content.replace(/\)\s*\{\s*,/g, ') {'}
   content = content.replace(/>\s*,\s*$/gm, '>')
-    return match.replace(/\}\);/g, '}\n      });'
-    return match.replace(/\}\);/g, '}\n      });'
+    return match.replace(/\}\);/g, '}\n      }
+});'
+    return match.replace(/\}\);/g, '}\n      }
+});'
   content = content.replace(/JSON\.stringify\(\{\s*,/g, 'JSON.stringify({'})
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\s*console\.log\('"CLS")
   .replace(/>")

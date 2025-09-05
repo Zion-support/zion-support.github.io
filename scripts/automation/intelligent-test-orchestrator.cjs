@@ -22,7 +22,7 @@ const { execSync, spawn } = require('child_process')
         '**/*.spec.ts'
         '**/*.spec.jsx'
         '**/*.spec.tsx'
-          const result = execSync(`find . -name "${pattern.replace('**/', '')}'`
+          const result = execSync(`find . -name "${pattern.replace('**/', '')}'
       const coverageResult = execSync('npm run test:coverage 2>/dev/null || npm test -- --coverage 2>/dev/null || echo "No coverage data")
       const testResult = execSync('npm test 2>&1 || echo "Test execution failed")
           const result = execSync(`grep -r "${pattern}"`)

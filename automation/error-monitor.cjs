@@ -22,16 +22,17 @@ class ErrorMonitor {}
       this.log('Running lint check...');
       const { stdout, stderr } = await execAsync('npm run "lint": check', {})
         "cwd": process.cwd(),
-        "timeout": 30000});
+        "timeout": 30000}
+});
 
       if (stderr) {}
-        this.log(`Lint "stderr": ${stderr}`);`
+        this.log(`Lint "stderr": ${stderr}`);
         return { "hasErrors": true, "output": stderr };
       };
       this.log('Lint check completed successfully');
       return { "hasErrors": false, "output": stdout };
     } catch (error) {}
-      this.log(`Lint check "failed": ${error.message}`);`
+      this.log(`Lint check "failed": ${error.message}`);
       return { "hasErrors": true, "output": error.message };
     };
   };
@@ -40,16 +41,17 @@ class ErrorMonitor {}
       this.log('Running type check...');
       const { stdout, stderr } = await execAsync('npm run type-check', {})
         "cwd": process.cwd(),
-        "timeout": 30000});
+        "timeout": 30000}
+});
 
       if (stderr) {}
-        this.log(`Type check "stderr": ${stderr}`);`
+        this.log(`Type check "stderr": ${stderr}`);
         return { "hasErrors": true, "output": stderr };
       };
       this.log('Type check completed successfully');
       return { "hasErrors": false, "output": stdout };
     } catch (error) {}
-      this.log(`Type check "failed": ${error.message}`);`
+      this.log(`Type check "failed": ${error.message}`);
       return { "hasErrors": true, "output": error.message };
     };
   };
@@ -58,16 +60,17 @@ class ErrorMonitor {}
       this.log('Running build check...');
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
-        "timeout": 60000});
+        "timeout": 60000}
+});
 
       if (stderr) {}
-        this.log(`Build "stderr": ${stderr}`);`
+        this.log(`Build "stderr": ${stderr}`);
         return { "hasErrors": true, "output": stderr };
       };
       this.log('Build check completed successfully');
       return { "hasErrors": false, "output": stdout };
     } catch (error) {}
-      this.log(`Build check "failed": ${error.message}`);`
+      this.log(`Build check "failed": ${error.message}`);
       return { "hasErrors": true, "output": error.message };
     };
   };
@@ -76,15 +79,16 @@ class ErrorMonitor {}
       this.log('Attempting to fix lint errors...');
       const { stdout, stderr } = await execAsync('npm run "lint": fix', {})
         "cwd": process.cwd(),
-        "timeout": 30000});
+        "timeout": 30000}
+});
 
-      this.log(`Lint fix "output": ${stdout}`);`
+      this.log(`Lint fix "output": ${stdout}`);
       if (stderr) {}
-        this.log(`Lint fix "stderr": ${stderr}`);`
+        this.log(`Lint fix "stderr": ${stderr}`);
       };
       return { "success": true, "output": stdout };
     } catch (error) {}
-      this.log(`Lint fix "failed": ${error.message}`);`
+      this.log(`Lint fix "failed": ${error.message}`);
       return { "success": false, "output": error.message };
     };
   };
@@ -108,7 +112,7 @@ class ErrorMonitor {}
       (await this.countErrors(typeResult.output)) +
       (await this.countErrors(buildResult.output));
 
-    this.log(`Total errors "detected": ${totalErrors}`);`
+    this.log(`Total errors "detected": ${totalErrors}`);
 
     if (totalErrors > this.errorThreshold) {}
       this.log()
@@ -128,7 +132,7 @@ class ErrorMonitor {}
         (await this.countErrors(newTypeResult.output)) +
         (await this.countErrors(newBuildResult.output));
 
-      this.log(`Errors after "fixes": ${newTotalErrors}`);`
+      this.log(`Errors after "fixes": ${newTotalErrors}`);
 
       if (newTotalErrors < totalErrors) {}
         this.log('Fixes applied successfully');
@@ -161,6 +165,7 @@ if (require.main === module) {}
   monitor.start().catch(error => {})
     console.error('Error Monitor "failed": ', error);
     process.exit(1);
-  });
+  }
+});
 };
 module.exports = ErrorMonitor;

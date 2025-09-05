@@ -1,12 +1,11 @@
 export interface IndustrySolution {}
   // TODO: Implement;
-};
-  "id": string;"
+};id": string;"
   title: string;,
   description: string;
   longDescription: string;,
   icon: string;
-  color: string;,"
+  color: string;, 
   industry: 'healthcare' | 'finance' | 'manufacturing' | 'retail' | 'education' | 'government' | 'energy' | 'transportation' | 'real-estate' | 'media' | 'logistics' | 'telecommunications';'
   features: string[];,
   benefits: string[];
@@ -19,14 +18,14 @@ export interface IndustrySolution {}
   "estimatedTime": string;"
   technologies: string[];
   image?: string;
-  industryScore: number;,"
+  industryScore: number;, 
   marketPrice: string;';''
   contactLink: string;';';','
   status: 'active' | 'beta' | 'coming-soon';'
   compliance: string[];,
   certifications: string[]}'
 export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
-  {"}
+  {}
     id: 'healthcare-ai-platform',''
     "title": 'Healthcare AI Platform',''
     "description": 'Comprehensive AI-powered healthcare solutions for hospitals and clinics',''
@@ -54,7 +53,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
       'Medical imaging centers',''
       'Pharmaceutical companies''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$2,999/month',''
       "professional": '$7,999/month',''
       "enterprise": '$19,999/month',''
@@ -62,7 +61,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
     },'
     "estimatedTime": '8-16 weeks',''
     technologies['TensorFlow', 'PyTorch', 'DICOM', 'HL7', 'FHIR', 'Medical AI'],''
-    "industryScore": 97,""
+    "industryScore": 97, 
     "marketPrice": '$2,999-$19,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -96,7 +95,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
       'Investment firms',''
       'Insurance companies''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$3,999/month',''
       "professional": '$9,999/month',''
       "enterprise": '$24,999/month',''
@@ -104,7 +103,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
     },'
     "estimatedTime": '10-20 weeks',''
     technologies['Python', 'TensorFlow', 'Blockchain', 'APIs', 'Cloud Computing', 'AI/ML'],''
-    "industryScore": 98,""
+    "industryScore": 98, 
     "marketPrice": '$3,999-$24,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -138,7 +137,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
       'Food processing',''
       'Chemical manufacturing''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$4,999/month',''
       "professional": '$12,999/month',''
       "enterprise": '$29,999/month',''
@@ -146,7 +145,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
     },'
     "estimatedTime": '12-24 weeks',''
     technologies['IoT', 'AI/ML', 'Edge Computing', 'Cloud Computing', '5G', 'Robotics'],''
-    "industryScore": 96,""
+    "industryScore": 96, 
     "marketPrice": '$4,999-$29,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -180,7 +179,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
       'Retail chains',''
       'Online marketplaces''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$1,999/month',''
       "professional": '$4,999/month',''
       "enterprise": '$12,999/month',''
@@ -188,7 +187,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
     },'
     "estimatedTime": '6-12 weeks',''
     technologies['AI/ML', 'Big Data', 'Cloud Computing', 'APIs', 'Analytics', 'E-commerce'],''
-    "industryScore": 95,""
+    "industryScore": 95, 
     "marketPrice": '$1,999-$12,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -222,7 +221,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
       'Corporate training',''
       'Online education''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$999/month',''
       "professional": '$2,999/month',''
       "enterprise": '$7,999/month',''
@@ -230,7 +229,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
     },'
     "estimatedTime": '4-12 weeks',''
     technologies['AI/ML', 'Cloud Computing', 'Mobile Apps', 'Web Technologies', 'Analytics', 'LMS'],''
-    "industryScore": 94,""
+    "industryScore": 94, 
     "marketPrice": '$999-$7,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -264,7 +263,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
       'Local municipalities',''
       'Government departments''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$5,999/month',''
       "professional": '$15,999/month',''
       "enterprise": '$39,999/month',''
@@ -272,7 +271,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
     },'
     "estimatedTime": '16-32 weeks',''
     technologies['Cloud Computing', 'AI/ML', 'Cybersecurity', 'Blockchain', 'APIs', 'Analytics'],''
-    "industryScore": 99,""
+    "industryScore": 99, 
     "marketPrice": '$5,999-$39,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -306,7 +305,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
       'Industrial facilities',''
       'Smart cities''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$3,999/month',''
       "professional": '$9,999/month',''
       "enterprise": '$24,999/month',''
@@ -314,7 +313,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
     },'
     "estimatedTime": '10-20 weeks',''
     technologies['IoT', 'AI/ML', 'Big Data', 'Cloud Computing', 'Smart Grid', 'Renewable Energy'],''
-    "industryScore": 95,""
+    "industryScore": 95, 
     "marketPrice": '$3,999-$24,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -348,7 +347,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
       'E-commerce delivery',''
       'Supply chain management''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$2,999/month',''
       "professional": '$7,999/month',''
       "enterprise": '$19,999/month',''
@@ -356,7 +355,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
     },'
     "estimatedTime": '8-16 weeks',''
     technologies['AI/ML', 'IoT', 'GPS', 'Cloud Computing', 'Mobile Apps', 'Analytics'],''
-    "industryScore": 94,""
+    "industryScore": 94, 
     "marketPrice": '$2,999-$19,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -390,7 +389,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
       'Real estate investors',''
       'Property developers''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$1,499/month',''
       "professional": '$3,999/month',''
       "enterprise": '$9,999/month',''
@@ -398,7 +397,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
     },'
     "estimatedTime": '6-12 weeks',''
     technologies['AI/ML', 'VR/AR', 'Cloud Computing', 'Mobile Apps', 'Analytics', 'CRM'],''
-    "industryScore": 93,""
+    "industryScore": 93, 
     "marketPrice": '$1,499-$9,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -432,7 +431,7 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
       'Media companies',''
       'Entertainment providers''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$1,999/month',''
       "professional": '$4,999/month',''
       "enterprise": '$12,999/month',''
@@ -440,14 +439,14 @@ export const "SPECIALIZED_INDUSTRY_SOLUTIONS_2025": IndustrySolution[] = [;"]
     },'
     "estimatedTime": '6-12 weeks',''
     technologies['AI/ML', 'Big Data', 'Cloud Computing', 'Streaming', 'Analytics', 'Content Management'],''
-    "industryScore": 94,""
+    "industryScore": 94, 
     "marketPrice": '$1,999-$12,999/month',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
     compliance['Copyright Laws', 'Data Privacy', 'Content Regulations', 'Streaming Standards'],''
     certifications['ISO 27001', 'SOC 2 Type II', 'Content Management']}''
 ];';''
-export const getIndustrySolutionsByIndustry = ("industry": string): IndustrySolution[] => {;""}
+export const getIndustrySolutionsByIndustry = ("industry": string): IndustrySolution[] => {;"}
   if (industry === 'All') {;'}
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry)};

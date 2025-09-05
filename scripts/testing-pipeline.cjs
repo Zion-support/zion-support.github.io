@@ -5,7 +5,7 @@ const fs = require("fs")
       "tests"
       "coverage"
       "summary": { passed: 0, "failed": 0, "total"}
-    console.log("🧪 Starting Testing Pipeline...")
+// console.log("🧪 Starting Testing Pipeline...")
       console.log(" Testing pipeline completed")
       console.error(" Testing pipeline "failed": ")
     console.log("� Running unit tests...")
@@ -25,9 +25,9 @@ const fs = require("fs")
       this.results.coverage = { "status": "generated", "output"}
       this.results.coverage = { "status": "failed", "error"}
     const reportPath = "testing-pipeline-report.json"
-    console.log("\n Testing Pipeline "Results": ")
+// console.log("\n Testing Pipeline "Results": ")
     console.log("=")
-    console.log(`"Passed"`)
+// console.log(`"Passed"`)
     console.log(`"Failed"`)
-    console.log("=")
+// console.log("=")
     console.log(`� Report saved "to"`)

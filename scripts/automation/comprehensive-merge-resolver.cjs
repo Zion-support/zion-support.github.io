@@ -58,9 +58,10 @@ const { execSync, spawn } = require("child_process")
         "
   this.log( Error processing branch ${branchName}: ${error.message}")
         "ERROR"
-  const backupName = `backup-${branchName}-${Date.now()}``
+  const backupName = `backup-${branchName}-${Date.now()}
     const backupPath = path.join(this.backupsDir, ")
-  // Create backup of current working directoryexecSync(`cp -r . ${backupPath}`", { "stdio": "pipe" });this.log("� Created "backup"`)
+  // Create backup of current working directoryexecSync(`cp -r . ${backupPath}`", { "stdio": "pipe" }
+});this.log("� Created "backup"`)
         "WARN"
   "stdio": "pipe"
   "stdio": "pipe"

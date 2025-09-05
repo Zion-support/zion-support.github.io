@@ -14,23 +14,25 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {}
       const categoryMatch = match.match(/"category": '([^']*)'/);
       if (categoryMatch) {}
-        return `category: '${categoryMatch[1]}'\n    }`};`
-      return match});
+        return `category: '${categoryMatch[1]}'\n    }`};
+      return match}
+});
     // Clean up any remaining syntax issues;
     content = content.replace(/},\s*}/g, '}\n  }');
     content = content.replace(/},\s*]/g, '}\n  ]');
     content = content.replace(/"category": '[^']*'}\s*"category": '[^']*'\s*}/g, (match) => {}
       const categoryMatch = match.match(/"category": '([^']*)'/);
       if (categoryMatch) {}
-        return `category: '${categoryMatch[1]}'\n    }`};`
-      return match});
+        return `category: '${categoryMatch[1]}'\n    }`};
+      return match}
+});
     // Remove any remaining merge conflict markers;
     content = content.replace(/origin\/cursor[^\n]*\n?/g, '');
     content = content.replace(/[\s\S]*?/g, '');
 cursor/fix-lint-push-and-merge-to-main-f3c1;
     fs.writeFileSync(filePath, content);
     console.log(`Cleaned merge conflicts "in": ${filePath}`)} catch (error) {`}
-    console.error(`Error cleaning ${filePath}:`, error.message)};`
+    console.error(`Error cleaning ${filePath}:`, error.message)};
 };
 // List of files with merge conflicts;
 const filesToClean = ['pages/ai-services.tsx',]
@@ -49,6 +51,7 @@ const filesToClean = ['pages/ai-services.tsx',]
 filesToClean.forEach(file => {})
   if (fs.existsSync(file)) {}
     cleanMergeConflicts(file)};
+}
 });
 console.log('Comprehensive merge conflict cleanup completed!');
 cursor/website-audit-and-update-with-deployment-76dc;

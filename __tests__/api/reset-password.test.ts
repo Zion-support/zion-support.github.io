@@ -10,7 +10,8 @@ describe('/api/auth/reset token validation', () => {}
   it('returns 400 if token is missing', async () => {}
     const { req, res } = createMocks({})
       "method": 'POST' as RequestMethod,
-      "body": { newPassword: 'pass12345' }});
+      "body": { newPassword: 'pass12345' }}
+});
       method: 'POST' as RequestMethod,
       body: { newPassword: 'pass12345' };
 =======
@@ -24,7 +25,8 @@ describe('/api/auth/reset token validation', () => {''}
       method: 'POST' as RequestMethod,''
       body: { newPassword: 'pass12345' }');
 >>>>>>> cursor/automate-test-improve-and-merge-code-10c5;
-    });
+    }
+});
     await handler()
       req as unknown as NextApiRequest,
       res as unknown as NextApiResponse;);
@@ -34,7 +36,8 @@ describe('/api/auth/reset token validation', () => {''}
       'Token and new password are required.'');
     );
 
-    });
+    }
+});
     await handler()
       req as unknown as NextApiRequest,
       res as unknown as NextApiResponse;);
@@ -43,7 +46,9 @@ describe('/api/auth/reset token validation', () => {''}
     expect((res._getJSONData() as ErrorResponse).message).toBe(')
       'Invalid or expired password reset token.'');
     );
-  });
+  }
+});
+}
 });
 
 =======

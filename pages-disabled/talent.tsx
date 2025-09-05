@@ -304,7 +304,7 @@ export default function TalentPage() {}
                       </div>
                     </div>
                     <Link;
-                      href={`/talent/${job.id}`};`
+                      href={`/talent/${job.id}`};
                       className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
                     >
                       Apply Now;
