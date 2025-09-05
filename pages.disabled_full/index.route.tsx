@@ -1,1 +1,14 @@
-import React from 'react'; import Link from 'next/link'; export default function HomeRoute() { return ( <main style={{ "padding": '24',"fontFamily": 'ui-sans-serif,system-ui' }}> <h1 style={{ "fontSize": '28',"fontWeight": '700' }}>Zion Tech Group</h1> <p style={{ "marginTop": '8' }}>AI-powered Micro SAAS,IT and AI solutions.</p> <div style={{ "marginTop": '16',"display": 'flex',"gap": '12' }}> <Link href="/services/comprehensive-micro-saas-showcase" legacyBehavior> <a style={{ "color": '#4f46e5' }}>Explore Services</a> </Link> <Link href="/services" legacyBehavior> <a style={{ "color": '#4f46e5' }}>Services Overview</a> </Link> <a href=""https": </div> </main> )}""
+import React from 'react';
+
+interface Index.routeProps {
+  // Add props here as needed
+}
+
+export default function Index.route({ }: Index.routeProps) {
+  return (
+    <div>
+      <h1>Index.route</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

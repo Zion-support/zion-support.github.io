@@ -1,2 +1,14 @@
-"use client";"; import * as React from "react"; export const ThemeProvider({ children }) {}}; "use client"; const initialState = {}; "setTheme": () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window.document.documentElement;"; root.classList.remove("light","dark");"; root.classList.add("dark")},[]); const value = {}}}; return (<ThemeContext.Provider value={value}> {children} </ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)"; throw new Error("useTheme must be used within a ThemeProvider"); return context}; "}"
-</ThemeContext>"
+import React from 'react';
+
+interface ThemeProviderProps {
+  // Add props here as needed
+}
+
+export default function ThemeProvider({ }: ThemeProviderProps) {
+  return (
+    <div>
+      <h1>ThemeProvider</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
