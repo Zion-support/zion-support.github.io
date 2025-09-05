@@ -17,7 +17,6 @@ export default function ContactPage() {
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
           <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
         </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -40,15 +39,14 @@ export default function ContactPage() {
 
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
-          
-          {/* Contact Information Cards */}
+          {/* Contact Info Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <motion.div
               className="bg-white rounded-lg shadow-lg p-6 text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once:true }}
+              viewport={{ once: true }}
             >
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-blue-600" />
@@ -62,7 +60,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once:true }}
+              viewport={{ once: true }}
             >
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-8 h-8 text-green-600" />
@@ -76,7 +74,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once:true }}
+              viewport={{ once: true }}
             >
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-purple-600" />
@@ -92,15 +90,14 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
               className="bg-white rounded-lg shadow-lg p-8"
-              initial={{ opacity: 0, x:-30 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once:true }}
+              viewport={{ once: true }}
             >
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">
                 Send us a Message
               </h2>
-              
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -116,7 +113,6 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address
@@ -193,7 +189,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once:true }}
+              viewport={{ once: true }}
             >
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">
                 Why Choose Zion Tech Group?
@@ -233,44 +229,19 @@ export default function ContactPage() {
 
               <div className="mt-8 p-6 bg-gray-50 rounded-lg">
                 <h3 className="font-semibold text-gray-900 mb-2">Business Hours</h3>
-                <p className="text-gray-600 text-sm mb-2">Monday - "Friday": 9:00 AM - 6:00 PM EST</p>
+                <p className="text-gray-600 text-sm mb-2">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
                 <p className="text-gray-600 text-sm">Saturday: 10:00 AM - 4:00 PM EST</p>
                 <p className="text-gray-600 text-sm">Sunday: Emergency support only</p>
               </div>
             </motion.div>
-=======
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      required
-                    ></textarea>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
-                  >
-                    Send Message
-                  </button>
-                </form>
-              </div>
-            </div>
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
           </div>
         </div>
       </div>
       </div>
-    </MainLayout>
+    </Layout>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-76dc

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
-import Layout from '../components/Layout';
+import MainLayout from '../components/layout/MainLayout';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },

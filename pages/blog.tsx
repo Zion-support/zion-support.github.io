@@ -167,6 +167,9 @@ export default function BlogPage() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   </MainLayout>
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-76dc
   );
 }
