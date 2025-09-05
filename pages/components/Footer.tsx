@@ -96,15 +96,9 @@ const footerSections = [
       { title: 'White Papers', href: '/white-papers', icon: FileText },
       { title: 'Webinars', href: '/webinars', icon: Calendar },
       { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
-<<<<<<< HEAD
       { title: 'API Documentation', href: '/api-docs', icon: Code },
       { title: 'Training', href: '/training', icon: BookOpen },
       { title: 'FAQ', href: '/faq', icon: MessageSquare }
-=======
-      { title: 'Documentation', href: '/docs', icon: FileText },
-      { title: 'API Reference', href: '/api-docs', icon: Code },
-      { title: 'Status Page', href: '/status', icon: Activity }
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
     ]
   },
   {
@@ -115,7 +109,6 @@ const footerSections = [
       { title: 'Careers', href: '/careers', icon: Users },
       { title: 'Partners', href: '/partners', icon: Globe },
       { title: 'News', href: '/news', icon: FileText },
-<<<<<<< HEAD
       { title: 'Contact', href: '/contact', icon: MessageSquare },
       { title: 'Privacy Policy', href: '/privacy', icon: Lock },
       { title: 'Terms of Service', href: '/terms', icon: FileText }
@@ -132,10 +125,6 @@ const footerSections = [
       { title: 'Training', href: '/training', icon: BookOpen },
       { title: 'Free Consultation', href: '/consultation', icon: Calendar },
       { title: 'Get Quote', href: '/quote', icon: FileText }
-=======
-      { title: 'Privacy Policy', href: '/privacy', icon: Lock },
-      { title: 'Terms of Service', href: '/terms', icon: FileText }
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
     ]
   }
 ];

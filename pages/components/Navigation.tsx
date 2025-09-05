@@ -89,33 +89,21 @@ const navigationItems = [
         title: 'AI Services',
         href: '/ai-services',
         icon: Brain,
-<<<<<<< HEAD
         description: '100+ cutting-edge AI solutions',
-=======
-        description: '80+ cutting-edge AI solutions',
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
         popular: true
       },
       {
         title: 'IT Services',
         href: '/it-services',
         icon: Network,
-<<<<<<< HEAD
         description: '85+ comprehensive IT services',
-=======
-        description: '70+ comprehensive IT services',
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
         popular: true
       },
       {
         title: 'Micro SaaS',
         href: '/micro-saas',
         icon: Cloud,
-<<<<<<< HEAD
         description: '120+ innovative micro SaaS solutions',
-=======
-        description: '85+ innovative micro SaaS solutions',
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
         popular: true
       },
       {
@@ -334,7 +322,6 @@ const navigationItems = [
         icon: BookOpen,
         description: 'Step-by-step guides',
         popular: false
-<<<<<<< HEAD
       },
       {
         title: 'API Documentation',
@@ -356,8 +343,6 @@ const navigationItems = [
         icon: MessageSquare,
         description: 'Frequently asked questions',
         popular: false
-=======
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
       }
     ]
   },
@@ -388,7 +373,6 @@ const navigationItems = [
         popular: true
       },
       {
-<<<<<<< HEAD
         title: 'Partners',
         href: '/partners',
         icon: Globe,
@@ -421,12 +405,6 @@ const navigationItems = [
         href: '/terms',
         icon: FileText,
         description: 'Terms and conditions',
-=======
-        title: 'Contact',
-        href: '/contact',
-        icon: Phone,
-        description: 'Get in touch',
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
         popular: false
       }
     ]
