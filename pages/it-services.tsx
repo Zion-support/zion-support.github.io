@@ -259,12 +259,53 @@ import Link from 'next/link';
     icon: TrendingUp,
     features: ['Performance Analysis', 'Bottleneck Identification', 'Optimization Strategies', 'Monitoring Setup'],
     pricing: '$15,000 - $75,000/project',
+    category: 'Performance'
+  }
+];
+
+const categories = [
+  'All Services',
+  'Cloud Services',
+  'Security',
+  'Infrastructure',
+  'Support',
+  'Data Management',
+  'DevOps',
+  'Data Protection',
+  'Communication',
+  'Consulting',
+  'Software Management',
+  'Mobile Management',
+  'Asset Management',
+  'Training',
+  'Virtualization',
+  'Compliance',
+  'Project Management',
+  'Cost Optimization',
+  'AI Operations',
+  'Advanced Security',
+  'Edge Computing',
+  '5G Technology',
+  'Blockchain',
+  'IoT Security',
+  'Hybrid Cloud',
+  'AI Security',
+  'Digital Transformation',
+  'Green IT',
+  'Governance',
+  'Architecture',
+  'Disaster Recovery'
+];
+
+const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
   { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
   { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
 ];
+const benefits = [
+  {
     icon: Clock,
     title: 'Reduced Downtime',
     description: 'Proactive monitoring and maintenance',

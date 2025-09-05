@@ -188,11 +188,36 @@ export default function PartnersPage() {
                     </div>;
                   </motion.div>;
                 ))}
-              </div>,
-            </div>;
-          </div>;
-        </section>;
-
+              </div>
+            </div>
+          </div>
+        </section>
         {/* Become a Partner */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold mb-6">Become a Partner</h2>
+              <p className="text-xl text-blue-100 mb-8">
+                Join our partner ecosystem and help us deliver innovative technology solutions to clients worldwide.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                >
+                  Apply to Become a Partner
+                </a>
+                <a
+                  href="mailto:partners@ziontechgroup.com"
+                  className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"
+                >
+                  Contact Partnership Team
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
   );
 }

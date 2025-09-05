@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from './Header';
 import { Sidebar } from './Sidebar';
 import Footer from './Footer';
+
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
@@ -11,6 +12,7 @@ interface LayoutProps {
   ogImage?: string;
   noIndex?: boolean;
 }
+
 export default function Layout({
   children,
   title = 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -20,6 +22,7 @@ export default function Layout({
   noIndex = false
 }: LayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -30,31 +33,27 @@ export default function Layout({
         <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
         <link rel="canonical" href="https://ziontechgroup.com" />
         
-ursor/website-audit-and-update-with-deployment-9cae
         {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content={ogImage} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
-        {/* Favicon */}
+        
+        {/* Additional SEO */}
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="theme-color" content="#2563eb" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-ursor/website-audit-and-update-with-deployment-9cae
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -68,14 +67,16 @@ ursor/website-audit-and-update-with-deployment-9cae
               "description": description,
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
+                "addressLocality": "Wilmington",
                 "addressRegion": "DE",
-                "postalCode": "19709",
                 "addressCountry": "US"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
+                "email": "info@ziontechgroup.com"
+              },
               "sameAs": [
                 "https://linkedin.com/company/ziontechgroup",
                 "https://twitter.com/ziontechgroup",
@@ -85,15 +86,16 @@ ursor/website-audit-and-update-with-deployment-9cae
           }}
         />
       </Head>
-      <div className="min-h-screen flex">
-        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-        <div className="flex-1 flex flex-col lg:ml-80">
-          <Header onMenuClick={() => setIsSidebarOpen(true)} />
-          <main className="flex-1 pt-16">
-            {children}
-          </main>
-          <Footer />
-        </div>
+      
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        
+        {/* Main Content */}
+        <main>
+          {children}
+        </main>
+        
+        <Footer />
       </div>
     </>
   );

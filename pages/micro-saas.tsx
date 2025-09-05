@@ -460,6 +460,592 @@ const microSaasProducts = [
     title: 'Smart Resource Scheduler',
     description: 'AI-powered resource scheduling and optimization for teams and facilities.',
     icon: Calendar,
+    features: ['Resource Optimization', 'Conflict Resolution', 'Availability Tracking', 'Analytics'],
+    pricing: '$149 - $899/month',
+    category: 'Scheduling'
+  }
+];
+
+
+const benefits = [{
+    icon: Clock,
+    title: 'Fast Time to Market',
+    description: 'Launch your SaaS in weeks, not months',
+    stat: '80%'
+  },
+  {
+    icon: DollarSign,
+    title: 'Cost Effective',
+    description: 'Lower development and maintenance costs',
+    stat: '60%'
+  },
+  {
+    icon: Star,
+    title: 'High Quality',
+    description: 'Production-ready code and infrastructure',
+    stat: '99.9%'
+  },
+  {
+    title: 'AI Financial Analytics',
+    description: 'Automated financial reporting, forecasting, and expense management platform.',
+    icon: TrendingUp,
+    features: ['Automated Reporting', 'Financial Forecasting', 'Expense Tracking', 'Budget Planning'],
+    pricing: '$49 - $349/month',
+    category: 'Finance',
+    benefits: ['Accurate Forecasting', 'Cost Control', 'Automated Reports', 'Financial Insights'],
+    marketPrice: '$75 - $500/month',
+    link: 'https://ziontechgroup.com/ai-financial-analytics'
+  },
+  {
+    title: 'Smart HR Management',
+    description: 'AI-powered HR platform with recruitment, performance management, and analytics.',
+    icon: Users,
+    features: ['AI Recruitment', 'Performance Analytics', 'Employee Engagement', 'Compliance'],
+    pricing: '$59 - $399/month',
+    category: 'HR',
+    benefits: ['Better Hiring', 'Performance Insights', 'Employee Satisfaction', 'Compliance'],
+    marketPrice: '$80 - $600/month',
+    link: 'https://ziontechgroup.com/smart-hr-management'
+  },
+  {
+    title: 'AI Social Media Manager',
+    description: 'Automated social media posting, engagement, and analytics platform.',
+    icon: Globe,
+    features: ['Auto Posting', 'Engagement Tracking', 'Content Suggestions', 'Analytics'],
+    pricing: '$19 - $149/month',
+    category: 'Social Media',
+    benefits: ['Consistent Posting', 'Better Engagement', 'Time Savings', 'Growth Tracking'],
+    marketPrice: '$30 - $250/month',
+    link: 'https://ziontechgroup.com/ai-social-media-manager'
+  },
+  {
+    title: 'Smart Document Management',
+    description: 'AI-powered document processing, OCR, and intelligent filing system.',
+    icon: FileText,
+    features: ['OCR Processing', 'Smart Filing', 'Search & Retrieval', 'Version Control'],
+    pricing: '$25 - $199/month',
+    category: 'Document Management',
+    benefits: ['Easy Organization', 'Quick Search', 'Version Control', 'Collaboration'],
+    marketPrice: '$40 - $300/month',
+    link: 'https://ziontechgroup.com/smart-document-management'
+  },
+  {
+    title: 'AI Website Optimizer',
+    description: 'Automated website performance optimization and SEO enhancement platform.',
+    icon: Monitor,
+    features: ['Performance Optimization', 'SEO Enhancement', 'A/B Testing', 'Analytics'],
+    pricing: '$39 - $299/month',
+    category: 'Web Optimization',
+    benefits: ['Faster Loading', 'Better SEO', 'Higher Conversions', 'User Experience'],
+    marketPrice: '$60 - $500/month',
+    link: 'https://ziontechgroup.com/ai-website-optimizer'
+  },
+  {
+    title: 'Smart E-commerce Analytics',
+    description: 'AI-powered e-commerce insights with customer behavior analysis and recommendations.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Product Recommendations', 'Sales Forecasting', 'Inventory Insights'],
+    pricing: '$49 - $349/month',
+    category: 'E-commerce',
+    benefits: ['Better Recommendations', 'Sales Growth', 'Customer Insights', 'Inventory Optimization'],
+    marketPrice: '$75 - $500/month',
+    link: 'https://ziontechgroup.com/smart-ecommerce-analytics'
+  },
+  {
+    title: 'AI Code Review Assistant',
+    description: 'Automated code review with security analysis, performance optimization, and best practices.',
+    icon: Code,
+    features: ['Security Analysis', 'Performance Review', 'Best Practices', 'Automated Fixes'],
+    pricing: '$29 - $199/month',
+    category: 'Development',
+    benefits: ['Better Code Quality', 'Security Assurance', 'Faster Reviews', 'Learning'],
+    marketPrice: '$50 - $300/month',
+    link: 'https://ziontechgroup.com/ai-code-review'
+  },
+  {
+    title: 'Smart Energy Management',
+    description: 'AI-powered energy monitoring and optimization for businesses and homes.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Usage Optimization', 'Cost Analysis', 'Predictive Maintenance'],
+    pricing: '$19 - $149/month',
+    category: 'Energy',
+    benefits: ['Cost Savings', 'Energy Efficiency', 'Predictive Maintenance', 'Sustainability'],
+    marketPrice: '$30 - $250/month',
+    link: 'https://ziontechgroup.com/smart-energy-management'
+  },
+  {
+    title: 'AI Translation Manager',
+    description: 'Automated translation and localization platform with AI-powered accuracy.',
+    icon: Globe,
+    features: ['AI Translation', 'Multi-language Support', 'Quality Assurance', 'Workflow Management'],
+    pricing: '$25 - $199/month',
+    category: 'Translation',
+    benefits: ['Accurate Translations', 'Cost Savings', 'Faster Delivery', 'Quality Control'],
+    marketPrice: '$40 - $300/month',
+    link: 'https://ziontechgroup.com/ai-translation-manager'
+  },
+  {
+    title: 'Smart Compliance Monitor',
+    description: 'Automated compliance monitoring and reporting for various industry standards.',
+    icon: Shield,
+    features: ['Compliance Monitoring', 'Automated Reports', 'Risk Assessment', 'Audit Trail'],
+    pricing: '$59 - $399/month',
+    category: 'Compliance',
+    benefits: ['Compliance Assurance', 'Risk Mitigation', 'Automated Reports', 'Audit Readiness'],
+    marketPrice: '$80 - $600/month',
+    link: 'https://ziontechgroup.com/smart-compliance-monitor'
+  },
+  {
+    title: 'AI Video Analytics',
+    description: 'Intelligent video analysis with object detection, behavior analysis, and insights.',
+    icon: Video,
+    features: ['Object Detection', 'Behavior Analysis', 'Real-time Alerts', 'Analytics Dashboard'],
+    pricing: '$39 - $299/month',
+    category: 'Video Analytics',
+    benefits: ['Security Enhancement', 'Behavior Insights', 'Real-time Alerts', 'Cost Savings'],
+    marketPrice: '$60 - $500/month',
+    link: 'https://ziontechgroup.com/ai-video-analytics'
+  },
+  {
+    title: 'Smart Contract Management',
+    description: 'AI-powered contract lifecycle management with automated analysis and compliance tracking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Automated Reviews', 'Compliance Tracking', 'Renewal Alerts'],
+    pricing: '$49 - $399/month',
+    category: 'Legal Tech',
+    benefits: ['Risk Reduction', 'Time Savings', 'Compliance Assurance', 'Cost Control'],
+    marketPrice: '$75 - $600/month',
+    link: 'https://ziontechgroup.com/smart-contract-management'
+  },
+  {
+    title: 'AI-Powered SEO Suite',
+    description: 'Comprehensive SEO optimization platform with AI-driven content and technical analysis.',
+    icon: Search,
+    features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Rank Tracking'],
+    pricing: '$29 - $199/month',
+    category: 'SEO',
+    benefits: ['Higher Rankings', 'More Traffic', 'Better ROI', 'Automated Optimization'],
+    marketPrice: '$50 - $300/month',
+    link: 'https://ziontechgroup.com/ai-seo-suite'
+  },
+  {
+    title: 'Smart Expense Management',
+    description: 'AI-powered expense tracking and reimbursement platform for businesses.',
+    icon: CreditCard,
+    features: ['Receipt OCR', 'Policy Compliance', 'Automated Approval', 'Analytics'],
+    pricing: '$19 - $149/month',
+    category: 'Finance',
+    benefits: ['Time Savings', 'Policy Compliance', 'Cost Control', 'Automation'],
+    marketPrice: '$30 - $250/month',
+    link: 'https://ziontechgroup.com/smart-expense-management'
+  },
+  {
+    title: 'AI-Powered Time Tracking',
+    description: 'Intelligent time tracking with automatic project detection and productivity insights.',
+    icon: Clock,
+    features: ['Auto Time Tracking', 'Project Detection', 'Productivity Analytics', 'Team Management'],
+    pricing: '$15 - $99/month',
+    category: 'Productivity',
+    benefits: ['Accurate Tracking', 'Productivity Insights', 'Team Visibility', 'Billing Accuracy'],
+    marketPrice: '$25 - $150/month',
+    link: 'https://ziontechgroup.com/ai-time-tracking'
+  },
+  {
+    title: 'Smart Meeting Scheduler',
+    description: 'AI-powered meeting scheduling with calendar optimization and conflict resolution.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Conflict Resolution', 'Time Zone Handling', 'Meeting Analytics'],
+    pricing: '$9 - $79/month',
+    category: 'Productivity',
+    benefits: ['Time Savings', 'Fewer Conflicts', 'Better Scheduling', 'Analytics'],
+    marketPrice: '$15 - $120/month',
+    link: 'https://ziontechgroup.com/smart-meeting-scheduler'
+  },
+  {
+    title: 'AI-Powered Password Manager',
+    description: 'Advanced password management with AI security analysis and breach monitoring.',
+    icon: Lock,
+    features: ['Password Generation', 'Security Analysis', 'Breach Monitoring', 'Team Sharing'],
+    pricing: '$5 - $39/month',
+    category: 'Security',
+    benefits: ['Enhanced Security', 'Convenience', 'Team Collaboration', 'Breach Protection'],
+    marketPrice: '$8 - $60/month',
+    link: 'https://ziontechgroup.com/ai-password-manager'
+  },
+  {
+    title: 'Smart Invoice Generator',
+    description: 'AI-powered invoice creation with automated data extraction and payment tracking.',
+    icon: FileText,
+    features: ['Auto Data Extraction', 'Template Customization', 'Payment Tracking', 'Tax Calculation'],
+    pricing: '$19 - $149/month',
+    category: 'Finance',
+    benefits: ['Time Savings', 'Accuracy', 'Professional Invoices', 'Payment Tracking'],
+    marketPrice: '$30 - $250/month',
+    link: 'https://ziontechgroup.com/smart-invoice-generator'
+  },
+  {
+    title: 'AI-Powered Customer Feedback Analysis',
+    description: 'Intelligent analysis of customer feedback with sentiment analysis and actionable insights.',
+    icon: MessageSquare,
+    features: ['Sentiment Analysis', 'Topic Extraction', 'Trend Analysis', 'Actionable Insights'],
+    pricing: '$29 - $199/month',
+    category: 'Customer Experience',
+    benefits: ['Better Understanding', 'Actionable Insights', 'Customer Satisfaction', 'Competitive Edge'],
+    marketPrice: '$50 - $300/month',
+    link: 'https://ziontechgroup.com/ai-customer-feedback'
+  },
+  {
+    title: 'Smart Inventory Forecasting',
+    description: 'AI-powered inventory prediction with demand forecasting and optimization recommendations.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Stock Optimization', 'Seasonal Analysis', 'Reorder Alerts'],
+    pricing: '$39 - $299/month',
+    category: 'Inventory',
+    benefits: ['Reduced Stockouts', 'Lower Costs', 'Better Planning', 'Optimized Inventory'],
+    marketPrice: '$60 - $500/month',
+    link: 'https://ziontechgroup.com/smart-inventory-forecasting'
+  },
+  {
+    title: 'AI-Powered Social Media Scheduler',
+    description: 'Intelligent social media management with optimal posting times and content suggestions.',
+    icon: Globe,
+    features: ['Optimal Timing', 'Content Suggestions', 'Multi-platform Posting', 'Engagement Analytics'],
+    pricing: '$19 - $149/month',
+    category: 'Social Media',
+    benefits: ['Better Engagement', 'Time Savings', 'Consistent Posting', 'Growth Tracking'],
+    marketPrice: '$30 - $250/month',
+    link: 'https://ziontechgroup.com/ai-social-scheduler'
+  },
+  {
+    title: 'Smart Document Scanner',
+    description: 'AI-powered document scanning with OCR, classification, and intelligent filing.',
+    icon: FileText,
+    features: ['OCR Processing', 'Auto Classification', 'Smart Filing', 'Search & Retrieval'],
+    pricing: '$15 - $99/month',
+    category: 'Document Management',
+    benefits: ['Easy Organization', 'Quick Search', 'Paperless Office', 'Time Savings'],
+    marketPrice: '$25 - $150/month',
+    link: 'https://ziontechgroup.com/smart-document-scanner'
+  },
+  {
+    title: 'AI-Powered Lead Scoring',
+    description: 'Intelligent lead qualification and scoring with automated follow-up recommendations.',
+    icon: Target,
+    features: ['Lead Scoring', 'Behavioral Analysis', 'Follow-up Automation', 'Conversion Prediction'],
+    pricing: '$29 - $199/month',
+    category: 'Sales',
+    benefits: ['Higher Conversion', 'Better Prioritization', 'Automated Workflows', 'ROI Improvement'],
+    marketPrice: '$50 - $300/month',
+    link: 'https://ziontechgroup.com/ai-lead-scoring'
+  },
+  {
+    title: 'Smart Email Signature Manager',
+    description: 'AI-powered email signature management with dynamic content and compliance tracking.',
+    icon: Mail,
+    features: ['Dynamic Signatures', 'Compliance Tracking', 'Brand Consistency', 'Analytics'],
+    pricing: '$9 - $59/month',
+    category: 'Email Marketing',
+    benefits: ['Brand Consistency', 'Compliance', 'Professional Image', 'Easy Management'],
+    marketPrice: '$15 - $90/month',
+    link: 'https://ziontechgroup.com/smart-email-signatures'
+  },
+  {
+    title: 'AI-Powered Website Heatmap',
+    description: 'Intelligent website analytics with user behavior tracking and optimization recommendations.',
+    icon: Eye,
+    features: ['Heatmap Analysis', 'User Behavior Tracking', 'Conversion Optimization', 'A/B Testing'],
+    pricing: '$19 - $149/month',
+    category: 'Web Analytics',
+    benefits: ['Better UX', 'Higher Conversions', 'Data-Driven Decisions', 'Optimization'],
+    marketPrice: '$30 - $250/month',
+    link: 'https://ziontechgroup.com/ai-website-heatmap'
+  },
+  {
+    title: 'Smart Appointment Booking',
+    description: 'AI-powered appointment scheduling with automated reminders and conflict resolution.',
+    icon: Calendar,
+    features: ['Auto Scheduling', 'Reminder Automation', 'Conflict Resolution', 'Calendar Sync'],
+    pricing: '$15 - $99/month',
+    category: 'Scheduling',
+    benefits: ['Reduced No-shows', 'Time Savings', 'Better Scheduling', 'Customer Satisfaction'],
+    marketPrice: '$25 - $150/month',
+    link: 'https://ziontechgroup.com/smart-appointment-booking'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation with AI-powered detection of inappropriate content.',
+    icon: Shield,
+    features: ['Content Detection', 'Automated Moderation', 'Custom Rules', 'Real-time Processing'],
+    pricing: '$39 - $299/month',
+    category: 'Content Management',
+    benefits: ['Safer Platform', 'Reduced Manual Work', 'Consistent Moderation', 'Scalability'],
+    marketPrice: '$60 - $500/month',
+    link: 'https://ziontechgroup.com/ai-content-moderation'
+  },
+  {
+    title: 'Smart Backup Manager',
+    description: 'AI-powered backup solution with intelligent scheduling and data deduplication.',
+    icon: Database,
+    features: ['Auto Scheduling', 'Data Deduplication', 'Cloud Storage', 'Recovery Testing'],
+    pricing: '$19 - $149/month',
+    category: 'Data Management',
+    benefits: ['Data Protection', 'Cost Savings', 'Automation', 'Peace of Mind'],
+    marketPrice: '$30 - $250/month',
+    link: 'https://ziontechgroup.com/smart-backup-manager'
+  },
+  {
+    title: 'AI-Powered Form Builder',
+    description: 'Intelligent form creation with conditional logic and automated data processing.',
+    icon: FileText,
+    features: ['Drag & Drop Builder', 'Conditional Logic', 'Auto Processing', 'Analytics'],
+    pricing: '$15 - $99/month',
+    category: 'Form Management',
+    benefits: ['Easy Creation', 'Better UX', 'Data Processing', 'Analytics'],
+    marketPrice: '$25 - $150/month',
+    link: 'https://ziontechgroup.com/ai-form-builder'
+  }
+];
+
+const categories = [
+  'All Products',
+  'Marketing',
+  'Sales',
+  'Analytics',
+  'Automation',
+  'Customer Service',
+  'Inventory',
+  'Email Marketing',
+  'Project Management',
+  'Finance',
+  'HR',
+  'Social Media',
+  'Document Management',
+  'Web Optimization',
+  'E-commerce',
+  'Development',
+  'Energy',
+  'Translation',
+  'Compliance',
+  'Video Analytics',
+  'Legal Tech',
+  'SEO',
+  'Productivity',
+  'Security',
+  'Customer Experience',
+  'Web Analytics',
+  'Scheduling',
+  'Content Management',
+  'Data Management',
+  'Form Management'
+];
+
+const microSaasServices = [
+  {
+    title: "Custom Web Applications",
+    description: "Tailored web applications designed to solve specific business problems with modern technology stacks",
+    icon: Globe,
+    features: [
+      "Responsive Design",
+      "Cross-browser Compatibility",
+      "Progressive Web App (PWA)",
+      "Real-time Updates",
+      "User Authentication",
+      "API Integration"
+    ],
+    color: "from-blue-500 to-cyan-500",
+    benefits: [
+      "Improved efficiency",
+      "Better user experience",
+      "Scalable architecture",
+      "Cost-effective solution"
+    ]
+  },
+  {
+    title: "Mobile Applications",
+    description: "Native and cross-platform mobile apps that deliver exceptional user experiences",
+    icon: Smartphone,
+    features: [
+      "iOS & Android Development",
+      "React Native Solutions",
+      "Flutter Applications",
+      "App Store Optimization",
+      "Push Notifications",
+      "Offline Functionality"
+    ],
+    color: "from-green-500 to-emerald-500",
+    benefits: [
+      "Increased accessibility",
+      "Better engagement",
+      "Mobile-first design",
+      "App store presence"
+    ]
+  },
+  {
+    title: "API Development & Integration",
+    description: "Robust APIs and seamless integrations to connect your systems and data",
+    icon: Code,
+    features: [
+      "RESTful API Design",
+      "GraphQL Implementation",
+      "Third-party Integrations",
+      "API Documentation",
+      "Rate Limiting & Security",
+      "Webhook Support"
+    ],
+    color: "from-purple-500 to-pink-500",
+    benefits: [
+      "System connectivity",
+      "Data synchronization",
+      "Automated workflows",
+      "Reduced manual work"
+    ]
+  },
+  {
+    title: "Data Management Solutions",
+    description: "Comprehensive data handling, processing, and analytics platforms",
+    icon: Database,
+    features: [
+      "Data Collection & Storage",
+      "ETL Processes",
+      "Data Visualization",
+      "Real-time Analytics",
+      "Data Security & Privacy",
+      "Automated Reporting"
+    ],
+    color: "from-orange-500 to-red-500",
+    benefits: [
+      "Better insights",
+      "Data-driven decisions",
+      "Automated reporting",
+      "Compliance assurance"
+    ]
+  },
+  {
+    title: "Workflow Automation",
+    description: "Intelligent automation solutions that streamline business processes",
+    icon: Zap,
+    features: [
+      "Process Automation",
+      "Task Scheduling",
+      "Email Automation",
+      "Document Processing",
+      "Approval Workflows",
+      "Integration Automation"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    benefits: [
+      "Reduced manual work",
+      "Faster processing",
+      "Fewer errors",
+      "Improved efficiency"
+    ]
+  },
+  {
+    title: "E-commerce Solutions",
+    description: "Complete e-commerce platforms with payment processing and inventory management",
+    icon: Layers,
+    features: [
+      "Online Store Setup",
+      "Payment Gateway Integration",
+      "Inventory Management",
+      "Order Processing",
+      "Customer Management",
+      "Analytics & Reporting"
+    ],
+    color: "from-indigo-500 to-purple-500",
+    benefits: [
+      "Online presence",
+      "Revenue generation",
+      "Customer management",
+      "Business growth"
+    ]
+  }
+];
+
+const platforms = [
+  {
+    name: "Web Development",
+    icon: Globe,
+    technologies: ["React", "Next.js", "Vue.js", "Angular", "Node.js", "Python", "PHP"],
+    description: "Modern web applications with responsive design and optimal performance"
+  },
+  {
+    name: "Mobile Development",
+    icon: Smartphone,
+    technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Ionic", "Xamarin"],
+    description: "Cross-platform and native mobile applications for iOS and Android"
+  },
+  {
+    name: "Backend Services",
+    icon: Server,
+    technologies: ["Node.js", "Python", "Java", "C#", "Go", "Ruby", "PHP"],
+    description: "Scalable backend services and APIs for robust application architecture"
+  },
+  {
+    name: "Cloud Platforms",
+    icon: Cloud,
+    technologies: ["AWS", "Azure", "Google Cloud", "Heroku", "Vercel", "Netlify"],
+    description: "Cloud-native applications with auto-scaling and global deployment"
+  },
+  {
+    name: "Databases",
+    icon: Database,
+    technologies: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Firebase", "Supabase"],
+    description: "Reliable data storage and management solutions for all application types"
+  },
+  {
+    name: "DevOps & Deployment",
+    icon: Settings,
+    technologies: ["Docker", "Kubernetes", "CI/CD", "GitHub Actions", "Jenkins", "Terraform"],
+    description: "Automated deployment and infrastructure management for seamless operations"
+  }
+];
+
+const developmentProcess = [
+  {
+    step: "01",
+    title: "Discovery & Planning",
+    description: "We analyze your requirements, define project scope, and create a detailed development plan."
+  },
+  {
+    step: "02",
+    title: "Design & Prototyping",
+    description: "Create wireframes, mockups, and interactive prototypes to visualize the final product."
+  },
+  {
+    step: "03",
+    title: "Development & Testing",
+    description: "Build your application using agile methodology with continuous testing and feedback."
+  },
+  {
+    step: "04",
+    title: "Deployment & Launch",
+    description: "Deploy your application to production with monitoring and performance optimization."
+  },
+  {
+    step: "05",
+    title: "Maintenance & Support",
+    description: "Ongoing maintenance, updates, and support to ensure optimal performance and security."
+  }
+];
+
+
+const pricingTiers = [
+  {
+    name: "Starter",
+    price: "$19-49",
+    description: "Perfect for small businesses",
+    features: ["Basic Features", "Email Support", "5 Users", "1GB Storage"],
+    popular: false
+  },
+  {
+    name: "Professional",
+    price: "$49-199",
+    description: "Ideal for growing businesses",
+    features: ["Advanced Features", "Priority Support", "25 Users", "10GB Storage"]
+  }
+];
+
 const microSaaSProducts = [{
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
@@ -2287,101 +2873,6 @@ const microSaaSProducts = [{
     category: 'Social Media Management'
   }
 ];
-const features = [{
-    icon: Zap,
-    title: 'Rapid Deployment',
-    description: 'Get up and running in days, not months'
-  },
-  {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-level security and compliance'
-  },
-  {
-    icon: Users,
-    title: 'Scalable Architecture',
-    description: 'Grows with your business needs'
-  },
-  {
-    icon: Globe,
-    title: 'Multi-tenant Ready',
-    description: 'Built for SaaS from the ground up'
-  },
-  {
-    icon: BarChart3,
-    title: 'Analytics Built-in',
-    description: 'Comprehensive usage and performance metrics'
-  },
-  {
-    icon: Lock,
-    title: 'Data Privacy',
-    description: 'GDPR and SOC 2 compliant by default'
-  }
-];
-    icon: Clock,
-    title: 'Fast Time to Market',
-    description: 'Launch your SaaS in weeks, not months',
-    stat: '80%'
-  },
-  {
-    icon: DollarSign,
-    title: 'Cost Effective',
-    description: 'Lower development and maintenance costs',
-    stat: '60%'
-  },
-  {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Built-in security and compliance features',
-    stat: '99.9%'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Scalable',
-    description: 'Handles growth from startup to enterprise',
-    stat: '10x'
-  }
-];
-    name: 'Starter',
-    description: 'Perfect for small teams and MVPs',
-    price: '$299',
-    period: '/month',
-    features: [
-      'Up to 1,000 users',
-      'Basic analytics',
-      'Email support',
-      'Standard integrations'
-    ],
-    popular: false
-  },
-  {
-    name: 'Professional',
-    description: 'Ideal for growing businesses',
-    price: '$799',
-    period: '/month',
-      'Advanced analytics',
-      'Priority support',
-      'Enhanced security',
-      '5 custom integrations',
-      'API access'
-    ],
-    popular: true
-  },
-  {
-    name: 'Enterprise',
-    description: 'For large organizations',
-    price: 'Custom',
-    period: '',
-      'Custom analytics',
-      'Dedicated support',
-      'Enterprise security',
-      'Unlimited integrations',
-      'Custom development'
-    ],
-    popular: false
-  }
-];
-
 export default function MicroSaaSPage() {
   return (
         <div className="absolute inset-0">

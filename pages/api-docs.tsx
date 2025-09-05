@@ -212,6 +212,7 @@ const endpoints = [
           </div>
         </section>
       </div>
+    </Layout>
   );
 }
 

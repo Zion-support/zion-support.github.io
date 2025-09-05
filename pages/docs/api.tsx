@@ -1,34 +1,40 @@
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                API Features
-              </h2>
-              <p className="text-xl text-gray-600">
-                Powerful, secure, and easy to use
-              </p>
-            </motion.div>
+import React from 'react';
+import Layout from '../../components/Layout';
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {apiFeatures.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white rounded-lg shadow-lg p-6 text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                  >
-                    <IconComponent className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+const codeExamples = [
+  {
+    language: 'JavaScript',
+    title: 'Fetch Services',
+    code: `const response = await fetch('https://ziontechgroup.com/api/v1/services', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  }
+})
+const data = await response.json()
+`
+  },
+  {
+    language: 'Python',
+    title: 'Submit Contact Form',
+    code: `import requests
+url = 'https://ziontechgroup.com/api/v1/contact'
+headers = {
+  'Authorization': 'Bearer YOUR_API_KEY',
+  'Content-Type': 'application/json'
+}
+data = {
+  'name': 'John Doe',
+  'email': 'john@example.com',
+  'message': 'Interested in AI services',
+  'company': 'Tech Corp'
+}
+response = requests.post(url, json=data, headers=headers)
+print(response.json())
+`
+  }
+];
 
         {/* API Endpoints Section */}
         <section className="py-16 bg-white">
@@ -80,3 +86,5 @@
         <p className="text-gray-600">Reference content will return after fixes. Basic page added to restore build.</p>
       </div>
     </Layout>
+  );
+}
