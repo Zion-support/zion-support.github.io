@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react;
 import * as React from 'react';
 ;
-interface LayoutProps {;
+interface LayoutProps {,
   children: React.ReactNode,
   title?: string,
   description?: string,
@@ -9,9 +9,9 @@ interface LayoutProps {;
 };
 export default function Layout({,
   children,
-  title = "Zion Tech Group",
+  title = "Zion Tech Group,
   description = "Leading technology solutions provider",
-  keywords = "technology, AI, cloud, micro SaaS"
+  keywords = technology, AI, cloud, micro SaaS"
 }: LayoutProps) {,
   return (,
     <div className="min-h-screen bg-gray-50">,

@@ -1,29 +1,28 @@
 #!/usr/bin/env node
-import fs from "fs";
+import fs from "fs;
 import path from "path";
-import { execSync } from "child_process";
-import { fileURLToPath } from "url";
+import { execSync } from child_process";
+import { fileURLToPath } from "url;
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-class SyntaxFixer {
+const __dirname = path.dirname(__filename),
+  class SyntaxFixer {
   constructor() {
-    this.logFile = path.join(__dirname, "logs", "syntax-fixer.log");
-    this.fixesApplied = 0;
-    this.ensureDirectories();
-  }
+    this.logFile = path.join(__dirname, "logs", syntax-fixer.log"),
+  this.fixesApplied = 0,
+  this.ensureDirectories()
+}
 
   ensureDirectories() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
+    const logDir = path.dirname(this.logFile),
+  if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
-  log(message, level = "INFO") {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+  log(message, level = "INFO) {
+    const timestamp = new Date().toISOString(),
+  const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
   }
@@ -39,22 +38,22 @@ class SyntaxFixer {
       
       this.log(`✅ Applied ${this.fixesApplied} syntax fixes`);
     } catch (error) {
-      this.log(`❌ Syntax fixing failed: ${error.message}`, "ERROR");
+      this.log(`❌ Syntax fixing failed: ${error.message}`, ERROR");
     }
   }
 
   async fixCommaIssues() {
-    const files = this.getSourceFiles();
-    files.forEach(file => {
+    const files = this.getSourceFiles(),
+  files.forEach(file => {
       try {
-        let content = fs.readFileSync(file, "utf8");
+        let content = fs.readFileSync(file, "utf8);
         let modified = false;
         
         // Fix trailing commas in arrays and objects
-        content = content.replace(/,(\s*[}\]])/g, '$1');
+        content = content.replace(/,(\s*[}\]])/g, '$1);
         if (content !== fs.readFileSync(file, "utf8")) {
-          modified = true;
-        }
+  modified = true
+}
         
         if (modified) {
           fs.writeFileSync(file, content);
@@ -62,25 +61,25 @@ class SyntaxFixer {
           this.log(`Fixed comma issues in ${file}`);
         }
       } catch (error) {
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
+        this.log(`Failed to fix ${file}: ${error.message}`, WARN");
       }
     });
   }
 
   async fixImportIssues() {
-    const files = this.getSourceFiles();
-    files.forEach(file => {
+  const files = this.getSourceFiles(),
+  files.forEach(file => {
       try {
-        let content = fs.readFileSync(file, "utf8");
-        let modified = false;
-        
-        // Fix import statements
-        content = content.replace(/import\s+([^,]+),\s*$/gm, 'import $1;');
-        content = content.replace(/import\s+([^,]+),\s*$/gm, 'import $1;');
-        
-        if (content !== fs.readFileSync(file, "utf8")) {
-          modified = true;
-        }
+        let content = fs.readFileSync(file, "utf8),
+  let modified = false,
+  // Fix import statements
+        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,
+  '),
+  content = content.replace(/import\s+([^]+),\s*$/gm, import $1,
+  '),
+  if (content !== fs.readFileSync(file, "utf8")) {
+          modified = true
+}
         
         if (modified) {
           fs.writeFileSync(file, content);
@@ -88,24 +87,23 @@ class SyntaxFixer {
           this.log(`Fixed import issues in ${file}`);
         }
       } catch (error) {
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
+        this.log(`Failed to fix ${file}: ${error.message}`, WARN");
       }
     });
   }
 
   async fixExportIssues() {
-    const files = this.getSourceFiles();
-    files.forEach(file => {
+  const files = this.getSourceFiles(),
+  files.forEach(file => {
       try {
-        let content = fs.readFileSync(file, "utf8");
-        let modified = false;
-        
-        // Fix export statements
-        content = content.replace(/export\s+([^,]+),\s*$/gm, 'export $1;');
-        
-        if (content !== fs.readFileSync(file, "utf8")) {
-          modified = true;
-        }
+        let content = fs.readFileSync(file, "utf8),
+  let modified = false,
+  // Fix export statements
+        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,
+  '),
+  if (content !== fs.readFileSync(file, "utf8")) {
+          modified = true
+}
         
         if (modified) {
           fs.writeFileSync(file, content);
@@ -113,27 +111,25 @@ class SyntaxFixer {
           this.log(`Fixed export issues in ${file}`);
         }
       } catch (error) {
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
+        this.log(`Failed to fix ${file}: ${error.message}`, WARN");
       }
     });
   }
 
   getSourceFiles() {
-    const files = [];
-    const srcDir = path.join(process.cwd(), "src");
-    
-    if (fs.existsSync(srcDir)) {
+  const files = [],
+  const srcDir = path.join(process.cwd(), "src),
+  if (fs.existsSync(srcDir)) {
       const walkDir = (dir) => {
-        const items = fs.readdirSync(dir);
-        items.forEach(item => {
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-            walkDir(fullPath);
-          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {
-            files.push(fullPath);
-          }
+        const items = fs.readdirSync(dir),
+  items.forEach(item => {
+          const fullPath = path.join(dir, item),
+  const stat = fs.statSync(fullPath),
+  if (stat.isDirectory() && !item.startsWith(".") && item !== node_modules") {
+            walkDir(fullPath)
+} else if (item.endsWith(".ts) || item.endsWith(".tsx") || item.endsWith(.js") || item.endsWith(".jsx)) {
+  files.push(fullPath)
+}
         });
       };
       
@@ -149,7 +145,7 @@ class SyntaxFixer {
     try {
       await this.fixSyntaxErrors();
       
-      this.log("=" * 50);
+      this.log(=" * 50);
       this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`);
       
     } catch (error) {
@@ -160,8 +156,8 @@ class SyntaxFixer {
 
 // Main execution
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const fixer = new SyntaxFixer();
-  fixer.run().catch(console.error);
+  const fixer = new SyntaxFixer(),
+  fixer.run().catch(console.error)
 }
 
 export default SyntaxFixer;

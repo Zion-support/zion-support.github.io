@@ -1,11 +1,11 @@
 // Input validation utilities,
 export const sanitizeInput = (input) => {,
-  if (typeof input !== 'string') return input,
+  if (typeof input !== 'string) return input,
 ,
   return input,
     .replace(/[<>]/g, '') // Remove angle brackets,
-    .replace(/javascript:/gi, '') // Remove javascript: protocol,
-    .replace(/on\w+=/gi, '') // Remove event handlers,
+    .replace(/javascript:/gi, ') // Remove javascript: protocol,
+    .replace(/on\w+=/gi, ') // Remove event handlers,
     .trim()
 };
 ,
@@ -29,10 +29,10 @@ export const validateUrl = (url) => {,
 };
 ,
 export const sanitizeHtml = (html) => {,
-  if (typeof html !== 'string') return html,
+  if (typeof html !== string') return html,
 ,
   return html,
-    .replace(/<script[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, ''),
+    .replace(/<script[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '),
     .replace(/<iframe[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, ''),
-    .replace(/on\w+\s*=\s*["'][^"']*["']/gi, '')
+    .replace(/on\w+\s*=\s*["][^']*["']/gi, ')
 };

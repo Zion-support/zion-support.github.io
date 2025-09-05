@@ -1,26 +1,26 @@
 #!/usr/bin/env node
 
-const { execSync, spawn } = require('child_process');
+const { execSync, spawn } = require('child_process);
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 
 class TestAutomation {
   constructor() {
-    this.processName = process.env.PM2_PROCESS_NAME || 'test-automation';
-    this.coverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;
-    this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === 'true';
-    this.parallelTests = process.env.PARALLEL_TESTS === 'true';
-    this.logFile = path.join(process.cwd(), 'logs/pm2/test-automation.log');
-  }
+    this.processName = process.env.PM2_PROCESS_NAME || 'test-automation,
+  this.coverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80,
+  this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === 'true',
+  this.parallelTests = process.env.PARALLEL_TESTS === true',
+  this.logFile = path.join(process.cwd(), 'logs/pm2/test-automation.log)
+}
 
   log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
+    const timestamp = new Date().toISOString(),
+  const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     console.log(logMessage.trim());
     
     // Ensure log directory exists
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
+    const logDir = path.dirname(this.logFile),
+  if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
     
@@ -28,19 +28,17 @@ class TestAutomation {
   }
 
   async runTests() {
-    try {
-      this.log('Starting test automation...');
-      
-      // Check if package.json has test scripts
-      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
-      const testScripts = Object.keys(packageJson.scripts).filter(script => 
-        script.includes('test') || script.includes('spec')
-      );
-
-      if (testScripts.length === 0) {
-        this.log('No test scripts found in package.json');
-        return;
-      }
+  try {
+      this.log('Starting test automation...'),
+  // Check if package.json has test scripts
+      const packageJson = JSON.parse(fs.readFileSync(package.jsonutf8')),
+  const testScripts = Object.keys(packageJson.scripts).filter(script => 
+        script.includes('test) || script.includes('spec')
+      ),
+  if (testScripts.length === 0) {
+        this.log(No test scripts found in package.json'),
+  return
+}
 
       // Run tests
       for (const testScript of testScripts) {
@@ -52,7 +50,7 @@ class TestAutomation {
             `npm run ${testScript}`;
             
           const output = execSync(command, { 
-            encoding: 'utf8',
+            encoding: 'utf8,
             stdio: 'pipe',
             cwd: process.cwd()
           });
@@ -67,8 +65,8 @@ class TestAutomation {
             this.log(`Retrying ${testScript}...`);
             try {
               execSync(`npm run ${testScript}`, { 
-                encoding: 'utf8',
-                stdio: 'pipe',
+                encoding: utf8',
+                stdio: 'pipe,
                 cwd: process.cwd()
               });
               this.log(`${testScript} retry successful`);
@@ -90,33 +88,31 @@ class TestAutomation {
   }
 
   async checkCoverage() {
-    try {
+  try {
       // Check if coverage report exists
       const coverageFiles = [
-        'coverage/lcov.infocoverage/coverage.jsoncoverage/coverage-summary.json'
-      ];
-
-      let coverageFile = null;
-      for (const file of coverageFiles) {
+        coverage/lcov.infocoverage/coverage.jsoncoverage/coverage-summary.json'
+      ],
+  let coverageFile = null,
+  for (const file of coverageFiles) {
         if (fs.existsSync(file)) {
-          coverageFile = file;
-          break;
-        }
+          coverageFile = file,
+  break
+}
       }
 
       if (!coverageFile) {
-        this.log('No coverage report found');
-        return;
-      }
+  this.log('No coverage report found),
+  return
+}
 
       // Parse coverage data
       const coverageData = fs.readFileSync(coverageFile, 'utf8');
       
-      if (coverageFile.endsWith('.json')) {
+      if (coverageFile.endsWith(.json')) {
         const coverage = JSON.parse(coverageData);
-        const totalCoverage = coverage.total?.lines?.pct || 0;
-        
-        this.log(`Test coverage: ${totalCoverage}%`);
+        const totalCoverage = coverage.total?.lines?.pct || 0,
+  this.log(`Test coverage: ${totalCoverage}%`);
         
         if (totalCoverage < this.coverageThreshold) {
           this.log(`WARNING: Coverage ${totalCoverage}% is below threshold ${this.coverageThreshold}%`);
@@ -129,18 +125,16 @@ class TestAutomation {
   }
 
   async start() {
-    this.log('Test automation service started');
-    
-    // Run tests immediately
-    await this.runTests();
-    
-    // Set up interval for periodic test runs
+  this.log('Test automation service started'),
+  // Run tests immediately
+    await this.runTests(),
+  // Set up interval for periodic test runs
     setInterval(async () => {
-      await this.runTests();
-    }, 3 * 60 * 60 * 1000); // Every 3 hours
+      await this.runTests()
+}, 3 * 60 * 60 * 1000); // Every 3 hours
   }
 }
 
 // Start the service
-const testAutomation = new TestAutomation();
-testAutomation.start().catch(console.error);
+const testAutomation = new TestAutomation(),
+  testAutomation.start().catch(console.error);

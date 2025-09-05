@@ -1,28 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react;
 import Head from 'next/head';
 
 interface AnalyticsProps {
-  trackingId?: string;
+  trackingId?: string
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
+const Analytics: React.FC<AnalyticsProps> = ({ trackingId = G-XXXXXXXXXX' }) => {
   useEffect(() => {
     // Google Analytics 4
-    if (typeof window !== 'undefined' && trackingId) {
+    if (typeof window !== 'undefined && trackingId) {
       // Load gtag script
       const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      script.async = true,
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
 
       // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: unknown[]) {
-        window.dataLayer.push(args);
-      }
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', trackingId, {
+      window.dataLayer = window.dataLayer || [],
+  function gtag(...args: unknown[]) {
+  window.dataLayer.push(args)
+}
+      window.gtag = gtag,
+  gtag(js', new Date());
+      gtag('config, trackingId, {
         page_title: document.title,
         page_location: window.location.href
       });
@@ -41,29 +41,29 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 
       // Track page view on route change (for SPA behavior)
       const handleRouteChange = () => {
-        trackPageView();
-      };
+  trackPageView()
+};
 
       // Listen for popstate events (back/forward navigation)
-      window.addEventListener('popstate', handleRouteChange);
+      window.addEventListener(popstate', handleRouteChange);
 
       // Cleanup
       return () => {
-        window.removeEventListener('popstate', handleRouteChange);
-      };
+  window.removeEventListener('popstate, handleRouteChange)
+};
     }
   }, [trackingId]);
 
   // Track custom events
   const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
-    }
+  if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag(event', eventName, parameters)
+}
   };
 
   // Track button clicks
   const trackButtonClick = (buttonName: string, location?: string) => {
-    trackEvent('button_click', {
+    trackEvent('button_click, {
       button_name: buttonName,
       location: location || window.location.pathname
     });
@@ -79,7 +79,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 
   // Track external link clicks
   const trackExternalLink = (url: string, linkText: string) => {
-    trackEvent('external_link_click', {
+    trackEvent(external_link_click', {
       link_url: url,
       link_text: linkText,
       page_location: window.location.href
@@ -87,12 +87,12 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   };
 
   // Expose tracking functions globally for use in other components
-  if (typeof window !== 'undefined') {
-    (window as unknown as Record<string, unknown>).trackEvent = trackEvent;
-    (window as unknown as Record<string, unknown>).trackButtonClick = trackButtonClick;
-    (window as unknown as Record<string, unknown>).trackFormSubmission = trackFormSubmission;
-    (window as unknown as Record<string, unknown>).trackExternalLink = trackExternalLink;
-  }
+  if (typeof window !== 'undefined) {
+  (window as unknown as Record<string, unknown>).trackEvent = trackEvent,
+  (window as unknown as Record<string, unknown>).trackButtonClick = trackButtonClick,
+  (window as unknown as Record<string, unknown>).trackFormSubmission = trackFormSubmission,
+  (window as unknown as Record<string, unknown>).trackExternalLink = trackExternalLink
+}
 
   return (
     <Head>
@@ -101,14 +101,14 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
           __html: `
             // Performance monitoring
             if ('performance' in window) {
-              window.addEventListener('load', function() {
+              window.addEventListener(load', function() {
                 setTimeout(function() {
-                  const perfData = performance.getEntriesByType('navigation')[0];
+                  const perfData = performance.getEntriesByType('navigation)[0];
                   if (perfData) {
-                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-                    if (window.gtag) {
+                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart,
+  if (window.gtag) {
                       window.gtag('eventtiming_complete', {
-                        name: 'load',
+                        name: load',
                         value: Math.round(loadTime)
                       });
                     }

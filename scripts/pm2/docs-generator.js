@@ -1,43 +1,43 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs);
+const path = require('path'),
+  const { execSync } = require(child_process');
 
 class DocsGenerator {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/docs-generator.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/docs-generator-report.json');
-    this.startTime = Date.now();
-  }
+    this.projectRoot = process.cwd(),
+  this.logFile = path.join(this.projectRoot, 'logs/pm2/docs-generator.log),
+  this.reportFile = path.join(this.projectRoot, 'logs/pm2/docs-generator-report.json'),
+  this.startTime = Date.now()
+}
 
   log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
+    const timestamp = new Date().toISOString(),
+  const logMessage = `[${timestamp}] ${message}\n`;
     
     try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {
-      console.error('Error writing to log file:', error.message);
-    }
+  fs.appendFileSync(this.logFile, logMessage)
+} catch (error) {
+  console.error(Error writing to log file:', error.message)
+}
   }
 
   async generateReadme() {
     try {
-      this.log('📝 Generating README.md...');
+      this.log('📝 Generating README.md...);
       
-      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
-      const readmeContent = `# ${packageJson.name}
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
+  const readmeContent = `# ${packageJson.name}
 
-${packageJson.description || 'A modern web application built with Next.js'}
+${packageJson.description || A modern web application built with Next.js'}
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - Node.js ${process.version}
-- npm ${execSync('npm --version', { encoding: 'utf8' }).trim()}
+- npm ${execSync('npm --version, { encoding: 'utf8' }).trim()}
 
 ### Installation
 
@@ -74,12 +74,12 @@ ${this.projectRoot}/
 
 ## 🛠️ Available Scripts
 
-${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')}
+${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join(\n')}
 
 ## 📦 Dependencies
 
 ### Production Dependencies
-${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n')}
+${Object.keys(packageJson.dependencies || {}).map(dep => `- ${dep}`).join('\n)}
 
 ### Development Dependencies
 ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n')}
@@ -105,7 +105,7 @@ The project includes automated monitoring with PM2:
 
 1. Fork the repository
 2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`)
-3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`)
+3. Commit your changes (\`git commit -m Add some AmazingFeature'\`)
 4. Push to the branch (\`git push origin feature/AmazingFeature\`)
 5. Open a Pull Request
 
@@ -122,7 +122,7 @@ For support, email support@example.com or create an issue in the repository.
 Generated on ${new Date().toISOString()}
 `;
 
-      fs.writeFileSync('README.md', readmeContent);
+      fs.writeFileSync('README.md, readmeContent);
       
       return {
         success: true,
@@ -138,13 +138,13 @@ Generated on ${new Date().toISOString()}
 
   async generateApiDocs() {
     try {
-      this.log('🔌 Generating API documentation...');
+      this.log(🔌 Generating API documentation...');
       
       const apiDocs = {
-        title: 'API Documentation',
+        title: 'API Documentation,
         version: '1.0.0',
-        description: 'API endpoints and documentation',
-        baseUrl: 'http://localhost:3000',
+        description: API endpoints and documentation',
+        baseUrl: 'http://localhost:3000,
         endpoints: [],
         generatedAt: new Date().toISOString()
       };
@@ -152,14 +152,13 @@ Generated on ${new Date().toISOString()}
       // Scan for API routes
       const pagesDir = path.join(this.projectRoot, 'pages/api');
       if (fs.existsSync(pagesDir)) {
-        const apiFiles = this.getApiFiles(pagesDir);
-        
-        apiFiles.forEach(file => {
-          const content = fs.readFileSync(file, 'utf8');
-          const endpoint = this.extractApiEndpoint(file, content);
-          if (endpoint) {
-            apiDocs.endpoints.push(endpoint);
-          }
+  const apiFiles = this.getApiFiles(pagesDir),
+  apiFiles.forEach(file => {
+          const content = fs.readFileSync(file, utf8'),
+  const endpoint = this.extractApiEndpoint(file, content),
+  if (endpoint) {
+            apiDocs.endpoints.push(endpoint)
+}
         });
       }
       
@@ -178,7 +177,7 @@ ${apiDocs.endpoints.map(endpoint => `
 ${endpoint.description}
 
 **Parameters:**
-${endpoint.parameters.map(param => `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')}
+${endpoint.parameters.map(param => `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n)}
 
 **Response:**
 \`\`\`json
@@ -204,11 +203,11 @@ API requests are rate limited to prevent abuse. Please respect the rate limits a
 Generated by Docs Generator on ${new Date().toISOString()}
 `;
 
-      fs.writeFileSync('docs/API.md', docsContent);
+      fs.writeFileSync(docs/API.md', docsContent);
       
       return {
         success: true,
-        message: 'API documentation generated successfully',
+        message: 'API documentation generated successfully,
         endpoints: apiDocs.endpoints.length
       };
     } catch (error) {
@@ -220,19 +219,17 @@ Generated by Docs Generator on ${new Date().toISOString()}
   }
 
   getApiFiles(dir) {
-    const files = [];
-    
-    const scanDirectory = (currentDir) => {
-      const items = fs.readdirSync(currentDir);
-      items.forEach(item => {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else if (item.endsWith('.js') || item.endsWith('.ts')) {
-          files.push(fullPath);
-        }
+  const files = [],
+  const scanDirectory = (currentDir) => {
+      const items = fs.readdirSync(currentDir),
+  items.forEach(item => {
+        const fullPath = path.join(currentDir, item),
+  const stat = fs.statSync(fullPath),
+  if (stat.isDirectory()) {
+          scanDirectory(fullPath)
+} else if (item.endsWith('.js') || item.endsWith(.ts')) {
+  files.push(fullPath)
+}
       });
     };
     
@@ -241,17 +238,16 @@ Generated by Docs Generator on ${new Date().toISOString()}
   }
 
   extractApiEndpoint(filePath, content) {
-    const relativePath = filePath.replace(this.projectRoot + '/pages/api', '');
-    const path = relativePath.replace(/\.(js|ts)$/, '').replace(/\/index$/, '') || '/';
+    const relativePath = filePath.replace(this.projectRoot + '/pages/api, '');
+    const path = relativePath.replace(/\.(js|ts)$/, ').replace(/\/index$/, ') || '/';
     
     // Extract HTTP method from content
-    const method = content.includes('export default') ? 'GET' : 'POST';
+    const method = content.includes(export default') ? 'GET : 'POST';
     
     // Extract description from comments
     const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//);
-    const description = commentMatch ? commentMatch[1].trim() : 'API endpoint';
-    
-    return {
+    const description = commentMatch ? commentMatch[1].trim() : API endpoint',
+  return {
       method: method,
       path: path,
       description: description,
@@ -264,21 +260,18 @@ Generated by Docs Generator on ${new Date().toISOString()}
   }
 
   async generateComponentDocs() {
-    try {
-      this.log('🧩 Generating component documentation...');
-      
-      const componentsDir = path.join(this.projectRoot, 'components');
-      const componentDocs = [];
-      
-      if (fs.existsSync(componentsDir)) {
-        const componentFiles = this.getComponentFiles(componentsDir);
-        
-        componentFiles.forEach(file => {
-          const content = fs.readFileSync(file, 'utf8');
-          const componentInfo = this.extractComponentInfo(file, content);
-          if (componentInfo) {
-            componentDocs.push(componentInfo);
-          }
+  try {
+      this.log('🧩 Generating component documentation...),
+  const componentsDir = path.join(this.projectRoot, 'components'),
+  const componentDocs = [],
+  if (fs.existsSync(componentsDir)) {
+        const componentFiles = this.getComponentFiles(componentsDir),
+  componentFiles.forEach(file => {
+          const content = fs.readFileSync(file, utf8'),
+  const componentInfo = this.extractComponentInfo(file, content),
+  if (componentInfo) {
+            componentDocs.push(componentInfo)
+}
         });
       }
       
@@ -297,7 +290,7 @@ ${component.description}
 **File**: \`${component.file}\`
 
 **Props:**
-${component.props.map(prop => `- \`${prop.name}\` (${prop.type}): ${prop.description}`).join('\n')}
+${component.props.map(prop => `- \`${prop.name}\` (${prop.type}): ${prop.description}`).join('\n)}
 
 **Usage:**
 \`\`\`jsx
@@ -310,11 +303,11 @@ ${component.usage}
 Generated by Docs Generator on ${new Date().toISOString()}
 `;
 
-      fs.writeFileSync('docs/COMPONENTS.md', docsContent);
+      fs.writeFileSync(docs/COMPONENTS.md', docsContent);
       
       return {
         success: true,
-        message: 'Component documentation generated successfully',
+        message: 'Component documentation generated successfully,
         components: componentDocs.length
       };
     } catch (error) {
@@ -326,19 +319,17 @@ Generated by Docs Generator on ${new Date().toISOString()}
   }
 
   getComponentFiles(dir) {
-    const files = [];
-    
-    const scanDirectory = (currentDir) => {
-      const items = fs.readdirSync(currentDir);
-      items.forEach(item => {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else if (item.endsWith('.jsx') || item.endsWith('.tsx')) {
-          files.push(fullPath);
-        }
+  const files = [],
+  const scanDirectory = (currentDir) => {
+      const items = fs.readdirSync(currentDir),
+  items.forEach(item => {
+        const fullPath = path.join(currentDir, item),
+  const stat = fs.statSync(fullPath),
+  if (stat.isDirectory()) {
+          scanDirectory(fullPath)
+} else if (item.endsWith('.jsx') || item.endsWith(.tsx')) {
+  files.push(fullPath)
+}
       });
     };
     
@@ -351,17 +342,17 @@ Generated by Docs Generator on ${new Date().toISOString()}
     const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
     
     // Extract description from comments
-    const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//);
-    const description = commentMatch ? commentMatch[1].trim() : `${componentName} component`;
+    const commentMatch = content.match(/\/\*\*([\s\S]*?)\*\//),
+  const description = commentMatch ? commentMatch[1].trim() : `${componentName} component`;
     
     // Extract props from interface or PropTypes
-    const props = [];
-    const propMatch = content.match(/interface\s+\w+Props\s*{([\s\S]*?)}/);
+    const props = [],
+  const propMatch = content.match(/interface\s+\w+Props\s*{([\s\S]*?)}/);
     if (propMatch) {
-      const propLines = propMatch[1].split('\n');
+      const propLines = propMatch[1].split('\n);
       propLines.forEach(line => {
-        const propMatch = line.match(/(\w+)\s*:\s*(\w+)/);
-        if (propMatch) {
+        const propMatch = line.match(/(\w+)\s*:\s*(\w+)/),
+  if (propMatch) {
           props.push({
             name: propMatch[1],
             type: propMatch[2],
@@ -373,7 +364,7 @@ Generated by Docs Generator on ${new Date().toISOString()}
     
     return {
       name: componentName,
-      file: filePath.replace(this.projectRoot + '/', ''),
+      file: filePath.replace(this.projectRoot + /', '),
       description: description,
       props: props,
       usage: `<${componentName} />`
@@ -402,32 +393,32 @@ Generated by Docs Generator on ${new Date().toISOString()}
     if (!readmeResult.success) {
       report.recommendations.push({
         priority: 'high',
-        message: 'README generation failed',
-        action: 'Check file permissions and try again'
+        message: README generation failed',
+        action: 'Check file permissions and try again
       });
     }
     
     if (!apiResult.success) {
       report.recommendations.push({
         priority: 'medium',
-        message: 'API documentation generation failed',
-        action: 'Check API route files and try again'
+        message: API documentation generation failed',
+        action: 'Check API route files and try again
       });
     }
     
     if (!componentResult.success) {
       report.recommendations.push({
         priority: 'medium',
-        message: 'Component documentation generation failed',
-        action: 'Check component files and try again'
+        message: Component documentation generation failed',
+        action: 'Check component files and try again
       });
     }
     
     if (report.summary.totalEndpoints === 0) {
       report.recommendations.push({
         priority: 'low',
-        message: 'No API endpoints found',
-        action: 'Consider adding API routes for better documentation'
+        message: No API endpoints found',
+        action: 'Consider adding API routes for better documentation
       });
     }
     
@@ -436,8 +427,8 @@ Generated by Docs Generator on ${new Date().toISOString()}
 
   async saveReport(report) {
     try {
-      const reportDir = path.dirname(this.reportFile);
-      if (!fs.existsSync(reportDir)) {
+      const reportDir = path.dirname(this.reportFile),
+  if (!fs.existsSync(reportDir)) {
         fs.mkdirSync(reportDir, { recursive: true });
       }
       
@@ -453,14 +444,14 @@ Generated by Docs Generator on ${new Date().toISOString()}
     this.log(`Project root: ${this.projectRoot}`);
     
     try {
-      // Create logs directory if it doesn't exist
-      const logsDir = path.dirname(this.logFile);
-      if (!fs.existsSync(logsDir)) {
+      // Create logs directory if it doesnt exist
+      const logsDir = path.dirname(this.logFile),
+  if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
       }
       
       // Create docs directory if it doesn't exist
-      const docsDir = path.join(this.projectRoot, 'docs');
+      const docsDir = path.join(this.projectRoot, 'docs);
       if (!fs.existsSync(docsDir)) {
         fs.mkdirSync(docsDir, { recursive: true });
       }
@@ -471,8 +462,8 @@ Generated by Docs Generator on ${new Date().toISOString()}
       const componentResult = await this.generateComponentDocs();
       
       // Generate report
-      this.log('📊 Generating documentation report...');
-      const report = await this.generateReport(readmeResult, apiResult, componentResult);
+      this.log('📊 Generating documentation report...'),
+  const report = await this.generateReport(readmeResult, apiResult, componentResult);
       
       // Save report
       await this.saveReport(report);
@@ -480,23 +471,23 @@ Generated by Docs Generator on ${new Date().toISOString()}
       const duration = Date.now() - this.startTime;
       
       // Log summary
-      this.log('\n📊 Docs Generator Summary:');
-      this.log(`README: ${report.summary.readmeGenerated ? 'Generated' : 'Failed'}`);
-      this.log(`API Docs: ${report.summary.apiDocsGenerated ? 'Generated' : 'Failed'}`);
-      this.log(`Component Docs: ${report.summary.componentDocsGenerated ? 'Generated' : 'Failed'}`);
+      this.log(\n📊 Docs Generator Summary:'),
+  this.log(`README: ${report.summary.readmeGenerated ? 'Generated : 'Failed'}`);
+      this.log(`API Docs: ${report.summary.apiDocsGenerated ? Generated' : 'Failed}`);
+      this.log(`Component Docs: ${report.summary.componentDocsGenerated ? 'Generated' : Failed'}`);
       this.log(`Total Endpoints: ${report.summary.totalEndpoints}`);
       this.log(`Total Components: ${report.summary.totalComponents}`);
       this.log(`Duration: ${duration}ms`);
       
       if (report.recommendations.length > 0) {
-        this.log('\n💡 Recommendations:');
-        report.recommendations.forEach(rec => {
+        this.log('\n💡 Recommendations:),
+  report.recommendations.forEach(rec => {
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);
         });
       } else {
-        this.log('\n✨ Documentation generated successfully!');
-      }
+  this.log('\n✨ Documentation generated successfully!')
+}
       
     } catch (error) {
       this.log(`❌ Error running docs generator: ${error.message}`);
@@ -506,7 +497,7 @@ Generated by Docs Generator on ${new Date().toISOString()}
 }
 
 // Run the docs generator
-const docsGenerator = new DocsGenerator();
-docsGenerator.run().catch(error => {
-  process.exit(1);
+const docsGenerator = new DocsGenerator(),
+  docsGenerator.run().catch(error => {
+  process.exit(1)
 });

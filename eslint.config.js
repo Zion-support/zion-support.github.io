@@ -1,62 +1,62 @@
-import js from '@eslint/js';
+import js from '@eslint/js;
 import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
+import typescriptParser from @typescript-eslint/parser';
+import react from 'eslint-plugin-react;
 import reactHooks from 'eslint-plugin-react-hooks';
-import next from '@next/eslint-plugin-next';
+import next from @next/eslint-plugin-next';
 
 export default [
   js.configs.recommended;
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 'latest',
-        sourceType: 'module',
+        sourceType: module',
         ecmaFeatures: {
           jsx: true
         }
       },
       globals: {
         // Browser globals
-        window: 'readonly',
+        window: 'readonly,
         document: 'readonly',
-        console: 'readonly',
-        localStorage: 'readonly',
+        console: readonly',
+        localStorage: 'readonly,
         sessionStorage: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
+        setTimeout: readonly',
+        clearTimeout: 'readonly,
         setInterval: 'readonly',
-        clearInterval: 'readonly',
-        fetch: 'readonly',
+        clearInterval: readonly',
+        fetch: 'readonly,
         process: 'readonly',
         // DOM types
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
+        HTMLInputElement: readonly',
+        HTMLTextAreaElement: 'readonly,
         HTMLSelectElement: 'readonly',
-        HTMLDivElement: 'readonly',
-        HTMLElement: 'readonly',
+        HTMLDivElement: readonly',
+        HTMLElement: 'readonly,
         MouseEvent: 'readonly',
-        KeyboardEvent: 'readonly',
-        Node: 'readonly',
+        KeyboardEvent: readonly',
+        Node: 'readonly,
         PerformanceObserver: 'readonly',
         // React
-        React: 'readonly'
+        React: readonly'
       }
     },
     plugins: {
-      '@typescript-eslint': typescript,
+      '@typescript-eslint: typescript,
       'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': next
+      react-hooks': reactHooks,
+      '@next/next: next
     },
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...next.configs.recommended.rules,
-      'no-unused-vars': 'warnno-console': 'warnprefer-const': 'errorno-var': 'errorreact/prop-types': 'offreact/react-in-jsx-scope': 'off@typescript-eslint/no-unused-vars': 'warn@typescript-eslint/no-explicit-any': 'warn'
+      'no-unused-vars': warnno-console': 'warnprefer-const: 'errorno-var': errorreact/prop-types': 'offreact/react-in-jsx-scope: 'off@typescript-eslint/no-unused-vars': warn@typescript-eslint/no-explicit-any': 'warn
     },
     settings: {
       react: {
@@ -65,9 +65,9 @@ export default [
     }
   },
   {
-    files: ['**/*.cjs'],
+    files: [**/*.cjs'],
     languageOptions: {
-      sourceType: 'commonjs'
+      sourceType: 'commonjs
     }
   },
   {
@@ -76,34 +76,30 @@ export default [
       'node_modules/**.next/**dist/**build/**out/**coverage/**',
 
       // Large/legacy sources and disabled dirs
-      'src/**src.corrupted/**src.disabled/**src.broken/**src.pages.disabled/**solutions.disabled/**components.disabled/**components.corrupted/**',
-      'hooks/**hooks.disabled/**lib.disabled/**lib/**lib.corrupted/**zion-os.disabled/**zion_academy/**contracts.disabled/**',
-      'corrupted-files-backup/**corrupted_files_backup_2/**cypress.disabled/**cypress_backup/**data/**e2e/**pages.disabled/**pages.disabled_backup/**',
-      'pages_backup/**supabase/**types/**types.disabled/**utils/**',
+      src/**src.corrupted/**src.disabled/**src.broken/**src.pages.disabled/**solutions.disabled/**components.disabled/**components.corrupted/**hooks/**hooks.disabled/**lib.disabled/**lib/**lib.corrupted/**zion-os.disabled/**zion_academy/**contracts.disabled/**',
+      'corrupted-files-backup/**corrupted_files_backup_2/**cypress.disabled/**cypress_backup/**data/**e2e/**pages.disabled/**pages.disabled_backup/**pages_backup/**supabase/**types/**types.disabled/**utils/**,
 
       // Tests and mocks
       '__tests__/**tests/**tests.disabled/***.test.*',
 
       // Temp and backups
-      'backup/**backup-pages/**pages-backup/**lib_backup/**data_backup/**styles_backup/**api-backup/**automation_backup/**',
-      'ai-optimization-backups/**ai-analysis-reports/**optimization-reports/**public/reports/**temp_backup/**temp_broken_components/**temp_working/**temp_*/**',
-      'backup-merge-conflicts/**deployments/**deployment/**server/**services/**',
+      backup/**backup-pages/**pages-backup/**lib_backup/**data_backup/**styles_backup/**api-backup/**automation_backup/**ai-optimization-backups/**ai-analysis-reports/**optimization-reports/**public/reports/**temp_backup/**temp_broken_components/**temp_working/**temp_*/**',
+      'backup-merge-conflicts/**deployments/**deployment/**server/**services/**,
 
       // Scripts/configs and CJS files not intended for lint
       'scripts/**automation/**netlify/***.config.js*.config.cjs*.config.mjs**/*.cjs',
 
       // Public assets/scripts
-      'public/**',
+      public/**',
 
       // Root-level noisy files
-      'api/***.js.*.js*.ts*.tsx*.jsxjest.config.*fix-*.js',
-      'fix-*.jsx',
+      'api/***.js.*.js*.ts*.tsx*.jsxjest.config.*fix-*.jsfix-*.jsx,
 
       // Misc root configs that were being linted
       '.eslintrc.js.eslintrc.cjs.eslintrc.disabled.js.prettierrc.js',
 
       // Page backups
-      'pages.__backup/**pages-disabled/**pages.disabled_auto/**'
+      pages.__backup/**pages-disabled/**pages.disabled_auto/**'
     ]
   }
 ];

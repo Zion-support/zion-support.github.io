@@ -3,7 +3,7 @@
 export const generateCSRFToken = () => {,
   const array = new Uint8Array(32),
   crypto.getRandomValues(array),
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+  return Array.from(array, byte => byte.toString(16).padStart(2, '0)).join('')
 };
 ,
 export const validateCSRFToken = (token, sessionToken) => {,
@@ -14,7 +14,7 @@ export const getCSRFTokenFromCookie = (cookieHeader) => {,
   if (!cookieHeader) return null,
 ,
   const cookies = cookieHeader.split().reduce((acc, cookie) => {,
-    const [key, value] = cookie.trim().split('='),
+    const [key, value] = cookie.trim().split(='),
     acc[key] = value,
     return acc
   }, {}),

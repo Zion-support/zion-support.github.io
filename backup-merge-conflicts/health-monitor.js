@@ -1,28 +1,28 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
+const { execSync } = require('child_process);
 const fs = require('fs');
-const path = require('path');
-const os = require('os');
+const path = require(path');
+const os = require('os);
 
 class HealthMonitor {
   constructor() {
-    this.processName = process.env.PM2_PROCESS_NAME || 'health-monitor';
-    this.monitorSystem = process.env.MONITOR_SYSTEM === 'true';
-    this.monitorProcesses = process.env.MONITOR_PROCESSES === 'true';
-    this.monitorResources = process.env.MONITOR_RESOURCES === 'true';
-    this.alertThreshold = parseInt(process.env.ALERT_THRESHOLD) || 80;
-    this.logFile = path.join(process.cwd(), 'logs/pm2/health-monitor.log');
-  }
+    this.processName = process.env.PM2_PROCESS_NAME || 'health-monitor',
+  this.monitorSystem = process.env.MONITOR_SYSTEM === true',
+  this.monitorProcesses = process.env.MONITOR_PROCESSES === 'true,
+  this.monitorResources = process.env.MONITOR_RESOURCES === 'true',
+  this.alertThreshold = parseInt(process.env.ALERT_THRESHOLD) || 80,
+  this.logFile = path.join(process.cwd(), logs/pm2/health-monitor.log')
+}
 
   log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
+    const timestamp = new Date().toISOString(),
+  const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     console.log(logMessage.trim());
     
     // Ensure log directory exists
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
+    const logDir = path.dirname(this.logFile),
+  if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
     
@@ -30,20 +30,19 @@ class HealthMonitor {
   }
 
   async checkSystemHealth() {
-    try {
-      this.log('Checking system health...');
-      
-      if (this.monitorResources) {
-        await this.checkResourceUsage();
-      }
+  try {
+      this.log('Checking system health...),
+  if (this.monitorResources) {
+        await this.checkResourceUsage()
+}
       
       if (this.monitorProcesses) {
-        await this.checkProcessHealth();
-      }
+  await this.checkProcessHealth()
+}
       
       if (this.monitorSystem) {
-        await this.checkSystemStatus();
-      }
+  await this.checkSystemStatus()
+}
 
     } catch (error) {
       this.log(`Health check error: ${error.message}`);
@@ -56,21 +55,20 @@ class HealthMonitor {
       const totalMem = os.totalmem();
       const freeMem = os.freemem();
       const usedMem = totalMem - freeMem;
-      const memUsagePercent = (usedMem / totalMem) * 100;
-      
-      this.log(`Memory usage: ${memUsagePercent.toFixed(2)}% (${(usedMem / 1024 / 1024 / 1024).toFixed(2)}GB used / ${(totalMem / 1024 / 1024 / 1024).toFixed(2)}GB total)`);
+      const memUsagePercent = (usedMem / totalMem) * 100,
+  this.log(`Memory usage: ${memUsagePercent.toFixed(2)}% (${(usedMem / 1024 / 1024 / 1024).toFixed(2)}GB used / ${(totalMem / 1024 / 1024 / 1024).toFixed(2)}GB total)`);
       
       if (memUsagePercent > this.alertThreshold) {
         this.log(`ALERT: Memory usage ${memUsagePercent.toFixed(2)}% exceeds threshold ${this.alertThreshold}%`);
       }
 
       // Check CPU usage
-      const cpus = os.cpus();
-      this.log(`CPU cores: ${cpus.length}`);
+      const cpus = os.cpus(),
+  this.log(`CPU cores: ${cpus.length}`);
       
       // Check disk usage
       try {
-        const diskUsage = execSync('df -h /', { encoding: 'utf8' });
+        const diskUsage = execSync('df -h /', { encoding: utf8' });
         this.log(`Disk usage:\n${diskUsage}`);
       } catch (error) {
         this.log(`Disk usage check failed: ${error.message}`);
@@ -85,20 +83,18 @@ class HealthMonitor {
     try {
       // Check PM2 processes
       try {
-        const pm2List = execSync('pm2 list --json', { encoding: 'utf8' });
-        const processes = JSON.parse(pm2List);
-        
-        this.log(`PM2 processes: ${processes.length}`);
+        const pm2List = execSync('pm2 list --json, { encoding: 'utf8' });
+        const processes = JSON.parse(pm2List),
+  this.log(`PM2 processes: ${processes.length}`);
         
         processes.forEach(proc => {
           const status = proc.pm2_env?.status;
           const name = proc.name;
           const memory = proc.monit?.memory || 0;
-          const cpu = proc.monit?.cpu || 0;
+          const cpu = proc.monit?.cpu || 0,
+  this.log(`  ${name}: ${status} (CPU: ${cpu}%, Memory: ${(memory / 1024 / 1024).toFixed(2)}MB)`);
           
-          this.log(`  ${name}: ${status} (CPU: ${cpu}%, Memory: ${(memory / 1024 / 1024).toFixed(2)}MB)`);
-          
-          if (status !== 'online') {
+          if (status !== online') {
             this.log(`ALERT: Process ${name} is not online (status: ${status})`);
           }
         });
@@ -118,20 +114,18 @@ class HealthMonitor {
       const uptime = os.uptime();
       const days = Math.floor(uptime / 86400);
       const hours = Math.floor((uptime % 86400) / 3600);
-      const minutes = Math.floor((uptime % 3600) / 60);
-      
-      this.log(`System uptime: ${days}d ${hours}h ${minutes}m`);
+      const minutes = Math.floor((uptime % 3600) / 60),
+  this.log(`System uptime: ${days}d ${hours}h ${minutes}m`);
       
       // Check load average
-      const loadAvg = os.loadavg();
-      this.log(`Load average: ${loadAvg.map(load => load.toFixed(2)).join()}`);
+      const loadAvg = os.loadavg(),
+  this.log(`Load average: ${loadAvg.map(load => load.toFixed(2)).join()}`);
       
       // Check if load is too high
       const cpuCount = os.cpus().length;
       const currentLoad = loadAvg[0];
-      const loadPercent = (currentLoad / cpuCount) * 100;
-      
-      if (loadPercent > this.alertThreshold) {
+      const loadPercent = (currentLoad / cpuCount) * 100,
+  if (loadPercent > this.alertThreshold) {
         this.log(`ALERT: Load average ${currentLoad.toFixed(2)} exceeds threshold (${cpuCount} cores)`);
       }
 
@@ -143,17 +137,16 @@ class HealthMonitor {
   async checkApplicationHealth() {
     try {
       // Check if the application is responding
-      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
-      const isNextJS = packageJson.dependencies?.next || packageJson.devDependencies?.next;
-      
-      if (isNextJS) {
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8));
+      const isNextJS = packageJson.dependencies?.next || packageJson.devDependencies?.next,
+  if (isNextJS) {
         // Try to check if Next.js dev server is running
         try {
-          execSync('curl -f http://localhost:3000 > /dev/null 2>&1', { encoding: 'utf8' });
-          this.log('Application is responding on port 3000');
+          execSync('curl -f http://localhost:3000 > /dev/null 2>&1', { encoding: utf8' });
+          this.log('Application is responding on port 3000);
         } catch (error) {
-          this.log('Application is not responding on port 3000');
-        }
+  this.log('Application is not responding on port 3000')
+}
       }
 
     } catch (error) {
@@ -181,9 +174,9 @@ class HealthMonitor {
 
       // Get PM2 process info
       try {
-        const pm2List = execSync('pm2 list --json', { encoding: 'utf8' });
-        const processes = JSON.parse(pm2List);
-        report.processes = processes.map(proc => ({
+        const pm2List = execSync(pm2 list --json', { encoding: 'utf8 });
+        const processes = JSON.parse(pm2List),
+  report.processes = processes.map(proc => ({
           name: proc.name,
           status: proc.pm2_env?.status,
           memory: proc.monit?.memory || 0,
@@ -205,26 +198,24 @@ class HealthMonitor {
   }
 
   async start() {
-    this.log('Health monitor service started');
-    
-    // Run health checks immediately
-    await this.checkSystemHealth();
-    await this.checkApplicationHealth();
-    await this.generateHealthReport();
-    
-    // Set up interval for periodic health checks
+  this.log(Health monitor service started'),
+  // Run health checks immediately
+    await this.checkSystemHealth(),
+  await this.checkApplicationHealth(),
+  await this.generateHealthReport(),
+  // Set up interval for periodic health checks
     setInterval(async () => {
-      await this.checkSystemHealth();
-      await this.checkApplicationHealth();
-    }, 60 * 1000); // Every minute
+      await this.checkSystemHealth(),
+  await this.checkApplicationHealth()
+}, 60 * 1000); // Every minute
     
     // Generate health report every hour
     setInterval(async () => {
-      await this.generateHealthReport();
-    }, 60 * 60 * 1000); // Every hour
+  await this.generateHealthReport()
+}, 60 * 60 * 1000); // Every hour
   }
 }
 
 // Start the service
-const healthMonitor = new HealthMonitor();
-healthMonitor.start().catch(console.error);
+const healthMonitor = new HealthMonitor(),
+  healthMonitor.start().catch(console.error);

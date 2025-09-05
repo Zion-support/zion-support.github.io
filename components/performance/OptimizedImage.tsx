@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react,
   alt: string;
   width?: number;
   height?: number,
@@ -16,14 +16,14 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({,
 }) => {,
   return (,
     <Image,
-      src={src};
-      alt={alt};
-      width={width};
-      height={height};
-      priority={priority};
-      className={className};
-      sizes={sizes};
-      quality={85};
+      src={src},
+  alt={alt},
+  width={width},
+  height={height},
+  priority={priority},
+  className={className},
+  sizes={sizes},
+  quality={85};
     />)
 };
 export default OptimizedImage,

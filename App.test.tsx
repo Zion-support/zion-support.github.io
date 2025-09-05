@@ -5,17 +5,42 @@ import React from &amp;apos;react&amp;apos;;
 ;
 describe(&amp;apos;App&amp;apos;, () =&amp;gt; {,
   it(&amp;apos;renders without crashing&amp;apos;, () =&amp;gt; {,
-    render(&amp;lt;App /&amp;gt;),
-    expect(screen.getByRole(&amp;apos;main&amp;apos;)).toBeInTheDocument()
+    render(
+  &amp,
+  lt,
+  App /&amp,
+  gt
+),
+    expect(
+  screen.getByRole(&amp,
+  apos,
+  main&amp,
+  apos
+)).toBeInTheDocument()
   }),
 ,
   it(&amp;apos;displays correct content&amp;apos;, () =&amp;gt; {,
-    render(&amp;lt;App /&amp;gt;),
-    expect(screen.getByText(&amp;apos;Hello App&amp;apos;)).toBeInTheDocument()
+    render(
+  &amp,
+  lt,
+  App /&amp,
+  gt
+),
+    expect(
+  screen.getByText(&amp,
+  apos,
+  Hello App&amp,
+  apos
+)).toBeInTheDocument()
   }),
 ,
   it(&amp;apos;handles user interactions&amp;apos;, () =&amp;gt; {,
-    render(&amp;lt;App /&amp;gt;),
+    render(
+  &amp,
+  lt,
+  App /&amp,
+  gt
+),
     // Add interaction tests here
   })
 }),

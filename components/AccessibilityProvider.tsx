@@ -1,26 +1,26 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react;
 
 interface AccessibilityContextType {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  toggleHighContrast: () => void;
-  toggleLargeText: () => void;
-  toggleReducedMotion: () => void;
+  highContrast: boolean,
+  largeText: boolean,
+  reducedMotion: boolean,
+  toggleHighContrast: () => void,
+  toggleLargeText: () => void,
+  toggleReducedMotion: () => void
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
+  const context = useContext(AccessibilityContext),
   if (!context) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
-  }
+    throw new Error('useAccessibility must be used within an AccessibilityProvider')
+}
   return context;
 };
 
 interface AccessibilityProviderProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
@@ -30,8 +30,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleLargeText = () => setLargeText(!largeText);
-  const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-
+  const toggleReducedMotion = () => setReducedMotion(!reducedMotion),
   const value = {
     highContrast,
     largeText,
@@ -43,7 +42,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   return (
     <AccessibilityContext.Provider value={value}>
-      <div className={`${highContrast ? 'high-contrast' : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>
+      <div className={`${highContrast ? high-contrast' : '} ${largeText ? 'large-text' : '} ${reducedMotion ? 'reduced-motion : ''}`}>
         {children}
       </div>
     </AccessibilityContext.Provider>
