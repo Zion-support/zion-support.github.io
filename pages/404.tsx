@@ -1,254 +1,139 @@
-<<<<<<< HEAD
-import { Home } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
-=======
-import React from 'react';
-import Head from 'next/head';';
-import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react';
->>>>>>> main
-export default function Custom404() {
-<<<<<<< HEAD
-  return (;
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">";
-      <Head>;
-        <title>404 - Page Not Found | Zion Tech Group</title>;
-        <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />";
-      </Head>;
+import { 
+  ArrowRight, 
+  Home, 
+  Search, 
+  AlertCircle,
+  RefreshCw
+} from 'lucide-react';
 
-      <div className="max-w-4xl mx-auto px-4 text-center">";
-        <motion.div);
-=======
+export default function Custom404() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+    <>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div className="max-w-4xl mx-auto px-4 text-center">
-        <motion.div
->>>>>>> main
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >,
-          {/* 404 Animation */}
-<<<<<<< HEAD
-          <div className="mb-8">"
-            <motion.div;
-              className="text-9xl font-bold text-blue-600 mb-4"";
-              animate={{ }
-=======
-          <div className="mb-8">
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* 404 Animation */}
             <motion.div
-              className="text-9xl font-bold text-blue-600 mb-4"
-              animate={{
->>>>>>> main
-                scale: [1, 1.1, 1],
-                rotate: [0, 5, -5, 0];
-              }}
-<<<<<<< HEAD
-              transition={{ }
-=======
-              transition={{
->>>>>>> main
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse""
-              }}
-<<<<<<< HEAD
-            >,
-              404;
-            </motion.div>;
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">";
-              Oops! Page Not Found;
-            </h1>;
-            <p className="text-xl text-gray-600 mb-8">";
-              The page you're looking for doesn't exist or has been moved.';
-            </p>;
-          </div>;
-
-=======
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mb-8"
             >
-              404
+              <div className="relative">
+                <div className="text-9xl md:text-[12rem] font-bold text-white/10 select-none">
+                  404
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <AlertCircle className="h-16 w-16 md:h-24 md:w-24 text-blue-400" />
+                </div>
+              </div>
             </motion.div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Oops! Page Not Found
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              The page you're looking for doesn't exist or has been moved.
-            </p>
-          </div>
->>>>>>> main
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
-            <Link;
-              href="/"";
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"";
-            >;
-              <Home className="w-5 h-5" />";
-              Go Home;
-            </Link>;
-            <button;
-              onClick={() => window.history.back()}
-<<<<<<< HEAD
-              className="inline-flex items-center gap-2 bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors""
-            >;
-              <ArrowLeft className="w-5 h-5" />";
-              Go Back;
-            </button>;
-          </div>;
 
-          {/* Quick Links */}
-          <div className="bg-white rounded-lg shadow-lg p-8">"
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">";
-              Popular Pages;
-            </h2>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">";
-              <Link;
-                href="/services"";
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"";
-              >;
-                <div className="text-center">";
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">";
-                    <Search className="w-6 h-6 text-blue-600" />";
-                  </div>;
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">";
-                    Our Services;
-                  </h3>;
-                  <p className="text-sm text-gray-600">";
-                    Explore our AI and technology solutions;
-                  </p>;
-                </div>;
-              </Link>;
-
-              <Link;
-                href="/about"";
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"";
-              >;
-                <div className="text-center">";
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">";
-                    <HelpCircle className="w-6 h-6 text-blue-600" />";
-                  </div>;
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">";
-                    About Us;
-                  </h3>;
-                  <p className="text-sm text-gray-600">";
-                    Learn about our company and mission;
-                  </p>;
-                </div>;
-              </Link>;
-
-              <Link;
-                href="/contact"";
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"";
-              >;
-                <div className="text-center">";
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">";
-                    <HelpCircle className="w-6 h-6 text-blue-600" />";
-                  </div>;
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">";
-                    Contact Us;
-                  </h3>;
-                  <p className="text-sm text-gray-600">";
-                    Get in touch with our team;
-                  </p>;
-                </div>;
-              </Link>;
-            </div>;
-          </div>;
-
-          {/* Help Text */}
-          <div className="mt-8 text-center">"
-            <p className="text-gray-600">";
-              Still can't find what you're looking for?{' '}',
-              <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">";
-                Contact our support team;
-              </Link>;
-            </p>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;
-=======
-              className="inline-flex items-center gap-2 bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors"
+            {/* Error Message */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mb-8"
             >
-              <ArrowLeft className="w-5 h-5" />
-              Go Back
-            </button>
-          </div>
-          {/* Quick Links */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Popular Pages
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Link
-                href="/services"
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                Oops! Page Not Found
+              </h1>
+              <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
+                The page you're looking for doesn't exist or has been moved. 
+                Don't worry, let's get you back on track.
+              </p>
+            </motion.div>
+
+            {/* Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+            >
+              <Link 
+                href="/" 
+                className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
               >
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">
-                    <Search className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
-                    Our Services
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Explore our AI and technology solutions
-                  </p>
-                </div>
+                <Home className="h-5 w-5 mr-2" />
+                Go Home
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
-                href="/about"
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
+              <button 
+                onClick={() => window.history.back()} 
+                className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors"
               >
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">
-                    <HelpCircle className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
-                    About Us
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Learn about our company and mission
-                  </p>
-                </div>
-              </Link>
-              <Link
-                href="/contact"
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
-              >
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">
-                    <HelpCircle className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
-                    Contact Us
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Get in touch with our team
-                  </p>
-                </div>
-              </Link>
-            </div>
-          </div>
-          {/* Help Text */}
-          <div className="mt-8 text-center">
-            <p className="text-gray-600">
-              Still can't find what you're looking for?{' '}
-              <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
-                Contact our support team
-              </Link>
-            </p>
-          </div>
-        </motion.div>
+                <RefreshCw className="h-5 w-5 mr-2" />
+                Go Back
+              </button>
+            </motion.div>
+
+            {/* Quick Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="bg-white/10 backdrop-blur-md rounded-xl p-8"
+            >
+              <h2 className="text-2xl font-bold text-white mb-6">Popular Pages</h2>
+              <div className="grid md:grid-cols-3 gap-4">
+                <Link 
+                  href="/services" 
+                  className="flex items-center justify-center p-4 bg-white/5 hover:bg-white/10 rounded-lg transition-colors"
+                >
+                  <Search className="h-5 w-5 mr-2 text-blue-400" />
+                  <span className="text-gray-300">Our Services</span>
+                </Link>
+                <Link 
+                  href="/about" 
+                  className="flex items-center justify-center p-4 bg-white/5 hover:bg-white/10 rounded-lg transition-colors"
+                >
+                  <Search className="h-5 w-5 mr-2 text-blue-400" />
+                  <span className="text-gray-300">About Us</span>
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="flex items-center justify-center p-4 bg-white/5 hover:bg-white/10 rounded-lg transition-colors"
+                >
+                  <Search className="h-5 w-5 mr-2 text-blue-400" />
+                  <span className="text-gray-300">Contact Us</span>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Help Text */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="mt-8"
+            >
+              <p className="text-gray-400 text-sm">
+                If you believe this is an error, please{' '}
+                <Link href="/contact" className="text-blue-400 hover:text-blue-300 underline">
+                  contact our support team
+                </Link>
+                {' '}and we'll help you find what you're looking for.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
-    </div>
->>>>>>> main
+    </>
   );
 }

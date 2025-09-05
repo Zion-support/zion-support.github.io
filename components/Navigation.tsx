@@ -1,167 +1,132 @@
-import React, { useState } from 'react';';
-import Link from 'next/link';';
-import { Menu, X, ChevronDown, Phone, Shield } from 'lucide-react';';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown,
+  ArrowRight
+} from 'lucide-react';
 
-const Navigation: React.FC = () => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-;
-  const navigationItems = [;
-    { name: 'Home', href: '/' },';
-    {;
-      name: 'Services',';
-      href: '/services',';
-      dropdown: [;
-        { name: 'AI Services', href: '/ai-services' },';
-        { name: 'IT Services', href: '/it-services' },';
-        { name: 'Micro SaaS', href: '/micro-saas' },';
-        { name: 'Blockchain Solutions', href: '/blockchain-solutions' },';
-        { name: 'All Services', href: '/services' }';,
-];,
-},;
-    {;
-      name: 'Solutions',';
-      href: '/solutions',';
-      dropdown: [;
-        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },';
-        { name: 'Email Automation', href: '/solutions/email-automation' },';
-        { name: 'Customer Support Platform', href: '/solutions/customer-support' },';
-        { name: 'Event Management', href: '/solutions/event-management' },';
-        { name: 'Project Management', href: '/solutions/project-management' },';
-        { name: 'Workflow Automation', href: '/solutions/workflow-automation' }';,
-];,
-},;
-    { name: 'Pricing', href: '/pricing' },';
-    { name: 'About', href: '/about' },';
-    { name: 'Blog', href: '/blog' },';
-    { name: 'Careers', href: '/careers' },';
-    { name: 'Contact', href: '/contact' }';,
-];
-;
-  const toggleDropdown = (itemName: string) => {;
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);,
-}
-;
-  return (;
-    <nav className='bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 shadow-lg sticky top-0 z-50'>';
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>';
-        <div className='flex justify-between items-center h-16'>';
-          {/* Logo */}
-          <div className='flex-shrink-0'>';
-            <Link href='/' className='text-white text-2xl font-bold hover:text-blue-300 transition-colors'>';
-              Zion Tech Group;
-            </Link>;
-          </div>;
+const Navigation = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
-          {/* Desktop Navigation */}
-          <div className='hidden md:block'>';
-            <div className='ml-10 flex items-baseline space-x-4'>';
-              {navigationItems.map((item) => (;
-                <div key={item.name} className='relative'>';
-                  {item.dropdown ? (;
-                    <div className='relative'>';
-                      <button;
-                        onClick={() => toggleDropdown(item.name)}
-                        className='text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center'';
-                      >;
-                        {item.name}
-                        <ChevronDown className='ml-1 h-4 w-4' />';
-                      </button>;
-                      {activeDropdown === item.name && (;
-                        <div className='absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50'>';
-                          {item.dropdown.map((dropdownItem) => (;
-                            <Link;
-                              key={dropdownItem.name}
-                              href={dropdownItem.href}
-                              className='block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors'';
-                              onClick={() => setActiveDropdown(null)}
-                            >;
-                              {dropdownItem.name}
-                            </Link>;
-                          ))}
-                        </div>;
-                      )}
-                    </div>;
-                  ) : (;
-                    <Link;
-                      href={item.href}
-                      className='text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors'';
-                    >;
-                      {item.name}
-                    </Link>;
-                  )}
-                </div>;
-              ))}
-;
-              <Link;
-                href="/contact"";
-                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center"";
-              >;
-                <Phone className="h-4 w-4 mr-2" />";
-                Contact Us;
-              </Link>;
-            </div>;
-          </div>;
-          {/* Mobile menu button */}
-          <div className='md:hidden'>';
-            <button;
-              onClick={() => setIsOpen(!isOpen)}
-              className='text-white hover:text-blue-300 p-2 rounded-md transition-colors'';
-            >;
-              {isOpen ? <X className='h-6 w-6' /> : <Menu className='h-6 w-6' />}';
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Mobile Navigation */}
-      {isOpen && (;
-        <div className='md:hidden'>';
-          <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-800 bg-opacity-95'>';
-            {navigationItems.map((item) => (;
-              <div key={item.name}>;
-                {item.dropdown ? (;
-                  <div>;
-                    <button;
-                      onClick={() => toggleDropdown(item.name)}
-                      className='text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between'';
-                    >;
-                      {item.name}
-                      <ChevronDown className='h-4 w-4' />';
-                    </button>;
-                    {activeDropdown === item.name && (;
-                      <div className='pl-4 space-y-1'>';
-                        {item.dropdown.map((dropdownItem) => (;
-                          <Link;
-                            key={dropdownItem.name}
-                            href={dropdownItem.href}
-                            className='text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm'';
-                            onClick={() => {;
-                              setIsOpen(false);
-                              setActiveDropdown(null);,
-}}
-                          >;
-                            {dropdownItem.name}
-                          </Link>;
-                        ))}
-                      </div>;
-                    )}
-                  </div>;
-                ) : (;
-                  <Link;
-                    href={item.href}
-                    className='text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium'';
-                    onClick={() => setIsOpen(false)}
-                  >;
-                    {item.name}
-                  </Link>;
+  const services = [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' }
+  ];
+
+  const mainNav = [
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services', hasDropdown: true },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+  return (
+    <nav className="relative z-50 px-6 py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <span className="text-white font-bold text-lg">Z</span>
+          </div>
+          <span className="text-white text-xl font-bold">Zion Tech Group</span>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center space-x-8">
+          {mainNav.map((item) => (
+            <div key={item.name} className="relative group">
+              <Link 
+                href={item.href} 
+                className="text-gray-300 hover:text-white transition-colors flex items-center space-x-1"
+                onMouseEnter={() => item.hasDropdown && setIsServicesOpen(true)}
+                onMouseLeave={() => item.hasDropdown && setIsServicesOpen(false)}
+              >
+                <span>{item.name}</span>
+                {item.hasDropdown && <ChevronDown className="h-4 w-4" />}
+              </Link>
+              
+              {/* Services Dropdown */}
+              {item.hasDropdown && isServicesOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  className="absolute top-full left-0 mt-2 w-64 bg-white/10 backdrop-blur-md rounded-xl p-4 shadow-xl"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <div className="space-y-2">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="flex items-center justify-between p-3 rounded-lg hover:bg-white/10 transition-colors group"
+                      >
+                        <span className="text-white">{service.name}</span>
+                        <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-white transition-colors" />
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="lg:hidden text-white"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+          className="lg:hidden absolute top-full left-0 right-0 bg-white/10 backdrop-blur-md border-t border-white/20"
+        >
+          <div className="px-6 py-4 space-y-4">
+            {mainNav.map((item) => (
+              <div key={item.name}>
+                <Link
+                  href={item.href}
+                  className="block text-gray-300 hover:text-white transition-colors py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+                {item.hasDropdown && (
+                  <div className="ml-4 space-y-2 mt-2">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block text-gray-400 hover:text-white transition-colors py-1"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
                 )}
-              </div>;
+              </div>
             ))}
-          </div>;
-        </div>;
+          </div>
+        </motion.div>
       )}
-    </nav>;
-  );,
+    </nav>
+  );
 };
-;
-export default Navigation
+
+export default Navigation;

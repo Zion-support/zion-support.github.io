@@ -688,4 +688,4 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
 // Import new advanced services
 export { ADVANCED_AI_SERVICES } from './advancedAIServices2025';
 export { INNOVATIVE_IT_SERVICES } from './innovativeITServices2025';
-export { INNOVATIVE_MICRO_SAAS } from './innovativeMicroSaas2025';
+export { MICRO_SAAS_SERVICES as INNOVATIVE_MICRO_SAAS } from './microSaasServicesData';
