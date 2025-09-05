@@ -3,16 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
-<<<<<<< HEAD
     scrollRestoration: true,
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
-=======
-    appDir: true,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion'],
+    appDir: true
   },
   images: {
-<<<<<<< HEAD
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -20,14 +16,11 @@ const nextConfig = {
     minimumCacheTTL: 31536000, // 1 year
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    unoptimized: true
   },
   
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
-=======
-    domains: ['localhost', 'ziontechgroup.com'],
-    unoptimized: true,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb
   },
   trailingSlash: true,
   output: 'export',
@@ -85,7 +78,6 @@ const nextConfig = {
       },
     ];
   },
-<<<<<<< HEAD
   
   // Redirects for SEO
   async redirects() {
@@ -106,8 +98,6 @@ const nextConfig = {
       },
     ];
   },
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb
 };
 
 module.exports = nextConfig;

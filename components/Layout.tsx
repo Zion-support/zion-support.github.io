@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -304,4 +302,3 @@ export default function Layout({
     </div>
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb

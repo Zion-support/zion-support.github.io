@@ -1,7 +1,7 @@
 import React from 'react';
+import Header from '../Header';
+import Footer from '../Footer';
 
-<<<<<<< HEAD
-=======
 export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -10,8 +10,10 @@ export default function Layout({ children }: LayoutProps) {
         {children}
       </main>
       <Footer />
+    </div>
+  );
+}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
