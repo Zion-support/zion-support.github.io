@@ -103,23 +103,12 @@ type Service = typeof enhancedRealMicroSaasServices[number];
 function getAllServices(): Service[] {_return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], _additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
-		.concat(curatedMarketServices as Service[])
 		.concat(new2025Services as unknown as Service[])
 		.concat(marketValidatedServices as unknown as Service[])
-		.concat(moreRealServices2025 as unknown as Service[])
-		.concat(verified2025Additions as unknown as Service[])
-		.concat(realServicesQ12025 as unknown as Service[])
-		.concat(realEnterpriseServices2025 as unknown as Service[])
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
-		.concat(realMarketAugmentations2025 as unknown as Service[])
-		.concat(additionalLiveServices2025 as unknown as Service[])
-		.concat(real2025Q2Additions as unknown as Service[])
-		.concat(augmentedServicesBatch3 as unknown as Service[])
-		.concat(realServicesQ22025 as unknown as Service[])
 		.concat(realServicesQ32025 as unknown as Service[])
 		.concat(realQ4Services2025 as unknown as Service[])
 		.concat(real2025Q4Additions as unknown as Service[])
-		.concat(realMarketServicesExtended as unknown as Service[])
 		.concat(real2026Q1Additions as unknown as Service[])
 		.concat(real2026Additions as unknown as Service[])
 		.concat(added2026Q2Services as unknown as Service[])
@@ -141,13 +130,13 @@ function getExistingRootPageSlugs(): Set<string> {
 	const reserved = new Set<string>(['apireportsservices']),
 	const slugs = new Set<string>(),
 	for (const entry of entries) {
-		if (entry.name.startsWith('_')) continue,
-		if (reserved.has(entry.name)) continue,
+		if (entry.name.startsWith('_')) continue;
+		if (reserved.has(entry.name)) continue;
 		// Files at root
 		if (entry.isFile()) {
-			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/),
+			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
 			if (m) {
-				const base = m[1],
+				const base = m[1];
 				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
 					slugs.add(base)
 				}
@@ -186,14 +175,14 @@ function getExistingRootPageSlugs(): Set<string> {_const _pagesDir = path.join(p
 
 <<<<<<< HEAD
 export async function getStaticPaths() {
-	const services = getAllServices(),
-	const slugs = new Set<string>(),
+	const services = getAllServices();
+	const slugs = new Set<string>();
 	for (const s of services) {
 		if (s.id) slugs.add(toSlug(s.id)),
 		else if (s.name) slugs.add(toSlug(s.name))
 	}
-	const existing = getExistingRootPageSlugs(),
-	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug)),
+	const existing = getExistingRootPageSlugs();
+	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
 	return {
 		paths: filtered.map((slug) => ({ params: { slug } })),
 =======
@@ -212,9 +201,9 @@ export async function getStaticPaths() {_const _services = getAllServices();
 
 <<<<<<< HEAD
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-	const services = getAllServices(),
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),
-	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
+	const services = getAllServices();
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
 	if (!service) {
 		return { notFound: true }
 	}

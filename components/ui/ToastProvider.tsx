@@ -13,7 +13,7 @@ export type Toast = {_id: string
 <<<<<<< HEAD
 export type ToastContextValue = {
   toasts: Toast[]
-  addToast: (toast: Omit<Toast 'id'>) => string
+  addToast: (toast: Omit<Toast, 'id'>) => string
   removeToast: (id: string) => void
   clearToasts: () => void
 }

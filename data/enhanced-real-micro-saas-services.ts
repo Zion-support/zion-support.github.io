@@ -2039,7 +2039,7 @@ export const microSaasServices: MicroSaasService[] = [
     reviews: 27
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   }
-],
+];
 
 <<<<<<< HEAD
 export const serviceCategories = [
@@ -2083,7 +2083,15 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
     'Analytics & Business Intelligence': ['AI & Data AnalyticsAI & Market Research'],
     'Cloud & Infrastructure': ['Cloud PlatformEdge Computing & IoT'],
     'Climate Technology': ['Climate Technology']
-  },
+  };
+
+  return enhancedRealMicroSaasServices.filter(service => {
+    const serviceCategories = service.category || '';
+    return categoryMapping[categoryName]?.some(cat => 
+      serviceCategories.includes(cat)
+    ) || false;
+  });
+};
 
 // Service categories
 export const serviceCategories = [
@@ -2096,12 +2104,8 @@ export const serviceCategories = [
   'Quantum CybersecuritySpace Technology & AerospaceMetaverse & VR/ARMetaverse & Virtual RealityBiomedical AINeural TechnologyBlockchain & DeFiEdge Computing & IoT',
   'Manufacturing & Industry 4.0Cybersecurity & PrivacyHealthcare & BiotechnologyFinancial TechnologyFinancial Technology & TradingEnergy & SustainabilityIoT & Smart CitiesClimate Technology',
   'Robotics & AutomationAgriculture & Food Tech'
-],
+];
 
-export const getServicesByCategory = (category: string) => {
-  if (category === 'All') return allEnhancedRealMicroSaasServices,
-  return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
-},
 
 export const getPopularServices = () => {
   return allEnhancedRealMicroSaasServices.filter(service => service.popular)

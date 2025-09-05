@@ -9,7 +9,8 @@ const Header: React.FC = () => {
     { name: 'Resources', href: '/resources' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }],
+    { name: 'Contact', href: '/contact' }
+  ];
 
   return (
     <header className=&quot;bg-white/5 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50&quot;>
@@ -104,4 +105,4 @@ const Header: React.FC = () => {_const _navigation = [
   )
 },
 
-export default Header,
+export default Header;
