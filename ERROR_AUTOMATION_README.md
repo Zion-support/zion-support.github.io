@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🚀 Error Automation System
 
 A comprehensive PM2-based automation system that continuously detects and automatically fixes errors in your project.
@@ -47,7 +46,6 @@ pm2 logs
 ```
 
 ### Stop the System
-=======
 # 🚨 Error Automation System
 
 A comprehensive automated error detection and fixing system for Next.js projects using PM2 process management.
@@ -207,7 +205,6 @@ pm2 logs typescript-error-monitor --lines 20
 ```bash
 ./start-error-automation.sh stop
 ```
-<<<<<<< HEAD
 
 | Service | Frequency | Purpose |
 |---------|-----------|---------|
@@ -279,7 +276,6 @@ pm2 logs [service-name]     # View specific service logs
   "service": "error-detection-service"
 }
 ```
-=======
 ├── ecosystem-error-automation.config.cjs    # PM2 configuration
 ├── start-error-automation.sh               # Startup script
 ├── manage-error-automation.sh              # Management script
@@ -438,7 +434,6 @@ pm2 delete all               # Remove all services
 
 ### Common Issues
 
-<<<<<<< HEAD
 #### 1. **Services Not Starting**
 ```bash
 # Check PM2 installation
@@ -589,7 +584,6 @@ For issues or questions:
 ---
 
 **🎉 Your project will now automatically stay error-free with continuous monitoring and automated fixing!**
-=======
 1. **PM2 not installed**
    ```bash
    npm install -g pm2

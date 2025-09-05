@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';
-import App from '../src/App';
-describe('App', () => {
-  it('renders without crashing', () => {
+import { render, screen } from '@testing-library/react';''
+import App from '../src/App';''
+describe('App', () => {''}
+  it('renders without crashing', () => {'}
     render(<App />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-  it('has proper heading structure', () => {
+</App>
     render(<App />);
-    const heading = screen.getByRole('heading', { "level": '1' });
-    expect(heading).toBeInTheDocument();
-  });
-});
-=======
-import { render,screen } from '@testing-library/react'; import App from '../src/App'; describe('App',() => { it('renders without crashing',() => { render(<App />); expect(screen.getByRole('main')).toBeInTheDocument()}); it('has proper heading structure',() => { render(<App />); const heading = screen.getByRole('heading',{ level: '1' }); expect(heading).toBeInTheDocument()})});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+</App>'
+import { render,screen } from '@testing-library/react'; import App from '../src/App'; describe('App',() => { it('renders without crashing',() => { render(<App />); expect(screen.getByRole('main')).toBeInTheDocument()}); it('has proper heading structure',() => { render(<App />); const heading = screen.getByRole('heading',{ level: '1' }); expect(heading).toBeInTheDocument()})});'
+</App>'

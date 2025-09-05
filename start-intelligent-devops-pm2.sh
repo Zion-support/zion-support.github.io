@@ -486,7 +486,7 @@ display_system_status() {
 # Main execution
 main() {
     echo -e "${PURPLE}🚀 Intelligent DevOps PM2 Automation System Startup${NC}"
-    echo "================================================================"
+    echo "="
     echo
     
     # Check prerequisites

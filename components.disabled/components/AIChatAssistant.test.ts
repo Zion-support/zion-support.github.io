@@ -1,11 +1,7 @@
-import { render, screen  } from "@testing-library/react";
+import { render, screen  } from "@testing-library/react";"
     render(<AIChatAssistant />);
-    expect(screen.getByRole("main")).toBeInTheDocument()});
-  it("displays correct content", () => {;
-
+</AIChatAssistant>
     render(<AIChatAssistant />);
-    // Add specific content checks based on component functionality});
-  it("handles user interactions", () => {;
-
+</AIChatAssistant>
     render(<AIChatAssistant />);
-    // Add interaction tests based on component functionality})})
+</AIChatAssistant>"
