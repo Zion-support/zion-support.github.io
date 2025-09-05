@@ -14,7 +14,7 @@ class ComprehensiveFixer {
   fixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
+      const originalContent = content;
 
       // Remove merge conflict markers completely
       content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
