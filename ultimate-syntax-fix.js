@@ -5,21 +5,28 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix all remaining issues
-function fixAllRemainingIssues(content) {
-  // Fix malformed array structures
-  content = content.replace(/},\s*\{\s*$/g, '}\n]');
-  content = content.replace(/},\s*\{\s*\n/g, '},\n  {\n');
-  content = content.replace(/\]\s*$/g, ']');
+// Function to fix all remaining syntax errors
+function fixAllRemainingSyntax(content) {
+  // Fix JSX semicolons
+  content = content.replace(/<(\w+);/g, '<$1');
+  content = content.replace(/<\/?(\w+);/g, '</$1');
   
-  // Fix malformed JSX attributes
-  content = content.replace(/initial=\{\{ opacity: 0, y: 30 \}\},/g, 'initial={{ opacity: 0, y: 30 }}');
-  content = content.replace(/animate=\{\{ opacity: 1, y: 0 \}\},/g, 'animate={{ opacity: 1, y: 0 }}');
+  // Fix malformed JSX tags
+  content = content.replace(/<\/\$1>/g, '');
+  content = content.replace(/<div className="[^"]*">"/g, '<div className="min-h-screen bg-gray-50">');
+  content = content.replace(/<section className="[^"]*">"/g, '<section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">');
+  
+  // Fix array syntax issues
+  content = content.replace(/\]\s*\n\s*\{/g, ',\n  {');
+  content = content.replace(/\]\s*$/g, ']');
   
   // Fix missing commas in arrays
   content = content.replace(/\}\s*\n\s*\{/g, '},\n  {');
   
-  // Fix trailing commas
+  // Fix malformed array declarations
+  content = content.replace(/const\s+(\w+)\s*=\s*\[\s*\{\}\]/g, 'const $1 = [\n  {');
+  
+  // Fix trailing commas in arrays
   content = content.replace(/,(\s*\])/g, '$1');
   
   // Fix missing closing brackets for arrays
@@ -59,6 +66,10 @@ function fixAllRemainingIssues(content) {
   
   content = fixedLines.join('\n');
   
+  // Fix specific patterns
+  content = content.replace(/features:\s*\[([^\]]*)\]\s*\]/g, 'features: [$1]');
+  content = content.replace(/\[\s*\]/g, '[]');
+  
   return content;
 }
 
@@ -66,7 +77,7 @@ function fixAllRemainingIssues(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixAllRemainingIssues(content);
+    const fixedContent = fixAllRemainingSyntax(content);
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
@@ -80,19 +91,16 @@ function processFile(filePath) {
   }
 }
 
-// Process the specific files that have errors
-const errorFiles = [
-  'pages/about.tsx',
-  'pages/accessibility.tsx', 
-  'pages/ai-services.tsx',
-  'pages/api.tsx',
-  'pages/blog.tsx'
-];
+// Process all .tsx files in pages directory
+const pagesDir = './pages';
+const files = fs.readdirSync(pagesDir)
+  .filter(file => file.endsWith('.tsx'))
+  .map(file => path.join(pagesDir, file));
 
-console.log(`Processing ${errorFiles.length} files with errors`);
+console.log(`Processing ${files.length} .tsx files`);
 
 let fixedCount = 0;
-errorFiles.forEach(file => {
+files.forEach(file => {
   if (processFile(file)) {
     fixedCount++;
   }

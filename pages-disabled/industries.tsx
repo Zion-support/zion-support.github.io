@@ -1,10 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
+import React from "react";
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion;
+import {},
+  {
   // TODO: Implement
-}
+  },
+  {
   Heart, 
   Building, 
   ShoppingCart, 
@@ -21,9 +23,10 @@ import {
   Brain,
   Network,
   Cloud;'
-} from 'lucide-react';
+} from 'lucide-react;
 const industries = [
-  {'
+  {'},
+  {
     title: 'Healthcare','
     icon: Heart,'
     description: 'AI-powered diagnostics, medical imaging, drug discovery, and patient care solutions.',''
@@ -34,18 +37,19 @@ const industries = [
       'Patient Data Analytics',''
       'Telemedicine Solutions',''
       'Clinical Decision Support',''
-      'Healthcare IoT Management''];
-    ],
+      'Healthcare IoT Management'']
+],
     benefits: [']
       'Improved Patient Outcomes',''
       'Reduced Diagnostic Time',''
       'Enhanced Treatment Accuracy',''
-      'Cost-effective Care Delivery''];
-    ],'
+      'Cost-effective Care Delivery'']
+],'
     caseStudy: 'Reduced diagnostic time by 60% for a major hospital network',''
     pricing: 'Starting at $15,000/project''
   },
-  {'}
+  {'},
+  {
     title: 'Finance','
     icon: Building,'
     description: 'Fraud detection, risk assessment, algorithmic trading, and financial planning solutions.',''
@@ -56,18 +60,19 @@ const industries = [
       'Risk Assessment Models',''
       'Financial Planning Tools',''
       'Regulatory Compliance',''
-      'Blockchain Solutions''];
-    ],
+      'Blockchain Solutions'']
+],
     benefits: [']
       'Enhanced Security',''
       'Reduced Financial Risk',''
       'Improved Compliance',''
-      'Automated Trading''];
-    ],'
+      'Automated Trading'']
+],'
     caseStudy: 'Prevented $2M+ in fraudulent transactions for a major bank',''
     pricing: 'Starting at $10,000/setup''
   },
-  {'}
+  {'},
+  {
     title: 'E-commerce','
     icon: ShoppingCart,'
     description: 'Personalized recommendations, inventory optimization, and customer experience enhancement.',''
@@ -78,18 +83,19 @@ const industries = [
       'Customer Analytics',''
       'Price Optimization',''
       'Chatbot Support',''
-      'Visual Search''];
-    ],
+      'Visual Search'']
+],
     benefits: [']
       'Increased Sales',''
       'Better Customer Experience',''
       'Optimized Inventory',''
-      'Reduced Cart Abandonment''];
-    ],'
+      'Reduced Cart Abandonment'']
+],'
     caseStudy: 'Increased conversion rates by 35% for an online retailer',''
     pricing: 'Starting at $3,000/setup''
   },
-  {'}
+  {'},
+  {
     title: 'Manufacturing','
     icon: Settings,'
     description: 'Predictive maintenance, quality control, supply chain optimization, and smart factory solutions.',''
@@ -100,18 +106,19 @@ const industries = [
       'Supply Chain Optimization',''
       'Smart Factory Solutions',''
       'IoT Integration',''
-      'Energy Optimization''];
-    ],
+      'Energy Optimization'']
+],
     benefits: [']
       'Reduced Downtime',''
       'Improved Quality',''
       'Cost Optimization',''
-      'Enhanced Efficiency''];
-    ],'
+      'Enhanced Efficiency'']
+],'
     caseStudy: 'Reduced equipment downtime by 40% for a manufacturing plant',''
     pricing: 'Starting at $20,000/project''
   },
-  {'}
+  {'},
+  {
     title: 'Education','
     icon: BookOpen,'
     description: 'Personalized learning, automated assessment, and educational content generation.',''
@@ -122,18 +129,19 @@ const industries = [
       'Content Generation',''
       'Student Analytics',''
       'Virtual Tutoring',''
-      'Learning Management''];
-    ],
+      'Learning Management'']
+],
     benefits: [']
       'Personalized Education',''
       'Improved Learning Outcomes',''
       'Automated Grading',''
-      'Enhanced Engagement''];
-    ],'
+      'Enhanced Engagement'']
+],'
     caseStudy: 'Improved student performance by 25% in a university program',''
     pricing: 'Starting at $5,000/setup''
   },
-  {'}
+  {'},
+  {
     title: 'Government','
     icon: Shield,'
     description: 'Citizen services, data analytics, cybersecurity, and digital transformation solutions.',''
@@ -144,112 +152,132 @@ const industries = [
       'Cybersecurity Solutions',''
       'Digital Transformation',''
       'Compliance Management',''
-      'Public Safety AI''];
-    ],
+      'Public Safety AI'']
+],
     benefits: [']
       'Improved Citizen Services',''
       'Enhanced Security',''
       'Better Data Insights',''
-      'Streamlined Operations''];
-    ],'
+      'Streamlined Operations'']
+],'
     caseStudy: 'Streamlined citizen services for a state government',''
     pricing: 'Starting at $25,000/project''
-  };
+  },
+  {
 ];
 
-const technologies = [']
-  { name: 'AI & Machine Learning', icon: Brain, description: 'Advanced AI solutions for every industry' },''
-  { name: 'Cloud Infrastructure', icon: Cloud, description: 'Scalable and secure cloud solutions' },''
-  { name: 'Cybersecurity', icon: Shield, description: 'Enterprise-grade security solutions' },''
-  { name: 'Data Analytics', icon: BarChart3, description: 'Insights-driven decision making' },''
-  { name: 'IoT & Edge Computing', icon: Network, description: 'Connected and intelligent systems' },''
-  { name: 'Blockchain', icon: Globe, description: 'Secure and transparent solutions' }'];
+const technologies = [',
+  { name: 'AI & Machine Learning', icon: Brain, description: 'Advanced AI solutions for every industry' },
+  {'',
+  { name: 'Cloud Infrastructure', icon: Cloud, description: 'Scalable and secure cloud solutions' },
+  {'',
+  { name: 'Cybersecurity', icon: Shield, description: 'Enterprise-grade security solutions' },
+  {'',
+  { name: 'Data Analytics', icon: BarChart3, description: 'Insights-driven decision making' },
+  {'',
+  { name: 'IoT & Edge Computing', icon: Network, description: 'Connected and intelligent systems' },
+  {'',
+  { name: 'Blockchain', icon: Globe, description: 'Secure and transparent solutions' }']
 ];
 
-export default function IndustriesPage() {}
+export default function IndustriesPage() {},
+  {
   return (')
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+    <div className="min-h-screen bg-gray-50">
 </div>
       <Head>
 </Head>
-        <title>Industry Solutions - Zion Tech Group</title>"
+        <title>Industry Solutions - Zion Tech Group
         <meta name="description" content="Industry-specific technology solutions for healthcare, finance, e-commerce, manufacturing, education, and government sectors." />"
-</meta>"
+
         <meta name="keywords" content="industry solutions, healthcare AI, fintech, e-commerce technology, manufacturing automation, education technology, government solutions" />"
 </meta>
-      </$1>
-      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
-</section>
-        <div className="absolute inset-0">"
-</div>
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+      
+      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
+
+        <div className="min-h-screen bg-gray-50">
+
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
         </div>
 "
-        <div className="container mx-auto px-4 relative z-10">"
+        <div className="min-h-screen bg-gray-50">
 </div>
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
+          <motion.div
+            initial={{ opacity: 0, y: 30 }},
+  {
+            animate={{ opacity: 1, y: 0 }},
+  {
+            transition={{ duration: 0.8 }},
+  {
             className="text-center"
           >
-</motion>"
-            <h1 className="text-4xl md: text-6xl font-bold mb-6">"
-</h1>
+
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">"
+
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">"
 </span>
               </span>
-            </h1>
+            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">"
 </p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-</div>
+            
+            <div className="min-h-screen bg-gray-50">
+
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">"
 </Link>
-              </$1>
+              
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">"
 </Link>
               </Link>
             </div>
           </motion.div>
         </div>
-      </section>
-      <section className="py-20 bg-gray-50">"
-</section>
-        <div className="container mx-auto px-4">"
+      
+      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
+
+        <div className="min-h-screen bg-gray-50">
 </div>
-          <motion.div,"
+          <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }},
+  {
+            whileInView={{ opacity: 1, y: 0 }},
+  {
+            transition={{ duration: 0.8 }},
+  {
+            viewport={{ once: true }},
+  {
           >
-</motion>"
-            <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
 </h2>
-            </h2>
+            
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">"
 </p>
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">"
+          <div className="min-h-screen bg-gray-50">
 </div>
-                <motion.div,
-                  key={index}"
+                <motion.div
+                  key={index},
+  {
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
+                  initial={{ opacity: 0, y: 30 }},
+  {
+                  whileInView={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                  viewport={{ once: true }},
+  {
+                  whileHover={{ y: -5 }},
+  {
                 >
 </motion>
-                  <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-</div>
+                  <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>`
+</div>``
                     <IconComponent className="w-8 h-8 text-white" />"
 </IconComponent>
                   </div>
@@ -262,129 +290,146 @@ export default function IndustriesPage() {}
 </p>
                   </p>
 "
-                  <div className="mb-6">"
-</div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Services:</h4>""
+                  <div className="min-h-screen bg-gray-50">
+
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Services:
                     <ul className="space-y-2">"
-</ul>"
+
                         <li key={serviceIndex} className="flex items-center text-sm text-gray-600">"
-</li>"
+
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />"
 </CheckCircle>
                         </li>
                     </ul>
                   </div>
 "
-                  <div className="mb-6">"
-</div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>""
+                  <div className="min-h-screen bg-gray-50">
+
+                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:
                     <ul className="space-y-2">"
-</ul>"
+
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-600">"
-</li>"
+
                           <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />"
 </Star>
                         </li>
                     </ul>
                   </div>
 "
-                  <div className="mb-6 p-4 bg-gray-50 rounded-lg">"
-</div>
+                  <div className="min-h-screen bg-gray-50">
+
                     <p className="text-sm text-gray-600 italic">"
 </p>
-                      <strong>Case Study:</strong> {industry.caseStudy};
+                      <strong>Case Study:</strong> {industry.caseStudy},
+  {
                     </p>
                   </div>
 "
-                  <div className="flex items-center justify-between">"
-</div>
-                    <span className="text-lg font-semibold text-blue-600">{industry.pricing}</span>
-                    <Link"
+                  <div className="min-h-screen bg-gray-50">
+
+                    <span className="text-lg font-semibold text-blue-600">{industry.pricing},
+  {
+                    <Link
                       href="/contact"
-                      className="text-blue-600 hover: text-blue-700 font-semibold inline-flex items-center group"
+                      className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center group"
                     >
 </Link>
-                      <span>Learn More</span>
+                      <span>Learn More
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />"
 </ArrowRight>
                     </Link>
                   </div>
-                </motion.div>)
-              ),
-            })}
+                </motion.div>);
+              )
+  })},
+  {
           </div>
         </div>
-      </section>
-      <section className="py-20 bg-white">"
-</section>
-        <div className="container mx-auto px-4">"
+      
+      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
+
+        <div className="min-h-screen bg-gray-50">
 </div>
-          <motion.div;"
+          <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }},
+  {
+            whileInView={{ opacity: 1, y: 0 }},
+  {
+            transition={{ duration: 0.8 }},
+  {
+            viewport={{ once: true }},
+  {
           >
-</motion>"
-            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">"
+
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">"
 </h2>
-            </h2>
+            
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">"
 </p>
             </p>
           </motion.div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+          <div className="min-h-screen bg-gray-50">
 </div>
-                <motion.div,
-                  key={index}"
+                <motion.div
+                  key={index},
+  {
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }},
+  {
+                  whileInView={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                  viewport={{ once: true }},
+  {
                 >
-</motion>"
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
-</div>
+
+                  <div className="min-h-screen bg-gray-50">
+
                     <IconComponent className="w-8 h-8 text-blue-600" />"
 </IconComponent>
-                  </div>
+                  
                   <h3 className="text-xl font-bold text-gray-900 mb-2">"
 </h3>
-                  </h3>
+                  
                   <p className="text-gray-600">"
 </p>
                   </p>
                 </motion.div>
-              );
-            })};
+              )
+  })},
+  {
           </div>
         </div>
-      </section>
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
-</section>
-        <div className="container mx-auto px-4 text-center">"
+      
+      <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
+
+        <div className="min-h-screen bg-gray-50">
 </div>
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }};
-            whileInView={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.8 }};
-            viewport={{ once: true }};
+          <motion.div
+            initial={{ opacity: 0, y: 30 }},
+  {
+            whileInView={{ opacity: 1, y: 0 }},
+  {
+            transition={{ duration: 0.8 }},
+  {
+            viewport={{ once: true }},
+  {
           >
-</motion>"
+
             <h2 className="text-3xl md:text-4xl font-bold mb-6">"
 </h2>
-            </h2>
+            
             <p className="text-xl mb-8 max-w-2xl mx-auto">"
 </p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-</div>
+            
+            <div className="min-h-screen bg-gray-50">
+
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">"
 </Link>
-              </$1>
+              
               <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">"
 </Link>
               </Link>
@@ -393,4 +438,4 @@ export default function IndustriesPage() {}
         </div>
       </section>
     </div>
-}
+  );

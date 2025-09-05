@@ -5,50 +5,67 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix remaining syntax errors
-function fixRemainingSyntax(content) {
-  // Fix semicolons that should be commas in object arrays
-  content = content.replace(/;\s*\n\s*\]/g, '\n]');
+// Function to fix specific syntax errors
+function fixSpecificSyntax(content) {
+  // Fix JSX semicolons
+  content = content.replace(/<(\w+);/g, '<$1');
+  content = content.replace(/<\/?(\w+);/g, '</$1');
   
-  // Fix missing commas between array items
+  // Fix unterminated strings in JSX
+  content = content.replace(/<Layout"/g, '<Layout');
+  content = content.replace(/<\/Layout>"/g, '</Layout>');
+  
+  // Fix missing commas in arrays
   content = content.replace(/\}\s*\n\s*\{/g, '},\n  {');
   
-  // Fix malformed array items with missing brackets
-  content = content.replace(/features:\s*\[\s*""\s*\]\s*\n\s*"([^"]+)"/g, 'features: [\n      "$1"');
+  // Fix array items that are outside brackets
+  content = content.replace(/\]\s*\n\s*\{([^}]+)\}/g, ',\n  {$1}');
   
-  // Fix array items that are outside the array brackets
-  content = content.replace(/\[\s*""\s*\]\s*\n\s*"([^"]+)"/g, '[\n      "$1"');
+  // Fix malformed array declarations
+  content = content.replace(/const\s+(\w+)\s*=\s*\[\s*\{\}\]/g, 'const $1 = [\n  {');
   
-  // Fix double quotes in features arrays
-  content = content.replace(/\[\s*"([^"]+)""/g, '["$1"');
-  
-  // Fix missing commas in features arrays
-  content = content.replace(/"([^"]+)"\s*\n\s*"([^"]+)"/g, '"$1",\n      "$2"');
+  // Fix missing opening brackets
+  content = content.replace(/const\s+(\w+)\s*=\s*\[\s*\{\}/g, 'const $1 = [\n  {');
   
   // Fix trailing commas in arrays
   content = content.replace(/,(\s*\])/g, '$1');
   
   // Fix missing closing brackets for arrays
   const lines = content.split('\n');
-  let bracketCount = 0;
+  let fixedLines = [];
   let inArray = false;
+  let bracketCount = 0;
+  let arrayStartLine = -1;
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
+    
     if (line.includes('const') && line.includes('= [')) {
       inArray = true;
       bracketCount = 1;
+      arrayStartLine = i;
     } else if (inArray) {
       if (line.includes('[')) bracketCount++;
       if (line.includes(']')) bracketCount--;
       if (bracketCount === 0) {
         inArray = false;
+        arrayStartLine = -1;
       }
+    }
+    
+    // Fix array items that are outside brackets
+    if (inArray && line.trim().startsWith('{') && !line.includes('[') && !line.includes(']')) {
+      if (!line.includes(',')) {
+        fixedLines.push(line + ',');
+      } else {
+        fixedLines.push(line);
+      }
+    } else {
+      fixedLines.push(line);
     }
   }
   
-  // Fix function declarations that are missing opening braces
-  content = content.replace(/export default function (\w+)\(\)\s*\{\s*\}/g, 'export default function $1() {\n  return (\n    <div>Content</div>\n  );\n}');
+  content = fixedLines.join('\n');
   
   return content;
 }
@@ -57,7 +74,7 @@ function fixRemainingSyntax(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixRemainingSyntax(content);
+    const fixedContent = fixSpecificSyntax(content);
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
