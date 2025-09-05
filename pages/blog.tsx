@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react'
 import MainLayout from '../components/layout/MainLayout'
+
 const blogPosts = [{
     id: 1,
     title: "The Future of AI in Business: 2025 Trends",
@@ -70,16 +71,14 @@ const blogPosts = [{
     image: "/api/placeholder/600/300",
     tags: ["API", "Development", "Design"]
   }]
+
 export default function BlogPage() {
   return (
     <MainLayout
       title="Blog - Zion Tech Group"
       description="Latest insights on AI, technology, and business innovation from Zion Tech Group experts."
-      keywords="blog, AI insights, technology news, business innovation, tech trends">
-      <Head>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest insights on AI, technology, and business innovation from Zion Tech Group experts." />
-      </Head>
+      keywords="blog, AI insights, technology news, business innovation, tech trends"
+    >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
@@ -88,15 +87,17 @@ export default function BlogPage() {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}>
-              <h1>
-                Tech Insights & Innovation
-              </h1>
-              <p>
-                Stay ahead with the latest insights on AI, technology trends, and business innovation
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl font-bold mb-6">Our Blog</h1>
+              <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+                Stay updated with the latest insights on AI, technology, and business innovation from our expert team.
               </p>
             </motion.div>
-        {/* Blog Posts Section */}
+          </div>
+        </section>
+
+        {/* Blog Posts */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -110,9 +111,9 @@ export default function BlogPage() {
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: index * 0.1 }}
-                      viewport={{ once: true }}>
-                      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600">
-                      </div>
+                      viewport={{ once: true }}
+                    >
+                      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
                       <div className="p-6">
                         <div className="flex flex-wrap gap-2 mb-3">
                           {post.tags.map((tag, tagIndex) => (
@@ -141,7 +142,8 @@ export default function BlogPage() {
                           <span>{post.readTime}</span>
                           <Link
                             href={`/blog/${post.id}`}
-                            className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center">
+                            className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center"
+                          >
                             Read More
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </Link>
@@ -155,6 +157,6 @@ export default function BlogPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   )
 }

@@ -109,6 +109,25 @@ const quickLinks = [
   { title: "Video Tutorials", href: "/tutorials", icon: Video },
   { title: "Download Resources", href: "/downloads", icon: Download },
   { title: "Community Forum", href: "/community", icon: MessageCircle }]
+const supportMethods = [
+  {
+    title: "Email Support",
+    description: "Get detailed help via email. We typically respond within 24 hours."
+  },
+  {
+    title: "Live Chat",
+    description: "Chat with our support team in real-time during business hours."
+  },
+  {
+    title: "Phone Support",
+    description: "Speak directly with our technical experts for urgent issues."
+  },
+  {
+    title: "Community Forum",
+    description: "Connect with other users and get help from the community."
+  }
+]
+
 const faqs = [{
     question: "How do I get started with your AI services?",
     answer: "Getting started is easy! First, create an account, then choose a plan that fits your needs. You can start with our free trial to explore our AI capabilities before committing to a paid plan."
@@ -127,7 +146,14 @@ const faqs = [{
   }]
 export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('')
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
+  const [expandedCategories, setExpandedCategories] = useState<{[key: string]: boolean}>({})
+  
+  const toggleCategory = (categoryTitle: string) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [categoryTitle]: !prev[categoryTitle]
+    }))
+  }
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
