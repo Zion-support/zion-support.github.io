@@ -26,7 +26,9 @@ import {
   BarChart3,
   Cpu,
   Car,
-  Code
+  Code,
+  HelpCircle,
+  Clock
 } from 'lucide-react';
 
 const navigation = [
@@ -79,7 +81,9 @@ const navigation = [
       { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
       { name: 'Blog', href: '/blog', icon: MessageSquare },
       { name: 'Documentation', href: '/docs', icon: FileText },
-      { name: 'API Reference', href: '/api-docs', icon: Code }
+      { name: 'API Reference', href: '/api-docs', icon: Code },
+      { name: 'Help Center', href: '/help', icon: HelpCircle },
+      { name: 'Community', href: '/community', icon: Users }
     ]
   },
   {
@@ -93,6 +97,18 @@ const navigation = [
       { name: 'Partners', href: '/partners', icon: Network },
       { name: 'News', href: '/news', icon: MessageSquare },
       { name: 'Contact', href: '/contact', icon: Phone }
+    ]
+  },
+  {
+    name: 'Support',
+    href: '/help',
+    icon: HelpCircle,
+    children: [
+      { name: 'Help Center', href: '/help', icon: HelpCircle },
+      { name: 'FAQ', href: '/faq', icon: HelpCircle },
+      { name: 'Community', href: '/community', icon: Users },
+      { name: 'Contact Support', href: '/contact', icon: Phone },
+      { name: 'Status Page', href: '/status', icon: Clock }
     ]
   },
   {
