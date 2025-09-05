@@ -1,4 +1,27 @@
-<<<<<<< HEAD
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+class QuickSyntaxFixer {
+  constructor() {
+    this.fixedFiles = [];
+  }
+
+  log(message) {
+    console.log(`[QuickSyntaxFixer] ${message}`);
+  }
+
+  fixFile(filePath) {
+    try {
+      if (!fs.existsSync(filePath)) {
+        this.log(`File not found: ${filePath}`);
+        return false;
+      }
+
+      const originalContent = fs.readFileSync(filePath, 'utf8');
+      let content = originalContent
+        // Remove merge conflict markers
+        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> .*/g, '')
         .replace(/^>>>>>>>.*$/gm, '')
         
         // Fix module.exports
@@ -19,19 +42,23 @@
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`"Fixed": ${filePath}`);
-        return true}
+        this.log(`Fixed: ${filePath}`);
+        return true;
+      }
 
-      return false} catch (error) {
+      return false;
+    } catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`);
-      return false}
+      return false;
+    }
   }
 
   async run() {
     this.log('🚀 Starting Quick Syntax Fixer');
     
     // Fix critical files first
-    const criticalFiles = ['components/AccessibilityEnhancer.tsx',
+    const criticalFiles = [
+      'components/AccessibilityEnhancer.tsx',
       '.eslintrc.js',
       'ecosystem.config.cjs',
       'run-automation-suite.cjs',
@@ -44,27 +71,19 @@
     let fixedCount = 0;
     for (const file of criticalFiles) {
       if (this.fixFile(file)) {
-        fixedCount++}
+        fixedCount++;
+      }
     }
 
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { "fixedFiles": this.fixedFiles }}
+    return { fixedFiles: this.fixedFiles };
+  }
 }
 
 // Run the fixer
 if (require.main === module) {
   const fixer = new QuickSyntaxFixer();
-  fixer.run().catch(console.error)}
+  fixer.run().catch(console.error);
+}
 
 module.exports = QuickSyntaxFixer;
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-      let content = fs.readFileSync(filePath, 'utf8')
-        .replace(/(\w+):\s*([^,]+),/g, '$"1"
-        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
-        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
