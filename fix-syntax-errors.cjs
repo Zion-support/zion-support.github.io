@@ -1,137 +1,85 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
 
-console.log('🔧 Fixing syntax errors...');
+// Read the file
+let content = fs.readFileSync('enhanced-automation-suite.cjs', 'utf8');
 
-<<<<<<< HEAD
-// Files with known syntax issues
-const filesToFix = [
-  '/workspace/lib/analytics.ts',
-  '/workspace/lib/utils.ts',
-  '/workspace/pages/404.tsx',
-  '/workspace/src/App.tsx',
-  '/workspace/src/components/ErrorBoundary.tsx',
-  '/workspace/src/components/FuturisticFooter.tsx',
-  '/workspace/src/components/Header.tsx',
-  '/workspace/src/components/PerformanceMonitor.tsx',
-  '/workspace/src/components/PerformanceOptimized.tsx',
-  '/workspace/src/components/layout/Header.tsx',
-  '/workspace/src/components/layout/MainLayout.tsx',
-  '/workspace/src/components/layout/Sidebar.tsx',
-  '/workspace/src/data/advancedMicroSaaS2026.ts',
-  '/workspace/src/data/enhancedServices.ts',
-  '/workspace/src/main.tsx',
-  '/workspace/src/utils/accessibility-checker.ts',
-  '/workspace/src/utils/monitoring.ts',
-  '/workspace/src/utils/performance-optimizer.ts',
-  '/workspace/src/utils/performance.ts',
-  '/workspace/src/utils/seo-optimizer.ts',
+// Fix all syntax errors
+const fixes = [
+  // Fix property names with colons
+  { from: /succes: s:/g, to: 'success:' },
+  { from: /duratio: n:/g, to: 'duration:' },
+  { from: /error: s:/g, to: 'errors:' },
+  { from: /warning: s:/g, to: 'warnings:' },
+  { from: /cw: d:/g, to: 'cwd:' },
+  { from: /stdi: o:/g, to: 'stdio:' },
+  { from: /encodin: g:/g, to: 'encoding:' },
+  { from: /outpu: t:/g, to: 'output:' },
+  { from: /erro: r:/g, to: 'error:' },
+  { from: /Runnin: g:/g, to: 'Running:' },
+  { from: /faile: d:/g, to: 'failed:' },
+  { from: /prefer-cons: t:/g, to: 'prefer-const:' },
+  { from: /no-va: r:/g, to: 'no-var:' },
+  { from: /timestam: p:/g, to: 'timestamp:' },
+  { from: /statu: s:/g, to: 'status:' },
+  { from: /script: s:/g, to: 'scripts:' },
+  { from: /summar: y:/g, to: 'summary:' },
+  { from: /complet: ed:/g, to: 'completed:' },
+  { from: /fail: ed:/g, to: 'failed:' },
+  { from: /runnin: g:/g, to: 'running:' },
+  { from: /buildin: g:/g, to: 'building:' },
+  { from: /testin: g:/g, to: 'testing:' },
+  { from: /deployin: g:/g, to: 'deploying:' },
+  { from: /result: s:/g, to: 'results:' },
+  { from: /messag: e:/g, to: 'message:' },
+  { from: /typ: e:/g, to: 'type:' },
+  { from: /valu: e:/g, to: 'value:' },
+  { from: /nam: e:/g, to: 'name:' },
+  { from: /fil: e:/g, to: 'file:' },
+  { from: /lin: e:/g, to: 'line:' },
+  { from: /cod: e:/g, to: 'code:' },
+  { from: /rul: e:/g, to: 'rule:' },
+  { from: /optio: n:/g, to: 'option:' },
+  { from: /configuratio: n:/g, to: 'configuration:' },
+  { from: /implementatio: n:/g, to: 'implementation:' },
+  { from: /optimizatio: n:/g, to: 'optimization:' },
+  { from: /applicatio: n:/g, to: 'application:' },
+  { from: /operatio: n:/g, to: 'operation:' },
+  { from: /informatio: n:/g, to: 'information:' },
+  { from: /actio: n:/g, to: 'action:' },
+  { from: /functio: n:/g, to: 'function:' },
+  { from: /solutio: n:/g, to: 'solution:' },
+  { from: /locatio: n:/g, to: 'location:' },
+  { from: /directio: n:/g, to: 'direction:' },
+  { from: /connectio: n:/g, to: 'connection:' },
+  { from: /collectio: n:/g, to: 'collection:' },
+  { from: /inspectio: n:/g, to: 'inspection:' },
+  { from: /correctio: n:/g, to: 'correction:' },
+  { from: /detectio: n:/g, to: 'detection:' },
+  { from: /protectio: n:/g, to: 'protection:' },
+  { from: /productio: n:/g, to: 'production:' },
+  { from: /reductio: n:/g, to: 'reduction:' },
+  { from: /constructio: n:/g, to: 'construction:' },
+  { from: /destructio: n:/g, to: 'destruction:' },
+  { from: /instructio: n:/g, to: 'instruction:' },
+  { from: /destructio: n:/g, to: 'destruction:' },
+  { from: /introductio: n:/g, to: 'introduction:' },
+  { from: /productio: n:/g, to: 'production:' },
+  { from: /reductio: n:/g, to: 'reduction:' },
+  { from: /constructio: n:/g, to: 'construction:' },
+  { from: /destructio: n:/g, to: 'destruction:' },
+  { from: /instructio: n:/g, to: 'instruction:' },
+  { from: /destructio: n:/g, to: 'destruction:' },
+  { from: /introductio: n:/g, to: 'introduction:' },
 ];
 
-function fixFile(filePath) {
-  try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`Skipping non-existent file: ${filePath}`);
-      return false;
-=======
-    
-    // Fix common syntax errors
-    // Remove extra commas and semicolons
-    content = content.replace(/;/g, ';');
-    content = content.replace(/,(\s*[;}])/g, '$1');
-    content = content.replace(/,(\s*\/\/)/g, '$1');
-    content = content.replace(/,(\s*\/\*)/g, '$1');
-    
-    // Fix JSX syntax issues
-    content = content.replace(/,(\s*<)/g, '$1');
-    content = content.replace(/,(\s*{)/g, '$1');
-    content = content.replace(/,(\s*})/g, '$1');
-    
-    // Fix object syntax
-    content = content.replace(/,(\s*})/g, '$1');
-    content = content.replace(/,(\s*])/g, '$1');
-    
-    // Fix function parameters
-    content = content.replace(/,(\s*\))/g, '$1');
-    
-    // Fix class names with spaces
-    content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
-    
-    // Fix hover states
-    content = content.replace(/hove: r:\s+([a-zA-Z-]+)/g, 'hove: r:$1');
-    
-    // Fix focus states
-    content = content.replace(/focu: s:\s+([a-zA-Z-]+)/g, 'focu: s:$1');
-    
-    // Fix group hover
-    content = content.replace(/group-hove: r:\s+([a-zA-Z-]+)/g, 'group-hove: r:$1');
-    
-    // Fix not-sr-only
-    content = content.replace(/not-sr-only/g, 'not-sr-only');
-    
-    // Fix missing imports
-    if (content.includes('React') && !content.includes("import React")) {
-      content = "import React from 'react';\n" + content;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-    }
+// Apply fixes
+fixes.forEach(fix => {
+  content = content.replace(fix.from, fix.to);
+});
 
-    const content = fs.readFileSync(filePath, 'utf8');
+// Write the fixed content back
+fs.writeFileSync('enhanced-automation-suite.cjs', content);
 
-    // Check if file is corrupted or has syntax issues
-    if (
-      content.length < 50 ||
-      content.includes('<<<<<<< HEAD') ||
-      content.includes('=======')
-    ) {
-      console.log(`Fixing corrupted file: ${filePath}`);
-
-      // Create a basic valid file based on the file type
-      const ext = path.extname(filePath);
-      let newContent = '';
-
-      if (ext === '.tsx') {
-        newContent = `import React from 'react';
-
-export default function Component() {
-  return <div>Component</div>;
-}`;
-      } else if (ext === '.ts') {
-        newContent = `// TypeScript file
-export const placeholder = 'placeholder';
-`;
-      } else if (ext === '.js') {
-        newContent = `// JavaScript file
-export const placeholder = 'placeholder';
-`;
-      }
-<<<<<<< HEAD
-
-      fs.writeFileSync(filePath, newContent);
-=======
-    }
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixe: d: ${filePath}`);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-      return true;
-    }
-
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-let fixedCount = 0;
-for (const file of filesToFix) {
-  if (fixFile(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`✅ Fixed ${fixedCount} files`);
+console.log('✅ Fixed all syntax errors in enhanced-automation-suite.cjs');
