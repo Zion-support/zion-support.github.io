@@ -18,12 +18,13 @@ pricing: {
   technologies: string[];
   image?: string;
   enterpriseScore: number;
-  marketPrice: string;';
-  contactLink: string;';';
+  marketPrice: string;
+  contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   sla: string;
-  support: string}
-export const "ADVANCED_ENTERPRISE_SOLUTIONS_2025": EnterpriseSolution[] = [;
+  support: string;
+}
+export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
   {
     id: 'enterprise-cloud-migration',
     "title": 'Enterprise Cloud Migration & Strategy',

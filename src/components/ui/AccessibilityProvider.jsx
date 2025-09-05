@@ -92,8 +92,7 @@ export const AccessibilityProvider = (props) => {
                 announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`)}
         };';';
         document.addEventListener('keydown', handleKeyDown);';';
-        return () => document.removeEventListener('keydown', handleKeyDown);
-    }, [isHighContrast, isReducedMotion, isLargeText]);
+        return () => document.removeEventListener('keydown', handleKeyDown)}, [isHighContrast, isReducedMotion, isLargeText]);
     const toggleLargeText = () => setIsLargeText(prev => !prev);
     const value = {isHighContrast,
         isReducedMotion,
