@@ -722,6 +722,132 @@ title: 'Generative AI Content Creation Suite',
     pricing: '$60,000 - $400,000/project',
     category: 'Space Mining',
     popular: true
+  },
+  {
+    title: 'AI-Powered Climate Change Modeling',
+    description: 'Advanced climate modeling and prediction using machine learning for environmental planning.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Impact Analysis', 'Carbon Footprint Optimization', 'Sustainability Planning'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Climate AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Mental Health Assessment',
+    description: 'Intelligent mental health screening and early intervention using natural language processing.',
+    icon: Heart,
+    features: ['Sentiment Analysis', 'Risk Assessment', 'Early Detection', 'Treatment Recommendations'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Mental Health AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicle Fleet Management',
+    description: 'Intelligent fleet coordination and optimization for autonomous vehicles and drones.',
+    icon: Car,
+    features: ['Route Optimization', 'Fleet Coordination', 'Predictive Maintenance', 'Real-time Monitoring'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Quantum Computing Optimization',
+    description: 'Machine learning algorithms for quantum circuit optimization and error correction.',
+    icon: Cpu,
+    features: ['Quantum Circuit Design', 'Error Correction', 'Algorithm Optimization', 'Performance Tuning'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personalized Medicine',
+    description: 'Genomic analysis and personalized treatment recommendations using AI.',
+    icon: Heart,
+    features: ['Genomic Analysis', 'Drug Response Prediction', 'Treatment Optimization', 'Side Effect Prediction'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Precision Medicine',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart City Traffic Management',
+    description: 'Intelligent traffic flow optimization and congestion management for smart cities.',
+    icon: Car,
+    features: ['Traffic Flow Optimization', 'Congestion Prediction', 'Signal Timing', 'Emergency Response'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Agricultural Yield Prediction',
+    description: 'Machine learning models for crop yield prediction and agricultural optimization.',
+    icon: Sprout,
+    features: ['Yield Prediction', 'Weather Integration', 'Soil Analysis', 'Pest Detection'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'AgTech AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Intelligence',
+    description: 'Advanced threat detection and response using AI-powered security analytics.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Threat Intelligence'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'Intelligent property valuation and market analysis using machine learning.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Recommendations', 'Risk Assessment'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Real Estate AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Cloning & Synthesis',
+    description: 'High-quality voice synthesis and cloning with emotional expression and multi-language support.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotional Expression', 'Multi-language Support', 'Real-time Synthesis'],
+    pricing: '$0.10 - $1.00 per minute',
+    category: 'Voice AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Drug Interaction Checker',
+    description: 'Intelligent drug interaction analysis and safety recommendations for healthcare providers.',
+    icon: Heart,
+    features: ['Drug Interaction Analysis', 'Safety Recommendations', 'Dosage Optimization', 'Side Effect Prediction'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Investment Portfolio Optimizer',
+    description: 'Intelligent portfolio management with risk assessment and automated rebalancing.',
+    icon: TrendingUp,
+    features: ['Portfolio Optimization', 'Risk Assessment', 'Automated Rebalancing', 'Market Analysis'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'FinTech AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Translation & Localization',
+    description: 'Advanced translation services with cultural context and industry-specific terminology.',
+    icon: Globe,
+    features: ['100+ Languages', 'Cultural Context', 'Industry Terms', 'Real-time Translation'],
+    pricing: '$0.01 - $0.10 per word',
+    category: 'Language AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance for Manufacturing',
+    description: 'Machine learning-based equipment maintenance prediction with IoT sensor integration.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Monitoring'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Manufacturing AI',
+    popular: true
   }
 ];
 
@@ -900,9 +1026,11 @@ whileHover={{ y: -5 }}
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-blue-600" />
@@ -965,6 +1093,53 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           </div>
                   </div>
                   </section>
+
+      {/* Contact Information Section */}
+      <section className="py-16 bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Unlock AI Potential</h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Ready to revolutionize your business with cutting-edge AI solutions? Contact our AI experts for a personalized consultation and custom AI implementation strategy.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-slate-700 p-6 rounded-lg">
+                <div className="text-2xl font-bold text-blue-400 mb-2">📞 Call Us</div>
+                <p className="text-white text-lg">+1 302 464 0950</p>
+                <p className="text-gray-400 text-sm">Available 24/7 for urgent support</p>
+              </div>
+              
+              <div className="bg-slate-700 p-6 rounded-lg">
+                <div className="text-2xl font-bold text-blue-400 mb-2">✉️ Email Us</div>
+                <p className="text-white text-lg">kleber@ziontechgroup.com</p>
+                <p className="text-gray-400 text-sm">Get a response within 2 hours</p>
+              </div>
+              
+              <div className="bg-slate-700 p-6 rounded-lg">
+                <div className="text-2xl font-bold text-blue-400 mb-2">📍 Visit Us</div>
+                <p className="text-white text-lg">364 E Main St STE 1008</p>
+                <p className="text-white text-lg">Middletown DE 19709</p>
+              </div>
+            </div>
+            
+            <div className="mt-12">
+              <Link 
+                href="/contact" 
+                className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 font-semibold text-lg"
+              >
+                Schedule Free AI Consultation
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">

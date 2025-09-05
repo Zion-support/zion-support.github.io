@@ -4,31 +4,26 @@ import { motion } from 'framer-motion';
 import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 
-export default function LoginPage() {},
-  {
-  const ["showPassword", "setShowPassword"] = useState(false);
-  const ["formData", "setFormData"] = useState({})
+export default function LoginPage() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [formData, setFormData] = useState({
     email: '',
     password: '',
     remember: false
   });
 
-  const handleSubmit = (e: React.FormEvent) => {},
-  {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
-  },
-  {
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {},
-  {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({})
+    setFormData(prev => ({
       ...prev,
-      ["name"]: type === 'checkbox' ? checked : value
-  }))
-  },
-  {
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
 
   return (
     <Layout
@@ -39,12 +34,9 @@ export default function LoginPage() {},
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }},
-  {
-            animate={{ opacity: 1, y: 0 }},
-  {
-            transition={{ duration: 0.6 }},
-  {
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center"
           >
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">

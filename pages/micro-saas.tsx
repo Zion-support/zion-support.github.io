@@ -46,7 +46,12 @@ import {
   Home,
   Trash2,
   Camera,
-  HardDrive
+  HardDrive,
+  Moon,
+  Shirt,
+  Vote,
+  Droplets,
+  Briefcase
 } from 'lucide-react';
 
 const microSaaSProducts = [{
@@ -765,6 +770,141 @@ description: 'Automated code review with security scanning, performance optimiza
     pricing: '$1,999 - $9,999/month',
     category: 'Space Technology',
     popular: true
+  },
+  {
+    title: 'AI-Powered Personal Finance Coach',
+    description: 'Intelligent personal finance management with investment recommendations and budgeting.',
+    icon: DollarSign,
+    features: ['Expense Tracking', 'Investment Advice', 'Budget Optimization', 'Goal Setting'],
+    pricing: '$9.99 - $49.99/month',
+    category: 'Personal Finance',
+    popular: true
+  },
+  {
+    title: 'Smart Home Energy Optimizer',
+    description: 'AI-driven energy consumption optimization for smart homes with cost savings analytics.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Cost Optimization', 'Smart Scheduling', 'Carbon Footprint Tracking'],
+    pricing: '$19.99 - $99.99/month',
+    category: 'Smart Home',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Mental Health Companion',
+    description: '24/7 mental health support with mood tracking, meditation guidance, and crisis intervention.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Meditation Guidance', 'Crisis Detection', 'Professional Referrals'],
+    pricing: '$29.99 - $149.99/month',
+    category: 'HealthTech',
+    popular: true
+  },
+  {
+    title: 'Blockchain Supply Chain Tracker',
+    description: 'Transparent supply chain tracking with blockchain verification and sustainability metrics.',
+    icon: Package,
+    features: ['Product Tracking', 'Sustainability Metrics', 'Authenticity Verification', 'Compliance Reporting'],
+    pricing: '$199 - $1,999/month',
+    category: 'Supply Chain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Learning Platform',
+    description: 'Personalized language learning with speech recognition and cultural context integration.',
+    icon: Globe,
+    features: ['Speech Recognition', 'Cultural Context', 'Personalized Learning', 'Progress Tracking'],
+    pricing: '$14.99 - $79.99/month',
+    category: 'EdTech',
+    popular: true
+  },
+  {
+    title: 'Smart Waste Management System',
+    description: 'IoT-based waste collection optimization with route planning and environmental impact tracking.',
+    icon: Trash2,
+    features: ['Route Optimization', 'Fill Level Monitoring', 'Environmental Impact', 'Cost Reduction'],
+    pricing: '$299 - $1,999/month',
+    category: 'Environmental Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Pet Health Monitor',
+    description: 'Comprehensive pet health tracking with AI-powered symptom analysis and vet recommendations.',
+    icon: Heart,
+    features: ['Health Tracking', 'Symptom Analysis', 'Vet Recommendations', 'Vaccination Reminders'],
+    pricing: '$9.99 - $49.99/month',
+    category: 'PetTech',
+    popular: true
+  },
+  {
+    title: 'Decentralized Social Media Platform',
+    description: 'Privacy-focused social media with blockchain-based content ownership and monetization.',
+    icon: MessageSquare,
+    features: ['Content Ownership', 'Monetization', 'Privacy Protection', 'Decentralized Storage'],
+    pricing: '$4.99 - $29.99/month',
+    category: 'Social Media',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Sleep Optimization',
+    description: 'Advanced sleep tracking and optimization with personalized recommendations and environment control.',
+    icon: Moon,
+    features: ['Sleep Tracking', 'Environment Control', 'Personalized Recommendations', 'Sleep Coaching'],
+    pricing: '$19.99 - $99.99/month',
+    category: 'HealthTech',
+    popular: true
+  },
+  {
+    title: 'Smart Agriculture Drone Fleet',
+    description: 'Autonomous drone fleet for precision agriculture with crop monitoring and treatment application.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Precision Treatment', 'Yield Analysis', 'Weather Integration'],
+    pricing: '$499 - $3,999/month',
+    category: 'AgTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Stylist',
+    description: 'Virtual personal stylist with body analysis, trend prediction, and shopping recommendations.',
+    icon: Shirt,
+    features: ['Body Analysis', 'Trend Prediction', 'Shopping Integration', 'Style Matching'],
+    pricing: '$9.99 - $49.99/month',
+    category: 'Fashion Tech',
+    popular: true
+  },
+  {
+    title: 'Blockchain-Based Voting System',
+    description: 'Secure, transparent voting system with blockchain verification and real-time results.',
+    icon: Vote,
+    features: ['Blockchain Verification', 'Real-time Results', 'Voter Authentication', 'Audit Trail'],
+    pricing: '$999 - $9,999/election',
+    category: 'GovTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Home Security System',
+    description: 'Intelligent home security with facial recognition, anomaly detection, and automated responses.',
+    icon: Shield,
+    features: ['Facial Recognition', 'Anomaly Detection', 'Automated Alerts', 'Mobile Integration'],
+    pricing: '$29.99 - $199.99/month',
+    category: 'Home Security',
+    popular: true
+  },
+  {
+    title: 'Smart Water Quality Monitor',
+    description: 'Real-time water quality monitoring with contamination detection and purification recommendations.',
+    icon: Droplets,
+    features: ['Real-time Monitoring', 'Contamination Detection', 'Purification Tips', 'Health Alerts'],
+    pricing: '$199 - $999/month',
+    category: 'Environmental Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Career Coach',
+    description: 'Personalized career development platform with skill assessment and job matching.',
+    icon: Briefcase,
+    features: ['Skill Assessment', 'Job Matching', 'Career Planning', 'Interview Prep'],
+    pricing: '$19.99 - $99.99/month',
+    category: 'Career Development',
+    popular: true
   }
 ];
 
@@ -1253,6 +1393,53 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                 <div className="text-3xl font-bold text-yellow-300 mb-2">5★</div>
                 <div className="text-sm">Client Rating</div>
               </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-16 bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Get Started Today</h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Ready to transform your business with innovative micro SaaS solutions? Contact our expert team for a personalized consultation and custom pricing.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-slate-700 p-6 rounded-lg">
+                <div className="text-2xl font-bold text-purple-400 mb-2">📞 Call Us</div>
+                <p className="text-white text-lg">+1 302 464 0950</p>
+                <p className="text-gray-400 text-sm">Available 24/7 for urgent support</p>
+              </div>
+              
+              <div className="bg-slate-700 p-6 rounded-lg">
+                <div className="text-2xl font-bold text-purple-400 mb-2">✉️ Email Us</div>
+                <p className="text-white text-lg">kleber@ziontechgroup.com</p>
+                <p className="text-gray-400 text-sm">Get a response within 2 hours</p>
+              </div>
+              
+              <div className="bg-slate-700 p-6 rounded-lg">
+                <div className="text-2xl font-bold text-purple-400 mb-2">📍 Visit Us</div>
+                <p className="text-white text-lg">364 E Main St STE 1008</p>
+                <p className="text-white text-lg">Middletown DE 19709</p>
+              </div>
+            </div>
+            
+            <div className="mt-12">
+              <Link 
+                href="/contact" 
+                className="inline-block px-8 py-4 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all duration-300 font-semibold text-lg"
+              >
+                Schedule Free Consultation
+              </Link>
             </div>
           </motion.div>
         </div>

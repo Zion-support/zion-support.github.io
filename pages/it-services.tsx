@@ -548,6 +548,105 @@ title: 'AI-Powered IT Operations (AIOps)',
     pricing: '$75,000 - $500,000/project',
     category: 'Holographic Computing',
     popular: true
+  },
+  {
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations with machine learning-driven automation and predictive analytics.',
+    icon: Brain,
+    features: ['Predictive Analytics', 'Automated Incident Response', 'Anomaly Detection', 'Performance Optimization'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Comprehensive zero trust security implementation with continuous verification and micro-segmentation.',
+    icon: Lock,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Least Privilege Access'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Zero Trust Security',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Cpu,
+    features: ['Edge Nodes Deployment', 'Latency Optimization', 'IoT Integration', 'Distributed Processing'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Cryptography Implementation',
+    description: 'Post-quantum cryptography solutions to protect against future quantum computing threats.',
+    icon: Shield,
+    features: ['Quantum-Safe Algorithms', 'Key Management', 'Migration Planning', 'Compliance Support'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: '5G Network Infrastructure',
+    description: '5G network design, implementation, and optimization for enterprise applications.',
+    icon: Network,
+    features: ['5G Network Design', 'Performance Optimization', 'IoT Connectivity', 'Low Latency Applications'],
+    pricing: '$50,000 - $300,000/project',
+    category: '5G Networks',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+    icon: Lock,
+    features: ['Blockchain Development', 'Smart Contracts', 'DApp Development', 'Consensus Mechanisms'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'IoT Security & Management',
+    description: 'Comprehensive IoT security solutions with device management and threat protection.',
+    icon: Shield,
+    features: ['Device Authentication', 'Threat Detection', 'Firmware Updates', 'Network Segmentation'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'IoT Security',
+    popular: true
+  },
+  {
+    title: 'Hyperconverged Infrastructure (HCI)',
+    description: 'Integrated compute, storage, and networking solutions for simplified data center management.',
+    icon: Server,
+    features: ['Integrated Stack', 'Simplified Management', 'Scalable Architecture', 'Cost Optimization'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'HCI',
+    popular: true
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'Comprehensive IT service management with ITIL best practices and automation.',
+    icon: Settings,
+    features: ['ITIL Framework', 'Service Catalog', 'Change Management', 'Incident Management'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'ITSM',
+    popular: true
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Strategic digital transformation planning and implementation for modern business operations.',
+    icon: Rocket,
+    features: ['Strategy Development', 'Process Optimization', 'Technology Integration', 'Change Management'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Digital Transformation',
+    popular: true
+  },
+  {
+    title: 'IT Compliance & Risk Management',
+    description: 'Comprehensive IT compliance management with risk assessment and regulatory adherence.',
+    icon: Shield,
+    features: ['Compliance Auditing', 'Risk Assessment', 'Regulatory Adherence', 'Documentation'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Compliance',
+    popular: true
   }
 ];
 
@@ -746,9 +845,11 @@ whileHover={{ y: -5 }}
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-green-600" />
@@ -872,6 +973,53 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           </div>
                   </div>
                   </section>
+
+      {/* Contact Information Section */}
+      <section className="py-16 bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">Transform Your IT Infrastructure</h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Ready to modernize your IT infrastructure with cutting-edge solutions? Contact our certified experts for a comprehensive IT assessment and custom implementation plan.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-slate-700 p-6 rounded-lg">
+                <div className="text-2xl font-bold text-green-400 mb-2">📞 Call Us</div>
+                <p className="text-white text-lg">+1 302 464 0950</p>
+                <p className="text-gray-400 text-sm">Available 24/7 for urgent support</p>
+              </div>
+              
+              <div className="bg-slate-700 p-6 rounded-lg">
+                <div className="text-2xl font-bold text-green-400 mb-2">✉️ Email Us</div>
+                <p className="text-white text-lg">kleber@ziontechgroup.com</p>
+                <p className="text-gray-400 text-sm">Get a response within 2 hours</p>
+              </div>
+              
+              <div className="bg-slate-700 p-6 rounded-lg">
+                <div className="text-2xl font-bold text-green-400 mb-2">📍 Visit Us</div>
+                <p className="text-white text-lg">364 E Main St STE 1008</p>
+                <p className="text-white text-lg">Middletown DE 19709</p>
+              </div>
+            </div>
+            
+            <div className="mt-12">
+              <Link 
+                href="/contact" 
+                className="inline-block px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-300 font-semibold text-lg"
+              >
+                Schedule Free IT Assessment
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
