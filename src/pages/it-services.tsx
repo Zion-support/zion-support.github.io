@@ -21,7 +21,8 @@ import {
   Settings,
   Monitor,
   Wifi,
-  HardDrive
+  HardDrive,
+  Brain
 } from 'lucide-react';
 
 const itServices = [
@@ -184,6 +185,90 @@ const itServices = [
       "Decentralization",
       "Future-proof technology"
     ]
+  },
+  {
+    title: "AI-Powered IT Operations",
+    description: "Intelligent IT operations management using artificial intelligence and machine learning",
+    icon: Brain,
+    features: [
+      "Predictive Maintenance",
+      "Automated Incident Response",
+      "Intelligent Monitoring",
+      "Anomaly Detection",
+      "Capacity Planning",
+      "Performance Optimization"
+    ],
+    color: "from-purple-500 to-pink-500",
+    benefits: [
+      "Proactive issue resolution",
+      "Reduced downtime",
+      "Cost optimization",
+      "Improved efficiency"
+    ],
+    pricing: "Starting at $2,499/month"
+  },
+  {
+    title: "Zero Trust Security Architecture",
+    description: "Comprehensive zero trust security implementation for modern enterprises",
+    icon: Shield,
+    features: [
+      "Identity & Access Management",
+      "Micro-segmentation",
+      "Continuous Verification",
+      "Privileged Access Management",
+      "Security Analytics",
+      "Compliance Automation"
+    ],
+    color: "from-red-500 to-orange-500",
+    benefits: [
+      "Enhanced security posture",
+      "Reduced attack surface",
+      "Compliance assurance",
+      "Better visibility"
+    ],
+    pricing: "Starting at $3,999/month"
+  },
+  {
+    title: "Hybrid Cloud Management",
+    description: "Seamless management of hybrid cloud environments across multiple platforms",
+    icon: Cloud,
+    features: [
+      "Multi-cloud Orchestration",
+      "Cost Optimization",
+      "Security Management",
+      "Workload Migration",
+      "Disaster Recovery",
+      "Compliance Monitoring"
+    ],
+    color: "from-blue-500 to-cyan-500",
+    benefits: [
+      "Flexibility and choice",
+      "Cost optimization",
+      "Risk mitigation",
+      "Scalability"
+    ],
+    pricing: "Starting at $2,999/month"
+  },
+  {
+    title: "Edge Computing Infrastructure",
+    description: "Distributed computing infrastructure for real-time data processing",
+    icon: Cpu,
+    features: [
+      "Edge Server Deployment",
+      "5G Network Integration",
+      "Real-time Processing",
+      "Data Synchronization",
+      "Edge Security",
+      "Performance Monitoring"
+    ],
+    color: "from-green-500 to-teal-500",
+    benefits: [
+      "Ultra-low latency",
+      "Bandwidth optimization",
+      "Real-time insights",
+      "Improved user experience"
+    ],
+    pricing: "Starting at $4,499/month"
   },
   {
     title: "Quantum Computing",

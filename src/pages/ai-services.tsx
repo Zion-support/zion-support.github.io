@@ -20,7 +20,16 @@ import {
   Bot,
   TrendingUp,
   Target,
-  Lightbulb
+  Lightbulb,
+  Shield,
+  Heart,
+  Truck,
+  FileText,
+  Home,
+  Scale,
+  Leaf,
+  Car,
+  BookOpen
 } from 'lucide-react';
 
 const aiServices = [
@@ -143,6 +152,258 @@ const aiServices = [
       "Supply chain optimization",
       "Compliance monitoring"
     ]
+  },
+  {
+    title: "AI-Powered Cybersecurity Suite",
+    description: "Advanced threat detection and prevention using machine learning algorithms",
+    icon: Shield,
+    features: [
+      "Real-time Threat Detection",
+      "Behavioral Analysis",
+      "Automated Response",
+      "Zero-day Attack Prevention",
+      "Network Anomaly Detection",
+      "Incident Response Automation"
+    ],
+    color: "from-red-500 to-pink-500",
+    useCases: [
+      "Enterprise security monitoring",
+      "Financial fraud detection",
+      "Network intrusion prevention",
+      "Compliance automation"
+    ],
+    pricing: "Starting at $2,999/month"
+  },
+  {
+    title: "AI-Powered Healthcare Analytics",
+    description: "Medical data analysis and diagnostic support using advanced AI models",
+    icon: Heart,
+    features: [
+      "Medical Image Analysis",
+      "Drug Discovery Support",
+      "Patient Risk Assessment",
+      "Treatment Recommendation",
+      "Clinical Trial Optimization",
+      "Health Outcome Prediction"
+    ],
+    color: "from-green-500 to-teal-500",
+    useCases: [
+      "Radiology assistance",
+      "Pharmaceutical research",
+      "Personalized medicine",
+      "Population health management"
+    ],
+    pricing: "Starting at $4,999/month"
+  },
+  {
+    title: "AI-Powered Financial Trading",
+    description: "Algorithmic trading and investment analysis using machine learning",
+    icon: TrendingUp,
+    features: [
+      "Algorithmic Trading",
+      "Market Sentiment Analysis",
+      "Risk Assessment",
+      "Portfolio Optimization",
+      "Fraud Detection",
+      "Credit Scoring"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    useCases: [
+      "Automated trading strategies",
+      "Investment portfolio management",
+      "Credit risk assessment",
+      "Market prediction"
+    ],
+    pricing: "Starting at $3,999/month"
+  },
+  {
+    title: "AI-Powered Supply Chain Optimization",
+    description: "Intelligent supply chain management and logistics optimization",
+    icon: Truck,
+    features: [
+      "Demand Forecasting",
+      "Inventory Optimization",
+      "Route Planning",
+      "Supplier Risk Assessment",
+      "Quality Control",
+      "Cost Optimization"
+    ],
+    color: "from-blue-500 to-cyan-500",
+    useCases: [
+      "Manufacturing optimization",
+      "Retail inventory management",
+      "Logistics planning",
+      "Supplier relationship management"
+    ],
+    pricing: "Starting at $2,499/month"
+  },
+  {
+    title: "AI-Powered Content Generation",
+    description: "Automated content creation and marketing using advanced language models",
+    icon: FileText,
+    features: [
+      "Blog Post Generation",
+      "Social Media Content",
+      "Email Marketing Copy",
+      "Product Descriptions",
+      "SEO Optimization",
+      "Multi-language Support"
+    ],
+    color: "from-purple-500 to-pink-500",
+    useCases: [
+      "Content marketing automation",
+      "E-commerce product descriptions",
+      "Social media management",
+      "SEO content strategy"
+    ],
+    pricing: "Starting at $799/month"
+  },
+  {
+    title: "AI-Powered HR & Talent Management",
+    description: "Intelligent human resources management and talent acquisition",
+    icon: Users,
+    features: [
+      "Resume Screening",
+      "Candidate Matching",
+      "Interview Scheduling",
+      "Performance Analysis",
+      "Employee Retention Prediction",
+      "Skills Gap Analysis"
+    ],
+    color: "from-indigo-500 to-purple-500",
+    useCases: [
+      "Automated recruitment",
+      "Employee performance tracking",
+      "Talent development planning",
+      "Workforce analytics"
+    ],
+    pricing: "Starting at $1,499/month"
+  },
+  {
+    title: "AI-Powered Real Estate Analytics",
+    description: "Property valuation and market analysis using machine learning",
+    icon: Home,
+    features: [
+      "Property Valuation",
+      "Market Trend Analysis",
+      "Investment Recommendations",
+      "Risk Assessment",
+      "Price Prediction",
+      "Neighborhood Analysis"
+    ],
+    color: "from-emerald-500 to-green-500",
+    useCases: [
+      "Real estate investment",
+      "Property management",
+      "Market research",
+      "Mortgage risk assessment"
+    ],
+    pricing: "Starting at $1,999/month"
+  },
+  {
+    title: "AI-Powered Legal Document Analysis",
+    description: "Automated legal document review and contract analysis",
+    icon: Scale,
+    features: [
+      "Contract Analysis",
+      "Legal Document Review",
+      "Compliance Checking",
+      "Risk Assessment",
+      "Due Diligence",
+      "Legal Research"
+    ],
+    color: "from-gray-500 to-slate-500",
+    useCases: [
+      "Contract management",
+      "Legal compliance",
+      "Due diligence processes",
+      "Legal research automation"
+    ],
+    pricing: "Starting at $2,999/month"
+  },
+  {
+    title: "AI-Powered Energy Management",
+    description: "Smart energy consumption optimization and renewable energy integration",
+    icon: Zap,
+    features: [
+      "Energy Consumption Analysis",
+      "Renewable Energy Optimization",
+      "Grid Management",
+      "Carbon Footprint Tracking",
+      "Predictive Maintenance",
+      "Cost Optimization"
+    ],
+    color: "from-yellow-500 to-amber-500",
+    useCases: [
+      "Smart grid management",
+      "Renewable energy integration",
+      "Energy efficiency optimization",
+      "Carbon neutrality planning"
+    ],
+    pricing: "Starting at $3,499/month"
+  },
+  {
+    title: "AI-Powered Agriculture & Food Tech",
+    description: "Precision agriculture and food production optimization using AI",
+    icon: Leaf,
+    features: [
+      "Crop Yield Prediction",
+      "Soil Analysis",
+      "Pest Detection",
+      "Irrigation Optimization",
+      "Food Quality Control",
+      "Supply Chain Tracking"
+    ],
+    color: "from-green-500 to-lime-500",
+    useCases: [
+      "Precision farming",
+      "Food safety monitoring",
+      "Supply chain optimization",
+      "Sustainable agriculture"
+    ],
+    pricing: "Starting at $2,199/month"
+  },
+  {
+    title: "AI-Powered Transportation & Logistics",
+    description: "Smart transportation management and autonomous vehicle systems",
+    icon: Car,
+    features: [
+      "Route Optimization",
+      "Fleet Management",
+      "Autonomous Vehicle Control",
+      "Traffic Prediction",
+      "Maintenance Scheduling",
+      "Fuel Efficiency Optimization"
+    ],
+    color: "from-blue-500 to-indigo-500",
+    useCases: [
+      "Fleet management",
+      "Autonomous driving",
+      "Traffic optimization",
+      "Logistics planning"
+    ],
+    pricing: "Starting at $4,499/month"
+  },
+  {
+    title: "AI-Powered Education & E-Learning",
+    description: "Personalized learning and educational content optimization",
+    icon: BookOpen,
+    features: [
+      "Personalized Learning Paths",
+      "Content Recommendation",
+      "Student Performance Analysis",
+      "Automated Grading",
+      "Learning Style Adaptation",
+      "Progress Tracking"
+    ],
+    color: "from-purple-500 to-violet-500",
+    useCases: [
+      "Online education platforms",
+      "Corporate training",
+      "Student assessment",
+      "Educational content creation"
+    ],
+    pricing: "Starting at $1,299/month"
   },
   {
     title: "Quantum AI Solutions",

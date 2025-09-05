@@ -21,7 +21,12 @@ import {
   Lightbulb,
   Rocket,
   Code,
-  Layers
+  Layers,
+  Bot,
+  FileText,
+  DollarSign,
+  Mail,
+  Calendar
 } from 'lucide-react';
 
 const microSaasServices = [
@@ -244,6 +249,237 @@ const microSaasServices = [
       "Customer management",
       "Business growth"
     ]
+  },
+  {
+    title: "AI-Powered Customer Support Chatbot",
+    description: "Intelligent customer support automation with natural language processing and multi-language support",
+    icon: Bot,
+    features: [
+      "24/7 Customer Support",
+      "Multi-language Support",
+      "Ticket Management",
+      "Knowledge Base Integration",
+      "Sentiment Analysis",
+      "Live Agent Handoff"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    benefits: [
+      "Reduced support costs",
+      "Instant responses",
+      "Improved customer satisfaction",
+      "Scalable support"
+    ],
+    pricing: "Starting at $299/month"
+  },
+  {
+    title: "Smart Inventory Management System",
+    description: "AI-driven inventory optimization with predictive analytics and automated reordering",
+    icon: BarChart3,
+    features: [
+      "Predictive Analytics",
+      "Automated Reordering",
+      "Multi-location Support",
+      "Barcode Scanning",
+      "Supplier Management",
+      "Cost Optimization"
+    ],
+    color: "from-orange-500 to-red-500",
+    benefits: [
+      "Reduced stockouts",
+      "Lower carrying costs",
+      "Improved cash flow",
+      "Data-driven decisions"
+    ],
+    pricing: "Starting at $199/month"
+  },
+  {
+    title: "Employee Time Tracking & Productivity Analytics",
+    description: "Advanced workforce management with productivity insights and automated reporting",
+    icon: Users,
+    features: [
+      "Time Tracking",
+      "Productivity Analytics",
+      "Project Management",
+      "Automated Invoicing",
+      "Team Performance Reports",
+      "Mobile App"
+    ],
+    color: "from-green-500 to-teal-500",
+    benefits: [
+      "Improved productivity",
+      "Accurate billing",
+      "Better project management",
+      "Team insights"
+    ],
+    pricing: "Starting at $149/month"
+  },
+  {
+    title: "AI-Powered Social Media Management",
+    description: "Automated social media posting, engagement, and analytics across all platforms",
+    icon: Globe,
+    features: [
+      "Multi-platform Posting",
+      "Content Scheduling",
+      "Engagement Analytics",
+      "Hashtag Optimization",
+      "Competitor Analysis",
+      "ROI Tracking"
+    ],
+    color: "from-pink-500 to-purple-500",
+    benefits: [
+      "Increased engagement",
+      "Time savings",
+      "Better content strategy",
+      "Measurable results"
+    ],
+    pricing: "Starting at $179/month"
+  },
+  {
+    title: "Smart Document Processing & OCR",
+    description: "Automated document digitization, data extraction, and intelligent form processing",
+    icon: FileText,
+    features: [
+      "OCR Technology",
+      "Data Extraction",
+      "Form Processing",
+      "Document Classification",
+      "Batch Processing",
+      "API Integration"
+    ],
+    color: "from-indigo-500 to-purple-500",
+    benefits: [
+      "Reduced manual work",
+      "Faster processing",
+      "Improved accuracy",
+      "Cost savings"
+    ],
+    pricing: "Starting at $249/month"
+  },
+  {
+    title: "Real-time Analytics Dashboard",
+    description: "Custom business intelligence dashboards with real-time data visualization and reporting",
+    icon: BarChart3,
+    features: [
+      "Real-time Data",
+      "Custom Dashboards",
+      "Interactive Charts",
+      "Automated Reports",
+      "Data Export",
+      "Mobile Access"
+    ],
+    color: "from-blue-500 to-cyan-500",
+    benefits: [
+      "Data-driven decisions",
+      "Real-time insights",
+      "Improved performance",
+      "Competitive advantage"
+    ],
+    pricing: "Starting at $399/month"
+  },
+  {
+    title: "AI-Powered Lead Generation & CRM",
+    description: "Intelligent lead scoring, automated follow-ups, and comprehensive customer relationship management",
+    icon: Target,
+    features: [
+      "Lead Scoring",
+      "Automated Follow-ups",
+      "Email Sequences",
+      "Pipeline Management",
+      "Contact Enrichment",
+      "Sales Analytics"
+    ],
+    color: "from-emerald-500 to-green-500",
+    benefits: [
+      "Higher conversion rates",
+      "Automated nurturing",
+      "Better lead quality",
+      "Increased sales"
+    ],
+    pricing: "Starting at $299/month"
+  },
+  {
+    title: "Smart Financial Management & Invoicing",
+    description: "Automated accounting, invoicing, expense tracking, and financial reporting for small businesses",
+    icon: DollarSign,
+    features: [
+      "Automated Invoicing",
+      "Expense Tracking",
+      "Financial Reporting",
+      "Tax Preparation",
+      "Payment Processing",
+      "Budget Management"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    benefits: [
+      "Time savings",
+      "Reduced errors",
+      "Better cash flow",
+      "Tax compliance"
+    ],
+    pricing: "Starting at $199/month"
+  },
+  {
+    title: "AI-Powered Email Marketing Automation",
+    description: "Intelligent email campaigns with personalization, A/B testing, and advanced segmentation",
+    icon: Mail,
+    features: [
+      "Email Automation",
+      "Personalization",
+      "A/B Testing",
+      "Segmentation",
+      "Behavioral Triggers",
+      "Performance Analytics"
+    ],
+    color: "from-red-500 to-pink-500",
+    benefits: [
+      "Higher open rates",
+      "Better engagement",
+      "Automated nurturing",
+      "Increased conversions"
+    ],
+    pricing: "Starting at $149/month"
+  },
+  {
+    title: "Smart Project Management & Collaboration",
+    description: "AI-enhanced project management with task automation, resource optimization, and team collaboration",
+    icon: Calendar,
+    features: [
+      "Task Automation",
+      "Resource Planning",
+      "Team Collaboration",
+      "Progress Tracking",
+      "Risk Management",
+      "Integration Hub"
+    ],
+    color: "from-violet-500 to-purple-500",
+    benefits: [
+      "Better project delivery",
+      "Improved collaboration",
+      "Resource optimization",
+      "Risk mitigation"
+    ],
+    pricing: "Starting at $229/month"
+  },
+  {
+    title: "AI-Powered Content Management System",
+    description: "Intelligent content creation, optimization, and management with SEO and performance analytics",
+    icon: FileText,
+    features: [
+      "Content Creation",
+      "SEO Optimization",
+      "Performance Analytics",
+      "Content Scheduling",
+      "Multi-language Support",
+      "Version Control"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    benefits: [
+      "Better SEO performance",
+      "Content consistency",
+      "Time savings",
+      "Improved engagement"
+    ],
+    pricing: "Starting at $179/month"
   }
 ];
 
@@ -339,7 +575,7 @@ const benefits = [
 
 const pricingTiers = [
   {
-    name: "Starter",
+    name: "Starter SaaS",
     price: "$2,999",
     description: "Perfect for small businesses and startups",
     features: [
@@ -348,12 +584,14 @@ const pricingTiers = [
       "User authentication",
       "Basic analytics",
       "3 months support",
-      "Source code included"
+      "Source code included",
+      "Hosting setup"
     ],
-    color: "from-blue-500 to-cyan-500"
+    color: "from-blue-500 to-cyan-500",
+    monthlyPricing: "Starting at $99/month for hosted solutions"
   },
   {
-    name: "Professional",
+    name: "Professional SaaS",
     price: "$7,999",
     description: "Ideal for growing businesses with complex needs",
     features: [
@@ -363,13 +601,15 @@ const pricingTiers = [
       "Database integration",
       "Advanced analytics",
       "6 months support",
-      "Source code included"
+      "Source code included",
+      "Cloud deployment"
     ],
     color: "from-purple-500 to-pink-500",
-    popular: true
+    popular: true,
+    monthlyPricing: "Starting at $299/month for hosted solutions"
   },
   {
-    name: "Enterprise",
+    name: "Enterprise SaaS",
     price: "Custom",
     description: "Tailored solutions for large organizations",
     features: [
@@ -379,9 +619,40 @@ const pricingTiers = [
       "Custom analytics dashboard",
       "12 months support",
       "Dedicated project manager",
-      "Source code included"
+      "Source code included",
+      "White-label options"
     ],
-    color: "from-green-500 to-emerald-500"
+    color: "from-green-500 to-emerald-500",
+    monthlyPricing: "Custom pricing based on requirements"
+  }
+];
+
+const microSaasPricing = [
+  {
+    category: "AI-Powered Solutions",
+    services: [
+      { name: "AI Customer Support Chatbot", price: "$299/month", features: "24/7 support, multi-language, sentiment analysis" },
+      { name: "AI Lead Generation & CRM", price: "$299/month", features: "Lead scoring, automated follow-ups, sales analytics" },
+      { name: "AI Email Marketing", price: "$149/month", features: "Personalization, A/B testing, behavioral triggers" },
+      { name: "AI Content Management", price: "$179/month", features: "Content creation, SEO optimization, analytics" }
+    ]
+  },
+  {
+    category: "Business Management",
+    services: [
+      { name: "Smart Inventory Management", price: "$199/month", features: "Predictive analytics, automated reordering, multi-location" },
+      { name: "Time Tracking & Analytics", price: "$149/month", features: "Productivity insights, project management, reporting" },
+      { name: "Financial Management", price: "$199/month", features: "Automated invoicing, expense tracking, tax prep" },
+      { name: "Project Management", price: "$229/month", features: "Task automation, resource planning, collaboration" }
+    ]
+  },
+  {
+    category: "Marketing & Analytics",
+    services: [
+      { name: "Social Media Management", price: "$179/month", features: "Multi-platform posting, analytics, competitor analysis" },
+      { name: "Real-time Analytics Dashboard", price: "$399/month", features: "Custom dashboards, real-time data, mobile access" },
+      { name: "Document Processing & OCR", price: "$249/month", features: "Data extraction, form processing, batch processing" }
+    ]
   }
 ];
 
@@ -895,6 +1166,158 @@ export default function MicroSaasPage() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Micro SaaS Pricing Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Micro SaaS Monthly Pricing
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Affordable monthly pricing for our ready-to-use micro SaaS solutions. 
+              No setup fees, cancel anytime.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {microSaasPricing.map((category, categoryIndex) => (
+              <motion.div
+                key={categoryIndex}
+                className="bg-gray-50 rounded-lg p-6"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+                  {category.category}
+                </h3>
+                <div className="space-y-4">
+                  {category.services.map((service, serviceIndex) => (
+                    <div key={serviceIndex} className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                      <div className="flex justify-between items-start mb-2">
+                        <h4 className="font-semibold text-gray-900 text-sm">{service.name}</h4>
+                        <span className="text-blue-600 font-bold text-sm">{service.price}</span>
+                      </div>
+                      <p className="text-gray-600 text-xs">{service.features}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">
+              All plans include 24/7 support, regular updates, and 99.9% uptime guarantee
+            </p>
+            <Link
+              href="/contact"
+              className="text-blue-600 hover:text-blue-700 font-semibold underline"
+            >
+              Contact us for custom pricing →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+              Get Started Today
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Ready to transform your business with our micro SaaS solutions? 
+              Contact us for a free consultation and custom quote.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              className="text-center p-6 bg-white/10 rounded-lg backdrop-blur-sm"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold mb-2">Call Us</h3>
+              <p className="text-gray-300 mb-2">+1 302 464 0950</p>
+              <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white/10 rounded-lg backdrop-blur-sm"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold mb-2">Email Us</h3>
+              <p className="text-gray-300 mb-2">kleber@ziontechgroup.com</p>
+              <p className="text-sm text-gray-400">24/7 response within 2 hours</p>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white/10 rounded-lg backdrop-blur-sm"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <MapPin className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold mb-2">Visit Us</h3>
+              <p className="text-gray-300 mb-2">364 E Main St STE 1008</p>
+              <p className="text-sm text-gray-400">Middletown, DE 19709</p>
+            </motion.div>
+          </div>
+
+          <div className="text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold mb-4">Why Choose Zion Tech Group?</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div className="text-center">
+                  <Award className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                  <p className="text-sm text-gray-300">500+ Projects Completed</p>
+                </div>
+                <div className="text-center">
+                  <Users className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                  <p className="text-sm text-gray-300">50+ Expert Team Members</p>
+                </div>
+                <div className="text-center">
+                  <Shield className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                  <p className="text-sm text-gray-300">99.9% Uptime Guarantee</p>
+                </div>
+                <div className="text-center">
+                  <Globe className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                  <p className="text-sm text-gray-300">Global Client Base</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
