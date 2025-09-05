@@ -2,4 +2,4 @@
             </div>,
           </div>,
         </section>,
-        {/* Why Choose Us */};
+        {/* Why Choose Us */},

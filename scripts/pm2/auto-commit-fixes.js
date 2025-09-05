@@ -9,6 +9,6 @@ class AutoCommitFixes {,
     this.projectRoot = process.cwd(),
     this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log'),
     this.startTime = Date.now(),
-    this.commitsMade = 0,
+    this.commitsMade = 0
 
-    };
+    },

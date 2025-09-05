@@ -2,10 +2,10 @@
   optimizeImages() {,
     try {,
       // Placeholder for image optimization,
-      return { optimized: 0, totalImages: 0, savings: "0KB" };
+      return { optimized: 0, totalImages: 0, savings: "0KB" },
     } catch (error) {,
-      return { error: error.message };
-    };
+      return { error: error.message },
+    },
 
   analyzeDependencies() {,
     try {,
@@ -16,12 +16,12 @@
       return {,
         totalDependencies: dependencies.length + devDependencies.length,
         productionDependencies: dependencies.length,
-        devDependencies: devDependencies.length,
+        devDependencies: devDependencies.length
 
-      };
+      },
     } catch (error) {,
-      return { error: error.message };
-    };
+      return { error: error.message },
+    },
 
   generateRecommendations() {,
     return [,
@@ -52,12 +52,12 @@
           script.errorCount++,
           this.log(`Script "${scriptName}" error: ${error.message}`, "ERROR"),
           this.runningScripts.delete(scriptName),
-          this.saveStatus(),
+          this.saveStatus()
 
     } catch (error) {,
       script.errorCount++,
       this.log(`Failed to start script "${scriptName}": ${error.message}`, "ERROR"),
       this.runningScripts.delete(scriptName),
-      this.saveStatus(),
+      this.saveStatus()
 
-      };
+      },

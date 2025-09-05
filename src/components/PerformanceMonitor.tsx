@@ -1,5 +1,5 @@
-        };
-      };
+        },
+      },
 
   return (,
     <div className="fixed bottom-4 right-4 z-50">,
@@ -8,4 +8,4 @@
           <BarChart3 className="w-5 h-5 text-blue-400" />,
           <span className="text-sm font-medium text-white">Performance Monitor</span>,
           <button,
-            onClick={() => setIsVisible(false)};
+            onClick={() => setIsVisible(false)},

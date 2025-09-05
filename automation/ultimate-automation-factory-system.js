@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs',
+import path from 'path',
 
 // CLI interface,
 if (import.meta.url === `file: //${process.argv[1]}`) {,

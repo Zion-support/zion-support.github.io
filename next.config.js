@@ -6,19 +6,17 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true
   },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ['tsxts', 'jsxjs'],
   trailingSlash: true,
   images: {
     domains: [
-      'localhost',
-      'ziontechgroup.com',
-      'images.unsplash.com',
-      'via.placeholder.com',
+      'localhostziontechgroup.com',
+      'images.unsplash.comvia.placeholder.com'
     ],
-    formats: ['image/webp', 'image/avif'],
+    formats: ['image/webpimage/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000,
+    minimumCacheTTL: 31536000
   },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
@@ -27,11 +25,11 @@ const nextConfig = {
 
         ],
         poll: 1000,
-        aggregateTimeout: 300,
-      };
+        aggregateTimeout: 300
+      },
     }
-    return config;
-  },
-};
+    return config,
+  }
+},
 
-export default nextConfig;
+export default nextConfig,

@@ -1,4 +1,4 @@
-};
+},
 
 function fixedCount = 0,
   for (const filePath = path.join(dir, file),
@@ -6,7 +6,7 @@ function fixedCount = 0,
     if (stat.isDirectory()) {,
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {,
       if (fixFile(filePath)) {,
-        fixedCount++};
-};
-};
-  return fixedCount};
+        fixedCount++},
+},
+},
+  return fixedCount},

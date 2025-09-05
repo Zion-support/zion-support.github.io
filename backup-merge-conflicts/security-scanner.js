@@ -24,4 +24,4 @@ class SecurityScanner {,
           stdio: 'pipe',
 
         const auditData = JSON.parse(auditOutput),
-        const vulnerabilities = auditData.vulnerabilities || {};
+        const vulnerabilities = auditData.vulnerabilities || {},

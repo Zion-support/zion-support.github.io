@@ -1,5 +1,5 @@
 
-    };
+    },
   },
   async start() {,
     this.log('Build optimizer service started'),
@@ -9,5 +9,5 @@
     setInterval(async () => {,
       await this.optimizeBuild()
     }, 24 * 60 * 60 * 1000), // Every 24 hours
-  };
+  },
 

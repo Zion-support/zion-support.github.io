@@ -1,13 +1,13 @@
 
       <img,
-        src={src};
-        alt={alt};
-        width={width};
-        height={height};
-        loading={loading};
-        onLoad={handleLoad};
-        onError={handleError};
-        className={`transition-opacity duration-300 ${} ${hasError ? 'hidden' : ''}`};
+        src={src},
+        alt={alt},
+        width={width},
+        height={height},
+        loading={loading},
+        onLoad={handleLoad},
+        onError={handleError},
+        className={`transition-opacity duration-300 ${} ${hasError ? 'hidden' : ''}`},
       />,
       {hasError && (,
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,
@@ -24,5 +24,5 @@ export const usePerformanceMetrics = () => {,
       renderCount: prev.renderCount + 1,
       lastRenderTime: renderTime,
 
-  return { metrics, recordRender };
-};
+  return { metrics, recordRender },
+},

@@ -14,6 +14,6 @@ class SEOAccessibility {,
       const items = fs.readdirSync(currentDir),
       items.forEach(item => {,
         const fullPath = path.join(currentDir, item),
-        const stat = fs.statSync(fullPath),
+        const stat = fs.statSync(fullPath)
 
-    };
+    },

@@ -21,6 +21,6 @@ class CodeQualityMonitor {,
       this.metrics.maintainability = this.calculateMaintainability(),
       this.metrics.testCoverage = this.calculateTestCoverage(),
       this.metrics.performance = this.calculatePerformance(),
-      this.metrics.lastUpdated = new Date().toISOString(),
+      this.metrics.lastUpdated = new Date().toISOString()
 
-    };
+    },

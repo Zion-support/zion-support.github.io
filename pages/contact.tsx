@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import ContactForm from '../components/ContactForm';
-import ErrorBoundary from '../components/ErrorBoundary';
+import React from 'react',
+import Head from 'next/head',
+import ContactForm from '../components/ContactForm',
+import ErrorBoundary from '../components/ErrorBoundary',
 
 export default function Contact() {
   return (
@@ -49,7 +49,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-blue-400 mb-2">Website</h3>
-                      <a href="https://ziontechgroup.com" className="text-slate-300 hover:text-blue-400">
+                      <a href="https: //ziontechgroup.com" className="text-slate-300 hover:text-blue-400">
                         https://ziontechgroup.com
                       </a>
                     </div>
@@ -66,5 +66,5 @@ export default function Contact() {
         </main>
       </ErrorBoundary>
     </>
-  );
+  )
 }

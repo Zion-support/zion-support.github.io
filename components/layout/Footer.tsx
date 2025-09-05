@@ -1,4 +1,4 @@
-                  key={social.name};
-                  href={social.href};
+                  key={social.name},
+                  href={social.href},
 
-        {/* Bottom Section */};
+        {/* Bottom Section */},

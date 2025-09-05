@@ -4,9 +4,9 @@
       },
       if (this.monitorSystem) {,
         await this.checkSystemStatus()
-      };
+      },
 
-    };
+    },
   },
   async start() {,
     this.log('Health monitor service started'),
@@ -23,5 +23,5 @@
     setInterval(async () => {,
       await this.generateHealthReport()
     }, 60 * 60 * 1000), // Every hour
-  };
+  },
 

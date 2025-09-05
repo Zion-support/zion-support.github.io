@@ -1,4 +1,4 @@
-  };
+  },
 },
 // Run all fixes,
 fixFooter(),

@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Link from 'next/link';
+import { motion } from 'framer-motion',
+import Head from 'next/head',
+import Link from 'next/link',
 import { 
-  Cloud, 
+  Cloud,
   Zap, 
   BarChart3, 
   Leaf,
@@ -133,18 +133,18 @@ import {
   Gamepad2,
   GraduationCap,
   Calculator
-} from 'lucide-react';
-import Layout from './components/Layout';
+} from 'lucide-react',
+import Layout from './components/Layout',
 
 const microSaasSolutions = [
   {
     description: 'Automated content creation, SEO optimization, and social media management platform with advanced AI capabilities.',
     icon: FileText,
-    features: ['AI Content Generation', 'SEO Optimization', 'Social Media Scheduling', 'Analytics Dashboard', 'Multi-language Support', 'Brand Voice Training'],
+    features: ['AI Content GenerationSEO Optimization', 'Social Media SchedulingAnalytics Dashboard', 'Multi-language SupportBrand Voice Training'],
     pricing: '$29 - $199/month',
     category: 'AI Marketing',
     popular: true,
-    benefits: ['10x Content Output', 'SEO Boost', 'Time Savings', 'Better Engagement', 'Cost Reduction'],
+    benefits: ['10x Content OutputSEO Boost', 'Time SavingsBetter Engagement', 'Cost Reduction'],
     marketPrice: '$50 - $300/month',
     link: 'https://ziontechgroup.com/ai-content-marketing-suite',
     contact: '+1 302 464 0950'
@@ -154,11 +154,11 @@ const microSaasSolutions = [
     title: 'Smart Lead Management System',
     description: 'AI-powered lead scoring, nurturing, and conversion optimization platform with predictive analytics.',
     icon: Target,
-    features: ['Lead Scoring', 'Automated Nurturing', 'CRM Integration', 'Conversion Tracking', 'Predictive Analytics', 'A/B Testing'],
+    features: ['Lead ScoringAutomated Nurturing', 'CRM IntegrationConversion Tracking', 'Predictive AnalyticsA/B Testing'],
     pricing: '$49 - $299/month',
     category: 'AI Sales',
     popular: true,
-    benefits: ['Higher Conversion', 'Automated Workflows', 'Better ROI', 'Data Insights', 'Reduced Manual Work'],
+    benefits: ['Higher ConversionAutomated Workflows', 'Better ROIData Insights', 'Reduced Manual Work'],
     marketPrice: '$75 - $500/month',
     link: 'https://ziontechgroup.com/smart-lead-management',
     contact: '+1 302 464 0950'
@@ -168,11 +168,11 @@ const microSaasSolutions = [
     title: 'AI-Powered Analytics Dashboard',
     description: 'Real-time business intelligence with predictive analytics, custom reporting, and automated insights.',
     icon: BarChart3,
-    features: ['Real-time Analytics', 'Predictive Insights', 'Custom Reports', 'Data Visualization', 'Automated Alerts', 'ROI Tracking'],
+    features: ['Real-time AnalyticsPredictive Insights', 'Custom ReportsData Visualization', 'Automated AlertsROI Tracking'],
     pricing: '$39 - $249/month',
     category: 'AI Analytics',
     popular: true,
-    benefits: ['Data-Driven Decisions', 'Predictive Insights', 'Custom Dashboards', 'ROI Tracking', 'Automated Reporting'],
+    benefits: ['Data-Driven DecisionsPredictive Insights', 'Custom DashboardsROI Tracking', 'Automated Reporting'],
     marketPrice: '$60 - $400/month',
     link: 'https://ziontechgroup.com/ai-analytics-dashboard',
     contact: '+1 302 464 0950'
@@ -182,11 +182,11 @@ const microSaasSolutions = [
     title: 'Smart Document Processing',
     description: 'Automated document extraction, classification, and data entry using advanced AI and OCR technology.',
     icon: FileText,
-    features: ['OCR Technology', 'Smart Classification', 'Data Extraction', 'Workflow Automation', 'Multi-format Support', 'API Integration'],
+    features: ['OCR TechnologySmart Classification', 'Data ExtractionWorkflow Automation', 'Multi-format SupportAPI Integration'],
     pricing: '$19 - $149/month',
     category: 'AI Productivity',
     popular: false,
-    benefits: ['99% Accuracy', 'Time Savings', 'Cost Reduction', 'Error Elimination', 'Scalable Processing'],
+    benefits: ['99% AccuracyTime Savings', 'Cost ReductionError Elimination', 'Scalable Processing'],
     marketPrice: '$35 - $250/month',
     link: 'https://ziontechgroup.com/smart-document-processing',
     contact: '+1 302 464 0950'
@@ -196,11 +196,11 @@ const microSaasSolutions = [
     title: 'AI Customer Support Bot',
     description: 'Intelligent chatbot platform with natural language processing and seamless human handoff capabilities.',
     icon: Bot,
-    features: ['Natural Language Processing', 'Multi-channel Support', 'Human Handoff', 'Knowledge Base Integration', 'Sentiment Analysis', 'Custom Training'],
+    features: ['Natural Language ProcessingMulti-channel Support', 'Human HandoffKnowledge Base Integration', 'Sentiment AnalysisCustom Training'],
     pricing: '$39 - $199/month',
     category: 'AI Customer Service',
     popular: true,
-    benefits: ['24/7 Support', 'Instant Responses', 'Cost Reduction', 'Customer Satisfaction', 'Scalable Support'],
+    benefits: ['24/7 SupportInstant Responses', 'Cost ReductionCustomer Satisfaction', 'Scalable Support'],
     marketPrice: '$65 - $350/month',
     link: 'https://ziontechgroup.com/ai-customer-support-bot',
     contact: '+1 302 464 0950'
@@ -210,11 +210,11 @@ const microSaasSolutions = [
     title: 'Smart Inventory Management',
     description: 'AI-powered inventory tracking with demand forecasting, automated reordering, and optimization algorithms.',
     icon: Package,
-    features: ['Demand Forecasting', 'Automated Reordering', 'Multi-location Tracking', 'Cost Optimization', 'Supplier Management', 'Analytics Dashboard'],
+    features: ['Demand ForecastingAutomated Reordering', 'Multi-location TrackingCost Optimization', 'Supplier ManagementAnalytics Dashboard'],
     pricing: '$49 - $299/month',
     category: 'AI Operations',
     popular: false,
-    benefits: ['Reduce Stockouts', 'Lower Inventory Costs', 'Optimize Reordering', 'Improve Cash Flow', 'Data-Driven Decisions'],
+    benefits: ['Reduce StockoutsLower Inventory Costs', 'Optimize ReorderingImprove Cash Flow', 'Data-Driven Decisions'],
     marketPrice: '$80 - $500/month',
     link: 'https://ziontechgroup.com/smart-inventory-management',
     contact: '+1 302 464 0950'
@@ -224,11 +224,11 @@ const microSaasSolutions = [
     title: 'AI Email Marketing Platform',
     description: 'Intelligent email marketing with AI-driven personalization, send time optimization, and advanced segmentation.',
     icon: Mail,
-    features: ['AI Personalization', 'Send Time Optimization', 'Advanced Segmentation', 'A/B Testing', 'Automation Workflows', 'Analytics & Reporting'],
+    features: ['AI PersonalizationSend Time Optimization', 'Advanced SegmentationA/B Testing', 'Automation WorkflowsAnalytics & Reporting'],
     pricing: '$29 - $199/month',
     category: 'AI Marketing',
     popular: true,
-    benefits: ['Higher Open Rates', 'Better Engagement', 'Automated Campaigns', 'Personalized Content', 'ROI Optimization'],
+    benefits: ['Higher Open RatesBetter Engagement', 'Automated CampaignsPersonalized Content', 'ROI Optimization'],
     marketPrice: '$50 - $350/month',
     link: 'https://ziontechgroup.com/ai-email-marketing',
     contact: '+1 302 464 0950'
@@ -244,7 +244,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Smart Contract Auditor',
     description: 'Automated smart contract security analysis and vulnerability detection using AI.',
     icon: Shield,
-    features: ['Security Analysis', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checking'],
+    features: ['Security AnalysisVulnerability Detection', 'Gas OptimizationCompliance Checking'],
     pricing: '$299 - $1,499/month',
     category: 'Blockchain Security'
   },
@@ -252,7 +252,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Voice Analytics Platform',
     description: 'Advanced voice analysis for customer service, sales, and training optimization.',
     icon: Mic,
-    features: ['Sentiment Analysis', 'Call Quality Scoring', 'Training Insights', 'Performance Metrics'],
+    features: ['Sentiment AnalysisCall Quality Scoring', 'Training InsightsPerformance Metrics'],
     pricing: '$199 - $999/month',
     category: 'Voice Analytics'
   },
@@ -260,7 +260,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Carbon Footprint Tracker',
     description: 'Environmental impact tracking and sustainability optimization for businesses.',
     icon: Sprout,
-    features: ['Carbon Tracking', 'Sustainability Metrics', 'Optimization Recommendations', 'Reporting'],
+    features: ['Carbon TrackingSustainability Metrics', 'Optimization RecommendationsReporting'],
     pricing: '$99 - $499/month',
     category: 'Sustainability'
   },
@@ -268,7 +268,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Mental Health Assistant',
     description: 'AI-powered mental health support and wellness tracking for employees and individuals.',
     icon: Heart,
-    features: ['Mood Tracking', 'Wellness Insights', 'Resource Recommendations', 'Privacy Protection'],
+    features: ['Mood TrackingWellness Insights', 'Resource RecommendationsPrivacy Protection'],
     pricing: '$19 - $99/month',
     category: 'Health & Wellness'
   },
@@ -276,7 +276,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Cryptocurrency Tax Calculator',
     description: 'Automated cryptocurrency tax calculation and reporting with AI-powered optimization.',
     icon: DollarSign,
-    features: ['Tax Calculation', 'Transaction Tracking', 'Report Generation', 'Compliance Checking'],
+    features: ['Tax CalculationTransaction Tracking', 'Report GenerationCompliance Checking'],
     pricing: '$49 - $299/month',
     category: 'Crypto Finance'
   },
@@ -284,7 +284,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Remote Work Analytics',
     description: 'Productivity and engagement analytics for remote teams with AI insights.',
     icon: Monitor,
-    features: ['Productivity Metrics', 'Engagement Tracking', 'Wellness Monitoring', 'Team Insights'],
+    features: ['Productivity MetricsEngagement Tracking', 'Wellness MonitoringTeam Insights'],
     pricing: '$79 - $399/month',
     category: 'Remote Work'
   },
@@ -292,7 +292,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Subscription Management',
     description: 'Intelligent subscription lifecycle management with churn prediction and optimization.',
     icon: Settings,
-    features: ['Churn Prediction', 'Lifecycle Management', 'Pricing Optimization', 'Customer Insights'],
+    features: ['Churn PredictionLifecycle Management', 'Pricing OptimizationCustomer Insights'],
     pricing: '$99 - $599/month',
     category: 'Subscription Management'
   },
@@ -300,7 +300,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Code Documentation Generator',
     description: 'Automatically generate comprehensive documentation from code with AI analysis.',
     icon: FileText,
-    features: ['Auto Documentation', 'API Documentation', 'Code Comments', 'Interactive Examples'],
+    features: ['Auto DocumentationAPI Documentation', 'Code CommentsInteractive Examples'],
     pricing: '$79 - $399/month',
     category: 'Development Tools',
     popular: true
@@ -309,7 +309,7 @@ const microSaasSolutions = [
     title: 'Smart Contract Testing Suite',
     description: 'Comprehensive testing framework for smart contracts with automated vulnerability detection.',
     icon: Shield,
-    features: ['Unit Testing', 'Integration Testing', 'Security Auditing', 'Gas Optimization'],
+    features: ['Unit TestingIntegration Testing', 'Security AuditingGas Optimization'],
     pricing: '$199 - $999/month',
     category: 'Blockchain'
   },
@@ -317,7 +317,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Database Query Optimizer',
     description: 'Intelligent database query optimization and performance monitoring.',
     icon: Database,
-    features: ['Query Analysis', 'Performance Monitoring', 'Index Recommendations', 'Cost Optimization'],
+    features: ['Query AnalysisPerformance Monitoring', 'Index RecommendationsCost Optimization'],
     pricing: '$149 - $799/month',
     category: 'Database'
   },
@@ -325,7 +325,7 @@ const microSaasSolutions = [
     title: 'Real-time Collaboration Whiteboard',
     description: 'AI-enhanced collaborative whiteboard with smart drawing and idea organization.',
     icon: Target,
-    features: ['Real-time Collaboration', 'AI Drawing Assistant', 'Idea Organization', 'Export Options'],
+    features: ['Real-time CollaborationAI Drawing Assistant', 'Idea OrganizationExport Options'],
     pricing: '$29 - $149/month',
     category: 'Collaboration'
   },
@@ -333,7 +333,7 @@ const microSaasSolutions = [
     title: 'AI-Powered API Documentation Generator',
     description: 'Automatically generate interactive API documentation from OpenAPI specs.',
     icon: Code,
-    features: ['Auto Generation', 'Interactive Docs', 'Testing Interface', 'Version Management'],
+    features: ['Auto GenerationInteractive Docs', 'Testing InterfaceVersion Management'],
     pricing: '$49 - $299/month',
     category: 'API Tools'
   },
@@ -341,7 +341,7 @@ const microSaasSolutions = [
     title: 'Smart Contract Deployment Manager',
     description: 'Automated smart contract deployment and management across multiple blockchains.',
     icon: Rocket,
-    features: ['Multi-chain Deployment', 'Version Control', 'Automated Testing', 'Monitoring'],
+    features: ['Multi-chain DeploymentVersion Control', 'Automated TestingMonitoring'],
     pricing: '$99 - $499/month',
     category: 'Blockchain'
   },
@@ -349,7 +349,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Error Monitoring',
     description: 'Intelligent error tracking and debugging assistance for applications.',
     icon: Monitor,
-    features: ['Error Tracking', 'AI Debugging', 'Performance Monitoring', 'Alert Management'],
+    features: ['Error TrackingAI Debugging', 'Performance MonitoringAlert Management'],
     pricing: '$39 - $199/month',
     category: 'Monitoring'
   },
@@ -357,7 +357,7 @@ const microSaasSolutions = [
     title: 'Smart Contract Analytics Dashboard',
     description: 'Comprehensive analytics for smart contract performance and usage.',
     icon: BarChart3,
-    features: ['Usage Analytics', 'Performance Metrics', 'Cost Analysis', 'User Behavior'],
+    features: ['Usage AnalyticsPerformance Metrics', 'Cost AnalysisUser Behavior'],
     pricing: '$79 - $399/month',
     category: 'Analytics'
   },
@@ -365,7 +365,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Code Refactoring Assistant',
     description: 'Intelligent code refactoring suggestions and automated improvements.',
     icon: Code,
-    features: ['Refactoring Suggestions', 'Code Quality Analysis', 'Automated Fixes', 'Best Practices'],
+    features: ['Refactoring SuggestionsCode Quality Analysis', 'Automated FixesBest Practices'],
     pricing: '$99 - $499/month',
     category: 'Development Tools'
   },
@@ -373,7 +373,7 @@ const microSaasSolutions = [
     title: 'Smart Contract Auditor',
     description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
     icon: Shield,
-    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checks', 'Audit Reports'],
+    features: ['Vulnerability DetectionGas Optimization', 'Compliance ChecksAudit Reports'],
     pricing: '$1,999 - $9,999/project',
     category: 'Blockchain',
     popular: true
@@ -382,7 +382,7 @@ const microSaasSolutions = [
     title: 'Carbon Footprint Tracker',
     description: 'Real-time carbon footprint monitoring and sustainability reporting for businesses.',
     icon: Sprout,
-    features: ['Real-time Tracking', 'Sustainability Reports', 'Carbon Credits', 'Green Certifications'],
+    features: ['Real-time TrackingSustainability Reports', 'Carbon CreditsGreen Certifications'],
     pricing: '$199 - $999/month',
     category: 'Sustainability'
   },
@@ -390,7 +390,7 @@ const microSaasSolutions = [
     title: 'Voice-to-Text Meeting Transcriber',
     description: 'AI-powered meeting transcription with action items and key insights extraction.',
     icon: Mic,
-    features: ['Real-time Transcription', 'Action Items', 'Speaker Identification', 'Meeting Analytics'],
+    features: ['Real-time TranscriptionAction Items', 'Speaker IdentificationMeeting Analytics'],
     pricing: '$49 - $299/month',
     category: 'Productivity'
   },
@@ -398,7 +398,7 @@ const microSaasSolutions = [
     title: 'AI-Powered A/B Testing Platform',
     description: 'Intelligent A/B testing with automated statistical significance and optimization recommendations.',
     icon: Target,
-    features: ['Automated Testing', 'Statistical Analysis', 'Conversion Optimization', 'Multi-variate Testing'],
+    features: ['Automated TestingStatistical Analysis', 'Conversion OptimizationMulti-variate Testing'],
     pricing: '$299 - $1,999/month',
     category: 'Marketing'
   },
@@ -406,7 +406,7 @@ const microSaasSolutions = [
     title: 'Smart Inventory Predictor',
     description: 'AI-driven demand forecasting and inventory optimization for retail and e-commerce.',
     icon: Package,
-    features: ['Demand Forecasting', 'Stock Optimization', 'Seasonal Analysis', 'Supplier Integration'],
+    features: ['Demand ForecastingStock Optimization', 'Seasonal AnalysisSupplier Integration'],
     pricing: '$399 - $2,499/month',
     category: 'E-commerce'
   },
@@ -414,7 +414,7 @@ const microSaasSolutions = [
     title: 'Automated Compliance Monitor',
     description: 'Real-time compliance monitoring for GDPR, HIPAA, SOX, and other regulatory requirements.',
     icon: CheckCircle,
-    features: ['Multi-regulation Support', 'Real-time Monitoring', 'Audit Trails', 'Compliance Reports'],
+    features: ['Multi-regulation SupportReal-time Monitoring', 'Audit TrailsCompliance Reports'],
     pricing: '$599 - $3,999/month',
     category: 'Compliance'
   },
@@ -422,7 +422,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Customer Churn Predictor',
     description: 'Predict and prevent customer churn with machine learning and behavioral analytics.',
     icon: TrendingUp,
-    features: ['Churn Prediction', 'Risk Scoring', 'Retention Campaigns', 'Customer Insights'],
+    features: ['Churn PredictionRisk Scoring', 'Retention CampaignsCustomer Insights'],
     pricing: '$199 - $1,499/month',
     category: 'Customer Success'
   },
@@ -430,7 +430,7 @@ const microSaasSolutions = [
     title: 'Smart Document Workflow',
     description: 'Automated document processing with OCR, classification, and intelligent routing.',
     icon: FileText,
-    features: ['OCR Processing', 'Document Classification', 'Workflow Automation', 'Data Extraction'],
+    features: ['OCR ProcessingDocument Classification', 'Workflow AutomationData Extraction'],
     pricing: '$149 - $899/month',
     category: 'Document Management'
   },
@@ -438,7 +438,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Price Optimization',
     description: 'Dynamic pricing optimization using machine learning and market analysis.',
     icon: DollarSign,
-    features: ['Dynamic Pricing', 'Market Analysis', 'Competitor Tracking', 'Revenue Optimization'],
+    features: ['Dynamic PricingMarket Analysis', 'Competitor TrackingRevenue Optimization'],
     pricing: '$299 - $1,999/month',
     category: 'Pricing'
   },
@@ -446,7 +446,7 @@ const microSaasSolutions = [
     title: 'Smart Energy Management',
     description: 'AI-powered energy consumption optimization for buildings and facilities.',
     icon: Zap,
-    features: ['Energy Monitoring', 'Consumption Optimization', 'Predictive Maintenance', 'Cost Reduction'],
+    features: ['Energy MonitoringConsumption Optimization', 'Predictive MaintenanceCost Reduction'],
     pricing: '$199 - $1,299/month',
     category: 'Energy'
   },
@@ -454,7 +454,7 @@ const microSaasSolutions = [
     title: 'Automated Social Media Sentiment Analysis',
     description: 'Real-time social media monitoring and sentiment analysis for brand reputation management.',
     icon: Globe,
-    features: ['Real-time Monitoring', 'Sentiment Analysis', 'Crisis Detection', 'Brand Reports'],
+    features: ['Real-time MonitoringSentiment Analysis', 'Crisis DetectionBrand Reports'],
     pricing: '$99 - $599/month',
     category: 'Social Media'
   },
@@ -462,7 +462,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Fraud Detection API',
     description: 'Real-time fraud detection and prevention for financial transactions and user activities.',
     icon: Shield,
-    features: ['Real-time Detection', 'Machine Learning Models', 'Risk Scoring', 'API Integration'],
+    features: ['Real-time DetectionMachine Learning Models', 'Risk ScoringAPI Integration'],
     pricing: '$0.01 - $0.10 per transaction',
     category: 'Security'
   },
@@ -470,7 +470,7 @@ const microSaasSolutions = [
     title: 'Smart Recruitment Screening',
     description: 'AI-powered candidate screening and interview scheduling for HR teams.',
     icon: Users,
-    features: ['Resume Screening', 'Skill Matching', 'Interview Scheduling', 'Candidate Scoring'],
+    features: ['Resume ScreeningSkill Matching', 'Interview SchedulingCandidate Scoring'],
     pricing: '$199 - $999/month',
     category: 'HR'
   },
@@ -478,7 +478,7 @@ const microSaasSolutions = [
     title: 'Automated Backup & Recovery',
     description: 'Intelligent backup scheduling and disaster recovery for cloud and on-premises systems.',
     icon: HardDrive,
-    features: ['Automated Backups', 'Disaster Recovery', 'Data Validation', 'Compliance'],
+    features: ['Automated BackupsDisaster Recovery', 'Data ValidationCompliance'],
     pricing: '$49 - $399/month',
     category: 'Data Protection'
   },
@@ -486,7 +486,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Content Moderation',
     description: 'Automated content moderation for text, images, and videos using advanced AI models.',
     icon: Eye,
-    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    features: ['Multi-modal DetectionCustom Rules', 'Real-time ProcessingAPI Integration'],
     pricing: '$0.001 - $0.01 per piece of content',
     category: 'Content Safety'
   },
@@ -494,7 +494,7 @@ const microSaasSolutions = [
     title: 'Smart Contract Testing Platform',
     description: 'Automated testing and simulation platform for smart contracts and DeFi protocols.',
     icon: Code,
-    features: ['Automated Testing', 'Simulation Environment', 'Security Analysis', 'Gas Optimization'],
+    features: ['Automated TestingSimulation Environment', 'Security AnalysisGas Optimization'],
     pricing: '$299 - $1,999/month',
     category: 'Blockchain'
   },
@@ -502,7 +502,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Email Deliverability',
     description: 'Optimize email deliverability and inbox placement using AI and machine learning.',
     icon: Mail,
-    features: ['Deliverability Optimization', 'Reputation Monitoring', 'A/B Testing', 'Analytics'],
+    features: ['Deliverability OptimizationReputation Monitoring', 'A/B TestingAnalytics'],
     pricing: '$199 - $1,299/month',
     category: 'Email Marketing'
   },
@@ -510,7 +510,7 @@ const microSaasSolutions = [
     title: 'Automated API Documentation Generator',
     description: 'AI-powered API documentation generation and maintenance for development teams.',
     icon: FileText,
-    features: ['Auto Documentation', 'Code Analysis', 'Interactive Examples', 'Version Control'],
+    features: ['Auto DocumentationCode Analysis', 'Interactive ExamplesVersion Control'],
     pricing: '$99 - $599/month',
     category: 'Developer Tools'
   },
@@ -518,7 +518,7 @@ const microSaasSolutions = [
     title: 'Smart Resource Scheduler',
     description: 'AI-powered resource scheduling and optimization for teams and facilities.',
     icon: Calendar,
-    features: ['Smart Scheduling', 'Calendar Integration', 'Conflict Resolution', 'Time Zone Handling'],
+    features: ['Smart SchedulingCalendar Integration', 'Conflict ResolutionTime Zone Handling'],
     pricing: '$19 - $99/month',
     category: 'Scheduling',
     link: 'https://meetingscheduler.ziontechgroup.com'
@@ -527,7 +527,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Code Review Assistant',
     description: 'Automated code review with security scanning, performance analysis, and best practice recommendations.',
     icon: Code,
-    features: ['Security Scanning', 'Performance Analysis', 'Best Practice Checks', 'Automated Comments'],
+    features: ['Security ScanningPerformance Analysis', 'Best Practice ChecksAutomated Comments'],
     pricing: '$199 - $999/month',
     category: 'Development',
     popular: true,
@@ -537,7 +537,7 @@ const microSaasSolutions = [
     title: 'Smart Contract Analytics Platform',
     description: 'Blockchain smart contract analysis, security auditing, and performance monitoring.',
     icon: Shield,
-    features: ['Security Auditing', 'Gas Optimization', 'Vulnerability Detection', 'Performance Monitoring'],
+    features: ['Security AuditingGas Optimization', 'Vulnerability DetectionPerformance Monitoring'],
     pricing: '$299 - $1,999/month',
     category: 'Blockchain',
     link: 'https://smartcontractai.ziontechgroup.com'
@@ -546,7 +546,7 @@ const microSaasSolutions = [
     title: 'AI-Powered SEO Content Optimizer',
     description: 'Intelligent SEO content analysis and optimization with real-time ranking predictions.',
     icon: Search,
-    features: ['Content Analysis', 'Keyword Optimization', 'Ranking Predictions', 'Competitor Analysis'],
+    features: ['Content AnalysisKeyword Optimization', 'Ranking PredictionsCompetitor Analysis'],
     pricing: '$79 - $399/month',
     category: 'SEO',
     link: 'https://seooptimizer.ziontechgroup.com'
@@ -555,7 +555,7 @@ const microSaasSolutions = [
     title: 'Real-Time Language Translation API',
     description: 'Advanced neural translation service with 100+ languages and context-aware translations.',
     icon: Globe,
-    features: ['100+ Languages', 'Context Awareness', 'Real-time Translation', 'API Integration'],
+    features: ['100+ LanguagesContext Awareness', 'Real-time TranslationAPI Integration'],
     pricing: '$0.01 - $0.05 per 1000 characters',
     category: 'Translation',
     link: 'https://translationapi.ziontechgroup.com'
@@ -564,7 +564,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Video Analytics',
     description: 'Intelligent video analysis with object detection, sentiment analysis, and content moderation.',
     icon: Video,
-    features: ['Object Detection', 'Sentiment Analysis', 'Content Moderation', 'Real-time Processing'],
+    features: ['Object DetectionSentiment Analysis', 'Content ModerationReal-time Processing'],
     pricing: '$0.10 - $0.50 per minute',
     category: 'Video AI',
     link: 'https://videoanalytics.ziontechgroup.com'
@@ -573,7 +573,7 @@ const microSaasSolutions = [
     title: 'Smart Energy Management System',
     description: 'IoT-based energy monitoring and optimization for buildings and industrial facilities.',
     icon: Zap,
-    features: ['Real-time Monitoring', 'Predictive Analytics', 'Cost Optimization', 'Automated Controls'],
+    features: ['Real-time MonitoringPredictive Analytics', 'Cost OptimizationAutomated Controls'],
     pricing: '$199 - $1,299/month',
     category: 'IoT',
     link: 'https://energyai.ziontechgroup.com'
@@ -582,7 +582,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Customer Churn Prediction',
     description: 'Machine learning models to predict and prevent customer churn with actionable insights.',
     icon: TrendingUp,
-    features: ['Churn Prediction', 'Risk Scoring', 'Intervention Strategies', 'Real-time Alerts'],
+    features: ['Churn PredictionRisk Scoring', 'Intervention StrategiesReal-time Alerts'],
     pricing: '$299 - $1,499/month',
     category: 'Analytics',
     link: 'https://churnprediction.ziontechgroup.com'
@@ -591,7 +591,7 @@ const microSaasSolutions = [
     title: 'Blockchain Document Verification',
     description: 'Immutable document verification and authentication using blockchain technology.',
     icon: FileText,
-    features: ['Document Verification', 'Blockchain Storage', 'Tamper Detection', 'API Integration'],
+    features: ['Document VerificationBlockchain Storage', 'Tamper DetectionAPI Integration'],
     pricing: '$0.50 - $2.00 per document',
     category: 'Blockchain',
     link: 'https://docverify.ziontechgroup.com'
@@ -600,7 +600,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Supply Chain Risk Assessment',
     description: 'Intelligent supply chain risk analysis with predictive modeling and mitigation strategies.',
     icon: Package,
-    features: ['Risk Assessment', 'Predictive Modeling', 'Mitigation Strategies', 'Real-time Monitoring'],
+    features: ['Risk AssessmentPredictive Modeling', 'Mitigation StrategiesReal-time Monitoring'],
     pricing: '$499 - $2,999/month',
     category: 'Supply Chain',
     link: 'https://supplychainai.ziontechgroup.com'
@@ -609,7 +609,7 @@ const microSaasSolutions = [
     title: 'Smart Home Automation Hub',
     description: 'AI-powered home automation with voice control, learning algorithms, and energy optimization.',
     icon: Home,
-    features: ['Voice Control', 'Learning Algorithms', 'Energy Optimization', 'Device Integration'],
+    features: ['Voice ControlLearning Algorithms', 'Energy OptimizationDevice Integration'],
     pricing: '$99 - $499/month',
     category: 'Smart Home',
     link: 'https://smarthomeai.ziontechgroup.com'
@@ -618,7 +618,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Financial Planning Assistant',
     description: 'Personalized financial planning with investment recommendations and risk assessment.',
     icon: DollarSign,
-    features: ['Financial Planning', 'Investment Recommendations', 'Risk Assessment', 'Goal Tracking'],
+    features: ['Financial PlanningInvestment Recommendations', 'Risk AssessmentGoal Tracking'],
     pricing: '$29 - $199/month',
     category: 'FinTech',
     link: 'https://financialai.ziontechgroup.com'
@@ -627,7 +627,7 @@ const microSaasSolutions = [
     title: 'Real-Time Sentiment Analysis API',
     description: 'Advanced sentiment analysis for social media, reviews, and customer feedback in real-time.',
     icon: MessageSquare,
-    features: ['Real-time Analysis', 'Multi-language Support', 'Emotion Detection', 'API Integration'],
+    features: ['Real-time AnalysisMulti-language Support', 'Emotion DetectionAPI Integration'],
     pricing: '$0.02 - $0.10 per 1000 texts',
     category: 'Analytics',
     link: 'https://sentimentapi.ziontechgroup.com'
@@ -636,7 +636,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Inventory Forecasting',
     description: 'Intelligent inventory forecasting with demand prediction and automated reordering.',
     icon: BarChart3,
-    features: ['Demand Forecasting', 'Automated Reordering', 'Seasonal Analysis', 'Multi-location Support'],
+    features: ['Demand ForecastingAutomated Reordering', 'Seasonal AnalysisMulti-location Support'],
     pricing: '$199 - $999/month',
     category: 'Inventory',
     link: 'https://inventoryforecast.ziontechgroup.com'
@@ -645,7 +645,7 @@ const microSaasSolutions = [
     title: 'Smart Contract Development Platform',
     description: 'No-code smart contract creation with testing, deployment, and monitoring tools.',
     icon: Code,
-    features: ['No-code Creation', 'Testing Tools', 'Deployment Automation', 'Monitoring Dashboard'],
+    features: ['No-code CreationTesting Tools', 'Deployment AutomationMonitoring Dashboard'],
     pricing: '$99 - $599/month',
     category: 'Blockchain',
     link: 'https://smartcontractdev.ziontechgroup.com'
@@ -654,7 +654,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Personal Assistant API',
     description: 'Advanced personal assistant with natural language processing and task automation.',
     icon: Bot,
-    features: ['Natural Language Processing', 'Task Automation', 'Calendar Management', 'API Integration'],
+    features: ['Natural Language ProcessingTask Automation', 'Calendar ManagementAPI Integration'],
     pricing: '$0.05 - $0.25 per request',
     category: 'AI Assistant',
     link: 'https://personalassistant.ziontechgroup.com'
@@ -663,7 +663,7 @@ const microSaasSolutions = [
     title: 'Blockchain Identity Verification',
     description: 'Decentralized identity verification with privacy-preserving authentication.',
     icon: Lock,
-    features: ['Decentralized Identity', 'Privacy Protection', 'Zero-knowledge Proofs', 'API Integration'],
+    features: ['Decentralized IdentityPrivacy Protection', 'Zero-knowledge ProofsAPI Integration'],
     pricing: '$0.10 - $0.50 per verification',
     category: 'Identity',
     link: 'https://identityverify.ziontechgroup.com'
@@ -672,7 +672,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Market Research Platform',
     description: 'Intelligent market research with competitor analysis, trend prediction, and consumer insights.',
     icon: Search,
-    features: ['Competitor Analysis', 'Trend Prediction', 'Consumer Insights', 'Market Reports'],
+    features: ['Competitor AnalysisTrend Prediction', 'Consumer InsightsMarket Reports'],
     pricing: '$299 - $1,999/month',
     category: 'Market Research',
     link: 'https://marketresearch.ziontechgroup.com'
@@ -681,7 +681,7 @@ const microSaasSolutions = [
     title: 'Smart Contract Monitoring & Analytics',
     description: 'Real-time monitoring and analytics for smart contracts with security alerts and performance metrics.',
     icon: Monitor,
-    features: ['Real-time Monitoring', 'Security Alerts', 'Performance Metrics', 'Gas Optimization'],
+    features: ['Real-time MonitoringSecurity Alerts', 'Performance MetricsGas Optimization'],
     pricing: '$199 - $1,299/month',
     category: 'Blockchain',
     link: 'https://contractmonitor.ziontechgroup.com'
@@ -690,7 +690,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Email Security Scanner',
     description: 'Advanced email security with phishing detection, malware scanning, and threat intelligence.',
     icon: Mail,
-    features: ['Phishing Detection', 'Malware Scanning', 'Threat Intelligence', 'Real-time Protection'],
+    features: ['Phishing DetectionMalware Scanning', 'Threat IntelligenceReal-time Protection'],
     pricing: '$2 - $10 per user/month',
     category: 'Security',
     link: 'https://emailsecurity.ziontechgroup.com'
@@ -699,7 +699,7 @@ const microSaasSolutions = [
     title: 'Code Review Assistant',
     description: 'AI-powered code review with automated suggestions and security vulnerability detection.',
     icon: Code,
-    features: ['AI Code Review', 'Security Scanning', 'Performance Analysis', 'Team Collaboration'],
+    features: ['AI Code ReviewSecurity Scanning', 'Performance AnalysisTeam Collaboration'],
     pricing: '$99 - $499/month',
     category: 'Development',
     link: 'https://codereview.ziontechgroup.com'
@@ -708,7 +708,7 @@ const microSaasSolutions = [
     title: 'Customer Support Ticketing',
     description: 'AI-enhanced customer support with automated ticket routing and response suggestions.',
     icon: Headphones,
-    features: ['AI Ticket Routing', 'Response Suggestions', 'Knowledge Base', 'Multi-channel Support'],
+    features: ['AI Ticket RoutingResponse Suggestions', 'Knowledge BaseMulti-channel Support'],
     pricing: '$79 - $399/month',
     category: 'Customer Support',
     link: 'https://supporttickets.ziontechgroup.com'
@@ -717,7 +717,7 @@ const microSaasSolutions = [
     title: 'Project Management Hub',
     description: 'Comprehensive project management with AI-powered resource allocation and timeline optimization.',
     icon: Kanban,
-    features: ['AI Resource Allocation', 'Timeline Optimization', 'Team Collaboration', 'Progress Tracking'],
+    features: ['AI Resource AllocationTimeline Optimization', 'Team CollaborationProgress Tracking'],
     pricing: '$59 - $299/month',
     category: 'Project Management',
     link: 'https://projecthub.ziontechgroup.com'
@@ -726,7 +726,7 @@ const microSaasSolutions = [
     title: 'Data Backup & Recovery',
     description: 'Automated data backup with instant recovery and cross-platform synchronization.',
     icon: HardDrive,
-    features: ['Automated Backups', 'Instant Recovery', 'Cross-platform Sync', 'Version History'],
+    features: ['Automated BackupsInstant Recovery', 'Cross-platform SyncVersion History'],
     pricing: '$39 - $199/month',
     category: 'Data Management',
     link: 'https://databackup.ziontechgroup.com'
@@ -735,7 +735,7 @@ const microSaasSolutions = [
     title: 'AI-Powered SEO Optimizer',
     description: 'Automated SEO analysis and optimization with real-time keyword tracking and content suggestions.',
     icon: Search,
-    features: ['Keyword Research', 'Content Optimization', 'Rank Tracking', 'Competitor Analysis'],
+    features: ['Keyword ResearchContent Optimization', 'Rank TrackingCompetitor Analysis'],
     pricing: '$149 - $799/month',
     category: 'SEO',
     popular: true,
@@ -745,7 +745,7 @@ const microSaasSolutions = [
     title: 'Smart Analytics Dashboard',
     description: 'Real-time business intelligence with AI-driven insights and predictive analytics.',
     icon: BarChart3,
-    features: ['Real-time Dashboards', 'Predictive Analytics', 'Custom Reports', 'Data Visualization'],
+    features: ['Real-time DashboardsPredictive Analytics', 'Custom ReportsData Visualization'],
     pricing: '$199 - $999/month',
     category: 'Analytics',
     link: 'https://smartanalytics.ziontechgroup.com'
@@ -754,7 +754,7 @@ const microSaasSolutions = [
     title: 'Automated Testing Suite',
     description: 'Comprehensive automated testing platform for web and mobile applications.',
     icon: CheckCircle,
-    features: ['UI Testing', 'API Testing', 'Performance Testing', 'Cross-browser Testing'],
+    features: ['UI TestingAPI Testing', 'Performance TestingCross-browser Testing'],
     pricing: '$299 - $1,499/month',
     category: 'Quality Assurance',
     link: 'https://autotesting.ziontechgroup.com'
@@ -763,7 +763,7 @@ const microSaasSolutions = [
     title: 'Customer Onboarding Platform',
     description: 'Streamlined customer onboarding with interactive tutorials and progress tracking.',
     icon: Rocket,
-    features: ['Interactive Tutorials', 'Progress Tracking', 'Personalized Paths', 'Analytics'],
+    features: ['Interactive TutorialsProgress Tracking', 'Personalized PathsAnalytics'],
     pricing: '$99 - $499/month',
     category: 'Customer Success',
     link: 'https://onboarding.ziontechgroup.com'
@@ -772,7 +772,7 @@ const microSaasSolutions = [
     title: 'AI Content Moderation',
     description: 'Advanced content moderation using machine learning for text, images, and video content.',
     icon: Eye,
-    features: ['Multi-modal Detection', 'Custom Rules Engine', 'Real-time Processing', 'API Integration'],
+    features: ['Multi-modal DetectionCustom Rules Engine', 'Real-time ProcessingAPI Integration'],
     pricing: '$399 - $1,999/month',
     category: 'Content Safety',
     link: 'https://contentmoderation.ziontechgroup.com'
@@ -781,7 +781,7 @@ const microSaasSolutions = [
     title: 'Subscription Management Hub',
     description: 'Complete subscription lifecycle management with billing automation and analytics.',
     icon: Receipt,
-    features: ['Billing Automation', 'Subscription Analytics', 'Churn Prevention', 'Payment Processing'],
+    features: ['Billing AutomationSubscription Analytics', 'Churn PreventionPayment Processing'],
     pricing: '$199 - $999/month',
     category: 'Subscription Management',
     link: 'https://subscriptionhub.ziontechgroup.com'
@@ -790,7 +790,7 @@ const microSaasSolutions = [
     title: 'API Documentation Generator',
     description: 'Automated API documentation with interactive testing and version management.',
     icon: Code,
-    features: ['Auto Documentation', 'Interactive Testing', 'Version Management', 'Team Collaboration'],
+    features: ['Auto DocumentationInteractive Testing', 'Version ManagementTeam Collaboration'],
     pricing: '$79 - $399/month',
     category: 'API Development',
     link: 'https://apidocs.ziontechgroup.com'
@@ -799,7 +799,7 @@ const microSaasSolutions = [
     title: 'AI Voice Assistant Builder',
     description: 'Create custom voice assistants with natural language processing and multi-platform deployment.',
     icon: Mic,
-    features: ['Voice Recognition', 'Natural Language Processing', 'Multi-platform Deployment', 'Custom Commands'],
+    features: ['Voice RecognitionNatural Language Processing', 'Multi-platform DeploymentCustom Commands'],
     pricing: '$299 - $1,499/month',
     category: 'Voice AI',
     popular: true,
@@ -809,7 +809,7 @@ const microSaasSolutions = [
     title: 'Blockchain Analytics Dashboard',
     description: 'Real-time blockchain transaction monitoring and analytics for cryptocurrency businesses.',
     icon: Network,
-    features: ['Transaction Monitoring', 'Wallet Analytics', 'Risk Assessment', 'Compliance Reporting'],
+    features: ['Transaction MonitoringWallet Analytics', 'Risk AssessmentCompliance Reporting'],
     pricing: '$499 - $2,999/month',
     category: 'Blockchain',
     link: 'https://blockchainanalytics.ziontechgroup.com'
@@ -818,7 +818,7 @@ const microSaasSolutions = [
     title: 'Quantum Computing Simulator',
     description: 'Cloud-based quantum computing simulation for research and development projects.',
     icon: Cpu,
-    features: ['Quantum Circuit Design', 'Simulation Engine', 'Algorithm Testing', 'Research Tools'],
+    features: ['Quantum Circuit DesignSimulation Engine', 'Algorithm TestingResearch Tools'],
     pricing: '$999 - $4,999/month',
     category: 'Quantum Computing',
     link: 'https://quantumsim.ziontechgroup.com'
@@ -827,7 +827,7 @@ const microSaasSolutions = [
     title: 'Edge Computing Orchestrator',
     description: 'Manage and deploy applications across edge computing infrastructure with intelligent routing.',
     icon: Server,
-    features: ['Edge Deployment', 'Intelligent Routing', 'Performance Optimization', 'Global Distribution'],
+    features: ['Edge DeploymentIntelligent Routing', 'Performance OptimizationGlobal Distribution'],
     pricing: '$399 - $1,999/month',
     category: 'Edge Computing',
     link: 'https://edgeorchestrator.ziontechgroup.com'
@@ -836,7 +836,7 @@ const microSaasSolutions = [
     title: 'AR/VR Content Creator',
     description: 'AI-powered augmented and virtual reality content creation and management platform.',
     icon: Video,
-    features: ['3D Content Creation', 'AR/VR Publishing', 'Interactive Experiences', 'Analytics Dashboard'],
+    features: ['3D Content CreationAR/VR Publishing', 'Interactive ExperiencesAnalytics Dashboard'],
     pricing: '$199 - $999/month',
     category: 'AR/VR',
     link: 'https://arvrcreator.ziontechgroup.com'
@@ -845,7 +845,7 @@ const microSaasSolutions = [
     title: 'IoT Device Manager',
     description: 'Comprehensive IoT device management with real-time monitoring and automated maintenance.',
     icon: Settings,
-    features: ['Device Monitoring', 'Automated Maintenance', 'Firmware Updates', 'Security Management'],
+    features: ['Device MonitoringAutomated Maintenance', 'Firmware UpdatesSecurity Management'],
     pricing: '$149 - $799/month',
     category: 'IoT',
     link: 'https://iotmanager.ziontechgroup.com'
@@ -854,7 +854,7 @@ const microSaasSolutions = [
     title: 'Digital Twin Platform',
     description: 'Create and manage digital twins of physical assets with real-time synchronization.',
     icon: Building,
-    features: ['3D Modeling', 'Real-time Sync', 'Predictive Maintenance', 'Simulation Engine'],
+    features: ['3D ModelingReal-time Sync', 'Predictive MaintenanceSimulation Engine'],
     pricing: '$599 - $2,999/month',
     category: 'Digital Twin',
     link: 'https://digitaltwin.ziontechgroup.com'
@@ -863,7 +863,7 @@ const microSaasSolutions = [
     title: 'Neural Network Designer',
     description: 'Visual neural network design and training platform with pre-built models and datasets.',
     icon: Brain,
-    features: ['Visual Designer', 'Pre-built Models', 'Dataset Management', 'Model Training'],
+    features: ['Visual DesignerPre-built Models', 'Dataset ManagementModel Training'],
     pricing: '$399 - $1,999/month',
     category: 'Machine Learning',
     link: 'https://neuraldesigner.ziontechgroup.com'
@@ -872,7 +872,7 @@ const microSaasSolutions = [
     title: 'Robotic Process Automation',
     description: 'Intelligent automation for repetitive tasks with AI-powered decision making.',
     icon: Bot,
-    features: ['Task Automation', 'AI Decision Making', 'Process Optimization', 'Error Handling'],
+    features: ['Task AutomationAI Decision Making', 'Process OptimizationError Handling'],
     pricing: '$299 - $1,499/month',
     category: 'RPA',
     popular: true,
@@ -882,7 +882,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Voice Analytics Platform',
     description: 'Advanced voice analysis for customer service, sales calls, and team meetings with sentiment analysis and insights.',
     icon: Mic,
-    features: ['Call Analytics', 'Sentiment Analysis', 'Performance Metrics', 'Real-time Insights'],
+    features: ['Call AnalyticsSentiment Analysis', 'Performance MetricsReal-time Insights'],
     pricing: '$199 - $999/month',
     category: 'Voice Analytics',
     popular: true,
@@ -892,7 +892,7 @@ const microSaasSolutions = [
     title: 'Smart Contract Security Auditor',
     description: 'Automated smart contract security analysis with vulnerability detection and gas optimization recommendations.',
     icon: Shield,
-    features: ['Security Auditing', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checking'],
+    features: ['Security AuditingVulnerability Detection', 'Gas OptimizationCompliance Checking'],
     pricing: '$299 - $1,999/month',
     category: 'Blockchain Security',
     link: 'https://contractauditor.ziontechgroup.com'
@@ -901,7 +901,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Carbon Footprint Tracker',
     description: 'Environmental impact tracking and sustainability optimization for businesses with actionable insights.',
     icon: Sprout,
-    features: ['Carbon Tracking', 'Sustainability Metrics', 'Optimization Recommendations', 'ESG Reporting'],
+    features: ['Carbon TrackingSustainability Metrics', 'Optimization RecommendationsESG Reporting'],
     pricing: '$99 - $499/month',
     category: 'Sustainability',
     link: 'https://carbonfootprint.ziontechgroup.com'
@@ -910,7 +910,7 @@ const microSaasSolutions = [
     title: 'Mental Health & Wellness Assistant',
     description: 'AI-powered mental health support and wellness tracking for employees and individuals with privacy protection.',
     icon: Heart,
-    features: ['Mood Tracking', 'Wellness Insights', 'Resource Recommendations', 'Privacy Protection'],
+    features: ['Mood TrackingWellness Insights', 'Resource RecommendationsPrivacy Protection'],
     pricing: '$19 - $99/month',
     category: 'Health & Wellness',
     link: 'https://wellnessai.ziontechgroup.com'
@@ -919,7 +919,7 @@ const microSaasSolutions = [
     title: 'Cryptocurrency Tax Calculator Pro',
     description: 'Automated cryptocurrency tax calculation and reporting with AI-powered optimization and compliance checking.',
     icon: DollarSign,
-    features: ['Tax Calculation', 'Transaction Tracking', 'Report Generation', 'Compliance Checking'],
+    features: ['Tax CalculationTransaction Tracking', 'Report GenerationCompliance Checking'],
     pricing: '$49 - $299/month',
     category: 'Crypto Finance',
     link: 'https://cryptotax.ziontechgroup.com'
@@ -928,7 +928,7 @@ const microSaasSolutions = [
     title: 'Remote Work Analytics Dashboard',
     description: 'Productivity and engagement analytics for remote teams with AI insights and team optimization recommendations.',
     icon: Monitor,
-    features: ['Productivity Metrics', 'Engagement Tracking', 'Wellness Monitoring', 'Team Insights'],
+    features: ['Productivity MetricsEngagement Tracking', 'Wellness MonitoringTeam Insights'],
     pricing: '$79 - $399/month',
     category: 'Remote Work',
     link: 'https://remotework.ziontechgroup.com'
@@ -937,7 +937,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Subscription Management',
     description: 'Intelligent subscription lifecycle management with churn prediction, pricing optimization, and customer insights.',
     icon: Settings,
-    features: ['Churn Prediction', 'Lifecycle Management', 'Pricing Optimization', 'Customer Insights'],
+    features: ['Churn PredictionLifecycle Management', 'Pricing OptimizationCustomer Insights'],
     pricing: '$99 - $599/month',
     category: 'Subscription Management',
     link: 'https://subscriptionai.ziontechgroup.com'
@@ -946,7 +946,7 @@ const microSaasSolutions = [
     title: 'Code Documentation Generator AI',
     description: 'Automatically generate comprehensive documentation from code with AI analysis and interactive examples.',
     icon: FileText,
-    features: ['Auto Documentation', 'API Documentation', 'Code Comments', 'Interactive Examples'],
+    features: ['Auto DocumentationAPI Documentation', 'Code CommentsInteractive Examples'],
     pricing: '$79 - $399/month',
     category: 'Development Tools',
     popular: true,
@@ -956,7 +956,7 @@ const microSaasSolutions = [
     title: 'Smart Contract Testing Suite',
     description: 'Comprehensive testing framework for smart contracts with automated vulnerability detection and gas optimization.',
     icon: Shield,
-    features: ['Unit Testing', 'Integration Testing', 'Security Auditing', 'Gas Optimization'],
+    features: ['Unit TestingIntegration Testing', 'Security AuditingGas Optimization'],
     pricing: '$199 - $999/month',
     category: 'Blockchain',
     link: 'https://contracttesting.ziontechgroup.com'
@@ -965,7 +965,7 @@ const microSaasSolutions = [
     title: 'Database Query Optimizer AI',
     description: 'Intelligent database query optimization and performance monitoring with automated recommendations.',
     icon: Database,
-    features: ['Query Analysis', 'Performance Monitoring', 'Index Recommendations', 'Cost Optimization'],
+    features: ['Query AnalysisPerformance Monitoring', 'Index RecommendationsCost Optimization'],
     pricing: '$149 - $799/month',
     category: 'Database',
     link: 'https://dboptimizer.ziontechgroup.com'
@@ -974,7 +974,7 @@ const microSaasSolutions = [
     title: 'Real-time Collaboration Whiteboard',
     description: 'AI-enhanced collaborative whiteboard with smart drawing assistance and idea organization capabilities.',
     icon: Target,
-    features: ['Real-time Collaboration', 'AI Drawing Assistant', 'Idea Organization', 'Export Options'],
+    features: ['Real-time CollaborationAI Drawing Assistant', 'Idea OrganizationExport Options'],
     pricing: '$29 - $149/month',
     category: 'Collaboration',
     link: 'https://collabwhiteboard.ziontechgroup.com'
@@ -983,7 +983,7 @@ const microSaasSolutions = [
     title: 'API Documentation Generator Pro',
     description: 'Automatically generate interactive API documentation from OpenAPI specs with testing interface and version management.',
     icon: Code,
-    features: ['Auto Generation', 'Interactive Docs', 'Testing Interface', 'Version Management'],
+    features: ['Auto GenerationInteractive Docs', 'Testing InterfaceVersion Management'],
     pricing: '$49 - $299/month',
     category: 'API Tools',
     link: 'https://apidocs.ziontechgroup.com'
@@ -992,7 +992,7 @@ const microSaasSolutions = [
     title: 'Smart Contract Deployment Manager',
     description: 'Automated smart contract deployment and management across multiple blockchains with monitoring and version control.',
     icon: Rocket,
-    features: ['Multi-chain Deployment', 'Version Control', 'Automated Testing', 'Monitoring'],
+    features: ['Multi-chain DeploymentVersion Control', 'Automated TestingMonitoring'],
     pricing: '$99 - $499/month',
     category: 'Blockchain',
     link: 'https://contractdeploy.ziontechgroup.com'
@@ -1001,7 +1001,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Error Monitoring',
     description: 'Intelligent error tracking and debugging assistance for applications with performance monitoring and alert management.',
     icon: Monitor,
-    features: ['Error Tracking', 'AI Debugging', 'Performance Monitoring', 'Alert Management'],
+    features: ['Error TrackingAI Debugging', 'Performance MonitoringAlert Management'],
     pricing: '$39 - $199/month',
     category: 'Monitoring',
     link: 'https://errormonitor.ziontechgroup.com'
@@ -1010,7 +1010,7 @@ const microSaasSolutions = [
     title: 'Smart Contract Analytics Dashboard',
     description: 'Comprehensive analytics for smart contract performance and usage with cost analysis and user behavior insights.',
     icon: BarChart3,
-    features: ['Usage Analytics', 'Performance Metrics', 'Cost Analysis', 'User Behavior'],
+    features: ['Usage AnalyticsPerformance Metrics', 'Cost AnalysisUser Behavior'],
     pricing: '$79 - $399/month',
     category: 'Analytics',
     link: 'https://contractanalytics.ziontechgroup.com'
@@ -1019,7 +1019,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Code Refactoring Assistant',
     description: 'Intelligent code refactoring suggestions and automated improvements with best practices and quality analysis.',
     icon: Code,
-    features: ['Refactoring Suggestions', 'Code Quality Analysis', 'Automated Fixes', 'Best Practices'],
+    features: ['Refactoring SuggestionsCode Quality Analysis', 'Automated FixesBest Practices'],
     pricing: '$99 - $499/month',
     category: 'Development Tools',
     link: 'https://coderefactor.ziontechgroup.com'
@@ -1028,7 +1028,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Email Responder Pro',
     description: 'Advanced email automation with natural language processing, sentiment analysis, and smart routing capabilities.',
     icon: Mail,
-    features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-categorization', 'Smart Routing'],
+    features: ['Natural Language ProcessingSentiment Analysis', 'Auto-categorizationSmart Routing'],
     pricing: '$2,000 - $8,000 setup',
     category: 'Email Automation',
     popular: true,
@@ -1038,7 +1038,7 @@ const microSaasSolutions = [
     title: 'Predictive Analytics Platform Pro',
     description: 'Advanced forecasting and predictive modeling for business intelligence with real-time predictions and custom dashboards.',
     icon: BarChart3,
-    features: ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
+    features: ['Time Series AnalysisMachine Learning Models', 'Real-time PredictionsCustom Dashboards'],
     pricing: '$4,000 - $20,000 project',
     category: 'Analytics',
     popular: true,
@@ -1048,7 +1048,7 @@ const microSaasSolutions = [
     title: 'Intelligent Chatbot System Pro',
     description: 'AI-powered customer support with natural conversation capabilities, context awareness, and multi-language support.',
     icon: MessageSquare,
-    features: ['Natural Language Understanding', 'Context Awareness', 'Multi-language Support', 'Integration APIs'],
+    features: ['Natural Language UnderstandingContext Awareness', 'Multi-language SupportIntegration APIs'],
     pricing: '$1,000 - $6,000/month',
     category: 'Customer Service',
     popular: true,
@@ -1058,7 +1058,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Social Proof Widgets',
     description: 'Real-time social proof widgets with AI optimization for increased conversions and customizable display options.',
     icon: Globe,
-    features: ['Real-time Activity', 'Customizable Display', 'E-commerce Integration', 'Conversion Analytics'],
+    features: ['Real-time ActivityCustomizable Display', 'E-commerce IntegrationConversion Analytics'],
     pricing: '$19 - $99/month',
     category: 'Marketing',
     link: 'https://socialproof.ziontechgroup.com'
@@ -1067,7 +1067,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Customer Loyalty Tracker',
     description: 'Intelligent loyalty program management with AI-driven engagement strategies and reward optimization.',
     icon: Heart,
-    features: ['Points System', 'Engagement Tracking', 'Reward Management', 'AI Personalization'],
+    features: ['Points SystemEngagement Tracking', 'Reward ManagementAI Personalization'],
     pricing: '$39 - $199/month',
     category: 'Customer Retention',
     link: 'https://loyaltytracker.ziontechgroup.com'
@@ -1076,7 +1076,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Personalized E-Learning',
     description: 'Adaptive learning platform with AI-powered personalization, skill assessment, and progress tracking.',
     icon: BookOpen,
-    features: ['Adaptive Learning', 'Skill Assessment', 'Progress Tracking', 'AI Tutoring'],
+    features: ['Adaptive LearningSkill Assessment', 'Progress TrackingAI Tutoring'],
     pricing: '$49 - $299/month',
     category: 'Education',
     link: 'https://elearningai.ziontechgroup.com'
@@ -1085,7 +1085,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Local SEO Optimizer',
     description: 'Comprehensive local SEO optimization with AI-powered keyword research, competitor analysis, and performance tracking.',
     icon: Search,
-    features: ['Keyword Research', 'Listing Optimization', 'Competitor Analysis', 'Performance Tracking'],
+    features: ['Keyword ResearchListing Optimization', 'Competitor AnalysisPerformance Tracking'],
     pricing: '$79 - $399/month',
     category: 'SEO',
     link: 'https://localseo.ziontechgroup.com'
@@ -1094,7 +1094,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Online Booking System',
     description: 'Intelligent appointment scheduling with AI optimization, automated reminders, and client management capabilities.',
     icon: Calendar,
-    features: ['Smart Scheduling', 'Calendar Integration', 'Automated Reminders', 'Client Management'],
+    features: ['Smart SchedulingCalendar Integration', 'Automated RemindersClient Management'],
     pricing: '$29 - $149/month',
     category: 'Scheduling',
     link: 'https://bookingai.ziontechgroup.com'
@@ -1103,7 +1103,7 @@ const microSaasSolutions = [
     title: 'AI-Powered Referral Program Manager',
     description: 'Automated referral program management with AI-driven optimization, fraud detection, and performance analytics.',
     icon: Users,
-    features: ['Referral Tracking', 'Reward Management', 'Fraud Detection', 'Performance Analytics'],
+    features: ['Referral TrackingReward Management', 'Fraud DetectionPerformance Analytics'],
     pricing: '$39 - $199/month',
     category: 'Marketing',
     link: 'https://referralmanager.ziontechgroup.com'
@@ -1112,11 +1112,11 @@ const microSaasSolutions = [
     title: 'Advanced Telehealth Platform',
     description: 'Comprehensive telehealth platform with AI-powered patient monitoring, virtual consultations, and integrated healthcare management tools.',
     icon: Heart,
-    features: ['Virtual Consultations', 'AI Patient Monitoring', 'Health Records Management', 'Prescription Management', 'Appointment Scheduling', 'Telemedicine Analytics'],
+    features: ['Virtual ConsultationsAI Patient Monitoring', 'Health Records ManagementPrescription Management', 'Appointment SchedulingTelemedicine Analytics'],
     pricing: '$5,000 setup + $199/month',
     category: 'Healthcare',
     popular: true,
-    benefits: ['Improved Patient Access', 'Reduced Healthcare Costs', 'Better Patient Outcomes', 'Streamlined Workflows'],
+    benefits: ['Improved Patient AccessReduced Healthcare Costs', 'Better Patient OutcomesStreamlined Workflows'],
     marketPrice: '$8,000-15,000/month',
     link: 'https://telehealth.ziontechgroup.com',
     contact: '+1 302 464 0950'
@@ -1125,11 +1125,11 @@ const microSaasSolutions = [
     title: 'AI Marketing Automation Suite',
     description: 'Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and automate customer journey management.',
     icon: Target,
-    features: ['Campaign Optimization', 'Content Personalization', 'Customer Journey Automation', 'A/B Testing', 'Performance Analytics', 'Lead Scoring'],
+    features: ['Campaign OptimizationContent Personalization', 'Customer Journey AutomationA/B Testing', 'Performance AnalyticsLead Scoring'],
     pricing: '$3,000 setup + $149/month',
     category: 'Marketing',
     popular: true,
-    benefits: ['Higher Conversion Rates', 'Reduced Manual Work', 'Better Customer Engagement', 'Improved ROI'],
+    benefits: ['Higher Conversion RatesReduced Manual Work', 'Better Customer EngagementImproved ROI'],
     marketPrice: '$5,000-12,000/month',
     link: 'https://marketingautomation.ziontechgroup.com',
     contact: '+1 302 464 0950'
@@ -1138,11 +1138,11 @@ const microSaasSolutions = [
     title: 'AI Productivity Suite',
     description: 'Comprehensive AI-powered productivity platform that automates workflows, manages tasks, and optimizes team collaboration with intelligent insights.',
     icon: Zap,
-    features: ['Workflow Automation', 'Task Management', 'Team Collaboration', 'Intelligent Insights', 'Document Management', 'Meeting Optimization'],
+    features: ['Workflow AutomationTask Management', 'Team CollaborationIntelligent Insights', 'Document ManagementMeeting Optimization'],
     pricing: '$2,500 setup + $99/month',
     category: 'Productivity',
     popular: true,
-    benefits: ['Increased Productivity', 'Better Team Collaboration', 'Automated Workflows', 'Data-Driven Insights'],
+    benefits: ['Increased ProductivityBetter Team Collaboration', 'Automated WorkflowsData-Driven Insights'],
     marketPrice: '$4,000-8,000/month',
     link: 'https://productivityai.ziontechgroup.com',
     contact: '+1 302 464 0950'
@@ -1151,25 +1151,25 @@ const microSaasSolutions = [
     title: 'Blockchain FinTech Solutions',
     description: 'Comprehensive blockchain-based financial technology solutions including DeFi protocols, smart contracts, and digital asset management.',
     icon: Shield,
-    features: ['DeFi Protocols', 'Smart Contracts', 'Digital Asset Management', 'Cross-Chain Integration', 'Security Auditing', 'Compliance Monitoring'],
+    features: ['DeFi ProtocolsSmart Contracts', 'Digital Asset ManagementCross-Chain Integration', 'Security AuditingCompliance Monitoring'],
     pricing: '$8,000 setup + $299/month',
     category: 'FinTech',
     popular: false,
-    benefits: ['Enhanced Security', 'Reduced Transaction Costs', 'Faster Settlements', 'Improved Transparency'],
+    benefits: ['Enhanced SecurityReduced Transaction Costs', 'Faster SettlementsImproved Transparency'],
     marketPrice: '$12,000-25,000/month',
     link: 'https://blockchainfintech.ziontechgroup.com',
     contact: '+1 302 464 0950'
   }
-];
+],
 
 const benefits = [
   {
     icon: Rocket,
-    features: ['Resource Optimization', 'Conflict Resolution', 'Availability Tracking', 'Analytics'],
+    features: ['Resource OptimizationConflict Resolution', 'Availability TrackingAnalytics'],
     pricing: '$149 - $899/month',
     category: 'Scheduling'
   }
-];
+],
 
 const features = [{
     icon: Zap,
@@ -1201,7 +1201,7 @@ const features = [{
     title: 'Data Privacy',
     description: 'GDPR and SOC 2 compliant by default'
   }
-];
+],
 
 const microSaasBenefits = [
   {
@@ -1222,18 +1222,18 @@ const microSaasBenefits = [
     description: 'Production-ready code and infrastructure',
     stat: '99.9%'
   }
-];
+],
 
 const additionalServices = [
   {
     title: 'AI-Powered Project Management',
     description: 'Intelligent project management with AI-driven task assignment, deadline prediction, and resource optimization.',
     icon: Target,
-    features: ['AI Task Assignment', 'Deadline Prediction', 'Resource Optimization', 'Risk Assessment', 'Progress Tracking', 'Team Collaboration'],
+    features: ['AI Task AssignmentDeadline Prediction', 'Resource OptimizationRisk Assessment', 'Progress TrackingTeam Collaboration'],
     pricing: '$39 - $249/month',
     category: 'AI Project Management',
     popular: false,
-    benefits: ['Better Planning', 'Reduced Delays', 'Optimal Resource Use', 'Risk Mitigation', 'Improved Delivery'],
+    benefits: ['Better PlanningReduced Delays', 'Optimal Resource UseRisk Mitigation', 'Improved Delivery'],
     marketPrice: '$65 - $400/month',
     link: 'https://ziontechgroup.com/smart-project-management',
     contact: '+1 302 464 0950'
@@ -1243,11 +1243,11 @@ const additionalServices = [
     title: 'AI Financial Analytics',
     description: 'Advanced financial analysis platform with predictive modeling, risk assessment, and automated reporting.',
     icon: DollarSign,
-    features: ['Predictive Modeling', 'Risk Assessment', 'Automated Reporting', 'Cash Flow Analysis', 'Investment Insights', 'Compliance Monitoring'],
+    features: ['Predictive ModelingRisk Assessment', 'Automated ReportingCash Flow Analysis', 'Investment InsightsCompliance Monitoring'],
     pricing: '$59 - $399/month',
     category: 'AI Finance',
     popular: true,
-    benefits: ['Better Financial Planning', 'Risk Mitigation', 'Automated Reporting', 'Investment Optimization', 'Compliance Assurance'],
+    benefits: ['Better Financial PlanningRisk Mitigation', 'Automated ReportingInvestment Optimization', 'Compliance Assurance'],
     marketPrice: '$100 - $600/month',
     link: 'https://ziontechgroup.com/ai-financial-analytics',
     contact: '+1 302 464 0950'
@@ -1257,11 +1257,11 @@ const additionalServices = [
     title: 'Smart HR Management',
     description: 'AI-powered HR platform with resume screening, candidate matching, and employee performance analytics.',
     icon: Users,
-    features: ['Resume Screening', 'Candidate Matching', 'Performance Analytics', 'Employee Engagement', 'Talent Acquisition', 'Workforce Planning'],
+    features: ['Resume ScreeningCandidate Matching', 'Performance AnalyticsEmployee Engagement', 'Talent AcquisitionWorkforce Planning'],
     pricing: '$49 - $299/month',
     category: 'AI HR',
     popular: false,
-    benefits: ['Faster Hiring', 'Better Matches', 'Reduced Bias', 'Performance Insights', 'Cost Savings'],
+    benefits: ['Faster HiringBetter Matches', 'Reduced BiasPerformance Insights', 'Cost Savings'],
     marketPrice: '$80 - $500/month',
     link: 'https://ziontechgroup.com/smart-hr-management',
     contact: '+1 302 464 0950'
@@ -1271,11 +1271,11 @@ const additionalServices = [
     title: 'AI Social Media Manager',
     description: 'Automated social media management with content creation, scheduling, and performance optimization.',
     icon: MessageSquare,
-    features: ['Content Creation', 'Auto Scheduling', 'Performance Analytics', 'Hashtag Optimization', 'Engagement Tracking', 'Multi-platform Support'],
+    features: ['Content CreationAuto Scheduling', 'Performance AnalyticsHashtag Optimization', 'Engagement TrackingMulti-platform Support'],
     pricing: '$29 - $199/month',
     category: 'AI Social Media',
     popular: true,
-    benefits: ['Consistent Posting', 'Better Engagement', 'Time Savings', 'Content Optimization', 'Growth Acceleration'],
+    benefits: ['Consistent PostingBetter Engagement', 'Time SavingsContent Optimization', 'Growth Acceleration'],
     marketPrice: '$50 - $350/month',
     link: 'https://ziontechgroup.com/ai-social-media-manager',
     contact: '+1 302 464 0950'
@@ -1285,11 +1285,11 @@ const additionalServices = [
     title: 'Smart E-commerce Analytics',
     description: 'AI-driven e-commerce analytics with customer behavior insights, conversion optimization, and sales forecasting.',
     icon: ShoppingCart,
-    features: ['Customer Behavior Analysis', 'Conversion Optimization', 'Sales Forecasting', 'Product Recommendations', 'Price Optimization', 'Market Trends'],
+    features: ['Customer Behavior AnalysisConversion Optimization', 'Sales ForecastingProduct Recommendations', 'Price OptimizationMarket Trends'],
     pricing: '$39 - $249/month',
     category: 'AI E-commerce',
     popular: false,
-    benefits: ['Higher Conversions', 'Better Customer Insights', 'Optimized Pricing', 'Increased Sales', 'Data-Driven Decisions'],
+    benefits: ['Higher ConversionsBetter Customer Insights', 'Optimized PricingIncreased Sales', 'Data-Driven Decisions'],
     marketPrice: '$65 - $400/month',
     link: 'https://ziontechgroup.com/smart-ecommerce-analytics',
     contact: '+1 302 464 0950'
@@ -1299,11 +1299,11 @@ const additionalServices = [
     title: 'AI Video Content Creator',
     description: 'Automated video creation platform with AI-generated scripts, voice synthesis, and video editing capabilities.',
     icon: Video,
-    features: ['AI Script Generation', 'Voice Synthesis', 'Auto Video Editing', 'Template Library', 'Multi-language Support', 'Brand Customization'],
+    features: ['AI Script GenerationVoice Synthesis', 'Auto Video EditingTemplate Library', 'Multi-language SupportBrand Customization'],
     pricing: '$49 - $299/month',
     category: 'AI Video',
     popular: true,
-    benefits: ['Faster Video Creation', 'Consistent Quality', 'Cost Reduction', 'Scalable Production', 'Professional Results'],
+    benefits: ['Faster Video CreationConsistent Quality', 'Cost ReductionScalable Production', 'Professional Results'],
     marketPrice: '$80 - $500/month',
     link: 'https://ziontechgroup.com/ai-video-content-creator',
     contact: '+1 302 464 0950'
@@ -1313,11 +1313,11 @@ const additionalServices = [
     title: 'Smart Data Visualization',
     description: 'AI-powered data visualization platform that automatically creates charts, graphs, and interactive dashboards.',
     icon: PieChart,
-    features: ['Auto Chart Generation', 'Interactive Dashboards', 'Data Storytelling', 'Custom Templates', 'Real-time Updates', 'Export Options'],
+    features: ['Auto Chart GenerationInteractive Dashboards', 'Data StorytellingCustom Templates', 'Real-time UpdatesExport Options'],
     pricing: '$29 - $199/month',
     category: 'AI Data Visualization',
     popular: false,
-    benefits: ['Faster Insights', 'Better Presentations', 'Automated Reporting', 'Professional Charts', 'Data Storytelling'],
+    benefits: ['Faster InsightsBetter Presentations', 'Automated ReportingProfessional Charts', 'Data Storytelling'],
     marketPrice: '$50 - $350/month',
     link: 'https://ziontechgroup.com/smart-data-visualization',
     contact: '+1 302 464 0950'
@@ -1327,11 +1327,11 @@ const additionalServices = [
     title: 'AI Code Review Assistant',
     description: 'Automated code review platform with bug detection, security analysis, and performance optimization suggestions.',
     icon: Code,
-    features: ['Bug Detection', 'Security Analysis', 'Performance Optimization', 'Code Quality Metrics', 'Best Practices', 'Automated Testing'],
+    features: ['Bug DetectionSecurity Analysis', 'Performance OptimizationCode Quality Metrics', 'Best PracticesAutomated Testing'],
     pricing: '$39 - $249/month',
     category: 'AI Development',
     popular: true,
-    benefits: ['Faster Reviews', 'Better Code Quality', 'Security Assurance', 'Performance Optimization', 'Learning Opportunities'],
+    benefits: ['Faster ReviewsBetter Code Quality', 'Security AssurancePerformance Optimization', 'Learning Opportunities'],
     marketPrice: '$65 - $400/month',
     link: 'https://ziontechgroup.com/ai-code-review-assistant',
     contact: '+1 302 464 0950'
@@ -1341,11 +1341,11 @@ const additionalServices = [
     title: 'Smart Meeting Assistant',
     description: 'AI-powered meeting platform with transcription, action item extraction, and intelligent scheduling.',
     icon: Mic,
-    features: ['Live Transcription', 'Action Item Extraction', 'Meeting Summaries', 'Smart Scheduling', 'Follow-up Reminders', 'Integration Support'],
+    features: ['Live TranscriptionAction Item Extraction', 'Meeting SummariesSmart Scheduling', 'Follow-up RemindersIntegration Support'],
     pricing: '$19 - $149/month',
     category: 'AI Productivity',
     popular: false,
-    benefits: ['Better Meeting Notes', 'Action Tracking', 'Time Savings', 'Improved Follow-up', 'Meeting Optimization'],
+    benefits: ['Better Meeting NotesAction Tracking', 'Time SavingsImproved Follow-up', 'Meeting Optimization'],
     marketPrice: '$35 - $250/month',
     link: 'https://ziontechgroup.com/smart-meeting-assistant',
     contact: '+1 302 464 0950'
@@ -1355,11 +1355,11 @@ const additionalServices = [
     title: 'AI Website Optimizer',
     description: 'Automated website optimization platform with A/B testing, performance monitoring, and conversion rate optimization.',
     icon: Monitor,
-    features: ['A/B Testing', 'Performance Monitoring', 'Conversion Optimization', 'SEO Analysis', 'User Experience Tracking', 'Automated Recommendations'],
+    features: ['A/B TestingPerformance Monitoring', 'Conversion OptimizationSEO Analysis', 'User Experience TrackingAutomated Recommendations'],
     pricing: '$49 - $299/month',
     category: 'AI Web Optimization',
     popular: true,
-    benefits: ['Higher Conversions', 'Better Performance', 'SEO Improvement', 'User Experience', 'Automated Optimization'],
+    benefits: ['Higher ConversionsBetter Performance', 'SEO ImprovementUser Experience', 'Automated Optimization'],
     marketPrice: '$80 - $500/month',
     link: 'https://ziontechgroup.com/ai-website-optimizer',
     contact: '+1 302 464 0950'
@@ -1369,11 +1369,11 @@ const additionalServices = [
     title: 'Smart Expense Tracker',
     description: 'AI-powered expense management with receipt scanning, categorization, and automated reporting for businesses.',
     icon: CreditCard,
-    features: ['Receipt Scanning', 'Auto Categorization', 'Expense Approval', 'Budget Tracking', 'Tax Preparation', 'Reporting Dashboard'],
+    features: ['Receipt ScanningAuto Categorization', 'Expense ApprovalBudget Tracking', 'Tax PreparationReporting Dashboard'],
     pricing: '$19 - $149/month',
     category: 'AI Finance',
     popular: false,
-    benefits: ['Time Savings', 'Better Accuracy', 'Tax Preparation', 'Budget Control', 'Compliance Assurance'],
+    benefits: ['Time SavingsBetter Accuracy', 'Tax PreparationBudget Control', 'Compliance Assurance'],
     marketPrice: '$35 - $250/month',
     link: 'https://ziontechgroup.com/smart-expense-tracker',
     contact: '+1 302 464 0950'
@@ -1383,11 +1383,11 @@ const additionalServices = [
     title: 'AI Customer Feedback Analyzer',
     description: 'Intelligent feedback analysis platform that processes customer reviews, surveys, and support tickets for actionable insights.',
     icon: MessageSquare,
-    features: ['Sentiment Analysis', 'Topic Extraction', 'Trend Identification', 'Actionable Insights', 'Multi-source Integration', 'Real-time Monitoring'],
+    features: ['Sentiment AnalysisTopic Extraction', 'Trend IdentificationActionable Insights', 'Multi-source IntegrationReal-time Monitoring'],
     pricing: '$29 - $199/month',
     category: 'AI Customer Analytics',
     popular: true,
-    benefits: ['Better Customer Understanding', 'Actionable Insights', 'Trend Identification', 'Improved Products', 'Customer Satisfaction'],
+    benefits: ['Better Customer UnderstandingActionable Insights', 'Trend IdentificationImproved Products', 'Customer Satisfaction'],
     marketPrice: '$50 - $350/month',
     link: 'https://ziontechgroup.com/ai-customer-feedback-analyzer',
     contact: '+1 302 464 0950'
@@ -1397,11 +1397,11 @@ const additionalServices = [
     title: 'Smart Supply Chain Optimizer',
     description: 'AI-powered supply chain management with demand forecasting, route optimization, and supplier risk assessment.',
     icon: Truck,
-    features: ['Demand Forecasting', 'Route Optimization', 'Supplier Risk Assessment', 'Inventory Management', 'Cost Optimization', 'Performance Analytics'],
+    features: ['Demand ForecastingRoute Optimization', 'Supplier Risk AssessmentInventory Management', 'Cost OptimizationPerformance Analytics'],
     pricing: '$59 - $399/month',
     category: 'AI Supply Chain',
     popular: false,
-    benefits: ['Cost Reduction', 'Better Planning', 'Risk Mitigation', 'Efficiency Gains', 'Optimized Operations'],
+    benefits: ['Cost ReductionBetter Planning', 'Risk MitigationEfficiency Gains', 'Optimized Operations'],
     marketPrice: '$100 - $600/month',
     link: 'https://ziontechgroup.com/smart-supply-chain-optimizer',
     contact: '+1 302 464 0950'
@@ -1412,11 +1412,11 @@ const additionalServices = [
     title: 'AI Voice Assistant Platform',
     description: 'Custom voice assistant development platform with natural language processing and multi-language support.',
     icon: Mic,
-    features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Custom Commands', 'Integration APIs', 'Analytics'],
+    features: ['Voice RecognitionNatural Language Processing', 'Multi-language SupportCustom Commands', 'Integration APIsAnalytics'],
     pricing: '$39 - $199/month',
     category: 'AI Voice',
     popular: true,
-    benefits: ['Hands-free Operations', 'Better Accessibility', 'Custom Voice Commands', 'Multi-language Support', 'Easy Integration'],
+    benefits: ['Hands-free OperationsBetter Accessibility', 'Custom Voice CommandsMulti-language Support', 'Easy Integration'],
     marketPrice: '$60 - $300/month',
     link: 'https://ziontechgroup.com/ai-voice-assistant-platform',
     contact: '+1 302 464 0950'
@@ -1425,11 +1425,11 @@ const additionalServices = [
     title: 'AI Image Recognition API',
     description: 'Advanced image recognition and analysis API with object detection, facial recognition, and content moderation.',
     icon: Eye,
-    features: ['Object Detection', 'Facial Recognition', 'Content Moderation', 'OCR Processing', 'Image Classification', 'API Integration'],
+    features: ['Object DetectionFacial Recognition', 'Content ModerationOCR Processing', 'Image ClassificationAPI Integration'],
     pricing: '$29 - $149/month',
     category: 'AI Vision',
     popular: true,
-    benefits: ['Automated Image Processing', 'Content Safety', 'OCR Capabilities', 'Easy API Integration', 'High Accuracy'],
+    benefits: ['Automated Image ProcessingContent Safety', 'OCR CapabilitiesEasy API Integration', 'High Accuracy'],
     marketPrice: '$50 - $250/month',
     link: 'https://ziontechgroup.com/ai-image-recognition-api',
     contact: '+1 302 464 0950'
@@ -1438,11 +1438,11 @@ const additionalServices = [
     title: 'AI Document Intelligence',
     description: 'Intelligent document processing with OCR, data extraction, and automated classification for various document types.',
     icon: FileText,
-    features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Processing', 'Batch Processing', 'API Integration'],
+    features: ['OCR ProcessingData Extraction', 'Document ClassificationForm Processing', 'Batch ProcessingAPI Integration'],
     pricing: '$49 - $249/month',
     category: 'AI Documents',
     popular: true,
-    benefits: ['Automated Processing', 'Data Extraction', 'Document Classification', 'Batch Operations', 'API Integration'],
+    benefits: ['Automated ProcessingData Extraction', 'Document ClassificationBatch Operations', 'API Integration'],
     marketPrice: '$80 - $400/month',
     link: 'https://ziontechgroup.com/ai-document-intelligence',
     contact: '+1 302 464 0950'
@@ -1452,11 +1452,11 @@ const additionalServices = [
     title: 'AI Predictive Maintenance',
     description: 'AI-powered predictive maintenance platform for equipment monitoring, failure prediction, and maintenance scheduling.',
     icon: Settings,
-    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'IoT Integration', 'Alert System', 'Analytics'],
+    features: ['Equipment MonitoringFailure Prediction', 'Maintenance SchedulingIoT Integration', 'Alert SystemAnalytics'],
     pricing: '$79 - $399/month',
     category: 'AI Maintenance',
     popular: true,
-    benefits: ['Reduced Downtime', 'Cost Savings', 'Preventive Maintenance', 'Equipment Longevity', 'Data-Driven Decisions'],
+    benefits: ['Reduced DowntimeCost Savings', 'Preventive MaintenanceEquipment Longevity', 'Data-Driven Decisions'],
     marketPrice: '$120 - $600/month',
     link: 'https://ziontechgroup.com/ai-predictive-maintenance',
     contact: '+1 302 464 0950'
@@ -1468,11 +1468,11 @@ const additionalServices = [
     title: 'Quantum Security Suite',
     description: 'Quantum-resistant encryption and security solutions for future-proof data protection against quantum attacks.',
     icon: Shield,
-    features: ['Quantum-Resistant Encryption', 'Post-Quantum Cryptography', 'Key Management', 'Security Audits', 'Compliance Tools', 'Migration Support'],
+    features: ['Quantum-Resistant EncryptionPost-Quantum Cryptography', 'Key ManagementSecurity Audits', 'Compliance ToolsMigration Support'],
     pricing: '$199 - $999/month',
     category: 'Quantum Security',
     popular: true,
-    benefits: ['Future-Proof Security', 'Quantum Resistance', 'Advanced Encryption', 'Compliance Ready', 'Migration Support'],
+    benefits: ['Future-Proof SecurityQuantum Resistance', 'Advanced EncryptionCompliance Ready', 'Migration Support'],
     marketPrice: '$300 - $1,500/month',
     link: 'https://ziontechgroup.com/quantum-security-suite',
     contact: '+1 302 464 0950'
@@ -1482,11 +1482,11 @@ const additionalServices = [
     title: 'Blockchain Analytics Platform',
     description: 'Advanced blockchain analysis and monitoring platform with transaction tracking, risk assessment, and compliance reporting.',
     icon: Network,
-    features: ['Transaction Tracking', 'Risk Assessment', 'Compliance Reporting', 'Address Analysis', 'Flow Visualization', 'Alert System'],
+    features: ['Transaction TrackingRisk Assessment', 'Compliance ReportingAddress Analysis', 'Flow VisualizationAlert System'],
     pricing: '$99 - $499/month',
     category: 'Blockchain Analytics',
     popular: true,
-    benefits: ['Enhanced Security', 'Compliance Assurance', 'Risk Mitigation', 'Transaction Insights', 'Regulatory Compliance'],
+    benefits: ['Enhanced SecurityCompliance Assurance', 'Risk MitigationTransaction Insights', 'Regulatory Compliance'],
     marketPrice: '$150 - $800/month',
     link: 'https://ziontechgroup.com/blockchain-analytics-platform',
     contact: '+1 302 464 0950'
@@ -1496,11 +1496,11 @@ const additionalServices = [
     title: 'IoT Device Management',
     description: 'Comprehensive IoT device management platform with remote monitoring, firmware updates, and security management.',
     icon: Wifi,
-    features: ['Device Monitoring', 'Remote Management', 'Firmware Updates', 'Security Management', 'Data Collection', 'Analytics Dashboard'],
+    features: ['Device MonitoringRemote Management', 'Firmware UpdatesSecurity Management', 'Data CollectionAnalytics Dashboard'],
     pricing: '$49 - $299/month',
     category: 'IoT Management',
     popular: true,
-    benefits: ['Centralized Management', 'Remote Control', 'Security Updates', 'Data Insights', 'Scalable Operations'],
+    benefits: ['Centralized ManagementRemote Control', 'Security UpdatesData Insights', 'Scalable Operations'],
     marketPrice: '$80 - $500/month',
     link: 'https://ziontechgroup.com/iot-device-management',
     contact: '+1 302 464 0950'
@@ -1510,11 +1510,11 @@ const additionalServices = [
     title: 'AR/VR Business Platform',
     description: 'Augmented and virtual reality platform for business applications including training, presentations, and customer experiences.',
     icon: Eye,
-    features: ['AR/VR Development', '3D Content Creation', 'Interactive Experiences', 'Multi-platform Support', 'Analytics', 'Custom Solutions'],
+    features: ['AR/VR Development3D Content Creation', 'Interactive ExperiencesMulti-platform Support', 'AnalyticsCustom Solutions'],
     pricing: '$199 - $999/month',
     category: 'AR/VR Solutions',
     popular: true,
-    benefits: ['Immersive Experiences', 'Better Training', 'Enhanced Presentations', 'Customer Engagement', 'Innovative Solutions'],
+    benefits: ['Immersive ExperiencesBetter Training', 'Enhanced PresentationsCustomer Engagement', 'Innovative Solutions'],
     marketPrice: '$300 - $1,500/month',
     link: 'https://ziontechgroup.com/ar-vr-business-platform',
     contact: '+1 302 464 0950'
@@ -1526,11 +1526,11 @@ const additionalServices = [
     title: 'AI Drug Discovery Platform',
     description: 'AI-powered drug discovery and development platform with molecular analysis, compound screening, and clinical trial optimization.',
     icon: Heart,
-    features: ['Molecular Analysis', 'Compound Screening', 'Clinical Trial Optimization', 'Drug Interaction Analysis', 'Patent Research', 'Regulatory Compliance'],
+    features: ['Molecular AnalysisCompound Screening', 'Clinical Trial OptimizationDrug Interaction Analysis', 'Patent ResearchRegulatory Compliance'],
     pricing: '$499 - $2,999/month',
     category: 'AI Healthcare',
     popular: true,
-    benefits: ['Faster Discovery', 'Cost Reduction', 'Better Success Rates', 'Regulatory Compliance', 'Innovation Acceleration'],
+    benefits: ['Faster DiscoveryCost Reduction', 'Better Success RatesRegulatory Compliance', 'Innovation Acceleration'],
     marketPrice: '$800 - $5,000/month',
     link: 'https://ziontechgroup.com/ai-drug-discovery-platform',
     contact: '+1 302 464 0950'
@@ -1540,11 +1540,11 @@ const additionalServices = [
     title: 'AI Climate Analytics',
     description: 'Advanced climate data analysis platform with weather prediction, environmental monitoring, and sustainability insights.',
     icon: TreePine,
-    features: ['Weather Prediction', 'Environmental Monitoring', 'Sustainability Analytics', 'Carbon Footprint Tracking', 'Climate Risk Assessment', 'Reporting Tools'],
+    features: ['Weather PredictionEnvironmental Monitoring', 'Sustainability AnalyticsCarbon Footprint Tracking', 'Climate Risk AssessmentReporting Tools'],
     pricing: '$79 - $399/month',
     category: 'AI Climate',
     popular: true,
-    benefits: ['Climate Insights', 'Risk Mitigation', 'Sustainability Goals', 'Environmental Monitoring', 'Data-Driven Decisions'],
+    benefits: ['Climate InsightsRisk Mitigation', 'Sustainability GoalsEnvironmental Monitoring', 'Data-Driven Decisions'],
     marketPrice: '$120 - $600/month',
     link: 'https://ziontechgroup.com/ai-climate-analytics',
     contact: '+1 302 464 0950'
@@ -1554,11 +1554,11 @@ const additionalServices = [
     title: 'AI Space Technology Platform',
     description: 'Space technology solutions including satellite data analysis, space mission planning, and astronomical research tools.',
     icon: Rocket,
-    features: ['Satellite Data Analysis', 'Mission Planning', 'Orbital Mechanics', 'Space Weather Monitoring', 'Research Tools', 'Data Visualization'],
+    features: ['Satellite Data AnalysisMission Planning', 'Orbital MechanicsSpace Weather Monitoring', 'Research ToolsData Visualization'],
     pricing: '$299 - $1,999/month',
     category: 'Space Technology',
     popular: true,
-    benefits: ['Space Insights', 'Mission Optimization', 'Data Analysis', 'Research Acceleration', 'Innovation Support'],
+    benefits: ['Space InsightsMission Optimization', 'Data AnalysisResearch Acceleration', 'Innovation Support'],
     marketPrice: '$500 - $3,000/month',
     link: 'https://ziontechgroup.com/ai-space-technology-platform',
     contact: '+1 302 464 0950'
@@ -1568,11 +1568,11 @@ const additionalServices = [
     title: 'AI Autonomous Vehicle Platform',
     description: 'AI platform for autonomous vehicle development including perception, decision-making, and safety systems.',
     icon: Car,
-    features: ['Computer Vision', 'Path Planning', 'Obstacle Detection', 'Safety Systems', 'Simulation Environment', 'Real-time Processing'],
+    features: ['Computer VisionPath Planning', 'Obstacle DetectionSafety Systems', 'Simulation EnvironmentReal-time Processing'],
     pricing: '$999 - $4,999/month',
     category: 'AI Automotive',
     popular: true,
-    benefits: ['Advanced Safety', 'Autonomous Capabilities', 'Real-time Processing', 'Simulation Testing', 'Innovation Support'],
+    benefits: ['Advanced SafetyAutonomous Capabilities', 'Real-time ProcessingSimulation Testing', 'Innovation Support'],
     marketPrice: '$1,500 - $8,000/month',
     link: 'https://ziontechgroup.com/ai-autonomous-vehicle-platform',
     contact: '+1 302 464 0950'
@@ -1582,11 +1582,11 @@ const additionalServices = [
     title: 'AI Gaming Intelligence',
     description: 'AI-powered gaming platform with intelligent NPCs, procedural content generation, and player behavior analysis.',
     icon: Gamepad2,
-    features: ['Intelligent NPCs', 'Procedural Generation', 'Player Analytics', 'Dynamic Difficulty', 'Content Creation', 'Multiplayer AI'],
+    features: ['Intelligent NPCsProcedural Generation', 'Player AnalyticsDynamic Difficulty', 'Content CreationMultiplayer AI'],
     pricing: '$99 - $499/month',
     category: 'AI Gaming',
     popular: true,
-    benefits: ['Enhanced Gameplay', 'Dynamic Content', 'Player Insights', 'Automated Development', 'Innovative Features'],
+    benefits: ['Enhanced GameplayDynamic Content', 'Player InsightsAutomated Development', 'Innovative Features'],
     marketPrice: '$150 - $800/month',
     link: 'https://ziontechgroup.com/ai-gaming-intelligence',
     contact: '+1 302 464 0950'
@@ -1598,11 +1598,11 @@ const additionalServices = [
     title: 'AI Legal Research Assistant',
     description: 'AI-powered legal research platform with case law analysis, document review, and legal precedent identification.',
     icon: BookOpen,
-    features: ['Case Law Analysis', 'Document Review', 'Legal Research', 'Precedent Identification', 'Contract Analysis', 'Compliance Checking'],
+    features: ['Case Law AnalysisDocument Review', 'Legal ResearchPrecedent Identification', 'Contract AnalysisCompliance Checking'],
     pricing: '$199 - $999/month',
     category: 'AI Legal',
     popular: true,
-    benefits: ['Faster Research', 'Better Accuracy', 'Cost Reduction', 'Comprehensive Analysis', 'Time Savings'],
+    benefits: ['Faster ResearchBetter Accuracy', 'Cost ReductionComprehensive Analysis', 'Time Savings'],
     marketPrice: '$300 - $1,500/month',
     link: 'https://ziontechgroup.com/ai-legal-research-assistant',
     contact: '+1 302 464 0950'
@@ -1612,11 +1612,11 @@ const additionalServices = [
     title: 'AI Real Estate Analytics',
     description: 'Comprehensive real estate analysis platform with market trends, property valuation, and investment insights.',
     icon: Home,
-    features: ['Market Analysis', 'Property Valuation', 'Investment Insights', 'Trend Prediction', 'Location Analysis', 'ROI Calculator'],
+    features: ['Market AnalysisProperty Valuation', 'Investment InsightsTrend Prediction', 'Location AnalysisROI Calculator'],
     pricing: '$79 - $399/month',
     category: 'AI Real Estate',
     popular: true,
-    benefits: ['Better Investment Decisions', 'Market Insights', 'Accurate Valuations', 'Trend Analysis', 'ROI Optimization'],
+    benefits: ['Better Investment DecisionsMarket Insights', 'Accurate ValuationsTrend Analysis', 'ROI Optimization'],
     marketPrice: '$120 - $600/month',
     link: 'https://ziontechgroup.com/ai-real-estate-analytics',
     contact: '+1 302 464 0950'
@@ -1626,11 +1626,11 @@ const additionalServices = [
     title: 'AI Agriculture Platform',
     description: 'Smart agriculture solution with crop monitoring, yield prediction, and automated farming recommendations.',
     icon: Sprout,
-    features: ['Crop Monitoring', 'Yield Prediction', 'Weather Analysis', 'Soil Analysis', 'Pest Detection', 'Automated Recommendations'],
+    features: ['Crop MonitoringYield Prediction', 'Weather AnalysisSoil Analysis', 'Pest DetectionAutomated Recommendations'],
     pricing: '$99 - $499/month',
     category: 'AI Agriculture',
     popular: true,
-    benefits: ['Higher Yields', 'Cost Reduction', 'Better Planning', 'Risk Mitigation', 'Sustainable Farming'],
+    benefits: ['Higher YieldsCost Reduction', 'Better PlanningRisk Mitigation', 'Sustainable Farming'],
     marketPrice: '$150 - $800/month',
     link: 'https://ziontechgroup.com/ai-agriculture-platform',
     contact: '+1 302 464 0950'
@@ -1640,11 +1640,11 @@ const additionalServices = [
     title: 'AI Energy Management',
     description: 'Intelligent energy management platform with consumption optimization, renewable energy integration, and cost analysis.',
     icon: Zap,
-    features: ['Energy Monitoring', 'Consumption Optimization', 'Renewable Integration', 'Cost Analysis', 'Predictive Maintenance', 'Sustainability Tracking'],
+    features: ['Energy MonitoringConsumption Optimization', 'Renewable IntegrationCost Analysis', 'Predictive MaintenanceSustainability Tracking'],
     pricing: '$149 - $799/month',
     category: 'AI Energy',
     popular: true,
-    benefits: ['Energy Savings', 'Cost Reduction', 'Sustainability', 'Optimized Consumption', 'Renewable Integration'],
+    benefits: ['Energy SavingsCost Reduction', 'SustainabilityOptimized Consumption', 'Renewable Integration'],
     marketPrice: '$200 - $1,200/month',
     link: 'https://ziontechgroup.com/ai-energy-management',
     contact: '+1 302 464 0950'
@@ -1654,11 +1654,11 @@ const additionalServices = [
     title: 'AI Education Platform',
     description: 'Personalized learning platform with adaptive content, progress tracking, and intelligent tutoring systems.',
     icon: GraduationCap,
-    features: ['Adaptive Learning', 'Progress Tracking', 'Personalized Content', 'Assessment Tools', 'Learning Analytics', 'Multi-language Support'],
+    features: ['Adaptive LearningProgress Tracking', 'Personalized ContentAssessment Tools', 'Learning AnalyticsMulti-language Support'],
     pricing: '$49 - $299/month',
     category: 'AI Education',
     popular: true,
-    benefits: ['Personalized Learning', 'Better Outcomes', 'Progress Tracking', 'Adaptive Content', 'Improved Engagement'],
+    benefits: ['Personalized LearningBetter Outcomes', 'Progress TrackingAdaptive Content', 'Improved Engagement'],
     marketPrice: '$80 - $500/month',
     link: 'https://ziontechgroup.com/ai-education-platform',
     contact: '+1 302 464 0950'
@@ -1669,11 +1669,11 @@ const additionalServices = [
     title: 'Multi-Cloud Management',
     description: 'Unified multi-cloud management platform with cost optimization, security monitoring, and resource orchestration.',
     icon: Cloud,
-    features: ['Multi-cloud Support', 'Cost Optimization', 'Security Monitoring', 'Resource Orchestration', 'Compliance Management', 'Analytics'],
+    features: ['Multi-cloud SupportCost Optimization', 'Security MonitoringResource Orchestration', 'Compliance ManagementAnalytics'],
     pricing: '$99 - $499/month',
     category: 'Cloud Management',
     popular: true,
-    benefits: ['Unified Management', 'Cost Optimization', 'Security Enhancement', 'Compliance', 'Resource Efficiency'],
+    benefits: ['Unified ManagementCost Optimization', 'Security EnhancementCompliance', 'Resource Efficiency'],
     marketPrice: '$150 - $800/month',
     link: 'https://ziontechgroup.com/multi-cloud-management',
     contact: '+1 302 464 0950'
@@ -1682,11 +1682,11 @@ const additionalServices = [
     title: 'Container Orchestration Platform',
     description: 'Kubernetes-based container orchestration with automated scaling, monitoring, and deployment management.',
     icon: Server,
-    features: ['Kubernetes Management', 'Auto Scaling', 'Container Monitoring', 'Deployment Automation', 'Service Mesh', 'Security'],
+    features: ['Kubernetes ManagementAuto Scaling', 'Container MonitoringDeployment Automation', 'Service MeshSecurity'],
     pricing: '$59 - $299/month',
     category: 'DevOps',
     popular: true,
-    benefits: ['Automated Scaling', 'Container Management', 'Deployment Automation', 'Service Mesh', 'Security'],
+    benefits: ['Automated ScalingContainer Management', 'Deployment AutomationService Mesh', 'Security'],
     marketPrice: '$100 - $500/month',
     link: 'https://ziontechgroup.com/container-orchestration-platform',
     contact: '+1 302 464 0950'
@@ -1695,11 +1695,11 @@ const additionalServices = [
     title: 'Database Performance Optimizer',
     description: 'AI-powered database optimization with query analysis, index recommendations, and performance monitoring.',
     icon: Database,
-    features: ['Query Analysis', 'Index Optimization', 'Performance Monitoring', 'Automated Tuning', 'Capacity Planning', 'Alerting'],
+    features: ['Query AnalysisIndex Optimization', 'Performance MonitoringAutomated Tuning', 'Capacity PlanningAlerting'],
     pricing: '$49 - $249/month',
     category: 'Database',
     popular: true,
-    benefits: ['Performance Optimization', 'Automated Tuning', 'Query Optimization', 'Capacity Planning', 'Cost Reduction'],
+    benefits: ['Performance OptimizationAutomated Tuning', 'Query OptimizationCapacity Planning', 'Cost Reduction'],
     marketPrice: '$80 - $400/month',
     link: 'https://ziontechgroup.com/database-performance-optimizer',
     contact: '+1 302 464 0950'
@@ -1710,11 +1710,11 @@ const additionalServices = [
     title: 'AI Product Recommendation Engine',
     description: 'Advanced product recommendation system with machine learning algorithms and real-time personalization.',
     icon: Target,
-    features: ['ML Algorithms', 'Real-time Personalization', 'A/B Testing', 'Analytics Dashboard', 'API Integration', 'Customization'],
+    features: ['ML AlgorithmsReal-time Personalization', 'A/B TestingAnalytics Dashboard', 'API IntegrationCustomization'],
     pricing: '$39 - $199/month',
     category: 'E-commerce AI',
     popular: true,
-    benefits: ['Higher Conversion', 'Personalized Experience', 'A/B Testing', 'Analytics', 'Easy Integration'],
+    benefits: ['Higher ConversionPersonalized Experience', 'A/B TestingAnalytics', 'Easy Integration'],
     marketPrice: '$60 - $300/month',
     link: 'https://ziontechgroup.com/ai-product-recommendation-engine',
     contact: '+1 302 464 0950'
@@ -1723,11 +1723,11 @@ const additionalServices = [
     title: 'Dynamic Pricing Platform',
     description: 'AI-powered dynamic pricing platform with competitor analysis, demand forecasting, and automated price optimization.',
     icon: DollarSign,
-    features: ['Competitor Analysis', 'Demand Forecasting', 'Price Optimization', 'A/B Testing', 'Analytics', 'API Integration'],
+    features: ['Competitor AnalysisDemand Forecasting', 'Price OptimizationA/B Testing', 'AnalyticsAPI Integration'],
     pricing: '$79 - $399/month',
     category: 'E-commerce',
     popular: true,
-    benefits: ['Revenue Optimization', 'Competitive Pricing', 'Demand-based Pricing', 'A/B Testing', 'Analytics'],
+    benefits: ['Revenue OptimizationCompetitive Pricing', 'Demand-based PricingA/B Testing', 'Analytics'],
     marketPrice: '$120 - $600/month',
     link: 'https://ziontechgroup.com/dynamic-pricing-platform',
     contact: '+1 302 464 0950'
@@ -1736,11 +1736,11 @@ const additionalServices = [
     title: 'Customer Journey Analytics',
     description: 'Comprehensive customer journey tracking with behavioral analysis, conversion optimization, and personalized experiences.',
     icon: TrendingUp,
-    features: ['Journey Tracking', 'Behavioral Analysis', 'Conversion Optimization', 'Personalization', 'A/B Testing', 'Analytics'],
+    features: ['Journey TrackingBehavioral Analysis', 'Conversion OptimizationPersonalization', 'A/B TestingAnalytics'],
     pricing: '$49 - $249/month',
     category: 'E-commerce Analytics',
     popular: true,
-    benefits: ['Journey Insights', 'Conversion Optimization', 'Personalization', 'Behavioral Analysis', 'A/B Testing'],
+    benefits: ['Journey InsightsConversion Optimization', 'PersonalizationBehavioral Analysis', 'A/B Testing'],
     marketPrice: '$80 - $400/month',
     link: 'https://ziontechgroup.com/customer-journey-analytics',
     contact: '+1 302 464 0950'
@@ -1751,11 +1751,11 @@ const additionalServices = [
     title: 'AI Security Monitoring',
     description: 'Advanced AI-powered security monitoring with threat detection, anomaly analysis, and automated response.',
     icon: Shield,
-    features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response', 'Real-time Monitoring', 'Incident Management', 'Compliance'],
+    features: ['Threat DetectionAnomaly Analysis', 'Automated ResponseReal-time Monitoring', 'Incident ManagementCompliance'],
     pricing: '$99 - $499/month',
     category: 'Security AI',
     popular: true,
-    benefits: ['Threat Prevention', 'Automated Response', 'Real-time Monitoring', 'Compliance', 'Incident Management'],
+    benefits: ['Threat PreventionAutomated Response', 'Real-time MonitoringCompliance', 'Incident Management'],
     marketPrice: '$150 - $800/month',
     link: 'https://ziontechgroup.com/ai-security-monitoring',
     contact: '+1 302 464 0950'
@@ -1764,11 +1764,11 @@ const additionalServices = [
     title: 'Data Privacy Management',
     description: 'Comprehensive data privacy platform with GDPR compliance, consent management, and data protection automation.',
     icon: Lock,
-    features: ['GDPR Compliance', 'Consent Management', 'Data Protection', 'Privacy Impact Assessment', 'Audit Trails', 'Automation'],
+    features: ['GDPR ComplianceConsent Management', 'Data ProtectionPrivacy Impact Assessment', 'Audit TrailsAutomation'],
     pricing: '$79 - $399/month',
     category: 'Privacy',
     popular: true,
-    benefits: ['GDPR Compliance', 'Consent Management', 'Data Protection', 'Audit Trails', 'Automation'],
+    benefits: ['GDPR ComplianceConsent Management', 'Data ProtectionAudit Trails', 'Automation'],
     marketPrice: '$120 - $600/month',
     link: 'https://ziontechgroup.com/data-privacy-management',
     contact: '+1 302 464 0950'
@@ -1777,11 +1777,11 @@ const additionalServices = [
     title: 'Vulnerability Assessment Platform',
     description: 'Automated vulnerability scanning and assessment with AI-powered risk analysis and remediation recommendations.',
     icon: Shield,
-    features: ['Vulnerability Scanning', 'Risk Analysis', 'Remediation Recommendations', 'Compliance Checking', 'Reporting', 'Automation'],
+    features: ['Vulnerability ScanningRisk Analysis', 'Remediation RecommendationsCompliance Checking', 'ReportingAutomation'],
     pricing: '$59 - $299/month',
     category: 'Security',
     popular: true,
-    benefits: ['Vulnerability Detection', 'Risk Assessment', 'Remediation Guidance', 'Compliance', 'Automation'],
+    benefits: ['Vulnerability DetectionRisk Assessment', 'Remediation GuidanceCompliance', 'Automation'],
     marketPrice: '$100 - $500/month',
     link: 'https://ziontechgroup.com/vulnerability-assessment-platform',
     contact: '+1 302 464 0950'
@@ -1792,11 +1792,11 @@ const additionalServices = [
     title: 'Real Estate Analytics Platform',
     description: 'AI-powered real estate analytics with market analysis, property valuation, and investment insights.',
     icon: Building,
-    features: ['Market Analysis', 'Property Valuation', 'Investment Insights', 'Trend Analysis', 'Predictive Modeling', 'Reporting'],
+    features: ['Market AnalysisProperty Valuation', 'Investment InsightsTrend Analysis', 'Predictive ModelingReporting'],
     pricing: '$99 - $499/month',
     category: 'Real Estate',
     popular: true,
-    benefits: ['Market Insights', 'Property Valuation', 'Investment Analysis', 'Trend Analysis', 'Predictive Modeling'],
+    benefits: ['Market InsightsProperty Valuation', 'Investment AnalysisTrend Analysis', 'Predictive Modeling'],
     marketPrice: '$150 - $800/month',
     link: 'https://ziontechgroup.com/real-estate-analytics-platform',
     contact: '+1 302 464 0950'
@@ -1805,11 +1805,11 @@ const additionalServices = [
     title: 'Manufacturing Quality Control',
     description: 'AI-powered quality control system with defect detection, process optimization, and predictive quality analytics.',
     icon: CheckCircle,
-    features: ['Defect Detection', 'Process Optimization', 'Quality Analytics', 'Predictive Modeling', 'Real-time Monitoring', 'Reporting'],
+    features: ['Defect DetectionProcess Optimization', 'Quality AnalyticsPredictive Modeling', 'Real-time MonitoringReporting'],
     pricing: '$149 - $599/month',
     category: 'Manufacturing',
     popular: true,
-    benefits: ['Quality Improvement', 'Defect Reduction', 'Process Optimization', 'Predictive Analytics', 'Cost Savings'],
+    benefits: ['Quality ImprovementDefect Reduction', 'Process OptimizationPredictive Analytics', 'Cost Savings'],
     marketPrice: '$250 - $900/month',
     link: 'https://ziontechgroup.com/manufacturing-quality-control',
     contact: '+1 302 464 0950'
@@ -1818,11 +1818,11 @@ const additionalServices = [
     title: 'Retail Analytics Suite',
     description: 'Comprehensive retail analytics with customer behavior analysis, inventory optimization, and sales forecasting.',
     icon: ShoppingCart,
-    features: ['Customer Analytics', 'Inventory Optimization', 'Sales Forecasting', 'Behavioral Analysis', 'Trend Analysis', 'Reporting'],
+    features: ['Customer AnalyticsInventory Optimization', 'Sales ForecastingBehavioral Analysis', 'Trend AnalysisReporting'],
     pricing: '$79 - $399/month',
     category: 'Retail',
     popular: true,
-    benefits: ['Customer Insights', 'Inventory Optimization', 'Sales Forecasting', 'Behavioral Analysis', 'Trend Analysis'],
+    benefits: ['Customer InsightsInventory Optimization', 'Sales ForecastingBehavioral Analysis', 'Trend Analysis'],
     marketPrice: '$120 - $600/month',
     link: 'https://ziontechgroup.com/retail-analytics-suite',
     contact: '+1 302 464 0950'
@@ -1833,11 +1833,11 @@ const additionalServices = [
     title: 'AI Meeting Assistant',
     description: 'Intelligent meeting assistant with transcription, action item extraction, and meeting insights.',
     icon: Video,
-    features: ['Meeting Transcription', 'Action Item Extraction', 'Meeting Insights', 'Note Taking', 'Follow-up Automation', 'Analytics'],
+    features: ['Meeting TranscriptionAction Item Extraction', 'Meeting InsightsNote Taking', 'Follow-up AutomationAnalytics'],
     pricing: '$19 - $99/month',
     category: 'AI Meetings',
     popular: true,
-    benefits: ['Meeting Efficiency', 'Action Item Tracking', 'Meeting Insights', 'Automation', 'Productivity'],
+    benefits: ['Meeting EfficiencyAction Item Tracking', 'Meeting InsightsAutomation', 'Productivity'],
     marketPrice: '$30 - $150/month',
     link: 'https://ziontechgroup.com/ai-meeting-assistant',
     contact: '+1 302 464 0950'
@@ -1846,11 +1846,11 @@ const additionalServices = [
     title: 'Smart Calendar Management',
     description: 'AI-powered calendar optimization with scheduling intelligence, conflict resolution, and productivity insights.',
     icon: Calendar,
-    features: ['Smart Scheduling', 'Conflict Resolution', 'Productivity Insights', 'Meeting Optimization', 'Time Blocking', 'Analytics'],
+    features: ['Smart SchedulingConflict Resolution', 'Productivity InsightsMeeting Optimization', 'Time BlockingAnalytics'],
     pricing: '$29 - $149/month',
     category: 'Productivity',
     popular: true,
-    benefits: ['Smart Scheduling', 'Conflict Resolution', 'Productivity Insights', 'Time Optimization', 'Analytics'],
+    benefits: ['Smart SchedulingConflict Resolution', 'Productivity InsightsTime Optimization', 'Analytics'],
     marketPrice: '$50 - $250/month',
     link: 'https://ziontechgroup.com/smart-calendar-management',
     contact: '+1 302 464 0950'
@@ -1859,11 +1859,11 @@ const additionalServices = [
     title: 'AI Email Management',
     description: 'Intelligent email management with smart categorization, priority detection, and automated responses.',
     icon: Mail,
-    features: ['Smart Categorization', 'Priority Detection', 'Automated Responses', 'Email Analytics', 'Spam Filtering', 'Scheduling'],
+    features: ['Smart CategorizationPriority Detection', 'Automated ResponsesEmail Analytics', 'Spam FilteringScheduling'],
     pricing: '$19 - $99/month',
     category: 'AI Email',
     popular: true,
-    benefits: ['Email Organization', 'Priority Management', 'Automation', 'Analytics', 'Productivity'],
+    benefits: ['Email OrganizationPriority Management', 'AutomationAnalytics', 'Productivity'],
     marketPrice: '$30 - $150/month',
     link: 'https://ziontechgroup.com/ai-email-management',
     contact: '+1 302 464 0950'
@@ -2932,7 +2932,7 @@ const additionalServices = [
     benefits: ["Ensure compliance", "Reduce audit time by 70%", "Lower risk exposure"],
     setupTime: "3-4 weeks"
   }
-];
+],
 
 const industries = [
   {
@@ -2965,7 +2965,7 @@ const industries = [
     description: "Property management, lead tracking, and market analysis",
     icon: "🏠"
   }
-];
+],
 
 const whyChooseUs = [
   {
@@ -2988,18 +2988,18 @@ const whyChooseUs = [
     description: "Round-the-clock support and maintenance for your solutions",
     icon: "🛡️"
   }
-];
+],
 
 const microSaasServices = [
   {
     title: 'AI Content Generator',
     description: 'Generate high-quality content for blogs, social media, and marketing materials using AI',
     icon: FileText,
-    features: ['AI-powered content creation', 'Multiple content types', 'SEO optimization', 'Brand voice consistency'],
+    features: ['AI-powered content creationMultiple content types', 'SEO optimizationBrand voice consistency'],
     pricing: '$29 - $99/month',
     category: 'Content & Marketing',
     popular: true,
-    benefits: ['Save time on content creation', 'Improve content quality', 'Scale content production', 'Maintain brand consistency'],
+    benefits: ['Save time on content creationImprove content quality', 'Scale content productionMaintain brand consistency'],
     marketPrice: '$49/month',
     link: '/contact'
   },
@@ -3007,11 +3007,11 @@ const microSaasServices = [
     title: 'Social Media Scheduler',
     description: 'Schedule and manage your social media posts across multiple platforms',
     icon: Calendar,
-    features: ['Multi-platform posting', 'Content calendar', 'Analytics dashboard', 'Team collaboration'],
+    features: ['Multi-platform postingContent calendar', 'Analytics dashboardTeam collaboration'],
     pricing: '$19 - $79/month',
     category: 'Social Media',
     popular: true,
-    benefits: ['Save time on posting', 'Improve engagement', 'Better content planning', 'Team coordination'],
+    benefits: ['Save time on postingImprove engagement', 'Better content planningTeam coordination'],
     marketPrice: '$39/month',
     link: '/contact'
   },
@@ -3019,11 +3019,11 @@ const microSaasServices = [
     title: 'Email Marketing Automation',
     description: 'Automate your email marketing campaigns with personalized messages',
     icon: Mail,
-    features: ['Email templates', 'Automation workflows', 'A/B testing', 'Analytics'],
+    features: ['Email templatesAutomation workflows', 'A/B testingAnalytics'],
     pricing: '$39 - $149/month',
     category: 'Email Marketing',
     popular: true,
-    benefits: ['Increase email engagement', 'Save time on campaigns', 'Improve conversion rates', 'Better customer segmentation'],
+    benefits: ['Increase email engagementSave time on campaigns', 'Improve conversion ratesBetter customer segmentation'],
     marketPrice: '$79/month',
     link: '/contact'
   },
@@ -3031,11 +3031,11 @@ const microSaasServices = [
     title: 'Project Management Tool',
     description: 'Streamline your project management with task tracking and team collaboration',
     icon: Target,
-    features: ['Task management', 'Team collaboration', 'Progress tracking', 'File sharing'],
+    features: ['Task managementTeam collaboration', 'Progress trackingFile sharing'],
     pricing: '$9 - $29/user/month',
     category: 'Productivity',
     popular: false,
-    benefits: ['Improve team productivity', 'Better project visibility', 'Streamlined workflows', 'Enhanced collaboration'],
+    benefits: ['Improve team productivityBetter project visibility', 'Streamlined workflowsEnhanced collaboration'],
     marketPrice: '$19/user/month',
     link: '/contact'
   },
@@ -3043,11 +3043,11 @@ const microSaasServices = [
     title: 'Analytics Dashboard',
     description: 'Comprehensive analytics and reporting for your business metrics',
     icon: BarChart3,
-    features: ['Real-time analytics', 'Custom reports', 'Data visualization', 'Export capabilities'],
+    features: ['Real-time analyticsCustom reports', 'Data visualizationExport capabilities'],
     pricing: '$49 - $199/month',
     category: 'Analytics',
     popular: true,
-    benefits: ['Better business insights', 'Data-driven decisions', 'Improved performance tracking', 'Custom reporting'],
+    benefits: ['Better business insightsData-driven decisions', 'Improved performance trackingCustom reporting'],
     marketPrice: '$99/month',
     link: '/contact'
   },
@@ -3055,11 +3055,11 @@ const microSaasServices = [
     title: 'Customer Support Chat',
     description: 'Live chat widget for customer support with AI-powered responses',
     icon: MessageSquare,
-    features: ['Live chat widget', 'AI responses', 'Ticket management', 'Multi-language support'],
+    features: ['Live chat widgetAI responses', 'Ticket managementMulti-language support'],
     pricing: '$29 - $99/month',
     category: 'Customer Support',
     popular: false,
-    benefits: ['Improve customer satisfaction', 'Reduce support workload', 'Faster response times', 'Better customer experience'],
+    benefits: ['Improve customer satisfactionReduce support workload', 'Faster response timesBetter customer experience'],
     marketPrice: '$59/month',
     link: '/contact'
   },
@@ -3067,11 +3067,11 @@ const microSaasServices = [
     title: 'Invoice Generator',
     description: 'Create and manage professional invoices for your business',
     icon: FileText,
-    features: ['Invoice templates', 'Payment tracking', 'Automated reminders', 'Tax calculations'],
+    features: ['Invoice templatesPayment tracking', 'Automated remindersTax calculations'],
     pricing: '$19 - $59/month',
     category: 'Finance',
     popular: false,
-    benefits: ['Professional invoicing', 'Faster payment processing', 'Better financial tracking', 'Reduced admin work'],
+    benefits: ['Professional invoicingFaster payment processing', 'Better financial trackingReduced admin work'],
     marketPrice: '$39/month',
     link: '/contact'
   },
@@ -3079,11 +3079,11 @@ const microSaasServices = [
     title: 'Password Manager',
     description: 'Secure password management for individuals and teams',
     icon: Lock,
-    features: ['Secure storage', 'Password generation', 'Team sharing', 'Two-factor authentication'],
+    features: ['Secure storagePassword generation', 'Team sharingTwo-factor authentication'],
     pricing: '$3 - $12/user/month',
     category: 'Security',
     popular: true,
-    benefits: ['Enhanced security', 'Convenient access', 'Team collaboration', 'Reduced password fatigue'],
+    benefits: ['Enhanced securityConvenient access', 'Team collaborationReduced password fatigue'],
     marketPrice: '$6/user/month',
     link: '/contact'
   },
@@ -3091,11 +3091,11 @@ const microSaasServices = [
     title: 'Time Tracking Tool',
     description: 'Track time spent on projects and tasks for better productivity',
     icon: Clock,
-    features: ['Time tracking', 'Project categorization', 'Reporting', 'Team management'],
+    features: ['Time trackingProject categorization', 'ReportingTeam management'],
     pricing: '$7 - $25/user/month',
     category: 'Productivity',
     popular: false,
-    benefits: ['Better time management', 'Accurate billing', 'Productivity insights', 'Project optimization'],
+    benefits: ['Better time managementAccurate billing', 'Productivity insightsProject optimization'],
     marketPrice: '$15/user/month',
     link: '/contact'
   },
@@ -3103,11 +3103,11 @@ const microSaasServices = [
     title: 'Form Builder',
     description: 'Create custom forms and surveys with advanced features',
     icon: Settings,
-    features: ['Drag-and-drop builder', 'Custom fields', 'Conditional logic', 'Data export'],
+    features: ['Drag-and-drop builderCustom fields', 'Conditional logicData export'],
     pricing: '$29 - $99/month',
     category: 'Forms & Surveys',
     popular: false,
-    benefits: ['Easy form creation', 'Better data collection', 'Customized workflows', 'Improved user experience'],
+    benefits: ['Easy form creationBetter data collection', 'Customized workflowsImproved user experience'],
     marketPrice: '$59/month',
     link: '/contact'
   },
@@ -3115,11 +3115,11 @@ const microSaasServices = [
     title: 'Video Conferencing',
     description: 'High-quality video conferencing with screen sharing and recording',
     icon: Video,
-    features: ['HD video calls', 'Screen sharing', 'Recording', 'Virtual backgrounds'],
+    features: ['HD video callsScreen sharing', 'RecordingVirtual backgrounds'],
     pricing: '$14 - $49/user/month',
     category: 'Communication',
     popular: true,
-    benefits: ['Better remote collaboration', 'Professional meetings', 'Easy screen sharing', 'Meeting recordings'],
+    benefits: ['Better remote collaborationProfessional meetings', 'Easy screen sharingMeeting recordings'],
     marketPrice: '$29/user/month',
     link: '/contact'
   },
@@ -3127,11 +3127,11 @@ const microSaasServices = [
     title: 'File Storage & Sharing',
     description: 'Secure cloud storage with advanced sharing and collaboration features',
     icon: Cloud,
-    features: ['Cloud storage', 'File sharing', 'Version control', 'Team collaboration'],
+    features: ['Cloud storageFile sharing', 'Version controlTeam collaboration'],
     pricing: '$5 - $20/user/month',
     category: 'Storage',
     popular: true,
-    benefits: ['Secure file storage', 'Easy sharing', 'Version control', 'Team collaboration'],
+    benefits: ['Secure file storageEasy sharing', 'Version controlTeam collaboration'],
     marketPrice: '$12/user/month',
     link: '/contact'
   },
@@ -3139,11 +3139,11 @@ const microSaasServices = [
     title: 'CRM System',
     description: 'Customer relationship management with sales pipeline and contact management',
     icon: Users,
-    features: ['Contact management', 'Sales pipeline', 'Email integration', 'Reporting'],
+    features: ['Contact managementSales pipeline', 'Email integrationReporting'],
     pricing: '$25 - $100/user/month',
     category: 'CRM',
     popular: true,
-    benefits: ['Better customer relationships', 'Improved sales tracking', 'Enhanced communication', 'Data organization'],
+    benefits: ['Better customer relationshipsImproved sales tracking', 'Enhanced communicationData organization'],
     marketPrice: '$50/user/month',
     link: '/contact'
   },
@@ -3151,11 +3151,11 @@ const microSaasServices = [
     title: 'Website Builder',
     description: 'Drag-and-drop website builder with templates and hosting',
     icon: Globe,
-    features: ['Drag-and-drop builder', 'Templates', 'Hosting included', 'SEO tools'],
+    features: ['Drag-and-drop builderTemplates', 'Hosting includedSEO tools'],
     pricing: '$12 - $49/month',
     category: 'Web Development',
     popular: false,
-    benefits: ['Easy website creation', 'Professional templates', 'No coding required', 'Built-in hosting'],
+    benefits: ['Easy website creationProfessional templates', 'No coding requiredBuilt-in hosting'],
     marketPrice: '$29/month',
     link: '/contact'
   },
@@ -3163,11 +3163,11 @@ const microSaasServices = [
     title: 'E-commerce Platform',
     description: 'Complete e-commerce solution with payment processing and inventory management',
     icon: ShoppingCart,
-    features: ['Product management', 'Payment processing', 'Inventory tracking', 'Order management'],
+    features: ['Product managementPayment processing', 'Inventory trackingOrder management'],
     pricing: '$29 - $299/month',
     category: 'E-commerce',
     popular: true,
-    benefits: ['Easy online selling', 'Payment processing', 'Inventory management', 'Order tracking'],
+    benefits: ['Easy online sellingPayment processing', 'Inventory managementOrder tracking'],
     marketPrice: '$79/month',
     link: '/contact'
   },
@@ -3175,11 +3175,11 @@ const microSaasServices = [
     title: 'Learning Management System',
     description: 'Create and manage online courses with student tracking and assessments',
     icon: BookOpen,
-    features: ['Course creation', 'Student management', 'Assessments', 'Progress tracking'],
+    features: ['Course creationStudent management', 'AssessmentsProgress tracking'],
     pricing: '$39 - $199/month',
     category: 'Education',
     popular: false,
-    benefits: ['Easy course creation', 'Student engagement', 'Progress tracking', 'Assessment tools'],
+    benefits: ['Easy course creationStudent engagement', 'Progress trackingAssessment tools'],
     marketPrice: '$99/month',
     link: '/contact'
   },
@@ -3187,11 +3187,11 @@ const microSaasServices = [
     title: 'Appointment Scheduler',
     description: 'Online booking system for appointments with calendar integration',
     icon: Calendar,
-    features: ['Online booking', 'Calendar sync', 'Automated reminders', 'Payment processing'],
+    features: ['Online bookingCalendar sync', 'Automated remindersPayment processing'],
     pricing: '$19 - $79/month',
     category: 'Scheduling',
     popular: false,
-    benefits: ['Reduce no-shows', 'Automated scheduling', 'Payment integration', 'Better customer experience'],
+    benefits: ['Reduce no-showsAutomated scheduling', 'Payment integrationBetter customer experience'],
     marketPrice: '$39/month',
     link: '/contact'
   },
@@ -3199,11 +3199,11 @@ const microSaasServices = [
     title: 'Survey & Feedback Tool',
     description: 'Create surveys and collect feedback with advanced analytics',
     icon: Target,
-    features: ['Survey builder', 'Response analytics', 'Custom branding', 'Data export'],
+    features: ['Survey builderResponse analytics', 'Custom brandingData export'],
     pricing: '$25 - $99/month',
     category: 'Feedback',
     popular: false,
-    benefits: ['Better customer insights', 'Easy survey creation', 'Advanced analytics', 'Custom branding'],
+    benefits: ['Better customer insightsEasy survey creation', 'Advanced analyticsCustom branding'],
     marketPrice: '$59/month',
     link: '/contact'
   },
@@ -3211,11 +3211,11 @@ const microSaasServices = [
     title: 'Team Communication',
     description: 'Internal communication platform with channels and file sharing',
     icon: MessageSquare,
-    features: ['Team channels', 'File sharing', 'Video calls', 'Integration'],
+    features: ['Team channelsFile sharing', 'Video callsIntegration'],
     pricing: '$6 - $15/user/month',
     category: 'Communication',
     popular: true,
-    benefits: ['Better team communication', 'Centralized information', 'Easy file sharing', 'Integration options'],
+    benefits: ['Better team communicationCentralized information', 'Easy file sharingIntegration options'],
     marketPrice: '$10/user/month',
     link: '/contact'
   },
@@ -3223,11 +3223,11 @@ const microSaasServices = [
     title: 'API Management',
     description: 'Manage and monitor your APIs with rate limiting and analytics',
     icon: Code,
-    features: ['API monitoring', 'Rate limiting', 'Analytics', 'Documentation'],
+    features: ['API monitoringRate limiting', 'AnalyticsDocumentation'],
     pricing: '$99 - $499/month',
     category: 'Development',
     popular: false,
-    benefits: ['Better API performance', 'Usage monitoring', 'Rate limiting', 'Developer experience'],
+    benefits: ['Better API performanceUsage monitoring', 'Rate limitingDeveloper experience'],
     marketPrice: '$299/month',
     link: '/contact'
   },
@@ -3235,15 +3235,15 @@ const microSaasServices = [
     title: 'Database Management',
     description: 'Cloud database service with automatic backups and scaling',
     icon: Database,
-    features: ['Cloud database', 'Automatic backups', 'Auto-scaling', 'Monitoring'],
+    features: ['Cloud databaseAutomatic backups', 'Auto-scalingMonitoring'],
     pricing: '$25 - $200/month',
     category: 'Database',
     popular: false,
-    benefits: ['Reliable data storage', 'Automatic backups', 'Easy scaling', 'Performance monitoring'],
+    benefits: ['Reliable data storageAutomatic backups', 'Easy scalingPerformance monitoring'],
     marketPrice: '$99/month',
     link: '/contact'
   }
-];
+],
 
 const categories = [
   { name: 'Content & Marketing', icon: FileText, count: 3 },
@@ -3252,7 +3252,7 @@ const categories = [
   { name: 'Analytics', icon: BarChart3, count: 2 },
   { name: 'E-commerce', icon: ShoppingCart, count: 2 },
   { name: 'Security', icon: Lock, count: 1 }
-];
+],
 
 export default function MicroSaas() {
   return (
@@ -3375,7 +3375,7 @@ export default function MicroSaas() {
         {/* CTA Section */}
         <section className="py-16 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -3392,5 +3392,5 @@ export default function MicroSaas() {
         </section>
       </div>
     </>
-  );
+  )
 }

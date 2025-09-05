@@ -1,19 +1,19 @@
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-;
+const { execSync } = require('child_process'),
+const fs = require('fs'),
+const path = require('path'),
+,
 
-        };
+        },
       },
       return {,
         totalBranches: allBranches.length,
         mergedBranches: mergedBranches.length,
         deletedBranches: deletedCount,
         branchesToDelete: branchesToDelete.length
-      };
+      },
 
-    };
+    },
   },
   async checkForConflicts() {,
     try {,
@@ -29,11 +29,11 @@ const path = require('path');
         conflictFiles: hasConflicts ? status.split('\n').filter(line =>,
           line.includes('UU') || line.includes('AA') || line.includes('DD'),
         ) : []
-      };
+      },
     } catch (error) {,
       this.log(`Conflict check failed: ${error.message}`, 'ERROR'),
-      return { error: error.message };
-    };
+      return { error: error.message },
+    },
   },
   async optimizeRepository() {,
     try {,
@@ -48,11 +48,11 @@ const path = require('path');
       return {,
         message: 'Repository optimization completed',
         repositorySize: repoSize
-      };
+      },
     } catch (error) {,
       this.log(`Repository optimization failed: ${error.message}`, 'ERROR'),
-      return { error: error.message };
-    };
+      return { error: error.message },
+    },
   },
   getRepositorySize() {,
     try {,
@@ -64,7 +64,7 @@ const path = require('path');
     } catch (error) {,
       this.log(`Failed to get repository size: ${error.message}`, 'ERROR'),
       return 'Unknown'
-    };
+    },
   },
   generateWorkflowRecommendations(gitStatus, branchCleanup, conflictCheck) {,
     const recommendations = [],
@@ -81,7 +81,7 @@ const path = require('path');
       recommendations.push('Git workflow is in good state')
     },
     return recommendations
-  };
+  },
 ursor/automate-test-improve-and-merge-code-8ee2
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> 8796e3849ea134a1ec01eed18b098b8e737df5b5

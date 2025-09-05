@@ -1,6 +1,6 @@
 
-};
+},
 
 export const apiClient = new ApiClient(),
-export type { ApiResponse, RequestOptions };
-;
+export type { ApiResponse, RequestOptions },
+,

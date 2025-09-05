@@ -1,4 +1,4 @@
-    event.respondWith(handleOtherRequest(request))};
+    event.respondWith(handleOtherRequest(request))},
 
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
@@ -11,4 +11,4 @@ self.addEventListener('notificationclick', (event) => {',
 // "Helper": functions for background sync,
 async: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
-  "return": []};
+  "return": []},
