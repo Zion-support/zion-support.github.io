@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/equipmentDetails.ts
+=======
 <<<<<<< HEAD
 export interface EquipmentItem { "id": 'string; "name": "string; "description": string; "price": number; "category": string; "image": string; "specs": string[]; "availability": boolean' "} ; export const "EQUIPMENT_DETAILS": "EquipmentIte m[] = [ { "id": "1""," "name": "High-Performance GPU Server"," "description": "Enterprise-grade GPU server for AI/ML workloads","price": '250 0'," "category": "Servers"," "image": ""https":
 =======
@@ -9,5 +11,6 @@ module.exports = interface EquipmentItem { id: "string; name: string; descriptio
 =======
 export interface EquipmentItem { "id": 'string; name: string; description: string; price: number; category: string; image: string; specs: string[]; availability: boolean' } ; export const "EQUIPMENT_DETAILS": EquipmentIte m[] = [ { id: "1"," "name": "High-Performance GPU Server"," "description": "Enterprise-grade GPU server for AI/ML workloads","price": '250 0'," "category": "Servers"," "image": "https:"]"}
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/equipmentDetails.ts
 >>>>>>> main
 >>>>>>> main

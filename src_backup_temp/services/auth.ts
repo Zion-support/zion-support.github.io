@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/services/auth.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -49,3 +51,4 @@ export async * @param {*} params - Function parameters;*/ * @returns {*} Functio
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/services/auth.ts

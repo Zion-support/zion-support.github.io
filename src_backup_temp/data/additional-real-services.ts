@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/additional-real-services.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -197,3 +199,4 @@ export interface AdditionalEnhancedService { id: string; name: string; tagline: 
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/additional-real-services.ts
