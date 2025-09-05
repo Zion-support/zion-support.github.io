@@ -23,7 +23,7 @@ export interface EnterpriseITBreakthroughService2029 {}
   technology: string[];,
   benefits: string[];
   useCases: string[];,
-  enterpriseCapabilities: string[];export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughService2029[] = [{,"}]
+  enterpriseCapabilities: string[];export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughService2029[] = [{"}]
   id: "ai-business-intelligence-suite",""
     "name": "AI Business Intelligence Suite",""
     "tagline": "Intelligent insights and analytics for enterprise decision making",""

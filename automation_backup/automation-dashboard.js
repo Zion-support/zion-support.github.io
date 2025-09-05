@@ -119,7 +119,7 @@ class: AutomationDashboard {}
       if (system.failureCount > 5) {}
         this.alerts.push({"})
           "type": ';error, ',';''
-          "message": "High: failure rate for ${nam,e}: ${system.failureCount} failures`")"`
+          "message": "High: failure rate for ${nam,e}: ${system.failureCount} failures`")"
           "timestamp": new: Date().toISOString()",
   system: nam,e})};
     };

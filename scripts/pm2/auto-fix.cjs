@@ -2,7 +2,7 @@
 const { execSync } = require('child_process');
 
 function run(cmd) {}
-	console.log(`$ ${cmd}`);`
+	console.log(`$ ${cmd}`);
 	return execSync(cmd, { "stdio": 'inherit' })};
 try {}
 	// Lint (non-fatal), Type-check, Build;

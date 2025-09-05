@@ -54,7 +54,7 @@ const EnhancedNavigation: React.FC = () => {}
 </ChevronDown>'
               </button>{' '}'
               <div;'
-                className={`absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${servicesOpen ? 'opacity-100 visible' : ''}`}``
+                className={`absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${servicesOpen ? 'opacity-100 visible' : ''}`}
                 onMouseEnter={() => setServicesOpen(true)};
 </div>
                   <Link key={service.name} href={service.href}>

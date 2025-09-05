@@ -17,7 +17,7 @@ function log(message, type = 'INFO') {}
     "ERROR": '❌', 
     "WARNING": '⚠️' 
   };
-  console.log(`${icons[type]} [${type}] ${message}`);`
+  console.log(`${icons[type]} [${type}] ${message}`);
 };
 class PerformanceOptimizer {}
   constructor() {}
@@ -42,7 +42,7 @@ class PerformanceOptimizer {}
       
       return true;
     } catch (error) {}
-      log(`Performance optimization failed: ${error.message}`, 'ERROR');`
+      log(`Performance optimization failed: ${error.message}`, 'ERROR');
       return false;
     };
   };
@@ -69,8 +69,9 @@ class PerformanceOptimizer {}
       this.report.recommendations.push({})
         file: configPath,
         optimizations;
-      });
-      log(`Found ${optimizations.length} optimization opportunities in next.config.js`, 'WARNING');`
+      }
+});
+      log(`Found ${optimizations.length} optimization opportunities in next.config.js`, 'WARNING');
     } else {}
       log('next.config.js is well optimized', 'SUCCESS');
     };
@@ -84,7 +85,8 @@ class PerformanceOptimizer {}
     };
     try {}
       // Check if sharp is available;
-      execSync('npx sharp --version', { stdio: 'pipe' });
+      execSync('npx sharp --version', { stdio: 'pipe' }
+});
       
       const imageFiles = this.findImageFiles(publicDir);
       let optimizedCount = 0;
@@ -96,7 +98,8 @@ class PerformanceOptimizer {}
         if (sizeKB > 100) { // Optimize images larger than 100KB;}
           try {}
             const outputPath = imagePath.replace(/(\.[^.]+)$/, '_optimized$1');
-            execSync(`npx sharp -i "${imagePath}" -o "${outputPath}" --quality 80`, { stdio: 'pipe' });`
+            execSync(`npx sharp -i "${imagePath}" -o "${outputPath}" --quality 80`, { stdio: 'pipe' }
+});
             
             const newStats = fs.statSync(outputPath);
             const newSizeKB = Math.round(newStats.size / 1024);
@@ -107,12 +110,13 @@ class PerformanceOptimizer {}
               originalSize: sizeKB,
               optimizedSize: newSizeKB,
               savings: `${savings}%``
-            });
+            }
+});
             
             optimizedCount++;
-            log(`Optimized ${path.basename(imagePath)}: ${sizeKB}KB → ${newSizeKB}KB (${savings}% savings)`, 'SUCCESS');`
+            log(`Optimized ${path.basename(imagePath)}: ${sizeKB}KB → ${newSizeKB}KB (${savings}% savings)`, 'SUCCESS');
           } catch (error) {}
-            log(`Failed to optimize ${imagePath}: ${error.message}`, 'ERROR');`
+            log(`Failed to optimize ${imagePath}: ${error.message}`, 'ERROR');
           };
         };
       };
@@ -125,7 +129,8 @@ class PerformanceOptimizer {}
   };
   findImageFiles(dir) {}
     const imageFiles = [];
-    const files = fs.readdirSync(dir, { withFileTypes: true });
+    const files = fs.readdirSync(dir, { withFileTypes: true }
+});
     
     for (const file of files) {}
       const fullPath = path.join(dir, file.name);
@@ -143,7 +148,8 @@ class PerformanceOptimizer {}
       log('Checking bundle size...', 'INFO');
       
       // Run build to get bundle analysis;
-      execSync('npm run build', { stdio: 'pipe' });
+      execSync('npm run build', { stdio: 'pipe' }
+});
       
       const nextDir = '.next';
       if (fs.existsSync(nextDir)) {}
@@ -156,24 +162,27 @@ class PerformanceOptimizer {}
             type: 'bundle_size',
             size: `${sizeMB}MB`,`
             status: sizeMB < 5 ? 'good' : sizeMB < 10 ? 'warning' : 'large'
-          });
+          }
+});
           
           if (sizeMB > 10) {}
             this.report.recommendations.push({})
               type: 'bundle_size',
               message: 'Bundle size is large, consider code splitting and lazy loading'
-            });
+            }
+});
           };
-          log(`Bundle size: ${sizeMB}MB`, sizeMB < 5 ? 'SUCCESS' : sizeMB < 10 ? 'WARNING' : 'ERROR');`
+          log(`Bundle size: ${sizeMB}MB`, sizeMB < 5 ? 'SUCCESS' : sizeMB < 10 ? 'WARNING' : 'ERROR');
         };
       };
     } catch (error) {}
-      log(`Failed to check bundle size: ${error.message}`, 'ERROR');`
+      log(`Failed to check bundle size: ${error.message}`, 'ERROR');
     };
   };
   getDirectorySize(dir) {}
     let totalSize = 0;
-    const files = fs.readdirSync(dir, { withFileTypes: true });
+    const files = fs.readdirSync(dir, { withFileTypes: true }
+});
     
     for (const file of files) {}
       const fullPath = path.join(dir, file.name);
@@ -189,7 +198,8 @@ class PerformanceOptimizer {}
   async checkLighthouse() {}
     try {}
       // Check if lighthouse is available;
-      execSync('npx lighthouse --version', { stdio: 'pipe' });
+      execSync('npx lighthouse --version', { stdio: 'pipe' }
+});
       log('Lighthouse available, consider running: npx lighthouse http://localhost:3000', 'INFO');
     } catch (error) {}
       log('Lighthouse not available, install with: npm install -g lighthouse', 'WARNING');
@@ -198,7 +208,7 @@ class PerformanceOptimizer {}
   generateReport() {}
     const reportPath = 'performance-optimization-report.json';
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
-    log(`Performance report saved to ${reportPath}`, 'SUCCESS');`
+    log(`Performance report saved to ${reportPath}`, 'SUCCESS');
   };
 };
 // Run if called directly;
@@ -206,6 +216,7 @@ if (require.main === module) {}
   const optimizer = new PerformanceOptimizer();
   optimizer.optimize().then(success => {})
     process.exit(success ? 0 : 1);
-  });
+  }
+});
 };
 module.exports = PerformanceOptimizer;

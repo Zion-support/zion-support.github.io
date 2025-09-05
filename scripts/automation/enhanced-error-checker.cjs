@@ -30,10 +30,11 @@ class EnhancedErrorChecker {}
         "cwd": this.projectRoot,
         "encoding": "utf8",
         "timeout": 60000;
-      });
+      }
+});
       this.log("No TypeScript errors found");
       return { "errors": 0, "output": result }} catch(error) {}
-      this.log(`TypeScript errors "found": ${error.message}`, "ERROR");`
+      this.log(`TypeScript errors "found": ${error.message}`, "ERROR");
       return { "errors": 1, "output": error.stdout || error.message }};
   };
   async run() {}

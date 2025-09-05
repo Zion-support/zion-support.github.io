@@ -25,7 +25,8 @@ class PM2SyncAutomation {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -40,14 +41,14 @@ class PM2SyncAutomation {}
             };);
             
             const status = JSON.parse(statusResult;);
-            this.log(`Found ${status.length} PM2 processes`);`
+            this.log(`Found ${status.length} PM2 processes`);
             
             return {;}
                 "status": 'success',
                 "processes": status.length,
                 "details": status;
             }} catch (error) {}
-            this.log(`PM2 status check "failed": ${error.message}`);`
+            this.log(`PM2 status check "failed": ${error.message}`);
             return {;}
                 "status": 'failed',
                 "error": error.message;
@@ -61,23 +62,26 @@ class PM2SyncAutomation {}
             execSync('pm2 stop all', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
-            });
+            }
+});
             
             // Delete all processes;
             execSync('pm2 delete all', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
-            });
+            }
+});
             
             // Start processes from ecosystem file;
             execSync('pm2 start ecosystem.config.cjs', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
-            });
+            }
+});
             
             this.log('PM2 processes synced successfully');
             return { "status": 'success' }} catch (error) {}
-            this.log(`PM2 sync "failed": ${error.message}`);`
+            this.log(`PM2 sync "failed": ${error.message}`);
             return { "status": 'failed', "error": error.message }};
     };
     checkProcessHealth() {}
@@ -94,7 +98,7 @@ class PM2SyncAutomation {}
             const healthyProcesses = processes.filter(p => p.pm2_env?.status === 'online';);
             const unhealthyProcesses = processes.filter(p => p.pm2_env?.status !== 'online';);
             
-            this.log(`Healthy "processes": ${healthyProcesses.length}/${processes.length}`);`
+            this.log(`Healthy "processes": ${healthyProcesses.length}/${processes.length}`);
             
             return {;}
                 "status": 'success',
@@ -103,7 +107,7 @@ class PM2SyncAutomation {}
                 "unhealthy": unhealthyProcesses.length,
                 "processes": processes;
             }} catch (error) {}
-            this.log(`Process health check "failed": ${error.message}`);`
+            this.log(`Process health check "failed": ${error.message}`);
             return { "status": 'failed', "error": error.message }};
     };
     restartUnhealthyProcesses() {}
@@ -127,7 +131,7 @@ class PM2SyncAutomation {}
                 this.log('All processes are healthy');
                 return { "status": 'success', "restarted": 0 }};
         } catch (error) {}
-            this.log(`Process restart "failed": ${error.message}`);`
+            this.log(`Process restart "failed": ${error.message}`);
             return { "status": 'failed', "error": error.message }};
     };
     generateSyncReport() {}
@@ -146,7 +150,7 @@ class PM2SyncAutomation {}
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`PM2 sync report saved to ${this.reportFile}`);`
+        this.log(`PM2 sync report saved to ${this.reportFile}`);
         
         return report};
     generateSyncRecommendations() {}
@@ -166,7 +170,7 @@ class PM2SyncAutomation {}
             const report = this.generateSyncReport(;);
             this.log('PM2 Sync Automation completed successfully');
             return report} catch (error) {}
-            this.log(`PM2 Sync Automation "failed": ${error.message}`);`
+            this.log(`PM2 Sync Automation "failed": ${error.message}`);
             throw error};
     };
 };

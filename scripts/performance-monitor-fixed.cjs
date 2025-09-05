@@ -11,7 +11,7 @@ const path = require("path")
         "process"
       "application"
       "build": {hasBuildArtifacts: false,"buildTime"}
-      console.log(" Collecting performance metrics...")
+// console.log(" Collecting performance metrics...")
       console.log(" Performance monitoring completed")
       console.error(" Error during performance "monitoring": ")
 const { execSync } = require("child_process")
@@ -58,25 +58,25 @@ const { execSync } = require("child_process")
         // Skip directories we can"
         if (file === "node_modules" || file === ".git")
     const reportPath = path.join(this.projectRoot, "performance-report.json")
-    console.log("\n Performance "Summary": ")
+// console.log("\n Performance "Summary": ")
     console.log("=")
-    console.log("� System Metrics:")
+// console.log("� System Metrics:")
     console.log(`   "CPU"`)
-    console.log(`   "Process": PID ${this.metrics.system.process.pid}, "Uptime"`)
+// console.log(`   "Process": PID ${this.metrics.system.process.pid}, "Uptime"`)
     console.log("\n� Application "Metrics": ")
-    console.log(`   "Dependencies"`)
+// console.log(`   "Dependencies"`)
     console.log(`   Source "Code"`)
-    console.log(`   "Files"`)
+// console.log(`   "Files"`)
     console.log("\n� Build "Metrics": ")
-    console.log(`   Has Build Artifacts: ${this.metrics.build.hasBuildArtifacts ? "Yes" : "No"`})
+// console.log(`   Has Build Artifacts: ${this.metrics.build.hasBuildArtifacts ? "Yes" : "No"`})
     console.log(`   Available "Scripts"`)
     console.log("=")
   async runPerformanceTest() {console.log(" Starting performance monitoring..."),"}
     console.log("\n Performance Metrics Report");";    console.log("─".repeat(50));""
-    console.log("� "System": ");"    console.log(),      `   "Memory": ${this.metrics.system.memory.heapUsed || "N/A"}MB used / ${this.metrics.system.memory.heapTotal || "N/A"}MB total`");";    console.log();      "   CPU": ${this.metrics.system.cpu.user || "N/A"}ms user / ${this.metrics.system.cpu.system || "N/A"}ms system"");";    console.log(`   ""Uptime": ${this.metrics.system.process.uptime || "N/A"}s`);";";    // Application metrics;";    console.log("\n� "Application": ");"    if (this.metrics.application.buildSize) {",      console.log("   Build "size": ${this.metrics.application.buildSize}MB");"`
-    console.log(`   Dependencies": ${this.metrics.application.bundleSize}`);``
-    console.log("\n� Web ""Vitals": "),"    console.log("   "LCP": ${Math.round(this.metrics.web.lcp)}ms");";    console.log(`   "FID": ${Math.round(this.metrics.web.fid)}ms`);";    console.log("   CLS": ${this.metrics.web.cls.toFixed(3)}");";    console.log(`   ""FCP": ${Math.round(this.metrics.web.fcp)}ms`);";    console.log("   "TTFB": ${Math.round(this.metrics.web.ttfb)}ms");"`
-    console.log(`\n Performance "Score": ${score}/100`);``
+    console.log("� "System": ");"    console.log(),      `   "Memory": ${this.metrics.system.memory.heapUsed || "N/A"}MB used / ${this.metrics.system.memory.heapTotal || "N/A"}MB total`");";    console.log();      "   CPU": ${this.metrics.system.cpu.user || "N/A"}ms user / ${this.metrics.system.cpu.system || "N/A"}ms system"");";    console.log(`   ""Uptime": ${this.metrics.system.process.uptime || "N/A"}s`);";";    // Application metrics;";    console.log("\n� "Application": ");"    if (this.metrics.application.buildSize) {",      console.log("   Build "size": ${this.metrics.application.buildSize}MB");"
+    console.log(`   Dependencies": ${this.metrics.application.bundleSize}`);
+    console.log("\n� Web ""Vitals": "),"    console.log("   "LCP": ${Math.round(this.metrics.web.lcp)}ms");";    console.log(`   "FID": ${Math.round(this.metrics.web.fid)}ms`);";    console.log("   CLS": ${this.metrics.web.cls.toFixed(3)}");";    console.log(`   ""FCP": ${Math.round(this.metrics.web.fcp)}ms`);";    console.log("   "TTFB": ${Math.round(this.metrics.web.ttfb)}ms");"
+    console.log(`\n Performance "Score": ${score}/100`);
       console.log(" Excellent performance!")} else if (score >= 70) {      console.log("⚠  Good performance, room for improvement")} else {      console.log(" Performance needs attention")}"
       const report = {timestamp": new Date().toISOString(),","metrics": this.metrics,,        "score": this.calculatePerformanceScore(),        "recommendations"}
       console.log("\n� Report saved "to": ${this.reportFile}");"} catch (error) {console.error("Error saving report":", error.message),"}"

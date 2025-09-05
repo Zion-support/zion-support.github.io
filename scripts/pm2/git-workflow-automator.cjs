@@ -9,7 +9,7 @@ execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
         "stdio"
         "stdio"
   ', { "stdio"}
-      const prTitle = title || `"feat"`
+      const prTitle = title || `"feat"
         "stdio"
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
@@ -42,7 +42,7 @@ execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
         "stdio"
         "stdio"
   gh --version', { "stdio": 'pipe})} "catch"
-      const prTitle = title || `"feat"`
+      const prTitle = title || `"feat"
         "encoding"
         "stdio"
   'git: checkout main', { "cwd": this.projectRoo,t, "stdio"}

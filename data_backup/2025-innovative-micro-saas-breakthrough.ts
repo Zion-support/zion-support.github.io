@@ -16,7 +16,7 @@ export const innovativeMicroSaasBreakthrough2025 = [{}]
   'Custom AI model training for industry-specific content''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 99,
         period:,"
   month',''
@@ -99,7 +99,7 @@ starter: {,}
   'Mobile-first responsive design and applications''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 149,
         period:,"
   month',''
@@ -183,7 +183,7 @@ starter: {,}
   'API access for custom integrations''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 799,
         period:,"
   month',''
@@ -265,7 +265,7 @@ starter: {,}
   'API access for legal software integration''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 299,
         period:,"
   month',''
@@ -348,7 +348,7 @@ starter: {,}
   'HIPAA compliance and security''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 599,
         period:,"
   month',''

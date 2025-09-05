@@ -2,14 +2,16 @@ import { withErrorLogging } from '../withErrorLogging.cjs';
 
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' }
+});
   }
 
   try {
     const { country, weight } = req.body;
 
     if (!country) {
-      return res.status(400).json({ error: 'Country is required' });
+      return res.status(400).json({ error: 'Country is required' }
+});
     }
 
     // Sample shipping rates calculation
@@ -31,12 +33,15 @@ export default withErrorLogging(async (req, res) => {
           estimatedDays: '2-3 business days'
         }
       ]
-    });
+    }
+});
   } catch (error) {
     console.error('Shipping rates calculation failed:', error);
     res.status(500).json({
       error: 'Failed to calculate shipping rates',
       message: error.message,
-    });
+    }
+});
   }
+}
 });
