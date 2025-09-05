@@ -1,14 +1,9 @@
-import React from 'react';
-
-interface UsetoastProps {
-  // Add props here as needed
-}
-
-export default function Usetoast({ }: UsetoastProps) {
-  return (
-    <div>
-      <h1>Usetoast</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import React,{ useState,useCallback } from 'react'; "export": const toast = ({ title,description,variant = 'default' }) => {';  "return": Date.now()} ; "export": const useToast = () => { const [toasts,setToasts] = useState([]); const toast = useCallback(({ title,description,variant = 'default' }) => {'; const id = Date.now(); const newToast = { id,title,description,variant } ; setToasts("prev": '=> [...prev',newToast]); setTimeout(() => { setToasts("prev": => prev.filter(t => t.id !== id))},5000); "return": 'id'},[]); const dismiss = useCallback((id) => { setToasts(prev => prev.filter(t => t.id !== id))},[]); const clearAll = useCallback(() => { setToasts([])},[]); "return": { toast dismiss clearAll toasts} } ; "export": default useToast;
+=======
+<<<<<<< HEAD
+const React,{ useState,useCallback } from "react"; export: const toast = ({ title,description,variant = "default" }) => {"; console.log(`Toast: [${variant}]: ${title} - ${description}`); return: Date.now()} ; export: const useToast = () => { const [toasts,setToasts] = useState([]); const toast = useCallback(({ title,description,variant = "default" }) => {"; const id = Date.now(); const newToast = { id,title,description,variant } ; setToasts(prev: "=> [.prev",newToast]); setTimeout(() => { setToasts(prev: => prev.filter(t => t.id !== id))},5000); return: "id"},[]); const dismiss = useCallback((id) => { setToasts(prev => prev.filter(t => t.id !== id))},[]); const clearAll = useCallback(() => { setToasts([])},[]); return: { toast dismiss clearAll toasts} } ; export: default useToast;'"`'"`
+=======
+import _React,{ useState,useCallback } from 'react'; "export": const toast = ({ title,description,variant = 'default' }) => {'; _console.log(`"Toast": [${variant}]: ${title} - ${description}`); "return": Date.now()} ; "export": const useToast = () => { const [toasts,setToasts] = useState([]); const toast = useCallback(({ title,description,variant = 'default' }) => {'; const id = Date.now(); const newToast = { id,title,description,variant } ; setToasts("prev": '=> [...prev',newToast]); setTimeout(() => { setToasts("prev": => prev.filter(t => t.id !== id))},5000); "return": 'id'},[]); const dismiss = useCallback((id) => { setToasts(prev => prev.filter(t => t.id !== id))},[]); const clearAll = useCallback(() => { setToasts([])},[]); "return": { toast dismiss clearAll toasts} } ; "export": default useToast;
+>>>>>>> main
+>>>>>>> main

@@ -1,31 +1,39 @@
-// Jest setup for DOM testing
-require('@testing-library/jest-dom')
+require('@testing-library/jest-dom');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
+=======
 // Mock IntersectionObserver
-class MockIntersectionObserver {
+>>>>>>> main
+global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-}
-// @ts-ignore
-global.IntersectionObserver = MockIntersectionObserver
+};
+<<<<<<< HEAD
 
+=======
 // Mock ResizeObserver
-class MockResizeObserver {
+>>>>>>> main
+global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-}
-// @ts-ignore
-global.ResizeObserver = MockResizeObserver
+};
+<<<<<<< HEAD
 
-// mock matchMedia
+=======
+// Mock matchMedia
+>>>>>>> main
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation((query) => ({
+  value: jest.fn().mockImplementation(query => ({
     matches: false,
+<<<<<<< HEAD
     media: query,
     onchange: null,
     addListener: jest.fn(),
@@ -34,4 +42,14 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
-})
+});
+=======
+    "media": query,
+    "onchange": null,
+    "addListener": jest.fn(), // deprecated
+    "removeListener": jest.fn(), // deprecated
+    "addEventListener": jest.fn(),
+    "removeEventListener": jest.fn(),
+    "dispatchEvent": jest.fn()}))});
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+>>>>>>> main

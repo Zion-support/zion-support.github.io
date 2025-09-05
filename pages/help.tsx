@@ -1,459 +1,704 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  HelpCircle,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  FileText,
-  Video,
+import { motion } from 'framer-motion';
+import { 
+  HelpCircle, 
+  Search, 
+  BookOpen, 
+  Video, 
+  MessageSquare, 
+  Phone, 
+  Mail, 
+  FileText, 
   Download,
   ExternalLink,
-  ChevronDown,
-  ChevronRight
+  ChevronRight,
+  Clock,
+  User,
+  Tag
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const helpCategories = [
   {
+    id: 'getting-started',
     title: 'Getting Started',
+    description: 'New to Zion Tech Group? Start here to learn the basics.',
     icon: BookOpen,
-    color: 'from-blue-600 to-purple-600',
+    color: 'blue',
     articles: [
       {
-        title: 'How to create an account',
-        description: 'Step-by-step guide to setting up your account',
-        readTime: '2 min',
+        title: 'Welcome to Zion Tech Group',
+        description: 'Learn about our platform and how to get started',
+        readTime: '5 min read',
         type: 'Guide'
       },
       {
-        title: 'First project setup',
-        description: 'Learn how to create your first AI project',
-        readTime: '5 min',
+        title: 'Setting Up Your Account',
+        description: 'Step-by-step guide to configure your account',
+        readTime: '3 min read',
         type: 'Tutorial'
       },
       {
-        title: 'API key management',
-        description: 'How to generate and manage your API keys',
-        readTime: '3 min',
-        type: 'Guide'
+        title: 'Understanding Our Services',
+        description: 'Overview of all available services and solutions',
+        readTime: '7 min read',
+        type: 'Overview'
       }
+    ]
+  },
+  {
+    id: 'ai-services',
+    title: 'AI Services',
+    description: 'Everything about our AI and machine learning solutions.',
+    icon: HelpCircle,
+    color: 'green',
+    articles: [
+      {
+        title: 'AI Implementation Guide',
+        description: 'How to implement AI solutions in your business',
+        readTime: '10 min read',
+        type: 'Guide'
+      },
+      {
+        title: 'Machine Learning Models',
+        description: 'Understanding different ML models and their applications',
+        readTime: '8 min read',
+        type: 'Technical'
+      },
+      {
+        title: 'AI Best Practices',
+        description: 'Tips and best practices for AI development',
+        readTime: '6 min read',
+        type: 'Best Practice'
+      }
+    ]
+  },
+  {
+    id: 'cloud-solutions',
+    title: 'Cloud Solutions',
+    description: 'Cloud infrastructure, migration, and management help.',
+    icon: HelpCircle,
+    color: 'purple',
+    articles: [
+      {
+        title: 'Cloud Migration Checklist',
+        description: 'Complete checklist for migrating to the cloud',
+        readTime: '12 min read',
+        type: 'Checklist'
+      },
+      {
+        title: 'AWS vs Azure vs Google Cloud',
+        description: 'Comparison of major cloud providers',
+        readTime: '9 min read',
+        type: 'Comparison'
+      },
+      {
+        title: 'Cloud Security Best Practices',
+        description: 'Essential security practices for cloud environments',
+        readTime: '7 min read',
+        type: 'Security'
+      }
+    ]
+  },
+  {
+    id: 'technical-support',
+    title: 'Technical Support',
+    description: 'Technical issues, troubleshooting, and advanced topics.',
+    icon: HelpCircle,
+    color: 'orange',
+    articles: [
+      {
+        title: 'Common Technical Issues',
+        description: 'Solutions to frequently encountered problems',
+        readTime: '5 min read',
+        type: 'Troubleshooting'
+      },
+      {
+        title: 'API Documentation',
+        description: 'Complete API reference and examples',
+        readTime: '15 min read',
+        type: 'Documentation'
+      },
+      {
+        title: 'System Requirements',
+        description: 'Hardware and software requirements for our solutions',
+        readTime: '4 min read',
+        type: 'Requirements'
+      }
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Search, HelpCircle, BookOpen, MessageCircle, Phone, Mail, FileText, Video, Download, ExternalLink, ChevronDown, ChevronRight } from 'lucide-react';
+
+const helpCategories = [
+  {
+    title: 'Getting Started',
+    description: 'Learn the basics and get up and running quickly',
+    icon: BookOpen,
+    articles: [
+      { title: 'Account Setup', href: '/help/getting-started/account-setup' },
+      { title: 'First Steps', href: '/help/getting-started/first-steps' },
+      { title: 'Basic Configuration', href: '/help/getting-started/configuration' }
     ]
   },
   {
     title: 'AI Services',
+    description: 'Guides for our AI and machine learning services',
     icon: HelpCircle,
-    color: 'from-green-600 to-blue-600',
     articles: [
-      {
-        title: 'AI model selection',
-        description: 'Choose the right AI model for your use case',
-        readTime: '4 min',
-        type: 'Guide'
-      },
-      {
-        title: 'Text analysis API',
-        description: 'Complete guide to using our text analysis API',
-        readTime: '8 min',
-        type: 'Tutorial'
-      },
-      {
-        title: 'Image recognition setup',
-        description: 'Configure image recognition for your application',
-        readTime: '6 min',
-        type: 'Tutorial'
-      }
+      { title: 'AI Email Responder Setup', href: '/help/ai-services/email-responder' },
+      { title: 'Predictive Analytics Guide', href: '/help/ai-services/predictive-analytics' },
+      { title: 'Chatbot Configuration', href: '/help/ai-services/chatbot' }
     ]
   },
   {
-    title: 'Cloud Services',
-    icon: MessageCircle,
-    color: 'from-purple-600 to-pink-600',
-    articles: [
-      {
-        title: 'Cloud deployment guide',
-        description: 'Deploy your applications to the cloud',
-        readTime: '10 min',
-        type: 'Tutorial'
-      },
-      {
-        title: 'Auto-scaling configuration',
-        description: 'Set up automatic scaling for your services',
-        readTime: '7 min',
-        type: 'Guide'
-      },
-      {
-        title: 'Monitoring setup',
-        description: 'Configure monitoring and alerting',
-        readTime: '5 min',
-        type: 'Guide'
-      }
-    ]
-  },
-  {
-    title: 'Billing & Account',
+    title: 'IT Services',
+    description: 'Documentation for our IT infrastructure services',
     icon: FileText,
-    color: 'from-orange-600 to-red-600',
     articles: [
-      {
-        title: 'Understanding pricing',
-        description: 'Learn about our pricing structure and plans',
-        readTime: '3 min',
-        type: 'Guide'
-      },
-      {
-        title: 'Payment methods',
-        description: 'How to add and manage payment methods',
-        readTime: '2 min',
-        type: 'Guide'
-      },
-      {
-        title: 'Billing history',
-        description: 'View and download your billing history',
-        readTime: '2 min',
-        type: 'Guide'
-      }
+      { title: 'Cloud Infrastructure Setup', href: '/help/it-services/cloud-infrastructure' },
+      { title: 'Cybersecurity Configuration', href: '/help/it-services/cybersecurity' },
+      { title: 'Network Setup', href: '/help/it-services/network' }
+    ]
+  },
+  {
+    title: 'Troubleshooting',
+    description: 'Common issues and their solutions',
+    icon: MessageCircle,
+    articles: [
+      { title: 'Common Issues', href: '/help/troubleshooting/common-issues' },
+      { title: 'Error Messages', href: '/help/troubleshooting/error-messages' },
+      { title: 'Performance Issues', href: '/help/troubleshooting/performance' }
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
     ]
   }
 ];
 
-const faqItems = [
+<<<<<<< HEAD
+const quickLinks = [
   {
-    question: 'How do I get started with AI services?',
-    answer: 'Getting started is easy! First, create an account and generate your API key. Then, check out our quick start guide to make your first API call. We also provide SDKs for popular programming languages to make integration even easier.'
+    title: 'API Documentation',
+    description: 'Complete API reference',
+    href: '/api-docs',
+    icon: FileText,
+    color: 'blue'
+=======
+const supportOptions = [
+  {
+    title: 'Documentation',
+    description: 'Comprehensive guides and API references',
+    icon: BookOpen,
+    href: '/docs'
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
   },
   {
-    question: 'What programming languages do you support?',
-    answer: 'We provide SDKs for JavaScript, Python, Go, Java, and C#. You can also use our REST API with any programming language that supports HTTP requests.'
+    title: 'Video Tutorials',
+    description: 'Step-by-step video guides',
+<<<<<<< HEAD
+    href: '/tutorials',
+    icon: Video,
+    color: 'green'
   },
   {
-    question: 'How does pricing work?',
-    answer: 'We offer flexible pricing based on usage. You can start with our free tier and scale up as needed. Pricing is based on API calls, data processing, and storage usage. Check our pricing page for detailed information.'
+    title: 'Status Page',
+    description: 'Check system status',
+    href: '/status',
+    icon: Clock,
+    color: 'orange'
   },
   {
-    question: 'Is my data secure?',
-    answer: 'Yes, we take security seriously. All data is encrypted in transit and at rest. We are SOC 2 Type II compliant and follow industry best practices for data protection.'
-  },
-  {
-    question: 'Do you offer support?',
-    answer: 'Yes! We offer multiple support channels including email, chat, and phone support. Our documentation and guides are also comprehensive resources for self-service support.'
-  },
-  {
-    question: 'Can I cancel my subscription anytime?',
-    answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees. You will continue to have access to your account until the end of your current billing period.'
+    title: 'Contact Support',
+    description: 'Get help from our team',
+    href: '/contact',
+    icon: MessageSquare,
+    color: 'purple'
   }
 ];
 
 const supportChannels = [
   {
-    name: 'Email Support',
-    description: 'Get help via email within 24 hours',
-    icon: Mail,
+    title: 'Email Support',
+    description: 'Get detailed help via email',
     contact: 'support@ziontechgroup.com',
-    responseTime: '24 hours'
+    responseTime: 'Within 24 hours',
+    icon: Mail,
+    color: 'blue'
   },
   {
-    name: 'Live Chat',
-    description: 'Chat with our support team in real-time',
-    icon: MessageCircle,
-    contact: 'Available 9 AM - 6 PM EST',
-    responseTime: 'Immediate'
-  },
-  {
-    name: 'Phone Support',
-    description: 'Speak directly with our support team',
+    title: 'Phone Support',
+    description: 'Speak with our experts',
+    contact: '+1 302 464 0950',
+    responseTime: 'Immediate',
     icon: Phone,
-    contact: '+1 (555) 123-4567',
-    responseTime: 'Immediate'
+    color: 'green'
+  },
+  {
+    title: 'Live Chat',
+    description: 'Get instant help online',
+    contact: 'Available 24/7',
+    responseTime: 'Immediate',
+    icon: MessageSquare,
+    color: 'purple'
+  }
+];
+
+export default function Help() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('getting-started');
+
+  const filteredCategories = helpCategories.filter(category =>
+    category.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    category.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <Layout>
+      <Head>
+        <title>Help Center - Zion Tech Group</title>
+        <meta name="description" content="Get help and support for Zion Tech Group's services. Find documentation, tutorials, and contact our support team." />
+        <meta name="keywords" content="help center, support, documentation, tutorials, Zion Tech Group, customer service" />
+        <link rel="canonical" href="https://ziontechgroup.com/help" />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
+          <div className="container mx-auto px-4">
+=======
+    icon: Video,
+    href: '/tutorials'
+  },
+  {
+    title: 'Community Forum',
+    description: 'Connect with other users and experts',
+    icon: MessageCircle,
+    href: '/community'
+  },
+  {
+    title: 'Contact Support',
+    description: 'Get help from our support team',
+    icon: Phone,
+    href: '/contact'
   }
 ];
 
 export default function HelpPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState(null);
-  const [expandedFaq, setExpandedFaq] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
 
-  const toggleCategory = (categoryTitle) => {
-    setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
-  };
-
-  const toggleFaq = (index) => {
-    setExpandedFaq(expandedFaq === index ? null : index);
+  const toggleCategory = (index: number) => {
+    setExpandedCategory(expandedCategory === index ? null : index);
   };
 
   const filteredCategories = helpCategories.map(category => ({
     ...category,
-    articles: category.articles.filter(article =>
-      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.description.toLowerCase().includes(searchQuery.toLowerCase())
+    articles: category.articles.filter(article => 
+      article.title.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.articles.length > 0);
 
   return (
-    <Layout
-      title="Help & Support - Zion Tech Group"
-      description="Get help and support for Zion Tech Group's AI and cloud services. Find guides, FAQs, and contact our support team."
-      keywords="help, support, FAQ, guides, documentation, contact support"
-    >
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Help & Support
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-              Find answers to your questions and get the help you need to succeed with our platform
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+    <>
+      <Head>
+        <title>Help Center - Zion Tech Group</title>
+        <meta name="description" content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources." />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+<<<<<<< HEAD
+              <h1 className="text-5xl font-bold mb-6">Help Center</h1>
+              <p className="text-xl text-blue-100 mb-8">
+                Find answers, get support, and learn how to make the most of our services.
+              </p>
+              
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search help articles..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  />
+                </div>
+=======
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Help <span className="text-blue-600">Center</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Find answers, get support, and learn how to make the most of our services.
+              </p>
+              <div className="relative max-w-md mx-auto">
+                <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
                 <input
                   type="text"
-                  placeholder="Search for help articles..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Search help articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            </motion.div>
+          </div>
+        </section>
 
-      {/* Help Categories */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Help Categories
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Browse our organized help articles by category
-            </p>
-          </motion.div>
+<<<<<<< HEAD
+        {/* Quick Links */}
+        <section className="py-12 bg-white border-b">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-8"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Quick Links</h2>
+              <p className="text-gray-600">Popular resources and support channels</p>
+            </motion.div>
 
-          <div className="space-y-6">
-            {filteredCategories.map((category, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <button
-                  onClick={() => toggleCategory(category.title)}
-                  className="w-full p-6 text-left hover:bg-gray-50 transition-colors"
+            <div className="grid md:grid-cols-4 gap-6">
+              {quickLinks.map((link, index) => (
+                <motion.a
+                  key={index}
+                  href={link.href}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-gray-50 hover:bg-gray-100 rounded-lg p-6 text-center transition-colors group"
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center mr-4`}>
-                        <category.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">{category.title}</h3>
-                        <p className="text-gray-600">{category.articles.length} articles</p>
-                      </div>
-                    </div>
-                    {expandedCategory === category.title ? (
-                      <ChevronDown className="w-6 h-6 text-gray-400" />
-                    ) : (
-                      <ChevronRight className="w-6 h-6 text-gray-400" />
-                    )}
+                  <div className={`bg-${link.color}-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-${link.color}-200 transition-colors`}>
+                    <link.icon className={`w-6 h-6 text-${link.color}-600`} />
                   </div>
-                </button>
-                
-                <AnimatePresence>
-                  {expandedCategory === category.title && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="border-t border-gray-200 p-6">
-                        <div className="space-y-4">
-                          {category.articles.map((article, articleIndex) => (
-                            <div key={articleIndex} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                              <div className="flex-1">
-                                <h4 className="font-semibold text-gray-900 mb-1">{article.title}</h4>
-                                <p className="text-sm text-gray-600">{article.description}</p>
-                                <div className="flex items-center mt-2 space-x-4">
-                                  <span className="text-xs text-gray-500">{article.readTime}</span>
-                                  <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
-                                    {article.type}
-                                  </span>
-                                </div>
-                              </div>
-                              <ExternalLink className="w-5 h-5 text-gray-400" />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{link.title}</h3>
+                  <p className="text-gray-600 text-sm">{link.description}</p>
+                  <ChevronRight className="w-4 h-4 text-gray-400 mx-auto mt-2 group-hover:text-gray-600" />
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Help Categories */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Browse Help Topics</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Find help articles organized by topic and service area.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {filteredCategories.map((category, index) => (
+                <motion.div
+                  key={category.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                  onClick={() => setSelectedCategory(category.id)}
+                >
+                  <div className={`bg-${category.color}-600 p-6 text-white`}>
+                    <category.icon className="w-8 h-8 mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">{category.title}</h3>
+                    <p className="text-${category.color}-100 text-sm">{category.description}</p>
+                  </div>
+                  <div className="p-6">
+                    <div className="space-y-3">
+                      {category.articles.slice(0, 3).map((article, articleIndex) => (
+                        <div key={articleIndex} className="flex items-start space-x-3">
+                          <div className="flex-shrink-0">
+                            <div className={`w-2 h-2 bg-${category.color}-600 rounded-full mt-2`}></div>
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900 truncate">
+                              {article.title}
+                            </p>
+                            <div className="flex items-center space-x-2 mt-1">
+                              <span className="text-xs text-gray-500">{article.readTime}</span>
+                              <span className="text-xs text-gray-400">•</span>
+                              <span className="text-xs text-gray-500">{article.type}</span>
                             </div>
-                          ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-4 flex items-center text-sm text-blue-600 hover:text-blue-800">
+                      <span>View all articles</span>
+                      <ChevronRight className="w-4 h-4 ml-1" />
+                    </div>
+                  </div>
+=======
+        {/* Support Options */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">How Can We Help?</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Choose the support option that works best for you.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {supportOptions.map((option, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <option.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{option.title}</h3>
+                  <p className="text-gray-600 mb-4">{option.description}</p>
+                  <Link
+                    href={option.href}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                  >
+                    Learn More
+                    <ExternalLink className="ml-1 w-4 h-4" />
+                  </Link>
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
+        {/* Selected Category Articles */}
+        {selectedCategory && (
+          <section className="py-20 bg-white">
+            <div className="container mx-auto px-4">
+              <motion.div
+                key={selectedCategory}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="max-w-4xl mx-auto"
+              >
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    {helpCategories.find(cat => cat.id === selectedCategory)?.title} Articles
+                  </h2>
+                  <p className="text-gray-600">
+                    {helpCategories.find(cat => cat.id === selectedCategory)?.description}
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  {helpCategories.find(cat => cat.id === selectedCategory)?.articles.map((article, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors cursor-pointer"
+                    >
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                            {article.title}
+                          </h3>
+                          <p className="text-gray-600 mb-3">{article.description}</p>
+                          <div className="flex items-center space-x-4">
+                            <div className="flex items-center text-sm text-gray-500">
+                              <Clock className="w-4 h-4 mr-1" />
+                              {article.readTime}
+                            </div>
+                            <div className="flex items-center text-sm text-gray-500">
+                              <Tag className="w-4 h-4 mr-1" />
+                              {article.type}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-2 ml-4">
+                          <Download className="w-4 h-4 text-gray-400" />
+                          <ExternalLink className="w-4 h-4 text-gray-400" />
                         </div>
                       </div>
                     </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Quick answers to common questions
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto space-y-4">
-            {faqItems.map((item, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full p-6 text-left hover:bg-gray-50 transition-colors"
-                >
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-gray-900">{item.question}</h3>
-                    {expandedFaq === index ? (
-                      <ChevronDown className="w-6 h-6 text-gray-400" />
-                    ) : (
-                      <ChevronRight className="w-6 h-6 text-gray-400" />
-                    )}
-                  </div>
-                </button>
-                
-                <AnimatePresence>
-                  {expandedFaq === index && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="border-t border-gray-200 p-6">
-                        <p className="text-gray-600 leading-relaxed">{item.answer}</p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Support Channels */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Contact Support
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Still need help? Reach out to our support team through any of these channels
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {supportChannels.map((channel, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <channel.icon className="w-8 h-8 text-white" />
+                  ))}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{channel.name}</h3>
-                <p className="text-gray-600 mb-4">{channel.description}</p>
-                <p className="text-blue-600 font-semibold mb-2">{channel.contact}</p>
-                <p className="text-sm text-gray-500">Response time: {channel.responseTime}</p>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-              Still Need Help?
-            </h2>
-            <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Our support team is here to help you succeed. Contact us and we'll get back to you as soon as possible.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
-              >
-                Contact Support
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                href="/docs"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-200"
-              >
-                Browse Documentation
-              </Link>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </section>
+        )}
+
+        {/* Support Channels */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Get Support</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Can't find what you're looking for? Our support team is here to help.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {supportChannels.map((channel, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-lg p-6 shadow-lg text-center hover:shadow-xl transition-shadow"
+                >
+                  <div className={`bg-${channel.color}-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
+                    <channel.icon className={`w-8 h-8 text-${channel.color}-600`} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{channel.title}</h3>
+                  <p className="text-gray-600 mb-4">{channel.description}</p>
+                  <div className="space-y-2">
+                    <p className="text-sm font-medium text-gray-900">{channel.contact}</p>
+                    <p className="text-xs text-gray-500">Response time: {channel.responseTime}</p>
+                  </div>
+=======
+        {/* Help Categories */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Help Categories</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Browse our help articles by category.
+              </p>
+            </motion.div>
+            <div className="space-y-6">
+              {filteredCategories.map((category, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gray-50 rounded-xl overflow-hidden"
+                >
+                  <button
+                    onClick={() => toggleCategory(index)}
+                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
+                  >
+                    <div className="flex items-center">
+                      <category.icon className="w-6 h-6 mr-3 text-blue-600" />
+                      <div>
+                        <h3 className="text-xl font-semibold">{category.title}</h3>
+                        <p className="text-gray-600">{category.description}</p>
+                      </div>
+                    </div>
+                    {expandedCategory === index ? (
+                      <ChevronDown className="w-5 h-5 text-blue-600" />
+                    ) : (
+                      <ChevronRight className="w-5 h-5 text-blue-600" />
+                    )}
+                  </button>
+                  <AnimatePresence>
+                    {expandedCategory === index && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-6 pb-4 border-t border-gray-200">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+                            {category.articles.map((article, articleIndex) => (
+                              <Link
+                                key={articleIndex}
+                                href={article.href}
+                                className="flex items-center p-3 bg-white rounded-lg hover:bg-gray-50 transition-colors"
+                              >
+                                <FileText className="w-4 h-4 mr-3 text-gray-400" />
+                                <span className="text-gray-700">{article.title}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+      </div>
     </Layout>
+=======
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Still Need Help?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Our support team is here to help you succeed. Contact us for personalized assistance.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Contact Support
+                  <MessageCircle className="ml-2 w-4 h-4" />
+                </Link>
+                <a
+                  href="tel:+13024640950"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  Call Us
+                  <Phone className="ml-2 w-4 h-4" />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
   );
 }

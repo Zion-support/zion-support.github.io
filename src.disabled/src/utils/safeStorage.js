@@ -1,14 +1,12 @@
-import React from 'react';
-
-interface SafeStorageProps {
-  // Add props here as needed
-}
-
-export default function SafeStorage({ }: SafeStorageProps) {
-  return (
-    <div>
-      <h1>SafeStorage</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+<<<<<<< HEAD
+function safeConsoleError(message, error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production'; if(env === 'development') { console.error(message, error)} } function safeLocalStorage() { try { if(typeof window !== 'undefined' && window.localStorage) { return window.localStorage} } catch(error) { safeConsoleError('LocalStorage not available:', error)} return null} function safeSessionStorage() { try { if(typeof window !== 'undefined' && window.sessionStorage) { return window.sessionStorage} } catch(error) { safeConsoleError('SessionStorage not available:', error)} return null} export { safeConsoleError, safeLocalStorage, safeSessionStorage };
+=======
+function safeConsoleError(message,error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production'; if(env === 'development') { console.error(message,error)} } function safeLocalStorage() { try { if(typeof window !== 'undefined' && window.localStorage) { return window.localStorage} } catch(error) { safeConsoleError('LocalStorage not available:',error)} return null} function safeSessionStorage() { try { if(typeof window !== 'undefined' && window.sessionStorage) { return window.sessionStorage} } catch(error) { safeConsoleError('SessionStorage not available:',error)} return null} export { safeConsoleError,safeLocalStorage,safeSessionStorage };
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+function safeConsoleError(message, error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production'; if(env === 'development') { console.error(message, error)} } function safeLocalStorage() { try { if(typeof window !== 'undefined' && window.localStorage) { return window.localStorage} } catch(error) { safeConsoleError('LocalStorage not "available": ', error)} return null} function safeSessionStorage() { try { if(typeof window !== 'undefined' && window.sessionStorage) { return window.sessionStorage} } catch(error) { safeConsoleError('SessionStorage not "available": ', error)} return null} export { safeConsoleError, safeLocalStorage, safeSessionStorage };
+>>>>>>> main
+function safeConsoleError(message,error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production'; if(env === 'development') { console.error(message,error)} } function safeLocalStorage() { try { if(typeof window !== 'undefined' && window.localStorage) { return window.localStorage} } catch(error) { safeConsoleError('LocalStorage not available:',error)} return null} function safeSessionStorage() { try { if(typeof window !== 'undefined' && window.sessionStorage) { return window.sessionStorage} } catch(error) { safeConsoleError('SessionStorage not available:',error)} return null} export { safeConsoleError,safeLocalStorage,safeSessionStorage };
+>>>>>>> main

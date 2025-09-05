@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 interface AddToCart.testProps {
@@ -12,3 +14,4 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
     </div>
   );
 }
+>>>>>>> main

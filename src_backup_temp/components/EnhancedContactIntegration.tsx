@@ -1,0 +1,55 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react' import { motion, AnimatePresence     } from 'framer-motionimport { Phone, Mail, MapPin, MessageSquare, Calendar, Clock, Globe, X, Copy, CheckCircle, ExternalLink     } from lucide-reactinterface EnhancedContactIntegrationProps {';
+ onClose: () => void serviceTitle?: string  ';';
+} export const EnhancedContactIntegration: Reac t.FC<EnhancedContactIntegrationProps> = ({ onClose, serviceTitle }) => { const [copiedField, setCopiedField] = useState<string | null>(null) const [activeTab, setActiveTab] = useState<contact| schedule' | 'support'>('contact')  const contactInfo = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', website: 'https:'
+
+</contact>
+</string>';
+</EnhancedContactIntegrationProps>;';;';
+=======
+=======
+>>>>>>> main
+;
+import React, { useState } from 'react' import { motion, AnimatePresence     } from 'framer-motionimport { Phone, Mail, MapPin, MessageSquare, Calendar, Clock, Globe, X, Copy, CheckCircle, ExternalLink     } from lucide-reactinterface EnhancedContactIntegrationProps {;
+ "onClose": "() => void serviceTitle?: string;
+"} export const "EnhancedContactIntegration": "React.FC<EnhancedContactIntegrationProps> = ({ onClose", serviceTitle }) => { const [copiedField, setCopiedField] = useState<string | null>(null) const [activeTab, setActiveTab] = useState<contact| schedule' | 'support'>('contact')  const contactInfo = { "phone": '+1 302 464 0950', "email": 'kleber@ziontechgroup.com', "website": '"https":';
+</contact>;
+</string>;
+</EnhancedContactIntegrationProps>;
+<<<<<<< HEAD
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+
+import React, { useState } from 'react' import { motion, AnimatePresence     } from 'framer-motionimport { Phone, Mail, MapPin, MessageSquare, Calendar, Clock, Globe, X, Copy, CheckCircle, ExternalLink     } from lucide-reactinterface EnhancedContactIntegrationProps {
+ onClose: () => void serviceTitle?: string  
+} export const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProps> = ({ onClose, serviceTitle }) => { const [copiedField, setCopiedField] = useState<string | null>(null) const [activeTab, setActiveTab] = useState<contact| schedule' | 'support'>('contact')  const contactInfo = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', website: 'https:'
+
+</contact>
+</string>
+</EnhancedContactIntegrationProps>
+=======
+<<<<<<< HEAD
+import React,{ useState } from &apos;react&apos; import { motion,AnimatePresence } from &apos;framer-motionimport { Phone,Mail,MapPin,MessageSquare,Calendar,Clock,Globe,X,Copy,CheckCircle,ExternalLink } from lucide-reactinterface EnhancedContactIntegrationProps { onClose: () => void serviceTitle?: string &apos;;&apos;} export const EnhancedContactIntegration: Reac t.FC<EnhancedContactIntegrationProps> = ({ onClose,serviceTitle };) => { const [copiedField,setCopiedField] = useState<string | null>(null) const [activeTab,setActiveTab] = useState<contact| schedule&apos; | &apos;support&apos;>(&apos;contact&apos;) const contactInfo = { phone: &apos;+1 302 464 0950&apos;,email: &apos;kleber@ziontechgroup.com&apos;,website: &apos;https:&apos; </contact> </string> </EnhancedContactIntegrationProps>;&apos;;&apos;;
+=======
+<<<<<<< HEAD
+const React,{ useState } from "react" import { motion,AnimatePresence } from "framer-motionimport { Phone,Mail,MapPin,MessageSquare,Calendar,Clock,Globe,X,Copy,CheckCircle,ExternalLink } from lucide-reactinterface EnhancedContactIntegrationProps { onClose: () => void serviceTitle?: string ";"
+  "} export const EnhancedContactIntegration: Reac t.FC<EnhancedContactIntegrationProps> = ({ onClose,serviceTitle };) => { const [copiedField,setCopiedField] = useState<string | null>(null) const [activeTab,setActiveTab] = useState<contact| schedule" | "support">("
+  "contact") const contactInfo = { phone:"
+  "+1 302 464 0950",email:"
+  "kleber@ziontechgroup.com",website:"
+  "https:"
+  " </contact> </string> </EnhancedContactIntegrationProps>;"
+  ";"
+  ";''"
+=======
+import { useState } from 'react';,
+import _React,{ useState } from 'react' import { motion,AnimatePresence } from 'framer-motionimport { Phone,Mail,MapPin,MessageSquare,Calendar,Clock,Globe,X,Copy,CheckCircle,ExternalLink } from lucide-reactinterface EnhancedContactIntegrationProps { onClose: () => void serviceTitle?: string ';'} export const EnhancedContactIntegration: Reac t.FC<EnhancedContactIntegrationProps> = ({ onClose,serviceTitle };) => { const [copiedField,setCopiedField] = useState<string | null>(null) const [activeTab,setActiveTab] = useState<contact| schedule' | 'support'>('contact') const contactInfo = { phone: '+1 302 464 0950,email: 'kleber@ziontechgroup.com,website: 'https:' </contact> </string> </EnhancedContactIntegrationProps>;';';
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

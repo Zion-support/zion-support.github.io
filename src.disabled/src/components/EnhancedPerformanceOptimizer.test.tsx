@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import EnhancedPerformanceOptimizer from &apos;./EnhancedPerformanceOptimizer; describe(&apos;EnhancedPerformanceOptimizer&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedPerformanceOptimizer / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+=======
+<<<<<<< HEAD
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import EnhancedPerformanceOptimizer from &apos;./EnhancedPerformanceOptimizer; describe(&apos;EnhancedPerformanceOptimizer&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<EnhancedPerformanceOptimizer / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+=======
 import React from 'react';
 
 interface EnhancedPerformanceOptimizer.testProps {
@@ -12,3 +18,5 @@ export default function EnhancedPerformanceOptimizer.test({ }: EnhancedPerforman
     </div>
   );
 }
+>>>>>>> main
+>>>>>>> main

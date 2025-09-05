@@ -1,14 +1,12 @@
-import React from 'react';
-
-interface UseAuthStateProps {
-  // Add props here as needed
-}
-
-export default function UseAuthState({ }: UseAuthStateProps) {
-  return (
-    <div>
-      <h1>UseAuthState</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect } from 'react'; ; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string  }; interface AuthTokens { accessToken: string | null; refreshToken: string | null  }; export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {; const [user, setUser] = useState<any>(null); const [isLoading, setIsLoading] = useState(true); const [onboardingStep, setOnboardingStep] = useState(0); const [tokens, setTokens] = useState<any>({; accessToken: null, refreshToken: null}); ; useEffect(() => {}})
+=======
+import { useState,useEffect } from 'react'; ; interface User { id: 'string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string' }; interface AuthTokens { accessToken: 'string | null; refreshToken: string | null' }; export const useAuthState[,React.Dispatch<React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: 'null',; refreshToken: 'null;' }); ; useEffect(() => {}})
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+import { useState, useEffect } from 'react'; interface User { "id": string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string  }; interface AuthTokens { "accessToken": string | null; refreshToken: string | null  }; export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {; const [user, setUser] = useState<any>(null); const [isLoading, setIsLoading] = useState(true); const [onboardingStep, setOnboardingStep] = useState(0); const [tokens, setTokens] = useState<any>({; "accessToken": null, "refreshToken": null}); useEffect(() => {}})
+>>>>>>> main
+import { useState,useEffect } from 'react'; ; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string }; interface AuthTokens { accessToken: string | null; refreshToken: string | null }; export const useAuthState[,React.Dispatch<React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: null,refreshToken: null}); ; useEffect(() => {}})
+>>>>>>> main

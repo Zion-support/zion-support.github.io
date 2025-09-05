@@ -1,14 +1,34 @@
-import React from 'react';
-
-interface Next.config.analyzerProps {
-  // Add props here as needed
-}
-
-export default function Next.config.analyzer({ }: Next.config.analyzerProps) {
-  return (
-    <div>
-      <h1>Next.config.analyzer</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+module.exports = {
+  "webpack": (config, { isServer }) => {
+    if ( {
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          "analyzerMode": 'static',
+          "openAnalyzer": 'false',
+          "reportFilename": isServer ? '../analyze/server.html' : './analyze/client.html'})
+      )}
+    return config) {
+     {
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          "analyzerMode": 'static',
+          "openAnalyzer": false,
+          "reportFilename": isServer ? '../analyze/server.html' : './analyze/client.html'})
+      )}
+<<<<<<< HEAD
+    return config}},
+};
+=======
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+    return config}}};
+>>>>>>> main
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+>>>>>>> main

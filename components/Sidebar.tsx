@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { 
-  Home, 
-  Briefcase, 
-  Target, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
+import {
+  Home,
+  Briefcase,
+  Target,
+  Building2,
+  FileText,
+  HelpCircle,
   Search,
   X,
   ChevronRight,
@@ -18,11 +18,7 @@ import {
   DollarSign,
   ShoppingCart,
   GraduationCap,
-  Globe,
-  Cpu as CpuIcon,
-  Lock,
-  Network,
-  Monitor
+  Globe
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -35,7 +31,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
+    setExpandedSections(prev =>
       prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
@@ -44,94 +40,89 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   const navigationItems = [
     {
-      label: 'Home',
-      href: '/',
+      label: "Home",
+      href: "/",
       icon: Home
     },
     {
-      label: 'Services',
-      href: '/services',
+      label: "Services",
+      href: "/services",
       icon: Briefcase,
       hasSubmenu: true,
       submenu: [
-        { label: 'All Services', href: '/services' },
-        { label: 'AI Services', href: '/ai-services', icon: Brain },
-        { label: 'IT Services', href: '/it-services', icon: Shield },
-        { label: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-        { label: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
-        { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-        { label: 'Data Analytics', href: '/services/data-analytics', icon: Brain },
-        { label: 'Quantum Computing', href: '/services/quantum-computing', icon: CpuIcon },
-        { label: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
-        { label: 'IoT & Smart Cities', href: '/services/iot-smart-cities', icon: Globe },
-        { label: 'Edge Computing', href: '/services/edge-computing', icon: Network },
-        { label: 'Digital Twins', href: '/services/digital-twins', icon: Monitor }
+        { label: "All Services", href: "/services" },
+        { label: "AI Services", href: "/ai-services", icon: Brain },
+        { label: "IT Services", href: "/it-services", icon: Shield },
+        { label: "Micro SaaS", href: "/micro-saas", icon: Cloud },
+        { label: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
+        { label: "Cybersecurity", href: "/services/cybersecurity", icon: Shield },
+        { label: "Data Analytics", href: "/services/data-analytics", icon: Brain }
       ]
     },
     {
-      label: 'Solutions',
-      href: '/solutions',
+      label: "Solutions",
+      href: "/solutions",
       icon: Target,
       hasSubmenu: true,
       submenu: [
-        { label: 'All Solutions', href: '/solutions' },
-        { label: 'Enterprise', href: '/solutions/enterprise', icon: Building2 },
-        { label: 'Healthcare', href: '/solutions/healthcare', icon: Heart },
-        { label: 'Finance', href: '/solutions/finance', icon: DollarSign },
-        { label: 'Retail', href: '/solutions/retail', icon: ShoppingCart },
-        { label: 'Education', href: '/solutions/education', icon: GraduationCap },
-        { label: 'Government', href: '/solutions/government', icon: Globe }
+        { label: "All Solutions", href: "/solutions" },
+        { label: "Enterprise", href: "/solutions/enterprise", icon: Building2 },
+        { label: "Healthcare", href: "/solutions/healthcare", icon: Heart },
+        { label: "Finance", href: "/solutions/finance", icon: DollarSign },
+        { label: "Retail", href: "/solutions/retail", icon: ShoppingCart },
+        { label: "Education", href: "/solutions/education", icon: GraduationCap },
+        { label: "Government", href: "/solutions/government", icon: Globe }
       ]
     },
     {
-      label: 'Industries',
-      href: '/industries',
+      label: "Industries",
+      href: "/industries",
       icon: Building2,
       hasSubmenu: true,
       submenu: [
-        { label: 'All Industries', href: '/industries' },
-        { label: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-        { label: 'Finance', href: '/industries/finance', icon: DollarSign },
-        { label: 'Education', href: '/industries/education', icon: GraduationCap },
-        { label: 'Government', href: '/industries/government', icon: Globe },
-        { label: 'Manufacturing', href: '/industries/manufacturing', icon: Building2 },
-        { label: 'Retail', href: '/industries/retail', icon: ShoppingCart }
+        { label: "All Industries", href: "/industries" },
+        { label: "Healthcare", href: "/industries/healthcare", icon: Heart },
+        { label: "Finance", href: "/industries/finance", icon: DollarSign },
+        { label: "Education", href: "/industries/education", icon: GraduationCap },
+        { label: "Government", href: "/industries/government", icon: Globe },
+        { label: "Manufacturing", href: "/industries/manufacturing", icon: Building2 },
+        { label: "Retail", href: "/industries/retail", icon: ShoppingCart }
       ]
     },
     {
-      label: 'Resources',
-      href: '/resources',
+      label: "Resources",
+      href: "/resources",
       icon: FileText,
       hasSubmenu: true,
       submenu: [
-        { label: 'Blog', href: '/blog' },
-        { label: 'White Papers', href: '/white-papers' },
-        { label: 'Case Studies', href: '/case-studies' },
-        { label: 'Webinars', href: '/webinars' },
-        { label: 'Help Center', href: '/help' },
-        { label: 'FAQ', href: '/faq' }
+        { label: "Blog", href: "/blog" },
+        { label: "White Papers", href: "/white-papers" },
+        { label: "Case Studies", href: "/case-studies" },
+        { label: "Webinars", href: "/webinars" },
+        { label: "Help Center", href: "/help" },
+        { label: "FAQ", href: "/faq" }
       ]
     },
     {
-      label: 'Company',
-      href: '/about',
+      label: "Company",
+      href: "/about",
       icon: Building2,
       hasSubmenu: true,
       submenu: [
-        { label: 'About Us', href: '/about' },
-        { label: 'Our Team', href: '/team' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'News', href: '/news' },
-        { label: 'Contact', href: '/contact' }
+        { label: "About Us", href: "/about" },
+        { label: "Our Team", href: "/team" },
+        { label: "Careers", href: "/careers" },
+        { label: "News", href: "/news" },
+        { label: "Contact", href: "/contact" }
       ]
     }
   ];
 
   const quickLinks = [
-    { label: 'Get Started', href: '/contact', icon: ChevronRight },
-    { label: 'Pricing', href: '/pricing', icon: DollarSign },
-    { label: 'Support', href: '/support', icon: HelpCircle },
-    { label: 'Documentation', href: '/docs', icon: FileText }
+    { label: "Get Started", href: "/contact", icon: ChevronRight },
+    { label: "Pricing", href: "/pricing", icon: DollarSign },
+    { label: "Support", href: "/support", icon: HelpCircle },
+    { label: "Documentation", href: "/docs", icon: FileText }
   ];
 
   const isActive = (href: string) => {
@@ -142,18 +133,13 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     <>
       {/* Overlay */}
       {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-          onClick={onClose}
-        />
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden" onClick={onClose} />
       )}
-      
+
       {/* Sidebar */}
-      <div className={`
-        fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        lg:translate-x-0 lg:static lg:block
-      `}>
+      <div className={`fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out ${
+        isOpen ? "translate-x-0" : "-translate-x-full"
+      } lg:translate-x-0 lg:static lg:block`}>
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-700">
           <Link href="/" className="flex items-center space-x-2">
@@ -192,15 +178,14 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     href={item.href}
                     className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
                       isActive(item.href)
-                        ? 'bg-blue-600 text-white'
-                        : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                        ? "bg-blue-600 text-white"
+                        : "text-gray-300 hover:bg-gray-800 hover:text-white"
                     }`}
                     onClick={() => !item.hasSubmenu && onClose()}
                   >
                     <item.icon className="w-5 h-5" />
                     <span className="font-medium">{item.label}</span>
                   </Link>
-                  
                   {item.hasSubmenu && (
                     <button
                       onClick={() => toggleSection(item.label)}
@@ -208,13 +193,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     >
                       <ChevronRight
                         className={`w-4 h-4 transition-transform ${
-                          expandedSections.includes(item.label) ? 'rotate-90' : ''
+                          expandedSections.includes(item.label) ? "rotate-90" : ""
                         }`}
                       />
                     </button>
                   )}
                 </div>
-
                 {item.hasSubmenu && expandedSections.includes(item.label) && (
                   <div className="ml-8 mt-2 space-y-1">
                     {item.submenu?.map((subItem, subIndex) => (
@@ -223,8 +207,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         href={subItem.href}
                         className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-colors ${
                           isActive(subItem.href)
-                            ? 'bg-blue-600 text-white'
-                            : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                            ? "bg-blue-600 text-white"
+                            : "text-gray-400 hover:bg-gray-800 hover:text-white"
                         }`}
                         onClick={onClose}
                       >
@@ -265,7 +249,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <p className="mb-2">Need help?</p>
             <p className="text-blue-400">kleber@ziontechgroup.com</p>
             <p className="text-blue-400">+1 302 464 0950</p>
-            <p className="text-blue-400 text-xs mt-1">364 E Main St STE 1008<br />Middletown, DE 19709</p>
           </div>
         </div>
       </div>
