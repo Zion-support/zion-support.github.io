@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
-import PerformanceMonitor from '../components/PerformanceMonitor';
+// import PerformanceMonitor from '../components/PerformanceMonitor';
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
@@ -29,8 +29,9 @@ export default function Home() {
           </button>
         </div>
       </div>
-    ),
+    );
   }
+
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -243,13 +244,13 @@ export default function Home() {
         </section>
           </main>
         </Suspense>
-        <PerformanceMonitor 
+        {/* <PerformanceMonitor 
           showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn('Performance thresholds exceeded:', metrics)
           }}
-        />
+        /> */}
       </ErrorBoundary>
     </>
   )
