@@ -1,9 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion
+import { motion } from 'framer-motion'
 import {
-  // TODO: Implement
-}
   Heart, 
   DollarSign, 
   Settings, 
@@ -15,9 +13,9 @@ import {
   Users,
   Shield,
   Cloud,
-  Brain;'
+  Brain
 } from 'lucide-react'
-import Layout from '../../components/Layout
+import Layout from '../../components/Layout'
 const industries = [
   {'
     name: 'Healthcare',''

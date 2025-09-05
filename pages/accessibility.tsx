@@ -37,7 +37,7 @@ const accessibilityFeatures = [
       "Visual indicators for audio cues",
       "Text-based communication options",
       "Volume controls and audio descriptions",
-      "Sign language support where applicable"]
+      "Sign language support where applicable"
     ]
   },
   {
@@ -49,7 +49,7 @@ const accessibilityFeatures = [
       "Voice control compatibility",
       "Large click targets",
       "Customizable interaction timing",
-      "Switch control support"]
+      "Switch control support"
     ]
   },
   {
@@ -61,7 +61,7 @@ const accessibilityFeatures = [
       "Consistent navigation patterns",
       "Error prevention and recovery",
       "Progress indicators",
-      "Customizable interface complexity"]
+      "Customizable interface complexity"
     ]
   }
 ];
@@ -72,29 +72,29 @@ const standardsCompliance = [
     description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",
     status: "Compliant",
     coverage: "95%",
-    icon: Shield;
+    icon: Shield
   },
   {
     standard: "Section 508",
     description: "U.S. federal accessibility requirements",
     status: "Compliant",
     coverage: "100%",
-    icon: FileText;
+    icon: FileText
   },
   {
     standard: "ADA",
     description: "Americans with Disabilities Act compliance",
     status: "Compliant",
     coverage: "100%",
-    icon: Users;
+    icon: Users
   },
   {
     standard: "EN 301 549",
     description: "European accessibility standard for ICT products",
     status: "Compliant",
     coverage: "90%",
-    icon: Globe;
-  }]
+    icon: Globe
+  }
 ];
 
 const accessibilityTools = [
@@ -117,7 +117,7 @@ const accessibilityTools = [
     name: "User Testing",
     description: "Regular testing with users who have disabilities to identify barriers",
     frequency: "Quarterly"
-  }]
+  }
 ];
 
 const accessibilityGuidelines = [
@@ -128,7 +128,7 @@ const accessibilityGuidelines = [
       "Provide alternative text for images",
       "Use proper heading structure",
       "Ensure sufficient color contrast",
-      "Provide captions for videos"]
+      "Provide captions for videos"
     ]
   },
   {
@@ -138,7 +138,7 @@ const accessibilityGuidelines = [
       "Skip links for main content",
       "Consistent navigation patterns",
       "Breadcrumb navigation",
-      "Search functionality"]
+      "Search functionality"
     ]
   },
   {
@@ -148,7 +148,7 @@ const accessibilityGuidelines = [
       "Error messages and validation",
       "Required field indicators",
       "Logical grouping of related fields",
-      "Multiple input methods"]
+      "Multiple input methods"
     ]
   },
   {
@@ -158,7 +158,7 @@ const accessibilityGuidelines = [
       "Focus indicators",
       "Adequate target sizes",
       "No seizure-inducing content",
-      "Customizable timing"]
+      "Customizable timing"
     ]
   }
 ];

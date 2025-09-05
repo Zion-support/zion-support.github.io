@@ -1,9 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion
+import { motion } from 'framer-motion'
 import {
-  // TODO: Implement
-}
   BookOpen, 
   Brain, 
   Users, 
@@ -14,273 +12,207 @@ import {
   FileText,
   Video,
   Globe,
-  Database;'
+  Database
 } from 'lucide-react'
-import Layout from '../../components/Layout
+import Layout from '../../components/Layout'
+
 const services = [
-  {'
-    title: 'Learning Management Systems',''
-    description: 'Comprehensive LMS platforms for educational institutions and corporate training.','
+  {
+    title: 'Learning Management Systems',
+    description: 'Comprehensive LMS platforms for educational institutions and corporate training.',
     icon: BookOpen,
-    features: ['
-      'Course management',''
-      'Student tracking',''
-      'Assessment tools',''
-      'Progress analytics'']
+    features: [
+      'Course management',
+      'Student tracking',
+      'Assessment tools',
+      'Progress analytics'
     ]
   },
-  {'
-    title: 'Virtual Classrooms',''
-    description: 'Advanced virtual learning environments with interactive features.','
+  {
+    title: 'Virtual Classrooms',
+    description: 'Advanced virtual learning environments with interactive features.',
     icon: Video,
-    features: ['
-      'Live video streaming',''
-      'Interactive whiteboards',''
-      'Breakout rooms',''
-      'Recording capabilities'']
+    features: [
+      'Live video streaming',
+      'Interactive whiteboards',
+      'Breakout rooms',
+      'Recording capabilities'
     ]
   },
-  {'
-    title: 'Educational AI Tutors',''
-    description: 'AI-powered tutoring systems for personalized learning experiences.','
+  {
+    title: 'Educational AI Tutors',
+    description: 'AI-powered tutoring systems for personalized learning experiences.',
     icon: Brain,
-    features: ['
-      'Adaptive learning paths',''
-      'Intelligent tutoring',''
-      'Progress monitoring',''
-      'Personalized feedback'']
+    features: [
+      'Adaptive learning paths',
+      'Intelligent tutoring',
+      'Performance analytics',
+      'Personalized recommendations'
     ]
   },
-  {'
-    title: 'Student Analytics',''
-    description: 'Data-driven insights into student performance and engagement.','
-    icon: BarChart3,
-    features: ['
-      'Performance tracking',''
-      'Engagement metrics',''
-      'Predictive analytics',''
-      'Intervention recommendations'']
-    ]
-  },
-  {'
-    title: 'Online Assessment Tools',''
-    description: 'Secure and comprehensive online testing and evaluation systems.','
-    icon: FileText,
-    features: ['
-      'Automated grading',''
-      'Plagiarism detection',''
-      'Secure testing',''
-      'Performance reports'']
-    ]
-  },
-  {'
-    title: 'Content Management Systems',''
-    description: 'Digital content creation and management platforms for educators.','
+  {
+    title: 'Student Information Systems',
+    description: 'Comprehensive SIS solutions for managing student data and records.',
     icon: Database,
-    features: ['
-      'Content creation tools',''
-      'Resource libraries',''
-      'Version control',''
-      'Collaboration features'']
+    features: [
+      'Student enrollment',
+      'Grade management',
+      'Attendance tracking',
+      'Parent communication'
     ]
   }
 ];
 
 const benefits = [
-  {'
-    title: 'Improved Learning Outcomes',''
-    description: 'Personalized learning experiences lead to better student performance.','
-    icon: GraduationCap;
+  {
+    title: 'Improved Learning Outcomes',
+    description: 'Technology-enhanced learning leads to better student engagement and academic performance.',
+    icon: BarChart3
   },
-  {'
-    title: 'Enhanced Engagement',''
-    description: 'Interactive tools and gamification increase student participation.','
-    icon: Users;
+  {
+    title: 'Accessibility',
+    description: 'Make education accessible to students with diverse learning needs and abilities.',
+    icon: Users
   },
-  {'
-    title: 'Better Accessibility',''
-    description: 'Online platforms make education accessible to more students.','
-    icon: Globe;
+  {
+    title: 'Cost Efficiency',
+    description: 'Reduce operational costs while improving educational quality and reach.',
+    icon: CheckCircle
   },
-  {'
-    title: 'Data-Driven Insights',''
-    description: 'Analytics help educators make informed decisions about teaching methods.','
-    icon: BarChart3;
-  }]
+  {
+    title: 'Global Reach',
+    description: 'Expand educational opportunities to students worldwide through online platforms.',
+    icon: Globe
+  }
 ];
 
 export default function EducationPage() {
   return (
-    <Layout;'
+    <Layout
       title="Education Technology Solutions - Zion Tech Group"
-      description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms."
-      keywords="education technology, LMS, virtual classrooms, AI tutoring, student analytics, edtech"
+      description="Transform education with cutting-edge technology solutions including LMS, virtual classrooms, AI tutors, and student information systems."
     >
-</Layout>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-</div>"
-        <section className="relative bg-gradient-to-br from-orange-900 via-amber-900 to-yellow-900 text-white py-20 overflow-hidden">"
-</section>"
-          <div className="absolute inset-0">"
-</div>"
-            <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>"
-            <div className="absolute top-40 right-10 w-72 h-72 bg-amber-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>"
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>"
-          </div>
-"
-          <div className="container mx-auto px-4 relative z-10">"
-</div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
-</motion>"
-              <div className="flex items-center justify-center mb-6">"
-</div>"
-                <BookOpen className="w-12 h-12 text-orange-400 mr-4" />"
-</BookOpen>"
-                <h1 className="text-5xl md:text-6xl font-bold">"
-</h1>"
-                  <span className="block bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">"
-</span>
-                  </span>
-                </h1>
-              </div>"
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">"
-</p>
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-</div>"
-                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">"
-</Link>
-                </Link>"
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">"
-</Link>
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>"
-        <section className="py-20 bg-white">"
-</section>"
-          <div className="container mx-auto px-4">"
-</div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-</motion>"
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
-</h2>
-              </h2>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
-</p>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Education Technology Solutions
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Transform education with cutting-edge technology solutions designed for modern learning environments
               </p>
-            </motion.div>
-"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-</div>
-                <motion.div;
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
-                >
-</motion>"
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">"
-</div>"
-                    <service.icon className="w-6 h-6 text-white" />"
-</service>
-                  </div>
-                  "
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
-                  <ul className="space-y-3">"
-</ul>"
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
-</li>"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />"
-</CheckCircle>
-                      </li>
-                  </ul>
-                </motion.div>)
-              ))}
-            </div>
-          </div>
-        </section>"
-        <section className="py-20 bg-gray-50">"
-</section>"
-          <div className="container mx-auto px-4">"
-</div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-</motion>"
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
-</h2>
-              </h2>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
-</p>
-              </p>
-            </motion.div>
-"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-</div>
-                <motion.div;
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
-                >
-</motion>"
-                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">"
-</div>"
-                    <benefit.icon className="w-8 h-8 text-white" />"
-</benefit>
-                  </div>"
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>"
-        <section className="py-20 bg-gradient-to-r from-orange-600 to-amber-600 text-white">"
-</section>"
-          <div className="container mx-auto px-4 text-center">"
-</div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-</motion>"
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">"
-</h2>
-              </h2>"
-              <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">"
-</p>
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-</div>"
-                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">"
-</Link>
-                </Link>"
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">"
-</Link>
-                </Link>
-              </div>
             </motion.div>
           </div>
         </section>
+
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Our Education Services
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  We provide comprehensive technology solutions for educational institutions, 
+                  from K-12 schools to universities and corporate training programs.
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                {services.map((service, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+                  >
+                    <div className="flex items-center mb-4">
+                      <service.icon className="w-8 h-8 text-blue-600 mr-3" />
+                      <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                    </div>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-500">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="bg-white rounded-2xl shadow-xl p-8 mb-16"
+              >
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+                  Why Choose Our Education Solutions?
+                </h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="text-center">
+                      <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <benefit.icon className="w-8 h-8 text-blue-600" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm">
+                        {benefit.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="text-center"
+              >
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                  Ready to Transform Education?
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                  Let's discuss how our technology solutions can enhance your educational institution's capabilities.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    href="/contact"
+                    className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center"
+                  >
+                    Get Started
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                  <Link
+                    href="/ai-services"
+                    className="bg-white text-blue-600 px-8 py-4 rounded-lg border border-blue-600 hover:bg-blue-50 transition-colors duration-200 flex items-center justify-center"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
       </div>
-    </Layout>"
+    </Layout>
+  )
+}
