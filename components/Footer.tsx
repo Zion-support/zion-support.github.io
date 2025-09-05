@@ -53,7 +53,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
@@ -99,9 +99,9 @@ export default function Footer() {
             </div>
           ))}
 
-          {/* Quick Links */}
+          {/* Company Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
@@ -109,13 +109,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                  Blog
+                <Link href="/team" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Our Team
                 </Link>
               </li>
               <li>
@@ -124,6 +119,60 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/news" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  News
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Resources</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/blog" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/case-studies" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link href="/white-papers" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  White Papers
+                </Link>
+              </li>
+              <li>
+                <Link href="/webinars" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Webinars
+                </Link>
+              </li>
+              <li>
+                <Link href="/help" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  FAQ
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Legal</h4>
+            <ul className="space-y-2">
+              <li>
                 <Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                   Privacy Policy
                 </Link>
@@ -131,6 +180,16 @@ export default function Footer() {
               <li>
                 <Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                   Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/cookies" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Cookie Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/compliance" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Compliance
                 </Link>
               </li>
             </ul>

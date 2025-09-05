@@ -18,7 +18,8 @@ import {
   DollarSign,
   ShoppingCart,
   GraduationCap,
-  Globe
+  Globe,
+  Mail
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -101,6 +102,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Webinars', href: '/webinars' },
         { label: 'Help Center', href: '/help' },
         { label: 'FAQ', href: '/faq' },
+        { label: 'Documentation', href: '/docs' },
+        { label: 'Tutorials', href: '/tutorials' },
+        { label: 'Guides', href: '/guides' },
       ]
     },
     {
@@ -115,6 +119,20 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'News', href: '/news' },
         { label: 'Contact', href: '/contact' },
       ]
+    },
+    {
+      label: 'Support',
+      href: '/support',
+      icon: HelpCircle,
+      hasSubmenu: true,
+      submenu: [
+        { label: 'Support Center', href: '/support' },
+        { label: 'Help Center', href: '/help' },
+        { label: 'FAQ', href: '/faq' },
+        { label: 'Contact Support', href: '/contact' },
+        { label: 'Documentation', href: '/docs' },
+        { label: 'API Docs', href: '/api-docs' },
+      ]
     }
   ];
 
@@ -123,6 +141,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     { label: 'Pricing', href: '/pricing', icon: DollarSign },
     { label: 'Support', href: '/support', icon: HelpCircle },
     { label: 'Documentation', href: '/docs', icon: FileText },
+    { label: 'Search', href: '/search', icon: Search },
+    { label: 'Newsletter', href: '/newsletter', icon: Mail },
   ];
 
   const isActive = (href: string) => {
