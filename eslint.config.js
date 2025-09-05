@@ -36,7 +36,9 @@ export default [
         HTMLTextAreaElement: 'readonly',
         HTMLSelectElement: 'readonly',
         HTMLDivElement: 'readonly',
+        HTMLElement: 'readonly',
         MouseEvent: 'readonly',
+        KeyboardEvent: 'readonly',
         Node: 'readonly',
         PerformanceObserver: 'readonly',
         // React
